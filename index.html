@@ -26,6 +26,10 @@
     --glow: rgba(196,80,43,0.04);
     --tag-blue: #2b6f8e;
     --tag-blue-border: #a8c8d8;
+    --tag-green: #4a6b3f;
+    --tag-green-border: #b5c8a8;
+    --tag-violet: #6b5a8e;
+    --tag-violet-border: #c0b5d4;
   }
 
   /* ───────────── DARK THEME ───────────── */
@@ -43,6 +47,10 @@
     --glow: rgba(232,163,130,0.05);
     --tag-blue: #82b8d0;
     --tag-blue-border: #2b4f60;
+    --tag-green: #9ab589;
+    --tag-green-border: #3f5a35;
+    --tag-violet: #b8a8d8;
+    --tag-violet-border: #454060;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -222,6 +230,16 @@
   }
 
   /* ───────────── CARD GRID ───────────── */
+  /* Auto-numbering: a CSS counter increments once per .card in document order,
+     so cards are numbered sequentially across all sections without manual edits.
+     Just write the category text in <span class="card-index">…</span>;
+     the "NN / " prefix is added automatically. */
+  body { counter-reset: card-counter; }
+  .card { counter-increment: card-counter; }
+  .card-index::before {
+    content: counter(card-counter, decimal-leading-zero) " / ";
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -317,6 +335,8 @@
 
   .tag.alevel { color: var(--accent); border-color: var(--accent-soft); }
   .tag.gcse { color: var(--tag-blue); border-color: var(--tag-blue-border); }
+  .tag.teacher { color: var(--tag-green); border-color: var(--tag-green-border); }
+  .tag.allages { color: var(--tag-violet); border-color: var(--tag-violet-border); }
 
   /* ───────────── ABOUT / NOTES SECTION ───────────── */
   .about {
@@ -488,7 +508,7 @@
 
       <a class="card" href="https://jshphysics.github.io/stellar-parallax-lab/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">01 / Astrophysics</span>
+          <span class="card-index">Astrophysics</span>
           <span class="card-arrow">↗</span>
         </div>
         <h3>Stellar Parallax Lab</h3>
@@ -500,7 +520,7 @@
 
       <a class="card" href="https://jshphysics.github.io/DecayLab/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">02 / Nuclear</span>
+          <span class="card-index">Nuclear</span>
           <span class="card-arrow">↗</span>
         </div>
         <h3>Radioactive Decay Lab</h3>
@@ -513,7 +533,7 @@
 
       <a class="card" href="https://jshphysics.github.io/upthrust-derivation/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">03 / Mechanics</span>
+          <span class="card-index">Mechanics</span>
           <span class="card-arrow">↗</span>
         </div>
         <h3>Upthrust Derivation</h3>
@@ -524,7 +544,9 @@
         </div>
       </a>
 
-      <!-- ─── To add a new simulation: copy any <a class="card">…</a> block above ─── -->
+      <!-- ─── To add a new card: copy any <a class="card">…</a> block above.
+           The "NN / " number prefix is added automatically by CSS based on
+           document order — just write the category in <span class="card-index">. ─── -->
 
     </div>
   </section>
@@ -540,7 +562,7 @@
 
       <a class="card" href="https://jshphysics.github.io/revision_tracker/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">04 / Tracker</span>
+          <span class="card-index">Tracker</span>
           <span class="card-arrow">↗</span>
         </div>
         <h3>Revision Tracker <span class="card-preview-tag">(preview)</span></h3>
@@ -553,38 +575,37 @@
 
       <a class="card" href="https://jshphysics.github.io/interactive-clock-cipher/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">05 / Cipher</span>
+          <span class="card-index">Cipher</span>
           <span class="card-arrow">↗</span>
         </div>
         <h3>Clock Cipher</h3>
         <p>A live encode/decode tool with auto-snap rotation. Good for cryptography starters, end-of-term puzzles, or just having a fiddle.</p>
         <div class="card-tags">
-          <span class="tag gcse">Teacher Tool</span>
+          <span class="tag teacher">Teacher Tool</span>
         </div>
       </a>
       
       <a class="card" href="https://jshphysics.github.io/similar-different-template-builder/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">06 / Similar and Different Generator</span>
+          <span class="card-index">Similar and Different Generator</span>
           <span class="card-arrow">↗</span>
         </div>
-        <h3>Similar/Different Template Builder </span></h3>
+        <h3>Similar/Different Template Builder</h3>
         <p>A tool for building Similar/Different comparison activities. Features include exportable to print or digital, touch or keyboard inputs, definable structure.</p>
         <div class="card-tags">
-          <span class="tag gcse">Teacher Tool</span>
+          <span class="tag teacher">Teacher Tool</span>
         </div>
       </a>
 
       <a class="card" href="https://jshphysics.github.io/vocab-schema-builder/" target="_blank" rel="noopener">
         <div class="card-header">
-          <span class="card-index">07 / Schema and Mind Maps</span>
+          <span class="card-index">Schema and Mind Maps</span>
           <span class="card-arrow">↗</span>
         </div>
-        <h3>Schema and Mind Map Builder</span></h3>
+        <h3>Schema and Mind Map Builder</h3>
         <p>A tool for building mind maps of vocabulary. Simple interface, touch functionality, ability to save, export and import your map for later improvement.</p>
         <div class="card-tags">
-          <span class="tag gcse">Teacher Tool</span>
-
+          <span class="tag teacher">Teacher Tool</span>
         </div>
       </a>
       
