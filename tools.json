@@ -43,7 +43,7 @@
       "tags": ["GCSE", "A-Level"]
     },
     {
-      "title": "Meausre the Hubble Constant",
+      "title": "Measure the Hubble Constant",
       "url": "https://jshphysics.github.io/measure-the-hubble-constant/",
       "section": "simulations",
       "category": "Astrophysics",
@@ -58,7 +58,6 @@
       "description": "A walkthrough derivation of Archimedes' upthrust from first principles. Each stage builds up interactively with students answering self-marking questions as they progress.",
       "tags": ["GCSE", "A-Level"]
     },
-
     {
       "title": "Revision Tracker",
       "url": "https://jshphysics.github.io/revision_tracker/",
