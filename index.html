@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>JSHPhysics — Physics Simulations, Teacher Tools & Resources</title>
-<meta name="description" content="A collection of interactive physics simulations, teacher tools, and classroom resources by Joshua Stafford-Haworth." />
+<title>JSHPhysics — Simulations, Tools & Resources</title>
+<meta name="description" content="A collection of interactive physics simulations, revision tools, and classroom resources by Joshua Stafford-Haworth." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,8 @@
     --glow: rgba(196,80,43,0.04);
     --tag-blue: #2b6f8e;
     --tag-blue-border: #a8c8d8;
+    --tag-green: #4a6b3f;
+    --tag-green-border: #b5c8a8;
   }
 
   /* ───────────── DARK THEME ───────────── */
@@ -43,6 +45,8 @@
     --glow: rgba(232,163,130,0.05);
     --tag-blue: #82b8d0;
     --tag-blue-border: #2b4f60;
+    --tag-green: #9ab589;
+    --tag-green-border: #3f5a35;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -327,6 +331,7 @@
 
   .tag.alevel { color: var(--accent); border-color: var(--accent-soft); }
   .tag.gcse { color: var(--tag-blue); border-color: var(--tag-blue-border); }
+  .tag.ks3 { color: var(--tag-green); border-color: var(--tag-green-border); }
 
   /* ───────────── ABOUT / NOTES SECTION ───────────── */
   .about {
@@ -487,93 +492,15 @@
     </div>
   </header>
 
-  <!-- ═══════════ SECTION 1: PHYSICS ═══════════ -->
-  <section id="Physics">
+  <!-- ═══════════ SECTION 1: SIMULATIONS ═══════════ -->
+  <section id="simulations">
     <div class="section-header">
       <span class="section-number">§ 01</span>
-      <h2 class="section-title">Physics</h2>
-      <span class="section-blurb">Interactive physics models you can poke, drag, and break. Guided walkthroughs, jupyternotebooks.</span>
+      <h2 class="section-title">Simulations</h2>
+      <span class="section-blurb">Interactive physics models you can poke, drag, and break.</span>
     </div>
-    <div class="grid">
-
-      <a class="card" href="https://jshphysics.github.io/BPhO-computational-physics-2026/lab/index.html" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Coding</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Computational Physics Olympiad</h3>
-        <p>A Jupyter notebook to provide support for students attempting the British Computational Physics Olympiad.</p>
-        <div class="card-tags">
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-      
-      <a class="card" href="https://jshphysics.github.io/stellar-parallax-lab/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Astrophysics</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Stellar Parallax Lab</h3>
-        <p>Follow a guided walkthrough of Stellar Parallax using real images. Select from 5 stars and use their real images and data to determine how far away they are.</p>
-        <div class="card-tags">
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-      
-      <a class="card" href="https://jshphysics.github.io/hr-diagrams-life-cycle-of-stars/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Astrophysics</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Interactive HR Diagram inc. Life Cycle of Stars</h3>
-        <p>Follow a guided walkthrough of the HR-diagram, included a self-guided worksheet to explore its key features and how the life cycle of stars plays out on it.</p>
-        <div class="card-tags">
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-
-      <a class="card" href="https://jshphysics.github.io/doppler-effect-and-red-shift/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Astrophysics</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Doppler Effect & Cosmological Red-shift</h3>
-        <p>A simulation with key features to demonstrate the Doppler effect. Includes an alternate version which shows cosmological redshift, in both cases spectral lines are available for measurement.</p>
-        <div class="card-tags">
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-      
-      <a class="card" href="https://jshphysics.github.io/DecayLab/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Nuclear</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Radioactive Decay Lab</h3>
-        <p>Explore radioactive decay with adjustable half-lives — including a dice view and a nuclei view with live graph plotting and exportable data so students can analyse it themselves.</p>
-        <div class="card-tags">
-          <span class="tag gcse">GCSE</span>
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-
-      <a class="card" href="https://jshphysics.github.io/upthrust-derivation/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Mechanics</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Upthrust Derivation</h3>
-        <p>A walkthrough derivation of Archimedes' upthrust from first principles. Each stage builds up interactively with students answering self-marking questions as they progress.</p>
-        <div class="card-tags">
-          <span class="tag gcse">GCSE</span>
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-
-      <!-- ─── To add a new card: copy any <a class="card">…</a> block above.
-           The "NN / " number prefix is added automatically by CSS based on
-           document order — just write the category in <span class="card-index">. ─── -->
-
+    <div class="grid" data-section="simulations">
+      <!-- Cards are rendered here from tools.json at runtime. -->
     </div>
   </section>
 
@@ -584,68 +511,16 @@
       <h2 class="section-title">Tools</h2>
       <span class="section-blurb">Trackers, puzzles, and odds-and-ends for the classroom.</span>
     </div>
-    <div class="grid">
-
-      <a class="card" href="https://jshphysics.github.io/revision_tracker/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Tracker</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Revision Tracker <span class="card-preview-tag">(preview)</span></h3>
-        <p>A multi-subject GCSE &amp; A-level revision checklist. Track progress across topics and see what's left to do. The full app is in development — this is an early preview. If you would like your subject added simply give me a checklist of the spec points and I'll see what I can do.</p>
-        <div class="card-tags">
-          <span class="tag gcse">GCSE</span>
-          <span class="tag alevel">A-Level</span>
-        </div>
-      </a>
-
-      <a class="card" href="https://jshphysics.github.io/interactive-clock-cipher/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Cipher</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Clock Cipher</h3>
-        <p>A live encode/decode tool with auto-snap rotation. Good for cryptography starters, end-of-term puzzles, or just having a fiddle.</p>
-      </a>
-      
-      <a class="card" href="https://jshphysics.github.io/similar-different-template-builder/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Similar and Different Generator</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Similar/Different Template Builder</h3>
-        <p>A tool for building Similar/Different comparison activities. Features include exportable to print or digital, touch or keyboard inputs, definable structure.</p>
-      </a>
-
-      <a class="card" href="https://jshphysics.github.io/vocab-schema-builder/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Schema and Mind Maps</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Schema and Mind Map Builder</h3>
-        <p>A tool for building mind maps of vocabulary. Simple interface, touch functionality, ability to save, export and import your map for later improvement.</p>
-      </a>
-
-      <a class="card" href="https://jshphysics.github.io/roll-a-conjunction/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Conjunction Randomizer</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Conjunction Randomizer</h3>
-        <p>A random conjunction picker to help students write richer sentences that get them thinking harder.</p>
-      </a>
-      
-      <a class="card" href="https://jshphysics.github.io/frayer-diagram-maker/" target="_blank" rel="noopener">
-        <div class="card-header">
-          <span class="card-index">Frayer Diagram Maker</span>
-          <span class="card-arrow">↗</span>
-        </div>
-        <h3>Frayer Diagram Maker</h3>
-        <p>A tool for making Frayer Diagrams. Simple export features (copy as image, export as pdf), full touch interactivity including digital pens.</p>
-      </a>
-      
+    <div class="grid" data-section="tools">
+      <!-- Cards are rendered here from tools.json at runtime. -->
     </div>
   </section>
+
+  <noscript>
+    <div style="padding: 24px; border: 1px solid var(--rule); background: var(--paper-warm); margin-top: 32px; font-size: 14px; color: var(--ink-soft);">
+      <strong>JavaScript is disabled.</strong> The list of tools loads dynamically and needs JavaScript to render. You can browse every tool directly at <a href="https://github.com/JSHPhysics/" style="color: var(--accent);">github.com/JSHPhysics</a>.
+    </div>
+  </noscript>
 
   <!-- ═══════════ ABOUT / NOTES ═══════════ -->
   <div class="about">
@@ -694,6 +569,86 @@
         root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
       }
     });
+  })();
+</script>
+
+<script>
+  // ─────────── TOOLS RENDERER ───────────
+  // Fetches tools.json and renders the cards into the section grids.
+  // To add a new tool: edit tools.json — no HTML changes needed.
+  (function() {
+    // Map of known tag slugs → CSS class. Tags not listed get neutral styling.
+    const TAG_CLASS = { 'alevel': 'alevel', 'gcse': 'gcse', 'ks3': 'ks3' };
+
+    function slug(s) {
+      return String(s).toLowerCase().replace(/[\s\-_]+/g, '');
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderTag(tag) {
+      const cls = TAG_CLASS[slug(tag)] || '';
+      return `<span class="tag${cls ? ' ' + cls : ''}">${escapeHtml(tag)}</span>`;
+    }
+
+    function renderCard(tool) {
+      const badge = tool.badge === 'preview'
+        ? ' <span class="card-preview-tag">(preview)</span>'
+        : '';
+      const tagSpans = (tool.tags || []).map(renderTag).join('\n          ');
+      const tagsBlock = tagSpans
+        ? `<div class="card-tags">\n          ${tagSpans}\n        </div>`
+        : '';
+      return `<a class="card" href="${escapeHtml(tool.url)}" target="_blank" rel="noopener">
+        <div class="card-header">
+          <span class="card-index">${escapeHtml(tool.category)}</span>
+          <span class="card-arrow">↗</span>
+        </div>
+        <h3>${escapeHtml(tool.title)}${badge}</h3>
+        <p>${escapeHtml(tool.description)}</p>
+        ${tagsBlock}
+      </a>`;
+    }
+
+    function showError(message) {
+      document.querySelectorAll('.grid').forEach(grid => {
+        grid.innerHTML = `<div class="card"><p style="color: var(--ink-faint); font-size: 13px;">${escapeHtml(message)}</p></div>`;
+      });
+    }
+
+    async function load() {
+      try {
+        const res = await fetch('./tools.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('tools.json returned HTTP ' + res.status);
+        const data = await res.json();
+        const tools = Array.isArray(data) ? data : (data.tools || []);
+
+        // Group tools by their declared section.
+        const bySection = {};
+        tools.forEach(t => {
+          const key = t.section || 'tools';
+          (bySection[key] = bySection[key] || []).push(t);
+        });
+
+        // Render into each section's grid.
+        document.querySelectorAll('.grid[data-section]').forEach(grid => {
+          const key = grid.getAttribute('data-section');
+          const items = bySection[key] || [];
+          grid.innerHTML = items.map(renderCard).join('\n');
+        });
+      } catch (err) {
+        console.error('Failed to load tools.json:', err);
+        showError('Could not load the tools list. Refresh to try again, or visit github.com/JSHPhysics for the full set.');
+      }
+    }
+
+    load();
   })();
 </script>
 

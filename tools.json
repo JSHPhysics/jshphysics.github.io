@@ -1,0 +1,92 @@
+{
+  "_instructions": {
+    "what": "This file is the single source of truth for everything that appears on the JSHPhysics landing page. The page reads this at load time and builds the cards automatically.",
+    "howToAddATool": "Copy any object inside the \"tools\" array below, paste it where you want it to appear (order in this array = order on the page), and edit the fields. Commit and push. That's it — no HTML changes needed.",
+    "fields": {
+      "title":       "Display name shown in large text on the card.",
+      "url":         "Full URL to the live tool.",
+      "section":     "Either \"simulations\" or \"tools\". Determines which page section the card appears in.",
+      "category":    "Short label shown above the title (e.g. \"Mechanics\", \"Nuclear\", \"Cipher\"). The \"NN / \" number prefix is added automatically.",
+      "description": "1–2 sentences of body text. Plain text — no HTML.",
+      "tags":        "Optional. Array of strings shown as small chips at the bottom of the card. See tagConventions below.",
+      "badge":       "Optional. Set to \"preview\" to show a small (preview) marker next to the title. Omit otherwise."
+    },
+    "tagConventions": {
+      "note": "Level tags (KS3, GCSE, A-Level) are colour-coded automatically — KS3 green, GCSE blue, A-Level coral. Every other tag renders in the default neutral grey. New tags can be added freely as plain strings; they just won't get a special colour unless a CSS rule is added for them.",
+      "levels": ["KS3", "GCSE", "A-Level"],
+      "types": ["Teacher Tool", "Study Tool"],
+      "physicsTopics": [
+        "Mechanics", "Forces", "Energy", "Electricity", "Magnetism",
+        "Waves", "Light", "Thermal", "Particles", "Materials",
+        "Nuclear", "Astrophysics", "Quantum", "Fields", "Space"
+      ]
+    },
+    "orderingAndNumbering": "Cards are numbered (01, 02, 03…) automatically by CSS, based on document order. Reorder cards by reordering objects in this array. Numbering runs continuously across both sections (so if simulations has 3 entries, the first tool will be 04).",
+    "sectionsAvailable": ["simulations", "tools"]
+  },
+
+  "tools": [
+    {
+      "title": "Stellar Parallax Lab",
+      "url": "https://jshphysics.github.io/stellar-parallax-lab/",
+      "section": "simulations",
+      "category": "Astrophysics",
+      "description": "Follow a guided walkthrough of Stellar Parallax using real images. Select from 5 stars and use their real images and data to determine how far away they are.",
+      "tags": ["A-Level"]
+    },
+    {
+      "title": "Radioactive Decay Lab",
+      "url": "https://jshphysics.github.io/DecayLab/",
+      "section": "simulations",
+      "category": "Nuclear",
+      "description": "Explore radioactive decay with adjustable half-lives — including a dice view and a nuclei view with live graph plotting and exportable data so students can analyse it themselves.",
+      "tags": ["GCSE", "A-Level"]
+    },
+    {
+      "title": "Upthrust Derivation",
+      "url": "https://jshphysics.github.io/upthrust-derivation/",
+      "section": "simulations",
+      "category": "Mechanics",
+      "description": "A walkthrough derivation of Archimedes' upthrust from first principles. Each stage builds up interactively with students answering self-marking questions as they progress.",
+      "tags": ["GCSE", "A-Level"]
+    },
+
+    {
+      "title": "Revision Tracker",
+      "url": "https://jshphysics.github.io/revision_tracker/",
+      "section": "tools",
+      "category": "Tracker",
+      "description": "A multi-subject GCSE & A-level revision checklist. Track progress across topics and see what's left to do. The full app is in development — this is an early preview. If you would like your subject added simply give me a checklist of the spec points and I'll see what I can do.",
+      "tags": ["GCSE", "A-Level"],
+      "badge": "preview"
+    },
+    {
+      "title": "Clock Cipher",
+      "url": "https://jshphysics.github.io/interactive-clock-cipher/",
+      "section": "tools",
+      "category": "Cipher",
+      "description": "A live encode/decode tool with auto-snap rotation. Good for cryptography starters, end-of-term puzzles, or just having a fiddle."
+    },
+    {
+      "title": "Similar/Different Template Builder",
+      "url": "https://jshphysics.github.io/similar-different-template-builder/",
+      "section": "tools",
+      "category": "Similar and Different Generator",
+      "description": "A tool for building Similar/Different comparison activities. Features include exportable to print or digital, touch or keyboard inputs, definable structure."
+    },
+    {
+      "title": "Schema and Mind Map Builder",
+      "url": "https://jshphysics.github.io/vocab-schema-builder/",
+      "section": "tools",
+      "category": "Schema and Mind Maps",
+      "description": "A tool for building mind maps of vocabulary. Simple interface, touch functionality, ability to save, export and import your map for later improvement."
+    },
+    {
+      "title": "Conjunction Randomizer",
+      "url": "https://jshphysics.github.io/roll-a-conjunction/",
+      "section": "tools",
+      "category": "Conjunction Randomizer",
+      "description": "A random conjunction picker to help students write richer sentences that get them thinking harder."
+    }
+  ]
+}
