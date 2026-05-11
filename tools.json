@@ -43,6 +43,14 @@
       "tags": ["GCSE", "A-Level"]
     },
     {
+      "title": "Meausre the Hubble Constant",
+      "url": "https://jshphysics.github.io/measure-the-hubble-constant/",
+      "section": "simulations",
+      "category": "Astrophysics",
+      "description": "Using a generated field of stars take measurements of wavelength, determine the recessional velocity, and find Hubble's constant.",
+      "tags": ["A-Level"]      
+    },
+    {
       "title": "Upthrust Derivation",
       "url": "https://jshphysics.github.io/upthrust-derivation/",
       "section": "simulations",
