@@ -43,12 +43,28 @@
       "tags": ["GCSE", "A-Level"]
     },
     {
+      "title": "Doppler Effect & Red-shift",
+      "url": "https://jshphysics.github.io/doppler-effect-and-red-shift/",
+      "section": "simulations",
+      "category": "Astrophysics",
+      "description": "A simulation tool to show the Classical Doppler effect, including measuring of emmision spectra and calculation of red-shift. Also features a mode displaying cosmological red-shift.",
+      "tags": ["A-Level", "GCSE"]
+    },
+    {
       "title": "Measure the Hubble Constant",
       "url": "https://jshphysics.github.io/measure-the-hubble-constant/",
       "section": "simulations",
       "category": "Astrophysics",
       "description": "Using a generated field of stars take measurements of wavelength, determine the recessional velocity, and find Hubble's constant.",
       "tags": ["A-Level"]      
+    },
+    {
+      "title": "HR Diagrams & Life Cycle of Stars",
+      "url": "https://jshphysics.github.io/hr-diagrams-life-cycle-of-stars/",
+      "section": "simulations",
+      "category": "Astrophysics",
+      "description": "An interactive HR-diagram for students to explore. Features built-in downloadable worksheet. Students can follow the life cycle of stars as it plays out on the HR diagram with guided explanations and different complexity levels.",
+      "tags": ["A-Level", "GCSE"]      
     },
     {
       "title": "Upthrust Derivation",
