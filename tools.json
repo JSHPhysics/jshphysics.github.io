@@ -135,6 +135,15 @@
       "image": "roll-a-conjunction.png"
     },
     {
+      "title": "Fantastic Flashcards",
+      "url": "https://jshphysics.github.io/fantastic-flashcards/",
+      "section": "tools",
+      "category": "Flashcards",
+      "description": "A free, privacy-respecting flashcard app supporting a wide range of specialised card types, with correct accent and language support and built-in pedagogically-backed algorithms for tracking card mastery. No student data is stored anywhere.",
+      "pedagogy": "Most flashcard tools either harvest student data or limit cards to plain Q-and-A, which encourages shallow memorisation. Specialised card types let students rehearse the actual cognitive operation the subject demands — equation rearrangement, language inflection, labelled diagram recall — instead of substituting it with verbal recognition. Built-in mastery tracking adapts review intervals to where each student actually is, which is the central insight of spaced repetition: the right card at the right time beats more cards more often.",
+      "image": "fantastic-flashcards.png"
+    },
+    {
       "title": "Curriculum Planner",
       "url": "https://github.com/JSHPhysics/curriculum-planner/releases/tag/v1.9.0",
       "section": "tools",
