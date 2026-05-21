@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JSHPhysics — On the design of these tools</title>
+<meta name="description" content="Notes on the pedagogy behind each tool in the JSHPhysics collection — why each one is more powerful than the traditional teaching of the same content." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,500;9..144,0,700;9..144,1,400;9..144,1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ───────────── LIGHT THEME (default) — matches index.html ───────────── */
+:root {
+  --paper: #f5f1ea;
+  --paper-warm: #ede7db;
+  --ink: #1a1d22;
+  --ink-soft: #4a4d54;
+  --ink-faint: #8a8d94;
+  --rule: #d8d2c4;
+  --accent: #c4502b;
+  --accent-soft: #e8a382;
+  --highlight: #f0e9d8;
+  --grain: rgba(26,29,34,0.025);
+  --glow: rgba(196,80,43,0.04);
+  --tag-blue: #2b6f8e;
+  --tag-blue-border: #a8c8d8;
+  --tag-green: #4a6b3f;
+  --tag-green-border: #b5c8a8;
+}
+
+/* ───────────── DARK THEME ───────────── */
+[data-theme="dark"] {
+  --paper: #16181d;
+  --paper-warm: #1d2027;
+  --ink: #ede7db;
+  --ink-soft: #b8b3a8;
+  --ink-faint: #71706c;
+  --rule: #2c2f37;
+  --accent: #e8a382;
+  --accent-soft: #c4502b;
+  --highlight: #21252e;
+  --grain: rgba(237,231,219,0.018);
+  --glow: rgba(232,163,130,0.05);
+  --tag-blue: #82b8d0;
+  --tag-blue-border: #2b4f60;
+  --tag-green: #9ab589;
+  --tag-green-border: #3f5a35;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--grain) 1px, transparent 0),
+    radial-gradient(circle at 30% 20%, var(--glow), transparent 60%);
+  background-size: 24px 24px, 100% 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ───────────── HEADER ───────────── */
+header {
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 64px;
+  gap: 16px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-links a {
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-links a:hover { color: var(--accent); }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-faint);
+  transition: color 0.2s, border-color 0.2s, transform 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+  transform: rotate(20deg);
+}
+
+.theme-toggle svg { width: 14px; height: 14px; }
+.theme-toggle .icon-moon { display: block; }
+.theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+/* Breadcrumb */
+.breadcrumb {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+}
+.breadcrumb a {
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 48px;
+  max-width: 760px;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.lede {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* ───────────── SECTIONS ───────────── */
+section {
+  padding: 80px 0 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 16px;
+}
+
+.section-number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+}
+
+.section-blurb {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--ink-faint);
+  max-width: 320px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* ───────────── ENTRIES ───────────── */
+/* Counter that runs across both sections, like index.html */
+body { counter-reset: entry-counter; }
+.entry { counter-increment: entry-counter; }
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+
+/* Image side */
+.entry-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+.entry-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-media[data-state="empty"] img { display: none; }
+.entry-media[data-state="empty"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg,
+      transparent 0,
+      transparent 18px,
+      var(--rule) 18px,
+      var(--rule) 19px);
+  opacity: 0.55;
+}
+.entry-media[data-state="empty"]::after {
+  content: attr(data-empty-label);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: 16px;
+  text-align: center;
+}
+
+/* Edit-mode controls — only visible when body has .edit-mode */
+.entry-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  gap: 6px;
+  z-index: 2;
+}
+body.edit-mode .entry-controls { display: flex; }
+
+.entry-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+  padding: 6px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 150ms ease;
+}
+.entry-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.entry-btn-file { display: none; }
+
+.entry-filename {
+  display: none;
+  margin-top: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  word-break: break-all;
+}
+body.edit-mode .entry-filename { display: block; }
+.entry-filename strong { color: var(--ink-soft); font-weight: 500; }
+
+/* Body side */
+.entry-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.entry-meta .num { color: var(--accent); }
+.entry-meta .num::before { content: counter(entry-counter, decimal-leading-zero) " · "; }
+
+.entry-body h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.entry-body h3 .preview-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.entry-description {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 56ch;
+}
+
+.entry-pedagogy {
+  padding: 18px 22px;
+  background: var(--paper-warm);
+  border-left: 2px solid var(--accent);
+  margin-bottom: 20px;
+  max-width: 56ch;
+}
+.entry-pedagogy-label {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.entry-pedagogy p {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.entry-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  padding: 3px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.tag.alevel { color: var(--accent); border-color: var(--accent-soft); }
+.tag.gcse { color: var(--tag-blue); border-color: var(--tag-blue-border); }
+.tag.ks3 { color: var(--tag-green); border-color: var(--tag-green-border); }
+
+.entry-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 150ms ease;
+}
+.entry-link:hover { border-bottom-color: var(--accent); }
+.entry-link .arrow { transition: transform 200ms ease; }
+.entry-link:hover .arrow { transform: translate(3px, -3px); }
+
+/* Edit-mode banner */
+.edit-banner {
+  display: none;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+body.edit-mode .edit-banner { display: block; }
+
+/* ───────────── FOOTER ───────────── */
+footer {
+  margin-top: 64px;
+  padding: 48px 0 32px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+footer a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+footer a:hover { color: var(--accent); border-color: var(--accent); }
+.footer-links { display: flex; gap: 20px; }
+
+/* ───────────── RESPONSIVE ───────────── */
+@media (max-width: 820px) {
+  .container { padding: 0 20px; }
+  .header-top { margin-bottom: 40px; flex-wrap: wrap; }
+  .header-links { gap: 14px; }
+  section { padding: 56px 0 16px; }
+  .section-header { flex-wrap: wrap; gap: 12px; }
+  .section-blurb { margin-left: 0; text-align: left; max-width: 100%; }
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 0;
+  }
+  .entry-media { max-width: 100%; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+
+/* Fade-in on load */
+.fade-in {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header>
+    <div class="header-top mono">
+      <span>JSHPhysics · Notes on the design</span>
+      <div class="header-links">
+        <a href="./">← back to tools</a>
+        <a href="https://x.com/educatorJSH" target="_blank" rel="noopener">@educatorJSH ↗</a>
+        <a href="https://github.com/JSHPhysics/" target="_blank" rel="noopener">GitHub ↗</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1 class="fade-in">On the <em>design</em> of these tools</h1>
+      <p class="lede fade-in">A note on each tool in the collection — what traditional teaching method it replaces or improves on, and the cognitive mechanism behind why it works.</p>
+    </div>
+  </header>
+
+  <div class="edit-banner mono">Edit mode active · upload controls visible · plain URL hides them again.</div>
+
+  <!-- ═══════════ SECTION 1: SIMULATIONS ═══════════ -->
+  <section id="simulations">
+    <div class="section-header">
+      <span class="section-number">§ 01</span>
+      <h2 class="section-title">Simulations</h2>
+      <span class="section-blurb">The pedagogy behind each interactive model.</span>
+    </div>
+    <div class="entry-list" data-section="simulations"></div>
+  </section>
+
+  <!-- ═══════════ SECTION 2: TOOLS ═══════════ -->
+  <section id="tools">
+    <div class="section-header">
+      <span class="section-number">§ 02</span>
+      <h2 class="section-title">Tools</h2>
+      <span class="section-blurb">Trackers, builders and classroom utilities.</span>
+    </div>
+    <div class="entry-list" data-section="tools"></div>
+  </section>
+
+  <noscript>
+    <div style="padding: 24px; border: 1px solid var(--rule); background: var(--paper-warm); margin-top: 32px; font-size: 14px; color: var(--ink-soft);">
+      <strong>JavaScript is disabled.</strong> The list of tools loads dynamically and needs JavaScript to render. You can browse every tool directly at <a href="https://github.com/JSHPhysics/" style="color: var(--accent);">github.com/JSHPhysics</a>.
+    </div>
+  </noscript>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <span class="mono">© Joshua · jshphysics</span>
+    <div class="footer-links">
+      <a href="./">Back to tools</a>
+      <a href="https://x.com/educatorJSH" target="_blank" rel="noopener">Follow @educatorJSH</a>
+      <a href="https://github.com/JSHPhysics/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// ─────────── THEME TOGGLE (shares storage key with index.html so theme persists across pages) ───────────
+(function() {
+  const STORAGE_KEY = 'jsh-theme';
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const stored = localStorage.getItem(STORAGE_KEY);
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = stored || (systemPrefersDark ? 'dark' : 'light');
+  root.setAttribute('data-theme', initialTheme);
+
+  toggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem(STORAGE_KEY, next);
+  });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    }
+  });
+})();
+</script>
+
+<script>
+// ─────────── EDIT MODE (triggered by ?edit or #edit) ───────────
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const hashEdit = window.location.hash === '#edit';
+  if (params.has('edit') || hashEdit) {
+    document.body.classList.add('edit-mode');
+  }
+})();
+</script>
+
+<script>
+// ─────────── PEDAGOGY ENTRIES RENDERER ───────────
+// Fetches tools.json (the same single source of truth used by index.html)
+// and renders one detailed entry per tool with image, description, pedagogy note, and link.
+(function() {
+  const TAG_CLASS = { 'alevel': 'alevel', 'gcse': 'gcse', 'ks3': 'ks3' };
+  function slug(s) { return String(s).toLowerCase().replace(/[\s\-_]+/g, ''); }
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderEntry(tool) {
+    const imageFile = tool.image || '';
+    const imagePath = imageFile ? `images/${imageFile}` : '';
+    const sectionLabel = tool.section === 'simulations' ? 'Simulation' : 'Tool';
+    const category = tool.category ? ` · ${esc(tool.category)}` : '';
+    const previewBadge = tool.badge === 'preview'
+      ? ' <span class="preview-tag">(preview)</span>' : '';
+    const tagSpans = (tool.tags || []).map(t => {
+      const cls = TAG_CLASS[slug(t)] || '';
+      return `<span class="tag${cls ? ' ' + cls : ''}">${esc(t)}</span>`;
+    }).join(' ');
+    const tagsBlock = tagSpans ? `<div class="entry-tags">${tagSpans}</div>` : '';
+    const pedagogy = tool.pedagogy ? `
+      <div class="entry-pedagogy">
+        <span class="entry-pedagogy-label">Why this matters</span>
+        <p>${esc(tool.pedagogy)}</p>
+      </div>` : '';
+    const link = tool.url
+      ? `<a class="entry-link" href="${esc(tool.url)}" target="_blank" rel="noopener">visit tool <span class="arrow">↗</span></a>`
+      : '';
+    const emptyLabel = imagePath
+      ? `Add ${imagePath} to the repo`
+      : 'No image yet';
+
+    return `
+      <article class="entry">
+        <div class="entry-media-wrap">
+          <div class="entry-media" data-state="empty" data-empty-label="${esc(emptyLabel)}" data-path="${esc(imagePath)}">
+            <img alt="" loading="lazy" />
+            <div class="entry-controls">
+              <label class="entry-btn">
+                Upload
+                <input type="file" class="entry-btn-file" accept="image/*" />
+              </label>
+              <button class="entry-btn entry-btn-clear" type="button">Clear</button>
+            </div>
+          </div>
+          <div class="entry-filename">expects: <strong>${esc(imagePath || '— no image filename set —')}</strong></div>
+        </div>
+        <div class="entry-body">
+          <div class="entry-meta">
+            <span class="num">${esc(sectionLabel)}${category}</span>
+          </div>
+          <h3>${esc(tool.title)}${previewBadge}</h3>
+          <p class="entry-description">${esc(tool.description)}</p>
+          ${pedagogy}
+          ${tagsBlock}
+          ${link}
+        </div>
+      </article>
+    `;
+  }
+
+  function wireMediaSlot(article) {
+    const slot = article.querySelector('.entry-media');
+    if (!slot) return;
+    const img = slot.querySelector('img');
+    const fileInput = slot.querySelector('.entry-btn-file');
+    const clearBtn = slot.querySelector('.entry-btn-clear');
+    const path = slot.dataset.path;
+
+    if (path) {
+      img.onload = () => { slot.dataset.state = 'filled'; };
+      img.onerror = () => { slot.dataset.state = 'empty'; img.removeAttribute('src'); };
+      img.src = path;
+    }
+
+    if (fileInput) {
+      fileInput.addEventListener('change', e => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+          img.src = ev.target.result;
+          slot.dataset.state = 'filled';
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        img.removeAttribute('src');
+        if (fileInput) fileInput.value = '';
+        slot.dataset.state = 'empty';
+      });
+    }
+  }
+
+  function showError(message) {
+    document.querySelectorAll('.entry-list').forEach(list => {
+      list.innerHTML = `<div style="padding: 32px; color: var(--ink-faint); font-size: 13px;">${message}</div>`;
+    });
+  }
+
+  async function load() {
+    try {
+      const res = await fetch('./tools.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('tools.json returned HTTP ' + res.status);
+      const data = await res.json();
+      const tools = Array.isArray(data) ? data : (data.tools || []);
+
+      const bySection = {};
+      tools.forEach(t => {
+        const key = t.section || 'tools';
+        (bySection[key] = bySection[key] || []).push(t);
+      });
+
+      document.querySelectorAll('.entry-list[data-section]').forEach(list => {
+        const key = list.getAttribute('data-section');
+        const items = bySection[key] || [];
+        list.innerHTML = items.map(renderEntry).join('\n');
+        list.querySelectorAll('.entry').forEach(wireMediaSlot);
+      });
+    } catch (err) {
+      console.error('Failed to load tools.json:', err);
+      showError('Could not load tools.json. Refresh to try again.');
+    }
+  }
+
+  load();
+})();
+</script>
+
+</body>
+</html>

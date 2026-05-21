@@ -1,15 +1,17 @@
 {
   "_instructions": {
-    "what": "This file is the single source of truth for everything that appears on the JSHPhysics landing page. The page reads this at load time and builds the cards automatically.",
+    "what": "This file is the single source of truth for everything that appears on the JSHPhysics landing page AND the pedagogy notes subpage. Both pages read this at load time and build their content automatically.",
     "howToAddATool": "Copy any object inside the \"tools\" array below, paste it where you want it to appear (order in this array = order on the page), and edit the fields. Commit and push. That's it — no HTML changes needed.",
     "fields": {
-      "title":       "Display name shown in large text on the card.",
-      "url":         "Full URL to the live tool.",
-      "section":     "Either \"simulations\" or \"tools\". Determines which page section the card appears in.",
-      "category":    "Short label shown above the title (e.g. \"Mechanics\", \"Nuclear\", \"Cipher\"). The \"NN / \" number prefix is added automatically.",
+      "title": "Display name shown in large text on the card.",
+      "url": "Full URL to the live tool (or release page / download link for desktop apps).",
+      "section": "Either \"simulations\" or \"tools\". Determines which page section the card appears in.",
+      "category": "Short label shown above the title (e.g. \"Mechanics\", \"Nuclear\", \"Cipher\"). The \"NN / \" number prefix is added automatically.",
       "description": "1–2 sentences of body text. Plain text — no HTML.",
-      "tags":        "Optional. Array of strings shown as small chips at the bottom of the card. See tagConventions below.",
-      "badge":       "Optional. Set to \"preview\" to show a small (preview) marker next to the title. Omit otherwise."
+      "pedagogy": "Used by /pedagogy.html only. 2–4 sentences explaining why this tool is pedagogically powerful compared to traditional teaching of the same content. Name the cognitive mechanism or the specific traditional method being improved on. Plain text — no HTML.",
+      "image": "Used by /pedagogy.html only. Filename of a screenshot or illustration in the /images/ folder (e.g. \"decay-lab.png\"). Recommended 16:10, ≥ 960px wide. If omitted or the file is missing, a neutral placeholder is shown.",
+      "tags": "Optional. Array of strings shown as small chips at the bottom of the card. See tagConventions below.",
+      "badge": "Optional. Set to \"preview\" to show a small (preview) marker next to the title. Omit otherwise."
     },
     "tagConventions": {
       "note": "Level tags (KS3, GCSE, A-Level) are colour-coded automatically — KS3 green, GCSE blue, A-Level coral. Every other tag renders in the default neutral grey. New tags can be added freely as plain strings; they just won't get a special colour unless a CSS rule is added for them.",
@@ -24,7 +26,6 @@
     "orderingAndNumbering": "Cards are numbered (01, 02, 03…) automatically by CSS, based on document order. Reorder cards by reordering objects in this array. Numbering runs continuously across both sections (so if simulations has 3 entries, the first tool will be 04).",
     "sectionsAvailable": ["simulations", "tools"]
   },
-
   "tools": [
     {
       "title": "Stellar Parallax Lab",
@@ -32,6 +33,8 @@
       "section": "simulations",
       "category": "Astrophysics",
       "description": "Follow a guided walkthrough of Stellar Parallax using real images. Select from 5 stars and use their real images and data to determine how far away they are.",
+      "pedagogy": "Textbook parallax problems use clean diagrams and contrived numbers. Working with real star images forces students to confront how vanishingly small parallax angles actually are — turning an abstract formula into a felt sense of why measuring stellar distances is genuinely hard. It also models how working astronomers use data, not just equations.",
+      "image": "stellar-parallax-lab.png",
       "tags": ["A-Level"]
     },
     {
@@ -40,6 +43,8 @@
       "section": "simulations",
       "category": "Nuclear",
       "description": "Explore radioactive decay with adjustable half-lives — including a dice view and a nuclei view with live graph plotting and exportable data so students can analyse it themselves.",
+      "pedagogy": "The classroom dice analogy is tactile but caps at a few noisy trials. Running thousands of nuclei lets students see aggregate exponential behaviour emerge from individually random events — the core idea of stochastic modelling. Exportable data means students do their own graph analysis rather than copy a teacher-drawn curve, which is where the real learning lives.",
+      "image": "decay-lab.png",
       "tags": ["GCSE", "A-Level"]
     },
     {
@@ -48,6 +53,8 @@
       "section": "simulations",
       "category": "Astrophysics",
       "description": "A simulation tool to show the Classical Doppler effect, including measuring of emmision spectra and calculation of red-shift. Also features a mode displaying cosmological red-shift.",
+      "pedagogy": "Traditional teaching shows pre-drawn before/after spectra and asserts the v–Δλ relationship. Letting students vary recession velocity and watch the spectral lines shift in real time builds the equation through observation rather than receiving it as a given. The toggle between classical and cosmological modes surfaces a confusion that's almost universal at the GCSE-to-A-level transition, and rarely addressed head-on.",
+      "image": "doppler-redshift.png",
       "tags": ["A-Level", "GCSE"]
     },
     {
@@ -56,7 +63,9 @@
       "section": "simulations",
       "category": "Astrophysics",
       "description": "Using a generated field of stars take measurements of wavelength, determine the recessional velocity, and find Hubble's constant.",
-      "tags": ["A-Level"]      
+      "pedagogy": "Most students never derive a physical constant from raw data — they accept H₀ as a number on a formula sheet. Generating a star field, measuring wavelengths, plotting velocity against distance, and reading a gradient gives students the actual scientific method, not just its description. It also reinforces the transferable habit that physical constants almost always live in the gradient of the right graph.",
+      "image": "hubble-constant.png",
+      "tags": ["A-Level"]
     },
     {
       "title": "HR Diagrams & Life Cycle of Stars",
@@ -64,7 +73,9 @@
       "section": "simulations",
       "category": "Astrophysics",
       "description": "An interactive HR-diagram for students to explore. Features built-in downloadable worksheet. Students can follow the life cycle of stars as it plays out on the HR diagram with guided explanations and different complexity levels.",
-      "tags": ["A-Level", "GCSE"]      
+      "pedagogy": "HR diagrams suffer the same problem as static flowcharts — students copy them without seeing them as a dynamic record of how stars move. Playing the life cycle directly on the diagram connects the static representation to the underlying physical process. Multiple complexity levels means the same artefact serves a novice meeting main sequence for the first time and a confident A-level student exploring why massive stars cut left.",
+      "image": "hr-diagram.png",
+      "tags": ["A-Level", "GCSE"]
     },
     {
       "title": "Upthrust Derivation",
@@ -72,6 +83,8 @@
       "section": "simulations",
       "category": "Mechanics",
       "description": "A walkthrough derivation of Archimedes' upthrust from first principles. Each stage builds up interactively with students answering self-marking questions as they progress.",
+      "pedagogy": "A board derivation is shown once and immediately forgotten. Step-gated reveals with embedded MCQs combine the worked-example effect with retrieval practice at every algebraic step. Distractors are written to surface specific misconceptions — sign errors, pressure-depth confusion — rather than just being plausible-wrong, so a student's wrong answer is the diagnostic signal.",
+      "image": "upthrust-derivation.png",
       "tags": ["GCSE", "A-Level"]
     },
     {
@@ -80,6 +93,8 @@
       "section": "tools",
       "category": "Tracker",
       "description": "A multi-subject GCSE & A-level revision checklist. Track progress across topics and see what's left to do. The full app is in development — this is an early preview. If you would like your subject added simply give me a checklist of the spec points and I'll see what I can do.",
+      "pedagogy": "A printed revision checklist is static and quickly hidden in a folder. Active tracking at spec-point granularity creates a visible feedback loop: students see exactly what they have and have not covered, which converts vague 'I should revise physics' into a concrete next action. Targeted revision beats general revision every time, but only if the gap is visible.",
+      "image": "revision-tracker.png",
       "tags": ["GCSE", "A-Level"],
       "badge": "preview"
     },
@@ -88,28 +103,46 @@
       "url": "https://jshphysics.github.io/interactive-clock-cipher/",
       "section": "tools",
       "category": "Cipher",
-      "description": "A live encode/decode tool with auto-snap rotation. Good for cryptography starters, end-of-term puzzles, or just having a fiddle."
+      "description": "A live encode/decode tool with auto-snap rotation. Good for cryptography starters, end-of-term puzzles, or just having a fiddle.",
+      "pedagogy": "Paper cipher templates burn most of the lesson on careful rotation and copying — bookkeeping, not thinking. Auto-snap and live bidirectional encode/decode strip that friction so cognitive load lands on the cipher mechanic itself. Students can hypothesise, test, and revise in seconds, which is the iteration loop that actually builds problem-solving.",
+      "image": "clock-cipher.png"
     },
     {
       "title": "Similar/Different Template Builder",
       "url": "https://jshphysics.github.io/similar-different-template-builder/",
       "section": "tools",
       "category": "Similar and Different Generator",
-      "description": "A tool for building Similar/Different comparison activities. Features include exportable to print or digital, touch or keyboard inputs, definable structure."
+      "description": "A tool for building Similar/Different comparison activities. Features include exportable to print or digital, touch or keyboard inputs, definable structure.",
+      "pedagogy": "Comparative thinking is one of the most robust routes to deep encoding — analogical reasoning transfers better than rote definitions. Traditional teaching offers single examples; this scaffolds the comparison explicitly, forcing students to articulate both what is shared and what differs between two cases. That dual articulation is where the cognitive heavy lifting happens.",
+      "image": "similar-different.png"
     },
     {
       "title": "Schema and Mind Map Builder",
       "url": "https://jshphysics.github.io/vocab-schema-builder/",
       "section": "tools",
       "category": "Schema and Mind Maps",
-      "description": "A tool for building mind maps of vocabulary. Simple interface, touch functionality, ability to save, export and import your map for later improvement."
+      "description": "A tool for building mind maps of vocabulary. Simple interface, touch functionality, ability to save, export and import your map for later improvement.",
+      "pedagogy": "Experts are distinguished from novices largely by the richness of their schemas. Paper mind maps are messy and disposable; saving, exporting and reimporting lets a student revisit the same schema across weeks and watch their own model grow more sophisticated. The map becomes a longitudinal record of conceptual change, not a one-off lesson activity.",
+      "image": "vocab-schema-builder.png"
     },
     {
       "title": "Conjunction Randomizer",
       "url": "https://jshphysics.github.io/roll-a-conjunction/",
       "section": "tools",
       "category": "Conjunction Randomizer",
-      "description": "A random conjunction picker to help students write richer sentences that get them thinking harder."
+      "description": "A random conjunction picker to help students write richer sentences that get them thinking harder.",
+      "pedagogy": "Open prompts like 'write a sentence about X' let students default to descriptive listing. A forced conjunction — 'however', 'because', 'in contrast to' — demands a specific cognitive operation (contrast, causation, comparison) that turns recall into reasoning. Randomisation stops students gravitating to the easiest connective every time, broadening the range of thinking they have to do.",
+      "image": "roll-a-conjunction.png"
+    },
+    {
+      "title": "Curriculum Planner",
+      "url": "https://github.com/JSHPhysics/curriculum-planner/releases/tag/v1.9.0",
+      "section": "tools",
+      "category": "Planner",
+      "description": "A desktop app for planning long-term schemes of work. Import a spec from TSV/XLSX (topic, sub-topic, lessons, objectives) and sequence across years, terms and practicals. Released on GitHub — see the v1.9.0 release page for downloads.",
+      "pedagogy": "Schemes of work usually follow exam-board order out of inertia, even where it forces pedagogically poor sequencing — stopping distances before work done; electricity before the particle model. Treating the spec as data — importable, reorderable, dependency-aware — lets you plan around how concepts genuinely build, not around how the spec happens to list them. The structure becomes a thinking tool, not a constraint.",
+      "image": "curriculum-planner.png",
+      "tags": ["Teacher Tool"]
     }
   ]
 }
