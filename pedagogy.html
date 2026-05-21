@@ -253,19 +253,27 @@ body { counter-reset: entry-counter; }
   align-items: start;
 }
 
-/* Image side */
+/* Image side
+   Filled state: width and height are set inline by JS so the container
+   takes the image's own aspect ratio, capped at column width × the
+   body-column height. Empty/loading state falls back to a 16:10
+   placeholder filling the column so the striped texture still has room. */
 .entry-media {
   position: relative;
-  aspect-ratio: 16 / 10;
   background: var(--paper-warm);
   border: 1px solid var(--rule);
   overflow: hidden;
 }
 
+.entry-media[data-state="empty"] {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
 .entry-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -930,11 +938,49 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
     const fileInput = slot.querySelector('.entry-btn-file');
     const clearBtn = slot.querySelector('.entry-btn-clear');
     const path = slot.dataset.path;
+    const body = article.querySelector('.entry-body');
+    const wrap = slot.parentNode;
+
+    function fitToImage() {
+      if (slot.dataset.state !== 'filled') return;
+      if (!img.naturalWidth || !img.naturalHeight) return;
+      const maxW = (wrap && wrap.clientWidth) || 0;
+      const maxH = body ? body.offsetHeight : 0;
+      if (!maxW || !maxH) return;
+      const ar = img.naturalWidth / img.naturalHeight;
+      let w = maxW;
+      let h = w / ar;
+      if (h > maxH) {
+        h = maxH;
+        w = h * ar;
+      }
+      slot.style.width = w + 'px';
+      slot.style.height = h + 'px';
+    }
+
+    function unsetSize() {
+      slot.style.width = '';
+      slot.style.height = '';
+    }
 
     if (path) {
-      img.onload = () => { slot.dataset.state = 'filled'; };
-      img.onerror = () => { slot.dataset.state = 'empty'; img.removeAttribute('src'); };
+      img.onload = () => {
+        slot.dataset.state = 'filled';
+        fitToImage();
+      };
+      img.onerror = () => {
+        slot.dataset.state = 'empty';
+        img.removeAttribute('src');
+        unsetSize();
+      };
       img.src = path;
+    }
+
+    // Re-fit whenever the body column or the wrap column changes height/width
+    if (window.ResizeObserver) {
+      const ro = new ResizeObserver(fitToImage);
+      if (body) ro.observe(body);
+      if (wrap) ro.observe(wrap);
     }
 
     if (fileInput) {
@@ -955,6 +1001,7 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
         img.removeAttribute('src');
         if (fileInput) fileInput.value = '';
         slot.dataset.state = 'empty';
+        unsetSize();
       });
     }
   }
