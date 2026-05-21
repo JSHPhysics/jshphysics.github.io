@@ -10,6 +10,7 @@
       "description": "1–2 sentences of body text. Plain text — no HTML.",
       "pedagogy": "Used by /pedagogy.html only. 2–4 sentences explaining why this tool is pedagogically powerful compared to traditional teaching of the same content. Name the cognitive mechanism or the specific traditional method being improved on. Plain text — no HTML.",
       "image": "Used by /pedagogy.html only. Filename of a screenshot or illustration in the /images/ folder (e.g. \"decay-lab.png\"). Recommended 16:10, ≥ 960px wide. If omitted or the file is missing, a neutral placeholder is shown.",
+      "annotations": "Used by /pedagogy.html only. Optional array of clickable hotspots overlaid on the enlarged (lightboxed) image. Each is { x, y, w, h, title, note } where x/y/w/h are percentages of the image's natural dimensions (0–100). Authored with the offline /annotate.html tool.",
       "tags": "Optional. Array of strings shown as small chips at the bottom of the card. See tagConventions below.",
       "badge": "Optional. Set to \"preview\" to show a small (preview) marker next to the title. Omit otherwise."
     },
@@ -35,6 +36,11 @@
       "description": "Follow a guided walkthrough of Stellar Parallax using real images. Select from 5 stars and use their real images and data to determine how far away they are.",
       "pedagogy": "Textbook parallax problems use clean diagrams and contrived numbers. Working with real star images forces students to confront how vanishingly small parallax angles actually are — turning an abstract formula into a felt sense of why measuring stellar distances is genuinely hard. It also models how working astronomers use data, not just equations.",
       "image": "stellar-parallax-lab.png",
+      "annotations": [
+        {"x": 47.77, "y": 0.92, "w": 21.22, "h": 5.05, "title": "Guided Walkthrough", "note": "Simulation starts with a guided walkthrough of the first star"},
+        {"x": 0.68, "y": 7.57, "w": 24.71, "h": 41.97, "title": "Extending Information", "note": "Each step comes with background about the process and what the student is doing."},
+        {"x": 35.27, "y": 8.1, "w": 57.46, "h": 58.48, "title": "Real images", "note": "The images are overlayed like two transparencies. They are real images from real stars, exactly (minus the colour) how real astronomers would take this measurement."}
+      ],
       "tags": ["A-Level"]
     },
     {
@@ -45,6 +51,12 @@
       "description": "Explore radioactive decay with adjustable half-lives — including a dice view and a nuclei view with live graph plotting and exportable data so students can analyse it themselves.",
       "pedagogy": "The classroom dice analogy is tactile but caps at a few noisy trials. Running thousands of nuclei lets students see aggregate exponential behaviour emerge from individually random events — the core idea of stochastic modelling. Exportable data means students do their own graph analysis rather than copy a teacher-drawn curve, which is where the real learning lives.",
       "image": "decay-lab.png",
+      "annotations": [
+        {"x": 81.3, "y": 0.93, "w": 17.59, "h": 5.51, "title": "Dice and Nuclei Modes", "note": "300 dice will still show statistical variation, but the model can swap to showing nuclei instead, and go up to 1,000,000! Students can see the direct link between the model and reality."},
+        {"x": 79.46, "y": 8.14, "w": 19.67, "h": 23.34, "title": "Customisable No. of Dice and Decay Rule", "note": "Statistical errors are much more common with a lower sample size, this allows the teacher to demonstrate that. Not only that but teachers can show different decay constants to show quicker and slower decaying materials."},
+        {"x": 1.07, "y": 17.06, "w": 15.41, "h": 8.69, "title": "Grid and Graph views", "note": "Teachers can model the dice themselves, or switch to a live-plotting graph to show the granular progression of exponential decay."},
+        {"x": 0.97, "y": 85.93, "w": 75.53, "h": 13.65, "title": "Saved Table for Students", "note": "The table below auto-fills as the simulation progresses. It can be exported to excel in 1 click allowing students to do the analysis and graph plotting."}
+      ],
       "tags": ["GCSE", "A-Level"]
     },
     {
@@ -55,6 +67,13 @@
       "description": "A simulation tool to show the Classical Doppler effect, including measuring of emmision spectra and calculation of red-shift. Also features a mode displaying cosmological red-shift.",
       "pedagogy": "Traditional teaching shows pre-drawn before/after spectra and asserts the v–Δλ relationship. Letting students vary recession velocity and watch the spectral lines shift in real time builds the equation through observation rather than receiving it as a given. The toggle between classical and cosmological modes surfaces a confusion that's almost universal at the GCSE-to-A-level transition, and rarely addressed head-on.",
       "image": "doppler-redshift.png",
+      "annotations": [
+        {"x": 50.08, "y": 3.09, "w": 49.24, "h": 4.75, "title": "Cosmological Redshift Included", "note": "Allows students to probe beyond A-level into ideas that are very difficult to visualise without a good simulation."},
+        {"x": 0.67, "y": 7.19, "w": 97.73, "h": 16.63, "title": "Clear Walkthrough", "note": "Perfect for independent review by students."},
+        {"x": 70.37, "y": 24.88, "w": 29.55, "h": 18.23, "title": "Customizable parameters", "note": "Students can explore red/blue shift in all their variations."},
+        {"x": 1.18, "y": 52.91, "w": 68.01, "h": 13.12, "title": "Dynamic Absoprtion Spectra", "note": "This absorption display dynamically adjusts to match the conditions from the simulation, showing students the direct link between the moving source and red-shift."},
+        {"x": 0.17, "y": 66.51, "w": 99.33, "h": 33.31, "title": "Live Results & Verification", "note": "Allows students to test their own calculations and see if they can replicate the results."}
+      ],
       "tags": ["A-Level", "GCSE"]
     },
     {
@@ -65,6 +84,14 @@
       "description": "Using a generated field of stars take measurements of wavelength, determine the recessional velocity, and find Hubble's constant.",
       "pedagogy": "Most students never derive a physical constant from raw data — they accept H₀ as a number on a formula sheet. Generating a star field, measuring wavelengths, plotting velocity against distance, and reading a gradient gives students the actual scientific method, not just its description. It also reinforces the transferable habit that physical constants almost always live in the gradient of the right graph.",
       "image": "hubble-constant.png",
+      "annotations": [
+        {"x": 75.42, "y": 0.18, "w": 24.43, "h": 4.91, "title": "Student and Teacher Modes", "note": "Use it how you see fit, a guided activity, a presentation, it supports either."},
+        {"x": 58.8, "y": 7.05, "w": 7.77, "h": 4.72, "title": "Explainers for curious students", "note": ""},
+        {"x": 68.68, "y": 6.87, "w": 29.55, "h": 17.54, "title": "Log each star into a table, no faff.", "note": ""},
+        {"x": 68.24, "y": 25.39, "w": 30.33, "h": 46, "title": "Analysis Walkthroughs", "note": ""},
+        {"x": 12.78, "y": 60.35, "w": 9.98, "h": 4.17, "title": "Cosmology Mode", "note": "Let's you explore beyond the course, varying parameters that influence the structure and history of our universe."},
+        {"x": 2.11, "y": 66.36, "w": 65.83, "h": 27.05, "title": "Live data for each star clicked", "note": ""}
+      ],
       "tags": ["A-Level"]
     },
     {
@@ -75,6 +102,14 @@
       "description": "An interactive HR-diagram for students to explore. Features built-in downloadable worksheet. Students can follow the life cycle of stars as it plays out on the HR diagram with guided explanations and different complexity levels.",
       "pedagogy": "HR diagrams suffer the same problem as static flowcharts — students copy them without seeing them as a dynamic record of how stars move. Playing the life cycle directly on the diagram connects the static representation to the underlying physical process. Multiple complexity levels means the same artefact serves a novice meeting main sequence for the first time and a confident A-level student exploring why massive stars cut left.",
       "image": "hr-diagram.png",
+      "annotations": [
+        {"x": 34.98, "y": -1.22, "w": 41.22, "h": 5.97, "title": "Guided walkthroughs by student-type", "note": ""},
+        {"x": 85.88, "y": -1.09, "w": 13.87, "h": 5.65, "title": "Quick text size adjustments for clarity", "note": ""},
+        {"x": 0.15, "y": 7.7, "w": 53.24, "h": 6.61, "title": "Built-in \"question your way through it\"", "note": ""},
+        {"x": 0.5, "y": 14.96, "w": 32.93, "h": 7.32, "title": "Filters to highlight only what you need", "note": ""},
+        {"x": 75.45, "y": 14.38, "w": 23.95, "h": 29.33, "title": "Parameters of a star, wherever you drop it", "note": ""},
+        {"x": 76.4, "y": 69.32, "w": 17.86, "h": 23.75, "title": "Built in \"interesting\" stars", "note": ""}
+      ],
       "tags": ["A-Level", "GCSE"]
     },
     {
@@ -85,6 +120,10 @@
       "description": "A walkthrough derivation of Archimedes' upthrust from first principles. Each stage builds up interactively with students answering self-marking questions as they progress.",
       "pedagogy": "A board derivation is shown once and immediately forgotten. Step-gated reveals with embedded MCQs combine the worked-example effect with retrieval practice at every algebraic step. Distractors are written to surface specific misconceptions — sign errors, pressure-depth confusion — rather than just being plausible-wrong, so a student's wrong answer is the diagnostic signal.",
       "image": "upthrust-derivation.png",
+      "annotations": [
+        {"x": 0.86, "y": 15.79, "w": 96.83, "h": 12.82, "title": "Simple instructions", "note": ""},
+        {"x": 3.25, "y": 36.79, "w": 92.64, "h": 62.26, "title": "Gated Progression", "note": "Each step of the derivation requires a student to understand the last part of the derivation. When wrong, students are told WHY they're wrong. Then they progress onward. After the derivation, self-marking practice questions exist too."}
+      ],
       "tags": ["GCSE", "A-Level"]
     },
     {
@@ -95,6 +134,13 @@
       "description": "A multi-subject GCSE & A-level revision checklist. Track progress across topics and see what's left to do. The full app is in development — this is an early preview. If you would like your subject added simply give me a checklist of the spec points and I'll see what I can do.",
       "pedagogy": "A printed revision checklist is static and quickly hidden in a folder. Active tracking at spec-point granularity creates a visible feedback loop: students see exactly what they have and have not covered, which converts vague 'I should revise physics' into a concrete next action. Targeted revision beats general revision every time, but only if the gap is visible.",
       "image": "revision-tracker.png",
+      "annotations": [
+        {"x": 37.87, "y": 0.29, "w": 25.99, "h": 3.11, "title": "Toggles for H/F and D/T students", "note": "Spec trackers dynamically adjust."},
+        {"x": 64.18, "y": 0.14, "w": 5.52, "h": 3.03, "title": "Coin Rewards and Unlocks", "note": "Increase engagement by having unlocks for coins.\nFonts, Layouts, Themes.\nThere are also custom codes for teachers to unlock special rewards, e.g the unique Classics/Physics/Subject themes."},
+        {"x": 0.32, "y": 3.4, "w": 77.86, "h": 5.64, "title": "All topics included", "note": "Currently matched to Edexcel spec, however CUSTOM specs exist, including a custom spec I wrote for LEH."},
+        {"x": 4.36, "y": 10.26, "w": 91.01, "h": 18.21, "title": "Tracked progress across all topics", "note": ""},
+        {"x": 3.4, "y": 29.91, "w": 93.39, "h": 33.53, "title": "Tracked by paper and by topic", "note": "Objectives are inside each one."}
+      ],
       "tags": ["GCSE", "A-Level"],
       "badge": "preview"
     },
@@ -105,7 +151,13 @@
       "category": "Cipher",
       "description": "A live encode/decode tool with auto-snap rotation. Good for cryptography starters, end-of-term puzzles, or just having a fiddle.",
       "pedagogy": "Paper cipher templates burn most of the lesson on careful rotation and copying — bookkeeping, not thinking. Auto-snap and live bidirectional encode/decode strip that friction so cognitive load lands on the cipher mechanic itself. Students can hypothesise, test, and revise in seconds, which is the iteration loop that actually builds problem-solving.",
-      "image": "clock-cipher.png"
+      "image": "clock-cipher.png",
+      "annotations": [
+        {"x": 63.02, "y": 14.56, "w": 30.86, "h": 13.38, "title": "Pick a language", "note": "Many are supported, WITH accents."},
+        {"x": 13.48, "y": 15.73, "w": 47.47, "h": 45.89, "title": "Click-and-drag Cipher Wheel", "note": "Direct interaction for hands on problem solving."},
+        {"x": 63.78, "y": 28.39, "w": 29.4, "h": 44.58, "title": "Customize the letter-number-pair", "note": "Users can adjust it to be whatever they want."},
+        {"x": 3.75, "y": 73.83, "w": 95.48, "h": 18.54, "title": "Encoder/Decoder", "note": "Students and teacher can both encode and decode using the tool."}
+      ]
     },
     {
       "title": "Similar/Different Template Builder",
@@ -114,7 +166,12 @@
       "category": "Similar and Different Generator",
       "description": "A tool for building Similar/Different comparison activities. Features include exportable to print or digital, touch or keyboard inputs, definable structure.",
       "pedagogy": "Comparative thinking is one of the most robust routes to deep encoding — analogical reasoning transfers better than rote definitions. Traditional teaching offers single examples; this scaffolds the comparison explicitly, forcing students to articulate both what is shared and what differs between two cases. That dual articulation is where the cognitive heavy lifting happens.",
-      "image": "similar-different.png"
+      "image": "similar-different.png",
+      "annotations": [
+        {"x": 0.2, "y": -2.24, "w": 100.47, "h": 15.83, "title": "Adjusts to the situation", "note": "Students can set the template up to match their work and notes."},
+        {"x": 0.33, "y": 14.29, "w": 27.53, "h": 3.85, "title": "Print? OneNote picture? It does it all.", "note": "Simply tap here to have the card set up for the students use case. Copy as image and voila, instant paste over to OneNote."},
+        {"x": 0.6, "y": 21.41, "w": 23.14, "h": 8.46, "title": "Supports Apple Pen", "note": "We know learning is better when written instead of typed. So this app for making similar/different templates includes pen functionality from the start."}
+      ]
     },
     {
       "title": "Schema and Mind Map Builder",
@@ -123,7 +180,12 @@
       "category": "Schema and Mind Maps",
       "description": "A tool for building mind maps of vocabulary. Simple interface, touch functionality, ability to save, export and import your map for later improvement.",
       "pedagogy": "Experts are distinguished from novices largely by the richness of their schemas. Paper mind maps are messy and disposable; saving, exporting and reimporting lets a student revisit the same schema across weeks and watch their own model grow more sophisticated. The map becomes a longitudinal record of conceptual change, not a one-off lesson activity.",
-      "image": "vocab-schema-builder.png"
+      "image": "vocab-schema-builder.png",
+      "annotations": [
+        {"x": 8.82, "y": -0.55, "w": 17.51, "h": 6.48, "title": "Only ideas and concepts", "note": ""},
+        {"x": 43.92, "y": -0.16, "w": 55.82, "h": 4.98, "title": "Quick functions", "note": "Copy -> Paste to OneNote\nSave as pdf.\nSave locally to change later.\nLight/Dark modes for vision.\nLimited style and layout choices to prevent students agonising over colours and fonts forever."},
+        {"x": 8.82, "y": 10.19, "w": 65.11, "h": 88.55, "title": "Dynamic links, easily adjusted", "note": ""}
+      ]
     },
     {
       "title": "Conjunction Randomizer",
@@ -132,7 +194,13 @@
       "category": "Conjunction Randomizer",
       "description": "A random conjunction picker to help students write richer sentences that get them thinking harder.",
       "pedagogy": "Open prompts like 'write a sentence about X' let students default to descriptive listing. A forced conjunction — 'however', 'because', 'in contrast to' — demands a specific cognitive operation (contrast, causation, comparison) that turns recall into reasoning. Randomisation stops students gravitating to the easiest connective every time, broadening the range of thinking they have to do.",
-      "image": "roll-a-conjunction.png"
+      "image": "roll-a-conjunction.png",
+      "annotations": [
+        {"x": 85.38, "y": 0.77, "w": 13.97, "h": 3.86, "title": "Link to pedagogical explainer and best uses", "note": ""},
+        {"x": 2.61, "y": 15.38, "w": 80.15, "h": 8.85, "title": "Pre-categorised conjunctions", "note": "Save teacher memory! Pick one from the list."},
+        {"x": 3.1, "y": 57.02, "w": 38.4, "h": 4.28, "title": "Engaging ways to roll", "note": "To keep the students interested."},
+        {"x": 1.72, "y": 68.68, "w": 82.84, "h": 14.54, "title": "Pick a specific conjunction if you want", "note": ""}
+      ]
     },
     {
       "title": "Fantastic Flashcards",
@@ -141,7 +209,18 @@
       "category": "Flashcards",
       "description": "A free, privacy-respecting flashcard app supporting a wide range of specialised card types, with correct accent and language support and built-in pedagogically-backed algorithms for tracking card mastery. No student data is stored anywhere.",
       "pedagogy": "Most flashcard tools either harvest student data or limit cards to plain Q-and-A, which encourages shallow memorisation. Specialised card types let students rehearse the actual cognitive operation the subject demands — equation rearrangement, language inflection, labelled diagram recall — instead of substituting it with verbal recognition. Built-in mastery tracking adapts review intervals to where each student actually is, which is the central insight of spaced repetition: the right card at the right time beats more cards more often.",
-      "image": "fantastic-flashcards.png"
+      "image": "fantastic-flashcards.png",
+      "annotations": [
+        {"x": 90.72, "y": 0, "w": 7.51, "h": 2.34, "title": "Engagement - Layouts, Fonts, etc.", "note": ""},
+        {"x": 87.26, "y": 5, "w": 11.78, "h": 5.44, "title": "Engagement - Streaks", "note": ""},
+        {"x": 49.93, "y": 11.71, "w": 14.73, "h": 2.66, "title": "Engaging revision games", "note": ""},
+        {"x": 65.17, "y": 11.46, "w": 10.16, "h": 3.16, "title": "Native Quizlet Import", "note": "Keeps images & text."},
+        {"x": 87.26, "y": 11.46, "w": 10.9, "h": 3.35, "title": "A guide to typing math cards", "note": "Native LaTeX so students can have beautiful equations, not bodged text ones."},
+        {"x": 2.28, "y": 14.56, "w": 33.58, "h": 18.1, "title": "Sub-topics", "note": "Students can put flashcard decks into larger topic decks."},
+        {"x": 8.76, "y": 40.82, "w": 5.38, "h": 2.59, "title": "Tags", "note": "So students can filter across decks by tag"},
+        {"x": 6.26, "y": 67.59, "w": 27.1, "h": 5, "title": "A demo deck for my wife... hah.", "note": "She's a medical device regulator."},
+        {"x": 45.88, "y": 94.43, "w": 6.63, "h": 5.38, "title": "Stat tracking", "note": "From card mastery to practice days, students get custom stat tracking powers."}
+      ]
     },
     {
       "title": "Curriculum Planner",
@@ -151,6 +230,17 @@
       "description": "A desktop app for planning long-term schemes of work. Import a spec from TSV/XLSX (topic, sub-topic, lessons, objectives) and sequence across years, terms and practicals. Released on GitHub — see the v1.9.0 release page for downloads.",
       "pedagogy": "Schemes of work usually follow exam-board order out of inertia, even where it forces pedagogically poor sequencing — stopping distances before work done; electricity before the particle model. Treating the spec as data — importable, reorderable, dependency-aware — lets you plan around how concepts genuinely build, not around how the spec happens to list them. The structure becomes a thinking tool, not a constraint.",
       "image": "curriculum-planner.png",
+      "annotations": [
+        {"x": 0.78, "y": 5.43, "w": 46.46, "h": 5.16, "title": "Import multiple curriculums", "note": "Ever wanted to see how biology/chemistry/physics line up for topics, tests, etc? Now you can."},
+        {"x": 55.86, "y": 5.79, "w": 15.99, "h": 4.8, "title": "View the curriculum at every layer of granularity", "note": ""},
+        {"x": 79.89, "y": 5.43, "w": 19.67, "h": 5.79, "title": "Save layouts and exports", "note": ""},
+        {"x": 0.58, "y": 10.68, "w": 38.42, "h": 4.44, "title": "At a glance how many lessons in a year", "note": ""},
+        {"x": 84.84, "y": 11.23, "w": 14.58, "h": 4.25, "title": "Filter by including depth or not", "note": ""},
+        {"x": 0.48, "y": 24.71, "w": 99.22, "h": 21.09, "title": "Automatic Pedagogy Based Review", "note": "Spacing, interleaving, recall, clustering, it reports on them all."},
+        {"x": 0.48, "y": 47.62, "w": 12.35, "h": 54.41, "title": "Lesson pool to drag and drop in", "note": ""},
+        {"x": 13.66, "y": 47.35, "w": 13.76, "h": 50.52, "title": "Drag-and-drop", "note": "Each lesson can be clicked into an edited"},
+        {"x": 67.34, "y": 63.19, "w": 2.03, "h": 2.9, "title": "Lessons flagged for depth", "note": ""}
+      ],
       "tags": ["Teacher Tool"]
     }
   ]
