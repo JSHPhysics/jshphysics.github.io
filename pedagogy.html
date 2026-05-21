@@ -289,6 +289,52 @@ body { counter-reset: entry-counter; }
   text-align: center;
 }
 
+.entry-media[data-state="filled"] img { cursor: zoom-in; transition: filter 200ms ease; }
+.entry-media[data-state="filled"]:hover img { filter: brightness(1.04); }
+
+/* ───────────── LIGHTBOX ───────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 16, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+  cursor: zoom-out;
+  animation: lightboxFade 0.18s ease-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  background: #16181d;
+}
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.2s;
+}
+.lightbox-close:hover { color: white; }
+@keyframes lightboxFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Edit-mode controls — only visible when body has .edit-mode */
 .entry-controls {
   position: absolute;
@@ -565,6 +611,12 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
     </div>
   </noscript>
 
+  <!-- ═══════════ LIGHTBOX ═══════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+    <button class="lightbox-close" type="button" aria-label="Close">Close · Esc</button>
+    <img alt="" />
+  </div>
+
   <!-- ═══════════ FOOTER ═══════════ -->
   <footer>
     <span class="mono">© Joshua · jshphysics</span>
@@ -747,6 +799,40 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
   }
 
   load();
+})();
+</script>
+
+<script>
+// ─────────── LIGHTBOX (click any loaded entry image to enlarge) ───────────
+(function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  function openLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.removeAttribute('src');
+    document.body.style.overflow = '';
+  }
+
+  // Delegate so dynamically rendered entries work
+  document.addEventListener('click', e => {
+    if (document.body.classList.contains('edit-mode')) return;
+    const img = e.target.closest('.entry-media[data-state="filled"] img');
+    if (img && img.src) {
+      e.preventDefault();
+      openLightbox(img.src);
+    }
+  });
+
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
 })();
 </script>
 
