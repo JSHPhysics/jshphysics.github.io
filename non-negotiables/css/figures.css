@@ -75,6 +75,13 @@
 .fig .theta-arm { animation: fig-theta-arm 3.8s linear infinite; }
 .fig .theta-glyph { transform-box: fill-box; transform-origin: center; animation: fig-theta-glyph 3.8s linear infinite; }
 .fig .orbit { animation: fig-orbit 9s linear infinite; }
+.fig .orbit.ccw { animation-name: fig-orbit-ccw; }
+/* A label inside a rotating group that must stay upright */
+.fig .upright { transform-box: fill-box; transform-origin: center; animation: fig-counter 9s linear infinite; }
+/* Materials: the spring-end level and the Δx dimension track the stretching spring */
+.fig .shift { animation: fig-shift 2.8s ease-in-out infinite alternate; }
+.fig .dx-line { animation: fig-dx-line 2.8s ease-in-out infinite alternate; }
+.fig .dx-label { animation: fig-dx-label 2.8s ease-in-out infinite alternate; }
 .fig .jitter { animation: fig-jitter 1.4s ease-in-out infinite alternate; }
 .fig .stretch { transform-origin: 160px 20px; animation: fig-stretch 2.8s ease-in-out infinite alternate; }
 .fig .wave { animation: fig-wave 3.2s linear infinite; }
@@ -199,6 +206,12 @@
   100.00% { transform: rotate(0.00deg); }
 }
 @keyframes fig-orbit { to { transform: rotate(360deg); } }
+@keyframes fig-orbit-ccw { to { transform: rotate(-360deg); } }
+@keyframes fig-counter { to { transform: rotate(360deg); } }
+/* spring end moves from 20 + 110 × 0.82 to 20 + 110 × 1.06, i.e. −19.8 px to +6.6 px about y = 130 */
+@keyframes fig-shift { from { transform: translateY(-19.8px); } to { transform: translateY(6.6px); } }
+@keyframes fig-dx-line { from { transform: scaleY(0.34); } to { transform: scaleY(1.22); } }
+@keyframes fig-dx-label { from { transform: translateY(-9.9px); } to { transform: translateY(3.3px); } }
 @keyframes fig-jitter { from { transform: translate(0, 0); } to { transform: translate(var(--dx), var(--dy)); } }
 @keyframes fig-stretch { from { transform: scaleY(0.82); } to { transform: scaleY(1.06); } }
 @keyframes fig-wave { from { transform: translateX(0); } to { transform: translateX(128px); } }

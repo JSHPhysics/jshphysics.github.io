@@ -151,8 +151,8 @@
       return wrap(
         "<line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\"/>" +
         "<path class=\"draw arc\" d=\"" + path + "\"/>" +
-        dash(160, 60, 160, 160) +
-        dash(40, 60, 160, 60) +
+        // Extension line from the apex out to the H dimension
+        dash(160, 60, 180, 60) +
         // Initial velocity and its components
         arrow(40, 160, 92, 108, "acc") +
         arrow(40, 160, 92, 160, "cons") +
@@ -208,9 +208,10 @@
         // Normal reaction
         arrow(cx, cy, cx - 55 * sin, cy - 55 * cos, "acc") +
         text(cx - 55 * sin - 4, cy - 55 * cos - 6, "R", "end") +
-        // Angle marker
-        "<path class=\"cons\" d=\"M240,170 A30,30 0 0 0 242.5,158\"/>" +
-        text(228, 164, "θ", "end")
+        // Slope angle at the bottom-right vertex (270,170): arc from the base
+        // round to the hypotenuse, label on the bisector just inside the arc
+        "<path class=\"cons\" d=\"M234,170 A36,36 0 0 1 " + (270 - 36 * cos).toFixed(1) + "," + (170 - 36 * sin).toFixed(1) + "\"/>" +
+        text(221, 164, "θ", "middle")
       );
     },
 
@@ -260,24 +261,42 @@
         arrow(160, 156, 160, 186, "") +
         text(166, 186, "F") +
         "</g>" +
+        // Natural length level (fixed) and the moving spring-end level
         dash(160, 100, 230, 100) +
-        dash(160, 130, 230, 130) +
-        dimension(230, 100, 230, 130, "Δx", 0) +
+        "<g class=\"shift\">" + dash(160, 130, 230, 130) + "</g>" +
+        // Δx: a dimension whose lower end tracks the spring (scaled about y = 100),
+        // with the label moved to its midpoint separately so the glyph is not squashed
+        "<g class=\"dim dx-line\" style=\"transform-origin: 230px 100px\">" +
+        "<line x1=\"230\" y1=\"100\" x2=\"230\" y2=\"130\"/>" +
+        "<line x1=\"226\" y1=\"100\" x2=\"234\" y2=\"100\"/>" +
+        "<line x1=\"226\" y1=\"130\" x2=\"234\" y2=\"130\"/>" +
+        "</g>" +
+        "<g class=\"dim dx-label\"><text x=\"242\" y=\"119\">Δx</text></g>" +
         dimension(60, 20, 60, 100, "L", 0)
       );
     },
 
-    // A travelling wave with wavelength and amplitude marked
+    // A travelling wave with wavelength and amplitude marked. The markers
+    // sit inside the moving group, duplicated one wavelength back, so they
+    // travel with the crests and the wrap-around is seamless.
     "waves": function () {
       const wave = sinePath(0, 100, 320, 36, 2.5, 120);
+      // Crests at x = 32, 160, 288 (period 128); troughs at 96, 224
+      function markers(shift) {
+        return "<g transform=\"translate(" + shift + ",0)\">" +
+          dash(32, 44, 32, 64) + dash(160, 44, 160, 64) +
+          dimension(32, 44, 160, 44, "λ", 0) +
+          dash(224, 100, 224, 136) +
+          dimension(224, 100, 224, 136, "A", 14) +
+          "</g>";
+      }
       return wrap(
         "<line class=\"cons\" x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\"/>" +
-        "<g class=\"wave\"><path class=\"acc draw\" d=\"" + wave + "\"/><path class=\"acc\" transform=\"translate(-128,0)\" d=\"" + wave + "\"/></g>" +
-        // Mask the overflow by drawing paper-coloured rectangles at the sides
-        dimension(52, 44, 180, 44, "λ", 0) +
-        dash(52, 44, 52, 100) +
-        dash(180, 44, 180, 100) +
-        dimension(224, 100, 224, 64, "A", 12) +
+        "<g class=\"wave\">" +
+        "<path class=\"acc draw\" d=\"" + wave + "\"/>" +
+        "<path class=\"acc\" transform=\"translate(-128,0)\" d=\"" + wave + "\"/>" +
+        markers(0) + markers(-128) +
+        "</g>" +
         text(300, 92, "x", "end")
       );
     },
@@ -389,20 +408,22 @@
       );
     },
 
-    // A planet with a satellite in orbit and the radius vector
+    // A planet with a satellite in a circular orbit. The radius vector, the
+    // satellite and its velocity vector rotate together; the labels are
+    // counter-rotated so they stay upright.
     "gravitational-fields": function () {
       return wrap(
-        "<circle class=\"draw\" cx=\"130\" cy=\"100\" r=\"30\"/>" +
-        "<g class=\"hatch\"><path d=\"M112,80 Q130,96 148,80 M106,100 Q130,112 154,100 M112,120 Q130,106 148,120\"/></g>" +
-        "<ellipse class=\"cons\" cx=\"130\" cy=\"100\" rx=\"120\" ry=\"76\"/>" +
-        // Orbiting satellite
-        "<rect class=\"travel slow acc fill\" x=\"-5\" y=\"-5\" width=\"10\" height=\"10\" style=\"offset-path: path('M250,100 A120,76 0 1 1 10,100 A120,76 0 1 1 250,100')\"/>" +
-        // Radius vector drawn to the starting position
-        arrow(130, 100, 240, 100, "") +
-        text(190, 94, "r", "middle") +
-        arrow(250, 100, 250, 60, "acc") +
-        text(256, 66, "v") +
-        text(130, 104, "M", "middle") +
+        "<circle class=\"draw\" cx=\"160\" cy=\"100\" r=\"28\"/>" +
+        "<g class=\"hatch\"><path d=\"M143,82 Q160,96 177,82 M137,100 Q160,112 183,100 M143,118 Q160,106 177,118\"/></g>" +
+        "<circle class=\"cons\" cx=\"160\" cy=\"100\" r=\"88\"/>" +
+        text(160, 104, "M", "middle") +
+        "<g class=\"orbit ccw\" style=\"transform-origin: 160px 100px\">" +
+        arrow(160, 100, 243, 100, "") +
+        "<g class=\"upright\"><text x=\"204\" y=\"94\" text-anchor=\"middle\">r</text></g>" +
+        "<rect class=\"acc fill\" x=\"243\" y=\"95\" width=\"10\" height=\"10\"/>" +
+        arrow(248, 100, 248, 58, "acc") +
+        "<g class=\"upright\"><text class=\"acc\" x=\"258\" y=\"66\">v</text></g>" +
+        "</g>" +
         text(40, 186, "F = GMm / r²")
       );
     },
@@ -444,15 +465,16 @@
       return wrap(
         dots +
         "<circle class=\"cons\" cx=\"160\" cy=\"110\" r=\"56\"/>" +
-        "<g class=\"orbit\" style=\"transform-origin: 160px 110px\">" +
-        "<circle class=\"acc fill\" cx=\"216\" cy=\"110\" r=\"5\"/>" +
-        "</g>" +
+        // Radius, particle, velocity (tangent) and force (to the centre) rotate as one
+        "<g class=\"orbit ccw\" style=\"transform-origin: 160px 110px\">" +
         arrow(160, 110, 212, 110, "") +
-        text(186, 104, "r", "middle") +
+        "<g class=\"upright\"><text x=\"186\" y=\"104\" text-anchor=\"middle\">r</text></g>" +
+        "<circle class=\"acc fill\" cx=\"216\" cy=\"110\" r=\"5\"/>" +
         arrow(216, 110, 216, 70, "acc") +
-        text(222, 76, "v") +
+        "<g class=\"upright\"><text class=\"acc\" x=\"222\" y=\"76\">v</text></g>" +
         arrow(216, 110, 180, 110, "acc") +
-        text(190, 124, "F") +
+        "<g class=\"upright\"><text class=\"acc\" x=\"190\" y=\"124\">F</text></g>" +
+        "</g>" +
         text(282, 54, "B", "end") +
         text(40, 186, "r = mv / BQ")
       );
