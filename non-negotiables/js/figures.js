@@ -151,8 +151,7 @@
       return wrap(
         "<line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\"/>" +
         "<path class=\"draw arc\" d=\"" + path + "\"/>" +
-        // Extension line from the apex out to the H dimension
-        dash(160, 60, 180, 60) +
+
         // Initial velocity and its components
         arrow(40, 160, 92, 108, "acc") +
         arrow(40, 160, 92, 160, "cons") +
@@ -164,7 +163,7 @@
         "<path class=\"cons\" d=\"M66,160 A26,26 0 0 0 58,142\"/>" +
         text(70, 150, "θ") +
         dimension(40, 182, 280, 182, "R", 0) +
-        dimension(160, 60, 160, 160, "H", -14) +
+        dimension(160, 160, 160, 60, "H", 0) +
         // Travelling dot
         "<circle class=\"travel acc\" r=\"4\" style=\"offset-path: path('" + path + "')\"/>"
       );
@@ -282,11 +281,12 @@
     "waves": function () {
       const wave = sinePath(0, 100, 320, 36, 2.5, 120);
       // Crests at x = 32, 160, 288 (period 128); troughs at 96, 224
+      // One wavelength's worth of markers; repeated every 128 px so the
+      // pattern is continuous across the box however far the group has moved
       function markers(shift) {
         return "<g transform=\"translate(" + shift + ",0)\">" +
           dash(32, 44, 32, 64) + dash(160, 44, 160, 64) +
           dimension(32, 44, 160, 44, "λ", 0) +
-          dash(224, 100, 224, 136) +
           dimension(224, 100, 224, 136, "A", 14) +
           "</g>";
       }
@@ -295,7 +295,7 @@
         "<g class=\"wave\">" +
         "<path class=\"acc draw\" d=\"" + wave + "\"/>" +
         "<path class=\"acc\" transform=\"translate(-128,0)\" d=\"" + wave + "\"/>" +
-        markers(0) + markers(-128) +
+        markers(-256) + markers(-128) + markers(0) + markers(128) +
         "</g>" +
         text(300, 92, "x", "end")
       );
