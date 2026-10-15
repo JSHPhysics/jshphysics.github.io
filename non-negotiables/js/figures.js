@@ -80,18 +80,10 @@
     return path;
   }
 
-  // A zigzag resistor between two points (horizontal)
+  // A resistor between two points (horizontal): the IEC / BS 3939 rectangle
   function resistor(x, y, width) {
-    const n = 6;
-    const step = width / n;
-    let path = "M" + x + "," + y;
-    for (let index = 0; index < n; index += 1) {
-      const px = x + step * (index + 0.5);
-      const py = y + (index % 2 === 0 ? -7 : 7);
-      path += "L" + px.toFixed(1) + "," + py;
-    }
-    path += "L" + (x + width) + "," + y;
-    return "<path d=\"" + path + "\"/>";
+    const height = 14;
+    return "<rect x=\"" + x + "\" y=\"" + (y - height / 2) + "\" width=\"" + width + "\" height=\"" + height + "\"/>";
   }
 
   // A coil spring between (x, y1) and (x, y2), vertical
@@ -331,7 +323,8 @@
     "electricity": function () {
       const loop = "M60,50 L260,50 L260,150 L60,150 Z";
       return wrap(
-        "<path class=\"draw\" d=\"M60,50 L130,50 M190,50 L260,50 L260,150 L170,150 M150,150 L60,150 Z\"/>" +
+        // Wires: gaps for the resistor (130–190 on top) and the ammeter (circle r = 12 at 160 on the bottom)
+        "<path class=\"draw\" d=\"M60,50 L130,50 M190,50 L260,50 L260,150 L174,150 M146,150 L60,150\"/>" +
         // Cell on the left side
         "<line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"88\"/><line x1=\"60\" y1=\"112\" x2=\"60\" y2=\"150\"/>" +
         "<line x1=\"46\" y1=\"88\" x2=\"74\" y2=\"88\"/><line x1=\"52\" y1=\"98\" x2=\"68\" y2=\"98\"/>" +
