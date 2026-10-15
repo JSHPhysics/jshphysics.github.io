@@ -45,6 +45,8 @@
 .fig .mask { fill: var(--bg); stroke: none; }
 .fig .bdot { stroke-width: 1; opacity: 0.6; }
 .fig .on-fill line { stroke: var(--bg); stroke-width: 1.6; }
+/* Labels that sit over linework get a paper halo */
+.fig .halo text { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
 
 /* ---- motion ---- */
 
