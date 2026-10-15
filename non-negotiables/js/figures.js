@@ -287,7 +287,7 @@
         return "<g transform=\"translate(" + shift + ",0)\">" +
           dash(32, 44, 32, 64) + dash(160, 44, 160, 64) +
           dimension(32, 44, 160, 44, "λ", 0) +
-          dimension(224, 100, 224, 136, "A", 14) +
+          dimension(224, 100, 224, 136, "A", 0) +
           "</g>";
       }
       return wrap(
@@ -339,7 +339,7 @@
         text(28, 104, "ε, r") +
         // Resistor on top
         "<g class=\"acc\">" + resistor(130, 50, 60) + "</g>" +
-        text(160, 36, "R", "middle") +
+        text(160, 74, "R", "middle") +
         // Ammeter at the bottom
         "<circle cx=\"160\" cy=\"150\" r=\"12\"/>" + text(160, 154, "A", "middle") +
         // Voltmeter across R
