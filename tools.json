@@ -127,6 +127,16 @@
       "tags": ["GCSE", "A-Level"]
     },
     {
+      "title": "The Non-negotiables",
+      "url": "https://jshphysics.github.io/non-negotiables/",
+      "section": "tools",
+      "category": "Calculation practice",
+      "description": "Every straightforward calculation in A-level physics — 152 of them across 15 topics — each with a worked example and six practice questions checked as you go, with hints, walkthroughs, exam-style graphs and a printable booklet. Filter to your exam board.",
+      "pedagogy": "Fluency in the routine calculations frees working memory for the physics that is actually hard, but most students only meet each calculation a handful of times a year. Here every type is isolated as a single skill with a worked example and graded practice, so students can drill the one step they get wrong rather than re-doing whole past papers. Checking answers instantly, with diagnostic feedback for a power-of-ten slip or a sign error, closes the feedback loop that marking a week later never can. Graph-reading questions are drawn as real exam graphs so reading a gradient or an area is practised as a skill in its own right.",
+      "image": "non-negotiables.png",
+      "tags": ["A-Level", "Study Tool", "Teacher Tool"]
+    },
+    {
       "title": "Revision Tracker",
       "url": "https://jshphysics.github.io/revision_tracker/",
       "section": "tools",

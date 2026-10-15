@@ -1,0 +1,1525 @@
+{
+  "id": "measurements",
+  "title": "Measurements and uncertainties",
+  "subtitle": "Units, prefixes, significant figures and combining uncertainties",
+  "order": 10,
+  "types": [
+    {
+      "id": "si-prefixes",
+      "name": "Converting with SI prefixes and standard form",
+      "equations": [
+        "T = 10¹², G = 10⁹, M = 10⁶, k = 10³",
+        "m = 10⁻³, μ = 10⁻⁶, n = 10⁻⁹, p = 10⁻¹²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Replace the prefix with its power of ten, then tidy the number into standard form (one non-zero digit before the decimal point). To go from a base unit to a prefixed unit, divide by the prefix's power of ten. To go between two prefixes, go via the base unit.",
+      "commonErrors": [
+        "Mixing up m (milli, 10⁻³) with M (mega, 10⁶)",
+        "Dividing instead of multiplying when converting a prefixed value to the base unit",
+        "Forgetting to adjust the power of ten after moving the decimal point into standard form"
+      ],
+      "worked": {
+        "id": "si-prefixes-w",
+        "question": "A red laser pointer emits light of wavelength 650 nm. Express this wavelength in metres, in standard form.",
+        "steps": [
+          "Known: λ = 650 nm. The prefix nano (n) means × 10⁻⁹.",
+          "λ = 650 × 10⁻⁹ m",
+          "Write 650 in standard form: 650 = 6.50 × 10²",
+          "λ = 6.50 × 10² × 10⁻⁹ m = 6.50 × 10⁻⁷ m",
+          "λ = 6.50 × 10⁻⁷ m"
+        ],
+        "answer": {
+          "value": 6.5e-07,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "si-prefixes-p1",
+          "question": "A radar pulse lasts 25 μs. Express this time in seconds, in standard form.",
+          "hint": "Micro (μ) means × 10⁻⁶; then move the decimal point so one digit sits before it.",
+          "walkthrough": [
+            "t = 25 μs = 25 × 10⁻⁶ s",
+            "25 = 2.5 × 10¹, so t = 2.5 × 10¹ × 10⁻⁶ s",
+            "t = 2.5 × 10⁻⁵ s"
+          ],
+          "answer": {
+            "value": 2.5e-05,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "si-prefixes-p2",
+          "question": "The tension in a crane cable is 3.2 kN. Express this force in newtons.",
+          "hint": "Kilo (k) means × 10³.",
+          "walkthrough": [
+            "F = 3.2 kN = 3.2 × 10³ N",
+            "F = 3200 N",
+            "F = 3.2 × 10³ N"
+          ],
+          "answer": {
+            "value": 3200,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "si-prefixes-p3",
+          "question": "A capacitor in a radio tuning circuit has a capacitance of 1.8 × 10⁻¹¹ F. Express this capacitance in picofarads (pF).",
+          "hint": "Pico (p) means 10⁻¹²; divide the value in farads by 10⁻¹².",
+          "walkthrough": [
+            "1 pF = 10⁻¹² F, so C in pF = C in F / 10⁻¹²",
+            "C = 1.8 × 10⁻¹¹ / 10⁻¹² = 1.8 × 10¹",
+            "C = 18 pF"
+          ],
+          "answer": {
+            "value": 18,
+            "unit": "pF"
+          }
+        },
+        {
+          "id": "si-prefixes-p4",
+          "question": "A nuclear power station has a total electrical output of 4.5 × 10⁹ W. Express this power in gigawatts (GW).",
+          "hint": "Giga (G) means 10⁹; divide the value in watts by 10⁹.",
+          "walkthrough": [
+            "1 GW = 10⁹ W, so P in GW = P in W / 10⁹",
+            "P = 4.5 × 10⁹ / 10⁹",
+            "P = 4.5 GW"
+          ],
+          "answer": {
+            "value": 4.5,
+            "unit": "GW"
+          }
+        },
+        {
+          "id": "si-prefixes-p5",
+          "question": "A geostationary satellite orbits at a distance of 35.8 Mm from the centre of the Earth, measured along a line to a ground station. Express this distance in kilometres.",
+          "hint": "Convert Mm to metres first (mega = 10⁶), then divide by 10³ to get kilometres.",
+          "walkthrough": [
+            "d = 35.8 Mm = 35.8 × 10⁶ m = 3.58 × 10⁷ m",
+            "1 km = 10³ m, so d in km = 3.58 × 10⁷ / 10³",
+            "d = 3.58 × 10⁴ km = 35 800 km"
+          ],
+          "answer": {
+            "value": 35800,
+            "unit": "km"
+          }
+        },
+        {
+          "id": "si-prefixes-p6",
+          "question": "The current through an LED in a smoke alarm is 0.062 mA. Express this current in microamps (μA).",
+          "hint": "Convert mA to A first (milli = 10⁻³), then divide by 10⁻⁶ to get μA.",
+          "walkthrough": [
+            "I = 0.062 mA = 0.062 × 10⁻³ A = 6.2 × 10⁻⁵ A",
+            "1 μA = 10⁻⁶ A, so I in μA = 6.2 × 10⁻⁵ / 10⁻⁶",
+            "I = 6.2 × 10¹ μA = 62 μA"
+          ],
+          "answer": {
+            "value": 62,
+            "unit": "μA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "derived-units",
+      "name": "Converting derived units",
+      "equations": [
+        "1 km h⁻¹ = 1000 / 3600 m s⁻¹",
+        "1 g cm⁻³ = 1000 kg m⁻³",
+        "1 mm² = 10⁻⁶ m², 1 cm³ = 10⁻⁶ m³",
+        "1 litre = 10⁻³ m³",
+        "1 kWh = 3.6 × 10⁶ J"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Convert each part of the unit separately, remembering that a squared or cubed unit needs the conversion factor squared or cubed. Multiply the factors together and apply them to the number. Check the direction of each factor by asking whether the new number should be bigger or smaller.",
+      "commonErrors": [
+        "Using 10⁻³ instead of 10⁻⁶ when converting mm² to m², or 10⁻² instead of 10⁻⁶ for cm³ to m³",
+        "Dividing by 3.6 instead of multiplying when going from m s⁻¹ to km h⁻¹",
+        "Treating 1 kWh as 1000 J rather than 1000 W × 3600 s"
+      ],
+      "worked": {
+        "id": "derived-units-w",
+        "question": "A train travels at 108 km h⁻¹. Convert this speed to m s⁻¹.",
+        "steps": [
+          "Known: v = 108 km h⁻¹. Convert km to m and hours to seconds separately.",
+          "1 km = 1000 m and 1 h = 3600 s",
+          "v = 108 × 1000 m / 3600 s",
+          "v = 108 000 / 3600",
+          "v = 30.0 m s⁻¹"
+        ],
+        "answer": {
+          "value": 30.0,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "derived-units-p1",
+          "question": "Olive oil has a density of 0.92 g cm⁻³. Convert this density to kg m⁻³.",
+          "hint": "1 g = 10⁻³ kg and 1 cm³ = 10⁻⁶ m³, so the factor is 10⁻³ / 10⁻⁶.",
+          "walkthrough": [
+            "1 g cm⁻³ = 10⁻³ kg / 10⁻⁶ m³ = 1000 kg m⁻³",
+            "ρ = 0.92 × 1000",
+            "ρ = 920 kg m⁻³"
+          ],
+          "answer": {
+            "value": 920,
+            "unit": "kg m⁻³"
+          }
+        },
+        {
+          "id": "derived-units-p2",
+          "question": "A car's fuel tank holds 55 litres. Convert this volume to m³.",
+          "hint": "1 litre = 1000 cm³ = 10⁻³ m³.",
+          "walkthrough": [
+            "1 litre = 10⁻³ m³",
+            "V = 55 × 10⁻³ m³",
+            "V = 0.055 m³ (5.5 × 10⁻² m³)"
+          ],
+          "answer": {
+            "value": 0.055,
+            "unit": "m³"
+          }
+        },
+        {
+          "id": "derived-units-p3",
+          "question": "A copper wire in a household cable has a cross-sectional area of 2.5 mm². Convert this area to m², in standard form.",
+          "hint": "1 mm = 10⁻³ m, so 1 mm² = (10⁻³)² m².",
+          "walkthrough": [
+            "1 mm² = (10⁻³ m)² = 10⁻⁶ m²",
+            "A = 2.5 × 10⁻⁶ m²",
+            "A = 2.5 × 10⁻⁶ m²"
+          ],
+          "answer": {
+            "value": 2.5e-06,
+            "unit": "m²"
+          }
+        },
+        {
+          "id": "derived-units-p4",
+          "question": "A tumble dryer uses 2.6 kWh of electrical energy in one cycle. Convert this energy to joules.",
+          "hint": "A kilowatt-hour is 1000 W running for 3600 s; energy = power × time.",
+          "walkthrough": [
+            "1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J",
+            "E = 2.6 × 3.6 × 10⁶",
+            "E = 9.36 × 10⁶ J"
+          ],
+          "answer": {
+            "value": 9360000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "derived-units-p5",
+          "question": "A sprinter runs 100 m in 9.86 s. Calculate her average speed in km h⁻¹.",
+          "hint": "Find the speed in m s⁻¹ first, then multiply by 3600 / 1000.",
+          "walkthrough": [
+            "v = d / t = 100 / 9.86 = 10.14 m s⁻¹",
+            "1 m s⁻¹ = 3600 m per hour = 3.6 km h⁻¹",
+            "v = 10.14 × 3.6",
+            "v = 36.5 km h⁻¹"
+          ],
+          "answer": {
+            "value": 36.5,
+            "unit": "km h⁻¹"
+          }
+        },
+        {
+          "id": "derived-units-p6",
+          "question": "A gold bar has a mass of 12.4 kg and a volume of 642 cm³. Calculate its density in kg m⁻³.",
+          "hint": "Convert the volume to m³ (1 cm³ = 10⁻⁶ m³) before using ρ = m / V.",
+          "walkthrough": [
+            "V = 642 cm³ = 642 × 10⁻⁶ m³ = 6.42 × 10⁻⁴ m³",
+            "ρ = m / V = 12.4 / 6.42 × 10⁻⁴",
+            "ρ = 19 300 kg m⁻³ = 1.93 × 10⁴ kg m⁻³"
+          ],
+          "answer": {
+            "value": 19300,
+            "unit": "kg m⁻³"
+          }
+        }
+      ]
+    },
+    {
+      "id": "single-uncertainty",
+      "name": "Absolute and percentage uncertainty of a reading",
+      "equations": [
+        "percentage uncertainty = (absolute uncertainty / value) × 100 %",
+        "uncertainty of repeats = half the range"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Find the absolute uncertainty first: for a single reading it is the instrument's resolution (or half the resolution — follow your board's convention; questions here state which), and for repeats it is half the range (largest minus smallest, divided by two). Then divide by the value (the mean, for repeats) and multiply by 100 to get the percentage. Keep the absolute uncertainty in the same unit as the value.",
+      "commonErrors": [
+        "Using the full range of repeat readings instead of half the range",
+        "Mixing units, e.g. dividing an uncertainty in mm by a length in cm",
+        "Forgetting to divide the uncertainty by the number of oscillations when timing several swings"
+      ],
+      "worked": {
+        "id": "single-uncertainty-w",
+        "question": "A student times one swing of a pendulum four times and records 1.52 s, 1.48 s, 1.55 s and 1.49 s. Calculate the percentage uncertainty in the mean period.",
+        "steps": [
+          "Known: four repeat readings of T. Want: percentage uncertainty in the mean.",
+          "Mean: T = (1.52 + 1.48 + 1.55 + 1.49) / 4 = 6.04 / 4 = 1.51 s",
+          "Absolute uncertainty = half the range = (1.55 − 1.48) / 2 = 0.07 / 2 = 0.035 s",
+          "Percentage uncertainty = (0.035 / 1.51) × 100 %",
+          "Percentage uncertainty = 2.3 %"
+        ],
+        "answer": {
+          "value": 2.32,
+          "unit": "%"
+        }
+      },
+      "practice": [
+        {
+          "id": "single-uncertainty-p1",
+          "question": "A digital voltmeter reads 6.4 V across a lamp, with an uncertainty of ± 0.1 V. Calculate the percentage uncertainty in this reading.",
+          "hint": "Divide the absolute uncertainty by the reading and multiply by 100.",
+          "walkthrough": [
+            "Absolute uncertainty = 0.1 V, value = 6.4 V",
+            "Percentage uncertainty = (0.1 / 6.4) × 100 %",
+            "Percentage uncertainty = 1.56 %"
+          ],
+          "answer": {
+            "value": 1.56,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "single-uncertainty-p2",
+          "question": "A micrometer reads the diameter of a steel ball bearing as 2.46 mm, with an uncertainty of ± 0.005 mm. Calculate the percentage uncertainty in the diameter.",
+          "hint": "Percentage uncertainty = (0.005 / 2.46) × 100.",
+          "walkthrough": [
+            "Absolute uncertainty = 0.005 mm, value = 2.46 mm",
+            "Percentage uncertainty = (0.005 / 2.46) × 100 %",
+            "Percentage uncertainty = 0.203 %"
+          ],
+          "answer": {
+            "value": 0.203,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "single-uncertainty-p3",
+          "question": "The length of a guitar string is measured as 62.5 cm using a metre rule, with an uncertainty of ± 1 mm. Calculate the percentage uncertainty in the length.",
+          "hint": "Put both values in the same unit before dividing.",
+          "walkthrough": [
+            "Length = 62.5 cm = 625 mm, uncertainty = 1 mm",
+            "Percentage uncertainty = (1 / 625) × 100 %",
+            "Percentage uncertainty = 0.16 %"
+          ],
+          "answer": {
+            "value": 0.16,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "single-uncertainty-p4",
+          "question": "A bag of flour is weighed on kitchen scales as 0.360 kg. The manufacturer states that the scales have a percentage uncertainty of 2.5 %. Calculate the absolute uncertainty in the mass, in grams.",
+          "hint": "Rearrange: absolute uncertainty = (percentage / 100) × value, then convert kg to g.",
+          "walkthrough": [
+            "Absolute uncertainty = (2.5 / 100) × 0.360 kg",
+            "Absolute uncertainty = 0.0090 kg",
+            "Absolute uncertainty = 9.0 g"
+          ],
+          "answer": {
+            "value": 9.0,
+            "unit": "g"
+          }
+        },
+        {
+          "id": "single-uncertainty-p5",
+          "question": "A student times 10 complete oscillations of a mass on a spring as 18.4 s, using a stopwatch with an uncertainty of ± 0.2 s. Calculate the percentage uncertainty in the period of one oscillation.",
+          "hint": "Divide both the time and its uncertainty by 10 to get the period and its uncertainty, then find the percentage.",
+          "walkthrough": [
+            "T = 18.4 / 10 = 1.84 s",
+            "Uncertainty in T = 0.2 / 10 = 0.02 s",
+            "Percentage uncertainty = (0.02 / 1.84) × 100 %",
+            "Percentage uncertainty = 1.09 %"
+          ],
+          "answer": {
+            "value": 1.09,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "single-uncertainty-p6",
+          "question": "The current through a thermistor is measured five times: 0.244 A, 0.251 A, 0.247 A, 0.249 A and 0.254 A. Calculate the percentage uncertainty in the mean current.",
+          "hint": "Find the mean, then take half the range as the absolute uncertainty.",
+          "walkthrough": [
+            "Mean: I = (0.244 + 0.251 + 0.247 + 0.249 + 0.254) / 5 = 1.245 / 5 = 0.249 A",
+            "Absolute uncertainty = half the range = (0.254 − 0.244) / 2 = 0.005 A",
+            "Percentage uncertainty = (0.005 / 0.249) × 100 %",
+            "Percentage uncertainty = 2.01 %"
+          ],
+          "answer": {
+            "value": 2.01,
+            "unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sums-differences",
+      "name": "Combining uncertainties: sums and differences",
+      "equations": [
+        "Q = A + B or Q = A − B: ΔQ = ΔA + ΔB"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "When a result is found by adding or subtracting two measurements, add their absolute uncertainties, never their percentage uncertainties. If the question wants a percentage uncertainty in the result, work out the result and the combined absolute uncertainty first, then divide. If the data give percentage uncertainties, convert them to absolute values before adding.",
+      "commonErrors": [
+        "Subtracting the uncertainties when the quantities are subtracted — uncertainties always add",
+        "Adding percentage uncertainties for a difference instead of absolute uncertainties",
+        "Forgetting that a difference between two similar values has a large percentage uncertainty"
+      ],
+      "worked": {
+        "id": "sums-differences-w",
+        "question": "A beaker containing water has a mass of 184.5 g ± 0.5 g. The empty beaker has a mass of 62.0 g ± 0.5 g. Calculate the absolute uncertainty in the mass of the water.",
+        "steps": [
+          "Known: m₁ = 184.5 ± 0.5 g, m₂ = 62.0 ± 0.5 g. Want: uncertainty in m₁ − m₂.",
+          "Mass of water = 184.5 − 62.0 = 122.5 g",
+          "For a difference, add the absolute uncertainties: Δm = 0.5 + 0.5",
+          "Δm = 1.0 g, so the mass of water is 122.5 ± 1.0 g",
+          "Absolute uncertainty = 1.0 g"
+        ],
+        "answer": {
+          "value": 1.0,
+          "unit": "g"
+        }
+      },
+      "practice": [
+        {
+          "id": "sums-differences-p1",
+          "question": "Two resistors of 47 Ω ± 2 Ω and 68 Ω ± 3 Ω are connected in series. Calculate the absolute uncertainty in the total resistance.",
+          "hint": "Series resistances add, so their absolute uncertainties add.",
+          "walkthrough": [
+            "R = 47 + 68 = 115 Ω",
+            "ΔR = 2 + 3",
+            "ΔR = 5 Ω"
+          ],
+          "answer": {
+            "value": 5.0,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "sums-differences-p2",
+          "question": "In a specific heat capacity experiment, the water temperature rises from 18.5 °C to 41.0 °C. Each thermometer reading has an uncertainty of ± 0.5 °C. Calculate the absolute uncertainty in the temperature rise.",
+          "hint": "The rise is a difference of two readings, so add the two absolute uncertainties.",
+          "walkthrough": [
+            "Δθ = 41.0 − 18.5 = 22.5 °C",
+            "Uncertainty = 0.5 + 0.5",
+            "Uncertainty = 1.0 °C"
+          ],
+          "answer": {
+            "value": 1.0,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "sums-differences-p3",
+          "question": "A student measures the length of a pencil by reading both ends against a ruler: one end at 2.3 cm and the other at 18.7 cm, each reading ± 0.1 cm. Calculate the percentage uncertainty in the length.",
+          "hint": "Find the length and its absolute uncertainty (sum of the two) before turning it into a percentage.",
+          "walkthrough": [
+            "Length = 18.7 − 2.3 = 16.4 cm",
+            "Absolute uncertainty = 0.1 + 0.1 = 0.2 cm",
+            "Percentage uncertainty = (0.2 / 16.4) × 100 %",
+            "Percentage uncertainty = 1.22 %"
+          ],
+          "answer": {
+            "value": 1.22,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "sums-differences-p4",
+          "question": "A spring has an unstretched length of 125 mm and a stretched length of 183 mm when a load is hung from it. Each length is measured to ± 1 mm. Calculate the percentage uncertainty in the extension.",
+          "hint": "Extension = stretched − unstretched; add the two absolute uncertainties, then find the percentage.",
+          "walkthrough": [
+            "Extension = 183 − 125 = 58 mm",
+            "Absolute uncertainty = 1 + 1 = 2 mm",
+            "Percentage uncertainty = (2 / 58) × 100 %",
+            "Percentage uncertainty = 3.45 %"
+          ],
+          "answer": {
+            "value": 3.45,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "sums-differences-p5",
+          "question": "A flask of water has a mass of 0.428 kg and the empty flask has a mass of 0.176 kg. The balance has a percentage uncertainty of 0.5 % on each reading. Calculate the percentage uncertainty in the mass of the water.",
+          "hint": "Turn each percentage uncertainty into an absolute uncertainty in kg, add them, then divide by the mass of water.",
+          "walkthrough": [
+            "Absolute uncertainties: 0.005 × 0.428 = 0.00214 kg and 0.005 × 0.176 = 0.00088 kg",
+            "Mass of water = 0.428 − 0.176 = 0.252 kg",
+            "Combined absolute uncertainty = 0.00214 + 0.00088 = 0.00302 kg",
+            "Percentage uncertainty = (0.00302 / 0.252) × 100 %",
+            "Percentage uncertainty = 1.20 %"
+          ],
+          "answer": {
+            "value": 1.2,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "sums-differences-p6",
+          "question": "A battery has an e.m.f. of 9.0 V ± 0.1 V. When it drives a current, the potential difference across its internal resistance (the 'lost volts') is 2.4 V ± 0.1 V. Calculate the percentage uncertainty in the terminal p.d.",
+          "hint": "Terminal p.d. = e.m.f. − lost volts; add the absolute uncertainties first.",
+          "walkthrough": [
+            "Terminal p.d. = 9.0 − 2.4 = 6.6 V",
+            "Absolute uncertainty = 0.1 + 0.1 = 0.2 V",
+            "Percentage uncertainty = (0.2 / 6.6) × 100 %",
+            "Percentage uncertainty = 3.03 %"
+          ],
+          "answer": {
+            "value": 3.03,
+            "unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "products-quotients",
+      "name": "Combining uncertainties: products and quotients",
+      "equations": [
+        "Q = AB or Q = A / B: %ΔQ = %ΔA + %ΔB"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "When a result is found by multiplying or dividing measurements, convert each uncertainty to a percentage and add the percentages. If the question asks for an absolute uncertainty in the result, calculate the result, then multiply it by the total percentage uncertainty divided by 100.",
+      "commonErrors": [
+        "Adding absolute uncertainties for a product or quotient",
+        "Subtracting percentage uncertainties for a quotient — they always add",
+        "Giving a percentage when the question asks for the absolute uncertainty, or vice versa"
+      ],
+      "worked": {
+        "id": "products-quotients-w",
+        "question": "A metal block has a mass of 48.6 g ± 0.1 g and a volume of 18.0 cm³ ± 0.5 cm³. Calculate the percentage uncertainty in its density.",
+        "steps": [
+          "Known: m = 48.6 ± 0.1 g, V = 18.0 ± 0.5 cm³. ρ = m / V, so add percentage uncertainties.",
+          "Percentage uncertainty in m = (0.1 / 48.6) × 100 % = 0.206 %",
+          "Percentage uncertainty in V = (0.5 / 18.0) × 100 % = 2.78 %",
+          "Percentage uncertainty in ρ = 0.206 + 2.78",
+          "Percentage uncertainty in ρ = 2.98 %"
+        ],
+        "answer": {
+          "value": 2.98,
+          "unit": "%"
+        }
+      },
+      "practice": [
+        {
+          "id": "products-quotients-p1",
+          "question": "The p.d. across a resistor is measured with a percentage uncertainty of 2 % and the current through it with a percentage uncertainty of 3 %. Calculate the percentage uncertainty in the resistance R = V / I.",
+          "hint": "For a quotient, add the percentage uncertainties.",
+          "walkthrough": [
+            "R = V / I, so %ΔR = %ΔV + %ΔI",
+            "%ΔR = 2 + 3",
+            "%ΔR = 5 %"
+          ],
+          "answer": {
+            "value": 5.0,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "products-quotients-p2",
+          "question": "A car headlamp draws a current of 0.42 A ± 0.01 A at a p.d. of 11.8 V ± 0.1 V. Calculate the percentage uncertainty in the power P = IV.",
+          "hint": "Find the percentage uncertainty in each quantity, then add them.",
+          "walkthrough": [
+            "%ΔI = (0.01 / 0.42) × 100 % = 2.38 %",
+            "%ΔV = (0.1 / 11.8) × 100 % = 0.847 %",
+            "%ΔP = 2.38 + 0.847",
+            "%ΔP = 3.23 %"
+          ],
+          "answer": {
+            "value": 3.23,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "products-quotients-p3",
+          "question": "A filament lamp has a p.d. of 3.6 V ± 0.1 V across it and a current of 0.15 A ± 0.01 A through it. Calculate the absolute uncertainty in its resistance, in ohms.",
+          "hint": "Find R, add the percentage uncertainties, then convert the total percentage back to ohms.",
+          "walkthrough": [
+            "R = V / I = 3.6 / 0.15 = 24 Ω",
+            "%ΔV = (0.1 / 3.6) × 100 % = 2.78 %; %ΔI = (0.01 / 0.15) × 100 % = 6.67 %",
+            "%ΔR = 2.78 + 6.67 = 9.44 %",
+            "ΔR = (9.44 / 100) × 24",
+            "ΔR = 2.27 Ω"
+          ],
+          "answer": {
+            "value": 2.27,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "products-quotients-p4",
+          "question": "A swimmer covers a distance of 25.0 m ± 0.1 m in a time of 3.20 s ± 0.05 s. Calculate the percentage uncertainty in her average speed.",
+          "hint": "Speed = distance / time; find both percentage uncertainties and add.",
+          "walkthrough": [
+            "%Δd = (0.1 / 25.0) × 100 % = 0.400 %",
+            "%Δt = (0.05 / 3.20) × 100 % = 1.56 %",
+            "%Δv = 0.400 + 1.56",
+            "%Δv = 1.96 %"
+          ],
+          "answer": {
+            "value": 1.96,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "products-quotients-p5",
+          "question": "A brick of weight 120 N ± 2 N rests on a face of length 0.250 m ± 0.005 m and width 0.120 m ± 0.005 m. Calculate the percentage uncertainty in the pressure it exerts, p = F / (l × w).",
+          "hint": "Three quantities are multiplied or divided, so add all three percentage uncertainties.",
+          "walkthrough": [
+            "%ΔF = (2 / 120) × 100 % = 1.67 %",
+            "%Δl = (0.005 / 0.250) × 100 % = 2.00 %",
+            "%Δw = (0.005 / 0.120) × 100 % = 4.17 %",
+            "%Δp = 1.67 + 2.00 + 4.17",
+            "%Δp = 7.83 %"
+          ],
+          "answer": {
+            "value": 7.83,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "products-quotients-p6",
+          "question": "A removal worker pushes a crate with a force of 45 N ± 1 N through a distance of 2.4 m ± 0.1 m. Calculate the absolute uncertainty in the work done, in joules.",
+          "hint": "Find W = Fd, add the percentage uncertainties, then multiply W by the total percentage divided by 100.",
+          "walkthrough": [
+            "W = Fd = 45 × 2.4 = 108 J",
+            "%ΔF = (1 / 45) × 100 % = 2.22 %; %Δd = (0.1 / 2.4) × 100 % = 4.17 %",
+            "%ΔW = 2.22 + 4.17 = 6.39 %",
+            "ΔW = (6.39 / 100) × 108",
+            "ΔW = 6.9 J"
+          ],
+          "answer": {
+            "value": 6.9,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "powers",
+      "name": "Combining uncertainties: powers",
+      "equations": [
+        "Q = Aⁿ: %ΔQ = n × %ΔA",
+        "Q = A × Bⁿ: %ΔQ = %ΔA + n × %ΔB"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "When a quantity is raised to a power n in the equation, multiply its percentage uncertainty by n. Then add this to the percentage uncertainties of any other measured quantities in the product or quotient. Constants such as π, ½ and 4/3 have no uncertainty.",
+      "commonErrors": [
+        "Squaring the percentage uncertainty instead of doubling it",
+        "Forgetting that a quantity on the bottom of a fraction, such as T² in g = 4π²L / T², still contributes +2 × %ΔT",
+        "Adding a percentage uncertainty for a constant like π or ½"
+      ],
+      "worked": {
+        "id": "powers-w",
+        "question": "A trolley's mass is measured with a percentage uncertainty of 1.5 % and its speed with a percentage uncertainty of 2.0 %. Calculate the percentage uncertainty in its kinetic energy, E = ½mv².",
+        "steps": [
+          "Known: %Δm = 1.5 %, %Δv = 2.0 %. E = ½mv², so v is squared and ½ has no uncertainty.",
+          "%ΔE = %Δm + 2 × %Δv",
+          "%ΔE = 1.5 + 2 × 2.0 = 1.5 + 4.0",
+          "%ΔE = 5.5 %"
+        ],
+        "answer": {
+          "value": 5.5,
+          "unit": "%"
+        }
+      },
+      "practice": [
+        {
+          "id": "powers-p1",
+          "question": "The radius of a ball bearing is measured with a percentage uncertainty of 1.2 %. Calculate the percentage uncertainty in its volume, V = (4/3)πr³.",
+          "hint": "r is cubed, so multiply its percentage uncertainty by 3.",
+          "walkthrough": [
+            "V = (4/3)πr³, so %ΔV = 3 × %Δr",
+            "%ΔV = 3 × 1.2",
+            "%ΔV = 3.6 %"
+          ],
+          "answer": {
+            "value": 3.6,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "powers-p2",
+          "question": "In a pendulum experiment the length L has a percentage uncertainty of 0.5 % and the period T has a percentage uncertainty of 1.5 %. Calculate the percentage uncertainty in g found from g = 4π²L / T².",
+          "hint": "Add %ΔL to twice %ΔT; 4π² has no uncertainty.",
+          "walkthrough": [
+            "%Δg = %ΔL + 2 × %ΔT",
+            "%Δg = 0.5 + 2 × 1.5 = 0.5 + 3.0",
+            "%Δg = 3.5 %"
+          ],
+          "answer": {
+            "value": 3.5,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "powers-p3",
+          "question": "The diameter of a copper pipe is measured as 12.4 mm ± 0.1 mm. Calculate the percentage uncertainty in the cross-sectional area, A = πd² / 4.",
+          "hint": "Find the percentage uncertainty in d first, then double it.",
+          "walkthrough": [
+            "%Δd = (0.1 / 12.4) × 100 % = 0.806 %",
+            "A = πd² / 4, so %ΔA = 2 × %Δd",
+            "%ΔA = 2 × 0.806",
+            "%ΔA = 1.61 %"
+          ],
+          "answer": {
+            "value": 1.61,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "powers-p4",
+          "question": "A hockey ball of mass 0.250 kg ± 0.005 kg is struck and moves at 3.0 m s⁻¹ ± 0.1 m s⁻¹. Calculate the absolute uncertainty in its kinetic energy, in joules.",
+          "hint": "Find E = ½mv², the total percentage uncertainty (%Δm + 2 × %Δv), then multiply E by that percentage divided by 100.",
+          "walkthrough": [
+            "E = ½ × 0.250 × 3.0² = 1.125 J",
+            "%Δm = (0.005 / 0.250) × 100 % = 2.00 %; %Δv = (0.1 / 3.0) × 100 % = 3.33 %",
+            "%ΔE = 2.00 + 2 × 3.33 = 8.67 %",
+            "ΔE = (8.67 / 100) × 1.125",
+            "ΔE = 0.0975 J"
+          ],
+          "answer": {
+            "value": 0.0975,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "powers-p5",
+          "question": "A heater is connected to a supply of 12.0 V ± 0.2 V and has a resistance of 36 Ω ± 1 Ω. Calculate the percentage uncertainty in the power dissipated, P = V² / R.",
+          "hint": "Double the percentage uncertainty in V and add the percentage uncertainty in R.",
+          "walkthrough": [
+            "%ΔV = (0.2 / 12.0) × 100 % = 1.67 %",
+            "%ΔR = (1 / 36) × 100 % = 2.78 %",
+            "%ΔP = 2 × 1.67 + 2.78",
+            "%ΔP = 6.11 %"
+          ],
+          "answer": {
+            "value": 6.11,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "powers-p6",
+          "question": "The radius of a cricket ball is measured as 2.50 cm ± 0.05 cm. Calculate the absolute uncertainty in its volume, V = (4/3)πr³, in cm³.",
+          "hint": "Calculate V, triple the percentage uncertainty in r, then convert that percentage to cm³.",
+          "walkthrough": [
+            "V = (4/3) × π × 2.50³ = 65.4 cm³",
+            "%Δr = (0.05 / 2.50) × 100 % = 2.0 %",
+            "%ΔV = 3 × 2.0 = 6.0 %",
+            "ΔV = (6.0 / 100) × 65.4",
+            "ΔV = 3.93 cm³"
+          ],
+          "answer": {
+            "value": 3.93,
+            "unit": "cm³"
+          }
+        }
+      ]
+    },
+    {
+      "id": "graph-gradient",
+      "name": "Finding a quantity from a graph gradient or intercept",
+      "equations": [
+        "gradient = (y₂ − y₁) / (x₂ − x₁)",
+        "y = mx + c: compare with the physics equation to identify what the gradient and intercept represent"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Write the physics equation in the form y = mx + c for the quantities plotted and identify what the gradient (and intercept) stands for. Calculate the gradient from two points far apart on the best-fit line, with units. Then rearrange the expression for the gradient to find the quantity asked for.",
+      "commonErrors": [
+        "Using data points instead of two points on the best-fit line",
+        "Stopping at the gradient when the question asks for the physical quantity, e.g. g = 4π² / gradient for a T² against L graph",
+        "Forgetting to convert axis units (cm, ms, 10¹⁴ Hz) before calculating the gradient"
+      ],
+      "worked": {
+        "id": "graph-gradient-w",
+        "question": "A student plots resistance R against length L for a wire of cross-sectional area 2.5 × 10⁻⁷ m². The best-fit line passes through (0.20 m, 1.6 Ω) and (0.80 m, 6.4 Ω). Calculate the resistivity of the wire.",
+        "steps": [
+          "Known: A = 2.5 × 10⁻⁷ m², two points on the line. R = ρL / A, so gradient = ρ / A.",
+          "Gradient = (6.4 − 1.6) / (0.80 − 0.20) = 4.8 / 0.60 = 8.0 Ω m⁻¹",
+          "ρ = gradient × A",
+          "ρ = 8.0 × 2.5 × 10⁻⁷",
+          "ρ = 2.0 × 10⁻⁶ Ω m"
+        ],
+        "answer": {
+          "value": 2e-06,
+          "unit": "Ω m"
+        }
+      },
+      "practice": [
+        {
+          "id": "graph-gradient-p1",
+          "question": "A velocity–time graph for a lorry pulling away from traffic lights is a straight line through (2.0 s, 5.0 m s⁻¹) and (8.0 s, 23.0 m s⁻¹). Calculate the acceleration of the lorry.",
+          "hint": "On a v–t graph the gradient is the acceleration.",
+          "walkthrough": [
+            "a = gradient = (v₂ − v₁) / (t₂ − t₁)",
+            "a = (23.0 − 5.0) / (8.0 − 2.0) = 18.0 / 6.0",
+            "a = 3.0 m s⁻²"
+          ],
+          "answer": {
+            "value": 3.0,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "graph-gradient-p2",
+          "question": "A force–extension graph for a bungee cord sample is a straight line through (0.020 m, 5.0 N) and (0.080 m, 20.0 N). Calculate the spring constant of the sample.",
+          "hint": "F = kx, so the gradient of F against x is k.",
+          "walkthrough": [
+            "k = gradient = (F₂ − F₁) / (x₂ − x₁)",
+            "k = (20.0 − 5.0) / (0.080 − 0.020) = 15.0 / 0.060",
+            "k = 250 N m⁻¹"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "N m⁻¹"
+          }
+        },
+        {
+          "id": "graph-gradient-p3",
+          "question": "A student plots T² against L for a simple pendulum. The best-fit line passes through (0.40 m, 1.61 s²) and (1.00 m, 4.02 s²). Use T = 2π√(L / g) to calculate a value for g.",
+          "hint": "Squaring gives T² = (4π² / g) L, so gradient = 4π² / g.",
+          "walkthrough": [
+            "T² = (4π² / g) L, so gradient = 4π² / g",
+            "Gradient = (4.02 − 1.61) / (1.00 − 0.40) = 2.41 / 0.60 = 4.02 s² m⁻¹",
+            "g = 4π² / gradient = 39.5 / 4.02",
+            "g = 9.83 m s⁻²"
+          ],
+          "answer": {
+            "value": 9.83,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "graph-gradient-p4",
+          "question": "In a photoelectric experiment, stopping potential Vₛ is plotted against frequency f. The best-fit line passes through (6.0 × 10¹⁴ Hz, 0.45 V) and (9.0 × 10¹⁴ Hz, 1.69 V). Calculate the value of the Planck constant given by this graph.",
+          "hint": "eVₛ = hf − φ, so Vₛ = (h / e) f − φ / e and the gradient is h / e.",
+          "walkthrough": [
+            "Vₛ = (h / e) f − φ / e, so gradient = h / e",
+            "Gradient = (1.69 − 0.45) / (9.0 × 10¹⁴ − 6.0 × 10¹⁴) = 1.24 / 3.0 × 10¹⁴ = 4.13 × 10⁻¹⁵ V s",
+            "h = e × gradient = 1.60 × 10⁻¹⁹ × 4.13 × 10⁻¹⁵",
+            "h = 6.61 × 10⁻³⁴ J s"
+          ],
+          "answer": {
+            "value": 6.61e-34,
+            "unit": "J s"
+          }
+        },
+        {
+          "id": "graph-gradient-p5",
+          "question": "The terminal p.d. V of a cell is plotted against the current I it delivers. The best-fit line passes through (0.20 A, 1.40 V) and (0.60 A, 1.08 V). Use V = ε − Ir to calculate the e.m.f. ε of the cell.",
+          "hint": "The gradient is −r; find it first, then substitute one point into V = ε − Ir to find the intercept ε.",
+          "walkthrough": [
+            "Gradient = (1.08 − 1.40) / (0.60 − 0.20) = −0.32 / 0.40 = −0.80 Ω, so r = 0.80 Ω",
+            "V = ε − Ir → ε = V + Ir",
+            "Using (0.20 A, 1.40 V): ε = 1.40 + 0.20 × 0.80 = 1.40 + 0.16",
+            "ε = 1.56 V"
+          ],
+          "answer": {
+            "value": 1.56,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "graph-gradient-p6",
+          "question": "A 50 W immersion heater warms a 0.50 kg block of metal. The temperature–time graph is a straight line through (60 s, 24.0 °C) and (240 s, 36.0 °C). Assuming no heat loss, calculate the specific heat capacity of the metal.",
+          "hint": "Pt = mcΔθ, so the gradient Δθ / t equals P / (mc).",
+          "walkthrough": [
+            "Pt = mcΔθ → Δθ = (P / mc) t, so gradient = P / (mc)",
+            "Gradient = (36.0 − 24.0) / (240 − 60) = 12.0 / 180 = 0.0667 K s⁻¹",
+            "c = P / (m × gradient) = 50 / (0.50 × 0.0667)",
+            "c = 1500 J kg⁻¹ K⁻¹"
+          ],
+          "answer": {
+            "value": 1500,
+            "unit": "J kg⁻¹ K⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "percentage-error",
+      "name": "Percentage difference and percentage error",
+      "equations": [
+        "percentage error = |measured − accepted| / accepted × 100 %",
+        "percentage difference = |A − B| / mean of A and B × 100 %"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "To compare a measured value with an accepted value, subtract, ignore the sign, divide by the accepted value and multiply by 100. To compare two measured values with no accepted value, divide the difference by their mean instead. Put both values in the same unit before subtracting.",
+      "commonErrors": [
+        "Dividing by the measured value instead of the accepted value",
+        "Comparing values in different units, e.g. g cm⁻³ against kg m⁻³",
+        "Reporting a negative percentage error — quote the magnitude"
+      ],
+      "worked": {
+        "id": "percentage-error-w",
+        "question": "A student uses a falling-ball experiment to measure the acceleration of free fall and obtains 9.65 m s⁻². Calculate the percentage error in this value compared with the accepted value of 9.81 m s⁻².",
+        "steps": [
+          "Known: measured g = 9.65 m s⁻², accepted g = 9.81 m s⁻².",
+          "Percentage error = |measured − accepted| / accepted × 100 %",
+          "Percentage error = |9.65 − 9.81| / 9.81 × 100 % = 0.16 / 9.81 × 100 %",
+          "Percentage error = 1.63 %"
+        ],
+        "answer": {
+          "value": 1.63,
+          "unit": "%"
+        }
+      },
+      "practice": [
+        {
+          "id": "percentage-error-p1",
+          "question": "A resonance-tube experiment gives a speed of sound in air of 336 m s⁻¹. The accepted value at the room temperature is 343 m s⁻¹. Calculate the percentage error.",
+          "hint": "Divide the difference by the accepted value, not the measured one.",
+          "walkthrough": [
+            "Difference = |336 − 343| = 7 m s⁻¹",
+            "Percentage error = (7 / 343) × 100 %",
+            "Percentage error = 2.04 %"
+          ],
+          "answer": {
+            "value": 2.04,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "percentage-error-p2",
+          "question": "A student measures the resistivity of copper as 1.80 × 10⁻⁸ Ω m. The accepted value is 1.68 × 10⁻⁸ Ω m. Calculate the percentage error.",
+          "hint": "The powers of ten cancel in the ratio, so work with 1.80 and 1.68.",
+          "walkthrough": [
+            "Difference = |1.80 − 1.68| × 10⁻⁸ = 0.12 × 10⁻⁸ Ω m",
+            "Percentage error = (0.12 × 10⁻⁸ / 1.68 × 10⁻⁸) × 100 %",
+            "Percentage error = 7.14 %"
+          ],
+          "answer": {
+            "value": 7.14,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "percentage-error-p3",
+          "question": "Two students measure the spring constant of the same spring by different methods and obtain 24.5 N m⁻¹ and 26.3 N m⁻¹. Calculate the percentage difference between the two values.",
+          "hint": "With no accepted value, divide the difference by the mean of the two results.",
+          "walkthrough": [
+            "Mean = (24.5 + 26.3) / 2 = 25.4 N m⁻¹",
+            "Difference = 26.3 − 24.5 = 1.8 N m⁻¹",
+            "Percentage difference = (1.8 / 25.4) × 100 %",
+            "Percentage difference = 7.09 %"
+          ],
+          "answer": {
+            "value": 7.09,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "percentage-error-p4",
+          "question": "A student measures the density of an aluminium block as 2.65 g cm⁻³. The accepted density of aluminium is 2700 kg m⁻³. Calculate the percentage error in the student's value.",
+          "hint": "Convert g cm⁻³ to kg m⁻³ (multiply by 1000) before comparing.",
+          "walkthrough": [
+            "Measured density = 2.65 × 1000 = 2650 kg m⁻³",
+            "Difference = |2650 − 2700| = 50 kg m⁻³",
+            "Percentage error = (50 / 2700) × 100 %",
+            "Percentage error = 1.85 %"
+          ],
+          "answer": {
+            "value": 1.85,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "percentage-error-p5",
+          "question": "A simple pendulum of length 0.500 m has a measured period of 1.45 s. Use T = 2π√(L / g) to find a value for g, and calculate the percentage error compared with 9.81 m s⁻².",
+          "hint": "Rearrange to g = 4π²L / T², evaluate it, then compare with 9.81.",
+          "walkthrough": [
+            "g = 4π²L / T² = 4π² × 0.500 / 1.45² = 19.74 / 2.1025",
+            "g = 9.39 m s⁻²",
+            "Percentage error = |9.39 − 9.81| / 9.81 × 100 % = 0.42 / 9.81 × 100 %",
+            "Percentage error = 4.30 %"
+          ],
+          "answer": {
+            "value": 4.3,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "percentage-error-p6",
+          "question": "A resistor is marked as 22 Ω. A student measures a p.d. of 4.80 V across it when a current of 0.210 A flows through it. Calculate the percentage error of the measured resistance compared with the marked value.",
+          "hint": "Find R = V / I first, then compare it with 22 Ω.",
+          "walkthrough": [
+            "R = V / I = 4.80 / 0.210 = 22.86 Ω",
+            "Difference = |22.86 − 22| = 0.86 Ω",
+            "Percentage error = (0.86 / 22) × 100 %",
+            "Percentage error = 3.90 %"
+          ],
+          "answer": {
+            "value": 3.9,
+            "unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "experiment-graph",
+      "name": "Reading experimental graphs",
+      "equations": [
+        "gradient = (y₂ − y₁) / (x₂ − x₁), using two points far apart on the line",
+        "y = mx + c: match the physics equation to find what the gradient and intercept mean",
+        "percentage uncertainty in gradient = |best − worst| / best × 100%"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Pick two points on the drawn line (not data points) at gridline intersections as far apart as possible, and find the gradient with its unit, converting any scaled axis units first. Then compare the plotted equation with y = mx + c to turn the gradient or intercept into the quantity asked for. For an uncertainty, find the gradient of the worst-fit line the same way and quote the percentage difference from the best-fit gradient.",
+      "commonErrors": [
+        "Taking the gradient between two data points instead of two points on the best-fit line",
+        "Reading the gradient triangle too small, so the gradient is poorly determined",
+        "Forgetting that an axis in cm, mm or 10⁻²³ m⁻² must be converted before the gradient is used in an equation",
+        "Reporting the gradient when the question asks for the quantity it represents (e.g. g = 4π² / gradient)"
+      ],
+      "worked": {
+        "id": "experiment-graph-w",
+        "question": "A student measures the resistance R of a wire of cross-sectional area 4.0 × 10⁻⁷ m² for different lengths L. The best-fit line through the results is shown; points P and Q lie on the line. Use the gradient of the line to determine the resistivity of the wire.",
+        "steps": [
+          "Known: A = 4.0 × 10⁻⁷ m². R = ρL / A, so the gradient of R against L is ρ / A.",
+          "P is at (0, 0.5 Ω) and Q is at (1.0 m, 4.5 Ω).",
+          "Gradient = (4.5 − 0.5) / (1.0 − 0) = 4.0 Ω m⁻¹",
+          "ρ = gradient × A = 4.0 × 4.0 × 10⁻⁷",
+          "ρ = 1.6 × 10⁻⁶ Ω m"
+        ],
+        "answer": {
+          "value": 1.6e-06,
+          "unit": "Ω m"
+        },
+        "graph": {
+          "x": {
+            "label": "L / m",
+            "min": 0,
+            "max": 1.0,
+            "step": 0.1
+          },
+          "y": {
+            "label": "R / Ω",
+            "min": 0,
+            "max": 5,
+            "step": 0.5
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1.0,
+                  4.5
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 0,
+              "y": 0.5,
+              "label": "P",
+              "dx": 10,
+              "dy": 4
+            },
+            {
+              "x": 1.0,
+              "y": 4.5,
+              "label": "Q",
+              "dx": -18,
+              "dy": -8
+            }
+          ],
+          "alt": "Straight line of resistance against length from point P at (0, 0.5 Ω) to point Q at (1.0 m, 4.5 Ω)"
+        }
+      },
+      "practice": [
+        {
+          "id": "experiment-graph-p1",
+          "question": "A beaker of water is heated by an immersion heater and its temperature θ is recorded every minute. The graph shows the results with a best-fit line drawn. Determine the gradient of the best-fit line.",
+          "hint": "Use two points on the line far apart, such as where it meets the left and right edges of the grid: (0, 20 °C) and (10 min, 70 °C).",
+          "walkthrough": [
+            "Choose two points on the best-fit line, not data points: (0, 20 °C) and (10 min, 70 °C).",
+            "Gradient = (70 − 20) / (10 − 0) = 50 / 10",
+            "Gradient = 5.0 °C min⁻¹"
+          ],
+          "answer": {
+            "value": 5.0,
+            "unit": "°C min⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / min",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "θ / °C",
+              "min": 20,
+              "max": 80,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    1,
+                    26.2
+                  ],
+                  [
+                    2,
+                    29.1
+                  ],
+                  [
+                    3,
+                    36.5
+                  ],
+                  [
+                    4,
+                    38.7
+                  ],
+                  [
+                    5,
+                    45.6
+                  ],
+                  [
+                    6,
+                    51.4
+                  ],
+                  [
+                    7,
+                    53.9
+                  ],
+                  [
+                    8,
+                    60.8
+                  ],
+                  [
+                    9,
+                    64.3
+                  ]
+                ],
+                "fit": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    10,
+                    70
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature against time for nine readings scattered about a best-fit line rising from 20 °C at t = 0 to 70 °C at 10 minutes"
+          }
+        },
+        {
+          "id": "experiment-graph-p2",
+          "question": "A student times a simple pendulum for several lengths L and plots T² against L, where T is the period. The best-fit line is drawn through the origin. Use T = 2π√(L / g) and the gradient of the line to determine a value for g.",
+          "hint": "Squaring the equation gives T² = (4π² / g) L, so g = 4π² / gradient; read the gradient from (0, 0) and (1.0 m, 4.0 s²).",
+          "walkthrough": [
+            "T² = (4π² / g) L, so the gradient of T² against L is 4π² / g.",
+            "Points on the line: (0, 0) and (1.0 m, 4.0 s²).",
+            "Gradient = (4.0 − 0) / (1.0 − 0) = 4.0 s² m⁻¹",
+            "g = 4π² / gradient = 39.5 / 4.0",
+            "g = 9.87 m s⁻²"
+          ],
+          "answer": {
+            "value": 9.87,
+            "unit": "m s⁻²"
+          },
+          "graph": {
+            "x": {
+              "label": "L / m",
+              "min": 0,
+              "max": 1.0,
+              "step": 0.1
+            },
+            "y": {
+              "label": "T² / s²",
+              "min": 0,
+              "max": 4,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    0.2,
+                    0.88
+                  ],
+                  [
+                    0.3,
+                    1.14
+                  ],
+                  [
+                    0.4,
+                    1.65
+                  ],
+                  [
+                    0.5,
+                    1.91
+                  ],
+                  [
+                    0.6,
+                    2.47
+                  ],
+                  [
+                    0.7,
+                    2.76
+                  ],
+                  [
+                    0.8,
+                    3.26
+                  ],
+                  [
+                    0.9,
+                    3.55
+                  ]
+                ],
+                "fit": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1.0,
+                    4
+                  ]
+                ]
+              }
+            ],
+            "alt": "Period squared against length for eight pendulum readings scattered about a best-fit line through the origin reaching 4.0 s² at 1.0 m"
+          }
+        },
+        {
+          "id": "experiment-graph-p3",
+          "question": "A student loads a spring and records its extension x with a ruler, plotting x against the load F. The best-fit line is shown. The line should pass through the origin, but the student made the same zero error in every ruler reading. Use the intercept of the graph to determine the zero error, in mm.",
+          "hint": "Read where the line crosses the x axis of the graph at F = 0; that is the extension recorded when there should have been none, in cm.",
+          "walkthrough": [
+            "With no load the true extension is zero, so the intercept on the extension axis is the zero error.",
+            "Intercept: at F = 0 the line reads x = 0.5 cm.",
+            "Zero error = 0.5 cm = 5.0 mm"
+          ],
+          "answer": {
+            "value": 5.0,
+            "unit": "mm"
+          },
+          "graph": {
+            "x": {
+              "label": "F / N",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "x / cm",
+              "min": 0,
+              "max": 5,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    8,
+                    4.5
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 0.5,
+                "label": "intercept",
+                "dx": 10,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line of recorded extension against load starting at an intercept of 0.5 cm when F = 0 and rising to 4.5 cm at 8 N"
+          }
+        },
+        {
+          "id": "experiment-graph-p4",
+          "question": "A mass m hanging from a spring is set oscillating and its period T is measured for several masses. The graph shows T² against m with a straight line drawn through the origin; point P lies on the line. Use T = 2π√(m / k) and the gradient of the line to determine the spring constant k.",
+          "hint": "T² = (4π² / k) m, so gradient = 4π² / k; find the gradient from the origin and P, then rearrange for k.",
+          "walkthrough": [
+            "T² = (4π² / k) m, so the gradient of T² against m is 4π² / k.",
+            "P is at (0.50 kg, 1.0 s²) and the line passes through (0, 0).",
+            "Gradient = (1.0 − 0) / (0.50 − 0) = 2.0 s² kg⁻¹",
+            "k = 4π² / gradient = 39.5 / 2.0",
+            "k = 19.7 N m⁻¹"
+          ],
+          "answer": {
+            "value": 19.7,
+            "unit": "N m⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "m / kg",
+              "min": 0,
+              "max": 0.6,
+              "step": 0.1
+            },
+            "y": {
+              "label": "T² / s²",
+              "min": 0,
+              "max": 1.2,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.6,
+                    1.2
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.5,
+                "y": 1.0,
+                "label": "P"
+              }
+            ],
+            "alt": "Straight line of period squared against mass through the origin and point P at (0.50 kg, 1.0 s²), reaching 1.2 s² at 0.6 kg"
+          }
+        },
+        {
+          "id": "experiment-graph-p5",
+          "question": "A student plots the extension x of a spring against the load F. The solid line is the best-fit line, which passes through the origin, and the dashed line is the worst-fit line; points A and B lie on the worst-fit line. Determine the percentage uncertainty in the gradient of the best-fit line.",
+          "hint": "Find both gradients from points far apart on each line, then percentage uncertainty = |best − worst| / best × 100%.",
+          "walkthrough": [
+            "Best-fit line through (0, 0) and (20 N, 40 mm): gradient = 40 / 20 = 2.0 mm N⁻¹",
+            "Worst-fit line through A (0, 2 mm) and B (20 N, 38 mm): gradient = (38 − 2) / (20 − 0) = 1.8 mm N⁻¹",
+            "Difference = 2.0 − 1.8 = 0.2 mm N⁻¹",
+            "Percentage uncertainty = 0.2 / 2.0 × 100% = 10%"
+          ],
+          "answer": {
+            "value": 10.0,
+            "unit": "%"
+          },
+          "graph": {
+            "x": {
+              "label": "F / N",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "x / mm",
+              "min": 0,
+              "max": 40,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    20,
+                    40
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    20,
+                    38
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 2,
+                "label": "A",
+                "dx": 10,
+                "dy": 4
+              },
+              {
+                "x": 20,
+                "y": 38,
+                "label": "B",
+                "dx": 6,
+                "dy": 16
+              }
+            ],
+            "alt": "Extension against load with a solid best-fit line from the origin to (20 N, 40 mm) and a dashed worst-fit line from point A at (0, 2 mm) to point B at (20 N, 38 mm)"
+          }
+        },
+        {
+          "id": "experiment-graph-p6",
+          "question": "A student pours ethanol into a measuring cylinder on a balance and records the total mass m for several volumes V. The graph shows m against V with a best-fit line drawn. Use the gradient of the line to determine the density of the ethanol in kg m⁻³.",
+          "hint": "The gradient is the density in g cm⁻³ (the intercept is the mass of the empty cylinder); read it from (0, 80 g) and (100 cm³, 160 g), then convert using 1 g cm⁻³ = 1000 kg m⁻³.",
+          "walkthrough": [
+            "m = (mass of cylinder) + ρV, so the gradient of m against V is ρ.",
+            "Points on the line: (0, 80 g) and (100 cm³, 160 g).",
+            "Gradient = (160 − 80) / (100 − 0) = 0.80 g cm⁻³",
+            "ρ = 0.80 g cm⁻³ = 0.80 × 1000 kg m⁻³",
+            "ρ = 800 kg m⁻³"
+          ],
+          "answer": {
+            "value": 800,
+            "unit": "kg m⁻³"
+          },
+          "graph": {
+            "x": {
+              "label": "V / cm³",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "y": {
+              "label": "m / g",
+              "min": 60,
+              "max": 160,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    10,
+                    89.5
+                  ],
+                  [
+                    20,
+                    94.8
+                  ],
+                  [
+                    30,
+                    104.9
+                  ],
+                  [
+                    40,
+                    110.4
+                  ],
+                  [
+                    50,
+                    121.1
+                  ],
+                  [
+                    60,
+                    127.2
+                  ],
+                  [
+                    70,
+                    137.4
+                  ],
+                  [
+                    80,
+                    143
+                  ],
+                  [
+                    90,
+                    152.7
+                  ]
+                ],
+                "fit": [
+                  [
+                    0,
+                    80
+                  ],
+                  [
+                    100,
+                    160
+                  ]
+                ]
+              }
+            ],
+            "alt": "Total mass against volume for nine readings scattered about a best-fit line from 80 g at zero volume to 160 g at 100 cm³"
+          }
+        }
+      ]
+    }
+  ]
+}

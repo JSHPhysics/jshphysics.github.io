@@ -1,0 +1,1638 @@
+{
+  "id": "electricity",
+  "title": "Electric circuits",
+  "subtitle": "Charge, current, resistance, resistivity, power, e.m.f. and potential dividers",
+  "order": 80,
+  "types": [
+    {
+      "id": "charge-current-time",
+      "name": "Charge, current and time",
+      "equations": [
+        "Q = It",
+        "Q = Ne"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Current is the rate of flow of charge, so charge = current × time with time in seconds. If the question mentions a number of electrons, the total charge is that number multiplied by e = 1.60 × 10⁻¹⁹ C. Convert mA and μA to amps and minutes or hours to seconds before substituting.",
+      "commonErrors": [
+        "Leaving time in minutes or hours instead of converting to seconds",
+        "Forgetting that 1 mA = 10⁻³ A and 1 μA = 10⁻⁶ A",
+        "Dividing by e instead of multiplying when going from number of electrons to charge"
+      ],
+      "worked": {
+        "id": "charge-current-time-w",
+        "question": "A torch bulb carries a current of 0.25 A for 2.0 minutes. Calculate the charge that flows through the bulb.",
+        "steps": [
+          "Known: I = 0.25 A, t = 2.0 minutes = 2.0 × 60 = 120 s. Unknown: Q.",
+          "Use Q = It.",
+          "Q = 0.25 × 120",
+          "Q = 30 C"
+        ],
+        "answer": {
+          "value": 30,
+          "unit": "C"
+        }
+      },
+      "practice": [
+        {
+          "id": "charge-current-time-p1",
+          "question": "An electric kettle draws a current of 9.5 A for 180 s while boiling water. Calculate the charge that passes through the heating element.",
+          "hint": "Use Q = It; the time is already in seconds.",
+          "walkthrough": [
+            "I = 9.5 A, t = 180 s, find Q.",
+            "Q = It = 9.5 × 180",
+            "Q = 1710 C = 1.71 × 10³ C"
+          ],
+          "answer": {
+            "value": 1710,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "charge-current-time-p2",
+          "question": "A charge of 540 C passes through an electric drill motor in 45 s. Calculate the current in the motor.",
+          "hint": "Rearrange Q = It to make I the subject.",
+          "walkthrough": [
+            "Q = 540 C, t = 45 s, find I.",
+            "I = Q / t = 540 / 45",
+            "I = 12 A"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "charge-current-time-p3",
+          "question": "An LED on a games console is lit for 5.0 minutes with a current of 18 mA through it. Calculate the charge that flows through the LED.",
+          "hint": "Convert 18 mA to amps and 5.0 minutes to seconds before using Q = It.",
+          "walkthrough": [
+            "I = 18 mA = 18 × 10⁻³ A = 0.018 A, t = 5.0 × 60 = 300 s.",
+            "Q = It = 0.018 × 300",
+            "Q = 5.4 C"
+          ],
+          "answer": {
+            "value": 5.4,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "charge-current-time-p4",
+          "question": "A solar panel delivers a total charge of 2.4 × 10⁴ C to a battery over a period of 3.0 hours. Calculate the mean current delivered by the panel.",
+          "hint": "Convert 3.0 hours to seconds, then use I = Q / t.",
+          "walkthrough": [
+            "Q = 2.4 × 10⁴ C, t = 3.0 × 3600 = 10 800 s, find I.",
+            "I = Q / t = 2.4 × 10⁴ / 10 800",
+            "I = 2.22 A"
+          ],
+          "answer": {
+            "value": 2.22,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "charge-current-time-p5",
+          "question": "The beam current in an electron microscope is 2.5 μA. Calculate the number of electrons that strike the sample in 4.0 s.",
+          "hint": "Find the charge with Q = It first, then divide by the charge on one electron.",
+          "walkthrough": [
+            "I = 2.5 μA = 2.5 × 10⁻⁶ A, t = 4.0 s, e = 1.60 × 10⁻¹⁹ C.",
+            "Q = It = 2.5 × 10⁻⁶ × 4.0 = 1.0 × 10⁻⁵ C",
+            "N = Q / e = 1.0 × 10⁻⁵ / 1.60 × 10⁻¹⁹",
+            "N = 6.25 × 10¹³ electrons"
+          ],
+          "answer": {
+            "value": 62500000000000,
+            "unit": ""
+          }
+        },
+        {
+          "id": "charge-current-time-p6",
+          "question": "During a car's starter motor turning over, 3.0 × 10²⁰ electrons pass through the motor in 8.0 s. Calculate the current in the motor.",
+          "hint": "Find the total charge with Q = Ne first, then divide by the time.",
+          "walkthrough": [
+            "N = 3.0 × 10²⁰, e = 1.60 × 10⁻¹⁹ C, t = 8.0 s.",
+            "Q = Ne = 3.0 × 10²⁰ × 1.60 × 10⁻¹⁹ = 48 C",
+            "I = Q / t = 48 / 8.0",
+            "I = 6.0 A"
+          ],
+          "answer": {
+            "value": 6.0,
+            "unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pd-energy-charge",
+      "name": "Potential difference, energy and charge",
+      "equations": [
+        "V = W / Q",
+        "W = QV"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Potential difference is the energy transferred per unit charge, so energy = charge × p.d. Identify which two of W, Q and V you are given and rearrange for the third. If the question gives a current and a time instead of a charge, find Q = It first.",
+      "commonErrors": [
+        "Confusing energy per unit charge (p.d.) with energy per unit time (power)",
+        "Using the number of electrons as if it were the charge in coulombs",
+        "Giving the energy of an electron in eV when the question asks for joules"
+      ],
+      "worked": {
+        "id": "pd-energy-charge-w",
+        "question": "A charge of 6.0 C passes through a resistor and transfers 54 J of energy to it. Calculate the potential difference across the resistor.",
+        "steps": [
+          "Known: W = 54 J, Q = 6.0 C. Unknown: V.",
+          "Use V = W / Q.",
+          "V = 54 / 6.0",
+          "V = 9.0 V"
+        ],
+        "answer": {
+          "value": 9.0,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "pd-energy-charge-p1",
+          "question": "A charge of 50 C flows through an electric heater connected to the 230 V mains. Calculate the energy transferred to the heater.",
+          "hint": "Use W = QV with the values given.",
+          "walkthrough": [
+            "Q = 50 C, V = 230 V, find W.",
+            "W = QV = 50 × 230",
+            "W = 11 500 J = 1.15 × 10⁴ J"
+          ],
+          "answer": {
+            "value": 11500,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "pd-energy-charge-p2",
+          "question": "A car starter motor transfers 2.4 × 10³ J of energy when 200 C of charge passes through it. Calculate the potential difference across the motor.",
+          "hint": "Use V = W / Q.",
+          "walkthrough": [
+            "W = 2.4 × 10³ J, Q = 200 C, find V.",
+            "V = W / Q = 2400 / 200",
+            "V = 12 V"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "pd-energy-charge-p3",
+          "question": "An electron in an X-ray tube is accelerated through a potential difference of 2.5 kV. Calculate the energy gained by the electron, in joules.",
+          "hint": "The charge is e = 1.60 × 10⁻¹⁹ C; convert kV to V and use W = QV.",
+          "walkthrough": [
+            "Q = e = 1.60 × 10⁻¹⁹ C, V = 2.5 kV = 2500 V, find W.",
+            "W = QV = 1.60 × 10⁻¹⁹ × 2500",
+            "W = 4.0 × 10⁻¹⁶ J"
+          ],
+          "answer": {
+            "value": 4e-16,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "pd-energy-charge-p4",
+          "question": "A defibrillator delivers 360 J of energy to a patient at a potential difference of 2.0 kV. Calculate the charge that passes through the patient.",
+          "hint": "Rearrange W = QV to make Q the subject and convert kV to V.",
+          "walkthrough": [
+            "W = 360 J, V = 2.0 kV = 2000 V, find Q.",
+            "Q = W / V = 360 / 2000",
+            "Q = 0.18 C"
+          ],
+          "answer": {
+            "value": 0.18,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "pd-energy-charge-p5",
+          "question": "A desk fan runs from the 230 V mains with a current of 0.50 A for 3.0 minutes. Calculate the energy transferred to the fan.",
+          "hint": "Find the charge from Q = It (time in seconds), then use W = QV.",
+          "walkthrough": [
+            "V = 230 V, I = 0.50 A, t = 3.0 × 60 = 180 s.",
+            "Q = It = 0.50 × 180 = 90 C",
+            "W = QV = 90 × 230",
+            "W = 20 700 J = 2.07 × 10⁴ J"
+          ],
+          "answer": {
+            "value": 20700,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "pd-energy-charge-p6",
+          "question": "A bicycle lamp transfers 360 J of energy in 40 s while a current of 1.5 A flows through it. Calculate the potential difference across the lamp.",
+          "hint": "Find the charge from Q = It, then use V = W / Q.",
+          "walkthrough": [
+            "W = 360 J, I = 1.5 A, t = 40 s.",
+            "Q = It = 1.5 × 40 = 60 C",
+            "V = W / Q = 360 / 60",
+            "V = 6.0 V"
+          ],
+          "answer": {
+            "value": 6.0,
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resistance-v-i",
+      "name": "Resistance from p.d. and current",
+      "equations": [
+        "R = V / I",
+        "V = IR",
+        "I = V / R"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Resistance is defined as p.d. divided by current. Identify which two of V, I and R you have and rearrange for the third. If values come from a table or a graph, take a pair of corresponding V and I readings (for an ohmic conductor any pair gives the same R). Convert mA to A and kΩ to Ω before substituting.",
+      "commonErrors": [
+        "Dividing I by V instead of V by I",
+        "Leaving current in mA so the resistance comes out 1000 times too small",
+        "Reading the gradient of an I–V graph as the resistance (it is 1/R)"
+      ],
+      "worked": {
+        "id": "resistance-v-i-w",
+        "question": "A resistor in a lab circuit has a p.d. of 6.0 V across it and a current of 0.40 A through it. Calculate its resistance.",
+        "steps": [
+          "Known: V = 6.0 V, I = 0.40 A. Unknown: R.",
+          "Use R = V / I.",
+          "R = 6.0 / 0.40",
+          "R = 15 Ω"
+        ],
+        "answer": {
+          "value": 15,
+          "unit": "Ω"
+        }
+      },
+      "practice": [
+        {
+          "id": "resistance-v-i-p1",
+          "question": "A car headlamp bulb operates at 12 V with a current of 2.5 A. Calculate the resistance of the filament at its working temperature.",
+          "hint": "Use R = V / I.",
+          "walkthrough": [
+            "V = 12 V, I = 2.5 A, find R.",
+            "R = V / I = 12 / 2.5",
+            "R = 4.8 Ω"
+          ],
+          "answer": {
+            "value": 4.8,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistance-v-i-p2",
+          "question": "An immersion heater of resistance 20 Ω is connected to the 230 V mains. Calculate the current in the heater.",
+          "hint": "Rearrange R = V / I to I = V / R.",
+          "walkthrough": [
+            "V = 230 V, R = 20 Ω, find I.",
+            "I = V / R = 230 / 20",
+            "I = 11.5 A"
+          ],
+          "answer": {
+            "value": 11.5,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "resistance-v-i-p3",
+          "question": "A 4.7 kΩ resistor in a radio has a p.d. of 9.0 V across it. Calculate the current in the resistor, in mA.",
+          "hint": "Convert 4.7 kΩ to ohms, find I = V / R in amps, then convert to mA.",
+          "walkthrough": [
+            "V = 9.0 V, R = 4.7 kΩ = 4700 Ω, find I.",
+            "I = V / R = 9.0 / 4700 = 1.91 × 10⁻³ A",
+            "I = 1.91 mA"
+          ],
+          "answer": {
+            "value": 1.91,
+            "unit": "mA"
+          }
+        },
+        {
+          "id": "resistance-v-i-p4",
+          "question": "A student records the following readings for a wire: p.d. 0.50 V at 25 mA, 1.00 V at 50 mA, and 1.50 V at 75 mA. Calculate the resistance of the wire.",
+          "hint": "Pick any pair of readings, convert mA to A, and use R = V / I.",
+          "walkthrough": [
+            "Take the pair V = 1.50 V, I = 75 mA = 0.075 A.",
+            "R = V / I = 1.50 / 0.075",
+            "R = 20 Ω (the other pairs give the same value, so the wire is ohmic)"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistance-v-i-p5",
+          "question": "A heating element connected to the 230 V mains passes a charge of 2400 C in 2.0 minutes. Calculate the resistance of the element.",
+          "hint": "Find the current from I = Q / t (time in seconds), then use R = V / I.",
+          "walkthrough": [
+            "V = 230 V, Q = 2400 C, t = 2.0 × 60 = 120 s.",
+            "I = Q / t = 2400 / 120 = 20 A",
+            "R = V / I = 230 / 20",
+            "R = 11.5 Ω"
+          ],
+          "answer": {
+            "value": 11.5,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistance-v-i-p6",
+          "question": "The I–V graph for a metal wire at constant temperature is a straight line through the origin passing through the point I = 0.35 A, V = 4.2 V. Calculate the current in the wire when the p.d. across it is 9.0 V.",
+          "hint": "Use the given point to find R = V / I, then use I = V / R at 9.0 V.",
+          "walkthrough": [
+            "From the graph point: V = 4.2 V, I = 0.35 A.",
+            "R = V / I = 4.2 / 0.35 = 12 Ω",
+            "At 9.0 V: I = V / R = 9.0 / 12",
+            "I = 0.75 A"
+          ],
+          "answer": {
+            "value": 0.75,
+            "unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resistivity",
+      "name": "Resistivity",
+      "equations": [
+        "R = ρL / A",
+        "A = πd² / 4 for a circular wire"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Resistance depends on the material (ρ), the length and the cross-sectional area. Convert every length to metres and every area to m² (1 mm² = 10⁻⁶ m²) before substituting. If a diameter is given, halve it to get the radius and use A = πr². Rearrange R = ρL / A for whichever quantity is unknown.",
+      "commonErrors": [
+        "Using the diameter as the radius in A = πr²",
+        "Converting mm² to m² by multiplying by 10⁻³ instead of 10⁻⁶",
+        "Mixing up the units of resistivity (Ω m, not Ω m⁻¹ or Ω/m)"
+      ],
+      "worked": {
+        "id": "resistivity-w",
+        "question": "A constantan wire of length 2.0 m has a diameter of 0.50 mm. The resistivity of constantan is 4.9 × 10⁻⁷ Ω m. Calculate the resistance of the wire.",
+        "steps": [
+          "Known: ρ = 4.9 × 10⁻⁷ Ω m, L = 2.0 m, d = 0.50 mm = 0.50 × 10⁻³ m. Unknown: R.",
+          "Radius r = d / 2 = 0.25 × 10⁻³ m",
+          "A = πr² = π × (0.25 × 10⁻³)² = 1.96 × 10⁻⁷ m²",
+          "R = ρL / A = 4.9 × 10⁻⁷ × 2.0 / 1.96 × 10⁻⁷",
+          "R = 4.99 Ω"
+        ],
+        "answer": {
+          "value": 4.99,
+          "unit": "Ω"
+        }
+      },
+      "practice": [
+        {
+          "id": "resistivity-p1",
+          "question": "A nichrome heating wire has length 1.5 m and cross-sectional area 2.0 × 10⁻⁷ m². The resistivity of nichrome is 1.1 × 10⁻⁶ Ω m. Calculate the resistance of the wire.",
+          "hint": "Substitute straight into R = ρL / A; everything is already in SI units.",
+          "walkthrough": [
+            "ρ = 1.1 × 10⁻⁶ Ω m, L = 1.5 m, A = 2.0 × 10⁻⁷ m², find R.",
+            "R = ρL / A = 1.1 × 10⁻⁶ × 1.5 / 2.0 × 10⁻⁷",
+            "R = 8.25 Ω"
+          ],
+          "answer": {
+            "value": 8.25,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistivity-p2",
+          "question": "A copper cable in a house has length 25 m and cross-sectional area 1.0 × 10⁻⁶ m². The resistivity of copper is 1.7 × 10⁻⁸ Ω m. Calculate the resistance of the cable.",
+          "hint": "Use R = ρL / A directly.",
+          "walkthrough": [
+            "ρ = 1.7 × 10⁻⁸ Ω m, L = 25 m, A = 1.0 × 10⁻⁶ m², find R.",
+            "R = ρL / A = 1.7 × 10⁻⁸ × 25 / 1.0 × 10⁻⁶",
+            "R = 0.425 Ω"
+          ],
+          "answer": {
+            "value": 0.425,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistivity-p3",
+          "question": "A student measures the resistance of a 1.2 m length of wire of cross-sectional area 0.25 mm² to be 2.3 Ω. Calculate the resistivity of the wire's material.",
+          "hint": "Convert mm² to m² (multiply by 10⁻⁶), then rearrange to ρ = RA / L.",
+          "walkthrough": [
+            "R = 2.3 Ω, L = 1.2 m, A = 0.25 mm² = 0.25 × 10⁻⁶ m², find ρ.",
+            "ρ = RA / L = 2.3 × 0.25 × 10⁻⁶ / 1.2",
+            "ρ = 4.79 × 10⁻⁷ Ω m"
+          ],
+          "answer": {
+            "value": 4.79e-07,
+            "unit": "Ω m"
+          }
+        },
+        {
+          "id": "resistivity-p4",
+          "question": "An aluminium overhead power line has cross-sectional area 120 mm² and resistance 0.35 Ω. The resistivity of aluminium is 2.8 × 10⁻⁸ Ω m. Calculate the length of the line, in km.",
+          "hint": "Convert mm² to m², rearrange to L = RA / ρ, then convert the answer to km.",
+          "walkthrough": [
+            "R = 0.35 Ω, A = 120 mm² = 120 × 10⁻⁶ m² = 1.2 × 10⁻⁴ m², ρ = 2.8 × 10⁻⁸ Ω m.",
+            "L = RA / ρ = 0.35 × 1.2 × 10⁻⁴ / 2.8 × 10⁻⁸",
+            "L = 1500 m",
+            "L = 1.5 km"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "km"
+          }
+        },
+        {
+          "id": "resistivity-p5",
+          "question": "A copper connecting lead of length 4.0 m must have a resistance of 0.50 Ω. The resistivity of copper is 1.7 × 10⁻⁸ Ω m. Calculate the diameter of wire required, in mm.",
+          "hint": "Find A = ρL / R first, then use A = πr² to get the radius and double it.",
+          "walkthrough": [
+            "ρ = 1.7 × 10⁻⁸ Ω m, L = 4.0 m, R = 0.50 Ω.",
+            "A = ρL / R = 1.7 × 10⁻⁸ × 4.0 / 0.50 = 1.36 × 10⁻⁷ m²",
+            "r = √(A / π) = √(1.36 × 10⁻⁷ / π) = 2.08 × 10⁻⁴ m",
+            "d = 2r = 4.16 × 10⁻⁴ m",
+            "d = 0.416 mm"
+          ],
+          "answer": {
+            "value": 0.416,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "resistivity-p6",
+          "question": "A 0.60 m length of wire with cross-sectional area 1.3 × 10⁻⁷ m² carries a current of 0.80 A when the p.d. across it is 2.5 V. Calculate the resistivity of the wire.",
+          "hint": "Find R = V / I first, then use ρ = RA / L.",
+          "walkthrough": [
+            "V = 2.5 V, I = 0.80 A, L = 0.60 m, A = 1.3 × 10⁻⁷ m².",
+            "R = V / I = 2.5 / 0.80 = 3.125 Ω",
+            "ρ = RA / L = 3.125 × 1.3 × 10⁻⁷ / 0.60",
+            "ρ = 6.77 × 10⁻⁷ Ω m"
+          ],
+          "answer": {
+            "value": 6.77e-07,
+            "unit": "Ω m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resistor-combinations",
+      "name": "Resistors in series and parallel",
+      "equations": [
+        "Series: R = R₁ + R₂ + R₃",
+        "Parallel: 1/R = 1/R₁ + 1/R₂ + 1/R₃"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Resistors in series simply add. For resistors in parallel add the reciprocals, then take the reciprocal of the total; the result is always smaller than the smallest resistor. For a mixed network, reduce the innermost group first and replace it with a single resistor, then repeat.",
+      "commonErrors": [
+        "Forgetting to take the reciprocal at the end of a parallel calculation (leaving 1/R as the answer)",
+        "Adding resistances in parallel as if they were in series",
+        "For two resistors, using R₁R₂ / (R₁ + R₂) with three or more resistors"
+      ],
+      "worked": {
+        "id": "resistor-combinations-w",
+        "question": "A 6.0 Ω resistor and a 3.0 Ω resistor are connected in parallel, and this combination is connected in series with a 4.0 Ω resistor. Calculate the total resistance of the network.",
+        "steps": [
+          "Known: 6.0 Ω and 3.0 Ω in parallel, then 4.0 Ω in series. Unknown: total R.",
+          "Parallel pair first: 1/R_p = 1/6.0 + 1/3.0 = 0.1667 + 0.3333 = 0.500 Ω⁻¹",
+          "R_p = 1 / 0.500 = 2.0 Ω",
+          "Series with 4.0 Ω: R = 2.0 + 4.0",
+          "R = 6.0 Ω"
+        ],
+        "answer": {
+          "value": 6.0,
+          "unit": "Ω"
+        }
+      },
+      "practice": [
+        {
+          "id": "resistor-combinations-p1",
+          "question": "Three resistors of 12 Ω, 18 Ω and 30 Ω are connected in series in a lamp dimmer circuit. Calculate the total resistance.",
+          "hint": "Resistors in series simply add.",
+          "walkthrough": [
+            "R = R₁ + R₂ + R₃",
+            "R = 12 + 18 + 30",
+            "R = 60 Ω"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistor-combinations-p2",
+          "question": "A 20 Ω resistor and a 30 Ω resistor are connected in parallel across a battery. Calculate the combined resistance.",
+          "hint": "Add the reciprocals, then take the reciprocal of the result.",
+          "walkthrough": [
+            "1/R = 1/20 + 1/30 = 0.0500 + 0.0333 = 0.0833 Ω⁻¹",
+            "R = 1 / 0.0833",
+            "R = 12 Ω"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistor-combinations-p3",
+          "question": "Three heating elements of resistance 10 Ω, 15 Ω and 30 Ω are connected in parallel inside an oven. Calculate the combined resistance of the three elements.",
+          "hint": "Add all three reciprocals before taking the reciprocal of the total.",
+          "walkthrough": [
+            "1/R = 1/10 + 1/15 + 1/30 = 0.100 + 0.0667 + 0.0333 = 0.200 Ω⁻¹",
+            "R = 1 / 0.200",
+            "R = 5.0 Ω"
+          ],
+          "answer": {
+            "value": 5.0,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistor-combinations-p4",
+          "question": "In an amplifier a 4.7 kΩ resistor is connected in parallel with a 2.2 kΩ resistor. Calculate the combined resistance, in kΩ.",
+          "hint": "You can work entirely in kΩ; the parallel formula gives the answer in the same unit as the inputs.",
+          "walkthrough": [
+            "1/R = 1/4.7 + 1/2.2 = 0.2128 + 0.4545 = 0.6673 kΩ⁻¹",
+            "R = 1 / 0.6673",
+            "R = 1.50 kΩ"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "kΩ"
+          }
+        },
+        {
+          "id": "resistor-combinations-p5",
+          "question": "A 10 Ω resistor and a 30 Ω resistor are connected in series. This series pair is then connected in parallel with a 60 Ω resistor. Calculate the total resistance of the network.",
+          "hint": "Combine the series pair into one resistor first, then put it in parallel with the 60 Ω.",
+          "walkthrough": [
+            "Series pair: 10 + 30 = 40 Ω",
+            "Parallel with 60 Ω: 1/R = 1/40 + 1/60 = 0.0250 + 0.0167 = 0.0417 Ω⁻¹",
+            "R = 1 / 0.0417",
+            "R = 24 Ω"
+          ],
+          "answer": {
+            "value": 24,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "resistor-combinations-p6",
+          "question": "A 12 Ω resistor and a 6.0 Ω resistor are connected in parallel. This pair is connected in series with a 5.0 Ω resistor, and the whole arrangement is then connected in parallel with an 18 Ω resistor. Calculate the total resistance.",
+          "hint": "Work from the inside out: parallel pair, then add the series resistor, then the final parallel step.",
+          "walkthrough": [
+            "Inner pair: 1/R₁ = 1/12 + 1/6.0 = 0.0833 + 0.1667 = 0.250 Ω⁻¹, so R₁ = 4.0 Ω",
+            "Add the series 5.0 Ω: 4.0 + 5.0 = 9.0 Ω",
+            "Final parallel step: 1/R = 1/9.0 + 1/18 = 0.1111 + 0.0556 = 0.1667 Ω⁻¹",
+            "R = 1 / 0.1667",
+            "R = 6.0 Ω"
+          ],
+          "answer": {
+            "value": 6.0,
+            "unit": "Ω"
+          }
+        }
+      ]
+    },
+    {
+      "id": "current-pd-circuits",
+      "name": "Current and p.d. in series and parallel circuits",
+      "equations": [
+        "V = IR",
+        "Series: same current, p.d.s add",
+        "Parallel: same p.d., currents add"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "First reduce the circuit to a single resistance and use I = V / R to find the supply current. In series the current is the same everywhere, so the p.d. across one resistor is I × that resistor. In parallel every branch has the same p.d., so the current in one branch is that p.d. divided by the branch resistance.",
+      "commonErrors": [
+        "Using the full supply p.d. across one series resistor",
+        "Assuming the current splits equally between parallel branches of different resistance",
+        "Forgetting to combine resistances before finding the supply current"
+      ],
+      "worked": {
+        "id": "current-pd-circuits-w",
+        "question": "A 4.0 Ω resistor and an 8.0 Ω resistor are connected in series to a 12 V supply of negligible internal resistance. Calculate the p.d. across the 8.0 Ω resistor.",
+        "steps": [
+          "Known: V = 12 V, R₁ = 4.0 Ω, R₂ = 8.0 Ω in series. Unknown: p.d. across 8.0 Ω.",
+          "Total resistance R = 4.0 + 8.0 = 12 Ω",
+          "Current I = V / R = 12 / 12 = 1.0 A (same through both resistors)",
+          "V₂ = IR₂ = 1.0 × 8.0",
+          "V₂ = 8.0 V"
+        ],
+        "answer": {
+          "value": 8.0,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "current-pd-circuits-p1",
+          "question": "Three resistors of 10 Ω, 20 Ω and 15 Ω are connected in series across a 9.0 V battery of negligible internal resistance. Calculate the current in the circuit.",
+          "hint": "Add the resistances, then use I = V / R.",
+          "walkthrough": [
+            "R = 10 + 20 + 15 = 45 Ω",
+            "I = V / R = 9.0 / 45",
+            "I = 0.20 A"
+          ],
+          "answer": {
+            "value": 0.2,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "current-pd-circuits-p2",
+          "question": "A 12 Ω resistor and a 4.0 Ω resistor are connected in parallel across a 6.0 V supply. Calculate the current in the 12 Ω resistor.",
+          "hint": "Each parallel branch has the full supply p.d. across it.",
+          "walkthrough": [
+            "The p.d. across the 12 Ω branch is the supply p.d., 6.0 V.",
+            "I = V / R = 6.0 / 12",
+            "I = 0.50 A"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "current-pd-circuits-p3",
+          "question": "In a sensor circuit a 2.2 kΩ resistor and a 3.3 kΩ resistor are in series across a 5.0 V supply. Calculate the current in the circuit, in mA.",
+          "hint": "Add the resistances in kΩ, convert to Ω, use I = V / R, then convert to mA.",
+          "walkthrough": [
+            "R = 2.2 + 3.3 = 5.5 kΩ = 5500 Ω",
+            "I = V / R = 5.0 / 5500 = 9.09 × 10⁻⁴ A",
+            "I = 0.909 mA"
+          ],
+          "answer": {
+            "value": 0.909,
+            "unit": "mA"
+          }
+        },
+        {
+          "id": "current-pd-circuits-p4",
+          "question": "A 60 Ω resistor and a 40 Ω resistor are connected in parallel across a 12 V supply. Calculate the total current drawn from the supply.",
+          "hint": "Find the combined parallel resistance first, then use I = V / R.",
+          "walkthrough": [
+            "1/R = 1/60 + 1/40 = 0.0167 + 0.0250 = 0.0417 Ω⁻¹, so R = 24 Ω",
+            "I = V / R = 12 / 24",
+            "I = 0.50 A"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "current-pd-circuits-p5",
+          "question": "A 2.0 Ω resistor is connected in series with a parallel pair of 6.0 Ω and 3.0 Ω resistors. The circuit is powered by a 9.0 V supply of negligible internal resistance. Calculate the current drawn from the supply.",
+          "hint": "Reduce the parallel pair to one resistor, add the 2.0 Ω, then use I = V / R.",
+          "walkthrough": [
+            "Parallel pair: 1/R_p = 1/6.0 + 1/3.0 = 0.500 Ω⁻¹, so R_p = 2.0 Ω",
+            "Total R = 2.0 + 2.0 = 4.0 Ω",
+            "I = V / R = 9.0 / 4.0",
+            "I = 2.25 A"
+          ],
+          "answer": {
+            "value": 2.25,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "current-pd-circuits-p6",
+          "question": "A 3.0 Ω resistor is connected in series with a parallel pair of 12 Ω and 6.0 Ω resistors across a 12 V supply of negligible internal resistance. Calculate the p.d. across the parallel pair.",
+          "hint": "Find the total resistance and the supply current, then multiply the current by the parallel pair's combined resistance.",
+          "walkthrough": [
+            "Parallel pair: 1/R_p = 1/12 + 1/6.0 = 0.0833 + 0.1667 = 0.250 Ω⁻¹, so R_p = 4.0 Ω",
+            "Total R = 3.0 + 4.0 = 7.0 Ω, so I = 12 / 7.0 = 1.71 A",
+            "V_p = IR_p = 1.71 × 4.0",
+            "V_p = 6.86 V"
+          ],
+          "answer": {
+            "value": 6.86,
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-energy",
+      "name": "Electrical power, energy and cost",
+      "equations": [
+        "P = IV",
+        "P = I²R",
+        "P = V² / R",
+        "E = Pt",
+        "cost = energy in kWh × price per kWh"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Choose the form of the power equation that uses the two quantities you are given. Energy is power × time with time in seconds for joules, or power in kW × time in hours for kWh. For a cost question, find the energy in kWh and multiply by the price per kWh.",
+      "commonErrors": [
+        "Mixing kW with seconds or W with hours when finding energy",
+        "Using P = V²/R with the supply voltage when the resistor does not have the full supply p.d. across it",
+        "Forgetting to square the current in P = I²R"
+      ],
+      "worked": {
+        "id": "power-energy-w",
+        "question": "A kettle connected to the 230 V mains draws a current of 9.0 A. Calculate the power of the kettle.",
+        "steps": [
+          "Known: V = 230 V, I = 9.0 A. Unknown: P.",
+          "Use P = IV.",
+          "P = 9.0 × 230",
+          "P = 2070 W = 2.07 kW"
+        ],
+        "answer": {
+          "value": 2070,
+          "unit": "W"
+        }
+      },
+      "practice": [
+        {
+          "id": "power-energy-p1",
+          "question": "The heating element of a toaster has resistance 66 Ω and carries a current of 3.4 A. Calculate the power dissipated in the element.",
+          "hint": "You have I and R, so use P = I²R.",
+          "walkthrough": [
+            "I = 3.4 A, R = 66 Ω, find P.",
+            "P = I²R = 3.4² × 66 = 11.56 × 66",
+            "P = 763 W"
+          ],
+          "answer": {
+            "value": 763,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-energy-p2",
+          "question": "A 4.0 Ω lamp is connected across a 12 V car battery. Calculate the power of the lamp.",
+          "hint": "You have V and R, so use P = V² / R.",
+          "walkthrough": [
+            "V = 12 V, R = 4.0 Ω, find P.",
+            "P = V² / R = 12² / 4.0 = 144 / 4.0",
+            "P = 36 W"
+          ],
+          "answer": {
+            "value": 36,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-energy-p3",
+          "question": "A 2.4 kW tumble dryer runs for 1.25 hours. Electricity costs 28 p per kWh. Calculate the cost of running the dryer, in pence.",
+          "hint": "Energy in kWh = power in kW × time in hours; then multiply by the price.",
+          "walkthrough": [
+            "P = 2.4 kW, t = 1.25 h.",
+            "E = Pt = 2.4 × 1.25 = 3.0 kWh",
+            "Cost = 3.0 × 28",
+            "Cost = 84 p"
+          ],
+          "answer": {
+            "value": 84,
+            "unit": "p"
+          }
+        },
+        {
+          "id": "power-energy-p4",
+          "question": "A high-brightness LED has a power of 1.2 W when the p.d. across it is 3.4 V. Calculate the current in the LED, in mA.",
+          "hint": "Rearrange P = IV to I = P / V, then convert to mA.",
+          "walkthrough": [
+            "P = 1.2 W, V = 3.4 V, find I.",
+            "I = P / V = 1.2 / 3.4 = 0.353 A",
+            "I = 353 mA"
+          ],
+          "answer": {
+            "value": 353,
+            "unit": "mA"
+          }
+        },
+        {
+          "id": "power-energy-p5",
+          "question": "A 1.8 kW fan heater is designed for the 230 V mains. Calculate the resistance of its heating element.",
+          "hint": "Find the current from I = P / V, then use R = V / I (or go straight to R = V² / P).",
+          "walkthrough": [
+            "P = 1.8 kW = 1800 W, V = 230 V.",
+            "I = P / V = 1800 / 230 = 7.83 A",
+            "R = V / I = 230 / 7.83",
+            "R = 29.4 Ω"
+          ],
+          "answer": {
+            "value": 29.4,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "power-energy-p6",
+          "question": "An electric wheelchair motor draws 4.0 A from a 24 V battery for 5.0 minutes. Calculate the energy transferred to the motor, in joules.",
+          "hint": "Find the power with P = IV, then multiply by the time in seconds.",
+          "walkthrough": [
+            "I = 4.0 A, V = 24 V, t = 5.0 × 60 = 300 s.",
+            "P = IV = 4.0 × 24 = 96 W",
+            "E = Pt = 96 × 300",
+            "E = 28 800 J = 2.88 × 10⁴ J"
+          ],
+          "answer": {
+            "value": 28800,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emf-internal-resistance",
+      "name": "E.m.f. and internal resistance",
+      "equations": [
+        "ε = I(R + r)",
+        "V = ε − Ir",
+        "V = IR"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Treat the internal resistance r as one more resistor in series with the load R, so the current is I = ε / (R + r). The terminal p.d. is what is left after the 'lost volts' Ir: V = ε − Ir. To find r from two readings, write V = ε − Ir for each and subtract, or use r = (ε − V) / I if the e.m.f. is known.",
+      "commonErrors": [
+        "Using the terminal p.d. instead of the e.m.f. in ε = I(R + r)",
+        "Forgetting to add r to R before dividing to get the current",
+        "Giving the power dissipated in the cell instead of in the external load"
+      ],
+      "worked": {
+        "id": "emf-internal-resistance-w",
+        "question": "A battery of e.m.f. 12 V and internal resistance 0.50 Ω is connected to a 5.5 Ω resistor. Calculate the current in the circuit.",
+        "steps": [
+          "Known: ε = 12 V, r = 0.50 Ω, R = 5.5 Ω. Unknown: I.",
+          "Use ε = I(R + r), so I = ε / (R + r).",
+          "I = 12 / (5.5 + 0.50) = 12 / 6.0",
+          "I = 2.0 A"
+        ],
+        "answer": {
+          "value": 2.0,
+          "unit": "A"
+        }
+      },
+      "practice": [
+        {
+          "id": "emf-internal-resistance-p1",
+          "question": "A dry cell has an e.m.f. of 1.5 V and an internal resistance of 0.80 Ω. Calculate the terminal p.d. when the cell supplies a current of 0.50 A.",
+          "hint": "Use V = ε − Ir.",
+          "walkthrough": [
+            "ε = 1.5 V, r = 0.80 Ω, I = 0.50 A, find V.",
+            "V = ε − Ir = 1.5 − 0.50 × 0.80 = 1.5 − 0.40",
+            "V = 1.1 V"
+          ],
+          "answer": {
+            "value": 1.1,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "emf-internal-resistance-p2",
+          "question": "A 9.0 V battery with internal resistance 2.0 Ω is connected to a 16 Ω buzzer. Calculate the current in the buzzer.",
+          "hint": "Use I = ε / (R + r).",
+          "walkthrough": [
+            "ε = 9.0 V, r = 2.0 Ω, R = 16 Ω, find I.",
+            "I = ε / (R + r) = 9.0 / (16 + 2.0) = 9.0 / 18",
+            "I = 0.50 A"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "emf-internal-resistance-p3",
+          "question": "A lantern battery has an e.m.f. of 6.0 V. When it delivers a current of 1.5 A to a lamp, the terminal p.d. falls to 5.4 V. Calculate the internal resistance of the battery.",
+          "hint": "The lost volts are ε − V; divide by the current to get r.",
+          "walkthrough": [
+            "ε = 6.0 V, V = 5.4 V, I = 1.5 A, find r.",
+            "Lost volts = ε − V = 6.0 − 5.4 = 0.60 V",
+            "r = (ε − V) / I = 0.60 / 1.5",
+            "r = 0.40 Ω"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "emf-internal-resistance-p4",
+          "question": "The p.d. across the terminals of a car battery is 12.6 V when nothing is connected. When the headlights are switched on and the battery supplies 30 A, the terminal p.d. drops to 10.8 V. Calculate the internal resistance of the battery.",
+          "hint": "The open-circuit reading is the e.m.f.; use r = (ε − V) / I.",
+          "walkthrough": [
+            "With no current, V = ε = 12.6 V. Loaded: V = 10.8 V at I = 30 A.",
+            "r = (ε − V) / I = (12.6 − 10.8) / 30 = 1.8 / 30",
+            "r = 0.060 Ω"
+          ],
+          "answer": {
+            "value": 0.06,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "emf-internal-resistance-p5",
+          "question": "A cell of e.m.f. 4.5 V and internal resistance 0.40 Ω is connected to a 2.6 Ω resistor. Calculate the power dissipated in the 2.6 Ω resistor.",
+          "hint": "Find the current from I = ε / (R + r), then use P = I²R with the load resistance only.",
+          "walkthrough": [
+            "ε = 4.5 V, r = 0.40 Ω, R = 2.6 Ω.",
+            "I = ε / (R + r) = 4.5 / (2.6 + 0.40) = 4.5 / 3.0 = 1.5 A",
+            "P = I²R = 1.5² × 2.6 = 2.25 × 2.6",
+            "P = 5.85 W"
+          ],
+          "answer": {
+            "value": 5.85,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "emf-internal-resistance-p6",
+          "question": "A power pack delivers a current of 0.20 A when connected to a 6.0 Ω resistor and a current of 0.30 A when connected to a 3.8 Ω resistor. Calculate the internal resistance of the power pack.",
+          "hint": "Find the terminal p.d. in each case using V = IR, then write ε = V + Ir for both and subtract.",
+          "walkthrough": [
+            "Case 1: V₁ = I₁R₁ = 0.20 × 6.0 = 1.20 V. Case 2: V₂ = I₂R₂ = 0.30 × 3.8 = 1.14 V.",
+            "ε = V₁ + I₁r = V₂ + I₂r, so V₁ − V₂ = (I₂ − I₁)r",
+            "r = (1.20 − 1.14) / (0.30 − 0.20) = 0.060 / 0.10",
+            "r = 0.60 Ω"
+          ],
+          "answer": {
+            "value": 0.6,
+            "unit": "Ω"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-divider",
+      "name": "Potential divider",
+      "equations": [
+        "V_out = V_in × R₂ / (R₁ + R₂)",
+        "V₁ / V₂ = R₁ / R₂"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Two resistors in series share the input p.d. in the ratio of their resistances. The p.d. across one resistor is the input p.d. multiplied by that resistor's share of the total. To find a resistor for a required output, substitute and rearrange, or use the fact that the current is the same in both resistors. A thermistor or LDR is just a resistor whose value you are told at a stated condition.",
+      "commonErrors": [
+        "Putting the wrong resistor on top of the fraction (V_out is across the resistor in the numerator)",
+        "Mixing Ω and kΩ within one calculation",
+        "Treating the output p.d. as if it were across both resistors"
+      ],
+      "worked": {
+        "id": "potential-divider-w",
+        "question": "A 4.0 kΩ resistor and a 2.0 kΩ resistor are connected in series across a 12 V supply. Calculate the p.d. across the 2.0 kΩ resistor.",
+        "steps": [
+          "Known: V_in = 12 V, R₁ = 4.0 kΩ, R₂ = 2.0 kΩ. Unknown: V_out across R₂.",
+          "Use V_out = V_in × R₂ / (R₁ + R₂).",
+          "V_out = 12 × 2.0 / (4.0 + 2.0) = 12 × 2.0 / 6.0",
+          "V_out = 4.0 V"
+        ],
+        "answer": {
+          "value": 4.0,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "potential-divider-p1",
+          "question": "A 100 Ω resistor and a 200 Ω resistor are connected in series across a 9.0 V battery. Calculate the p.d. across the 200 Ω resistor.",
+          "hint": "Use V_out = V_in × R₂ / (R₁ + R₂) with R₂ = 200 Ω.",
+          "walkthrough": [
+            "V_in = 9.0 V, R₁ = 100 Ω, R₂ = 200 Ω.",
+            "V_out = 9.0 × 200 / (100 + 200) = 9.0 × 200 / 300",
+            "V_out = 6.0 V"
+          ],
+          "answer": {
+            "value": 6.0,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "potential-divider-p2",
+          "question": "In a microcontroller circuit a 1.5 kΩ resistor and a 3.5 kΩ resistor are in series across a 5.0 V supply. Calculate the p.d. across the 1.5 kΩ resistor.",
+          "hint": "The resistor you want goes on top of the fraction; you can work in kΩ throughout.",
+          "walkthrough": [
+            "V_in = 5.0 V, want the p.d. across 1.5 kΩ, total = 1.5 + 3.5 = 5.0 kΩ.",
+            "V = 5.0 × 1.5 / 5.0",
+            "V = 1.5 V"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "potential-divider-p3",
+          "question": "A potential divider across a 6.0 V supply uses a 470 Ω resistor as R₁. Calculate the value of R₂ needed so that the p.d. across R₂ is 2.0 V.",
+          "hint": "Substitute into V_out = V_in R₂ / (R₁ + R₂) and rearrange for R₂, or note that R₁ has 4.0 V across it and use the ratio of p.d.s.",
+          "walkthrough": [
+            "V_in = 6.0 V, V_out = 2.0 V, R₁ = 470 Ω.",
+            "P.d. across R₁ = 6.0 − 2.0 = 4.0 V, and V₁ / V₂ = R₁ / R₂",
+            "R₂ = R₁ × V₂ / V₁ = 470 × 2.0 / 4.0",
+            "R₂ = 235 Ω"
+          ],
+          "answer": {
+            "value": 235,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "potential-divider-p4",
+          "question": "An LDR in a street-light sensor has a resistance of 400 Ω in daylight. It is connected in series with a 1.2 kΩ resistor across a 9.0 V supply. Calculate the p.d. across the LDR in daylight.",
+          "hint": "Convert 1.2 kΩ to Ω, then treat the LDR as the resistor on top of the fraction.",
+          "walkthrough": [
+            "V_in = 9.0 V, R_LDR = 400 Ω, R = 1.2 kΩ = 1200 Ω.",
+            "V_LDR = 9.0 × 400 / (400 + 1200) = 9.0 × 400 / 1600",
+            "V_LDR = 2.25 V"
+          ],
+          "answer": {
+            "value": 2.25,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "potential-divider-p5",
+          "question": "A thermistor has a resistance of 5.0 kΩ at 20 °C. It is connected in series with a fixed resistor across a 9.0 V supply. Calculate the value of the fixed resistor, in kΩ, needed for the p.d. across the fixed resistor to be 3.0 V at 20 °C.",
+          "hint": "The thermistor has 9.0 − 3.0 = 6.0 V across it; use the ratio of p.d.s equals the ratio of resistances.",
+          "walkthrough": [
+            "V_in = 9.0 V, V_R = 3.0 V, so V_thermistor = 9.0 − 3.0 = 6.0 V, R_thermistor = 5.0 kΩ.",
+            "V_R / V_thermistor = R / R_thermistor",
+            "R = 5.0 × 3.0 / 6.0",
+            "R = 2.5 kΩ"
+          ],
+          "answer": {
+            "value": 2.5,
+            "unit": "kΩ"
+          }
+        },
+        {
+          "id": "potential-divider-p6",
+          "question": "A potential divider is built from a 1.8 kΩ resistor R₁ and a second resistor R₂ in series across a 6.0 V supply. The p.d. across R₂ is measured as 2.4 V. Calculate the value of R₂, in kΩ.",
+          "hint": "Find the p.d. across R₁, use it to get the current, then use R₂ = V₂ / I.",
+          "walkthrough": [
+            "V₁ = 6.0 − 2.4 = 3.6 V across R₁ = 1.8 kΩ = 1800 Ω.",
+            "I = V₁ / R₁ = 3.6 / 1800 = 2.0 × 10⁻³ A",
+            "R₂ = V₂ / I = 2.4 / 2.0 × 10⁻³ = 1200 Ω",
+            "R₂ = 1.2 kΩ"
+          ],
+          "answer": {
+            "value": 1.2,
+            "unit": "kΩ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "drift-velocity",
+      "name": "Drift velocity of charge carriers",
+      "equations": [
+        "I = nAve",
+        "A = πd² / 4 for a circular wire"
+      ],
+      "boards": [
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Current is the number of carriers per unit volume × cross-sectional area × drift velocity × charge on each carrier. Rearrange for the unknown; for metals the carrier charge is e = 1.60 × 10⁻¹⁹ C. If a diameter is given, convert it to metres, halve it, and use A = πr². Expect drift velocities of the order of 10⁻⁴ to 10⁻³ m s⁻¹ in ordinary wiring; much higher in a thin filament.",
+      "commonErrors": [
+        "Using the diameter instead of the radius in A = πr²",
+        "Leaving the area in mm² instead of converting to m²",
+        "Forgetting e and getting an answer of the wrong order of magnitude"
+      ],
+      "worked": {
+        "id": "drift-velocity-w",
+        "question": "A copper wire of cross-sectional area 1.0 × 10⁻⁶ m² carries a current of 3.0 A. Copper has 8.5 × 10²⁸ free electrons per cubic metre. Calculate the drift velocity of the electrons.",
+        "steps": [
+          "Known: I = 3.0 A, n = 8.5 × 10²⁸ m⁻³, A = 1.0 × 10⁻⁶ m², e = 1.60 × 10⁻¹⁹ C. Unknown: v.",
+          "Use I = nAve, so v = I / (nAe).",
+          "v = 3.0 / (8.5 × 10²⁸ × 1.0 × 10⁻⁶ × 1.60 × 10⁻¹⁹)",
+          "v = 3.0 / (1.36 × 10⁴)",
+          "v = 2.21 × 10⁻⁴ m s⁻¹"
+        ],
+        "answer": {
+          "value": 0.000221,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "drift-velocity-p1",
+          "question": "A current of 0.50 A flows in a copper wire of cross-sectional area 2.5 × 10⁻⁷ m². The number density of free electrons in copper is 8.5 × 10²⁸ m⁻³. Calculate the drift velocity of the electrons.",
+          "hint": "Rearrange I = nAve to v = I / (nAe).",
+          "walkthrough": [
+            "I = 0.50 A, n = 8.5 × 10²⁸ m⁻³, A = 2.5 × 10⁻⁷ m², e = 1.60 × 10⁻¹⁹ C.",
+            "v = I / (nAe) = 0.50 / (8.5 × 10²⁸ × 2.5 × 10⁻⁷ × 1.60 × 10⁻¹⁹)",
+            "v = 0.50 / 3400",
+            "v = 1.47 × 10⁻⁴ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.000147,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "drift-velocity-p2",
+          "question": "A silver wire has cross-sectional area 4.0 × 10⁻⁷ m² and free electron number density 5.8 × 10²⁸ m⁻³. The electrons drift at 1.2 × 10⁻⁴ m s⁻¹. Calculate the current in the wire.",
+          "hint": "Substitute directly into I = nAve.",
+          "walkthrough": [
+            "n = 5.8 × 10²⁸ m⁻³, A = 4.0 × 10⁻⁷ m², v = 1.2 × 10⁻⁴ m s⁻¹, e = 1.60 × 10⁻¹⁹ C.",
+            "I = nAve = 5.8 × 10²⁸ × 4.0 × 10⁻⁷ × 1.2 × 10⁻⁴ × 1.60 × 10⁻¹⁹",
+            "I = 0.445 A"
+          ],
+          "answer": {
+            "value": 0.445,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "drift-velocity-p3",
+          "question": "A metal wire of cross-sectional area 1.5 × 10⁻⁶ m² carries a current of 2.0 A, and the free electrons drift at 1.5 × 10⁻⁴ m s⁻¹. Calculate the number density of free electrons in the metal.",
+          "hint": "Rearrange I = nAve to n = I / (Ave).",
+          "walkthrough": [
+            "I = 2.0 A, A = 1.5 × 10⁻⁶ m², v = 1.5 × 10⁻⁴ m s⁻¹, e = 1.60 × 10⁻¹⁹ C.",
+            "n = I / (Ave) = 2.0 / (1.5 × 10⁻⁶ × 1.5 × 10⁻⁴ × 1.60 × 10⁻¹⁹)",
+            "n = 2.0 / (3.6 × 10⁻²⁹)",
+            "n = 5.56 × 10²⁸ m⁻³"
+          ],
+          "answer": {
+            "value": 5.56e+28,
+            "unit": "m⁻³"
+          }
+        },
+        {
+          "id": "drift-velocity-p4",
+          "question": "A copper wire of diameter 0.80 mm carries a current of 1.5 A. Copper has 8.5 × 10²⁸ free electrons per cubic metre. Calculate the drift velocity of the electrons.",
+          "hint": "Convert the diameter to metres, halve it, find A = πr², then use v = I / (nAe).",
+          "walkthrough": [
+            "d = 0.80 mm = 0.80 × 10⁻³ m, so r = 0.40 × 10⁻³ m and A = π × (0.40 × 10⁻³)² = 5.03 × 10⁻⁷ m²",
+            "v = I / (nAe) = 1.5 / (8.5 × 10²⁸ × 5.03 × 10⁻⁷ × 1.60 × 10⁻¹⁹)",
+            "v = 1.5 / 6840",
+            "v = 2.19 × 10⁻⁴ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.000219,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "drift-velocity-p5",
+          "question": "A 2.0 Ω length of copper wire is connected across a 3.0 V supply. The wire has cross-sectional area 2.0 × 10⁻⁷ m² and copper has 8.5 × 10²⁸ free electrons per cubic metre. Calculate the drift velocity of the electrons.",
+          "hint": "Find the current from I = V / R first, then use v = I / (nAe).",
+          "walkthrough": [
+            "I = V / R = 3.0 / 2.0 = 1.5 A",
+            "v = I / (nAe) = 1.5 / (8.5 × 10²⁸ × 2.0 × 10⁻⁷ × 1.60 × 10⁻¹⁹)",
+            "v = 1.5 / 2720",
+            "v = 5.51 × 10⁻⁴ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.000551,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "drift-velocity-p6",
+          "question": "The tungsten filament of a lamp has diameter 0.030 mm and carries a current of 250 mA. Tungsten has 3.4 × 10²⁸ free electrons per cubic metre. Calculate the drift velocity of the electrons in the filament.",
+          "hint": "Convert mm to m and mA to A, find the area from the radius, then use v = I / (nAe).",
+          "walkthrough": [
+            "d = 0.030 mm = 3.0 × 10⁻⁵ m, r = 1.5 × 10⁻⁵ m, A = π × (1.5 × 10⁻⁵)² = 7.07 × 10⁻¹⁰ m²",
+            "I = 250 mA = 0.250 A",
+            "v = I / (nAe) = 0.250 / (3.4 × 10²⁸ × 7.07 × 10⁻¹⁰ × 1.60 × 10⁻¹⁹)",
+            "v = 0.250 / 3.85",
+            "v = 0.0650 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.065,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "iv-graph",
+      "name": "Reading I–V and V–I graphs",
+      "equations": [
+        "R = V / I (the ratio at a point)",
+        "gradient of I–V line = 1 / R (ohmic conductor)",
+        "gradient of V–I line = R (ohmic conductor)",
+        "V = ε − Ir (intercept on V axis = ε, gradient = −r)",
+        "P = IV"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "First check which quantity is on which axis. For an ohmic conductor the straight line through the origin has gradient 1 / R on an I–V graph and gradient R on a V–I graph. For a non-ohmic component such as a lamp or a diode, the resistance at a point is V / I using that point's coordinates — never the gradient of the curve. On a terminal p.d.–current graph the intercept on the V axis is the e.m.f. and the magnitude of the gradient is the internal resistance.",
+      "commonErrors": [
+        "Taking the gradient of an I–V graph as R when it is 1 / R",
+        "Finding the resistance of a lamp from the gradient of a tangent instead of V / I at the point",
+        "Reading the e.m.f. from the current-axis intercept instead of the p.d.-axis intercept",
+        "Ignoring an axis scale in mA or kΩ"
+      ],
+      "worked": {
+        "id": "iv-graph-w",
+        "question": "The graph shows the I–V characteristic of a length of constantan wire. Point X is marked on the line. Use the graph to determine the resistance of the wire.",
+        "steps": [
+          "Check the axes: current I is on the vertical axis and p.d. V on the horizontal axis, so the gradient of the line is I / V = 1 / R, not R.",
+          "The line passes through the origin and through X at (5.0 V, 2.0 A).",
+          "Gradient = (2.0 − 0) / (5.0 − 0) = 0.40 A V⁻¹",
+          "R = 1 / gradient = 1 / 0.40",
+          "R = 2.5 Ω (check: R = V / I at X = 5.0 / 2.0 = 2.5 Ω)"
+        ],
+        "answer": {
+          "value": 2.5,
+          "unit": "Ω"
+        },
+        "graph": {
+          "x": {
+            "label": "V / V",
+            "min": 0,
+            "max": 6,
+            "step": 1
+          },
+          "y": {
+            "label": "I / A",
+            "min": 0,
+            "max": 3.0,
+            "step": 0.5
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [0, 0],
+                [6, 2.4]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 5,
+              "y": 2,
+              "label": "X",
+              "drop": true
+            }
+          ],
+          "alt": "Straight line through the origin on axes of current against p.d., with point X marked at 5.0 V and 2.0 A"
+        }
+      },
+      "practice": [
+        {
+          "id": "iv-graph-p1",
+          "question": "The graph shows how the p.d. V across a carbon resistor varies with the current I in it. Point X is marked on the line. Use the graph to determine the resistance of the resistor.",
+          "hint": "This time V is on the vertical axis, so the gradient of the line is V / I, which is R directly.",
+          "walkthrough": [
+            "V is on the vertical axis and I on the horizontal axis, so gradient = V / I = R.",
+            "The line passes through the origin and X at (0.40 A, 8.0 V).",
+            "R = gradient = (8.0 − 0) / (0.40 − 0)",
+            "R = 20 Ω"
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "I / A",
+              "min": 0,
+              "max": 0.5,
+              "step": 0.1
+            },
+            "y": {
+              "label": "V / V",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 0],
+                  [0.5, 10]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.4,
+                "y": 8,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line through the origin on axes of p.d. against current, with point X marked at 0.40 A and 8.0 V"
+          }
+        },
+        {
+          "id": "iv-graph-p2",
+          "question": "The graph shows the I–V characteristic of a filament lamp. Use the graph to determine the resistance of the lamp at the point marked X.",
+          "hint": "For a non-ohmic component the resistance at a point is V / I using that point's coordinates, not the gradient of the curve.",
+          "walkthrough": [
+            "Read both coordinates of X along the dotted lines: V = 8.0 V, I = 0.50 A.",
+            "The lamp is non-ohmic, so do not take a gradient: resistance is defined as R = V / I at the point.",
+            "R = 8.0 / 0.50",
+            "R = 16 Ω"
+          ],
+          "answer": {
+            "value": 16.0,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "V / V",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "I / A",
+              "min": 0,
+              "max": 0.7,
+              "step": 0.1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 0],
+                  [0.5, 0.064],
+                  [1, 0.114],
+                  [1.5, 0.156],
+                  [2, 0.194],
+                  [3, 0.259],
+                  [4, 0.316],
+                  [5, 0.368],
+                  [6, 0.415],
+                  [7, 0.459],
+                  [8, 0.5],
+                  [9, 0.539],
+                  [10, 0.577],
+                  [11, 0.613],
+                  [12, 0.647]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 0.5,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Curve of current against p.d. for a filament lamp, steep at first and flattening, with point X marked at 8.0 V and 0.50 A"
+          }
+        },
+        {
+          "id": "iv-graph-p3",
+          "question": "The graph shows how the terminal p.d. V of a battery varies with the current I it delivers. Use the graph to determine the e.m.f. of the battery.",
+          "hint": "V = ε − Ir, so when I = 0 the terminal p.d. equals the e.m.f.: read the intercept on the V axis.",
+          "walkthrough": [
+            "V = ε − Ir. At I = 0 there are no lost volts, so V = ε.",
+            "The line meets the V axis (where I = 0) at V = 9.0 V.",
+            "ε = 9.0 V"
+          ],
+          "answer": {
+            "value": 9.0,
+            "unit": "V"
+          },
+          "graph": {
+            "x": {
+              "label": "I / A",
+              "min": 0,
+              "max": 6,
+              "step": 1
+            },
+            "y": {
+              "label": "V / V",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 9],
+                  [6, 0]
+                ]
+              }
+            ],
+            "alt": "Straight line of terminal p.d. against current, falling from 9.0 V at zero current to zero at 6.0 A"
+          }
+        },
+        {
+          "id": "iv-graph-p4",
+          "question": "The graph shows how the terminal p.d. V across a laboratory power supply varies with the current I drawn from it. Points A and B are marked on the line. Use the graph to determine the internal resistance of the supply.",
+          "hint": "Compare V = ε − Ir with y = mx + c: the gradient of the line is −r, so find the gradient between A and B and take its magnitude.",
+          "walkthrough": [
+            "A is at (0 A, 7.0 V) and B is at (8.0 A, 1.0 V).",
+            "Gradient = (1.0 − 7.0) / (8.0 − 0) = −6.0 / 8.0 = −0.75 V A⁻¹",
+            "V = ε − Ir, so gradient = −r.",
+            "r = 0.75 Ω"
+          ],
+          "answer": {
+            "value": 0.75,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "I / A",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "V / V",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 7],
+                  [8, 1]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 7,
+                "label": "A"
+              },
+              {
+                "x": 8,
+                "y": 1,
+                "label": "B",
+                "drop": true,
+                "dx": -16,
+                "dy": -10
+              }
+            ],
+            "alt": "Straight line of terminal p.d. against current from A at 0 A and 7.0 V down to B at 8.0 A and 1.0 V"
+          }
+        },
+        {
+          "id": "iv-graph-p5",
+          "question": "The graph shows how the terminal p.d. V of a battery pack varies with the current I in an external resistor connected across it. Point P is marked on the line. Use the graph to determine the power delivered to the external resistor at P.",
+          "hint": "Read both the current and the terminal p.d. at P, then use P = IV.",
+          "walkthrough": [
+            "At P the dotted lines give I = 4.0 A and V = 6.0 V.",
+            "The terminal p.d. is the p.d. across the external resistor, so P = IV.",
+            "P = 4.0 × 6.0",
+            "P = 24 W"
+          ],
+          "answer": {
+            "value": 24.0,
+            "unit": "W"
+          },
+          "graph": {
+            "x": {
+              "label": "I / A",
+              "min": 0,
+              "max": 6,
+              "step": 1
+            },
+            "y": {
+              "label": "V / V",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 12],
+                  [6, 3]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 6,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line of terminal p.d. against current falling from 12 V to 3.0 V at 6.0 A, with point P marked at 4.0 A and 6.0 V"
+          }
+        },
+        {
+          "id": "iv-graph-p6",
+          "question": "The graph shows the I–V characteristic of a silicon diode in forward bias. Point X is marked on the curve where the p.d. is 0.70 V. Use the graph to determine the current in the diode, in mA, at this p.d.",
+          "hint": "Find 0.70 V on the horizontal axis, go up to the curve and read across to the current axis; note the axis is in mA.",
+          "walkthrough": [
+            "Locate V = 0.70 V on the horizontal axis and go up to the curve at X.",
+            "Read across to the vertical axis: I = 20 mA.",
+            "The current axis is scaled in mA, so I = 20 mA (= 0.020 A)."
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "mA"
+          },
+          "graph": {
+            "x": {
+              "label": "V / V",
+              "min": 0,
+              "max": 0.8,
+              "step": 0.1
+            },
+            "y": {
+              "label": "I / mA",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 0],
+                  [0.05, 0],
+                  [0.1, 0.01],
+                  [0.15, 0.02],
+                  [0.2, 0.04],
+                  [0.25, 0.07],
+                  [0.3, 0.13],
+                  [0.35, 0.25],
+                  [0.4, 0.47],
+                  [0.45, 0.88],
+                  [0.5, 1.64],
+                  [0.55, 3.06],
+                  [0.6, 5.73],
+                  [0.65, 10.7],
+                  [0.7, 20],
+                  [0.75, 37.37],
+                  [0.8, 69.81]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.7,
+                "y": 20,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Diode characteristic: current stays near zero until about 0.5 V then rises steeply, with point X marked at 0.70 V and 20 mA"
+          }
+        }
+      ]
+    }
+  ]
+}

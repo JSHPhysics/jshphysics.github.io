@@ -1,0 +1,1291 @@
+{
+  "id": "gravitational-fields",
+  "title": "Gravitational fields",
+  "subtitle": "Newton's law of gravitation, field strength, potential and orbits",
+  "order": 110,
+  "types": [
+    {
+      "id": "newtons-law-of-gravitation",
+      "name": "Newton's law of gravitation",
+      "equations": ["F = GMm / r²"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Use this whenever you are asked for the gravitational force between two masses. Identify the two masses and the distance between their centres (for a satellite, add the altitude to the planet's radius), then substitute into F = GMm / r². To find r, rearrange to r² = GMm / F and square-root.",
+      "commonErrors": [
+        "Using the altitude above the surface as r instead of the distance from the planet's centre",
+        "Forgetting to square r, or squaring the whole of GMm / r",
+        "Mixing km and m — convert every distance to metres before substituting"
+      ],
+      "worked": {
+        "id": "newtons-law-of-gravitation-w",
+        "question": "The Moon has a mass of 7.35 × 10²² kg and the distance between the centres of the Earth and the Moon is 3.84 × 10⁸ m. Calculate the gravitational force between the Earth and the Moon.",
+        "steps": [
+          "Known: M = 5.97 × 10²⁴ kg (Earth), m = 7.35 × 10²² kg (Moon), r = 3.84 × 10⁸ m. Unknown: F.",
+          "F = GMm / r²",
+          "F = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 7.35 × 10²² / (3.84 × 10⁸)²",
+          "F = 2.93 × 10³⁷ / 1.47 × 10¹⁷",
+          "F = 1.98 × 10²⁰ N"
+        ],
+        "answer": { "value": 1.98e20, "unit": "N" }
+      },
+      "practice": [
+        {
+          "id": "newtons-law-of-gravitation-p1",
+          "question": "In a Cavendish-style experiment two lead spheres, each of mass 20 kg, are placed with their centres 0.150 m apart. Calculate the gravitational force between them.",
+          "hint": "Substitute both masses and the centre-to-centre distance straight into F = GMm / r².",
+          "walkthrough": [
+            "M = m = 20 kg, r = 0.150 m, find F.",
+            "F = GMm / r² = 6.67 × 10⁻¹¹ × 20 × 20 / 0.150²",
+            "F = 2.67 × 10⁻⁸ / 0.0225",
+            "F = 1.19 × 10⁻⁶ N"
+          ],
+          "answer": { "value": 1.19e-6, "unit": "N" }
+        },
+        {
+          "id": "newtons-law-of-gravitation-p2",
+          "question": "Calculate the gravitational force the Sun exerts on the Earth. Take the Earth–Sun distance to be 1 AU.",
+          "hint": "Use the Sun's mass, the Earth's mass and 1 AU = 1.50 × 10¹¹ m from the data sheet.",
+          "walkthrough": [
+            "M = 1.99 × 10³⁰ kg, m = 5.97 × 10²⁴ kg, r = 1.50 × 10¹¹ m, find F.",
+            "F = GMm / r² = 6.67 × 10⁻¹¹ × 1.99 × 10³⁰ × 5.97 × 10²⁴ / (1.50 × 10¹¹)²",
+            "F = 7.92 × 10⁴⁴ / 2.25 × 10²²",
+            "F = 3.52 × 10²² N"
+          ],
+          "answer": { "value": 3.52e22, "unit": "N" }
+        },
+        {
+          "id": "newtons-law-of-gravitation-p3",
+          "question": "A weather satellite of mass 850 kg orbits the Earth at an altitude of 400 km above the surface. Calculate the gravitational force the Earth exerts on the satellite.",
+          "hint": "r is measured from the Earth's centre: add the altitude (in metres) to the Earth's radius.",
+          "walkthrough": [
+            "r = R_E + h = 6.37 × 10⁶ + 4.00 × 10⁵ = 6.77 × 10⁶ m",
+            "F = GMm / r² = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 850 / (6.77 × 10⁶)²",
+            "F = 3.38 × 10¹⁷ / 4.58 × 10¹³",
+            "F = 7380 N"
+          ],
+          "answer": { "value": 7380, "unit": "N" }
+        },
+        {
+          "id": "newtons-law-of-gravitation-p4",
+          "question": "Jupiter (mass 1.90 × 10²⁷ kg) exerts a gravitational force of 6.35 × 10²² N on its moon Io (mass 8.93 × 10²² kg). Calculate the distance between the centres of Jupiter and Io.",
+          "hint": "Rearrange to r² = GMm / F, then take the square root.",
+          "walkthrough": [
+            "M = 1.90 × 10²⁷ kg, m = 8.93 × 10²² kg, F = 6.35 × 10²² N, find r.",
+            "r² = GMm / F = 6.67 × 10⁻¹¹ × 1.90 × 10²⁷ × 8.93 × 10²² / 6.35 × 10²²",
+            "r² = 1.78 × 10¹⁷ m²",
+            "r = √(1.78 × 10¹⁷) = 4.22 × 10⁸ m"
+          ],
+          "answer": { "value": 422000000, "unit": "m" }
+        },
+        {
+          "id": "newtons-law-of-gravitation-p5",
+          "question": "A spherical asteroid has a radius of 10.0 km and a uniform density of 2500 kg m⁻³. A probe of mass 500 kg lands on its surface. Calculate the gravitational force on the probe.",
+          "hint": "First find the asteroid's mass from M = ρ × (4/3)πr³, then use F = GMm / r² with r equal to the asteroid's radius.",
+          "walkthrough": [
+            "Volume = (4/3)π r³ = (4/3)π × (1.00 × 10⁴)³ = 4.19 × 10¹² m³",
+            "M = ρV = 2500 × 4.19 × 10¹² = 1.05 × 10¹⁶ kg",
+            "F = GMm / r² = 6.67 × 10⁻¹¹ × 1.05 × 10¹⁶ × 500 / (1.00 × 10⁴)²",
+            "F = 3.49 × 10⁸ / 1.00 × 10⁸",
+            "F = 3.49 N"
+          ],
+          "answer": { "value": 3.49, "unit": "N" }
+        },
+        {
+          "id": "newtons-law-of-gravitation-p6",
+          "question": "Calculate the height above the Earth's surface at which the gravitational force on a spacecraft is exactly half the force on it at the surface.",
+          "hint": "F ∝ 1 / r², so halving F means r² doubles; find r and then subtract the Earth's radius.",
+          "walkthrough": [
+            "F ∝ 1 / r², so F / 2 occurs where r² = 2R_E²",
+            "r = √2 × R_E = √2 × 6.37 × 10⁶ = 9.01 × 10⁶ m",
+            "h = r − R_E = 9.01 × 10⁶ − 6.37 × 10⁶",
+            "h = 2.64 × 10⁶ m"
+          ],
+          "answer": { "value": 2640000, "unit": "m" }
+        }
+      ]
+    },
+    {
+      "id": "gravitational-field-strength",
+      "name": "Gravitational field strength",
+      "equations": ["g = GM / r²", "g = F / m"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Field strength is the force per unit mass at a point. If you know the mass of the body and the distance from its centre, use g = GM / r²; if you know the force on a test mass, use g = F / m. To find M or r, rearrange g = GM / r² (M = gr² / G, or r = √(GM / g)).",
+      "commonErrors": [
+        "Assuming g = 9.81 N kg⁻¹ at altitude — it only applies at the Earth's surface",
+        "Using the altitude instead of the distance from the centre",
+        "Giving the unit as m s⁻² and N kg⁻¹ inconsistently — both are correct, but write one"
+      ],
+      "worked": {
+        "id": "gravitational-field-strength-w",
+        "question": "Mars has a mass of 6.42 × 10²³ kg and a radius of 3.39 × 10⁶ m. Calculate the gravitational field strength at the surface of Mars.",
+        "steps": [
+          "Known: M = 6.42 × 10²³ kg, r = 3.39 × 10⁶ m (surface, so r = radius). Unknown: g.",
+          "g = GM / r²",
+          "g = 6.67 × 10⁻¹¹ × 6.42 × 10²³ / (3.39 × 10⁶)²",
+          "g = 4.28 × 10¹³ / 1.15 × 10¹³",
+          "g = 3.73 N kg⁻¹"
+        ],
+        "answer": { "value": 3.73, "unit": "N kg⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "gravitational-field-strength-p1",
+          "question": "The Moon has a mass of 7.35 × 10²² kg and a radius of 1.74 × 10⁶ m. Calculate the gravitational field strength at the Moon's surface.",
+          "hint": "At the surface, r equals the Moon's radius; substitute into g = GM / r².",
+          "walkthrough": [
+            "M = 7.35 × 10²² kg, r = 1.74 × 10⁶ m, find g.",
+            "g = GM / r² = 6.67 × 10⁻¹¹ × 7.35 × 10²² / (1.74 × 10⁶)²",
+            "g = 4.90 × 10¹² / 3.03 × 10¹²",
+            "g = 1.62 N kg⁻¹"
+          ],
+          "answer": { "value": 1.62, "unit": "N kg⁻¹" }
+        },
+        {
+          "id": "gravitational-field-strength-p2",
+          "question": "An astronaut of mass 72 kg stands on the surface of Mercury, where the gravitational force on her is 266 N. Calculate the gravitational field strength at Mercury's surface.",
+          "hint": "Field strength is force per unit mass: g = F / m.",
+          "walkthrough": [
+            "F = 266 N, m = 72 kg, find g.",
+            "g = F / m = 266 / 72",
+            "g = 3.69 N kg⁻¹"
+          ],
+          "answer": { "value": 3.69, "unit": "N kg⁻¹" }
+        },
+        {
+          "id": "gravitational-field-strength-p3",
+          "question": "The International Space Station orbits at an altitude of 410 km above the Earth's surface. Calculate the gravitational field strength at this altitude.",
+          "hint": "Convert 410 km to metres and add it to the Earth's radius before using g = GM / r².",
+          "walkthrough": [
+            "r = R_E + h = 6.37 × 10⁶ + 4.10 × 10⁵ = 6.78 × 10⁶ m",
+            "g = GM / r² = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / (6.78 × 10⁶)²",
+            "g = 3.98 × 10¹⁴ / 4.60 × 10¹³",
+            "g = 8.66 N kg⁻¹"
+          ],
+          "answer": { "value": 8.66, "unit": "N kg⁻¹" }
+        },
+        {
+          "id": "gravitational-field-strength-p4",
+          "question": "The gravitational field strength at the surface of Venus is 8.87 N kg⁻¹ and the radius of Venus is 6.05 × 10⁶ m. Calculate the mass of Venus.",
+          "hint": "Rearrange g = GM / r² to M = g r² / G.",
+          "walkthrough": [
+            "g = 8.87 N kg⁻¹, r = 6.05 × 10⁶ m, find M.",
+            "M = g r² / G = 8.87 × (6.05 × 10⁶)² / 6.67 × 10⁻¹¹",
+            "M = 3.25 × 10¹⁴ / 6.67 × 10⁻¹¹",
+            "M = 4.87 × 10²⁴ kg"
+          ],
+          "answer": { "value": 4.87e24, "unit": "kg" }
+        },
+        {
+          "id": "gravitational-field-strength-p5",
+          "question": "Calculate the altitude above the Earth's surface, in km, at which the gravitational field strength has fallen to 2.45 N kg⁻¹.",
+          "hint": "Rearrange to r = √(GM / g), then subtract the Earth's radius and convert to km.",
+          "walkthrough": [
+            "r² = GM / g = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 2.45 = 1.63 × 10¹⁴ m²",
+            "r = √(1.63 × 10¹⁴) = 1.27 × 10⁷ m",
+            "h = r − R_E = 1.275 × 10⁷ − 6.37 × 10⁶ = 6.38 × 10⁶ m",
+            "h = 6380 km"
+          ],
+          "answer": { "value": 6380, "unit": "km" }
+        },
+        {
+          "id": "gravitational-field-strength-p6",
+          "question": "Mercury has a mass of 3.30 × 10²³ kg and a radius of 2.44 × 10⁶ m. Calculate the weight of an 85 kg astronaut standing on the surface of Mercury.",
+          "hint": "First find g at Mercury's surface from g = GM / r², then use W = mg.",
+          "walkthrough": [
+            "g = GM / r² = 6.67 × 10⁻¹¹ × 3.30 × 10²³ / (2.44 × 10⁶)²",
+            "g = 2.20 × 10¹³ / 5.95 × 10¹² = 3.70 N kg⁻¹",
+            "W = mg = 85 × 3.70",
+            "W = 314 N"
+          ],
+          "answer": { "value": 314, "unit": "N" }
+        }
+      ]
+    },
+    {
+      "id": "gravitational-potential",
+      "name": "Gravitational potential and potential energy",
+      "equations": ["V = −GM / r", "E_p = −GMm / r"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Potential V is the energy per unit mass at a point, taking zero at infinity, so it is always negative near a mass. Use V = −GM / r for the potential and E_p = mV = −GMm / r for the potential energy of a mass m. Keep the minus sign in the answer; to find r, rearrange to r = GM / |V|.",
+      "commonErrors": [
+        "Dropping the minus sign — potential and potential energy are negative in an attractive field",
+        "Squaring r (confusing V = −GM / r with g = GM / r²)",
+        "Using the altitude rather than the distance from the centre of the body"
+      ],
+      "worked": {
+        "id": "gravitational-potential-w",
+        "question": "Calculate the gravitational potential at the surface of the Earth.",
+        "steps": [
+          "Known: M = 5.97 × 10²⁴ kg, r = R_E = 6.37 × 10⁶ m. Unknown: V.",
+          "V = −GM / r",
+          "V = −6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 6.37 × 10⁶",
+          "V = −3.98 × 10¹⁴ / 6.37 × 10⁶",
+          "V = −6.25 × 10⁷ J kg⁻¹"
+        ],
+        "answer": { "value": -62500000, "unit": "J kg⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "gravitational-potential-p1",
+          "question": "The Moon has a mass of 7.35 × 10²² kg and a radius of 1.74 × 10⁶ m. Calculate the gravitational potential at the Moon's surface.",
+          "hint": "Use V = −GM / r with r equal to the Moon's radius, and keep the minus sign.",
+          "walkthrough": [
+            "M = 7.35 × 10²² kg, r = 1.74 × 10⁶ m, find V.",
+            "V = −GM / r = −6.67 × 10⁻¹¹ × 7.35 × 10²² / 1.74 × 10⁶",
+            "V = −4.90 × 10¹² / 1.74 × 10⁶",
+            "V = −2.82 × 10⁶ J kg⁻¹"
+          ],
+          "answer": { "value": -2820000, "unit": "J kg⁻¹" }
+        },
+        {
+          "id": "gravitational-potential-p2",
+          "question": "A communications satellite of mass 2000 kg orbits at a distance of 4.22 × 10⁷ m from the centre of the Earth. Calculate its gravitational potential energy.",
+          "hint": "Substitute straight into E_p = −GMm / r; the distance given is already from the centre.",
+          "walkthrough": [
+            "M = 5.97 × 10²⁴ kg, m = 2000 kg, r = 4.22 × 10⁷ m, find E_p.",
+            "E_p = −GMm / r = −6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 2000 / 4.22 × 10⁷",
+            "E_p = −7.96 × 10¹⁷ / 4.22 × 10⁷",
+            "E_p = −1.89 × 10¹⁰ J"
+          ],
+          "answer": { "value": -18900000000, "unit": "J" }
+        },
+        {
+          "id": "gravitational-potential-p3",
+          "question": "Calculate the gravitational potential at a point 2000 km above the Earth's surface.",
+          "hint": "Convert 2000 km to metres and add the Earth's radius to get r, then use V = −GM / r.",
+          "walkthrough": [
+            "r = R_E + h = 6.37 × 10⁶ + 2.00 × 10⁶ = 8.37 × 10⁶ m",
+            "V = −GM / r = −6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 8.37 × 10⁶",
+            "V = −3.98 × 10¹⁴ / 8.37 × 10⁶",
+            "V = −4.76 × 10⁷ J kg⁻¹"
+          ],
+          "answer": { "value": -47600000, "unit": "J kg⁻¹" }
+        },
+        {
+          "id": "gravitational-potential-p4",
+          "question": "At a certain point in the Earth's gravitational field the potential is −1.50 × 10⁷ J kg⁻¹. Calculate the distance of this point from the centre of the Earth.",
+          "hint": "Rearrange V = −GM / r to r = GM / |V|.",
+          "walkthrough": [
+            "V = −1.50 × 10⁷ J kg⁻¹, M = 5.97 × 10²⁴ kg, find r.",
+            "r = −GM / V = GM / 1.50 × 10⁷",
+            "r = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 1.50 × 10⁷ = 3.98 × 10¹⁴ / 1.50 × 10⁷",
+            "r = 2.65 × 10⁷ m"
+          ],
+          "answer": { "value": 26500000, "unit": "m" }
+        },
+        {
+          "id": "gravitational-potential-p5",
+          "question": "A space-station module of mass 12.0 tonnes orbits at an altitude of 400 km above the Earth's surface. Calculate its gravitational potential energy.",
+          "hint": "Convert tonnes to kg and altitude to a distance from the Earth's centre, then use E_p = −GMm / r.",
+          "walkthrough": [
+            "m = 12.0 tonnes = 1.20 × 10⁴ kg",
+            "r = R_E + h = 6.37 × 10⁶ + 4.00 × 10⁵ = 6.77 × 10⁶ m",
+            "E_p = −GMm / r = −6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 1.20 × 10⁴ / 6.77 × 10⁶",
+            "E_p = −4.78 × 10¹⁸ / 6.77 × 10⁶",
+            "E_p = −7.06 × 10¹¹ J"
+          ],
+          "answer": { "value": -706000000000, "unit": "J" }
+        },
+        {
+          "id": "gravitational-potential-p6",
+          "question": "At the surface of Neptune the gravitational potential is −2.76 × 10⁸ J kg⁻¹ and the gravitational field strength is 11.2 N kg⁻¹. Calculate the radius of Neptune.",
+          "hint": "Divide V = −GM / r by g = GM / r² to eliminate GM; the ratio gives r directly.",
+          "walkthrough": [
+            "V = −GM / r and g = GM / r², so |V| / g = (GM / r) / (GM / r²) = r",
+            "r = |V| / g = 2.76 × 10⁸ / 11.2",
+            "r = 2.46 × 10⁷ m"
+          ],
+          "answer": { "value": 24600000, "unit": "m" }
+        }
+      ]
+    },
+    {
+      "id": "work-done-in-field",
+      "name": "Work done moving a mass between two points",
+      "equations": ["ΔW = mΔV", "V = −GM / r"],
+      "boards": ["AQA", "OCR A", "Edexcel", "WJEC"],
+      "method": "The work done moving a mass between two points depends only on the change in potential. Find V = −GM / r at each radius (measured from the centre), subtract to get ΔV, then multiply by the mass. Moving outwards gives positive work done on the mass; moving inwards releases energy.",
+      "commonErrors": [
+        "Using mgΔh — only valid when g is constant, which it is not over hundreds of kilometres",
+        "Subtracting the potentials the wrong way round and getting the wrong sign",
+        "Subtracting two large, nearly equal potentials after rounding them heavily — keep an extra figure in each V"
+      ],
+      "worked": {
+        "id": "work-done-in-field-w",
+        "question": "A satellite of mass 1200 kg is launched from the Earth's surface to an orbital altitude of 600 km. Calculate the minimum work done against gravity to raise it to this altitude, ignoring any kinetic energy.",
+        "steps": [
+          "Known: m = 1200 kg, r₁ = 6.37 × 10⁶ m, r₂ = 6.37 × 10⁶ + 6.00 × 10⁵ = 6.97 × 10⁶ m. Unknown: ΔW.",
+          "V₁ = −GM / r₁ = −3.98 × 10¹⁴ / 6.37 × 10⁶ = −6.251 × 10⁷ J kg⁻¹",
+          "V₂ = −GM / r₂ = −3.98 × 10¹⁴ / 6.97 × 10⁶ = −5.713 × 10⁷ J kg⁻¹",
+          "ΔV = V₂ − V₁ = −5.713 × 10⁷ − (−6.251 × 10⁷) = 5.38 × 10⁶ J kg⁻¹",
+          "ΔW = mΔV = 1200 × 5.38 × 10⁶",
+          "ΔW = 6.46 × 10⁹ J"
+        ],
+        "answer": { "value": 6460000000, "unit": "J" }
+      },
+      "practice": [
+        {
+          "id": "work-done-in-field-p1",
+          "question": "A probe of mass 850 kg is moved from a point where the gravitational potential is −6.25 × 10⁷ J kg⁻¹ to a point where it is −5.30 × 10⁷ J kg⁻¹. Calculate the work done on the probe.",
+          "hint": "ΔW = mΔV; the potentials are given, so just find the difference and multiply.",
+          "walkthrough": [
+            "m = 850 kg, V₁ = −6.25 × 10⁷ J kg⁻¹, V₂ = −5.30 × 10⁷ J kg⁻¹.",
+            "ΔV = V₂ − V₁ = −5.30 × 10⁷ − (−6.25 × 10⁷) = 9.50 × 10⁶ J kg⁻¹",
+            "ΔW = mΔV = 850 × 9.50 × 10⁶",
+            "ΔW = 8.08 × 10⁹ J"
+          ],
+          "answer": { "value": 8080000000, "unit": "J" }
+        },
+        {
+          "id": "work-done-in-field-p2",
+          "question": "An astronaut of mass 70 kg is lifted from the Moon's surface, where the gravitational potential is −2.82 × 10⁶ J kg⁻¹, to a point where the potential is −1.10 × 10⁶ J kg⁻¹. Calculate the work done against the Moon's gravity.",
+          "hint": "Find ΔV from the two potentials and multiply by the astronaut's mass.",
+          "walkthrough": [
+            "m = 70 kg, V₁ = −2.82 × 10⁶ J kg⁻¹, V₂ = −1.10 × 10⁶ J kg⁻¹.",
+            "ΔV = −1.10 × 10⁶ − (−2.82 × 10⁶) = 1.72 × 10⁶ J kg⁻¹",
+            "ΔW = mΔV = 70 × 1.72 × 10⁶",
+            "ΔW = 1.20 × 10⁸ J"
+          ],
+          "answer": { "value": 120000000, "unit": "J" }
+        },
+        {
+          "id": "work-done-in-field-p3",
+          "question": "A navigation satellite of mass 450 kg is raised from the Earth's surface to an altitude of 3000 km. Calculate the work done against gravity, ignoring kinetic energy.",
+          "hint": "Convert the altitude to a distance from the Earth's centre, find V at both radii, then use ΔW = mΔV.",
+          "walkthrough": [
+            "r₁ = 6.37 × 10⁶ m, r₂ = 6.37 × 10⁶ + 3.00 × 10⁶ = 9.37 × 10⁶ m",
+            "V₁ = −3.98 × 10¹⁴ / 6.37 × 10⁶ = −6.251 × 10⁷ J kg⁻¹",
+            "V₂ = −3.98 × 10¹⁴ / 9.37 × 10⁶ = −4.250 × 10⁷ J kg⁻¹",
+            "ΔV = −4.250 × 10⁷ − (−6.251 × 10⁷) = 2.00 × 10⁷ J kg⁻¹",
+            "ΔW = mΔV = 450 × 2.00 × 10⁷ = 9.01 × 10⁹ J"
+          ],
+          "answer": { "value": 9010000000, "unit": "J" }
+        },
+        {
+          "id": "work-done-in-field-p4",
+          "question": "A launch vehicle does 2.40 × 10⁹ J of work against gravity to raise a payload from a point where the potential is −6.25 × 10⁷ J kg⁻¹ to a point where it is −4.65 × 10⁷ J kg⁻¹. Calculate the mass of the payload.",
+          "hint": "Rearrange ΔW = mΔV to m = ΔW / ΔV after finding ΔV.",
+          "walkthrough": [
+            "ΔV = −4.65 × 10⁷ − (−6.25 × 10⁷) = 1.60 × 10⁷ J kg⁻¹",
+            "m = ΔW / ΔV = 2.40 × 10⁹ / 1.60 × 10⁷",
+            "m = 150 kg"
+          ],
+          "answer": { "value": 150, "unit": "kg" }
+        },
+        {
+          "id": "work-done-in-field-p5",
+          "question": "Mars has a mass of 6.42 × 10²³ kg and a radius of 3.39 × 10⁶ m. A lander of mass 900 kg descends from an orbit 300 km above the surface of Mars to the surface. Calculate the gravitational potential energy it loses.",
+          "hint": "Find V at the orbital radius and at the surface using V = −GM / r, then multiply the difference by the mass.",
+          "walkthrough": [
+            "GM = 6.67 × 10⁻¹¹ × 6.42 × 10²³ = 4.28 × 10¹³ N m² kg⁻¹",
+            "r₁ = 3.39 × 10⁶ + 3.00 × 10⁵ = 3.69 × 10⁶ m, r₂ = 3.39 × 10⁶ m",
+            "V₁ = −4.28 × 10¹³ / 3.69 × 10⁶ = −1.160 × 10⁷ J kg⁻¹; V₂ = −4.28 × 10¹³ / 3.39 × 10⁶ = −1.263 × 10⁷ J kg⁻¹",
+            "ΔV = 1.263 × 10⁷ − 1.160 × 10⁷ = 1.03 × 10⁶ J kg⁻¹",
+            "Energy lost = mΔV = 900 × 1.03 × 10⁶ = 9.24 × 10⁸ J"
+          ],
+          "answer": { "value": 924000000, "unit": "J", "tolerance": 0.05 }
+        },
+        {
+          "id": "work-done-in-field-p6",
+          "question": "A meteoroid of mass 25 kg falls from a distance of 8.00 × 10⁷ m from the centre of the Earth to the Earth's surface. Calculate the gravitational potential energy it loses during the fall.",
+          "hint": "Find V at 8.00 × 10⁷ m and at the surface, then multiply the change by the mass.",
+          "walkthrough": [
+            "V₁ = −3.98 × 10¹⁴ / 8.00 × 10⁷ = −4.98 × 10⁶ J kg⁻¹",
+            "V₂ = −3.98 × 10¹⁴ / 6.37 × 10⁶ = −6.25 × 10⁷ J kg⁻¹",
+            "ΔV = 6.25 × 10⁷ − 0.498 × 10⁷ = 5.75 × 10⁷ J kg⁻¹",
+            "Energy lost = mΔV = 25 × 5.75 × 10⁷ = 1.44 × 10⁹ J"
+          ],
+          "answer": { "value": 1440000000, "unit": "J" }
+        }
+      ]
+    },
+    {
+      "id": "escape-velocity",
+      "name": "Escape velocity",
+      "equations": ["v = √(2GM / r)", "½mv² = GMm / r"],
+      "boards": ["AQA", "OCR A", "Edexcel", "WJEC"],
+      "method": "Escape velocity is the launch speed at which kinetic energy equals the magnitude of the potential energy, so the object just reaches infinity. Set ½mv² = GMm / r, cancel m and rearrange to v = √(2GM / r) with r the radius of the body (or the launch distance from its centre). To find M, square both sides: M = v²r / 2G.",
+      "commonErrors": [
+        "Forgetting the factor of 2 (using v = √(GM / r), which is the orbital speed)",
+        "Forgetting to square-root at the end",
+        "Leaving the answer in m s⁻¹ when km s⁻¹ is asked for, or the reverse"
+      ],
+      "worked": {
+        "id": "escape-velocity-w",
+        "question": "Calculate the escape velocity from the surface of the Earth.",
+        "steps": [
+          "Known: M = 5.97 × 10²⁴ kg, r = R_E = 6.37 × 10⁶ m. Unknown: v.",
+          "½mv² = GMm / r, so v = √(2GM / r)",
+          "v = √(2 × 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 6.37 × 10⁶)",
+          "v = √(1.25 × 10⁸)",
+          "v = 1.12 × 10⁴ m s⁻¹"
+        ],
+        "answer": { "value": 11200, "unit": "m s⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "escape-velocity-p1",
+          "question": "The Moon has a mass of 7.35 × 10²² kg and a radius of 1.74 × 10⁶ m. Calculate the escape velocity from the Moon's surface.",
+          "hint": "Substitute the Moon's mass and radius into v = √(2GM / r).",
+          "walkthrough": [
+            "M = 7.35 × 10²² kg, r = 1.74 × 10⁶ m, find v.",
+            "v = √(2GM / r) = √(2 × 6.67 × 10⁻¹¹ × 7.35 × 10²² / 1.74 × 10⁶)",
+            "v = √(5.64 × 10⁶)",
+            "v = 2370 m s⁻¹"
+          ],
+          "answer": { "value": 2370, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "escape-velocity-p2",
+          "question": "Mars has a mass of 6.42 × 10²³ kg and a radius of 3.39 × 10⁶ m. Calculate the escape velocity from the surface of Mars.",
+          "hint": "Use v = √(2GM / r) with r equal to the radius of Mars.",
+          "walkthrough": [
+            "M = 6.42 × 10²³ kg, r = 3.39 × 10⁶ m, find v.",
+            "v = √(2GM / r) = √(2 × 6.67 × 10⁻¹¹ × 6.42 × 10²³ / 3.39 × 10⁶)",
+            "v = √(2.53 × 10⁷)",
+            "v = 5030 m s⁻¹"
+          ],
+          "answer": { "value": 5030, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "escape-velocity-p3",
+          "question": "Jupiter has a mass of 1.90 × 10²⁷ kg and a radius of 69 900 km. Calculate the escape velocity from Jupiter's cloud tops in km s⁻¹.",
+          "hint": "Convert the radius to metres, use v = √(2GM / r), then divide by 1000.",
+          "walkthrough": [
+            "r = 69 900 km = 6.99 × 10⁷ m",
+            "v = √(2GM / r) = √(2 × 6.67 × 10⁻¹¹ × 1.90 × 10²⁷ / 6.99 × 10⁷)",
+            "v = √(3.63 × 10⁹) = 6.02 × 10⁴ m s⁻¹",
+            "v = 60.2 km s⁻¹"
+          ],
+          "answer": { "value": 60.2, "unit": "km s⁻¹" }
+        },
+        {
+          "id": "escape-velocity-p4",
+          "question": "The escape velocity from the surface of Venus is 10.4 km s⁻¹ and the radius of Venus is 6.05 × 10⁶ m. Calculate the mass of Venus.",
+          "hint": "Convert the speed to m s⁻¹, then square v = √(2GM / r) and rearrange to M = v²r / 2G.",
+          "walkthrough": [
+            "v = 10.4 km s⁻¹ = 1.04 × 10⁴ m s⁻¹, r = 6.05 × 10⁶ m, find M.",
+            "v² = 2GM / r, so M = v²r / 2G",
+            "M = (1.04 × 10⁴)² × 6.05 × 10⁶ / (2 × 6.67 × 10⁻¹¹)",
+            "M = 6.54 × 10¹⁴ / 1.334 × 10⁻¹⁰",
+            "M = 4.91 × 10²⁴ kg"
+          ],
+          "answer": { "value": 4.91e24, "unit": "kg" }
+        },
+        {
+          "id": "escape-velocity-p5",
+          "question": "A small spherical asteroid has a radius of 500 m and a uniform density of 2000 kg m⁻³. Calculate the escape velocity from its surface.",
+          "hint": "First find the asteroid's mass from M = ρ × (4/3)πr³, then use v = √(2GM / r).",
+          "walkthrough": [
+            "Volume = (4/3)π × 500³ = 5.24 × 10⁸ m³",
+            "M = ρV = 2000 × 5.24 × 10⁸ = 1.05 × 10¹² kg",
+            "v = √(2GM / r) = √(2 × 6.67 × 10⁻¹¹ × 1.05 × 10¹² / 500)",
+            "v = √(0.279)",
+            "v = 0.529 m s⁻¹"
+          ],
+          "answer": { "value": 0.529, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "escape-velocity-p6",
+          "question": "A planet has a radius of 7.00 × 10⁷ m and a gravitational field strength of 25.0 N kg⁻¹ at its surface. Calculate the escape velocity from its surface.",
+          "hint": "You are not given M, but g = GM / r² gives GM = g r²; substitute that into v = √(2GM / r).",
+          "walkthrough": [
+            "GM = g r² = 25.0 × (7.00 × 10⁷)² = 1.225 × 10¹⁷ N m² kg⁻¹",
+            "v = √(2GM / r) = √(2 × 1.225 × 10¹⁷ / 7.00 × 10⁷)",
+            "v = √(3.50 × 10⁹)",
+            "v = 5.92 × 10⁴ m s⁻¹"
+          ],
+          "answer": { "value": 59200, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "orbital-speed-and-period",
+      "name": "Orbital speed and period of a satellite",
+      "equations": ["v = √(GM / r)", "T = 2πr / v", "T² = 4π²r³ / GM"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "For a circular orbit, gravity provides the centripetal force: GMm / r² = mv² / r, giving v = √(GM / r). The period follows from T = 2πr / v, or directly from T² = 4π²r³ / GM. To find r from T, rearrange to r³ = GMT² / 4π² and cube-root. Always measure r from the centre of the body being orbited.",
+      "commonErrors": [
+        "Using the altitude as r instead of altitude plus radius",
+        "Forgetting to cube-root when finding r from T² = 4π²r³ / GM",
+        "Leaving T in seconds when the question asks for hours, minutes or days"
+      ],
+      "worked": {
+        "id": "orbital-speed-and-period-w",
+        "question": "The International Space Station orbits the Earth at an altitude of 400 km. Calculate its orbital period in seconds.",
+        "steps": [
+          "Known: M = 5.97 × 10²⁴ kg, r = 6.37 × 10⁶ + 4.00 × 10⁵ = 6.77 × 10⁶ m. Unknown: T.",
+          "First the orbital speed: v = √(GM / r) = √(6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 6.77 × 10⁶)",
+          "v = √(5.88 × 10⁷) = 7670 m s⁻¹",
+          "Then the period: T = 2πr / v = 2π × 6.77 × 10⁶ / 7670",
+          "T = 5550 s"
+        ],
+        "answer": { "value": 5550, "unit": "s" }
+      },
+      "practice": [
+        {
+          "id": "orbital-speed-and-period-p1",
+          "question": "The Moon orbits the Earth at a distance of 3.84 × 10⁸ m from the Earth's centre. Calculate the Moon's orbital speed.",
+          "hint": "Substitute the Earth's mass and the orbital radius into v = √(GM / r).",
+          "walkthrough": [
+            "M = 5.97 × 10²⁴ kg, r = 3.84 × 10⁸ m, find v.",
+            "v = √(GM / r) = √(6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 3.84 × 10⁸)",
+            "v = √(1.04 × 10⁶)",
+            "v = 1020 m s⁻¹"
+          ],
+          "answer": { "value": 1020, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "orbital-speed-and-period-p2",
+          "question": "An Earth-observation satellite orbits at a distance of 7.00 × 10⁶ m from the centre of the Earth. Calculate its orbital period in seconds.",
+          "hint": "Use T² = 4π²r³ / GM and take the square root.",
+          "walkthrough": [
+            "r = 7.00 × 10⁶ m, M = 5.97 × 10²⁴ kg, find T.",
+            "T² = 4π²r³ / GM = 4π² × (7.00 × 10⁶)³ / (6.67 × 10⁻¹¹ × 5.97 × 10²⁴)",
+            "T² = 1.35 × 10²² / 3.98 × 10¹⁴ = 3.40 × 10⁷ s²",
+            "T = 5830 s"
+          ],
+          "answer": { "value": 5830, "unit": "s" }
+        },
+        {
+          "id": "orbital-speed-and-period-p3",
+          "question": "A GPS satellite orbits the Earth at an altitude of 20 200 km. Calculate its orbital period in hours.",
+          "hint": "Add the altitude (in metres) to the Earth's radius, find T in seconds from T² = 4π²r³ / GM, then divide by 3600.",
+          "walkthrough": [
+            "r = 6.37 × 10⁶ + 2.02 × 10⁷ = 2.657 × 10⁷ m",
+            "T² = 4π²r³ / GM = 4π² × (2.657 × 10⁷)³ / 3.98 × 10¹⁴ = 1.86 × 10⁹ s²",
+            "T = √(1.86 × 10⁹) = 4.31 × 10⁴ s",
+            "T = 4.31 × 10⁴ / 3600 = 12.0 h"
+          ],
+          "answer": { "value": 12.0, "unit": "h" }
+        },
+        {
+          "id": "orbital-speed-and-period-p4",
+          "question": "Mars has a mass of 6.42 × 10²³ kg. A probe is to be placed in a circular orbit around Mars with a period of 2.00 hours. Calculate the required orbital radius.",
+          "hint": "Convert the period to seconds, rearrange to r³ = GMT² / 4π², then cube-root.",
+          "walkthrough": [
+            "T = 2.00 h = 7200 s, M = 6.42 × 10²³ kg, find r.",
+            "r³ = GMT² / 4π² = 6.67 × 10⁻¹¹ × 6.42 × 10²³ × 7200² / 4π²",
+            "r³ = 5.62 × 10¹⁹ m³",
+            "r = ∛(5.62 × 10¹⁹) = 3.83 × 10⁶ m"
+          ],
+          "answer": { "value": 3830000, "unit": "m" }
+        },
+        {
+          "id": "orbital-speed-and-period-p5",
+          "question": "Jupiter's moon Europa orbits at a distance of 6.71 × 10⁸ m from the centre of Jupiter, which has a mass of 1.90 × 10²⁷ kg. Calculate Europa's orbital period in days.",
+          "hint": "Find v from v = √(GM / r), then T = 2πr / v, then convert seconds to days (1 day = 86 400 s).",
+          "walkthrough": [
+            "v = √(GM / r) = √(6.67 × 10⁻¹¹ × 1.90 × 10²⁷ / 6.71 × 10⁸) = √(1.89 × 10⁸)",
+            "v = 1.37 × 10⁴ m s⁻¹",
+            "T = 2πr / v = 2π × 6.71 × 10⁸ / 1.37 × 10⁴ = 3.07 × 10⁵ s",
+            "T = 3.07 × 10⁵ / 86 400 = 3.55 days"
+          ],
+          "answer": { "value": 3.55, "unit": "days" }
+        },
+        {
+          "id": "orbital-speed-and-period-p6",
+          "question": "A reconnaissance satellite orbits the Earth with a period of 95.0 minutes. Calculate its altitude above the Earth's surface in km.",
+          "hint": "Convert the period to seconds, find r from r³ = GMT² / 4π², then subtract the Earth's radius and convert to km.",
+          "walkthrough": [
+            "T = 95.0 min = 5700 s",
+            "r³ = GMT² / 4π² = 3.98 × 10¹⁴ × 5700² / 4π² = 3.28 × 10²⁰ m³",
+            "r = ∛(3.28 × 10²⁰) = 6.89 × 10⁶ m",
+            "h = r − R_E = 6.894 × 10⁶ − 6.37 × 10⁶ = 5.24 × 10⁵ m",
+            "h = 524 km"
+          ],
+          "answer": { "value": 524, "unit": "km" }
+        }
+      ]
+    },
+    {
+      "id": "geostationary-orbit",
+      "name": "Geostationary and synchronous orbits",
+      "equations": ["T² = 4π²r³ / GM", "altitude = r − R"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "A geostationary (or synchronous) satellite has an orbital period equal to the rotation period of the planet, so T is known. Convert T to seconds, find r³ = GMT² / 4π² and cube-root to get the orbital radius measured from the planet's centre. If the altitude is asked for, subtract the planet's radius.",
+      "commonErrors": [
+        "Leaving T in hours instead of converting to seconds",
+        "Reporting the orbital radius when the question asks for the altitude (or the reverse)",
+        "Forgetting to cube-root r³"
+      ],
+      "worked": {
+        "id": "geostationary-orbit-w",
+        "question": "A geostationary satellite orbits the Earth with a period of 24.0 hours. Calculate the altitude of the satellite above the Earth's surface.",
+        "steps": [
+          "Known: T = 24.0 h = 86 400 s, M = 5.97 × 10²⁴ kg, R_E = 6.37 × 10⁶ m. Unknown: altitude h.",
+          "T² = 4π²r³ / GM, so r³ = GMT² / 4π²",
+          "r³ = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 86 400² / 4π² = 7.53 × 10²² m³",
+          "r = ∛(7.53 × 10²²) = 4.22 × 10⁷ m",
+          "h = r − R_E = 4.22 × 10⁷ − 6.37 × 10⁶",
+          "h = 3.59 × 10⁷ m"
+        ],
+        "answer": { "value": 35900000, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "geostationary-orbit-p1",
+          "question": "Mars has a mass of 6.42 × 10²³ kg and rotates once every 24.6 hours. Calculate the orbital radius of a satellite in a synchronous orbit around Mars.",
+          "hint": "Convert 24.6 h to seconds and use r³ = GMT² / 4π².",
+          "walkthrough": [
+            "T = 24.6 × 3600 = 88 560 s, M = 6.42 × 10²³ kg, find r.",
+            "r³ = GMT² / 4π² = 6.67 × 10⁻¹¹ × 6.42 × 10²³ × 88 560² / 4π²",
+            "r³ = 8.51 × 10²¹ m³",
+            "r = ∛(8.51 × 10²¹) = 2.04 × 10⁷ m"
+          ],
+          "answer": { "value": 20400000, "unit": "m" }
+        },
+        {
+          "id": "geostationary-orbit-p2",
+          "question": "Jupiter has a mass of 1.90 × 10²⁷ kg and a rotation period of 9.93 hours. Calculate the orbital radius of a satellite that would stay above the same point on Jupiter's cloud tops.",
+          "hint": "The satellite's period equals Jupiter's rotation period; convert to seconds and use r³ = GMT² / 4π².",
+          "walkthrough": [
+            "T = 9.93 × 3600 = 35 748 s, M = 1.90 × 10²⁷ kg, find r.",
+            "r³ = GMT² / 4π² = 6.67 × 10⁻¹¹ × 1.90 × 10²⁷ × 35 748² / 4π²",
+            "r³ = 4.10 × 10²⁴ m³",
+            "r = ∛(4.10 × 10²⁴) = 1.60 × 10⁸ m"
+          ],
+          "answer": { "value": 160000000, "unit": "m" }
+        },
+        {
+          "id": "geostationary-orbit-p3",
+          "question": "Neptune has a mass of 1.02 × 10²⁶ kg, a radius of 2.46 × 10⁷ m and a rotation period of 16.1 hours. Calculate the altitude above Neptune's cloud tops of a satellite in a synchronous orbit.",
+          "hint": "Find the orbital radius from r³ = GMT² / 4π² (T in seconds), then subtract Neptune's radius.",
+          "walkthrough": [
+            "T = 16.1 × 3600 = 57 960 s",
+            "r³ = GMT² / 4π² = 6.67 × 10⁻¹¹ × 1.02 × 10²⁶ × 57 960² / 4π² = 5.79 × 10²³ m³",
+            "r = ∛(5.79 × 10²³) = 8.33 × 10⁷ m",
+            "h = r − R = 8.33 × 10⁷ − 2.46 × 10⁷ = 5.87 × 10⁷ m"
+          ],
+          "answer": { "value": 58700000, "unit": "m" }
+        },
+        {
+          "id": "geostationary-orbit-p4",
+          "question": "Saturn has a mass of 5.68 × 10²⁶ kg, a radius of 5.82 × 10⁷ m and a rotation period of 10.7 hours. Calculate, in km, the altitude above Saturn's cloud tops of a satellite in a synchronous orbit.",
+          "hint": "Convert T to seconds, find r from r³ = GMT² / 4π², subtract Saturn's radius, then convert metres to km.",
+          "walkthrough": [
+            "T = 10.7 × 3600 = 38 520 s",
+            "r³ = GMT² / 4π² = 6.67 × 10⁻¹¹ × 5.68 × 10²⁶ × 38 520² / 4π² = 1.42 × 10²⁴ m³",
+            "r = ∛(1.42 × 10²⁴) = 1.125 × 10⁸ m",
+            "h = r − R = 1.125 × 10⁸ − 5.82 × 10⁷ = 5.43 × 10⁷ m",
+            "h = 54 300 km"
+          ],
+          "answer": { "value": 54300, "unit": "km" }
+        },
+        {
+          "id": "geostationary-orbit-p5",
+          "question": "Pluto has a mass of 1.31 × 10²² kg, a radius of 1.19 × 10⁶ m and a rotation period of 6.39 days. Calculate, in km, the altitude of a synchronous orbit above Pluto's surface.",
+          "hint": "Convert 6.39 days to seconds (1 day = 86 400 s), find r from r³ = GMT² / 4π², subtract Pluto's radius and convert to km.",
+          "walkthrough": [
+            "T = 6.39 × 86 400 = 5.52 × 10⁵ s",
+            "r³ = GMT² / 4π² = 6.67 × 10⁻¹¹ × 1.31 × 10²² × (5.52 × 10⁵)² / 4π² = 6.75 × 10²¹ m³",
+            "r = ∛(6.75 × 10²¹) = 1.89 × 10⁷ m",
+            "h = r − R = 1.89 × 10⁷ − 1.19 × 10⁶ = 1.77 × 10⁷ m",
+            "h = 17 700 km"
+          ],
+          "answer": { "value": 17700, "unit": "km" }
+        },
+        {
+          "id": "geostationary-orbit-p6",
+          "question": "Mercury has a mass of 3.30 × 10²³ kg and a radius of 2.44 × 10⁶ m. A satellite in a synchronous orbit around Mercury has an altitude of 2.38 × 10⁸ m above the surface. Calculate the rotation period of Mercury in days.",
+          "hint": "Add the radius to the altitude to get r, find T from T² = 4π²r³ / GM, then convert seconds to days.",
+          "walkthrough": [
+            "r = R + h = 2.44 × 10⁶ + 2.38 × 10⁸ = 2.404 × 10⁸ m",
+            "T² = 4π²r³ / GM = 4π² × (2.404 × 10⁸)³ / (6.67 × 10⁻¹¹ × 3.30 × 10²³) = 2.49 × 10¹³ s²",
+            "T = √(2.49 × 10¹³) = 4.99 × 10⁶ s",
+            "T = 4.99 × 10⁶ / 86 400 = 57.8 days"
+          ],
+          "answer": { "value": 57.8, "unit": "days" }
+        }
+      ]
+    },
+    {
+      "id": "keplers-third-law",
+      "name": "Kepler's third law comparisons",
+      "equations": ["T² ∝ r³", "T₁² / T₂² = r₁³ / r₂³"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "For two orbits around the same central body, T² / r³ is the same constant, so you can compare them without knowing G or M. Write T₂ = T₁ × (r₂ / r₁)^(3/2) to find a period, or r₂ = r₁ × (T₂ / T₁)^(2/3) to find a radius. Any consistent units will do for T and r, so there is no need to convert to seconds and metres.",
+      "commonErrors": [
+        "Using the ratio to the power 3 or 2 instead of 3/2 or 2/3",
+        "Comparing orbits around different central bodies — the constant is only the same for the same M",
+        "Mixing an altitude with an orbital radius in the ratio"
+      ],
+      "worked": {
+        "id": "keplers-third-law-w",
+        "question": "The Earth orbits the Sun at 1.00 AU with a period of 1.00 year. Mars orbits at 1.52 AU. Calculate the orbital period of Mars in years.",
+        "steps": [
+          "Known: r₁ = 1.00 AU, T₁ = 1.00 year, r₂ = 1.52 AU. Unknown: T₂.",
+          "T² ∝ r³, so T₂ = T₁ × (r₂ / r₁)^(3/2)",
+          "T₂ = 1.00 × (1.52 / 1.00)^(3/2) = √(1.52³) = √3.51",
+          "T₂ = 1.87 years"
+        ],
+        "answer": { "value": 1.87, "unit": "years" }
+      },
+      "practice": [
+        {
+          "id": "keplers-third-law-p1",
+          "question": "Jupiter orbits the Sun at a mean distance of 5.20 AU. Using the Earth's orbit (1.00 AU, 1.00 year), calculate Jupiter's orbital period in years.",
+          "hint": "T₂ = T₁ × (r₂ / r₁)^(3/2) with the Earth's orbit as orbit 1.",
+          "walkthrough": [
+            "r₁ = 1.00 AU, T₁ = 1.00 year, r₂ = 5.20 AU, find T₂.",
+            "T₂ = T₁ × (r₂ / r₁)^(3/2) = 1.00 × 5.20^(3/2) = √(5.20³)",
+            "T₂ = √141",
+            "T₂ = 11.9 years"
+          ],
+          "answer": { "value": 11.9, "unit": "years" }
+        },
+        {
+          "id": "keplers-third-law-p2",
+          "question": "Satellite A orbits the Earth at a radius of 7.00 × 10⁶ m with a period of 97.0 minutes. Satellite B orbits the Earth at a radius of 2.80 × 10⁷ m. Calculate the period of satellite B in minutes.",
+          "hint": "Both orbit the Earth, so T_B = T_A × (r_B / r_A)^(3/2); the ratio of radii is a whole number.",
+          "walkthrough": [
+            "r_B / r_A = 2.80 × 10⁷ / 7.00 × 10⁶ = 4.00",
+            "T_B = T_A × (r_B / r_A)^(3/2) = 97.0 × 4.00^(3/2) = 97.0 × 8.00",
+            "T_B = 776 min"
+          ],
+          "answer": { "value": 776, "unit": "min" }
+        },
+        {
+          "id": "keplers-third-law-p3",
+          "question": "Saturn orbits the Sun with a period of 29.5 years. Using the Earth's orbit (1.00 AU, 1.00 year), calculate the mean orbital radius of Saturn in AU.",
+          "hint": "Rearrange to r₂ = r₁ × (T₂ / T₁)^(2/3).",
+          "walkthrough": [
+            "T₁ = 1.00 year, r₁ = 1.00 AU, T₂ = 29.5 years, find r₂.",
+            "r₂ = r₁ × (T₂ / T₁)^(2/3) = 1.00 × 29.5^(2/3) = ∛(29.5²)",
+            "r₂ = ∛870",
+            "r₂ = 9.55 AU"
+          ],
+          "answer": { "value": 9.55, "unit": "AU" }
+        },
+        {
+          "id": "keplers-third-law-p4",
+          "question": "Jupiter's moon Io orbits at a radius of 4.22 × 10⁸ m with a period of 1.77 days. Callisto, another moon of Jupiter, has a period of 16.7 days. Calculate the orbital radius of Callisto in metres.",
+          "hint": "Both orbit Jupiter, so r_C = r_I × (T_C / T_I)^(2/3); the periods can stay in days.",
+          "walkthrough": [
+            "T_C / T_I = 16.7 / 1.77 = 9.44",
+            "r_C = r_I × (T_C / T_I)^(2/3) = 4.22 × 10⁸ × 9.44^(2/3)",
+            "r_C = 4.22 × 10⁸ × 4.47",
+            "r_C = 1.88 × 10⁹ m"
+          ],
+          "answer": { "value": 1880000000, "unit": "m" }
+        },
+        {
+          "id": "keplers-third-law-p5",
+          "question": "A geostationary satellite orbits the Earth at a radius of 4.22 × 10⁷ m with a period of 24.0 hours. Calculate, in minutes, the period of a satellite orbiting the Earth at an altitude of 800 km.",
+          "hint": "First convert the altitude to an orbital radius by adding the Earth's radius, then use T₂ = T₁ × (r₂ / r₁)^(3/2) and convert hours to minutes.",
+          "walkthrough": [
+            "r₂ = R_E + h = 6.37 × 10⁶ + 8.00 × 10⁵ = 7.17 × 10⁶ m",
+            "r₂ / r₁ = 7.17 × 10⁶ / 4.22 × 10⁷ = 0.170",
+            "T₂ = T₁ × (r₂ / r₁)^(3/2) = 24.0 × 0.170^(3/2) = 24.0 × 0.0700 = 1.68 h",
+            "T₂ = 1.68 × 60 = 101 min"
+          ],
+          "answer": { "value": 101, "unit": "min" }
+        },
+        {
+          "id": "keplers-third-law-p6",
+          "question": "The Moon orbits the Earth at a radius of 3.84 × 10⁸ m with a period of 27.3 days. Calculate the altitude above the Earth's surface of a satellite whose orbital period is exactly 1.00 day.",
+          "hint": "Use r₂ = r₁ × (T₂ / T₁)^(2/3) to find the satellite's orbital radius, then subtract the Earth's radius.",
+          "walkthrough": [
+            "T₂ / T₁ = 1.00 / 27.3 = 0.0366",
+            "r₂ = r₁ × (T₂ / T₁)^(2/3) = 3.84 × 10⁸ × 0.0366^(2/3) = 3.84 × 10⁸ × 0.110",
+            "r₂ = 4.24 × 10⁷ m",
+            "h = r₂ − R_E = 4.235 × 10⁷ − 6.37 × 10⁶ = 3.60 × 10⁷ m"
+          ],
+          "answer": { "value": 36000000, "unit": "m" }
+        }
+      ]
+    },
+    {
+      "id": "gravity-graph",
+      "name": "Reading gravitational field and potential graphs",
+      "equations": [
+        "g = GM / r² (value read at a point → M = gr² / G)",
+        "ΔV = area under a g–r graph",
+        "g = −ΔV / Δr (gradient of a V–r graph; tangent on a curve)",
+        "ΔW = mΔV",
+        "v_esc = √(2GM / r) = √(2|V_surface|)",
+        "T² = (4π² / GM) r³ (gradient of T² against r³ = 4π² / GM)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Check what is plotted and where the surface is: the curves start at the planet's radius, so add any altitude to the radius before reading r. On a g–r graph a value read at a point gives g (and M = gr² / G), and the area between two radii is the change in potential. On a V–r graph the gradient of a tangent gives g, and the difference between two readings gives ΔV for ΔW = mΔV or the escape speed. A linearised plot such as T² against r³ has gradient 4π² / GM. Multiply by the axis scales (× 10⁶ m, × 10⁷ J kg⁻¹) before calculating.",
+      "commonErrors": [
+        "Reading r as the altitude instead of the distance from the planet's centre",
+        "Ignoring the power of ten in an axis label such as r / 10⁶ m",
+        "Mishandling the minus signs on a potential axis so that ΔV comes out as a sum instead of a difference",
+        "Counting squares under a curve without first working out what one square represents"
+      ],
+      "worked": {
+        "id": "gravity-graph-w",
+        "question": "The graph shows how the gravitational field strength g varies with distance r from the centre of a planet of radius 4.0 × 10⁶ m. A probe is at an altitude of 4000 km above the surface. Point X is marked. Use the graph to determine the gravitational field strength at the probe.",
+        "steps": [
+          "The r axis is distance from the centre, not altitude: r = R + h = 4.0 × 10⁶ + 4.0 × 10⁶ = 8.0 × 10⁶ m.",
+          "The r axis is scaled in 10⁶ m, so find r = 8 on the axis and go up to the curve: this is point X.",
+          "Read across to the g axis: g = 3.0 N kg⁻¹",
+          "Check: g has fallen to a quarter of the surface value (12 → 3.0) when r has doubled, as expected for an inverse-square field.",
+          "g = 3.0 N kg⁻¹"
+        ],
+        "answer": {
+          "value": 3.0,
+          "unit": "N kg⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "r / 10⁶ m",
+            "min": 0,
+            "max": 16,
+            "step": 2
+          },
+          "y": {
+            "label": "g / N kg⁻¹",
+            "min": 0,
+            "max": 12,
+            "step": 1
+          },
+          "series": [
+            {
+              "kind": "curve",
+              "points": [
+                [4, 12],
+                [4.5, 9.481],
+                [5, 7.68],
+                [5.5, 6.347],
+                [6, 5.333],
+                [6.5, 4.544],
+                [7, 3.918],
+                [7.5, 3.413],
+                [8, 3],
+                [9, 2.37],
+                [10, 1.92],
+                [11, 1.587],
+                [12, 1.333],
+                [13, 1.136],
+                [14, 0.98],
+                [15, 0.853],
+                [16, 0.75]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 8,
+              "y": 3,
+              "label": "X",
+              "drop": true
+            }
+          ],
+          "alt": "Gravitational field strength against distance from a planet's centre, falling as 1 over r squared from 12 N per kg at 4 million metres, with X marked at 8 million metres and 3.0 N per kg"
+        }
+      },
+      "practice": [
+        {
+          "id": "gravity-graph-p1",
+          "question": "The graph shows how the gravitational field strength g varies with distance r from the centre of a planet. Point P is marked on the curve. Use the value of g at P to determine the mass of the planet.",
+          "hint": "Read r and g at P (the r axis is in 10⁶ m), then rearrange g = GM / r² to M = gr² / G.",
+          "walkthrough": [
+            "At P: r = 6.0 × 10⁶ m and g = 2.0 N kg⁻¹.",
+            "g = GM / r², so M = gr² / G",
+            "M = 2.0 × (6.0 × 10⁶)² / 6.67 × 10⁻¹¹ = 7.2 × 10¹³ / 6.67 × 10⁻¹¹",
+            "M = 1.08 × 10²⁴ kg"
+          ],
+          "answer": {
+            "value": 1080000000000000000000000,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "r / 10⁶ m",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "y": {
+              "label": "g / N kg⁻¹",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [3, 8],
+                  [3.5, 5.878],
+                  [4, 4.5],
+                  [4.5, 3.556],
+                  [5, 2.88],
+                  [5.5, 2.38],
+                  [6, 2],
+                  [6.5, 1.704],
+                  [7, 1.469],
+                  [7.5, 1.28],
+                  [8, 1.125],
+                  [8.5, 0.997],
+                  [9, 0.889],
+                  [9.5, 0.798],
+                  [10, 0.72],
+                  [10.5, 0.653],
+                  [11, 0.595],
+                  [11.5, 0.544],
+                  [12, 0.5]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 2,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "alt": "Gravitational field strength against distance from a planet's centre, falling from 8.0 N per kg at 3 million metres, with P marked at 6 million metres and 2.0 N per kg"
+          }
+        },
+        {
+          "id": "gravity-graph-p2",
+          "question": "The graph shows how the gravitational field strength g varies with distance r from the centre of a planet. The area under the curve between A (r = 8.0 × 10⁶ m) and B (r = 12.0 × 10⁶ m) is shaded and contains 7.5 large squares. Use the graph to determine the magnitude of the change in gravitational potential between A and B.",
+          "hint": "The area under a g–r graph is the change in potential; work out what one large square represents from the axis scales, remembering the r axis is in 10⁶ m.",
+          "walkthrough": [
+            "ΔV = area under the g–r graph between A and B.",
+            "One large square is 2 × 10⁶ m wide and 1 N kg⁻¹ tall, so it represents 2 × 10⁶ × 1 = 2.0 × 10⁶ J kg⁻¹.",
+            "Shaded area = 7.5 squares × 2.0 × 10⁶ J kg⁻¹",
+            "ΔV = 1.5 × 10⁷ J kg⁻¹"
+          ],
+          "answer": {
+            "value": 15000000,
+            "unit": "J kg⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "r / 10⁶ m",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "g / N kg⁻¹",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [6, 10],
+                  [6.5, 8.521],
+                  [7, 7.347],
+                  [7.5, 6.4],
+                  [8, 5.625],
+                  [8.5, 4.983],
+                  [9, 4.444],
+                  [9.5, 3.989],
+                  [10, 3.6],
+                  [11, 2.975],
+                  [12, 2.5],
+                  [13, 2.13],
+                  [14, 1.837],
+                  [15, 1.6],
+                  [16, 1.406],
+                  [17, 1.246],
+                  [18, 1.111],
+                  [19, 0.997],
+                  [20, 0.9]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 5.625,
+                "label": "A"
+              },
+              {
+                "x": 12,
+                "y": 2.5,
+                "label": "B"
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 8,
+                "to": 12
+              }
+            ],
+            "alt": "Gravitational field strength against distance from a planet's centre, falling from 10 N per kg at 6 million metres, with the area under the curve between A at 8 million metres and B at 12 million metres shaded"
+          }
+        },
+        {
+          "id": "gravity-graph-p3",
+          "question": "The graph shows how the gravitational potential V varies with distance r from the centre of a planet. The tangent to the curve at X is drawn. Use the graph to determine the gravitational field strength at X.",
+          "hint": "g = −ΔV / Δr, so g at X is the magnitude of the gradient of the tangent; use its end points and include both axis scales.",
+          "walkthrough": [
+            "Field strength is the potential gradient: g = −ΔV / Δr, found from the tangent at X.",
+            "The tangent passes through (0, −8.0 × 10⁷ J kg⁻¹) and (18 × 10⁶ m, −2.0 × 10⁷ J kg⁻¹).",
+            "Gradient = (−2.0 × 10⁷ − (−8.0 × 10⁷)) / (18 × 10⁶ − 0) = 6.0 × 10⁷ / 1.8 × 10⁷",
+            "g = 3.33 N kg⁻¹ (magnitude; the field points towards the planet)"
+          ],
+          "answer": {
+            "value": 3.33,
+            "unit": "N kg⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "r / 10⁶ m",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "V / 10⁷ J kg⁻¹",
+              "min": -8,
+              "max": 0,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [6, -8],
+                  [6.5, -7.385],
+                  [7, -6.857],
+                  [7.5, -6.4],
+                  [8, -6],
+                  [8.5, -5.647],
+                  [9, -5.333],
+                  [9.5, -5.053],
+                  [10, -4.8],
+                  [11, -4.364],
+                  [12, -4],
+                  [13, -3.692],
+                  [14, -3.429],
+                  [15, -3.2],
+                  [16, -3],
+                  [17, -2.824],
+                  [18, -2.667],
+                  [19, -2.526],
+                  [20, -2.4]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [0, -8],
+                  [18, -2]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 12,
+                "y": -4,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "labels": [
+              {
+                "x": 3.6,
+                "y": -6.0,
+                "text": "tangent at X"
+              }
+            ],
+            "alt": "Gravitational potential against distance from a planet's centre, rising from minus 8 times 10 to the 7 joules per kilogram at 6 million metres towards zero, with the tangent at X (12 million metres) drawn from (0, minus 8) to (18 million metres, minus 2)"
+          }
+        },
+        {
+          "id": "gravity-graph-p4",
+          "question": "The graph shows how the gravitational potential V varies with distance r from the centre of a moon. A lander of mass 500 kg is raised from point A to point B. Use the graph to determine the work done on the lander against gravity.",
+          "hint": "Read V at A and at B (the V axis is in 10⁶ J kg⁻¹), subtract to get ΔV, then ΔW = mΔV.",
+          "walkthrough": [
+            "V_A = −4.0 × 10⁶ J kg⁻¹ and V_B = −2.0 × 10⁶ J kg⁻¹ (read along the dotted lines).",
+            "ΔV = V_B − V_A = −2.0 × 10⁶ − (−4.0 × 10⁶) = 2.0 × 10⁶ J kg⁻¹",
+            "ΔW = mΔV = 500 × 2.0 × 10⁶",
+            "ΔW = 1.0 × 10⁹ J"
+          ],
+          "answer": {
+            "value": 1000000000,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "r / 10⁶ m",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "V / 10⁶ J kg⁻¹",
+              "min": -6,
+              "max": 0,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [2, -6],
+                  [2.5, -4.8],
+                  [3, -4],
+                  [3.5, -3.429],
+                  [4, -3],
+                  [4.5, -2.667],
+                  [5, -2.4],
+                  [5.5, -2.182],
+                  [6, -2],
+                  [6.5, -1.846],
+                  [7, -1.714],
+                  [7.5, -1.6],
+                  [8, -1.5],
+                  [8.5, -1.412],
+                  [9, -1.333],
+                  [9.5, -1.263],
+                  [10, -1.2]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 3,
+                "y": -4,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 6,
+                "y": -2,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "alt": "Gravitational potential against distance from a moon's centre, rising from minus 6 million joules per kilogram at 2 million metres towards zero, with A marked at 3 million metres and B at 6 million metres"
+          }
+        },
+        {
+          "id": "gravity-graph-p5",
+          "question": "The graph shows how the gravitational potential V varies with distance r from the centre of a small moon. Point S marks the moon's surface. Use the graph to determine the minimum speed at which an object must be launched from the surface to escape the moon's gravitational field.",
+          "hint": "Read the potential at S (the axis is in 10⁶ J kg⁻¹); escaping means gaining enough kinetic energy per unit mass to reach V = 0, so ½v² = |V_S|.",
+          "walkthrough": [
+            "At S: V = −3.0 × 10⁶ J kg⁻¹.",
+            "To escape, the kinetic energy per kilogram must equal the rise in potential to zero: ½v² = 0 − V_S = 3.0 × 10⁶ J kg⁻¹",
+            "v = √(2 × 3.0 × 10⁶) = √(6.0 × 10⁶)",
+            "v = 2.45 × 10³ m s⁻¹"
+          ],
+          "answer": {
+            "value": 2450,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "r / 10⁶ m",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "V / 10⁶ J kg⁻¹",
+              "min": -3,
+              "max": 0,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [1, -3],
+                  [1.25, -2.4],
+                  [1.5, -2],
+                  [1.75, -1.714],
+                  [2, -1.5],
+                  [2.25, -1.333],
+                  [2.5, -1.2],
+                  [2.75, -1.091],
+                  [3, -1],
+                  [3.25, -0.923],
+                  [3.5, -0.857],
+                  [3.75, -0.8],
+                  [4, -0.75],
+                  [5, -0.6],
+                  [6, -0.5],
+                  [7, -0.429],
+                  [8, -0.375]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 1,
+                "y": -3,
+                "label": "S",
+                "drop": true
+              }
+            ],
+            "alt": "Gravitational potential against distance from a small moon's centre, rising from minus 3 million joules per kilogram at the surface S (1 million metres) towards zero at large distances"
+          }
+        },
+        {
+          "id": "gravity-graph-p6",
+          "question": "For six moons of a planet, the square of the orbital period T² is plotted against the cube of the orbital radius r³, and a best-fit line is drawn through the origin. Point X is marked on the line. Use the gradient of the line to determine the mass of the planet.",
+          "hint": "From T² = (4π² / GM) r³ the gradient is 4π² / GM; find the gradient using X and the origin, including both axis scales, then M = 4π² / (G × gradient).",
+          "walkthrough": [
+            "T² = (4π² / GM) r³, so the gradient of T² against r³ is 4π² / GM.",
+            "X is at r³ = 8.0 × 10²¹ m³, T² = 16 × 10⁷ s²; the line passes through the origin.",
+            "Gradient = 16 × 10⁷ / 8.0 × 10²¹ = 2.0 × 10⁻¹⁴ s² m⁻³",
+            "M = 4π² / (G × gradient) = 39.5 / (6.67 × 10⁻¹¹ × 2.0 × 10⁻¹⁴) = 39.5 / 1.33 × 10⁻²⁴",
+            "M = 2.96 × 10²⁵ kg"
+          ],
+          "answer": {
+            "value": 29600000000000000000000000,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "r³ / 10²¹ m³",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "T² / 10⁷ s²",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [1, 2.15],
+                  [2, 3.8],
+                  [3.5, 7.1],
+                  [5, 9.85],
+                  [7, 14.2],
+                  [9, 17.9]
+                ],
+                "fit": [
+                  [0, 0],
+                  [10, 20]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 16,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Data crosses of orbital period squared against orbital radius cubed for six moons, with a best-fit straight line through the origin and point X marked on it at 8 times 10 to the 21 cubic metres and 16 times 10 to the 7 seconds squared"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1759 @@
+{
+  "id": "electric-fields-capacitors",
+  "title": "Electric fields and capacitors",
+  "subtitle": "Coulomb's law, field strength, potential, capacitance, energy and discharge",
+  "order": 120,
+  "types": [
+    {
+      "id": "coulombs-law",
+      "name": "Coulomb's law between two point charges",
+      "equations": [
+        "F = Qq / (4πε₀r²)",
+        "1 / (4πε₀) = 8.99 × 10⁹ N m² C⁻²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Use Coulomb's law whenever two point charges (or charged spheres, ions, nuclei, electrons) are a known distance apart. Convert every charge to coulombs and every distance to metres before substituting, then square the separation. The sign tells you attract or repel; the question usually wants the magnitude.",
+      "commonErrors": [
+        "Forgetting to square r, or squaring the prefix wrongly (3.0 mm → 9.0 × 10⁻⁶ m², not 9.0 × 10⁻³)",
+        "Entering 1 / (4πε₀) as 4π × 8.85 × 10⁻¹² instead of 1 / (4π × 8.85 × 10⁻¹²) = 8.99 × 10⁹",
+        "Dividing a charge in nC by 10⁹ instead of multiplying by 10⁻⁹ and losing the power of ten"
+      ],
+      "worked": {
+        "id": "coulombs-law-w",
+        "question": "Two small charged spheres in a laboratory carry charges of +3.0 μC and +5.0 μC. Their centres are 0.20 m apart. Calculate the magnitude of the electrostatic force between them.",
+        "steps": [
+          "Known: Q = 3.0 × 10⁻⁶ C, q = 5.0 × 10⁻⁶ C, r = 0.20 m. Unknown: F.",
+          "F = Qq / (4πε₀r²), with 1 / (4πε₀) = 8.99 × 10⁹ N m² C⁻²",
+          "F = 8.99 × 10⁹ × 3.0 × 10⁻⁶ × 5.0 × 10⁻⁶ / 0.20²",
+          "F = 0.1349 / 0.040",
+          "F = 3.37 N (repulsive, since both charges are positive)"
+        ],
+        "answer": {
+          "value": 3.37,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "coulombs-law-p1",
+          "question": "A charged balloon carrying +40 nC is held 0.15 m from a small metal sphere carrying −25 nC. Calculate the magnitude of the force between them.",
+          "hint": "Convert both charges to coulombs (1 nC = 10⁻⁹ C) and substitute into F = Qq / (4πε₀r²); ignore the signs for the magnitude.",
+          "walkthrough": [
+            "Q = 40 × 10⁻⁹ C, q = 25 × 10⁻⁹ C, r = 0.15 m",
+            "F = 8.99 × 10⁹ × 40 × 10⁻⁹ × 25 × 10⁻⁹ / 0.15²",
+            "F = 8.99 × 10⁻⁶ / 0.0225",
+            "F = 4.00 × 10⁻⁴ N"
+          ],
+          "answer": {
+            "value": 0.0004,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "coulombs-law-p2",
+          "question": "In a hydrogen atom the electron is, on average, 5.3 × 10⁻¹¹ m from the proton. Calculate the magnitude of the electrostatic force between them.",
+          "hint": "Both charges have magnitude e = 1.60 × 10⁻¹⁹ C; substitute into F = Qq / (4πε₀r²).",
+          "walkthrough": [
+            "Q = q = 1.60 × 10⁻¹⁹ C, r = 5.3 × 10⁻¹¹ m",
+            "F = 8.99 × 10⁹ × (1.60 × 10⁻¹⁹)² / (5.3 × 10⁻¹¹)²",
+            "F = 2.30 × 10⁻²⁸ / 2.81 × 10⁻²¹",
+            "F = 8.19 × 10⁻⁸ N"
+          ],
+          "answer": {
+            "value": 8.19e-08,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "coulombs-law-p3",
+          "question": "Two toner particles in a photocopier each carry a charge of 2.0 nC and are 3.0 mm apart. Calculate the electrostatic force between them.",
+          "hint": "Convert 3.0 mm to metres before squaring it.",
+          "walkthrough": [
+            "Q = q = 2.0 × 10⁻⁹ C, r = 3.0 × 10⁻³ m",
+            "F = 8.99 × 10⁹ × (2.0 × 10⁻⁹)² / (3.0 × 10⁻³)²",
+            "F = 3.60 × 10⁻⁸ / 9.0 × 10⁻⁶",
+            "F = 4.00 × 10⁻³ N"
+          ],
+          "answer": {
+            "value": 0.004,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "coulombs-law-p4",
+          "question": "In a crystal of sodium chloride, a Na⁺ ion and a neighbouring Cl⁻ ion are 282 pm apart. Treating the ions as point charges, calculate the magnitude of the electrostatic force between them.",
+          "hint": "Each ion carries a charge of magnitude e; 1 pm = 10⁻¹² m.",
+          "walkthrough": [
+            "Q = q = 1.60 × 10⁻¹⁹ C, r = 282 × 10⁻¹² m = 2.82 × 10⁻¹⁰ m",
+            "F = 8.99 × 10⁹ × (1.60 × 10⁻¹⁹)² / (2.82 × 10⁻¹⁰)²",
+            "F = 2.30 × 10⁻²⁸ / 7.95 × 10⁻²⁰",
+            "F = 2.89 × 10⁻⁹ N"
+          ],
+          "answer": {
+            "value": 2.89e-09,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "coulombs-law-p5",
+          "question": "Two identical polystyrene spheres are each given 2.5 × 10¹⁰ excess electrons and placed with their centres 8.0 cm apart. Calculate the repulsive force between them.",
+          "hint": "First find the charge on each sphere from Q = ne, then use Coulomb's law with r in metres.",
+          "walkthrough": [
+            "Q = ne = 2.5 × 10¹⁰ × 1.60 × 10⁻¹⁹ = 4.0 × 10⁻⁹ C on each sphere",
+            "r = 8.0 cm = 0.080 m",
+            "F = 8.99 × 10⁹ × (4.0 × 10⁻⁹)² / 0.080²",
+            "F = 1.44 × 10⁻⁷ / 6.4 × 10⁻³",
+            "F = 2.25 × 10⁻⁵ N"
+          ],
+          "answer": {
+            "value": 2.25e-05,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "coulombs-law-p6",
+          "question": "In a scattering experiment an alpha particle (charge +2e) approaches a gold nucleus (charge +79e). Calculate the separation at which the repulsive force between them is 2.0 N.",
+          "hint": "Work out both charges as multiples of e, then rearrange F = Qq / (4πε₀r²) for r and remember the square root.",
+          "walkthrough": [
+            "Q = 2 × 1.60 × 10⁻¹⁹ = 3.2 × 10⁻¹⁹ C, q = 79 × 1.60 × 10⁻¹⁹ = 1.264 × 10⁻¹⁷ C",
+            "Rearrange: r² = Qq / (4πε₀F)",
+            "r² = 8.99 × 10⁹ × 3.2 × 10⁻¹⁹ × 1.264 × 10⁻¹⁷ / 2.0 = 1.82 × 10⁻²⁶ m²",
+            "r = √(1.82 × 10⁻²⁶)",
+            "r = 1.35 × 10⁻¹³ m"
+          ],
+          "answer": {
+            "value": 1.35e-13,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "field-strength-point-charge",
+      "name": "Electric field strength of a point charge",
+      "equations": [
+        "E = Q / (4πε₀r²)",
+        "E = F / Q"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Field strength is the force per unit positive charge. For a radial field around a point charge use E = Q / (4πε₀r²) with Q the charge producing the field and r the distance from its centre. If you are given a force on a known test charge, use E = F / Q instead. Rearranging for r needs a square root.",
+      "commonErrors": [
+        "Using the test charge instead of the source charge in E = Q / (4πε₀r²)",
+        "Forgetting the square root when rearranging for r",
+        "Writing the unit as N or V instead of N C⁻¹ (equivalently V m⁻¹)"
+      ],
+      "worked": {
+        "id": "field-strength-point-charge-w",
+        "question": "A Van de Graaff dome carries a charge of +2.0 μC. Treating the dome as a point charge, calculate the electric field strength at a point 0.30 m from its centre.",
+        "steps": [
+          "Known: Q = 2.0 × 10⁻⁶ C, r = 0.30 m. Unknown: E.",
+          "E = Q / (4πε₀r²), with 1 / (4πε₀) = 8.99 × 10⁹ N m² C⁻²",
+          "E = 8.99 × 10⁹ × 2.0 × 10⁻⁶ / 0.30²",
+          "E = 1.80 × 10⁴ / 0.090",
+          "E = 2.00 × 10⁵ N C⁻¹"
+        ],
+        "answer": {
+          "value": 200000,
+          "unit": "N C⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "field-strength-point-charge-p1",
+          "question": "A small charged sphere carries +60 nC. Calculate the electric field strength at a point 1.2 m from its centre.",
+          "hint": "Convert 60 nC to coulombs and substitute into E = Q / (4πε₀r²).",
+          "walkthrough": [
+            "Q = 60 × 10⁻⁹ C, r = 1.2 m",
+            "E = 8.99 × 10⁹ × 60 × 10⁻⁹ / 1.2²",
+            "E = 539.5 / 1.44",
+            "E = 375 N C⁻¹"
+          ],
+          "answer": {
+            "value": 375,
+            "unit": "N C⁻¹"
+          }
+        },
+        {
+          "id": "field-strength-point-charge-p2",
+          "question": "A test charge of +4.0 nC placed in an electric field experiences a force of 3.2 × 10⁻⁵ N. Calculate the electric field strength at that point.",
+          "hint": "Field strength is force per unit charge: E = F / Q.",
+          "walkthrough": [
+            "F = 3.2 × 10⁻⁵ N, Q = 4.0 × 10⁻⁹ C",
+            "E = F / Q = 3.2 × 10⁻⁵ / 4.0 × 10⁻⁹",
+            "E = 8.0 × 10³ N C⁻¹"
+          ],
+          "answer": {
+            "value": 8000,
+            "unit": "N C⁻¹"
+          }
+        },
+        {
+          "id": "field-strength-point-charge-p3",
+          "question": "Calculate the electric field strength at a distance of 1.0 nm from a proton.",
+          "hint": "The proton's charge is e = 1.60 × 10⁻¹⁹ C; convert 1.0 nm to metres before squaring.",
+          "walkthrough": [
+            "Q = 1.60 × 10⁻¹⁹ C, r = 1.0 × 10⁻⁹ m",
+            "E = 8.99 × 10⁹ × 1.60 × 10⁻¹⁹ / (1.0 × 10⁻⁹)²",
+            "E = 1.44 × 10⁻⁹ / 1.0 × 10⁻¹⁸",
+            "E = 1.44 × 10⁹ N C⁻¹"
+          ],
+          "answer": {
+            "value": 1440000000,
+            "unit": "N C⁻¹"
+          }
+        },
+        {
+          "id": "field-strength-point-charge-p4",
+          "question": "The electric field strength 0.20 m from the centre of a charged sphere is 5.0 × 10⁴ N C⁻¹. Calculate the charge on the sphere, in nC.",
+          "hint": "Rearrange E = Q / (4πε₀r²) to give Q = 4πε₀Er², then divide by 10⁻⁹ to convert to nC.",
+          "walkthrough": [
+            "E = 5.0 × 10⁴ N C⁻¹, r = 0.20 m",
+            "Q = 4πε₀Er² = Er² / (8.99 × 10⁹)",
+            "Q = 5.0 × 10⁴ × 0.20² / 8.99 × 10⁹ = 2000 / 8.99 × 10⁹",
+            "Q = 2.22 × 10⁻⁷ C",
+            "Q = 222 nC"
+          ],
+          "answer": {
+            "value": 222,
+            "unit": "nC"
+          }
+        },
+        {
+          "id": "field-strength-point-charge-p5",
+          "question": "Air breaks down (sparks) when the electric field strength reaches 3.0 × 10⁶ N C⁻¹. Calculate the distance from the centre of a point charge of +8.0 μC at which the field strength has this value.",
+          "hint": "Rearrange E = Q / (4πε₀r²) for r² and take the square root.",
+          "walkthrough": [
+            "Q = 8.0 × 10⁻⁶ C, E = 3.0 × 10⁶ N C⁻¹",
+            "r² = Q / (4πε₀E) = 8.99 × 10⁹ × 8.0 × 10⁻⁶ / 3.0 × 10⁶",
+            "r² = 7.19 × 10⁴ / 3.0 × 10⁶ = 0.0240 m²",
+            "r = √0.0240",
+            "r = 0.155 m"
+          ],
+          "answer": {
+            "value": 0.155,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "field-strength-point-charge-p6",
+          "question": "A charged pith ball carries +3.0 μC. A second ball carrying −20 nC is placed 0.25 m from its centre. By first finding the electric field strength due to the first ball at the second ball, calculate the magnitude of the force on the second ball.",
+          "hint": "Find E from the +3.0 μC charge using E = Q / (4πε₀r²), then use F = EQ with the −20 nC charge.",
+          "walkthrough": [
+            "E = 8.99 × 10⁹ × 3.0 × 10⁻⁶ / 0.25² = 2.70 × 10⁴ / 0.0625",
+            "E = 4.32 × 10⁵ N C⁻¹",
+            "F = EQ = 4.32 × 10⁵ × 20 × 10⁻⁹",
+            "F = 8.63 × 10⁻³ N"
+          ],
+          "answer": {
+            "value": 0.00863,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "uniform-field-parallel-plates",
+      "name": "Uniform field between parallel plates",
+      "equations": [
+        "E = V / d",
+        "F = EQ",
+        "a = F / m"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Between two parallel plates the field is uniform: E = V / d, where V is the p.d. between the plates and d their separation in metres. A charge Q in the field feels a constant force F = EQ, so a particle of mass m accelerates at a = EQ / m. Convert mm or cm to metres and kV to volts first.",
+      "commonErrors": [
+        "Leaving the plate separation in mm or cm",
+        "Using the electron charge without the mass (or the proton mass for an electron) when finding acceleration",
+        "Writing E = Vd instead of V / d"
+      ],
+      "worked": {
+        "id": "uniform-field-parallel-plates-w",
+        "question": "Two parallel metal plates 4.0 cm apart have a p.d. of 2.0 kV across them. Calculate the force on a dust particle carrying a charge of +3.0 nC that is between the plates.",
+        "steps": [
+          "Known: V = 2000 V, d = 0.040 m, Q = 3.0 × 10⁻⁹ C. Unknown: F.",
+          "First the field strength: E = V / d = 2000 / 0.040 = 5.0 × 10⁴ V m⁻¹",
+          "Then the force: F = EQ",
+          "F = 5.0 × 10⁴ × 3.0 × 10⁻⁹",
+          "F = 1.5 × 10⁻⁴ N"
+        ],
+        "answer": {
+          "value": 0.00015,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "uniform-field-parallel-plates-p1",
+          "question": "The deflecting plates in an oscilloscope are 0.050 m apart and have a p.d. of 600 V across them. Calculate the electric field strength between the plates.",
+          "hint": "The field between parallel plates is E = V / d.",
+          "walkthrough": [
+            "V = 600 V, d = 0.050 m",
+            "E = V / d = 600 / 0.050",
+            "E = 1.2 × 10⁴ V m⁻¹"
+          ],
+          "answer": {
+            "value": 12000,
+            "unit": "V m⁻¹"
+          }
+        },
+        {
+          "id": "uniform-field-parallel-plates-p2",
+          "question": "A charged oil drop carrying +8.0 nC sits in a uniform field of strength 2.5 × 10⁴ V m⁻¹. Calculate the electric force on the drop.",
+          "hint": "Force on a charge in a field: F = EQ, with Q in coulombs.",
+          "walkthrough": [
+            "E = 2.5 × 10⁴ V m⁻¹, Q = 8.0 × 10⁻⁹ C",
+            "F = EQ = 2.5 × 10⁴ × 8.0 × 10⁻⁹",
+            "F = 2.0 × 10⁻⁴ N"
+          ],
+          "answer": {
+            "value": 0.0002,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "uniform-field-parallel-plates-p3",
+          "question": "The plates of an electrostatic air filter are 8.0 mm apart and have 1500 V across them. Calculate the electric field strength between the plates.",
+          "hint": "Convert 8.0 mm to metres before dividing.",
+          "walkthrough": [
+            "V = 1500 V, d = 8.0 × 10⁻³ m",
+            "E = V / d = 1500 / 8.0 × 10⁻³",
+            "E = 1.88 × 10⁵ V m⁻¹"
+          ],
+          "answer": {
+            "value": 188000,
+            "unit": "V m⁻¹"
+          }
+        },
+        {
+          "id": "uniform-field-parallel-plates-p4",
+          "question": "A uniform field of strength 3.2 × 10⁵ V m⁻¹ exists between two parallel plates 5.0 mm apart. Calculate the p.d. between the plates.",
+          "hint": "Rearrange E = V / d to V = Ed, with d in metres.",
+          "walkthrough": [
+            "E = 3.2 × 10⁵ V m⁻¹, d = 5.0 × 10⁻³ m",
+            "V = Ed = 3.2 × 10⁵ × 5.0 × 10⁻³",
+            "V = 1600 V"
+          ],
+          "answer": {
+            "value": 1600,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "uniform-field-parallel-plates-p5",
+          "question": "In an electron gun, electrons are accelerated between two plates 20 mm apart with a p.d. of 250 V between them. Calculate the acceleration of an electron between the plates.",
+          "hint": "Find E = V / d, then the force F = eE, then a = F / m_e.",
+          "walkthrough": [
+            "E = V / d = 250 / 0.020 = 1.25 × 10⁴ V m⁻¹",
+            "F = eE = 1.60 × 10⁻¹⁹ × 1.25 × 10⁴ = 2.0 × 10⁻¹⁵ N",
+            "a = F / m_e = 2.0 × 10⁻¹⁵ / 9.11 × 10⁻³¹",
+            "a = 2.20 × 10¹⁵ m s⁻²"
+          ],
+          "answer": {
+            "value": 2200000000000000,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "uniform-field-parallel-plates-p6",
+          "question": "In a mass spectrometer, singly charged argon ions (mass 6.64 × 10⁻²⁶ kg) are accelerated between two plates 3.0 cm apart with a p.d. of 1.2 kV. Calculate the acceleration of an ion between the plates.",
+          "hint": "A singly charged ion has charge e; find E = V / d, then a = eE / m.",
+          "walkthrough": [
+            "E = V / d = 1200 / 0.030 = 4.0 × 10⁴ V m⁻¹",
+            "F = eE = 1.60 × 10⁻¹⁹ × 4.0 × 10⁴ = 6.4 × 10⁻¹⁵ N",
+            "a = F / m = 6.4 × 10⁻¹⁵ / 6.64 × 10⁻²⁶",
+            "a = 9.64 × 10¹⁰ m s⁻²"
+          ],
+          "answer": {
+            "value": 96400000000,
+            "unit": "m s⁻²"
+          }
+        }
+      ]
+    },
+    {
+      "id": "electric-potential-energy",
+      "name": "Electric potential and potential energy",
+      "equations": [
+        "V = Q / (4πε₀r)",
+        "E_p = Qq / (4πε₀r)",
+        "W = QΔV"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Potential at a distance r from a point charge is V = Q / (4πε₀r) — note r, not r². The potential energy of two point charges is E_p = Qq / (4πε₀r). Work done moving a charge q between two points is W = qΔV, so for a radial field find V at each point first and subtract.",
+      "commonErrors": [
+        "Squaring r in the potential equation (that is the field strength equation)",
+        "Using only the final potential instead of the change ΔV when finding work done",
+        "Forgetting to convert an energy in joules to eV or MeV when the question asks for it"
+      ],
+      "worked": {
+        "id": "electric-potential-energy-w",
+        "question": "A charged sphere carries +4.0 μC. Calculate the electric potential at a point 0.50 m from its centre.",
+        "steps": [
+          "Known: Q = 4.0 × 10⁻⁶ C, r = 0.50 m. Unknown: V.",
+          "V = Q / (4πε₀r), with 1 / (4πε₀) = 8.99 × 10⁹ N m² C⁻²",
+          "V = 8.99 × 10⁹ × 4.0 × 10⁻⁶ / 0.50",
+          "V = 3.60 × 10⁴ / 0.50",
+          "V = 7.19 × 10⁴ V"
+        ],
+        "answer": {
+          "value": 71900,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "electric-potential-energy-p1",
+          "question": "A small sphere on a plastic rod carries +25 nC. Calculate the electric potential at a point 0.10 m from its centre.",
+          "hint": "V = Q / (4πε₀r) with Q in coulombs; no square on r.",
+          "walkthrough": [
+            "Q = 25 × 10⁻⁹ C, r = 0.10 m",
+            "V = 8.99 × 10⁹ × 25 × 10⁻⁹ / 0.10",
+            "V = 224.8 / 0.10",
+            "V = 2250 V"
+          ],
+          "answer": {
+            "value": 2250,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "electric-potential-energy-p2",
+          "question": "A charge of +3.0 μC is moved between two points in an electric field whose potentials differ by 250 V. Calculate the work done on the charge.",
+          "hint": "Work done = charge × potential difference, W = QΔV.",
+          "walkthrough": [
+            "Q = 3.0 × 10⁻⁶ C, ΔV = 250 V",
+            "W = QΔV = 3.0 × 10⁻⁶ × 250",
+            "W = 7.5 × 10⁻⁴ J"
+          ],
+          "answer": {
+            "value": 0.00075,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "electric-potential-energy-p3",
+          "question": "In a hydrogen atom the electron and proton are 53 pm apart. Calculate the magnitude of the electric potential energy of the pair, in joules.",
+          "hint": "Use E_p = Qq / (4πε₀r) with both charges equal to e and r converted from pm to metres.",
+          "walkthrough": [
+            "Q = q = 1.60 × 10⁻¹⁹ C, r = 53 × 10⁻¹² m",
+            "E_p = 8.99 × 10⁹ × (1.60 × 10⁻¹⁹)² / 53 × 10⁻¹²",
+            "E_p = 2.30 × 10⁻²⁸ / 5.3 × 10⁻¹¹",
+            "E_p = 4.34 × 10⁻¹⁸ J"
+          ],
+          "answer": {
+            "value": 4.34e-18,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "electric-potential-energy-p4",
+          "question": "The potential at a point near the dome of a Van de Graaff generator carrying +5.0 μC is 90 kV. Treating the dome as a point charge, calculate the distance of the point from the centre of the dome.",
+          "hint": "Rearrange V = Q / (4πε₀r) to give r = Q / (4πε₀V); convert kV to V.",
+          "walkthrough": [
+            "Q = 5.0 × 10⁻⁶ C, V = 9.0 × 10⁴ V",
+            "r = Q / (4πε₀V) = 8.99 × 10⁹ × 5.0 × 10⁻⁶ / 9.0 × 10⁴",
+            "r = 4.50 × 10⁴ / 9.0 × 10⁴",
+            "r = 0.500 m"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "electric-potential-energy-p5",
+          "question": "A charge of +2.0 nC is moved from a point 0.20 m from a +6.0 μC point charge to a point 0.50 m from it. Calculate the magnitude of the work done.",
+          "hint": "Find the potential at each distance using V = Q / (4πε₀r), subtract to get ΔV, then W = qΔV.",
+          "walkthrough": [
+            "V at 0.20 m = 8.99 × 10⁹ × 6.0 × 10⁻⁶ / 0.20 = 2.70 × 10⁵ V",
+            "V at 0.50 m = 8.99 × 10⁹ × 6.0 × 10⁻⁶ / 0.50 = 1.08 × 10⁵ V",
+            "ΔV = 2.70 × 10⁵ − 1.08 × 10⁵ = 1.62 × 10⁵ V",
+            "W = qΔV = 2.0 × 10⁻⁹ × 1.62 × 10⁵",
+            "W = 3.24 × 10⁻⁴ J"
+          ],
+          "answer": {
+            "value": 0.000324,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "electric-potential-energy-p6",
+          "question": "An alpha particle (charge +2e) reaches a distance of 4.5 × 10⁻¹⁴ m from the centre of a gold nucleus (charge +79e). Calculate the electric potential energy of the pair at this separation, in MeV.",
+          "hint": "Use E_p = Qq / (4πε₀r) with Q = 2e and q = 79e to get joules, then divide by 1.60 × 10⁻¹³ J per MeV.",
+          "walkthrough": [
+            "Q = 2 × 1.60 × 10⁻¹⁹ = 3.2 × 10⁻¹⁹ C, q = 79 × 1.60 × 10⁻¹⁹ = 1.264 × 10⁻¹⁷ C",
+            "E_p = 8.99 × 10⁹ × 3.2 × 10⁻¹⁹ × 1.264 × 10⁻¹⁷ / 4.5 × 10⁻¹⁴",
+            "E_p = 3.64 × 10⁻²⁶ / 4.5 × 10⁻¹⁴ = 8.08 × 10⁻¹³ J",
+            "1 MeV = 1.60 × 10⁻¹³ J, so E_p = 8.08 × 10⁻¹³ / 1.60 × 10⁻¹³",
+            "E_p = 5.05 MeV"
+          ],
+          "answer": {
+            "value": 5.05,
+            "unit": "MeV"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capacitance",
+      "name": "Capacitance, charge and p.d. (C = Q / V)",
+      "equations": [
+        "C = Q / V",
+        "Q = It"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Capacitance is the charge stored per volt: C = Q / V. Identify which two of C, Q and V you have, convert prefixes (μF = 10⁻⁶ F, nF = 10⁻⁹ F, pF = 10⁻¹² F, mC = 10⁻³ C) and rearrange. If the charge comes from a constant current, find it first with Q = It.",
+      "commonErrors": [
+        "Treating μF as 10⁻³ F or nF as 10⁻⁶ F",
+        "Giving the answer in F when the question asks for μF or nF (or the reverse)",
+        "Rearranging C = Q / V as Q = C / V instead of Q = CV"
+      ],
+      "worked": {
+        "id": "capacitance-w",
+        "question": "A 220 μF smoothing capacitor in a power supply is charged to 10.0 V. Calculate the charge stored on it.",
+        "steps": [
+          "Known: C = 220 × 10⁻⁶ F, V = 10.0 V. Unknown: Q.",
+          "C = Q / V, so Q = CV",
+          "Q = 220 × 10⁻⁶ × 10.0",
+          "Q = 2.2 × 10⁻³ C"
+        ],
+        "answer": {
+          "value": 0.0022,
+          "unit": "C"
+        }
+      },
+      "practice": [
+        {
+          "id": "capacitance-p1",
+          "question": "A capacitor stores 3.0 × 10⁻⁴ C of charge when the p.d. across it is 6.0 V. Calculate its capacitance in farads.",
+          "hint": "Capacitance is charge per volt: C = Q / V.",
+          "walkthrough": [
+            "Q = 3.0 × 10⁻⁴ C, V = 6.0 V",
+            "C = Q / V = 3.0 × 10⁻⁴ / 6.0",
+            "C = 5.0 × 10⁻⁵ F"
+          ],
+          "answer": {
+            "value": 5e-05,
+            "unit": "F"
+          }
+        },
+        {
+          "id": "capacitance-p2",
+          "question": "A 100 μF capacitor in a camera flash unit carries a charge of 1.5 × 10⁻³ C. Calculate the p.d. across it.",
+          "hint": "Rearrange C = Q / V to V = Q / C, with C in farads.",
+          "walkthrough": [
+            "C = 100 × 10⁻⁶ F, Q = 1.5 × 10⁻³ C",
+            "V = Q / C = 1.5 × 10⁻³ / 100 × 10⁻⁶",
+            "V = 15 V"
+          ],
+          "answer": {
+            "value": 15,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "capacitance-p3",
+          "question": "A 4700 μF capacitor in a car audio amplifier is charged to 25 V. Calculate the charge stored, in mC.",
+          "hint": "Q = CV gives coulombs; divide by 10⁻³ to convert to mC.",
+          "walkthrough": [
+            "C = 4700 × 10⁻⁶ F, V = 25 V",
+            "Q = CV = 4700 × 10⁻⁶ × 25 = 0.1175 C",
+            "Q = 0.1175 / 10⁻³ mC",
+            "Q = 118 mC"
+          ],
+          "answer": {
+            "value": 118,
+            "unit": "mC"
+          }
+        },
+        {
+          "id": "capacitance-p4",
+          "question": "A capacitor in a radio circuit stores 36 nC when charged to 12 V. Calculate its capacitance in nF.",
+          "hint": "C = Q / V; keeping Q in nC gives C directly in nF, or convert to coulombs and back.",
+          "walkthrough": [
+            "Q = 36 × 10⁻⁹ C, V = 12 V",
+            "C = Q / V = 36 × 10⁻⁹ / 12 = 3.0 × 10⁻⁹ F",
+            "C = 3.0 nF"
+          ],
+          "answer": {
+            "value": 3.0,
+            "unit": "nF"
+          }
+        },
+        {
+          "id": "capacitance-p5",
+          "question": "A capacitor is charged by a constant current of 50 μA for 40 s, after which the p.d. across it is 8.0 V. Calculate its capacitance in μF.",
+          "hint": "First find the charge from Q = It, then use C = Q / V.",
+          "walkthrough": [
+            "Q = It = 50 × 10⁻⁶ × 40 = 2.0 × 10⁻³ C",
+            "C = Q / V = 2.0 × 10⁻³ / 8.0 = 2.5 × 10⁻⁴ F",
+            "C = 250 μF"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "μF"
+          }
+        },
+        {
+          "id": "capacitance-p6",
+          "question": "A 12 pF capacitor in a mobile phone circuit is charged to 5.0 V. Calculate the number of excess electrons on its negative plate.",
+          "hint": "Find the charge from Q = CV, then divide by e = 1.60 × 10⁻¹⁹ C.",
+          "walkthrough": [
+            "Q = CV = 12 × 10⁻¹² × 5.0 = 6.0 × 10⁻¹¹ C",
+            "n = Q / e = 6.0 × 10⁻¹¹ / 1.60 × 10⁻¹⁹",
+            "n = 3.75 × 10⁸ electrons"
+          ],
+          "answer": {
+            "value": 375000000,
+            "unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel-plate-capacitor",
+      "name": "Parallel-plate capacitor (C = ε₀ε_rA / d)",
+      "equations": [
+        "C = ε₀ε_rA / d",
+        "C = ε₀A / d for air (ε_r = 1)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "WJEC"
+      ],
+      "method": "The capacitance of two parallel plates depends on their overlap area A (in m²), separation d (in m) and the relative permittivity ε_r of what is between them (1 for air or vacuum). Convert cm² to m² (× 10⁻⁴) and mm to m (× 10⁻³) before substituting. Rearrange for d or ε_r by cross-multiplying.",
+      "commonErrors": [
+        "Converting cm² to m² with 10⁻² instead of 10⁻⁴",
+        "Leaving out ε₀ = 8.85 × 10⁻¹² F m⁻¹ and getting an answer of farads rather than picofarads",
+        "Putting d on top: C is inversely proportional to the separation"
+      ],
+      "worked": {
+        "id": "parallel-plate-capacitor-w",
+        "question": "Two parallel metal plates in a laboratory each have an area of 0.040 m² and are separated by 0.50 mm of air. Calculate the capacitance of the arrangement.",
+        "steps": [
+          "Known: A = 0.040 m², d = 0.50 × 10⁻³ m, ε_r = 1 (air). Unknown: C.",
+          "C = ε₀ε_rA / d",
+          "C = 8.85 × 10⁻¹² × 1 × 0.040 / 0.50 × 10⁻³",
+          "C = 3.54 × 10⁻¹³ / 5.0 × 10⁻⁴",
+          "C = 7.08 × 10⁻¹⁰ F"
+        ],
+        "answer": {
+          "value": 7.08e-10,
+          "unit": "F"
+        }
+      },
+      "practice": [
+        {
+          "id": "parallel-plate-capacitor-p1",
+          "question": "A simple air-spaced capacitor has plates of area 0.020 m² separated by 1.0 × 10⁻³ m. Calculate its capacitance.",
+          "hint": "For air, ε_r = 1, so C = ε₀A / d.",
+          "walkthrough": [
+            "A = 0.020 m², d = 1.0 × 10⁻³ m, ε_r = 1",
+            "C = ε₀A / d = 8.85 × 10⁻¹² × 0.020 / 1.0 × 10⁻³",
+            "C = 1.77 × 10⁻¹⁰ F"
+          ],
+          "answer": {
+            "value": 1.77e-10,
+            "unit": "F"
+          }
+        },
+        {
+          "id": "parallel-plate-capacitor-p2",
+          "question": "A capacitor is made from two foil sheets of area 0.015 m² separated by a 2.5 × 10⁻⁴ m layer of mica with relative permittivity 4.0. Calculate its capacitance.",
+          "hint": "Substitute directly into C = ε₀ε_rA / d, remembering to include ε_r.",
+          "walkthrough": [
+            "A = 0.015 m², d = 2.5 × 10⁻⁴ m, ε_r = 4.0",
+            "C = 8.85 × 10⁻¹² × 4.0 × 0.015 / 2.5 × 10⁻⁴",
+            "C = 5.31 × 10⁻¹³ / 2.5 × 10⁻⁴",
+            "C = 2.12 × 10⁻⁹ F"
+          ],
+          "answer": {
+            "value": 2.12e-09,
+            "unit": "F"
+          }
+        },
+        {
+          "id": "parallel-plate-capacitor-p3",
+          "question": "A capacitor in a tuning circuit has plates of area 25 cm² separated by 0.20 mm of polythene (ε_r = 2.3). Calculate its capacitance in pF.",
+          "hint": "Convert 25 cm² to m² (× 10⁻⁴) and 0.20 mm to m, then divide the answer in F by 10⁻¹².",
+          "walkthrough": [
+            "A = 25 × 10⁻⁴ m² = 2.5 × 10⁻³ m², d = 0.20 × 10⁻³ m, ε_r = 2.3",
+            "C = 8.85 × 10⁻¹² × 2.3 × 2.5 × 10⁻³ / 0.20 × 10⁻³",
+            "C = 5.09 × 10⁻¹⁴ / 2.0 × 10⁻⁴ = 2.54 × 10⁻¹⁰ F",
+            "C = 254 pF"
+          ],
+          "answer": {
+            "value": 254,
+            "unit": "pF"
+          }
+        },
+        {
+          "id": "parallel-plate-capacitor-p4",
+          "question": "An air-spaced capacitor is to have a capacitance of 100 pF using plates of area 60 cm². Calculate the required plate separation in mm.",
+          "hint": "Rearrange C = ε₀A / d to d = ε₀A / C; convert cm² to m² and the answer from m to mm.",
+          "walkthrough": [
+            "C = 100 × 10⁻¹² F, A = 60 × 10⁻⁴ m² = 6.0 × 10⁻³ m²",
+            "d = ε₀A / C = 8.85 × 10⁻¹² × 6.0 × 10⁻³ / 100 × 10⁻¹²",
+            "d = 5.31 × 10⁻¹⁴ / 1.0 × 10⁻¹⁰ = 5.31 × 10⁻⁴ m",
+            "d = 0.531 mm"
+          ],
+          "answer": {
+            "value": 0.531,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "parallel-plate-capacitor-p5",
+          "question": "A 4.7 nF capacitor has plates of area 0.012 m² separated by a 0.10 mm layer of dielectric. Calculate the relative permittivity of the dielectric.",
+          "hint": "Rearrange C = ε₀ε_rA / d to ε_r = Cd / (ε₀A).",
+          "walkthrough": [
+            "C = 4.7 × 10⁻⁹ F, A = 0.012 m², d = 0.10 × 10⁻³ m",
+            "ε_r = Cd / (ε₀A) = 4.7 × 10⁻⁹ × 1.0 × 10⁻⁴ / (8.85 × 10⁻¹² × 0.012)",
+            "ε_r = 4.7 × 10⁻¹³ / 1.062 × 10⁻¹³",
+            "ε_r = 4.43"
+          ],
+          "answer": {
+            "value": 4.43,
+            "unit": ""
+          }
+        },
+        {
+          "id": "parallel-plate-capacitor-p6",
+          "question": "A capacitor has square plates of side 8.0 cm separated by 0.50 mm of ceramic with relative permittivity 6.0. It is connected to a 50 V supply. Calculate the charge stored.",
+          "hint": "Find A in m² and then C from C = ε₀ε_rA / d; then use Q = CV.",
+          "walkthrough": [
+            "A = 0.080 × 0.080 = 6.4 × 10⁻³ m², d = 0.50 × 10⁻³ m, ε_r = 6.0",
+            "C = 8.85 × 10⁻¹² × 6.0 × 6.4 × 10⁻³ / 0.50 × 10⁻³ = 3.40 × 10⁻¹³ / 5.0 × 10⁻⁴",
+            "C = 6.80 × 10⁻¹⁰ F",
+            "Q = CV = 6.80 × 10⁻¹⁰ × 50",
+            "Q = 3.40 × 10⁻⁸ C"
+          ],
+          "answer": {
+            "value": 3.4e-08,
+            "unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "energy-stored-capacitor",
+      "name": "Energy stored in a capacitor",
+      "equations": [
+        "E = ½QV",
+        "E = ½CV²",
+        "E = Q² / 2C"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Choose the form of the energy equation that uses the two quantities you are given: ½QV, ½CV² or Q² / 2C. Energy delivered as the p.d. falls from V₁ to V₂ is ½C(V₁² − V₂²), so find the energy at each p.d. and subtract. To find V from energy, rearrange ½CV² and take the square root.",
+      "commonErrors": [
+        "Forgetting the ½",
+        "Subtracting the p.d.s before squaring when finding energy delivered: use V₁² − V₂², not (V₁ − V₂)²",
+        "Forgetting the square root when rearranging for V"
+      ],
+      "worked": {
+        "id": "energy-stored-capacitor-w",
+        "question": "A 2200 μF capacitor in a power supply is charged to 15 V. Calculate the energy stored.",
+        "steps": [
+          "Known: C = 2200 × 10⁻⁶ F, V = 15 V. Unknown: E.",
+          "The two given quantities are C and V, so use E = ½CV²",
+          "E = ½ × 2200 × 10⁻⁶ × 15²",
+          "E = ½ × 2200 × 10⁻⁶ × 225",
+          "E = 0.248 J"
+        ],
+        "answer": {
+          "value": 0.248,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "energy-stored-capacitor-p1",
+          "question": "A capacitor holds 5.0 mC of charge at a p.d. of 20 V. Calculate the energy stored.",
+          "hint": "You have Q and V, so use E = ½QV with Q in coulombs.",
+          "walkthrough": [
+            "Q = 5.0 × 10⁻³ C, V = 20 V",
+            "E = ½QV = ½ × 5.0 × 10⁻³ × 20",
+            "E = 0.050 J"
+          ],
+          "answer": {
+            "value": 0.05,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "energy-stored-capacitor-p2",
+          "question": "A 100 μF capacitor in a bicycle light is charged to 50 V. Calculate the energy stored.",
+          "hint": "Use E = ½CV² with C in farads.",
+          "walkthrough": [
+            "C = 100 × 10⁻⁶ F, V = 50 V",
+            "E = ½CV² = ½ × 100 × 10⁻⁶ × 50²",
+            "E = ½ × 100 × 10⁻⁶ × 2500",
+            "E = 0.125 J"
+          ],
+          "answer": {
+            "value": 0.125,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "energy-stored-capacitor-p3",
+          "question": "A 40 μF capacitor stores a charge of 0.60 mC. Calculate the energy stored.",
+          "hint": "You have Q and C, so use E = Q² / 2C after converting both prefixes.",
+          "walkthrough": [
+            "Q = 0.60 × 10⁻³ C, C = 40 × 10⁻⁶ F",
+            "E = Q² / 2C = (0.60 × 10⁻³)² / (2 × 40 × 10⁻⁶)",
+            "E = 3.6 × 10⁻⁷ / 8.0 × 10⁻⁵",
+            "E = 4.5 × 10⁻³ J"
+          ],
+          "answer": {
+            "value": 0.0045,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "energy-stored-capacitor-p4",
+          "question": "A defibrillator stores 200 J of energy in a 32 μF capacitor. Calculate the p.d. to which the capacitor is charged.",
+          "hint": "Rearrange E = ½CV² to V = √(2E / C).",
+          "walkthrough": [
+            "E = 200 J, C = 32 × 10⁻⁶ F",
+            "V² = 2E / C = 2 × 200 / 32 × 10⁻⁶ = 1.25 × 10⁷",
+            "V = √(1.25 × 10⁷)",
+            "V = 3540 V"
+          ],
+          "answer": {
+            "value": 3540,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "energy-stored-capacitor-p5",
+          "question": "A 4700 μF capacitor charged to 12 V is used to power a small motor. The p.d. across the capacitor falls to 4.0 V. Calculate the energy delivered to the motor.",
+          "hint": "Find the stored energy at 12 V and at 4.0 V using ½CV², then subtract.",
+          "walkthrough": [
+            "E at 12 V = ½ × 4700 × 10⁻⁶ × 12² = 0.3384 J",
+            "E at 4.0 V = ½ × 4700 × 10⁻⁶ × 4.0² = 0.0376 J",
+            "Energy delivered = 0.3384 − 0.0376",
+            "ΔE = 0.301 J"
+          ],
+          "answer": {
+            "value": 0.301,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "energy-stored-capacitor-p6",
+          "question": "A 1200 μF capacitor charged to 300 V discharges fully through a flash tube in 2.0 ms. Calculate the mean power delivered to the tube, in kW.",
+          "hint": "Find the stored energy with ½CV², then divide by the time in seconds.",
+          "walkthrough": [
+            "E = ½CV² = ½ × 1200 × 10⁻⁶ × 300² = 54 J",
+            "P = E / t = 54 / 2.0 × 10⁻³ = 2.7 × 10⁴ W",
+            "P = 27.0 kW"
+          ],
+          "answer": {
+            "value": 27.0,
+            "unit": "kW"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capacitors-series-parallel",
+      "name": "Capacitors in series and parallel",
+      "equations": [
+        "Parallel: C = C₁ + C₂ + …",
+        "Series: 1 / C = 1 / C₁ + 1 / C₂ + …",
+        "Q = CV"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "WJEC"
+      ],
+      "method": "Capacitors add directly in parallel and by reciprocals in series — the opposite way round to resistors. Work through a network one block at a time, replacing each parallel or series pair with its single equivalent. Capacitors in series all carry the same charge; capacitors in parallel all have the same p.d.",
+      "commonErrors": [
+        "Using the resistor rules (adding in series, reciprocals in parallel)",
+        "Forgetting to take the reciprocal at the end of a series calculation",
+        "Mixing pF and nF in the same sum without converting"
+      ],
+      "worked": {
+        "id": "capacitors-series-parallel-w",
+        "question": "A 2.0 μF capacitor and a 3.0 μF capacitor are connected in series. Calculate the combined capacitance.",
+        "steps": [
+          "Known: C₁ = 2.0 μF, C₂ = 3.0 μF in series. Unknown: combined C.",
+          "1 / C = 1 / C₁ + 1 / C₂",
+          "1 / C = 1 / 2.0 + 1 / 3.0 = 0.500 + 0.333 = 0.833 μF⁻¹",
+          "C = 1 / 0.833",
+          "C = 1.2 μF"
+        ],
+        "answer": {
+          "value": 1.2,
+          "unit": "μF"
+        }
+      },
+      "practice": [
+        {
+          "id": "capacitors-series-parallel-p1",
+          "question": "A 4.7 μF capacitor and a 10 μF capacitor are connected in parallel across a loudspeaker crossover. Calculate the combined capacitance.",
+          "hint": "Capacitors in parallel simply add.",
+          "walkthrough": [
+            "C₁ = 4.7 μF, C₂ = 10 μF in parallel",
+            "C = C₁ + C₂ = 4.7 + 10",
+            "C = 14.7 μF"
+          ],
+          "answer": {
+            "value": 14.7,
+            "unit": "μF"
+          }
+        },
+        {
+          "id": "capacitors-series-parallel-p2",
+          "question": "A 6.0 μF capacitor is connected in series with a 12 μF capacitor. Calculate the combined capacitance.",
+          "hint": "Use 1 / C = 1 / C₁ + 1 / C₂ and remember to invert at the end.",
+          "walkthrough": [
+            "1 / C = 1 / 6.0 + 1 / 12 = 0.1667 + 0.0833 = 0.250 μF⁻¹",
+            "C = 1 / 0.250",
+            "C = 4.0 μF"
+          ],
+          "answer": {
+            "value": 4.0,
+            "unit": "μF"
+          }
+        },
+        {
+          "id": "capacitors-series-parallel-p3",
+          "question": "In a radio tuning circuit a 2200 pF capacitor is connected in parallel with a 4.7 nF capacitor. Calculate the combined capacitance in nF.",
+          "hint": "Convert 2200 pF to nF (1 nF = 1000 pF) before adding.",
+          "walkthrough": [
+            "2200 pF = 2200 × 10⁻¹² F = 2.2 × 10⁻⁹ F = 2.2 nF",
+            "In parallel: C = 2.2 + 4.7",
+            "C = 6.9 nF"
+          ],
+          "answer": {
+            "value": 6.9,
+            "unit": "nF"
+          }
+        },
+        {
+          "id": "capacitors-series-parallel-p4",
+          "question": "A capacitor of unknown capacitance is connected in series with a 10 μF capacitor. The combined capacitance is 4.0 μF. Calculate the unknown capacitance.",
+          "hint": "Rearrange the series rule: 1 / C₂ = 1 / C − 1 / C₁.",
+          "walkthrough": [
+            "1 / C₂ = 1 / C − 1 / C₁ = 1 / 4.0 − 1 / 10",
+            "1 / C₂ = 0.250 − 0.100 = 0.150 μF⁻¹",
+            "C₂ = 1 / 0.150",
+            "C₂ = 6.67 μF"
+          ],
+          "answer": {
+            "value": 6.67,
+            "unit": "μF"
+          }
+        },
+        {
+          "id": "capacitors-series-parallel-p5",
+          "question": "A 2.0 μF capacitor and a 4.0 μF capacitor are connected in parallel, and this combination is connected in series with a 3.0 μF capacitor. Calculate the total capacitance of the network.",
+          "hint": "Combine the parallel pair first by adding, then treat the result as a single capacitor in series with the 3.0 μF.",
+          "walkthrough": [
+            "Parallel pair: 2.0 + 4.0 = 6.0 μF",
+            "Series with 3.0 μF: 1 / C = 1 / 6.0 + 1 / 3.0 = 0.1667 + 0.3333 = 0.500 μF⁻¹",
+            "C = 1 / 0.500",
+            "C = 2.0 μF"
+          ],
+          "answer": {
+            "value": 2.0,
+            "unit": "μF"
+          }
+        },
+        {
+          "id": "capacitors-series-parallel-p6",
+          "question": "A 3.0 μF capacitor and a 6.0 μF capacitor are connected in series across an 18 V supply. Calculate the charge stored on the 3.0 μF capacitor, in μC.",
+          "hint": "Find the combined capacitance first; capacitors in series all carry the same charge, Q = C_total × V.",
+          "walkthrough": [
+            "1 / C = 1 / 3.0 + 1 / 6.0 = 0.3333 + 0.1667 = 0.500 μF⁻¹, so C = 2.0 μF",
+            "Series capacitors carry equal charge: Q = CV = 2.0 × 10⁻⁶ × 18",
+            "Q = 3.6 × 10⁻⁵ C",
+            "Q = 36 μC"
+          ],
+          "answer": {
+            "value": 36,
+            "unit": "μC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capacitor-discharge",
+      "name": "Capacitor discharge through a resistor",
+      "equations": [
+        "V = V₀e^(−t/RC)",
+        "Q = Q₀e^(−t/RC)",
+        "I = I₀e^(−t/RC)",
+        "τ = RC"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Find the time constant τ = RC first (ohms × farads gives seconds). Then V, Q and I all fall as e^(−t/τ). To find a value after time t, evaluate the exponential. To find a time, divide by the starting value to get the fraction remaining, take the natural log of both sides and multiply by −τ.",
+      "commonErrors": [
+        "Calculating RC with the capacitance in μF instead of F, giving a time constant 10⁶ too big",
+        "Taking log₁₀ instead of ln when solving for t",
+        "Dropping the minus sign: t = −RC ln(V / V₀), and ln of a fraction is negative so t comes out positive"
+      ],
+      "worked": {
+        "id": "capacitor-discharge-w",
+        "question": "A 470 μF capacitor charged to 9.0 V discharges through a 10 kΩ resistor. Calculate the p.d. across the capacitor 6.0 s after the discharge begins.",
+        "steps": [
+          "Known: V₀ = 9.0 V, R = 10 × 10³ Ω, C = 470 × 10⁻⁶ F, t = 6.0 s. Unknown: V.",
+          "Time constant: τ = RC = 10 × 10³ × 470 × 10⁻⁶ = 4.7 s",
+          "V = V₀e^(−t/RC) = 9.0 × e^(−6.0 / 4.7)",
+          "V = 9.0 × e^(−1.277) = 9.0 × 0.279",
+          "V = 2.51 V"
+        ],
+        "answer": {
+          "value": 2.51,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "capacitor-discharge-p1",
+          "question": "A 2200 μF capacitor discharges through a 1.5 kΩ resistor. Calculate the time constant of the circuit.",
+          "hint": "τ = RC with R in ohms and C in farads.",
+          "walkthrough": [
+            "R = 1.5 × 10³ Ω, C = 2200 × 10⁻⁶ F",
+            "τ = RC = 1.5 × 10³ × 2200 × 10⁻⁶",
+            "τ = 3.3 s"
+          ],
+          "answer": {
+            "value": 3.3,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "capacitor-discharge-p2",
+          "question": "A capacitor charged to 12 V discharges through a resistor in a circuit with a time constant of 5.0 s. Calculate the p.d. across the capacitor after 8.0 s.",
+          "hint": "Substitute directly into V = V₀e^(−t/τ).",
+          "walkthrough": [
+            "V₀ = 12 V, τ = 5.0 s, t = 8.0 s",
+            "V = 12 × e^(−8.0 / 5.0) = 12 × e^(−1.6)",
+            "V = 12 × 0.202",
+            "V = 2.42 V"
+          ],
+          "answer": {
+            "value": 2.42,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "capacitor-discharge-p3",
+          "question": "A 100 μF capacitor discharges through a 47 kΩ resistor. The initial current is 2.0 mA. Calculate the current after 10 s, in μA.",
+          "hint": "Find τ = RC, use I = I₀e^(−t/RC), then convert the answer from A to μA.",
+          "walkthrough": [
+            "τ = RC = 47 × 10³ × 100 × 10⁻⁶ = 4.7 s",
+            "I = I₀e^(−t/RC) = 2.0 × 10⁻³ × e^(−10 / 4.7) = 2.0 × 10⁻³ × 0.119",
+            "I = 2.38 × 10⁻⁴ A",
+            "I = 238 μA"
+          ],
+          "answer": {
+            "value": 238,
+            "unit": "μA"
+          }
+        },
+        {
+          "id": "capacitor-discharge-p4",
+          "question": "A timing circuit uses a 50 μF capacitor and needs a time constant of 0.25 s. Calculate the resistance required, in kΩ.",
+          "hint": "Rearrange τ = RC to R = τ / C, then convert ohms to kΩ.",
+          "walkthrough": [
+            "τ = 0.25 s, C = 50 × 10⁻⁶ F",
+            "R = τ / C = 0.25 / 50 × 10⁻⁶ = 5000 Ω",
+            "R = 5.0 kΩ"
+          ],
+          "answer": {
+            "value": 5.0,
+            "unit": "kΩ"
+          }
+        },
+        {
+          "id": "capacitor-discharge-p5",
+          "question": "A 330 μF capacitor discharges through a 22 kΩ resistor. Calculate the time taken for the p.d. across the capacitor to fall to 25% of its initial value.",
+          "hint": "Find τ = RC, then set V / V₀ = 0.25 and solve t = −RC ln(0.25).",
+          "walkthrough": [
+            "τ = RC = 22 × 10³ × 330 × 10⁻⁶ = 7.26 s",
+            "V / V₀ = e^(−t/RC) = 0.25",
+            "t = −RC ln(0.25) = −7.26 × (−1.386)",
+            "t = 10.1 s"
+          ],
+          "answer": {
+            "value": 10.1,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "capacitor-discharge-p6",
+          "question": "A capacitor discharges through a 100 kΩ resistor. The p.d. across it halves in 14 s. Calculate the capacitance, in μF.",
+          "hint": "Use V / V₀ = 0.5 = e^(−t/RC) to find RC first, then divide by R.",
+          "walkthrough": [
+            "0.5 = e^(−14 / RC), so RC = −14 / ln(0.5) = 14 / 0.693 = 20.2 s",
+            "C = RC / R = 20.2 / 100 × 10³",
+            "C = 2.02 × 10⁻⁴ F",
+            "C = 202 μF"
+          ],
+          "answer": {
+            "value": 202,
+            "unit": "μF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capacitor-charging",
+      "name": "Capacitor charging through a resistor",
+      "equations": [
+        "V = V₀(1 − e^(−t/RC))",
+        "Q = Q₀(1 − e^(−t/RC))",
+        "τ = RC"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "WJEC"
+      ],
+      "method": "When a capacitor charges through a resistor from a supply V₀, the p.d. across it rises as V = V₀(1 − e^(−t/RC)). Find τ = RC first. To find a time, divide by V₀ to get the fraction reached, rearrange to e^(−t/RC) = 1 − fraction, then take ln and multiply by −RC.",
+      "commonErrors": [
+        "Using the discharge equation V₀e^(−t/RC), which gives the p.d. across the resistor, not the capacitor",
+        "Taking ln of the fraction reached instead of ln of (1 − fraction)",
+        "Leaving C in μF or nF when calculating RC"
+      ],
+      "worked": {
+        "id": "capacitor-charging-w",
+        "question": "A 22 μF capacitor is charged from a 6.0 V supply through a 100 kΩ resistor. Calculate the p.d. across the capacitor 3.0 s after the switch is closed.",
+        "steps": [
+          "Known: V₀ = 6.0 V, R = 100 × 10³ Ω, C = 22 × 10⁻⁶ F, t = 3.0 s. Unknown: V.",
+          "Time constant: τ = RC = 100 × 10³ × 22 × 10⁻⁶ = 2.2 s",
+          "V = V₀(1 − e^(−t/RC)) = 6.0 × (1 − e^(−3.0 / 2.2))",
+          "e^(−1.364) = 0.256, so V = 6.0 × (1 − 0.256) = 6.0 × 0.744",
+          "V = 4.47 V"
+        ],
+        "answer": {
+          "value": 4.47,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "capacitor-charging-p1",
+          "question": "A capacitor is charged from a 10 V supply through a resistor; the circuit's time constant is 4.0 s. Calculate the p.d. across the capacitor 2.0 s after charging begins.",
+          "hint": "Substitute directly into V = V₀(1 − e^(−t/τ)).",
+          "walkthrough": [
+            "V₀ = 10 V, τ = 4.0 s, t = 2.0 s",
+            "V = 10 × (1 − e^(−2.0 / 4.0)) = 10 × (1 − e^(−0.5))",
+            "V = 10 × (1 − 0.607) = 10 × 0.393",
+            "V = 3.93 V"
+          ],
+          "answer": {
+            "value": 3.93,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "capacitor-charging-p2",
+          "question": "A 1000 μF capacitor in a camera is charged from a 12 V battery through a 4.7 kΩ resistor. Calculate the p.d. across the capacitor 5.0 s after charging begins.",
+          "hint": "Find τ = RC first, then use V = V₀(1 − e^(−t/RC)).",
+          "walkthrough": [
+            "τ = RC = 4.7 × 10³ × 1000 × 10⁻⁶ = 4.7 s",
+            "V = 12 × (1 − e^(−5.0 / 4.7)) = 12 × (1 − e^(−1.064))",
+            "V = 12 × (1 − 0.345) = 12 × 0.655",
+            "V = 7.86 V"
+          ],
+          "answer": {
+            "value": 7.86,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "capacitor-charging-p3",
+          "question": "A 470 nF capacitor is charged from a 5.0 V logic supply through a 2.2 MΩ resistor. Calculate the p.d. across the capacitor after 0.50 s.",
+          "hint": "Convert MΩ to Ω and nF to F before finding RC.",
+          "walkthrough": [
+            "τ = RC = 2.2 × 10⁶ × 470 × 10⁻⁹ = 1.034 s",
+            "V = 5.0 × (1 − e^(−0.50 / 1.034)) = 5.0 × (1 − e^(−0.484))",
+            "V = 5.0 × (1 − 0.617) = 5.0 × 0.383",
+            "V = 1.92 V"
+          ],
+          "answer": {
+            "value": 1.92,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "capacitor-charging-p4",
+          "question": "A capacitor is charged from a 5.0 V supply in a circuit with a time constant of 3.0 s. Calculate the time taken for the p.d. across it to reach 2.0 V.",
+          "hint": "Set V / V₀ = 2.0 / 5.0 = 0.40, so e^(−t/τ) = 1 − 0.40 = 0.60, then t = −τ ln(0.60).",
+          "walkthrough": [
+            "V / V₀ = 2.0 / 5.0 = 0.40 = 1 − e^(−t/τ)",
+            "e^(−t/τ) = 0.60",
+            "t = −τ ln(0.60) = −3.0 × (−0.511)",
+            "t = 1.53 s"
+          ],
+          "answer": {
+            "value": 1.53,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "capacitor-charging-p5",
+          "question": "A 220 μF capacitor is charged through a 56 kΩ resistor. Calculate the time taken for the p.d. across the capacitor to reach 90% of the supply p.d.",
+          "hint": "Find τ = RC, then e^(−t/RC) = 1 − 0.90 = 0.10 and t = −RC ln(0.10).",
+          "walkthrough": [
+            "τ = RC = 56 × 10³ × 220 × 10⁻⁶ = 12.32 s",
+            "0.90 = 1 − e^(−t/RC), so e^(−t/RC) = 0.10",
+            "t = −RC ln(0.10) = −12.32 × (−2.303)",
+            "t = 28.4 s"
+          ],
+          "answer": {
+            "value": 28.4,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "capacitor-charging-p6",
+          "question": "A 100 μF capacitor is charged through a resistor from a fixed supply. The p.d. across the capacitor reaches half the supply p.d. after 0.20 s. Calculate the resistance, in kΩ.",
+          "hint": "Use 0.5 = 1 − e^(−t/RC) to find RC first, then R = RC / C.",
+          "walkthrough": [
+            "0.5 = 1 − e^(−0.20 / RC), so e^(−0.20 / RC) = 0.5",
+            "RC = −0.20 / ln(0.5) = 0.20 / 0.693 = 0.2885 s",
+            "R = RC / C = 0.2885 / 100 × 10⁻⁶ = 2885 Ω",
+            "R = 2.89 kΩ"
+          ],
+          "answer": {
+            "value": 2.89,
+            "unit": "kΩ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "field-capacitor-graph",
+      "name": "Reading field, potential and capacitor graphs",
+      "equations": [
+        "E = −ΔV / Δr (gradient of a V–r graph; tangent on a curve)",
+        "ΔV = area under an E–r graph",
+        "W = ½QV = area under a V–Q graph",
+        "C = Q / V = gradient of a Q–V graph",
+        "V = V₀e^(−t/RC): V = 0.37 V₀ when t = RC",
+        "ln V = ln V₀ − t / RC (gradient = −1 / RC)",
+        "I = −ΔQ / Δt (gradient of a Q–t graph)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Decide what the gradient and the area of the graph mean before reading anything. Potential against distance: the gradient (of a tangent, on a curve) gives the field strength. Field strength against distance: the area gives the p.d. For a capacitor, the area under a V–Q graph is the energy stored and the gradient of a Q–V graph is the capacitance. On discharge curves the time constant RC is the time for V or Q to fall to 0.37 of its starting value, the tangent at t = 0 has gradient −Q₀ / RC, and ln V against t is a straight line of gradient −1 / RC. Convert axis scales (cm, μC, kV m⁻¹) to SI before quoting the answer.",
+      "commonErrors": [
+        "Reading a gradient in V cm⁻¹ and forgetting to convert it to V m⁻¹",
+        "Using the whole area under a V–Q graph instead of the triangle up to the final charge, or forgetting the ½",
+        "Taking the time constant as the time for V to fall to half of V₀ (that is 0.69 RC, not RC)",
+        "Quoting the gradient of ln V against t as RC instead of −1 / RC"
+      ],
+      "worked": {
+        "id": "field-capacitor-graph-w",
+        "question": "The graph shows how the electric potential V varies with distance r from the centre of a charged metal sphere of radius 2.0 cm. The tangent to the curve at X is drawn. Use the graph to determine the magnitude of the electric field strength at X.",
+        "steps": [
+          "Field strength is the potential gradient: E = −ΔV / Δr, so E at X is the gradient of the tangent at X.",
+          "The tangent passes through (1.0 cm, 2000 V) and (6.0 cm, 0 V).",
+          "Gradient = (0 − 2000) / (6.0 − 1.0) = −400 V cm⁻¹",
+          "Convert: 1 cm = 0.010 m, so gradient = −400 / 0.010 = −4.0 × 10⁴ V m⁻¹",
+          "E = 4.0 × 10⁴ V m⁻¹ (magnitude; the field points outwards, down the potential slope)"
+        ],
+        "answer": {
+          "value": 40000,
+          "unit": "V m⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "r / cm",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          },
+          "y": {
+            "label": "V / V",
+            "min": 0,
+            "max": 2000,
+            "step": 200
+          },
+          "series": [
+            {
+              "kind": "curve",
+              "points": [
+                [2, 1800],
+                [2.5, 1440],
+                [3, 1200],
+                [3.5, 1028.571],
+                [4, 900],
+                [4.5, 800],
+                [5, 720],
+                [5.5, 654.545],
+                [6, 600],
+                [6.5, 553.846],
+                [7, 514.286],
+                [7.5, 480],
+                [8, 450],
+                [8.5, 423.529],
+                [9, 400],
+                [9.5, 378.947],
+                [10, 360]
+              ]
+            },
+            {
+              "kind": "tangent",
+              "points": [
+                [1, 2000],
+                [6, 0]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 3,
+              "y": 1200,
+              "label": "X",
+              "drop": true
+            }
+          ],
+          "labels": [
+            {
+              "x": 4.2,
+              "y": 1300,
+              "text": "tangent at X"
+            }
+          ],
+          "alt": "Potential against distance from a charged sphere, falling as 1 over r from 1800 V at 2 cm to 360 V at 10 cm, with the tangent at X (3 cm, 1200 V) drawn from (1 cm, 2000 V) to (6 cm, 0)"
+        }
+      },
+      "practice": [
+        {
+          "id": "field-capacitor-graph-p1",
+          "question": "The graph shows how the charge Q stored on a capacitor varies with the p.d. V across it. Point X is marked on the line. Use the graph to determine the capacitance of the capacitor in μF.",
+          "hint": "C = Q / V, so the gradient of a Q–V line through the origin is the capacitance; the charge axis is in mC.",
+          "walkthrough": [
+            "The line passes through the origin and X at (10 V, 1.5 mC).",
+            "Gradient = Q / V = 1.5 × 10⁻³ / 10 = 1.5 × 10⁻⁴ F",
+            "C = 1.5 × 10⁻⁴ F = 150 μF"
+          ],
+          "answer": {
+            "value": 150.0,
+            "unit": "μF"
+          },
+          "graph": {
+            "x": {
+              "label": "V / V",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "Q / mC",
+              "min": 0,
+              "max": 2.0,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 0],
+                  [12, 1.8]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10,
+                "y": 1.5,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line through the origin of charge in mC against p.d., with point X marked at 10 V and 1.5 mC"
+          }
+        },
+        {
+          "id": "field-capacitor-graph-p2",
+          "question": "The graph shows how the p.d. V across a capacitor in a camera flash unit varies with the charge Q stored on it. Use the shaded area to determine the energy stored in the capacitor when it holds the charge at point P. Give your answer in J.",
+          "hint": "The energy stored is the area under the V–Q line, which is a triangle: ½ × base × height, with the charge converted from μC to C.",
+          "walkthrough": [
+            "At P: Q = 50 μC = 50 × 10⁻⁶ C and V = 10 V.",
+            "Energy stored = area of the shaded triangle = ½ × Q × V",
+            "W = ½ × 50 × 10⁻⁶ × 10",
+            "W = 2.5 × 10⁻⁴ J"
+          ],
+          "answer": {
+            "value": 0.00025,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "Q / μC",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "V / V",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 0],
+                  [60, 12]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 50,
+                "y": 10,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 50
+              }
+            ],
+            "alt": "Straight line through the origin of p.d. against charge in μC, with the triangle under the line up to P (50 μC, 10 V) shaded"
+          }
+        },
+        {
+          "id": "field-capacitor-graph-p3",
+          "question": "The graph shows how the electric field strength E varies with distance r from the centre of the charged dome of a Van de Graaff generator. The area under the curve between A (r = 0.20 m) and B (r = 0.40 m) is shaded and contains 4.5 large squares. Use the graph to determine the potential difference between A and B.",
+          "hint": "The area under an E–r graph is the p.d.; work out what one large square represents from the axis scales, remembering the E axis is in kV m⁻¹.",
+          "walkthrough": [
+            "P.d. = area under the E–r graph between A and B.",
+            "One large square is 0.05 m wide and 1 kV m⁻¹ = 1000 V m⁻¹ tall, so it represents 0.05 × 1000 = 50 V.",
+            "Shaded area = 4.5 squares × 50 V",
+            "ΔV = 225 V"
+          ],
+          "answer": {
+            "value": 225.0,
+            "unit": "V"
+          },
+          "graph": {
+            "x": {
+              "label": "r / m",
+              "min": 0,
+              "max": 0.5,
+              "step": 0.05
+            },
+            "y": {
+              "label": "E / kV m⁻¹",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0.1, 9],
+                  [0.125, 5.76],
+                  [0.15, 4],
+                  [0.175, 2.939],
+                  [0.2, 2.25],
+                  [0.225, 1.778],
+                  [0.25, 1.44],
+                  [0.275, 1.19],
+                  [0.3, 1],
+                  [0.325, 0.852],
+                  [0.35, 0.735],
+                  [0.375, 0.64],
+                  [0.4, 0.562],
+                  [0.425, 0.498],
+                  [0.45, 0.444],
+                  [0.475, 0.399],
+                  [0.5, 0.36]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.2,
+                "y": 2.25,
+                "label": "A"
+              },
+              {
+                "x": 0.4,
+                "y": 0.562,
+                "label": "B"
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0.2,
+                "to": 0.4
+              }
+            ],
+            "alt": "Field strength in kV per metre against distance from a charged dome, falling as 1 over r squared from 9 kV per metre at 0.10 m, with the area between r = 0.20 m and r = 0.40 m shaded"
+          }
+        },
+        {
+          "id": "field-capacitor-graph-p4",
+          "question": "A 2.7 V supercapacitor discharges through a resistor. The graph shows how the p.d. V across it varies with time t. Point X is marked where the p.d. has fallen to 0.37 of its initial value. Use the graph to determine the time constant of the circuit.",
+          "hint": "After one time constant the p.d. has fallen to V₀ / e = 0.37 V₀; read the time at which V reaches that value.",
+          "walkthrough": [
+            "V₀ = 2.7 V, so 0.37 V₀ = 0.37 × 2.7 = 1.0 V.",
+            "Point X is where V = 1.0 V; read down to the time axis: t = 20 s.",
+            "After one time constant V = V₀e⁻¹ = 0.37 V₀, so RC = 20 s"
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "s"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "V / V",
+              "min": 0,
+              "max": 3.0,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 2.7],
+                  [4, 2.211],
+                  [8, 1.81],
+                  [12, 1.482],
+                  [16, 1.213],
+                  [20, 0.993],
+                  [24, 0.813],
+                  [28, 0.666],
+                  [32, 0.545],
+                  [36, 0.446],
+                  [40, 0.365],
+                  [44, 0.299],
+                  [48, 0.245],
+                  [52, 0.201],
+                  [56, 0.164],
+                  [60, 0.134]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 20,
+                "y": 1,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Exponential decay of p.d. from 2.7 V towards zero over 60 s, with point X marked where the p.d. has fallen to 1.0 V at 20 s"
+          }
+        },
+        {
+          "id": "field-capacitor-graph-p5",
+          "question": "The graph shows how the charge Q on a capacitor varies with time t as it discharges through a resistor in a timing circuit. The tangent to the curve at X, where t = 0, is drawn. Use the graph to determine the initial discharge current in μA.",
+          "hint": "Current is the rate of change of charge, I = −ΔQ / Δt, so the magnitude of the gradient of the tangent at t = 0 is the initial current; μC per second is μA.",
+          "walkthrough": [
+            "The tangent at X passes through (0 s, 600 μC) and (30 s, 0 μC).",
+            "Gradient = (0 − 600) / (30 − 0) = −20 μC s⁻¹",
+            "I = −ΔQ / Δt = 20 μC s⁻¹",
+            "I₀ = 20 μA"
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "μA"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "Q / μC",
+              "min": 0,
+              "max": 600,
+              "step": 100
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 600],
+                  [4, 525.1],
+                  [8, 459.6],
+                  [12, 402.2],
+                  [16, 352],
+                  [20, 308.1],
+                  [24, 269.6],
+                  [28, 235.9],
+                  [32, 206.5],
+                  [36, 180.7],
+                  [40, 158.2],
+                  [44, 138.4],
+                  [48, 121.1],
+                  [52, 106],
+                  [56, 92.8],
+                  [60, 81.2]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [0, 600],
+                  [30, 0]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 600,
+                "label": "X"
+              }
+            ],
+            "labels": [
+              {
+                "x": 16,
+                "y": 380,
+                "text": "tangent at X"
+              }
+            ],
+            "alt": "Exponential decay of charge in μC from 600 μC at t = 0, with the tangent at t = 0 drawn from (0, 600 μC) down to (30 s, 0)"
+          }
+        },
+        {
+          "id": "field-capacitor-graph-p6",
+          "question": "A 1000 μF capacitor discharges through a resistor. The graph shows ln V plotted against time t, where V is the p.d. across the capacitor, with the best-fit line drawn through A and B. Use the graph to determine the resistance of the resistor in kΩ.",
+          "hint": "Taking logs of V = V₀e^(−t/RC) gives ln V = ln V₀ − t / RC, so the gradient is −1 / RC; find RC, then divide by C in farads.",
+          "walkthrough": [
+            "ln V = ln V₀ − t / RC, so the gradient of the line is −1 / RC.",
+            "Gradient = (0.5 − 2.5) / (100 − 0) = −2.0 / 100 = −0.020 s⁻¹",
+            "RC = −1 / gradient = 1 / 0.020 = 50 s",
+            "R = RC / C = 50 / (1000 × 10⁻⁶) = 5.0 × 10⁴ Ω",
+            "R = 50 kΩ"
+          ],
+          "answer": {
+            "value": 50.0,
+            "unit": "kΩ"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "y": {
+              "label": "ln (V / V)",
+              "min": 0,
+              "max": 3.0,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [0, 2.52],
+                  [10, 2.27],
+                  [20, 2.11],
+                  [30, 1.93],
+                  [40, 1.68],
+                  [50, 1.5],
+                  [60, 1.32],
+                  [70, 1.07],
+                  [80, 0.91],
+                  [90, 0.69],
+                  [100, 0.52]
+                ],
+                "fit": [
+                  [0, 2.5],
+                  [100, 0.5]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 2.5,
+                "label": "A"
+              },
+              {
+                "x": 100,
+                "y": 0.5,
+                "label": "B",
+                "drop": true,
+                "dx": -16,
+                "dy": -10
+              }
+            ],
+            "alt": "Data crosses of ln V against time with a straight best-fit line from A (0, 2.5) to B (100 s, 0.5)"
+          }
+        }
+      ]
+    }
+  ]
+}

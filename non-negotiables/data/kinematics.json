@@ -1,0 +1,1363 @@
+{
+  "id": "kinematics",
+  "title": "Kinematics",
+  "subtitle": "SUVAT, free fall, projectiles and motion graphs",
+  "order": 20,
+  "types": [
+    {
+      "id": "speed-velocity-acceleration",
+      "name": "Speed, velocity and acceleration from definitions",
+      "equations": ["average speed = distance / time", "v = Δs / Δt", "a = Δv / Δt"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Average speed or velocity is total distance (or displacement) divided by total time; acceleration is change in velocity divided by the time taken. Convert every quantity to SI units (m, s, m s⁻¹) before substituting: km × 1000, minutes × 60, km h⁻¹ × 1000 / 3600.",
+      "commonErrors": [
+        "Leaving a speed in km h⁻¹ when the time is in seconds",
+        "Using the final velocity instead of the change in velocity (v − u) in a = Δv / Δt",
+        "Averaging two speeds instead of dividing total distance by total time"
+      ],
+      "worked": {
+        "id": "speed-velocity-acceleration-w",
+        "question": "A sprinter runs the 200 m race in 20.3 s. Calculate her average speed.",
+        "steps": [
+          "Known: distance = 200 m, time = 20.3 s. Unknown: average speed.",
+          "average speed = distance / time",
+          "average speed = 200 / 20.3",
+          "average speed = 9.85 m s⁻¹"
+        ],
+        "answer": { "value": 9.85, "unit": "m s⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "speed-velocity-acceleration-p1",
+          "question": "A car joins a motorway and speeds up uniformly from 5.0 m s⁻¹ to 23 m s⁻¹ in 6.0 s. Calculate its acceleration.",
+          "hint": "Acceleration is the change in velocity divided by the time taken.",
+          "walkthrough": [
+            "u = 5.0 m s⁻¹, v = 23 m s⁻¹, Δt = 6.0 s, find a.",
+            "a = Δv / Δt = (23 − 5.0) / 6.0 = 18 / 6.0",
+            "a = 3.0 m s⁻²"
+          ],
+          "answer": { "value": 3.0, "unit": "m s⁻²" }
+        },
+        {
+          "id": "speed-velocity-acceleration-p2",
+          "question": "A lift in an office block rises 42 m from the ground floor to the top floor in 15 s. Calculate its average velocity.",
+          "hint": "Average velocity is displacement divided by time.",
+          "walkthrough": [
+            "Δs = 42 m, Δt = 15 s, find v.",
+            "v = Δs / Δt = 42 / 15",
+            "v = 2.8 m s⁻¹"
+          ],
+          "answer": { "value": 2.8, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "speed-velocity-acceleration-p3",
+          "question": "An intercity train travels 54 km between two stations in 40 minutes. Calculate its average speed in m s⁻¹.",
+          "hint": "Convert km to m and minutes to s before dividing.",
+          "walkthrough": [
+            "distance = 54 km = 54 000 m, time = 40 × 60 = 2400 s.",
+            "average speed = 54 000 / 2400",
+            "average speed = 22.5 m s⁻¹"
+          ],
+          "answer": { "value": 22.5, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "speed-velocity-acceleration-p4",
+          "question": "A car travelling at 90 km h⁻¹ brakes uniformly to rest in 7.5 s. Calculate the magnitude of its deceleration in m s⁻².",
+          "hint": "Convert 90 km h⁻¹ to m s⁻¹ (× 1000, ÷ 3600) first; the change in velocity is then u − 0.",
+          "walkthrough": [
+            "u = 90 × 1000 / 3600 = 25 m s⁻¹, v = 0, Δt = 7.5 s.",
+            "deceleration = Δv / Δt = (25 − 0) / 7.5",
+            "deceleration = 3.33 m s⁻²"
+          ],
+          "answer": { "value": 3.33, "unit": "m s⁻²" }
+        },
+        {
+          "id": "speed-velocity-acceleration-p5",
+          "question": "A delivery van covers 12 km at a steady 8.0 m s⁻¹ and then a further 6.0 km in 10 minutes. Calculate its average speed for the whole journey.",
+          "hint": "Find the time for the first stage, add the two times, then divide the total distance by the total time.",
+          "walkthrough": [
+            "Stage 1: t₁ = 12 000 / 8.0 = 1500 s. Stage 2: t₂ = 10 × 60 = 600 s.",
+            "Total distance = 12 000 + 6000 = 18 000 m; total time = 1500 + 600 = 2100 s.",
+            "average speed = 18 000 / 2100",
+            "average speed = 8.57 m s⁻¹"
+          ],
+          "answer": { "value": 8.57, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "speed-velocity-acceleration-p6",
+          "question": "A car on a test track accelerates uniformly from 54 km h⁻¹ to 90 km h⁻¹ in 8.0 s. Calculate its acceleration in m s⁻².",
+          "hint": "Convert both speeds to m s⁻¹ before finding Δv.",
+          "walkthrough": [
+            "u = 54 × 1000 / 3600 = 15 m s⁻¹; v = 90 × 1000 / 3600 = 25 m s⁻¹.",
+            "a = Δv / Δt = (25 − 15) / 8.0 = 10 / 8.0",
+            "a = 1.25 m s⁻²"
+          ],
+          "answer": { "value": 1.25, "unit": "m s⁻²" }
+        }
+      ]
+    },
+    {
+      "id": "suvat-one-equation",
+      "name": "Using a single SUVAT equation",
+      "equations": ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "s = ½(u + v)t"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "List s, u, v, a, t with their values. Cross out the one quantity you neither know nor want, and pick the equation that does not contain it. Rearrange for the unknown, substitute in SI units and evaluate. Take the direction of initial motion as positive.",
+      "commonErrors": [
+        "Forgetting that 'from rest' means u = 0 and 'comes to rest' means v = 0",
+        "Using v² = u² + 2as and forgetting to square-root at the end",
+        "Substituting km h⁻¹ or cm without converting to m s⁻¹ and m first"
+      ],
+      "worked": {
+        "id": "suvat-one-equation-w",
+        "question": "A cyclist accelerates uniformly from 3.0 m s⁻¹ to 9.0 m s⁻¹ over a distance of 24 m. Calculate her acceleration.",
+        "steps": [
+          "Known: u = 3.0 m s⁻¹, v = 9.0 m s⁻¹, s = 24 m. Unknown: a. Not needed: t.",
+          "The equation without t is v² = u² + 2as.",
+          "Rearrange: a = (v² − u²) / 2s",
+          "a = (9.0² − 3.0²) / (2 × 24) = (81 − 9.0) / 48 = 72 / 48",
+          "a = 1.5 m s⁻²"
+        ],
+        "answer": { "value": 1.5, "unit": "m s⁻²" }
+      },
+      "practice": [
+        {
+          "id": "suvat-one-equation-p1",
+          "question": "A train leaves a station from rest with a uniform acceleration of 0.50 m s⁻². Calculate its velocity after 40 s.",
+          "hint": "You know u, a and t and want v, so use v = u + at.",
+          "walkthrough": [
+            "u = 0, a = 0.50 m s⁻², t = 40 s, find v.",
+            "v = u + at = 0 + 0.50 × 40",
+            "v = 20 m s⁻¹"
+          ],
+          "answer": { "value": 20.0, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "suvat-one-equation-p2",
+          "question": "A rocket sled starts from rest and accelerates uniformly at 30 m s⁻² along a straight track. Calculate the distance it travels in the first 4.0 s.",
+          "hint": "You know u, a and t and want s, so use s = ut + ½at².",
+          "walkthrough": [
+            "u = 0, a = 30 m s⁻², t = 4.0 s, find s.",
+            "s = ut + ½at² = 0 + ½ × 30 × 4.0²",
+            "s = 15 × 16",
+            "s = 240 m"
+          ],
+          "answer": { "value": 240, "unit": "m" }
+        },
+        {
+          "id": "suvat-one-equation-p3",
+          "question": "A bowling ball is pushed from rest and reaches a speed of 6.0 m s⁻¹ after travelling 9.0 m along the lane. Calculate its acceleration, assuming it is uniform.",
+          "hint": "Time is not given or wanted, so use v² = u² + 2as and rearrange for a.",
+          "walkthrough": [
+            "u = 0, v = 6.0 m s⁻¹, s = 9.0 m, find a.",
+            "v² = u² + 2as → a = (v² − u²) / 2s",
+            "a = (6.0² − 0) / (2 × 9.0) = 36 / 18",
+            "a = 2.0 m s⁻²"
+          ],
+          "answer": { "value": 2.0, "unit": "m s⁻²" }
+        },
+        {
+          "id": "suvat-one-equation-p4",
+          "question": "A car travelling at 72 km h⁻¹ brakes uniformly and stops in a distance of 50 m. Calculate the magnitude of its deceleration.",
+          "hint": "Convert 72 km h⁻¹ to m s⁻¹ first, then use v² = u² + 2as with v = 0.",
+          "walkthrough": [
+            "u = 72 × 1000 / 3600 = 20 m s⁻¹, v = 0, s = 50 m, find a.",
+            "v² = u² + 2as → a = (v² − u²) / 2s",
+            "a = (0 − 20²) / (2 × 50) = −400 / 100 = −4.0 m s⁻²",
+            "deceleration = 4.0 m s⁻²"
+          ],
+          "answer": { "value": 4.0, "unit": "m s⁻²" }
+        },
+        {
+          "id": "suvat-one-equation-p5",
+          "question": "A bullet accelerates uniformly from rest to 320 m s⁻¹ along a rifle barrel 0.60 m long. Calculate the time the bullet spends in the barrel, in milliseconds.",
+          "hint": "You know u, v and s; use s = ½(u + v)t, rearrange for t, then convert s to ms.",
+          "walkthrough": [
+            "u = 0, v = 320 m s⁻¹, s = 0.60 m, find t.",
+            "s = ½(u + v)t → t = 2s / (u + v)",
+            "t = 2 × 0.60 / (0 + 320) = 1.2 / 320 = 3.75 × 10⁻³ s",
+            "t = 3.75 ms"
+          ],
+          "answer": { "value": 3.75, "unit": "ms" }
+        },
+        {
+          "id": "suvat-one-equation-p6",
+          "question": "In a cathode ray tube, an electron is accelerated uniformly from rest to 2.0 × 10⁷ m s⁻¹ over a distance of 5.0 cm. Calculate the acceleration of the electron.",
+          "hint": "Convert 5.0 cm to m, then use v² = u² + 2as with u = 0 and rearrange for a.",
+          "walkthrough": [
+            "u = 0, v = 2.0 × 10⁷ m s⁻¹, s = 5.0 cm = 0.050 m, find a.",
+            "v² = u² + 2as → a = (v² − u²) / 2s",
+            "a = (2.0 × 10⁷)² / (2 × 0.050) = 4.0 × 10¹⁴ / 0.10",
+            "a = 4.0 × 10¹⁵ m s⁻²"
+          ],
+          "answer": { "value": 4000000000000000, "unit": "m s⁻²" }
+        }
+      ]
+    },
+    {
+      "id": "suvat-two-step",
+      "name": "SUVAT in two steps",
+      "equations": ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "s = ½(u + v)t"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "When no single equation contains only what you know and what you want, find an intermediate quantity first (often v or a) with one equation and then use it in a second. For motion in two stages, the final velocity of the first stage is the initial velocity of the next. Keep the unrounded intermediate value in your calculator.",
+      "commonErrors": [
+        "Rounding the intermediate value too early and shifting the final answer",
+        "Carrying the acceleration of the first stage into a second stage where the acceleration has changed",
+        "Forgetting to add the distances of the two stages when a total is asked for"
+      ],
+      "worked": {
+        "id": "suvat-two-step-w",
+        "question": "A car accelerates uniformly from rest at 2.5 m s⁻² for 6.0 s. It then brakes uniformly and comes to rest in a further 30 m. Calculate the magnitude of its deceleration while braking.",
+        "steps": [
+          "Stage 1: u = 0, a = 2.5 m s⁻², t = 6.0 s. Find v at the end of the acceleration.",
+          "v = u + at = 0 + 2.5 × 6.0 = 15 m s⁻¹",
+          "Stage 2: u = 15 m s⁻¹, v = 0, s = 30 m. Find a.",
+          "v² = u² + 2as → a = (v² − u²) / 2s = (0 − 15²) / (2 × 30) = −225 / 60 = −3.75 m s⁻²",
+          "deceleration = 3.75 m s⁻²"
+        ],
+        "answer": { "value": 3.75, "unit": "m s⁻²" }
+      },
+      "practice": [
+        {
+          "id": "suvat-two-step-p1",
+          "question": "A cyclist travelling at 4.0 m s⁻¹ accelerates uniformly at 0.80 m s⁻² for 10 s and then holds the velocity she has reached for a further 20 s. Calculate the distance she travels during the 20 s at constant velocity.",
+          "hint": "Use v = u + at to find her velocity after 10 s, then distance = velocity × time for the constant-velocity stage.",
+          "walkthrough": [
+            "Stage 1: u = 4.0 m s⁻¹, a = 0.80 m s⁻², t = 10 s.",
+            "v = u + at = 4.0 + 0.80 × 10 = 12 m s⁻¹",
+            "Stage 2: s = vt = 12 × 20",
+            "s = 240 m"
+          ],
+          "answer": { "value": 240, "unit": "m" }
+        },
+        {
+          "id": "suvat-two-step-p2",
+          "question": "A sprinter accelerates uniformly from rest to 9.0 m s⁻¹ in 3.0 s and then runs at 9.0 m s⁻¹ for a further 7.0 s. Calculate the total distance run.",
+          "hint": "Find the distance in each stage separately (s = ½(u + v)t, then s = vt) and add them.",
+          "walkthrough": [
+            "Stage 1: u = 0, v = 9.0 m s⁻¹, t = 3.0 s. s₁ = ½(u + v)t = ½ × 9.0 × 3.0 = 13.5 m",
+            "Stage 2: s₂ = vt = 9.0 × 7.0 = 63 m",
+            "Total s = 13.5 + 63",
+            "s = 76.5 m"
+          ],
+          "answer": { "value": 76.5, "unit": "m" }
+        },
+        {
+          "id": "suvat-two-step-p3",
+          "question": "A lorry travelling at 20 m s⁻¹ brakes uniformly and its velocity falls to 8.0 m s⁻¹ over a distance of 84 m. If the braking continues with the same deceleration, calculate the total time from the start of braking until the lorry stops.",
+          "hint": "Find the deceleration from v² = u² + 2as, then use v = u + at with v = 0 for the whole braking period.",
+          "walkthrough": [
+            "Step 1: u = 20 m s⁻¹, v = 8.0 m s⁻¹, s = 84 m. a = (v² − u²) / 2s = (64 − 400) / 168 = −2.0 m s⁻²",
+            "Step 2: u = 20 m s⁻¹, v = 0, a = −2.0 m s⁻². t = (v − u) / a",
+            "t = (0 − 20) / (−2.0)",
+            "t = 10 s"
+          ],
+          "answer": { "value": 10.0, "unit": "s" }
+        },
+        {
+          "id": "suvat-two-step-p4",
+          "question": "A tram leaves a stop from rest and accelerates uniformly at 1.2 m s⁻² for 25 s. It then brakes uniformly to rest in 15 s. Calculate the total distance between the two stops, in km.",
+          "hint": "Find the velocity after 25 s, then the distance of each stage (s = ½at² and s = ½(u + v)t); add them and convert to km.",
+          "walkthrough": [
+            "Stage 1: v = u + at = 0 + 1.2 × 25 = 30 m s⁻¹; s₁ = ½at² = ½ × 1.2 × 25² = 375 m",
+            "Stage 2: u = 30 m s⁻¹, v = 0, t = 15 s. s₂ = ½(u + v)t = ½ × 30 × 15 = 225 m",
+            "Total s = 375 + 225 = 600 m",
+            "s = 0.600 km"
+          ],
+          "answer": { "value": 0.6, "unit": "km" }
+        },
+        {
+          "id": "suvat-two-step-p5",
+          "question": "A rocket sled starts from rest and covers 180 m in 6.0 s with uniform acceleration. Calculate its velocity at the end of the 6.0 s.",
+          "hint": "Find a from s = ut + ½at² with u = 0, then use v = u + at.",
+          "walkthrough": [
+            "Step 1: u = 0, s = 180 m, t = 6.0 s. s = ½at² → a = 2s / t² = 2 × 180 / 6.0² = 360 / 36 = 10 m s⁻²",
+            "Step 2: v = u + at = 0 + 10 × 6.0",
+            "v = 60 m s⁻¹"
+          ],
+          "answer": { "value": 60.0, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "suvat-two-step-p6",
+          "question": "A steel ball is released from rest at the top of a straight, smooth ramp. After travelling 0.50 m down the ramp its speed is 1.2 m s⁻¹. Calculate its speed after it has travelled 2.0 m down the ramp.",
+          "hint": "Use v² = u² + 2as to find a from the first 0.50 m, then apply the same equation over 2.0 m.",
+          "walkthrough": [
+            "Step 1: u = 0, v = 1.2 m s⁻¹, s = 0.50 m. a = v² / 2s = 1.44 / 1.0 = 1.44 m s⁻²",
+            "Step 2: u = 0, a = 1.44 m s⁻², s = 2.0 m. v² = 2as = 2 × 1.44 × 2.0 = 5.76",
+            "v = √5.76",
+            "v = 2.4 m s⁻¹"
+          ],
+          "answer": { "value": 2.4, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "vertical-motion",
+      "name": "Vertical motion under gravity",
+      "equations": ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "a = ±g = ±9.81 m s⁻²"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Choose a positive direction and stick to it: if up is positive then a = −9.81 m s⁻² throughout; if the object is simply dropped, take down as positive with u = 0 and a = +9.81 m s⁻². At the highest point v = 0. Then solve as an ordinary SUVAT problem with air resistance ignored.",
+      "commonErrors": [
+        "Using +9.81 m s⁻² for a ball thrown upwards when up has been taken as positive",
+        "Forgetting that u = 0 for a dropped object but not for a thrown one",
+        "Finding only the time to the top when the question asks for the total time in the air"
+      ],
+      "worked": {
+        "id": "vertical-motion-w",
+        "question": "A tennis ball is thrown vertically upwards at 15 m s⁻¹. Calculate the maximum height it reaches above the point of release.",
+        "steps": [
+          "Take up as positive. Known: u = 15 m s⁻¹, v = 0 at the top, a = −9.81 m s⁻². Unknown: s.",
+          "The equation without t is v² = u² + 2as.",
+          "Rearrange: s = (v² − u²) / 2a",
+          "s = (0 − 15²) / (2 × −9.81) = −225 / −19.62",
+          "s = 11.5 m"
+        ],
+        "answer": { "value": 11.5, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "vertical-motion-p1",
+          "question": "A coin is dropped from rest into a well. The water surface is 20 m below the point of release. Calculate the time taken for the coin to reach the water.",
+          "hint": "Take down as positive: u = 0, a = 9.81 m s⁻², s = 20 m; use s = ut + ½at².",
+          "walkthrough": [
+            "Down positive: u = 0, a = 9.81 m s⁻², s = 20 m, find t.",
+            "s = ½at² → t = √(2s / a)",
+            "t = √(2 × 20 / 9.81) = √4.08",
+            "t = 2.02 s"
+          ],
+          "answer": { "value": 2.02, "unit": "s" }
+        },
+        {
+          "id": "vertical-motion-p2",
+          "question": "A stone is released from rest at the edge of a sea cliff and hits the water 3.2 s later. Calculate the speed of the stone as it hits the water.",
+          "hint": "With u = 0 and a = 9.81 m s⁻², use v = u + at.",
+          "walkthrough": [
+            "Down positive: u = 0, a = 9.81 m s⁻², t = 3.2 s, find v.",
+            "v = u + at = 0 + 9.81 × 3.2",
+            "v = 31.4 m s⁻¹"
+          ],
+          "answer": { "value": 31.4, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "vertical-motion-p3",
+          "question": "A roof tile slips from the top of a building 45 m tall and falls from rest. Calculate its speed in km h⁻¹ just before it hits the ground.",
+          "hint": "Use v² = u² + 2as to find v in m s⁻¹, then multiply by 3600 / 1000.",
+          "walkthrough": [
+            "Down positive: u = 0, a = 9.81 m s⁻², s = 45 m, find v.",
+            "v² = u² + 2as = 0 + 2 × 9.81 × 45 = 882.9",
+            "v = √882.9 = 29.7 m s⁻¹",
+            "v = 29.7 × 3600 / 1000 = 107 km h⁻¹"
+          ],
+          "answer": { "value": 107, "unit": "km h⁻¹" }
+        },
+        {
+          "id": "vertical-motion-p4",
+          "question": "A flea jumps vertically and reaches a maximum height of 20 cm. Calculate its take-off speed.",
+          "hint": "Convert 20 cm to m, set v = 0 at the top and a = −9.81 m s⁻², then rearrange v² = u² + 2as for u.",
+          "walkthrough": [
+            "Up positive: v = 0, a = −9.81 m s⁻², s = 20 cm = 0.20 m, find u.",
+            "v² = u² + 2as → u² = v² − 2as = 0 − 2 × (−9.81) × 0.20 = 3.924",
+            "u = √3.924",
+            "u = 1.98 m s⁻¹"
+          ],
+          "answer": { "value": 1.98, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "vertical-motion-p5",
+          "question": "A juggler throws a ball vertically upwards at 14 m s⁻¹ and catches it at the same height. Calculate the total time the ball is in the air.",
+          "hint": "Find the time to reach the top (v = 0) using v = u + at, then double it.",
+          "walkthrough": [
+            "Up positive: u = 14 m s⁻¹, v = 0 at the top, a = −9.81 m s⁻².",
+            "Time to top: t = (v − u) / a = (0 − 14) / (−9.81) = 1.427 s",
+            "Total time = 2 × 1.427",
+            "t = 2.85 s"
+          ],
+          "answer": { "value": 2.85, "unit": "s" }
+        },
+        {
+          "id": "vertical-motion-p6",
+          "question": "A ball is thrown vertically upwards at 12 m s⁻¹ from a balcony 30 m above the ground. Calculate the time taken for the ball to reach the ground.",
+          "hint": "With up positive the displacement on landing is s = −30 m; find the landing velocity from v² = u² + 2as (take the negative root), then t from v = u + at.",
+          "walkthrough": [
+            "Up positive: u = 12 m s⁻¹, a = −9.81 m s⁻², s = −30 m.",
+            "v² = u² + 2as = 144 + 2 × (−9.81) × (−30) = 144 + 588.6 = 732.6",
+            "v = −√732.6 = −27.07 m s⁻¹ (downwards on landing)",
+            "t = (v − u) / a = (−27.07 − 12) / (−9.81)",
+            "t = 3.98 s"
+          ],
+          "answer": { "value": 3.98, "unit": "s" }
+        }
+      ]
+    },
+    {
+      "id": "projectiles-horizontal",
+      "name": "Projectiles launched horizontally",
+      "equations": ["Vertical: s = ½gt², v = gt (u = 0)", "Horizontal: s = ut (constant velocity)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Treat the two directions separately: vertically the object falls from rest with a = 9.81 m s⁻², horizontally it moves at constant velocity. The time of flight is the same for both directions and is almost always fixed by the vertical drop, so find t from the height first, then use it horizontally.",
+      "commonErrors": [
+        "Giving the projectile an initial vertical velocity when it was launched horizontally (u = 0 vertically)",
+        "Applying g to the horizontal motion",
+        "Forgetting to combine the horizontal and vertical components with Pythagoras when asked for the landing speed"
+      ],
+      "worked": {
+        "id": "projectiles-horizontal-w",
+        "question": "A marble rolls off the edge of a table 0.80 m high at 2.5 m s⁻¹. Calculate the horizontal distance from the edge of the table to the point where it lands.",
+        "steps": [
+          "Vertical: u = 0, a = 9.81 m s⁻², s = 0.80 m. Horizontal: constant velocity 2.5 m s⁻¹.",
+          "Vertical: s = ½gt² → t = √(2s / g) = √(2 × 0.80 / 9.81) = √0.1631",
+          "t = 0.404 s",
+          "Horizontal: s = ut = 2.5 × 0.404",
+          "s = 1.01 m"
+        ],
+        "answer": { "value": 1.01, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "projectiles-horizontal-p1",
+          "question": "A stone is thrown horizontally from the top of a cliff 45 m above the sea. Calculate the time taken for the stone to reach the sea.",
+          "hint": "Only the vertical motion matters for the time: u = 0, a = 9.81 m s⁻², s = 45 m.",
+          "walkthrough": [
+            "Vertical: u = 0, a = 9.81 m s⁻², s = 45 m, find t.",
+            "s = ½gt² → t = √(2s / g) = √(2 × 45 / 9.81) = √9.17",
+            "t = 3.03 s"
+          ],
+          "answer": { "value": 3.03, "unit": "s" }
+        },
+        {
+          "id": "projectiles-horizontal-p2",
+          "question": "A supply package is released from an aircraft flying horizontally at 60 m s⁻¹. The package takes 4.9 s to reach the ground. Calculate the horizontal distance it travels before landing.",
+          "hint": "Horizontally the package keeps the aircraft's velocity, so s = ut.",
+          "walkthrough": [
+            "Horizontal: u = 60 m s⁻¹, t = 4.9 s, find s.",
+            "s = ut = 60 × 4.9",
+            "s = 294 m"
+          ],
+          "answer": { "value": 294, "unit": "m" }
+        },
+        {
+          "id": "projectiles-horizontal-p3",
+          "question": "A dart is thrown horizontally at 12 m s⁻¹ towards a dartboard 2.4 m away. Calculate how far, in cm, the dart drops below its launch height before hitting the board.",
+          "hint": "Find the time from the horizontal motion (t = s / u), then use s = ½gt² vertically and convert to cm.",
+          "walkthrough": [
+            "Horizontal: t = s / u = 2.4 / 12 = 0.20 s",
+            "Vertical: s = ½gt² = ½ × 9.81 × 0.20² = ½ × 9.81 × 0.040 = 0.196 m",
+            "drop = 19.6 cm"
+          ],
+          "answer": { "value": 19.6, "unit": "cm" }
+        },
+        {
+          "id": "projectiles-horizontal-p4",
+          "question": "Water leaves a horizontal hose pipe held 1.2 m above the ground and hits the ground 3.0 m horizontally from the end of the pipe. Calculate the speed at which the water leaves the pipe.",
+          "hint": "Find the time of fall from the 1.2 m drop, then speed = horizontal distance / time.",
+          "walkthrough": [
+            "Vertical: t = √(2s / g) = √(2 × 1.2 / 9.81) = √0.2446 = 0.4946 s",
+            "Horizontal: u = s / t = 3.0 / 0.4946",
+            "u = 6.07 m s⁻¹"
+          ],
+          "answer": { "value": 6.07, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "projectiles-horizontal-p5",
+          "question": "A ski jumper leaves the end of a horizontal take-off ramp at 25 m s⁻¹ and lands on a slope 40 m vertically below the ramp. Ignoring air resistance, calculate the horizontal distance travelled before landing.",
+          "hint": "Use the 40 m drop to find the time of flight, then multiply by the horizontal velocity.",
+          "walkthrough": [
+            "Vertical: u = 0, a = 9.81 m s⁻², s = 40 m. t = √(2 × 40 / 9.81) = √8.155 = 2.856 s",
+            "Horizontal: s = ut = 25 × 2.856",
+            "s = 71.4 m"
+          ],
+          "answer": { "value": 71.4, "unit": "m" }
+        },
+        {
+          "id": "projectiles-horizontal-p6",
+          "question": "A stone is thrown horizontally at 15 m s⁻¹ from the top of a 20 m cliff. Calculate the speed of the stone just before it hits the ground.",
+          "hint": "Find the vertical velocity on landing from v² = 2gs, then combine it with the unchanged horizontal velocity using Pythagoras.",
+          "walkthrough": [
+            "Vertical: v_y² = u² + 2as = 0 + 2 × 9.81 × 20 = 392.4, so v_y = 19.81 m s⁻¹",
+            "Horizontal: v_x = 15 m s⁻¹ (unchanged)",
+            "v = √(v_x² + v_y²) = √(225 + 392.4) = √617.4",
+            "v = 24.8 m s⁻¹"
+          ],
+          "answer": { "value": 24.8, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "projectiles-angle",
+      "name": "Projectiles launched at an angle",
+      "equations": ["u_x = u cos θ, u_y = u sin θ", "Vertical: v = u_y − gt, v² = u_y² − 2gs", "Horizontal: range = u_x × t"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Resolve the launch velocity into u_x = u cos θ and u_y = u sin θ. Use the vertical component alone (with a = −9.81 m s⁻² and v = 0 at the top) for maximum height and time to the top; the time of flight back to the launch height is twice the time to the top. Use the horizontal component and the time of flight for the range.",
+      "commonErrors": [
+        "Swapping sin and cos when resolving the launch velocity",
+        "Using the full launch speed instead of the vertical component in the vertical equations",
+        "Having the calculator in radians mode"
+      ],
+      "worked": {
+        "id": "projectiles-angle-w",
+        "question": "A football is kicked from the ground at 20 m s⁻¹ at an angle of 30° above the horizontal. Calculate the maximum height it reaches.",
+        "steps": [
+          "Resolve: u_y = u sin θ = 20 × sin 30° = 10 m s⁻¹. Up positive, a = −9.81 m s⁻², v = 0 at the top.",
+          "Vertical equation without t: v² = u_y² + 2as",
+          "Rearrange: s = (v² − u_y²) / 2a",
+          "s = (0 − 10²) / (2 × −9.81) = −100 / −19.62",
+          "s = 5.10 m"
+        ],
+        "answer": { "value": 5.1, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "projectiles-angle-p1",
+          "question": "An arrow leaves a bow at 40 m s⁻¹ at an angle of 25° above the horizontal. Calculate the vertical component of its initial velocity.",
+          "hint": "The vertical component is u sin θ.",
+          "walkthrough": [
+            "u = 40 m s⁻¹, θ = 25°, find u_y.",
+            "u_y = u sin θ = 40 × sin 25°",
+            "u_y = 16.9 m s⁻¹"
+          ],
+          "answer": { "value": 16.9, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "projectiles-angle-p2",
+          "question": "A golf ball is struck at 35 m s⁻¹ at 40° above the horizontal. Calculate the time taken for the ball to reach its maximum height.",
+          "hint": "Find u_y = u sin θ, then use v = u_y + at with v = 0 and a = −9.81 m s⁻².",
+          "walkthrough": [
+            "u_y = 35 × sin 40° = 22.50 m s⁻¹; at the top v = 0, a = −9.81 m s⁻².",
+            "v = u_y + at → t = (v − u_y) / a = (0 − 22.50) / (−9.81)",
+            "t = 2.29 s"
+          ],
+          "answer": { "value": 2.29, "unit": "s" }
+        },
+        {
+          "id": "projectiles-angle-p3",
+          "question": "A long jumper leaves the take-off board at 9.0 m s⁻¹ at 20° above the horizontal. Treating the jumper as a projectile, calculate the maximum height, in cm, that her centre of mass rises above its take-off level.",
+          "hint": "Use u_y = u sin θ in v² = u_y² + 2as with v = 0, then convert the height to cm.",
+          "walkthrough": [
+            "u_y = 9.0 × sin 20° = 3.078 m s⁻¹; v = 0 at the top, a = −9.81 m s⁻².",
+            "s = (v² − u_y²) / 2a = (0 − 3.078²) / (2 × −9.81) = −9.475 / −19.62",
+            "s = 0.483 m",
+            "s = 48.3 cm"
+          ],
+          "answer": { "value": 48.3, "unit": "cm" }
+        },
+        {
+          "id": "projectiles-angle-p4",
+          "question": "An artillery shell is fired at 150 m s⁻¹ at 35° above the horizontal over level ground. Ignoring air resistance, calculate the time of flight.",
+          "hint": "Find the time to the top from the vertical component, then double it because the shell lands at launch height.",
+          "walkthrough": [
+            "u_y = 150 × sin 35° = 86.04 m s⁻¹; at the top v = 0, a = −9.81 m s⁻².",
+            "Time to top: t = (0 − 86.04) / (−9.81) = 8.770 s",
+            "Time of flight = 2 × 8.770",
+            "t = 17.5 s"
+          ],
+          "answer": { "value": 17.5, "unit": "s" }
+        },
+        {
+          "id": "projectiles-angle-p5",
+          "question": "A javelin is released at 28 m s⁻¹ at 38° above the horizontal. Treating release and landing as being at the same height and ignoring air resistance, calculate the horizontal distance the javelin travels.",
+          "hint": "Find the time of flight from the vertical component (twice the time to the top), then multiply by the horizontal component.",
+          "walkthrough": [
+            "Resolve: u_x = 28 × cos 38° = 22.06 m s⁻¹, u_y = 28 × sin 38° = 17.24 m s⁻¹",
+            "Time of flight = 2u_y / g = 2 × 17.24 / 9.81 = 3.515 s",
+            "Range = u_x × t = 22.06 × 3.515",
+            "Range = 77.5 m"
+          ],
+          "answer": { "value": 77.5, "unit": "m" }
+        },
+        {
+          "id": "projectiles-angle-p6",
+          "question": "A stunt motorcyclist leaves a ramp inclined at 25° to the horizontal at a speed of 22 m s⁻¹ and lands on a platform at the same height as the end of the ramp. Calculate the horizontal distance between the ramp and the landing point.",
+          "hint": "Resolve into u_x and u_y, find the time of flight from 2u_y / g, then range = u_x × t.",
+          "walkthrough": [
+            "Resolve: u_x = 22 × cos 25° = 19.94 m s⁻¹, u_y = 22 × sin 25° = 9.297 m s⁻¹",
+            "Time of flight = 2u_y / g = 2 × 9.297 / 9.81 = 1.895 s",
+            "Range = u_x × t = 19.94 × 1.895",
+            "Range = 37.8 m"
+          ],
+          "answer": { "value": 37.8, "unit": "m" }
+        }
+      ]
+    },
+    {
+      "id": "velocity-time-graphs",
+      "name": "Velocity–time graphs: area and gradient",
+      "equations": ["displacement = area under the v–t graph", "acceleration = gradient of the v–t graph = Δv / Δt"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "On a velocity–time graph the gradient of a section is the acceleration and the area between the line and the time axis is the displacement. Split the area into triangles (½ × base × height), rectangles and trapeziums (½ × (sum of parallel sides) × width) and add them. Area below the axis counts as negative displacement.",
+      "commonErrors": [
+        "Reading the gradient of a v–t graph as velocity instead of acceleration",
+        "Forgetting the ½ in the area of a triangular section",
+        "Mixing km h⁻¹ on the velocity axis with seconds on the time axis"
+      ],
+      "worked": {
+        "id": "velocity-time-graphs-w",
+        "question": "A velocity–time graph for a tube train has three straight sections: velocity rises from 0 to 12 m s⁻¹ in the first 8.0 s, stays at 12 m s⁻¹ for the next 20 s, then falls to 0 in a further 4.0 s. Calculate the total displacement of the train.",
+        "steps": [
+          "Displacement = total area under the graph. Split it into a triangle, a rectangle and a triangle.",
+          "Section 1 (triangle): ½ × 8.0 × 12 = 48 m",
+          "Section 2 (rectangle): 20 × 12 = 240 m",
+          "Section 3 (triangle): ½ × 4.0 × 12 = 24 m",
+          "Total displacement = 48 + 240 + 24 = 312 m"
+        ],
+        "answer": { "value": 312, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "velocity-time-graphs-p1",
+          "question": "On a velocity–time graph, the line for a speedboat is straight from (0 s, 0 m s⁻¹) to (6.0 s, 15 m s⁻¹). Calculate the acceleration of the speedboat.",
+          "hint": "Acceleration is the gradient: change in velocity divided by change in time.",
+          "walkthrough": [
+            "Gradient = Δv / Δt = (15 − 0) / (6.0 − 0)",
+            "a = 15 / 6.0",
+            "a = 2.5 m s⁻²"
+          ],
+          "answer": { "value": 2.5, "unit": "m s⁻²" }
+        },
+        {
+          "id": "velocity-time-graphs-p2",
+          "question": "A velocity–time graph for a cyclist is a straight line rising from 6.0 m s⁻¹ at t = 0 to 18 m s⁻¹ at t = 4.0 s. Calculate the displacement of the cyclist during these 4.0 s.",
+          "hint": "The area under the line is a trapezium: ½ × (6.0 + 18) × 4.0.",
+          "walkthrough": [
+            "Displacement = area of trapezium = ½ × (u + v) × t",
+            "s = ½ × (6.0 + 18) × 4.0 = ½ × 24 × 4.0",
+            "s = 48 m"
+          ],
+          "answer": { "value": 48, "unit": "m" }
+        },
+        {
+          "id": "velocity-time-graphs-p3",
+          "question": "The velocity–time graph for a lorry shows a straight line falling from 54 km h⁻¹ to 0 in 12 s. Calculate the magnitude of the lorry's deceleration in m s⁻².",
+          "hint": "Convert 54 km h⁻¹ to m s⁻¹ before finding the gradient.",
+          "walkthrough": [
+            "54 km h⁻¹ = 54 × 1000 / 3600 = 15 m s⁻¹",
+            "Gradient = Δv / Δt = (0 − 15) / 12 = −1.25 m s⁻²",
+            "deceleration = 1.25 m s⁻²"
+          ],
+          "answer": { "value": 1.25, "unit": "m s⁻²" }
+        },
+        {
+          "id": "velocity-time-graphs-p4",
+          "question": "The velocity–time graph for a drag racer is a straight line from the origin to a velocity v at t = 5.0 s. The area under the graph during these 5.0 s is 60 m. Calculate v.",
+          "hint": "The area is a triangle, ½ × 5.0 × v; set it equal to 60 m and rearrange.",
+          "walkthrough": [
+            "Area of triangle = ½ × t × v = 60 m",
+            "½ × 5.0 × v = 60 → v = 2 × 60 / 5.0",
+            "v = 24 m s⁻¹"
+          ],
+          "answer": { "value": 24, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "velocity-time-graphs-p5",
+          "question": "A velocity–time graph for a bus shows a straight line from 0 to a velocity v in the first 10 s, followed by a horizontal line at v for the next 30 s. The total displacement in the 40 s is 700 m. Calculate v.",
+          "hint": "Write the total area as a triangle plus a rectangle in terms of v (½ × 10 × v + 30 × v), set it equal to 700 m and solve.",
+          "walkthrough": [
+            "Triangle: ½ × 10 × v = 5v. Rectangle: 30 × v = 30v.",
+            "Total area = 5v + 30v = 35v = 700 m",
+            "v = 700 / 35",
+            "v = 20 m s⁻¹"
+          ],
+          "answer": { "value": 20, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "velocity-time-graphs-p6",
+          "question": "A velocity–time graph for a skateboarder rises in a straight line from 0 to 9.0 m s⁻¹ in 3.0 s and then falls in a straight line back to 0 over the next 12 s. Calculate the skateboarder's average velocity over the whole 15 s.",
+          "hint": "Find the total displacement from the two triangular areas, then divide by the total time.",
+          "walkthrough": [
+            "Area 1 = ½ × 3.0 × 9.0 = 13.5 m; area 2 = ½ × 12 × 9.0 = 54 m",
+            "Total displacement = 13.5 + 54 = 67.5 m",
+            "average velocity = 67.5 / 15",
+            "average velocity = 4.5 m s⁻¹"
+          ],
+          "answer": { "value": 4.5, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "displacement-time-graphs",
+      "name": "Displacement–time graphs: velocity from the gradient",
+      "equations": ["velocity = gradient of the s–t graph = Δs / Δt", "average speed = total distance / total time"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "On a displacement–time graph the gradient of a straight section is the velocity; a horizontal section means the object is stationary and a line sloping back towards the axis means it is returning. Read off two points on the section, convert to m and s, and divide the change in displacement by the change in time.",
+      "commonErrors": [
+        "Reading the displacement value itself instead of the gradient when asked for velocity",
+        "Forgetting the minus sign for a section that slopes downwards (returning)",
+        "Using the displacement at the end of an interval instead of the change in displacement during it"
+      ],
+      "worked": {
+        "id": "displacement-time-graphs-w",
+        "question": "On a displacement–time graph for a runner, the line is straight between the points (5.0 s, 40 m) and (20 s, 160 m). Calculate the velocity of the runner during this interval.",
+        "steps": [
+          "Known: s₁ = 40 m at t₁ = 5.0 s, s₂ = 160 m at t₂ = 20 s. Unknown: velocity (gradient).",
+          "velocity = Δs / Δt = (s₂ − s₁) / (t₂ − t₁)",
+          "v = (160 − 40) / (20 − 5.0) = 120 / 15",
+          "v = 8.0 m s⁻¹"
+        ],
+        "answer": { "value": 8.0, "unit": "m s⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "displacement-time-graphs-p1",
+          "question": "A displacement–time graph for a rowing boat is a straight line from the origin to the point (12 s, 54 m). Calculate the velocity of the boat.",
+          "hint": "Velocity is the gradient: rise over run.",
+          "walkthrough": [
+            "Gradient = Δs / Δt = (54 − 0) / (12 − 0)",
+            "v = 54 / 12",
+            "v = 4.5 m s⁻¹"
+          ],
+          "answer": { "value": 4.5, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "displacement-time-graphs-p2",
+          "question": "A toy boat is pulled back towards a child. Its displacement–time graph is a straight line from (0 s, 12 m) to (8.0 s, 0 m). Calculate the speed of the boat.",
+          "hint": "The gradient is negative because the boat is returning; the speed is its magnitude.",
+          "walkthrough": [
+            "Gradient = Δs / Δt = (0 − 12) / (8.0 − 0) = −1.5 m s⁻¹",
+            "The velocity is −1.5 m s⁻¹ (towards the child).",
+            "speed = 1.5 m s⁻¹"
+          ],
+          "answer": { "value": 1.5, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "displacement-time-graphs-p3",
+          "question": "A displacement–time graph for a garden snail is a straight line from the origin to (2.0 minutes, 36 cm). Calculate the velocity of the snail in m s⁻¹.",
+          "hint": "Convert cm to m and minutes to s before taking the gradient.",
+          "walkthrough": [
+            "Δs = 36 cm = 0.36 m; Δt = 2.0 × 60 = 120 s",
+            "v = Δs / Δt = 0.36 / 120",
+            "v = 3.0 × 10⁻³ m s⁻¹"
+          ],
+          "answer": { "value": 0.003, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "displacement-time-graphs-p4",
+          "question": "A displacement–time graph for a tram, with displacement in km, is straight between the points (20 s, 0.60 km) and (80 s, 1.5 km). Calculate the velocity of the tram in m s⁻¹.",
+          "hint": "Convert the displacements to metres, then divide the change in displacement by the change in time.",
+          "walkthrough": [
+            "Δs = 1.5 − 0.60 = 0.90 km = 900 m; Δt = 80 − 20 = 60 s",
+            "v = Δs / Δt = 900 / 60",
+            "v = 15 m s⁻¹"
+          ],
+          "answer": { "value": 15, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "displacement-time-graphs-p5",
+          "question": "A radio-controlled car's displacement–time graph is a straight line from the origin to (5.0 s, 30 m), then horizontal until t = 12 s, then a straight line back to (15 s, 0 m). Calculate the average speed of the car over the 15 s.",
+          "hint": "Average speed uses total distance (out and back), not final displacement, divided by total time.",
+          "walkthrough": [
+            "Distance out = 30 m; distance back = 30 m; total distance = 60 m",
+            "Total time = 15 s",
+            "average speed = 60 / 15",
+            "average speed = 4.0 m s⁻¹"
+          ],
+          "answer": { "value": 4.0, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "displacement-time-graphs-p6",
+          "question": "A displacement–time graph for a car has two straight sections: from the origin to (10 s, 150 m), then from (10 s, 150 m) to (20 s, 390 m). Calculate the increase in the car's velocity between the first section and the second.",
+          "hint": "Find the gradient of each section separately, then subtract.",
+          "walkthrough": [
+            "Section 1: v₁ = (150 − 0) / (10 − 0) = 15 m s⁻¹",
+            "Section 2: v₂ = (390 − 150) / (20 − 10) = 240 / 10 = 24 m s⁻¹",
+            "Increase = v₂ − v₁ = 24 − 15",
+            "Increase = 9.0 m s⁻¹"
+          ],
+          "answer": { "value": 9.0, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "motion-graph",
+      "name": "Reading motion graphs",
+      "equations": [
+        "acceleration = gradient of the v–t graph",
+        "displacement = area under the v–t graph",
+        "velocity = gradient of the s–t graph",
+        "instantaneous value = gradient of the tangent at that point"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Every motion-graph question is a read-off, a gradient or an area. On a v–t graph the gradient is the acceleration and the area under the line is the displacement; on an s–t graph the gradient is the velocity. For a straight section take two points far apart on gridline intersections; for a curve use the tangent drawn at the marked point. Check the axis scales (minutes, km) before you calculate.",
+      "commonErrors": [
+        "Reading the height of the graph when asked for a gradient, or the gradient of a v–t graph when asked for velocity",
+        "Using one point on a tangent instead of two points far apart along it",
+        "Forgetting the ½ in a triangular area, or using the final velocity instead of the average for a trapezium",
+        "Ignoring axis scales such as t / min or s / km"
+      ],
+      "worked": {
+        "id": "motion-graph-w",
+        "question": "The velocity–time graph is for an underground train leaving a station. Use the graph to determine the acceleration of the train during the section AB.",
+        "steps": [
+          "Acceleration is the gradient of the v–t graph. Section AB is a straight line, so use its two end points.",
+          "A = (0 s, 5 m s⁻¹) and B = (6 s, 20 m s⁻¹)",
+          "gradient = Δv / Δt = (20 − 5) / (6 − 0) = 15 / 6",
+          "a = 2.5 m s⁻²"
+        ],
+        "answer": {
+          "value": 2.5,
+          "unit": "m s⁻²"
+        },
+        "graph": {
+          "x": {
+            "label": "t / s",
+            "min": 0,
+            "max": 16,
+            "step": 2
+          },
+          "y": {
+            "label": "v / m s⁻¹",
+            "min": 0,
+            "max": 25,
+            "step": 5
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  5
+                ],
+                [
+                  6,
+                  20
+                ],
+                [
+                  12,
+                  20
+                ],
+                [
+                  16,
+                  0
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 0,
+              "y": 5,
+              "label": "A",
+              "dx": 6,
+              "dy": 16
+            },
+            {
+              "x": 6,
+              "y": 20,
+              "label": "B",
+              "drop": true
+            }
+          ],
+          "alt": "Velocity–time graph rising in a straight line from 5 m/s at 0 s to 20 m/s at 6 s, level at 20 m/s until 12 s, then falling in a straight line to zero at 16 s"
+        }
+      },
+      "practice": [
+        {
+          "id": "motion-graph-p1",
+          "question": "The velocity–time graph is for a cyclist setting off from traffic lights. Use the graph to determine the displacement of the cyclist during the first 8.0 s, shown by the shaded area.",
+          "hint": "Displacement is the area under the line between 0 and 8 s; the shaded shape is a triangle.",
+          "walkthrough": [
+            "Displacement = area under the v–t graph between t = 0 and t = 8 s.",
+            "The shaded region is a triangle with base 8 s and height 12 m s⁻¹ (the velocity at X).",
+            "s = ½ × 8 × 12",
+            "s = 48 m"
+          ],
+          "answer": {
+            "value": 48.0,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    8,
+                    12
+                  ],
+                  [
+                    12,
+                    12
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 12,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 8
+              }
+            ],
+            "alt": "Velocity–time graph rising in a straight line from the origin to 12 m/s at 8 s, then level at 12 m/s to 12 s; the triangle under the rising section is shaded"
+          }
+        },
+        {
+          "id": "motion-graph-p2",
+          "question": "The velocity–time graph is for a lorry approaching a set of traffic lights. Use the graph to determine the magnitude of the deceleration of the lorry during the section AB.",
+          "hint": "Deceleration is the magnitude of the gradient of the falling section AB; read A and B from the gridlines.",
+          "walkthrough": [
+            "A = (10 s, 20 m s⁻¹) and B = (35 s, 0)",
+            "gradient = Δv / Δt = (0 − 20) / (35 − 10) = −20 / 25 = −0.80 m s⁻²",
+            "The negative gradient means the lorry is slowing down.",
+            "deceleration = 0.80 m s⁻²"
+          ],
+          "answer": {
+            "value": 0.8,
+            "unit": "m s⁻²"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 40,
+              "step": 5
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": 0,
+              "max": 25,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    10,
+                    20
+                  ],
+                  [
+                    35,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10,
+                "y": 20,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 35,
+                "y": 0,
+                "label": "B",
+                "dx": 6,
+                "dy": -8
+              }
+            ],
+            "alt": "Velocity–time graph level at 20 m/s from 0 to 10 s, then falling in a straight line to zero at 35 s"
+          }
+        },
+        {
+          "id": "motion-graph-p3",
+          "question": "The displacement–time graph is for an intercity train between two signals. Note the units on the axes. Use the graph to determine the velocity of the train during the first 4.0 minutes, in m s⁻¹.",
+          "hint": "Velocity is the gradient of the straight section OA; convert km to m and minutes to seconds before dividing.",
+          "walkthrough": [
+            "O = (0, 0) and A = (4.0 min, 6.0 km)",
+            "Δs = 6.0 km = 6000 m; Δt = 4.0 × 60 = 240 s",
+            "v = Δs / Δt = 6000 / 240",
+            "v = 25 m s⁻¹"
+          ],
+          "answer": {
+            "value": 25.0,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / min",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "s / km",
+              "min": 0,
+              "max": 15,
+              "step": 3
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    6
+                  ],
+                  [
+                    8,
+                    6
+                  ],
+                  [
+                    12,
+                    15
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 6,
+                "label": "A",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–time graph rising in a straight line from the origin to 6 km at 4 min, level until 8 min, then rising to 15 km at 12 min"
+          }
+        },
+        {
+          "id": "motion-graph-p4",
+          "question": "The velocity–time graph is for a motorboat accelerating steadily across a lake. Use the graph to determine the displacement of the boat between t = 4.0 s and t = 10 s, shown by the shaded area.",
+          "hint": "The shaded region between A and B is a trapezium: ½ × (sum of the parallel sides) × width.",
+          "walkthrough": [
+            "From the gridlines, A = (4 s, 8 m s⁻¹) and B = (10 s, 14 m s⁻¹).",
+            "The shaded area is a trapezium with parallel sides 8 and 14 m s⁻¹ and width 10 − 4 = 6 s.",
+            "s = ½ × (8 + 14) × 6 = ½ × 22 × 6",
+            "s = 66 m"
+          ],
+          "answer": {
+            "value": 66.0,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    10,
+                    14
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 8.0,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 10,
+                "y": 14,
+                "label": "B",
+                "drop": true,
+                "dx": -14,
+                "dy": -10
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 4,
+                "to": 10
+              }
+            ],
+            "alt": "Velocity–time graph, a straight line from 4 m/s at 0 s to 14 m/s at 10 s; the trapezium under the line between 4 s and 10 s is shaded"
+          }
+        },
+        {
+          "id": "motion-graph-p5",
+          "question": "The velocity–time graph is for a model rocket during the first 8.0 s of its flight; its acceleration is not uniform. The tangent to the curve at X (t = 4.0 s) is drawn. Use the tangent to determine the acceleration of the rocket at t = 4.0 s.",
+          "hint": "Instantaneous acceleration is the gradient of the tangent; use the two points where the tangent crosses gridline intersections at each end.",
+          "walkthrough": [
+            "At t = 4.0 s the acceleration is the gradient of the tangent at X.",
+            "The tangent passes through (2.0 s, 0) and (8.0 s, 24 m s⁻¹).",
+            "gradient = (24 − 0) / (8.0 − 2.0) = 24 / 6.0",
+            "a = 4.0 m s⁻²"
+          ],
+          "answer": {
+            "value": 4.0,
+            "unit": "m s⁻²"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": 0,
+              "max": 32,
+              "step": 4
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.5,
+                    0.125
+                  ],
+                  [
+                    1.0,
+                    0.5
+                  ],
+                  [
+                    1.5,
+                    1.125
+                  ],
+                  [
+                    2.0,
+                    2.0
+                  ],
+                  [
+                    2.5,
+                    3.125
+                  ],
+                  [
+                    3.0,
+                    4.5
+                  ],
+                  [
+                    3.5,
+                    6.125
+                  ],
+                  [
+                    4.0,
+                    8.0
+                  ],
+                  [
+                    4.5,
+                    10.125
+                  ],
+                  [
+                    5.0,
+                    12.5
+                  ],
+                  [
+                    5.5,
+                    15.125
+                  ],
+                  [
+                    6.0,
+                    18.0
+                  ],
+                  [
+                    6.5,
+                    21.125
+                  ],
+                  [
+                    7.0,
+                    24.5
+                  ],
+                  [
+                    7.5,
+                    28.125
+                  ],
+                  [
+                    8.0,
+                    32.0
+                  ]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    8,
+                    24
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4.0,
+                "y": 8.0,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "labels": [
+              {
+                "x": 5.6,
+                "y": 10,
+                "text": "tangent at X"
+              }
+            ],
+            "alt": "Velocity–time graph curving upwards with increasing gradient from the origin to 32 m/s at 8 s; a tangent at X (4 s, 8 m/s) passes through (2 s, 0) and (8 s, 24 m/s)"
+          }
+        },
+        {
+          "id": "motion-graph-p6",
+          "question": "The displacement–time graph is for a tram braking to a halt. The tangent to the curve at X (t = 4.0 s) is drawn. Use the tangent to determine the velocity of the tram at t = 4.0 s.",
+          "hint": "Velocity is the gradient of the s–t graph; for a curve, take the gradient of the drawn tangent between two gridline points far apart.",
+          "walkthrough": [
+            "The velocity at t = 4.0 s is the gradient of the tangent at X.",
+            "The tangent passes through (2.0 s, 40 m) and (7.0 s, 100 m).",
+            "gradient = (100 − 40) / (7.0 − 2.0) = 60 / 5.0",
+            "v = 12 m s⁻¹"
+          ],
+          "answer": {
+            "value": 12.0,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "s / m",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    19.0
+                  ],
+                  [
+                    2.0,
+                    36.0
+                  ],
+                  [
+                    3.0,
+                    51.0
+                  ],
+                  [
+                    4.0,
+                    64.0
+                  ],
+                  [
+                    5.0,
+                    75.0
+                  ],
+                  [
+                    6.0,
+                    84.0
+                  ],
+                  [
+                    7.0,
+                    91.0
+                  ],
+                  [
+                    8.0,
+                    96.0
+                  ],
+                  [
+                    9.0,
+                    99.0
+                  ],
+                  [
+                    10.0,
+                    100.0
+                  ]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [
+                    2,
+                    40
+                  ],
+                  [
+                    7,
+                    100
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4.0,
+                "y": 64.0,
+                "label": "X",
+                "dx": 8,
+                "dy": 14
+              }
+            ],
+            "labels": [
+              {
+                "x": 5.2,
+                "y": 55,
+                "text": "tangent at X"
+              }
+            ],
+            "alt": "Displacement–time graph curving from the origin to 100 m at 10 s with decreasing gradient; a tangent at X (4 s, 64 m) passes through (2 s, 40 m) and (7 s, 100 m)"
+          }
+        }
+      ]
+    }
+  ]
+}

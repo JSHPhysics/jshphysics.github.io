@@ -1,0 +1,109 @@
+{
+  "topics": [
+    {
+      "id": "measurements",
+      "file": "measurements.json",
+      "title": "Measurements and uncertainties",
+      "order": 10,
+      "types": 9
+    },
+    {
+      "id": "kinematics",
+      "file": "kinematics.json",
+      "title": "Kinematics",
+      "order": 20,
+      "types": 9
+    },
+    {
+      "id": "forces",
+      "file": "forces.json",
+      "title": "Forces and Newton's laws",
+      "order": 30,
+      "types": 9
+    },
+    {
+      "id": "momentum-energy",
+      "file": "momentum-energy.json",
+      "title": "Momentum, work, energy and power",
+      "order": 40,
+      "types": 10
+    },
+    {
+      "id": "materials",
+      "file": "materials.json",
+      "title": "Materials and fluids",
+      "order": 50,
+      "types": 10
+    },
+    {
+      "id": "waves",
+      "file": "waves.json",
+      "title": "Waves and optics",
+      "order": 60,
+      "types": 11
+    },
+    {
+      "id": "quantum",
+      "file": "quantum.json",
+      "title": "Quantum physics",
+      "order": 70,
+      "types": 9
+    },
+    {
+      "id": "electricity",
+      "file": "electricity.json",
+      "title": "Electric circuits",
+      "order": 80,
+      "types": 11
+    },
+    {
+      "id": "circular-shm",
+      "file": "circular-shm.json",
+      "title": "Circular motion and simple harmonic motion",
+      "order": 90,
+      "types": 9
+    },
+    {
+      "id": "thermal-gases",
+      "file": "thermal-gases.json",
+      "title": "Thermal physics and gases",
+      "order": 100,
+      "types": 11
+    },
+    {
+      "id": "gravitational-fields",
+      "file": "gravitational-fields.json",
+      "title": "Gravitational fields",
+      "order": 110,
+      "types": 9
+    },
+    {
+      "id": "electric-fields-capacitors",
+      "file": "electric-fields-capacitors.json",
+      "title": "Electric fields and capacitors",
+      "order": 120,
+      "types": 11
+    },
+    {
+      "id": "magnetic-fields-induction",
+      "file": "magnetic-fields-induction.json",
+      "title": "Magnetic fields and electromagnetic induction",
+      "order": 130,
+      "types": 10
+    },
+    {
+      "id": "nuclear-particles",
+      "file": "nuclear-particles.json",
+      "title": "Nuclear and particle physics",
+      "order": 140,
+      "types": 12
+    },
+    {
+      "id": "astrophysics",
+      "file": "astrophysics.json",
+      "title": "Astrophysics and cosmology",
+      "order": 150,
+      "types": 12
+    }
+  ]
+}

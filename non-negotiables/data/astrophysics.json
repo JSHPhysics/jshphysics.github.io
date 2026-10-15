@@ -1,0 +1,2045 @@
+{
+  "id": "astrophysics",
+  "title": "Astrophysics and cosmology",
+  "subtitle": "Luminosity, stellar temperature, distances, redshift and Hubble's law",
+  "order": 150,
+  "types": [
+    {
+      "id": "distance-units",
+      "name": "Astronomical distance units and light travel time",
+      "equations": [
+        "1 AU = 1.50 × 10¹¹ m",
+        "1 ly = 9.46 × 10¹⁵ m",
+        "1 pc = 3.09 × 10¹⁶ m",
+        "t = d / c"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Multiply by the conversion factor to go from AU, ly or pc into metres; divide by it to go back. To change between two astronomical units, go via metres. Light travel time is distance in metres divided by c = 3.00 × 10⁸ m s⁻¹.",
+      "commonErrors": [
+        "Treating a light-year as a time rather than a distance",
+        "Dividing when converting into metres (1 ly is 9.46 × 10¹⁵ m, so multiply)",
+        "Forgetting to convert km to m before dividing by c"
+      ],
+      "worked": {
+        "id": "distance-units-w",
+        "question": "Neptune orbits the Sun at an average distance of 30.1 AU. Express this distance in metres.",
+        "steps": [
+          "Known: d = 30.1 AU. 1 AU = 1.50 × 10¹¹ m.",
+          "To convert AU to metres, multiply by 1.50 × 10¹¹.",
+          "d = 30.1 × 1.50 × 10¹¹",
+          "d = 4.515 × 10¹²",
+          "d = 4.52 × 10¹² m"
+        ],
+        "answer": {
+          "value": 4520000000000,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "distance-units-p1",
+          "question": "Proxima Centauri, the nearest star to the Sun, is 4.24 light-years away. Express this distance in metres.",
+          "hint": "Multiply the number of light-years by 9.46 × 10¹⁵ m.",
+          "walkthrough": [
+            "d = 4.24 ly, 1 ly = 9.46 × 10¹⁵ m",
+            "d = 4.24 × 9.46 × 10¹⁵",
+            "d = 4.01 × 10¹⁶ m"
+          ],
+          "answer": {
+            "value": 4.01e+16,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "distance-units-p2",
+          "question": "The Earth is 1 AU from the Sun. Calculate the time taken for sunlight to reach the Earth, in seconds.",
+          "hint": "Convert 1 AU to metres, then use t = d / c.",
+          "walkthrough": [
+            "d = 1 AU = 1.50 × 10¹¹ m, c = 3.00 × 10⁸ m s⁻¹",
+            "t = d / c = 1.50 × 10¹¹ / 3.00 × 10⁸",
+            "t = 500 s"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "distance-units-p3",
+          "question": "Sirius, the brightest star in the night sky, is 8.14 × 10¹⁶ m from Earth. Express this distance in light-years.",
+          "hint": "Divide the distance in metres by the number of metres in one light-year.",
+          "walkthrough": [
+            "d = 8.14 × 10¹⁶ m, 1 ly = 9.46 × 10¹⁵ m",
+            "d in ly = 8.14 × 10¹⁶ / 9.46 × 10¹⁵",
+            "d = 8.60 ly"
+          ],
+          "answer": {
+            "value": 8.6,
+            "unit": "ly"
+          }
+        },
+        {
+          "id": "distance-units-p4",
+          "question": "At its closest approach, Mars is 54.6 million km from Earth. Express this distance in AU.",
+          "hint": "Convert million km to metres first (× 10⁶ × 10³), then divide by 1.50 × 10¹¹ m.",
+          "walkthrough": [
+            "d = 54.6 million km = 54.6 × 10⁶ × 10³ m = 5.46 × 10¹⁰ m",
+            "1 AU = 1.50 × 10¹¹ m",
+            "d in AU = 5.46 × 10¹⁰ / 1.50 × 10¹¹",
+            "d = 0.364 AU"
+          ],
+          "answer": {
+            "value": 0.364,
+            "unit": "AU"
+          }
+        },
+        {
+          "id": "distance-units-p5",
+          "question": "The Voyager 1 space probe is 163 AU from Earth. Calculate the time, in hours, for a radio signal from Voyager 1 to reach Earth.",
+          "hint": "Convert the distance to metres, divide by c to get seconds, then divide by 3600.",
+          "walkthrough": [
+            "d = 163 × 1.50 × 10¹¹ = 2.445 × 10¹³ m",
+            "t = d / c = 2.445 × 10¹³ / 3.00 × 10⁸ = 81 500 s",
+            "t in hours = 81 500 / 3600",
+            "t = 22.6 h"
+          ],
+          "answer": {
+            "value": 22.6,
+            "unit": "h"
+          }
+        },
+        {
+          "id": "distance-units-p6",
+          "question": "The red supergiant Betelgeuse is about 548 light-years from Earth. Express this distance in parsecs.",
+          "hint": "Convert light-years to metres, then divide by 3.09 × 10¹⁶ m to get parsecs.",
+          "walkthrough": [
+            "d = 548 × 9.46 × 10¹⁵ = 5.184 × 10¹⁸ m",
+            "1 pc = 3.09 × 10¹⁶ m",
+            "d in pc = 5.184 × 10¹⁸ / 3.09 × 10¹⁶",
+            "d = 168 pc"
+          ],
+          "answer": {
+            "value": 168,
+            "unit": "pc"
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallax",
+      "name": "Stellar parallax and the parsec",
+      "equations": [
+        "d = 1 / p (d in pc, p in arcseconds)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "A star whose parallax angle is p arcseconds is 1 / p parsecs away. Make sure the angle is in arcseconds (1 arcsecond = 1/3600 of a degree; 1 milliarcsecond = 10⁻³ arcseconds) before taking the reciprocal. Convert the answer to light-years or metres with 1 pc = 3.09 × 10¹⁶ m if the question asks for it.",
+      "commonErrors": [
+        "Using the parallax angle in degrees or milliarcseconds instead of arcseconds",
+        "Forgetting that a larger parallax means a nearer star",
+        "Converting parsecs to light-years by guessing the factor instead of going via metres (1 pc ≈ 3.27 ly)"
+      ],
+      "worked": {
+        "id": "parallax-w",
+        "question": "The star Vega has a parallax angle of 0.130 arcseconds. Calculate its distance from Earth in parsecs.",
+        "steps": [
+          "Known: p = 0.130 arcseconds. Unknown: d in pc.",
+          "d = 1 / p with p in arcseconds gives d in parsecs.",
+          "d = 1 / 0.130",
+          "d = 7.69 pc"
+        ],
+        "answer": {
+          "value": 7.69,
+          "unit": "pc"
+        }
+      },
+      "practice": [
+        {
+          "id": "parallax-p1",
+          "question": "61 Cygni was the first star to have its parallax measured, in 1838. Its parallax angle is 0.287 arcseconds. Calculate its distance in parsecs.",
+          "hint": "d = 1 / p, with p in arcseconds.",
+          "walkthrough": [
+            "p = 0.287 arcseconds",
+            "d = 1 / p = 1 / 0.287",
+            "d = 3.48 pc"
+          ],
+          "answer": {
+            "value": 3.48,
+            "unit": "pc"
+          }
+        },
+        {
+          "id": "parallax-p2",
+          "question": "The star Altair has a parallax angle of 0.195 arcseconds. Calculate its distance in parsecs.",
+          "hint": "Take the reciprocal of the parallax angle in arcseconds.",
+          "walkthrough": [
+            "p = 0.195 arcseconds",
+            "d = 1 / p = 1 / 0.195",
+            "d = 5.13 pc"
+          ],
+          "answer": {
+            "value": 5.13,
+            "unit": "pc"
+          }
+        },
+        {
+          "id": "parallax-p3",
+          "question": "A star is known from other measurements to be 25.0 pc from Earth. Calculate the parallax angle, in arcseconds, that a telescope should measure for it.",
+          "hint": "Rearrange d = 1 / p to make p the subject.",
+          "walkthrough": [
+            "d = 25.0 pc",
+            "d = 1 / p → p = 1 / d",
+            "p = 1 / 25.0",
+            "p = 0.0400 arcseconds"
+          ],
+          "answer": {
+            "value": 0.04,
+            "unit": "arcsec"
+          }
+        },
+        {
+          "id": "parallax-p4",
+          "question": "The Gaia space telescope measures the parallax of a distant star as 7.50 milliarcseconds. Calculate the distance to the star in parsecs.",
+          "hint": "Convert milliarcseconds to arcseconds (× 10⁻³) before using d = 1 / p.",
+          "walkthrough": [
+            "p = 7.50 milliarcseconds = 7.50 × 10⁻³ arcseconds",
+            "d = 1 / p = 1 / (7.50 × 10⁻³)",
+            "d = 133 pc"
+          ],
+          "answer": {
+            "value": 133,
+            "unit": "pc"
+          }
+        },
+        {
+          "id": "parallax-p5",
+          "question": "Sirius has a parallax angle of 0.379 arcseconds. Calculate its distance from Earth in light-years.",
+          "hint": "Find the distance in parsecs, convert to metres with 1 pc = 3.09 × 10¹⁶ m, then divide by 9.46 × 10¹⁵ m.",
+          "walkthrough": [
+            "d = 1 / p = 1 / 0.379 = 2.639 pc",
+            "d = 2.639 × 3.09 × 10¹⁶ = 8.153 × 10¹⁶ m",
+            "d in ly = 8.153 × 10¹⁶ / 9.46 × 10¹⁵",
+            "d = 8.62 ly"
+          ],
+          "answer": {
+            "value": 8.62,
+            "unit": "ly"
+          }
+        },
+        {
+          "id": "parallax-p6",
+          "question": "The orange giant Arcturus has a parallax angle of 0.0889 arcseconds. Calculate its distance from Earth in metres.",
+          "hint": "Find the distance in parsecs first, then multiply by 3.09 × 10¹⁶ m.",
+          "walkthrough": [
+            "d = 1 / p = 1 / 0.0889 = 11.25 pc",
+            "1 pc = 3.09 × 10¹⁶ m",
+            "d = 11.25 × 3.09 × 10¹⁶",
+            "d = 3.48 × 10¹⁷ m"
+          ],
+          "answer": {
+            "value": 3.48e+17,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inverse-square",
+      "name": "Luminosity and intensity: the inverse square law",
+      "equations": [
+        "I = L / (4πd²)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Luminosity L (W) is the total power a star emits; intensity I (W m⁻²) is the power per square metre arriving at distance d. The power spreads over a sphere of area 4πd², so I = L / 4πd². Put d in metres before squaring, and rearrange for L = 4πd²I or d = √(L / 4πI) as needed.",
+      "commonErrors": [
+        "Forgetting to square the distance, or squaring 4π as well",
+        "Leaving d in AU or light-years instead of converting to metres",
+        "Forgetting the square root when finding d"
+      ],
+      "worked": {
+        "id": "inverse-square-w",
+        "question": "The Sun has a luminosity of 3.85 × 10²⁶ W. Calculate the intensity of sunlight arriving at the top of the Earth's atmosphere, 1.50 × 10¹¹ m from the Sun.",
+        "steps": [
+          "Known: L = 3.85 × 10²⁶ W, d = 1.50 × 10¹¹ m. Unknown: I.",
+          "I = L / (4πd²)",
+          "4πd² = 4π × (1.50 × 10¹¹)² = 2.827 × 10²³ m²",
+          "I = 3.85 × 10²⁶ / 2.827 × 10²³",
+          "I = 1360 W m⁻²"
+        ],
+        "answer": {
+          "value": 1360,
+          "unit": "W m⁻²"
+        }
+      },
+      "practice": [
+        {
+          "id": "inverse-square-p1",
+          "question": "A rover on Mars is 2.28 × 10¹¹ m from the Sun. Given that the Sun's luminosity is 3.85 × 10²⁶ W, calculate the intensity of sunlight at Mars.",
+          "hint": "Use I = L / 4πd² with d in metres.",
+          "walkthrough": [
+            "L = 3.85 × 10²⁶ W, d = 2.28 × 10¹¹ m",
+            "4πd² = 4π × (2.28 × 10¹¹)² = 6.533 × 10²³ m²",
+            "I = 3.85 × 10²⁶ / 6.533 × 10²³",
+            "I = 589 W m⁻²"
+          ],
+          "answer": {
+            "value": 589,
+            "unit": "W m⁻²"
+          }
+        },
+        {
+          "id": "inverse-square-p2",
+          "question": "A star has a luminosity of 1.2 × 10²⁸ W and is 4.0 × 10¹⁷ m from Earth. Calculate the intensity of its light at Earth.",
+          "hint": "Substitute straight into I = L / 4πd².",
+          "walkthrough": [
+            "L = 1.2 × 10²⁸ W, d = 4.0 × 10¹⁷ m",
+            "4πd² = 4π × (4.0 × 10¹⁷)² = 2.011 × 10³⁶ m²",
+            "I = 1.2 × 10²⁸ / 2.011 × 10³⁶",
+            "I = 5.97 × 10⁻⁹ W m⁻²"
+          ],
+          "answer": {
+            "value": 5.97e-09,
+            "unit": "W m⁻²"
+          }
+        },
+        {
+          "id": "inverse-square-p3",
+          "question": "Light from Sirius arrives at Earth with an intensity of 1.0 × 10⁻⁷ W m⁻². Sirius is 8.14 × 10¹⁶ m away. Calculate the luminosity of Sirius.",
+          "hint": "Rearrange to L = 4πd²I.",
+          "walkthrough": [
+            "I = 1.0 × 10⁻⁷ W m⁻², d = 8.14 × 10¹⁶ m",
+            "L = 4πd²I",
+            "4πd² = 4π × (8.14 × 10¹⁶)² = 8.326 × 10³⁴ m²",
+            "L = 8.326 × 10³⁴ × 1.0 × 10⁻⁷",
+            "L = 8.33 × 10²⁷ W"
+          ],
+          "answer": {
+            "value": 8.33e+27,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "inverse-square-p4",
+          "question": "Saturn orbits at 9.58 AU from the Sun. The Sun's luminosity is 3.85 × 10²⁶ W. Calculate the intensity of sunlight at Saturn.",
+          "hint": "Convert the distance to metres (1 AU = 1.50 × 10¹¹ m) before using I = L / 4πd².",
+          "walkthrough": [
+            "d = 9.58 × 1.50 × 10¹¹ = 1.437 × 10¹² m",
+            "4πd² = 4π × (1.437 × 10¹²)² = 2.595 × 10²⁵ m²",
+            "I = 3.85 × 10²⁶ / 2.595 × 10²⁵",
+            "I = 14.8 W m⁻²"
+          ],
+          "answer": {
+            "value": 14.8,
+            "unit": "W m⁻²"
+          }
+        },
+        {
+          "id": "inverse-square-p5",
+          "question": "A star has a luminosity 40 times that of the Sun (3.85 × 10²⁶ W). Its light reaches Earth with an intensity of 2.6 × 10⁻⁸ W m⁻². Calculate the distance to the star in light-years.",
+          "hint": "Find L in watts, rearrange to d = √(L / 4πI) for d in metres, then convert to light-years.",
+          "walkthrough": [
+            "L = 40 × 3.85 × 10²⁶ = 1.54 × 10²⁸ W",
+            "d² = L / 4πI = 1.54 × 10²⁸ / (4π × 2.6 × 10⁻⁸) = 4.713 × 10³⁴ m²",
+            "d = √(4.713 × 10³⁴) = 2.171 × 10¹⁷ m",
+            "d in ly = 2.171 × 10¹⁷ / 9.46 × 10¹⁵",
+            "d = 22.9 ly"
+          ],
+          "answer": {
+            "value": 22.9,
+            "unit": "ly"
+          }
+        },
+        {
+          "id": "inverse-square-p6",
+          "question": "A space probe near Venus is 1.08 × 10¹¹ m from the Sun. Its solar panel has an area of 3.5 m² and faces the Sun directly. The Sun's luminosity is 3.85 × 10²⁶ W. Calculate the solar power arriving at the panel.",
+          "hint": "Find the intensity at the probe first, then multiply by the panel area.",
+          "walkthrough": [
+            "4πd² = 4π × (1.08 × 10¹¹)² = 1.466 × 10²³ m²",
+            "I = L / 4πd² = 3.85 × 10²⁶ / 1.466 × 10²³ = 2627 W m⁻²",
+            "P = I × A = 2627 × 3.5",
+            "P = 9190 W"
+          ],
+          "answer": {
+            "value": 9190,
+            "unit": "W"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stefan-boltzmann",
+      "name": "Stefan–Boltzmann law for stellar luminosity",
+      "equations": [
+        "L = σAT⁴ = 4πr²σT⁴"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Treat the star as a black body of surface area 4πr² at surface temperature T in kelvin. Luminosity is L = 4πr²σT⁴ with σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴. Rearrange to T = (L / 4πr²σ)^¼ or r = √(L / 4πσT⁴); work out the T⁴ or r² value as a separate line to avoid calculator slips.",
+      "commonErrors": [
+        "Using the diameter instead of the radius, or forgetting to square it",
+        "Forgetting the fourth root when finding T (raise to the power 0.25)",
+        "Using a temperature in °C instead of kelvin"
+      ],
+      "worked": {
+        "id": "stefan-boltzmann-w",
+        "question": "The Sun has a radius of 6.96 × 10⁸ m and a surface temperature of 5800 K. Calculate its luminosity.",
+        "steps": [
+          "Known: r = 6.96 × 10⁸ m, T = 5800 K, σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴. Unknown: L.",
+          "L = 4πr²σT⁴",
+          "4πr² = 4π × (6.96 × 10⁸)² = 6.087 × 10¹⁸ m²",
+          "T⁴ = 5800⁴ = 1.132 × 10¹⁵ K⁴",
+          "L = 6.087 × 10¹⁸ × 5.67 × 10⁻⁸ × 1.132 × 10¹⁵",
+          "L = 3.91 × 10²⁶ W"
+        ],
+        "answer": {
+          "value": 3.91e+26,
+          "unit": "W"
+        }
+      },
+      "practice": [
+        {
+          "id": "stefan-boltzmann-p1",
+          "question": "Sirius A has a radius of 1.19 × 10⁹ m and a surface temperature of 9940 K. Calculate its luminosity.",
+          "hint": "Substitute into L = 4πr²σT⁴; work out 4πr² and T⁴ separately.",
+          "walkthrough": [
+            "r = 1.19 × 10⁹ m, T = 9940 K",
+            "4πr² = 4π × (1.19 × 10⁹)² = 1.780 × 10¹⁹ m²",
+            "T⁴ = 9940⁴ = 9.762 × 10¹⁵ K⁴",
+            "L = 1.780 × 10¹⁹ × 5.67 × 10⁻⁸ × 9.762 × 10¹⁵",
+            "L = 9.85 × 10²⁷ W"
+          ],
+          "answer": {
+            "value": 9.85e+27,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "stefan-boltzmann-p2",
+          "question": "The red dwarf Proxima Centauri has a radius of 1.07 × 10⁸ m and a surface temperature of 3040 K. Calculate its luminosity.",
+          "hint": "L = 4πr²σT⁴ with T in kelvin.",
+          "walkthrough": [
+            "r = 1.07 × 10⁸ m, T = 3040 K",
+            "4πr² = 4π × (1.07 × 10⁸)² = 1.439 × 10¹⁷ m²",
+            "T⁴ = 3040⁴ = 8.541 × 10¹³ K⁴",
+            "L = 1.439 × 10¹⁷ × 5.67 × 10⁻⁸ × 8.541 × 10¹³",
+            "L = 6.97 × 10²³ W"
+          ],
+          "answer": {
+            "value": 6.97e+23,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "stefan-boltzmann-p3",
+          "question": "The white dwarf Sirius B has a radius of only 5840 km but a surface temperature of 25 200 K. Calculate its luminosity.",
+          "hint": "Convert the radius to metres before squaring.",
+          "walkthrough": [
+            "r = 5840 km = 5.84 × 10⁶ m, T = 25 200 K",
+            "4πr² = 4π × (5.84 × 10⁶)² = 4.286 × 10¹⁴ m²",
+            "T⁴ = 25 200⁴ = 4.033 × 10¹⁷ K⁴",
+            "L = 4.286 × 10¹⁴ × 5.67 × 10⁻⁸ × 4.033 × 10¹⁷",
+            "L = 9.80 × 10²⁴ W"
+          ],
+          "answer": {
+            "value": 9.8e+24,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "stefan-boltzmann-p4",
+          "question": "Vega has a luminosity of 1.54 × 10²⁸ W and a radius of 1.64 × 10⁹ m. Calculate its surface temperature.",
+          "hint": "Rearrange to T⁴ = L / 4πr²σ, then take the fourth root.",
+          "walkthrough": [
+            "L = 1.54 × 10²⁸ W, r = 1.64 × 10⁹ m",
+            "4πr²σ = 4π × (1.64 × 10⁹)² × 5.67 × 10⁻⁸ = 1.916 × 10¹² W K⁻⁴",
+            "T⁴ = L / 4πr²σ = 1.54 × 10²⁸ / 1.916 × 10¹² = 8.036 × 10¹⁵ K⁴",
+            "T = (8.036 × 10¹⁵)^0.25",
+            "T = 9470 K"
+          ],
+          "answer": {
+            "value": 9470,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "stefan-boltzmann-p5",
+          "question": "Betelgeuse has a luminosity of 1.2 × 10⁵ times that of the Sun (3.85 × 10²⁶ W) and a surface temperature of 3500 K. Calculate its radius.",
+          "hint": "Find L in watts, then rearrange to r² = L / 4πσT⁴ and square-root.",
+          "walkthrough": [
+            "L = 1.2 × 10⁵ × 3.85 × 10²⁶ = 4.62 × 10³¹ W",
+            "4πσT⁴ = 4π × 5.67 × 10⁻⁸ × 3500⁴ = 1.069 × 10⁸ W m⁻²",
+            "r² = L / 4πσT⁴ = 4.62 × 10³¹ / 1.069 × 10⁸ = 4.321 × 10²³ m²",
+            "r = √(4.321 × 10²³)",
+            "r = 6.57 × 10¹¹ m"
+          ],
+          "answer": {
+            "value": 657000000000,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "stefan-boltzmann-p6",
+          "question": "A star has a radius 2.5 times that of the Sun (6.96 × 10⁸ m) and a surface temperature of 7200 K. Calculate its luminosity.",
+          "hint": "Work out the star's radius in metres first, then use L = 4πr²σT⁴.",
+          "walkthrough": [
+            "r = 2.5 × 6.96 × 10⁸ = 1.74 × 10⁹ m",
+            "4πr² = 4π × (1.74 × 10⁹)² = 3.805 × 10¹⁹ m²",
+            "T⁴ = 7200⁴ = 2.687 × 10¹⁵ K⁴",
+            "L = 3.805 × 10¹⁹ × 5.67 × 10⁻⁸ × 2.687 × 10¹⁵",
+            "L = 5.80 × 10²⁷ W"
+          ],
+          "answer": {
+            "value": 5.8e+27,
+            "unit": "W"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wien-law",
+      "name": "Wien's displacement law",
+      "equations": [
+        "λ_max T = 2.90 × 10⁻³ m K"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The wavelength at which a black body emits most strongly is inversely proportional to its temperature: λ_max T = 2.90 × 10⁻³ m K. Convert the peak wavelength to metres (nm × 10⁻⁹, μm × 10⁻⁶), then T = 2.90 × 10⁻³ / λ_max, or λ_max = 2.90 × 10⁻³ / T. If a frequency is given, convert it to wavelength with λ = c / f first (strictly the peak of a spectrum plotted against frequency sits elsewhere, but A-level questions mean the frequency corresponding to λ_max).",
+      "commonErrors": [
+        "Leaving λ_max in nm, giving a temperature far too small",
+        "Multiplying by the constant instead of dividing",
+        "Giving the temperature in °C or forgetting the unit K"
+      ],
+      "worked": {
+        "id": "wien-law-w",
+        "question": "The Sun's spectrum peaks at a wavelength of 500 nm. Calculate the surface temperature of the Sun.",
+        "steps": [
+          "Known: λ_max = 500 nm = 500 × 10⁻⁹ m. Unknown: T.",
+          "λ_max T = 2.90 × 10⁻³ m K → T = 2.90 × 10⁻³ / λ_max",
+          "T = 2.90 × 10⁻³ / (500 × 10⁻⁹)",
+          "T = 5800 K"
+        ],
+        "answer": {
+          "value": 5800,
+          "unit": "K"
+        }
+      },
+      "practice": [
+        {
+          "id": "wien-law-p1",
+          "question": "The spectrum of Betelgeuse peaks at 830 nm. Calculate its surface temperature.",
+          "hint": "Convert nm to m, then T = 2.90 × 10⁻³ / λ_max.",
+          "walkthrough": [
+            "λ_max = 830 nm = 830 × 10⁻⁹ m",
+            "T = 2.90 × 10⁻³ / λ_max = 2.90 × 10⁻³ / (830 × 10⁻⁹)",
+            "T = 3490 K"
+          ],
+          "answer": {
+            "value": 3490,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "wien-law-p2",
+          "question": "The blue supergiant Rigel has a surface temperature of 12 100 K. Calculate the peak wavelength of its spectrum, in nm.",
+          "hint": "λ_max = 2.90 × 10⁻³ / T gives metres; divide by 10⁻⁹ for nm.",
+          "walkthrough": [
+            "T = 12 100 K",
+            "λ_max = 2.90 × 10⁻³ / T = 2.90 × 10⁻³ / 12 100 = 2.397 × 10⁻⁷ m",
+            "λ_max = 2.397 × 10⁻⁷ / 10⁻⁹ nm",
+            "λ_max = 240 nm"
+          ],
+          "answer": {
+            "value": 240,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "wien-law-p3",
+          "question": "A thermal imaging camera detects radiation from a human body at 310 K. Calculate the peak wavelength of this radiation, in μm.",
+          "hint": "Use λ_max = 2.90 × 10⁻³ / T, then convert metres to micrometres by dividing by 10⁻⁶.",
+          "walkthrough": [
+            "T = 310 K",
+            "λ_max = 2.90 × 10⁻³ / 310 = 9.355 × 10⁻⁶ m",
+            "λ_max = 9.355 × 10⁻⁶ / 10⁻⁶ μm",
+            "λ_max = 9.35 μm"
+          ],
+          "answer": {
+            "value": 9.35,
+            "unit": "μm"
+          }
+        },
+        {
+          "id": "wien-law-p4",
+          "question": "The glowing interior of an industrial furnace emits radiation that peaks at a wavelength of 1.45 μm. Calculate the temperature of the furnace in kelvin.",
+          "hint": "Convert μm to m (× 10⁻⁶) before dividing into 2.90 × 10⁻³.",
+          "walkthrough": [
+            "λ_max = 1.45 μm = 1.45 × 10⁻⁶ m",
+            "T = 2.90 × 10⁻³ / λ_max = 2.90 × 10⁻³ / (1.45 × 10⁻⁶)",
+            "T = 2000 K"
+          ],
+          "answer": {
+            "value": 2000,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "wien-law-p5",
+          "question": "A star's spectrum peaks at a wavelength corresponding to a frequency of 3.4 × 10¹⁴ Hz. Calculate the star's surface temperature.",
+          "hint": "Convert the peak frequency to a wavelength with λ = c / f, then apply Wien's law.",
+          "walkthrough": [
+            "λ_max = c / f = 3.00 × 10⁸ / 3.4 × 10¹⁴ = 8.824 × 10⁻⁷ m",
+            "T = 2.90 × 10⁻³ / λ_max",
+            "T = 2.90 × 10⁻³ / 8.824 × 10⁻⁷",
+            "T = 3290 K"
+          ],
+          "answer": {
+            "value": 3290,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "wien-law-p6",
+          "question": "The cosmic microwave background radiation has a black-body temperature of 2.73 K. Calculate the frequency corresponding to the peak wavelength of its spectrum.",
+          "hint": "Find λ_max from Wien's law first, then use f = c / λ.",
+          "walkthrough": [
+            "λ_max = 2.90 × 10⁻³ / T = 2.90 × 10⁻³ / 2.73 = 1.062 × 10⁻³ m",
+            "f = c / λ_max = 3.00 × 10⁸ / 1.062 × 10⁻³",
+            "f = 2.82 × 10¹¹ Hz"
+          ],
+          "answer": {
+            "value": 282000000000,
+            "unit": "Hz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wien-stefan-combined",
+      "name": "Combining Wien's law with Stefan–Boltzmann",
+      "equations": [
+        "λ_max T = 2.90 × 10⁻³ m K",
+        "L = 4πr²σT⁴"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "When a question gives the peak wavelength and asks for luminosity or radius, it is a two-step problem: first find T from Wien's law, then put T into L = 4πr²σT⁴. Keep the unrounded temperature on your calculator, because T is raised to the fourth power and a rounding error grows quickly.",
+      "commonErrors": [
+        "Rounding T heavily before raising it to the fourth power",
+        "Forgetting to convert λ_max from nm to m, which gives a nonsense temperature",
+        "Forgetting the square root when finding r from r² = L / 4πσT⁴"
+      ],
+      "worked": {
+        "id": "wien-stefan-combined-w",
+        "question": "A star's spectrum peaks at a wavelength of 580 nm and its luminosity is 2.3 × 10²⁷ W. Calculate the radius of the star.",
+        "steps": [
+          "Known: λ_max = 580 × 10⁻⁹ m, L = 2.3 × 10²⁷ W. Unknown: r. Need T first.",
+          "T = 2.90 × 10⁻³ / λ_max = 2.90 × 10⁻³ / (580 × 10⁻⁹) = 5000 K",
+          "L = 4πr²σT⁴ → r² = L / 4πσT⁴",
+          "4πσT⁴ = 4π × 5.67 × 10⁻⁸ × 5000⁴ = 4.453 × 10⁸ W m⁻²",
+          "r² = 2.3 × 10²⁷ / 4.453 × 10⁸ = 5.165 × 10¹⁸ m²",
+          "r = √(5.165 × 10¹⁸) = 2.27 × 10⁹ m"
+        ],
+        "answer": {
+          "value": 2270000000,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "wien-stefan-combined-p1",
+          "question": "A hot blue star has a radius of 2.0 × 10⁹ m and its spectrum peaks at 290 nm. Calculate its luminosity.",
+          "hint": "Find T from Wien's law, then use L = 4πr²σT⁴.",
+          "walkthrough": [
+            "T = 2.90 × 10⁻³ / (290 × 10⁻⁹) = 10 000 K",
+            "4πr² = 4π × (2.0 × 10⁹)² = 5.027 × 10¹⁹ m²",
+            "L = 4πr²σT⁴ = 5.027 × 10¹⁹ × 5.67 × 10⁻⁸ × 10 000⁴",
+            "L = 2.85 × 10²⁸ W"
+          ],
+          "answer": {
+            "value": 2.85e+28,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "wien-stefan-combined-p2",
+          "question": "A red giant has a radius of 3.5 × 10¹⁰ m and its spectrum peaks at 1000 nm. Calculate its luminosity.",
+          "hint": "Wien's law gives T; then L = 4πr²σT⁴.",
+          "walkthrough": [
+            "T = 2.90 × 10⁻³ / (1000 × 10⁻⁹) = 2900 K",
+            "4πr² = 4π × (3.5 × 10¹⁰)² = 1.539 × 10²² m²",
+            "T⁴ = 2900⁴ = 7.073 × 10¹³ K⁴",
+            "L = 1.539 × 10²² × 5.67 × 10⁻⁸ × 7.073 × 10¹³",
+            "L = 6.17 × 10²⁸ W"
+          ],
+          "answer": {
+            "value": 6.17e+28,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "wien-stefan-combined-p3",
+          "question": "A Sun-like star has a luminosity of 8.0 × 10²⁶ W and a spectrum that peaks at 480 nm. Calculate its radius in km.",
+          "hint": "Find T, rearrange for r² = L / 4πσT⁴, square-root, then convert m to km.",
+          "walkthrough": [
+            "T = 2.90 × 10⁻³ / (480 × 10⁻⁹) = 6042 K",
+            "4πσT⁴ = 4π × 5.67 × 10⁻⁸ × 6042⁴ = 9.495 × 10⁸ W m⁻²",
+            "r² = L / 4πσT⁴ = 8.0 × 10²⁶ / 9.495 × 10⁸ = 8.425 × 10¹⁷ m²",
+            "r = √(8.425 × 10¹⁷) = 9.18 × 10⁸ m",
+            "r = 9.18 × 10⁸ / 10³ = 918 000 km"
+          ],
+          "answer": {
+            "value": 918000,
+            "unit": "km"
+          }
+        },
+        {
+          "id": "wien-stefan-combined-p4",
+          "question": "A red supergiant has a luminosity of 9.5 × 10²⁹ W and its spectrum peaks at 725 nm. Calculate its radius in metres.",
+          "hint": "Temperature from Wien first; then r = √(L / 4πσT⁴).",
+          "walkthrough": [
+            "T = 2.90 × 10⁻³ / (725 × 10⁻⁹) = 4000 K",
+            "4πσT⁴ = 4π × 5.67 × 10⁻⁸ × 4000⁴ = 1.824 × 10⁸ W m⁻²",
+            "r² = 9.5 × 10²⁹ / 1.824 × 10⁸ = 5.208 × 10²¹ m²",
+            "r = √(5.208 × 10²¹)",
+            "r = 7.22 × 10¹⁰ m"
+          ],
+          "answer": {
+            "value": 72200000000,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "wien-stefan-combined-p5",
+          "question": "A star has a radius of 1.2 × 10⁹ m and a spectrum that peaks at 362.5 nm. Calculate its luminosity as a multiple of the Sun's luminosity, 3.85 × 10²⁶ W.",
+          "hint": "Find T, then L in watts, then divide by the Sun's luminosity.",
+          "walkthrough": [
+            "T = 2.90 × 10⁻³ / (362.5 × 10⁻⁹) = 8000 K",
+            "4πr² = 4π × (1.2 × 10⁹)² = 1.810 × 10¹⁹ m²",
+            "L = 1.810 × 10¹⁹ × 5.67 × 10⁻⁸ × 8000⁴ = 4.203 × 10²⁷ W",
+            "L / L_sun = 4.203 × 10²⁷ / 3.85 × 10²⁶",
+            "L = 10.9 solar luminosities"
+          ],
+          "answer": {
+            "value": 10.9,
+            "unit": ""
+          }
+        },
+        {
+          "id": "wien-stefan-combined-p6",
+          "question": "A red supergiant has a luminosity of 1.2 × 10³⁰ W and its spectrum peaks at 1160 nm. Calculate its radius as a multiple of the Sun's radius, 6.96 × 10⁸ m.",
+          "hint": "Find T, then r in metres from r² = L / 4πσT⁴, then divide by the Sun's radius.",
+          "walkthrough": [
+            "T = 2.90 × 10⁻³ / (1160 × 10⁻⁹) = 2500 K",
+            "4πσT⁴ = 4π × 5.67 × 10⁻⁸ × 2500⁴ = 2.783 × 10⁷ W m⁻²",
+            "r² = 1.2 × 10³⁰ / 2.783 × 10⁷ = 4.311 × 10²² m²",
+            "r = √(4.311 × 10²²) = 2.076 × 10¹¹ m",
+            "r / R_sun = 2.076 × 10¹¹ / 6.96 × 10⁸ = 298 solar radii"
+          ],
+          "answer": {
+            "value": 298,
+            "unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "redshift",
+      "name": "Doppler redshift and recession velocity",
+      "equations": [
+        "z = Δλ / λ = v / c (for v ≪ c)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Redshift z is the fractional change in wavelength: z = (λ_observed − λ_emitted) / λ_emitted. For speeds much less than c, z = v / c, so v = zc. A longer observed wavelength (redshift) means the source is receding; a shorter one (blueshift) means it is approaching. Any wavelength unit works for z as long as both wavelengths use the same unit.",
+      "commonErrors": [
+        "Dividing the shift by the observed wavelength instead of the emitted (rest) wavelength",
+        "Using the observed wavelength itself as Δλ instead of the difference",
+        "Forgetting to multiply z by c to get a speed in m s⁻¹"
+      ],
+      "worked": {
+        "id": "redshift-w",
+        "question": "The hydrogen-alpha line has a wavelength of 656.3 nm in the laboratory. In the spectrum of a distant galaxy the same line is observed at 662.9 nm. Calculate the recession velocity of the galaxy.",
+        "steps": [
+          "Known: λ = 656.3 nm, λ_observed = 662.9 nm. Unknown: v.",
+          "Δλ = 662.9 − 656.3 = 6.6 nm",
+          "z = Δλ / λ = 6.6 / 656.3 = 0.01006",
+          "v = zc = 0.01006 × 3.00 × 10⁸",
+          "v = 3.02 × 10⁶ m s⁻¹"
+        ],
+        "answer": {
+          "value": 3020000,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "redshift-p1",
+          "question": "A galaxy has a measured redshift of z = 0.025. Calculate its recession velocity in m s⁻¹.",
+          "hint": "Multiply the redshift by the speed of light: v = zc.",
+          "walkthrough": [
+            "z = 0.025, c = 3.00 × 10⁸ m s⁻¹",
+            "v = zc = 0.025 × 3.00 × 10⁸",
+            "v = 7.50 × 10⁶ m s⁻¹"
+          ],
+          "answer": {
+            "value": 7500000,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "redshift-p2",
+          "question": "The hydrogen-beta line has a rest wavelength of 486.1 nm. In a quasar's spectrum it is shifted by 12.4 nm to a longer wavelength. Calculate the redshift z of the quasar.",
+          "hint": "z = Δλ / λ with both wavelengths in the same unit.",
+          "walkthrough": [
+            "Δλ = 12.4 nm, λ = 486.1 nm",
+            "z = Δλ / λ = 12.4 / 486.1",
+            "z = 0.0255"
+          ],
+          "answer": {
+            "value": 0.0255,
+            "unit": ""
+          }
+        },
+        {
+          "id": "redshift-p3",
+          "question": "A galaxy is receding from Earth at 1.8 × 10⁶ m s⁻¹. The calcium K line has a rest wavelength of 393.4 nm. Calculate the wavelength at which this line is observed, in nm.",
+          "hint": "Find z = v / c, then Δλ = zλ, then add the shift to the rest wavelength.",
+          "walkthrough": [
+            "z = v / c = 1.8 × 10⁶ / 3.00 × 10⁸ = 0.0060",
+            "Δλ = zλ = 0.0060 × 393.4 = 2.36 nm",
+            "λ_observed = 393.4 + 2.36",
+            "λ_observed = 395.8 nm"
+          ],
+          "answer": {
+            "value": 395.8,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "redshift-p4",
+          "question": "A galaxy in the Coma cluster is receding at 4500 km s⁻¹. Calculate the shift in wavelength, in nm, of its hydrogen-alpha line (rest wavelength 656.3 nm).",
+          "hint": "Convert the speed to m s⁻¹, find z = v / c, then Δλ = zλ.",
+          "walkthrough": [
+            "v = 4500 km s⁻¹ = 4.5 × 10⁶ m s⁻¹",
+            "z = v / c = 4.5 × 10⁶ / 3.00 × 10⁸ = 0.015",
+            "Δλ = zλ = 0.015 × 656.3",
+            "Δλ = 9.84 nm"
+          ],
+          "answer": {
+            "value": 9.84,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "redshift-p5",
+          "question": "A radio telescope observes the 21 cm hydrogen line from a distant galaxy. The rest wavelength is 21.11 cm and the observed wavelength is 21.80 cm. Calculate the recession velocity of the galaxy in km s⁻¹.",
+          "hint": "Find z from the two wavelengths (cm is fine), then v = zc in m s⁻¹, then convert to km s⁻¹.",
+          "walkthrough": [
+            "Δλ = 21.80 − 21.11 = 0.69 cm",
+            "z = Δλ / λ = 0.69 / 21.11 = 0.03269",
+            "v = zc = 0.03269 × 3.00 × 10⁸ = 9.81 × 10⁶ m s⁻¹",
+            "v = 9.81 × 10⁶ / 10³",
+            "v = 9810 km s⁻¹"
+          ],
+          "answer": {
+            "value": 9810,
+            "unit": "km s⁻¹"
+          }
+        },
+        {
+          "id": "redshift-p6",
+          "question": "The Andromeda galaxy is moving towards the Milky Way. A sodium line with a rest wavelength of 589.0 nm is observed at 588.7 nm. Calculate the speed at which Andromeda is approaching, in km s⁻¹.",
+          "hint": "The line is blueshifted, so take the magnitude of the change; find z, then v = zc and convert to km s⁻¹.",
+          "walkthrough": [
+            "Δλ = 589.0 − 588.7 = 0.3 nm (blueshift)",
+            "z = Δλ / λ = 0.3 / 589.0 = 5.093 × 10⁻⁴",
+            "v = zc = 5.093 × 10⁻⁴ × 3.00 × 10⁸ = 1.528 × 10⁵ m s⁻¹",
+            "v = 1.528 × 10⁵ / 10³",
+            "v = 153 km s⁻¹"
+          ],
+          "answer": {
+            "value": 153,
+            "unit": "km s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hubble-law",
+      "name": "Hubble's law",
+      "equations": [
+        "v = H₀d"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "A galaxy's recession velocity is proportional to its distance: v = H₀d. With H₀ in km s⁻¹ Mpc⁻¹, put d in Mpc to get v in km s⁻¹ (or divide v in km s⁻¹ by H₀ to get d in Mpc). If distances are given in metres or light-years, convert to Mpc first using 1 Mpc = 10⁶ pc = 3.09 × 10²² m.",
+      "commonErrors": [
+        "Mixing units: using v in m s⁻¹ with H₀ in km s⁻¹ Mpc⁻¹",
+        "Forgetting the 10⁶ when converting parsecs to megaparsecs",
+        "Multiplying by H₀ when finding d instead of dividing"
+      ],
+      "worked": {
+        "id": "hubble-law-w",
+        "question": "A galaxy is 50 Mpc from Earth. Taking H₀ = 70 km s⁻¹ Mpc⁻¹, calculate its recession velocity in km s⁻¹.",
+        "steps": [
+          "Known: d = 50 Mpc, H₀ = 70 km s⁻¹ Mpc⁻¹. Unknown: v.",
+          "v = H₀d; with d in Mpc the answer comes out in km s⁻¹.",
+          "v = 70 × 50",
+          "v = 3500 km s⁻¹"
+        ],
+        "answer": {
+          "value": 3500,
+          "unit": "km s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "hubble-law-p1",
+          "question": "A galaxy in the Virgo supercluster is 120 Mpc from Earth. Taking H₀ = 70 km s⁻¹ Mpc⁻¹, calculate its recession velocity in km s⁻¹.",
+          "hint": "v = H₀d with d in Mpc.",
+          "walkthrough": [
+            "d = 120 Mpc, H₀ = 70 km s⁻¹ Mpc⁻¹",
+            "v = H₀d = 70 × 120",
+            "v = 8400 km s⁻¹"
+          ],
+          "answer": {
+            "value": 8400,
+            "unit": "km s⁻¹"
+          }
+        },
+        {
+          "id": "hubble-law-p2",
+          "question": "A galaxy is observed to be receding at 21 000 km s⁻¹. Taking H₀ = 70 km s⁻¹ Mpc⁻¹, calculate its distance in Mpc.",
+          "hint": "Rearrange to d = v / H₀.",
+          "walkthrough": [
+            "v = 21 000 km s⁻¹, H₀ = 70 km s⁻¹ Mpc⁻¹",
+            "d = v / H₀ = 21 000 / 70",
+            "d = 300 Mpc"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "Mpc"
+          }
+        },
+        {
+          "id": "hubble-law-p3",
+          "question": "A galaxy is 2.5 × 10²⁴ m from Earth. Taking H₀ = 70 km s⁻¹ Mpc⁻¹ and 1 pc = 3.09 × 10¹⁶ m, calculate its recession velocity in km s⁻¹.",
+          "hint": "Convert the distance to Mpc (1 Mpc = 3.09 × 10²² m) before using v = H₀d.",
+          "walkthrough": [
+            "1 Mpc = 10⁶ × 3.09 × 10¹⁶ = 3.09 × 10²² m",
+            "d = 2.5 × 10²⁴ / 3.09 × 10²² = 80.9 Mpc",
+            "v = H₀d = 70 × 80.9",
+            "v = 5660 km s⁻¹"
+          ],
+          "answer": {
+            "value": 5660,
+            "unit": "km s⁻¹"
+          }
+        },
+        {
+          "id": "hubble-law-p4",
+          "question": "A galaxy is receding at 1.2 × 10⁷ m s⁻¹. Taking H₀ = 70 km s⁻¹ Mpc⁻¹, calculate its distance in Mpc.",
+          "hint": "Convert the speed to km s⁻¹ before dividing by H₀.",
+          "walkthrough": [
+            "v = 1.2 × 10⁷ m s⁻¹ = 1.2 × 10⁴ km s⁻¹",
+            "d = v / H₀ = 12 000 / 70",
+            "d = 171 Mpc"
+          ],
+          "answer": {
+            "value": 171,
+            "unit": "Mpc"
+          }
+        },
+        {
+          "id": "hubble-law-p5",
+          "question": "A galaxy's spectrum shows a redshift of z = 0.030. Taking H₀ = 70 km s⁻¹ Mpc⁻¹, calculate the distance to the galaxy in Mpc.",
+          "hint": "Find v = zc first, convert to km s⁻¹, then d = v / H₀.",
+          "walkthrough": [
+            "v = zc = 0.030 × 3.00 × 10⁸ = 9.0 × 10⁶ m s⁻¹",
+            "v = 9.0 × 10⁶ / 10³ = 9000 km s⁻¹",
+            "d = v / H₀ = 9000 / 70",
+            "d = 129 Mpc"
+          ],
+          "answer": {
+            "value": 129,
+            "unit": "Mpc"
+          }
+        },
+        {
+          "id": "hubble-law-p6",
+          "question": "A galaxy is 3.5 × 10⁸ light-years from Earth. Taking H₀ = 70 km s⁻¹ Mpc⁻¹, 1 ly = 9.46 × 10¹⁵ m and 1 pc = 3.09 × 10¹⁶ m, calculate its recession velocity in km s⁻¹.",
+          "hint": "Convert light-years to metres, then metres to Mpc, then use v = H₀d.",
+          "walkthrough": [
+            "d = 3.5 × 10⁸ × 9.46 × 10¹⁵ = 3.311 × 10²⁴ m",
+            "1 Mpc = 3.09 × 10²² m, so d = 3.311 × 10²⁴ / 3.09 × 10²² = 107.2 Mpc",
+            "v = H₀d = 70 × 107.2",
+            "v = 7500 km s⁻¹"
+          ],
+          "answer": {
+            "value": 7500,
+            "unit": "km s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hubble-age",
+      "name": "Hubble constant in SI units and the age of the universe",
+      "equations": [
+        "H₀ (s⁻¹) = H₀ (km s⁻¹ Mpc⁻¹) × 10³ / 3.09 × 10²²",
+        "t ≈ 1 / H₀"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "To estimate the age of the universe, first express H₀ in s⁻¹: multiply the value in km s⁻¹ Mpc⁻¹ by 10³ (km → m) and divide by 3.09 × 10²² (m per Mpc). Then t = 1 / H₀ gives the age in seconds; divide by the number of seconds in a year (3.16 × 10⁷ s, given in the question) to get years.",
+      "commonErrors": [
+        "Taking 1 / 70 and calling it the age, without converting H₀ to s⁻¹",
+        "Dividing by 10³ instead of multiplying when converting km to m",
+        "Forgetting to convert seconds to years at the end"
+      ],
+      "worked": {
+        "id": "hubble-age-w",
+        "question": "Taking H₀ = 70 km s⁻¹ Mpc⁻¹, 1 pc = 3.09 × 10¹⁶ m and 1 year = 3.16 × 10⁷ s, estimate the age of the universe in years.",
+        "steps": [
+          "Known: H₀ = 70 km s⁻¹ Mpc⁻¹. Unknown: t = 1 / H₀ in years.",
+          "Convert H₀ to s⁻¹: 70 km s⁻¹ Mpc⁻¹ = 70 × 10³ m s⁻¹ per 3.09 × 10²² m",
+          "H₀ = 7.0 × 10⁴ / 3.09 × 10²² = 2.265 × 10⁻¹⁸ s⁻¹",
+          "t = 1 / H₀ = 1 / 2.265 × 10⁻¹⁸ = 4.414 × 10¹⁷ s",
+          "t = 4.414 × 10¹⁷ / 3.16 × 10⁷",
+          "t = 1.40 × 10¹⁰ years"
+        ],
+        "answer": {
+          "value": 14000000000,
+          "unit": "years"
+        }
+      },
+      "practice": [
+        {
+          "id": "hubble-age-p1",
+          "question": "Convert H₀ = 70 km s⁻¹ Mpc⁻¹ into SI units (s⁻¹). Take 1 pc = 3.09 × 10¹⁶ m.",
+          "hint": "Multiply by 10³ to turn km into m, and divide by the number of metres in a megaparsec.",
+          "walkthrough": [
+            "1 Mpc = 10⁶ × 3.09 × 10¹⁶ = 3.09 × 10²² m",
+            "H₀ = 70 × 10³ m s⁻¹ per 3.09 × 10²² m",
+            "H₀ = 7.0 × 10⁴ / 3.09 × 10²²",
+            "H₀ = 2.27 × 10⁻¹⁸ s⁻¹"
+          ],
+          "answer": {
+            "value": 2.27e-18,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "hubble-age-p2",
+          "question": "A cosmology textbook quotes H₀ = 2.3 × 10⁻¹⁸ s⁻¹. Taking 1 year = 3.16 × 10⁷ s, estimate the age of the universe in years.",
+          "hint": "t = 1 / H₀ gives seconds; divide by the number of seconds in a year.",
+          "walkthrough": [
+            "t = 1 / H₀ = 1 / 2.3 × 10⁻¹⁸ = 4.348 × 10¹⁷ s",
+            "t in years = 4.348 × 10¹⁷ / 3.16 × 10⁷",
+            "t = 1.38 × 10¹⁰ years"
+          ],
+          "answer": {
+            "value": 13800000000,
+            "unit": "years"
+          }
+        },
+        {
+          "id": "hubble-age-p3",
+          "question": "The Planck satellite measured H₀ = 67.4 km s⁻¹ Mpc⁻¹. Taking 1 pc = 3.09 × 10¹⁶ m and 1 year = 3.16 × 10⁷ s, estimate the age of the universe in billions of years.",
+          "hint": "Convert H₀ to s⁻¹, take the reciprocal, convert to years, then divide by 10⁹.",
+          "walkthrough": [
+            "H₀ = 67.4 × 10³ / 3.09 × 10²² = 2.181 × 10⁻¹⁸ s⁻¹",
+            "t = 1 / H₀ = 1 / 2.181 × 10⁻¹⁸ = 4.585 × 10¹⁷ s",
+            "t = 4.585 × 10¹⁷ / 3.16 × 10⁷ = 1.451 × 10¹⁰ years",
+            "t = 14.5 billion years"
+          ],
+          "answer": {
+            "value": 14.5,
+            "unit": "billion years"
+          }
+        },
+        {
+          "id": "hubble-age-p4",
+          "question": "Suppose the age of the universe were 13.0 × 10⁹ years. Taking 1 year = 3.16 × 10⁷ s and 1 pc = 3.09 × 10¹⁶ m, calculate the value of H₀ this implies, in km s⁻¹ Mpc⁻¹.",
+          "hint": "H₀ = 1 / t in s⁻¹; then multiply by 3.09 × 10²² m per Mpc and divide by 10³ m per km.",
+          "walkthrough": [
+            "t = 13.0 × 10⁹ × 3.16 × 10⁷ = 4.108 × 10¹⁷ s",
+            "H₀ = 1 / t = 1 / 4.108 × 10¹⁷ = 2.434 × 10⁻¹⁸ s⁻¹",
+            "H₀ = 2.434 × 10⁻¹⁸ × 3.09 × 10²² / 10³",
+            "H₀ = 75.2 km s⁻¹ Mpc⁻¹"
+          ],
+          "answer": {
+            "value": 75.2,
+            "unit": "km s⁻¹ Mpc⁻¹"
+          }
+        },
+        {
+          "id": "hubble-age-p5",
+          "question": "A galaxy 100 Mpc away is measured to be receding at 6500 km s⁻¹. Use this one galaxy to estimate H₀ and hence the age of the universe in years. Take 1 pc = 3.09 × 10¹⁶ m and 1 year = 3.16 × 10⁷ s.",
+          "hint": "H₀ = v / d in km s⁻¹ Mpc⁻¹; convert to s⁻¹, then t = 1 / H₀ in years.",
+          "walkthrough": [
+            "H₀ = v / d = 6500 / 100 = 65 km s⁻¹ Mpc⁻¹",
+            "H₀ = 65 × 10³ / 3.09 × 10²² = 2.104 × 10⁻¹⁸ s⁻¹",
+            "t = 1 / H₀ = 1 / 2.104 × 10⁻¹⁸ = 4.754 × 10¹⁷ s",
+            "t = 4.754 × 10¹⁷ / 3.16 × 10⁷",
+            "t = 1.50 × 10¹⁰ years"
+          ],
+          "answer": {
+            "value": 15000000000,
+            "unit": "years"
+          }
+        },
+        {
+          "id": "hubble-age-p6",
+          "question": "The Hubble distance c / H₀ is the distance at which Hubble's law gives a recession velocity equal to the speed of light. Taking H₀ = 68 km s⁻¹ Mpc⁻¹, 1 pc = 3.09 × 10¹⁶ m and 1 ly = 9.46 × 10¹⁵ m, calculate the Hubble distance in light-years.",
+          "hint": "Convert H₀ to s⁻¹, then d = c / H₀ in metres, then divide by 9.46 × 10¹⁵ m.",
+          "walkthrough": [
+            "H₀ = 68 × 10³ / 3.09 × 10²² = 2.201 × 10⁻¹⁸ s⁻¹",
+            "d = c / H₀ = 3.00 × 10⁸ / 2.201 × 10⁻¹⁸ = 1.363 × 10²⁶ m",
+            "d in ly = 1.363 × 10²⁶ / 9.46 × 10¹⁵",
+            "d = 1.44 × 10¹⁰ ly"
+          ],
+          "answer": {
+            "value": 14400000000,
+            "unit": "ly"
+          }
+        }
+      ]
+    },
+    {
+      "id": "magnitudes",
+      "name": "Apparent and absolute magnitude",
+      "equations": [
+        "m − M = 5 log₁₀(d / 10) (d in parsecs)"
+      ],
+      "boards": [
+        "AQA"
+      ],
+      "method": "Apparent magnitude m is how bright a star looks from Earth; absolute magnitude M is how bright it would look from 10 pc. They are linked by m − M = 5 log(d / 10) with d in parsecs. To find d, rearrange to d = 10 × 10^((m − M) / 5). Remember that smaller (more negative) magnitudes mean brighter stars.",
+      "commonErrors": [
+        "Using d in light-years instead of parsecs",
+        "Sign slips when M is negative: m − (−3.6) = m + 3.6",
+        "Forgetting the factor of 10 when rearranging for d, or using ln instead of log₁₀"
+      ],
+      "worked": {
+        "id": "magnitudes-w",
+        "question": "Sirius has an apparent magnitude of −1.46 and is 2.64 pc from Earth. Calculate its absolute magnitude.",
+        "steps": [
+          "Known: m = −1.46, d = 2.64 pc. Unknown: M.",
+          "m − M = 5 log(d / 10) → M = m − 5 log(d / 10)",
+          "5 log(2.64 / 10) = 5 log(0.264) = 5 × (−0.578) = −2.89",
+          "M = −1.46 − (−2.89)",
+          "M = 1.43"
+        ],
+        "answer": {
+          "value": 1.43,
+          "unit": ""
+        }
+      },
+      "practice": [
+        {
+          "id": "magnitudes-p1",
+          "question": "A star just visible to the naked eye has an apparent magnitude of 6.0 and is 100 pc away. Calculate its absolute magnitude.",
+          "hint": "M = m − 5 log(d / 10).",
+          "walkthrough": [
+            "m = 6.0, d = 100 pc",
+            "5 log(d / 10) = 5 log(10) = 5 × 1 = 5",
+            "M = m − 5 = 6.0 − 5",
+            "M = 1.0"
+          ],
+          "answer": {
+            "value": 1.0,
+            "unit": ""
+          }
+        },
+        {
+          "id": "magnitudes-p2",
+          "question": "Polaris has an absolute magnitude of −3.6 and is 133 pc from Earth. Calculate its apparent magnitude.",
+          "hint": "m = M + 5 log(d / 10).",
+          "walkthrough": [
+            "M = −3.6, d = 133 pc",
+            "5 log(133 / 10) = 5 log(13.3) = 5 × 1.124 = 5.62",
+            "m = M + 5.62 = −3.6 + 5.62",
+            "m = 2.02"
+          ],
+          "answer": {
+            "value": 2.02,
+            "unit": ""
+          }
+        },
+        {
+          "id": "magnitudes-p3",
+          "question": "Deneb has an apparent magnitude of 1.25 and an absolute magnitude of −8.4. Calculate its distance from Earth in parsecs.",
+          "hint": "Rearrange to d = 10 × 10^((m − M) / 5).",
+          "walkthrough": [
+            "m − M = 1.25 − (−8.4) = 9.65",
+            "log(d / 10) = 9.65 / 5 = 1.93",
+            "d / 10 = 10^1.93 = 85.1",
+            "d = 851 pc"
+          ],
+          "answer": {
+            "value": 851,
+            "unit": "pc"
+          }
+        },
+        {
+          "id": "magnitudes-p4",
+          "question": "A star has an apparent magnitude of 4.8 and is 820 light-years from Earth. Taking 1 ly = 9.46 × 10¹⁵ m and 1 pc = 3.09 × 10¹⁶ m, calculate its absolute magnitude.",
+          "hint": "Convert the distance to parsecs first (via metres), then M = m − 5 log(d / 10).",
+          "walkthrough": [
+            "d = 820 × 9.46 × 10¹⁵ / 3.09 × 10¹⁶ = 251 pc",
+            "5 log(251 / 10) = 5 log(25.1) = 5 × 1.400 = 7.00",
+            "M = m − 7.00 = 4.8 − 7.00",
+            "M = −2.20"
+          ],
+          "answer": {
+            "value": -2.2,
+            "unit": ""
+          }
+        },
+        {
+          "id": "magnitudes-p5",
+          "question": "A star has a parallax angle of 0.0125 arcseconds and an apparent magnitude of 3.5. Calculate its absolute magnitude.",
+          "hint": "Find d = 1 / p in parsecs first, then M = m − 5 log(d / 10).",
+          "walkthrough": [
+            "d = 1 / p = 1 / 0.0125 = 80.0 pc",
+            "5 log(80.0 / 10) = 5 log(8.0) = 5 × 0.903 = 4.52",
+            "M = m − 4.52 = 3.5 − 4.52",
+            "M = −1.02"
+          ],
+          "answer": {
+            "value": -1.02,
+            "unit": ""
+          }
+        },
+        {
+          "id": "magnitudes-p6",
+          "question": "A Cepheid variable star in a nearby galaxy has an absolute magnitude of −4.0 and an apparent magnitude of 12.0. Taking 1 pc = 3.09 × 10¹⁶ m and 1 ly = 9.46 × 10¹⁵ m, calculate the distance to the galaxy in light-years.",
+          "hint": "Find d in parsecs from d = 10 × 10^((m − M) / 5), then convert via metres to light-years.",
+          "walkthrough": [
+            "m − M = 12.0 − (−4.0) = 16.0, so log(d / 10) = 16.0 / 5 = 3.2",
+            "d = 10 × 10^3.2 = 10 × 1585 = 1.585 × 10⁴ pc",
+            "d = 1.585 × 10⁴ × 3.09 × 10¹⁶ = 4.897 × 10²⁰ m",
+            "d in ly = 4.897 × 10²⁰ / 9.46 × 10¹⁵",
+            "d = 5.18 × 10⁴ ly"
+          ],
+          "answer": {
+            "value": 51800,
+            "unit": "ly"
+          }
+        }
+      ]
+    },
+    {
+      "id": "schwarzschild-radius",
+      "name": "Schwarzschild radius of a black hole",
+      "equations": [
+        "R_s = 2GM / c²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR B"
+      ],
+      "method": "The Schwarzschild radius is the radius of the event horizon of a black hole of mass M: R_s = 2GM / c². Put M in kg (convert solar masses using 1.99 × 10³⁰ kg), use G = 6.67 × 10⁻¹¹ N m² kg⁻² and c = 3.00 × 10⁸ m s⁻¹, and rearrange to M = R_s c² / 2G when the radius is given.",
+      "commonErrors": [
+        "Forgetting to square c (c² = 9.00 × 10¹⁶ m² s⁻²)",
+        "Leaving the mass in solar masses instead of converting to kg",
+        "Dropping the factor of 2"
+      ],
+      "worked": {
+        "id": "schwarzschild-radius-w",
+        "question": "Calculate the Schwarzschild radius of a black hole with the same mass as the Sun, 1.99 × 10³⁰ kg.",
+        "steps": [
+          "Known: M = 1.99 × 10³⁰ kg, G = 6.67 × 10⁻¹¹ N m² kg⁻², c = 3.00 × 10⁸ m s⁻¹. Unknown: R_s.",
+          "R_s = 2GM / c²",
+          "2GM = 2 × 6.67 × 10⁻¹¹ × 1.99 × 10³⁰ = 2.655 × 10²⁰",
+          "c² = (3.00 × 10⁸)² = 9.00 × 10¹⁶",
+          "R_s = 2.655 × 10²⁰ / 9.00 × 10¹⁶",
+          "R_s = 2950 m"
+        ],
+        "answer": {
+          "value": 2950,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "schwarzschild-radius-p1",
+          "question": "A stellar black hole in an X-ray binary system has a mass of 2.4 × 10³¹ kg. Calculate its Schwarzschild radius.",
+          "hint": "R_s = 2GM / c².",
+          "walkthrough": [
+            "M = 2.4 × 10³¹ kg",
+            "R_s = 2GM / c² = 2 × 6.67 × 10⁻¹¹ × 2.4 × 10³¹ / (3.00 × 10⁸)²",
+            "R_s = 3.202 × 10²¹ / 9.00 × 10¹⁶",
+            "R_s = 3.56 × 10⁴ m"
+          ],
+          "answer": {
+            "value": 35600,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "schwarzschild-radius-p2",
+          "question": "Sagittarius A*, the supermassive black hole at the centre of the Milky Way, has a mass of 8.2 × 10³⁶ kg. Calculate its Schwarzschild radius.",
+          "hint": "Substitute into R_s = 2GM / c².",
+          "walkthrough": [
+            "M = 8.2 × 10³⁶ kg",
+            "R_s = 2GM / c² = 2 × 6.67 × 10⁻¹¹ × 8.2 × 10³⁶ / 9.00 × 10¹⁶",
+            "R_s = 1.094 × 10²⁷ / 9.00 × 10¹⁶",
+            "R_s = 1.22 × 10¹⁰ m"
+          ],
+          "answer": {
+            "value": 12200000000,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "schwarzschild-radius-p3",
+          "question": "A black hole has a Schwarzschild radius of 60 km. Calculate its mass in kg.",
+          "hint": "Convert km to m, then rearrange to M = R_s c² / 2G.",
+          "walkthrough": [
+            "R_s = 60 km = 6.0 × 10⁴ m",
+            "M = R_s c² / 2G = 6.0 × 10⁴ × 9.00 × 10¹⁶ / (2 × 6.67 × 10⁻¹¹)",
+            "M = 5.4 × 10²¹ / 1.334 × 10⁻¹⁰",
+            "M = 4.05 × 10³¹ kg"
+          ],
+          "answer": {
+            "value": 4.05e+31,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "schwarzschild-radius-p4",
+          "question": "Calculate the Schwarzschild radius, in mm, that the Earth (mass 5.97 × 10²⁴ kg) would have if it were compressed into a black hole.",
+          "hint": "Find R_s in metres with R_s = 2GM / c², then divide by 10⁻³ for mm.",
+          "walkthrough": [
+            "M = 5.97 × 10²⁴ kg",
+            "R_s = 2GM / c² = 2 × 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 9.00 × 10¹⁶",
+            "R_s = 7.964 × 10¹⁴ / 9.00 × 10¹⁶ = 8.85 × 10⁻³ m",
+            "R_s = 8.85 mm"
+          ],
+          "answer": {
+            "value": 8.85,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "schwarzschild-radius-p5",
+          "question": "A black hole has a mass of 15 solar masses. Taking the mass of the Sun as 1.99 × 10³⁰ kg, calculate its Schwarzschild radius in km.",
+          "hint": "Convert the mass to kg first, find R_s in metres, then convert to km.",
+          "walkthrough": [
+            "M = 15 × 1.99 × 10³⁰ = 2.985 × 10³¹ kg",
+            "R_s = 2GM / c² = 2 × 6.67 × 10⁻¹¹ × 2.985 × 10³¹ / 9.00 × 10¹⁶",
+            "R_s = 3.982 × 10²¹ / 9.00 × 10¹⁶ = 4.424 × 10⁴ m",
+            "R_s = 44.2 km"
+          ],
+          "answer": {
+            "value": 44.2,
+            "unit": "km"
+          }
+        },
+        {
+          "id": "schwarzschild-radius-p6",
+          "question": "The Event Horizon Telescope imaged the black hole M87*, whose Schwarzschild radius is 1.9 × 10¹³ m. Taking the mass of the Sun as 1.99 × 10³⁰ kg, calculate the mass of M87* in solar masses.",
+          "hint": "Find M in kg from M = R_s c² / 2G, then divide by the mass of the Sun.",
+          "walkthrough": [
+            "M = R_s c² / 2G = 1.9 × 10¹³ × 9.00 × 10¹⁶ / (2 × 6.67 × 10⁻¹¹)",
+            "M = 1.71 × 10³⁰ / 1.334 × 10⁻¹⁰ = 1.282 × 10⁴⁰ kg",
+            "M / M_sun = 1.282 × 10⁴⁰ / 1.99 × 10³⁰",
+            "M = 6.44 × 10⁹ solar masses"
+          ],
+          "answer": {
+            "value": 6440000000,
+            "unit": "solar masses"
+          }
+        }
+      ]
+    },
+    {
+      "id": "astro-graph",
+      "name": "Reading astrophysics graphs",
+      "equations": [
+        "v = H₀d: gradient of v against d is H₀",
+        "age of universe ≈ 1 / H₀ (H₀ in s⁻¹)",
+        "λ_max T = 2.90 × 10⁻³ m K",
+        "L = 4πd²I",
+        "z = Δλ / λ = v / c"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Decide what the graph feature represents before you read anything: on v against d the gradient is H₀; on a black-body curve the peak gives λ_max for Wien's law; on an intensity–distance graph a marked point gives d and I for L = 4πd²I; on a spectrum the gap between the laboratory line and the observed line is Δλ. Read coordinates from gridline intersections, convert any scaled axis units (10³ km s⁻¹, nm, 10¹⁶ m) to SI where the equation needs it, then substitute.",
+      "commonErrors": [
+        "Reading an axis labelled v / 10³ km s⁻¹ and forgetting the factor of 10³",
+        "Using the observed wavelength instead of the laboratory wavelength in the denominator of z = Δλ / λ",
+        "Leaving λ_max in nm when using Wien's law",
+        "Converting H₀ to s⁻¹ with 1 pc instead of 1 Mpc"
+      ],
+      "worked": {
+        "id": "astro-graph-w",
+        "question": "The graph shows the recession velocity v of eight galaxies plotted against their distance d from Earth, with a best-fit line drawn through the origin. Use the gradient of the best-fit line to determine the Hubble constant in km s⁻¹ Mpc⁻¹.",
+        "steps": [
+          "Known: v = H₀d, so the gradient of v against d is H₀. Read two points on the best-fit line, far apart: (0, 0) and (500 Mpc, 35 × 10³ km s⁻¹).",
+          "The v axis is in units of 10³ km s⁻¹, so the second point is v = 35 000 km s⁻¹ at d = 500 Mpc.",
+          "Gradient = (35 000 − 0) / (500 − 0) = 70 km s⁻¹ Mpc⁻¹",
+          "H₀ = 70 km s⁻¹ Mpc⁻¹"
+        ],
+        "answer": {
+          "value": 70.0,
+          "unit": "km s⁻¹ Mpc⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "d / Mpc",
+            "min": 0,
+            "max": 500,
+            "step": 50
+          },
+          "y": {
+            "label": "v / 10³ km s⁻¹",
+            "min": 0,
+            "max": 40,
+            "step": 5
+          },
+          "series": [
+            {
+              "kind": "data",
+              "points": [
+                [
+                  60,
+                  4.45
+                ],
+                [
+                  120,
+                  7.98
+                ],
+                [
+                  180,
+                  12.98
+                ],
+                [
+                  240,
+                  15.62
+                ],
+                [
+                  300,
+                  21.42
+                ],
+                [
+                  360,
+                  26.46
+                ],
+                [
+                  420,
+                  28.22
+                ],
+                [
+                  480,
+                  32.93
+                ]
+              ],
+              "fit": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  500,
+                  35
+                ]
+              ]
+            }
+          ],
+          "alt": "Recession velocity against distance for eight galaxies scattered about a best-fit line through the origin that reaches 35 × 10³ km s⁻¹ at 500 Mpc"
+        }
+      },
+      "practice": [
+        {
+          "id": "astro-graph-p1",
+          "question": "The graph shows how the intensity I of radiation from a star varies with distance d from the star. Point X is marked. Use the coordinates of X to determine the luminosity of the star.",
+          "hint": "Read d and I at X, convert both axis units (10¹⁶ m and 10⁻⁸ W m⁻²), then use L = 4πd²I.",
+          "walkthrough": [
+            "At X: d = 4.0 × 10¹⁶ m and I = 5.0 × 10⁻⁸ W m⁻².",
+            "L = 4πd²I = 4π × (4.0 × 10¹⁶)² × 5.0 × 10⁻⁸",
+            "L = 4π × 1.6 × 10³³ × 5.0 × 10⁻⁸ = 4π × 8.0 × 10²⁵",
+            "L = 1.01 × 10²⁷ W"
+          ],
+          "answer": {
+            "value": 1.01e+27,
+            "unit": "W"
+          },
+          "graph": {
+            "x": {
+              "label": "d / 10¹⁶ m",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "I / 10⁻⁸ W m⁻²",
+              "min": 0,
+              "max": 20,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    2,
+                    20
+                  ],
+                  [
+                    2.5,
+                    12.8
+                  ],
+                  [
+                    3,
+                    8.8889
+                  ],
+                  [
+                    3.5,
+                    6.5306
+                  ],
+                  [
+                    4,
+                    5
+                  ],
+                  [
+                    4.5,
+                    3.9506
+                  ],
+                  [
+                    5,
+                    3.2
+                  ],
+                  [
+                    5.5,
+                    2.6446
+                  ],
+                  [
+                    6,
+                    2.2222
+                  ],
+                  [
+                    6.5,
+                    1.8935
+                  ],
+                  [
+                    7,
+                    1.6327
+                  ],
+                  [
+                    7.5,
+                    1.4222
+                  ],
+                  [
+                    8,
+                    1.25
+                  ],
+                  [
+                    8.5,
+                    1.1073
+                  ],
+                  [
+                    9,
+                    0.9877
+                  ],
+                  [
+                    9.5,
+                    0.8864
+                  ],
+                  [
+                    10,
+                    0.8
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 5,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Inverse-square curve of intensity against distance falling from 20 × 10⁻⁸ W m⁻² at 2 × 10¹⁶ m to 0.8 × 10⁻⁸ W m⁻² at 10 × 10¹⁶ m, with point X at 4 × 10¹⁶ m and 5 × 10⁻⁸ W m⁻²"
+          }
+        },
+        {
+          "id": "astro-graph-p2",
+          "question": "The graph shows part of the spectrum of a distant galaxy. The dashed line marks the wavelength of a spectral line measured in the laboratory; the solid line marks the same spectral line observed in the galaxy's light. Use the graph to determine the redshift z of the galaxy.",
+          "hint": "z = Δλ / λ, where λ is the laboratory wavelength and Δλ is the shift between the two lines.",
+          "walkthrough": [
+            "Laboratory wavelength λ = 500 nm; observed wavelength = 520 nm.",
+            "Δλ = 520 − 500 = 20 nm",
+            "z = Δλ / λ = 20 / 500",
+            "z = 0.040"
+          ],
+          "answer": {
+            "value": 0.04,
+            "unit": ""
+          },
+          "graph": {
+            "x": {
+              "label": "λ / nm",
+              "min": 480,
+              "max": 540,
+              "step": 10
+            },
+            "y": {
+              "label": "intensity / arbitrary units",
+              "min": 0,
+              "max": 1,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    500,
+                    0
+                  ],
+                  [
+                    500,
+                    1
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    520,
+                    0
+                  ],
+                  [
+                    520,
+                    1
+                  ]
+                ]
+              }
+            ],
+            "labels": [
+              {
+                "x": 498,
+                "y": 0.93,
+                "text": "laboratory",
+                "anchor": "end"
+              },
+              {
+                "x": 522,
+                "y": 0.93,
+                "text": "observed"
+              }
+            ],
+            "alt": "Wavelength axis from 480 nm to 540 nm with a dashed vertical line at the laboratory wavelength of 500 nm and a solid vertical line at the observed wavelength of 520 nm"
+          }
+        },
+        {
+          "id": "astro-graph-p3",
+          "question": "The graph shows the black-body spectrum of a star: the relative intensity of its radiation plotted against wavelength λ. The peak of the curve is marked X. Use the graph and Wien's displacement law to determine the surface temperature of the star.",
+          "hint": "Read λ_max at X, convert nm to m, then T = 2.90 × 10⁻³ / λ_max.",
+          "walkthrough": [
+            "The peak X is at λ_max = 500 nm = 5.00 × 10⁻⁷ m.",
+            "λ_max T = 2.90 × 10⁻³ m K, so T = 2.90 × 10⁻³ / λ_max",
+            "T = 2.90 × 10⁻³ / 5.00 × 10⁻⁷",
+            "T = 5800 K"
+          ],
+          "answer": {
+            "value": 5800,
+            "unit": "K"
+          },
+          "graph": {
+            "x": {
+              "label": "λ / nm",
+              "min": 0,
+              "max": 1500,
+              "step": 100
+            },
+            "y": {
+              "label": "relative intensity",
+              "min": 0,
+              "max": 1,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    100,
+                    0
+                  ],
+                  [
+                    200,
+                    0.0561
+                  ],
+                  [
+                    250,
+                    0.2206
+                  ],
+                  [
+                    300,
+                    0.4649
+                  ],
+                  [
+                    350,
+                    0.7027
+                  ],
+                  [
+                    400,
+                    0.8766
+                  ],
+                  [
+                    450,
+                    0.972
+                  ],
+                  [
+                    500,
+                    1
+                  ],
+                  [
+                    550,
+                    0.9795
+                  ],
+                  [
+                    600,
+                    0.9285
+                  ],
+                  [
+                    700,
+                    0.7865
+                  ],
+                  [
+                    800,
+                    0.6393
+                  ],
+                  [
+                    900,
+                    0.5108
+                  ],
+                  [
+                    1000,
+                    0.4063
+                  ],
+                  [
+                    1100,
+                    0.3237
+                  ],
+                  [
+                    1200,
+                    0.2591
+                  ],
+                  [
+                    1300,
+                    0.2089
+                  ],
+                  [
+                    1400,
+                    0.1696
+                  ],
+                  [
+                    1500,
+                    0.1388
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 500,
+                "y": 1,
+                "label": "X",
+                "drop": true,
+                "dx": 10,
+                "dy": 16
+              }
+            ],
+            "alt": "Black-body curve rising steeply from zero to a peak marked X at 500 nm and relative intensity 1.0, then falling gradually to about 0.2 at 1500 nm"
+          }
+        },
+        {
+          "id": "astro-graph-p4",
+          "question": "A space probe travelling away from the Sun measures the intensity I of sunlight at several distances d. The graph shows I plotted against 1 / d² with a best-fit line through the origin. Use the gradient of the line to determine the luminosity of the Sun.",
+          "hint": "I = L / (4πd²), so a graph of I against 1 / d² has gradient L / 4π; remember the x axis is in units of 10⁻²³ m⁻².",
+          "walkthrough": [
+            "I = (L / 4π) × (1 / d²), so gradient = L / 4π.",
+            "Two points on the line: (0, 0) and (4.0 × 10⁻²³ m⁻², 1200 W m⁻²).",
+            "Gradient = (1200 − 0) / (4.0 × 10⁻²³ − 0) = 3.0 × 10²⁵ W",
+            "L = 4π × gradient = 4π × 3.0 × 10²⁵",
+            "L = 3.77 × 10²⁶ W"
+          ],
+          "answer": {
+            "value": 3.77e+26,
+            "unit": "W"
+          },
+          "graph": {
+            "x": {
+              "label": "1 / d² / 10⁻²³ m⁻²",
+              "min": 0,
+              "max": 4,
+              "step": 0.5
+            },
+            "y": {
+              "label": "I / W m⁻²",
+              "min": 0,
+              "max": 1200,
+              "step": 200
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    0.5,
+                    156
+                  ],
+                  [
+                    1,
+                    291
+                  ],
+                  [
+                    1.5,
+                    459
+                  ],
+                  [
+                    2,
+                    576
+                  ],
+                  [
+                    2.5,
+                    772.5
+                  ],
+                  [
+                    3,
+                    882
+                  ],
+                  [
+                    3.5,
+                    1060.5
+                  ]
+                ],
+                "fit": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    1200
+                  ]
+                ]
+              }
+            ],
+            "alt": "Intensity against 1 over distance squared for seven measurements scattered about a best-fit line through the origin that reaches 1200 W m⁻² at 4.0 × 10⁻²³ m⁻²"
+          }
+        },
+        {
+          "id": "astro-graph-p5",
+          "question": "The graph shows a spectral line from a galaxy in a distant cluster. The dashed line is the laboratory wavelength of the line and the solid line is the wavelength observed in the galaxy's spectrum. Use the graph to determine the recession velocity of the galaxy.",
+          "hint": "Find z = Δλ / λ from the two wavelengths first, then v = zc.",
+          "walkthrough": [
+            "Laboratory wavelength λ = 650 nm; observed wavelength = 675 nm, so Δλ = 25 nm.",
+            "z = Δλ / λ = 25 / 650 = 0.0385",
+            "v = zc = 0.0385 × 3.00 × 10⁸",
+            "v = 1.15 × 10⁷ m s⁻¹"
+          ],
+          "answer": {
+            "value": 11500000,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "λ / nm",
+              "min": 640,
+              "max": 690,
+              "step": 5
+            },
+            "y": {
+              "label": "intensity / arbitrary units",
+              "min": 0,
+              "max": 1,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    650,
+                    0
+                  ],
+                  [
+                    650,
+                    1
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    675,
+                    0
+                  ],
+                  [
+                    675,
+                    1
+                  ]
+                ]
+              }
+            ],
+            "labels": [
+              {
+                "x": 648,
+                "y": 0.93,
+                "text": "laboratory",
+                "anchor": "end"
+              },
+              {
+                "x": 677,
+                "y": 0.93,
+                "text": "observed"
+              }
+            ],
+            "alt": "Wavelength axis from 640 nm to 690 nm with a dashed vertical line at the laboratory wavelength of 650 nm and a solid vertical line at the observed wavelength of 675 nm"
+          }
+        },
+        {
+          "id": "astro-graph-p6",
+          "question": "The graph shows recession velocity v against distance d for seven galaxies, with a best-fit line through the origin. Use the gradient of the line to find the Hubble constant and hence estimate the age of the universe in years. Take 1 Mpc = 3.09 × 10²² m and 1 year = 3.16 × 10⁷ s.",
+          "hint": "Find H₀ in km s⁻¹ Mpc⁻¹ from the gradient, convert it to s⁻¹ (km → m, Mpc → m), then age = 1 / H₀ in seconds before converting to years.",
+          "walkthrough": [
+            "Points on the line: (0, 0) and (400 Mpc, 30 × 10³ km s⁻¹).",
+            "H₀ = gradient = 30 000 / 400 = 75 km s⁻¹ Mpc⁻¹",
+            "H₀ = 75 × 10³ / 3.09 × 10²² = 2.43 × 10⁻¹⁸ s⁻¹",
+            "Age ≈ 1 / H₀ = 1 / 2.43 × 10⁻¹⁸ = 4.12 × 10¹⁷ s",
+            "Age = 4.12 × 10¹⁷ / 3.16 × 10⁷ = 1.30 × 10¹⁰ years"
+          ],
+          "answer": {
+            "value": 13000000000,
+            "unit": "years"
+          },
+          "graph": {
+            "x": {
+              "label": "d / Mpc",
+              "min": 0,
+              "max": 400,
+              "step": 50
+            },
+            "y": {
+              "label": "v / 10³ km s⁻¹",
+              "min": 0,
+              "max": 30,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    50,
+                    3.52
+                  ],
+                  [
+                    100,
+                    7.88
+                  ],
+                  [
+                    150,
+                    10.91
+                  ],
+                  [
+                    200,
+                    15.9
+                  ],
+                  [
+                    250,
+                    18
+                  ],
+                  [
+                    300,
+                    23.18
+                  ],
+                  [
+                    350,
+                    25.72
+                  ]
+                ],
+                "fit": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    400,
+                    30
+                  ]
+                ]
+              }
+            ],
+            "alt": "Recession velocity against distance for seven galaxies scattered about a best-fit line through the origin that reaches 30 × 10³ km s⁻¹ at 400 Mpc"
+          }
+        }
+      ]
+    }
+  ]
+}

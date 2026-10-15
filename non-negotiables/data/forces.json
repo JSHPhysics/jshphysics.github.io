@@ -1,0 +1,1629 @@
+{
+  "id": "forces",
+  "title": "Forces and Newton's laws",
+  "subtitle": "Resolving, equilibrium, F = ma, inclines and moments",
+  "order": 30,
+  "types": [
+    {
+      "id": "weight-and-mass",
+      "name": "Weight and mass",
+      "equations": [
+        "W = mg"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Weight is the gravitational force on a mass, W = mg, where g is the gravitational field strength in N kg⁻¹ (numerically equal to the free-fall acceleration in m s⁻²). Use g = 9.81 N kg⁻¹ on Earth; for any other body use the value given. Mass does not change from place to place, so to move between bodies find the mass first.",
+      "commonErrors": [
+        "Treating 'weight' and 'mass' as the same thing and giving a weight in kg",
+        "Using g = 10 N kg⁻¹ instead of the data-sheet value 9.81 N kg⁻¹",
+        "Forgetting to convert kN to N before dividing by g"
+      ],
+      "worked": {
+        "id": "weight-and-mass-w",
+        "question": "An astronaut has a mass of 85 kg. Calculate the astronaut's weight on Earth.",
+        "steps": [
+          "Known: m = 85 kg, g = 9.81 N kg⁻¹. Unknown: W.",
+          "W = mg",
+          "W = 85 × 9.81 = 833.85",
+          "W = 834 N"
+        ],
+        "answer": {
+          "value": 834,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "weight-and-mass-p1",
+          "question": "A physics textbook has a mass of 1.2 kg. Calculate its weight on Earth.",
+          "hint": "Use W = mg with g = 9.81 N kg⁻¹.",
+          "walkthrough": [
+            "m = 1.2 kg, g = 9.81 N kg⁻¹, find W.",
+            "W = mg = 1.2 × 9.81 = 11.772",
+            "W = 11.8 N"
+          ],
+          "answer": {
+            "value": 11.8,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p2",
+          "question": "A Mars rover has a mass of 899 kg. The gravitational field strength on the surface of Mars is 3.71 N kg⁻¹. Calculate the weight of the rover on Mars.",
+          "hint": "Use W = mg, but with the value of g for Mars given in the question.",
+          "walkthrough": [
+            "m = 899 kg, g = 3.71 N kg⁻¹, find W.",
+            "W = mg = 899 × 3.71 = 3335.3",
+            "W = 3340 N"
+          ],
+          "answer": {
+            "value": 3340,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p3",
+          "question": "A gymnast weighs 540 N on Earth. Calculate the gymnast's mass.",
+          "hint": "Rearrange W = mg to m = W / g.",
+          "walkthrough": [
+            "W = 540 N, g = 9.81 N kg⁻¹, find m.",
+            "m = W / g = 540 / 9.81 = 55.05",
+            "m = 55.0 kg"
+          ],
+          "answer": {
+            "value": 55.0,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "weight-and-mass-p4",
+          "question": "A crane lifts a shipping crate whose weight is 2.4 kN. Calculate the mass of the crate.",
+          "hint": "Convert kN to N first, then use m = W / g.",
+          "walkthrough": [
+            "W = 2.4 kN = 2400 N, g = 9.81 N kg⁻¹, find m.",
+            "m = W / g = 2400 / 9.81 = 244.6",
+            "m = 245 kg"
+          ],
+          "answer": {
+            "value": 245,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "weight-and-mass-p5",
+          "question": "A lunar sample container weighs 73.6 N on the Moon, where the gravitational field strength is 1.62 N kg⁻¹. Calculate the weight of the same container on Earth.",
+          "hint": "Find the mass from the Moon data first; mass is the same everywhere, so then use g for Earth.",
+          "walkthrough": [
+            "On the Moon: W = 73.6 N, g = 1.62 N kg⁻¹.",
+            "m = W / g = 73.6 / 1.62 = 45.43 kg",
+            "On Earth: W = mg = 45.43 × 9.81 = 445.7",
+            "W = 446 N"
+          ],
+          "answer": {
+            "value": 446,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p6",
+          "question": "A probe weighs 1570 N on Earth. Calculate its weight on Jupiter, where the gravitational field strength is 24.8 N kg⁻¹.",
+          "hint": "Use the Earth weight to find the mass, then multiply by g for Jupiter.",
+          "walkthrough": [
+            "On Earth: m = W / g = 1570 / 9.81 = 160.0 kg",
+            "On Jupiter: W = mg = 160.0 × 24.8 = 3969",
+            "W = 3970 N"
+          ],
+          "answer": {
+            "value": 3970,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resolving-forces",
+      "name": "Resolving a force into components",
+      "equations": [
+        "F_x = F cos θ",
+        "F_y = F sin θ"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Draw the force and the angle θ it makes with the line you are resolving along. The component along that line is F cos θ; the component perpendicular to it is F sin θ. Check the angle is measured from the correct line before deciding which is cos and which is sin.",
+      "commonErrors": [
+        "Swapping sin and cos because the angle was measured from the vertical, not the horizontal",
+        "Having the calculator in radians mode",
+        "Multiplying by the angle instead of its sine or cosine"
+      ],
+      "worked": {
+        "id": "resolving-forces-w",
+        "question": "A child pulls a sledge with a rope. The tension in the rope is 40 N and the rope makes an angle of 30° above the horizontal. Calculate the horizontal component of the tension.",
+        "steps": [
+          "Known: F = 40 N, θ = 30° to the horizontal. Unknown: horizontal component F_x.",
+          "The horizontal component is adjacent to the angle, so use cos.",
+          "F_x = F cos θ = 40 × cos 30°",
+          "F_x = 40 × 0.866 = 34.64",
+          "F_x = 34.6 N"
+        ],
+        "answer": {
+          "value": 34.6,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "resolving-forces-p1",
+          "question": "A kite string has a tension of 25 N and makes an angle of 55° with the horizontal ground. Calculate the vertical component of the tension.",
+          "hint": "The vertical component is opposite the angle to the horizontal, so use F sin θ.",
+          "walkthrough": [
+            "F = 25 N, θ = 55° to the horizontal, find F_y.",
+            "F_y = F sin θ = 25 × sin 55°",
+            "F_y = 25 × 0.8192 = 20.48",
+            "F_y = 20.5 N"
+          ],
+          "answer": {
+            "value": 20.5,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resolving-forces-p2",
+          "question": "A gardener pushes a lawnmower with a force of 120 N along the handle, which is angled at 35° below the horizontal. Calculate the horizontal component of the push.",
+          "hint": "The horizontal component is adjacent to the 35° angle, so use F cos θ.",
+          "walkthrough": [
+            "F = 120 N, θ = 35° to the horizontal, find F_x.",
+            "F_x = F cos θ = 120 × cos 35°",
+            "F_x = 120 × 0.8192 = 98.30",
+            "F_x = 98.3 N"
+          ],
+          "answer": {
+            "value": 98.3,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resolving-forces-p3",
+          "question": "A water-skier is towed by a rope that makes an angle of 20° with the horizontal. The horizontal component of the tension is 180 N. Calculate the tension in the rope.",
+          "hint": "F_x = F cos θ; rearrange to F = F_x / cos θ.",
+          "walkthrough": [
+            "F_x = 180 N, θ = 20°, find F.",
+            "F_x = F cos θ → F = F_x / cos θ",
+            "F = 180 / cos 20° = 180 / 0.9397 = 191.6",
+            "F = 192 N"
+          ],
+          "answer": {
+            "value": 192,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resolving-forces-p4",
+          "question": "A stay cable on a radio mast has a tension of 3.5 kN and makes an angle of 65° with the vertical. Calculate the vertical component of the tension, in N.",
+          "hint": "Convert kN to N; the angle is measured from the vertical, so the vertical component is F cos θ.",
+          "walkthrough": [
+            "F = 3.5 kN = 3500 N, θ = 65° to the vertical, find F_y.",
+            "Angle is from the vertical, so vertical component = F cos θ",
+            "F_y = 3500 × cos 65° = 3500 × 0.4226 = 1479",
+            "F_y = 1480 N"
+          ],
+          "answer": {
+            "value": 1480,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resolving-forces-p5",
+          "question": "A decorator pushes a paint roller with the handle at 28° to the horizontal wall. The component of the push perpendicular to the wall is 32 N. Calculate the component of the push along the wall.",
+          "hint": "Find the full force from the perpendicular component using F sin θ, then take F cos θ.",
+          "walkthrough": [
+            "Perpendicular component F sin θ = 32 N, θ = 28°.",
+            "F = 32 / sin 28° = 32 / 0.4695 = 68.16 N",
+            "Component along wall = F cos θ = 68.16 × cos 28°",
+            "= 68.16 × 0.8829 = 60.18",
+            "Component along wall = 60.2 N"
+          ],
+          "answer": {
+            "value": 60.2,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resolving-forces-p6",
+          "question": "A horse pulls a canal barge with a tow rope under a tension of 250 N. The component of the tension along the canal is 150 N. Calculate the component of the tension perpendicular to the canal.",
+          "hint": "Find the angle of the rope from cos θ = 150 / 250, then use F sin θ.",
+          "walkthrough": [
+            "F = 250 N, F cos θ = 150 N.",
+            "cos θ = 150 / 250 = 0.600 → θ = 53.13°",
+            "Perpendicular component = F sin θ = 250 × sin 53.13°",
+            "= 250 × 0.800 = 200",
+            "Perpendicular component = 200 N"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resultant-perpendicular",
+      "name": "Resultant of two perpendicular forces",
+      "equations": [
+        "R = √(F₁² + F₂²)",
+        "tan θ = F₂ / F₁"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Two forces at right angles form the two shorter sides of a right-angled triangle; the resultant is the hypotenuse. Magnitude: Pythagoras, R = √(F₁² + F₂²). Direction: tan θ = (opposite force) / (adjacent force), measured from the force you choose as adjacent. Read the question to see whether the magnitude or the angle is wanted.",
+      "commonErrors": [
+        "Adding the two forces as scalars instead of using Pythagoras",
+        "Forgetting to square-root at the end",
+        "Giving the angle from the wrong force, or using the wrong ratio in tan θ"
+      ],
+      "worked": {
+        "id": "resultant-perpendicular-w",
+        "question": "A motor boat's engine pushes it forwards with a force of 300 N while a crosswind pushes it sideways with a force of 400 N. Calculate the magnitude of the resultant force on the boat.",
+        "steps": [
+          "Known: F₁ = 300 N, F₂ = 400 N, at right angles. Unknown: resultant R.",
+          "R = √(F₁² + F₂²)",
+          "R = √(300² + 400²) = √(90 000 + 160 000) = √250 000",
+          "R = 500 N"
+        ],
+        "answer": {
+          "value": 500,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "resultant-perpendicular-p1",
+          "question": "Two hockey sticks strike a puck at the same instant with forces of 2.5 N and 6.0 N at right angles to each other. Calculate the magnitude of the resultant force on the puck.",
+          "hint": "Use Pythagoras: R = √(F₁² + F₂²).",
+          "walkthrough": [
+            "F₁ = 2.5 N, F₂ = 6.0 N, find R.",
+            "R = √(2.5² + 6.0²) = √(6.25 + 36.0) = √42.25",
+            "R = 6.5 N"
+          ],
+          "answer": {
+            "value": 6.5,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-perpendicular-p2",
+          "question": "A drone's rotors provide an upward force of 60 N while the wind exerts a horizontal force of 35 N on it. Calculate the angle the resultant of these two forces makes with the horizontal.",
+          "hint": "tan θ = vertical force / horizontal force, with θ measured from the horizontal.",
+          "walkthrough": [
+            "Horizontal F = 35 N, vertical F = 60 N, find θ from horizontal.",
+            "tan θ = 60 / 35 = 1.714",
+            "θ = tan⁻¹(1.714) = 59.74°",
+            "θ = 59.7°"
+          ],
+          "answer": {
+            "value": 59.7,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "resultant-perpendicular-p3",
+          "question": "Two tugs pull a barge with forces of 1.2 kN and 900 N at right angles to each other. Calculate the magnitude of the resultant force in kN.",
+          "hint": "Put both forces in the same unit (N or kN) before using Pythagoras.",
+          "walkthrough": [
+            "F₁ = 1.2 kN = 1200 N, F₂ = 900 N, find R.",
+            "R = √(1200² + 900²) = √(1 440 000 + 810 000) = √2 250 000",
+            "R = 1500 N",
+            "R = 1.5 kN"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "kN"
+          }
+        },
+        {
+          "id": "resultant-perpendicular-p4",
+          "question": "Two children pull a toy cart with ropes at right angles to each other. The resultant force on the cart is 25 N and one child pulls with 15 N. Calculate the force exerted by the other child.",
+          "hint": "Rearrange Pythagoras: F₂ = √(R² − F₁²).",
+          "walkthrough": [
+            "R = 25 N, F₁ = 15 N, find F₂.",
+            "R² = F₁² + F₂² → F₂ = √(R² − F₁²)",
+            "F₂ = √(25² − 15²) = √(625 − 225) = √400",
+            "F₂ = 20 N"
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-perpendicular-p5",
+          "question": "A 3.2 kg bucket hangs from a hook. A horizontal force of 48 N is applied to the bucket. Calculate the magnitude of the resultant of the bucket's weight and the horizontal force.",
+          "hint": "Find the weight with W = mg first, then combine it with the horizontal force using Pythagoras.",
+          "walkthrough": [
+            "W = mg = 3.2 × 9.81 = 31.39 N (vertical)",
+            "Horizontal F = 48 N, at right angles to W.",
+            "R = √(48² + 31.39²) = √(2304 + 985.5) = √3289.5",
+            "R = 57.4 N"
+          ],
+          "answer": {
+            "value": 57.4,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-perpendicular-p6",
+          "question": "Two tugboats pull a ship with ropes at right angles to each other. The resultant force on the ship is 5.0 kN and one tug pulls with 3.0 kN. Calculate the angle between the resultant force and the 3.0 kN force.",
+          "hint": "Find the other force from Pythagoras first, then use tan θ = (other force) / 3.0 kN.",
+          "walkthrough": [
+            "R = 5.0 kN, F₁ = 3.0 kN, find F₂ then θ.",
+            "F₂ = √(5.0² − 3.0²) = √(25 − 9) = 4.0 kN",
+            "tan θ = F₂ / F₁ = 4.0 / 3.0 = 1.333",
+            "θ = tan⁻¹(1.333) = 53.13°",
+            "θ = 53.1°"
+          ],
+          "answer": {
+            "value": 53.1,
+            "unit": "°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "newton-second-law",
+      "name": "Newton's second law for a single body",
+      "equations": [
+        "F = ma",
+        "F is the resultant force"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Identify every force along the line of motion and find the resultant (driving force minus resistive forces). Then apply F = ma with that resultant. If the question gives the resultant directly, substitute straight in; if it asks for a driving force, add the resistive forces back on to ma.",
+      "commonErrors": [
+        "Using the driving force alone in F = ma instead of the resultant",
+        "Forgetting to convert tonnes to kg or kN to N",
+        "Giving a negative acceleration without saying it is a deceleration"
+      ],
+      "worked": {
+        "id": "newton-second-law-w",
+        "question": "A car of mass 1200 kg has a driving force of 3000 N. The total resistive force on it is 1200 N. Calculate the acceleration of the car.",
+        "steps": [
+          "Known: m = 1200 kg, driving force = 3000 N, resistive force = 1200 N. Unknown: a.",
+          "Resultant force F = 3000 − 1200 = 1800 N",
+          "F = ma → a = F / m",
+          "a = 1800 / 1200",
+          "a = 1.5 m s⁻²"
+        ],
+        "answer": {
+          "value": 1.5,
+          "unit": "m s⁻²"
+        }
+      },
+      "practice": [
+        {
+          "id": "newton-second-law-p1",
+          "question": "A laboratory trolley of mass 2.5 kg is pulled along a frictionless track by a resultant force of 6.0 N. Calculate its acceleration.",
+          "hint": "Use a = F / m with the resultant force given.",
+          "walkthrough": [
+            "F = 6.0 N, m = 2.5 kg, find a.",
+            "a = F / m = 6.0 / 2.5",
+            "a = 2.4 m s⁻²"
+          ],
+          "answer": {
+            "value": 2.4,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "newton-second-law-p2",
+          "question": "A sprinter of mass 70 kg accelerates out of the blocks at 4.2 m s⁻². Calculate the resultant force acting on the sprinter.",
+          "hint": "Use F = ma directly.",
+          "walkthrough": [
+            "m = 70 kg, a = 4.2 m s⁻², find F.",
+            "F = ma = 70 × 4.2",
+            "F = 294 N"
+          ],
+          "answer": {
+            "value": 294,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "newton-second-law-p3",
+          "question": "A lorry of mass 16 tonnes has a driving force of 40 kN while the resistive forces total 12 kN. Calculate its acceleration.",
+          "hint": "Convert tonnes to kg and kN to N, find the resultant force, then a = F / m.",
+          "walkthrough": [
+            "m = 16 tonnes = 16 000 kg; forces: 40 kN = 40 000 N, 12 kN = 12 000 N.",
+            "Resultant F = 40 000 − 12 000 = 28 000 N",
+            "a = F / m = 28 000 / 16 000",
+            "a = 1.75 m s⁻²"
+          ],
+          "answer": {
+            "value": 1.75,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "newton-second-law-p4",
+          "question": "A cyclist and bicycle have a combined mass of 92 kg. The cyclist accelerates at 1.4 m s⁻² against an air resistance of 35 N. Calculate the forward force provided by the cyclist.",
+          "hint": "The resultant is ma; the forward force must be the resultant plus the air resistance.",
+          "walkthrough": [
+            "m = 92 kg, a = 1.4 m s⁻², resistance = 35 N, find forward force.",
+            "Resultant F = ma = 92 × 1.4 = 128.8 N",
+            "Forward force = resultant + resistance = 128.8 + 35 = 163.8",
+            "Forward force = 164 N"
+          ],
+          "answer": {
+            "value": 164,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "newton-second-law-p5",
+          "question": "A rocket sled of mass 450 kg accelerates uniformly from rest to 30 m s⁻¹ in 4.0 s along a horizontal track. The frictional force on the sled is 600 N. Calculate the thrust of the rocket motor.",
+          "hint": "Find the acceleration from a = Δv / t first, then thrust = ma + friction.",
+          "walkthrough": [
+            "a = (v − u) / t = (30 − 0) / 4.0 = 7.5 m s⁻²",
+            "Resultant F = ma = 450 × 7.5 = 3375 N",
+            "Thrust = resultant + friction = 3375 + 600 = 3975",
+            "Thrust = 3980 N"
+          ],
+          "answer": {
+            "value": 3980,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "newton-second-law-p6",
+          "question": "A car of mass 1500 kg travelling at 25 m s⁻¹ brakes uniformly to rest in a distance of 50 m. Calculate the magnitude of the braking force.",
+          "hint": "Use v² = u² + 2as to find the deceleration, then F = ma.",
+          "walkthrough": [
+            "u = 25 m s⁻¹, v = 0, s = 50 m. v² = u² + 2as → a = (v² − u²) / 2s",
+            "a = (0 − 625) / (2 × 50) = −6.25 m s⁻² (deceleration 6.25 m s⁻²)",
+            "F = ma = 1500 × 6.25 = 9375",
+            "Braking force = 9380 N"
+          ],
+          "answer": {
+            "value": 9380,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "connected-bodies",
+      "name": "Newton's second law for connected bodies",
+      "equations": [
+        "F = (m₁ + m₂)a for the whole system",
+        "T = ma for one body"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Bodies joined by a string or tow bar share the same acceleration. To find a, treat the whole system as one mass: resultant external force = (m₁ + m₂)a. To find the tension, apply F = ma to just one body, using its own forces only. For a pulley system the driving force is the difference in the weights.",
+      "commonErrors": [
+        "Treating the hanging mass's weight as the resultant force on that mass alone, instead of as the driving force on the whole system",
+        "Forgetting that tension is an internal force and should not appear in the whole-system equation",
+        "Mixing grams and kilograms"
+      ],
+      "worked": {
+        "id": "connected-bodies-w",
+        "question": "Masses of 3.0 kg and 5.0 kg hang from the ends of a light string passing over a smooth pulley. Calculate the acceleration of the system when it is released.",
+        "steps": [
+          "Known: m₁ = 3.0 kg, m₂ = 5.0 kg. Unknown: a. Both masses accelerate together.",
+          "Resultant force on the system = difference in weights = (5.0 − 3.0) × 9.81 = 19.62 N",
+          "Total mass = 3.0 + 5.0 = 8.0 kg",
+          "a = F / (m₁ + m₂) = 19.62 / 8.0 = 2.4525",
+          "a = 2.45 m s⁻²"
+        ],
+        "answer": {
+          "value": 2.45,
+          "unit": "m s⁻²"
+        }
+      },
+      "practice": [
+        {
+          "id": "connected-bodies-p1",
+          "question": "A car of mass 1200 kg tows a trailer of mass 400 kg along a level road. The driving force is 3200 N and resistive forces are negligible. Calculate the acceleration of the car and trailer.",
+          "hint": "Treat car and trailer as one body: a = F / (m₁ + m₂).",
+          "walkthrough": [
+            "F = 3200 N, total mass = 1200 + 400 = 1600 kg, find a.",
+            "a = F / (m₁ + m₂) = 3200 / 1600",
+            "a = 2.0 m s⁻²"
+          ],
+          "answer": {
+            "value": 2.0,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "connected-bodies-p2",
+          "question": "A tractor of mass 2500 kg tows a trailer of mass 1500 kg across a field at an acceleration of 0.80 m s⁻². Resistive forces on the trailer are negligible. Calculate the tension in the tow bar.",
+          "hint": "Apply F = ma to the trailer alone: the only horizontal force on it is the tension.",
+          "walkthrough": [
+            "Trailer: m = 1500 kg, a = 0.80 m s⁻², only force is T.",
+            "T = ma = 1500 × 0.80",
+            "T = 1200 N"
+          ],
+          "answer": {
+            "value": 1200,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "connected-bodies-p3",
+          "question": "A trolley of mass 800 g on a smooth horizontal bench is connected by a string over a pulley to a hanging mass of 200 g. Calculate the acceleration of the trolley when the system is released.",
+          "hint": "Convert to kg; the driving force is the weight of the hanging mass and it accelerates the whole 1.0 kg.",
+          "walkthrough": [
+            "m_trolley = 0.800 kg, m_hanging = 0.200 kg.",
+            "Driving force = weight of hanging mass = 0.200 × 9.81 = 1.962 N",
+            "a = F / (m₁ + m₂) = 1.962 / (0.800 + 0.200) = 1.962",
+            "a = 1.96 m s⁻²"
+          ],
+          "answer": {
+            "value": 1.96,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "connected-bodies-p4",
+          "question": "A caravan of mass 900 kg is towed by a car. The tension in the tow bar is 1350 N and the resistive force on the caravan is 270 N. Calculate the acceleration of the caravan.",
+          "hint": "Apply F = ma to the caravan alone: resultant = tension − resistance.",
+          "walkthrough": [
+            "Caravan: m = 900 kg, T = 1350 N, resistance = 270 N.",
+            "Resultant F = 1350 − 270 = 1080 N",
+            "a = F / m = 1080 / 900",
+            "a = 1.2 m s⁻²"
+          ],
+          "answer": {
+            "value": 1.2,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "connected-bodies-p5",
+          "question": "Masses of 4.0 kg and 6.0 kg are connected by a light string over a smooth pulley and released. Calculate the tension in the string.",
+          "hint": "Find the acceleration of the system first, then apply F = ma to the 4.0 kg mass: T − mg = ma.",
+          "walkthrough": [
+            "a = (6.0 − 4.0) × 9.81 / (6.0 + 4.0) = 19.62 / 10 = 1.962 m s⁻²",
+            "For the 4.0 kg mass (accelerating upwards): T − mg = ma",
+            "T = m(g + a) = 4.0 × (9.81 + 1.962) = 4.0 × 11.77",
+            "T = 47.1 N"
+          ],
+          "answer": {
+            "value": 47.1,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "connected-bodies-p6",
+          "question": "A 2.0 kg block on a smooth horizontal table is connected by a string over a pulley at the table edge to a 1.5 kg mass hanging freely. Calculate the tension in the string once the system is released.",
+          "hint": "Find the acceleration of the whole system first, then T = ma for the block on the table.",
+          "walkthrough": [
+            "Driving force = weight of hanging mass = 1.5 × 9.81 = 14.715 N",
+            "a = F / (m₁ + m₂) = 14.715 / (2.0 + 1.5) = 4.204 m s⁻²",
+            "For the block on the table, the only horizontal force is T: T = ma",
+            "T = 2.0 × 4.204 = 8.409",
+            "T = 8.41 N"
+          ],
+          "answer": {
+            "value": 8.41,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inclines",
+      "name": "Objects on an incline",
+      "equations": [
+        "Component of weight along slope = mg sin θ",
+        "Component of weight into slope = mg cos θ",
+        "F = ma"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Resolve the weight along and perpendicular to the slope: mg sin θ acts down the slope, mg cos θ acts into the slope and is balanced by the normal reaction. The resultant along the slope is mg sin θ minus any friction (or plus any applied force up the slope), and F = ma gives the acceleration. For a smooth slope the acceleration is simply g sin θ.",
+      "commonErrors": [
+        "Using mg cos θ for the component along the slope",
+        "Setting the normal reaction equal to mg instead of mg cos θ",
+        "Forgetting to include friction in the resultant when the slope is rough"
+      ],
+      "worked": {
+        "id": "inclines-w",
+        "question": "A 12 kg box slides down a ramp inclined at 25° to the horizontal. The frictional force on the box is 20 N. Calculate the acceleration of the box.",
+        "steps": [
+          "Known: m = 12 kg, θ = 25°, friction = 20 N. Unknown: a.",
+          "Component of weight down the slope = mg sin θ = 12 × 9.81 × sin 25° = 49.75 N",
+          "Resultant down the slope = 49.75 − 20 = 29.75 N",
+          "a = F / m = 29.75 / 12 = 2.479",
+          "a = 2.48 m s⁻²"
+        ],
+        "answer": {
+          "value": 2.48,
+          "unit": "m s⁻²"
+        }
+      },
+      "practice": [
+        {
+          "id": "inclines-p1",
+          "question": "A skier of mass 65 kg stands on a slope inclined at 15° to the horizontal. Calculate the component of the skier's weight acting down the slope.",
+          "hint": "The component along the slope is mg sin θ.",
+          "walkthrough": [
+            "m = 65 kg, θ = 15°, find mg sin θ.",
+            "mg sin θ = 65 × 9.81 × sin 15° = 637.65 × 0.2588",
+            "Component down slope = 165 N"
+          ],
+          "answer": {
+            "value": 165,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "inclines-p2",
+          "question": "A toy car is released on a smooth track inclined at 20° to the horizontal. Calculate its acceleration down the track.",
+          "hint": "With no friction, ma = mg sin θ, so the mass cancels.",
+          "walkthrough": [
+            "Smooth slope: resultant = mg sin θ, so a = g sin θ.",
+            "a = 9.81 × sin 20° = 9.81 × 0.3420",
+            "a = 3.36 m s⁻²"
+          ],
+          "answer": {
+            "value": 3.36,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "inclines-p3",
+          "question": "A car of mass 850 kg is parked on a hill inclined at 12° to the horizontal. Calculate the normal reaction force from the road on the car, in kN.",
+          "hint": "The normal reaction balances the component of weight into the slope, mg cos θ; convert to kN at the end.",
+          "walkthrough": [
+            "m = 850 kg, θ = 12°, find N = mg cos θ.",
+            "N = 850 × 9.81 × cos 12° = 8338.5 × 0.9781 = 8156 N",
+            "N = 8.16 kN"
+          ],
+          "answer": {
+            "value": 8.16,
+            "unit": "kN"
+          }
+        },
+        {
+          "id": "inclines-p4",
+          "question": "A block slides down a smooth slope with an acceleration of 2.5 m s⁻². Calculate the angle of the slope to the horizontal.",
+          "hint": "On a smooth slope a = g sin θ; rearrange to sin θ = a / g.",
+          "walkthrough": [
+            "a = 2.5 m s⁻², smooth slope, find θ.",
+            "a = g sin θ → sin θ = a / g = 2.5 / 9.81 = 0.2548",
+            "θ = sin⁻¹(0.2548) = 14.76°",
+            "θ = 14.8°"
+          ],
+          "answer": {
+            "value": 14.8,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "inclines-p5",
+          "question": "A 30 kg crate is pulled up a ramp inclined at 20° to the horizontal at a constant speed by a rope parallel to the ramp. The frictional force on the crate is 45 N. Calculate the tension in the rope.",
+          "hint": "Constant speed means zero resultant: tension = mg sin θ + friction.",
+          "walkthrough": [
+            "m = 30 kg, θ = 20°, friction = 45 N, resultant = 0.",
+            "mg sin θ = 30 × 9.81 × sin 20° = 294.3 × 0.3420 = 100.66 N",
+            "T = mg sin θ + friction = 100.66 + 45 = 145.66",
+            "T = 146 N"
+          ],
+          "answer": {
+            "value": 146,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "inclines-p6",
+          "question": "A car of mass 1400 kg accelerates up a hill inclined at 6.0° to the horizontal at 1.2 m s⁻². The total resistive force is 500 N. Calculate the driving force of the engine, in kN.",
+          "hint": "Driving force = ma + mg sin θ + resistance; convert to kN at the end.",
+          "walkthrough": [
+            "m = 1400 kg, θ = 6.0°, a = 1.2 m s⁻², resistance = 500 N.",
+            "mg sin θ = 1400 × 9.81 × sin 6.0° = 13 734 × 0.1045 = 1435.6 N",
+            "ma = 1400 × 1.2 = 1680 N",
+            "Driving force = 1680 + 1435.6 + 500 = 3615.6 N",
+            "Driving force = 3.62 kN"
+          ],
+          "answer": {
+            "value": 3.62,
+            "unit": "kN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lifts",
+      "name": "Lifts and apparent weight",
+      "equations": [
+        "R − mg = ma (taking upwards as positive)",
+        "R = m(g + a)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Two forces act on a person in a lift: weight mg downwards and the reaction R from the floor (or scales) upwards. Take upwards as positive and write R − mg = ma, where a is the lift's acceleration (negative if the lift accelerates downwards, whichever way it is moving). The scale reading is R; constant velocity means a = 0 and R = mg.",
+      "commonErrors": [
+        "Using the direction of motion instead of the direction of acceleration to set the sign of a",
+        "Thinking R changes when the lift moves at constant speed",
+        "Forgetting that a scale 'reading in kg' must be multiplied by g to get R in newtons"
+      ],
+      "worked": {
+        "id": "lifts-w",
+        "question": "A person of mass 60 kg stands in a lift that is accelerating upwards at 1.5 m s⁻². Calculate the reaction force from the lift floor on the person.",
+        "steps": [
+          "Known: m = 60 kg, a = +1.5 m s⁻² (upwards). Unknown: R.",
+          "Taking upwards as positive: R − mg = ma",
+          "R = m(g + a) = 60 × (9.81 + 1.5) = 60 × 11.31",
+          "R = 678.6",
+          "R = 679 N"
+        ],
+        "answer": {
+          "value": 679,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "lifts-p1",
+          "question": "A person of mass 75 kg stands in a lift that is accelerating downwards at 2.0 m s⁻². Calculate the reaction force from the floor on the person.",
+          "hint": "Upwards positive: a = −2.0 m s⁻², so R = m(g + a) = m(g − 2.0).",
+          "walkthrough": [
+            "m = 75 kg, a = −2.0 m s⁻² (downwards), find R.",
+            "R − mg = ma → R = m(g + a) = 75 × (9.81 − 2.0) = 75 × 7.81",
+            "R = 585.75",
+            "R = 586 N"
+          ],
+          "answer": {
+            "value": 586,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "lifts-p2",
+          "question": "A crate of mass 120 kg rests on the floor of a goods lift moving upwards at a constant speed of 3.0 m s⁻¹. Calculate the reaction force from the floor on the crate.",
+          "hint": "Constant speed means a = 0, so R = mg.",
+          "walkthrough": [
+            "m = 120 kg, a = 0 (constant velocity), find R.",
+            "R − mg = 0 → R = mg = 120 × 9.81 = 1177.2",
+            "R = 1180 N"
+          ],
+          "answer": {
+            "value": 1180,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "lifts-p3",
+          "question": "A person of mass 50.0 kg stands on bathroom scales in a lift. The scales read 58.0 kg. Calculate the acceleration of the lift.",
+          "hint": "The reading in kg times g gives R in newtons; then rearrange R − mg = ma.",
+          "walkthrough": [
+            "R = 58.0 × 9.81 = 568.98 N; true weight mg = 50.0 × 9.81 = 490.5 N.",
+            "R − mg = ma → a = (R − mg) / m",
+            "a = (568.98 − 490.5) / 50.0 = 78.48 / 50.0 = 1.5696",
+            "a = 1.57 m s⁻² upwards"
+          ],
+          "answer": {
+            "value": 1.57,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "lifts-p4",
+          "question": "The floor of a lift exerts a reaction force of 450 N on a passenger of mass 55 kg. Calculate the magnitude of the lift's acceleration.",
+          "hint": "Rearrange R − mg = ma to a = R / m − g; a negative result means the acceleration is downwards.",
+          "walkthrough": [
+            "R = 450 N, m = 55 kg, find a.",
+            "a = (R − mg) / m = R / m − g = 450 / 55 − 9.81",
+            "a = 8.182 − 9.81 = −1.628 m s⁻² (downwards)",
+            "Magnitude of acceleration = 1.63 m s⁻²"
+          ],
+          "answer": {
+            "value": 1.63,
+            "unit": "m s⁻²"
+          }
+        },
+        {
+          "id": "lifts-p5",
+          "question": "A lift car of mass 800 kg carries passengers of total mass 250 kg. Calculate the tension in the lift cable, in kN, when the lift accelerates upwards at 1.2 m s⁻².",
+          "hint": "Add the masses first, then T = (total mass)(g + a) and convert to kN.",
+          "walkthrough": [
+            "Total mass = 800 + 250 = 1050 kg, a = +1.2 m s⁻².",
+            "T − mg = ma → T = m(g + a) = 1050 × (9.81 + 1.2) = 1050 × 11.01",
+            "T = 11 560 N",
+            "T = 11.6 kN"
+          ],
+          "answer": {
+            "value": 11.6,
+            "unit": "kN"
+          }
+        },
+        {
+          "id": "lifts-p6",
+          "question": "A lift moving upwards at 3.0 m s⁻¹ slows uniformly to rest in 2.5 s. A passenger of mass 68 kg stands inside. Calculate the reaction force from the floor on the passenger while the lift is slowing.",
+          "hint": "Find the acceleration from a = (v − u) / t (it will be negative), then R = m(g + a).",
+          "walkthrough": [
+            "a = (v − u) / t = (0 − 3.0) / 2.5 = −1.2 m s⁻² (downwards)",
+            "R − mg = ma → R = m(g + a) = 68 × (9.81 − 1.2) = 68 × 8.61",
+            "R = 585.5",
+            "R = 585 N"
+          ],
+          "answer": {
+            "value": 585,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "moments",
+      "name": "Moments and the principle of moments",
+      "equations": [
+        "Moment = F × d (d perpendicular to F)",
+        "Σ clockwise moments = Σ anticlockwise moments"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "A moment is force × perpendicular distance from the pivot. For a balanced object, take moments about the pivot (or about one support, so that its unknown reaction has zero moment) and set clockwise equal to anticlockwise. A uniform beam's weight acts at its centre. Keep all distances in the same unit.",
+      "commonErrors": [
+        "Measuring distances from the end of the beam instead of from the pivot",
+        "Forgetting the weight of a uniform beam acting at its centre",
+        "Mixing cm and m in the same equation"
+      ],
+      "worked": {
+        "id": "moments-w",
+        "question": "A child of mass 30 kg sits 1.6 m from the pivot of a seesaw. A parent pushes down on the other side at 0.80 m from the pivot to hold the seesaw level. Calculate the force the parent applies.",
+        "steps": [
+          "Known: child's weight W = mg = 30 × 9.81 = 294.3 N at 1.6 m; parent's force F at 0.80 m. Unknown: F.",
+          "Principle of moments about the pivot: clockwise = anticlockwise",
+          "F × 0.80 = 294.3 × 1.6",
+          "F = 470.9 / 0.80 = 588.6",
+          "F = 589 N"
+        ],
+        "answer": {
+          "value": 589,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "moments-p1",
+          "question": "A mechanic applies a force of 40 N at right angles to a spanner at a distance of 0.25 m from the centre of the nut. Calculate the moment of the force about the nut.",
+          "hint": "Moment = force × perpendicular distance.",
+          "walkthrough": [
+            "F = 40 N, d = 0.25 m, find the moment.",
+            "Moment = F × d = 40 × 0.25",
+            "Moment = 10.0 N m"
+          ],
+          "answer": {
+            "value": 10.0,
+            "unit": "N m"
+          }
+        },
+        {
+          "id": "moments-p2",
+          "question": "An adult of weight 400 N sits 1.5 m from the pivot of a seesaw. The seesaw balances when a child sits 2.0 m from the pivot on the other side. Calculate the weight of the child.",
+          "hint": "Set clockwise moments equal to anticlockwise moments about the pivot.",
+          "walkthrough": [
+            "Adult: 400 N at 1.5 m. Child: W at 2.0 m.",
+            "W × 2.0 = 400 × 1.5 = 600",
+            "W = 600 / 2.0",
+            "W = 300 N"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "moments-p3",
+          "question": "A wheel nut must be tightened with a moment of 36 N m. A spanner is 180 mm long. Calculate the minimum force needed at the end of the spanner, applied at right angles to it.",
+          "hint": "Convert mm to m, then rearrange moment = F × d to F = moment / d.",
+          "walkthrough": [
+            "Moment = 36 N m, d = 180 mm = 0.180 m, find F.",
+            "F = moment / d = 36 / 0.180",
+            "F = 200 N"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "moments-p4",
+          "question": "A metre rule is pivoted at its centre. A 1.5 N weight hangs 40 cm from the pivot on one side. Calculate how far from the pivot, in cm, a 2.0 N weight must hang on the other side to balance the rule.",
+          "hint": "Take moments about the pivot; the rule's own weight has no moment because it acts at the pivot.",
+          "walkthrough": [
+            "1.5 N at 40 cm balances 2.0 N at d.",
+            "2.0 × d = 1.5 × 40 = 60",
+            "d = 60 / 2.0",
+            "d = 30 cm"
+          ],
+          "answer": {
+            "value": 30.0,
+            "unit": "cm"
+          }
+        },
+        {
+          "id": "moments-p5",
+          "question": "A uniform bridge beam of weight 200 N and length 4.0 m rests on supports at each end. A load of 600 N is placed 1.0 m from the left-hand support. Calculate the reaction force at the right-hand support.",
+          "hint": "Take moments about the left-hand support so its unknown reaction drops out; the beam's weight acts at its centre, 2.0 m along.",
+          "walkthrough": [
+            "Moments about the left support: R_right × 4.0 = (200 × 2.0) + (600 × 1.0)",
+            "R_right × 4.0 = 400 + 600 = 1000",
+            "R_right = 1000 / 4.0",
+            "R_right = 250 N"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "moments-p6",
+          "question": "A uniform plank of mass 12 kg and length 3.0 m is pivoted 0.90 m from one end. Calculate the downward force that must be applied at that end to keep the plank horizontal.",
+          "hint": "Find the plank's weight first; it acts at the centre, 1.5 m from the end, so 0.60 m from the pivot on the other side.",
+          "walkthrough": [
+            "W = mg = 12 × 9.81 = 117.7 N, acting at the centre, 1.5 − 0.90 = 0.60 m from the pivot.",
+            "Moments about the pivot: F × 0.90 = 117.7 × 0.60",
+            "F = 70.63 / 0.90 = 78.5",
+            "F = 78.5 N"
+          ],
+          "answer": {
+            "value": 78.5,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "force-graph",
+      "name": "Reading graphs of forces and motion",
+      "equations": [
+        "W = mg → g = gradient of the W–m graph",
+        "F = μR → μ = gradient of the F–R graph",
+        "a = F / m → gradient of the a–F graph = 1 / m",
+        "acceleration = gradient of the v–t graph"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Decide what the gradient (or the value) on the graph represents by writing the equation in the form y = (gradient) × x: W = mg gives g, F = μR gives μ, a = F / m gives 1 / m. Take two points far apart on gridline intersections, or use the drawn tangent for a curve, and read any plateau or marked value straight off the axis.",
+      "commonErrors": [
+        "Using the gradient of an a–F graph as the mass instead of 1 / mass",
+        "Taking the gradient from the origin when the line does not pass through it",
+        "Reading a single point when the question asks for a gradient, or finding a gradient when it asks for a value",
+        "Confusing the initial gradient of a v–t graph with the terminal velocity"
+      ],
+      "worked": {
+        "id": "force-graph-w",
+        "question": "A lander on the Moon weighs a set of calibration masses with a force meter. The graph shows weight against mass. Use the graph to determine the gravitational field strength at the surface of the Moon.",
+        "steps": [
+          "W = mg, so the gradient of the W–m graph is g.",
+          "The line passes through the origin and X = (10 kg, 16 N).",
+          "g = ΔW / Δm = (16 − 0) / (10 − 0) = 16 / 10",
+          "g = 1.6 N kg⁻¹"
+        ],
+        "answer": {
+          "value": 1.6,
+          "unit": "N kg⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "m / kg",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          },
+          "y": {
+            "label": "W / N",
+            "min": 0,
+            "max": 16,
+            "step": 2
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  10,
+                  16
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 10,
+              "y": 16,
+              "label": "X",
+              "drop": true,
+              "dx": -16,
+              "dy": -8
+            }
+          ],
+          "alt": "Weight–mass graph: a straight line from the origin to X (10 kg, 16 N)"
+        }
+      },
+      "practice": [
+        {
+          "id": "force-graph-p1",
+          "question": "The graph shows the thrust from a model rocket motor against time. Use the graph to determine the thrust at t = 1.0 s, marked X.",
+          "hint": "Follow the dotted line from X across to the force axis and read the value.",
+          "walkthrough": [
+            "X lies on the curve at t = 1.0 s.",
+            "Reading across to the F axis: F = 8.0 N"
+          ],
+          "answer": {
+            "value": 8.0,
+            "unit": "N"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 3,
+              "step": 0.5
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0.0
+                  ],
+                  [
+                    0.1,
+                    4.8397
+                  ],
+                  [
+                    0.2,
+                    7.9249
+                  ],
+                  [
+                    0.3,
+                    9.7325
+                  ],
+                  [
+                    0.4,
+                    10.6244
+                  ],
+                  [
+                    0.5,
+                    10.8731
+                  ],
+                  [
+                    0.6,
+                    10.6826
+                  ],
+                  [
+                    0.8,
+                    9.5477
+                  ],
+                  [
+                    1.0,
+                    8.0
+                  ],
+                  [
+                    1.2,
+                    6.4351
+                  ],
+                  [
+                    1.4,
+                    5.0325
+                  ],
+                  [
+                    1.6,
+                    3.8553
+                  ],
+                  [
+                    1.8,
+                    2.9073
+                  ],
+                  [
+                    2.0,
+                    2.1654
+                  ],
+                  [
+                    2.25,
+                    1.4775
+                  ],
+                  [
+                    2.5,
+                    0.9957
+                  ],
+                  [
+                    2.75,
+                    0.6643
+                  ],
+                  [
+                    3.0,
+                    0.4396
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 1.0,
+                "y": 8.0,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Thrust–time graph rising steeply from the origin to a peak near 11 N at 0.5 s then decaying towards zero by 3 s; X is marked at (1.0 s, 8.0 N)"
+          }
+        },
+        {
+          "id": "force-graph-p2",
+          "question": "The velocity–time graph is for a steel ball bearing released from rest in a tall tube of glycerol. The dashed line shows the velocity the curve approaches. Use the graph to determine the terminal velocity of the ball bearing.",
+          "hint": "Terminal velocity is the constant velocity at the plateau; read it where the curve becomes level.",
+          "walkthrough": [
+            "The curve flattens onto the dashed line, where the velocity is constant.",
+            "Reading the dashed line on the v axis: v = 0.25 m s⁻¹",
+            "terminal velocity = 0.25 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.25,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 2.0,
+              "step": 0.2
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": 0,
+              "max": 0.3,
+              "step": 0.05
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0.0
+                  ],
+                  [
+                    0.1,
+                    0.0709
+                  ],
+                  [
+                    0.2,
+                    0.1216
+                  ],
+                  [
+                    0.3,
+                    0.158
+                  ],
+                  [
+                    0.4,
+                    0.1841
+                  ],
+                  [
+                    0.5,
+                    0.2028
+                  ],
+                  [
+                    0.6,
+                    0.2162
+                  ],
+                  [
+                    0.7,
+                    0.2258
+                  ],
+                  [
+                    0.8,
+                    0.2326
+                  ],
+                  [
+                    0.9,
+                    0.2376
+                  ],
+                  [
+                    1.0,
+                    0.2411
+                  ],
+                  [
+                    1.2,
+                    0.2454
+                  ],
+                  [
+                    1.4,
+                    0.2476
+                  ],
+                  [
+                    1.6,
+                    0.2488
+                  ],
+                  [
+                    1.8,
+                    0.2494
+                  ],
+                  [
+                    2.0,
+                    0.2497
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    0.25
+                  ],
+                  [
+                    2.0,
+                    0.25
+                  ]
+                ]
+              }
+            ],
+            "alt": "Velocity–time graph for a ball bearing in glycerol rising from the origin and flattening onto a dashed line at 0.25 m/s by about 1.5 s"
+          }
+        },
+        {
+          "id": "force-graph-p3",
+          "question": "A wooden block is pulled at constant speed across a bench with different loads on top. The graph shows the friction force F against the normal reaction R. Use the graph to determine the coefficient of friction between the block and the bench.",
+          "hint": "F = μR, so μ is the gradient of the line; it has no unit.",
+          "walkthrough": [
+            "F = μR, so μ = F / R = gradient of the F–R graph.",
+            "X = (50 N, 20 N): μ = (20 − 0) / (50 − 0)",
+            "μ = 0.40"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": ""
+          },
+          "boards": [
+            "AQA",
+            "OCR A",
+            "OCR B"
+          ],
+          "graph": {
+            "x": {
+              "label": "R / N",
+              "min": 0,
+              "max": 50,
+              "step": 10
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 25,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    50,
+                    20
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 50,
+                "y": 20,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "alt": "Friction force against normal reaction: a straight line from the origin to X (50 N, 20 N)"
+          }
+        },
+        {
+          "id": "force-graph-p4",
+          "question": "The velocity–time graph is for a skydiver falling from a hovering helicopter. The tangent to the curve at t = 0 is drawn and passes through T. Use the tangent to determine the acceleration of the skydiver at the instant she leaves the helicopter.",
+          "hint": "The initial acceleration is the gradient of the tangent at t = 0; use the origin and T, where the tangent crosses a gridline intersection.",
+          "walkthrough": [
+            "The acceleration at t = 0 is the gradient of the tangent, which passes through (0, 0) and T = (5.0 s, 50 m s⁻¹).",
+            "gradient = (50 − 0) / (5.0 − 0) = 50 / 5.0",
+            "a = 10 m s⁻² (close to g, as expected before air resistance builds up)"
+          ],
+          "answer": {
+            "value": 10.0,
+            "unit": "m s⁻²"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": 0,
+              "max": 50,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0.0
+                  ],
+                  [
+                    0.5,
+                    4.7581
+                  ],
+                  [
+                    1.0,
+                    9.0635
+                  ],
+                  [
+                    1.5,
+                    12.9591
+                  ],
+                  [
+                    2.0,
+                    16.484
+                  ],
+                  [
+                    2.5,
+                    19.6735
+                  ],
+                  [
+                    3.0,
+                    22.5594
+                  ],
+                  [
+                    4.0,
+                    27.5336
+                  ],
+                  [
+                    5.0,
+                    31.606
+                  ],
+                  [
+                    6.0,
+                    34.9403
+                  ],
+                  [
+                    7.0,
+                    37.6702
+                  ],
+                  [
+                    8.0,
+                    39.9052
+                  ],
+                  [
+                    9.0,
+                    41.7351
+                  ],
+                  [
+                    10.0,
+                    43.2332
+                  ]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    50
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 50,
+                "label": "T",
+                "drop": true,
+                "dx": 8,
+                "dy": 14
+              }
+            ],
+            "labels": [
+              {
+                "x": 5.3,
+                "y": 44,
+                "text": "tangent at t = 0"
+              }
+            ],
+            "alt": "Velocity–time graph for a skydiver curving from the origin towards 50 m/s with decreasing gradient, reaching about 43 m/s at 10 s; the tangent at the origin is drawn through T (5 s, 50 m/s)"
+          }
+        },
+        {
+          "id": "force-graph-p5",
+          "question": "A laboratory trolley loaded with masses is pulled along a frictionless track by different forces. The graph shows its acceleration against the applied force. Use the graph to determine the total mass of the trolley and its load.",
+          "hint": "a = F / m, so the gradient of the a–F graph is 1 / m; find the gradient and then take its reciprocal.",
+          "walkthrough": [
+            "a = F / m, so gradient = 1 / m",
+            "X = (8.0 N, 2.0 m s⁻²): gradient = 2.0 / 8.0 = 0.25 kg⁻¹",
+            "m = 1 / 0.25",
+            "m = 4.0 kg"
+          ],
+          "answer": {
+            "value": 4.0,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "F / N",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "a / m s⁻²",
+              "min": 0,
+              "max": 2.5,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    8,
+                    2.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 2.0,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "alt": "Acceleration against applied force: a straight line from the origin to X (8 N, 2.0 m/s²)"
+          }
+        },
+        {
+          "id": "force-graph-p6",
+          "question": "A trolley is pulled along a bench by a force F while a constant friction force acts on it. The graph shows the trolley's acceleration against F; the line meets the force axis at P. Use the graph to determine the mass of the trolley.",
+          "hint": "a = (F − friction) / m, so the gradient is still 1 / m, but take it between P and X, not from the origin.",
+          "walkthrough": [
+            "a = (F − f) / m = F / m − f / m: a straight line of gradient 1 / m that cuts the F axis where F = f.",
+            "P = (2.0 N, 0) and X = (10 N, 4.0 m s⁻²): gradient = (4.0 − 0) / (10 − 2.0) = 4.0 / 8.0 = 0.50 kg⁻¹",
+            "m = 1 / 0.50",
+            "m = 2.0 kg"
+          ],
+          "answer": {
+            "value": 2.0,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "F / N",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "a / m s⁻²",
+              "min": 0,
+              "max": 4,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    10,
+                    4.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2,
+                "y": 0,
+                "label": "P",
+                "dx": -14,
+                "dy": -6
+              },
+              {
+                "x": 10,
+                "y": 4.0,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "alt": "Acceleration against applied force: a straight line from P (2 N, 0) to X (10 N, 4.0 m/s²), cutting the force axis at 2 N"
+          }
+        }
+      ]
+    }
+  ]
+}

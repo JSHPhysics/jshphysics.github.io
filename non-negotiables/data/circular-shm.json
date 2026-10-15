@@ -1,0 +1,2461 @@
+{
+  "id": "circular-shm",
+  "title": "Circular motion and simple harmonic motion",
+  "subtitle": "Angular velocity, centripetal force, oscillators and SHM energy",
+  "order": 90,
+  "types": [
+    {
+      "id": "angular-velocity",
+      "name": "Angular velocity, period and frequency",
+      "equations": ["ω = 2π/T = 2πf", "v = ωr", "θ (rad) = θ (°) × π/180"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Angular velocity is the angle turned through per second in radians. If you are given a period use ω = 2π/T; if you are given a frequency use ω = 2πf. Convert rpm to Hz by dividing by 60, and degrees to radians by multiplying by π/180. The linear speed of a point on the rim is v = ωr.",
+      "commonErrors": [
+        "Using rpm directly as a frequency without dividing by 60",
+        "Leaving the calculator in degrees mode or forgetting that ω must be in rad s⁻¹",
+        "Mixing up T and f: ω = 2π/T but ω = 2πf",
+        "Using the diameter instead of the radius in v = ωr"
+      ],
+      "worked": {
+        "id": "angular-velocity-w",
+        "question": "A record turntable rotates at 45 revolutions per minute. Calculate its angular velocity in rad s⁻¹.",
+        "steps": [
+          "Known: 45 revolutions per minute. Unknown: ω.",
+          "Convert to a frequency in hertz: f = 45 / 60 = 0.75 Hz",
+          "Use ω = 2πf",
+          "ω = 2π × 0.75 = 4.712…",
+          "ω = 4.71 rad s⁻¹"
+        ],
+        "answer": { "value": 4.71, "unit": "rad s⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "angular-velocity-p1",
+          "question": "A wind turbine blade completes one full revolution every 4.0 s. Calculate the angular velocity of the blade.",
+          "hint": "The time for one revolution is the period; use ω = 2π/T.",
+          "walkthrough": [
+            "T = 4.0 s, find ω.",
+            "ω = 2π/T = 2π / 4.0",
+            "ω = 1.57 rad s⁻¹"
+          ],
+          "answer": { "value": 1.57, "unit": "rad s⁻¹" }
+        },
+        {
+          "id": "angular-velocity-p2",
+          "question": "A ceiling fan rotates at a frequency of 2.5 Hz. Calculate its angular velocity.",
+          "hint": "You are given a frequency, so use ω = 2πf.",
+          "walkthrough": [
+            "f = 2.5 Hz, find ω.",
+            "ω = 2πf = 2π × 2.5",
+            "ω = 15.7 rad s⁻¹"
+          ],
+          "answer": { "value": 15.7, "unit": "rad s⁻¹" }
+        },
+        {
+          "id": "angular-velocity-p3",
+          "question": "The Earth rotates once on its axis every 24 hours. Calculate the angular velocity of the Earth's rotation in rad s⁻¹.",
+          "hint": "Convert 24 hours into seconds before using ω = 2π/T.",
+          "walkthrough": [
+            "T = 24 × 60 × 60 = 86 400 s",
+            "ω = 2π/T = 2π / 86 400",
+            "ω = 7.27 × 10⁻⁵ rad s⁻¹"
+          ],
+          "answer": { "value": 7.27e-5, "unit": "rad s⁻¹" }
+        },
+        {
+          "id": "angular-velocity-p4",
+          "question": "A radar aerial turns through an angle of 135° in 0.75 s at a steady rate. Calculate its angular velocity in rad s⁻¹.",
+          "hint": "Convert the angle to radians (multiply by π/180), then divide by the time.",
+          "walkthrough": [
+            "θ = 135° = 135 × π/180 = 2.356 rad",
+            "ω = θ/t = 2.356 / 0.75",
+            "ω = 3.14 rad s⁻¹"
+          ],
+          "answer": { "value": 3.14, "unit": "rad s⁻¹" }
+        },
+        {
+          "id": "angular-velocity-p5",
+          "question": "A bicycle wheel of radius 0.34 m rotates at 180 revolutions per minute. Calculate the linear speed of a point on the rim of the wheel.",
+          "hint": "Find ω from the rpm first (rpm ÷ 60 gives f), then use v = ωr.",
+          "walkthrough": [
+            "f = 180 / 60 = 3.0 Hz",
+            "ω = 2πf = 2π × 3.0 = 18.85 rad s⁻¹",
+            "v = ωr = 18.85 × 0.34",
+            "v = 6.41 m s⁻¹"
+          ],
+          "answer": { "value": 6.41, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "angular-velocity-p6",
+          "question": "A satellite moves in a circular orbit of radius 6.9 × 10⁶ m at a speed of 7.6 × 10³ m s⁻¹. Calculate the period of the orbit in seconds.",
+          "hint": "Find ω from v = ωr, then use T = 2π/ω.",
+          "walkthrough": [
+            "ω = v/r = 7.6 × 10³ / 6.9 × 10⁶ = 1.101 × 10⁻³ rad s⁻¹",
+            "T = 2π/ω = 2π / 1.101 × 10⁻³",
+            "T = 5700 s"
+          ],
+          "answer": { "value": 5700, "unit": "s" }
+        }
+      ]
+    },
+    {
+      "id": "centripetal-acceleration",
+      "name": "Centripetal acceleration",
+      "equations": ["a = v²/r", "a = ω²r"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Any object moving in a circle at steady speed accelerates towards the centre. If you know the linear speed use a = v²/r; if you know the angular velocity use a = ω²r. Convert the radius to metres and any speed to m s⁻¹ before substituting.",
+      "commonErrors": [
+        "Squaring r instead of v in a = v²/r",
+        "Using a = ω²r with ω in rpm or Hz instead of rad s⁻¹",
+        "Forgetting to square-root when rearranging for v or ω"
+      ],
+      "worked": {
+        "id": "centripetal-acceleration-w",
+        "question": "A car travels at a steady 15 m s⁻¹ around a bend of radius 50 m. Calculate the centripetal acceleration of the car.",
+        "steps": [
+          "Known: v = 15 m s⁻¹, r = 50 m. Unknown: a.",
+          "Linear speed is given, so use a = v²/r",
+          "a = 15² / 50 = 225 / 50",
+          "a = 4.5 m s⁻²"
+        ],
+        "answer": { "value": 4.5, "unit": "m s⁻²" }
+      },
+      "practice": [
+        {
+          "id": "centripetal-acceleration-p1",
+          "question": "An athlete swings a hammer in a circle of radius 2.1 m. Just before release the hammer head moves at 25 m s⁻¹. Calculate its centripetal acceleration.",
+          "hint": "Use a = v²/r directly.",
+          "walkthrough": [
+            "v = 25 m s⁻¹, r = 2.1 m, find a.",
+            "a = v²/r = 25² / 2.1 = 625 / 2.1",
+            "a = 298 m s⁻²"
+          ],
+          "answer": { "value": 298, "unit": "m s⁻²" }
+        },
+        {
+          "id": "centripetal-acceleration-p2",
+          "question": "A washing machine drum of radius 0.25 m spins at an angular velocity of 120 rad s⁻¹. Calculate the centripetal acceleration of clothes at the edge of the drum.",
+          "hint": "Angular velocity is given, so use a = ω²r.",
+          "walkthrough": [
+            "ω = 120 rad s⁻¹, r = 0.25 m, find a.",
+            "a = ω²r = 120² × 0.25 = 14 400 × 0.25",
+            "a = 3600 m s⁻²"
+          ],
+          "answer": { "value": 3600, "unit": "m s⁻²" }
+        },
+        {
+          "id": "centripetal-acceleration-p3",
+          "question": "A sample in a laboratory centrifuge is held 12 cm from the axis of rotation and experiences a centripetal acceleration of 2.5 × 10⁴ m s⁻². Calculate the angular velocity of the centrifuge.",
+          "hint": "Convert the radius to metres, then rearrange a = ω²r to ω = √(a/r).",
+          "walkthrough": [
+            "r = 12 cm = 0.12 m, a = 2.5 × 10⁴ m s⁻², find ω.",
+            "a = ω²r → ω = √(a/r)",
+            "ω = √(2.5 × 10⁴ / 0.12) = √(2.083 × 10⁵)",
+            "ω = 456 rad s⁻¹"
+          ],
+          "answer": { "value": 456, "unit": "rad s⁻¹" }
+        },
+        {
+          "id": "centripetal-acceleration-p4",
+          "question": "A train travelling at 90 km h⁻¹ enters a curve. For passenger comfort the centripetal acceleration must not exceed 0.80 m s⁻². Calculate the minimum radius of the curve.",
+          "hint": "Convert km h⁻¹ to m s⁻¹ (× 1000 ÷ 3600), then rearrange a = v²/r for r.",
+          "walkthrough": [
+            "v = 90 × 1000 / 3600 = 25 m s⁻¹",
+            "a = v²/r → r = v²/a",
+            "r = 25² / 0.80 = 625 / 0.80",
+            "r = 781 m"
+          ],
+          "answer": { "value": 781, "unit": "m" }
+        },
+        {
+          "id": "centripetal-acceleration-p5",
+          "question": "The Earth orbits the Sun in a circle of radius 1.50 × 10¹¹ m with a period of 3.16 × 10⁷ s. Calculate the centripetal acceleration of the Earth.",
+          "hint": "Find ω = 2π/T first, then use a = ω²r.",
+          "walkthrough": [
+            "ω = 2π/T = 2π / 3.16 × 10⁷ = 1.988 × 10⁻⁷ rad s⁻¹",
+            "a = ω²r = (1.988 × 10⁻⁷)² × 1.50 × 10¹¹",
+            "a = 3.953 × 10⁻¹⁴ × 1.50 × 10¹¹",
+            "a = 5.93 × 10⁻³ m s⁻²"
+          ],
+          "answer": { "value": 0.00593, "unit": "m s⁻²" }
+        },
+        {
+          "id": "centripetal-acceleration-p6",
+          "question": "A fairground ride carries riders in a horizontal circle of radius 6.0 m at 24 revolutions per minute. Calculate the centripetal acceleration of a rider.",
+          "hint": "Convert rpm to Hz, find ω = 2πf, then use a = ω²r.",
+          "walkthrough": [
+            "f = 24 / 60 = 0.40 Hz",
+            "ω = 2πf = 2π × 0.40 = 2.513 rad s⁻¹",
+            "a = ω²r = 2.513² × 6.0 = 6.317 × 6.0",
+            "a = 37.9 m s⁻²"
+          ],
+          "answer": { "value": 37.9, "unit": "m s⁻²" }
+        }
+      ]
+    },
+    {
+      "id": "centripetal-force",
+      "name": "Centripetal force",
+      "equations": ["F = mv²/r", "F = mω²r"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "The resultant force towards the centre of a circle is F = mv²/r or F = mω²r. Decide which real force provides it (tension, friction, gravity, normal reaction) and set that force equal to mv²/r. For the maximum speed on a flat bend, set the maximum friction force equal to mv²/r and rearrange for v.",
+      "commonErrors": [
+        "Treating centripetal force as an extra force rather than the resultant of real forces",
+        "Forgetting to convert kN to N or g to kg before substituting",
+        "Using ω in rpm in F = mω²r",
+        "Forgetting to square-root when solving for v"
+      ],
+      "worked": {
+        "id": "centripetal-force-w",
+        "question": "A 0.20 kg ball on a string of length 0.80 m is whirled in a horizontal circle at a steady speed of 6.0 m s⁻¹. Calculate the tension in the string.",
+        "steps": [
+          "Known: m = 0.20 kg, r = 0.80 m, v = 6.0 m s⁻¹. Unknown: F (tension).",
+          "The tension provides the centripetal force, so T = mv²/r",
+          "T = 0.20 × 6.0² / 0.80 = 0.20 × 36 / 0.80",
+          "T = 7.2 / 0.80",
+          "T = 9.0 N"
+        ],
+        "answer": { "value": 9.0, "unit": "N" }
+      },
+      "practice": [
+        {
+          "id": "centripetal-force-p1",
+          "question": "A car of mass 1200 kg takes a flat bend of radius 40 m at a steady 12 m s⁻¹. Calculate the friction force needed to keep the car on its circular path.",
+          "hint": "Friction provides the centripetal force: F = mv²/r.",
+          "walkthrough": [
+            "m = 1200 kg, v = 12 m s⁻¹, r = 40 m, find F.",
+            "F = mv²/r = 1200 × 12² / 40 = 1200 × 144 / 40",
+            "F = 4320 N"
+          ],
+          "answer": { "value": 4320, "unit": "N" }
+        },
+        {
+          "id": "centripetal-force-p2",
+          "question": "A rider of mass 65 kg sits 5.0 m from the axis of a rotating fairground ride turning at 1.5 rad s⁻¹. Calculate the resultant force on the rider towards the centre.",
+          "hint": "Angular velocity is given, so use F = mω²r.",
+          "walkthrough": [
+            "m = 65 kg, ω = 1.5 rad s⁻¹, r = 5.0 m, find F.",
+            "F = mω²r = 65 × 1.5² × 5.0 = 65 × 2.25 × 5.0",
+            "F = 731 N"
+          ],
+          "answer": { "value": 731, "unit": "N" }
+        },
+        {
+          "id": "centripetal-force-p3",
+          "question": "A control-line model aircraft of mass 850 g flies in a horizontal circle on a line of length 12 m. The tension in the line is 48 N. Calculate the speed of the aircraft.",
+          "hint": "Convert the mass to kg, then rearrange F = mv²/r to v = √(Fr/m).",
+          "walkthrough": [
+            "m = 850 g = 0.85 kg, F = 48 N, r = 12 m, find v.",
+            "F = mv²/r → v = √(Fr/m)",
+            "v = √(48 × 12 / 0.85) = √677.6",
+            "v = 26.0 m s⁻¹"
+          ],
+          "answer": { "value": 26.0, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "centripetal-force-p4",
+          "question": "The maximum friction force between the tyres of a 950 kg car and a flat road is 6.4 kN. Calculate the maximum speed at which the car can take a bend of radius 60 m without skidding.",
+          "hint": "Convert kN to N, set the maximum friction equal to mv²/r and rearrange for v.",
+          "walkthrough": [
+            "F = 6.4 kN = 6400 N, m = 950 kg, r = 60 m, find v.",
+            "F = mv²/r → v = √(Fr/m)",
+            "v = √(6400 × 60 / 950) = √404.2",
+            "v = 20.1 m s⁻¹"
+          ],
+          "answer": { "value": 20.1, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "centripetal-force-p5",
+          "question": "A 2.5 kg mass is attached to a rope of length 1.6 m and swung in a horizontal circle at 40 revolutions per minute. Calculate the tension in the rope.",
+          "hint": "Convert rpm to Hz and find ω = 2πf first, then use F = mω²r.",
+          "walkthrough": [
+            "f = 40 / 60 = 0.667 Hz",
+            "ω = 2πf = 2π × 0.667 = 4.189 rad s⁻¹",
+            "F = mω²r = 2.5 × 4.189² × 1.6 = 2.5 × 17.55 × 1.6",
+            "F = 70.2 N"
+          ],
+          "answer": { "value": 70.2, "unit": "N" }
+        },
+        {
+          "id": "centripetal-force-p6",
+          "question": "A 450 kg satellite orbits the Earth in a circle of radius 7.0 × 10⁶ m with a period of 5.8 × 10³ s. Calculate the centripetal force on the satellite.",
+          "hint": "Find ω = 2π/T first, then use F = mω²r.",
+          "walkthrough": [
+            "ω = 2π/T = 2π / 5.8 × 10³ = 1.083 × 10⁻³ rad s⁻¹",
+            "F = mω²r = 450 × (1.083 × 10⁻³)² × 7.0 × 10⁶",
+            "F = 450 × 1.174 × 10⁻⁶ × 7.0 × 10⁶",
+            "F = 3700 N"
+          ],
+          "answer": { "value": 3700, "unit": "N" }
+        }
+      ]
+    },
+    {
+      "id": "vertical-circle",
+      "name": "Forces in a vertical circle",
+      "equations": ["Top: T + mg = mv²/r", "Bottom: T − mg = mv²/r", "Minimum speed at top: v = √(gr)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Draw the forces at the top or bottom of the circle and write the resultant towards the centre as mv²/r. At the top, weight acts towards the centre so T + mg = mv²/r; at the bottom, weight acts away from the centre so T − mg = mv²/r. For a car over a hump, the reaction is R = mg − mv²/r. The minimum speed at the top of a loop occurs when the tension or reaction falls to zero, giving v = √(gr).",
+      "commonErrors": [
+        "Adding mg at the bottom and subtracting it at the top, the wrong way round",
+        "Forgetting that the minimum speed at the top corresponds to zero tension, not zero weight",
+        "Converting km h⁻¹ to m s⁻¹ incorrectly (divide by 3.6, not multiply)"
+      ],
+      "worked": {
+        "id": "vertical-circle-w",
+        "question": "A 0.50 kg bucket of water is swung in a vertical circle on a rope of length 1.2 m. At the top of the circle the bucket moves at 5.0 m s⁻¹. Calculate the tension in the rope at the top.",
+        "steps": [
+          "Known: m = 0.50 kg, r = 1.2 m, v = 5.0 m s⁻¹ at the top. Unknown: T.",
+          "At the top both tension and weight act towards the centre: T + mg = mv²/r",
+          "Rearrange: T = mv²/r − mg",
+          "mv²/r = 0.50 × 5.0² / 1.2 = 12.5 / 1.2 = 10.42 N and mg = 0.50 × 9.81 = 4.905 N",
+          "T = 10.42 − 4.905",
+          "T = 5.51 N"
+        ],
+        "answer": { "value": 5.51, "unit": "N" }
+      },
+      "practice": [
+        {
+          "id": "vertical-circle-p1",
+          "question": "A roller-coaster loop has a radius of 6.0 m. Calculate the minimum speed the car must have at the top of the loop so that it stays in contact with the track.",
+          "hint": "At the minimum speed the normal reaction is zero, so weight alone provides mv²/r: v = √(gr).",
+          "walkthrough": [
+            "r = 6.0 m, g = 9.81 m s⁻², reaction = 0 at minimum speed.",
+            "mg = mv²/r → v = √(gr)",
+            "v = √(9.81 × 6.0) = √58.86",
+            "v = 7.67 m s⁻¹"
+          ],
+          "answer": { "value": 7.67, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "vertical-circle-p2",
+          "question": "A 0.30 kg ball on a string of length 0.90 m swings in a vertical circle. At the bottom of the circle its speed is 4.0 m s⁻¹. Calculate the tension in the string at the bottom.",
+          "hint": "At the bottom the tension must exceed the weight: T − mg = mv²/r.",
+          "walkthrough": [
+            "m = 0.30 kg, r = 0.90 m, v = 4.0 m s⁻¹, find T at the bottom.",
+            "T = mv²/r + mg",
+            "T = 0.30 × 4.0² / 0.90 + 0.30 × 9.81 = 5.333 + 2.943",
+            "T = 8.28 N"
+          ],
+          "answer": { "value": 8.28, "unit": "N" }
+        },
+        {
+          "id": "vertical-circle-p3",
+          "question": "A car of mass 1100 kg drives over the top of a hump-backed bridge that forms part of a circle of radius 25 m. The car's speed is 36 km h⁻¹. Calculate the normal reaction force from the road on the car at the top of the bridge.",
+          "hint": "Convert the speed to m s⁻¹. At the top of a hump the reaction is less than the weight: R = mg − mv²/r.",
+          "walkthrough": [
+            "v = 36 × 1000 / 3600 = 10 m s⁻¹",
+            "At the top: mg − R = mv²/r → R = mg − mv²/r",
+            "mg = 1100 × 9.81 = 10 791 N and mv²/r = 1100 × 10² / 25 = 4400 N",
+            "R = 10 791 − 4400",
+            "R = 6390 N"
+          ],
+          "answer": { "value": 6390, "unit": "N" }
+        },
+        {
+          "id": "vertical-circle-p4",
+          "question": "A conker of mass 0.15 kg swings in a vertical circle on a string of length 0.60 m. At the lowest point the tension in the string is 3.8 N. Calculate the speed of the conker at the lowest point.",
+          "hint": "At the bottom T − mg = mv²/r; rearrange for v.",
+          "walkthrough": [
+            "m = 0.15 kg, r = 0.60 m, T = 3.8 N at the bottom, find v.",
+            "T − mg = mv²/r → v² = (T − mg) r / m",
+            "T − mg = 3.8 − 0.15 × 9.81 = 3.8 − 1.472 = 2.329 N",
+            "v² = 2.329 × 0.60 / 0.15 = 9.314",
+            "v = 3.05 m s⁻¹"
+          ],
+          "answer": { "value": 3.05, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "vertical-circle-p5",
+          "question": "A stunt pilot of mass 70 kg flies through the bottom of a vertical loop of radius 500 m at a speed of 150 m s⁻¹. Calculate the force exerted on the pilot by the seat at the bottom of the loop.",
+          "hint": "Find the centripetal acceleration v²/r first, then at the bottom R = m(g + a).",
+          "walkthrough": [
+            "a = v²/r = 150² / 500 = 22 500 / 500 = 45 m s⁻²",
+            "At the bottom: R − mg = ma → R = m(g + a)",
+            "R = 70 × (9.81 + 45) = 70 × 54.81",
+            "R = 3840 N"
+          ],
+          "answer": { "value": 3840, "unit": "N" }
+        },
+        {
+          "id": "vertical-circle-p6",
+          "question": "A toy car of mass 25 g passes the top of a vertical loop of radius 0.20 m on a track. At the top the track pushes down on the car with a force of 0.30 N. Calculate the speed of the car at the top.",
+          "hint": "Convert the mass to kg. At the top both the reaction and the weight act towards the centre: N + mg = mv²/r.",
+          "walkthrough": [
+            "m = 25 g = 0.025 kg, r = 0.20 m, N = 0.30 N at the top, find v.",
+            "N + mg = mv²/r → v² = (N + mg) r / m",
+            "N + mg = 0.30 + 0.025 × 9.81 = 0.30 + 0.2453 = 0.5453 N",
+            "v² = 0.5453 × 0.20 / 0.025 = 4.362",
+            "v = 2.09 m s⁻¹"
+          ],
+          "answer": { "value": 2.09, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "shm-kinematics",
+      "name": "SHM displacement, velocity and acceleration",
+      "equations": ["x = A cos ωt", "v = ±ω√(A² − x²)", "v_max = ωA", "a = −ω²x", "a_max = ω²A"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "First get ω in rad s⁻¹ (ω = 2πf or 2π/T). Maximum speed is ωA and maximum acceleration is ω²A, both at the obvious places (centre and extremes). At a general displacement x, use a = −ω²x for acceleration and v = ±ω√(A² − x²) for speed. Convert mm and cm to metres before substituting unless the question asks for the answer in those units.",
+      "commonErrors": [
+        "Using f or T instead of ω in v_max = ωA and a_max = ω²A",
+        "Calculating x = A cos ωt with the calculator in degrees mode",
+        "Forgetting to square-root in v = ω√(A² − x²), or subtracting A − x instead of A² − x²",
+        "Mixing mm and m inside the same equation"
+      ],
+      "worked": {
+        "id": "shm-kinematics-w",
+        "question": "A mass on a spring oscillates with simple harmonic motion of amplitude 0.050 m and frequency 2.0 Hz. Calculate the maximum speed of the mass.",
+        "steps": [
+          "Known: A = 0.050 m, f = 2.0 Hz. Unknown: v_max.",
+          "ω = 2πf = 2π × 2.0 = 12.57 rad s⁻¹",
+          "v_max = ωA",
+          "v_max = 12.57 × 0.050",
+          "v_max = 0.628 m s⁻¹"
+        ],
+        "answer": { "value": 0.628, "unit": "m s⁻¹" }
+      },
+      "practice": [
+        {
+          "id": "shm-kinematics-p1",
+          "question": "A piston in a car engine moves with simple harmonic motion of amplitude 0.040 m and angular frequency 150 rad s⁻¹. Calculate the maximum acceleration of the piston.",
+          "hint": "Use a_max = ω²A.",
+          "walkthrough": [
+            "ω = 150 rad s⁻¹, A = 0.040 m, find a_max.",
+            "a_max = ω²A = 150² × 0.040 = 22 500 × 0.040",
+            "a_max = 900 m s⁻²"
+          ],
+          "answer": { "value": 900, "unit": "m s⁻²" }
+        },
+        {
+          "id": "shm-kinematics-p2",
+          "question": "A child's swing moves with simple harmonic motion with ω = 8.0 rad s⁻¹. Calculate the magnitude of its acceleration when its displacement from the centre is 0.030 m.",
+          "hint": "Use a = −ω²x; the question asks only for the magnitude.",
+          "walkthrough": [
+            "ω = 8.0 rad s⁻¹, x = 0.030 m, find |a|.",
+            "a = −ω²x = −8.0² × 0.030 = −64 × 0.030",
+            "|a| = 1.92 m s⁻²"
+          ],
+          "answer": { "value": 1.92, "unit": "m s⁻²" }
+        },
+        {
+          "id": "shm-kinematics-p3",
+          "question": "A loudspeaker cone oscillates with amplitude 60 mm and angular frequency 3.5 rad s⁻¹. Calculate the speed of the cone when its displacement is 25 mm. Give your answer in m s⁻¹.",
+          "hint": "Convert both lengths to metres, then use v = ω√(A² − x²).",
+          "walkthrough": [
+            "A = 60 mm = 0.060 m, x = 25 mm = 0.025 m, ω = 3.5 rad s⁻¹.",
+            "v = ω√(A² − x²) = 3.5 × √(0.060² − 0.025²)",
+            "v = 3.5 × √(0.0036 − 0.000625) = 3.5 × √0.002975 = 3.5 × 0.05454",
+            "v = 0.191 m s⁻¹"
+          ],
+          "answer": { "value": 0.191, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "shm-kinematics-p4",
+          "question": "A vibrating test platform in an industrial laboratory has a maximum acceleration of 15 m s⁻² when oscillating with amplitude 0.12 m. Calculate its angular frequency ω.",
+          "hint": "Rearrange a_max = ω²A to ω = √(a_max/A).",
+          "walkthrough": [
+            "a_max = 15 m s⁻², A = 0.12 m, find ω.",
+            "a_max = ω²A → ω = √(a_max/A)",
+            "ω = √(15 / 0.12) = √125",
+            "ω = 11.2 rad s⁻¹"
+          ],
+          "answer": { "value": 11.2, "unit": "rad s⁻¹" }
+        },
+        {
+          "id": "shm-kinematics-p5",
+          "question": "The prong of a tuning fork vibrates at 440 Hz with amplitude 0.60 mm. It is at maximum displacement at t = 0. Calculate its displacement 0.50 ms later. Give your answer in mm.",
+          "hint": "Find ω = 2πf, then use x = A cos ωt with the calculator in radians mode.",
+          "walkthrough": [
+            "ω = 2πf = 2π × 440 = 2765 rad s⁻¹",
+            "t = 0.50 ms = 0.50 × 10⁻³ s, so ωt = 2765 × 0.50 × 10⁻³ = 1.382 rad",
+            "x = A cos ωt = 0.60 × cos(1.382) = 0.60 × 0.1874",
+            "x = 0.112 mm"
+          ],
+          "answer": { "value": 0.112, "unit": "mm" }
+        },
+        {
+          "id": "shm-kinematics-p6",
+          "question": "A buoy bobs up and down on the sea with simple harmonic motion of frequency 1.5 Hz and amplitude 8.0 cm. Calculate the speed of the buoy when it is 5.0 cm from the centre of its motion. Give your answer in m s⁻¹.",
+          "hint": "Find ω = 2πf and convert cm to m, then use v = ω√(A² − x²).",
+          "walkthrough": [
+            "ω = 2πf = 2π × 1.5 = 9.425 rad s⁻¹",
+            "A = 0.080 m, x = 0.050 m",
+            "v = ω√(A² − x²) = 9.425 × √(0.080² − 0.050²) = 9.425 × √0.0039",
+            "v = 9.425 × 0.06245",
+            "v = 0.589 m s⁻¹"
+          ],
+          "answer": { "value": 0.589, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "mass-spring",
+      "name": "Mass–spring oscillator",
+      "equations": ["T = 2π√(m/k)", "f = 1/T", "k = F/x"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "A mass on a spring has period T = 2π√(m/k), independent of amplitude. Substitute m in kg and k in N m⁻¹. To find k or m, square both sides: T² = 4π²m/k, so k = 4π²m/T² and m = kT²/4π². If the spring constant is not given, find it first from Hooke's law k = F/x or from a measured period.",
+      "commonErrors": [
+        "Forgetting to square-root m/k, or square-rooting after multiplying by 2π",
+        "Using grams instead of kilograms, or kN m⁻¹ instead of N m⁻¹",
+        "Dividing the total time by the number of oscillations the wrong way round when finding T",
+        "Confusing period and frequency in the final answer"
+      ],
+      "worked": {
+        "id": "mass-spring-w",
+        "question": "A 0.40 kg mass hangs from a spring of spring constant 25 N m⁻¹. Calculate the period of its vertical oscillations.",
+        "steps": [
+          "Known: m = 0.40 kg, k = 25 N m⁻¹. Unknown: T.",
+          "T = 2π√(m/k)",
+          "m/k = 0.40 / 25 = 0.016",
+          "T = 2π × √0.016 = 2π × 0.1265",
+          "T = 0.795 s"
+        ],
+        "answer": { "value": 0.795, "unit": "s" }
+      },
+      "practice": [
+        {
+          "id": "mass-spring-p1",
+          "question": "A 0.25 kg trolley is attached to a spring of spring constant 40 N m⁻¹ on a frictionless track. Calculate the period of its oscillations.",
+          "hint": "Substitute directly into T = 2π√(m/k).",
+          "walkthrough": [
+            "m = 0.25 kg, k = 40 N m⁻¹, find T.",
+            "T = 2π√(m/k) = 2π × √(0.25 / 40) = 2π × √0.00625",
+            "T = 2π × 0.0791",
+            "T = 0.497 s"
+          ],
+          "answer": { "value": 0.497, "unit": "s" }
+        },
+        {
+          "id": "mass-spring-p2",
+          "question": "A car of mass 350 kg per wheel rests on a suspension spring of spring constant 2.2 × 10⁴ N m⁻¹. Calculate the frequency at which the car body bounces on that spring.",
+          "hint": "Find T from T = 2π√(m/k), then f = 1/T.",
+          "walkthrough": [
+            "m = 350 kg, k = 2.2 × 10⁴ N m⁻¹, find f.",
+            "T = 2π√(m/k) = 2π × √(350 / 2.2 × 10⁴) = 2π × 0.1261 = 0.7925 s",
+            "f = 1/T = 1 / 0.7925",
+            "f = 1.26 Hz"
+          ],
+          "answer": { "value": 1.26, "unit": "Hz" }
+        },
+        {
+          "id": "mass-spring-p3",
+          "question": "A 150 g mass on a spring oscillates with a period of 0.80 s. Calculate the spring constant of the spring.",
+          "hint": "Convert the mass to kg, then rearrange: k = 4π²m/T².",
+          "walkthrough": [
+            "m = 150 g = 0.15 kg, T = 0.80 s, find k.",
+            "T = 2π√(m/k) → k = 4π²m/T²",
+            "k = 4π² × 0.15 / 0.80² = 5.922 / 0.64",
+            "k = 9.25 N m⁻¹"
+          ],
+          "answer": { "value": 9.25, "unit": "N m⁻¹" }
+        },
+        {
+          "id": "mass-spring-p4",
+          "question": "A vibration sensor in a factory machine has a spring of spring constant 1.5 kN m⁻¹ and oscillates with a period of 0.12 s. Calculate the mass attached to the spring.",
+          "hint": "Convert kN m⁻¹ to N m⁻¹, then rearrange: m = kT²/4π².",
+          "walkthrough": [
+            "k = 1.5 kN m⁻¹ = 1500 N m⁻¹, T = 0.12 s, find m.",
+            "T = 2π√(m/k) → m = kT²/4π²",
+            "m = 1500 × 0.12² / (4π²) = 21.6 / 39.48",
+            "m = 0.547 kg"
+          ],
+          "answer": { "value": 0.547, "unit": "kg" }
+        },
+        {
+          "id": "mass-spring-p5",
+          "question": "A spring extends by 45 mm when a 0.30 kg mass is hung from it. The mass is then pulled down slightly and released. Calculate the period of the resulting oscillations.",
+          "hint": "Find k from Hooke's law (k = mg/x with x in metres) first, then use T = 2π√(m/k).",
+          "walkthrough": [
+            "x = 45 mm = 0.045 m. Weight = mg = 0.30 × 9.81 = 2.943 N",
+            "k = F/x = 2.943 / 0.045 = 65.4 N m⁻¹",
+            "T = 2π√(m/k) = 2π × √(0.30 / 65.4) = 2π × 0.06773",
+            "T = 0.426 s"
+          ],
+          "answer": { "value": 0.426, "unit": "s" }
+        },
+        {
+          "id": "mass-spring-p6",
+          "question": "A student times a 0.60 kg trolley on a spring and finds it completes 20 oscillations in 15 s. Calculate the spring constant of the spring.",
+          "hint": "Find T by dividing the total time by the number of oscillations, then use k = 4π²m/T².",
+          "walkthrough": [
+            "T = 15 / 20 = 0.75 s",
+            "k = 4π²m/T² = 4π² × 0.60 / 0.75²",
+            "k = 23.69 / 0.5625",
+            "k = 42.1 N m⁻¹"
+          ],
+          "answer": { "value": 42.1, "unit": "N m⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "pendulum",
+      "name": "Simple pendulum",
+      "equations": ["T = 2π√(L/g)", "f = 1/T", "g = 4π²L/T²"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "A simple pendulum of length L has period T = 2π√(L/g) for small swings, independent of mass and amplitude. Substitute L in metres. To find L or g, square both sides: L = gT²/4π² and g = 4π²L/T². If timing data are given, divide the total time by the number of oscillations to get T first.",
+      "commonErrors": [
+        "Using the length in cm instead of metres",
+        "Forgetting to square T when rearranging for L or g",
+        "Timing one oscillation as half a swing (centre to extreme) instead of a full there-and-back",
+        "Thinking the period depends on the mass of the bob"
+      ],
+      "worked": {
+        "id": "pendulum-w",
+        "question": "A simple pendulum has a length of 0.80 m. Calculate its period.",
+        "steps": [
+          "Known: L = 0.80 m, g = 9.81 m s⁻². Unknown: T.",
+          "T = 2π√(L/g)",
+          "L/g = 0.80 / 9.81 = 0.08155",
+          "T = 2π × √0.08155 = 2π × 0.2856",
+          "T = 1.79 s"
+        ],
+        "answer": { "value": 1.79, "unit": "s" }
+      },
+      "practice": [
+        {
+          "id": "pendulum-p1",
+          "question": "A chandelier hangs from a cathedral ceiling on a chain of length 2.5 m and swings gently. Calculate the period of its swing.",
+          "hint": "Substitute directly into T = 2π√(L/g).",
+          "walkthrough": [
+            "L = 2.5 m, g = 9.81 m s⁻², find T.",
+            "T = 2π√(L/g) = 2π × √(2.5 / 9.81) = 2π × √0.2548",
+            "T = 2π × 0.5048",
+            "T = 3.17 s"
+          ],
+          "answer": { "value": 3.17, "unit": "s" }
+        },
+        {
+          "id": "pendulum-p2",
+          "question": "A metronome bob swings as a simple pendulum of length 0.25 m. Calculate the frequency of its oscillations.",
+          "hint": "Find T from T = 2π√(L/g), then f = 1/T.",
+          "walkthrough": [
+            "L = 0.25 m, find f.",
+            "T = 2π√(L/g) = 2π × √(0.25 / 9.81) = 2π × 0.1596 = 1.003 s",
+            "f = 1/T = 1 / 1.003",
+            "f = 0.997 Hz"
+          ],
+          "answer": { "value": 0.997, "unit": "Hz" }
+        },
+        {
+          "id": "pendulum-p3",
+          "question": "A clockmaker wants a 'seconds pendulum' with a period of exactly 2.00 s. Calculate the length of pendulum required.",
+          "hint": "Square both sides of T = 2π√(L/g) and rearrange: L = gT²/4π².",
+          "walkthrough": [
+            "T = 2.00 s, g = 9.81 m s⁻², find L.",
+            "T = 2π√(L/g) → L = gT²/4π²",
+            "L = 9.81 × 2.00² / (4π²) = 39.24 / 39.48",
+            "L = 0.994 m"
+          ],
+          "answer": { "value": 0.994, "unit": "m" }
+        },
+        {
+          "id": "pendulum-p4",
+          "question": "On a rover mission to Mars, a simple pendulum of length 45 cm is found to have a period of 2.19 s. Calculate the gravitational field strength on Mars.",
+          "hint": "Convert cm to m, then rearrange: g = 4π²L/T².",
+          "walkthrough": [
+            "L = 45 cm = 0.45 m, T = 2.19 s, find g.",
+            "T = 2π√(L/g) → g = 4π²L/T²",
+            "g = 4π² × 0.45 / 2.19² = 17.77 / 4.796",
+            "g = 3.70 m s⁻²"
+          ],
+          "answer": { "value": 3.7, "unit": "m s⁻²" }
+        },
+        {
+          "id": "pendulum-p5",
+          "question": "A simple pendulum of length 1.2 m is set swinging. Calculate the number of complete oscillations it makes in 2.0 minutes.",
+          "hint": "Find T first, convert 2.0 minutes to seconds, then divide the total time by T and round down to a whole number.",
+          "walkthrough": [
+            "T = 2π√(L/g) = 2π × √(1.2 / 9.81) = 2π × 0.3497 = 2.197 s",
+            "Total time = 2.0 × 60 = 120 s",
+            "Number of oscillations = 120 / 2.197 = 54.6",
+            "Complete oscillations = 54"
+          ],
+          "answer": { "value": 54, "unit": "" }
+        },
+        {
+          "id": "pendulum-p6",
+          "question": "A student times 25 complete oscillations of a simple pendulum and records 38.0 s. Calculate the length of the pendulum.",
+          "hint": "Find T by dividing the total time by the number of oscillations, then use L = gT²/4π².",
+          "walkthrough": [
+            "T = 38.0 / 25 = 1.52 s",
+            "L = gT²/4π² = 9.81 × 1.52² / (4π²)",
+            "L = 9.81 × 2.310 / 39.48 = 22.66 / 39.48",
+            "L = 0.574 m"
+          ],
+          "answer": { "value": 0.574, "unit": "m" }
+        }
+      ]
+    },
+    {
+      "id": "shm-energy",
+      "name": "Energy in SHM",
+      "equations": ["E_total = ½mω²A²", "E_total = ½kA²", "KE = ½mω²(A² − x²)", "E_total = ½mv_max²"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "The total energy of an oscillator is constant and equals the maximum kinetic energy ½mω²A² (or, for a spring, the maximum elastic potential energy ½kA²). At displacement x the kinetic energy is ½mω²(A² − x²) and the rest is potential. To find the maximum speed from the total energy use E = ½mv_max². Convert mm and kN m⁻¹ before substituting.",
+      "commonErrors": [
+        "Forgetting to square the amplitude",
+        "Leaving the amplitude in mm or cm, which makes the energy wrong by a factor of 10⁴ or 10⁶",
+        "Using ½kA² with ω instead of k, or ½mω²A² with k instead of mω²",
+        "Forgetting the ½"
+      ],
+      "worked": {
+        "id": "shm-energy-w",
+        "question": "A 0.50 kg mass oscillates with simple harmonic motion of angular frequency 6.0 rad s⁻¹ and amplitude 0.080 m. Calculate the total energy of the oscillation.",
+        "steps": [
+          "Known: m = 0.50 kg, ω = 6.0 rad s⁻¹, A = 0.080 m. Unknown: E_total.",
+          "E_total = ½mω²A²",
+          "E_total = ½ × 0.50 × 6.0² × 0.080² = 0.5 × 0.50 × 36 × 0.0064",
+          "E_total = 0.0576 J",
+          "E_total = 5.76 × 10⁻² J"
+        ],
+        "answer": { "value": 0.0576, "unit": "J" }
+      },
+      "practice": [
+        {
+          "id": "shm-energy-p1",
+          "question": "A trolley is attached to a spring of spring constant 80 N m⁻¹ and oscillates with amplitude 0.050 m. Calculate the total energy of the oscillation.",
+          "hint": "Use E_total = ½kA².",
+          "walkthrough": [
+            "k = 80 N m⁻¹, A = 0.050 m, find E_total.",
+            "E_total = ½kA² = 0.5 × 80 × 0.050² = 0.5 × 80 × 0.0025",
+            "E_total = 0.100 J"
+          ],
+          "answer": { "value": 0.1, "unit": "J" }
+        },
+        {
+          "id": "shm-energy-p2",
+          "question": "A 0.20 kg pendulum bob oscillates with simple harmonic motion of angular frequency 12 rad s⁻¹ and amplitude 0.040 m. Calculate the maximum kinetic energy of the bob.",
+          "hint": "The maximum kinetic energy equals the total energy: ½mω²A².",
+          "walkthrough": [
+            "m = 0.20 kg, ω = 12 rad s⁻¹, A = 0.040 m, find KE_max.",
+            "KE_max = ½mω²A² = 0.5 × 0.20 × 12² × 0.040² = 0.5 × 0.20 × 144 × 0.0016",
+            "KE_max = 0.0230 J"
+          ],
+          "answer": { "value": 0.023, "unit": "J" }
+        },
+        {
+          "id": "shm-energy-p3",
+          "question": "A car suspension spring of spring constant 2.5 kN m⁻¹ oscillates with amplitude 30 mm after the car hits a bump. Calculate the total energy of the oscillation.",
+          "hint": "Convert kN m⁻¹ to N m⁻¹ and mm to m before using E_total = ½kA².",
+          "walkthrough": [
+            "k = 2.5 kN m⁻¹ = 2500 N m⁻¹, A = 30 mm = 0.030 m.",
+            "E_total = ½kA² = 0.5 × 2500 × 0.030²",
+            "E_total = 0.5 × 2500 × 9.0 × 10⁻⁴",
+            "E_total = 1.12 J"
+          ],
+          "answer": { "value": 1.12, "unit": "J" }
+        },
+        {
+          "id": "shm-energy-p4",
+          "question": "A mass on a spring of spring constant 36 N m⁻¹ oscillates with a total energy of 0.045 J. Calculate the amplitude of the oscillation.",
+          "hint": "Rearrange E_total = ½kA² to A = √(2E/k).",
+          "walkthrough": [
+            "E = 0.045 J, k = 36 N m⁻¹, find A.",
+            "E = ½kA² → A = √(2E/k)",
+            "A = √(2 × 0.045 / 36) = √0.0025",
+            "A = 0.050 m"
+          ],
+          "answer": { "value": 0.05, "unit": "m" }
+        },
+        {
+          "id": "shm-energy-p5",
+          "question": "A 0.30 kg mass oscillates with simple harmonic motion of angular frequency 8.0 rad s⁻¹ and amplitude 0.10 m. Calculate its kinetic energy when its displacement is 0.060 m.",
+          "hint": "Use KE = ½mω²(A² − x²); remember to square both A and x.",
+          "walkthrough": [
+            "m = 0.30 kg, ω = 8.0 rad s⁻¹, A = 0.10 m, x = 0.060 m, find KE.",
+            "KE = ½mω²(A² − x²) = 0.5 × 0.30 × 8.0² × (0.10² − 0.060²)",
+            "KE = 0.5 × 0.30 × 64 × (0.010 − 0.0036) = 9.6 × 0.0064",
+            "KE = 0.0614 J"
+          ],
+          "answer": { "value": 0.0614, "unit": "J" }
+        },
+        {
+          "id": "shm-energy-p6",
+          "question": "A 0.40 kg block on a horizontal spring of spring constant 50 N m⁻¹ oscillates with amplitude 0.12 m. Calculate the maximum speed of the block.",
+          "hint": "Find the total energy from ½kA², then set it equal to ½mv_max² and rearrange for v_max.",
+          "walkthrough": [
+            "E_total = ½kA² = 0.5 × 50 × 0.12² = 0.5 × 50 × 0.0144 = 0.36 J",
+            "At the centre all of this is kinetic: ½mv_max² = 0.36",
+            "v_max = √(2 × 0.36 / 0.40) = √1.8",
+            "v_max = 1.34 m s⁻¹"
+          ],
+          "answer": { "value": 1.34, "unit": "m s⁻¹" }
+        }
+      ]
+    },
+    {
+      "id": "shm-graph",
+      "name": "Reading oscillation graphs",
+      "equations": [
+        "T = time between successive peaks; f = 1/T",
+        "ω = 2π/T",
+        "v_max = ωA = gradient of x–t graph at x = 0",
+        "a_max = ω²A = gradient of v–t graph at v = 0",
+        "a = −ω²x (gradient of a–x graph = −ω²)",
+        "KE_max = ½mv_max²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Decide which graph you have from the axis labels. On a displacement–time graph the peak height is the amplitude and peak to peak is the period; the gradient at a zero crossing is the maximum velocity. On a velocity–time graph the peak is v_max and the gradient at a zero crossing is a_max. An acceleration–displacement graph is a straight line through the origin whose gradient is −ω². For a gradient, use the two end points of the drawn tangent, read on gridlines and far apart.",
+      "commonErrors": [
+        "Taking the gradient of the curve at a peak (where it is zero) instead of at the zero crossing",
+        "Reading the period as peak to trough, which is only half a cycle",
+        "Forgetting the prefix on an axis: x / cm must become metres before finding a speed in m s⁻¹",
+        "Using the gradient of the a–x graph as ω rather than ω² (and dropping the minus sign in a = −ω²x)"
+      ],
+      "worked": {
+        "id": "shm-graph-w",
+        "question": "The graph shows the displacement of a mass hanging on a spring against time. Use the graph to determine the maximum speed of the mass.",
+        "steps": [
+          "Read the period from successive peaks: P at 0.3 s and Q at 1.5 s, so T = 1.5 − 0.3 = 1.2 s.",
+          "Read the amplitude from the peak height: A = 5.0 cm = 0.050 m.",
+          "ω = 2π/T = 2π / 1.2 = 5.24 rad s⁻¹",
+          "v_max = ωA = 5.24 × 0.050",
+          "v_max = 0.262 m s⁻¹"
+        ],
+        "answer": {
+          "value": 0.262,
+          "unit": "m s⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "t / s",
+            "min": 0,
+            "max": 2.4,
+            "step": 0.3
+          },
+          "y": {
+            "label": "x / cm",
+            "min": -6,
+            "max": 6,
+            "step": 1
+          },
+          "series": [
+            {
+              "kind": "curve",
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.05,
+                  1.2941
+                ],
+                [
+                  0.1,
+                  2.5
+                ],
+                [
+                  0.15,
+                  3.5355
+                ],
+                [
+                  0.2,
+                  4.3301
+                ],
+                [
+                  0.25,
+                  4.8296
+                ],
+                [
+                  0.3,
+                  5.0
+                ],
+                [
+                  0.35,
+                  4.8296
+                ],
+                [
+                  0.4,
+                  4.3301
+                ],
+                [
+                  0.45,
+                  3.5355
+                ],
+                [
+                  0.5,
+                  2.5
+                ],
+                [
+                  0.55,
+                  1.2941
+                ],
+                [
+                  0.6,
+                  0.0
+                ],
+                [
+                  0.65,
+                  -1.2941
+                ],
+                [
+                  0.7,
+                  -2.5
+                ],
+                [
+                  0.75,
+                  -3.5355
+                ],
+                [
+                  0.8,
+                  -4.3301
+                ],
+                [
+                  0.85,
+                  -4.8296
+                ],
+                [
+                  0.9,
+                  -5.0
+                ],
+                [
+                  0.95,
+                  -4.8296
+                ],
+                [
+                  1.0,
+                  -4.3301
+                ],
+                [
+                  1.05,
+                  -3.5355
+                ],
+                [
+                  1.1,
+                  -2.5
+                ],
+                [
+                  1.15,
+                  -1.2941
+                ],
+                [
+                  1.2,
+                  -0.0
+                ],
+                [
+                  1.25,
+                  1.2941
+                ],
+                [
+                  1.3,
+                  2.5
+                ],
+                [
+                  1.35,
+                  3.5355
+                ],
+                [
+                  1.4,
+                  4.3301
+                ],
+                [
+                  1.45,
+                  4.8296
+                ],
+                [
+                  1.5,
+                  5.0
+                ],
+                [
+                  1.55,
+                  4.8296
+                ],
+                [
+                  1.6,
+                  4.3301
+                ],
+                [
+                  1.65,
+                  3.5355
+                ],
+                [
+                  1.7,
+                  2.5
+                ],
+                [
+                  1.75,
+                  1.2941
+                ],
+                [
+                  1.8,
+                  0.0
+                ],
+                [
+                  1.85,
+                  -1.2941
+                ],
+                [
+                  1.9,
+                  -2.5
+                ],
+                [
+                  1.95,
+                  -3.5355
+                ],
+                [
+                  2.0,
+                  -4.3301
+                ],
+                [
+                  2.05,
+                  -4.8296
+                ],
+                [
+                  2.1,
+                  -5.0
+                ],
+                [
+                  2.15,
+                  -4.8296
+                ],
+                [
+                  2.2,
+                  -4.3301
+                ],
+                [
+                  2.25,
+                  -3.5355
+                ],
+                [
+                  2.3,
+                  -2.5
+                ],
+                [
+                  2.35,
+                  -1.2941
+                ],
+                [
+                  2.4,
+                  -0.0
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 0.3,
+              "y": 5.0,
+              "label": "P",
+              "drop": true
+            },
+            {
+              "x": 1.5,
+              "y": 5.0,
+              "label": "Q",
+              "drop": true
+            }
+          ],
+          "alt": "Displacement–time graph: a sine curve of amplitude 5 cm with peaks at 0.3 s and 1.5 s marked P and Q"
+        }
+      },
+      "practice": [
+        {
+          "id": "shm-graph-p1",
+          "question": "The graph shows the displacement of the bob of a short pendulum against time. Use the graph to determine the period of the oscillation.",
+          "hint": "The period is the time between the successive peaks A and B.",
+          "walkthrough": [
+            "A is at t = 0.2 s and the next peak B is at t = 1.0 s.",
+            "T = 1.0 − 0.2",
+            "T = 0.80 s"
+          ],
+          "answer": {
+            "value": 0.8,
+            "unit": "s"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 2.0,
+              "step": 0.2
+            },
+            "y": {
+              "label": "x / cm",
+              "min": -4,
+              "max": 4,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0333,
+                    0.7765
+                  ],
+                  [
+                    0.0667,
+                    1.5
+                  ],
+                  [
+                    0.1,
+                    2.1213
+                  ],
+                  [
+                    0.1333,
+                    2.5981
+                  ],
+                  [
+                    0.1667,
+                    2.8978
+                  ],
+                  [
+                    0.2,
+                    3.0
+                  ],
+                  [
+                    0.2333,
+                    2.8978
+                  ],
+                  [
+                    0.2667,
+                    2.5981
+                  ],
+                  [
+                    0.3,
+                    2.1213
+                  ],
+                  [
+                    0.3333,
+                    1.5
+                  ],
+                  [
+                    0.3667,
+                    0.7765
+                  ],
+                  [
+                    0.4,
+                    0.0
+                  ],
+                  [
+                    0.4333,
+                    -0.7765
+                  ],
+                  [
+                    0.4667,
+                    -1.5
+                  ],
+                  [
+                    0.5,
+                    -2.1213
+                  ],
+                  [
+                    0.5333,
+                    -2.5981
+                  ],
+                  [
+                    0.5667,
+                    -2.8978
+                  ],
+                  [
+                    0.6,
+                    -3.0
+                  ],
+                  [
+                    0.6333,
+                    -2.8978
+                  ],
+                  [
+                    0.6667,
+                    -2.5981
+                  ],
+                  [
+                    0.7,
+                    -2.1213
+                  ],
+                  [
+                    0.7333,
+                    -1.5
+                  ],
+                  [
+                    0.7667,
+                    -0.7765
+                  ],
+                  [
+                    0.8,
+                    -0.0
+                  ],
+                  [
+                    0.8333,
+                    0.7765
+                  ],
+                  [
+                    0.8667,
+                    1.5
+                  ],
+                  [
+                    0.9,
+                    2.1213
+                  ],
+                  [
+                    0.9333,
+                    2.5981
+                  ],
+                  [
+                    0.9667,
+                    2.8978
+                  ],
+                  [
+                    1.0,
+                    3.0
+                  ],
+                  [
+                    1.0333,
+                    2.8978
+                  ],
+                  [
+                    1.0667,
+                    2.5981
+                  ],
+                  [
+                    1.1,
+                    2.1213
+                  ],
+                  [
+                    1.1333,
+                    1.5
+                  ],
+                  [
+                    1.1667,
+                    0.7765
+                  ],
+                  [
+                    1.2,
+                    0.0
+                  ],
+                  [
+                    1.2333,
+                    -0.7765
+                  ],
+                  [
+                    1.2667,
+                    -1.5
+                  ],
+                  [
+                    1.3,
+                    -2.1213
+                  ],
+                  [
+                    1.3333,
+                    -2.5981
+                  ],
+                  [
+                    1.3667,
+                    -2.8978
+                  ],
+                  [
+                    1.4,
+                    -3.0
+                  ],
+                  [
+                    1.4333,
+                    -2.8978
+                  ],
+                  [
+                    1.4667,
+                    -2.5981
+                  ],
+                  [
+                    1.5,
+                    -2.1213
+                  ],
+                  [
+                    1.5333,
+                    -1.5
+                  ],
+                  [
+                    1.5667,
+                    -0.7765
+                  ],
+                  [
+                    1.6,
+                    -0.0
+                  ],
+                  [
+                    1.6333,
+                    0.7765
+                  ],
+                  [
+                    1.6667,
+                    1.5
+                  ],
+                  [
+                    1.7,
+                    2.1213
+                  ],
+                  [
+                    1.7333,
+                    2.5981
+                  ],
+                  [
+                    1.7667,
+                    2.8978
+                  ],
+                  [
+                    1.8,
+                    3.0
+                  ],
+                  [
+                    1.8333,
+                    2.8978
+                  ],
+                  [
+                    1.8667,
+                    2.5981
+                  ],
+                  [
+                    1.9,
+                    2.1213
+                  ],
+                  [
+                    1.9333,
+                    1.5
+                  ],
+                  [
+                    1.9667,
+                    0.7765
+                  ],
+                  [
+                    2.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.2,
+                "y": 3.0,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 1.0,
+                "y": 3.0,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–time graph: a sine curve of amplitude 3 cm with peaks at 0.2, 1.0 and 1.8 s; the first two peaks are marked A and B"
+          }
+        },
+        {
+          "id": "shm-graph-p2",
+          "question": "The graph shows the displacement of the free end of a hacksaw blade clamped to a bench, against time. Use the graph to determine the frequency of the vibration.",
+          "hint": "Read the period from peaks A and B, convert ms to s, then f = 1/T.",
+          "walkthrough": [
+            "A is at t = 10 ms and B at t = 50 ms, so T = 50 − 10 = 40 ms = 0.040 s.",
+            "f = 1/T = 1 / 0.040",
+            "f = 25 Hz"
+          ],
+          "answer": {
+            "value": 25.0,
+            "unit": "Hz"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 120,
+              "step": 10
+            },
+            "y": {
+              "label": "x / mm",
+              "min": -6,
+              "max": 6,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.6667,
+                    1.0353
+                  ],
+                  [
+                    3.3333,
+                    2.0
+                  ],
+                  [
+                    5.0,
+                    2.8284
+                  ],
+                  [
+                    6.6667,
+                    3.4641
+                  ],
+                  [
+                    8.3333,
+                    3.8637
+                  ],
+                  [
+                    10.0,
+                    4.0
+                  ],
+                  [
+                    11.6667,
+                    3.8637
+                  ],
+                  [
+                    13.3333,
+                    3.4641
+                  ],
+                  [
+                    15.0,
+                    2.8284
+                  ],
+                  [
+                    16.6667,
+                    2.0
+                  ],
+                  [
+                    18.3333,
+                    1.0353
+                  ],
+                  [
+                    20.0,
+                    0.0
+                  ],
+                  [
+                    21.6667,
+                    -1.0353
+                  ],
+                  [
+                    23.3333,
+                    -2.0
+                  ],
+                  [
+                    25.0,
+                    -2.8284
+                  ],
+                  [
+                    26.6667,
+                    -3.4641
+                  ],
+                  [
+                    28.3333,
+                    -3.8637
+                  ],
+                  [
+                    30.0,
+                    -4.0
+                  ],
+                  [
+                    31.6667,
+                    -3.8637
+                  ],
+                  [
+                    33.3333,
+                    -3.4641
+                  ],
+                  [
+                    35.0,
+                    -2.8284
+                  ],
+                  [
+                    36.6667,
+                    -2.0
+                  ],
+                  [
+                    38.3333,
+                    -1.0353
+                  ],
+                  [
+                    40.0,
+                    -0.0
+                  ],
+                  [
+                    41.6667,
+                    1.0353
+                  ],
+                  [
+                    43.3333,
+                    2.0
+                  ],
+                  [
+                    45.0,
+                    2.8284
+                  ],
+                  [
+                    46.6667,
+                    3.4641
+                  ],
+                  [
+                    48.3333,
+                    3.8637
+                  ],
+                  [
+                    50.0,
+                    4.0
+                  ],
+                  [
+                    51.6667,
+                    3.8637
+                  ],
+                  [
+                    53.3333,
+                    3.4641
+                  ],
+                  [
+                    55.0,
+                    2.8284
+                  ],
+                  [
+                    56.6667,
+                    2.0
+                  ],
+                  [
+                    58.3333,
+                    1.0353
+                  ],
+                  [
+                    60.0,
+                    0.0
+                  ],
+                  [
+                    61.6667,
+                    -1.0353
+                  ],
+                  [
+                    63.3333,
+                    -2.0
+                  ],
+                  [
+                    65.0,
+                    -2.8284
+                  ],
+                  [
+                    66.6667,
+                    -3.4641
+                  ],
+                  [
+                    68.3333,
+                    -3.8637
+                  ],
+                  [
+                    70.0,
+                    -4.0
+                  ],
+                  [
+                    71.6667,
+                    -3.8637
+                  ],
+                  [
+                    73.3333,
+                    -3.4641
+                  ],
+                  [
+                    75.0,
+                    -2.8284
+                  ],
+                  [
+                    76.6667,
+                    -2.0
+                  ],
+                  [
+                    78.3333,
+                    -1.0353
+                  ],
+                  [
+                    80.0,
+                    -0.0
+                  ],
+                  [
+                    81.6667,
+                    1.0353
+                  ],
+                  [
+                    83.3333,
+                    2.0
+                  ],
+                  [
+                    85.0,
+                    2.8284
+                  ],
+                  [
+                    86.6667,
+                    3.4641
+                  ],
+                  [
+                    88.3333,
+                    3.8637
+                  ],
+                  [
+                    90.0,
+                    4.0
+                  ],
+                  [
+                    91.6667,
+                    3.8637
+                  ],
+                  [
+                    93.3333,
+                    3.4641
+                  ],
+                  [
+                    95.0,
+                    2.8284
+                  ],
+                  [
+                    96.6667,
+                    2.0
+                  ],
+                  [
+                    98.3333,
+                    1.0353
+                  ],
+                  [
+                    100.0,
+                    0.0
+                  ],
+                  [
+                    101.6667,
+                    -1.0353
+                  ],
+                  [
+                    103.3333,
+                    -2.0
+                  ],
+                  [
+                    105.0,
+                    -2.8284
+                  ],
+                  [
+                    106.6667,
+                    -3.4641
+                  ],
+                  [
+                    108.3333,
+                    -3.8637
+                  ],
+                  [
+                    110.0,
+                    -4.0
+                  ],
+                  [
+                    111.6667,
+                    -3.8637
+                  ],
+                  [
+                    113.3333,
+                    -3.4641
+                  ],
+                  [
+                    115.0,
+                    -2.8284
+                  ],
+                  [
+                    116.6667,
+                    -2.0
+                  ],
+                  [
+                    118.3333,
+                    -1.0353
+                  ],
+                  [
+                    120.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10,
+                "y": 4.0,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 50,
+                "y": 4.0,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–time graph: a sine curve of amplitude 4 mm with peaks at 10, 50 and 90 ms; the first two peaks are marked A and B"
+          }
+        },
+        {
+          "id": "shm-graph-p3",
+          "question": "The graph shows the vertical velocity of a moored boat against time as a swell passes. The tangent to the curve at X, where the velocity is zero, is drawn. Use the tangent to determine the maximum acceleration of the boat.",
+          "hint": "At a zero crossing of a v–t graph the acceleration is a maximum; find the gradient of the tangent from its two end points on gridlines.",
+          "walkthrough": [
+            "The tangent passes through (1.0 s, −0.5 m s⁻¹) and (5.0 s, 0.5 m s⁻¹).",
+            "a_max = gradient = (0.5 − (−0.5)) / (5.0 − 1.0) = 1.0 / 4.0",
+            "a_max = 0.25 m s⁻²"
+          ],
+          "answer": {
+            "value": 0.25,
+            "unit": "m s⁻²"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": -0.5,
+              "max": 0.5,
+              "step": 0.1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    -0.3816
+                  ],
+                  [
+                    0.2,
+                    -0.3936
+                  ],
+                  [
+                    0.4,
+                    -0.3994
+                  ],
+                  [
+                    0.6,
+                    -0.399
+                  ],
+                  [
+                    0.8,
+                    -0.3924
+                  ],
+                  [
+                    1.0,
+                    -0.3796
+                  ],
+                  [
+                    1.2,
+                    -0.3609
+                  ],
+                  [
+                    1.4,
+                    -0.3366
+                  ],
+                  [
+                    1.6,
+                    -0.307
+                  ],
+                  [
+                    1.8,
+                    -0.2727
+                  ],
+                  [
+                    2.0,
+                    -0.234
+                  ],
+                  [
+                    2.2,
+                    -0.1918
+                  ],
+                  [
+                    2.4,
+                    -0.1465
+                  ],
+                  [
+                    2.6,
+                    -0.099
+                  ],
+                  [
+                    2.8,
+                    -0.0499
+                  ],
+                  [
+                    3.0,
+                    0.0
+                  ],
+                  [
+                    3.2,
+                    0.0499
+                  ],
+                  [
+                    3.4,
+                    0.099
+                  ],
+                  [
+                    3.6,
+                    0.1465
+                  ],
+                  [
+                    3.8,
+                    0.1918
+                  ],
+                  [
+                    4.0,
+                    0.234
+                  ],
+                  [
+                    4.2,
+                    0.2727
+                  ],
+                  [
+                    4.4,
+                    0.307
+                  ],
+                  [
+                    4.6,
+                    0.3366
+                  ],
+                  [
+                    4.8,
+                    0.3609
+                  ],
+                  [
+                    5.0,
+                    0.3796
+                  ],
+                  [
+                    5.2,
+                    0.3924
+                  ],
+                  [
+                    5.4,
+                    0.399
+                  ],
+                  [
+                    5.6,
+                    0.3994
+                  ],
+                  [
+                    5.8,
+                    0.3936
+                  ],
+                  [
+                    6.0,
+                    0.3816
+                  ],
+                  [
+                    6.2,
+                    0.3637
+                  ],
+                  [
+                    6.4,
+                    0.3401
+                  ],
+                  [
+                    6.6,
+                    0.3112
+                  ],
+                  [
+                    6.8,
+                    0.2775
+                  ],
+                  [
+                    7.0,
+                    0.2394
+                  ],
+                  [
+                    7.2,
+                    0.1976
+                  ],
+                  [
+                    7.4,
+                    0.1527
+                  ],
+                  [
+                    7.6,
+                    0.1054
+                  ],
+                  [
+                    7.8,
+                    0.0564
+                  ],
+                  [
+                    8.0,
+                    0.0066
+                  ]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [
+                    1.0,
+                    -0.5
+                  ],
+                  [
+                    5.0,
+                    0.5
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 3.0,
+                "y": 0,
+                "label": "X",
+                "dx": 8,
+                "dy": 18
+              }
+            ],
+            "labels": [
+              {
+                "x": 5.2,
+                "y": 0.46,
+                "text": "tangent at X"
+              }
+            ],
+            "alt": "Velocity–time graph: a sinusoidal curve of amplitude 0.4 m/s crossing zero upwards at 3 s (marked X), with the tangent at X drawn from (1.0 s, −0.5 m/s) to (5.0 s, 0.5 m/s)"
+          }
+        },
+        {
+          "id": "shm-graph-p4",
+          "question": "The graph shows the displacement of the bob of a long museum pendulum against time. Its period is 7.5 s. The tangent to the curve at X, where the displacement is zero, is drawn. Use the tangent to determine the maximum speed of the bob.",
+          "hint": "At a zero crossing of an x–t graph the speed is a maximum; it equals the gradient of the tangent, which you can check against ωA.",
+          "walkthrough": [
+            "The tangent passes through (2.0 s, −1.0 m) and (6.0 s, 1.0 m).",
+            "v_max = gradient = (1.0 − (−1.0)) / (6.0 − 2.0) = 2.0 / 4.0 = 0.50 m s⁻¹",
+            "Check: ωA = (2π / 7.5) × 0.60 = 0.50 m s⁻¹, which agrees.",
+            "v_max = 0.50 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "x / m",
+              "min": -1.0,
+              "max": 1.0,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.1143
+                  ],
+                  [
+                    0.2,
+                    0.015
+                  ],
+                  [
+                    0.4,
+                    -0.0847
+                  ],
+                  [
+                    0.6,
+                    -0.182
+                  ],
+                  [
+                    0.8,
+                    -0.2744
+                  ],
+                  [
+                    1.0,
+                    -0.3591
+                  ],
+                  [
+                    1.2,
+                    -0.4339
+                  ],
+                  [
+                    1.4,
+                    -0.4966
+                  ],
+                  [
+                    1.6,
+                    -0.5456
+                  ],
+                  [
+                    1.8,
+                    -0.5794
+                  ],
+                  [
+                    2.0,
+                    -0.5972
+                  ],
+                  [
+                    2.2,
+                    -0.5985
+                  ],
+                  [
+                    2.4,
+                    -0.5832
+                  ],
+                  [
+                    2.6,
+                    -0.5517
+                  ],
+                  [
+                    2.8,
+                    -0.5049
+                  ],
+                  [
+                    3.0,
+                    -0.4441
+                  ],
+                  [
+                    3.2,
+                    -0.371
+                  ],
+                  [
+                    3.4,
+                    -0.2877
+                  ],
+                  [
+                    3.6,
+                    -0.1963
+                  ],
+                  [
+                    3.8,
+                    -0.0995
+                  ],
+                  [
+                    4.0,
+                    0.0
+                  ],
+                  [
+                    4.2,
+                    0.0995
+                  ],
+                  [
+                    4.4,
+                    0.1963
+                  ],
+                  [
+                    4.6,
+                    0.2877
+                  ],
+                  [
+                    4.8,
+                    0.371
+                  ],
+                  [
+                    5.0,
+                    0.4441
+                  ],
+                  [
+                    5.2,
+                    0.5049
+                  ],
+                  [
+                    5.4,
+                    0.5517
+                  ],
+                  [
+                    5.6,
+                    0.5832
+                  ],
+                  [
+                    5.8,
+                    0.5985
+                  ],
+                  [
+                    6.0,
+                    0.5972
+                  ],
+                  [
+                    6.2,
+                    0.5794
+                  ],
+                  [
+                    6.4,
+                    0.5456
+                  ],
+                  [
+                    6.6,
+                    0.4966
+                  ],
+                  [
+                    6.8,
+                    0.4339
+                  ],
+                  [
+                    7.0,
+                    0.3591
+                  ],
+                  [
+                    7.2,
+                    0.2744
+                  ],
+                  [
+                    7.4,
+                    0.182
+                  ],
+                  [
+                    7.6,
+                    0.0847
+                  ],
+                  [
+                    7.8,
+                    -0.015
+                  ],
+                  [
+                    8.0,
+                    -0.1143
+                  ]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [
+                    2.0,
+                    -1.0
+                  ],
+                  [
+                    6.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4.0,
+                "y": 0,
+                "label": "X",
+                "dx": 8,
+                "dy": 18
+              }
+            ],
+            "labels": [
+              {
+                "x": 6.2,
+                "y": 0.92,
+                "text": "tangent at X"
+              }
+            ],
+            "alt": "Displacement–time graph: a sinusoidal curve of amplitude 0.6 m crossing zero upwards at 4 s (marked X), with the tangent at X drawn from (2.0 s, −1.0 m) to (6.0 s, 1.0 m)"
+          }
+        },
+        {
+          "id": "shm-graph-p5",
+          "question": "The graph shows the velocity of a pendulum bob of mass 0.20 kg against time. Use the graph to determine the maximum kinetic energy of the bob.",
+          "hint": "Read v_max at the peak P, then KE_max = ½mv_max².",
+          "walkthrough": [
+            "The peak P is at v = 1.5 m s⁻¹, so v_max = 1.5 m s⁻¹.",
+            "KE_max = ½mv_max² = 0.5 × 0.20 × 1.5² = 0.5 × 0.20 × 2.25",
+            "KE_max = 0.225 J"
+          ],
+          "answer": {
+            "value": 0.225,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 4,
+              "step": 0.5
+            },
+            "y": {
+              "label": "v / m s⁻¹",
+              "min": -2,
+              "max": 2,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0833,
+                    0.3882
+                  ],
+                  [
+                    0.1667,
+                    0.75
+                  ],
+                  [
+                    0.25,
+                    1.0607
+                  ],
+                  [
+                    0.3333,
+                    1.299
+                  ],
+                  [
+                    0.4167,
+                    1.4489
+                  ],
+                  [
+                    0.5,
+                    1.5
+                  ],
+                  [
+                    0.5833,
+                    1.4489
+                  ],
+                  [
+                    0.6667,
+                    1.299
+                  ],
+                  [
+                    0.75,
+                    1.0607
+                  ],
+                  [
+                    0.8333,
+                    0.75
+                  ],
+                  [
+                    0.9167,
+                    0.3882
+                  ],
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.0833,
+                    -0.3882
+                  ],
+                  [
+                    1.1667,
+                    -0.75
+                  ],
+                  [
+                    1.25,
+                    -1.0607
+                  ],
+                  [
+                    1.3333,
+                    -1.299
+                  ],
+                  [
+                    1.4167,
+                    -1.4489
+                  ],
+                  [
+                    1.5,
+                    -1.5
+                  ],
+                  [
+                    1.5833,
+                    -1.4489
+                  ],
+                  [
+                    1.6667,
+                    -1.299
+                  ],
+                  [
+                    1.75,
+                    -1.0607
+                  ],
+                  [
+                    1.8333,
+                    -0.75
+                  ],
+                  [
+                    1.9167,
+                    -0.3882
+                  ],
+                  [
+                    2.0,
+                    -0.0
+                  ],
+                  [
+                    2.0833,
+                    0.3882
+                  ],
+                  [
+                    2.1667,
+                    0.75
+                  ],
+                  [
+                    2.25,
+                    1.0607
+                  ],
+                  [
+                    2.3333,
+                    1.299
+                  ],
+                  [
+                    2.4167,
+                    1.4489
+                  ],
+                  [
+                    2.5,
+                    1.5
+                  ],
+                  [
+                    2.5833,
+                    1.4489
+                  ],
+                  [
+                    2.6667,
+                    1.299
+                  ],
+                  [
+                    2.75,
+                    1.0607
+                  ],
+                  [
+                    2.8333,
+                    0.75
+                  ],
+                  [
+                    2.9167,
+                    0.3882
+                  ],
+                  [
+                    3.0,
+                    0.0
+                  ],
+                  [
+                    3.0833,
+                    -0.3882
+                  ],
+                  [
+                    3.1667,
+                    -0.75
+                  ],
+                  [
+                    3.25,
+                    -1.0607
+                  ],
+                  [
+                    3.3333,
+                    -1.299
+                  ],
+                  [
+                    3.4167,
+                    -1.4489
+                  ],
+                  [
+                    3.5,
+                    -1.5
+                  ],
+                  [
+                    3.5833,
+                    -1.4489
+                  ],
+                  [
+                    3.6667,
+                    -1.299
+                  ],
+                  [
+                    3.75,
+                    -1.0607
+                  ],
+                  [
+                    3.8333,
+                    -0.75
+                  ],
+                  [
+                    3.9167,
+                    -0.3882
+                  ],
+                  [
+                    4.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.5,
+                "y": 1.5,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "alt": "Velocity–time graph: a sine curve of amplitude 1.5 m/s and period 2 s; the first peak at 0.5 s is marked P"
+          }
+        },
+        {
+          "id": "shm-graph-p6",
+          "question": "The graph shows the acceleration of a trolley tethered between two springs against its displacement from the centre of the oscillation. Use the gradient of the line to determine the period of the oscillation.",
+          "hint": "For SHM, a = −ω²x, so the gradient of the line is −ω²; find ω and then T = 2π/ω.",
+          "walkthrough": [
+            "A = (−0.10 m, 2.5 m s⁻²) and B = (0.10 m, −2.5 m s⁻²).",
+            "gradient = (−2.5 − 2.5) / (0.10 − (−0.10)) = −5.0 / 0.20 = −25 s⁻²",
+            "gradient = −ω², so ω² = 25 s⁻² and ω = 5.0 rad s⁻¹",
+            "T = 2π/ω = 2π / 5.0",
+            "T = 1.26 s"
+          ],
+          "answer": {
+            "value": 1.26,
+            "unit": "s"
+          },
+          "graph": {
+            "x": {
+              "label": "x / m",
+              "min": -0.1,
+              "max": 0.1,
+              "step": 0.05
+            },
+            "y": {
+              "label": "a / m s⁻²",
+              "min": -3,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    -0.1,
+                    2.5
+                  ],
+                  [
+                    0.1,
+                    -2.5
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": -0.1,
+                "y": 2.5,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 0.1,
+                "y": -2.5,
+                "label": "B",
+                "drop": true,
+                "dx": -18,
+                "dy": 16
+              }
+            ],
+            "alt": "Acceleration–displacement graph: a straight line through the origin from A at (−0.10 m, 2.5 m/s²) to B at (0.10 m, −2.5 m/s²)"
+          }
+        }
+      ]
+    }
+  ]
+}

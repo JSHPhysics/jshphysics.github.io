@@ -1,0 +1,2058 @@
+{
+  "id": "nuclear-particles",
+  "title": "Nuclear and particle physics",
+  "subtitle": "Radioactive decay, half-life, mass–energy, binding energy and nuclear size",
+  "order": 140,
+  "types": [
+    {
+      "id": "half-life-decay-constant",
+      "name": "Half-life and decay constant",
+      "equations": [
+        "λ = ln 2 / t½",
+        "t½ = ln 2 / λ"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Half-life and decay constant are two ways of saying the same thing: λ = ln 2 / t½ converts one to the other. Decide which unit the answer needs first; if λ must be in s⁻¹, convert the half-life to seconds (× 60 for minutes, × 3600 for hours, × 86 400 for days, × 3.15 × 10⁷ for years) before dividing.",
+      "commonErrors": [
+        "Using log₁₀ 2 instead of ln 2 = 0.693",
+        "Leaving the half-life in years or days when λ is wanted in s⁻¹",
+        "Dividing t½ by ln 2 instead of the other way round"
+      ],
+      "worked": {
+        "id": "half-life-decay-constant-w",
+        "question": "Cobalt-60, used in hospital radiotherapy sources, has a half-life of 5.27 years. Calculate its decay constant in s⁻¹. Take 1 year = 365 days.",
+        "steps": [
+          "Known: t½ = 5.27 years. Unknown: λ in s⁻¹, so convert t½ to seconds first.",
+          "t½ = 5.27 × 365 × 24 × 3600 = 1.66 × 10⁸ s",
+          "λ = ln 2 / t½",
+          "λ = 0.693 / 1.66 × 10⁸",
+          "λ = 4.17 × 10⁻⁹ s⁻¹"
+        ],
+        "answer": {
+          "value": 4.17e-09,
+          "unit": "s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "half-life-decay-constant-p1",
+          "question": "Iodine-131, used to treat thyroid conditions, has a half-life of 8.02 days. Calculate its decay constant in day⁻¹.",
+          "hint": "λ = ln 2 / t½; the answer is wanted per day, so no unit conversion is needed.",
+          "walkthrough": [
+            "t½ = 8.02 days, find λ in day⁻¹.",
+            "λ = ln 2 / t½ = 0.693 / 8.02",
+            "λ = 0.0864 day⁻¹"
+          ],
+          "answer": {
+            "value": 0.0864,
+            "unit": "day⁻¹"
+          }
+        },
+        {
+          "id": "half-life-decay-constant-p2",
+          "question": "Technetium-99m, the most common tracer in medical imaging, has a half-life of 6.0 hours. Calculate its decay constant in h⁻¹.",
+          "hint": "Keep the time in hours and use λ = ln 2 / t½.",
+          "walkthrough": [
+            "t½ = 6.0 h, find λ in h⁻¹.",
+            "λ = ln 2 / t½ = 0.693 / 6.0",
+            "λ = 0.116 h⁻¹"
+          ],
+          "answer": {
+            "value": 0.116,
+            "unit": "h⁻¹"
+          }
+        },
+        {
+          "id": "half-life-decay-constant-p3",
+          "question": "Radon-222 gas, which seeps into houses built on granite, has a half-life of 3.82 days. Calculate its decay constant in s⁻¹.",
+          "hint": "Convert the half-life to seconds (1 day = 86 400 s) before using λ = ln 2 / t½.",
+          "walkthrough": [
+            "t½ = 3.82 days = 3.82 × 86 400 = 3.30 × 10⁵ s",
+            "λ = ln 2 / t½ = 0.693 / 3.30 × 10⁵",
+            "λ = 2.10 × 10⁻⁶ s⁻¹"
+          ],
+          "answer": {
+            "value": 2.1e-06,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "half-life-decay-constant-p4",
+          "question": "The decay constant of carbon-14, used in archaeological dating, is 1.21 × 10⁻⁴ year⁻¹. Calculate its half-life in years.",
+          "hint": "Rearrange λ = ln 2 / t½ to make t½ the subject.",
+          "walkthrough": [
+            "λ = 1.21 × 10⁻⁴ year⁻¹, find t½ in years.",
+            "t½ = ln 2 / λ = 0.693 / 1.21 × 10⁻⁴",
+            "t½ = 5730 years"
+          ],
+          "answer": {
+            "value": 5730,
+            "unit": "years"
+          }
+        },
+        {
+          "id": "half-life-decay-constant-p5",
+          "question": "Plutonium-239 in spent reactor fuel has a decay constant of 9.12 × 10⁻¹³ s⁻¹. Calculate its half-life in years. Take 1 year = 3.15 × 10⁷ s.",
+          "hint": "Find t½ in seconds from t½ = ln 2 / λ, then divide by the number of seconds in a year.",
+          "walkthrough": [
+            "λ = 9.12 × 10⁻¹³ s⁻¹, find t½ in years.",
+            "t½ = ln 2 / λ = 0.693 / 9.12 × 10⁻¹³ = 7.60 × 10¹¹ s",
+            "t½ = 7.60 × 10¹¹ / 3.15 × 10⁷",
+            "t½ = 2.41 × 10⁴ years"
+          ],
+          "answer": {
+            "value": 24100,
+            "unit": "years"
+          }
+        },
+        {
+          "id": "half-life-decay-constant-p6",
+          "question": "Uranium-238, the most common isotope in natural uranium ore, has a half-life of 4.47 × 10⁹ years. Calculate its decay constant in s⁻¹. Take 1 year = 3.15 × 10⁷ s.",
+          "hint": "Convert the half-life to seconds first, then use λ = ln 2 / t½.",
+          "walkthrough": [
+            "t½ = 4.47 × 10⁹ years = 4.47 × 10⁹ × 3.15 × 10⁷ = 1.41 × 10¹⁷ s",
+            "λ = ln 2 / t½ = 0.693 / 1.41 × 10¹⁷",
+            "λ = 4.92 × 10⁻¹⁸ s⁻¹"
+          ],
+          "answer": {
+            "value": 4.92e-18,
+            "unit": "s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "activity-number-nuclei",
+      "name": "Activity and number of nuclei",
+      "equations": [
+        "A = λN",
+        "N = (m / M) × N_A"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Activity is the number of decays per second: A = λN with λ in s⁻¹ and N the number of undecayed nuclei. If the sample is given as a mass, find N first: number of moles = mass in grams / molar mass in g mol⁻¹, then multiply by N_A. The molar mass in g mol⁻¹ is numerically the nucleon number.",
+      "commonErrors": [
+        "Using λ in day⁻¹ or year⁻¹ and quoting the activity in Bq",
+        "Dividing the mass in kg by the molar mass in g mol⁻¹",
+        "Forgetting to multiply the number of moles by N_A"
+      ],
+      "worked": {
+        "id": "activity-number-nuclei-w",
+        "question": "A calibration source contains 1.0 μg of cobalt-60. The molar mass of cobalt-60 is 60 g mol⁻¹ and its decay constant is 4.17 × 10⁻⁹ s⁻¹. Calculate the activity of the source.",
+        "steps": [
+          "Known: m = 1.0 μg = 1.0 × 10⁻⁶ g, M = 60 g mol⁻¹, λ = 4.17 × 10⁻⁹ s⁻¹. Unknown: A.",
+          "First find N: N = (m / M) × N_A",
+          "N = (1.0 × 10⁻⁶ / 60) × 6.02 × 10²³ = 1.003 × 10¹⁶ nuclei (keep the extra figure for the next step)",
+          "A = λN = 4.17 × 10⁻⁹ × 1.003 × 10¹⁶",
+          "A = 4.18 × 10⁷ Bq"
+        ],
+        "answer": {
+          "value": 41800000,
+          "unit": "Bq"
+        }
+      },
+      "practice": [
+        {
+          "id": "activity-number-nuclei-p1",
+          "question": "The americium-241 source in a household smoke detector contains 7.4 × 10¹⁴ undecayed nuclei. The decay constant of americium-241 is 5.08 × 10⁻¹¹ s⁻¹. Calculate the activity of the source.",
+          "hint": "Use A = λN directly; both values are already in SI units.",
+          "walkthrough": [
+            "N = 7.4 × 10¹⁴, λ = 5.08 × 10⁻¹¹ s⁻¹, find A.",
+            "A = λN = 5.08 × 10⁻¹¹ × 7.4 × 10¹⁴",
+            "A = 3.76 × 10⁴ Bq"
+          ],
+          "answer": {
+            "value": 37600,
+            "unit": "Bq"
+          }
+        },
+        {
+          "id": "activity-number-nuclei-p2",
+          "question": "A sample of uranium ore contains 5.0 g of uranium-238. The molar mass of uranium-238 is 238 g mol⁻¹. Calculate the number of uranium-238 nuclei in the sample.",
+          "hint": "Number of moles = mass / molar mass, then multiply by N_A.",
+          "walkthrough": [
+            "m = 5.0 g, M = 238 g mol⁻¹, find N.",
+            "N = (m / M) × N_A = (5.0 / 238) × 6.02 × 10²³",
+            "N = 1.26 × 10²² nuclei"
+          ],
+          "answer": {
+            "value": 1.26e+22,
+            "unit": ""
+          }
+        },
+        {
+          "id": "activity-number-nuclei-p3",
+          "question": "A patient is injected with a technetium-99m tracer of activity 800 MBq. The decay constant of technetium-99m is 3.21 × 10⁻⁵ s⁻¹. Calculate the number of technetium-99m nuclei injected.",
+          "hint": "Convert MBq to Bq, then rearrange A = λN to N = A / λ.",
+          "walkthrough": [
+            "A = 800 MBq = 8.00 × 10⁸ Bq, λ = 3.21 × 10⁻⁵ s⁻¹, find N.",
+            "N = A / λ = 8.00 × 10⁸ / 3.21 × 10⁻⁵",
+            "N = 2.49 × 10¹³ nuclei"
+          ],
+          "answer": {
+            "value": 24900000000000,
+            "unit": ""
+          }
+        },
+        {
+          "id": "activity-number-nuclei-p4",
+          "question": "A sealed radium-226 source in a school lab contains 2.6 × 10¹⁸ undecayed nuclei and has an activity of 36 MBq. Calculate the decay constant of radium-226 in s⁻¹.",
+          "hint": "Convert MBq to Bq, then rearrange A = λN to λ = A / N.",
+          "walkthrough": [
+            "A = 36 MBq = 3.6 × 10⁷ Bq, N = 2.6 × 10¹⁸, find λ.",
+            "λ = A / N = 3.6 × 10⁷ / 2.6 × 10¹⁸",
+            "λ = 1.38 × 10⁻¹¹ s⁻¹"
+          ],
+          "answer": {
+            "value": 1.38e-11,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "activity-number-nuclei-p5",
+          "question": "A radioisotope thermoelectric generator for a space probe is fuelled with 0.50 mg of polonium-210. The molar mass of polonium-210 is 210 g mol⁻¹ and its decay constant is 5.80 × 10⁻⁸ s⁻¹. Calculate the activity of the fuel.",
+          "hint": "Convert mg to g, find N from the mass and molar mass, then use A = λN.",
+          "walkthrough": [
+            "m = 0.50 mg = 5.0 × 10⁻⁴ g, M = 210 g mol⁻¹, λ = 5.80 × 10⁻⁸ s⁻¹.",
+            "N = (m / M) × N_A = (5.0 × 10⁻⁴ / 210) × 6.02 × 10²³ = 1.43 × 10¹⁸",
+            "A = λN = 5.80 × 10⁻⁸ × 1.43 × 10¹⁸",
+            "A = 8.31 × 10¹⁰ Bq"
+          ],
+          "answer": {
+            "value": 83100000000,
+            "unit": "Bq"
+          }
+        },
+        {
+          "id": "activity-number-nuclei-p6",
+          "question": "A dose of iodine-131 has an activity of 5.0 × 10⁸ Bq. The half-life of iodine-131 is 8.02 days. Calculate the number of iodine-131 nuclei in the dose.",
+          "hint": "Find λ in s⁻¹ from the half-life in seconds, then use N = A / λ.",
+          "walkthrough": [
+            "t½ = 8.02 × 86 400 = 6.93 × 10⁵ s",
+            "λ = ln 2 / t½ = 0.693 / 6.93 × 10⁵ = 1.00 × 10⁻⁶ s⁻¹",
+            "N = A / λ = 5.0 × 10⁸ / 1.00 × 10⁻⁶",
+            "N = 5.00 × 10¹⁴ nuclei"
+          ],
+          "answer": {
+            "value": 500000000000000,
+            "unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "exponential-decay",
+      "name": "Exponential decay over time",
+      "equations": [
+        "N = N₀e^(−λt)",
+        "A = A₀e^(−λt)",
+        "t = ln(A₀ / A) / λ"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Use the exponential form whenever the time is not a whole number of half-lives. Make sure λ and t are in the same time unit, work out the product λt first, then take e to the power of −λt. To find a time, divide both sides by A₀ (or N₀), take natural logs of both sides and rearrange: t = ln(A₀ / A) / λ.",
+      "commonErrors": [
+        "Mixing units: λ in s⁻¹ with t in days",
+        "Forgetting the minus sign in the exponent",
+        "Taking ln of the ratio the wrong way up and getting a negative time"
+      ],
+      "worked": {
+        "id": "exponential-decay-w",
+        "question": "A hospital receives an iodine-131 source of activity 8.0 × 10⁵ Bq. The decay constant of iodine-131 is 1.00 × 10⁻⁶ s⁻¹. Calculate the activity of the source 20 days later.",
+        "steps": [
+          "Known: A₀ = 8.0 × 10⁵ Bq, λ = 1.00 × 10⁻⁶ s⁻¹, t = 20 days. Unknown: A.",
+          "Convert t to seconds: t = 20 × 86 400 = 1.73 × 10⁶ s",
+          "λt = 1.00 × 10⁻⁶ × 1.73 × 10⁶ = 1.73",
+          "A = A₀e^(−λt) = 8.0 × 10⁵ × e^(−1.73) = 8.0 × 10⁵ × 0.178",
+          "A = 1.42 × 10⁵ Bq"
+        ],
+        "answer": {
+          "value": 142000,
+          "unit": "Bq"
+        }
+      },
+      "practice": [
+        {
+          "id": "exponential-decay-p1",
+          "question": "Phosphorus-32 is used as a tracer in plant biology experiments. Its decay constant is 0.0485 day⁻¹. Calculate the fraction of the original phosphorus-32 nuclei remaining after 30 days.",
+          "hint": "The fraction remaining is N / N₀ = e^(−λt); λ and t are both in days so no conversion is needed.",
+          "walkthrough": [
+            "λ = 0.0485 day⁻¹, t = 30 days, find N / N₀.",
+            "λt = 0.0485 × 30 = 1.455",
+            "N / N₀ = e^(−1.455)",
+            "N / N₀ = 0.233"
+          ],
+          "answer": {
+            "value": 0.233,
+            "unit": ""
+          }
+        },
+        {
+          "id": "exponential-decay-p2",
+          "question": "A sealed flask contains 6.0 × 10²⁰ radon-222 atoms. The decay constant of radon-222 is 2.1 × 10⁻⁶ s⁻¹. Calculate the number of radon-222 atoms remaining after 1.5 × 10⁵ s.",
+          "hint": "Work out λt first, then N = N₀e^(−λt).",
+          "walkthrough": [
+            "N₀ = 6.0 × 10²⁰, λ = 2.1 × 10⁻⁶ s⁻¹, t = 1.5 × 10⁵ s.",
+            "λt = 2.1 × 10⁻⁶ × 1.5 × 10⁵ = 0.315",
+            "N = 6.0 × 10²⁰ × e^(−0.315) = 6.0 × 10²⁰ × 0.730",
+            "N = 4.38 × 10²⁰"
+          ],
+          "answer": {
+            "value": 4.38e+20,
+            "unit": ""
+          }
+        },
+        {
+          "id": "exponential-decay-p3",
+          "question": "An industrial gamma source used for weld inspection has an initial activity of 1.2 × 10⁶ Bq and must be replaced when its activity falls to 3.0 × 10⁵ Bq. Its decay constant is 4.5 × 10⁻⁷ s⁻¹. Calculate the time, in days, before it must be replaced.",
+          "hint": "Rearrange to t = ln(A₀ / A) / λ, which gives t in seconds; then divide by 86 400.",
+          "walkthrough": [
+            "A₀ = 1.2 × 10⁶ Bq, A = 3.0 × 10⁵ Bq, λ = 4.5 × 10⁻⁷ s⁻¹, find t.",
+            "A₀ / A = 1.2 × 10⁶ / 3.0 × 10⁵ = 4.0, so ln(A₀ / A) = 1.386",
+            "t = 1.386 / 4.5 × 10⁻⁷ = 3.08 × 10⁶ s",
+            "t = 3.08 × 10⁶ / 86 400 = 35.7 days"
+          ],
+          "answer": {
+            "value": 35.7,
+            "unit": "days"
+          }
+        },
+        {
+          "id": "exponential-decay-p4",
+          "question": "The activity of a short-lived isotope produced in a cyclotron falls to 60% of its initial value in 12 hours. Calculate its decay constant in s⁻¹.",
+          "hint": "A / A₀ = 0.60 = e^(−λt); take ln of both sides and solve for λ with t in seconds.",
+          "walkthrough": [
+            "A / A₀ = 0.60, t = 12 h = 12 × 3600 = 43 200 s, find λ.",
+            "ln(A₀ / A) = ln(1 / 0.60) = 0.511",
+            "λ = 0.511 / 43 200",
+            "λ = 1.18 × 10⁻⁵ s⁻¹"
+          ],
+          "answer": {
+            "value": 1.18e-05,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "exponential-decay-p5",
+          "question": "A cobalt-60 radiotherapy source had an activity of 2.0 × 10¹⁰ Bq when installed. Cobalt-60 has a half-life of 5.27 years. Calculate the activity of the source 12 years after installation.",
+          "hint": "Find λ in year⁻¹ from the half-life, then use A = A₀e^(−λt) with t in years.",
+          "walkthrough": [
+            "λ = ln 2 / t½ = 0.693 / 5.27 = 0.132 year⁻¹",
+            "λt = 0.132 × 12 = 1.58",
+            "A = A₀e^(−λt) = 2.0 × 10¹⁰ × e^(−1.58) = 2.0 × 10¹⁰ × 0.206",
+            "A = 4.13 × 10⁹ Bq"
+          ],
+          "answer": {
+            "value": 4130000000,
+            "unit": "Bq"
+          }
+        },
+        {
+          "id": "exponential-decay-p6",
+          "question": "A sample of wood from an ancient boat has a carbon-14 activity that is 62% of the activity of living wood. The half-life of carbon-14 is 5730 years. Calculate the age of the wood.",
+          "hint": "Find λ in year⁻¹ from the half-life, then t = ln(A₀ / A) / λ with A / A₀ = 0.62.",
+          "walkthrough": [
+            "λ = ln 2 / t½ = 0.693 / 5730 = 1.21 × 10⁻⁴ year⁻¹",
+            "ln(A₀ / A) = ln(1 / 0.62) = 0.478",
+            "t = 0.478 / 1.21 × 10⁻⁴",
+            "t = 3950 years"
+          ],
+          "answer": {
+            "value": 3950,
+            "unit": "years"
+          }
+        }
+      ]
+    },
+    {
+      "id": "whole-half-lives",
+      "name": "Decay in whole half-lives",
+      "equations": [
+        "N = N₀ / 2ⁿ",
+        "A = A₀ / 2ⁿ",
+        "n = t / t½"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "When the time is a whole number of half-lives, halve repeatedly rather than reaching for the exponential. Count n = t / t½, then divide the starting amount by 2ⁿ. Going the other way, work out the ratio start / finish, write it as a power of 2 to get n, then multiply n by the half-life to get the time.",
+      "commonErrors": [
+        "Dividing by 2n instead of 2ⁿ (three half-lives leaves 1/8, not 1/6)",
+        "Mismatching units between t and t½ (hours against minutes)",
+        "Reading 'falls by 1/8' as the same as 'falls to 1/8'"
+      ],
+      "worked": {
+        "id": "whole-half-lives-w",
+        "question": "A technetium-99m source has an activity of 800 MBq when it is prepared. Technetium-99m has a half-life of 6.0 hours. Calculate its activity 24 hours later.",
+        "steps": [
+          "Known: A₀ = 800 MBq, t½ = 6.0 h, t = 24 h. Unknown: A.",
+          "Number of half-lives n = t / t½ = 24 / 6.0 = 4",
+          "A = A₀ / 2ⁿ = 800 / 2⁴ = 800 / 16",
+          "A = 50 MBq"
+        ],
+        "answer": {
+          "value": 50,
+          "unit": "MBq"
+        }
+      },
+      "practice": [
+        {
+          "id": "whole-half-lives-p1",
+          "question": "Iodine-131 has a half-life of 8.0 days. Calculate the fraction of the original iodine-131 nuclei remaining in a sample after 24 days.",
+          "hint": "Work out how many half-lives 24 days is, then halve 1 that many times.",
+          "walkthrough": [
+            "n = t / t½ = 24 / 8.0 = 3",
+            "Fraction remaining = 1 / 2³ = 1 / 8",
+            "Fraction = 0.125"
+          ],
+          "answer": {
+            "value": 0.125,
+            "unit": ""
+          }
+        },
+        {
+          "id": "whole-half-lives-p2",
+          "question": "In a school experiment, a radon-220 sample has an initial activity of 4000 Bq. Radon-220 has a half-life of 55 s. Calculate the activity after 165 s.",
+          "hint": "165 s is a whole number of half-lives; find n, then A = A₀ / 2ⁿ.",
+          "walkthrough": [
+            "n = t / t½ = 165 / 55 = 3",
+            "A = A₀ / 2ⁿ = 4000 / 2³ = 4000 / 8",
+            "A = 500 Bq"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "Bq"
+          }
+        },
+        {
+          "id": "whole-half-lives-p3",
+          "question": "The activity of a sodium-24 sample used to trace leaks in a pipeline falls from 9.6 × 10⁴ Bq to 3.0 × 10³ Bq. Sodium-24 has a half-life of 15 hours. Calculate the time taken, in hours.",
+          "hint": "Find the ratio A₀ / A, express it as 2ⁿ to get n, then multiply n by the half-life.",
+          "walkthrough": [
+            "A₀ / A = 9.6 × 10⁴ / 3.0 × 10³ = 32",
+            "32 = 2⁵, so n = 5 half-lives",
+            "t = n × t½ = 5 × 15",
+            "t = 75 h"
+          ],
+          "answer": {
+            "value": 75,
+            "unit": "h"
+          }
+        },
+        {
+          "id": "whole-half-lives-p4",
+          "question": "Fluorine-18, used in PET scans, has a half-life of 110 minutes. A dose with activity 640 MBq is prepared at 7:00 am. Calculate its activity 5.5 hours later.",
+          "hint": "Convert 5.5 hours to minutes so it matches the half-life, then find n.",
+          "walkthrough": [
+            "t = 5.5 h = 5.5 × 60 = 330 min",
+            "n = t / t½ = 330 / 110 = 3",
+            "A = A₀ / 2ⁿ = 640 / 8",
+            "A = 80 MBq"
+          ],
+          "answer": {
+            "value": 80,
+            "unit": "MBq"
+          }
+        },
+        {
+          "id": "whole-half-lives-p5",
+          "question": "A bone fragment from a cave has a carbon-14 activity that is 1/16 of the activity of living bone. Carbon-14 has a half-life of 5730 years. Calculate the age of the bone.",
+          "hint": "Write 1/16 as 1 / 2ⁿ to find the number of half-lives, then multiply by 5730 years.",
+          "walkthrough": [
+            "1 / 16 = 1 / 2⁴, so n = 4 half-lives",
+            "Age = n × t½ = 4 × 5730 = 22 920 years",
+            "Age = 2.29 × 10⁴ years"
+          ],
+          "answer": {
+            "value": 22900,
+            "unit": "years"
+          }
+        },
+        {
+          "id": "whole-half-lives-p6",
+          "question": "A newly made isotope in a research lab has an activity of 2.4 × 10⁶ Bq. One hour later its activity is 7.5 × 10⁴ Bq. Calculate its half-life in minutes.",
+          "hint": "Find the ratio A₀ / A as a power of 2 to get n, then divide the elapsed time (in minutes) by n.",
+          "walkthrough": [
+            "A₀ / A = 2.4 × 10⁶ / 7.5 × 10⁴ = 32 = 2⁵, so n = 5",
+            "t = 1 h = 60 min",
+            "t½ = t / n = 60 / 5",
+            "t½ = 12 min"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "min"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mass-energy",
+      "name": "Mass–energy equivalence",
+      "equations": [
+        "ΔE = c²Δm",
+        "E = mc²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Any change in energy ΔE has an equivalent change in mass Δm = ΔE / c². Put Δm in kilograms and use c = 3.00 × 10⁸ m s⁻¹; c² = 9.00 × 10¹⁶ m² s⁻², so the energy in joules is the mass in kg times 9.00 × 10¹⁶. Going the other way, divide the energy in joules by 9.00 × 10¹⁶ to get kilograms. In annihilation, the whole rest mass of both particles is converted.",
+      "commonErrors": [
+        "Forgetting to square c",
+        "Using the mass in grams or atomic mass units instead of kilograms",
+        "Counting only one particle's mass in a matter–antimatter annihilation"
+      ],
+      "worked": {
+        "id": "mass-energy-w",
+        "question": "The fuel in a nuclear reactor loses 2.5 × 10⁻⁵ kg of mass each day. Calculate the energy released in one day.",
+        "steps": [
+          "Known: Δm = 2.5 × 10⁻⁵ kg, c = 3.00 × 10⁸ m s⁻¹. Unknown: ΔE.",
+          "ΔE = c²Δm",
+          "ΔE = (3.00 × 10⁸)² × 2.5 × 10⁻⁵ = 9.00 × 10¹⁶ × 2.5 × 10⁻⁵",
+          "ΔE = 2.25 × 10¹² J"
+        ],
+        "answer": {
+          "value": 2250000000000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "mass-energy-p1",
+          "question": "In a single nuclear reaction, the total mass of the particles decreases by 3.0 × 10⁻²⁹ kg. Calculate the energy released.",
+          "hint": "Use ΔE = c²Δm with the mass already in kilograms.",
+          "walkthrough": [
+            "Δm = 3.0 × 10⁻²⁹ kg, find ΔE.",
+            "ΔE = c²Δm = 9.00 × 10¹⁶ × 3.0 × 10⁻²⁹",
+            "ΔE = 2.7 × 10⁻¹² J"
+          ],
+          "answer": {
+            "value": 2.7e-12,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "mass-energy-p2",
+          "question": "In a PET scanner, a positron and an electron, both effectively at rest, annihilate. Calculate the total energy released, in joules.",
+          "hint": "Both particles have mass m_e; the total mass converted is 2m_e.",
+          "walkthrough": [
+            "Total mass converted Δm = 2m_e = 2 × 9.11 × 10⁻³¹ = 1.82 × 10⁻³⁰ kg",
+            "ΔE = c²Δm = 9.00 × 10¹⁶ × 1.82 × 10⁻³⁰",
+            "ΔE = 1.64 × 10⁻¹³ J"
+          ],
+          "answer": {
+            "value": 1.64e-13,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "mass-energy-p3",
+          "question": "The Sun radiates energy at a rate of 3.9 × 10²⁶ W. Calculate the mass the Sun loses every second.",
+          "hint": "The energy released in one second is 3.9 × 10²⁶ J; rearrange to Δm = ΔE / c².",
+          "walkthrough": [
+            "Energy radiated in 1 s: ΔE = 3.9 × 10²⁶ J",
+            "Δm = ΔE / c² = 3.9 × 10²⁶ / 9.00 × 10¹⁶",
+            "Δm = 4.33 × 10⁹ kg"
+          ],
+          "answer": {
+            "value": 4330000000,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "mass-energy-p4",
+          "question": "A quarry explosion releases 4.5 MJ of energy. Calculate the decrease in mass of the explosive and its products, in kg.",
+          "hint": "Convert MJ to J, then Δm = ΔE / c².",
+          "walkthrough": [
+            "ΔE = 4.5 MJ = 4.5 × 10⁶ J",
+            "Δm = ΔE / c² = 4.5 × 10⁶ / 9.00 × 10¹⁶",
+            "Δm = 5.0 × 10⁻¹¹ kg"
+          ],
+          "answer": {
+            "value": 5e-11,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "mass-energy-p5",
+          "question": "A nuclear power station delivers a constant thermal power of 1.2 GW from its reactor core. Calculate the mass converted to energy in the core over one year. Take 1 year = 3.15 × 10⁷ s.",
+          "hint": "Energy = power × time gives ΔE in joules; then Δm = ΔE / c².",
+          "walkthrough": [
+            "ΔE = Pt = 1.2 × 10⁹ × 3.15 × 10⁷ = 3.78 × 10¹⁶ J",
+            "Δm = ΔE / c² = 3.78 × 10¹⁶ / 9.00 × 10¹⁶",
+            "Δm = 0.420 kg"
+          ],
+          "answer": {
+            "value": 0.42,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "mass-energy-p6",
+          "question": "In a science-fiction propulsion system, 1.0 μg of antimatter is allowed to annihilate with 1.0 μg of ordinary matter. Calculate the energy released.",
+          "hint": "Convert μg to kg and remember the total mass converted is matter plus antimatter.",
+          "walkthrough": [
+            "Each sample has mass 1.0 μg = 1.0 × 10⁻⁹ kg",
+            "Total mass converted Δm = 2 × 1.0 × 10⁻⁹ = 2.0 × 10⁻⁹ kg",
+            "ΔE = c²Δm = 9.00 × 10¹⁶ × 2.0 × 10⁻⁹",
+            "ΔE = 1.8 × 10⁸ J"
+          ],
+          "answer": {
+            "value": 180000000,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mev-u-si-conversions",
+      "name": "Converting between MeV, MeV/c², u and SI units",
+      "equations": [
+        "E = mc²",
+        "1 MeV = 1.60 × 10⁻¹³ J",
+        "1 u = 931.5 MeV/c²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Rest energy in joules is mc² with the mass in kilograms; divide by 1.60 × 10⁻¹³ to get MeV. A mass quoted in MeV/c² is just its rest energy in MeV: multiply by 1.60 × 10⁻¹³ to get joules, then divide by c² to get kilograms. Between u and MeV/c² the conversion factor is 931.5.",
+      "commonErrors": [
+        "Dividing by 1.60 × 10⁻¹⁹ (one eV) instead of 1.60 × 10⁻¹³ (one MeV)",
+        "Forgetting to divide by c² when turning an energy back into a mass",
+        "Treating a mass in MeV/c² as if it were already in kilograms"
+      ],
+      "worked": {
+        "id": "mev-u-si-conversions-w",
+        "question": "Calculate the rest energy of an electron in MeV.",
+        "steps": [
+          "Known: m_e = 9.11 × 10⁻³¹ kg, c = 3.00 × 10⁸ m s⁻¹, 1 MeV = 1.60 × 10⁻¹³ J.",
+          "E = mc² = 9.11 × 10⁻³¹ × (3.00 × 10⁸)²",
+          "E = 9.11 × 10⁻³¹ × 9.00 × 10¹⁶ = 8.20 × 10⁻¹⁴ J",
+          "E in MeV = 8.20 × 10⁻¹⁴ / 1.60 × 10⁻¹³",
+          "E = 0.512 MeV"
+        ],
+        "answer": {
+          "value": 0.512,
+          "unit": "MeV"
+        }
+      },
+      "practice": [
+        {
+          "id": "mev-u-si-conversions-p1",
+          "question": "Calculate the energy equivalent of a mass of 1 u, in joules.",
+          "hint": "Use E = mc² with 1 u = 1.66 × 10⁻²⁷ kg.",
+          "walkthrough": [
+            "m = 1 u = 1.66 × 10⁻²⁷ kg",
+            "E = mc² = 1.66 × 10⁻²⁷ × 9.00 × 10¹⁶",
+            "E = 1.49 × 10⁻¹⁰ J"
+          ],
+          "answer": {
+            "value": 1.49e-10,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "mev-u-si-conversions-p2",
+          "question": "Calculate the rest energy of a proton in MeV, using the data-sheet value for its mass.",
+          "hint": "Find mc² in joules with m_p = 1.67 × 10⁻²⁷ kg, then divide by 1.60 × 10⁻¹³ J per MeV.",
+          "walkthrough": [
+            "E = mc² = 1.67 × 10⁻²⁷ × 9.00 × 10¹⁶ = 1.50 × 10⁻¹⁰ J",
+            "E in MeV = 1.50 × 10⁻¹⁰ / 1.60 × 10⁻¹³",
+            "E = 939 MeV"
+          ],
+          "answer": {
+            "value": 939,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "mev-u-si-conversions-p3",
+          "question": "A charged pion has a rest energy of 140 MeV. Calculate its mass in kg.",
+          "hint": "Convert 140 MeV to joules, then rearrange E = mc² to m = E / c².",
+          "walkthrough": [
+            "E = 140 MeV = 140 × 1.60 × 10⁻¹³ = 2.24 × 10⁻¹¹ J",
+            "m = E / c² = 2.24 × 10⁻¹¹ / 9.00 × 10¹⁶",
+            "m = 2.49 × 10⁻²⁸ kg"
+          ],
+          "answer": {
+            "value": 2.49e-28,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "mev-u-si-conversions-p4",
+          "question": "A charged kaon has a mass of 494 MeV/c². Calculate its mass in atomic mass units (u).",
+          "hint": "1 u = 931.5 MeV/c², so divide by 931.5.",
+          "walkthrough": [
+            "m = 494 MeV/c², find m in u.",
+            "m = 494 / 931.5",
+            "m = 0.530 u"
+          ],
+          "answer": {
+            "value": 0.53,
+            "unit": "u"
+          }
+        },
+        {
+          "id": "mev-u-si-conversions-p5",
+          "question": "A muon detected in a cosmic-ray shower has a mass of 1.88 × 10⁻²⁸ kg. Calculate its rest energy in MeV.",
+          "hint": "Find mc² in joules first, then divide by 1.60 × 10⁻¹³ J per MeV.",
+          "walkthrough": [
+            "E = mc² = 1.88 × 10⁻²⁸ × 9.00 × 10¹⁶ = 1.69 × 10⁻¹¹ J",
+            "E in MeV = 1.69 × 10⁻¹¹ / 1.60 × 10⁻¹³",
+            "E = 106 MeV"
+          ],
+          "answer": {
+            "value": 106,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "mev-u-si-conversions-p6",
+          "question": "The W boson, which mediates the weak interaction, has a mass of 80.4 GeV/c². Calculate its mass in kg.",
+          "hint": "Convert 80.4 GeV to joules using 1 eV = 1.60 × 10⁻¹⁹ J, then m = E / c².",
+          "walkthrough": [
+            "E = 80.4 GeV = 80.4 × 10⁹ eV = 80.4 × 10⁹ × 1.60 × 10⁻¹⁹ = 1.29 × 10⁻⁸ J",
+            "m = E / c² = 1.29 × 10⁻⁸ / 9.00 × 10¹⁶",
+            "m = 1.43 × 10⁻²⁵ kg"
+          ],
+          "answer": {
+            "value": 1.43e-25,
+            "unit": "kg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mass-defect-binding-energy",
+      "name": "Mass defect and binding energy of a nucleus",
+      "equations": [
+        "Δm = Zm_p + (A − Z)m_n − m_nucleus",
+        "E_B = Δm × 931.5 MeV (Δm in u)",
+        "E_B = c²Δm (Δm in kg)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Add up the masses of the separate protons and neutrons, subtract the mass of the nucleus; that difference is the mass defect. Keep every mass in u to six decimal places until the subtraction is done, because the defect is a small difference between large numbers. Multiply the defect in u by 931.5 to get the binding energy in MeV, and divide by the nucleon number A for binding energy per nucleon.",
+      "commonErrors": [
+        "Rounding the nucleon masses to 1.01 u before subtracting, which wipes out the answer",
+        "Using the number of nucleons A instead of the number of neutrons A − Z",
+        "Multiplying a mass defect in kg by 931.5 instead of by c²"
+      ],
+      "worked": {
+        "id": "mass-defect-binding-energy-w",
+        "question": "A helium-4 nucleus (Z = 2, A = 4) has a mass of 4.001506 u. Using m_p = 1.007276 u and m_n = 1.008665 u, calculate the binding energy of the nucleus in MeV.",
+        "steps": [
+          "Known: Z = 2 protons, A − Z = 2 neutrons, m_nucleus = 4.001506 u. Unknown: E_B.",
+          "Mass of separate nucleons = 2 × 1.007276 + 2 × 1.008665 = 2.014552 + 2.017330 = 4.031882 u",
+          "Δm = 4.031882 − 4.001506 = 0.030376 u",
+          "E_B = 0.030376 × 931.5",
+          "E_B = 28.3 MeV"
+        ],
+        "answer": {
+          "value": 28.3,
+          "unit": "MeV"
+        }
+      },
+      "practice": [
+        {
+          "id": "mass-defect-binding-energy-p1",
+          "question": "A carbon-12 nucleus (Z = 6, A = 12) has a mass of 11.996706 u. Using m_p = 1.007276 u and m_n = 1.008665 u, calculate the mass defect of the nucleus in u.",
+          "hint": "Six protons and six neutrons; subtract the nuclear mass from the total mass of the separate nucleons.",
+          "walkthrough": [
+            "Separate nucleons: 6 × 1.007276 + 6 × 1.008665 = 6.043656 + 6.051990 = 12.095646 u",
+            "Δm = 12.095646 − 11.996706",
+            "Δm = 0.0989 u"
+          ],
+          "answer": {
+            "value": 0.0989,
+            "unit": "u"
+          }
+        },
+        {
+          "id": "mass-defect-binding-energy-p2",
+          "question": "The mass defect of an iron-56 nucleus is 0.528 u. Calculate its binding energy in MeV.",
+          "hint": "Multiply the mass defect in u by 931.5 MeV per u.",
+          "walkthrough": [
+            "Δm = 0.528 u, find E_B in MeV.",
+            "E_B = 0.528 × 931.5",
+            "E_B = 492 MeV"
+          ],
+          "answer": {
+            "value": 492,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "mass-defect-binding-energy-p3",
+          "question": "A lithium-7 nucleus (Z = 3, A = 7) has a mass of 7.014356 u. Using m_p = 1.007276 u and m_n = 1.008665 u, calculate its binding energy in joules.",
+          "hint": "Find the mass defect in u, convert to kg with 1 u = 1.66 × 10⁻²⁷ kg, then use E_B = c²Δm.",
+          "walkthrough": [
+            "Separate nucleons: 3 × 1.007276 + 4 × 1.008665 = 3.021828 + 4.034660 = 7.056488 u",
+            "Δm = 7.056488 − 7.014356 = 0.042132 u",
+            "Δm = 0.042132 × 1.66 × 10⁻²⁷ = 6.99 × 10⁻²⁹ kg",
+            "E_B = c²Δm = 9.00 × 10¹⁶ × 6.99 × 10⁻²⁹",
+            "E_B = 6.29 × 10⁻¹² J"
+          ],
+          "answer": {
+            "value": 6.29e-12,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "mass-defect-binding-energy-p4",
+          "question": "A deuterium nucleus (Z = 1, A = 2) has a mass of 2.013553 u. Using m_p = 1.007276 u and m_n = 1.008665 u, calculate its mass defect in kg.",
+          "hint": "One proton plus one neutron minus the nuclear mass gives Δm in u; multiply by 1.66 × 10⁻²⁷ kg.",
+          "walkthrough": [
+            "Separate nucleons: 1.007276 + 1.008665 = 2.015941 u",
+            "Δm = 2.015941 − 2.013553 = 0.002388 u",
+            "Δm = 0.002388 × 1.66 × 10⁻²⁷",
+            "Δm = 3.96 × 10⁻³⁰ kg"
+          ],
+          "answer": {
+            "value": 3.96e-30,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "mass-defect-binding-energy-p5",
+          "question": "An oxygen-16 nucleus (Z = 8, A = 16) has a mass of 15.990523 u. Using m_p = 1.007276 u and m_n = 1.008665 u, calculate the binding energy per nucleon in MeV.",
+          "hint": "Find the total binding energy in MeV from the mass defect, then divide by the 16 nucleons.",
+          "walkthrough": [
+            "Separate nucleons: 8 × 1.007276 + 8 × 1.008665 = 8.058208 + 8.069320 = 16.127528 u",
+            "Δm = 16.127528 − 15.990523 = 0.137005 u",
+            "E_B = 0.137005 × 931.5 = 127.6 MeV",
+            "E_B per nucleon = 127.6 / 16",
+            "E_B per nucleon = 7.98 MeV"
+          ],
+          "answer": {
+            "value": 7.98,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "mass-defect-binding-energy-p6",
+          "question": "A calcium-40 nucleus (Z = 20, A = 40) has a mass of 39.951611 u. Using m_p = 1.007276 u and m_n = 1.008665 u, calculate the binding energy per nucleon in MeV.",
+          "hint": "Twenty protons and twenty neutrons; find Δm, convert to MeV, then divide by 40.",
+          "walkthrough": [
+            "Separate nucleons: 20 × 1.007276 + 20 × 1.008665 = 20.145520 + 20.173300 = 40.318820 u",
+            "Δm = 40.318820 − 39.951611 = 0.367209 u",
+            "E_B = 0.367209 × 931.5 = 342.1 MeV",
+            "E_B per nucleon = 342.1 / 40",
+            "E_B per nucleon = 8.55 MeV"
+          ],
+          "answer": {
+            "value": 8.55,
+            "unit": "MeV"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reaction-energy-from-masses",
+      "name": "Energy released in a nuclear reaction from masses",
+      "equations": [
+        "Δm = (total mass before) − (total mass after)",
+        "Q = Δm × 931.5 MeV (Δm in u)",
+        "Q = c²Δm (Δm in kg)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Write the reaction out, add up the masses on each side to six decimal places, and subtract: mass before minus mass after. A positive difference means energy is released; multiply the difference in u by 931.5 to get MeV. If the answer is wanted in joules, either multiply the MeV value by 1.60 × 10⁻¹³ or convert the mass difference to kg and use c²Δm.",
+      "commonErrors": [
+        "Leaving out a free neutron or proton on one side of the equation",
+        "Counting the three product neutrons in fission as one",
+        "Rounding masses before subtracting, which destroys the small difference"
+      ],
+      "worked": {
+        "id": "reaction-energy-from-masses-w",
+        "question": "Radium-226 decays by alpha emission to radon-222. The nuclear masses are: radium-226 225.977098 u, radon-222 221.970364 u, helium-4 4.001506 u. Calculate the energy released in one decay, in MeV.",
+        "steps": [
+          "Reaction: Ra-226 → Rn-222 + He-4. Known: all three nuclear masses. Unknown: Q.",
+          "Mass before = 225.977098 u",
+          "Mass after = 221.970364 + 4.001506 = 225.971870 u",
+          "Δm = 225.977098 − 225.971870 = 0.005228 u",
+          "Q = 0.005228 × 931.5",
+          "Q = 4.87 MeV"
+        ],
+        "answer": {
+          "value": 4.87,
+          "unit": "MeV"
+        }
+      },
+      "practice": [
+        {
+          "id": "reaction-energy-from-masses-p1",
+          "question": "In a fusion reactor, deuterium and tritium fuse to form helium-4 and a neutron. The nuclear masses are: deuterium 2.013553 u, tritium 3.015500 u, helium-4 4.001506 u, neutron 1.008665 u. Calculate the energy released per reaction, in MeV.",
+          "hint": "Mass before = deuterium + tritium; mass after = helium-4 + neutron; multiply the difference by 931.5.",
+          "walkthrough": [
+            "Mass before = 2.013553 + 3.015500 = 5.029053 u",
+            "Mass after = 4.001506 + 1.008665 = 5.010171 u",
+            "Δm = 5.029053 − 5.010171 = 0.018882 u",
+            "Q = 0.018882 × 931.5 = 17.6 MeV"
+          ],
+          "answer": {
+            "value": 17.6,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "reaction-energy-from-masses-p2",
+          "question": "A uranium-235 nucleus absorbs a neutron and splits into barium-141, krypton-92 and three neutrons. The nuclear masses are: uranium-235 234.993422 u, barium-141 140.883667 u, krypton-92 91.906392 u, neutron 1.008665 u. Calculate the energy released, in MeV.",
+          "hint": "Remember one neutron goes in and three come out; add the masses on each side before subtracting.",
+          "walkthrough": [
+            "Mass before = 234.993422 + 1.008665 = 236.002087 u",
+            "Mass after = 140.883667 + 91.906392 + 3 × 1.008665 = 235.816054 u",
+            "Δm = 236.002087 − 235.816054 = 0.186033 u",
+            "Q = 0.186033 × 931.5 = 173 MeV"
+          ],
+          "answer": {
+            "value": 173,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "reaction-energy-from-masses-p3",
+          "question": "Polonium-210, used as a heat source on early lunar landers, decays by alpha emission to lead-206. The nuclear masses are: polonium-210 209.936758 u, lead-206 205.929447 u, helium-4 4.001506 u. Calculate the energy released in one decay, in joules.",
+          "hint": "Find Δm in u, convert to kg using 1 u = 1.66 × 10⁻²⁷ kg, then Q = c²Δm.",
+          "walkthrough": [
+            "Mass after = 205.929447 + 4.001506 = 209.930953 u",
+            "Δm = 209.936758 − 209.930953 = 0.005805 u",
+            "Δm = 0.005805 × 1.66 × 10⁻²⁷ = 9.64 × 10⁻³⁰ kg",
+            "Q = c²Δm = 9.00 × 10¹⁶ × 9.64 × 10⁻³⁰",
+            "Q = 8.67 × 10⁻¹³ J"
+          ],
+          "answer": {
+            "value": 8.67e-13,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "reaction-energy-from-masses-p4",
+          "question": "When two deuterium nuclei fuse to form helium-3 and a neutron, 3.27 MeV of energy is released. Calculate the decrease in mass in this reaction, in kg.",
+          "hint": "Divide the energy in MeV by 931.5 to get Δm in u, then convert u to kg.",
+          "walkthrough": [
+            "Δm in u = 3.27 / 931.5 = 3.51 × 10⁻³ u",
+            "Δm = 3.51 × 10⁻³ × 1.66 × 10⁻²⁷",
+            "Δm = 5.83 × 10⁻³⁰ kg"
+          ],
+          "answer": {
+            "value": 5.83e-30,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "reaction-energy-from-masses-p5",
+          "question": "In Rutherford's 1919 experiment, an alpha particle struck a nitrogen-14 nucleus to produce oxygen-17 and a proton. The nuclear masses are: nitrogen-14 13.999231 u, helium-4 4.001506 u, oxygen-17 16.994740 u, proton 1.007276 u. Calculate the energy that must be supplied for this reaction to occur (the magnitude of the Q-value), in MeV.",
+          "hint": "The mass after is greater than the mass before; the increase in mass, times 931.5, is the energy that must be supplied.",
+          "walkthrough": [
+            "Mass before = 13.999231 + 4.001506 = 18.000737 u",
+            "Mass after = 16.994740 + 1.007276 = 18.002016 u",
+            "Increase in mass = 18.002016 − 18.000737 = 0.001279 u",
+            "Energy needed = 0.001279 × 931.5 = 1.19 MeV"
+          ],
+          "answer": {
+            "value": 1.19,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "reaction-energy-from-masses-p6",
+          "question": "In the first artificial nuclear reaction (Cockcroft and Walton, 1932) a proton strikes a lithium-7 nucleus and two helium-4 nuclei are produced. The nuclear masses are: lithium-7 7.014356 u, proton 1.007276 u, helium-4 4.001506 u. Calculate the energy released, in joules, if one mole of lithium-7 nuclei undergoes this reaction.",
+          "hint": "Find the energy per reaction in MeV, convert to joules, then multiply by N_A.",
+          "walkthrough": [
+            "Mass before = 7.014356 + 1.007276 = 8.021632 u; mass after = 2 × 4.001506 = 8.003012 u",
+            "Δm = 8.021632 − 8.003012 = 0.018620 u",
+            "Q per reaction = 0.018620 × 931.5 = 17.3 MeV = 17.3 × 1.60 × 10⁻¹³ = 2.78 × 10⁻¹² J",
+            "Energy per mole = 2.78 × 10⁻¹² × 6.02 × 10²³",
+            "Energy = 1.67 × 10¹² J"
+          ],
+          "answer": {
+            "value": 1670000000000,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "energy-from-be-per-nucleon",
+      "name": "Energy released from binding energy per nucleon",
+      "equations": [
+        "E_B of a nucleus = (E_B per nucleon) × A",
+        "Q = (total E_B after) − (total E_B before)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Binding energy per nucleon is given per nucleon, so multiply each value by its nucleon number A to get the total binding energy of each nucleus. The energy released is the total binding energy of the products minus that of the reactants (products are more tightly bound, so this is positive). Free neutrons and protons have zero binding energy and contribute nothing.",
+      "commonErrors": [
+        "Forgetting to multiply binding energy per nucleon by the nucleon number",
+        "Subtracting the wrong way round (reactants minus products) and getting a negative energy release",
+        "Giving free neutrons a binding energy"
+      ],
+      "worked": {
+        "id": "energy-from-be-per-nucleon-w",
+        "question": "Deuterium (A = 2) and tritium (A = 3) fuse to form helium-4 and a neutron. The binding energies per nucleon are: deuterium 1.11 MeV, tritium 2.83 MeV, helium-4 7.07 MeV. Calculate the energy released in one reaction.",
+        "steps": [
+          "Known: E_B per nucleon for each nucleus; the free neutron has zero binding energy. Unknown: Q.",
+          "E_B of deuterium = 2 × 1.11 = 2.22 MeV; E_B of tritium = 3 × 2.83 = 8.49 MeV",
+          "Total E_B before = 2.22 + 8.49 = 10.71 MeV",
+          "E_B of helium-4 = 4 × 7.07 = 28.28 MeV",
+          "Q = 28.28 − 10.71",
+          "Q = 17.6 MeV"
+        ],
+        "answer": {
+          "value": 17.6,
+          "unit": "MeV"
+        }
+      },
+      "practice": [
+        {
+          "id": "energy-from-be-per-nucleon-p1",
+          "question": "A uranium-235 nucleus absorbs a neutron and splits into barium-141, krypton-92 and three neutrons. The binding energies per nucleon are: uranium-235 7.59 MeV, barium-141 8.33 MeV, krypton-92 8.51 MeV. Calculate the energy released in one fission.",
+          "hint": "Multiply each binding energy per nucleon by its nucleon number; the neutrons contribute nothing.",
+          "walkthrough": [
+            "E_B before = 235 × 7.59 = 1783.65 MeV",
+            "E_B after = 141 × 8.33 + 92 × 8.51 = 1174.53 + 782.92 = 1957.45 MeV",
+            "Q = 1957.45 − 1783.65",
+            "Q = 174 MeV"
+          ],
+          "answer": {
+            "value": 174,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "energy-from-be-per-nucleon-p2",
+          "question": "In the final step of the proton–proton chain in the Sun, two helium-3 nuclei fuse to form helium-4 and two protons. The binding energies per nucleon are: helium-3 2.57 MeV, helium-4 7.07 MeV. Calculate the energy released in one reaction.",
+          "hint": "Two helium-3 nuclei go in, each with 3 nucleons; the free protons have zero binding energy.",
+          "walkthrough": [
+            "E_B before = 2 × (3 × 2.57) = 2 × 7.71 = 15.42 MeV",
+            "E_B after = 4 × 7.07 = 28.28 MeV",
+            "Q = 28.28 − 15.42",
+            "Q = 12.9 MeV"
+          ],
+          "answer": {
+            "value": 12.9,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "energy-from-be-per-nucleon-p3",
+          "question": "Uranium-238 decays by alpha emission to thorium-234. The binding energies per nucleon are: uranium-238 7.570 MeV, thorium-234 7.597 MeV, helium-4 7.074 MeV. Calculate the energy released in one decay, in joules.",
+          "hint": "Find Q in MeV from the total binding energies, then convert using 1 MeV = 1.60 × 10⁻¹³ J.",
+          "walkthrough": [
+            "E_B before = 238 × 7.570 = 1801.66 MeV",
+            "E_B after = 234 × 7.597 + 4 × 7.074 = 1777.698 + 28.296 = 1805.994 MeV",
+            "Q = 1805.994 − 1801.66 = 4.334 MeV",
+            "Q = 4.334 × 1.60 × 10⁻¹³ = 6.93 × 10⁻¹³ J"
+          ],
+          "answer": {
+            "value": 6.93e-13,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "energy-from-be-per-nucleon-p4",
+          "question": "A plutonium-239 nucleus absorbs a neutron and splits into xenon-134, zirconium-103 and three neutrons, releasing 189 MeV. The binding energies per nucleon are: plutonium-239 7.56 MeV, xenon-134 8.41 MeV. Calculate the binding energy per nucleon of zirconium-103.",
+          "hint": "Q = E_B(Xe) + E_B(Zr) − E_B(Pu); rearrange for E_B(Zr), then divide by 103.",
+          "walkthrough": [
+            "E_B(Pu-239) = 239 × 7.56 = 1806.84 MeV; E_B(Xe-134) = 134 × 8.41 = 1126.94 MeV",
+            "E_B(Zr-103) = Q + E_B(Pu) − E_B(Xe) = 189 + 1806.84 − 1126.94 = 868.9 MeV",
+            "E_B per nucleon = 868.9 / 103",
+            "E_B per nucleon = 8.44 MeV"
+          ],
+          "answer": {
+            "value": 8.44,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "energy-from-be-per-nucleon-p5",
+          "question": "The overall effect of fusion in the Sun is that four protons form one helium-4 nucleus, releasing energy equal to the binding energy of helium-4. The binding energy per nucleon of helium-4 is 7.07 MeV. The Sun radiates 3.9 × 10²⁶ W. Calculate the number of helium-4 nuclei formed every second.",
+          "hint": "Find the energy per helium-4 nucleus in joules, then divide the Sun's power by it.",
+          "walkthrough": [
+            "Energy per He-4 formed = 4 × 7.07 = 28.28 MeV = 28.28 × 1.60 × 10⁻¹³ = 4.52 × 10⁻¹² J",
+            "Nuclei formed per second = power / energy per nucleus",
+            "Rate = 3.9 × 10²⁶ / 4.52 × 10⁻¹²",
+            "Rate = 8.62 × 10³⁷ s⁻¹"
+          ],
+          "answer": {
+            "value": 8.62e+37,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "energy-from-be-per-nucleon-p6",
+          "question": "In the triple-alpha process in red giant stars, three helium-4 nuclei fuse to form one carbon-12 nucleus. The binding energies per nucleon are: helium-4 7.074 MeV, carbon-12 7.680 MeV. Calculate the energy released, in joules, when 1.0 g of carbon-12 is formed this way. The molar mass of carbon-12 is 12 g mol⁻¹.",
+          "hint": "Find Q per carbon-12 nucleus in joules, then multiply by the number of carbon-12 nuclei in 1.0 g.",
+          "walkthrough": [
+            "Q = 12 × 7.680 − 3 × (4 × 7.074) = 92.16 − 84.89 = 7.27 MeV",
+            "Q = 7.27 × 1.60 × 10⁻¹³ = 1.16 × 10⁻¹² J per nucleus",
+            "N = (1.0 / 12) × 6.02 × 10²³ = 5.02 × 10²² nuclei",
+            "Energy = 1.16 × 10⁻¹² × 5.02 × 10²²",
+            "Energy = 5.84 × 10¹⁰ J"
+          ],
+          "answer": {
+            "value": 58400000000,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nuclear-radius-density",
+      "name": "Nuclear radius and density",
+      "equations": [
+        "R = r₀A^(1/3)",
+        "ρ = m / V",
+        "V = (4/3)πR³"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "WJEC"
+      ],
+      "method": "The nuclear radius depends on the cube root of the nucleon number: R = r₀A^(1/3), with r₀ = 1.2 × 10⁻¹⁵ m. For density, find R, then the volume of a sphere (4/3)πR³, then divide the nuclear mass in kg by the volume. Because R³ is proportional to A, nuclear density is the same for all nuclei.",
+      "commonErrors": [
+        "Using A¹ or A^(1/2) instead of the cube root",
+        "Forgetting to cube the radius when finding the volume",
+        "Using the proton number Z instead of the nucleon number A"
+      ],
+      "worked": {
+        "id": "nuclear-radius-density-w",
+        "question": "Calculate the radius of a uranium-238 nucleus. Take r₀ = 1.2 × 10⁻¹⁵ m.",
+        "steps": [
+          "Known: A = 238, r₀ = 1.2 × 10⁻¹⁵ m. Unknown: R.",
+          "R = r₀A^(1/3)",
+          "238^(1/3) = 6.20",
+          "R = 1.2 × 10⁻¹⁵ × 6.20",
+          "R = 7.44 × 10⁻¹⁵ m"
+        ],
+        "answer": {
+          "value": 7.44e-15,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "nuclear-radius-density-p1",
+          "question": "Calculate the radius of an iron-56 nucleus. Take r₀ = 1.2 × 10⁻¹⁵ m.",
+          "hint": "Take the cube root of 56, then multiply by r₀.",
+          "walkthrough": [
+            "A = 56, r₀ = 1.2 × 10⁻¹⁵ m, find R.",
+            "R = r₀A^(1/3) = 1.2 × 10⁻¹⁵ × 56^(1/3) = 1.2 × 10⁻¹⁵ × 3.83",
+            "R = 4.59 × 10⁻¹⁵ m"
+          ],
+          "answer": {
+            "value": 4.59e-15,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "nuclear-radius-density-p2",
+          "question": "Calculate the radius of a carbon-12 nucleus. Take r₀ = 1.2 × 10⁻¹⁵ m.",
+          "hint": "R = r₀A^(1/3) with A = 12.",
+          "walkthrough": [
+            "A = 12, r₀ = 1.2 × 10⁻¹⁵ m, find R.",
+            "R = 1.2 × 10⁻¹⁵ × 12^(1/3) = 1.2 × 10⁻¹⁵ × 2.29",
+            "R = 2.75 × 10⁻¹⁵ m"
+          ],
+          "answer": {
+            "value": 2.75e-15,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "nuclear-radius-density-p3",
+          "question": "Electron scattering measurements give the radius of a certain nucleus as 4.8 × 10⁻¹⁵ m. Taking r₀ = 1.2 × 10⁻¹⁵ m, calculate the nucleon number of this nucleus.",
+          "hint": "Rearrange R = r₀A^(1/3) to A = (R / r₀)³.",
+          "walkthrough": [
+            "R = 4.8 × 10⁻¹⁵ m, r₀ = 1.2 × 10⁻¹⁵ m, find A.",
+            "R / r₀ = 4.8 × 10⁻¹⁵ / 1.2 × 10⁻¹⁵ = 4.0",
+            "A = (R / r₀)³ = 4.0³",
+            "A = 64"
+          ],
+          "answer": {
+            "value": 64,
+            "unit": ""
+          }
+        },
+        {
+          "id": "nuclear-radius-density-p4",
+          "question": "Gold-197 foil was used in Rutherford's scattering experiment. Calculate the radius of a gold-197 nucleus in femtometres (fm). Take r₀ = 1.2 × 10⁻¹⁵ m.",
+          "hint": "Find R in metres, then convert using 1 fm = 10⁻¹⁵ m.",
+          "walkthrough": [
+            "A = 197, r₀ = 1.2 × 10⁻¹⁵ m, find R in fm.",
+            "R = 1.2 × 10⁻¹⁵ × 197^(1/3) = 1.2 × 10⁻¹⁵ × 5.82 = 6.98 × 10⁻¹⁵ m",
+            "R = 6.98 × 10⁻¹⁵ / 10⁻¹⁵",
+            "R = 6.98 fm"
+          ],
+          "answer": {
+            "value": 6.98,
+            "unit": "fm"
+          }
+        },
+        {
+          "id": "nuclear-radius-density-p5",
+          "question": "A helium-4 nucleus has a mass of 6.64 × 10⁻²⁷ kg. Taking r₀ = 1.2 × 10⁻¹⁵ m, calculate the density of the nucleus.",
+          "hint": "Find R from R = r₀A^(1/3), the volume from (4/3)πR³, then ρ = m / V.",
+          "walkthrough": [
+            "R = 1.2 × 10⁻¹⁵ × 4^(1/3) = 1.2 × 10⁻¹⁵ × 1.59 = 1.90 × 10⁻¹⁵ m",
+            "V = (4/3)πR³ = (4/3) × π × (1.90 × 10⁻¹⁵)³ = 2.90 × 10⁻⁴⁴ m³",
+            "ρ = m / V = 6.64 × 10⁻²⁷ / 2.90 × 10⁻⁴⁴",
+            "ρ = 2.29 × 10¹⁷ kg m⁻³"
+          ],
+          "answer": {
+            "value": 2.29e+17,
+            "unit": "kg m⁻³"
+          }
+        },
+        {
+          "id": "nuclear-radius-density-p6",
+          "question": "A neutron star has a mass of 2.8 × 10³⁰ kg and the same density as nuclear matter, 2.3 × 10¹⁷ kg m⁻³. Treating it as a uniform sphere, calculate its radius in km.",
+          "hint": "Find the volume from V = m / ρ, then rearrange V = (4/3)πR³ for R and convert to km.",
+          "walkthrough": [
+            "V = m / ρ = 2.8 × 10³⁰ / 2.3 × 10¹⁷ = 1.22 × 10¹³ m³",
+            "R³ = 3V / 4π = 3 × 1.22 × 10¹³ / (4π) = 2.91 × 10¹² m³",
+            "R = (2.91 × 10¹²)^(1/3) = 1.43 × 10⁴ m",
+            "R = 14.3 km"
+          ],
+          "answer": {
+            "value": 14.3,
+            "unit": "km"
+          }
+        }
+      ]
+    },
+    {
+      "id": "closest-approach",
+      "name": "Closest approach of an alpha particle",
+      "equations": [
+        "E_k = 2Ze² / (4πε₀d)",
+        "d = 2Ze² / (4πε₀E_k)"
+      ],
+      "boards": [
+        "AQA",
+        "WJEC"
+      ],
+      "method": "At the point of closest approach in a head-on collision the alpha particle stops, so all its initial kinetic energy has become electrostatic potential energy: E_k = Qq / (4πε₀d) with Q = Ze for the nucleus and q = 2e for the alpha particle. Convert the kinetic energy to joules first (1 MeV = 1.60 × 10⁻¹³ J), then rearrange for d.",
+      "commonErrors": [
+        "Leaving the kinetic energy in MeV instead of converting to joules",
+        "Forgetting the factor of 2 for the alpha particle's charge",
+        "Using the nucleon number A instead of the proton number Z for the nuclear charge"
+      ],
+      "worked": {
+        "id": "closest-approach-w",
+        "question": "An alpha particle with kinetic energy 5.0 MeV is fired directly at a gold nucleus (Z = 79). Calculate the distance of closest approach.",
+        "steps": [
+          "Known: E_k = 5.0 MeV, Z = 79, e = 1.60 × 10⁻¹⁹ C, ε₀ = 8.85 × 10⁻¹² F m⁻¹. Unknown: d.",
+          "E_k = 5.0 × 1.60 × 10⁻¹³ = 8.0 × 10⁻¹³ J",
+          "At closest approach E_k = 2Ze² / (4πε₀d), so d = 2Ze² / (4πε₀E_k)",
+          "d = 2 × 79 × (1.60 × 10⁻¹⁹)² / (4π × 8.85 × 10⁻¹² × 8.0 × 10⁻¹³)",
+          "d = 4.04 × 10⁻³⁶ / 8.90 × 10⁻²³",
+          "d = 4.55 × 10⁻¹⁴ m"
+        ],
+        "answer": {
+          "value": 4.55e-14,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "closest-approach-p1",
+          "question": "An alpha particle with kinetic energy 8.0 × 10⁻¹³ J approaches a silver nucleus (Z = 47) head-on. Calculate the distance of closest approach.",
+          "hint": "The kinetic energy is already in joules; use d = 2Ze² / (4πε₀E_k).",
+          "walkthrough": [
+            "E_k = 8.0 × 10⁻¹³ J, Z = 47, find d.",
+            "d = 2 × 47 × (1.60 × 10⁻¹⁹)² / (4π × 8.85 × 10⁻¹² × 8.0 × 10⁻¹³)",
+            "d = 2.41 × 10⁻³⁶ / 8.90 × 10⁻²³",
+            "d = 2.70 × 10⁻¹⁴ m"
+          ],
+          "answer": {
+            "value": 2.7e-14,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "closest-approach-p2",
+          "question": "An alpha particle with kinetic energy 6.4 × 10⁻¹³ J is fired directly at a copper nucleus (Z = 29). Calculate the distance of closest approach.",
+          "hint": "Equate kinetic energy to electrostatic potential energy and rearrange for d.",
+          "walkthrough": [
+            "E_k = 6.4 × 10⁻¹³ J, Z = 29, find d.",
+            "d = 2 × 29 × (1.60 × 10⁻¹⁹)² / (4π × 8.85 × 10⁻¹² × 6.4 × 10⁻¹³)",
+            "d = 1.48 × 10⁻³⁶ / 7.12 × 10⁻²³",
+            "d = 2.09 × 10⁻¹⁴ m"
+          ],
+          "answer": {
+            "value": 2.09e-14,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "closest-approach-p3",
+          "question": "An alpha particle of kinetic energy 4.8 MeV from a radium source approaches an aluminium nucleus (Z = 13) head-on. Calculate the distance of closest approach.",
+          "hint": "Convert 4.8 MeV to joules before substituting into d = 2Ze² / (4πε₀E_k).",
+          "walkthrough": [
+            "E_k = 4.8 × 1.60 × 10⁻¹³ = 7.68 × 10⁻¹³ J",
+            "d = 2 × 13 × (1.60 × 10⁻¹⁹)² / (4π × 8.85 × 10⁻¹² × 7.68 × 10⁻¹³)",
+            "d = 6.66 × 10⁻³⁷ / 8.54 × 10⁻²³",
+            "d = 7.79 × 10⁻¹⁵ m"
+          ],
+          "answer": {
+            "value": 7.79e-15,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "closest-approach-p4",
+          "question": "Calculate the kinetic energy, in MeV, that an alpha particle needs in order to approach to within 3.0 × 10⁻¹⁴ m of a gold nucleus (Z = 79) in a head-on collision.",
+          "hint": "Use E_k = 2Ze² / (4πε₀d) to get the energy in joules, then divide by 1.60 × 10⁻¹³.",
+          "walkthrough": [
+            "E_k = 2 × 79 × (1.60 × 10⁻¹⁹)² / (4π × 8.85 × 10⁻¹² × 3.0 × 10⁻¹⁴)",
+            "E_k = 4.04 × 10⁻³⁶ / 3.34 × 10⁻²⁴ = 1.21 × 10⁻¹² J",
+            "E_k = 1.21 × 10⁻¹² / 1.60 × 10⁻¹³",
+            "E_k = 7.58 MeV"
+          ],
+          "answer": {
+            "value": 7.58,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "closest-approach-p5",
+          "question": "An alpha particle of mass 6.64 × 10⁻²⁷ kg travelling at 1.5 × 10⁷ m s⁻¹ is fired directly at a gold nucleus (Z = 79). Calculate the distance of closest approach.",
+          "hint": "Find the kinetic energy from ½mv² first, then use d = 2Ze² / (4πε₀E_k).",
+          "walkthrough": [
+            "E_k = ½mv² = 0.5 × 6.64 × 10⁻²⁷ × (1.5 × 10⁷)² = 7.47 × 10⁻¹³ J",
+            "d = 2 × 79 × (1.60 × 10⁻¹⁹)² / (4π × 8.85 × 10⁻¹² × 7.47 × 10⁻¹³)",
+            "d = 4.04 × 10⁻³⁶ / 8.31 × 10⁻²³",
+            "d = 4.87 × 10⁻¹⁴ m"
+          ],
+          "answer": {
+            "value": 4.87e-14,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "closest-approach-p6",
+          "question": "A 6.0 MeV alpha particle fired head-on at a nucleus in a thin metal foil reaches a closest approach distance of 2.4 × 10⁻¹⁴ m. Calculate the proton number Z of the nucleus.",
+          "hint": "Convert E_k to joules, then rearrange E_k = 2Ze² / (4πε₀d) to make Z the subject.",
+          "walkthrough": [
+            "E_k = 6.0 × 1.60 × 10⁻¹³ = 9.6 × 10⁻¹³ J",
+            "Z = 4πε₀dE_k / (2e²)",
+            "Z = 4π × 8.85 × 10⁻¹² × 2.4 × 10⁻¹⁴ × 9.6 × 10⁻¹³ / (2 × (1.60 × 10⁻¹⁹)²)",
+            "Z = 2.56 × 10⁻³⁶ / 5.12 × 10⁻³⁸",
+            "Z = 50"
+          ],
+          "answer": {
+            "value": 50,
+            "unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "decay-graph",
+      "name": "Reading decay graphs",
+      "equations": [
+        "t½: the time for A (or N, or the corrected count rate) to halve",
+        "λ = ln 2 / t½",
+        "ln A = ln A₀ − λt: gradient = −λ, intercept = ln A₀"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "On an activity–time or N–t curve, read the starting value, halve it, and read across and down to find the half-life (do this from the graph, not from memory). On a graph of ln A against t the line is straight: its gradient is −λ and its y-intercept is ln A₀, so A₀ = e^(intercept). With a count-rate graph, subtract the stated background from every reading before you halve anything.",
+      "commonErrors": [
+        "Halving the time axis instead of the activity axis",
+        "Quoting the gradient of a ln A graph as λ with the minus sign still attached",
+        "Reading the y-intercept of ln A against t as A₀ instead of ln A₀",
+        "Finding the half-life of a count-rate curve without subtracting the background first"
+      ],
+      "worked": {
+        "id": "decay-graph-w",
+        "question": "The graph shows how the activity A of a short-lived source in a school laboratory varies with time t. Point X is marked. Use the graph to determine the half-life of the source.",
+        "steps": [
+          "Known: the curve starts at A₀ = 1200 Bq when t = 0. Unknown: t½, the time for the activity to fall to A₀ / 2.",
+          "A₀ / 2 = 1200 / 2 = 600 Bq",
+          "Read across from A = 600 Bq to the curve (point X) and down to the time axis.",
+          "X is at (40 s, 600 Bq), so the activity halves in 40 s.",
+          "t½ = 40 s"
+        ],
+        "answer": {
+          "value": 40.0,
+          "unit": "s"
+        },
+        "graph": {
+          "x": {
+            "label": "t / s",
+            "min": 0,
+            "max": 120,
+            "step": 20
+          },
+          "y": {
+            "label": "A / Bq",
+            "min": 0,
+            "max": 1200,
+            "step": 200
+          },
+          "series": [
+            {
+              "kind": "curve",
+              "points": [
+                [
+                  0,
+                  1200
+                ],
+                [
+                  8,
+                  1044.6607
+                ],
+                [
+                  16,
+                  909.4299
+                ],
+                [
+                  24,
+                  791.7047
+                ],
+                [
+                  32,
+                  689.219
+                ],
+                [
+                  40,
+                  600
+                ],
+                [
+                  48,
+                  522.3303
+                ],
+                [
+                  56,
+                  454.715
+                ],
+                [
+                  64,
+                  395.8524
+                ],
+                [
+                  72,
+                  344.6095
+                ],
+                [
+                  80,
+                  300
+                ],
+                [
+                  88,
+                  261.1652
+                ],
+                [
+                  96,
+                  227.3575
+                ],
+                [
+                  104,
+                  197.9262
+                ],
+                [
+                  112,
+                  172.3048
+                ],
+                [
+                  120,
+                  150
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 40,
+              "y": 600,
+              "label": "X",
+              "drop": true
+            }
+          ],
+          "alt": "Activity–time curve falling exponentially from 1200 Bq at t = 0, passing through point X at 600 Bq when t = 40 s, with dotted lines from X to both axes"
+        }
+      },
+      "practice": [
+        {
+          "id": "decay-graph-p1",
+          "question": "A hospital generator produces a short-lived isotope. The graph shows how the number N of undecayed nuclei in a sample varies with time t. Point X is marked at t = 6.0 hours. Use the graph to determine the number of undecayed nuclei at X.",
+          "hint": "Read straight across from X to the N axis, and remember the axis is in units of 10²⁰.",
+          "walkthrough": [
+            "X is on the curve at t = 6.0 hours; follow the dotted line across to the N axis.",
+            "The reading is 2.0 on an axis labelled N / 10²⁰.",
+            "Check: N₀ = 8.0 × 10²⁰ and 6.0 hours is two half-lives of 3.0 hours, so N should be 8.0 × 10²⁰ / 4.",
+            "N = 2.0 × 10²⁰"
+          ],
+          "answer": {
+            "value": 2e+20,
+            "unit": ""
+          },
+          "graph": {
+            "x": {
+              "label": "t / hours",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "N / 10²⁰",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    0.75,
+                    6.7272
+                  ],
+                  [
+                    1.5,
+                    5.6569
+                  ],
+                  [
+                    2.25,
+                    4.7568
+                  ],
+                  [
+                    3,
+                    4
+                  ],
+                  [
+                    3.75,
+                    3.3636
+                  ],
+                  [
+                    4.5,
+                    2.8284
+                  ],
+                  [
+                    5.25,
+                    2.3784
+                  ],
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    6.75,
+                    1.6818
+                  ],
+                  [
+                    7.5,
+                    1.4142
+                  ],
+                  [
+                    8.25,
+                    1.1892
+                  ],
+                  [
+                    9,
+                    1
+                  ],
+                  [
+                    9.75,
+                    0.8409
+                  ],
+                  [
+                    10.5,
+                    0.7071
+                  ],
+                  [
+                    11.25,
+                    0.5946
+                  ],
+                  [
+                    12,
+                    0.5
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 2,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Curve of number of undecayed nuclei against time falling exponentially from 8.0 × 10²⁰ at t = 0 to 0.5 × 10²⁰ at 12 hours, with point X marked at 6.0 hours and 2.0 × 10²⁰"
+          }
+        },
+        {
+          "id": "decay-graph-p2",
+          "question": "A radioactive gas is sealed in a chamber and its activity A is measured for 300 s. The graph shows ln A plotted against time t; points P and Q lie on the line. Use the graph to determine the decay constant of the gas.",
+          "hint": "ln A = ln A₀ − λt, so the gradient of the line is −λ; use P and Q to find the gradient.",
+          "walkthrough": [
+            "P is at (50 s, 8.0) and Q is at (250 s, 4.0).",
+            "Gradient = (4.0 − 8.0) / (250 − 50) = −4.0 / 200 = −0.020 s⁻¹",
+            "Gradient = −λ, so λ = 0.020 s⁻¹",
+            "λ = 2.0 × 10⁻² s⁻¹"
+          ],
+          "answer": {
+            "value": 0.02,
+            "unit": "s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 300,
+              "step": 50
+            },
+            "y": {
+              "label": "ln (A / Bq)",
+              "min": 3,
+              "max": 9,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    9
+                  ],
+                  [
+                    300,
+                    3
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 50,
+                "y": 8.0,
+                "label": "P"
+              },
+              {
+                "x": 250,
+                "y": 4.0,
+                "label": "Q"
+              }
+            ],
+            "alt": "Straight line of ln A against t falling from 9.0 at t = 0 through point P at (50 s, 8.0) and point Q at (250 s, 4.0) to 3.0 at 300 s"
+          }
+        },
+        {
+          "id": "decay-graph-p3",
+          "question": "A radioactive tracer is injected into a pipeline to find a leak. The graph shows ln A against time t for the tracer, where A is its activity in Bq. Use the y-intercept of the graph to determine the initial activity A₀ of the tracer.",
+          "hint": "The intercept is ln A₀, not A₀; undo the natural log with A₀ = e^(intercept).",
+          "walkthrough": [
+            "ln A = ln A₀ − λt, so the y-intercept is ln A₀.",
+            "Read the intercept: ln A₀ = 6.0",
+            "A₀ = e^6.0",
+            "A₀ = 403 Bq"
+          ],
+          "answer": {
+            "value": 403,
+            "unit": "Bq"
+          },
+          "graph": {
+            "x": {
+              "label": "t / min",
+              "min": 0,
+              "max": 40,
+              "step": 5
+            },
+            "y": {
+              "label": "ln (A / Bq)",
+              "min": 0,
+              "max": 7,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    6
+                  ],
+                  [
+                    40,
+                    1
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 6.0,
+                "label": "intercept",
+                "dx": 10,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line of ln A against t in minutes starting at an intercept of 6.0 on the ln A axis and falling to 1.0 at 40 minutes"
+          }
+        },
+        {
+          "id": "decay-graph-p4",
+          "question": "A nuclear medicine department measures the activity A of a freshly prepared isotope. The graph shows ln A against time t in minutes; points P and Q lie on the line. Use the graph to determine the decay constant of the isotope in s⁻¹.",
+          "hint": "The gradient from P and Q is −λ in min⁻¹; divide by 60 to convert λ to s⁻¹.",
+          "walkthrough": [
+            "P is at (10 min, 9.0) and Q is at (50 min, 5.0).",
+            "Gradient = (5.0 − 9.0) / (50 − 10) = −4.0 / 40 = −0.10 min⁻¹",
+            "λ = 0.10 min⁻¹ = 0.10 / 60 s⁻¹",
+            "λ = 1.67 × 10⁻³ s⁻¹"
+          ],
+          "answer": {
+            "value": 0.00167,
+            "unit": "s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / min",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "ln (A / Bq)",
+              "min": 4,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    10
+                  ],
+                  [
+                    60,
+                    4
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10,
+                "y": 9.0,
+                "label": "P"
+              },
+              {
+                "x": 50,
+                "y": 5.0,
+                "label": "Q"
+              }
+            ],
+            "alt": "Straight line of ln A against t in minutes falling from 10.0 at t = 0 through point P at (10, 9.0) and point Q at (50, 5.0) to 4.0 at 60 minutes"
+          }
+        },
+        {
+          "id": "decay-graph-p5",
+          "question": "An iodine-131 source is delivered to a hospital. The graph shows how its activity A, in kBq, varies with time t in days. Point X is marked. Use the graph to determine the half-life of iodine-131 and hence its decay constant in day⁻¹.",
+          "hint": "Halve the activity at t = 0, read off the time at X, then use λ = ln 2 / t½ with t½ in days.",
+          "walkthrough": [
+            "A₀ = 600 kBq, so A₀ / 2 = 300 kBq.",
+            "X is at (8.0 days, 300 kBq), so t½ = 8.0 days.",
+            "λ = ln 2 / t½ = 0.693 / 8.0",
+            "λ = 0.0866 day⁻¹"
+          ],
+          "answer": {
+            "value": 0.0866,
+            "unit": "day⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / days",
+              "min": 0,
+              "max": 24,
+              "step": 4
+            },
+            "y": {
+              "label": "A / kBq",
+              "min": 0,
+              "max": 600,
+              "step": 100
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    600
+                  ],
+                  [
+                    1.5,
+                    526.8756
+                  ],
+                  [
+                    3,
+                    462.6632
+                  ],
+                  [
+                    4.5,
+                    406.2767
+                  ],
+                  [
+                    6,
+                    356.7621
+                  ],
+                  [
+                    7.5,
+                    313.2821
+                  ],
+                  [
+                    9,
+                    275.1012
+                  ],
+                  [
+                    10.5,
+                    241.5735
+                  ],
+                  [
+                    12,
+                    212.132
+                  ],
+                  [
+                    13.5,
+                    186.2787
+                  ],
+                  [
+                    15,
+                    163.5762
+                  ],
+                  [
+                    16.5,
+                    143.6405
+                  ],
+                  [
+                    18,
+                    126.1345
+                  ],
+                  [
+                    19.5,
+                    110.762
+                  ],
+                  [
+                    21,
+                    97.263
+                  ],
+                  [
+                    22.5,
+                    85.4091
+                  ],
+                  [
+                    24,
+                    75
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 300,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Activity–time curve falling exponentially from 600 kBq at t = 0 through point X at 300 kBq when t = 8.0 days to 75 kBq at 24 days"
+          }
+        },
+        {
+          "id": "decay-graph-p6",
+          "question": "A student measures the count rate from a radioactive sample with a Geiger–Müller tube. The graph shows the measured count rate C against time t. The background count rate in the laboratory is 50 counts per minute and is shown as the dashed line. Point X is marked. Use the graph to determine the half-life of the sample.",
+          "hint": "Subtract the background from the count rate at t = 0, halve the corrected value, then add the background back to find which measured count rate to read across from.",
+          "walkthrough": [
+            "Measured count rate at t = 0 is 450 min⁻¹; corrected rate = 450 − 50 = 400 min⁻¹.",
+            "Half the corrected rate is 200 min⁻¹, which is a measured rate of 200 + 50 = 250 min⁻¹.",
+            "Read across from C = 250 min⁻¹ to the curve (point X) and down: t = 4.0 min.",
+            "t½ = 4.0 min"
+          ],
+          "answer": {
+            "value": 4.0,
+            "unit": "min"
+          },
+          "graph": {
+            "x": {
+              "label": "t / min",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "C / counts min⁻¹",
+              "min": 0,
+              "max": 500,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    450
+                  ],
+                  [
+                    0.625,
+                    408.9418
+                  ],
+                  [
+                    1.25,
+                    372.0981
+                  ],
+                  [
+                    1.875,
+                    339.0362
+                  ],
+                  [
+                    2.5,
+                    309.3679
+                  ],
+                  [
+                    3.125,
+                    282.745
+                  ],
+                  [
+                    3.75,
+                    258.8548
+                  ],
+                  [
+                    4.375,
+                    237.4168
+                  ],
+                  [
+                    5,
+                    218.1793
+                  ],
+                  [
+                    5.625,
+                    200.9164
+                  ],
+                  [
+                    6.25,
+                    185.4256
+                  ],
+                  [
+                    6.875,
+                    171.5247
+                  ],
+                  [
+                    7.5,
+                    159.0508
+                  ],
+                  [
+                    8.125,
+                    147.8572
+                  ],
+                  [
+                    8.75,
+                    137.8126
+                  ],
+                  [
+                    9.375,
+                    128.799
+                  ],
+                  [
+                    10,
+                    120.7107
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    50
+                  ],
+                  [
+                    10,
+                    50
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 250,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "labels": [
+              {
+                "x": 6.2,
+                "y": 80,
+                "text": "background"
+              }
+            ],
+            "alt": "Measured count rate against time falling from 450 counts per minute at t = 0 through point X at 250 counts per minute when t = 4.0 minutes towards a dashed background level of 50 counts per minute"
+          }
+        }
+      ]
+    }
+  ]
+}

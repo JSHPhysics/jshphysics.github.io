@@ -1,0 +1,1337 @@
+{
+  "id": "magnetic-fields-induction",
+  "title": "Magnetic fields and electromagnetic induction",
+  "subtitle": "Force on conductors and charges, flux, Faraday's law and transformers",
+  "order": 130,
+  "types": [
+    {
+      "id": "force-on-conductor",
+      "name": "Force on a current-carrying conductor",
+      "equations": ["F = BIL sin θ", "F = BIL (field perpendicular to current)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Recognise a wire or coil side carrying a current in a magnetic field. Use F = BIL, where L is the length of wire actually inside the field, and include sin θ only if the wire is not perpendicular to the field. In a current-balance question the magnetic force equals the weight of the mass change, F = mg, so convert the mass to kilograms first.",
+      "commonErrors": [
+        "Using the total length of the wire instead of the length inside the field",
+        "Leaving a current-balance mass in grams rather than converting to kilograms before F = mg",
+        "Using cos θ instead of sin θ: θ is the angle between the wire and the field, so a wire along the field feels no force"
+      ],
+      "worked": {
+        "id": "force-on-conductor-w",
+        "question": "A straight wire carries a current of 3.5 A. A length of 8.0 cm of the wire lies at right angles to a uniform magnetic field of flux density 0.25 T. Calculate the force on the wire.",
+        "steps": [
+          "Known: B = 0.25 T, I = 3.5 A, L = 8.0 cm = 0.080 m, θ = 90° so sin θ = 1. Unknown: F.",
+          "Use F = BIL",
+          "F = 0.25 × 3.5 × 0.080",
+          "F = 0.070 N",
+          "F = 7.0 × 10⁻² N"
+        ],
+        "answer": { "value": 0.07, "unit": "N" }
+      },
+      "practice": [
+        {
+          "id": "force-on-conductor-p1",
+          "question": "One side of the coil in a small d.c. motor is 0.12 m long and carries a current of 2.0 A at right angles to a magnetic field of flux density 0.30 T. Calculate the force on this side of the coil.",
+          "hint": "The wire is perpendicular to the field, so use F = BIL directly.",
+          "walkthrough": [
+            "B = 0.30 T, I = 2.0 A, L = 0.12 m, find F.",
+            "F = BIL = 0.30 × 2.0 × 0.12",
+            "F = 0.072 N"
+          ],
+          "answer": { "value": 0.072, "unit": "N" }
+        },
+        {
+          "id": "force-on-conductor-p2",
+          "question": "A 0.25 m length of overhead cable carries a current of 4.0 A through a region where the magnetic flux density is 0.60 T. The cable makes an angle of 30° with the field lines. Calculate the force on the cable.",
+          "hint": "The wire is not perpendicular to the field, so include sin θ with θ = 30°.",
+          "walkthrough": [
+            "B = 0.60 T, I = 4.0 A, L = 0.25 m, θ = 30°, find F.",
+            "F = BIL sin θ = 0.60 × 4.0 × 0.25 × sin 30°",
+            "F = 0.60 × 0.50",
+            "F = 0.30 N"
+          ],
+          "answer": { "value": 0.3, "unit": "N" }
+        },
+        {
+          "id": "force-on-conductor-p3",
+          "question": "In a laboratory experiment a 5.0 cm length of wire carrying 6.0 A sits at right angles to the field between the poles of a magnet. The force on the wire is measured as 1.8 × 10⁻² N. Calculate the magnetic flux density of the field.",
+          "hint": "Rearrange F = BIL to B = F / (IL), and convert the length to metres.",
+          "walkthrough": [
+            "F = 1.8 × 10⁻² N, I = 6.0 A, L = 5.0 cm = 0.050 m, find B.",
+            "B = F / (IL)",
+            "B = 1.8 × 10⁻² / (6.0 × 0.050) = 1.8 × 10⁻² / 0.30",
+            "B = 0.060 T"
+          ],
+          "answer": { "value": 0.06, "unit": "T" }
+        },
+        {
+          "id": "force-on-conductor-p4",
+          "question": "A loudspeaker coil carries a current of 15 A in a radial magnetic field of flux density 0.80 T. The force on the coil is 0.24 N. Calculate the length of wire inside the field, in centimetres.",
+          "hint": "Rearrange F = BIL to L = F / (BI); the answer in metres must then be converted to centimetres.",
+          "walkthrough": [
+            "F = 0.24 N, B = 0.80 T, I = 15 A, find L.",
+            "L = F / (BI) = 0.24 / (0.80 × 15) = 0.24 / 12",
+            "L = 0.020 m",
+            "L = 2.0 cm"
+          ],
+          "answer": { "value": 2.0, "unit": "cm" }
+        },
+        {
+          "id": "force-on-conductor-p5",
+          "question": "A current balance has a 60 mm length of wire placed at right angles to a magnetic field of flux density 120 mT. When the current is switched on, the reading on the balance changes by 0.45 g. Calculate the current in the wire.",
+          "hint": "The magnetic force equals the weight of the extra mass, F = mg with m in kilograms; then rearrange F = BIL for I.",
+          "walkthrough": [
+            "m = 0.45 g = 4.5 × 10⁻⁴ kg, B = 120 mT = 0.120 T, L = 60 mm = 0.060 m, find I.",
+            "F = mg = 4.5 × 10⁻⁴ × 9.81 = 4.41 × 10⁻³ N",
+            "I = F / (BL) = 4.41 × 10⁻³ / (0.120 × 0.060)",
+            "I = 4.41 × 10⁻³ / 7.2 × 10⁻³",
+            "I = 0.613 A"
+          ],
+          "answer": { "value": 0.613, "unit": "A" }
+        },
+        {
+          "id": "force-on-conductor-p6",
+          "question": "A U-shaped magnet rests on a top-pan balance with a wire clamped horizontally between its poles. A 4.0 cm length of wire is in the field, at right angles to it. When a current of 2.5 A flows, the balance reading increases by 1.2 g. Calculate the magnetic flux density between the poles.",
+          "hint": "Find the force from the mass change using F = mg (mass in kg), then rearrange F = BIL for B.",
+          "walkthrough": [
+            "m = 1.2 g = 1.2 × 10⁻³ kg, I = 2.5 A, L = 4.0 cm = 0.040 m, find B.",
+            "F = mg = 1.2 × 10⁻³ × 9.81 = 1.18 × 10⁻² N",
+            "B = F / (IL) = 1.18 × 10⁻² / (2.5 × 0.040)",
+            "B = 1.18 × 10⁻² / 0.10",
+            "B = 0.118 T"
+          ],
+          "answer": { "value": 0.118, "unit": "T" }
+        }
+      ]
+    },
+    {
+      "id": "force-on-moving-charge",
+      "name": "Force on a moving charged particle",
+      "equations": ["F = BQv sin θ", "F = BQv (velocity perpendicular to field)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Recognise a single charged particle (electron, proton, ion) moving through a magnetic field. Use F = BQv with Q the size of the charge in coulombs: e for an electron or proton, 2e for an alpha particle or doubly charged ion. Include sin θ only if the velocity is not perpendicular to the field.",
+      "commonErrors": [
+        "Using Q = 1 instead of Q = 1.60 × 10⁻¹⁹ C for an electron or proton",
+        "Forgetting that an alpha particle or a doubly charged ion has Q = 2e",
+        "Expecting the force to change the speed: it is always perpendicular to v, so it only changes the direction"
+      ],
+      "worked": {
+        "id": "force-on-moving-charge-w",
+        "question": "An electron in a cathode-ray tube moves at 2.0 × 10⁷ m s⁻¹ at right angles to a magnetic field of flux density 0.15 T. Calculate the magnetic force on the electron.",
+        "steps": [
+          "Known: B = 0.15 T, Q = e = 1.60 × 10⁻¹⁹ C, v = 2.0 × 10⁷ m s⁻¹, θ = 90°. Unknown: F.",
+          "Use F = BQv",
+          "F = 0.15 × 1.60 × 10⁻¹⁹ × 2.0 × 10⁷",
+          "F = 4.8 × 10⁻¹³ N"
+        ],
+        "answer": { "value": 4.8e-13, "unit": "N" }
+      },
+      "practice": [
+        {
+          "id": "force-on-moving-charge-p1",
+          "question": "A proton in a particle accelerator moves at 3.0 × 10⁶ m s⁻¹ perpendicular to a magnetic field of flux density 1.2 T. Calculate the force on the proton.",
+          "hint": "Use F = BQv with Q = e.",
+          "walkthrough": [
+            "B = 1.2 T, Q = 1.60 × 10⁻¹⁹ C, v = 3.0 × 10⁶ m s⁻¹, find F.",
+            "F = BQv = 1.2 × 1.60 × 10⁻¹⁹ × 3.0 × 10⁶",
+            "F = 5.76 × 10⁻¹³ N"
+          ],
+          "answer": { "value": 5.76e-13, "unit": "N" }
+        },
+        {
+          "id": "force-on-moving-charge-p2",
+          "question": "An alpha particle moves at 1.5 × 10⁷ m s⁻¹ through a magnetic field of flux density 0.40 T. Its velocity makes an angle of 60° with the field lines. Calculate the magnetic force on the alpha particle.",
+          "hint": "An alpha particle has charge 2e, and the velocity is not perpendicular to the field so include sin 60°.",
+          "walkthrough": [
+            "B = 0.40 T, Q = 2e = 3.2 × 10⁻¹⁹ C, v = 1.5 × 10⁷ m s⁻¹, θ = 60°, find F.",
+            "F = BQv sin θ = 0.40 × 3.2 × 10⁻¹⁹ × 1.5 × 10⁷ × sin 60°",
+            "F = 1.92 × 10⁻¹² × 0.866",
+            "F = 1.66 × 10⁻¹² N"
+          ],
+          "answer": { "value": 1.66e-12, "unit": "N" }
+        },
+        {
+          "id": "force-on-moving-charge-p3",
+          "question": "An electron moving at right angles to a magnetic field of flux density 5.0 mT experiences a force of 2.4 × 10⁻¹⁴ N. Calculate the speed of the electron.",
+          "hint": "Rearrange F = BQv to v = F / (BQ), and convert mT to T.",
+          "walkthrough": [
+            "F = 2.4 × 10⁻¹⁴ N, B = 5.0 mT = 5.0 × 10⁻³ T, Q = 1.60 × 10⁻¹⁹ C, find v.",
+            "v = F / (BQ) = 2.4 × 10⁻¹⁴ / (5.0 × 10⁻³ × 1.60 × 10⁻¹⁹)",
+            "v = 2.4 × 10⁻¹⁴ / 8.0 × 10⁻²²",
+            "v = 3.0 × 10⁷ m s⁻¹"
+          ],
+          "answer": { "value": 30000000, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "force-on-moving-charge-p4",
+          "question": "In a mass spectrometer a doubly charged magnesium ion, Mg²⁺, travels at 4.5 × 10⁵ m s⁻¹ at right angles to a magnetic field and experiences a force of 5.8 × 10⁻¹⁴ N. Calculate the magnetic flux density.",
+          "hint": "The ion carries charge 2e; rearrange F = BQv to B = F / (Qv).",
+          "walkthrough": [
+            "F = 5.8 × 10⁻¹⁴ N, Q = 2e = 3.2 × 10⁻¹⁹ C, v = 4.5 × 10⁵ m s⁻¹, find B.",
+            "B = F / (Qv) = 5.8 × 10⁻¹⁴ / (3.2 × 10⁻¹⁹ × 4.5 × 10⁵)",
+            "B = 5.8 × 10⁻¹⁴ / 1.44 × 10⁻¹³",
+            "B = 0.403 T"
+          ],
+          "answer": { "value": 0.403, "unit": "T" }
+        },
+        {
+          "id": "force-on-moving-charge-p5",
+          "question": "An electron in an electron microscope has a kinetic energy of 500 eV and enters a magnetic field of flux density 20 mT at right angles to the field lines. Calculate the magnetic force on the electron.",
+          "hint": "First convert the kinetic energy to joules and find v from ½mv², then use F = BQv.",
+          "walkthrough": [
+            "E_k = 500 × 1.60 × 10⁻¹⁹ = 8.0 × 10⁻¹⁷ J, B = 20 mT = 0.020 T, find F.",
+            "v = √(2E_k / m) = √(2 × 8.0 × 10⁻¹⁷ / 9.11 × 10⁻³¹) = 1.33 × 10⁷ m s⁻¹",
+            "F = BQv = 0.020 × 1.60 × 10⁻¹⁹ × 1.33 × 10⁷",
+            "F = 4.24 × 10⁻¹⁴ N"
+          ],
+          "answer": { "value": 4.24e-14, "unit": "N" }
+        },
+        {
+          "id": "force-on-moving-charge-p6",
+          "question": "A proton from the solar wind travels at 2.0 × 10⁶ m s⁻¹ perpendicular to a magnetic field of flux density 0.80 T in a laboratory simulation. Calculate the acceleration of the proton.",
+          "hint": "Find the force with F = BQv, then use a = F / m with the proton mass.",
+          "walkthrough": [
+            "B = 0.80 T, Q = 1.60 × 10⁻¹⁹ C, v = 2.0 × 10⁶ m s⁻¹, m = 1.67 × 10⁻²⁷ kg, find a.",
+            "F = BQv = 0.80 × 1.60 × 10⁻¹⁹ × 2.0 × 10⁶ = 2.56 × 10⁻¹³ N",
+            "a = F / m = 2.56 × 10⁻¹³ / 1.67 × 10⁻²⁷",
+            "a = 1.53 × 10¹⁴ m s⁻²"
+          ],
+          "answer": { "value": 153000000000000, "unit": "m s⁻²" }
+        }
+      ]
+    },
+    {
+      "id": "circular-path-radius",
+      "name": "Radius and period of a charged particle's circular path",
+      "equations": ["r = mv / (BQ)", "T = 2πm / (BQ)", "f = 1 / T"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "A charged particle moving at right angles to a uniform magnetic field follows a circle because the magnetic force provides the centripetal force: BQv = mv² / r, so r = mv / (BQ). Rearrange for whichever of r, v, B or m is asked. The period T = 2πr / v = 2πm / (BQ) does not depend on the speed.",
+      "commonErrors": [
+        "Using the electron mass for a proton, or the proton mass for an ion: convert u to kg with 1 u = 1.66 × 10⁻²⁷ kg",
+        "Giving a radius in metres when the question asks for centimetres, or the reverse",
+        "Including v in the period: T = 2πm / (BQ) has no speed in it"
+      ],
+      "worked": {
+        "id": "circular-path-radius-w",
+        "question": "A proton moving at 4.0 × 10⁶ m s⁻¹ enters a uniform magnetic field of flux density 0.50 T at right angles to the field. Calculate the radius of its circular path.",
+        "steps": [
+          "Known: m = 1.67 × 10⁻²⁷ kg, v = 4.0 × 10⁶ m s⁻¹, B = 0.50 T, Q = 1.60 × 10⁻¹⁹ C. Unknown: r.",
+          "The magnetic force is the centripetal force: BQv = mv² / r, so r = mv / (BQ)",
+          "r = (1.67 × 10⁻²⁷ × 4.0 × 10⁶) / (0.50 × 1.60 × 10⁻¹⁹)",
+          "r = 6.68 × 10⁻²¹ / 8.0 × 10⁻²⁰",
+          "r = 0.0835 m = 8.35 cm"
+        ],
+        "answer": { "value": 0.0835, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "circular-path-radius-p1",
+          "question": "An electron travelling at 5.0 × 10⁶ m s⁻¹ moves in a circle in a magnetic field of flux density 2.0 × 10⁻³ T. Calculate the radius of the circle, in metres.",
+          "hint": "Use r = mv / (BQ) with the electron mass and charge.",
+          "walkthrough": [
+            "m = 9.11 × 10⁻³¹ kg, v = 5.0 × 10⁶ m s⁻¹, B = 2.0 × 10⁻³ T, Q = 1.60 × 10⁻¹⁹ C, find r.",
+            "r = mv / (BQ) = (9.11 × 10⁻³¹ × 5.0 × 10⁶) / (2.0 × 10⁻³ × 1.60 × 10⁻¹⁹)",
+            "r = 4.56 × 10⁻²⁴ / 3.2 × 10⁻²²",
+            "r = 0.0142 m"
+          ],
+          "answer": { "value": 0.0142, "unit": "m" }
+        },
+        {
+          "id": "circular-path-radius-p2",
+          "question": "A proton circulates in the 1.5 T magnetic field of a cyclotron. Calculate the time taken for one complete orbit.",
+          "hint": "Use T = 2πm / (BQ); the speed is not needed.",
+          "walkthrough": [
+            "m = 1.67 × 10⁻²⁷ kg, B = 1.5 T, Q = 1.60 × 10⁻¹⁹ C, find T.",
+            "T = 2πm / (BQ) = (2π × 1.67 × 10⁻²⁷) / (1.5 × 1.60 × 10⁻¹⁹)",
+            "T = 1.049 × 10⁻²⁶ / 2.4 × 10⁻¹⁹",
+            "T = 4.37 × 10⁻⁸ s"
+          ],
+          "answer": { "value": 4.37e-8, "unit": "s" }
+        },
+        {
+          "id": "circular-path-radius-p3",
+          "question": "An alpha particle of mass 6.64 × 10⁻²⁷ kg moving at 1.2 × 10⁷ m s⁻¹ is to follow a circular path of radius 25 cm in a magnetic field. Calculate the flux density required.",
+          "hint": "Rearrange r = mv / (BQ) to B = mv / (rQ), remembering Q = 2e for an alpha particle and r in metres.",
+          "walkthrough": [
+            "m = 6.64 × 10⁻²⁷ kg, v = 1.2 × 10⁷ m s⁻¹, r = 25 cm = 0.25 m, Q = 2e = 3.2 × 10⁻¹⁹ C, find B.",
+            "B = mv / (rQ) = (6.64 × 10⁻²⁷ × 1.2 × 10⁷) / (0.25 × 3.2 × 10⁻¹⁹)",
+            "B = 7.97 × 10⁻²⁰ / 8.0 × 10⁻²⁰",
+            "B = 0.996 T"
+          ],
+          "answer": { "value": 0.996, "unit": "T" }
+        },
+        {
+          "id": "circular-path-radius-p4",
+          "question": "In a fine-beam tube, electrons move in a circle of radius 4.5 cm in a magnetic field of flux density 1.2 mT. Calculate the speed of the electrons.",
+          "hint": "Rearrange r = mv / (BQ) to v = BQr / m, converting cm to m and mT to T.",
+          "walkthrough": [
+            "r = 4.5 cm = 0.045 m, B = 1.2 mT = 1.2 × 10⁻³ T, Q = 1.60 × 10⁻¹⁹ C, m = 9.11 × 10⁻³¹ kg, find v.",
+            "v = BQr / m = (1.2 × 10⁻³ × 1.60 × 10⁻¹⁹ × 0.045) / 9.11 × 10⁻³¹",
+            "v = 8.64 × 10⁻²⁴ / 9.11 × 10⁻³¹",
+            "v = 9.48 × 10⁶ m s⁻¹"
+          ],
+          "answer": { "value": 9480000, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "circular-path-radius-p5",
+          "question": "A singly charged argon ion of mass 40 u moves in a circle of radius 0.40 m in the 0.60 T field of a mass spectrometer. Calculate the speed of the ion.",
+          "hint": "First convert the mass to kilograms using 1 u = 1.66 × 10⁻²⁷ kg, then use v = BQr / m.",
+          "walkthrough": [
+            "m = 40 × 1.66 × 10⁻²⁷ = 6.64 × 10⁻²⁶ kg, r = 0.40 m, B = 0.60 T, Q = 1.60 × 10⁻¹⁹ C, find v.",
+            "v = BQr / m = (0.60 × 1.60 × 10⁻¹⁹ × 0.40) / 6.64 × 10⁻²⁶",
+            "v = 3.84 × 10⁻²⁰ / 6.64 × 10⁻²⁶",
+            "v = 5.78 × 10⁵ m s⁻¹"
+          ],
+          "answer": { "value": 578000, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "circular-path-radius-p6",
+          "question": "The alternating voltage applied to the dees of a cyclotron must have the same frequency as the orbit of the protons. Calculate this frequency, in MHz, for protons in a magnetic field of flux density 1.8 T.",
+          "hint": "Find the period from T = 2πm / (BQ), then f = 1 / T and convert to MHz.",
+          "walkthrough": [
+            "m = 1.67 × 10⁻²⁷ kg, B = 1.8 T, Q = 1.60 × 10⁻¹⁹ C, find f.",
+            "T = 2πm / (BQ) = (2π × 1.67 × 10⁻²⁷) / (1.8 × 1.60 × 10⁻¹⁹) = 3.64 × 10⁻⁸ s",
+            "f = 1 / T = 1 / 3.64 × 10⁻⁸ = 2.74 × 10⁷ Hz",
+            "f = 27.4 MHz"
+          ],
+          "answer": { "value": 27.4, "unit": "MHz" }
+        }
+      ]
+    },
+    {
+      "id": "accelerate-then-deflect",
+      "name": "Particle accelerated by a p.d. then deflected by a field",
+      "equations": ["QV = ½mv²", "r = mv / (BQ)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "A particle accelerated from rest through a p.d. V gains kinetic energy QV, so v = √(2QV / m). It then enters a magnetic field at right angles and follows a circle of radius r = mv / (BQ). Do the two steps in order and keep the unrounded speed for the second step.",
+      "commonErrors": [
+        "Forgetting to square-root when finding v from ½mv² = QV",
+        "Rounding the speed to 2 s.f. before using it in r = mv / (BQ)",
+        "Using a p.d. in kV as if it were in volts"
+      ],
+      "worked": {
+        "id": "accelerate-then-deflect-w",
+        "question": "An electron is accelerated from rest through a p.d. of 2000 V and then enters a uniform magnetic field of flux density 5.0 mT at right angles to the field. Calculate the radius of its circular path, in centimetres.",
+        "steps": [
+          "Known: V = 2000 V, m = 9.11 × 10⁻³¹ kg, Q = e = 1.60 × 10⁻¹⁹ C, B = 5.0 mT = 5.0 × 10⁻³ T. Unknown: r.",
+          "Step 1, speed: eV = ½mv² so v = √(2eV / m)",
+          "v = √(2 × 1.60 × 10⁻¹⁹ × 2000 / 9.11 × 10⁻³¹) = 2.65 × 10⁷ m s⁻¹",
+          "Step 2, radius: r = mv / (BQ)",
+          "r = (9.11 × 10⁻³¹ × 2.65 × 10⁷) / (5.0 × 10⁻³ × 1.60 × 10⁻¹⁹) = 2.41 × 10⁻²³ / 8.0 × 10⁻²²",
+          "r = 0.0302 m = 3.02 cm"
+        ],
+        "answer": { "value": 3.02, "unit": "cm" }
+      },
+      "practice": [
+        {
+          "id": "accelerate-then-deflect-p1",
+          "question": "A proton is accelerated from rest through a p.d. of 5000 V and enters a magnetic field of flux density 0.20 T at right angles. Calculate the radius of its path, in metres.",
+          "hint": "Find v from eV = ½mv² using the proton mass, then use r = mv / (BQ).",
+          "walkthrough": [
+            "V = 5000 V, m = 1.67 × 10⁻²⁷ kg, Q = 1.60 × 10⁻¹⁹ C, B = 0.20 T, find r.",
+            "v = √(2eV / m) = √(2 × 1.60 × 10⁻¹⁹ × 5000 / 1.67 × 10⁻²⁷) = 9.79 × 10⁵ m s⁻¹",
+            "r = mv / (BQ) = (1.67 × 10⁻²⁷ × 9.79 × 10⁵) / (0.20 × 1.60 × 10⁻¹⁹)",
+            "r = 1.63 × 10⁻²¹ / 3.2 × 10⁻²⁰",
+            "r = 0.0511 m"
+          ],
+          "answer": { "value": 0.0511, "unit": "m" }
+        },
+        {
+          "id": "accelerate-then-deflect-p2",
+          "question": "In a television tube from the 1980s, electrons are accelerated through 400 V and then pass through a deflecting field of flux density 1.5 × 10⁻³ T at right angles. Calculate the radius of curvature of the electron path, in metres.",
+          "hint": "Speed first from eV = ½mv², then r = mv / (Be).",
+          "walkthrough": [
+            "V = 400 V, m = 9.11 × 10⁻³¹ kg, Q = 1.60 × 10⁻¹⁹ C, B = 1.5 × 10⁻³ T, find r.",
+            "v = √(2 × 1.60 × 10⁻¹⁹ × 400 / 9.11 × 10⁻³¹) = 1.19 × 10⁷ m s⁻¹",
+            "r = mv / (BQ) = (9.11 × 10⁻³¹ × 1.19 × 10⁷) / (1.5 × 10⁻³ × 1.60 × 10⁻¹⁹)",
+            "r = 1.08 × 10⁻²³ / 2.4 × 10⁻²²",
+            "r = 0.0450 m"
+          ],
+          "answer": { "value": 0.045, "unit": "m" }
+        },
+        {
+          "id": "accelerate-then-deflect-p3",
+          "question": "An alpha particle of mass 6.64 × 10⁻²⁷ kg is accelerated from rest through a p.d. of 12 kV and then enters a magnetic field of flux density 0.80 T at right angles. Calculate the radius of its path, in centimetres.",
+          "hint": "The charge is 2e and the p.d. is 12 000 V; find v from QV = ½mv², then r = mv / (BQ).",
+          "walkthrough": [
+            "V = 12 kV = 1.2 × 10⁴ V, m = 6.64 × 10⁻²⁷ kg, Q = 2e = 3.2 × 10⁻¹⁹ C, B = 0.80 T, find r.",
+            "v = √(2QV / m) = √(2 × 3.2 × 10⁻¹⁹ × 1.2 × 10⁴ / 6.64 × 10⁻²⁷) = 1.08 × 10⁶ m s⁻¹",
+            "r = mv / (BQ) = (6.64 × 10⁻²⁷ × 1.08 × 10⁶) / (0.80 × 3.2 × 10⁻¹⁹)",
+            "r = 7.14 × 10⁻²¹ / 2.56 × 10⁻¹⁹ = 0.0279 m",
+            "r = 2.79 cm"
+          ],
+          "answer": { "value": 2.79, "unit": "cm" }
+        },
+        {
+          "id": "accelerate-then-deflect-p4",
+          "question": "Electrons in a fine-beam tube are accelerated through 1.2 kV. The Helmholtz coils must produce a field that bends the beam into a circle of radius 8.0 cm. Calculate the flux density needed, in mT.",
+          "hint": "Find v from eV = ½mv², then rearrange r = mv / (Be) to B = mv / (er).",
+          "walkthrough": [
+            "V = 1.2 × 10³ V, m = 9.11 × 10⁻³¹ kg, Q = 1.60 × 10⁻¹⁹ C, r = 0.080 m, find B.",
+            "v = √(2 × 1.60 × 10⁻¹⁹ × 1.2 × 10³ / 9.11 × 10⁻³¹) = 2.05 × 10⁷ m s⁻¹",
+            "B = mv / (Qr) = (9.11 × 10⁻³¹ × 2.05 × 10⁷) / (1.60 × 10⁻¹⁹ × 0.080)",
+            "B = 1.87 × 10⁻²³ / 1.28 × 10⁻²⁰ = 1.46 × 10⁻³ T",
+            "B = 1.46 mT"
+          ],
+          "answer": { "value": 1.46, "unit": "mT" }
+        },
+        {
+          "id": "accelerate-then-deflect-p5",
+          "question": "Protons in a storage ring follow a circle of radius 0.50 m in a magnetic field of flux density 0.30 T. Calculate the p.d., in MV, through which the protons must have been accelerated from rest to reach this speed.",
+          "hint": "Find v from r = mv / (BQ) first, then use eV = ½mv² rearranged to V = mv² / (2e).",
+          "walkthrough": [
+            "r = 0.50 m, B = 0.30 T, m = 1.67 × 10⁻²⁷ kg, Q = 1.60 × 10⁻¹⁹ C, find V.",
+            "v = BQr / m = (0.30 × 1.60 × 10⁻¹⁹ × 0.50) / 1.67 × 10⁻²⁷ = 1.44 × 10⁷ m s⁻¹",
+            "V = mv² / (2e) = (1.67 × 10⁻²⁷ × (1.44 × 10⁷)²) / (2 × 1.60 × 10⁻¹⁹)",
+            "V = 3.45 × 10⁻¹³ / 3.2 × 10⁻¹⁹ = 1.08 × 10⁶ V",
+            "V = 1.08 MV"
+          ],
+          "answer": { "value": 1.08, "unit": "MV" }
+        },
+        {
+          "id": "accelerate-then-deflect-p6",
+          "question": "In a mass spectrometer a singly charged ion is accelerated from rest through 2.5 kV and then moves in a circle of radius 0.120 m in a field of flux density 0.45 T. Calculate the mass of the ion, in kg.",
+          "hint": "Combine QV = ½mv² and r = mv / (BQ) by eliminating v to get m = B²Qr² / (2V).",
+          "walkthrough": [
+            "V = 2.5 × 10³ V, r = 0.120 m, B = 0.45 T, Q = 1.60 × 10⁻¹⁹ C, find m.",
+            "From r = mv / (BQ): v = BQr / m. Substitute into QV = ½mv²: QV = B²Q²r² / (2m)",
+            "m = B²Qr² / (2V) = (0.45² × 1.60 × 10⁻¹⁹ × 0.120²) / (2 × 2.5 × 10³)",
+            "m = 4.67 × 10⁻²² / 5000",
+            "m = 9.33 × 10⁻²⁶ kg"
+          ],
+          "answer": { "value": 9.33e-26, "unit": "kg" }
+        }
+      ]
+    },
+    {
+      "id": "flux-and-flux-linkage",
+      "name": "Magnetic flux and flux linkage",
+      "equations": ["Φ = BA cos θ", "flux linkage = NΦ = BAN cos θ"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Flux is field strength multiplied by the area it passes through, Φ = BA, where A is the area in m² and θ is the angle between the field and the normal to the coil. Flux linkage multiplies this by the number of turns N. Convert cm² to m² (× 10⁻⁴) and mT to T (× 10⁻³) before substituting.",
+      "commonErrors": [
+        "Converting cm² to m² with 10⁻² instead of 10⁻⁴",
+        "Using the diameter instead of the radius in A = πr²",
+        "Taking θ as the angle between the field and the plane of the coil rather than the normal to the coil"
+      ],
+      "worked": {
+        "id": "flux-and-flux-linkage-w",
+        "question": "A coil of 200 turns and cross-sectional area 4.0 × 10⁻³ m² is placed with its plane at right angles to a uniform magnetic field of flux density 0.15 T. Calculate the flux linkage of the coil.",
+        "steps": [
+          "Known: N = 200, A = 4.0 × 10⁻³ m², B = 0.15 T, field along the normal so cos θ = 1. Unknown: NΦ.",
+          "Flux through one turn: Φ = BA = 0.15 × 4.0 × 10⁻³ = 6.0 × 10⁻⁴ Wb",
+          "Flux linkage: NΦ = 200 × 6.0 × 10⁻⁴",
+          "NΦ = 0.12 Wb turns"
+        ],
+        "answer": { "value": 0.12, "unit": "Wb turns" }
+      },
+      "practice": [
+        {
+          "id": "flux-and-flux-linkage-p1",
+          "question": "A single rectangular loop of wire of area 0.025 m² lies with its plane perpendicular to a uniform magnetic field of flux density 0.80 T. Calculate the magnetic flux through the loop.",
+          "hint": "Use Φ = BA; the field is along the normal so cos θ = 1.",
+          "walkthrough": [
+            "B = 0.80 T, A = 0.025 m², find Φ.",
+            "Φ = BA = 0.80 × 0.025",
+            "Φ = 0.020 Wb"
+          ],
+          "answer": { "value": 0.02, "unit": "Wb" }
+        },
+        {
+          "id": "flux-and-flux-linkage-p2",
+          "question": "The search coil of a metal detector has 500 turns and an area of 1.2 × 10⁻³ m². It is held so that a magnetic field of flux density 0.050 T passes straight through it. Calculate the flux linkage.",
+          "hint": "Flux linkage = NBA, with the field along the normal.",
+          "walkthrough": [
+            "N = 500, B = 0.050 T, A = 1.2 × 10⁻³ m², find NΦ.",
+            "NΦ = NBA = 500 × 0.050 × 1.2 × 10⁻³",
+            "NΦ = 0.030 Wb turns"
+          ],
+          "answer": { "value": 0.03, "unit": "Wb turns" }
+        },
+        {
+          "id": "flux-and-flux-linkage-p3",
+          "question": "A coil in a laboratory experiment has 150 turns and a cross-sectional area of 25 cm². It is placed with its normal parallel to a magnetic field of flux density 40 mT. Calculate the flux linkage.",
+          "hint": "Convert 25 cm² to m² (multiply by 10⁻⁴) and 40 mT to T before using NΦ = NBA.",
+          "walkthrough": [
+            "N = 150, A = 25 cm² = 25 × 10⁻⁴ m² = 2.5 × 10⁻³ m², B = 40 mT = 0.040 T, find NΦ.",
+            "NΦ = NBA = 150 × 0.040 × 2.5 × 10⁻³",
+            "NΦ = 0.015 Wb turns"
+          ],
+          "answer": { "value": 0.015, "unit": "Wb turns" }
+        },
+        {
+          "id": "flux-and-flux-linkage-p4",
+          "question": "A magnetic flux of 3.6 × 10⁻⁴ Wb passes perpendicularly through a circular coil of radius 3.0 cm. Calculate the magnetic flux density.",
+          "hint": "Find the area with A = πr² in m², then rearrange Φ = BA to B = Φ / A.",
+          "walkthrough": [
+            "Φ = 3.6 × 10⁻⁴ Wb, r = 3.0 cm = 0.030 m, find B.",
+            "A = πr² = π × 0.030² = 2.83 × 10⁻³ m²",
+            "B = Φ / A = 3.6 × 10⁻⁴ / 2.83 × 10⁻³",
+            "B = 0.127 T"
+          ],
+          "answer": { "value": 0.127, "unit": "T" }
+        },
+        {
+          "id": "flux-and-flux-linkage-p5",
+          "question": "A circular coil of 300 turns and diameter 8.0 cm sits in a uniform magnetic field of flux density 0.20 T. The normal to the coil makes an angle of 60° with the field. Calculate the flux linkage.",
+          "hint": "Find the area from the radius (half the diameter) in metres, then use NΦ = NBA cos θ with θ = 60°.",
+          "walkthrough": [
+            "N = 300, r = 4.0 cm = 0.040 m, B = 0.20 T, θ = 60°, find NΦ.",
+            "A = πr² = π × 0.040² = 5.03 × 10⁻³ m²",
+            "NΦ = NBA cos θ = 300 × 0.20 × 5.03 × 10⁻³ × cos 60°",
+            "NΦ = 0.302 × 0.50",
+            "NΦ = 0.151 Wb turns"
+          ],
+          "answer": { "value": 0.151, "unit": "Wb turns" }
+        },
+        {
+          "id": "flux-and-flux-linkage-p6",
+          "question": "A square coil of side 5.0 cm is placed with its plane perpendicular to a magnetic field of flux density 0.30 T. The flux linkage is 0.090 Wb turns. Calculate the number of turns on the coil.",
+          "hint": "Find the flux through one turn from Φ = BA (area of a square in m²), then N = flux linkage / Φ.",
+          "walkthrough": [
+            "Side = 5.0 cm = 0.050 m, B = 0.30 T, NΦ = 0.090 Wb turns, find N.",
+            "A = 0.050² = 2.5 × 10⁻³ m²",
+            "Φ = BA = 0.30 × 2.5 × 10⁻³ = 7.5 × 10⁻⁴ Wb",
+            "N = NΦ / Φ = 0.090 / 7.5 × 10⁻⁴",
+            "N = 120 turns"
+          ],
+          "answer": { "value": 120, "unit": "" }
+        }
+      ]
+    },
+    {
+      "id": "faradays-law",
+      "name": "Faraday's law: e.m.f. from a changing flux",
+      "equations": ["ε = NΔΦ / Δt", "ε = NA ΔB / Δt (fixed coil, changing field)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "The induced e.m.f. equals the rate of change of flux linkage. Find the change in flux through one turn, ΔΦ = A × ΔB, multiply by N and divide by the time taken. If the coil is removed from the field completely, the flux changes from BA to zero. If the field changes at a stated rate, ΔB / Δt is given directly.",
+      "commonErrors": [
+        "Using the final flux instead of the change in flux when the field does not fall to zero",
+        "Forgetting the number of turns N",
+        "Leaving the time in milliseconds or the area in cm²"
+      ],
+      "worked": {
+        "id": "faradays-law-w",
+        "question": "A coil of 250 turns and area 3.0 × 10⁻³ m² is placed with its plane at right angles to a magnetic field of flux density 0.40 T. The field is switched off and falls to zero in 0.050 s. Calculate the average e.m.f. induced in the coil.",
+        "steps": [
+          "Known: N = 250, A = 3.0 × 10⁻³ m², B falls from 0.40 T to 0, Δt = 0.050 s. Unknown: ε.",
+          "Change in flux through one turn: ΔΦ = A ΔB = 3.0 × 10⁻³ × 0.40 = 1.2 × 10⁻³ Wb",
+          "ε = NΔΦ / Δt = 250 × 1.2 × 10⁻³ / 0.050",
+          "ε = 0.30 / 0.050",
+          "ε = 6.0 V"
+        ],
+        "answer": { "value": 6.0, "unit": "V" }
+      },
+      "practice": [
+        {
+          "id": "faradays-law-p1",
+          "question": "A coil of 100 turns and area 2.0 × 10⁻³ m² has its plane perpendicular to a magnetic field. The flux density increases steadily at a rate of 2.5 T s⁻¹. Calculate the e.m.f. induced in the coil.",
+          "hint": "The rate of change of flux is A × (ΔB / Δt), so ε = NA ΔB / Δt.",
+          "walkthrough": [
+            "N = 100, A = 2.0 × 10⁻³ m², ΔB / Δt = 2.5 T s⁻¹, find ε.",
+            "ε = NA (ΔB / Δt) = 100 × 2.0 × 10⁻³ × 2.5",
+            "ε = 0.50 V"
+          ],
+          "answer": { "value": 0.5, "unit": "V" }
+        },
+        {
+          "id": "faradays-law-p2",
+          "question": "The flux linkage of a generator coil falls steadily from 0.60 Wb turns to 0.15 Wb turns in 0.30 s. Calculate the e.m.f. induced.",
+          "hint": "E.m.f. = change in flux linkage / time taken; the flux linkage already includes N.",
+          "walkthrough": [
+            "Δ(NΦ) = 0.60 − 0.15 = 0.45 Wb turns, Δt = 0.30 s, find ε.",
+            "ε = Δ(NΦ) / Δt = 0.45 / 0.30",
+            "ε = 1.5 V"
+          ],
+          "answer": { "value": 1.5, "unit": "V" }
+        },
+        {
+          "id": "faradays-law-p3",
+          "question": "A search coil of 400 turns and area 12 cm² is placed at right angles to a magnetic field of flux density 80 mT and then pulled completely out of the field in 20 ms. Calculate the average e.m.f. induced in the coil.",
+          "hint": "Convert cm² to m², mT to T and ms to s, then ε = NBA / Δt because the flux falls to zero.",
+          "walkthrough": [
+            "N = 400, A = 12 cm² = 1.2 × 10⁻³ m², B = 80 mT = 0.080 T, Δt = 20 ms = 0.020 s, find ε.",
+            "ΔΦ = BA = 0.080 × 1.2 × 10⁻³ = 9.6 × 10⁻⁵ Wb",
+            "ε = NΔΦ / Δt = 400 × 9.6 × 10⁻⁵ / 0.020",
+            "ε = 0.0384 / 0.020",
+            "ε = 1.92 V"
+          ],
+          "answer": { "value": 1.92, "unit": "V" }
+        },
+        {
+          "id": "faradays-law-p4",
+          "question": "A coil of 50 turns and area 0.040 m² is removed from a magnetic field of flux density 0.25 T. The average e.m.f. induced while it is removed is 4.0 V. Calculate the time taken to remove the coil.",
+          "hint": "Rearrange ε = NΔΦ / Δt to Δt = NΔΦ / ε, with ΔΦ = BA.",
+          "walkthrough": [
+            "N = 50, A = 0.040 m², B = 0.25 T, ε = 4.0 V, find Δt.",
+            "ΔΦ = BA = 0.25 × 0.040 = 0.010 Wb",
+            "Δt = NΔΦ / ε = 50 × 0.010 / 4.0",
+            "Δt = 0.125 s"
+          ],
+          "answer": { "value": 0.125, "unit": "s" }
+        },
+        {
+          "id": "faradays-law-p5",
+          "question": "The magnetic field through a coil of area 8.0 cm² rises uniformly from zero to 0.60 T in 0.15 s. An e.m.f. of 3.2 V is induced. Calculate the number of turns on the coil.",
+          "hint": "Find the rate of change of flux for one turn, A ΔB / Δt, then N = ε divided by that rate.",
+          "walkthrough": [
+            "A = 8.0 cm² = 8.0 × 10⁻⁴ m², ΔB = 0.60 T, Δt = 0.15 s, ε = 3.2 V, find N.",
+            "ΔΦ = A ΔB = 8.0 × 10⁻⁴ × 0.60 = 4.8 × 10⁻⁴ Wb",
+            "ΔΦ / Δt = 4.8 × 10⁻⁴ / 0.15 = 3.2 × 10⁻³ Wb s⁻¹",
+            "N = ε / (ΔΦ / Δt) = 3.2 / 3.2 × 10⁻³",
+            "N = 1000 turns"
+          ],
+          "answer": { "value": 1000, "unit": "" }
+        },
+        {
+          "id": "faradays-law-p6",
+          "question": "A coil of 120 turns, area 5.0 × 10⁻³ m² and total resistance 15 Ω is placed with its plane perpendicular to a magnetic field. The flux density falls steadily from 0.90 T to 0.30 T in 0.040 s. Calculate the average current induced in the coil.",
+          "hint": "Find the e.m.f. from ε = NA ΔB / Δt using the change in B, then I = ε / R.",
+          "walkthrough": [
+            "N = 120, A = 5.0 × 10⁻³ m², ΔB = 0.90 − 0.30 = 0.60 T, Δt = 0.040 s, R = 15 Ω, find I.",
+            "ΔΦ = A ΔB = 5.0 × 10⁻³ × 0.60 = 3.0 × 10⁻³ Wb",
+            "ε = NΔΦ / Δt = 120 × 3.0 × 10⁻³ / 0.040 = 9.0 V",
+            "I = ε / R = 9.0 / 15",
+            "I = 0.60 A"
+          ],
+          "answer": { "value": 0.6, "unit": "A" }
+        }
+      ]
+    },
+    {
+      "id": "motional-emf",
+      "name": "E.m.f. from a conductor moving through a field",
+      "equations": ["ε = BLv"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "A straight conductor of length L moving at speed v at right angles to a field B sweeps out flux at a rate BLv, so the e.m.f. between its ends is ε = BLv. Use the component of B perpendicular to both the conductor and its motion: for an aircraft or vehicle this is the vertical component of the Earth's field. Convert speeds in km h⁻¹ to m s⁻¹ first.",
+      "commonErrors": [
+        "Using the full Earth's field instead of the vertical component stated in the question",
+        "Leaving a speed in km h⁻¹ rather than dividing by 3.6",
+        "Giving the e.m.f. in volts when the question asks for millivolts"
+      ],
+      "worked": {
+        "id": "motional-emf-w",
+        "question": "An aircraft with a wingspan of 60 m flies horizontally at 250 m s⁻¹ through a region where the vertical component of the Earth's magnetic field is 4.5 × 10⁻⁵ T. Calculate the e.m.f. induced between the wing tips.",
+        "steps": [
+          "Known: B = 4.5 × 10⁻⁵ T (vertical component), L = 60 m, v = 250 m s⁻¹. Unknown: ε.",
+          "Use ε = BLv",
+          "ε = 4.5 × 10⁻⁵ × 60 × 250",
+          "ε = 0.675 V"
+        ],
+        "answer": { "value": 0.675, "unit": "V" }
+      },
+      "practice": [
+        {
+          "id": "motional-emf-p1",
+          "question": "A metal rod of length 0.50 m is moved at 3.0 m s⁻¹ at right angles to a uniform magnetic field of flux density 0.20 T. Calculate the e.m.f. induced between the ends of the rod.",
+          "hint": "Use ε = BLv directly.",
+          "walkthrough": [
+            "B = 0.20 T, L = 0.50 m, v = 3.0 m s⁻¹, find ε.",
+            "ε = BLv = 0.20 × 0.50 × 3.0",
+            "ε = 0.30 V"
+          ],
+          "answer": { "value": 0.3, "unit": "V" }
+        },
+        {
+          "id": "motional-emf-p2",
+          "question": "A train axle 1.5 m long travels at 40 m s⁻¹ where the vertical component of the Earth's magnetic field is 5.0 × 10⁻⁵ T. Calculate the e.m.f. induced across the axle, in volts.",
+          "hint": "Use ε = BLv with the vertical field component.",
+          "walkthrough": [
+            "B = 5.0 × 10⁻⁵ T, L = 1.5 m, v = 40 m s⁻¹, find ε.",
+            "ε = BLv = 5.0 × 10⁻⁵ × 1.5 × 40",
+            "ε = 3.0 × 10⁻³ V"
+          ],
+          "answer": { "value": 0.003, "unit": "V" }
+        },
+        {
+          "id": "motional-emf-p3",
+          "question": "In a laboratory, a 25 cm conducting rod is slid along rails at right angles to a magnetic field of flux density 0.60 T. An e.m.f. of 0.45 V is measured between the rails. Calculate the speed of the rod.",
+          "hint": "Rearrange ε = BLv to v = ε / (BL), with L in metres.",
+          "walkthrough": [
+            "ε = 0.45 V, B = 0.60 T, L = 25 cm = 0.25 m, find v.",
+            "v = ε / (BL) = 0.45 / (0.60 × 0.25)",
+            "v = 0.45 / 0.15",
+            "v = 3.0 m s⁻¹"
+          ],
+          "answer": { "value": 3.0, "unit": "m s⁻¹" }
+        },
+        {
+          "id": "motional-emf-p4",
+          "question": "A car 1.8 m wide travels along a motorway at 108 km h⁻¹. The vertical component of the Earth's magnetic field is 4.8 × 10⁻⁵ T. Calculate the e.m.f. induced across the width of the car, in millivolts.",
+          "hint": "Convert the speed to m s⁻¹ (divide km h⁻¹ by 3.6), then use ε = BLv and convert the answer to mV.",
+          "walkthrough": [
+            "v = 108 km h⁻¹ = 108 / 3.6 = 30 m s⁻¹, B = 4.8 × 10⁻⁵ T, L = 1.8 m, find ε.",
+            "ε = BLv = 4.8 × 10⁻⁵ × 1.8 × 30",
+            "ε = 2.59 × 10⁻³ V",
+            "ε = 2.59 mV"
+          ],
+          "answer": { "value": 2.59, "unit": "mV" }
+        },
+        {
+          "id": "motional-emf-p5",
+          "question": "A horizontal copper rod of length 0.80 m is released from rest and falls vertically through a horizontal magnetic field of flux density 0.12 T, which is at right angles to the rod. Calculate the e.m.f. between the ends of the rod 0.50 s after release. Ignore air resistance.",
+          "hint": "First find the speed after 0.50 s of free fall using v = gt, then use ε = BLv.",
+          "walkthrough": [
+            "t = 0.50 s, B = 0.12 T, L = 0.80 m, find ε.",
+            "v = gt = 9.81 × 0.50 = 4.905 m s⁻¹",
+            "ε = BLv = 0.12 × 0.80 × 4.905",
+            "ε = 0.471 V"
+          ],
+          "answer": { "value": 0.471, "unit": "V" }
+        },
+        {
+          "id": "motional-emf-p6",
+          "question": "A conducting rod of length 0.40 m moves at 6.0 m s⁻¹ along two parallel rails at right angles to a magnetic field of flux density 0.50 T. The rod and rails form a complete circuit of total resistance 2.0 Ω. Calculate the current in the circuit.",
+          "hint": "Find the e.m.f. from ε = BLv, then I = ε / R.",
+          "walkthrough": [
+            "B = 0.50 T, L = 0.40 m, v = 6.0 m s⁻¹, R = 2.0 Ω, find I.",
+            "ε = BLv = 0.50 × 0.40 × 6.0 = 1.2 V",
+            "I = ε / R = 1.2 / 2.0",
+            "I = 0.60 A"
+          ],
+          "answer": { "value": 0.6, "unit": "A" }
+        }
+      ]
+    },
+    {
+      "id": "transformers",
+      "name": "Transformers: turns ratio, currents and efficiency",
+      "equations": ["N_s / N_p = V_s / V_p", "I_p V_p = I_s V_s (ideal transformer)", "efficiency = I_s V_s / (I_p V_p)"],
+      "boards": ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      "method": "Write the turns-ratio equation as a proportion, N_s / N_p = V_s / V_p, and rearrange for the unknown. For an ideal transformer the input and output powers are equal, I_p V_p = I_s V_s, so a step-down transformer steps the current up. For efficiency, output power = input power minus the power lost, and efficiency = output / input.",
+      "commonErrors": [
+        "Inverting the ratio so that a step-down transformer appears to step the voltage up",
+        "Assuming the current follows the same ratio as the voltage: it follows the inverse ratio",
+        "Treating a stated power loss as the output power rather than subtracting it from the input"
+      ],
+      "worked": {
+        "id": "transformers-w",
+        "question": "A transformer steps the 230 V mains supply down to 12 V to run a halogen lamp. The primary coil has 1150 turns. Calculate the number of turns on the secondary coil.",
+        "steps": [
+          "Known: V_p = 230 V, V_s = 12 V, N_p = 1150. Unknown: N_s.",
+          "N_s / N_p = V_s / V_p, so N_s = N_p × V_s / V_p",
+          "N_s = 1150 × 12 / 230",
+          "N_s = 60 turns"
+        ],
+        "answer": { "value": 60, "unit": "" }
+      },
+      "practice": [
+        {
+          "id": "transformers-p1",
+          "question": "A phone charger contains a transformer with 400 turns on the primary coil and 20 turns on the secondary. The primary is connected to the 230 V mains. Calculate the secondary voltage.",
+          "hint": "Use V_s = V_p × N_s / N_p.",
+          "walkthrough": [
+            "V_p = 230 V, N_p = 400, N_s = 20, find V_s.",
+            "V_s = V_p × N_s / N_p = 230 × 20 / 400",
+            "V_s = 11.5 V"
+          ],
+          "answer": { "value": 11.5, "unit": "V" }
+        },
+        {
+          "id": "transformers-p2",
+          "question": "A step-up transformer in a neon-sign power supply has 50 turns on the primary coil and 2000 turns on the secondary. The primary voltage is 12 V. Calculate the secondary voltage.",
+          "hint": "Use V_s = V_p × N_s / N_p; the secondary has more turns, so expect a larger voltage.",
+          "walkthrough": [
+            "V_p = 12 V, N_p = 50, N_s = 2000, find V_s.",
+            "V_s = V_p × N_s / N_p = 12 × 2000 / 50",
+            "V_s = 480 V"
+          ],
+          "answer": { "value": 480, "unit": "V" }
+        },
+        {
+          "id": "transformers-p3",
+          "question": "A transformer supplies a 5.0 V output from the 230 V mains for a USB charger. The secondary coil has 30 turns. Calculate the number of turns on the primary coil.",
+          "hint": "Rearrange N_s / N_p = V_s / V_p to N_p = N_s × V_p / V_s.",
+          "walkthrough": [
+            "V_p = 230 V, V_s = 5.0 V, N_s = 30, find N_p.",
+            "N_p = N_s × V_p / V_s = 30 × 230 / 5.0",
+            "N_p = 1380 turns"
+          ],
+          "answer": { "value": 1380, "unit": "" }
+        },
+        {
+          "id": "transformers-p4",
+          "question": "An ideal transformer steps the 230 V mains down to 12 V for a garden lighting circuit. The secondary current is 4.0 A. Calculate the current in the primary coil.",
+          "hint": "For an ideal transformer I_p V_p = I_s V_s; rearrange to I_p = I_s V_s / V_p.",
+          "walkthrough": [
+            "V_p = 230 V, V_s = 12 V, I_s = 4.0 A, find I_p.",
+            "I_p = I_s V_s / V_p = 4.0 × 12 / 230",
+            "I_p = 48 / 230",
+            "I_p = 0.209 A"
+          ],
+          "answer": { "value": 0.209, "unit": "A" }
+        },
+        {
+          "id": "transformers-p5",
+          "question": "A transformer has 1200 turns on its primary coil and 60 turns on its secondary. The primary is connected to a 240 V supply and the secondary is connected to a lamp of resistance 6.0 Ω. Calculate the current in the lamp.",
+          "hint": "Find the secondary voltage from the turns ratio first, then use I = V / R.",
+          "walkthrough": [
+            "V_p = 240 V, N_p = 1200, N_s = 60, R = 6.0 Ω, find I_s.",
+            "V_s = V_p × N_s / N_p = 240 × 60 / 1200 = 12 V",
+            "I_s = V_s / R = 12 / 6.0",
+            "I_s = 2.0 A"
+          ],
+          "answer": { "value": 2.0, "unit": "A" }
+        },
+        {
+          "id": "transformers-p6",
+          "question": "A welding transformer draws a current of 8.0 A from the 230 V mains. A total of 120 W is lost as heat in the windings and core. Calculate the efficiency of the transformer, as a percentage.",
+          "hint": "Find the input power from P = IV, subtract the loss to get the output power, then efficiency = output / input × 100%.",
+          "walkthrough": [
+            "I_p = 8.0 A, V_p = 230 V, P_lost = 120 W, find efficiency.",
+            "P_in = I_p V_p = 8.0 × 230 = 1840 W",
+            "P_out = P_in − P_lost = 1840 − 120 = 1720 W",
+            "Efficiency = P_out / P_in × 100% = 1720 / 1840 × 100%",
+            "Efficiency = 93.5%"
+          ],
+          "answer": { "value": 93.5, "unit": "%" }
+        }
+      ]
+    },
+    {
+      "id": "ac-rms-values",
+      "name": "Alternating current: peak and r.m.s. values",
+      "equations": ["V_rms = V₀ / √2", "I_rms = I₀ / √2", "V₀ = ½ × (peak-to-peak voltage)", "P = I_rms V_rms = V_rms² / R"],
+      "boards": ["AQA", "OCR A", "OCR B", "WJEC"],
+      "method": "The r.m.s. value of a sinusoidal supply is the peak value divided by √2, and it is the value that gives the same mean power as a d.c. supply. Mains values quoted as 230 V are r.m.s. An oscilloscope trace shows the peak-to-peak voltage, which is twice the peak. Always use r.m.s. values in power calculations.",
+      "commonErrors": [
+        "Multiplying by √2 instead of dividing when going from peak to r.m.s.",
+        "Reading the peak-to-peak value from an oscilloscope trace and using it as the peak value",
+        "Using the peak voltage in P = V² / R, which doubles the mean power"
+      ],
+      "worked": {
+        "id": "ac-rms-values-w",
+        "question": "The peak voltage of a mains supply is 325 V. Calculate the r.m.s. voltage.",
+        "steps": [
+          "Known: V₀ = 325 V. Unknown: V_rms.",
+          "Use V_rms = V₀ / √2",
+          "V_rms = 325 / 1.414",
+          "V_rms = 230 V"
+        ],
+        "answer": { "value": 230, "unit": "V" }
+      },
+      "practice": [
+        {
+          "id": "ac-rms-values-p1",
+          "question": "The current through an electric kettle element has a peak value of 2.4 A. Calculate the r.m.s. current.",
+          "hint": "Use I_rms = I₀ / √2.",
+          "walkthrough": [
+            "I₀ = 2.4 A, find I_rms.",
+            "I_rms = I₀ / √2 = 2.4 / 1.414",
+            "I_rms = 1.70 A"
+          ],
+          "answer": { "value": 1.7, "unit": "A" }
+        },
+        {
+          "id": "ac-rms-values-p2",
+          "question": "The mains supply in the United States has an r.m.s. voltage of 110 V. Calculate the peak voltage.",
+          "hint": "Rearrange V_rms = V₀ / √2 to V₀ = V_rms × √2.",
+          "walkthrough": [
+            "V_rms = 110 V, find V₀.",
+            "V₀ = V_rms × √2 = 110 × 1.414",
+            "V₀ = 156 V"
+          ],
+          "answer": { "value": 156, "unit": "V" }
+        },
+        {
+          "id": "ac-rms-values-p3",
+          "question": "An oscilloscope trace of the output from a signal generator shows a sinusoidal wave with a peak-to-peak voltage of 17.0 V. Calculate the r.m.s. voltage of the output.",
+          "hint": "The peak voltage is half the peak-to-peak voltage; then divide by √2.",
+          "walkthrough": [
+            "V_pp = 17.0 V, find V_rms.",
+            "V₀ = V_pp / 2 = 17.0 / 2 = 8.5 V",
+            "V_rms = V₀ / √2 = 8.5 / 1.414",
+            "V_rms = 6.01 V"
+          ],
+          "answer": { "value": 6.01, "unit": "V" }
+        },
+        {
+          "id": "ac-rms-values-p4",
+          "question": "A multimeter set to a.c. reads 35 mA for the current through a small loudspeaker. The meter displays r.m.s. values. Calculate the peak current, in mA.",
+          "hint": "Rearrange I_rms = I₀ / √2 to I₀ = I_rms × √2; the answer stays in mA.",
+          "walkthrough": [
+            "I_rms = 35 mA, find I₀.",
+            "I₀ = I_rms × √2 = 35 × 1.414",
+            "I₀ = 49.5 mA"
+          ],
+          "answer": { "value": 49.5, "unit": "mA" }
+        },
+        {
+          "id": "ac-rms-values-p5",
+          "question": "A sinusoidal alternating voltage of peak value 12 V is connected across a resistor of resistance 8.0 Ω. Calculate the mean power dissipated in the resistor.",
+          "hint": "Find the r.m.s. voltage first, then use P = V_rms² / R.",
+          "walkthrough": [
+            "V₀ = 12 V, R = 8.0 Ω, find P.",
+            "V_rms = V₀ / √2 = 12 / 1.414 = 8.49 V",
+            "P = V_rms² / R = 8.49² / 8.0 = 72 / 8.0",
+            "P = 9.0 W"
+          ],
+          "answer": { "value": 9.0, "unit": "W" }
+        },
+        {
+          "id": "ac-rms-values-p6",
+          "question": "A 2.0 kW fan heater is connected to the 230 V r.m.s. mains supply. Calculate the peak current drawn by the heater.",
+          "hint": "Find the r.m.s. current from P = I_rms V_rms, then multiply by √2.",
+          "walkthrough": [
+            "P = 2.0 kW = 2000 W, V_rms = 230 V, find I₀.",
+            "I_rms = P / V_rms = 2000 / 230 = 8.70 A",
+            "I₀ = I_rms × √2 = 8.70 × 1.414",
+            "I₀ = 12.3 A"
+          ],
+          "answer": { "value": 12.3, "unit": "A" }
+        }
+      ]
+    },
+    {
+      "id": "flux-emf-graph",
+      "name": "Reading flux and induced e.m.f. graphs",
+      "equations": [
+        "ε = N ΔΦ / Δt = gradient of a flux linkage–time graph (magnitude)",
+        "ε_max = gradient of the steepest tangent",
+        "ΔNΦ = area under an ε–t graph",
+        "f = 1 / T",
+        "V_rms = V₀ / √2"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "On a flux linkage–time graph the induced e.m.f. is the magnitude of the gradient: a straight section gives a constant e.m.f., a flat section gives zero, and a curve needs a tangent, drawn at the steepest point for the maximum e.m.f. The area under an e.m.f.–time graph is the change in flux linkage. If the graph shows the flux through one turn, multiply the gradient by the number of turns. On a sinusoidal trace read the peak where it sits on a gridline and the period between two matching points, then use f = 1 / T and V_rms = V₀ / √2.",
+      "commonErrors": [
+        "Leaving a time in ms or a flux in 10⁻³ Wb unconverted, so the e.m.f. is out by a factor of 10³",
+        "Giving a non-zero e.m.f. for a flat section of a flux-linkage graph",
+        "Reading the peak-to-peak value of a trace and using it as the peak",
+        "Taking the period as the time from a positive peak to the next negative peak, which is half a period"
+      ],
+      "worked": {
+        "id": "flux-emf-graph-w",
+        "question": "A coil is pushed steadily into a magnetic field. The graph shows how the flux linkage NΦ of the coil varies with time t. Use the graph to determine the magnitude of the e.m.f. induced in the coil during the first 4.0 s.",
+        "steps": [
+          "Faraday's law: the induced e.m.f. equals the rate of change of flux linkage, which is the gradient of the NΦ–t graph.",
+          "From 0 to 4.0 s the graph is a straight line from (0, 0) to A at (4.0 s, 0.60 Wb turns), so the e.m.f. is constant.",
+          "Gradient = (0.60 − 0) / (4.0 − 0) = 0.15 Wb turns s⁻¹",
+          "ε = 0.15 V (after 4.0 s the graph is flat, so the e.m.f. is zero)"
+        ],
+        "answer": {
+          "value": 0.15,
+          "unit": "V"
+        },
+        "graph": {
+          "x": {
+            "label": "t / s",
+            "min": 0,
+            "max": 6,
+            "step": 1
+          },
+          "y": {
+            "label": "NΦ / Wb turns",
+            "min": 0,
+            "max": 0.8,
+            "step": 0.1
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [0, 0],
+                [4, 0.6],
+                [6, 0.6]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 4,
+              "y": 0.6,
+              "label": "A",
+              "drop": true
+            }
+          ],
+          "alt": "Flux linkage against time rising in a straight line from zero to 0.60 weber turns at A (4.0 s), then constant until 6.0 s"
+        }
+      },
+      "practice": [
+        {
+          "id": "flux-emf-graph-p1",
+          "question": "A magnet is held near a search coil and then moved away. The graph shows how the flux linkage of the coil varies with time; points A, B, C and D are marked. Use the graph to determine the magnitude of the e.m.f. induced in the coil during the section BC.",
+          "hint": "The e.m.f. is the gradient of the straight section BC; convert ms to s and 10⁻³ Wb turns to Wb turns before dividing.",
+          "walkthrough": [
+            "B is at (20 ms, 8.0 × 10⁻³ Wb turns) and C is at (40 ms, 0).",
+            "ΔNΦ = 0 − 8.0 × 10⁻³ = −8.0 × 10⁻³ Wb turns; Δt = 40 − 20 = 20 ms = 0.020 s",
+            "ε = |ΔNΦ / Δt| = 8.0 × 10⁻³ / 0.020",
+            "ε = 0.40 V (zero during AB and CD, where the flux linkage is constant)"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": "V"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 50,
+              "step": 5
+            },
+            "y": {
+              "label": "NΦ / 10⁻³ Wb turns",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 8],
+                  [20, 8],
+                  [40, 0],
+                  [50, 0]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 8,
+                "label": "A",
+                "dx": 9,
+                "dy": 16
+              },
+              {
+                "x": 20,
+                "y": 8,
+                "label": "B"
+              },
+              {
+                "x": 40,
+                "y": 0,
+                "label": "C"
+              },
+              {
+                "x": 50,
+                "y": 0,
+                "label": "D",
+                "dx": -16,
+                "dy": -10
+              }
+            ],
+            "alt": "Flux linkage against time: constant at 8 milliweber turns from A to B (0 to 20 ms), falling in a straight line to zero at C (40 ms), then zero to D (50 ms)"
+          }
+        },
+        {
+          "id": "flux-emf-graph-p2",
+          "question": "The graph shows how the e.m.f. ε induced in a coil varies with time t as the coil passes through a magnetic field. Use the shaded area to determine the total change in flux linkage of the coil during the 8.0 ms. Give your answer in Wb turns.",
+          "hint": "ε = ΔNΦ / Δt, so the change in flux linkage is the area under the ε–t graph; the shape is a trapezium and the time axis is in ms.",
+          "walkthrough": [
+            "ΔNΦ = ε × Δt summed over the motion = area under the ε–t graph.",
+            "The shaded trapezium has parallel sides of 4.0 ms (2 to 6 ms) and 8.0 ms (0 to 8 ms) and height 6.0 V.",
+            "Area = ½ × (4.0 + 8.0) × 10⁻³ × 6.0 = ½ × 12 × 10⁻³ × 6.0",
+            "ΔNΦ = 0.036 Wb turns"
+          ],
+          "answer": {
+            "value": 0.036,
+            "unit": "Wb turns"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "ε / V",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 0],
+                  [2, 6],
+                  [6, 6],
+                  [8, 0]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 8
+              }
+            ],
+            "alt": "Induced e.m.f. against time forming a trapezium: rising from zero to 6.0 V at 2 ms, constant to 6 ms, falling to zero at 8 ms, with the whole area shaded"
+          }
+        },
+        {
+          "id": "flux-emf-graph-p3",
+          "question": "A bar magnet is pushed into a coil and held there. The graph shows how the flux linkage of the coil varies with time. The tangent to the curve at P, where the curve is steepest, is drawn. Use the graph to determine the maximum e.m.f. induced in the coil.",
+          "hint": "The e.m.f. is greatest where the flux linkage changes fastest, so find the gradient of the tangent at P from its two end points, converting ms and 10⁻³ Wb turns.",
+          "walkthrough": [
+            "The maximum e.m.f. is the maximum gradient, which is the gradient of the tangent at P.",
+            "The tangent passes through (2.0 ms, 0) and (10.0 ms, 6.0 × 10⁻³ Wb turns).",
+            "Gradient = (6.0 × 10⁻³ − 0) / ((10.0 − 2.0) × 10⁻³) = 6.0 × 10⁻³ / 8.0 × 10⁻³",
+            "ε_max = 0.75 V"
+          ],
+          "answer": {
+            "value": 0.75,
+            "unit": "V"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "NΦ / 10⁻³ Wb turns",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 0],
+                  [1, 0.118],
+                  [2, 0.444],
+                  [3, 0.938],
+                  [4, 1.556],
+                  [5, 2.257],
+                  [6, 3],
+                  [7, 3.743],
+                  [8, 4.444],
+                  [9, 5.062],
+                  [10, 5.556],
+                  [11, 5.882],
+                  [12, 6],
+                  [14, 6],
+                  [16, 6]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [2, 0],
+                  [10, 6]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 3,
+                "label": "P",
+                "dx": 10,
+                "dy": 4
+              }
+            ],
+            "labels": [
+              {
+                "x": 10.4,
+                "y": 6.6,
+                "text": "tangent at P"
+              }
+            ],
+            "alt": "S-shaped curve of flux linkage against time rising from zero to 6 milliweber turns over 12 ms then constant, with the tangent at the steepest point P drawn from (2 ms, 0) to (10 ms, 6)"
+          }
+        },
+        {
+          "id": "flux-emf-graph-p4",
+          "question": "The graph shows how the alternating current I in a loudspeaker coil varies with time t. Successive positive peaks P and Q are marked. Use the graph to determine the frequency of the current.",
+          "hint": "The period is the time between two matching points such as P and Q (not half a cycle); convert ms to s, then f = 1 / T.",
+          "walkthrough": [
+            "P is at t = 2.0 ms and Q is at t = 10.0 ms, so one full cycle takes T = 10.0 − 2.0 = 8.0 ms.",
+            "T = 8.0 × 10⁻³ s",
+            "f = 1 / T = 1 / 8.0 × 10⁻³",
+            "f = 125 Hz"
+          ],
+          "answer": {
+            "value": 125.0,
+            "unit": "Hz"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "I / mA",
+              "min": -30,
+              "max": 30,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 0],
+                  [1, 14.14],
+                  [2, 20],
+                  [3, 14.14],
+                  [4, 0],
+                  [5, -14.14],
+                  [6, -20],
+                  [7, -14.14],
+                  [8, 0],
+                  [9, 14.14],
+                  [10, 20],
+                  [11, 14.14],
+                  [12, 0],
+                  [13, -14.14],
+                  [14, -20],
+                  [15, -14.14],
+                  [16, 0]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2,
+                "y": 20,
+                "label": "P"
+              },
+              {
+                "x": 10,
+                "y": 20,
+                "label": "Q"
+              }
+            ],
+            "alt": "Sinusoidal current of amplitude 20 mA against time, with successive positive peaks P at 2 ms and Q at 10 ms"
+          }
+        },
+        {
+          "id": "flux-emf-graph-p5",
+          "question": "The graph shows how the magnetic flux Φ through one turn of a 400-turn coil varies with time t as the coil is moved steadily into a field. Points P and Q are marked. Use the graph to determine the e.m.f. induced in the coil between P and Q.",
+          "hint": "The graph gives flux through one turn, so the e.m.f. is N times the gradient of PQ; the Φ axis is in 10⁻⁴ Wb.",
+          "walkthrough": [
+            "P is at (0.10 s, 2.0 × 10⁻⁴ Wb) and Q is at (0.40 s, 8.0 × 10⁻⁴ Wb).",
+            "ΔΦ / Δt = (8.0 − 2.0) × 10⁻⁴ / (0.40 − 0.10) = 6.0 × 10⁻⁴ / 0.30 = 2.0 × 10⁻³ Wb s⁻¹",
+            "ε = N ΔΦ / Δt = 400 × 2.0 × 10⁻³",
+            "ε = 0.80 V"
+          ],
+          "answer": {
+            "value": 0.8,
+            "unit": "V"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 0.5,
+              "step": 0.05
+            },
+            "y": {
+              "label": "Φ / 10⁻⁴ Wb",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [0, 2],
+                  [0.1, 2],
+                  [0.4, 8],
+                  [0.5, 8]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.1,
+                "y": 2,
+                "label": "P",
+                "drop": true
+              },
+              {
+                "x": 0.4,
+                "y": 8,
+                "label": "Q",
+                "drop": true
+              }
+            ],
+            "alt": "Flux through one turn against time: constant at 2 times 10 to the minus 4 weber until P (0.10 s), rising in a straight line to 8 times 10 to the minus 4 weber at Q (0.40 s), then constant"
+          }
+        },
+        {
+          "id": "flux-emf-graph-p6",
+          "question": "The graph shows the output voltage V of a bicycle dynamo against time t. The first positive peak X is marked. Use the graph to determine the r.m.s. value of the output voltage.",
+          "hint": "Read the peak voltage at X (not the peak-to-peak value), then V_rms = V₀ / √2.",
+          "walkthrough": [
+            "The peak voltage is read at X: V₀ = 6.0 V (the trace swings from +6.0 V to −6.0 V, so the peak is 6.0 V, not 12 V).",
+            "V_rms = V₀ / √2 = 6.0 / 1.414",
+            "V_rms = 4.24 V"
+          ],
+          "answer": {
+            "value": 4.24,
+            "unit": "V"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "y": {
+              "label": "V / V",
+              "min": -8,
+              "max": 8,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [0, 0],
+                  [5, 4.24],
+                  [10, 6],
+                  [15, 4.24],
+                  [20, 0],
+                  [25, -4.24],
+                  [30, -6],
+                  [35, -4.24],
+                  [40, 0],
+                  [45, 4.24],
+                  [50, 6],
+                  [55, 4.24],
+                  [60, 0],
+                  [65, -4.24],
+                  [70, -6],
+                  [75, -4.24],
+                  [80, 0]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10,
+                "y": 6,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Sinusoidal voltage against time with period 40 ms, with the first positive peak X marked at 10 ms and 6.0 V"
+          },
+          "boards": [
+            "AQA",
+            "OCR A",
+            "OCR B",
+            "WJEC"
+          ]
+        }
+      ]
+    }
+  ]
+}

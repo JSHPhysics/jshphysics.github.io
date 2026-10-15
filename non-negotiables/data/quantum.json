@@ -1,0 +1,1515 @@
+{
+  "id": "quantum",
+  "title": "Quantum physics",
+  "subtitle": "Photons, the photoelectric effect, energy levels and wave–particle duality",
+  "order": 70,
+  "types": [
+    {
+      "id": "photon-energy",
+      "name": "Photon energy from frequency or wavelength",
+      "equations": [
+        "E = hf",
+        "E = hc/λ",
+        "c = fλ"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "A photon's energy depends only on its frequency. Given f, use E = hf; given λ, use E = hc/λ with λ in metres. If the answer or the data are in eV, convert using 1 eV = 1.60 × 10⁻¹⁹ J. To find f or λ from E, rearrange before substituting.",
+      "commonErrors": [
+        "Leaving the wavelength in nm instead of converting to metres",
+        "Multiplying h by λ instead of dividing hc by λ",
+        "Forgetting to convert an energy given in eV or MeV into joules before using E = hf"
+      ],
+      "worked": {
+        "id": "photon-energy-w",
+        "question": "A green laser pointer emits light of wavelength 532 nm. Calculate the energy of one photon of this light, in joules.",
+        "steps": [
+          "Known: λ = 532 nm = 532 × 10⁻⁹ m = 5.32 × 10⁻⁷ m. Unknown: E.",
+          "Use E = hc/λ.",
+          "E = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (5.32 × 10⁻⁷)",
+          "E = 1.989 × 10⁻²⁵ / 5.32 × 10⁻⁷",
+          "E = 3.74 × 10⁻¹⁹ J"
+        ],
+        "answer": {
+          "value": 3.74e-19,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "photon-energy-p1",
+          "question": "An FM radio station broadcasts at a frequency of 98.5 MHz. Calculate the energy of one photon of this radio wave, in joules.",
+          "hint": "Use E = hf with the frequency in hertz (M = 10⁶).",
+          "walkthrough": [
+            "f = 98.5 MHz = 98.5 × 10⁶ Hz",
+            "E = hf = 6.63 × 10⁻³⁴ × 98.5 × 10⁶",
+            "E = 6.53 × 10⁻²⁶ J"
+          ],
+          "answer": {
+            "value": 6.53e-26,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "photon-energy-p2",
+          "question": "A dental X-ray machine produces X-rays of wavelength 0.10 nm. Calculate the energy of one of these X-ray photons, in joules.",
+          "hint": "Use E = hc/λ with λ converted to metres.",
+          "walkthrough": [
+            "λ = 0.10 nm = 0.10 × 10⁻⁹ m = 1.0 × 10⁻¹⁰ m",
+            "E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (1.0 × 10⁻¹⁰)",
+            "E = 1.989 × 10⁻²⁵ / 1.0 × 10⁻¹⁰",
+            "E = 1.99 × 10⁻¹⁵ J"
+          ],
+          "answer": {
+            "value": 1.99e-15,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "photon-energy-p3",
+          "question": "The photons emitted by a blue-green LED each have an energy of 2.5 eV. Calculate the wavelength of the light, in nm.",
+          "hint": "Convert 2.5 eV to joules, then rearrange E = hc/λ to make λ the subject.",
+          "walkthrough": [
+            "E = 2.5 × 1.60 × 10⁻¹⁹ = 4.0 × 10⁻¹⁹ J",
+            "E = hc/λ → λ = hc/E",
+            "λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (4.0 × 10⁻¹⁹) = 1.989 × 10⁻²⁵ / 4.0 × 10⁻¹⁹",
+            "λ = 4.97 × 10⁻⁷ m = 497 nm"
+          ],
+          "answer": {
+            "value": 497,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "photon-energy-p4",
+          "question": "The photons produced by the magnetron in a microwave oven each have an energy of 1.62 × 10⁻²⁴ J. Calculate the frequency of the microwaves, in GHz.",
+          "hint": "Rearrange E = hf to f = E/h, then divide by 10⁹ to get GHz.",
+          "walkthrough": [
+            "E = hf → f = E/h",
+            "f = 1.62 × 10⁻²⁴ / 6.63 × 10⁻³⁴ = 2.44 × 10⁹ Hz",
+            "1 GHz = 10⁹ Hz",
+            "f = 2.44 GHz"
+          ],
+          "answer": {
+            "value": 2.44,
+            "unit": "GHz"
+          }
+        },
+        {
+          "id": "photon-energy-p5",
+          "question": "A germicidal lamp used to sterilise hospital equipment emits ultraviolet light of wavelength 254 nm. Calculate the energy of one photon, in eV.",
+          "hint": "Find the photon energy in joules with E = hc/λ, then divide by 1.60 × 10⁻¹⁹ to convert to eV.",
+          "walkthrough": [
+            "λ = 254 nm = 2.54 × 10⁻⁷ m",
+            "E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (2.54 × 10⁻⁷) = 7.83 × 10⁻¹⁹ J",
+            "E in eV = 7.83 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹",
+            "E = 4.89 eV"
+          ],
+          "answer": {
+            "value": 4.89,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "photon-energy-p6",
+          "question": "A cobalt-60 source used in radiotherapy emits gamma photons of energy 1.17 MeV. Calculate the frequency of this gamma radiation, in Hz.",
+          "hint": "Convert MeV to joules first (1 MeV = 10⁶ eV), then use f = E/h.",
+          "walkthrough": [
+            "E = 1.17 × 10⁶ eV = 1.17 × 10⁶ × 1.60 × 10⁻¹⁹ = 1.872 × 10⁻¹³ J",
+            "E = hf → f = E/h",
+            "f = 1.872 × 10⁻¹³ / 6.63 × 10⁻³⁴",
+            "f = 2.82 × 10²⁰ Hz"
+          ],
+          "answer": {
+            "value": 2.82e+20,
+            "unit": "Hz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ev-and-joules",
+      "name": "Converting between eV and J; electron speed from a p.d.",
+      "equations": [
+        "1 eV = 1.60 × 10⁻¹⁹ J",
+        "1 keV = 10³ eV, 1 MeV = 10⁶ eV",
+        "eV = ½mv²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "An electronvolt is the energy gained by an electron accelerated through 1 V. To go from eV to J multiply by 1.60 × 10⁻¹⁹; to go from J to eV divide by it. Deal with keV or MeV by converting to eV first. A charge e accelerated through a p.d. V gains kinetic energy eV, so its speed comes from ½mv² = eV.",
+      "commonErrors": [
+        "Dividing by 1.60 × 10⁻¹⁹ when converting eV to J (the number in joules must be far smaller)",
+        "Forgetting the extra factor of 10³ or 10⁶ for keV and MeV",
+        "Forgetting to square-root after finding v² from ½mv² = eV"
+      ],
+      "worked": {
+        "id": "ev-and-joules-w",
+        "question": "An alpha particle emitted by an americium-241 source in a smoke detector has a kinetic energy of 5.0 MeV. Express this energy in joules.",
+        "steps": [
+          "Known: E = 5.0 MeV. Unknown: E in joules.",
+          "Convert to eV: 5.0 MeV = 5.0 × 10⁶ eV",
+          "1 eV = 1.60 × 10⁻¹⁹ J, so multiply by 1.60 × 10⁻¹⁹",
+          "E = 5.0 × 10⁶ × 1.60 × 10⁻¹⁹",
+          "E = 8.0 × 10⁻¹³ J"
+        ],
+        "answer": {
+          "value": 8e-13,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "ev-and-joules-p1",
+          "question": "The work function of a tungsten filament in a vacuum tube is 4.5 eV. Express this energy in joules.",
+          "hint": "Multiply the value in eV by 1.60 × 10⁻¹⁹.",
+          "walkthrough": [
+            "1 eV = 1.60 × 10⁻¹⁹ J",
+            "φ = 4.5 × 1.60 × 10⁻¹⁹",
+            "φ = 7.2 × 10⁻¹⁹ J"
+          ],
+          "answer": {
+            "value": 7.2e-19,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "ev-and-joules-p2",
+          "question": "An electron in a gas discharge tube has a kinetic energy of 3.2 × 10⁻¹⁸ J. Express this energy in electronvolts.",
+          "hint": "Divide the value in joules by 1.60 × 10⁻¹⁹.",
+          "walkthrough": [
+            "E in eV = E in J / 1.60 × 10⁻¹⁹",
+            "E = 3.2 × 10⁻¹⁸ / 1.60 × 10⁻¹⁹",
+            "E = 20 eV"
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "ev-and-joules-p3",
+          "question": "The most energetic X-ray photons from a hospital X-ray tube have an energy of 35 keV. Express this energy in joules.",
+          "hint": "Convert keV to eV first (k = 10³), then multiply by 1.60 × 10⁻¹⁹.",
+          "walkthrough": [
+            "35 keV = 35 × 10³ eV = 3.5 × 10⁴ eV",
+            "E = 3.5 × 10⁴ × 1.60 × 10⁻¹⁹",
+            "E = 5.6 × 10⁻¹⁵ J"
+          ],
+          "answer": {
+            "value": 5.6e-15,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "ev-and-joules-p4",
+          "question": "A fission fragment in a nuclear reactor carries 1.28 × 10⁻¹¹ J of kinetic energy. Express this energy in MeV.",
+          "hint": "Divide by 1.60 × 10⁻¹⁹ to get eV, then divide by 10⁶ to get MeV.",
+          "walkthrough": [
+            "E in eV = 1.28 × 10⁻¹¹ / 1.60 × 10⁻¹⁹ = 8.0 × 10⁷ eV",
+            "1 MeV = 10⁶ eV",
+            "E = 8.0 × 10⁷ / 10⁶",
+            "E = 80 MeV"
+          ],
+          "answer": {
+            "value": 80.0,
+            "unit": "MeV"
+          }
+        },
+        {
+          "id": "ev-and-joules-p5",
+          "question": "Electrons in an electron microscope are accelerated from rest through a potential difference of 500 V. Calculate the speed of the electrons.",
+          "hint": "Kinetic energy gained = eV in joules; then use ½mv² = eV and rearrange for v.",
+          "walkthrough": [
+            "KE = eV = 1.60 × 10⁻¹⁹ × 500 = 8.0 × 10⁻¹⁷ J",
+            "½mv² = KE → v = √(2 × KE / m)",
+            "v = √(2 × 8.0 × 10⁻¹⁷ / 9.11 × 10⁻³¹) = √(1.756 × 10¹⁴)",
+            "v = 1.33 × 10⁷ m s⁻¹"
+          ],
+          "answer": {
+            "value": 13300000,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "ev-and-joules-p6",
+          "question": "Protons in a small particle accelerator are accelerated from rest through a potential difference of 25 kV. Calculate the speed of the protons.",
+          "hint": "Kinetic energy gained = eV with V in volts; then ½mv² = eV using the proton mass.",
+          "walkthrough": [
+            "V = 25 kV = 2.5 × 10⁴ V",
+            "KE = eV = 1.60 × 10⁻¹⁹ × 2.5 × 10⁴ = 4.0 × 10⁻¹⁵ J",
+            "v = √(2 × KE / m_p) = √(2 × 4.0 × 10⁻¹⁵ / 1.67 × 10⁻²⁷) = √(4.79 × 10¹²)",
+            "v = 2.19 × 10⁶ m s⁻¹"
+          ],
+          "answer": {
+            "value": 2190000,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "photons-per-second",
+      "name": "Number of photons per second from a source",
+      "equations": [
+        "P = N × hf",
+        "N = P / E_photon",
+        "E_photon = hc/λ"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Power is energy per second, so the number of photons emitted per second is the power divided by the energy of one photon. Find the photon energy first (E = hf or hc/λ), then divide. Rearrange to find the power if the photon rate is given.",
+      "commonErrors": [
+        "Dividing the photon energy by the power instead of the power by the photon energy",
+        "Using the electrical power of a lamp when only a fraction of it is emitted as light",
+        "Leaving mW or nW unconverted so the answer is out by 10³ or 10⁹"
+      ],
+      "worked": {
+        "id": "photons-per-second-w",
+        "question": "A red laser used in a barcode scanner has a power output of 5.0 mW and a wavelength of 650 nm. Calculate the number of photons it emits per second.",
+        "steps": [
+          "Known: P = 5.0 mW = 5.0 × 10⁻³ W, λ = 650 nm = 6.50 × 10⁻⁷ m. Unknown: N per second.",
+          "Energy of one photon: E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (6.50 × 10⁻⁷)",
+          "E = 3.06 × 10⁻¹⁹ J",
+          "Photons per second: N = P / E = 5.0 × 10⁻³ / 3.06 × 10⁻¹⁹",
+          "N = 1.63 × 10¹⁶ photons per second"
+        ],
+        "answer": {
+          "value": 1.63e+16,
+          "unit": "s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "photons-per-second-p1",
+          "question": "A 60 W lamp is assumed to emit all of its power as photons of average energy 3.0 × 10⁻¹⁹ J. Calculate the number of photons it emits per second.",
+          "hint": "Photons per second = power / energy of one photon.",
+          "walkthrough": [
+            "N = P / E",
+            "N = 60 / 3.0 × 10⁻¹⁹",
+            "N = 2.0 × 10²⁰ photons per second"
+          ],
+          "answer": {
+            "value": 2e+20,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "photons-per-second-p2",
+          "question": "A medium-wave radio transmitter has an output power of 10 kW at a frequency of 1.0 MHz. Calculate the number of photons it emits per second.",
+          "hint": "Find the photon energy with E = hf, then divide the power (in watts) by it.",
+          "walkthrough": [
+            "E = hf = 6.63 × 10⁻³⁴ × 1.0 × 10⁶ = 6.63 × 10⁻²⁸ J",
+            "P = 10 kW = 1.0 × 10⁴ W",
+            "N = P / E = 1.0 × 10⁴ / 6.63 × 10⁻²⁸",
+            "N = 1.51 × 10³¹ photons per second"
+          ],
+          "answer": {
+            "value": 1.51e+31,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "photons-per-second-p3",
+          "question": "A blue LED in a stage light emits 20 mW of light at a wavelength of 470 nm. Calculate the number of photons it emits per second.",
+          "hint": "Convert mW to W and nm to m, find E = hc/λ, then N = P/E.",
+          "walkthrough": [
+            "P = 20 mW = 0.020 W; λ = 470 nm = 4.70 × 10⁻⁷ m",
+            "E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (4.70 × 10⁻⁷) = 4.23 × 10⁻¹⁹ J",
+            "N = P / E = 0.020 / 4.23 × 10⁻¹⁹",
+            "N = 4.73 × 10¹⁶ photons per second"
+          ],
+          "answer": {
+            "value": 4.73e+16,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "photons-per-second-p4",
+          "question": "A photodetector at the end of an optical fibre receives 1.5 × 10¹² photons per second of infrared light of wavelength 1550 nm. Calculate the power received by the detector, in nW.",
+          "hint": "Power = photons per second × energy of one photon; then divide by 10⁻⁹ for nW.",
+          "walkthrough": [
+            "λ = 1550 nm = 1.55 × 10⁻⁶ m",
+            "E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (1.55 × 10⁻⁶) = 1.283 × 10⁻¹⁹ J",
+            "P = N × E = 1.5 × 10¹² × 1.283 × 10⁻¹⁹ = 1.92 × 10⁻⁷ W",
+            "P = 192 nW"
+          ],
+          "answer": {
+            "value": 192,
+            "unit": "nW"
+          }
+        },
+        {
+          "id": "photons-per-second-p5",
+          "question": "A 150 W sodium street lamp converts 30% of its electrical power into light of wavelength 589 nm. Calculate the number of photons it emits per second.",
+          "hint": "Find the light power first (30% of 150 W), then divide by the photon energy hc/λ.",
+          "walkthrough": [
+            "Light power P = 0.30 × 150 = 45 W",
+            "E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (5.89 × 10⁻⁷) = 3.377 × 10⁻¹⁹ J",
+            "N = P / E = 45 / 3.377 × 10⁻¹⁹",
+            "N = 1.33 × 10²⁰ photons per second"
+          ],
+          "answer": {
+            "value": 1.33e+20,
+            "unit": "s⁻¹"
+          }
+        },
+        {
+          "id": "photons-per-second-p6",
+          "question": "Sunlight of intensity 1.4 kW m⁻² falls on a solar panel of area 2.0 m². Taking the average wavelength of the sunlight to be 550 nm, calculate the number of photons striking the panel per second.",
+          "hint": "Power = intensity × area; then divide by the energy of one photon of wavelength 550 nm.",
+          "walkthrough": [
+            "P = intensity × area = 1.4 × 10³ × 2.0 = 2800 W",
+            "E = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (5.50 × 10⁻⁷) = 3.616 × 10⁻¹⁹ J",
+            "N = P / E = 2800 / 3.616 × 10⁻¹⁹",
+            "N = 7.74 × 10²¹ photons per second"
+          ],
+          "answer": {
+            "value": 7.74e+21,
+            "unit": "s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "threshold-frequency",
+      "name": "Photoelectric effect: threshold frequency and work function",
+      "equations": [
+        "φ = hf₀",
+        "λ₀ = hc/φ",
+        "1 eV = 1.60 × 10⁻¹⁹ J"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The work function φ is the minimum energy needed to remove an electron from the metal surface. At the threshold frequency f₀ the photon energy exactly equals φ, so φ = hf₀. Work in joules: convert φ from eV before using it, and convert back to eV at the end if asked. The threshold wavelength follows from λ₀ = c/f₀ = hc/φ.",
+      "commonErrors": [
+        "Substituting φ in eV directly into φ = hf₀ instead of converting to joules",
+        "Confusing the threshold wavelength with the threshold frequency (a longer wavelength means a lower frequency)",
+        "Using λ in nm rather than metres in λ₀ = hc/φ"
+      ],
+      "worked": {
+        "id": "threshold-frequency-w",
+        "question": "The work function of sodium is 2.28 eV. Calculate the threshold frequency for the photoelectric effect in sodium.",
+        "steps": [
+          "Known: φ = 2.28 eV. Unknown: f₀.",
+          "Convert to joules: φ = 2.28 × 1.60 × 10⁻¹⁹ = 3.648 × 10⁻¹⁹ J",
+          "φ = hf₀ → f₀ = φ/h",
+          "f₀ = 3.648 × 10⁻¹⁹ / 6.63 × 10⁻³⁴",
+          "f₀ = 5.50 × 10¹⁴ Hz"
+        ],
+        "answer": {
+          "value": 550000000000000,
+          "unit": "Hz"
+        }
+      },
+      "practice": [
+        {
+          "id": "threshold-frequency-p1",
+          "question": "Caesium, used in photocells, has a threshold frequency of 4.6 × 10¹⁴ Hz. Calculate its work function in joules.",
+          "hint": "Use φ = hf₀ directly.",
+          "walkthrough": [
+            "φ = hf₀",
+            "φ = 6.63 × 10⁻³⁴ × 4.6 × 10¹⁴",
+            "φ = 3.05 × 10⁻¹⁹ J"
+          ],
+          "answer": {
+            "value": 3.05e-19,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "threshold-frequency-p2",
+          "question": "The work function of copper is 7.5 × 10⁻¹⁹ J. Calculate the threshold frequency for copper.",
+          "hint": "Rearrange φ = hf₀ to f₀ = φ/h.",
+          "walkthrough": [
+            "φ = hf₀ → f₀ = φ/h",
+            "f₀ = 7.5 × 10⁻¹⁹ / 6.63 × 10⁻³⁴",
+            "f₀ = 1.13 × 10¹⁵ Hz"
+          ],
+          "answer": {
+            "value": 1130000000000000,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "threshold-frequency-p3",
+          "question": "In a classic gold-leaf electroscope demonstration, a zinc plate emits photoelectrons only for frequencies above 1.04 × 10¹⁵ Hz. Calculate the work function of zinc in eV.",
+          "hint": "Find φ = hf₀ in joules, then divide by 1.60 × 10⁻¹⁹ to convert to eV.",
+          "walkthrough": [
+            "φ = hf₀ = 6.63 × 10⁻³⁴ × 1.04 × 10¹⁵ = 6.90 × 10⁻¹⁹ J",
+            "φ in eV = 6.90 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹",
+            "φ = 4.31 eV"
+          ],
+          "answer": {
+            "value": 4.31,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "threshold-frequency-p4",
+          "question": "Platinum electrodes in an industrial photo-sensor have a threshold wavelength of 196 nm. Calculate the work function of platinum in joules.",
+          "hint": "At the threshold the photon energy equals φ, so φ = hc/λ₀ with λ₀ in metres.",
+          "walkthrough": [
+            "λ₀ = 196 nm = 1.96 × 10⁻⁷ m",
+            "φ = hc/λ₀ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (1.96 × 10⁻⁷)",
+            "φ = 1.989 × 10⁻²⁵ / 1.96 × 10⁻⁷",
+            "φ = 1.01 × 10⁻¹⁸ J"
+          ],
+          "answer": {
+            "value": 1.01e-18,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "threshold-frequency-p5",
+          "question": "A lithium surface in a research vacuum chamber has a threshold wavelength of 430 nm. Calculate the work function of lithium in eV.",
+          "hint": "Find φ = hc/λ₀ in joules first, then convert to eV.",
+          "walkthrough": [
+            "λ₀ = 430 nm = 4.30 × 10⁻⁷ m",
+            "φ = hc/λ₀ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (4.30 × 10⁻⁷) = 4.626 × 10⁻¹⁹ J",
+            "φ in eV = 4.626 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹",
+            "φ = 2.89 eV"
+          ],
+          "answer": {
+            "value": 2.89,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "threshold-frequency-p6",
+          "question": "The work function of gold is 5.10 eV. Calculate the longest wavelength of light that can release photoelectrons from a gold surface, in nm.",
+          "hint": "Convert φ to joules, then use λ₀ = hc/φ and give the answer in nm.",
+          "walkthrough": [
+            "φ = 5.10 × 1.60 × 10⁻¹⁹ = 8.16 × 10⁻¹⁹ J",
+            "λ₀ = hc/φ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (8.16 × 10⁻¹⁹)",
+            "λ₀ = 1.989 × 10⁻²⁵ / 8.16 × 10⁻¹⁹ = 2.44 × 10⁻⁷ m",
+            "λ₀ = 244 nm"
+          ],
+          "answer": {
+            "value": 244,
+            "unit": "nm"
+          }
+        }
+      ]
+    },
+    {
+      "id": "photoelectric-equation",
+      "name": "Photoelectric equation: KE_max and stopping potential",
+      "equations": [
+        "hf = φ + KE_max",
+        "KE_max = hf − φ",
+        "eV_s = KE_max"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Each photon gives all its energy hf to one electron; φ is used up escaping the surface and the rest is the maximum kinetic energy. Get the photon energy and φ into the same unit (both J or both eV) before subtracting. The stopping potential V_s is the p.d. that just stops the fastest electrons, so eV_s = KE_max: in eV, the number for KE_max is the number of volts.",
+      "commonErrors": [
+        "Subtracting φ in eV from a photon energy in joules",
+        "Adding φ to hf instead of subtracting it",
+        "Giving V_s in joules: KE_max in eV is numerically equal to V_s in volts"
+      ],
+      "worked": {
+        "id": "photoelectric-equation-w",
+        "question": "Light of wavelength 420 nm falls on a sodium surface of work function 2.28 eV. Calculate the maximum kinetic energy of the emitted photoelectrons, in joules.",
+        "steps": [
+          "Known: λ = 420 nm = 4.20 × 10⁻⁷ m, φ = 2.28 eV. Unknown: KE_max in J.",
+          "Photon energy: hf = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (4.20 × 10⁻⁷) = 4.736 × 10⁻¹⁹ J",
+          "Work function in joules: φ = 2.28 × 1.60 × 10⁻¹⁹ = 3.648 × 10⁻¹⁹ J",
+          "KE_max = hf − φ = 4.736 × 10⁻¹⁹ − 3.648 × 10⁻¹⁹",
+          "KE_max = 1.09 × 10⁻¹⁹ J"
+        ],
+        "answer": {
+          "value": 1.09e-19,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "photoelectric-equation-p1",
+          "question": "Ultraviolet photons of energy 5.0 eV strike a metal surface with a work function of 2.9 eV. Calculate the maximum kinetic energy of the photoelectrons, in eV.",
+          "hint": "Both energies are already in eV, so just use KE_max = hf − φ.",
+          "walkthrough": [
+            "KE_max = hf − φ",
+            "KE_max = 5.0 − 2.9",
+            "KE_max = 2.1 eV"
+          ],
+          "answer": {
+            "value": 2.1,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "photoelectric-equation-p2",
+          "question": "Light of frequency 1.2 × 10¹⁵ Hz is shone on a zinc plate whose work function is 6.9 × 10⁻¹⁹ J. Calculate the maximum kinetic energy of the emitted electrons, in joules.",
+          "hint": "Find hf in joules, then subtract φ.",
+          "walkthrough": [
+            "hf = 6.63 × 10⁻³⁴ × 1.2 × 10¹⁵ = 7.956 × 10⁻¹⁹ J",
+            "KE_max = hf − φ = 7.956 × 10⁻¹⁹ − 6.9 × 10⁻¹⁹",
+            "KE_max = 1.06 × 10⁻¹⁹ J"
+          ],
+          "answer": {
+            "value": 1.06e-19,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "photoelectric-equation-p3",
+          "question": "A potassium photocathode in a light detector has a work function of 2.30 eV. Light of wavelength 310 nm falls on it. Calculate the maximum kinetic energy of the photoelectrons, in eV.",
+          "hint": "Find the photon energy from hc/λ, convert it to eV, then subtract φ.",
+          "walkthrough": [
+            "λ = 310 nm = 3.10 × 10⁻⁷ m",
+            "hf = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (3.10 × 10⁻⁷) = 6.416 × 10⁻¹⁹ J",
+            "hf in eV = 6.416 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 4.01 eV",
+            "KE_max = 4.01 − 2.30 = 1.71 eV"
+          ],
+          "answer": {
+            "value": 1.71,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "photoelectric-equation-p4",
+          "question": "When light of wavelength 250 nm falls on a metal surface, the fastest photoelectrons have a kinetic energy of 2.40 × 10⁻¹⁹ J. Calculate the work function of the metal in eV.",
+          "hint": "Rearrange to φ = hf − KE_max, working in joules, then convert to eV.",
+          "walkthrough": [
+            "λ = 250 nm = 2.50 × 10⁻⁷ m",
+            "hf = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (2.50 × 10⁻⁷) = 7.956 × 10⁻¹⁹ J",
+            "φ = hf − KE_max = 7.956 × 10⁻¹⁹ − 2.40 × 10⁻¹⁹ = 5.556 × 10⁻¹⁹ J",
+            "φ = 5.556 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 3.47 eV"
+          ],
+          "answer": {
+            "value": 3.47,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "photoelectric-equation-p5",
+          "question": "In a school photoelectric experiment, light of wavelength 450 nm is used and the photocurrent is just reduced to zero by a stopping potential of 0.85 V. Calculate the work function of the photocathode in eV.",
+          "hint": "The stopping potential gives KE_max = 0.85 eV; find the photon energy in eV and subtract.",
+          "walkthrough": [
+            "KE_max = eV_s = 0.85 eV",
+            "hf = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (4.50 × 10⁻⁷) = 4.42 × 10⁻¹⁹ J",
+            "hf in eV = 4.42 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 2.76 eV",
+            "φ = hf − KE_max = 2.76 − 0.85 = 1.91 eV"
+          ],
+          "answer": {
+            "value": 1.91,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "photoelectric-equation-p6",
+          "question": "Light of wavelength 350 nm falls on a caesium surface of work function 2.10 eV. Calculate the stopping potential needed to stop all the photoelectrons.",
+          "hint": "Find KE_max in eV first; the stopping potential in volts is numerically the same.",
+          "walkthrough": [
+            "hf = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (3.50 × 10⁻⁷) = 5.683 × 10⁻¹⁹ J",
+            "hf in eV = 5.683 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 3.55 eV",
+            "KE_max = hf − φ = 3.55 − 2.10 = 1.45 eV",
+            "eV_s = KE_max → V_s = 1.45 V"
+          ],
+          "answer": {
+            "value": 1.45,
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "id": "energy-levels",
+      "name": "Energy level transitions and the photon emitted or absorbed",
+      "equations": [
+        "ΔE = E₁ − E₂",
+        "ΔE = hf = hc/λ",
+        "1 eV = 1.60 × 10⁻¹⁹ J"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The photon energy is the difference between the two energy levels. Subtract the lower level from the upper level, remembering that levels are negative, so the difference is positive. Convert ΔE to joules, then find f = ΔE/h or λ = hc/ΔE. Going the other way, find the photon energy, convert to eV, and add or subtract it from the known level.",
+      "commonErrors": [
+        "Adding two negative levels instead of subtracting them",
+        "Using ΔE in eV in hf = ΔE without converting to joules",
+        "Using the energy of one level, rather than the difference, as the photon energy"
+      ],
+      "worked": {
+        "id": "energy-levels-w",
+        "question": "An electron in a hydrogen atom drops from the level at −1.51 eV to the level at −3.40 eV. Calculate the wavelength of the photon emitted, in nm.",
+        "steps": [
+          "Known: E₁ = −1.51 eV, E₂ = −3.40 eV. Unknown: λ.",
+          "ΔE = E₁ − E₂ = −1.51 − (−3.40) = 1.89 eV",
+          "Convert to joules: ΔE = 1.89 × 1.60 × 10⁻¹⁹ = 3.024 × 10⁻¹⁹ J",
+          "ΔE = hc/λ → λ = hc/ΔE = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (3.024 × 10⁻¹⁹)",
+          "λ = 6.58 × 10⁻⁷ m = 658 nm"
+        ],
+        "answer": {
+          "value": 658,
+          "unit": "nm"
+        }
+      },
+      "practice": [
+        {
+          "id": "energy-levels-p1",
+          "question": "An electron in a hydrogen atom falls from the −0.85 eV level to the −3.40 eV level. Calculate the energy of the photon emitted, in eV.",
+          "hint": "Photon energy = upper level − lower level; both levels are negative.",
+          "walkthrough": [
+            "ΔE = E₁ − E₂",
+            "ΔE = −0.85 − (−3.40)",
+            "ΔE = 2.55 eV"
+          ],
+          "answer": {
+            "value": 2.55,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "energy-levels-p2",
+          "question": "A transition between two energy levels in a neon atom in a shop sign releases a photon of energy 3.36 × 10⁻¹⁹ J. Calculate the frequency of the light emitted.",
+          "hint": "Use ΔE = hf and rearrange to f = ΔE/h.",
+          "walkthrough": [
+            "ΔE = hf → f = ΔE/h",
+            "f = 3.36 × 10⁻¹⁹ / 6.63 × 10⁻³⁴",
+            "f = 5.07 × 10¹⁴ Hz"
+          ],
+          "answer": {
+            "value": 507000000000000,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "energy-levels-p3",
+          "question": "In a mercury vapour lamp an electron drops from a level at −5.5 eV to the ground state at −10.4 eV. Calculate the wavelength of the ultraviolet photon emitted, in nm.",
+          "hint": "Find ΔE in eV, convert to joules, then use λ = hc/ΔE.",
+          "walkthrough": [
+            "ΔE = −5.5 − (−10.4) = 4.9 eV",
+            "ΔE = 4.9 × 1.60 × 10⁻¹⁹ = 7.84 × 10⁻¹⁹ J",
+            "λ = hc/ΔE = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (7.84 × 10⁻¹⁹) = 2.54 × 10⁻⁷ m",
+            "λ = 254 nm"
+          ],
+          "answer": {
+            "value": 254,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "energy-levels-p4",
+          "question": "The yellow light of a sodium street lamp (wavelength 589 nm) is emitted when electrons fall to the ground state of sodium at −5.14 eV. Calculate the energy of the level the electrons fall from, in eV.",
+          "hint": "Find the photon energy in eV, then add it to the lower level to get the upper level.",
+          "walkthrough": [
+            "ΔE = hc/λ = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (5.89 × 10⁻⁷) = 3.377 × 10⁻¹⁹ J",
+            "ΔE in eV = 3.377 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ = 2.11 eV",
+            "Upper level E₁ = E₂ + ΔE = −5.14 + 2.11",
+            "E₁ = −3.03 eV"
+          ],
+          "answer": {
+            "value": -3.03,
+            "unit": "eV"
+          }
+        },
+        {
+          "id": "energy-levels-p5",
+          "question": "The ground state of hydrogen is at −13.6 eV. Calculate the longest wavelength of light that can ionise a hydrogen atom in its ground state, in nm.",
+          "hint": "Ionisation takes the electron to 0 eV, so the photon needs 13.6 eV; convert to joules and use λ = hc/E.",
+          "walkthrough": [
+            "ΔE = 0 − (−13.6) = 13.6 eV",
+            "ΔE = 13.6 × 1.60 × 10⁻¹⁹ = 2.176 × 10⁻¹⁸ J",
+            "λ = hc/ΔE = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) / (2.176 × 10⁻¹⁸) = 9.14 × 10⁻⁸ m",
+            "λ = 91.4 nm"
+          ],
+          "answer": {
+            "value": 91.4,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "energy-levels-p6",
+          "question": "In an astronomical spectrum, a line is produced by hydrogen electrons dropping from the −1.51 eV level to the ground state at −13.6 eV. Calculate the frequency of the photons in this line.",
+          "hint": "Find ΔE in eV, convert to joules, then use f = ΔE/h.",
+          "walkthrough": [
+            "ΔE = −1.51 − (−13.6) = 12.09 eV",
+            "ΔE = 12.09 × 1.60 × 10⁻¹⁹ = 1.934 × 10⁻¹⁸ J",
+            "f = ΔE/h = 1.934 × 10⁻¹⁸ / 6.63 × 10⁻³⁴",
+            "f = 2.92 × 10¹⁵ Hz"
+          ],
+          "answer": {
+            "value": 2920000000000000,
+            "unit": "Hz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "de-broglie",
+      "name": "De Broglie wavelength",
+      "equations": [
+        "λ = h/p",
+        "λ = h/mv",
+        "½mv² = eV",
+        "p = √(2mE_k)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Every moving particle has a wavelength λ = h/p. Find the momentum first: p = mv if you know the speed, or get v from ½mv² = eV if the particle was accelerated through a p.d. Then divide h by p. A macroscopic object gives an absurdly small wavelength, which is why its wave nature is never observed.",
+      "commonErrors": [
+        "Dividing h by the mass or by the speed alone instead of by the momentum mv",
+        "Forgetting to convert the mass to kg (a 58 g ball is 0.058 kg)",
+        "Using the electron mass for a proton or neutron question"
+      ],
+      "worked": {
+        "id": "de-broglie-w",
+        "question": "An electron in a transmission electron microscope travels at 2.0 × 10⁶ m s⁻¹. Calculate its de Broglie wavelength.",
+        "steps": [
+          "Known: m = 9.11 × 10⁻³¹ kg, v = 2.0 × 10⁶ m s⁻¹. Unknown: λ.",
+          "Momentum: p = mv = 9.11 × 10⁻³¹ × 2.0 × 10⁶ = 1.822 × 10⁻²⁴ kg m s⁻¹",
+          "λ = h/p",
+          "λ = 6.63 × 10⁻³⁴ / 1.822 × 10⁻²⁴",
+          "λ = 3.64 × 10⁻¹⁰ m"
+        ],
+        "answer": {
+          "value": 3.64e-10,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "de-broglie-p1",
+          "question": "A proton in a fusion research plasma moves at 5.0 × 10⁵ m s⁻¹. Calculate its de Broglie wavelength.",
+          "hint": "Use λ = h/mv with the proton mass.",
+          "walkthrough": [
+            "p = mv = 1.67 × 10⁻²⁷ × 5.0 × 10⁵ = 8.35 × 10⁻²² kg m s⁻¹",
+            "λ = h/p = 6.63 × 10⁻³⁴ / 8.35 × 10⁻²²",
+            "λ = 7.94 × 10⁻¹³ m"
+          ],
+          "answer": {
+            "value": 7.94e-13,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "de-broglie-p2",
+          "question": "An electron in an electron diffraction tube has a momentum of 4.5 × 10⁻²⁴ kg m s⁻¹. Calculate its de Broglie wavelength.",
+          "hint": "The momentum is given, so use λ = h/p directly.",
+          "walkthrough": [
+            "λ = h/p",
+            "λ = 6.63 × 10⁻³⁴ / 4.5 × 10⁻²⁴",
+            "λ = 1.47 × 10⁻¹⁰ m"
+          ],
+          "answer": {
+            "value": 1.47e-10,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "de-broglie-p3",
+          "question": "A tennis ball of mass 58 g is served at 50 m s⁻¹. Calculate its de Broglie wavelength.",
+          "hint": "Convert the mass to kg, then use λ = h/mv.",
+          "walkthrough": [
+            "m = 58 g = 0.058 kg",
+            "p = mv = 0.058 × 50 = 2.9 kg m s⁻¹",
+            "λ = h/p = 6.63 × 10⁻³⁴ / 2.9",
+            "λ = 2.29 × 10⁻³⁴ m"
+          ],
+          "answer": {
+            "value": 2.29e-34,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "de-broglie-p4",
+          "question": "To study the structure of a crystal, electrons are needed with a de Broglie wavelength of 0.15 nm, similar to the atomic spacing. Calculate the speed the electrons must have.",
+          "hint": "Rearrange λ = h/mv to v = h/(mλ), with λ in metres.",
+          "walkthrough": [
+            "λ = 0.15 nm = 1.5 × 10⁻¹⁰ m",
+            "λ = h/mv → v = h/(mλ)",
+            "v = 6.63 × 10⁻³⁴ / (9.11 × 10⁻³¹ × 1.5 × 10⁻¹⁰) = 6.63 × 10⁻³⁴ / 1.3665 × 10⁻⁴⁰",
+            "v = 4.85 × 10⁶ m s⁻¹"
+          ],
+          "answer": {
+            "value": 4850000,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "de-broglie-p5",
+          "question": "Electrons in a scanning electron microscope are accelerated from rest through a potential difference of 1.5 kV. Calculate their de Broglie wavelength.",
+          "hint": "First find the speed from ½mv² = eV, then use λ = h/mv.",
+          "walkthrough": [
+            "KE = eV = 1.60 × 10⁻¹⁹ × 1.5 × 10³ = 2.4 × 10⁻¹⁶ J",
+            "v = √(2 × KE / m) = √(2 × 2.4 × 10⁻¹⁶ / 9.11 × 10⁻³¹) = 2.295 × 10⁷ m s⁻¹",
+            "p = mv = 9.11 × 10⁻³¹ × 2.295 × 10⁷ = 2.091 × 10⁻²³ kg m s⁻¹",
+            "λ = h/p = 6.63 × 10⁻³⁴ / 2.091 × 10⁻²³",
+            "λ = 3.17 × 10⁻¹¹ m"
+          ],
+          "answer": {
+            "value": 3.17e-11,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "de-broglie-p6",
+          "question": "A thermal neutron used for neutron diffraction in a materials laboratory has a kinetic energy of 0.025 eV. Calculate its de Broglie wavelength.",
+          "hint": "Convert the energy to joules, find the momentum from p = √(2mE_k), then use λ = h/p.",
+          "walkthrough": [
+            "E_k = 0.025 × 1.60 × 10⁻¹⁹ = 4.0 × 10⁻²¹ J",
+            "p = √(2mE_k) = √(2 × 1.67 × 10⁻²⁷ × 4.0 × 10⁻²¹) = √(1.336 × 10⁻⁴⁷)",
+            "p = 3.655 × 10⁻²⁴ kg m s⁻¹",
+            "λ = h/p = 6.63 × 10⁻³⁴ / 3.655 × 10⁻²⁴",
+            "λ = 1.81 × 10⁻¹⁰ m"
+          ],
+          "answer": {
+            "value": 1.81e-10,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "specific-charge",
+      "name": "Specific charge of a particle, nucleus or ion",
+      "equations": [
+        "specific charge = Q / m",
+        "Q = (number of charges) × e",
+        "m = (number of nucleons) × m_p"
+      ],
+      "boards": [
+        "AQA",
+        "WJEC"
+      ],
+      "method": "Specific charge is charge divided by mass, in C kg⁻¹. Count the charge in multiples of e (for a nucleus, the proton number; for an ion, the net charge) and the mass in multiples of the proton or neutron mass (or of u when given an atomic mass). Divide. Electrons have by far the largest specific charge because their mass is so small.",
+      "commonErrors": [
+        "Using the proton number for the mass of a nucleus instead of the nucleon number",
+        "Counting the electrons when finding the charge of a nucleus (a nucleus has no electrons)",
+        "Giving the answer with the wrong unit: specific charge is in C kg⁻¹, not C or kg"
+      ],
+      "worked": {
+        "id": "specific-charge-w",
+        "question": "Calculate the specific charge of an electron.",
+        "steps": [
+          "Known: Q = e = 1.60 × 10⁻¹⁹ C, m = m_e = 9.11 × 10⁻³¹ kg. Unknown: specific charge.",
+          "Specific charge = Q / m",
+          "= 1.60 × 10⁻¹⁹ / 9.11 × 10⁻³¹",
+          "= 1.76 × 10¹¹ C kg⁻¹"
+        ],
+        "answer": {
+          "value": 176000000000,
+          "unit": "C kg⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "specific-charge-p1",
+          "question": "Calculate the specific charge of a proton.",
+          "hint": "Divide the charge e by the proton mass.",
+          "walkthrough": [
+            "Specific charge = Q / m = e / m_p",
+            "= 1.60 × 10⁻¹⁹ / 1.67 × 10⁻²⁷",
+            "= 9.58 × 10⁷ C kg⁻¹"
+          ],
+          "answer": {
+            "value": 95800000,
+            "unit": "C kg⁻¹"
+          }
+        },
+        {
+          "id": "specific-charge-p2",
+          "question": "An alpha particle is a helium nucleus, ⁴He²⁺, made of two protons and two neutrons. Calculate its specific charge.",
+          "hint": "Charge = 2e; mass = 2 proton masses + 2 neutron masses.",
+          "walkthrough": [
+            "Q = 2e = 2 × 1.60 × 10⁻¹⁹ = 3.20 × 10⁻¹⁹ C",
+            "m = 2 × 1.67 × 10⁻²⁷ + 2 × 1.67 × 10⁻²⁷ = 6.68 × 10⁻²⁷ kg",
+            "Specific charge = Q / m = 3.20 × 10⁻¹⁹ / 6.68 × 10⁻²⁷",
+            "= 4.79 × 10⁷ C kg⁻¹"
+          ],
+          "answer": {
+            "value": 47900000,
+            "unit": "C kg⁻¹"
+          }
+        },
+        {
+          "id": "specific-charge-p3",
+          "question": "A calcium ion, Ca²⁺, in a mass spectrometer has a mass of 40 u. Calculate its specific charge.",
+          "hint": "Convert the mass to kg using 1 u = 1.66 × 10⁻²⁷ kg; the charge is 2e.",
+          "walkthrough": [
+            "m = 40 × 1.66 × 10⁻²⁷ = 6.64 × 10⁻²⁶ kg",
+            "Q = 2e = 3.20 × 10⁻¹⁹ C",
+            "Specific charge = Q / m = 3.20 × 10⁻¹⁹ / 6.64 × 10⁻²⁶",
+            "= 4.82 × 10⁶ C kg⁻¹"
+          ],
+          "answer": {
+            "value": 4820000,
+            "unit": "C kg⁻¹"
+          }
+        },
+        {
+          "id": "specific-charge-p4",
+          "question": "An ion with a charge of +3e is found to have a specific charge of 2.4 × 10⁷ C kg⁻¹. Calculate the mass of the ion.",
+          "hint": "Rearrange specific charge = Q/m to m = Q / specific charge.",
+          "walkthrough": [
+            "Q = 3e = 3 × 1.60 × 10⁻¹⁹ = 4.80 × 10⁻¹⁹ C",
+            "Specific charge = Q / m → m = Q / specific charge",
+            "m = 4.80 × 10⁻¹⁹ / 2.4 × 10⁷",
+            "m = 2.0 × 10⁻²⁶ kg"
+          ],
+          "answer": {
+            "value": 2e-26,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "specific-charge-p5",
+          "question": "A lithium-7 nucleus contains 3 protons and 4 neutrons. Calculate its specific charge.",
+          "hint": "Charge = 3e; mass = 7 nucleon masses (proton and neutron masses are the same on the data sheet).",
+          "walkthrough": [
+            "Q = 3e = 3 × 1.60 × 10⁻¹⁹ = 4.80 × 10⁻¹⁹ C",
+            "m = 3 × 1.67 × 10⁻²⁷ + 4 × 1.67 × 10⁻²⁷ = 1.169 × 10⁻²⁶ kg",
+            "Specific charge = Q / m = 4.80 × 10⁻¹⁹ / 1.169 × 10⁻²⁶",
+            "= 4.11 × 10⁷ C kg⁻¹"
+          ],
+          "answer": {
+            "value": 41100000,
+            "unit": "C kg⁻¹"
+          }
+        },
+        {
+          "id": "specific-charge-p6",
+          "question": "Calculate the ratio of the specific charge of an electron to the specific charge of a proton.",
+          "hint": "Find each specific charge separately, then divide; the charges cancel so the ratio equals m_p / m_e.",
+          "walkthrough": [
+            "Electron: e / m_e = 1.60 × 10⁻¹⁹ / 9.11 × 10⁻³¹ = 1.756 × 10¹¹ C kg⁻¹",
+            "Proton: e / m_p = 1.60 × 10⁻¹⁹ / 1.67 × 10⁻²⁷ = 9.581 × 10⁷ C kg⁻¹",
+            "Ratio = 1.756 × 10¹¹ / 9.581 × 10⁷ (= m_p / m_e)",
+            "Ratio = 1830"
+          ],
+          "answer": {
+            "value": 1830,
+            "unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "photoelectric-graph",
+      "name": "Reading photoelectric graphs",
+      "equations": [
+        "eV_s = hf − φ",
+        "V_s = (h/e) f − φ/e",
+        "gradient = h/e",
+        "x-intercept = f₀ = φ/h",
+        "y-intercept = −φ/e"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "A graph of stopping potential V_s against frequency f is the photoelectric equation rearranged as a straight line: V_s = (h/e)f − φ/e. The line meets the frequency axis at the threshold frequency f₀, its gradient is h/e, and it meets the V_s axis (when extended) at −φ/e, so the work function in eV is simply the size of that intercept. Check the power of ten on the frequency axis before using any value.",
+      "commonErrors": [
+        "Forgetting the 10¹⁴ on the frequency axis when working out f₀ or the gradient",
+        "Giving the work function as a negative number: the intercept is −φ/e, so φ is positive",
+        "Taking the gradient as h rather than h/e, so forgetting to multiply by e to find the Planck constant",
+        "Reading the stopping potential at a point and quoting it in volts when the question asks for an energy in eV or J"
+      ],
+      "worked": {
+        "id": "photoelectric-graph-w",
+        "question": "The graph shows how the stopping potential V_s for a metal surface varies with the frequency f of the light falling on it. The line has been extended (dashed) to the V_s axis. Use the graph to determine the threshold frequency of the metal.",
+        "steps": [
+          "At the threshold frequency the photoelectrons have no kinetic energy, so the stopping potential is zero: f₀ is where the line crosses the frequency axis.",
+          "The line crosses the axis at X, where f = 6.0 on the f / 10¹⁴ Hz scale.",
+          "f₀ = 6.0 × 10¹⁴ Hz",
+          "(Check: the V_s intercept of −2.5 V gives φ = 2.5 eV = 4.0 × 10⁻¹⁹ J, and φ/h = 4.0 × 10⁻¹⁹ / 6.63 × 10⁻³⁴ = 6.0 × 10¹⁴ Hz.)"
+        ],
+        "answer": {
+          "value": 600000000000000,
+          "unit": "Hz"
+        },
+        "graph": {
+          "x": {
+            "label": "f / 10¹⁴ Hz",
+            "min": 0,
+            "max": 12,
+            "step": 1
+          },
+          "y": {
+            "label": "V_s / V",
+            "min": -3,
+            "max": 3,
+            "step": 0.5
+          },
+          "series": [
+            {
+              "kind": "dashed",
+              "points": [
+                [
+                  0,
+                  -2.5
+                ],
+                [
+                  6.0,
+                  0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  6.0,
+                  0
+                ],
+                [
+                  12,
+                  2.5
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 6.0,
+              "y": 0,
+              "label": "X",
+              "dx": 8,
+              "dy": 18
+            }
+          ],
+          "alt": "Stopping potential against frequency: a straight line crossing the frequency axis at 6.0 × 10¹⁴ Hz (marked X) and extended as a dashed line to the stopping-potential axis at −2.5 V"
+        }
+      },
+      "practice": [
+        {
+          "id": "photoelectric-graph-p1",
+          "question": "The graph shows stopping potential against frequency for a sodium surface, with the line extended (dashed) to the V_s axis at Y. Use the graph to determine the work function of sodium in eV.",
+          "hint": "The V_s intercept is −φ/e, so the work function in eV is the size of the intercept in volts.",
+          "walkthrough": [
+            "The extended line meets the V_s axis at Y, where V_s = −2.0 V.",
+            "y-intercept = −φ/e, so φ/e = 2.0 V",
+            "φ = 2.0 eV"
+          ],
+          "answer": {
+            "value": 2.0,
+            "unit": "eV"
+          },
+          "graph": {
+            "x": {
+              "label": "f / 10¹⁴ Hz",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "y": {
+              "label": "V_s / V",
+              "min": -3,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    -2.0
+                  ],
+                  [
+                    4.8,
+                    0
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    4.8,
+                    0
+                  ],
+                  [
+                    12,
+                    3.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": -2.0,
+                "label": "Y",
+                "dx": 10,
+                "dy": 14
+              }
+            ],
+            "alt": "Stopping potential against frequency: a straight line rising from the frequency axis at about 4.8 × 10¹⁴ Hz, extended as a dashed line to the stopping-potential axis at −2.0 V (marked Y)"
+          }
+        },
+        {
+          "id": "photoelectric-graph-p2",
+          "question": "The graph shows stopping potential against frequency for a caesium surface. Use the graph to determine the maximum kinetic energy of the photoelectrons, in eV, when light of frequency 10.0 × 10¹⁴ Hz falls on the surface.",
+          "hint": "The maximum kinetic energy is eV_s, so in eV it is just the stopping potential read at X.",
+          "walkthrough": [
+            "At X, f = 10.0 × 10¹⁴ Hz and the stopping potential is V_s = 2.5 V.",
+            "KE_max = eV_s, which in electronvolts is numerically equal to V_s.",
+            "KE_max = 2.5 eV"
+          ],
+          "answer": {
+            "value": 2.5,
+            "unit": "eV"
+          },
+          "graph": {
+            "x": {
+              "label": "f / 10¹⁴ Hz",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "y": {
+              "label": "V_s / V",
+              "min": -2,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    -1.6667
+                  ],
+                  [
+                    4.0,
+                    0
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    4.0,
+                    0
+                  ],
+                  [
+                    11.2,
+                    3.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10.0,
+                "y": 2.5,
+                "label": "X",
+                "drop": true,
+                "dx": -20,
+                "dy": -4
+              }
+            ],
+            "alt": "Stopping potential against frequency: a straight line from the frequency axis at 4.0 × 10¹⁴ Hz rising to the right; the point X at 10.0 × 10¹⁴ Hz and 2.5 V is marked with dotted lines to both axes"
+          }
+        },
+        {
+          "id": "photoelectric-graph-p3",
+          "question": "The graph shows stopping potential against frequency for a zinc surface, with the line extended (dashed) to the V_s axis at Y. Use the graph to determine the work function of zinc in joules.",
+          "hint": "Read the V_s intercept, then φ = e × |intercept| to convert from eV to J.",
+          "walkthrough": [
+            "The extended line meets the V_s axis at Y, where V_s = −3.0 V, so φ/e = 3.0 V.",
+            "φ = e × 3.0 = 1.60 × 10⁻¹⁹ × 3.0",
+            "φ = 4.8 × 10⁻¹⁹ J"
+          ],
+          "answer": {
+            "value": 4.8e-19,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "f / 10¹⁴ Hz",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "V_s / V",
+              "min": -4,
+              "max": 4,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    -3.0
+                  ],
+                  [
+                    7.2,
+                    0
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    7.2,
+                    0
+                  ],
+                  [
+                    16,
+                    3.6667
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": -3.0,
+                "label": "Y",
+                "dx": 10,
+                "dy": 14
+              }
+            ],
+            "alt": "Stopping potential against frequency: a straight line rising from the frequency axis at about 7.2 × 10¹⁴ Hz, extended as a dashed line to the stopping-potential axis at −3.0 V (marked Y)"
+          }
+        },
+        {
+          "id": "photoelectric-graph-p4",
+          "question": "A student plots stopping potential against frequency for a photocell and draws the best-fit line shown, which passes through the points A and B. Use the gradient of the line to determine a value for the Planck constant.",
+          "hint": "The gradient of a V_s–f graph is h/e; remember the frequency axis is in units of 10¹⁴ Hz.",
+          "walkthrough": [
+            "A = (4.0 × 10¹⁴ Hz, 0 V) and B = (16.0 × 10¹⁴ Hz, 5.0 V).",
+            "gradient = (5.0 − 0) / ((16.0 − 4.0) × 10¹⁴) = 5.0 / (12.0 × 10¹⁴) = 4.17 × 10⁻¹⁵ V s",
+            "gradient = h/e, so h = e × gradient = 1.60 × 10⁻¹⁹ × 4.17 × 10⁻¹⁵",
+            "h = 6.67 × 10⁻³⁴ J s"
+          ],
+          "answer": {
+            "value": 6.67e-34,
+            "unit": "J s"
+          },
+          "graph": {
+            "x": {
+              "label": "f / 10¹⁴ Hz",
+              "min": 0,
+              "max": 18,
+              "step": 2
+            },
+            "y": {
+              "label": "V_s / V",
+              "min": 0,
+              "max": 6,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    4.0,
+                    0.0
+                  ],
+                  [
+                    18,
+                    5.8333
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4.0,
+                "y": 0.0,
+                "label": "A",
+                "dx": -18,
+                "dy": -6
+              },
+              {
+                "x": 16.0,
+                "y": 5.0,
+                "label": "B",
+                "drop": true,
+                "dx": 8,
+                "dy": 16
+              }
+            ],
+            "alt": "Stopping potential against frequency: a straight line from A at 4.0 × 10¹⁴ Hz on the frequency axis to B at 16.0 × 10¹⁴ Hz and 5.0 V"
+          }
+        },
+        {
+          "id": "photoelectric-graph-p5",
+          "question": "The graph shows stopping potential against frequency for a calcium surface, with the line extended (dashed) below the frequency axis. Use the graph to determine the longest wavelength of light that will release photoelectrons from calcium. Give your answer in nm.",
+          "hint": "Read the threshold frequency at X, then the threshold wavelength is λ₀ = c/f₀.",
+          "walkthrough": [
+            "The line crosses the frequency axis at X: f₀ = 8.0 × 10¹⁴ Hz.",
+            "λ₀ = c / f₀ = 3.00 × 10⁸ / (8.0 × 10¹⁴) = 3.75 × 10⁻⁷ m",
+            "λ₀ = 375 nm"
+          ],
+          "answer": {
+            "value": 375.0,
+            "unit": "nm"
+          },
+          "graph": {
+            "x": {
+              "label": "f / 10¹⁴ Hz",
+              "min": 0,
+              "max": 14,
+              "step": 2
+            },
+            "y": {
+              "label": "V_s / V",
+              "min": -4,
+              "max": 3,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    -3.3333
+                  ],
+                  [
+                    8.0,
+                    0
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    8.0,
+                    0
+                  ],
+                  [
+                    14,
+                    2.5
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8.0,
+                "y": 0,
+                "label": "X",
+                "dx": 8,
+                "dy": 18
+              }
+            ],
+            "alt": "Stopping potential against frequency: a straight line crossing the frequency axis at 8.0 × 10¹⁴ Hz (marked X), extended as a dashed line below the axis"
+          }
+        },
+        {
+          "id": "photoelectric-graph-p6",
+          "question": "The graph shows stopping potential against frequency for two different metals, A and B. The two lines are parallel. Use the graph to determine the work function of metal B in eV.",
+          "hint": "Read metal B's threshold frequency where its line meets the frequency axis, then use φ = hf₀ and convert J to eV.",
+          "walkthrough": [
+            "Line B meets the frequency axis at f₀ = 7.0 × 10¹⁴ Hz.",
+            "φ = hf₀ = 6.63 × 10⁻³⁴ × 7.0 × 10¹⁴ = 4.64 × 10⁻¹⁹ J",
+            "φ = 4.64 × 10⁻¹⁹ / 1.60 × 10⁻¹⁹ eV",
+            "φ = 2.90 eV"
+          ],
+          "answer": {
+            "value": 2.9,
+            "unit": "eV"
+          },
+          "graph": {
+            "x": {
+              "label": "f / 10¹⁴ Hz",
+              "min": 0,
+              "max": 14,
+              "step": 1
+            },
+            "y": {
+              "label": "V_s / V",
+              "min": 0,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    5.0,
+                    0
+                  ],
+                  [
+                    12.2,
+                    3.0
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    7.0,
+                    0
+                  ],
+                  [
+                    14,
+                    2.9167
+                  ]
+                ]
+              }
+            ],
+            "labels": [
+              {
+                "x": 10.2,
+                "y": 2.7,
+                "text": "metal A",
+                "anchor": "end"
+              },
+              {
+                "x": 12.6,
+                "y": 1.9,
+                "text": "metal B"
+              }
+            ],
+            "alt": "Stopping potential against frequency: two parallel straight lines, metal A starting from the frequency axis at 5.0 × 10¹⁴ Hz and metal B from 7.0 × 10¹⁴ Hz"
+          }
+        }
+      ]
+    }
+  ]
+}

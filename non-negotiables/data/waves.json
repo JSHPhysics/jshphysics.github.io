@@ -1,0 +1,3441 @@
+{
+  "id": "waves",
+  "title": "Waves and optics",
+  "subtitle": "Wave equation, refraction, interference, diffraction gratings and stationary waves",
+  "order": 60,
+  "types": [
+    {
+      "id": "wave-equation",
+      "name": "Wave speed, frequency, wavelength and period",
+      "equations": [
+        "v = fλ",
+        "f = 1/T"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Write down which two of v, f and λ you have and use v = fλ for the third. If you are given a period instead of a frequency, convert with f = 1/T first. Convert every prefixed unit (nm, MHz, ms, km) to the base unit before substituting.",
+      "commonErrors": [
+        "Leaving a wavelength in nm or a frequency in MHz when substituting",
+        "Dividing the wrong way round when rearranging, e.g. λ = f/v instead of v/f",
+        "Using the speed of light for a sound wave or vice versa"
+      ],
+      "worked": {
+        "id": "wave-equation-w",
+        "question": "A tuning fork vibrates at 512 Hz. The speed of sound in the air of the laboratory is 340 m s⁻¹. Calculate the wavelength of the sound wave.",
+        "steps": [
+          "Known: f = 512 Hz, v = 340 m s⁻¹. Unknown: λ.",
+          "Use v = fλ and rearrange: λ = v / f",
+          "λ = 340 / 512",
+          "λ = 0.664 m"
+        ],
+        "answer": {
+          "value": 0.664,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "wave-equation-p1",
+          "question": "In a ripple tank the dipper vibrates at 8.0 Hz and the wavelength of the water waves is 0.045 m. Calculate the speed of the waves.",
+          "hint": "Use v = fλ directly; both quantities are already in base units.",
+          "walkthrough": [
+            "f = 8.0 Hz, λ = 0.045 m, find v.",
+            "v = fλ = 8.0 × 0.045",
+            "v = 0.36 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.36,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "wave-equation-p2",
+          "question": "A surfer notices that ocean swell crests pass a buoy once every 12 s. Calculate the frequency of the swell.",
+          "hint": "The time between crests is the period; use f = 1/T.",
+          "walkthrough": [
+            "T = 12 s, find f.",
+            "f = 1 / T = 1 / 12",
+            "f = 0.0833 Hz"
+          ],
+          "answer": {
+            "value": 0.0833,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "wave-equation-p3",
+          "question": "An FM radio station broadcasts at 93.5 MHz. Calculate the wavelength of the radio waves in air.",
+          "hint": "Radio waves travel at c; convert MHz to Hz before using λ = c/f.",
+          "walkthrough": [
+            "f = 93.5 MHz = 93.5 × 10⁶ Hz, v = c = 3.00 × 10⁸ m s⁻¹, find λ.",
+            "λ = c / f = 3.00 × 10⁸ / (93.5 × 10⁶)",
+            "λ = 3.21 m"
+          ],
+          "answer": {
+            "value": 3.21,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "wave-equation-p4",
+          "question": "A sodium street lamp emits yellow light of wavelength 589 nm. Calculate the frequency of this light.",
+          "hint": "Convert nm to m (× 10⁻⁹), then use f = c/λ.",
+          "walkthrough": [
+            "λ = 589 nm = 589 × 10⁻⁹ m, v = c = 3.00 × 10⁸ m s⁻¹, find f.",
+            "f = c / λ = 3.00 × 10⁸ / (589 × 10⁻⁹)",
+            "f = 5.09 × 10¹⁴ Hz"
+          ],
+          "answer": {
+            "value": 509000000000000,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "wave-equation-p5",
+          "question": "A bat emits an ultrasound call in which one complete oscillation takes 20 μs. The speed of sound in air is 340 m s⁻¹. Calculate the wavelength of the ultrasound in millimetres.",
+          "hint": "Find the frequency from f = 1/T first (convert μs to s), then use λ = v/f and convert the answer to mm.",
+          "walkthrough": [
+            "T = 20 μs = 20 × 10⁻⁶ s, v = 340 m s⁻¹, find λ.",
+            "f = 1 / T = 1 / (20 × 10⁻⁶) = 50 000 Hz",
+            "λ = v / f = 340 / 50 000 = 6.8 × 10⁻³ m",
+            "λ = 6.8 mm"
+          ],
+          "answer": {
+            "value": 6.8,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "wave-equation-p6",
+          "question": "A seismic P-wave travels 240 km through the Earth's crust in 40 s. Its frequency is 2.0 Hz. Calculate the wavelength of the wave.",
+          "hint": "Find the wave speed from distance/time first (convert km to m), then use λ = v/f.",
+          "walkthrough": [
+            "d = 240 km = 240 × 10³ m, t = 40 s, f = 2.0 Hz, find λ.",
+            "v = d / t = 240 × 10³ / 40 = 6000 m s⁻¹",
+            "λ = v / f = 6000 / 2.0",
+            "λ = 3000 m"
+          ],
+          "answer": {
+            "value": 3000,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "phase-difference",
+      "name": "Phase difference from path difference or time delay",
+      "equations": [
+        "Δφ = (Δx / λ) × 360° = (Δx / λ) × 2π rad",
+        "Δφ = (Δt / T) × 360° = (Δt / T) × 2π rad"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Phase difference is the fraction of a cycle by which two points or two waves are out of step. Work out the fraction as path difference / wavelength, or as time delay / period, then multiply by 360° or by 2π radians according to the unit asked for.",
+      "commonErrors": [
+        "Giving the answer in degrees when radians were asked for, or vice versa",
+        "Using 180° or π for one whole cycle instead of 360° or 2π",
+        "Mixing units, e.g. a path difference in cm with a wavelength in m"
+      ],
+      "worked": {
+        "id": "phase-difference-w",
+        "question": "A transverse wave of wavelength 0.80 m travels along a rope. Calculate the phase difference, in degrees, between two points on the rope that are 0.20 m apart along the direction of travel.",
+        "steps": [
+          "Known: Δx = 0.20 m, λ = 0.80 m. Unknown: Δφ in degrees.",
+          "Fraction of a wavelength: Δx / λ = 0.20 / 0.80 = 0.25",
+          "One wavelength corresponds to 360°, so Δφ = 0.25 × 360°",
+          "Δφ = 90°"
+        ],
+        "answer": {
+          "value": 90,
+          "unit": "°"
+        }
+      },
+      "practice": [
+        {
+          "id": "phase-difference-p1",
+          "question": "Two loudspeakers emit sound of wavelength 2.0 m in phase. At a point in the room the path difference from the two speakers is 1.5 m. Calculate the phase difference between the two waves at this point, in radians.",
+          "hint": "Find the path difference as a fraction of a wavelength, then multiply by 2π.",
+          "walkthrough": [
+            "Δx = 1.5 m, λ = 2.0 m, find Δφ in rad.",
+            "Δφ = (Δx / λ) × 2π = (1.5 / 2.0) × 2π = 0.75 × 2π",
+            "Δφ = 4.71 rad"
+          ],
+          "answer": {
+            "value": 4.71,
+            "unit": "rad"
+          }
+        },
+        {
+          "id": "phase-difference-p2",
+          "question": "Two signal generators produce sine waves of period 4.0 ms. One trace on an oscilloscope lags the other by 0.50 ms. Calculate the phase difference between the two signals, in degrees.",
+          "hint": "The time delay as a fraction of the period gives the fraction of a cycle; multiply by 360°.",
+          "walkthrough": [
+            "Δt = 0.50 ms, T = 4.0 ms, find Δφ in degrees.",
+            "Δφ = (Δt / T) × 360° = (0.50 / 4.0) × 360° = 0.125 × 360°",
+            "Δφ = 45°"
+          ],
+          "answer": {
+            "value": 45,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "phase-difference-p3",
+          "question": "A sound wave in a corridor has a wavelength of 1.2 m. Calculate the distance along the wave between two points that have a phase difference of 60°.",
+          "hint": "Rearrange Δφ = (Δx/λ) × 360° to make Δx the subject.",
+          "walkthrough": [
+            "Δφ = 60°, λ = 1.2 m, find Δx.",
+            "Δx = (Δφ / 360°) × λ = (60 / 360) × 1.2",
+            "Δx = 0.20 m"
+          ],
+          "answer": {
+            "value": 0.2,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "phase-difference-p4",
+          "question": "A water wave in a harbour has a wavelength of 2.4 m. Calculate the phase difference, in radians, between two floats that are 30 cm apart along the direction the wave travels.",
+          "hint": "Convert 30 cm to metres, then find the fraction of a wavelength and multiply by 2π.",
+          "walkthrough": [
+            "Δx = 30 cm = 0.30 m, λ = 2.4 m, find Δφ in rad.",
+            "Δφ = (Δx / λ) × 2π = (0.30 / 2.4) × 2π = 0.125 × 2π",
+            "Δφ = 0.785 rad"
+          ],
+          "answer": {
+            "value": 0.785,
+            "unit": "rad"
+          }
+        },
+        {
+          "id": "phase-difference-p5",
+          "question": "A wave travels along a slinky spring at 1.5 m s⁻¹ with a frequency of 2.5 Hz. Calculate the phase difference, in degrees, between two coils that are 0.45 m apart along the spring.",
+          "hint": "Find the wavelength from λ = v/f first, then use Δφ = (Δx/λ) × 360°.",
+          "walkthrough": [
+            "v = 1.5 m s⁻¹, f = 2.5 Hz, Δx = 0.45 m, find Δφ in degrees.",
+            "λ = v / f = 1.5 / 2.5 = 0.60 m",
+            "Δφ = (Δx / λ) × 360° = (0.45 / 0.60) × 360° = 0.75 × 360°",
+            "Δφ = 270°"
+          ],
+          "answer": {
+            "value": 270,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "phase-difference-p6",
+          "question": "A radio transmitter broadcasts at 100 MHz. Two receiving aerials are placed 0.50 m apart along the line from the transmitter. Calculate the phase difference, in radians, between the signals received at the two aerials.",
+          "hint": "Find the wavelength from λ = c/f first (convert MHz to Hz), then use Δφ = (Δx/λ) × 2π.",
+          "walkthrough": [
+            "f = 100 MHz = 1.00 × 10⁸ Hz, Δx = 0.50 m, find Δφ in rad.",
+            "λ = c / f = 3.00 × 10⁸ / (1.00 × 10⁸) = 3.0 m",
+            "Δφ = (Δx / λ) × 2π = (0.50 / 3.0) × 2π",
+            "Δφ = 1.05 rad"
+          ],
+          "answer": {
+            "value": 1.05,
+            "unit": "rad"
+          }
+        }
+      ]
+    },
+    {
+      "id": "intensity",
+      "name": "Intensity, the inverse-square law and amplitude",
+      "equations": [
+        "I = P / A",
+        "I = P / 4πr² for a point source",
+        "I ∝ (amplitude)²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Intensity is power per unit area. For a beam, divide the power by the beam's cross-sectional area. For a point source radiating equally in all directions, the area is the surface of a sphere of radius r, so I = P/4πr². Intensity is proportional to amplitude squared, so doubling the amplitude quadruples the intensity.",
+      "commonErrors": [
+        "Using the diameter instead of the radius in πr² or 4πr²",
+        "Forgetting that intensity depends on amplitude squared, not amplitude",
+        "Leaving an area in cm² or mm² when the power is in watts"
+      ],
+      "worked": {
+        "id": "intensity-w",
+        "question": "A laser pointer emits 2.0 mW of light in a circular beam of diameter 1.5 mm. Calculate the intensity of the beam.",
+        "steps": [
+          "Known: P = 2.0 mW = 2.0 × 10⁻³ W, beam diameter = 1.5 mm so r = 0.75 × 10⁻³ m. Unknown: I.",
+          "Beam area A = πr² = π × (0.75 × 10⁻³)² = 1.77 × 10⁻⁶ m²",
+          "I = P / A = 2.0 × 10⁻³ / 1.77 × 10⁻⁶",
+          "I = 1130 W m⁻²"
+        ],
+        "answer": {
+          "value": 1130,
+          "unit": "W m⁻²"
+        }
+      },
+      "practice": [
+        {
+          "id": "intensity-p1",
+          "question": "A radiant heater delivers 60 W of infrared power uniformly onto a panel of area 0.30 m². Calculate the intensity of the radiation at the panel.",
+          "hint": "Use I = P/A directly.",
+          "walkthrough": [
+            "P = 60 W, A = 0.30 m², find I.",
+            "I = P / A = 60 / 0.30",
+            "I = 200 W m⁻²"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "W m⁻²"
+          }
+        },
+        {
+          "id": "intensity-p2",
+          "question": "A bare light bulb radiates 60 W equally in all directions. Calculate the intensity of the light at a distance of 2.0 m from the bulb.",
+          "hint": "Treat the bulb as a point source: the power spreads over a sphere of area 4πr².",
+          "walkthrough": [
+            "P = 60 W, r = 2.0 m, find I.",
+            "A = 4πr² = 4π × 2.0² = 50.3 m²",
+            "I = P / A = 60 / 50.3",
+            "I = 1.19 W m⁻²"
+          ],
+          "answer": {
+            "value": 1.19,
+            "unit": "W m⁻²"
+          }
+        },
+        {
+          "id": "intensity-p3",
+          "question": "The Sun radiates a total power of 3.85 × 10²⁶ W. The intensity of sunlight arriving at the top of the Earth's atmosphere is 1360 W m⁻². Calculate the distance from the Sun to the Earth.",
+          "hint": "Rearrange I = P/4πr² to make r the subject; remember to square-root.",
+          "walkthrough": [
+            "P = 3.85 × 10²⁶ W, I = 1360 W m⁻², find r.",
+            "I = P / 4πr² → r² = P / 4πI",
+            "r² = 3.85 × 10²⁶ / (4π × 1360) = 2.25 × 10²²",
+            "r = √(2.25 × 10²²) = 1.50 × 10¹¹ m"
+          ],
+          "answer": {
+            "value": 150000000000,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "intensity-p4",
+          "question": "A water wave of amplitude 3.0 cm has an intensity of 12 mW m⁻². The amplitude is increased to 5.0 cm. Calculate the new intensity, in mW m⁻².",
+          "hint": "I ∝ A², so the intensity scales by the square of the ratio of the amplitudes.",
+          "walkthrough": [
+            "I₁ = 12 mW m⁻², A₁ = 3.0 cm, A₂ = 5.0 cm, find I₂.",
+            "I₂ / I₁ = (A₂ / A₁)² = (5.0 / 3.0)² = 2.78",
+            "I₂ = 12 × 2.78",
+            "I₂ = 33.3 mW m⁻²"
+          ],
+          "answer": {
+            "value": 33.3,
+            "unit": "mW m⁻²"
+          }
+        },
+        {
+          "id": "intensity-p5",
+          "question": "A radio transmitter radiates 50 kW equally in all directions. A receiving aerial 10 km away has an effective collecting area of 0.20 m². Calculate the power received by the aerial.",
+          "hint": "Find the intensity at the aerial using I = P/4πr² (convert kW and km), then multiply by the aerial's area.",
+          "walkthrough": [
+            "P = 50 kW = 5.0 × 10⁴ W, r = 10 km = 1.0 × 10⁴ m, aerial area = 0.20 m², find received power.",
+            "I = P / 4πr² = 5.0 × 10⁴ / (4π × (1.0 × 10⁴)²) = 3.98 × 10⁻⁵ W m⁻²",
+            "Received power = I × area = 3.98 × 10⁻⁵ × 0.20",
+            "Received power = 7.96 × 10⁻⁶ W"
+          ],
+          "answer": {
+            "value": 7.96e-06,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "intensity-p6",
+          "question": "A small loudspeaker acts as a point source of sound. At a distance of 1.5 m the amplitude of the air oscillation is 0.80 mm. Calculate the amplitude at a distance of 6.0 m, in mm.",
+          "hint": "Use the inverse-square law to find how the intensity changes, then remember that amplitude ∝ √I.",
+          "walkthrough": [
+            "A₁ = 0.80 mm at r₁ = 1.5 m, find A₂ at r₂ = 6.0 m.",
+            "I ∝ 1/r², so I₂ / I₁ = (r₁ / r₂)² = (1.5 / 6.0)² = 0.0625",
+            "I ∝ A², so A₂ / A₁ = √(I₂ / I₁) = √0.0625 = 0.25",
+            "A₂ = 0.80 × 0.25 = 0.20 mm"
+          ],
+          "answer": {
+            "value": 0.2,
+            "unit": "mm"
+          }
+        }
+      ]
+    },
+    {
+      "id": "refractive-index",
+      "name": "Refractive index and Snell's law",
+      "equations": [
+        "n = c / v",
+        "n₁ sin θ₁ = n₂ sin θ₂"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Measure every angle from the normal. Put the known index and angle on one side of n₁ sin θ₁ = n₂ sin θ₂ and solve for the unknown; if you need the speed of light in a material, use n = c/v with n for air taken as 1.00. Remember to take the inverse sine at the end when the unknown is an angle.",
+      "commonErrors": [
+        "Measuring angles from the surface instead of from the normal",
+        "Forgetting to take sin⁻¹ at the end, giving sin θ as the answer",
+        "Writing n = v/c, which gives an index less than 1"
+      ],
+      "worked": {
+        "id": "refractive-index-w",
+        "question": "A ray of light in air strikes a glass block of refractive index 1.52 at an angle of incidence of 40°. Calculate the angle of refraction in the glass.",
+        "steps": [
+          "Known: n₁ = 1.00 (air), θ₁ = 40°, n₂ = 1.52. Unknown: θ₂.",
+          "n₁ sin θ₁ = n₂ sin θ₂ → sin θ₂ = n₁ sin θ₁ / n₂",
+          "sin θ₂ = 1.00 × sin 40° / 1.52 = 0.6428 / 1.52 = 0.4229",
+          "θ₂ = sin⁻¹(0.4229)",
+          "θ₂ = 25.0°"
+        ],
+        "answer": {
+          "value": 25.0,
+          "unit": "°"
+        }
+      },
+      "practice": [
+        {
+          "id": "refractive-index-p1",
+          "question": "Light travels through diamond at 1.24 × 10⁸ m s⁻¹. Calculate the refractive index of diamond.",
+          "hint": "Use n = c/v with c = 3.00 × 10⁸ m s⁻¹.",
+          "walkthrough": [
+            "v = 1.24 × 10⁸ m s⁻¹, c = 3.00 × 10⁸ m s⁻¹, find n.",
+            "n = c / v = 3.00 × 10⁸ / 1.24 × 10⁸",
+            "n = 2.42"
+          ],
+          "answer": {
+            "value": 2.42,
+            "unit": ""
+          }
+        },
+        {
+          "id": "refractive-index-p2",
+          "question": "A ray of light enters a swimming pool from the air at an angle of incidence of 55°. The refractive index of water is 1.33. Calculate the angle of refraction in the water.",
+          "hint": "Use n₁ sin θ₁ = n₂ sin θ₂ with n = 1.00 for air, then take sin⁻¹.",
+          "walkthrough": [
+            "n₁ = 1.00, θ₁ = 55°, n₂ = 1.33, find θ₂.",
+            "sin θ₂ = n₁ sin θ₁ / n₂ = sin 55° / 1.33 = 0.8192 / 1.33 = 0.6159",
+            "θ₂ = sin⁻¹(0.6159)",
+            "θ₂ = 38.0°"
+          ],
+          "answer": {
+            "value": 38.0,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "refractive-index-p3",
+          "question": "In a school experiment a ray of light enters a perspex block from air at an angle of incidence of 50° and is refracted at 30° to the normal. Calculate the refractive index of the perspex.",
+          "hint": "Rearrange Snell's law to n₂ = n₁ sin θ₁ / sin θ₂.",
+          "walkthrough": [
+            "n₁ = 1.00, θ₁ = 50°, θ₂ = 30°, find n₂.",
+            "n₂ = n₁ sin θ₁ / sin θ₂ = sin 50° / sin 30° = 0.7660 / 0.5000",
+            "n₂ = 1.53"
+          ],
+          "answer": {
+            "value": 1.53,
+            "unit": ""
+          }
+        },
+        {
+          "id": "refractive-index-p4",
+          "question": "A ray of light travelling in water (n = 1.33) meets the glass wall of an aquarium (n = 1.52) at an angle of incidence of 40°. Calculate the angle of refraction in the glass.",
+          "hint": "Neither medium is air here: use both indices in n₁ sin θ₁ = n₂ sin θ₂.",
+          "walkthrough": [
+            "n₁ = 1.33, θ₁ = 40°, n₂ = 1.52, find θ₂.",
+            "sin θ₂ = n₁ sin θ₁ / n₂ = 1.33 × sin 40° / 1.52 = 1.33 × 0.6428 / 1.52 = 0.5624",
+            "θ₂ = sin⁻¹(0.5624)",
+            "θ₂ = 34.2°"
+          ],
+          "answer": {
+            "value": 34.2,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "refractive-index-p5",
+          "question": "Light travels through a sample of vegetable oil at 2.10 × 10⁸ m s⁻¹. A ray enters the oil from air at an angle of incidence of 35°. Calculate the angle of refraction in the oil.",
+          "hint": "Find the refractive index of the oil from n = c/v first, then apply Snell's law.",
+          "walkthrough": [
+            "v = 2.10 × 10⁸ m s⁻¹, θ₁ = 35°, n₁ = 1.00, find θ₂.",
+            "n₂ = c / v = 3.00 × 10⁸ / 2.10 × 10⁸ = 1.43",
+            "sin θ₂ = sin 35° / 1.43 = 0.5736 / 1.43 = 0.4015",
+            "θ₂ = sin⁻¹(0.4015) = 23.7°"
+          ],
+          "answer": {
+            "value": 23.7,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "refractive-index-p6",
+          "question": "A ray of light enters a block of clear plastic from air at an angle of incidence of 60° and is refracted at 35° to the normal. Calculate the speed of light in the plastic.",
+          "hint": "Find the refractive index from Snell's law first, then rearrange n = c/v to get v.",
+          "walkthrough": [
+            "θ₁ = 60°, θ₂ = 35°, n₁ = 1.00, find v in the plastic.",
+            "n₂ = sin θ₁ / sin θ₂ = sin 60° / sin 35° = 0.8660 / 0.5736 = 1.51",
+            "v = c / n₂ = 3.00 × 10⁸ / 1.51",
+            "v = 1.99 × 10⁸ m s⁻¹"
+          ],
+          "answer": {
+            "value": 199000000,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "critical-angle",
+      "name": "Critical angle and total internal reflection",
+      "equations": [
+        "sin C = n₂ / n₁ (n₁ > n₂)",
+        "sin C = 1 / n for a boundary with air"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The critical angle is the angle of incidence in the denser medium for which the angle of refraction is 90°. Put the smaller index on top: sin C = n₂/n₁, which becomes sin C = 1/n when the second medium is air. Rearrange to find an index if the critical angle is given.",
+      "commonErrors": [
+        "Putting the larger index on top, giving sin C greater than 1",
+        "Using 1/n for an optical fibre when the cladding, not air, surrounds the core",
+        "Forgetting to take sin⁻¹ at the end"
+      ],
+      "worked": {
+        "id": "critical-angle-w",
+        "question": "Calculate the critical angle for light travelling from glass of refractive index 1.50 into air.",
+        "steps": [
+          "Known: n₁ = 1.50 (glass), n₂ = 1.00 (air). Unknown: C.",
+          "sin C = n₂ / n₁ = 1.00 / 1.50 = 0.6667",
+          "C = sin⁻¹(0.6667)",
+          "C = 41.8°"
+        ],
+        "answer": {
+          "value": 41.8,
+          "unit": "°"
+        }
+      },
+      "practice": [
+        {
+          "id": "critical-angle-p1",
+          "question": "A diver shines a torch upwards towards the surface of a swimming pool. The refractive index of water is 1.33. Calculate the critical angle for the water–air boundary.",
+          "hint": "Use sin C = 1/n for a boundary with air, then take sin⁻¹.",
+          "walkthrough": [
+            "n₁ = 1.33 (water), n₂ = 1.00 (air), find C.",
+            "sin C = 1 / 1.33 = 0.7519",
+            "C = sin⁻¹(0.7519)",
+            "C = 48.8°"
+          ],
+          "answer": {
+            "value": 48.8,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "critical-angle-p2",
+          "question": "An optical fibre has a core of refractive index 1.48 surrounded by cladding of refractive index 1.46. Calculate the critical angle at the core–cladding boundary.",
+          "hint": "Use sin C = n₂/n₁ with the cladding index on top.",
+          "walkthrough": [
+            "n₁ = 1.48 (core), n₂ = 1.46 (cladding), find C.",
+            "sin C = n₂ / n₁ = 1.46 / 1.48 = 0.9865",
+            "C = sin⁻¹(0.9865)",
+            "C = 80.6°"
+          ],
+          "answer": {
+            "value": 80.6,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "critical-angle-p3",
+          "question": "A jeweller measures the critical angle of a cubic zirconia gemstone in air to be 27.8°. Calculate the refractive index of cubic zirconia.",
+          "hint": "Rearrange sin C = 1/n to n = 1/sin C.",
+          "walkthrough": [
+            "C = 27.8°, n₂ = 1.00 (air), find n₁.",
+            "n₁ = 1 / sin C = 1 / sin 27.8° = 1 / 0.4664",
+            "n₁ = 2.14"
+          ],
+          "answer": {
+            "value": 2.14,
+            "unit": ""
+          }
+        },
+        {
+          "id": "critical-angle-p4",
+          "question": "The core of an optical fibre has a refractive index of 1.52 and the critical angle at the core–cladding boundary is 78.0°. Calculate the refractive index of the cladding.",
+          "hint": "Rearrange sin C = n₂/n₁ to n₂ = n₁ sin C.",
+          "walkthrough": [
+            "n₁ = 1.52, C = 78.0°, find n₂.",
+            "n₂ = n₁ sin C = 1.52 × sin 78.0° = 1.52 × 0.9781",
+            "n₂ = 1.49"
+          ],
+          "answer": {
+            "value": 1.49,
+            "unit": ""
+          }
+        },
+        {
+          "id": "critical-angle-p5",
+          "question": "Light travels through a perspex prism at 2.01 × 10⁸ m s⁻¹. Calculate the critical angle for light travelling from the perspex into air.",
+          "hint": "Find the refractive index from n = c/v first, then use sin C = 1/n.",
+          "walkthrough": [
+            "v = 2.01 × 10⁸ m s⁻¹, find C for a perspex–air boundary.",
+            "n = c / v = 3.00 × 10⁸ / 2.01 × 10⁸ = 1.49",
+            "sin C = 1 / n = 1 / 1.49 = 0.670",
+            "C = sin⁻¹(0.670) = 42.1°"
+          ],
+          "answer": {
+            "value": 42.1,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "critical-angle-p6",
+          "question": "A ray of light enters a glass paperweight from air at an angle of incidence of 48° and is refracted at 29° to the normal. Calculate the critical angle for light travelling from this glass into air.",
+          "hint": "Find the refractive index of the glass from Snell's law first, then use sin C = 1/n.",
+          "walkthrough": [
+            "θ₁ = 48°, θ₂ = 29°, find C for a glass–air boundary.",
+            "n = sin θ₁ / sin θ₂ = sin 48° / sin 29° = 0.7431 / 0.4848 = 1.53",
+            "sin C = 1 / n = 1 / 1.53 = 0.652",
+            "C = sin⁻¹(0.652) = 40.7°"
+          ],
+          "answer": {
+            "value": 40.7,
+            "unit": "°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "double-slit",
+      "name": "Young's double-slit fringe spacing",
+      "equations": [
+        "λ = ax / D",
+        "x = λD / a"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Identify a (slit separation), x (fringe spacing, the distance between adjacent bright fringes) and D (slit-to-screen distance). Convert a and x from mm or μm to metres and λ from nm to metres, then substitute into λ = ax/D and rearrange for whichever quantity is missing. Check that the fringe spacing comes out as a few millimetres.",
+      "commonErrors": [
+        "Mixing up a (slit separation) with x (fringe spacing)",
+        "Leaving a or x in mm, which gives an answer out by a factor of 1000",
+        "Using the distance across several fringes as x without dividing by the number of spacings"
+      ],
+      "worked": {
+        "id": "double-slit-w",
+        "question": "Laser light of wavelength 600 nm passes through two slits 0.50 mm apart. The interference pattern is observed on a screen 2.0 m from the slits. Calculate the fringe spacing, in mm.",
+        "steps": [
+          "Known: λ = 600 nm = 600 × 10⁻⁹ m, a = 0.50 mm = 0.50 × 10⁻³ m, D = 2.0 m. Unknown: x.",
+          "Rearrange λ = ax/D: x = λD / a",
+          "x = 600 × 10⁻⁹ × 2.0 / (0.50 × 10⁻³)",
+          "x = 2.4 × 10⁻³ m",
+          "x = 2.4 mm"
+        ],
+        "answer": {
+          "value": 2.4,
+          "unit": "mm"
+        }
+      },
+      "practice": [
+        {
+          "id": "double-slit-p1",
+          "question": "Green laser light of wavelength 520 nm illuminates a pair of slits 0.25 mm apart. The fringes are viewed on a wall 1.5 m away. Calculate the fringe spacing, in mm.",
+          "hint": "Use x = λD/a, converting nm and mm to metres first.",
+          "walkthrough": [
+            "λ = 520 × 10⁻⁹ m, a = 0.25 × 10⁻³ m, D = 1.5 m, find x.",
+            "x = λD / a = 520 × 10⁻⁹ × 1.5 / (0.25 × 10⁻³)",
+            "x = 3.12 × 10⁻³ m = 3.12 mm"
+          ],
+          "answer": {
+            "value": 3.12,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "double-slit-p2",
+          "question": "In a demonstration, slits 0.40 mm apart produce bright fringes 4.8 mm apart on a screen 3.0 m away. Calculate the wavelength of the light, in nm.",
+          "hint": "Use λ = ax/D directly, then convert the answer from metres to nm.",
+          "walkthrough": [
+            "a = 0.40 × 10⁻³ m, x = 4.8 × 10⁻³ m, D = 3.0 m, find λ.",
+            "λ = ax / D = 0.40 × 10⁻³ × 4.8 × 10⁻³ / 3.0",
+            "λ = 6.4 × 10⁻⁷ m = 640 nm"
+          ],
+          "answer": {
+            "value": 640,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "double-slit-p3",
+          "question": "Sodium light of wavelength 589 nm produces fringes 1.8 mm apart on a screen 2.5 m from a double slit. Calculate the separation of the slits, in mm.",
+          "hint": "Rearrange λ = ax/D to a = λD/x.",
+          "walkthrough": [
+            "λ = 589 × 10⁻⁹ m, x = 1.8 × 10⁻³ m, D = 2.5 m, find a.",
+            "a = λD / x = 589 × 10⁻⁹ × 2.5 / (1.8 × 10⁻³)",
+            "a = 8.18 × 10⁻⁴ m = 0.818 mm"
+          ],
+          "answer": {
+            "value": 0.818,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "double-slit-p4",
+          "question": "Blue light of wavelength 450 nm passes through slits 0.30 mm apart. A student wants bright fringes 2.7 mm apart. Calculate the distance from the slits to the screen that is needed.",
+          "hint": "Rearrange λ = ax/D to D = ax/λ.",
+          "walkthrough": [
+            "λ = 450 × 10⁻⁹ m, a = 0.30 × 10⁻³ m, x = 2.7 × 10⁻³ m, find D.",
+            "D = ax / λ = 0.30 × 10⁻³ × 2.7 × 10⁻³ / (450 × 10⁻⁹)",
+            "D = 1.8 m"
+          ],
+          "answer": {
+            "value": 1.8,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "double-slit-p5",
+          "question": "In a double-slit experiment the distance from the centre of the first bright fringe to the centre of the eleventh bright fringe is measured as 22 mm. The slits are 0.60 mm apart and the screen is 2.0 m away. Calculate the wavelength of the light, in nm.",
+          "hint": "First to eleventh fringe is ten fringe spacings; find x first, then use λ = ax/D.",
+          "walkthrough": [
+            "10 spacings = 22 mm, a = 0.60 × 10⁻³ m, D = 2.0 m, find λ.",
+            "x = 22 / 10 = 2.2 mm = 2.2 × 10⁻³ m",
+            "λ = ax / D = 0.60 × 10⁻³ × 2.2 × 10⁻³ / 2.0",
+            "λ = 6.6 × 10⁻⁷ m = 660 nm"
+          ],
+          "answer": {
+            "value": 660,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "double-slit-p6",
+          "question": "A helium–neon laser emits light of frequency 4.74 × 10¹⁴ Hz. It illuminates two slits 0.20 mm apart, and the pattern is viewed on a screen 2.4 m away. Calculate the fringe spacing, in mm.",
+          "hint": "Find the wavelength from λ = c/f first, then use x = λD/a.",
+          "walkthrough": [
+            "f = 4.74 × 10¹⁴ Hz, a = 0.20 × 10⁻³ m, D = 2.4 m, find x.",
+            "λ = c / f = 3.00 × 10⁸ / 4.74 × 10¹⁴ = 6.33 × 10⁻⁷ m",
+            "x = λD / a = 6.33 × 10⁻⁷ × 2.4 / (0.20 × 10⁻³)",
+            "x = 7.59 × 10⁻³ m = 7.59 mm"
+          ],
+          "answer": {
+            "value": 7.59,
+            "unit": "mm"
+          }
+        }
+      ]
+    },
+    {
+      "id": "diffraction-grating",
+      "name": "Diffraction grating equation",
+      "equations": [
+        "d sin θ = nλ",
+        "d = 1 / (lines per metre)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Find the slit spacing d from the number of lines per mm: d = 1 mm / N, in metres. Then use d sin θ = nλ, where n is the order and θ is measured from the straight-through direction. For the highest order visible, work out d/λ and round down to a whole number because sin θ cannot exceed 1.",
+      "commonErrors": [
+        "Using lines per mm as d instead of taking its reciprocal in metres",
+        "Rounding d/λ up instead of down when finding the maximum order",
+        "Using the full angle between the two first-order beams as θ instead of halving it"
+      ],
+      "worked": {
+        "id": "diffraction-grating-w",
+        "question": "A diffraction grating has 300 lines per mm. Light of wavelength 600 nm falls on it at normal incidence. Calculate the angle of the second-order maximum.",
+        "steps": [
+          "Known: N = 300 lines per mm, λ = 600 × 10⁻⁹ m, n = 2. Unknown: θ.",
+          "d = 1 × 10⁻³ / 300 = 3.33 × 10⁻⁶ m",
+          "d sin θ = nλ → sin θ = nλ / d = 2 × 600 × 10⁻⁹ / 3.33 × 10⁻⁶ = 0.360",
+          "θ = sin⁻¹(0.360)",
+          "θ = 21.1°"
+        ],
+        "answer": {
+          "value": 21.1,
+          "unit": "°"
+        }
+      },
+      "practice": [
+        {
+          "id": "diffraction-grating-p1",
+          "question": "A grating has a slit spacing of 2.0 × 10⁻⁶ m. Calculate the angle of the first-order maximum for light of wavelength 500 nm.",
+          "hint": "Use sin θ = nλ/d with n = 1; d is already given in metres.",
+          "walkthrough": [
+            "d = 2.0 × 10⁻⁶ m, λ = 500 × 10⁻⁹ m, n = 1, find θ.",
+            "sin θ = nλ / d = 500 × 10⁻⁹ / 2.0 × 10⁻⁶ = 0.25",
+            "θ = sin⁻¹(0.25) = 14.5°"
+          ],
+          "answer": {
+            "value": 14.5,
+            "unit": "°"
+          }
+        },
+        {
+          "id": "diffraction-grating-p2",
+          "question": "A spectrometer uses a grating with 500 lines per mm. The first-order maximum of a spectral line is found at 18.0° from the straight-through position. Calculate the wavelength of the line, in nm.",
+          "hint": "Find d from the lines per mm, then use λ = d sin θ / n with n = 1.",
+          "walkthrough": [
+            "N = 500 lines per mm, θ = 18.0°, n = 1, find λ.",
+            "d = 1 × 10⁻³ / 500 = 2.00 × 10⁻⁶ m",
+            "λ = d sin θ / n = 2.00 × 10⁻⁶ × sin 18.0° = 2.00 × 10⁻⁶ × 0.309",
+            "λ = 6.18 × 10⁻⁷ m = 618 nm"
+          ],
+          "answer": {
+            "value": 618,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "diffraction-grating-p3",
+          "question": "Sodium light of wavelength 589 nm produces a second-order maximum at 42.0° when it passes through a diffraction grating. Calculate the number of lines per mm on the grating.",
+          "hint": "Find d from d = nλ/sin θ, then take 1 mm divided by d.",
+          "walkthrough": [
+            "λ = 589 × 10⁻⁹ m, n = 2, θ = 42.0°, find lines per mm.",
+            "d = nλ / sin θ = 2 × 589 × 10⁻⁹ / sin 42.0° = 1.76 × 10⁻⁶ m",
+            "Lines per mm = 1 × 10⁻³ / d = 1 × 10⁻³ / 1.76 × 10⁻⁶",
+            "568 lines per mm"
+          ],
+          "answer": {
+            "value": 568,
+            "unit": "lines per mm"
+          }
+        },
+        {
+          "id": "diffraction-grating-p4",
+          "question": "Red laser light of wavelength 650 nm is shone through a grating with 600 lines per mm. Calculate the highest order of maximum that can be observed.",
+          "hint": "The maximum order is the whole-number part of d/λ, since sin θ cannot exceed 1.",
+          "walkthrough": [
+            "N = 600 lines per mm, λ = 650 × 10⁻⁹ m, find n_max.",
+            "d = 1 × 10⁻³ / 600 = 1.67 × 10⁻⁶ m",
+            "n_max = d / λ (with sin θ = 1) = 1.67 × 10⁻⁶ / 650 × 10⁻⁹ = 2.56",
+            "Round down: highest order visible is n = 2"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": ""
+          }
+        },
+        {
+          "id": "diffraction-grating-p5",
+          "question": "Light from a mercury lamp passes through a grating with 600 lines per mm. The two first-order maxima of a green line are measured to be 36.0° apart. Calculate the wavelength of the green line, in nm.",
+          "hint": "The angle from the straight-through beam to one first-order maximum is half of 36.0°; find d, then use λ = d sin θ.",
+          "walkthrough": [
+            "N = 600 lines per mm, angle between the two n = 1 beams = 36.0°, find λ.",
+            "θ = 36.0 / 2 = 18.0°",
+            "d = 1 × 10⁻³ / 600 = 1.67 × 10⁻⁶ m",
+            "λ = d sin θ / n = 1.67 × 10⁻⁶ × sin 18.0° / 1 = 5.15 × 10⁻⁷ m",
+            "λ = 515 nm"
+          ],
+          "answer": {
+            "value": 515,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "diffraction-grating-p6",
+          "question": "A light source emits at a frequency of 4.50 × 10¹⁴ Hz. The light falls at normal incidence on a grating with 300 lines per mm. Calculate the angle of the first-order maximum.",
+          "hint": "Find the wavelength from λ = c/f first, then find d and use sin θ = λ/d.",
+          "walkthrough": [
+            "f = 4.50 × 10¹⁴ Hz, N = 300 lines per mm, n = 1, find θ.",
+            "λ = c / f = 3.00 × 10⁸ / 4.50 × 10¹⁴ = 6.67 × 10⁻⁷ m",
+            "d = 1 × 10⁻³ / 300 = 3.33 × 10⁻⁶ m",
+            "sin θ = nλ / d = 6.67 × 10⁻⁷ / 3.33 × 10⁻⁶ = 0.200",
+            "θ = sin⁻¹(0.200) = 11.5°"
+          ],
+          "answer": {
+            "value": 11.5,
+            "unit": "°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "string-harmonics",
+      "name": "Stationary waves on a string",
+      "equations": [
+        "λₙ = 2L / n",
+        "fₙ = nv / 2L",
+        "v = √(T / μ)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "A string fixed at both ends has nodes at each end, so the fundamental (first harmonic) fits half a wavelength into the length: λ₁ = 2L. The nth harmonic has n loops, λₙ = 2L/n and fₙ = n × f₁. Use v = fλ to link frequency and wavelength, and where needed find the wave speed from v = √(T/μ), with μ the mass per unit length in kg m⁻¹.",
+      "commonErrors": [
+        "Taking the fundamental wavelength as L instead of 2L",
+        "Counting the nodes rather than the loops to get the harmonic number",
+        "Leaving μ in g m⁻¹ instead of converting to kg m⁻¹ before using v = √(T/μ)"
+      ],
+      "worked": {
+        "id": "string-harmonics-w",
+        "question": "A guitar string has a vibrating length of 0.65 m. Waves travel along the string at 420 m s⁻¹. Calculate the frequency of the fundamental (first harmonic).",
+        "steps": [
+          "Known: L = 0.65 m, v = 420 m s⁻¹, n = 1. Unknown: f₁.",
+          "For the fundamental, λ₁ = 2L = 2 × 0.65 = 1.3 m",
+          "f₁ = v / λ₁ = 420 / 1.3",
+          "f₁ = 323 Hz"
+        ],
+        "answer": {
+          "value": 323,
+          "unit": "Hz"
+        }
+      },
+      "practice": [
+        {
+          "id": "string-harmonics-p1",
+          "question": "A rope 1.2 m long is fixed at both ends and made to vibrate in its third harmonic, with three loops. Calculate the wavelength of the stationary wave.",
+          "hint": "Use λₙ = 2L/n with n = 3.",
+          "walkthrough": [
+            "L = 1.2 m, n = 3, find λ₃.",
+            "λ₃ = 2L / n = 2 × 1.2 / 3",
+            "λ₃ = 0.80 m"
+          ],
+          "answer": {
+            "value": 0.8,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "string-harmonics-p2",
+          "question": "A cello string of vibrating length 0.90 m carries waves at 270 m s⁻¹. Calculate the frequency of its second harmonic.",
+          "hint": "Use fₙ = nv/2L with n = 2.",
+          "walkthrough": [
+            "L = 0.90 m, v = 270 m s⁻¹, n = 2, find f₂.",
+            "f₂ = nv / 2L = 2 × 270 / (2 × 0.90)",
+            "f₂ = 300 Hz"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "string-harmonics-p3",
+          "question": "The G string of a violin has a vibrating length of 32.5 cm and a fundamental frequency of 196 Hz. Calculate the speed of waves along the string.",
+          "hint": "Convert cm to m, find λ₁ = 2L, then use v = fλ.",
+          "walkthrough": [
+            "L = 32.5 cm = 0.325 m, f₁ = 196 Hz, find v.",
+            "λ₁ = 2L = 2 × 0.325 = 0.65 m",
+            "v = f₁λ₁ = 196 × 0.65",
+            "v = 127 m s⁻¹"
+          ],
+          "answer": {
+            "value": 127,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "string-harmonics-p4",
+          "question": "A steel cable on a suspension footbridge has a mass per unit length of 2.0 g m⁻¹ and is under a tension of 80 N. Calculate the speed of transverse waves along the cable.",
+          "hint": "Convert μ to kg m⁻¹ before using v = √(T/μ).",
+          "walkthrough": [
+            "T = 80 N, μ = 2.0 g m⁻¹ = 2.0 × 10⁻³ kg m⁻¹, find v.",
+            "v = √(T / μ) = √(80 / 2.0 × 10⁻³) = √40 000",
+            "v = 200 m s⁻¹"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "m s⁻¹"
+          },
+          "boards": [
+            "AQA",
+            "WJEC"
+          ]
+        },
+        {
+          "id": "string-harmonics-p5",
+          "question": "A piano wire of length 0.60 m has a mass per unit length of 1.25 × 10⁻³ kg m⁻¹ and is held at a tension of 72 N. Calculate the frequency of its fundamental.",
+          "hint": "Find the wave speed from v = √(T/μ) first, then use f₁ = v/2L.",
+          "walkthrough": [
+            "L = 0.60 m, T = 72 N, μ = 1.25 × 10⁻³ kg m⁻¹, find f₁.",
+            "v = √(T / μ) = √(72 / 1.25 × 10⁻³) = √57 600 = 240 m s⁻¹",
+            "f₁ = v / 2L = 240 / (2 × 0.60)",
+            "f₁ = 200 Hz"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "Hz"
+          },
+          "boards": [
+            "AQA",
+            "WJEC"
+          ]
+        },
+        {
+          "id": "string-harmonics-p6",
+          "question": "In a Melde's experiment, a vibration generator at 50 Hz sets up a stationary wave with three loops on a string whose fixed length is 1.2 m. Calculate the speed of the waves on the string.",
+          "hint": "Three loops means n = 3; find λ from 2L/n, then use v = fλ.",
+          "walkthrough": [
+            "f = 50 Hz, L = 1.2 m, n = 3, find v.",
+            "λ = 2L / n = 2 × 1.2 / 3 = 0.80 m",
+            "v = fλ = 50 × 0.80",
+            "v = 40 m s⁻¹"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pipe-harmonics",
+      "name": "Stationary waves in open and closed pipes",
+      "equations": [
+        "Open pipe: λₙ = 2L / n, fₙ = nv / 2L (n = 1, 2, 3 …)",
+        "Closed pipe: λₙ = 4L / n, fₙ = nv / 4L (n = 1, 3, 5 …)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Decide whether the pipe is open at both ends (antinode at each end, fundamental λ = 2L) or closed at one end (node at the closed end, antinode at the open end, fundamental λ = 4L). A closed pipe has only odd harmonics. Find the wavelength from the length, then use v = fλ with the speed of sound.",
+      "commonErrors": [
+        "Using λ = 2L for a closed pipe instead of λ = 4L",
+        "Giving an even harmonic for a closed pipe, which cannot exist",
+        "Leaving the pipe length in cm when the speed of sound is in m s⁻¹"
+      ],
+      "worked": {
+        "id": "pipe-harmonics-w",
+        "question": "An organ pipe open at both ends is 0.85 m long. The speed of sound in air is 340 m s⁻¹. Calculate the fundamental frequency of the pipe.",
+        "steps": [
+          "Known: L = 0.85 m, v = 340 m s⁻¹, open pipe, n = 1. Unknown: f₁.",
+          "Open pipe fundamental: λ₁ = 2L = 2 × 0.85 = 1.7 m",
+          "f₁ = v / λ₁ = 340 / 1.7",
+          "f₁ = 200 Hz"
+        ],
+        "answer": {
+          "value": 200,
+          "unit": "Hz"
+        }
+      },
+      "practice": [
+        {
+          "id": "pipe-harmonics-p1",
+          "question": "Blowing across the top of an empty bottle 0.25 m deep produces a note. Treat the bottle as a pipe closed at one end. The speed of sound in air is 340 m s⁻¹. Calculate the fundamental frequency of the note.",
+          "hint": "For a closed pipe the fundamental wavelength is 4L.",
+          "walkthrough": [
+            "L = 0.25 m, v = 340 m s⁻¹, closed pipe, find f₁.",
+            "λ₁ = 4L = 4 × 0.25 = 1.0 m",
+            "f₁ = v / λ₁ = 340 / 1.0",
+            "f₁ = 340 Hz"
+          ],
+          "answer": {
+            "value": 340,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "pipe-harmonics-p2",
+          "question": "A flute behaves as a pipe open at both ends. With all holes covered its effective length is 0.60 m. The speed of sound in the warm air inside is 330 m s⁻¹. Calculate the frequency of the second harmonic.",
+          "hint": "Use fₙ = nv/2L with n = 2 for an open pipe.",
+          "walkthrough": [
+            "L = 0.60 m, v = 330 m s⁻¹, open pipe, n = 2, find f₂.",
+            "f₂ = nv / 2L = 2 × 330 / (2 × 0.60)",
+            "f₂ = 550 Hz"
+          ],
+          "answer": {
+            "value": 550,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "pipe-harmonics-p3",
+          "question": "A pipe closed at one end has a fundamental frequency of 256 Hz when the speed of sound is 340 m s⁻¹. Calculate the length of the pipe, in cm.",
+          "hint": "Find λ₁ = v/f first, then use L = λ₁/4 for a closed pipe and convert to cm.",
+          "walkthrough": [
+            "f₁ = 256 Hz, v = 340 m s⁻¹, closed pipe, find L.",
+            "L = v / 4f₁ = 340 / (4 × 256)",
+            "L = 0.332 m = 33.2 cm"
+          ],
+          "answer": {
+            "value": 33.2,
+            "unit": "cm"
+          }
+        },
+        {
+          "id": "pipe-harmonics-p4",
+          "question": "One tube of a set of pan pipes is 45 cm long and closed at the bottom. The speed of sound in air is 343 m s⁻¹. Calculate the frequency of the third harmonic of this tube.",
+          "hint": "Convert cm to m and use fₙ = nv/4L with n = 3 for a closed pipe.",
+          "walkthrough": [
+            "L = 45 cm = 0.45 m, v = 343 m s⁻¹, closed pipe, n = 3, find f₃.",
+            "f₃ = nv / 4L = 3 × 343 / (4 × 0.45)",
+            "f₃ = 572 Hz"
+          ],
+          "answer": {
+            "value": 572,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "pipe-harmonics-p5",
+          "question": "In a resonance-tube experiment, a tuning fork of frequency 512 Hz produces the first (fundamental) resonance when the length of the air column above the water is 16.6 cm. Treat the tube as closed at one end and ignore end corrections. Calculate the speed of sound in the air.",
+          "hint": "Find λ = 4L for the fundamental of a closed pipe (convert cm to m), then use v = fλ.",
+          "walkthrough": [
+            "f = 512 Hz, L = 16.6 cm = 0.166 m, closed pipe fundamental, find v.",
+            "λ = 4L = 4 × 0.166 = 0.664 m",
+            "v = fλ = 512 × 0.664",
+            "v = 340 m s⁻¹"
+          ],
+          "answer": {
+            "value": 340,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "pipe-harmonics-p6",
+          "question": "A pipe closed at one end resonates in its fifth harmonic at 850 Hz. The speed of sound in air is 340 m s⁻¹. Calculate the length of the pipe.",
+          "hint": "Find the wavelength from λ = v/f first; the fifth harmonic of a closed pipe fits five quarter-wavelengths into L.",
+          "walkthrough": [
+            "f₅ = 850 Hz, v = 340 m s⁻¹, closed pipe, n = 5, find L.",
+            "λ = v / f = 340 / 850 = 0.40 m",
+            "L = nλ / 4 = 5 × 0.40 / 4",
+            "L = 0.50 m"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "doppler",
+      "name": "Doppler shift for a slow-moving source",
+      "equations": [
+        "Δf / f ≈ v / c",
+        "Δλ / λ ≈ v / c"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "For a source moving much more slowly than the wave, the fractional change in frequency or wavelength equals v/c. Identify whether you know the shift or the speed, then use Δf = fv/c, Δλ = λv/c or v = cΔλ/λ as needed. A longer observed wavelength (redshift) means the source is receding.",
+      "commonErrors": [
+        "Using the observed wavelength instead of the emitted wavelength as λ in Δλ/λ",
+        "Forgetting that Δλ is the difference between observed and emitted values, not the observed value itself",
+        "Leaving a shift in nm while λ is in m, or mixing kHz with GHz"
+      ],
+      "worked": {
+        "id": "doppler-w",
+        "question": "The hydrogen alpha line has a wavelength of 656.3 nm in the laboratory. In the spectrum of a distant galaxy the same line is observed at 658.5 nm. Calculate the speed at which the galaxy is receding.",
+        "steps": [
+          "Known: λ = 656.3 nm, observed λ = 658.5 nm. Unknown: v.",
+          "Δλ = 658.5 − 656.3 = 2.2 nm (no need to convert, as only the ratio is used)",
+          "Δλ / λ = v / c → v = c × Δλ / λ",
+          "v = 3.00 × 10⁸ × 2.2 / 656.3",
+          "v = 1.01 × 10⁶ m s⁻¹"
+        ],
+        "answer": {
+          "value": 1010000,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "doppler-p1",
+          "question": "A satellite transmits at 1.5 GHz while moving directly towards a ground station at 7500 m s⁻¹. Calculate the change in the received frequency, in Hz.",
+          "hint": "Use Δf = fv/c, converting GHz to Hz.",
+          "walkthrough": [
+            "f = 1.5 GHz = 1.5 × 10⁹ Hz, v = 7500 m s⁻¹, find Δf.",
+            "Δf = f × v / c = 1.5 × 10⁹ × 7500 / 3.00 × 10⁸",
+            "Δf = 37 500 Hz"
+          ],
+          "answer": {
+            "value": 37500,
+            "unit": "Hz"
+          }
+        },
+        {
+          "id": "doppler-p2",
+          "question": "A star is moving away from the Earth at 6.0 × 10⁴ m s⁻¹. Calculate the change in wavelength, in nm, of a spectral line emitted at 500 nm.",
+          "hint": "Use Δλ = λv/c; keeping λ in nm gives Δλ in nm.",
+          "walkthrough": [
+            "λ = 500 nm, v = 6.0 × 10⁴ m s⁻¹, find Δλ.",
+            "Δλ = λ × v / c = 500 × 6.0 × 10⁴ / 3.00 × 10⁸",
+            "Δλ = 0.10 nm"
+          ],
+          "answer": {
+            "value": 0.1,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "doppler-p3",
+          "question": "A police speed radar operates at 10.5 GHz. The signal reflected from a car is shifted by 1.75 kHz. Treating this as a simple Doppler shift of the radar frequency, calculate the speed of the car.",
+          "hint": "Rearrange Δf/f = v/c to v = cΔf/f, converting kHz and GHz to Hz.",
+          "walkthrough": [
+            "f = 10.5 GHz = 10.5 × 10⁹ Hz, Δf = 1.75 kHz = 1.75 × 10³ Hz, find v.",
+            "v = c × Δf / f = 3.00 × 10⁸ × 1.75 × 10³ / 10.5 × 10⁹",
+            "v = 50.0 m s⁻¹"
+          ],
+          "answer": {
+            "value": 50.0,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "doppler-p4",
+          "question": "The calcium K line has a laboratory wavelength of 393.4 nm. In the spectrum of a galaxy it is observed at 393.8 nm. Calculate the recession speed of the galaxy, in km s⁻¹.",
+          "hint": "Find Δλ, use v = cΔλ/λ, then convert m s⁻¹ to km s⁻¹.",
+          "walkthrough": [
+            "λ = 393.4 nm, observed = 393.8 nm, find v.",
+            "Δλ = 393.8 − 393.4 = 0.4 nm",
+            "v = c × Δλ / λ = 3.00 × 10⁸ × 0.4 / 393.4 = 3.05 × 10⁵ m s⁻¹",
+            "v = 305 km s⁻¹"
+          ],
+          "answer": {
+            "value": 305,
+            "unit": "km s⁻¹"
+          }
+        },
+        {
+          "id": "doppler-p5",
+          "question": "A galaxy is receding from the Earth at 1.5 × 10⁷ m s⁻¹. It emits the hydrogen beta line at a wavelength of 486.1 nm. Calculate the wavelength at which this line is observed, in nm.",
+          "hint": "Find the shift Δλ = λv/c first, then add it to the emitted wavelength because the source is receding.",
+          "walkthrough": [
+            "λ = 486.1 nm, v = 1.5 × 10⁷ m s⁻¹, find the observed wavelength.",
+            "Δλ = λ × v / c = 486.1 × 1.5 × 10⁷ / 3.00 × 10⁸ = 24.3 nm",
+            "Observed λ = 486.1 + 24.3",
+            "Observed λ = 510.4 nm"
+          ],
+          "answer": {
+            "value": 510.4,
+            "unit": "nm"
+          }
+        },
+        {
+          "id": "doppler-p6",
+          "question": "Neutral hydrogen in a galaxy emits radio waves of wavelength 21.1 cm. The galaxy is receding at 4.5 × 10⁶ m s⁻¹. Calculate the shift in the received frequency, in MHz.",
+          "hint": "Find the emitted frequency from f = c/λ first (convert cm to m), then use Δf = fv/c and convert to MHz.",
+          "walkthrough": [
+            "λ = 21.1 cm = 0.211 m, v = 4.5 × 10⁶ m s⁻¹, find Δf.",
+            "f = c / λ = 3.00 × 10⁸ / 0.211 = 1.42 × 10⁹ Hz",
+            "Δf = f × v / c = 1.42 × 10⁹ × 4.5 × 10⁶ / 3.00 × 10⁸ = 2.13 × 10⁷ Hz",
+            "Δf = 21.3 MHz"
+          ],
+          "answer": {
+            "value": 21.3,
+            "unit": "MHz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wave-graph",
+      "name": "Reading wave graphs",
+      "equations": [
+        "f = 1/T",
+        "v = fλ = λ/T",
+        "Δφ = (Δx / λ) × 2π rad = (Δx / λ) × 360°"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "First check the horizontal axis. A displacement–time graph shows one point over time: the distance between successive peaks is the period T, and the peak height is the amplitude. A displacement–distance graph is a snapshot of the whole wave: the distance between successive peaks is the wavelength λ. Read the value from a peak that sits on gridlines, note the axis unit and its prefix, then use f = 1/T or v = fλ as needed.",
+      "commonErrors": [
+        "Reading the wavelength off a displacement–time graph (its horizontal axis is time, so peak to peak is the period)",
+        "Taking the peak-to-trough height as the amplitude instead of the peak height above the centre line",
+        "Forgetting the prefix on the axis: a period of 4 on a t / ms axis is 4 × 10⁻³ s",
+        "Measuring from a peak to the next trough and calling it one period or one wavelength (that is half)"
+      ],
+      "worked": {
+        "id": "wave-graph-w",
+        "question": "The graph shows the displacement of one point on a vibrating guitar string against time. Use the graph to determine the frequency of the vibration.",
+        "steps": [
+          "The horizontal axis is time, so peak to peak gives the period. The peaks marked A and B are at 4.0 ms and 8.0 ms.",
+          "T = 8.0 − 4.0 = 4.0 ms = 4.0 × 10⁻³ s",
+          "f = 1/T",
+          "f = 1 / (4.0 × 10⁻³)",
+          "f = 250 Hz"
+        ],
+        "answer": {
+          "value": 250.0,
+          "unit": "Hz"
+        },
+        "graph": {
+          "x": {
+            "label": "t / ms",
+            "min": 0,
+            "max": 12,
+            "step": 1
+          },
+          "y": {
+            "label": "y / mm",
+            "min": -4,
+            "max": 4,
+            "step": 1
+          },
+          "series": [
+            {
+              "kind": "curve",
+              "points": [
+                [
+                  0.0,
+                  3.0
+                ],
+                [
+                  0.1667,
+                  2.8978
+                ],
+                [
+                  0.3333,
+                  2.5981
+                ],
+                [
+                  0.5,
+                  2.1213
+                ],
+                [
+                  0.6667,
+                  1.5
+                ],
+                [
+                  0.8333,
+                  0.7765
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.1667,
+                  -0.7765
+                ],
+                [
+                  1.3333,
+                  -1.5
+                ],
+                [
+                  1.5,
+                  -2.1213
+                ],
+                [
+                  1.6667,
+                  -2.5981
+                ],
+                [
+                  1.8333,
+                  -2.8978
+                ],
+                [
+                  2.0,
+                  -3.0
+                ],
+                [
+                  2.1667,
+                  -2.8978
+                ],
+                [
+                  2.3333,
+                  -2.5981
+                ],
+                [
+                  2.5,
+                  -2.1213
+                ],
+                [
+                  2.6667,
+                  -1.5
+                ],
+                [
+                  2.8333,
+                  -0.7765
+                ],
+                [
+                  3.0,
+                  -0.0
+                ],
+                [
+                  3.1667,
+                  0.7765
+                ],
+                [
+                  3.3333,
+                  1.5
+                ],
+                [
+                  3.5,
+                  2.1213
+                ],
+                [
+                  3.6667,
+                  2.5981
+                ],
+                [
+                  3.8333,
+                  2.8978
+                ],
+                [
+                  4.0,
+                  3.0
+                ],
+                [
+                  4.1667,
+                  2.8978
+                ],
+                [
+                  4.3333,
+                  2.5981
+                ],
+                [
+                  4.5,
+                  2.1213
+                ],
+                [
+                  4.6667,
+                  1.5
+                ],
+                [
+                  4.8333,
+                  0.7765
+                ],
+                [
+                  5.0,
+                  0.0
+                ],
+                [
+                  5.1667,
+                  -0.7765
+                ],
+                [
+                  5.3333,
+                  -1.5
+                ],
+                [
+                  5.5,
+                  -2.1213
+                ],
+                [
+                  5.6667,
+                  -2.5981
+                ],
+                [
+                  5.8333,
+                  -2.8978
+                ],
+                [
+                  6.0,
+                  -3.0
+                ],
+                [
+                  6.1667,
+                  -2.8978
+                ],
+                [
+                  6.3333,
+                  -2.5981
+                ],
+                [
+                  6.5,
+                  -2.1213
+                ],
+                [
+                  6.6667,
+                  -1.5
+                ],
+                [
+                  6.8333,
+                  -0.7765
+                ],
+                [
+                  7.0,
+                  -0.0
+                ],
+                [
+                  7.1667,
+                  0.7765
+                ],
+                [
+                  7.3333,
+                  1.5
+                ],
+                [
+                  7.5,
+                  2.1213
+                ],
+                [
+                  7.6667,
+                  2.5981
+                ],
+                [
+                  7.8333,
+                  2.8978
+                ],
+                [
+                  8.0,
+                  3.0
+                ],
+                [
+                  8.1667,
+                  2.8978
+                ],
+                [
+                  8.3333,
+                  2.5981
+                ],
+                [
+                  8.5,
+                  2.1213
+                ],
+                [
+                  8.6667,
+                  1.5
+                ],
+                [
+                  8.8333,
+                  0.7765
+                ],
+                [
+                  9.0,
+                  0.0
+                ],
+                [
+                  9.1667,
+                  -0.7765
+                ],
+                [
+                  9.3333,
+                  -1.5
+                ],
+                [
+                  9.5,
+                  -2.1213
+                ],
+                [
+                  9.6667,
+                  -2.5981
+                ],
+                [
+                  9.8333,
+                  -2.8978
+                ],
+                [
+                  10.0,
+                  -3.0
+                ],
+                [
+                  10.1667,
+                  -2.8978
+                ],
+                [
+                  10.3333,
+                  -2.5981
+                ],
+                [
+                  10.5,
+                  -2.1213
+                ],
+                [
+                  10.6667,
+                  -1.5
+                ],
+                [
+                  10.8333,
+                  -0.7765
+                ],
+                [
+                  11.0,
+                  -0.0
+                ],
+                [
+                  11.1667,
+                  0.7765
+                ],
+                [
+                  11.3333,
+                  1.5
+                ],
+                [
+                  11.5,
+                  2.1213
+                ],
+                [
+                  11.6667,
+                  2.5981
+                ],
+                [
+                  11.8333,
+                  2.8978
+                ],
+                [
+                  12.0,
+                  3.0
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 4,
+              "y": 3.0,
+              "label": "A",
+              "drop": true
+            },
+            {
+              "x": 8,
+              "y": 3.0,
+              "label": "B",
+              "drop": true
+            }
+          ],
+          "alt": "Displacement–time graph: a cosine wave of amplitude 3 mm with peaks at 0, 4, 8 and 12 ms; the peaks at 4 ms and 8 ms are marked A and B"
+        }
+      },
+      "practice": [
+        {
+          "id": "wave-graph-p1",
+          "question": "The graph shows the vertical displacement of a buoy against time as waves pass it. Use the graph to determine the period of the waves.",
+          "hint": "The axis is time, so the period is the time between successive peaks P and Q.",
+          "walkthrough": [
+            "P is at t = 0.5 s and Q, the next peak, is at t = 2.5 s.",
+            "T = 2.5 − 0.5",
+            "T = 2.0 s"
+          ],
+          "answer": {
+            "value": 2.0,
+            "unit": "s"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 6,
+              "step": 0.5
+            },
+            "y": {
+              "label": "y / cm",
+              "min": -25,
+              "max": 25,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0833,
+                    5.1764
+                  ],
+                  [
+                    0.1667,
+                    10.0
+                  ],
+                  [
+                    0.25,
+                    14.1421
+                  ],
+                  [
+                    0.3333,
+                    17.3205
+                  ],
+                  [
+                    0.4167,
+                    19.3185
+                  ],
+                  [
+                    0.5,
+                    20.0
+                  ],
+                  [
+                    0.5833,
+                    19.3185
+                  ],
+                  [
+                    0.6667,
+                    17.3205
+                  ],
+                  [
+                    0.75,
+                    14.1421
+                  ],
+                  [
+                    0.8333,
+                    10.0
+                  ],
+                  [
+                    0.9167,
+                    5.1764
+                  ],
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.0833,
+                    -5.1764
+                  ],
+                  [
+                    1.1667,
+                    -10.0
+                  ],
+                  [
+                    1.25,
+                    -14.1421
+                  ],
+                  [
+                    1.3333,
+                    -17.3205
+                  ],
+                  [
+                    1.4167,
+                    -19.3185
+                  ],
+                  [
+                    1.5,
+                    -20.0
+                  ],
+                  [
+                    1.5833,
+                    -19.3185
+                  ],
+                  [
+                    1.6667,
+                    -17.3205
+                  ],
+                  [
+                    1.75,
+                    -14.1421
+                  ],
+                  [
+                    1.8333,
+                    -10.0
+                  ],
+                  [
+                    1.9167,
+                    -5.1764
+                  ],
+                  [
+                    2.0,
+                    -0.0
+                  ],
+                  [
+                    2.0833,
+                    5.1764
+                  ],
+                  [
+                    2.1667,
+                    10.0
+                  ],
+                  [
+                    2.25,
+                    14.1421
+                  ],
+                  [
+                    2.3333,
+                    17.3205
+                  ],
+                  [
+                    2.4167,
+                    19.3185
+                  ],
+                  [
+                    2.5,
+                    20.0
+                  ],
+                  [
+                    2.5833,
+                    19.3185
+                  ],
+                  [
+                    2.6667,
+                    17.3205
+                  ],
+                  [
+                    2.75,
+                    14.1421
+                  ],
+                  [
+                    2.8333,
+                    10.0
+                  ],
+                  [
+                    2.9167,
+                    5.1764
+                  ],
+                  [
+                    3.0,
+                    0.0
+                  ],
+                  [
+                    3.0833,
+                    -5.1764
+                  ],
+                  [
+                    3.1667,
+                    -10.0
+                  ],
+                  [
+                    3.25,
+                    -14.1421
+                  ],
+                  [
+                    3.3333,
+                    -17.3205
+                  ],
+                  [
+                    3.4167,
+                    -19.3185
+                  ],
+                  [
+                    3.5,
+                    -20.0
+                  ],
+                  [
+                    3.5833,
+                    -19.3185
+                  ],
+                  [
+                    3.6667,
+                    -17.3205
+                  ],
+                  [
+                    3.75,
+                    -14.1421
+                  ],
+                  [
+                    3.8333,
+                    -10.0
+                  ],
+                  [
+                    3.9167,
+                    -5.1764
+                  ],
+                  [
+                    4.0,
+                    -0.0
+                  ],
+                  [
+                    4.0833,
+                    5.1764
+                  ],
+                  [
+                    4.1667,
+                    10.0
+                  ],
+                  [
+                    4.25,
+                    14.1421
+                  ],
+                  [
+                    4.3333,
+                    17.3205
+                  ],
+                  [
+                    4.4167,
+                    19.3185
+                  ],
+                  [
+                    4.5,
+                    20.0
+                  ],
+                  [
+                    4.5833,
+                    19.3185
+                  ],
+                  [
+                    4.6667,
+                    17.3205
+                  ],
+                  [
+                    4.75,
+                    14.1421
+                  ],
+                  [
+                    4.8333,
+                    10.0
+                  ],
+                  [
+                    4.9167,
+                    5.1764
+                  ],
+                  [
+                    5.0,
+                    0.0
+                  ],
+                  [
+                    5.0833,
+                    -5.1764
+                  ],
+                  [
+                    5.1667,
+                    -10.0
+                  ],
+                  [
+                    5.25,
+                    -14.1421
+                  ],
+                  [
+                    5.3333,
+                    -17.3205
+                  ],
+                  [
+                    5.4167,
+                    -19.3185
+                  ],
+                  [
+                    5.5,
+                    -20.0
+                  ],
+                  [
+                    5.5833,
+                    -19.3185
+                  ],
+                  [
+                    5.6667,
+                    -17.3205
+                  ],
+                  [
+                    5.75,
+                    -14.1421
+                  ],
+                  [
+                    5.8333,
+                    -10.0
+                  ],
+                  [
+                    5.9167,
+                    -5.1764
+                  ],
+                  [
+                    6.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.5,
+                "y": 20.0,
+                "label": "P",
+                "drop": true
+              },
+              {
+                "x": 2.5,
+                "y": 20.0,
+                "label": "Q",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–time graph: a sine wave of amplitude 20 cm with peaks at 0.5, 2.5 and 4.5 s; the first two peaks are marked P and Q"
+          }
+        },
+        {
+          "id": "wave-graph-p2",
+          "question": "The graph is a snapshot of a transverse wave on a rope, showing displacement against distance along the rope. Use the graph to determine the wavelength of the wave.",
+          "hint": "The axis is distance, so peak to peak (P to Q) is one wavelength.",
+          "walkthrough": [
+            "P is at x = 0.3 m and the next peak Q is at x = 1.5 m.",
+            "λ = 1.5 − 0.3",
+            "λ = 1.2 m"
+          ],
+          "answer": {
+            "value": 1.2,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "x / m",
+              "min": 0,
+              "max": 3.0,
+              "step": 0.3
+            },
+            "y": {
+              "label": "y / cm",
+              "min": -5,
+              "max": 5,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.05,
+                    1.0353
+                  ],
+                  [
+                    0.1,
+                    2.0
+                  ],
+                  [
+                    0.15,
+                    2.8284
+                  ],
+                  [
+                    0.2,
+                    3.4641
+                  ],
+                  [
+                    0.25,
+                    3.8637
+                  ],
+                  [
+                    0.3,
+                    4.0
+                  ],
+                  [
+                    0.35,
+                    3.8637
+                  ],
+                  [
+                    0.4,
+                    3.4641
+                  ],
+                  [
+                    0.45,
+                    2.8284
+                  ],
+                  [
+                    0.5,
+                    2.0
+                  ],
+                  [
+                    0.55,
+                    1.0353
+                  ],
+                  [
+                    0.6,
+                    0.0
+                  ],
+                  [
+                    0.65,
+                    -1.0353
+                  ],
+                  [
+                    0.7,
+                    -2.0
+                  ],
+                  [
+                    0.75,
+                    -2.8284
+                  ],
+                  [
+                    0.8,
+                    -3.4641
+                  ],
+                  [
+                    0.85,
+                    -3.8637
+                  ],
+                  [
+                    0.9,
+                    -4.0
+                  ],
+                  [
+                    0.95,
+                    -3.8637
+                  ],
+                  [
+                    1.0,
+                    -3.4641
+                  ],
+                  [
+                    1.05,
+                    -2.8284
+                  ],
+                  [
+                    1.1,
+                    -2.0
+                  ],
+                  [
+                    1.15,
+                    -1.0353
+                  ],
+                  [
+                    1.2,
+                    -0.0
+                  ],
+                  [
+                    1.25,
+                    1.0353
+                  ],
+                  [
+                    1.3,
+                    2.0
+                  ],
+                  [
+                    1.35,
+                    2.8284
+                  ],
+                  [
+                    1.4,
+                    3.4641
+                  ],
+                  [
+                    1.45,
+                    3.8637
+                  ],
+                  [
+                    1.5,
+                    4.0
+                  ],
+                  [
+                    1.55,
+                    3.8637
+                  ],
+                  [
+                    1.6,
+                    3.4641
+                  ],
+                  [
+                    1.65,
+                    2.8284
+                  ],
+                  [
+                    1.7,
+                    2.0
+                  ],
+                  [
+                    1.75,
+                    1.0353
+                  ],
+                  [
+                    1.8,
+                    0.0
+                  ],
+                  [
+                    1.85,
+                    -1.0353
+                  ],
+                  [
+                    1.9,
+                    -2.0
+                  ],
+                  [
+                    1.95,
+                    -2.8284
+                  ],
+                  [
+                    2.0,
+                    -3.4641
+                  ],
+                  [
+                    2.05,
+                    -3.8637
+                  ],
+                  [
+                    2.1,
+                    -4.0
+                  ],
+                  [
+                    2.15,
+                    -3.8637
+                  ],
+                  [
+                    2.2,
+                    -3.4641
+                  ],
+                  [
+                    2.25,
+                    -2.8284
+                  ],
+                  [
+                    2.3,
+                    -2.0
+                  ],
+                  [
+                    2.35,
+                    -1.0353
+                  ],
+                  [
+                    2.4,
+                    -0.0
+                  ],
+                  [
+                    2.45,
+                    1.0353
+                  ],
+                  [
+                    2.5,
+                    2.0
+                  ],
+                  [
+                    2.55,
+                    2.8284
+                  ],
+                  [
+                    2.6,
+                    3.4641
+                  ],
+                  [
+                    2.65,
+                    3.8637
+                  ],
+                  [
+                    2.7,
+                    4.0
+                  ],
+                  [
+                    2.75,
+                    3.8637
+                  ],
+                  [
+                    2.8,
+                    3.4641
+                  ],
+                  [
+                    2.85,
+                    2.8284
+                  ],
+                  [
+                    2.9,
+                    2.0
+                  ],
+                  [
+                    2.95,
+                    1.0353
+                  ],
+                  [
+                    3.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.3,
+                "y": 4.0,
+                "label": "P",
+                "drop": true
+              },
+              {
+                "x": 1.5,
+                "y": 4.0,
+                "label": "Q",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–distance graph: a sine wave of amplitude 4 cm with peaks at 0.3, 1.5 and 2.7 m; the first two peaks are marked P and Q"
+          }
+        },
+        {
+          "id": "wave-graph-p3",
+          "question": "The graph shows the displacement of a loudspeaker cone against time while it plays a single note. Use the graph to determine the amplitude of the oscillation in metres.",
+          "hint": "Amplitude is the height of a peak above the zero line; read it at X and convert mm to m.",
+          "walkthrough": [
+            "The peak X is at y = 0.80 mm above the centre line, so A = 0.80 mm.",
+            "0.80 mm = 0.80 × 10⁻³ m",
+            "A = 8.0 × 10⁻⁴ m"
+          ],
+          "answer": {
+            "value": 0.0008,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "y / mm",
+              "min": -1.0,
+              "max": 1.0,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.8
+                  ],
+                  [
+                    0.3333,
+                    0.7727
+                  ],
+                  [
+                    0.6667,
+                    0.6928
+                  ],
+                  [
+                    1.0,
+                    0.5657
+                  ],
+                  [
+                    1.3333,
+                    0.4
+                  ],
+                  [
+                    1.6667,
+                    0.2071
+                  ],
+                  [
+                    2.0,
+                    0.0
+                  ],
+                  [
+                    2.3333,
+                    -0.2071
+                  ],
+                  [
+                    2.6667,
+                    -0.4
+                  ],
+                  [
+                    3.0,
+                    -0.5657
+                  ],
+                  [
+                    3.3333,
+                    -0.6928
+                  ],
+                  [
+                    3.6667,
+                    -0.7727
+                  ],
+                  [
+                    4.0,
+                    -0.8
+                  ],
+                  [
+                    4.3333,
+                    -0.7727
+                  ],
+                  [
+                    4.6667,
+                    -0.6928
+                  ],
+                  [
+                    5.0,
+                    -0.5657
+                  ],
+                  [
+                    5.3333,
+                    -0.4
+                  ],
+                  [
+                    5.6667,
+                    -0.2071
+                  ],
+                  [
+                    6.0,
+                    -0.0
+                  ],
+                  [
+                    6.3333,
+                    0.2071
+                  ],
+                  [
+                    6.6667,
+                    0.4
+                  ],
+                  [
+                    7.0,
+                    0.5657
+                  ],
+                  [
+                    7.3333,
+                    0.6928
+                  ],
+                  [
+                    7.6667,
+                    0.7727
+                  ],
+                  [
+                    8.0,
+                    0.8
+                  ],
+                  [
+                    8.3333,
+                    0.7727
+                  ],
+                  [
+                    8.6667,
+                    0.6928
+                  ],
+                  [
+                    9.0,
+                    0.5657
+                  ],
+                  [
+                    9.3333,
+                    0.4
+                  ],
+                  [
+                    9.6667,
+                    0.2071
+                  ],
+                  [
+                    10.0,
+                    0.0
+                  ],
+                  [
+                    10.3333,
+                    -0.2071
+                  ],
+                  [
+                    10.6667,
+                    -0.4
+                  ],
+                  [
+                    11.0,
+                    -0.5657
+                  ],
+                  [
+                    11.3333,
+                    -0.6928
+                  ],
+                  [
+                    11.6667,
+                    -0.7727
+                  ],
+                  [
+                    12.0,
+                    -0.8
+                  ],
+                  [
+                    12.3333,
+                    -0.7727
+                  ],
+                  [
+                    12.6667,
+                    -0.6928
+                  ],
+                  [
+                    13.0,
+                    -0.5657
+                  ],
+                  [
+                    13.3333,
+                    -0.4
+                  ],
+                  [
+                    13.6667,
+                    -0.2071
+                  ],
+                  [
+                    14.0,
+                    -0.0
+                  ],
+                  [
+                    14.3333,
+                    0.2071
+                  ],
+                  [
+                    14.6667,
+                    0.4
+                  ],
+                  [
+                    15.0,
+                    0.5657
+                  ],
+                  [
+                    15.3333,
+                    0.6928
+                  ],
+                  [
+                    15.6667,
+                    0.7727
+                  ],
+                  [
+                    16.0,
+                    0.8
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 0.8,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–time graph: a cosine wave of amplitude 0.8 mm with peaks at 0, 8 and 16 ms; the peak at 8 ms is marked X"
+          }
+        },
+        {
+          "id": "wave-graph-p4",
+          "question": "The graph shows the displacement of the face of an ultrasound transducer against time. Use the graph to determine the frequency of the ultrasound in kHz.",
+          "hint": "Read the period from peaks A and B, convert μs to s, then use f = 1/T.",
+          "walkthrough": [
+            "A is at t = 5 μs and B at t = 25 μs, so T = 25 − 5 = 20 μs = 20 × 10⁻⁶ s.",
+            "f = 1/T = 1 / (20 × 10⁻⁶) = 50 000 Hz",
+            "f = 50 kHz"
+          ],
+          "answer": {
+            "value": 50.0,
+            "unit": "kHz"
+          },
+          "graph": {
+            "x": {
+              "label": "t / μs",
+              "min": 0,
+              "max": 60,
+              "step": 5
+            },
+            "y": {
+              "label": "y / μm",
+              "min": -2.0,
+              "max": 2.0,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.8333,
+                    0.3882
+                  ],
+                  [
+                    1.6667,
+                    0.75
+                  ],
+                  [
+                    2.5,
+                    1.0607
+                  ],
+                  [
+                    3.3333,
+                    1.299
+                  ],
+                  [
+                    4.1667,
+                    1.4489
+                  ],
+                  [
+                    5.0,
+                    1.5
+                  ],
+                  [
+                    5.8333,
+                    1.4489
+                  ],
+                  [
+                    6.6667,
+                    1.299
+                  ],
+                  [
+                    7.5,
+                    1.0607
+                  ],
+                  [
+                    8.3333,
+                    0.75
+                  ],
+                  [
+                    9.1667,
+                    0.3882
+                  ],
+                  [
+                    10.0,
+                    0.0
+                  ],
+                  [
+                    10.8333,
+                    -0.3882
+                  ],
+                  [
+                    11.6667,
+                    -0.75
+                  ],
+                  [
+                    12.5,
+                    -1.0607
+                  ],
+                  [
+                    13.3333,
+                    -1.299
+                  ],
+                  [
+                    14.1667,
+                    -1.4489
+                  ],
+                  [
+                    15.0,
+                    -1.5
+                  ],
+                  [
+                    15.8333,
+                    -1.4489
+                  ],
+                  [
+                    16.6667,
+                    -1.299
+                  ],
+                  [
+                    17.5,
+                    -1.0607
+                  ],
+                  [
+                    18.3333,
+                    -0.75
+                  ],
+                  [
+                    19.1667,
+                    -0.3882
+                  ],
+                  [
+                    20.0,
+                    -0.0
+                  ],
+                  [
+                    20.8333,
+                    0.3882
+                  ],
+                  [
+                    21.6667,
+                    0.75
+                  ],
+                  [
+                    22.5,
+                    1.0607
+                  ],
+                  [
+                    23.3333,
+                    1.299
+                  ],
+                  [
+                    24.1667,
+                    1.4489
+                  ],
+                  [
+                    25.0,
+                    1.5
+                  ],
+                  [
+                    25.8333,
+                    1.4489
+                  ],
+                  [
+                    26.6667,
+                    1.299
+                  ],
+                  [
+                    27.5,
+                    1.0607
+                  ],
+                  [
+                    28.3333,
+                    0.75
+                  ],
+                  [
+                    29.1667,
+                    0.3882
+                  ],
+                  [
+                    30.0,
+                    0.0
+                  ],
+                  [
+                    30.8333,
+                    -0.3882
+                  ],
+                  [
+                    31.6667,
+                    -0.75
+                  ],
+                  [
+                    32.5,
+                    -1.0607
+                  ],
+                  [
+                    33.3333,
+                    -1.299
+                  ],
+                  [
+                    34.1667,
+                    -1.4489
+                  ],
+                  [
+                    35.0,
+                    -1.5
+                  ],
+                  [
+                    35.8333,
+                    -1.4489
+                  ],
+                  [
+                    36.6667,
+                    -1.299
+                  ],
+                  [
+                    37.5,
+                    -1.0607
+                  ],
+                  [
+                    38.3333,
+                    -0.75
+                  ],
+                  [
+                    39.1667,
+                    -0.3882
+                  ],
+                  [
+                    40.0,
+                    -0.0
+                  ],
+                  [
+                    40.8333,
+                    0.3882
+                  ],
+                  [
+                    41.6667,
+                    0.75
+                  ],
+                  [
+                    42.5,
+                    1.0607
+                  ],
+                  [
+                    43.3333,
+                    1.299
+                  ],
+                  [
+                    44.1667,
+                    1.4489
+                  ],
+                  [
+                    45.0,
+                    1.5
+                  ],
+                  [
+                    45.8333,
+                    1.4489
+                  ],
+                  [
+                    46.6667,
+                    1.299
+                  ],
+                  [
+                    47.5,
+                    1.0607
+                  ],
+                  [
+                    48.3333,
+                    0.75
+                  ],
+                  [
+                    49.1667,
+                    0.3882
+                  ],
+                  [
+                    50.0,
+                    0.0
+                  ],
+                  [
+                    50.8333,
+                    -0.3882
+                  ],
+                  [
+                    51.6667,
+                    -0.75
+                  ],
+                  [
+                    52.5,
+                    -1.0607
+                  ],
+                  [
+                    53.3333,
+                    -1.299
+                  ],
+                  [
+                    54.1667,
+                    -1.4489
+                  ],
+                  [
+                    55.0,
+                    -1.5
+                  ],
+                  [
+                    55.8333,
+                    -1.4489
+                  ],
+                  [
+                    56.6667,
+                    -1.299
+                  ],
+                  [
+                    57.5,
+                    -1.0607
+                  ],
+                  [
+                    58.3333,
+                    -0.75
+                  ],
+                  [
+                    59.1667,
+                    -0.3882
+                  ],
+                  [
+                    60.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 5,
+                "y": 1.5,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 25,
+                "y": 1.5,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–time graph: a sine wave of amplitude 1.5 micrometres with peaks at 5, 25 and 45 microseconds; the first two peaks are marked A and B"
+          }
+        },
+        {
+          "id": "wave-graph-p5",
+          "question": "The graph is a snapshot of a water wave in a ripple tank, showing displacement against distance. The period of the wave is 0.25 s. Use the graph to determine the speed of the wave in m s⁻¹.",
+          "hint": "Read λ from peak P to peak Q (in cm, so convert), find f = 1/T, then v = fλ.",
+          "walkthrough": [
+            "P is at x = 0.5 cm and Q at x = 2.5 cm, so λ = 2.0 cm = 0.020 m.",
+            "f = 1/T = 1 / 0.25 = 4.0 Hz",
+            "v = fλ = 4.0 × 0.020",
+            "v = 0.080 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.08,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "x / cm",
+              "min": 0,
+              "max": 6,
+              "step": 0.5
+            },
+            "y": {
+              "label": "y / mm",
+              "min": -3,
+              "max": 3,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0833,
+                    0.5176
+                  ],
+                  [
+                    0.1667,
+                    1.0
+                  ],
+                  [
+                    0.25,
+                    1.4142
+                  ],
+                  [
+                    0.3333,
+                    1.7321
+                  ],
+                  [
+                    0.4167,
+                    1.9319
+                  ],
+                  [
+                    0.5,
+                    2.0
+                  ],
+                  [
+                    0.5833,
+                    1.9319
+                  ],
+                  [
+                    0.6667,
+                    1.7321
+                  ],
+                  [
+                    0.75,
+                    1.4142
+                  ],
+                  [
+                    0.8333,
+                    1.0
+                  ],
+                  [
+                    0.9167,
+                    0.5176
+                  ],
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.0833,
+                    -0.5176
+                  ],
+                  [
+                    1.1667,
+                    -1.0
+                  ],
+                  [
+                    1.25,
+                    -1.4142
+                  ],
+                  [
+                    1.3333,
+                    -1.7321
+                  ],
+                  [
+                    1.4167,
+                    -1.9319
+                  ],
+                  [
+                    1.5,
+                    -2.0
+                  ],
+                  [
+                    1.5833,
+                    -1.9319
+                  ],
+                  [
+                    1.6667,
+                    -1.7321
+                  ],
+                  [
+                    1.75,
+                    -1.4142
+                  ],
+                  [
+                    1.8333,
+                    -1.0
+                  ],
+                  [
+                    1.9167,
+                    -0.5176
+                  ],
+                  [
+                    2.0,
+                    -0.0
+                  ],
+                  [
+                    2.0833,
+                    0.5176
+                  ],
+                  [
+                    2.1667,
+                    1.0
+                  ],
+                  [
+                    2.25,
+                    1.4142
+                  ],
+                  [
+                    2.3333,
+                    1.7321
+                  ],
+                  [
+                    2.4167,
+                    1.9319
+                  ],
+                  [
+                    2.5,
+                    2.0
+                  ],
+                  [
+                    2.5833,
+                    1.9319
+                  ],
+                  [
+                    2.6667,
+                    1.7321
+                  ],
+                  [
+                    2.75,
+                    1.4142
+                  ],
+                  [
+                    2.8333,
+                    1.0
+                  ],
+                  [
+                    2.9167,
+                    0.5176
+                  ],
+                  [
+                    3.0,
+                    0.0
+                  ],
+                  [
+                    3.0833,
+                    -0.5176
+                  ],
+                  [
+                    3.1667,
+                    -1.0
+                  ],
+                  [
+                    3.25,
+                    -1.4142
+                  ],
+                  [
+                    3.3333,
+                    -1.7321
+                  ],
+                  [
+                    3.4167,
+                    -1.9319
+                  ],
+                  [
+                    3.5,
+                    -2.0
+                  ],
+                  [
+                    3.5833,
+                    -1.9319
+                  ],
+                  [
+                    3.6667,
+                    -1.7321
+                  ],
+                  [
+                    3.75,
+                    -1.4142
+                  ],
+                  [
+                    3.8333,
+                    -1.0
+                  ],
+                  [
+                    3.9167,
+                    -0.5176
+                  ],
+                  [
+                    4.0,
+                    -0.0
+                  ],
+                  [
+                    4.0833,
+                    0.5176
+                  ],
+                  [
+                    4.1667,
+                    1.0
+                  ],
+                  [
+                    4.25,
+                    1.4142
+                  ],
+                  [
+                    4.3333,
+                    1.7321
+                  ],
+                  [
+                    4.4167,
+                    1.9319
+                  ],
+                  [
+                    4.5,
+                    2.0
+                  ],
+                  [
+                    4.5833,
+                    1.9319
+                  ],
+                  [
+                    4.6667,
+                    1.7321
+                  ],
+                  [
+                    4.75,
+                    1.4142
+                  ],
+                  [
+                    4.8333,
+                    1.0
+                  ],
+                  [
+                    4.9167,
+                    0.5176
+                  ],
+                  [
+                    5.0,
+                    0.0
+                  ],
+                  [
+                    5.0833,
+                    -0.5176
+                  ],
+                  [
+                    5.1667,
+                    -1.0
+                  ],
+                  [
+                    5.25,
+                    -1.4142
+                  ],
+                  [
+                    5.3333,
+                    -1.7321
+                  ],
+                  [
+                    5.4167,
+                    -1.9319
+                  ],
+                  [
+                    5.5,
+                    -2.0
+                  ],
+                  [
+                    5.5833,
+                    -1.9319
+                  ],
+                  [
+                    5.6667,
+                    -1.7321
+                  ],
+                  [
+                    5.75,
+                    -1.4142
+                  ],
+                  [
+                    5.8333,
+                    -1.0
+                  ],
+                  [
+                    5.9167,
+                    -0.5176
+                  ],
+                  [
+                    6.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.5,
+                "y": 2.0,
+                "label": "P",
+                "drop": true
+              },
+              {
+                "x": 2.5,
+                "y": 2.0,
+                "label": "Q",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–distance graph: a sine wave of amplitude 2 mm with peaks at 0.5, 2.5 and 4.5 cm; the first two peaks are marked P and Q"
+          }
+        },
+        {
+          "id": "wave-graph-p6",
+          "question": "The graph is a snapshot of a sea wave, showing displacement against distance. P and Q are two points on the wave. Use the graph to determine the phase difference between P and Q, in radians.",
+          "hint": "Find the wavelength from the graph, then phase difference = (separation of P and Q / λ) × 2π.",
+          "walkthrough": [
+            "The wave crosses zero going upwards at x = 0 and again at x = 8.0 m, so λ = 8.0 m.",
+            "P is at x = 2.0 m and Q at x = 8.0 m, so Δx = 8.0 − 2.0 = 6.0 m.",
+            "Δφ = (Δx / λ) × 2π = (6.0 / 8.0) × 2π = 0.75 × 2π",
+            "Δφ = 4.71 rad"
+          ],
+          "answer": {
+            "value": 4.71,
+            "unit": "rad"
+          },
+          "graph": {
+            "x": {
+              "label": "x / m",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "y / m",
+              "min": -0.8,
+              "max": 0.8,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3333,
+                    0.1553
+                  ],
+                  [
+                    0.6667,
+                    0.3
+                  ],
+                  [
+                    1.0,
+                    0.4243
+                  ],
+                  [
+                    1.3333,
+                    0.5196
+                  ],
+                  [
+                    1.6667,
+                    0.5796
+                  ],
+                  [
+                    2.0,
+                    0.6
+                  ],
+                  [
+                    2.3333,
+                    0.5796
+                  ],
+                  [
+                    2.6667,
+                    0.5196
+                  ],
+                  [
+                    3.0,
+                    0.4243
+                  ],
+                  [
+                    3.3333,
+                    0.3
+                  ],
+                  [
+                    3.6667,
+                    0.1553
+                  ],
+                  [
+                    4.0,
+                    0.0
+                  ],
+                  [
+                    4.3333,
+                    -0.1553
+                  ],
+                  [
+                    4.6667,
+                    -0.3
+                  ],
+                  [
+                    5.0,
+                    -0.4243
+                  ],
+                  [
+                    5.3333,
+                    -0.5196
+                  ],
+                  [
+                    5.6667,
+                    -0.5796
+                  ],
+                  [
+                    6.0,
+                    -0.6
+                  ],
+                  [
+                    6.3333,
+                    -0.5796
+                  ],
+                  [
+                    6.6667,
+                    -0.5196
+                  ],
+                  [
+                    7.0,
+                    -0.4243
+                  ],
+                  [
+                    7.3333,
+                    -0.3
+                  ],
+                  [
+                    7.6667,
+                    -0.1553
+                  ],
+                  [
+                    8.0,
+                    -0.0
+                  ],
+                  [
+                    8.3333,
+                    0.1553
+                  ],
+                  [
+                    8.6667,
+                    0.3
+                  ],
+                  [
+                    9.0,
+                    0.4243
+                  ],
+                  [
+                    9.3333,
+                    0.5196
+                  ],
+                  [
+                    9.6667,
+                    0.5796
+                  ],
+                  [
+                    10.0,
+                    0.6
+                  ],
+                  [
+                    10.3333,
+                    0.5796
+                  ],
+                  [
+                    10.6667,
+                    0.5196
+                  ],
+                  [
+                    11.0,
+                    0.4243
+                  ],
+                  [
+                    11.3333,
+                    0.3
+                  ],
+                  [
+                    11.6667,
+                    0.1553
+                  ],
+                  [
+                    12.0,
+                    0.0
+                  ],
+                  [
+                    12.3333,
+                    -0.1553
+                  ],
+                  [
+                    12.6667,
+                    -0.3
+                  ],
+                  [
+                    13.0,
+                    -0.4243
+                  ],
+                  [
+                    13.3333,
+                    -0.5196
+                  ],
+                  [
+                    13.6667,
+                    -0.5796
+                  ],
+                  [
+                    14.0,
+                    -0.6
+                  ],
+                  [
+                    14.3333,
+                    -0.5796
+                  ],
+                  [
+                    14.6667,
+                    -0.5196
+                  ],
+                  [
+                    15.0,
+                    -0.4243
+                  ],
+                  [
+                    15.3333,
+                    -0.3
+                  ],
+                  [
+                    15.6667,
+                    -0.1553
+                  ],
+                  [
+                    16.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2.0,
+                "y": 0.6,
+                "label": "P",
+                "drop": true
+              },
+              {
+                "x": 8.0,
+                "y": 0,
+                "label": "Q",
+                "drop": true
+              }
+            ],
+            "alt": "Displacement–distance graph: a sine wave of amplitude 0.6 m and wavelength 8 m; P marks the peak at 2 m and Q the zero crossing at 8 m"
+          }
+        }
+      ]
+    }
+  ]
+}

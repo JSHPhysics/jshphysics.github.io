@@ -1,0 +1,1662 @@
+{
+  "id": "materials",
+  "title": "Materials and fluids",
+  "subtitle": "Density, Hooke's law, Young modulus, elastic energy, pressure and upthrust",
+  "order": 50,
+  "types": [
+    {
+      "id": "density",
+      "name": "Density of a solid, liquid or planet",
+      "equations": [
+        "ρ = m / V",
+        "V(cube) = l × w × h",
+        "V(cylinder) = πr²L",
+        "V(sphere) = (4/3)πr³"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Density is mass divided by volume. If the volume is not given, work it out from the dimensions first, in metres. Convert g cm⁻³ to kg m⁻³ by multiplying by 1000 (1 cm³ = 10⁻⁶ m³, 1 g = 10⁻³ kg).",
+      "commonErrors": [
+        "Using the diameter instead of the radius in πr²L or (4/3)πr³",
+        "Forgetting to cube the conversion factor: 1 cm³ = 10⁻⁶ m³, not 10⁻²",
+        "Dividing volume by mass instead of mass by volume"
+      ],
+      "worked": {
+        "id": "density-w",
+        "question": "An aluminium block measures 0.120 m × 0.080 m × 0.050 m and has a mass of 1.30 kg. Calculate the density of aluminium.",
+        "steps": [
+          "Known: m = 1.30 kg, dimensions 0.120 m × 0.080 m × 0.050 m. Unknown: ρ.",
+          "V = l × w × h = 0.120 × 0.080 × 0.050 = 4.80 × 10⁻⁴ m³",
+          "ρ = m / V = 1.30 / 4.80 × 10⁻⁴",
+          "ρ = 2708 kg m⁻³",
+          "ρ = 2710 kg m⁻³ (3 s.f.)"
+        ],
+        "answer": {
+          "value": 2710,
+          "unit": "kg m⁻³"
+        }
+      },
+      "practice": [
+        {
+          "id": "density-p1",
+          "question": "A bottle of olive oil holds 5.00 × 10⁻⁴ m³ of oil with a mass of 0.460 kg. Calculate the density of the oil.",
+          "hint": "Use ρ = m / V directly; the volume is already in m³.",
+          "walkthrough": [
+            "m = 0.460 kg, V = 5.00 × 10⁻⁴ m³",
+            "ρ = m / V = 0.460 / 5.00 × 10⁻⁴",
+            "ρ = 920 kg m⁻³"
+          ],
+          "answer": {
+            "value": 920,
+            "unit": "kg m⁻³"
+          }
+        },
+        {
+          "id": "density-p2",
+          "question": "A gold bar in a bank vault has a mass of 12.4 kg and a volume of 6.42 × 10⁻⁴ m³. Calculate the density of gold.",
+          "hint": "Density is mass divided by volume.",
+          "walkthrough": [
+            "m = 12.4 kg, V = 6.42 × 10⁻⁴ m³",
+            "ρ = m / V = 12.4 / 6.42 × 10⁻⁴",
+            "ρ = 19 300 kg m⁻³"
+          ],
+          "answer": {
+            "value": 19300,
+            "unit": "kg m⁻³"
+          }
+        },
+        {
+          "id": "density-p3",
+          "question": "A steel ball bearing from a bicycle wheel has a radius of 6.0 mm. The density of steel is 7800 kg m⁻³. Calculate the mass of the ball bearing in grams.",
+          "hint": "Find the volume of a sphere with r in metres, multiply by the density, then convert kg to g.",
+          "walkthrough": [
+            "r = 6.0 mm = 6.0 × 10⁻³ m",
+            "V = (4/3)πr³ = (4/3) × π × (6.0 × 10⁻³)³ = 9.05 × 10⁻⁷ m³",
+            "m = ρV = 7800 × 9.05 × 10⁻⁷ = 7.06 × 10⁻³ kg",
+            "m = 7.06 g"
+          ],
+          "answer": {
+            "value": 7.06,
+            "unit": "g"
+          }
+        },
+        {
+          "id": "density-p4",
+          "question": "A solid copper cylinder used as a laboratory calorimeter block has a radius of 1.5 cm and a length of 8.0 cm. The density of copper is 8.96 g cm⁻³. Calculate the mass of the cylinder in kilograms.",
+          "hint": "Work in cm and g cm⁻³ to get the mass in grams, then divide by 1000.",
+          "walkthrough": [
+            "V = πr²L = π × 1.5² × 8.0 = 56.5 cm³",
+            "m = ρV = 8.96 × 56.5 = 507 g",
+            "m = 507 / 1000 = 0.507 kg"
+          ],
+          "answer": {
+            "value": 0.507,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "density-p5",
+          "question": "A reel of copper wire has a mass of 0.0250 kg. The wire has a cross-sectional area of 0.50 mm² and copper has a density of 8960 kg m⁻³. Calculate the length of wire on the reel.",
+          "hint": "Find the volume from ρ = m / V, then use V = A × L with the area in m².",
+          "walkthrough": [
+            "V = m / ρ = 0.0250 / 8960 = 2.79 × 10⁻⁶ m³",
+            "A = 0.50 mm² = 0.50 × 10⁻⁶ m²",
+            "L = V / A = 2.79 × 10⁻⁶ / 0.50 × 10⁻⁶",
+            "L = 5.58 m"
+          ],
+          "answer": {
+            "value": 5.58,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "density-p6",
+          "question": "Mars has a mass of 6.42 × 10²³ kg and a mean radius of 3.39 × 10⁶ m. Treating Mars as a sphere, calculate its mean density.",
+          "hint": "Find the volume of the sphere first, then divide the mass by it.",
+          "walkthrough": [
+            "V = (4/3)πr³ = (4/3) × π × (3.39 × 10⁶)³ = 1.63 × 10²⁰ m³",
+            "ρ = m / V = 6.42 × 10²³ / 1.63 × 10²⁰",
+            "ρ = 3930 kg m⁻³"
+          ],
+          "answer": {
+            "value": 3930,
+            "unit": "kg m⁻³"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hookes-law",
+      "name": "Hooke's law for a single spring",
+      "equations": [
+        "F = kΔx"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Hooke's law links the force on a spring to its extension (or compression) through the spring constant k. Identify which two of F, k and Δx you have, rearrange for the third, and make sure Δx is in metres so that k comes out in N m⁻¹. Extension is the change in length, not the total length.",
+      "commonErrors": [
+        "Leaving the extension in mm or cm, giving k a thousand or a hundred times too small",
+        "Using the stretched length instead of the extension (stretched length − natural length)",
+        "Forgetting that a hanging mass exerts a force of mg, not m"
+      ],
+      "worked": {
+        "id": "hookes-law-w",
+        "question": "A spring in a laboratory extends by 0.060 m when a force of 1.5 N is applied. Calculate the spring constant.",
+        "steps": [
+          "Known: F = 1.5 N, Δx = 0.060 m. Unknown: k.",
+          "F = kΔx, so k = F / Δx",
+          "k = 1.5 / 0.060",
+          "k = 25 N m⁻¹"
+        ],
+        "answer": {
+          "value": 25.0,
+          "unit": "N m⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "hookes-law-p1",
+          "question": "The spring inside a force meter has a spring constant of 120 N m⁻¹. Calculate the force needed to extend it by 0.050 m.",
+          "hint": "Substitute directly into F = kΔx.",
+          "walkthrough": [
+            "k = 120 N m⁻¹, Δx = 0.050 m",
+            "F = kΔx = 120 × 0.050",
+            "F = 6.0 N"
+          ],
+          "answer": {
+            "value": 6.0,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "hookes-law-p2",
+          "question": "Each spring around the edge of a trampoline has a spring constant of 3500 N m⁻¹. Calculate the force in one spring when it is stretched by 0.020 m.",
+          "hint": "Force equals spring constant times extension.",
+          "walkthrough": [
+            "k = 3500 N m⁻¹, Δx = 0.020 m",
+            "F = kΔx = 3500 × 0.020",
+            "F = 70 N"
+          ],
+          "answer": {
+            "value": 70.0,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "hookes-law-p3",
+          "question": "A spring in a car's suspension test rig extends by 45 mm when a force of 9.0 N is applied. Calculate the spring constant in N m⁻¹.",
+          "hint": "Convert 45 mm to metres before rearranging for k.",
+          "walkthrough": [
+            "Δx = 45 mm = 0.045 m, F = 9.0 N",
+            "k = F / Δx = 9.0 / 0.045",
+            "k = 200 N m⁻¹"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "N m⁻¹"
+          }
+        },
+        {
+          "id": "hookes-law-p4",
+          "question": "A spring in a mattress has a spring constant of 2.4 kN m⁻¹. Calculate the compression, in mm, produced by a force of 36 N.",
+          "hint": "Convert kN m⁻¹ to N m⁻¹, rearrange for Δx, then convert metres to millimetres.",
+          "walkthrough": [
+            "k = 2.4 kN m⁻¹ = 2400 N m⁻¹, F = 36 N",
+            "Δx = F / k = 36 / 2400 = 0.015 m",
+            "Δx = 15 mm"
+          ],
+          "answer": {
+            "value": 15.0,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "hookes-law-p5",
+          "question": "A 0.350 kg mass hangs at rest from a spring of spring constant 70 N m⁻¹ in a school laboratory. Calculate the extension of the spring.",
+          "hint": "Find the weight of the mass first (W = mg); that is the force on the spring.",
+          "walkthrough": [
+            "F = W = mg = 0.350 × 9.81 = 3.43 N",
+            "Δx = F / k = 3.43 / 70",
+            "Δx = 0.0491 m"
+          ],
+          "answer": {
+            "value": 0.0491,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "hookes-law-p6",
+          "question": "A spring on a garden gate has a natural length of 0.250 m. When the gate is opened the spring is stretched to a length of 0.410 m by a force of 48 N. Calculate the spring constant.",
+          "hint": "Extension is stretched length minus natural length; then rearrange F = kΔx.",
+          "walkthrough": [
+            "Δx = 0.410 − 0.250 = 0.160 m",
+            "k = F / Δx = 48 / 0.160",
+            "k = 300 N m⁻¹"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "N m⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "springs-combined",
+      "name": "Springs in series and parallel",
+      "equations": [
+        "Parallel: k = k₁ + k₂",
+        "Series: 1/k = 1/k₁ + 1/k₂",
+        "F = kΔx"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Springs side by side (parallel) share the load, so their spring constants add and the combination is stiffer. Springs end to end (series) each carry the full load, so the reciprocals add and the combination is softer. Find the combined k first, then use F = kΔx for the whole arrangement.",
+      "commonErrors": [
+        "Forgetting to take the reciprocal at the end of a series calculation",
+        "Adding the spring constants for springs in series",
+        "Using the extension of one spring when the question asks for the total extension of a series pair"
+      ],
+      "worked": {
+        "id": "springs-combined-w",
+        "question": "Two identical springs, each of spring constant 30 N m⁻¹, are connected side by side (in parallel) and support a load of 4.5 N. Calculate the extension of the arrangement.",
+        "steps": [
+          "Known: k₁ = k₂ = 30 N m⁻¹ in parallel, F = 4.5 N. Unknown: Δx.",
+          "Parallel: k = k₁ + k₂ = 30 + 30 = 60 N m⁻¹",
+          "F = kΔx, so Δx = F / k",
+          "Δx = 4.5 / 60",
+          "Δx = 0.075 m"
+        ],
+        "answer": {
+          "value": 0.075,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "springs-combined-p1",
+          "question": "Two springs of spring constants 200 N m⁻¹ and 300 N m⁻¹ are connected in parallel under a weightlifting bench. Calculate the combined spring constant.",
+          "hint": "In parallel the spring constants simply add.",
+          "walkthrough": [
+            "k = k₁ + k₂ = 200 + 300",
+            "k = 500 N m⁻¹"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "N m⁻¹"
+          }
+        },
+        {
+          "id": "springs-combined-p2",
+          "question": "Two springs of spring constants 40 N m⁻¹ and 60 N m⁻¹ are joined end to end (in series) in a toy. Calculate the combined spring constant.",
+          "hint": "In series add the reciprocals, then take the reciprocal of the result.",
+          "walkthrough": [
+            "1/k = 1/k₁ + 1/k₂ = 1/40 + 1/60 = 0.0417 m N⁻¹",
+            "k = 1 / 0.0417",
+            "k = 24 N m⁻¹"
+          ],
+          "answer": {
+            "value": 24.0,
+            "unit": "N m⁻¹"
+          }
+        },
+        {
+          "id": "springs-combined-p3",
+          "question": "Two identical springs, each of spring constant 80 N m⁻¹, are connected in series and a force of 2.0 N is applied. Calculate the total extension in mm.",
+          "hint": "Find the series spring constant (half of one spring for identical springs), then Δx = F / k and convert to mm.",
+          "walkthrough": [
+            "1/k = 1/80 + 1/80 = 2/80, so k = 40 N m⁻¹",
+            "Δx = F / k = 2.0 / 40 = 0.050 m",
+            "Δx = 50 mm"
+          ],
+          "answer": {
+            "value": 50.0,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "springs-combined-p4",
+          "question": "Two springs in series have a combined spring constant of 12 N m⁻¹. One of the springs has a spring constant of 20 N m⁻¹. Calculate the spring constant of the other spring.",
+          "hint": "Rearrange 1/k = 1/k₁ + 1/k₂ to make 1/k₂ the subject.",
+          "walkthrough": [
+            "1/k₂ = 1/k − 1/k₁ = 1/12 − 1/20",
+            "1/k₂ = 0.0833 − 0.0500 = 0.0333 m N⁻¹",
+            "k₂ = 1 / 0.0333 = 30 N m⁻¹"
+          ],
+          "answer": {
+            "value": 30.0,
+            "unit": "N m⁻¹"
+          }
+        },
+        {
+          "id": "springs-combined-p5",
+          "question": "A mass of 0.60 kg hangs at rest from three identical springs connected in parallel. Each spring has a spring constant of 45 N m⁻¹. Calculate the extension of the springs.",
+          "hint": "Find the weight (mg) and the parallel spring constant (3k), then use F = kΔx.",
+          "walkthrough": [
+            "F = mg = 0.60 × 9.81 = 5.89 N",
+            "k = 3 × 45 = 135 N m⁻¹",
+            "Δx = F / k = 5.89 / 135",
+            "Δx = 0.0436 m"
+          ],
+          "answer": {
+            "value": 0.0436,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "springs-combined-p6",
+          "question": "Springs of spring constants 120 N m⁻¹ and 180 N m⁻¹ are connected in series in a hospital bed mechanism. The total extension of the pair is 0.090 m. Calculate the force applied.",
+          "hint": "Find the series spring constant first, then F = kΔx using the total extension.",
+          "walkthrough": [
+            "1/k = 1/120 + 1/180 = 0.0139 m N⁻¹, so k = 72 N m⁻¹",
+            "F = kΔx = 72 × 0.090",
+            "F = 6.48 N"
+          ],
+          "answer": {
+            "value": 6.48,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "young-modulus",
+      "name": "Stress, strain and the Young modulus",
+      "equations": [
+        "σ = F / A",
+        "ε = ΔL / L",
+        "E = σ / ε",
+        "A = πd² / 4"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Stress is force per unit cross-sectional area (Pa); strain is extension divided by original length (no unit); the Young modulus is stress divided by strain (Pa). For a wire of given diameter, find the area from A = πd²/4 with d in metres. Keep every length in metres.",
+      "commonErrors": [
+        "Using the diameter as the radius in πr²",
+        "Forgetting to square the 10⁻³ when converting mm to m in an area",
+        "Dividing strain by stress, giving a tiny answer with the wrong unit"
+      ],
+      "worked": {
+        "id": "young-modulus-w",
+        "question": "A steel wire of length 2.00 m and diameter 0.50 mm extends by 3.0 mm when a force of 60 N is applied. Calculate the Young modulus of steel.",
+        "steps": [
+          "Known: L = 2.00 m, d = 0.50 mm = 5.0 × 10⁻⁴ m, F = 60 N, ΔL = 3.0 × 10⁻³ m. Unknown: E.",
+          "A = πd²/4 = π × (5.0 × 10⁻⁴)² / 4 = 1.96 × 10⁻⁷ m²",
+          "σ = F / A = 60 / 1.96 × 10⁻⁷ = 3.06 × 10⁸ Pa",
+          "ε = ΔL / L = 3.0 × 10⁻³ / 2.00 = 1.5 × 10⁻³",
+          "E = σ / ε = 3.06 × 10⁸ / 1.5 × 10⁻³",
+          "E = 2.04 × 10¹¹ Pa"
+        ],
+        "answer": {
+          "value": 204000000000,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "young-modulus-p1",
+          "question": "A tension of 250 N acts on a climbing rope of cross-sectional area 1.25 × 10⁻⁶ m². Calculate the stress in the rope.",
+          "hint": "Stress is force divided by area.",
+          "walkthrough": [
+            "F = 250 N, A = 1.25 × 10⁻⁶ m²",
+            "σ = F / A = 250 / 1.25 × 10⁻⁶",
+            "σ = 2.00 × 10⁸ Pa"
+          ],
+          "answer": {
+            "value": 200000000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "young-modulus-p2",
+          "question": "A sample of bone is tested in a materials lab. A stress of 1.2 × 10⁸ Pa produces a strain of 8.0 × 10⁻⁴. Calculate the Young modulus of the bone.",
+          "hint": "Young modulus is stress divided by strain.",
+          "walkthrough": [
+            "σ = 1.2 × 10⁸ Pa, ε = 8.0 × 10⁻⁴",
+            "E = σ / ε = 1.2 × 10⁸ / 8.0 × 10⁻⁴",
+            "E = 1.50 × 10¹¹ Pa"
+          ],
+          "answer": {
+            "value": 150000000000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "young-modulus-p3",
+          "question": "A guitar string of length 3.50 m (before fitting) is stretched so that it extends by 2.1 mm. Calculate the strain in the string.",
+          "hint": "Convert the extension to metres; strain has no unit.",
+          "walkthrough": [
+            "ΔL = 2.1 mm = 2.1 × 10⁻³ m, L = 3.50 m",
+            "ε = ΔL / L = 2.1 × 10⁻³ / 3.50",
+            "ε = 6.0 × 10⁻⁴"
+          ],
+          "answer": {
+            "value": 0.0006,
+            "unit": ""
+          }
+        },
+        {
+          "id": "young-modulus-p4",
+          "question": "A copper wire of diameter 0.80 mm in a crane's control circuit is under a tension of 180 N. Calculate the stress in the wire.",
+          "hint": "Find the cross-sectional area from A = πd²/4 with d in metres, then σ = F / A.",
+          "walkthrough": [
+            "d = 0.80 mm = 8.0 × 10⁻⁴ m",
+            "A = πd²/4 = π × (8.0 × 10⁻⁴)² / 4 = 5.03 × 10⁻⁷ m²",
+            "σ = F / A = 180 / 5.03 × 10⁻⁷",
+            "σ = 3.58 × 10⁸ Pa"
+          ],
+          "answer": {
+            "value": 358000000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "young-modulus-p5",
+          "question": "In an experiment a copper wire of length 1.80 m and diameter 0.60 mm extends by 2.1 mm under a load of 40 N. Calculate the Young modulus of copper.",
+          "hint": "Work out stress and strain separately, then divide.",
+          "walkthrough": [
+            "A = πd²/4 = π × (6.0 × 10⁻⁴)² / 4 = 2.83 × 10⁻⁷ m²",
+            "σ = F / A = 40 / 2.83 × 10⁻⁷ = 1.41 × 10⁸ Pa",
+            "ε = ΔL / L = 2.1 × 10⁻³ / 1.80 = 1.17 × 10⁻³",
+            "E = σ / ε = 1.41 × 10⁸ / 1.17 × 10⁻³",
+            "E = 1.21 × 10¹¹ Pa"
+          ],
+          "answer": {
+            "value": 121000000000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "young-modulus-p6",
+          "question": "A nylon fishing line has a Young modulus of 3.0 × 10⁹ Pa and a diameter of 0.40 mm. A 1.5 m length of the line extends by 12 mm when a fish pulls on it. Calculate the force exerted by the fish.",
+          "hint": "Find the strain, multiply by E to get the stress, then F = σA.",
+          "walkthrough": [
+            "ε = ΔL / L = 12 × 10⁻³ / 1.5 = 8.0 × 10⁻³",
+            "σ = Eε = 3.0 × 10⁹ × 8.0 × 10⁻³ = 2.4 × 10⁷ Pa",
+            "A = πd²/4 = π × (4.0 × 10⁻⁴)² / 4 = 1.26 × 10⁻⁷ m²",
+            "F = σA = 2.4 × 10⁷ × 1.26 × 10⁻⁷",
+            "F = 3.02 N"
+          ],
+          "answer": {
+            "value": 3.02,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wire-extension",
+      "name": "Extension of a wire from the Young modulus",
+      "equations": [
+        "ΔL = FL / (AE)",
+        "A = πd² / 4"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Combine E = (F/A)/(ΔL/L) and rearrange to ΔL = FL/(AE). Find the area first if only the diameter is given, then substitute with every length in metres. Convert the answer to mm if the question asks for it.",
+      "commonErrors": [
+        "Putting the Young modulus in the numerator",
+        "Using mm for the diameter but m for the length in the same calculation",
+        "Quoting the answer in metres when the question asks for mm, or vice versa"
+      ],
+      "worked": {
+        "id": "wire-extension-w",
+        "question": "A steel wire of length 1.50 m and diameter 0.40 mm hangs from a ceiling. The Young modulus of steel is 2.0 × 10¹¹ Pa. Calculate the extension, in mm, when a force of 25 N is applied.",
+        "steps": [
+          "Known: L = 1.50 m, d = 4.0 × 10⁻⁴ m, E = 2.0 × 10¹¹ Pa, F = 25 N. Unknown: ΔL.",
+          "A = πd²/4 = π × (4.0 × 10⁻⁴)² / 4 = 1.26 × 10⁻⁷ m²",
+          "ΔL = FL / (AE)",
+          "ΔL = (25 × 1.50) / (1.26 × 10⁻⁷ × 2.0 × 10¹¹) = 37.5 / 2.51 × 10⁴",
+          "ΔL = 1.49 × 10⁻³ m",
+          "ΔL = 1.49 mm"
+        ],
+        "answer": {
+          "value": 1.49,
+          "unit": "mm"
+        }
+      },
+      "practice": [
+        {
+          "id": "wire-extension-p1",
+          "question": "A copper wire has a cross-sectional area of 5.0 × 10⁻⁷ m² and a length of 2.5 m. The Young modulus of copper is 1.2 × 10¹¹ Pa. Calculate the extension when a force of 20 N is applied.",
+          "hint": "Substitute straight into ΔL = FL / (AE).",
+          "walkthrough": [
+            "F = 20 N, L = 2.5 m, A = 5.0 × 10⁻⁷ m², E = 1.2 × 10¹¹ Pa",
+            "ΔL = FL / (AE) = (20 × 2.5) / (5.0 × 10⁻⁷ × 1.2 × 10¹¹)",
+            "ΔL = 50 / 6.0 × 10⁴",
+            "ΔL = 8.33 × 10⁻⁴ m"
+          ],
+          "answer": {
+            "value": 0.000833,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "wire-extension-p2",
+          "question": "A lift cable of cross-sectional area 3.0 × 10⁻⁴ m² and length 40 m supports a load of 9000 N. The Young modulus of the steel cable is 2.0 × 10¹¹ Pa. Calculate the extension of the cable.",
+          "hint": "All the quantities are in SI units already; use ΔL = FL / (AE).",
+          "walkthrough": [
+            "ΔL = FL / (AE) = (9000 × 40) / (3.0 × 10⁻⁴ × 2.0 × 10¹¹)",
+            "ΔL = 3.6 × 10⁵ / 6.0 × 10⁷",
+            "ΔL = 6.0 × 10⁻³ m"
+          ],
+          "answer": {
+            "value": 0.006,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "wire-extension-p3",
+          "question": "A brass wire of diameter 0.90 mm and length 2.2 m is used to hang a picture. The Young modulus of brass is 1.0 × 10¹¹ Pa. Calculate the extension, in mm, when the wire carries a load of 36 N.",
+          "hint": "Find the area from the diameter in metres first, then convert the answer to mm.",
+          "walkthrough": [
+            "A = πd²/4 = π × (9.0 × 10⁻⁴)² / 4 = 6.36 × 10⁻⁷ m²",
+            "ΔL = FL / (AE) = (36 × 2.2) / (6.36 × 10⁻⁷ × 1.0 × 10¹¹)",
+            "ΔL = 79.2 / 6.36 × 10⁴ = 1.24 × 10⁻³ m",
+            "ΔL = 1.24 mm"
+          ],
+          "answer": {
+            "value": 1.24,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "wire-extension-p4",
+          "question": "A tendon of cross-sectional area 60 mm² and length 0.20 m has a Young modulus of 1.5 × 10⁹ Pa. Calculate the extension, in mm, when the muscle pulls on it with a force of 900 N.",
+          "hint": "Convert mm² to m² (1 mm² = 10⁻⁶ m²) before substituting.",
+          "walkthrough": [
+            "A = 60 mm² = 60 × 10⁻⁶ m²",
+            "ΔL = FL / (AE) = (900 × 0.20) / (60 × 10⁻⁶ × 1.5 × 10⁹)",
+            "ΔL = 180 / 9.0 × 10⁴ = 2.0 × 10⁻³ m",
+            "ΔL = 2.0 mm"
+          ],
+          "answer": {
+            "value": 2.0,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "wire-extension-p5",
+          "question": "A 12 kg bag of climbing gear hangs from a 10 m nylon rope of diameter 6.0 mm. The Young modulus of nylon is 3.0 × 10⁹ Pa. Calculate the extension of the rope in mm.",
+          "hint": "Find the weight (mg) and the area (πd²/4) first, then ΔL = FL / (AE).",
+          "walkthrough": [
+            "F = mg = 12 × 9.81 = 118 N",
+            "A = πd²/4 = π × (6.0 × 10⁻³)² / 4 = 2.83 × 10⁻⁵ m²",
+            "ΔL = FL / (AE) = (118 × 10) / (2.83 × 10⁻⁵ × 3.0 × 10⁹)",
+            "ΔL = 1180 / 8.48 × 10⁴ = 1.39 × 10⁻² m",
+            "ΔL = 13.9 mm"
+          ],
+          "answer": {
+            "value": 13.9,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "wire-extension-p6",
+          "question": "A steel piano string of diameter 0.25 mm extends by 2.0 mm when tightened to a tension of 70 N. The Young modulus of steel is 2.0 × 10¹¹ Pa. Calculate the original length of the string.",
+          "hint": "Find the area, then rearrange ΔL = FL / (AE) to make L the subject.",
+          "walkthrough": [
+            "A = πd²/4 = π × (2.5 × 10⁻⁴)² / 4 = 4.91 × 10⁻⁸ m²",
+            "L = ΔL × AE / F",
+            "L = (2.0 × 10⁻³ × 4.91 × 10⁻⁸ × 2.0 × 10¹¹) / 70 = 19.6 / 70",
+            "L = 0.280 m"
+          ],
+          "answer": {
+            "value": 0.28,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "elastic-energy",
+      "name": "Elastic strain energy",
+      "equations": [
+        "E = ½FΔx",
+        "E = ½kΔx²"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The energy stored in a stretched or compressed object is the area under its force–extension graph. While the line is straight (Hooke's law obeyed) that area is a triangle: E = ½FΔx, or E = ½kΔx² after substituting F = kΔx. Use whichever pair of quantities you are given, with Δx in metres.",
+      "commonErrors": [
+        "Forgetting the ½ (using FΔx, the area of the rectangle)",
+        "Squaring F instead of Δx in ½kΔx²",
+        "Using the extension in mm, which makes the energy a million times too small in ½kΔx²"
+      ],
+      "worked": {
+        "id": "elastic-energy-w",
+        "question": "A spring in a pogo stick has a spring constant of 250 N m⁻¹. Calculate the elastic strain energy stored when it is compressed by 0.060 m.",
+        "steps": [
+          "Known: k = 250 N m⁻¹, Δx = 0.060 m. Unknown: E.",
+          "E = ½kΔx²",
+          "E = ½ × 250 × 0.060² = ½ × 250 × 3.6 × 10⁻³",
+          "E = 0.45 J"
+        ],
+        "answer": {
+          "value": 0.45,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "elastic-energy-p1",
+          "question": "A force–extension graph for a bungee cord is a straight line from the origin to the point where the force is 12 N and the extension is 0.30 m. Calculate the elastic strain energy stored at this extension.",
+          "hint": "The energy is the area of the triangle under the line: ½FΔx.",
+          "walkthrough": [
+            "F = 12 N, Δx = 0.30 m",
+            "E = ½FΔx = ½ × 12 × 0.30",
+            "E = 1.8 J"
+          ],
+          "answer": {
+            "value": 1.8,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-energy-p2",
+          "question": "The spring in a car door latch has a spring constant of 800 N m⁻¹. Calculate the energy stored when the spring is compressed by 0.050 m.",
+          "hint": "Use E = ½kΔx² with the compression in metres.",
+          "walkthrough": [
+            "k = 800 N m⁻¹, Δx = 0.050 m",
+            "E = ½kΔx² = ½ × 800 × 0.050²",
+            "E = 1.0 J"
+          ],
+          "answer": {
+            "value": 1.0,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-energy-p3",
+          "question": "A steel wire in a suspension bridge model obeys Hooke's law up to a load of 80 N, at which point its extension is 1.6 mm. Calculate the energy stored in the wire at this load.",
+          "hint": "Convert the extension to metres, then use E = ½FΔx.",
+          "walkthrough": [
+            "Δx = 1.6 mm = 1.6 × 10⁻³ m, F = 80 N",
+            "E = ½FΔx = ½ × 80 × 1.6 × 10⁻³",
+            "E = 0.064 J"
+          ],
+          "answer": {
+            "value": 0.064,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-energy-p4",
+          "question": "The elastic of a catapult stores 2.4 J of energy when it is stretched by 0.20 m. Assuming it obeys Hooke's law, calculate its spring constant.",
+          "hint": "Rearrange E = ½kΔx² to make k the subject.",
+          "walkthrough": [
+            "E = ½kΔx², so k = 2E / Δx²",
+            "k = (2 × 2.4) / 0.20² = 4.8 / 0.040",
+            "k = 120 N m⁻¹"
+          ],
+          "answer": {
+            "value": 120,
+            "unit": "N m⁻¹"
+          }
+        },
+        {
+          "id": "elastic-energy-p5",
+          "question": "A 0.50 kg mass is hung from a spring of spring constant 60 N m⁻¹ and comes to rest. Calculate the elastic strain energy stored in the spring.",
+          "hint": "Find the weight and use F = kΔx to get the extension, then E = ½FΔx.",
+          "walkthrough": [
+            "F = mg = 0.50 × 9.81 = 4.905 N",
+            "Δx = F / k = 4.905 / 60 = 0.0818 m",
+            "E = ½FΔx = ½ × 4.905 × 0.0818",
+            "E = 0.200 J"
+          ],
+          "answer": {
+            "value": 0.2,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-energy-p6",
+          "question": "A spring in a retractable pen has a spring constant of 400 N m⁻¹. A force of 32 N compresses it. Calculate the energy stored in the compressed spring.",
+          "hint": "Find the compression from F = kΔx first, then use E = ½FΔx.",
+          "walkthrough": [
+            "Δx = F / k = 32 / 400 = 0.080 m",
+            "E = ½FΔx = ½ × 32 × 0.080",
+            "E = 1.28 J"
+          ],
+          "answer": {
+            "value": 1.28,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pressure",
+      "name": "Pressure on a surface and pressure in a fluid",
+      "equations": [
+        "p = F / A",
+        "p = hρg",
+        "p(total) = p(atmospheric) + hρg"
+      ],
+      "boards": [
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Pressure on a solid surface is force divided by area. The extra pressure at depth h in a fluid of density ρ is hρg. If the question asks for the total (absolute) pressure, add the atmospheric pressure acting on the surface; if it asks for the pressure due to the fluid alone, do not.",
+      "commonErrors": [
+        "Leaving an area in cm² instead of converting to m² (1 cm² = 10⁻⁴ m²)",
+        "Adding atmospheric pressure when the question asks only for the pressure due to the liquid",
+        "Using the density of water for every liquid"
+      ],
+      "worked": {
+        "id": "pressure-w",
+        "question": "A scuba diver is at a depth of 25 m in seawater of density 1030 kg m⁻³. Atmospheric pressure at the surface is 1.01 × 10⁵ Pa. Calculate the total pressure on the diver.",
+        "steps": [
+          "Known: h = 25 m, ρ = 1030 kg m⁻³, p(atm) = 1.01 × 10⁵ Pa. Unknown: total p.",
+          "Pressure due to water: hρg = 25 × 1030 × 9.81 = 2.53 × 10⁵ Pa",
+          "Total pressure = p(atm) + hρg = 1.01 × 10⁵ + 2.53 × 10⁵",
+          "p = 3.54 × 10⁵ Pa"
+        ],
+        "answer": {
+          "value": 354000,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "pressure-p1",
+          "question": "A hydraulic press exerts a force of 4500 N on a piston of area 0.015 m². Calculate the pressure on the piston.",
+          "hint": "Pressure is force divided by area.",
+          "walkthrough": [
+            "F = 4500 N, A = 0.015 m²",
+            "p = F / A = 4500 / 0.015",
+            "p = 3.0 × 10⁵ Pa"
+          ],
+          "answer": {
+            "value": 300000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p2",
+          "question": "A swimming pool is 1.8 m deep. The density of water is 1000 kg m⁻³. Calculate the pressure due to the water at the bottom of the pool.",
+          "hint": "Use p = hρg; do not add atmospheric pressure since only the water's contribution is asked for.",
+          "walkthrough": [
+            "h = 1.8 m, ρ = 1000 kg m⁻³",
+            "p = hρg = 1.8 × 1000 × 9.81",
+            "p = 1.77 × 10⁴ Pa"
+          ],
+          "answer": {
+            "value": 17700,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p3",
+          "question": "A person stands on one stiletto heel of area 1.2 cm², exerting a force of 300 N on the floor. Calculate the pressure on the floor.",
+          "hint": "Convert the area to m² (1 cm² = 10⁻⁴ m²) before dividing.",
+          "walkthrough": [
+            "A = 1.2 cm² = 1.2 × 10⁻⁴ m², F = 300 N",
+            "p = F / A = 300 / 1.2 × 10⁻⁴",
+            "p = 2.5 × 10⁶ Pa"
+          ],
+          "answer": {
+            "value": 2500000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p4",
+          "question": "The pressure due to the water at the base of a dam is 2.0 × 10⁵ Pa. The density of water is 1000 kg m⁻³. Calculate the depth of the water behind the dam.",
+          "hint": "Rearrange p = hρg to make h the subject.",
+          "walkthrough": [
+            "h = p / (ρg) = 2.0 × 10⁵ / (1000 × 9.81)",
+            "h = 2.0 × 10⁵ / 9810",
+            "h = 20.4 m"
+          ],
+          "answer": {
+            "value": 20.4,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "pressure-p5",
+          "question": "A storage tank is filled with oil of density 850 kg m⁻³ to a depth of 3.2 m. The surface of the oil is open to the atmosphere, where the pressure is 1.01 × 10⁵ Pa. Calculate the total pressure at the bottom of the tank.",
+          "hint": "Find the pressure due to the oil with hρg, then add atmospheric pressure.",
+          "walkthrough": [
+            "hρg = 3.2 × 850 × 9.81 = 2.67 × 10⁴ Pa",
+            "p = p(atm) + hρg = 1.01 × 10⁵ + 2.67 × 10⁴",
+            "p = 1.28 × 10⁵ Pa"
+          ],
+          "answer": {
+            "value": 128000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p6",
+          "question": "A submarine hatch of area 0.80 m² is at a depth of 60 m in seawater of density 1030 kg m⁻³. Calculate the force on the hatch due to the water alone.",
+          "hint": "Find the pressure due to the water with hρg, then F = pA.",
+          "walkthrough": [
+            "p = hρg = 60 × 1030 × 9.81 = 6.06 × 10⁵ Pa",
+            "F = pA = 6.06 × 10⁵ × 0.80",
+            "F = 4.85 × 10⁵ N"
+          ],
+          "answer": {
+            "value": 485000,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "upthrust",
+      "name": "Upthrust and Archimedes' principle",
+      "equations": [
+        "Upthrust = weight of fluid displaced = ρ(fluid) V g",
+        "Floating: upthrust = weight",
+        "Apparent weight = weight − upthrust"
+      ],
+      "boards": [
+        "OCR A",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Upthrust equals the weight of fluid displaced, so multiply the fluid's density by the submerged volume and by g. A fully submerged object displaces its own volume; a floating object displaces just enough fluid for the upthrust to equal its weight. Apparent weight in a fluid is weight minus upthrust.",
+      "commonErrors": [
+        "Using the density of the object instead of the density of the fluid",
+        "Forgetting the factor g, giving a mass of fluid rather than a weight",
+        "Using the whole volume of a floating object instead of the submerged part"
+      ],
+      "worked": {
+        "id": "upthrust-w",
+        "question": "A steel block of volume 2.0 × 10⁻³ m³ is fully submerged in water of density 1000 kg m⁻³. Calculate the upthrust on the block.",
+        "steps": [
+          "Known: V = 2.0 × 10⁻³ m³, ρ(water) = 1000 kg m⁻³. Unknown: upthrust.",
+          "Upthrust = weight of water displaced = ρVg",
+          "Upthrust = 1000 × 2.0 × 10⁻³ × 9.81",
+          "Upthrust = 19.6 N"
+        ],
+        "answer": {
+          "value": 19.6,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "upthrust-p1",
+          "question": "A diver's air cylinder of volume 0.012 m³ is fully submerged in seawater of density 1030 kg m⁻³. Calculate the upthrust on the cylinder.",
+          "hint": "Upthrust = ρ(fluid) × V × g.",
+          "walkthrough": [
+            "ρ = 1030 kg m⁻³, V = 0.012 m³",
+            "Upthrust = ρVg = 1030 × 0.012 × 9.81",
+            "Upthrust = 121 N"
+          ],
+          "answer": {
+            "value": 121,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "upthrust-p2",
+          "question": "A helium party balloon has a volume of 0.50 m³. The density of the surrounding air is 1.2 kg m⁻³. Calculate the upthrust on the balloon.",
+          "hint": "The fluid is air; use its density in ρVg.",
+          "walkthrough": [
+            "ρ(air) = 1.2 kg m⁻³, V = 0.50 m³",
+            "Upthrust = ρVg = 1.2 × 0.50 × 9.81",
+            "Upthrust = 5.89 N"
+          ],
+          "answer": {
+            "value": 5.89,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "upthrust-p3",
+          "question": "A stone of volume 250 cm³ is lowered fully into a pond. The density of water is 1000 kg m⁻³. Calculate the upthrust on the stone.",
+          "hint": "Convert cm³ to m³ (1 cm³ = 10⁻⁶ m³) before using ρVg.",
+          "walkthrough": [
+            "V = 250 cm³ = 250 × 10⁻⁶ m³ = 2.5 × 10⁻⁴ m³",
+            "Upthrust = ρVg = 1000 × 2.5 × 10⁻⁴ × 9.81",
+            "Upthrust = 2.45 N"
+          ],
+          "answer": {
+            "value": 2.45,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "upthrust-p4",
+          "question": "A rowing boat of weight 5000 N floats on a lake. The density of the water is 1000 kg m⁻³. Calculate the volume of water displaced by the boat.",
+          "hint": "A floating object has upthrust equal to its weight; rearrange ρVg = W for V.",
+          "walkthrough": [
+            "Floating, so upthrust = weight: ρVg = 5000",
+            "V = W / (ρg) = 5000 / (1000 × 9.81)",
+            "V = 0.510 m³"
+          ],
+          "answer": {
+            "value": 0.51,
+            "unit": "m³"
+          }
+        },
+        {
+          "id": "upthrust-p5",
+          "question": "An aluminium block of mass 0.540 kg and density 2700 kg m⁻³ hangs from a newton meter and is fully submerged in water of density 1000 kg m⁻³. Calculate the reading on the newton meter.",
+          "hint": "Find the block's volume from its mass and density, then the upthrust, then subtract from the weight.",
+          "walkthrough": [
+            "W = mg = 0.540 × 9.81 = 5.30 N",
+            "V = m / ρ = 0.540 / 2700 = 2.0 × 10⁻⁴ m³",
+            "Upthrust = ρ(water)Vg = 1000 × 2.0 × 10⁻⁴ × 9.81 = 1.96 N",
+            "Reading = W − upthrust = 5.30 − 1.96 = 3.34 N"
+          ],
+          "answer": {
+            "value": 3.34,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "upthrust-p6",
+          "question": "A wooden cylinder of mass 1.6 kg and uniform cross-sectional area 0.020 m² floats upright in water of density 1000 kg m⁻³. Calculate the depth of the cylinder below the water surface.",
+          "hint": "Upthrust equals weight, so find the submerged volume from ρVg = mg, then depth = V / A.",
+          "walkthrough": [
+            "Floating: ρ(water) V g = mg, so V = m / ρ(water) = 1.6 / 1000 = 1.6 × 10⁻³ m³",
+            "Submerged volume = A × depth, so depth = V / A",
+            "depth = 1.6 × 10⁻³ / 0.020",
+            "depth = 0.080 m"
+          ],
+          "answer": {
+            "value": 0.08,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stokes-terminal",
+      "name": "Stokes' law and terminal velocity",
+      "equations": [
+        "F = 6πηrv",
+        "At terminal velocity: weight = upthrust + drag",
+        "V(sphere) = (4/3)πr³"
+      ],
+      "boards": [
+        "Edexcel"
+      ],
+      "method": "Stokes' law gives the viscous drag on a small sphere moving slowly through a fluid: F = 6πηrv, with r the radius in metres and η the viscosity in Pa s. At terminal velocity the forces balance, so set weight − upthrust equal to the drag and solve for v. Work out the sphere's volume, weight and upthrust as separate steps.",
+      "commonErrors": [
+        "Using the diameter instead of the radius in 6πηrv",
+        "Forgetting the upthrust when finding terminal velocity in a liquid",
+        "Using the density of the fluid for the weight or the density of the sphere for the upthrust"
+      ],
+      "worked": {
+        "id": "stokes-terminal-w",
+        "question": "A steel ball bearing of radius 1.0 mm and density 7800 kg m⁻³ falls through glycerol of density 1260 kg m⁻³ and viscosity 1.4 Pa s. Calculate its terminal velocity.",
+        "steps": [
+          "Known: r = 1.0 × 10⁻³ m, ρ(steel) = 7800 kg m⁻³, ρ(glycerol) = 1260 kg m⁻³, η = 1.4 Pa s. Unknown: v.",
+          "V = (4/3)πr³ = (4/3) × π × (1.0 × 10⁻³)³ = 4.19 × 10⁻⁹ m³",
+          "Weight = ρ(steel)Vg = 7800 × 4.19 × 10⁻⁹ × 9.81 = 3.21 × 10⁻⁴ N",
+          "Upthrust = ρ(glycerol)Vg = 1260 × 4.19 × 10⁻⁹ × 9.81 = 5.18 × 10⁻⁵ N",
+          "At terminal velocity, drag = weight − upthrust = 2.69 × 10⁻⁴ N",
+          "v = F / (6πηr) = 2.69 × 10⁻⁴ / (6 × π × 1.4 × 1.0 × 10⁻³) = 2.69 × 10⁻⁴ / 0.0264",
+          "v = 0.0102 m s⁻¹"
+        ],
+        "answer": {
+          "value": 0.0102,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "stokes-terminal-p1",
+          "question": "A sphere of radius 2.0 mm moves at 0.050 m s⁻¹ through engine oil of viscosity 0.85 Pa s. Calculate the viscous drag on the sphere.",
+          "hint": "Substitute into F = 6πηrv with r in metres.",
+          "walkthrough": [
+            "r = 2.0 × 10⁻³ m, v = 0.050 m s⁻¹, η = 0.85 Pa s",
+            "F = 6πηrv = 6 × π × 0.85 × 2.0 × 10⁻³ × 0.050",
+            "F = 1.60 × 10⁻³ N"
+          ],
+          "answer": {
+            "value": 0.0016,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "stokes-terminal-p2",
+          "question": "A raindrop of radius 0.50 mm falls at 4.0 m s⁻¹ through air of viscosity 1.8 × 10⁻⁵ Pa s. Calculate the viscous drag on the raindrop according to Stokes' law.",
+          "hint": "F = 6πηrv; the radius must be in metres.",
+          "walkthrough": [
+            "r = 0.50 mm = 5.0 × 10⁻⁴ m, v = 4.0 m s⁻¹, η = 1.8 × 10⁻⁵ Pa s",
+            "F = 6πηrv = 6 × π × 1.8 × 10⁻⁵ × 5.0 × 10⁻⁴ × 4.0",
+            "F = 6.79 × 10⁻⁷ N"
+          ],
+          "answer": {
+            "value": 6.79e-07,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "stokes-terminal-p3",
+          "question": "In a viscosity experiment a ball of radius 1.5 mm moving at 0.020 m s⁻¹ through honey experiences a viscous drag of 1.2 × 10⁻³ N. Calculate the viscosity of the honey.",
+          "hint": "Rearrange F = 6πηrv to make η the subject.",
+          "walkthrough": [
+            "η = F / (6πrv)",
+            "η = 1.2 × 10⁻³ / (6 × π × 1.5 × 10⁻³ × 0.020) = 1.2 × 10⁻³ / 5.65 × 10⁻⁴",
+            "η = 2.12 Pa s"
+          ],
+          "answer": {
+            "value": 2.12,
+            "unit": "Pa s"
+          }
+        },
+        {
+          "id": "stokes-terminal-p4",
+          "question": "A sphere of diameter 3.0 mm moves through a sugar syrup of viscosity 0.30 Pa s. The viscous drag on it is 4.5 × 10⁻⁴ N. Calculate the speed of the sphere.",
+          "hint": "Halve the diameter to get the radius in metres, then rearrange for v.",
+          "walkthrough": [
+            "r = 3.0 mm / 2 = 1.5 × 10⁻³ m",
+            "v = F / (6πηr) = 4.5 × 10⁻⁴ / (6 × π × 0.30 × 1.5 × 10⁻³)",
+            "v = 4.5 × 10⁻⁴ / 8.48 × 10⁻³",
+            "v = 0.0531 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.0531,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "stokes-terminal-p5",
+          "question": "A fog droplet of radius 10 μm and density 1000 kg m⁻³ falls through still air of viscosity 1.8 × 10⁻⁵ Pa s. Ignoring upthrust, calculate the terminal velocity of the droplet.",
+          "hint": "Find the droplet's weight from its volume and density, then set it equal to 6πηrv.",
+          "walkthrough": [
+            "r = 10 μm = 1.0 × 10⁻⁵ m",
+            "V = (4/3)πr³ = (4/3) × π × (1.0 × 10⁻⁵)³ = 4.19 × 10⁻¹⁵ m³",
+            "Weight = ρVg = 1000 × 4.19 × 10⁻¹⁵ × 9.81 = 4.11 × 10⁻¹¹ N",
+            "v = W / (6πηr) = 4.11 × 10⁻¹¹ / (6 × π × 1.8 × 10⁻⁵ × 1.0 × 10⁻⁵) = 4.11 × 10⁻¹¹ / 3.39 × 10⁻⁹",
+            "v = 0.0121 m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.0121,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "stokes-terminal-p6",
+          "question": "A glass bead of radius 0.80 mm and density 2500 kg m⁻³ falls through oil of density 900 kg m⁻³ and viscosity 0.25 Pa s. Calculate the terminal velocity of the bead.",
+          "hint": "At terminal velocity drag = weight − upthrust; find both from the bead's volume, then v = F / (6πηr).",
+          "walkthrough": [
+            "V = (4/3)πr³ = (4/3) × π × (8.0 × 10⁻⁴)³ = 2.14 × 10⁻⁹ m³",
+            "Weight = 2500 × 2.14 × 10⁻⁹ × 9.81 = 5.26 × 10⁻⁵ N",
+            "Upthrust = 900 × 2.14 × 10⁻⁹ × 9.81 = 1.89 × 10⁻⁵ N",
+            "Drag = 5.26 × 10⁻⁵ − 1.89 × 10⁻⁵ = 3.37 × 10⁻⁵ N",
+            "v = F / (6πηr) = 3.37 × 10⁻⁵ / (6 × π × 0.25 × 8.0 × 10⁻⁴) = 3.37 × 10⁻⁵ / 3.77 × 10⁻³",
+            "v = 8.93 × 10⁻³ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.00893,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fx-stress-strain-graph",
+      "name": "Reading force–extension and stress–strain graphs",
+      "equations": [
+        "k = F / Δx = gradient of the F–x graph",
+        "elastic strain energy = ½FΔx = area under the F–x graph",
+        "Young modulus = σ / ε = gradient of the linear region of the σ–ε graph",
+        "strain energy per unit volume = ½σε = area under the σ–ε graph",
+        "E = kL / A"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "On a force–extension graph the gradient of the straight part is the spring constant and the area under the line is the elastic strain energy; on a stress–strain graph the gradient of the straight part is the Young modulus and the area is the strain energy per unit volume. Read the axis scales first (mm, cm, kN, MPa, 10⁸ Pa, 10⁻³) and convert to SI before you multiply or divide.",
+      "commonErrors": [
+        "Leaving the extension in mm, giving a spring constant 1000 times too small",
+        "Forgetting the ½ in the triangular area for strain energy",
+        "Ignoring the scale on a stress axis labelled MPa or 10⁸ Pa, or a strain axis labelled 10⁻³",
+        "Taking the gradient beyond the limit of proportionality"
+      ],
+      "worked": {
+        "id": "fx-stress-strain-graph-w",
+        "question": "The force–extension graph is for a spring tested in a school laboratory. Use the graph to determine the spring constant.",
+        "steps": [
+          "The spring constant is the gradient of the F–x graph; the line is straight through the origin, so use O and X.",
+          "X = (80 mm, 20 N); 80 mm = 0.080 m",
+          "k = F / Δx = (20 − 0) / (0.080 − 0)",
+          "k = 250 N m⁻¹"
+        ],
+        "answer": {
+          "value": 250.0,
+          "unit": "N m⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "x / mm",
+            "min": 0,
+            "max": 80,
+            "step": 10
+          },
+          "y": {
+            "label": "F / N",
+            "min": 0,
+            "max": 20,
+            "step": 5
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  80,
+                  20
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 80,
+              "y": 20,
+              "label": "X",
+              "drop": true,
+              "dx": -16,
+              "dy": -8
+            }
+          ],
+          "alt": "Force–extension graph: a straight line from the origin to 20 N at an extension of 80 mm, with X marked at the end"
+        }
+      },
+      "practice": [
+        {
+          "id": "fx-stress-strain-graph-p1",
+          "question": "The force–extension graph is for the spring in a toy catapult. Use the graph to determine the elastic strain energy stored when the extension is 40 mm, shown by the shaded area up to P.",
+          "hint": "The shaded region is a triangle with base 40 mm (in metres) and height equal to the force at P.",
+          "walkthrough": [
+            "P = (40 mm, 20 N); 40 mm = 0.040 m",
+            "E = area of the triangle = ½ × Δx × F = ½ × 0.040 × 20",
+            "E = 0.40 J"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "x / mm",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 30,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    60,
+                    30
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 40,
+                "y": 20,
+                "label": "P",
+                "drop": true,
+                "dx": -16,
+                "dy": -6
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 40
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to 30 N at 60 mm; the triangle under the line up to P (40 mm, 20 N) is shaded"
+          }
+        },
+        {
+          "id": "fx-stress-strain-graph-p2",
+          "question": "The stress–strain graph is for a sample of a steel alloy tested to destruction; B is the point at which it breaks. Note the scales on both axes. Use the graph to determine the breaking stress of the alloy, in Pa.",
+          "hint": "Read the stress at B from the gridlines; the axis is in MPa (1 MPa = 10⁶ Pa).",
+          "walkthrough": [
+            "At B the stress reads 400 MPa.",
+            "400 MPa = 400 × 10⁶ Pa",
+            "breaking stress = 4.00 × 10⁸ Pa"
+          ],
+          "answer": {
+            "value": 400000000,
+            "unit": "Pa"
+          },
+          "graph": {
+            "x": {
+              "label": "ε / 10⁻³",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "y": {
+              "label": "σ / MPa",
+              "min": 0,
+              "max": 500,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2,
+                    300
+                  ]
+                ]
+              },
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    2.0,
+                    300.0
+                  ],
+                  [
+                    3.0,
+                    355.0
+                  ],
+                  [
+                    4.0,
+                    400.0
+                  ],
+                  [
+                    5.0,
+                    435.0
+                  ],
+                  [
+                    6.0,
+                    460.0
+                  ],
+                  [
+                    7.0,
+                    475.0
+                  ],
+                  [
+                    8.0,
+                    480.0
+                  ],
+                  [
+                    9.0,
+                    475.0
+                  ],
+                  [
+                    10.0,
+                    460.0
+                  ],
+                  [
+                    11.0,
+                    435.0
+                  ],
+                  [
+                    12.0,
+                    400.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 12,
+                "y": 400,
+                "label": "B",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "alt": "Stress–strain graph rising linearly to 300 MPa at a strain of 0.002, curving over a maximum near 480 MPa, and ending at the breaking point B (0.012, 400 MPa)"
+          }
+        },
+        {
+          "id": "fx-stress-strain-graph-p3",
+          "question": "The stress–strain graph is for a brass wire; P is its limit of proportionality. Use the graph to determine the Young modulus of brass.",
+          "hint": "Young modulus is the gradient of the straight section OP; convert MPa to Pa and apply the 10⁻³ on the strain axis.",
+          "walkthrough": [
+            "P = (2.5 × 10⁻³, 250 MPa) = (2.5 × 10⁻³, 250 × 10⁶ Pa)",
+            "E = σ / ε = gradient of OP = 250 × 10⁶ / (2.5 × 10⁻³)",
+            "E = 1.00 × 10¹¹ Pa"
+          ],
+          "answer": {
+            "value": 100000000000,
+            "unit": "Pa"
+          },
+          "graph": {
+            "x": {
+              "label": "ε / 10⁻³",
+              "min": 0,
+              "max": 5,
+              "step": 0.5
+            },
+            "y": {
+              "label": "σ / MPa",
+              "min": 0,
+              "max": 300,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2.5,
+                    250
+                  ]
+                ]
+              },
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    2.5,
+                    250.0
+                  ],
+                  [
+                    2.75,
+                    257.6
+                  ],
+                  [
+                    3.0,
+                    264.4
+                  ],
+                  [
+                    3.25,
+                    270.4
+                  ],
+                  [
+                    3.5,
+                    275.6
+                  ],
+                  [
+                    3.75,
+                    280.0
+                  ],
+                  [
+                    4.0,
+                    283.6
+                  ],
+                  [
+                    4.25,
+                    286.4
+                  ],
+                  [
+                    4.5,
+                    288.4
+                  ],
+                  [
+                    4.75,
+                    289.6
+                  ],
+                  [
+                    5.0,
+                    290.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2.5,
+                "y": 250,
+                "label": "P",
+                "drop": true,
+                "dx": 8,
+                "dy": 14
+              }
+            ],
+            "alt": "Stress–strain graph: straight from the origin to P (strain 0.0025, stress 250 MPa), then curving with decreasing gradient to 290 MPa at a strain of 0.005"
+          }
+        },
+        {
+          "id": "fx-stress-strain-graph-p4",
+          "question": "The stress–strain graph is for an aluminium strut loaded within its elastic region. Use the graph to determine the strain energy stored per unit volume when the strain is 4.0 × 10⁻³, shown by the shaded area up to P.",
+          "hint": "The shaded triangle has base 4.0 × 10⁻³ and height equal to the stress at P in Pa (the axis is in units of 10⁸ Pa).",
+          "walkthrough": [
+            "P = (4.0 × 10⁻³, 3.0 × 10⁸ Pa)",
+            "strain energy per unit volume = area = ½ × σ × ε = ½ × 3.0 × 10⁸ × 4.0 × 10⁻³",
+            "strain energy per unit volume = 6.0 × 10⁵ J m⁻³"
+          ],
+          "answer": {
+            "value": 600000,
+            "unit": "J m⁻³"
+          },
+          "graph": {
+            "x": {
+              "label": "ε / 10⁻³",
+              "min": 0,
+              "max": 5,
+              "step": 1
+            },
+            "y": {
+              "label": "σ / 10⁸ Pa",
+              "min": 0,
+              "max": 4,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    3.75
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 3,
+                "label": "P",
+                "drop": true,
+                "dx": 8,
+                "dy": 14
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 4
+              }
+            ],
+            "alt": "Stress–strain graph: a straight line from the origin through P (strain 0.004, stress 3 × 10⁸ Pa); the triangle under the line up to P is shaded"
+          }
+        },
+        {
+          "id": "fx-stress-strain-graph-p5",
+          "question": "The force–extension graph is for a steel wire of original length 2.0 m and cross-sectional area 0.50 mm². Use the graph to determine the Young modulus of steel.",
+          "hint": "Find the gradient F / Δx from X (in N m⁻¹), then use E = (F / Δx) × L / A with A in m².",
+          "walkthrough": [
+            "X = (2.0 mm, 100 N): F / Δx = 100 / (2.0 × 10⁻³) = 5.0 × 10⁴ N m⁻¹",
+            "A = 0.50 mm² = 0.50 × 10⁻⁶ m²",
+            "E = (F / Δx) × L / A = 5.0 × 10⁴ × 2.0 / (0.50 × 10⁻⁶)",
+            "E = 2.00 × 10¹¹ Pa"
+          ],
+          "answer": {
+            "value": 200000000000,
+            "unit": "Pa"
+          },
+          "graph": {
+            "x": {
+              "label": "x / mm",
+              "min": 0,
+              "max": 2.5,
+              "step": 0.5
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 120,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2.0,
+                    100
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2.0,
+                "y": 100,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "alt": "Force–extension graph for a steel wire: a straight line from the origin to X (2.0 mm, 100 N)"
+          }
+        },
+        {
+          "id": "fx-stress-strain-graph-p6",
+          "question": "The force–extension graph is for a heavy industrial spring. Note the units on both axes. Use the graph to determine the work done in stretching the spring from A (extension 4.0 cm) to B (extension 10 cm), shown by the shaded area.",
+          "hint": "The shaded region between A and B is a trapezium; convert kN to N and cm to m before multiplying.",
+          "walkthrough": [
+            "A = (4.0 cm, 2.0 kN) and B = (10 cm, 5.0 kN)",
+            "Parallel sides 2000 N and 5000 N; width = 10 − 4.0 = 6.0 cm = 0.060 m",
+            "W = ½ × (2000 + 5000) × 0.060",
+            "W = 210 J"
+          ],
+          "answer": {
+            "value": 210.0,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "x / cm",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "F / kN",
+              "min": 0,
+              "max": 6,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    12,
+                    6
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 2,
+                "label": "A",
+                "drop": true,
+                "dx": -16,
+                "dy": -6
+              },
+              {
+                "x": 10,
+                "y": 5,
+                "label": "B",
+                "drop": true,
+                "dx": -16,
+                "dy": -6
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 4,
+                "to": 10
+              }
+            ],
+            "alt": "Force–extension graph for a heavy industrial spring: a straight line from the origin to 6 kN at 12 cm; the trapezium under the line between A (4 cm, 2 kN) and B (10 cm, 5 kN) is shaded"
+          }
+        }
+      ]
+    }
+  ]
+}

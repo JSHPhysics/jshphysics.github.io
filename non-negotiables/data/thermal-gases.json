@@ -1,0 +1,1832 @@
+{
+  "id": "thermal-gases",
+  "title": "Thermal physics and gases",
+  "subtitle": "Specific heat capacity, latent heat, ideal gases and kinetic theory",
+  "order": 100,
+  "types": [
+    {
+      "id": "temperature-conversion",
+      "name": "Converting between °C and K",
+      "equations": [
+        "T (K) = θ (°C) + 273",
+        "Δθ (°C) = ΔT (K)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Add 273 to go from °C to K; subtract 273 to go back. A temperature difference is the same number in °C and in K, so never add 273 to a difference. Any equation with T in it (gas laws, kinetic theory) needs the temperature in kelvin.",
+      "commonErrors": [
+        "Adding 273 to a temperature change, not just to a temperature",
+        "Substituting °C into pV = nRT or ⟨KE⟩ = (3/2)kT",
+        "Using 273 for one conversion and 273.15 for another in the same question"
+      ],
+      "worked": {
+        "id": "temperature-conversion-w",
+        "question": "Normal human body temperature is 37 °C. Express this temperature in kelvin.",
+        "steps": [
+          "Known: θ = 37 °C. Unknown: T in K.",
+          "T (K) = θ (°C) + 273",
+          "T = 37 + 273",
+          "T = 310 K"
+        ],
+        "answer": {
+          "value": 310,
+          "unit": "K"
+        }
+      },
+      "practice": [
+        {
+          "id": "temperature-conversion-p1",
+          "question": "Liquid nitrogen boils at 77 K. Express this temperature in °C.",
+          "hint": "Going from K to °C, subtract 273; the answer will be negative.",
+          "walkthrough": [
+            "T = 77 K, find θ in °C.",
+            "θ = T − 273 = 77 − 273",
+            "θ = −196 °C"
+          ],
+          "answer": {
+            "value": -196,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "temperature-conversion-p2",
+          "question": "A domestic oven is set to 180 °C. Express this temperature in kelvin.",
+          "hint": "Add 273 to a Celsius temperature to get kelvin.",
+          "walkthrough": [
+            "θ = 180 °C, find T in K.",
+            "T = 180 + 273",
+            "T = 453 K"
+          ],
+          "answer": {
+            "value": 453,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "temperature-conversion-p3",
+          "question": "A cup of tea cools from 85 °C to 22 °C. Calculate the fall in temperature in kelvin.",
+          "hint": "A temperature difference has the same size in °C and in K.",
+          "walkthrough": [
+            "Δθ = 85 − 22 = 63 °C",
+            "A difference in °C equals the same difference in K.",
+            "ΔT = 63 K"
+          ],
+          "answer": {
+            "value": 63,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "temperature-conversion-p4",
+          "question": "The surface temperature of the Sun is about 5800 K. Express this temperature in °C.",
+          "hint": "Subtract 273 from the kelvin temperature.",
+          "walkthrough": [
+            "T = 5800 K, find θ in °C.",
+            "θ = 5800 − 273 = 5527 °C",
+            "θ = 5530 °C (3 s.f.)"
+          ],
+          "answer": {
+            "value": 5530,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "temperature-conversion-p5",
+          "question": "A gas sample in a cold store at −20 °C is warmed until its temperature is 310 K. Calculate the rise in temperature in kelvin.",
+          "hint": "Convert the starting temperature to kelvin first, then subtract.",
+          "walkthrough": [
+            "Starting temperature: T₁ = −20 + 273 = 253 K",
+            "Final temperature: T₂ = 310 K",
+            "ΔT = 310 − 253",
+            "ΔT = 57 K"
+          ],
+          "answer": {
+            "value": 57,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "temperature-conversion-p6",
+          "question": "A datalogger records the temperature of an engine block as 300 K at start-up. Twenty minutes later a thermometer on the block reads 95 °C. Calculate the rise in temperature of the block in kelvin.",
+          "hint": "Put both temperatures in the same unit before subtracting.",
+          "walkthrough": [
+            "Final temperature: T₂ = 95 + 273 = 368 K",
+            "Starting temperature: T₁ = 300 K",
+            "ΔT = 368 − 300",
+            "ΔT = 68 K"
+          ],
+          "answer": {
+            "value": 68,
+            "unit": "K"
+          }
+        }
+      ]
+    },
+    {
+      "id": "specific-heat-capacity",
+      "name": "Specific heat capacity",
+      "equations": [
+        "ΔE = mcΔθ",
+        "E = Pt"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Recognise it by a mass that warms up or cools down without changing state. Write ΔE = mcΔθ, put the mass in kg and the temperature change in K (or °C, same size), then rearrange for whichever of E, m, c or Δθ is unknown. If a heater of power P runs for time t, the energy supplied is E = Pt with t in seconds.",
+      "commonErrors": [
+        "Using the mass in grams instead of kilograms",
+        "Using a temperature in kelvin where a temperature change is needed",
+        "Leaving the heater time in minutes when working out E = Pt"
+      ],
+      "worked": {
+        "id": "specific-heat-capacity-w",
+        "question": "A kettle contains 1.5 kg of water at 20 °C. Calculate the energy needed to heat the water to 100 °C. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+        "steps": [
+          "Known: m = 1.5 kg, c = 4200 J kg⁻¹ K⁻¹, Δθ = 100 − 20 = 80 K. Unknown: ΔE.",
+          "ΔE = mcΔθ",
+          "ΔE = 1.5 × 4200 × 80",
+          "ΔE = 504 000 J",
+          "ΔE = 5.04 × 10⁵ J"
+        ],
+        "answer": {
+          "value": 504000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "specific-heat-capacity-p1",
+          "question": "A 2.0 kg copper block is warmed from 15 °C to 25 °C. Calculate the energy supplied to the block. Specific heat capacity of copper = 390 J kg⁻¹ K⁻¹.",
+          "hint": "Use ΔE = mcΔθ with Δθ = 25 − 15.",
+          "walkthrough": [
+            "m = 2.0 kg, c = 390 J kg⁻¹ K⁻¹, Δθ = 25 − 15 = 10 K.",
+            "ΔE = mcΔθ = 2.0 × 390 × 10",
+            "ΔE = 7800 J"
+          ],
+          "answer": {
+            "value": 7800,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "specific-heat-capacity-p2",
+          "question": "A bath holds 80 kg of water. Calculate the energy needed to raise its temperature by 30 K. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "The temperature change is given directly; substitute into ΔE = mcΔθ.",
+          "walkthrough": [
+            "m = 80 kg, c = 4200 J kg⁻¹ K⁻¹, Δθ = 30 K.",
+            "ΔE = 80 × 4200 × 30",
+            "ΔE = 10 080 000 J",
+            "ΔE = 1.01 × 10⁷ J (3 s.f.)"
+          ],
+          "answer": {
+            "value": 10100000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "specific-heat-capacity-p3",
+          "question": "In an experiment, 10 800 J of energy raises the temperature of a 0.50 kg aluminium block by 24.0 K. Calculate the specific heat capacity of aluminium.",
+          "hint": "Rearrange ΔE = mcΔθ to make c the subject.",
+          "walkthrough": [
+            "ΔE = 10 800 J, m = 0.50 kg, Δθ = 24.0 K, find c.",
+            "c = ΔE / (mΔθ)",
+            "c = 10 800 / (0.50 × 24.0) = 10 800 / 12.0",
+            "c = 900 J kg⁻¹ K⁻¹"
+          ],
+          "answer": {
+            "value": 900,
+            "unit": "J kg⁻¹ K⁻¹"
+          }
+        },
+        {
+          "id": "specific-heat-capacity-p4",
+          "question": "A microwave oven supplies 42 kJ of energy to 250 g of water. Calculate the rise in temperature of the water. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Convert kJ to J and g to kg before rearranging for Δθ.",
+          "walkthrough": [
+            "ΔE = 42 × 10³ J = 42 000 J, m = 250 g = 0.250 kg, c = 4200 J kg⁻¹ K⁻¹.",
+            "Δθ = ΔE / (mc)",
+            "Δθ = 42 000 / (0.250 × 4200) = 42 000 / 1050",
+            "Δθ = 40.0 K"
+          ],
+          "answer": {
+            "value": 40.0,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "specific-heat-capacity-p5",
+          "question": "A 50 W immersion heater is placed in 0.60 kg of cooking oil and switched on for 4.0 minutes. Calculate the rise in temperature of the oil, assuming no energy is lost. Specific heat capacity of the oil = 2100 J kg⁻¹ K⁻¹.",
+          "hint": "First find the energy supplied with E = Pt (t in seconds), then use ΔE = mcΔθ.",
+          "walkthrough": [
+            "P = 50 W, t = 4.0 × 60 = 240 s, m = 0.60 kg, c = 2100 J kg⁻¹ K⁻¹.",
+            "Energy supplied: E = Pt = 50 × 240 = 12 000 J",
+            "Δθ = E / (mc) = 12 000 / (0.60 × 2100) = 12 000 / 1260",
+            "Δθ = 9.52 K"
+          ],
+          "answer": {
+            "value": 9.52,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "specific-heat-capacity-p6",
+          "question": "An 8.5 kW electric shower heats water from 12 °C to 38 °C. Calculate the mass of water that passes through the shower in 6.0 minutes, assuming all the electrical energy heats the water. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Find the energy supplied in 6.0 minutes with E = Pt, then rearrange ΔE = mcΔθ for m.",
+          "walkthrough": [
+            "P = 8500 W, t = 6.0 × 60 = 360 s, Δθ = 38 − 12 = 26 K, c = 4200 J kg⁻¹ K⁻¹.",
+            "Energy supplied: E = Pt = 8500 × 360 = 3 060 000 J",
+            "m = E / (cΔθ) = 3 060 000 / (4200 × 26) = 3 060 000 / 109 200",
+            "m = 28.0 kg"
+          ],
+          "answer": {
+            "value": 28.0,
+            "unit": "kg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "specific-latent-heat",
+      "name": "Specific latent heat",
+      "equations": [
+        "E = mL",
+        "E = Pt"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Recognise it by a change of state (melting, freezing, boiling, condensing) at constant temperature. The energy transferred is E = mL with m in kg; there is no temperature change term. Rearrange for m or L if needed, and use E = Pt if a heater's power and time are given.",
+      "commonErrors": [
+        "Multiplying by a temperature change — there is none during a change of state",
+        "Mixing up L for fusion (melting) and L for vaporisation (boiling)",
+        "Using grams instead of kilograms for the mass"
+      ],
+      "worked": {
+        "id": "specific-latent-heat-w",
+        "question": "Calculate the energy needed to melt 0.25 kg of ice at 0 °C. Specific latent heat of fusion of ice = 334 000 J kg⁻¹.",
+        "steps": [
+          "Known: m = 0.25 kg, L = 334 000 J kg⁻¹. Unknown: E.",
+          "E = mL",
+          "E = 0.25 × 334 000",
+          "E = 83 500 J",
+          "E = 8.35 × 10⁴ J"
+        ],
+        "answer": {
+          "value": 83500,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "specific-latent-heat-p1",
+          "question": "Calculate the energy needed to boil away 0.050 kg of water that is already at 100 °C. Specific latent heat of vaporisation of water = 2.26 × 10⁶ J kg⁻¹.",
+          "hint": "Use E = mL with the latent heat of vaporisation.",
+          "walkthrough": [
+            "m = 0.050 kg, L = 2.26 × 10⁶ J kg⁻¹.",
+            "E = mL = 0.050 × 2.26 × 10⁶",
+            "E = 113 000 J = 1.13 × 10⁵ J"
+          ],
+          "answer": {
+            "value": 113000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "specific-latent-heat-p2",
+          "question": "A foundry melts 3.5 kg of lead that is already at its melting point. Calculate the energy required. Specific latent heat of fusion of lead = 23 000 J kg⁻¹.",
+          "hint": "Direct substitution into E = mL.",
+          "walkthrough": [
+            "m = 3.5 kg, L = 23 000 J kg⁻¹.",
+            "E = mL = 3.5 × 23 000",
+            "E = 80 500 J = 8.05 × 10⁴ J"
+          ],
+          "answer": {
+            "value": 80500,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "specific-latent-heat-p3",
+          "question": "In a laboratory experiment, 1.68 × 10⁵ J of energy vaporises 0.20 kg of ethanol at its boiling point. Calculate the specific latent heat of vaporisation of ethanol.",
+          "hint": "Rearrange E = mL to make L the subject.",
+          "walkthrough": [
+            "E = 1.68 × 10⁵ J, m = 0.20 kg, find L.",
+            "L = E / m = 1.68 × 10⁵ / 0.20",
+            "L = 840 000 J kg⁻¹ = 8.40 × 10⁵ J kg⁻¹"
+          ],
+          "answer": {
+            "value": 840000,
+            "unit": "J kg⁻¹"
+          }
+        },
+        {
+          "id": "specific-latent-heat-p4",
+          "question": "A drink is cooled by ice at 0 °C. If 60 kJ of energy is transferred from the drink to the ice, calculate the mass of ice that melts, in grams. Specific latent heat of fusion of ice = 334 000 J kg⁻¹.",
+          "hint": "Convert kJ to J, find the mass in kg from m = E / L, then convert to grams.",
+          "walkthrough": [
+            "E = 60 × 10³ J = 60 000 J, L = 334 000 J kg⁻¹, find m.",
+            "m = E / L = 60 000 / 334 000 = 0.1796 kg",
+            "m = 0.1796 × 1000 g",
+            "m = 180 g (3 s.f.)"
+          ],
+          "answer": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "id": "specific-latent-heat-p5",
+          "question": "A 2.0 kW kettle is left boiling for 5.0 minutes. Calculate the mass of water turned to steam, assuming all the energy supplied goes into vaporising the water. Specific latent heat of vaporisation of water = 2.26 × 10⁶ J kg⁻¹.",
+          "hint": "Find the energy supplied with E = Pt (t in seconds), then use m = E / L.",
+          "walkthrough": [
+            "P = 2000 W, t = 5.0 × 60 = 300 s, L = 2.26 × 10⁶ J kg⁻¹.",
+            "Energy supplied: E = Pt = 2000 × 300 = 600 000 J",
+            "m = E / L = 600 000 / (2.26 × 10⁶)",
+            "m = 0.265 kg"
+          ],
+          "answer": {
+            "value": 0.265,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "specific-latent-heat-p6",
+          "question": "A marathon runner loses energy by the evaporation of sweat at an average rate of 350 W for 1.0 hour. Calculate the mass of sweat evaporated. Specific latent heat of vaporisation of sweat at skin temperature = 2.4 × 10⁶ J kg⁻¹.",
+          "hint": "Convert the hour to seconds, find the energy with E = Pt, then rearrange E = mL.",
+          "walkthrough": [
+            "P = 350 W, t = 1.0 × 3600 = 3600 s, L = 2.4 × 10⁶ J kg⁻¹.",
+            "Energy transferred: E = Pt = 350 × 3600 = 1 260 000 J",
+            "m = E / L = 1 260 000 / (2.4 × 10⁶)",
+            "m = 0.525 kg"
+          ],
+          "answer": {
+            "value": 0.525,
+            "unit": "kg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heating-with-change-of-state",
+      "name": "Heating through a change of state",
+      "equations": [
+        "ΔE = mcΔθ",
+        "E = mL",
+        "E_total = mcΔθ + mL"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Recognise it when a substance both changes temperature and changes state. Split the process into stages: a temperature change stage uses mcΔθ, a change of state stage uses mL. Work out each stage separately and add the energies; if a heater power or an unknown mass is involved, deal with the total energy at the end.",
+      "commonErrors": [
+        "Forgetting one of the stages, usually the latent heat",
+        "Using the specific heat capacity of water for a stage where the substance is ice",
+        "Using the temperature of the melting or boiling point as if it were a temperature change"
+      ],
+      "worked": {
+        "id": "heating-with-change-of-state-w",
+        "question": "Calculate the total energy needed to warm 0.40 kg of ice from −10 °C to 0 °C and then melt it completely. Specific heat capacity of ice = 2100 J kg⁻¹ K⁻¹; specific latent heat of fusion of ice = 334 000 J kg⁻¹.",
+        "steps": [
+          "Known: m = 0.40 kg, c_ice = 2100 J kg⁻¹ K⁻¹, Δθ = 0 − (−10) = 10 K, L_f = 334 000 J kg⁻¹. Unknown: total E.",
+          "Stage 1, warming the ice: ΔE₁ = mcΔθ = 0.40 × 2100 × 10 = 8400 J",
+          "Stage 2, melting the ice: E₂ = mL = 0.40 × 334 000 = 133 600 J",
+          "Total: E = 8400 + 133 600 = 142 000 J",
+          "E = 1.42 × 10⁵ J"
+        ],
+        "answer": {
+          "value": 142000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "heating-with-change-of-state-p1",
+          "question": "A pan contains 0.50 kg of water at 80 °C. Calculate the total energy needed to heat the water to 100 °C and then turn all of it into steam. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹; specific latent heat of vaporisation of water = 2.26 × 10⁶ J kg⁻¹.",
+          "hint": "Add the energy to warm the water (mcΔθ) to the energy to boil it (mL).",
+          "walkthrough": [
+            "m = 0.50 kg, Δθ = 100 − 80 = 20 K, c = 4200 J kg⁻¹ K⁻¹, L_v = 2.26 × 10⁶ J kg⁻¹.",
+            "Warming: ΔE₁ = 0.50 × 4200 × 20 = 42 000 J",
+            "Boiling: E₂ = 0.50 × 2.26 × 10⁶ = 1 130 000 J",
+            "Total: E = 42 000 + 1 130 000 = 1 172 000 J",
+            "E = 1.17 × 10⁶ J (3 s.f.)"
+          ],
+          "answer": {
+            "value": 1170000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "heating-with-change-of-state-p2",
+          "question": "In a foundry, 2.0 kg of solid lead at its melting point of 327 °C is melted and the liquid is then heated to 400 °C. Calculate the total energy supplied. Specific latent heat of fusion of lead = 23 000 J kg⁻¹; specific heat capacity of liquid lead = 140 J kg⁻¹ K⁻¹.",
+          "hint": "Melt first (mL), then warm the liquid (mcΔθ) from 327 °C to 400 °C.",
+          "walkthrough": [
+            "m = 2.0 kg, L_f = 23 000 J kg⁻¹, c = 140 J kg⁻¹ K⁻¹, Δθ = 400 − 327 = 73 K.",
+            "Melting: E₁ = 2.0 × 23 000 = 46 000 J",
+            "Warming the liquid: ΔE₂ = 2.0 × 140 × 73 = 20 440 J",
+            "Total: E = 46 000 + 20 440 = 66 440 J",
+            "E = 66 400 J (3 s.f.)"
+          ],
+          "answer": {
+            "value": 66400,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "heating-with-change-of-state-p3",
+          "question": "A 30 g ice cube at 0 °C is dropped into a drink. Calculate the energy the drink must transfer to melt the ice and then warm the melt water to 20 °C. Specific latent heat of fusion of ice = 334 000 J kg⁻¹; specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Convert the mass to kg, then add mL (melting) to mcΔθ (warming the water).",
+          "walkthrough": [
+            "m = 30 g = 0.030 kg, L_f = 334 000 J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹, Δθ = 20 K.",
+            "Melting: E₁ = 0.030 × 334 000 = 10 020 J",
+            "Warming: ΔE₂ = 0.030 × 4200 × 20 = 2520 J",
+            "Total: E = 10 020 + 2520 = 12 540 J",
+            "E = 12 500 J (3 s.f.)"
+          ],
+          "answer": {
+            "value": 12500,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "heating-with-change-of-state-p4",
+          "question": "A 1.5 kW heater is used to melt 0.20 kg of ice at 0 °C and warm the resulting water to 50 °C. Calculate the time this takes, assuming all the heater's energy goes into the ice and water. Specific latent heat of fusion of ice = 334 000 J kg⁻¹; specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Find the total energy needed, then use t = E / P with P in watts.",
+          "walkthrough": [
+            "m = 0.20 kg, L_f = 334 000 J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹, Δθ = 50 K, P = 1500 W.",
+            "Melting: E₁ = 0.20 × 334 000 = 66 800 J",
+            "Warming: ΔE₂ = 0.20 × 4200 × 50 = 42 000 J",
+            "Total: E = 66 800 + 42 000 = 108 800 J",
+            "t = E / P = 108 800 / 1500 = 72.5 s"
+          ],
+          "answer": {
+            "value": 72.5,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "heating-with-change-of-state-p5",
+          "question": "A steam iron turns 0.080 kg of water at 25 °C into steam at 100 °C. Calculate the total energy required. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹; specific latent heat of vaporisation of water = 2.26 × 10⁶ J kg⁻¹.",
+          "hint": "Warm the water from 25 °C to 100 °C first, then add the energy to boil it.",
+          "walkthrough": [
+            "m = 0.080 kg, Δθ = 100 − 25 = 75 K, c = 4200 J kg⁻¹ K⁻¹, L_v = 2.26 × 10⁶ J kg⁻¹.",
+            "Warming: ΔE₁ = 0.080 × 4200 × 75 = 25 200 J",
+            "Boiling: E₂ = 0.080 × 2.26 × 10⁶ = 180 800 J",
+            "Total: E = 25 200 + 180 800 = 206 000 J",
+            "E = 2.06 × 10⁵ J"
+          ],
+          "answer": {
+            "value": 206000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "heating-with-change-of-state-p6",
+          "question": "A freezer removes 50 kJ of energy from a tray of water at 15 °C, cooling it to 0 °C and freezing it completely. Calculate the mass of water in the tray. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹; specific latent heat of fusion of ice = 334 000 J kg⁻¹.",
+          "hint": "Write the total energy as m(cΔθ + L), then divide the energy removed by the bracket.",
+          "walkthrough": [
+            "E = 50 × 10³ J = 50 000 J, c = 4200 J kg⁻¹ K⁻¹, Δθ = 15 K, L_f = 334 000 J kg⁻¹, find m.",
+            "Energy removed per kg: cΔθ + L = 4200 × 15 + 334 000 = 63 000 + 334 000 = 397 000 J kg⁻¹",
+            "m = E / (cΔθ + L) = 50 000 / 397 000",
+            "m = 0.126 kg"
+          ],
+          "answer": {
+            "value": 0.126,
+            "unit": "kg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thermal-equilibrium",
+      "name": "Mixing: finding the final temperature",
+      "equations": [
+        "energy lost by hot = energy gained by cold",
+        "m₁c₁(θ₁ − θ_f) = m₂c₂(θ_f − θ₂)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Recognise it when a hot object and a cold object are put together and settle at one final temperature. Write energy lost by the hot object = energy gained by the cold object, each as mcΔθ with its own m and c, and the same unknown final temperature θ_f in both. Solve for θ_f (or for a mass if θ_f is given); it must lie between the two starting temperatures.",
+      "commonErrors": [
+        "Writing both temperature changes as (θ_f − θ) so one side comes out negative",
+        "Forgetting that the two substances may have different specific heat capacities",
+        "Getting a final temperature outside the range of the two starting temperatures and not noticing"
+      ],
+      "worked": {
+        "id": "thermal-equilibrium-w",
+        "question": "0.20 kg of water at 80 °C is mixed with 0.30 kg of water at 20 °C in an insulated container. Calculate the final temperature of the mixture. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+        "steps": [
+          "Known: m₁ = 0.20 kg at θ₁ = 80 °C, m₂ = 0.30 kg at θ₂ = 20 °C, same c for both. Unknown: θ_f.",
+          "Energy lost by hot water = energy gained by cold water: m₁c(80 − θ_f) = m₂c(θ_f − 20)",
+          "c cancels: 0.20 × (80 − θ_f) = 0.30 × (θ_f − 20)",
+          "16 − 0.20θ_f = 0.30θ_f − 6",
+          "22 = 0.50θ_f",
+          "θ_f = 44.0 °C"
+        ],
+        "answer": {
+          "value": 44.0,
+          "unit": "°C"
+        }
+      },
+      "practice": [
+        {
+          "id": "thermal-equilibrium-p1",
+          "question": "A bath is run with 60 kg of water at 55 °C and then 40 kg of water at 15 °C is added. Calculate the final temperature of the bath water. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Energy lost by the hot water equals energy gained by the cold; c is the same on both sides so it cancels.",
+          "walkthrough": [
+            "60 kg at 55 °C mixed with 40 kg at 15 °C; same c, find θ_f.",
+            "60 × (55 − θ_f) = 40 × (θ_f − 15)",
+            "3300 − 60θ_f = 40θ_f − 600",
+            "3900 = 100θ_f",
+            "θ_f = 39.0 °C"
+          ],
+          "answer": {
+            "value": 39.0,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "thermal-equilibrium-p2",
+          "question": "A 0.50 kg copper block at 100 °C is placed in 1.0 kg of water at 20 °C in an insulated beaker. Calculate the final temperature. Specific heat capacity of copper = 390 J kg⁻¹ K⁻¹; specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Use m_c c_c (100 − θ_f) = m_w c_w (θ_f − 20); the two c values are different, so they do not cancel.",
+          "walkthrough": [
+            "Copper: m = 0.50 kg, c = 390 J kg⁻¹ K⁻¹, starts at 100 °C. Water: m = 1.0 kg, c = 4200 J kg⁻¹ K⁻¹, starts at 20 °C.",
+            "0.50 × 390 × (100 − θ_f) = 1.0 × 4200 × (θ_f − 20)",
+            "195 × (100 − θ_f) = 4200 × (θ_f − 20)",
+            "19 500 − 195θ_f = 4200θ_f − 84 000",
+            "103 500 = 4395θ_f",
+            "θ_f = 23.5 °C"
+          ],
+          "answer": {
+            "value": 23.5,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "thermal-equilibrium-p3",
+          "question": "A nurse mixes 1.2 litres of water at 90 °C with 0.80 litres of water at 10 °C. Calculate the final temperature of the mixture. Density of water = 1000 kg m⁻³; specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "1 litre of water has a mass of 1 kg; then energy lost = energy gained with c cancelling.",
+          "walkthrough": [
+            "1.2 litres → m₁ = 1.2 kg at 90 °C; 0.80 litres → m₂ = 0.80 kg at 10 °C.",
+            "1.2 × (90 − θ_f) = 0.80 × (θ_f − 10)",
+            "108 − 1.2θ_f = 0.80θ_f − 8",
+            "116 = 2.0θ_f",
+            "θ_f = 58.0 °C"
+          ],
+          "answer": {
+            "value": 58.0,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "thermal-equilibrium-p4",
+          "question": "A cafe worker has 0.50 kg of water at 95 °C and wants to cool it to 40 °C by adding water at 15 °C. Calculate the mass of water at 15 °C that must be added. Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "The final temperature is known; rearrange energy lost = energy gained for the unknown mass.",
+          "walkthrough": [
+            "Hot: 0.50 kg from 95 °C to 40 °C, Δθ = 55 K. Cold: m from 15 °C to 40 °C, Δθ = 25 K. Same c.",
+            "0.50 × 4200 × 55 = m × 4200 × 25",
+            "0.50 × 55 = m × 25",
+            "m = 27.5 / 25",
+            "m = 1.10 kg"
+          ],
+          "answer": {
+            "value": 1.1,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "thermal-equilibrium-p5",
+          "question": "0.25 kg of coffee at 85 °C has 0.050 kg of milk at 5 °C added to it. Calculate the final temperature. Specific heat capacity of coffee = 4200 J kg⁻¹ K⁻¹; specific heat capacity of milk = 3900 J kg⁻¹ K⁻¹.",
+          "hint": "Work out mc for each liquid first, then set energy lost equal to energy gained.",
+          "walkthrough": [
+            "Coffee: mc = 0.25 × 4200 = 1050 J K⁻¹, starts at 85 °C. Milk: mc = 0.050 × 3900 = 195 J K⁻¹, starts at 5 °C.",
+            "1050 × (85 − θ_f) = 195 × (θ_f − 5)",
+            "89 250 − 1050θ_f = 195θ_f − 975",
+            "90 225 = 1245θ_f",
+            "θ_f = 72.5 °C"
+          ],
+          "answer": {
+            "value": 72.5,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "thermal-equilibrium-p6",
+          "question": "A blacksmith quenches a 1.2 kg steel horseshoe in 5.0 kg of water at 15 °C. The water and horseshoe settle at 32 °C. Calculate the initial temperature of the horseshoe. Specific heat capacity of steel = 450 J kg⁻¹ K⁻¹; specific heat capacity of water = 4200 J kg⁻¹ K⁻¹.",
+          "hint": "Find the energy gained by the water first, then use ΔE = mcΔθ for the steel to get its temperature drop.",
+          "walkthrough": [
+            "Water: m = 5.0 kg, c = 4200 J kg⁻¹ K⁻¹, Δθ = 32 − 15 = 17 K. Steel: m = 1.2 kg, c = 450 J kg⁻¹ K⁻¹, final 32 °C.",
+            "Energy gained by water: ΔE = 5.0 × 4200 × 17 = 357 000 J",
+            "Temperature drop of steel: Δθ = ΔE / (mc) = 357 000 / (1.2 × 450) = 357 000 / 540 = 661 K",
+            "Initial temperature = 32 + 661",
+            "θ = 693 °C"
+          ],
+          "answer": {
+            "value": 693,
+            "unit": "°C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-moles",
+      "name": "Ideal gas equation with moles, pV = nRT",
+      "equations": [
+        "pV = nRT"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Recognise it by a gas with an amount given in moles and three of p, V, n, T known. Convert everything to SI first: pressure in Pa (1 kPa = 10³ Pa), volume in m³ (1 litre = 10⁻³ m³, 1 cm³ = 10⁻⁶ m³), temperature in K. Then rearrange pV = nRT for the unknown and substitute with R = 8.31 J mol⁻¹ K⁻¹.",
+      "commonErrors": [
+        "Using the temperature in °C",
+        "Leaving the volume in litres or cm³",
+        "Leaving the pressure in kPa or atmospheres"
+      ],
+      "worked": {
+        "id": "ideal-gas-moles-w",
+        "question": "A gas cylinder of volume 0.050 m³ contains 2.0 mol of an ideal gas at 300 K. Calculate the pressure of the gas.",
+        "steps": [
+          "Known: V = 0.050 m³, n = 2.0 mol, T = 300 K, R = 8.31 J mol⁻¹ K⁻¹. Unknown: p.",
+          "pV = nRT → p = nRT / V",
+          "p = (2.0 × 8.31 × 300) / 0.050",
+          "p = 4986 / 0.050",
+          "p = 99 700 Pa = 9.97 × 10⁴ Pa"
+        ],
+        "answer": {
+          "value": 99700,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "ideal-gas-moles-p1",
+          "question": "Calculate the volume occupied by 0.50 mol of an ideal gas at a pressure of 1.0 × 10⁵ Pa and a temperature of 290 K.",
+          "hint": "Rearrange pV = nRT to V = nRT / p; everything is already in SI units.",
+          "walkthrough": [
+            "n = 0.50 mol, p = 1.0 × 10⁵ Pa, T = 290 K, find V.",
+            "V = nRT / p = (0.50 × 8.31 × 290) / (1.0 × 10⁵)",
+            "V = 1205 / (1.0 × 10⁵)",
+            "V = 0.0120 m³ = 1.20 × 10⁻² m³"
+          ],
+          "answer": {
+            "value": 0.012,
+            "unit": "m³"
+          }
+        },
+        {
+          "id": "ideal-gas-moles-p2",
+          "question": "A car tyre has an internal volume of 0.020 m³ and contains air at a pressure of 2.5 × 10⁵ Pa and a temperature of 295 K. Calculate the number of moles of air in the tyre.",
+          "hint": "Rearrange pV = nRT to n = pV / RT.",
+          "walkthrough": [
+            "p = 2.5 × 10⁵ Pa, V = 0.020 m³, T = 295 K, find n.",
+            "n = pV / (RT) = (2.5 × 10⁵ × 0.020) / (8.31 × 295)",
+            "n = 5000 / 2451",
+            "n = 2.04 mol"
+          ],
+          "answer": {
+            "value": 2.04,
+            "unit": "mol"
+          }
+        },
+        {
+          "id": "ideal-gas-moles-p3",
+          "question": "A sealed flask of volume 36 litres contains 1.5 mol of an ideal gas at a pressure of 120 kPa. Calculate the temperature of the gas in kelvin.",
+          "hint": "Convert litres to m³ and kPa to Pa, then use T = pV / nR.",
+          "walkthrough": [
+            "V = 36 litres = 36 × 10⁻³ m³ = 0.036 m³, p = 120 kPa = 1.20 × 10⁵ Pa, n = 1.5 mol, find T.",
+            "T = pV / (nR) = (1.20 × 10⁵ × 0.036) / (1.5 × 8.31)",
+            "T = 4320 / 12.47",
+            "T = 347 K"
+          ],
+          "answer": {
+            "value": 347,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "ideal-gas-moles-p4",
+          "question": "A gas syringe of volume 500 cm³ contains 0.040 mol of air at 25 °C. Calculate the pressure of the air in kPa.",
+          "hint": "Convert cm³ to m³ (× 10⁻⁶) and °C to K, find p in Pa, then divide by 1000.",
+          "walkthrough": [
+            "V = 500 cm³ = 500 × 10⁻⁶ m³ = 5.00 × 10⁻⁴ m³, n = 0.040 mol, T = 25 + 273 = 298 K, find p.",
+            "p = nRT / V = (0.040 × 8.31 × 298) / (5.00 × 10⁻⁴)",
+            "p = 99.06 / (5.00 × 10⁻⁴) = 198 100 Pa",
+            "p = 198 kPa"
+          ],
+          "answer": {
+            "value": 198,
+            "unit": "kPa"
+          }
+        },
+        {
+          "id": "ideal-gas-moles-p5",
+          "question": "A party balloon is filled with 0.25 mol of helium at 20 °C and atmospheric pressure, 101 kPa. Calculate the volume of the balloon in litres.",
+          "hint": "Find V in m³ from V = nRT / p with T in K and p in Pa, then convert to litres (× 1000).",
+          "walkthrough": [
+            "n = 0.25 mol, T = 20 + 273 = 293 K, p = 101 × 10³ Pa, find V.",
+            "V = nRT / p = (0.25 × 8.31 × 293) / (101 × 10³)",
+            "V = 608.7 / 101 000 = 6.03 × 10⁻³ m³",
+            "V = 6.03 × 10⁻³ × 1000 litres",
+            "V = 6.03 litres"
+          ],
+          "answer": {
+            "value": 6.03,
+            "unit": "litres"
+          }
+        },
+        {
+          "id": "ideal-gas-moles-p6",
+          "question": "An industrial pressure vessel of volume 0.018 m³ contains 0.80 mol of an ideal gas at a pressure of 1.2 × 10⁵ Pa. Calculate the temperature of the gas in °C.",
+          "hint": "Find T in kelvin from T = pV / nR, then subtract 273.",
+          "walkthrough": [
+            "p = 1.2 × 10⁵ Pa, V = 0.018 m³, n = 0.80 mol, find T.",
+            "T = pV / (nR) = (1.2 × 10⁵ × 0.018) / (0.80 × 8.31)",
+            "T = 2160 / 6.648 = 324.9 K",
+            "θ = 324.9 − 273",
+            "θ = 51.9 °C"
+          ],
+          "answer": {
+            "value": 51.9,
+            "unit": "°C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-molecules",
+      "name": "Ideal gas equation with molecules, pV = NkT",
+      "equations": [
+        "pV = NkT",
+        "N = nN_A",
+        "mass = n × molar mass"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Use pV = NkT when the question talks about the number of molecules N rather than moles; k = 1.38 × 10⁻²³ J K⁻¹. Convert between moles and molecules with N = nN_A, and from moles to mass by multiplying by the molar mass (in kg mol⁻¹). SI units throughout: Pa, m³, K.",
+      "commonErrors": [
+        "Using R with N, or k with n",
+        "Using a molar mass in g mol⁻¹ and getting a mass in grams when kilograms are needed",
+        "Forgetting to convert cm³ to m³ or °C to K"
+      ],
+      "worked": {
+        "id": "ideal-gas-molecules-w",
+        "question": "A sealed container of volume 0.025 m³ holds an ideal gas at a pressure of 1.0 × 10⁵ Pa and a temperature of 300 K. Calculate the number of gas molecules in the container.",
+        "steps": [
+          "Known: p = 1.0 × 10⁵ Pa, V = 0.025 m³, T = 300 K, k = 1.38 × 10⁻²³ J K⁻¹. Unknown: N.",
+          "pV = NkT → N = pV / (kT)",
+          "N = (1.0 × 10⁵ × 0.025) / (1.38 × 10⁻²³ × 300)",
+          "N = 2500 / (4.14 × 10⁻²¹)",
+          "N = 6.04 × 10²³ molecules"
+        ],
+        "answer": {
+          "value": 6.04e+23,
+          "unit": ""
+        }
+      },
+      "practice": [
+        {
+          "id": "ideal-gas-molecules-p1",
+          "question": "A cylinder of oxygen contains 3.5 mol of gas. Calculate the number of oxygen molecules in the cylinder.",
+          "hint": "Multiply the number of moles by the Avogadro constant.",
+          "walkthrough": [
+            "n = 3.5 mol, N_A = 6.02 × 10²³ mol⁻¹, find N.",
+            "N = nN_A = 3.5 × 6.02 × 10²³",
+            "N = 2.11 × 10²⁴ molecules"
+          ],
+          "answer": {
+            "value": 2.11e+24,
+            "unit": ""
+          }
+        },
+        {
+          "id": "ideal-gas-molecules-p2",
+          "question": "A light bulb of volume 1.5 × 10⁻³ m³ contains 4.0 × 10²² molecules of argon at a temperature of 320 K. Calculate the pressure of the gas.",
+          "hint": "Rearrange pV = NkT to p = NkT / V.",
+          "walkthrough": [
+            "N = 4.0 × 10²², T = 320 K, V = 1.5 × 10⁻³ m³, find p.",
+            "p = NkT / V = (4.0 × 10²² × 1.38 × 10⁻²³ × 320) / (1.5 × 10⁻³)",
+            "p = 176.6 / (1.5 × 10⁻³)",
+            "p = 118 000 Pa = 1.18 × 10⁵ Pa"
+          ],
+          "answer": {
+            "value": 118000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "ideal-gas-molecules-p3",
+          "question": "A diver's air tank contains 1.5 × 10²⁵ molecules of air. Calculate the number of moles of air in the tank.",
+          "hint": "Rearrange N = nN_A to n = N / N_A.",
+          "walkthrough": [
+            "N = 1.5 × 10²⁵, N_A = 6.02 × 10²³ mol⁻¹, find n.",
+            "n = N / N_A = 1.5 × 10²⁵ / (6.02 × 10²³)",
+            "n = 24.9 mol"
+          ],
+          "answer": {
+            "value": 24.9,
+            "unit": "mol"
+          }
+        },
+        {
+          "id": "ideal-gas-molecules-p4",
+          "question": "A bicycle pump holds 250 cm³ of air at atmospheric pressure, 101 kPa, and a temperature of 20 °C. Calculate the number of air molecules in the pump.",
+          "hint": "Convert cm³ to m³, kPa to Pa and °C to K before using N = pV / kT.",
+          "walkthrough": [
+            "V = 250 cm³ = 2.50 × 10⁻⁴ m³, p = 101 × 10³ Pa, T = 20 + 273 = 293 K, find N.",
+            "N = pV / (kT) = (101 × 10³ × 2.50 × 10⁻⁴) / (1.38 × 10⁻²³ × 293)",
+            "N = 25.25 / (4.043 × 10⁻²¹)",
+            "N = 6.24 × 10²¹ molecules"
+          ],
+          "answer": {
+            "value": 6.24e+21,
+            "unit": ""
+          }
+        },
+        {
+          "id": "ideal-gas-molecules-p5",
+          "question": "An industrial nitrogen cylinder of volume 0.050 m³ is filled to a pressure of 8.0 × 10⁶ Pa at 290 K. Calculate the mass of nitrogen in the cylinder. Molar mass of nitrogen = 0.028 kg mol⁻¹.",
+          "hint": "Find the number of moles from n = pV / RT, then multiply by the molar mass.",
+          "walkthrough": [
+            "p = 8.0 × 10⁶ Pa, V = 0.050 m³, T = 290 K, molar mass M = 0.028 kg mol⁻¹.",
+            "n = pV / (RT) = (8.0 × 10⁶ × 0.050) / (8.31 × 290) = 400 000 / 2410 = 166.0 mol",
+            "mass = n × M = 166.0 × 0.028",
+            "mass = 4.65 kg"
+          ],
+          "answer": {
+            "value": 4.65,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "ideal-gas-molecules-p6",
+          "question": "A fizzy drink contains 12 g of dissolved carbon dioxide. Calculate the number of carbon dioxide molecules this represents. Molar mass of carbon dioxide = 44 g mol⁻¹.",
+          "hint": "Find the number of moles from mass / molar mass, then multiply by N_A.",
+          "walkthrough": [
+            "mass = 12 g, molar mass = 44 g mol⁻¹, N_A = 6.02 × 10²³ mol⁻¹.",
+            "n = 12 / 44 = 0.2727 mol",
+            "N = nN_A = 0.2727 × 6.02 × 10²³",
+            "N = 1.64 × 10²³ molecules"
+          ],
+          "answer": {
+            "value": 1.64e+23,
+            "unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "gas-two-states",
+      "name": "Gas laws between two states",
+      "equations": [
+        "p₁V₁ / T₁ = p₂V₂ / T₂",
+        "p₁V₁ = p₂V₂ (constant T)",
+        "V₁ / T₁ = V₂ / T₂ (constant p)",
+        "p₁ / T₁ = p₂ / T₂ (constant V)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Recognise it by a fixed mass of gas that goes from one set of conditions to another. Write p₁V₁ / T₁ = p₂V₂ / T₂, cross out any quantity that is constant, and rearrange for the one unknown. Temperatures must be in kelvin, but pressures and volumes can stay in any unit as long as both states use the same unit.",
+      "commonErrors": [
+        "Using °C for the temperatures — the ratio only works in kelvin",
+        "Mixing units between the two states (e.g. litres on one side, m³ on the other)",
+        "Using this equation when the mass of gas changes"
+      ],
+      "worked": {
+        "id": "gas-two-states-w",
+        "question": "A bicycle pump contains 0.030 m³ of air at a pressure of 2.0 × 10⁵ Pa. The air is compressed slowly to a volume of 0.012 m³ at constant temperature. Calculate the new pressure.",
+        "steps": [
+          "Known: p₁ = 2.0 × 10⁵ Pa, V₁ = 0.030 m³, V₂ = 0.012 m³, T constant. Unknown: p₂.",
+          "Constant T, so p₁V₁ = p₂V₂",
+          "p₂ = p₁V₁ / V₂",
+          "p₂ = (2.0 × 10⁵ × 0.030) / 0.012 = 6000 / 0.012",
+          "p₂ = 5.00 × 10⁵ Pa"
+        ],
+        "answer": {
+          "value": 500000,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "gas-two-states-p1",
+          "question": "The air in a car tyre is at a pressure of 2.4 × 10⁵ Pa and a temperature of 280 K. After a long drive the temperature rises to 310 K with the volume unchanged. Calculate the new pressure.",
+          "hint": "Volume is constant, so p₁ / T₁ = p₂ / T₂.",
+          "walkthrough": [
+            "p₁ = 2.4 × 10⁵ Pa, T₁ = 280 K, T₂ = 310 K, V constant, find p₂.",
+            "p₂ = p₁T₂ / T₁ = (2.4 × 10⁵ × 310) / 280",
+            "p₂ = 266 000 Pa = 2.66 × 10⁵ Pa"
+          ],
+          "answer": {
+            "value": 266000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "gas-two-states-p2",
+          "question": "A balloon holds 3.0 × 10⁻³ m³ of air at 290 K. It is warmed at constant pressure to 350 K. Calculate its new volume.",
+          "hint": "Pressure is constant, so V₁ / T₁ = V₂ / T₂.",
+          "walkthrough": [
+            "V₁ = 3.0 × 10⁻³ m³, T₁ = 290 K, T₂ = 350 K, p constant, find V₂.",
+            "V₂ = V₁T₂ / T₁ = (3.0 × 10⁻³ × 350) / 290",
+            "V₂ = 3.62 × 10⁻³ m³"
+          ],
+          "answer": {
+            "value": 0.00362,
+            "unit": "m³"
+          }
+        },
+        {
+          "id": "gas-two-states-p3",
+          "question": "A sealed, rigid aerosol can contains gas at 1.0 × 10⁵ Pa at a room temperature of 20 °C. It is accidentally heated to 180 °C. Calculate the pressure of the gas at 180 °C.",
+          "hint": "Convert both temperatures to kelvin, then use the pressure law p₁ / T₁ = p₂ / T₂.",
+          "walkthrough": [
+            "T₁ = 20 + 273 = 293 K, T₂ = 180 + 273 = 453 K, p₁ = 1.0 × 10⁵ Pa, V constant.",
+            "p₂ = p₁T₂ / T₁ = (1.0 × 10⁵ × 453) / 293",
+            "p₂ = 155 000 Pa = 1.55 × 10⁵ Pa"
+          ],
+          "answer": {
+            "value": 155000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "gas-two-states-p4",
+          "question": "A fixed mass of gas occupies 2.0 litres at 100 kPa and 300 K. It is compressed and heated to 250 kPa and 450 K. Calculate the new volume in litres.",
+          "hint": "All three quantities change, so use the full p₁V₁ / T₁ = p₂V₂ / T₂ and keep the units consistent.",
+          "walkthrough": [
+            "p₁ = 100 kPa, V₁ = 2.0 litres, T₁ = 300 K; p₂ = 250 kPa, T₂ = 450 K; find V₂.",
+            "V₂ = p₁V₁T₂ / (p₂T₁)",
+            "V₂ = (100 × 2.0 × 450) / (250 × 300) = 90 000 / 75 000",
+            "V₂ = 1.20 litres"
+          ],
+          "answer": {
+            "value": 1.2,
+            "unit": "litres"
+          }
+        },
+        {
+          "id": "gas-two-states-p5",
+          "question": "A bubble of air of volume 0.50 cm³ is released by a diver where the pressure is 3.5 × 10⁵ Pa and the water temperature is 277 K. It rises to the surface where the pressure is 1.0 × 10⁵ Pa and the temperature is 293 K. Calculate the volume of the bubble at the surface, in cm³.",
+          "hint": "Both p and T change, so use p₁V₁ / T₁ = p₂V₂ / T₂; the volume can stay in cm³.",
+          "walkthrough": [
+            "p₁ = 3.5 × 10⁵ Pa, V₁ = 0.50 cm³, T₁ = 277 K; p₂ = 1.0 × 10⁵ Pa, T₂ = 293 K; find V₂.",
+            "V₂ = p₁V₁T₂ / (p₂T₁)",
+            "V₂ = (3.5 × 10⁵ × 0.50 × 293) / (1.0 × 10⁵ × 277) = 5.128 × 10⁷ / (2.77 × 10⁷)",
+            "V₂ = 1.85 cm³"
+          ],
+          "answer": {
+            "value": 1.85,
+            "unit": "cm³"
+          }
+        },
+        {
+          "id": "gas-two-states-p6",
+          "question": "In a diesel engine cylinder, air at 27 °C and 1.2 × 10⁵ Pa occupies 0.040 m³. It is compressed to 0.030 m³ and its pressure rises to 2.0 × 10⁵ Pa. Calculate the final temperature of the air in °C.",
+          "hint": "Convert 27 °C to kelvin, rearrange for T₂, then convert the answer back to °C.",
+          "walkthrough": [
+            "T₁ = 27 + 273 = 300 K, p₁ = 1.2 × 10⁵ Pa, V₁ = 0.040 m³; p₂ = 2.0 × 10⁵ Pa, V₂ = 0.030 m³; find T₂.",
+            "T₂ = T₁p₂V₂ / (p₁V₁)",
+            "T₂ = (300 × 2.0 × 10⁵ × 0.030) / (1.2 × 10⁵ × 0.040) = 1.8 × 10⁶ / 4800 = 375 K",
+            "θ₂ = 375 − 273",
+            "θ₂ = 102 °C"
+          ],
+          "answer": {
+            "value": 102,
+            "unit": "°C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kinetic-theory",
+      "name": "Kinetic theory: r.m.s. speed and pressure",
+      "equations": [
+        "pV = ⅓Nm⟨c²⟩",
+        "p = ⅓ρ⟨c²⟩",
+        "½m⟨c²⟩ = (3/2)kT",
+        "c_rms = √⟨c²⟩",
+        "c_rms = √(3kT/m) = √(3RT/M)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "If you are given pressure and density, use p = ⅓ρ⟨c²⟩ (the same as pV = ⅓Nm⟨c²⟩ with ρ = Nm / V). If you are given temperature and the mass of one molecule, use ½m⟨c²⟩ = (3/2)kT. Either way, solve for ⟨c²⟩ first and square-root at the end to get c_rms; the molecular mass m must be in kg.",
+      "commonErrors": [
+        "Forgetting to square-root ⟨c²⟩ to get the r.m.s. speed",
+        "Using the molar mass instead of the mass of one molecule in ½m⟨c²⟩ = (3/2)kT",
+        "Using °C for T"
+      ],
+      "worked": {
+        "id": "kinetic-theory-w",
+        "question": "Air at atmospheric pressure, 1.0 × 10⁵ Pa, has a density of 1.2 kg m⁻³. Calculate the r.m.s. speed of the air molecules.",
+        "steps": [
+          "Known: p = 1.0 × 10⁵ Pa, ρ = 1.2 kg m⁻³. Unknown: c_rms.",
+          "p = ⅓ρ⟨c²⟩ → ⟨c²⟩ = 3p / ρ",
+          "⟨c²⟩ = (3 × 1.0 × 10⁵) / 1.2 = 2.5 × 10⁵ m² s⁻²",
+          "c_rms = √(2.5 × 10⁵)",
+          "c_rms = 500 m s⁻¹"
+        ],
+        "answer": {
+          "value": 500,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "kinetic-theory-p1",
+          "question": "Helium in a balloon is at a pressure of 1.0 × 10⁵ Pa and has a density of 0.166 kg m⁻³. Calculate the r.m.s. speed of the helium atoms.",
+          "hint": "Use ⟨c²⟩ = 3p / ρ, then square-root.",
+          "walkthrough": [
+            "p = 1.0 × 10⁵ Pa, ρ = 0.166 kg m⁻³, find c_rms.",
+            "⟨c²⟩ = 3p / ρ = (3 × 1.0 × 10⁵) / 0.166 = 1.807 × 10⁶ m² s⁻²",
+            "c_rms = √(1.807 × 10⁶)",
+            "c_rms = 1340 m s⁻¹"
+          ],
+          "answer": {
+            "value": 1340,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "kinetic-theory-p2",
+          "question": "Calculate the r.m.s. speed of nitrogen molecules in a laboratory at 300 K. Mass of a nitrogen molecule = 4.65 × 10⁻²⁶ kg.",
+          "hint": "Use ½m⟨c²⟩ = (3/2)kT, so ⟨c²⟩ = 3kT / m, then square-root.",
+          "walkthrough": [
+            "T = 300 K, m = 4.65 × 10⁻²⁶ kg, k = 1.38 × 10⁻²³ J K⁻¹, find c_rms.",
+            "⟨c²⟩ = 3kT / m = (3 × 1.38 × 10⁻²³ × 300) / (4.65 × 10⁻²⁶)",
+            "⟨c²⟩ = 1.242 × 10⁻²⁰ / (4.65 × 10⁻²⁶) = 2.671 × 10⁵ m² s⁻²",
+            "c_rms = √(2.671 × 10⁵) = 517 m s⁻¹"
+          ],
+          "answer": {
+            "value": 517,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "kinetic-theory-p3",
+          "question": "In a hydrogen fuel tank the molecules have an r.m.s. speed of 2000 m s⁻¹. Calculate the temperature of the hydrogen. Mass of a hydrogen molecule = 3.34 × 10⁻²⁷ kg.",
+          "hint": "Square the r.m.s. speed to get ⟨c²⟩, then rearrange ½m⟨c²⟩ = (3/2)kT for T.",
+          "walkthrough": [
+            "c_rms = 2000 m s⁻¹ so ⟨c²⟩ = 2000² = 4.0 × 10⁶ m² s⁻²; m = 3.34 × 10⁻²⁷ kg; find T.",
+            "T = m⟨c²⟩ / (3k)",
+            "T = (3.34 × 10⁻²⁷ × 4.0 × 10⁶) / (3 × 1.38 × 10⁻²³) = 1.336 × 10⁻²⁰ / (4.14 × 10⁻²³)",
+            "T = 323 K"
+          ],
+          "answer": {
+            "value": 323,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "kinetic-theory-p4",
+          "question": "Oxygen in a hospital cylinder has a density of 1.43 kg m⁻³ and its molecules have an r.m.s. speed of 460 m s⁻¹. Calculate the pressure of the oxygen.",
+          "hint": "Square the r.m.s. speed first, then use p = ⅓ρ⟨c²⟩.",
+          "walkthrough": [
+            "ρ = 1.43 kg m⁻³, c_rms = 460 m s⁻¹ so ⟨c²⟩ = 460² = 211 600 m² s⁻²; find p.",
+            "p = ⅓ρ⟨c²⟩ = ⅓ × 1.43 × 211 600",
+            "p = 100 900 Pa",
+            "p = 1.01 × 10⁵ Pa (3 s.f.)"
+          ],
+          "answer": {
+            "value": 101000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "kinetic-theory-p5",
+          "question": "Calculate the r.m.s. speed of carbon dioxide molecules in the exhaust of a vehicle at 350 K. Molar mass of carbon dioxide = 0.044 kg mol⁻¹.",
+          "hint": "Find the mass of one molecule from molar mass / N_A, then use ⟨c²⟩ = 3kT / m.",
+          "walkthrough": [
+            "Molar mass M = 0.044 kg mol⁻¹, T = 350 K, find c_rms.",
+            "Mass of one molecule: m = M / N_A = 0.044 / (6.02 × 10²³) = 7.309 × 10⁻²⁶ kg",
+            "⟨c²⟩ = 3kT / m = (3 × 1.38 × 10⁻²³ × 350) / (7.309 × 10⁻²⁶) = 1.982 × 10⁵ m² s⁻²",
+            "c_rms = √(1.982 × 10⁵) = 445 m s⁻¹"
+          ],
+          "answer": {
+            "value": 445,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "kinetic-theory-p6",
+          "question": "A container of volume 0.020 m³ holds 5.0 × 10²³ atoms of argon, each of mass 6.6 × 10⁻²⁶ kg, at a pressure of 1.2 × 10⁵ Pa. Calculate the r.m.s. speed of the argon atoms.",
+          "hint": "Use pV = ⅓Nm⟨c²⟩: find the total mass Nm first, then rearrange for ⟨c²⟩ and square-root.",
+          "walkthrough": [
+            "V = 0.020 m³, N = 5.0 × 10²³, m = 6.6 × 10⁻²⁶ kg, p = 1.2 × 10⁵ Pa, find c_rms.",
+            "Total mass: Nm = 5.0 × 10²³ × 6.6 × 10⁻²⁶ = 0.033 kg",
+            "⟨c²⟩ = 3pV / (Nm) = (3 × 1.2 × 10⁵ × 0.020) / 0.033 = 7200 / 0.033 = 2.182 × 10⁵ m² s⁻²",
+            "c_rms = √(2.182 × 10⁵) = 467 m s⁻¹"
+          ],
+          "answer": {
+            "value": 467,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kinetic-energy-internal-energy",
+      "name": "Mean kinetic energy and internal energy of a gas",
+      "equations": [
+        "⟨KE⟩ = (3/2)kT",
+        "U = (3/2)NkT = (3/2)nRT",
+        "U = (3/2)pV"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The mean kinetic energy of one molecule of an ideal gas depends only on temperature: ⟨KE⟩ = (3/2)kT with T in kelvin. For a monatomic ideal gas (all its internal energy is kinetic), the internal energy of the whole gas is the mean kinetic energy times the number of molecules, U = (3/2)NkT, which is the same as (3/2)nRT or (3/2)pV. Pick the form that matches the data you are given.",
+      "commonErrors": [
+        "Using °C instead of K",
+        "Using k with the number of moles, or R with the number of molecules",
+        "Forgetting the factor of 3/2"
+      ],
+      "worked": {
+        "id": "kinetic-energy-internal-energy-w",
+        "question": "Calculate the mean kinetic energy of a molecule of an ideal gas at 300 K.",
+        "steps": [
+          "Known: T = 300 K, k = 1.38 × 10⁻²³ J K⁻¹. Unknown: ⟨KE⟩.",
+          "⟨KE⟩ = (3/2)kT",
+          "⟨KE⟩ = 1.5 × 1.38 × 10⁻²³ × 300",
+          "⟨KE⟩ = 6.21 × 10⁻²¹ J"
+        ],
+        "answer": {
+          "value": 6.21e-21,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "kinetic-energy-internal-energy-p1",
+          "question": "Calculate the mean kinetic energy of an air molecule in a classroom at 20 °C.",
+          "hint": "Convert to kelvin, then use ⟨KE⟩ = (3/2)kT.",
+          "walkthrough": [
+            "T = 20 + 273 = 293 K.",
+            "⟨KE⟩ = (3/2)kT = 1.5 × 1.38 × 10⁻²³ × 293",
+            "⟨KE⟩ = 6.07 × 10⁻²¹ J"
+          ],
+          "answer": {
+            "value": 6.07e-21,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-internal-energy-p2",
+          "question": "A cylinder contains 2.0 mol of an ideal gas at 400 K. Calculate the internal energy of the gas.",
+          "hint": "You have moles and temperature, so use U = (3/2)nRT.",
+          "walkthrough": [
+            "n = 2.0 mol, T = 400 K, R = 8.31 J mol⁻¹ K⁻¹.",
+            "U = (3/2)nRT = 1.5 × 2.0 × 8.31 × 400",
+            "U = 9970 J (3 s.f.)"
+          ],
+          "answer": {
+            "value": 9970,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-internal-energy-p3",
+          "question": "The molecules in a sample of gas in a furnace have a mean kinetic energy of 1.0 × 10⁻²⁰ J. Calculate the temperature of the gas.",
+          "hint": "Rearrange ⟨KE⟩ = (3/2)kT to T = 2⟨KE⟩ / 3k.",
+          "walkthrough": [
+            "⟨KE⟩ = 1.0 × 10⁻²⁰ J, find T.",
+            "T = 2⟨KE⟩ / (3k) = (2 × 1.0 × 10⁻²⁰) / (3 × 1.38 × 10⁻²³)",
+            "T = 2.0 × 10⁻²⁰ / (4.14 × 10⁻²³)",
+            "T = 483 K"
+          ],
+          "answer": {
+            "value": 483,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "kinetic-energy-internal-energy-p4",
+          "question": "A sealed flask contains 3.0 × 10²⁴ molecules of neon at 27 °C. Calculate the internal energy of the gas.",
+          "hint": "Convert 27 °C to kelvin, then use U = (3/2)NkT.",
+          "walkthrough": [
+            "N = 3.0 × 10²⁴, T = 27 + 273 = 300 K, k = 1.38 × 10⁻²³ J K⁻¹.",
+            "U = (3/2)NkT = 1.5 × 3.0 × 10²⁴ × 1.38 × 10⁻²³ × 300",
+            "U = 18 630 J",
+            "U = 18 600 J (3 s.f.)"
+          ],
+          "answer": {
+            "value": 18600,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-internal-energy-p5",
+          "question": "An ideal gas in a piston has a pressure of 2.0 × 10⁵ Pa and a volume of 0.015 m³. Calculate the internal energy of the gas.",
+          "hint": "pV = nRT, so U = (3/2)nRT can be written as U = (3/2)pV — no temperature needed.",
+          "walkthrough": [
+            "p = 2.0 × 10⁵ Pa, V = 0.015 m³, find U.",
+            "nRT = pV = 2.0 × 10⁵ × 0.015 = 3000 J",
+            "U = (3/2)nRT = 1.5 × 3000",
+            "U = 4500 J"
+          ],
+          "answer": {
+            "value": 4500,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-internal-energy-p6",
+          "question": "The gas at the surface of the Sun is at about 5800 K. Calculate the mean kinetic energy of a gas particle there, giving your answer in electronvolts.",
+          "hint": "Find ⟨KE⟩ = (3/2)kT in joules first, then divide by 1.60 × 10⁻¹⁹ J eV⁻¹.",
+          "walkthrough": [
+            "T = 5800 K, find ⟨KE⟩ in eV.",
+            "⟨KE⟩ = (3/2)kT = 1.5 × 1.38 × 10⁻²³ × 5800 = 1.201 × 10⁻¹⁹ J",
+            "⟨KE⟩ in eV = 1.201 × 10⁻¹⁹ / (1.60 × 10⁻¹⁹)",
+            "⟨KE⟩ = 0.750 eV"
+          ],
+          "answer": {
+            "value": 0.75,
+            "unit": "eV"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thermal-graph",
+      "name": "Reading thermal and gas graphs",
+      "equations": [
+        "P = mc × (Δθ/Δt), so c = P / (m × gradient)",
+        "L = PΔt / m (Δt = length of the flat section)",
+        "p ∝ T: the p–θ line meets the axis at absolute zero",
+        "W = area under a p–V graph",
+        "pV = nRT: gradient of pV against T = nR",
+        "pV = NkT: gradient of p against T = Nk/V"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Heating curves: a sloping section is the substance warming, and its gradient is the rate of temperature rise, so P = mc × gradient; a flat section is a change of state, and the energy supplied during it, P × Δt, equals mL. Gas graphs: a straight line of p (or pV) against kelvin temperature passes through the origin and its gradient is Nk/V (or nR); against Celsius temperature it meets the axis at absolute zero. Area under a p–V graph is work done. Check every axis unit and prefix (kPa, 10⁵ Pa, minutes) before substituting.",
+      "commonErrors": [
+        "Reading the gradient of a heating curve in K per minute and using it as K per second",
+        "Using the whole heating time for the latent heat instead of just the length of the flat section",
+        "Forgetting the prefix on a pressure axis (kPa, 10⁵ Pa) when finding a gradient or an area",
+        "Mixing up n (moles, gradient nR) with N (molecules, gradient Nk/V)"
+      ],
+      "worked": {
+        "id": "thermal-graph-w",
+        "question": "The graph shows the temperature of 0.80 kg of water in a kettle against time. The kettle element supplies a constant 2.0 kW to the water. Use the gradient of the line to determine the specific heat capacity of water.",
+        "steps": [
+          "Known: P = 2000 W, m = 0.80 kg. The gradient of the temperature–time line is the rate of temperature rise Δθ/Δt.",
+          "Using A (0 s, 20 °C) and B (100 s, 80 °C): gradient = (80 − 20) / (100 − 0) = 0.60 K s⁻¹",
+          "Energy supplied per second = P = mc × (Δθ/Δt), so c = P / (m × gradient)",
+          "c = 2000 / (0.80 × 0.60) = 2000 / 0.48",
+          "c = 4170 J kg⁻¹ K⁻¹"
+        ],
+        "answer": {
+          "value": 4170,
+          "unit": "J kg⁻¹ K⁻¹"
+        },
+        "graph": {
+          "x": {
+            "label": "t / s",
+            "min": 0,
+            "max": 120,
+            "step": 20
+          },
+          "y": {
+            "label": "θ / °C",
+            "min": 0,
+            "max": 100,
+            "step": 10
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  20
+                ],
+                [
+                  120,
+                  92.0
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 0,
+              "y": 20,
+              "label": "A",
+              "dx": 10,
+              "dy": 14
+            },
+            {
+              "x": 100,
+              "y": 80,
+              "label": "B",
+              "drop": true,
+              "dx": 8,
+              "dy": 16
+            }
+          ],
+          "alt": "Temperature–time graph: a straight line rising from A at 20 °C at time zero through B at 80 °C at 100 s"
+        }
+      },
+      "practice": [
+        {
+          "id": "thermal-graph-p1",
+          "question": "A fixed mass of gas is kept at constant volume and its pressure is measured at temperatures from 0 °C to 100 °C. The graph shows the results with a best-fit line, extended (dashed) to the temperature axis at X. Use the graph to determine the temperature of absolute zero in °C.",
+          "hint": "At absolute zero the pressure of an ideal gas is zero, so read where the extended line meets the temperature axis.",
+          "walkthrough": [
+            "Pressure is proportional to kelvin temperature, so the pressure falls to zero at absolute zero.",
+            "The extended line meets the temperature axis at X, just below −270 °C on the scale.",
+            "Absolute zero = −273 °C"
+          ],
+          "answer": {
+            "value": -273.0,
+            "unit": "°C",
+            "tolerance": 0.05
+          },
+          "graph": {
+            "x": {
+              "label": "θ / °C",
+              "min": -300,
+              "max": 100,
+              "step": 50
+            },
+            "y": {
+              "label": "p / kPa",
+              "min": 0,
+              "max": 150,
+              "step": 25
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    0,
+                    100.0
+                  ],
+                  [
+                    20,
+                    107.33
+                  ],
+                  [
+                    40,
+                    114.65
+                  ],
+                  [
+                    60,
+                    121.98
+                  ],
+                  [
+                    80,
+                    129.3
+                  ],
+                  [
+                    100,
+                    136.63
+                  ]
+                ],
+                "fit": [
+                  [
+                    0,
+                    100.0
+                  ],
+                  [
+                    100,
+                    136.63
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    -273.0,
+                    0
+                  ],
+                  [
+                    0,
+                    100.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": -273.0,
+                "y": 0,
+                "label": "X",
+                "dx": -22,
+                "dy": -8
+              }
+            ],
+            "alt": "Pressure against Celsius temperature: data points from 0 to 100 °C on a straight line rising from 100 kPa, extended as a dashed line down to the temperature axis at X near −273 °C"
+          }
+        },
+        {
+          "id": "thermal-graph-p2",
+          "question": "A 0.20 kg sample of paraffin wax is heated by a 250 W immersion heater. The graph shows its temperature against time; between A and B the wax is melting. Use the graph to determine the specific latent heat of fusion of the wax.",
+          "hint": "The flat section A to B is the melting; the energy supplied in that time, P × Δt, equals mL.",
+          "walkthrough": [
+            "The flat section runs from A at t = 80 s to B at t = 200 s, so Δt = 200 − 80 = 120 s.",
+            "Energy supplied while melting = PΔt = 250 × 120 = 30 000 J",
+            "L = PΔt / m = 30 000 / 0.20",
+            "L = 1.5 × 10⁵ J kg⁻¹"
+          ],
+          "answer": {
+            "value": 150000,
+            "unit": "J kg⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 240,
+              "step": 20
+            },
+            "y": {
+              "label": "θ / °C",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    80,
+                    60
+                  ],
+                  [
+                    200,
+                    60
+                  ],
+                  [
+                    240,
+                    80
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 80,
+                "y": 60,
+                "label": "A",
+                "dx": -4,
+                "dy": -10
+              },
+              {
+                "x": 200,
+                "y": 60,
+                "label": "B",
+                "dx": -4,
+                "dy": -10
+              }
+            ],
+            "alt": "Temperature–time heating curve: rising from 20 °C to 60 °C in the first 80 s, flat at 60 °C from A at 80 s to B at 200 s, then rising again to 80 °C at 240 s"
+          }
+        },
+        {
+          "id": "thermal-graph-p3",
+          "question": "The graph shows how the pressure of a gas in a cylinder changes as it expands from A to B, pushing a piston. Use the shaded area to determine the work done by the gas during the expansion.",
+          "hint": "Work done by the gas is the area under the p–V line; the shaded shape is a trapezium, and the axes carry powers of ten.",
+          "walkthrough": [
+            "A = (1.0 × 10⁻³ m³, 3.0 × 10⁵ Pa) and B = (4.0 × 10⁻³ m³, 1.0 × 10⁵ Pa).",
+            "Area of trapezium = ½ × (sum of parallel sides) × width = ½ × (3.0 + 1.0) × 10⁵ × (4.0 − 1.0) × 10⁻³",
+            "W = ½ × 4.0 × 10⁵ × 3.0 × 10⁻³ = 2.0 × 10⁵ × 3.0 × 10⁻³",
+            "W = 600 J"
+          ],
+          "answer": {
+            "value": 600.0,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "V / 10⁻³ m³",
+              "min": 0,
+              "max": 5,
+              "step": 1
+            },
+            "y": {
+              "label": "p / 10⁵ Pa",
+              "min": 0,
+              "max": 4,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    1.0,
+                    3.0
+                  ],
+                  [
+                    4.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 1.0,
+                "y": 3.0,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 4.0,
+                "y": 1.0,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 1.0,
+                "to": 4.0
+              }
+            ],
+            "alt": "Pressure–volume graph: a straight line falling from A at 3.0 × 10⁵ Pa and 1.0 × 10⁻³ m³ to B at 1.0 × 10⁵ Pa and 4.0 × 10⁻³ m³, with the area beneath it shaded"
+          },
+          "boards": [
+            "Edexcel",
+            "OCR A",
+            "OCR B",
+            "WJEC"
+          ]
+        },
+        {
+          "id": "thermal-graph-p4",
+          "question": "The graph shows the pressure of a gas sealed in a rigid 2.0 × 10⁻³ m³ container against its kelvin temperature. The line passes through the origin. Use the gradient of the line to determine the number of molecules in the container.",
+          "hint": "From pV = NkT, the gradient of p against T is Nk/V; convert the gradient from kPa K⁻¹ to Pa K⁻¹.",
+          "walkthrough": [
+            "Using A (200 K, 100 kPa) and B (400 K, 200 kPa): gradient = (200 − 100) / (400 − 200) = 0.50 kPa K⁻¹ = 500 Pa K⁻¹",
+            "pV = NkT → p = (Nk/V) T, so gradient = Nk/V",
+            "N = gradient × V / k = 500 × 2.0 × 10⁻³ / (1.38 × 10⁻²³)",
+            "N = 7.25 × 10²²"
+          ],
+          "answer": {
+            "value": 7.25e+22,
+            "unit": ""
+          },
+          "graph": {
+            "x": {
+              "label": "T / K",
+              "min": 0,
+              "max": 400,
+              "step": 50
+            },
+            "y": {
+              "label": "p / kPa",
+              "min": 0,
+              "max": 250,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    200,
+                    100
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    200,
+                    100
+                  ],
+                  [
+                    400,
+                    200
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 200,
+                "y": 100,
+                "label": "A",
+                "drop": true,
+                "dx": -18,
+                "dy": -6
+              },
+              {
+                "x": 400,
+                "y": 200,
+                "label": "B",
+                "drop": true,
+                "dx": -18,
+                "dy": -6
+              }
+            ],
+            "alt": "Pressure against kelvin temperature: a straight line through the origin, dashed up to A at 200 K and 100 kPa, then solid to B at 400 K and 200 kPa"
+          }
+        },
+        {
+          "id": "thermal-graph-p5",
+          "question": "A student measures the pressure and volume of a sample of gas at several kelvin temperatures and plots pV against T. The best-fit line passes through the origin. Use the gradient of the line to determine the number of moles of gas in the sample.",
+          "hint": "From pV = nRT, the gradient of pV against T is nR.",
+          "walkthrough": [
+            "Using A (150 K, 600 J) and B (400 K, 1600 J): gradient = (1600 − 600) / (400 − 150) = 1000 / 250 = 4.0 J K⁻¹",
+            "pV = nRT, so gradient = nR",
+            "n = gradient / R = 4.0 / 8.31",
+            "n = 0.481 mol"
+          ],
+          "answer": {
+            "value": 0.481,
+            "unit": "mol"
+          },
+          "graph": {
+            "x": {
+              "label": "T / K",
+              "min": 0,
+              "max": 400,
+              "step": 50
+            },
+            "y": {
+              "label": "pV / J",
+              "min": 0,
+              "max": 2000,
+              "step": 200
+            },
+            "series": [
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    150,
+                    600
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    150,
+                    600
+                  ],
+                  [
+                    400,
+                    1600
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 150,
+                "y": 600,
+                "label": "A",
+                "drop": true,
+                "dx": -18,
+                "dy": -6
+              },
+              {
+                "x": 400,
+                "y": 1600,
+                "label": "B",
+                "drop": true,
+                "dx": -18,
+                "dy": -6
+              }
+            ],
+            "alt": "pV against kelvin temperature: a straight line through the origin, dashed up to A at 150 K and 600 J, then solid to B at 400 K and 1600 J"
+          }
+        },
+        {
+          "id": "thermal-graph-p6",
+          "question": "The graph shows the temperature of 0.60 kg of cooking oil in a pan against time as it is heated on a hob. The specific heat capacity of the oil is 2000 J kg⁻¹ K⁻¹. Use the gradient of the line to determine the rate at which energy is transferred to the oil, in watts.",
+          "hint": "Find the gradient in K per minute, convert it to K per second, then P = mc × gradient.",
+          "walkthrough": [
+            "Using A (0 min, 20 °C) and B (4 min, 140 °C): gradient = (140 − 20) / (4 − 0) = 30 K min⁻¹",
+            "30 K min⁻¹ = 30 / 60 = 0.50 K s⁻¹",
+            "P = mc × (Δθ/Δt) = 0.60 × 2000 × 0.50",
+            "P = 600 W"
+          ],
+          "answer": {
+            "value": 600.0,
+            "unit": "W"
+          },
+          "graph": {
+            "x": {
+              "label": "t / min",
+              "min": 0,
+              "max": 5,
+              "step": 1
+            },
+            "y": {
+              "label": "θ / °C",
+              "min": 0,
+              "max": 180,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    5,
+                    170.0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 20,
+                "label": "A",
+                "dx": 10,
+                "dy": 14
+              },
+              {
+                "x": 4,
+                "y": 140,
+                "label": "B",
+                "drop": true,
+                "dx": 8,
+                "dy": 16
+              }
+            ],
+            "alt": "Temperature–time graph: a straight line rising from A at 20 °C at time zero through B at 140 °C at 4 minutes"
+          }
+        }
+      ]
+    }
+  ]
+}

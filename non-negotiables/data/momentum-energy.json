@@ -1,0 +1,1637 @@
+{
+  "id": "momentum-energy",
+  "title": "Momentum, work, energy and power",
+  "subtitle": "Collisions, impulse, work done, kinetic and potential energy, power and efficiency",
+  "order": 40,
+  "types": [
+    {
+      "id": "momentum-conservation-1d",
+      "name": "Conservation of momentum in one dimension",
+      "equations": [
+        "p = mv",
+        "total momentum before = total momentum after"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Pick a positive direction and give every velocity a sign. Write the total momentum before the event equal to the total momentum after it, with objects that stick together sharing one velocity and a system that starts at rest having zero total momentum. Solve for the unknown velocity; a negative answer means it moves in the negative direction.",
+      "commonErrors": [
+        "Forgetting the minus sign on an object moving in the negative direction",
+        "Using the mass of only one object after a collision where the objects stick together",
+        "Treating an explosion from rest as if the total momentum afterwards were non-zero"
+      ],
+      "worked": {
+        "id": "momentum-conservation-1d-w",
+        "question": "On an air track, a 0.80 kg glider moving at 3.0 m s⁻¹ collides with a stationary 1.2 kg glider. The gliders stick together. Calculate their common velocity after the collision.",
+        "steps": [
+          "Known: m₁ = 0.80 kg, u₁ = 3.0 m s⁻¹, m₂ = 1.2 kg, u₂ = 0. Unknown: common velocity v.",
+          "Momentum before = m₁u₁ + m₂u₂ = 0.80 × 3.0 + 1.2 × 0 = 2.4 kg m s⁻¹",
+          "Momentum after = (m₁ + m₂)v = (0.80 + 1.2)v = 2.0v",
+          "Conservation: 2.0v = 2.4, so v = 2.4 / 2.0",
+          "v = 1.2 m s⁻¹ in the original direction of the 0.80 kg glider"
+        ],
+        "answer": {
+          "value": 1.2,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "momentum-conservation-1d-p1",
+          "question": "A railway truck of mass 12 000 kg moving at 2.5 m s⁻¹ couples to a stationary truck of mass 8000 kg. Calculate the speed of the coupled trucks.",
+          "hint": "Momentum before equals momentum after; after coupling, the total mass 20 000 kg moves with one velocity.",
+          "walkthrough": [
+            "Momentum before = 12 000 × 2.5 + 8000 × 0 = 30 000 kg m s⁻¹",
+            "Momentum after = (12 000 + 8000)v = 20 000v",
+            "20 000v = 30 000, so v = 30 000 / 20 000",
+            "v = 1.5 m s⁻¹"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-1d-p2",
+          "question": "A cannon of mass 1200 kg, initially at rest, fires a shell of mass 8.0 kg horizontally at 150 m s⁻¹. Calculate the recoil speed of the cannon.",
+          "hint": "Total momentum before firing is zero, so the cannon's momentum must be equal and opposite to the shell's.",
+          "walkthrough": [
+            "Momentum before = 0 (everything at rest)",
+            "Momentum after = 8.0 × 150 + 1200 × v = 0",
+            "1200v = −1200, so v = −1200 / 1200",
+            "Recoil speed = 1.0 m s⁻¹ (opposite to the shell)"
+          ],
+          "answer": {
+            "value": 1.0,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-1d-p3",
+          "question": "A car of mass 1400 kg travelling at 54 km h⁻¹ runs into the back of a stationary van of mass 2200 kg. The vehicles lock together. Calculate their common speed immediately after the collision, in m s⁻¹.",
+          "hint": "Convert 54 km h⁻¹ to m s⁻¹ first (divide by 3.6), then apply conservation of momentum with the combined mass.",
+          "walkthrough": [
+            "u = 54 km h⁻¹ = 54 × 1000 / 3600 = 15 m s⁻¹",
+            "Momentum before = 1400 × 15 = 21 000 kg m s⁻¹",
+            "Momentum after = (1400 + 2200)v = 3600v",
+            "v = 21 000 / 3600 = 5.83 m s⁻¹"
+          ],
+          "answer": {
+            "value": 5.83,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-1d-p4",
+          "question": "A cue ball of mass 0.17 kg moving at 1.8 m s⁻¹ strikes a stationary red ball of mass 0.16 kg head-on. After the collision the cue ball continues in the same direction at 0.40 m s⁻¹. Calculate the velocity of the red ball.",
+          "hint": "Write momentum before = momentum after with both balls having their own velocity afterwards, and rearrange for the red ball's velocity.",
+          "walkthrough": [
+            "Momentum before = 0.17 × 1.8 + 0 = 0.306 kg m s⁻¹",
+            "Momentum after = 0.17 × 0.40 + 0.16 × v = 0.068 + 0.16v",
+            "0.16v = 0.306 − 0.068 = 0.238",
+            "v = 0.238 / 0.16 = 1.49 m s⁻¹"
+          ],
+          "answer": {
+            "value": 1.49,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-1d-p5",
+          "question": "An ice skater of mass 60 kg gliding east at 3.0 m s⁻¹ collides with a skater of mass 45 kg gliding west at 2.0 m s⁻¹. They hold on to each other after the collision. Calculate their common speed.",
+          "hint": "Take east as positive, so the second skater's velocity is −2.0 m s⁻¹, and find the total momentum before combining the masses.",
+          "walkthrough": [
+            "Take east as positive: u₁ = +3.0 m s⁻¹, u₂ = −2.0 m s⁻¹",
+            "Momentum before = 60 × 3.0 + 45 × (−2.0) = 180 − 90 = 90 kg m s⁻¹",
+            "Momentum after = (60 + 45)v = 105v",
+            "v = 90 / 105 = 0.857 m s⁻¹ east"
+          ],
+          "answer": {
+            "value": 0.857,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-1d-p6",
+          "question": "A dodgem car of mass 250 kg moving at 1.5 m s⁻¹ hits a stationary dodgem car of mass 300 kg. After the collision the first car rebounds backwards at 0.30 m s⁻¹. Calculate the velocity of the second car.",
+          "hint": "The rebounding car's velocity after the collision is negative; find the first car's momentum after, then subtract it from the total.",
+          "walkthrough": [
+            "Momentum before = 250 × 1.5 + 0 = 375 kg m s⁻¹",
+            "Momentum of first car after = 250 × (−0.30) = −75 kg m s⁻¹",
+            "Momentum of second car after = 375 − (−75) = 450 kg m s⁻¹",
+            "v = 450 / 300 = 1.5 m s⁻¹ in the original direction"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "impulse-and-force",
+      "name": "Impulse and average force",
+      "equations": [
+        "F = Δp / Δt",
+        "impulse = FΔt = Δp = mv − mu"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Find the change in momentum, remembering that velocities in opposite directions have opposite signs so a rebound gives a larger Δp. Divide by the contact time to get the average force, or multiply a force by its duration to get the impulse. Impulse has units of N s, which are the same as kg m s⁻¹.",
+      "commonErrors": [
+        "Subtracting speeds when the object rebounds, instead of adding them (Δp = m(v − (−u)))",
+        "Leaving the contact time in milliseconds",
+        "Using mass in grams"
+      ],
+      "worked": {
+        "id": "impulse-and-force-w",
+        "question": "A footballer kicks a stationary ball of mass 0.45 kg so that it leaves the boot at 25 m s⁻¹. The boot is in contact with the ball for 0.050 s. Calculate the average force exerted on the ball.",
+        "steps": [
+          "Known: m = 0.45 kg, u = 0, v = 25 m s⁻¹, Δt = 0.050 s. Unknown: F.",
+          "Δp = mv − mu = 0.45 × 25 − 0 = 11.25 kg m s⁻¹",
+          "F = Δp / Δt",
+          "F = 11.25 / 0.050",
+          "F = 225 N"
+        ],
+        "answer": {
+          "value": 225,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "impulse-and-force-p1",
+          "question": "A model rocket motor produces a constant thrust of 12 N for 1.6 s. Calculate the impulse delivered by the motor.",
+          "hint": "Impulse = FΔt.",
+          "walkthrough": [
+            "F = 12 N, Δt = 1.6 s",
+            "Impulse = FΔt = 12 × 1.6",
+            "Impulse = 19.2 N s"
+          ],
+          "answer": {
+            "value": 19.2,
+            "unit": "N s"
+          }
+        },
+        {
+          "id": "impulse-and-force-p2",
+          "question": "A hammer head of mass 0.50 kg moving at 8.0 m s⁻¹ strikes a nail and is brought to rest in 0.0025 s. Calculate the average force on the nail.",
+          "hint": "Δp = mv − mu with v = 0; then F = Δp / Δt.",
+          "walkthrough": [
+            "Δp = 0.50 × 0 − 0.50 × 8.0 = −4.0 kg m s⁻¹ (magnitude 4.0)",
+            "F = Δp / Δt = 4.0 / 0.0025",
+            "F = 1600 N"
+          ],
+          "answer": {
+            "value": 1600,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "impulse-and-force-p3",
+          "question": "In a crash test, a car of mass 1500 kg travelling at 20 m s⁻¹ is stopped by a barrier in 0.12 s. Calculate the average force exerted by the barrier, in kN.",
+          "hint": "Find Δp first, divide by the time, then convert the force from N to kN.",
+          "walkthrough": [
+            "Δp = 1500 × 20 = 30 000 kg m s⁻¹",
+            "F = Δp / Δt = 30 000 / 0.12 = 250 000 N",
+            "F = 250 kN"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "kN"
+          }
+        },
+        {
+          "id": "impulse-and-force-p4",
+          "question": "A golf club strikes a stationary ball of mass 0.046 kg, giving it a speed of 70 m s⁻¹. The average force during the strike is 6.4 kN. Calculate the contact time, in milliseconds.",
+          "hint": "Rearrange F = Δp / Δt to Δt = Δp / F, with F in newtons, then convert the time to ms.",
+          "walkthrough": [
+            "Δp = 0.046 × 70 = 3.22 kg m s⁻¹",
+            "Δt = Δp / F = 3.22 / 6400",
+            "Δt = 5.03 × 10⁻⁴ s",
+            "Δt = 0.503 ms"
+          ],
+          "answer": {
+            "value": 0.503,
+            "unit": "ms"
+          }
+        },
+        {
+          "id": "impulse-and-force-p5",
+          "question": "A cricket ball of mass 0.16 kg arrives at the bat at 35 m s⁻¹ and leaves in the opposite direction at 25 m s⁻¹. The ball is in contact with the bat for 1.2 ms. Calculate the average force exerted by the bat on the ball.",
+          "hint": "Take the direction the ball leaves as positive, so u = −35 m s⁻¹; convert 1.2 ms to seconds.",
+          "walkthrough": [
+            "Take the outgoing direction as positive: u = −35 m s⁻¹, v = +25 m s⁻¹",
+            "Δp = m(v − u) = 0.16 × (25 − (−35)) = 0.16 × 60 = 9.6 kg m s⁻¹",
+            "Δt = 1.2 ms = 1.2 × 10⁻³ s",
+            "F = Δp / Δt = 9.6 / 1.2 × 10⁻³ = 8000 N"
+          ],
+          "answer": {
+            "value": 8000,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "impulse-and-force-p6",
+          "question": "A ball of mass 0.20 kg is dropped from rest from a height of 1.8 m onto soft ground and does not bounce. It is brought to rest in 0.040 s. Calculate the average resultant force on the ball while it is stopping.",
+          "hint": "First find the speed just before impact using v² = 2gh (or energy conservation), then use F = Δp / Δt.",
+          "walkthrough": [
+            "Speed at impact: v = √(2gh) = √(2 × 9.81 × 1.8) = √35.3 = 5.94 m s⁻¹",
+            "Δp = mv − 0 = 0.20 × 5.94 = 1.19 kg m s⁻¹",
+            "F = Δp / Δt = 1.19 / 0.040",
+            "F = 29.7 N"
+          ],
+          "answer": {
+            "value": 29.7,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kinetic-energy-in-collisions",
+      "name": "Kinetic energy lost in a collision",
+      "equations": [
+        "E_k = ½mv²",
+        "KE lost = total KE before − total KE after"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Add up ½mv² for every object before the collision, then again for every object after it, and subtract. Kinetic energy is a scalar, so direction does not matter and every term is positive. If the KE after is less than before, the collision is inelastic; if equal, it is elastic.",
+      "commonErrors": [
+        "Treating kinetic energy as a vector and giving a negative KE to an object moving backwards",
+        "Forgetting to square the velocity",
+        "Adding momenta instead of kinetic energies"
+      ],
+      "worked": {
+        "id": "kinetic-energy-in-collisions-w",
+        "question": "A 2.0 kg trolley moving at 3.0 m s⁻¹ collides with a stationary 1.0 kg trolley and the two stick together, moving at 2.0 m s⁻¹. Calculate the kinetic energy lost in the collision.",
+        "steps": [
+          "Known: m₁ = 2.0 kg, u₁ = 3.0 m s⁻¹; m₂ = 1.0 kg, u₂ = 0; combined mass 3.0 kg at v = 2.0 m s⁻¹.",
+          "KE before = ½ × 2.0 × 3.0² + 0 = ½ × 2.0 × 9.0 = 9.0 J",
+          "KE after = ½ × 3.0 × 2.0² = ½ × 3.0 × 4.0 = 6.0 J",
+          "KE lost = 9.0 − 6.0",
+          "KE lost = 3.0 J (the collision is inelastic)"
+        ],
+        "answer": {
+          "value": 3.0,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "kinetic-energy-in-collisions-p1",
+          "question": "A car of mass 1200 kg travelling at 15 m s⁻¹ collides with a stationary car of mass 1800 kg. The wreckage moves off together at 6.0 m s⁻¹. Calculate the kinetic energy lost in the collision.",
+          "hint": "Find ½mv² for the moving car before, and ½mv² for the combined 3000 kg wreckage after; subtract.",
+          "walkthrough": [
+            "KE before = ½ × 1200 × 15² = ½ × 1200 × 225 = 135 000 J",
+            "KE after = ½ × 3000 × 6.0² = ½ × 3000 × 36 = 54 000 J",
+            "KE lost = 135 000 − 54 000",
+            "KE lost = 81 000 J"
+          ],
+          "answer": {
+            "value": 81000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-in-collisions-p2",
+          "question": "A rubber ball of mass 0.40 kg hits a wall at 5.0 m s⁻¹ and rebounds at 3.0 m s⁻¹. Calculate the kinetic energy lost in the bounce.",
+          "hint": "KE depends only on speed, so the change of direction does not matter; find ½mv² before and after.",
+          "walkthrough": [
+            "KE before = ½ × 0.40 × 5.0² = ½ × 0.40 × 25 = 5.0 J",
+            "KE after = ½ × 0.40 × 3.0² = ½ × 0.40 × 9.0 = 1.8 J",
+            "KE lost = 5.0 − 1.8 = 3.2 J"
+          ],
+          "answer": {
+            "value": 3.2,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-in-collisions-p3",
+          "question": "A lump of modelling clay of mass 150 g moving at 4.0 m s⁻¹ hits a stationary wooden block of mass 350 g and sticks to it. The clay and block move off together at 1.2 m s⁻¹. Calculate the kinetic energy lost.",
+          "hint": "Convert both masses to kilograms before using ½mv².",
+          "walkthrough": [
+            "m_clay = 0.150 kg, m_block = 0.350 kg, combined mass = 0.500 kg",
+            "KE before = ½ × 0.150 × 4.0² = ½ × 0.150 × 16 = 1.2 J",
+            "KE after = ½ × 0.500 × 1.2² = ½ × 0.500 × 1.44 = 0.36 J",
+            "KE lost = 1.2 − 0.36 = 0.84 J"
+          ],
+          "answer": {
+            "value": 0.84,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-in-collisions-p4",
+          "question": "A railway wagon of mass 40 000 kg rolling at 18 km h⁻¹ couples to a stationary wagon of mass 60 000 kg. The coupled wagons move off at 2.0 m s⁻¹. Calculate the kinetic energy lost in the coupling, in kJ.",
+          "hint": "Convert 18 km h⁻¹ to m s⁻¹ first, then compare KE before and after and give the answer in kJ.",
+          "walkthrough": [
+            "u = 18 km h⁻¹ = 18 × 1000 / 3600 = 5.0 m s⁻¹",
+            "KE before = ½ × 40 000 × 5.0² = 500 000 J",
+            "KE after = ½ × 100 000 × 2.0² = 200 000 J",
+            "KE lost = 500 000 − 200 000 = 300 000 J = 300 kJ"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "kJ"
+          }
+        },
+        {
+          "id": "kinetic-energy-in-collisions-p5",
+          "question": "On an ice rink, a puck of mass 0.50 kg sliding at 6.0 m s⁻¹ hits a stationary puck of mass 1.5 kg and the two stick together. Calculate the kinetic energy lost in the collision.",
+          "hint": "Use conservation of momentum to find the combined velocity first, then compare the kinetic energies.",
+          "walkthrough": [
+            "Momentum: 0.50 × 6.0 = (0.50 + 1.5)v, so v = 3.0 / 2.0 = 1.5 m s⁻¹",
+            "KE before = ½ × 0.50 × 6.0² = ½ × 0.50 × 36 = 9.0 J",
+            "KE after = ½ × 2.0 × 1.5² = ½ × 2.0 × 2.25 = 2.25 J",
+            "KE lost = 9.0 − 2.25 = 6.75 J"
+          ],
+          "answer": {
+            "value": 6.75,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-in-collisions-p6",
+          "question": "A rugby player of mass 95 kg running north at 4.0 m s⁻¹ tackles a player of mass 80 kg running south at 1.5 m s⁻¹. They hold on to each other after the tackle. Calculate the kinetic energy lost in the tackle.",
+          "hint": "Find the common velocity from momentum (with north positive and the second velocity negative), then compare the total KE before with the KE of the pair after.",
+          "walkthrough": [
+            "Momentum (north positive): 95 × 4.0 + 80 × (−1.5) = 380 − 120 = 260 kg m s⁻¹",
+            "v = 260 / (95 + 80) = 260 / 175 = 1.486 m s⁻¹ (keep unrounded)",
+            "KE before = ½ × 95 × 4.0² + ½ × 80 × 1.5² = 760 + 90 = 850 J",
+            "KE after = ½ × 175 × 1.486² = 193 J",
+            "KE lost = 850 − 193 = 657 J"
+          ],
+          "answer": {
+            "value": 657,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "momentum-conservation-2d",
+      "name": "Conservation of momentum in two dimensions",
+      "equations": [
+        "p_x before = p_x after",
+        "p_y before = p_y after",
+        "|p| = √(p_x² + p_y²)"
+      ],
+      "boards": [
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Resolve into two perpendicular directions, usually the directions the two objects move in, and conserve momentum separately along each. Find the unknown object's momentum components, combine them with Pythagoras to get the magnitude, then divide by its mass to get the speed. Momentum in a direction where nothing was moving before is zero.",
+      "commonErrors": [
+        "Adding the momenta as scalars instead of combining the perpendicular components with Pythagoras",
+        "Dividing by the wrong mass at the end (use the mass of the object whose speed you want)",
+        "Forgetting that the component of momentum perpendicular to the original motion must total zero"
+      ],
+      "worked": {
+        "id": "momentum-conservation-2d-w",
+        "question": "At a junction a car of mass 1000 kg travelling east at 12 m s⁻¹ collides with a car of mass 1500 kg travelling north at 8.0 m s⁻¹. The cars lock together. Calculate the speed of the wreckage immediately after the collision.",
+        "steps": [
+          "Known: m₁ = 1000 kg east at 12 m s⁻¹; m₂ = 1500 kg north at 8.0 m s⁻¹; combined mass 2500 kg. Unknown: speed v.",
+          "East component: p_x = 1000 × 12 = 12 000 kg m s⁻¹ (only car 1 contributes)",
+          "North component: p_y = 1500 × 8.0 = 12 000 kg m s⁻¹ (only car 2 contributes)",
+          "Magnitude: |p| = √(12 000² + 12 000²) = √(2.88 × 10⁸) = 16 970 kg m s⁻¹",
+          "v = |p| / (m₁ + m₂) = 16 970 / 2500",
+          "v = 6.79 m s⁻¹"
+        ],
+        "answer": {
+          "value": 6.79,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "momentum-conservation-2d-p1",
+          "question": "On an air table, a 0.20 kg puck moving east at 3.0 m s⁻¹ collides with a 0.20 kg puck moving north at 4.0 m s⁻¹. The pucks stick together. Calculate their speed after the collision.",
+          "hint": "Find the east and north momentum components separately, combine with Pythagoras, then divide by the total mass 0.40 kg.",
+          "walkthrough": [
+            "p_x = 0.20 × 3.0 = 0.60 kg m s⁻¹; p_y = 0.20 × 4.0 = 0.80 kg m s⁻¹",
+            "|p| = √(0.60² + 0.80²) = √(0.36 + 0.64) = 1.0 kg m s⁻¹",
+            "v = 1.0 / 0.40",
+            "v = 2.5 m s⁻¹"
+          ],
+          "answer": {
+            "value": 2.5,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-2d-p2",
+          "question": "A firework shell at rest explodes into three pieces. A 0.50 kg piece moves east at 20 m s⁻¹ and a 0.30 kg piece moves north at 25 m s⁻¹. The third piece has mass 0.50 kg. Calculate the speed of the third piece.",
+          "hint": "Total momentum is zero, so the third piece's momentum is equal and opposite to the vector sum of the other two.",
+          "walkthrough": [
+            "Momentum of first two pieces: p_x = 0.50 × 20 = 10 kg m s⁻¹, p_y = 0.30 × 25 = 7.5 kg m s⁻¹",
+            "Third piece must cancel this: |p₃| = √(10² + 7.5²) = √156.25 = 12.5 kg m s⁻¹",
+            "v₃ = 12.5 / 0.50",
+            "v₃ = 25.0 m s⁻¹"
+          ],
+          "answer": {
+            "value": 25.0,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-2d-p3",
+          "question": "A motor boat of mass 2400 kg travelling east at 36 km h⁻¹ collides with a yacht of mass 1200 kg travelling north at 54 km h⁻¹. The boats become locked together. Calculate their speed immediately after the collision, in m s⁻¹.",
+          "hint": "Convert both speeds to m s⁻¹ (divide by 3.6) before finding the perpendicular momentum components.",
+          "walkthrough": [
+            "36 km h⁻¹ = 10 m s⁻¹; 54 km h⁻¹ = 15 m s⁻¹",
+            "p_x = 2400 × 10 = 24 000 kg m s⁻¹; p_y = 1200 × 15 = 18 000 kg m s⁻¹",
+            "|p| = √(24 000² + 18 000²) = 30 000 kg m s⁻¹",
+            "v = 30 000 / (2400 + 1200) = 30 000 / 3600 = 8.33 m s⁻¹"
+          ],
+          "answer": {
+            "value": 8.33,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-2d-p4",
+          "question": "A 250 g ball of clay moving east at 3.2 m s⁻¹ collides with a 400 g ball of clay moving north at 1.5 m s⁻¹. They stick together. Calculate their speed after the collision.",
+          "hint": "Convert the masses to kg, then conserve momentum in each direction and combine with Pythagoras.",
+          "walkthrough": [
+            "m₁ = 0.250 kg, m₂ = 0.400 kg, combined mass 0.650 kg",
+            "p_x = 0.250 × 3.2 = 0.80 kg m s⁻¹; p_y = 0.400 × 1.5 = 0.60 kg m s⁻¹",
+            "|p| = √(0.80² + 0.60²) = √(0.64 + 0.36) = 1.0 kg m s⁻¹",
+            "v = 1.0 / 0.650 = 1.54 m s⁻¹"
+          ],
+          "answer": {
+            "value": 1.54,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-2d-p5",
+          "question": "A cue ball of mass 0.17 kg moving at 2.0 m s⁻¹ strikes a stationary red ball of mass 0.17 kg. After the collision the cue ball moves at 1.2 m s⁻¹ at 90° to its original direction. Calculate the speed of the red ball.",
+          "hint": "Along the original direction the red ball takes all the initial momentum; perpendicular to it, the red ball's momentum must cancel the cue ball's. Combine the two components.",
+          "walkthrough": [
+            "Original direction (x): 0.17 × 2.0 = 0 + 0.17 × v_x, so v_x = 2.0 m s⁻¹",
+            "Perpendicular (y): 0 = 0.17 × 1.2 + 0.17 × v_y, so v_y = −1.2 m s⁻¹",
+            "Speed of red ball = √(2.0² + 1.2²) = √(4.0 + 1.44) = √5.44",
+            "v = 2.33 m s⁻¹"
+          ],
+          "answer": {
+            "value": 2.33,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "momentum-conservation-2d-p6",
+          "question": "A satellite of mass 1200 kg drifting at 5.0 m s⁻¹ strikes a stationary piece of debris of mass 800 kg. After the collision the satellite moves at 2.0 m s⁻¹ at 90° to its original direction. Calculate the speed of the debris.",
+          "hint": "Conserve momentum along the original direction and perpendicular to it separately to get the debris's two momentum components, then combine them and divide by 800 kg.",
+          "walkthrough": [
+            "Original direction (x): 1200 × 5.0 = 6000 = 0 + p_x of debris, so p_x = 6000 kg m s⁻¹",
+            "Perpendicular (y): 0 = 1200 × 2.0 + p_y of debris, so p_y = −2400 kg m s⁻¹",
+            "|p| = √(6000² + 2400²) = √(4.176 × 10⁷) = 6462 kg m s⁻¹",
+            "v = 6462 / 800 = 8.08 m s⁻¹"
+          ],
+          "answer": {
+            "value": 8.08,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "work-done",
+      "name": "Work done by a force",
+      "equations": [
+        "W = Fs cos θ",
+        "W = Fs (force along the motion)"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Work done is force multiplied by the distance moved along the line of the force. If the force acts at an angle θ to the direction of motion, use the component F cos θ. When an object is dragged at constant speed, the pulling force equals the friction, so the work done against friction is friction × distance.",
+      "commonErrors": [
+        "Using sin θ instead of cos θ for the angle between the force and the motion",
+        "Multiplying by the full force when only its component along the motion does work",
+        "Forgetting to convert km to m or kN to N before multiplying"
+      ],
+      "worked": {
+        "id": "work-done-w",
+        "question": "A child pulls a sledge 25 m across level snow using a rope that makes an angle of 30° with the ground. The tension in the rope is 80 N. Calculate the work done by the child on the sledge.",
+        "steps": [
+          "Known: F = 80 N, s = 25 m, θ = 30°. Unknown: W.",
+          "Only the component of the force along the motion does work: F cos θ",
+          "W = Fs cos θ = 80 × 25 × cos 30°",
+          "W = 2000 × 0.866 = 1732 J",
+          "W = 1730 J"
+        ],
+        "answer": {
+          "value": 1730,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "work-done-p1",
+          "question": "A crane lifts a load of weight 1500 N vertically through a height of 12 m at constant speed. Calculate the work done by the crane on the load.",
+          "hint": "The lifting force equals the weight and acts along the motion, so W = Fs.",
+          "walkthrough": [
+            "F = 1500 N (equal to the weight at constant speed), s = 12 m",
+            "W = Fs = 1500 × 12",
+            "W = 18 000 J"
+          ],
+          "answer": {
+            "value": 18000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "work-done-p2",
+          "question": "A gardener pushes a lawnmower 15 m with a force of 60 N along the handle, which is at 40° to the horizontal. Calculate the work done on the lawnmower.",
+          "hint": "W = Fs cos θ with θ the angle between the handle and the direction of motion.",
+          "walkthrough": [
+            "F = 60 N, s = 15 m, θ = 40°",
+            "W = Fs cos θ = 60 × 15 × cos 40° = 900 × 0.766",
+            "W = 689 J"
+          ],
+          "answer": {
+            "value": 689,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "work-done-p3",
+          "question": "A tow truck pulls a broken-down car along a straight level road with a horizontal force of 2.5 kN. Calculate the work done by the tow truck in pulling the car 1.2 km.",
+          "hint": "Convert kN to N and km to m before using W = Fs.",
+          "walkthrough": [
+            "F = 2.5 kN = 2500 N; s = 1.2 km = 1200 m",
+            "W = Fs = 2500 × 1200",
+            "W = 3.0 × 10⁶ J"
+          ],
+          "answer": {
+            "value": 3000000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "work-done-p4",
+          "question": "A builder does 1800 J of work pushing a wheelbarrow 24 m along a level path. The force is applied along the handles, which are at 20° to the horizontal. Calculate the force the builder applies.",
+          "hint": "Rearrange W = Fs cos θ to F = W / (s cos θ).",
+          "walkthrough": [
+            "W = 1800 J, s = 24 m, θ = 20°",
+            "F = W / (s cos θ) = 1800 / (24 × cos 20°)",
+            "F = 1800 / (24 × 0.940) = 1800 / 22.6",
+            "F = 79.8 N"
+          ],
+          "answer": {
+            "value": 79.8,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "work-done-p5",
+          "question": "A crate of mass 12 kg is dragged 6.0 m across a horizontal floor at constant speed. The frictional force is 0.30 times the weight of the crate. Calculate the work done against friction.",
+          "hint": "Find the weight first (mg), then the friction, then multiply by the distance.",
+          "walkthrough": [
+            "Weight = mg = 12 × 9.81 = 117.7 N",
+            "Friction = 0.30 × 117.7 = 35.3 N",
+            "W = Fs = 35.3 × 6.0",
+            "W = 212 J"
+          ],
+          "answer": {
+            "value": 212,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "work-done-p6",
+          "question": "A rope pulls a boat 16 m along a canal with a tension of 120 N. The work done by the rope is 1440 J. Calculate the angle between the rope and the direction the boat moves.",
+          "hint": "Rearrange W = Fs cos θ to find cos θ, then use inverse cosine.",
+          "walkthrough": [
+            "W = Fs cos θ, so cos θ = W / (Fs)",
+            "cos θ = 1440 / (120 × 16) = 1440 / 1920 = 0.75",
+            "θ = cos⁻¹(0.75)",
+            "θ = 41.4°"
+          ],
+          "answer": {
+            "value": 41.4,
+            "unit": "°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kinetic-and-potential-energy",
+      "name": "Kinetic and gravitational potential energy",
+      "equations": [
+        "E_k = ½mv²",
+        "ΔE_p = mgΔh"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Kinetic energy is ½mv² with mass in kg and speed in m s⁻¹; gravitational potential energy change is mgΔh with the height change in metres. Rearrange as needed: v = √(2E_k / m), m = 2E_k / v², Δh = ΔE_p / (mg). Take g = 9.81 m s⁻².",
+      "commonErrors": [
+        "Forgetting to square the speed, or forgetting to square-root when finding v",
+        "Using mass in grams or height in cm",
+        "Halving mv² twice, or not at all"
+      ],
+      "worked": {
+        "id": "kinetic-and-potential-energy-w",
+        "question": "A cyclist and bicycle have a combined mass of 85 kg and a kinetic energy of 3400 J. Calculate the cyclist's speed.",
+        "steps": [
+          "Known: m = 85 kg, E_k = 3400 J. Unknown: v.",
+          "E_k = ½mv², so v² = 2E_k / m",
+          "v² = 2 × 3400 / 85 = 80",
+          "v = √80",
+          "v = 8.94 m s⁻¹"
+        ],
+        "answer": {
+          "value": 8.94,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "kinetic-and-potential-energy-p1",
+          "question": "A car of mass 1200 kg travels at 25 m s⁻¹. Calculate its kinetic energy.",
+          "hint": "E_k = ½mv²; square the speed before multiplying.",
+          "walkthrough": [
+            "E_k = ½mv² = ½ × 1200 × 25²",
+            "E_k = ½ × 1200 × 625 = 600 × 625",
+            "E_k = 375 000 J"
+          ],
+          "answer": {
+            "value": 375000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-and-potential-energy-p2",
+          "question": "A climber of mass 65 kg ascends a vertical height of 420 m. Calculate the gravitational potential energy gained.",
+          "hint": "ΔE_p = mgΔh with g = 9.81 m s⁻².",
+          "walkthrough": [
+            "ΔE_p = mgΔh = 65 × 9.81 × 420",
+            "ΔE_p = 267 813 J",
+            "ΔE_p = 268 000 J (2.68 × 10⁵ J)"
+          ],
+          "answer": {
+            "value": 268000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-and-potential-energy-p3",
+          "question": "A rifle bullet travelling at 400 m s⁻¹ has a kinetic energy of 1600 J. Calculate the mass of the bullet, in grams.",
+          "hint": "Rearrange E_k = ½mv² to m = 2E_k / v², then convert kg to g.",
+          "walkthrough": [
+            "m = 2E_k / v² = 2 × 1600 / 400²",
+            "m = 3200 / 160 000 = 0.020 kg",
+            "m = 20.0 g"
+          ],
+          "answer": {
+            "value": 20.0,
+            "unit": "g"
+          }
+        },
+        {
+          "id": "kinetic-and-potential-energy-p4",
+          "question": "A lift car of mass 750 kg gains 66 kJ of gravitational potential energy as it rises between two floors. Calculate the height it rises.",
+          "hint": "Convert kJ to J, then rearrange ΔE_p = mgΔh to Δh = ΔE_p / (mg).",
+          "walkthrough": [
+            "ΔE_p = 66 kJ = 66 000 J",
+            "Δh = ΔE_p / (mg) = 66 000 / (750 × 9.81)",
+            "Δh = 66 000 / 7357.5",
+            "Δh = 8.97 m"
+          ],
+          "answer": {
+            "value": 8.97,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "kinetic-and-potential-energy-p5",
+          "question": "A sprinter of mass 70 kg runs 100 m in 10.0 s. Calculate the kinetic energy of the sprinter when running at their average speed.",
+          "hint": "Find the average speed from distance / time first, then use ½mv².",
+          "walkthrough": [
+            "Average speed v = 100 / 10.0 = 10.0 m s⁻¹",
+            "E_k = ½mv² = ½ × 70 × 10.0²",
+            "E_k = ½ × 70 × 100",
+            "E_k = 3500 J"
+          ],
+          "answer": {
+            "value": 3500,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-and-potential-energy-p6",
+          "question": "A pump raises 2.4 m³ of water through a vertical height of 15 m into a storage tank. The density of water is 1000 kg m⁻³. Calculate the gravitational potential energy gained by the water.",
+          "hint": "Find the mass of the water from density × volume first, then use mgΔh.",
+          "walkthrough": [
+            "Mass of water = ρV = 1000 × 2.4 = 2400 kg",
+            "ΔE_p = mgΔh = 2400 × 9.81 × 15",
+            "ΔE_p = 353 160 J",
+            "ΔE_p = 353 000 J (3.53 × 10⁵ J)"
+          ],
+          "answer": {
+            "value": 353000,
+            "unit": "J"
+          }
+        }
+      ]
+    },
+    {
+      "id": "energy-conservation",
+      "name": "Energy transfers between KE and GPE",
+      "equations": [
+        "½mv² = mgΔh (no losses)",
+        "v = √(2gΔh)",
+        "Δh = v² / 2g",
+        "KE gained = GPE lost − work done against friction"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Equate the gravitational potential energy lost to the kinetic energy gained (or the reverse for something thrown upwards). With no losses the mass cancels, giving v = √(2gΔh) or Δh = v² / 2g. If energy is lost to friction, subtract the loss from the GPE before converting the remainder to KE; the mass then does not cancel.",
+      "commonErrors": [
+        "Cancelling the mass when there is a stated energy loss (it only cancels when there are no losses)",
+        "Forgetting to square-root when finding the speed",
+        "Using the slope length instead of the vertical height change"
+      ],
+      "worked": {
+        "id": "energy-conservation-w",
+        "question": "A roller-coaster car starts from rest at the top of a drop and descends a vertical height of 42 m. Ignoring friction, calculate the speed of the car at the bottom of the drop.",
+        "steps": [
+          "Known: Δh = 42 m, u = 0, g = 9.81 m s⁻². Unknown: v.",
+          "GPE lost = KE gained: mgΔh = ½mv²",
+          "The mass cancels: v² = 2gΔh",
+          "v² = 2 × 9.81 × 42 = 824",
+          "v = √824",
+          "v = 28.7 m s⁻¹"
+        ],
+        "answer": {
+          "value": 28.7,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "energy-conservation-p1",
+          "question": "A pendulum bob is pulled aside so that it is 0.12 m above its lowest point and released from rest. Calculate the speed of the bob as it passes through its lowest point.",
+          "hint": "mgΔh = ½mv², the mass cancels, so v = √(2gΔh).",
+          "walkthrough": [
+            "v² = 2gΔh = 2 × 9.81 × 0.12",
+            "v² = 2.35",
+            "v = √2.35 = 1.53 m s⁻¹"
+          ],
+          "answer": {
+            "value": 1.53,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "energy-conservation-p2",
+          "question": "A ball is thrown vertically upwards at 14 m s⁻¹. Ignoring air resistance, calculate the maximum height it rises above the point of release.",
+          "hint": "All the KE becomes GPE at the top: ½mv² = mgΔh, so Δh = v² / 2g.",
+          "walkthrough": [
+            "½mv² = mgΔh, so Δh = v² / 2g",
+            "Δh = 14² / (2 × 9.81) = 196 / 19.62",
+            "Δh = 9.99 m"
+          ],
+          "answer": {
+            "value": 9.99,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "energy-conservation-p3",
+          "question": "A skier starts from rest and descends a slope through a vertical height of 120 m. Ignoring friction and air resistance, calculate the skier's speed at the bottom, in km h⁻¹.",
+          "hint": "Find v in m s⁻¹ from v = √(2gΔh), then multiply by 3.6 to convert to km h⁻¹.",
+          "walkthrough": [
+            "v² = 2gΔh = 2 × 9.81 × 120 = 2354",
+            "v = √2354 = 48.5 m s⁻¹",
+            "v = 48.5 × 3600 / 1000",
+            "v = 175 km h⁻¹"
+          ],
+          "answer": {
+            "value": 175,
+            "unit": "km h⁻¹"
+          }
+        },
+        {
+          "id": "energy-conservation-p4",
+          "question": "A spring-loaded toy 'popper' launches itself vertically upwards at 4.2 m s⁻¹. Ignoring air resistance, calculate the maximum height it reaches, in centimetres.",
+          "hint": "Δh = v² / 2g gives metres; convert to cm.",
+          "walkthrough": [
+            "Δh = v² / 2g = 4.2² / (2 × 9.81) = 17.64 / 19.62",
+            "Δh = 0.899 m",
+            "Δh = 89.9 cm"
+          ],
+          "answer": {
+            "value": 89.9,
+            "unit": "cm"
+          }
+        },
+        {
+          "id": "energy-conservation-p5",
+          "question": "A diver leaves a 10 m platform moving vertically upwards at 3.5 m s⁻¹. Ignoring air resistance, calculate the diver's speed on entering the water 10 m below the platform.",
+          "hint": "The diver starts with some KE as well as GPE: ½mv² = ½mu² + mgΔh, so v² = u² + 2gΔh.",
+          "walkthrough": [
+            "KE at water = initial KE + GPE lost: ½mv² = ½mu² + mgΔh",
+            "v² = u² + 2gΔh = 3.5² + 2 × 9.81 × 10",
+            "v² = 12.25 + 196.2 = 208.45",
+            "v = √208.45 = 14.4 m s⁻¹"
+          ],
+          "answer": {
+            "value": 14.4,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "energy-conservation-p6",
+          "question": "A skateboarder of mass 60 kg starts from rest at the top of a ramp 3.2 m high and rolls to the bottom. 250 J of energy is transferred to thermal energy by friction on the way down. Calculate the skateboarder's speed at the bottom of the ramp.",
+          "hint": "KE at the bottom = GPE lost − energy lost to friction; the mass does not cancel here, so find the KE in joules first.",
+          "walkthrough": [
+            "GPE lost = mgΔh = 60 × 9.81 × 3.2 = 1884 J",
+            "KE at bottom = 1884 − 250 = 1634 J",
+            "½mv² = 1634, so v² = 2 × 1634 / 60 = 54.5",
+            "v = √54.5 = 7.38 m s⁻¹"
+          ],
+          "answer": {
+            "value": 7.38,
+            "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "name": "Power: energy per second and force × velocity",
+      "equations": [
+        "P = E / t = W / t",
+        "P = Fv"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Power is the rate of energy transfer: divide the energy or work done by the time taken, in seconds. When a force moves something at a steady speed, P = Fv. For a motor lifting a load at steady speed, the force equals the weight mg; for a vehicle at constant speed, the driving force equals the total resistive force.",
+      "commonErrors": [
+        "Leaving time in minutes or hours",
+        "Using the mass instead of the weight (mg) as the force in P = Fv for a lifting motor",
+        "Mixing up kW and W, or kJ and J"
+      ],
+      "worked": {
+        "id": "power-w",
+        "question": "A hoist motor lifts a 250 kg load vertically through 12 m in 20 s at a steady speed. Calculate the useful output power of the motor.",
+        "steps": [
+          "Known: m = 250 kg, Δh = 12 m, t = 20 s. Unknown: P.",
+          "Work done = GPE gained = mgΔh = 250 × 9.81 × 12 = 29 430 J",
+          "P = W / t",
+          "P = 29 430 / 20 = 1471.5 W",
+          "P = 1470 W"
+        ],
+        "answer": {
+          "value": 1470,
+          "unit": "W"
+        }
+      },
+      "practice": [
+        {
+          "id": "power-p1",
+          "question": "An electric kettle transfers 540 000 J of energy to the water in 180 s. Calculate the power of the kettle.",
+          "hint": "P = E / t with t in seconds.",
+          "walkthrough": [
+            "P = E / t = 540 000 / 180",
+            "P = 3000 W"
+          ],
+          "answer": {
+            "value": 3000,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-p2",
+          "question": "A car travels along a level motorway at a constant 30 m s⁻¹ against a total resistive force of 650 N. Calculate the output power of the engine.",
+          "hint": "At constant speed the driving force equals the resistive force; use P = Fv.",
+          "walkthrough": [
+            "Driving force F = 650 N (constant speed), v = 30 m s⁻¹",
+            "P = Fv = 650 × 30",
+            "P = 19 500 W (19.5 kW)"
+          ],
+          "answer": {
+            "value": 19500,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-p3",
+          "question": "A cyclist maintains a steady speed of 12 m s⁻¹ on a level road with a power output of 320 W. Calculate the total resistive force acting on the cyclist.",
+          "hint": "Rearrange P = Fv to F = P / v.",
+          "walkthrough": [
+            "P = Fv, so F = P / v",
+            "F = 320 / 12",
+            "F = 26.7 N"
+          ],
+          "answer": {
+            "value": 26.7,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "power-p4",
+          "question": "A wind turbine generates at a steady 2.4 MW for 5.0 minutes. Calculate the energy generated, in joules.",
+          "hint": "Rearrange P = E / t to E = Pt, with P in W and t in seconds.",
+          "walkthrough": [
+            "P = 2.4 MW = 2.4 × 10⁶ W; t = 5.0 min = 300 s",
+            "E = Pt = 2.4 × 10⁶ × 300",
+            "E = 7.2 × 10⁸ J"
+          ],
+          "answer": {
+            "value": 720000000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "power-p5",
+          "question": "A lift motor has a useful output power of 15 kW. Calculate the steady speed at which it can raise a lift and passengers of total mass 900 kg.",
+          "hint": "Find the weight mg first; at steady speed the lifting force equals the weight, so v = P / F.",
+          "walkthrough": [
+            "Lifting force F = mg = 900 × 9.81 = 8829 N",
+            "P = Fv, so v = P / F",
+            "v = 15 000 / 8829",
+            "v = 1.70 m s⁻¹"
+          ],
+          "answer": {
+            "value": 1.7,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "power-p6",
+          "question": "A pump raises 1.5 m³ of water every minute through a vertical height of 8.0 m. The density of water is 1000 kg m⁻³. Calculate the useful output power of the pump.",
+          "hint": "Find the mass of water lifted each minute, then the GPE gained, then divide by 60 s.",
+          "walkthrough": [
+            "Mass per minute = ρV = 1000 × 1.5 = 1500 kg",
+            "Energy per minute = mgΔh = 1500 × 9.81 × 8.0 = 117 720 J",
+            "P = E / t = 117 720 / 60",
+            "P = 1960 W"
+          ],
+          "answer": {
+            "value": 1960,
+            "unit": "W"
+          }
+        }
+      ]
+    },
+    {
+      "id": "efficiency",
+      "name": "Efficiency of an energy transfer",
+      "equations": [
+        "efficiency = useful energy output / total energy input",
+        "efficiency = useful power output / total power input",
+        "× 100 for a percentage"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "Divide the useful output (energy or power) by the total input, making sure both are in the same unit. Multiply by 100 if a percentage is asked for. To find an input or an output, rearrange: input = output / efficiency, output = efficiency × input, using the efficiency as a decimal.",
+      "commonErrors": [
+        "Dividing input by output and getting an efficiency above 100%",
+        "Mixing units, e.g. useful output in J with input in kWh",
+        "Using a percentage as a decimal (45% is 0.45) when rearranging"
+      ],
+      "worked": {
+        "id": "efficiency-w",
+        "question": "An electric drill is supplied with 85 J of electrical energy each second and delivers 68 J of useful mechanical energy each second. Calculate the efficiency of the drill as a percentage.",
+        "steps": [
+          "Known: useful output = 68 J, total input = 85 J. Unknown: efficiency.",
+          "efficiency = useful output / total input",
+          "efficiency = 68 / 85 = 0.80",
+          "As a percentage: 0.80 × 100",
+          "efficiency = 80.0 %"
+        ],
+        "answer": {
+          "value": 80.0,
+          "unit": "%"
+        }
+      },
+      "practice": [
+        {
+          "id": "efficiency-p1",
+          "question": "A kettle uses 420 kJ of electrical energy to boil some water. 360 kJ is transferred to the water as thermal energy. Calculate the efficiency of the kettle as a percentage.",
+          "hint": "efficiency = useful output / total input × 100; both values are already in kJ.",
+          "walkthrough": [
+            "efficiency = useful output / total input = 360 / 420",
+            "efficiency = 0.857",
+            "efficiency = 85.7 %"
+          ],
+          "answer": {
+            "value": 85.7,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "efficiency-p2",
+          "question": "An LED lamp draws 12 W of electrical power and emits 4.8 W as visible light. Calculate the efficiency of the lamp as a decimal.",
+          "hint": "efficiency = useful power output / total power input; do not multiply by 100.",
+          "walkthrough": [
+            "efficiency = useful power output / total power input",
+            "efficiency = 4.8 / 12",
+            "efficiency = 0.40"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": ""
+          }
+        },
+        {
+          "id": "efficiency-p3",
+          "question": "A wind turbine has an efficiency of 45% and a useful electrical output of 1.8 MW. Calculate the power input from the wind, in MW.",
+          "hint": "Rearrange efficiency = output / input to input = output / efficiency, with the efficiency as a decimal.",
+          "walkthrough": [
+            "efficiency = 45% = 0.45",
+            "input = output / efficiency = 1.8 / 0.45",
+            "input = 4.0 MW"
+          ],
+          "answer": {
+            "value": 4.0,
+            "unit": "MW"
+          }
+        },
+        {
+          "id": "efficiency-p4",
+          "question": "A crane uses 4.5 kWh of electrical energy during a lift and does 1.08 × 10⁷ J of useful work on the load. Calculate the efficiency of the crane as a percentage.",
+          "hint": "Convert 4.5 kWh to joules (1 kWh = 3.6 × 10⁶ J) so both energies are in the same unit.",
+          "walkthrough": [
+            "Input = 4.5 kWh = 4.5 × 3.6 × 10⁶ = 1.62 × 10⁷ J",
+            "efficiency = useful output / total input = 1.08 × 10⁷ / 1.62 × 10⁷",
+            "efficiency = 0.667",
+            "efficiency = 66.7 %"
+          ],
+          "answer": {
+            "value": 66.7,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "efficiency-p5",
+          "question": "An electric pump raises 800 kg of water through a vertical height of 12 m. The pump uses 120 kJ of electrical energy to do this. Calculate the efficiency of the pump as a percentage.",
+          "hint": "Find the useful output as the GPE gained by the water (mgΔh) first, then divide by the input in joules.",
+          "walkthrough": [
+            "Useful output = mgΔh = 800 × 9.81 × 12 = 94 176 J",
+            "Input = 120 kJ = 120 000 J",
+            "efficiency = 94 176 / 120 000 = 0.785",
+            "efficiency = 78.5 %"
+          ],
+          "answer": {
+            "value": 78.5,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "efficiency-p6",
+          "question": "A winch motor draws 2.0 kW of electrical power while lifting a 150 kg load at a steady speed of 0.90 m s⁻¹. Calculate the efficiency of the winch as a percentage.",
+          "hint": "Find the useful output power from P = Fv with F = mg, then divide by the 2000 W input.",
+          "walkthrough": [
+            "Lifting force F = mg = 150 × 9.81 = 1471.5 N",
+            "Useful output power = Fv = 1471.5 × 0.90 = 1324 W",
+            "efficiency = 1324 / 2000 = 0.662",
+            "efficiency = 66.2 %"
+          ],
+          "answer": {
+            "value": 66.2,
+            "unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ft-fs-graph",
+      "name": "Reading force–time and force–displacement graphs",
+      "equations": [
+        "impulse = FΔt = area under the F–t graph",
+        "impulse = Δp = mΔv",
+        "W = Fs = area under the F–s graph",
+        "P = ΔW / Δt = gradient of the W–t graph"
+      ],
+      "boards": [
+        "AQA",
+        "OCR A",
+        "OCR B",
+        "Edexcel",
+        "WJEC"
+      ],
+      "method": "The area under a force–time graph is the impulse (the change in momentum) and the area under a force–displacement graph is the work done; the gradient of a work–time graph is the power. Split the area into rectangles, triangles and trapeziums, convert any ms or kN axis before multiplying, and then, if asked, divide the impulse by the mass to get Δv or set the work done equal to ½mv².",
+      "commonErrors": [
+        "Forgetting to convert a time axis in ms to seconds before finding the area",
+        "Using the peak force instead of the area when asked for the impulse",
+        "Treating the area under an F–t graph as work done (it is impulse; work is the area under F–s)",
+        "Forgetting the ½ in a triangular area"
+      ],
+      "worked": {
+        "id": "ft-fs-graph-w",
+        "question": "The force–time graph shows the force exerted by a tennis racket on a ball during a serve. Use the graph to determine the impulse given to the ball, shown by the shaded area.",
+        "steps": [
+          "Impulse = area under the F–t graph. The shaded shape is a triangle with its peak at P.",
+          "Base = 10 ms = 10 × 10⁻³ s; height = 600 N",
+          "impulse = ½ × base × height = ½ × 10 × 10⁻³ × 600",
+          "impulse = 3.0 N s"
+        ],
+        "answer": {
+          "value": 3.0,
+          "unit": "N s"
+        },
+        "graph": {
+          "x": {
+            "label": "t / ms",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          },
+          "y": {
+            "label": "F / N",
+            "min": 0,
+            "max": 600,
+            "step": 100
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  4,
+                  600
+                ],
+                [
+                  10,
+                  0
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 4,
+              "y": 600,
+              "label": "P",
+              "drop": true
+            }
+          ],
+          "shade": [
+            {
+              "series": 0,
+              "from": 0,
+              "to": 10
+            }
+          ],
+          "alt": "Force–time graph: a triangle rising from the origin to 600 N at 4 ms and falling back to zero at 10 ms; the whole triangle is shaded"
+        }
+      },
+      "practice": [
+        {
+          "id": "ft-fs-graph-p1",
+          "question": "The force–time graph shows the thrust from a small rocket thruster on a satellite during a 10 s burn. Use the graph to determine the total impulse delivered, shown by the shaded area.",
+          "hint": "Split the shaded area into a rectangle (from 0 to A) and a triangle (from A to B) and add them.",
+          "walkthrough": [
+            "Rectangle from 0 to 6 s: 6 × 200 = 1200 N s",
+            "Triangle from 6 s to 10 s: ½ × 4 × 200 = 400 N s",
+            "impulse = 1200 + 400",
+            "impulse = 1600 N s"
+          ],
+          "answer": {
+            "value": 1600,
+            "unit": "N s"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 250,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    200
+                  ],
+                  [
+                    6,
+                    200
+                  ],
+                  [
+                    10,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 200,
+                "label": "A",
+                "drop": true
+              },
+              {
+                "x": 10,
+                "y": 0,
+                "label": "B",
+                "dx": 6,
+                "dy": -6
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 10
+              }
+            ],
+            "alt": "Force–time graph level at 200 N from 0 to 6 s then falling in a straight line to zero at 10 s; the area under the whole graph is shaded"
+          }
+        },
+        {
+          "id": "ft-fs-graph-p2",
+          "question": "The force–displacement graph shows the horizontal pull on a sledge as it is dragged 16 m across snow. Use the graph to determine the work done on the sledge, shown by the shaded area.",
+          "hint": "Work done is the area under the F–s graph; the shaded shape is a trapezium with its parallel sides at A and B.",
+          "walkthrough": [
+            "Work done = area under the F–s graph from 0 to 16 m.",
+            "The trapezium has parallel sides 100 N (at A) and 40 N (at B) and width 16 m.",
+            "W = ½ × (100 + 40) × 16 = ½ × 140 × 16",
+            "W = 1120 J"
+          ],
+          "answer": {
+            "value": 1120,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "s / m",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 120,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    100
+                  ],
+                  [
+                    16,
+                    40
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 100,
+                "label": "A",
+                "dx": 8,
+                "dy": -8
+              },
+              {
+                "x": 16,
+                "y": 40,
+                "label": "B",
+                "drop": true,
+                "dx": -14,
+                "dy": -10
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 16
+              }
+            ],
+            "alt": "Force–displacement graph: a straight line falling from 100 N at 0 m to 40 N at 16 m; the trapezium under the line is shaded"
+          }
+        },
+        {
+          "id": "ft-fs-graph-p3",
+          "question": "The force–time graph shows the force of a golf club on a ball during the 0.60 ms of contact. Note the units on both axes. Use the shaded area to determine the average force on the ball during the contact.",
+          "hint": "Find the impulse from the triangular area (convert kN and ms first), then divide by the whole contact time, 0.60 ms.",
+          "walkthrough": [
+            "Peak force (at P) = 1.8 kN = 1800 N; contact time = 0.60 ms = 0.60 × 10⁻³ s",
+            "impulse = area = ½ × 0.60 × 10⁻³ × 1800 = 0.54 N s",
+            "average force = impulse / contact time = 0.54 / (0.60 × 10⁻³)",
+            "F = 900 N"
+          ],
+          "answer": {
+            "value": 900.0,
+            "unit": "N"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 0.6,
+              "step": 0.1
+            },
+            "y": {
+              "label": "F / kN",
+              "min": 0,
+              "max": 2.0,
+              "step": 0.2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.2,
+                    1.8
+                  ],
+                  [
+                    0.6,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.2,
+                "y": 1.8,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 0.6
+              }
+            ],
+            "alt": "Force–time graph: a triangle rising from the origin to 1.8 kN at 0.2 ms and falling to zero at 0.6 ms; the triangle is shaded"
+          }
+        },
+        {
+          "id": "ft-fs-graph-p4",
+          "question": "The graph shows the work done by a crane motor against time while it raises a load at a steady rate. Use the graph to determine the power of the motor.",
+          "hint": "Power is the gradient of the W–t graph; read X and convert kJ to J.",
+          "walkthrough": [
+            "X = (20 s, 30 kJ) = (20 s, 30 × 10³ J)",
+            "P = ΔW / Δt = gradient = 30 × 10³ / 20",
+            "P = 1500 W"
+          ],
+          "answer": {
+            "value": 1500,
+            "unit": "W"
+          },
+          "graph": {
+            "x": {
+              "label": "t / s",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "W / kJ",
+              "min": 0,
+              "max": 30,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    20,
+                    30
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 20,
+                "y": 30,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -8
+              }
+            ],
+            "alt": "Work done–time graph: a straight line from the origin to 30 kJ at 20 s, with X marked at the end"
+          }
+        },
+        {
+          "id": "ft-fs-graph-p5",
+          "question": "The force–time graph shows the force of a hockey stick on a stationary ball of mass 0.18 kg during a push pass. Use the shaded area to determine the speed of the ball as it leaves the stick.",
+          "hint": "Find the impulse from the trapezium area (convert ms to s), then use impulse = mΔv.",
+          "walkthrough": [
+            "Impulse = area of the trapezium: parallel sides AB = 4 ms and the base = 8 ms, height 300 N",
+            "impulse = ½ × (4 + 8) × 10⁻³ × 300 = 1.8 N s",
+            "impulse = mΔv → Δv = 1.8 / 0.18",
+            "v = 10 m s⁻¹"
+          ],
+          "answer": {
+            "value": 10.0,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "t / ms",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 300,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2,
+                    300
+                  ],
+                  [
+                    6,
+                    300
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2,
+                "y": 300,
+                "label": "A",
+                "drop": true,
+                "dx": -14,
+                "dy": -8
+              },
+              {
+                "x": 6,
+                "y": 300,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 8
+              }
+            ],
+            "alt": "Force–time graph: a trapezium rising from the origin to 300 N at 2 ms, level to 6 ms, then falling to zero at 8 ms; the whole area is shaded"
+          }
+        },
+        {
+          "id": "ft-fs-graph-p6",
+          "question": "A model car of mass 2.5 kg starts from rest on a level track. The graph shows the resultant force on the car against the distance it has travelled. Use the shaded area to determine the speed of the car after 8.0 m.",
+          "hint": "The shaded area is the work done by the resultant force, which equals the kinetic energy gained, ½mv².",
+          "walkthrough": [
+            "Work done = area of the trapezium = ½ × (50 + 30) × 8.0 = 320 J",
+            "Work done by the resultant force = gain in kinetic energy = ½mv²",
+            "v² = 2 × 320 / 2.5 = 256",
+            "v = 16 m s⁻¹"
+          ],
+          "answer": {
+            "value": 16.0,
+            "unit": "m s⁻¹"
+          },
+          "graph": {
+            "x": {
+              "label": "s / m",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "F / N",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    50
+                  ],
+                  [
+                    8,
+                    30
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0,
+                "y": 50,
+                "label": "A",
+                "dx": 8,
+                "dy": -8
+              },
+              {
+                "x": 8,
+                "y": 30,
+                "label": "B",
+                "drop": true,
+                "dx": -14,
+                "dy": -10
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 8
+              }
+            ],
+            "alt": "Resultant force–displacement graph: a straight line falling from 50 N at 0 m to 30 N at 8 m; the trapezium under the line is shaded"
+          }
+        }
+      ]
+    }
+  ]
+}
