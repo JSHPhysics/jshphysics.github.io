@@ -103,9 +103,10 @@
   ];
   const UNIT_SET = new Set(BASE_UNITS);
 
-  // Units that are unambiguous even without a number in front
+  // Units that are unambiguous even without a number in front ("turns" and
+  // "lines" are only units after a number or another unit: "Wb turns")
   const STRONG_UNITS = new Set(BASE_UNITS.filter(function (unit) {
-    return unit.length >= 2 && !IDENTIFIERS.has(unit);
+    return unit.length >= 2 && !IDENTIFIERS.has(unit) && unit !== "turns" && unit !== "lines";
   }));
 
   function isDigit(character) {
@@ -569,6 +570,11 @@
 
     for (const neighbour of [previous, next]) {
       if (!neighbour) {
+        continue;
+      }
+      // A unit ("54 km h⁻¹ runs into") is followed by prose, so it never
+      // makes its neighbour maths
+      if (neighbour.isUnit || (neighbour.type === "word" && unitBase(neighbour.text))) {
         continue;
       }
       if (neighbour.type === "op" && MATH_NEIGHBOUR_OPS.has(neighbour.text)) {
