@@ -346,13 +346,20 @@
         "<path class=\"cons\" d=\"M98,142 A130,130 0 0 0 222,142\"/>" +
         // Amplitude marks
         dimension(160, 176, 222, 176, "A", 0) +
-        // Pendulum
+        // Pendulum: string and bob rotate about the pivot
         "<g class=\"swing\" style=\"transform-origin: 160px 28px\">" +
         "<line class=\"acc\" x1=\"160\" y1=\"28\" x2=\"160\" y2=\"158\"/>" +
         "<circle class=\"acc fill\" cx=\"160\" cy=\"164\" r=\"9\"/>" +
         "</g>" +
-        text(176, 70, "θ") +
-        "<path class=\"cons\" d=\"M160,70 A42,42 0 0 1 172,58\"/>" +
+        // Angle marker: a dashed arc from the vertical to the string. The
+        // visible part of this circle is a dash whose length follows the
+        // swing angle (see fig-theta-arc in figures.css)
+        "<circle class=\"cons theta-arc\" cx=\"160\" cy=\"28\" r=\"42\" style=\"transform-origin: 160px 28px\"/>" +
+        // θ sits at the middle of that arc: an arm rotated by half the
+        // swing angle, with the glyph counter-rotated so it stays upright
+        "<g class=\"theta-arm\" style=\"transform-origin: 160px 28px\">" +
+        "<text class=\"theta-glyph\" x=\"160\" y=\"88\" text-anchor=\"middle\">θ</text>" +
+        "</g>" +
         text(130, 100, "L", "end")
       );
     },

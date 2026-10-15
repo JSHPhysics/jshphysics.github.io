@@ -63,7 +63,17 @@
 
 .fig .travel.slow { animation-duration: 11s; }
 
-.fig .swing { animation: fig-swing 1.9s ease-in-out infinite alternate; }
+.fig .swing { animation: fig-swing 3.8s linear infinite; }
+.fig .theta-arc {
+  /* dash lengths must be in user units, so no non-scaling-stroke here */
+  vector-effect: none;
+  stroke-width: 1;
+  stroke-dasharray: 263.89;
+  stroke-dashoffset: 263.89;
+  animation: fig-theta-arc 3.8s linear infinite;
+}
+.fig .theta-arm { animation: fig-theta-arm 3.8s linear infinite; }
+.fig .theta-glyph { transform-box: fill-box; transform-origin: center; animation: fig-theta-glyph 3.8s linear infinite; }
 .fig .orbit { animation: fig-orbit 9s linear infinite; }
 .fig .jitter { animation: fig-jitter 1.4s ease-in-out infinite alternate; }
 .fig .stretch { transform-origin: 160px 20px; animation: fig-stretch 2.8s ease-in-out infinite alternate; }
@@ -78,7 +88,116 @@
 
 @keyframes fig-draw { to { stroke-dashoffset: 0; } }
 @keyframes fig-travel { from { offset-distance: 0%; } to { offset-distance: 100%; } }
-@keyframes fig-swing { from { transform: rotate(-24deg); } to { transform: rotate(24deg); } }
+/* The pendulum, its angle arc and the θ label share one sinusoidal table
+   (generated: φ = 24° sin 2πt, 24 steps) so they stay in step. */
+@keyframes fig-swing {
+  0.00% { transform: rotate(0.00deg); }
+  4.17% { transform: rotate(6.21deg); }
+  8.33% { transform: rotate(12.00deg); }
+  12.50% { transform: rotate(16.97deg); }
+  16.67% { transform: rotate(20.78deg); }
+  20.83% { transform: rotate(23.18deg); }
+  25.00% { transform: rotate(24.00deg); }
+  29.17% { transform: rotate(23.18deg); }
+  33.33% { transform: rotate(20.78deg); }
+  37.50% { transform: rotate(16.97deg); }
+  41.67% { transform: rotate(12.00deg); }
+  45.83% { transform: rotate(6.21deg); }
+  50.00% { transform: rotate(0.00deg); }
+  54.17% { transform: rotate(-6.21deg); }
+  58.33% { transform: rotate(-12.00deg); }
+  62.50% { transform: rotate(-16.97deg); }
+  66.67% { transform: rotate(-20.78deg); }
+  70.83% { transform: rotate(-23.18deg); }
+  75.00% { transform: rotate(-24.00deg); }
+  79.17% { transform: rotate(-23.18deg); }
+  83.33% { transform: rotate(-20.78deg); }
+  87.50% { transform: rotate(-16.97deg); }
+  91.67% { transform: rotate(-12.00deg); }
+  95.83% { transform: rotate(-6.21deg); }
+  100.00% { transform: rotate(-0.00deg); }
+}
+@keyframes fig-theta-arc {
+  0.00% { transform: rotate(90.00deg); stroke-dashoffset: 263.89; }
+  4.17% { transform: rotate(90.00deg); stroke-dashoffset: 259.34; }
+  8.33% { transform: rotate(90.00deg); stroke-dashoffset: 255.10; }
+  12.50% { transform: rotate(90.00deg); stroke-dashoffset: 251.45; }
+  16.67% { transform: rotate(90.00deg); stroke-dashoffset: 248.66; }
+  20.83% { transform: rotate(90.00deg); stroke-dashoffset: 246.90; }
+  25.00% { transform: rotate(90.00deg); stroke-dashoffset: 246.30; }
+  29.17% { transform: rotate(90.00deg); stroke-dashoffset: 246.90; }
+  33.33% { transform: rotate(90.00deg); stroke-dashoffset: 248.66; }
+  37.50% { transform: rotate(90.00deg); stroke-dashoffset: 251.45; }
+  41.67% { transform: rotate(90.00deg); stroke-dashoffset: 255.10; }
+  45.83% { transform: rotate(90.00deg); stroke-dashoffset: 259.34; }
+  50.00% { transform: rotate(90.00deg); stroke-dashoffset: 263.89; }
+  54.17% { transform: rotate(83.79deg); stroke-dashoffset: 259.34; }
+  58.33% { transform: rotate(78.00deg); stroke-dashoffset: 255.10; }
+  62.50% { transform: rotate(73.03deg); stroke-dashoffset: 251.45; }
+  66.67% { transform: rotate(69.22deg); stroke-dashoffset: 248.66; }
+  70.83% { transform: rotate(66.82deg); stroke-dashoffset: 246.90; }
+  75.00% { transform: rotate(66.00deg); stroke-dashoffset: 246.30; }
+  79.17% { transform: rotate(66.82deg); stroke-dashoffset: 246.90; }
+  83.33% { transform: rotate(69.22deg); stroke-dashoffset: 248.66; }
+  87.50% { transform: rotate(73.03deg); stroke-dashoffset: 251.45; }
+  91.67% { transform: rotate(78.00deg); stroke-dashoffset: 255.10; }
+  95.83% { transform: rotate(83.79deg); stroke-dashoffset: 259.34; }
+  100.00% { transform: rotate(90.00deg); stroke-dashoffset: 263.89; }
+}
+@keyframes fig-theta-arm {
+  0.00% { transform: rotate(0.00deg); }
+  4.17% { transform: rotate(3.11deg); }
+  8.33% { transform: rotate(6.00deg); }
+  12.50% { transform: rotate(8.49deg); }
+  16.67% { transform: rotate(10.39deg); }
+  20.83% { transform: rotate(11.59deg); }
+  25.00% { transform: rotate(12.00deg); }
+  29.17% { transform: rotate(11.59deg); }
+  33.33% { transform: rotate(10.39deg); }
+  37.50% { transform: rotate(8.49deg); }
+  41.67% { transform: rotate(6.00deg); }
+  45.83% { transform: rotate(3.11deg); }
+  50.00% { transform: rotate(0.00deg); }
+  54.17% { transform: rotate(-3.11deg); }
+  58.33% { transform: rotate(-6.00deg); }
+  62.50% { transform: rotate(-8.49deg); }
+  66.67% { transform: rotate(-10.39deg); }
+  70.83% { transform: rotate(-11.59deg); }
+  75.00% { transform: rotate(-12.00deg); }
+  79.17% { transform: rotate(-11.59deg); }
+  83.33% { transform: rotate(-10.39deg); }
+  87.50% { transform: rotate(-8.49deg); }
+  91.67% { transform: rotate(-6.00deg); }
+  95.83% { transform: rotate(-3.11deg); }
+  100.00% { transform: rotate(-0.00deg); }
+}
+@keyframes fig-theta-glyph {
+  0.00% { transform: rotate(-0.00deg); }
+  4.17% { transform: rotate(-3.11deg); }
+  8.33% { transform: rotate(-6.00deg); }
+  12.50% { transform: rotate(-8.49deg); }
+  16.67% { transform: rotate(-10.39deg); }
+  20.83% { transform: rotate(-11.59deg); }
+  25.00% { transform: rotate(-12.00deg); }
+  29.17% { transform: rotate(-11.59deg); }
+  33.33% { transform: rotate(-10.39deg); }
+  37.50% { transform: rotate(-8.49deg); }
+  41.67% { transform: rotate(-6.00deg); }
+  45.83% { transform: rotate(-3.11deg); }
+  50.00% { transform: rotate(-0.00deg); }
+  54.17% { transform: rotate(3.11deg); }
+  58.33% { transform: rotate(6.00deg); }
+  62.50% { transform: rotate(8.49deg); }
+  66.67% { transform: rotate(10.39deg); }
+  70.83% { transform: rotate(11.59deg); }
+  75.00% { transform: rotate(12.00deg); }
+  79.17% { transform: rotate(11.59deg); }
+  83.33% { transform: rotate(10.39deg); }
+  87.50% { transform: rotate(8.49deg); }
+  91.67% { transform: rotate(6.00deg); }
+  95.83% { transform: rotate(3.11deg); }
+  100.00% { transform: rotate(0.00deg); }
+}
 @keyframes fig-orbit { to { transform: rotate(360deg); } }
 @keyframes fig-jitter { from { transform: translate(0, 0); } to { transform: translate(var(--dx), var(--dy)); } }
 @keyframes fig-stretch { from { transform: scaleY(0.82); } to { transform: scaleY(1.06); } }
@@ -107,5 +226,8 @@
   .fig * { animation: none !important; }
   .fig .draw { stroke-dashoffset: 0; }
   .fig .swing { transform: rotate(18deg); }
+  .fig .theta-arc { transform: rotate(90deg); stroke-dashoffset: 250.70; }
+  .fig .theta-arm { transform: rotate(9deg); }
+  .fig .theta-glyph { transform: rotate(-9deg); }
   .fig .travel { offset-distance: 40%; }
 }
