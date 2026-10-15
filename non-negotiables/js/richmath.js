@@ -333,6 +333,9 @@
     "web win wet why yes zip tube fuel jet sled skis sits lamp drum reed horn bell taut tyre fish fin " +
     "deep cold warm loud soft dull dark grey blue bus van cup jug jar mug lid").split(" "));
 
+  // Two-letter abbreviations that are prose, not pairs of points
+  const ABBREVIATIONS = new Set(["SI", "UK", "US", "AC", "DC", "TV", "GM", "UV", "IR", "AM", "FM", "PM", "GB", "HD", "ID", "OK", "PC", "CD", "PV"]);
+
   // Words after which a lone capital letter names a point on a diagram
   const POINT_WORDS = new Set(["point", "points", "at", "from", "to", "between", "and", "section", "through", "via", "reaches", "label", "labelled", "marked", "position"]);
 
@@ -497,7 +500,8 @@
     }
 
     // Two capital letters name a section or a pair of points: AB, PQ
-    if (/^[A-Z]{2}$/.test(core)) {
+    // (but not common abbreviations)
+    if (/^[A-Z]{2}$/.test(core) && !ABBREVIATIONS.has(core)) {
       return "M";
     }
 
