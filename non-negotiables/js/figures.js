@@ -296,6 +296,8 @@
     // Energy levels with a downward transition emitting a photon
     "quantum": function () {
       const levels = [160, 118, 92, 76, 66];
+      // 96 px wide, 4 cycles, amplitude 5: path length 128.75 (used by the CSS dashes)
+      const photon = sinePath(140, 106, 96, 5, 4, 80);
       let lines = "";
       const names = ["n = 1", "n = 2", "n = 3", "n = 4", "∞"];
       levels.forEach(function (y, index) {
@@ -308,12 +310,14 @@
         "<circle class=\"acc\" cx=\"130\" cy=\"92\" r=\"4\"/>" +
         "</g>" +
         arrow(130, 92, 130, 120, "acc") +
-        // Photon leaving
-        "<g class=\"photon\">" +
-        "<path class=\"acc\" d=\"" + sinePath(140, 106, 90, 5, 4, 60) + "\"/>" +
-        arrow(230, 106, 250, 106, "acc") +
-        "</g>" +
-        text(260, 110, "hf") +
+        // Photon leaving: a wavefront dot runs along a sinusoidal path and
+        // leaves the wave as a fading trail (three dash windows of
+        // increasing length behind the head, see figures.css)
+        "<path class=\"acc trail t1\" d=\"" + photon + "\"/>" +
+        "<path class=\"acc trail t2\" d=\"" + photon + "\"/>" +
+        "<path class=\"acc trail t3\" d=\"" + photon + "\"/>" +
+        "<circle class=\"acc fill photon-head\" r=\"3\" style=\"offset-path: path('" + photon + "')\"/>" +
+        text(244, 110, "hf") +
         dimension(44, 118, 44, 92, "ΔE", 0) +
         text(60, 186, "E = −13.6 eV / n²")
       );

@@ -86,8 +86,15 @@
 .fig .stretch { transform-origin: 160px 20px; animation: fig-stretch 2.8s ease-in-out infinite alternate; }
 .fig .wave { animation: fig-wave 3.2s linear infinite; }
 .fig .pulse { transform-box: fill-box; transform-origin: center; animation: fig-pulse 1.8s ease-in-out infinite; }
-.fig .drop { animation: fig-drop 3.6s ease-in-out infinite; }
-.fig .photon { animation: fig-photon 3.6s ease-in-out infinite; }
+.fig .drop { animation: fig-drop 4s linear infinite; }
+/* Photon: the head runs the path while three trailing windows (20, 44, 70 px)
+   at equal partial opacity stack into a stepped fade behind it. Dash lengths
+   are user units (vector-effect none); the path is 128.75 units long. */
+.fig .trail { vector-effect: none; stroke-width: 1.6; opacity: 0.38; stroke-linecap: round; }
+.fig .trail.t1 { stroke-dasharray: 20 200; stroke-dashoffset: 20; animation: fig-trail-1 4s linear infinite; }
+.fig .trail.t2 { stroke-dasharray: 44 200; stroke-dashoffset: 44; animation: fig-trail-2 4s linear infinite; }
+.fig .trail.t3 { stroke-dasharray: 70 200; stroke-dashoffset: 70; animation: fig-trail-3 4s linear infinite; }
+.fig .photon-head { offset-rotate: 0deg; opacity: 0; animation: fig-photon-head 4s linear infinite; }
 .fig .slide-right { animation: fig-slide 3.4s ease-in infinite; }
 
 /* A figure paused until it enters the viewport or its card is hovered */
@@ -217,16 +224,31 @@
 @keyframes fig-wave { from { transform: translateX(0); } to { transform: translateX(128px); } }
 @keyframes fig-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.6; } }
 @keyframes fig-drop {
-  0%, 20% { transform: translateY(0); opacity: 1; }
-  40%, 70% { transform: translateY(26px); opacity: 1; }
-  85% { opacity: 0; }
-  100% { transform: translateY(0); opacity: 0; }
+  0%, 18% { transform: translateY(0); opacity: 1; }
+  32%, 86% { transform: translateY(26px); opacity: 1; }
+  90% { transform: translateY(26px); opacity: 0; }
+  96%, 100% { transform: translateY(0); opacity: 0; }
 }
-@keyframes fig-photon {
-  0%, 38% { opacity: 0; transform: translateX(-20px); }
-  48% { opacity: 1; }
-  80% { opacity: 1; transform: translateX(10px); }
-  100% { opacity: 0; transform: translateX(30px); }
+@keyframes fig-photon-head {
+  0%, 35% { offset-distance: 0%; opacity: 0; }
+  36% { opacity: 1; }
+  75% { offset-distance: 100%; opacity: 1; }
+  79%, 100% { offset-distance: 100%; opacity: 0; }
+}
+@keyframes fig-trail-1 {
+  0%, 35% { stroke-dashoffset: 20; opacity: 0.38; }
+  75% { stroke-dashoffset: -108.75; opacity: 0.38; }
+  84%, 100% { stroke-dashoffset: -108.75; opacity: 0; }
+}
+@keyframes fig-trail-2 {
+  0%, 35% { stroke-dashoffset: 44; opacity: 0.38; }
+  75% { stroke-dashoffset: -84.75; opacity: 0.38; }
+  84%, 100% { stroke-dashoffset: -84.75; opacity: 0; }
+}
+@keyframes fig-trail-3 {
+  0%, 35% { stroke-dashoffset: 70; opacity: 0.38; }
+  75% { stroke-dashoffset: -58.75; opacity: 0.38; }
+  84%, 100% { stroke-dashoffset: -58.75; opacity: 0; }
 }
 @keyframes fig-slide {
   0% { transform: translateX(0); }
