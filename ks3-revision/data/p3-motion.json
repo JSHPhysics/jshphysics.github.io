@@ -1,0 +1,2705 @@
+{
+ "id": "p3-motion",
+ "order": 1,
+ "title": "P3 Motion",
+ "subtitle": "Speed, graph skills, distance–time graphs, acceleration and speed–time graphs",
+ "stage": "Key Stage 3",
+ "lede": "Everything on the P3 revision checklist, in order. Each lesson's ideas are explained, shown in a worked example, then practised straight away — with answers checked as you go.",
+ "howto": [
+  "Read the explanation. Cover it up and try to say it back to yourself in your own words.",
+  "Study the worked example. Reveal the steps one at a time and notice <i>how</i> the answer is laid out, not just what it is.",
+  "Do the practice questions <b>before</b> opening the hint or walkthrough. Write every calculation in EWAU layout on paper first, then type the answer to check it.",
+  "If you got something wrong, go back to the explanation, then try the question again.",
+  "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+ ],
+ "sections": [
+  {
+   "id": "speed",
+   "lessons": "Lessons 1–2",
+   "title": "Speed",
+   "blurb": "What speed means, the speed equation and its rearrangements, laying out calculations with EWAU, and the difference between instantaneous and average speed.",
+   "equations": [
+    "\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}",
+    "\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}"
+   ],
+   "checklist": [
+    "Know what is meant by the term 'speed'",
+    "Calculate the speed of an object",
+    "Rearrange the speed equation to calculate distance or time",
+    "Use EWAU to lay out calculations",
+    "Understand the difference between instantaneous speed and average speed",
+    "Know how to calculate average speed"
+   ],
+   "parts": [
+    {
+     "kind": "explain",
+     "title": "What is speed?",
+     "html": "<p><b>Speed</b> tells you <b>how far an object travels every second</b> (or every hour). A faster object covers more distance in the same time.</p><p>The equation is:</p>$$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$$<p>The units must match up:</p><table class=\"tbl\"><tr><th>Distance in…</th><th>Time in…</th><th>Speed in…</th></tr><tr><td>metres (m)</td><td>seconds (s)</td><td>metres per second (m/s)</td></tr><tr><td>kilometres (km)</td><td>hours (h)</td><td>kilometres per hour (km/h)</td></tr><tr><td>miles</td><td>hours (h)</td><td>miles per hour (mph)</td></tr></table><p>In physics we normally use <b>m/s</b>. If a question gives you minutes or kilometres, <b>convert first</b>: 1 minute = 60 s and 1 km = 1000 m.</p>"
+    },
+    {
+     "kind": "explain",
+     "title": "EWAU — how to lay out every calculation",
+     "html": "<p>Every calculation in physics should be written out in four lines. This earns marks even if you make a slip with the arithmetic, and it makes your working easy to check.</p><table class=\"tbl\"><tr><th>Letter</th><th>What you write</th></tr><tr><td><b>E</b>quation</td><td>The equation in words or symbols, <i>before</i> you put any numbers in.</td></tr><tr><td><b>W</b>orking</td><td>The numbers substituted into the equation.</td></tr><tr><td><b>A</b>nswer</td><td>The number you get out.</td></tr><tr><td><b>U</b>nits</td><td>The correct unit written after the answer.</td></tr></table><p>Every worked example and walkthrough on this page is written in EWAU. Copy the layout.</p>"
+    },
+    {
+     "kind": "worked",
+     "title": "Calculating speed",
+     "question": "A cyclist travels 240 m in 30 s. Calculate her speed.",
+     "steps": [
+      "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+      "<b>Working:</b> $\\text{speed} = \\dfrac{240}{30}$",
+      "<b>Answer:</b> $= 8$",
+      "<b>Units:</b> m/s",
+      "Check it makes sense: 8 m every second for 30 seconds is $8 \\times 30 = 240$ m. ✓"
+     ]
+    },
+    {
+     "kind": "explain",
+     "title": "Rearranging the speed equation",
+     "html": "<p>Sometimes you are given the speed and need to find the distance or the time. Here are all three versions of the equation — learn them:</p><table class=\"tbl\"><tr><th>To find…</th><th>Use…</th><th>Why it works</th></tr><tr><td>speed</td><td>$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$</td><td>This is the original equation.</td></tr><tr><td>distance</td><td>$\\text{distance} = \\text{speed} \\times \\text{time}$</td><td>Distance was being divided by time, so multiply both sides by time to undo it.</td></tr><tr><td>time</td><td>$\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}}$</td><td>Swap speed and time — they are both \"underneath\" the distance.</td></tr></table><p><b>Quick check:</b> if you are finding a distance, you <i>multiply</i>. If you are finding a speed or a time, you always <i>divide the distance</i> by something.</p>"
+    },
+    {
+     "kind": "worked",
+     "title": "Calculating distance",
+     "question": "A car travels at 25 m/s for 40 s. How far does it travel?",
+     "steps": [
+      "<b>Equation:</b> $\\text{distance} = \\text{speed} \\times \\text{time}$",
+      "<b>Working:</b> $\\text{distance} = 25 \\times 40$",
+      "<b>Answer:</b> $= 1000$",
+      "<b>Units:</b> m"
+     ]
+    },
+    {
+     "kind": "worked",
+     "title": "Calculating time",
+     "question": "A runner moves at 5 m/s. How long does it take him to run 200 m?",
+     "steps": [
+      "<b>Equation:</b> $\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}}$",
+      "<b>Working:</b> $\\text{time} = \\dfrac{200}{5}$",
+      "<b>Answer:</b> $= 40$",
+      "<b>Units:</b> s"
+     ]
+    },
+    {
+     "kind": "practice",
+     "title": "Speed, distance and time",
+     "intro": "Use EWAU for every question. Convert units first where needed.",
+     "questions": [
+      {
+       "id": "p3-s1-q1",
+       "type": "numeric",
+       "text": "A dog runs 50 m in 10 s. Calculate its speed.",
+       "answer": {
+        "value": 5,
+        "unit": "m/s"
+       },
+       "hint": "You have a distance and a time, so use the original speed equation.",
+       "walkthrough": [
+        "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+        "<b>Working:</b> $\\text{speed} = \\dfrac{50}{10}$",
+        "<b>Answer:</b> $= 5$",
+        "<b>Units:</b> m/s"
+       ]
+      },
+      {
+       "id": "p3-s1-q2",
+       "type": "numeric",
+       "text": "A train travels 3600 m in 120 s. Calculate its speed.",
+       "answer": {
+        "value": 30,
+        "unit": "m/s"
+       },
+       "hint": "Distance divided by time.",
+       "walkthrough": [
+        "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+        "<b>Working:</b> $\\text{speed} = \\dfrac{3600}{120}$",
+        "<b>Answer:</b> $= 30$",
+        "<b>Units:</b> m/s"
+       ]
+      },
+      {
+       "id": "p3-s1-q3",
+       "type": "numeric",
+       "text": "A walker moves at 1.5 m/s for 600 s. How far does she walk?",
+       "answer": {
+        "value": 900,
+        "unit": "m"
+       },
+       "hint": "You want a distance, so multiply speed by time.",
+       "walkthrough": [
+        "<b>Equation:</b> $\\text{distance} = \\text{speed} \\times \\text{time}$",
+        "<b>Working:</b> $\\text{distance} = 1.5 \\times 600$",
+        "<b>Answer:</b> $= 900$",
+        "<b>Units:</b> m"
+       ]
+      },
+      {
+       "id": "p3-s1-q4",
+       "type": "numeric",
+       "text": "A ball rolls at 12 m/s. How long does it take to travel 36 m?",
+       "answer": {
+        "value": 3,
+        "unit": "s"
+       },
+       "hint": "You want a time, so divide the distance by the speed.",
+       "walkthrough": [
+        "<b>Equation:</b> $\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}}$",
+        "<b>Working:</b> $\\text{time} = \\dfrac{36}{12}$",
+        "<b>Answer:</b> $= 3$",
+        "<b>Units:</b> s"
+       ]
+      },
+      {
+       "id": "p3-s1-q5",
+       "type": "numeric",
+       "text": "A bus travels 18 km in 0.5 hours. Calculate its speed in km/h.",
+       "answer": {
+        "value": 36,
+        "unit": "km/h"
+       },
+       "hint": "The distance is already in km and the time in hours, so no conversion is needed.",
+       "walkthrough": [
+        "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+        "<b>Working:</b> $\\text{speed} = \\dfrac{18}{0.5}$",
+        "<b>Answer:</b> $= 36$",
+        "<b>Units:</b> km/h"
+       ]
+      },
+      {
+       "id": "p3-s1-q6",
+       "type": "numeric",
+       "text": "A jet flies at 250 m/s. How far does it travel in 2 minutes? Give your answer in metres.",
+       "answer": {
+        "value": 30000,
+        "unit": "m"
+       },
+       "hint": "The speed is in m/s, so the time must be in seconds. How many seconds are in 2 minutes?",
+       "walkthrough": [
+        "Convert the time first: $2 \\text{ minutes} = 2 \\times 60 = 120$ s.",
+        "<b>Equation:</b> $\\text{distance} = \\text{speed} \\times \\text{time}$",
+        "<b>Working:</b> $\\text{distance} = 250 \\times 120$",
+        "<b>Answer:</b> $= 30\\,000$",
+        "<b>Units:</b> m",
+        "That is $30\\,000 \\div 1000 = 30$ km."
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "explain",
+     "title": "Instantaneous speed vs average speed",
+     "html": "<p>Real journeys are not at one steady speed — you speed up, slow down and stop. So there are two kinds of speed:</p><table class=\"tbl\"><tr><th>Type</th><th>Meaning</th><th>Example</th></tr><tr><td><b>Instantaneous speed</b></td><td>The speed at <b>one particular moment</b>.</td><td>The reading on a car's speedometer right now; a speed-camera reading.</td></tr><tr><td><b>Average speed</b></td><td>The <b>total distance</b> travelled divided by the <b>total time</b> taken for the <b>whole journey</b> — including any stops.</td><td>\"The coach averaged 60 km/h on the motorway.\"</td></tr></table>$$\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}$$<p><b>Common mistake:</b> leaving out the time spent stopped. If you stop for lunch, that time still counts in the total time — it lowers your average speed.</p>"
+    },
+    {
+     "kind": "worked",
+     "title": "Average speed",
+     "question": "A cyclist rides 1200 m in 100 s, stops for 50 s at a junction, then rides a further 600 m in 50 s. Calculate her average speed for the whole journey.",
+     "steps": [
+      "Add up the totals first. Total distance $= 1200 + 600 = 1800$ m.",
+      "Total time $= 100 + 50 + 50 = 200$ s — the 50 s stop counts.",
+      "<b>Equation:</b> $\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}$",
+      "<b>Working:</b> $\\text{average speed} = \\dfrac{1800}{200}$",
+      "<b>Answer:</b> $= 9$",
+      "<b>Units:</b> m/s",
+      "Notice: during the first part her speed was $1200 \\div 100 = 12$ m/s, and at the junction it was 0 m/s. The average, 9 m/s, is in between."
+     ]
+    },
+    {
+     "kind": "practice",
+     "title": "Instantaneous and average speed",
+     "questions": [
+      {
+       "id": "p3-s1-q7",
+       "type": "written",
+       "text": "In your own words, explain the difference between instantaneous speed and average speed.",
+       "model": "<p><b>Instantaneous speed</b> is the speed at one moment in time (for example, a speedometer reading). <b>Average speed</b> is the total distance divided by the total time for a whole journey, including any stops.</p>",
+       "lines": 3
+      },
+      {
+       "id": "p3-s1-q8",
+       "type": "numeric",
+       "text": "A car travels 30 km in 0.5 h and then 60 km in 1 h. Calculate its average speed in km/h.",
+       "answer": {
+        "value": 60,
+        "unit": "km/h"
+       },
+       "hint": "Add up the total distance and the total time before you divide.",
+       "walkthrough": [
+        "Total distance $= 30 + 60 = 90$ km. Total time $= 0.5 + 1 = 1.5$ h.",
+        "<b>Equation:</b> $\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}$",
+        "<b>Working:</b> $\\text{average speed} = \\dfrac{90}{1.5}$",
+        "<b>Answer:</b> $= 60$",
+        "<b>Units:</b> km/h"
+       ]
+      },
+      {
+       "id": "p3-s1-q9",
+       "type": "numeric",
+       "text": "An athlete runs 100 m in 12 s, rests for 18 s, then runs another 100 m in 10 s. Calculate her average speed over the whole 40 s.",
+       "answer": {
+        "value": 5,
+        "unit": "m/s"
+       },
+       "hint": "The rest counts in the total time. Total distance is 200 m.",
+       "walkthrough": [
+        "Total distance $= 100 + 100 = 200$ m. Total time $= 12 + 18 + 10 = 40$ s.",
+        "<b>Equation:</b> $\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}$",
+        "<b>Working:</b> $\\text{average speed} = \\dfrac{200}{40}$",
+        "<b>Answer:</b> $= 5$",
+        "<b>Units:</b> m/s"
+       ]
+      },
+      {
+       "id": "p3-s1-q10",
+       "type": "choice",
+       "text": "A speedometer in a car reads 70 mph. Is this an instantaneous speed or an average speed?",
+       "options": [
+        "Instantaneous speed",
+        "Average speed"
+       ],
+       "correct": 0,
+       "explain": "A speedometer shows the speed at that exact moment, not over a whole journey — so it is an instantaneous speed."
+      },
+      {
+       "id": "p3-s1-q11",
+       "type": "group",
+       "text": "A cyclist's average speed over 300 s is 6 m/s.",
+       "parts": [
+        {
+         "id": "p3-s1-q11a",
+         "type": "numeric",
+         "text": "Calculate the distance he travelled.",
+         "answer": {
+          "value": 1800,
+          "unit": "m"
+         },
+         "hint": "Rearrange: distance = speed × time.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{distance} = \\text{speed} \\times \\text{time}$",
+          "<b>Working:</b> $\\text{distance} = 6 \\times 300$",
+          "<b>Answer:</b> $= 1800$",
+          "<b>Units:</b> m"
+         ],
+         "label": "a"
+        },
+        {
+         "id": "p3-s1-q11b",
+         "type": "written",
+         "text": "Does this mean he was travelling at 6 m/s the whole time? Explain your answer.",
+         "model": "<p>No. An average speed only tells you the overall speed for the whole journey. He could have gone faster at some times and slower (or stopped) at others.</p>",
+         "lines": 2,
+         "label": "b"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "graphs",
+   "lessons": "Lessons 3–5",
+   "title": "Graph skills",
+   "blurb": "Line graphs and scatter graphs, when to draw a line of best fit and when to join dot-to-dot, drawing graphs correctly, and calculating a gradient.",
+   "equations": [
+    "\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}"
+   ],
+   "checklist": [
+    "Understand the difference between line and scatter graphs",
+    "Understand when to draw a line of best fit and when to connect points dot-to-dot",
+    "Correctly draw line and scatter graphs",
+    "Calculate the gradient of a line",
+    "Understand that a gradient can be positive or negative and what this tells you about the slope"
+   ],
+   "parts": [
+    {
+     "kind": "explain",
+     "title": "Line graphs vs scatter graphs",
+     "html": "<p>Both graphs plot one number against another, but they are used for different jobs.</p><table class=\"tbl\"><tr><th></th><th>Line graph</th><th>Scatter graph</th></tr><tr><td><b>When you use it</b></td><td>You <b>chose</b> the values of the variable on the x-axis (the <i>independent variable</i>) and measured what happened to the other one.</td><td>You <b>measured both</b> variables and want to see if there is a <i>correlation</i> (a link) between them.</td></tr><tr><td><b>Example</b></td><td>Distance travelled every 10 s; extension of a spring for different forces; temperature of water each minute.</td><td>Height vs arm span of 30 pupils; hours of sleep vs test score.</td></tr><tr><td><b>The line</b></td><td>Points are joined — either with a line of best fit or dot-to-dot (see below).</td><td>Points are <b>not</b> joined dot-to-dot. A line of best fit can be added if there is a clear correlation.</td></tr></table>"
+    },
+    {
+     "kind": "explain",
+     "title": "Line of best fit or dot-to-dot?",
+     "html": "<table class=\"tbl\"><tr><th>Draw a…</th><th>When…</th><th>How</th></tr><tr><td><b>Line of best fit</b></td><td>You expect a <b>smooth pattern</b> and the points are slightly scattered because of small measurement errors. Most science experiments are like this.</td><td>One straight line (ruler!) or one smooth curve that passes through the <i>middle</i> of the points, with roughly as many above as below. <b>Ignore anomalous points</b> (ones clearly off the pattern) and circle them.</td></tr><tr><td><b>Dot-to-dot</b></td><td>There is <b>no reason to expect a smooth pattern</b> between readings — the thing being measured can change suddenly. Journey graphs (distance–time and speed–time) are usually drawn like this, because a car can stop at lights or suddenly accelerate.</td><td>Join each point to the next with a straight ruled line.</td></tr></table>"
+    },
+    {
+     "kind": "explain",
+     "title": "Drawing a graph correctly — the checklist",
+     "html": "<ol class=\"list\"><li><b>Axes:</b> independent variable (the one you changed or chose, usually time) on the <b>x-axis</b>; dependent variable (the one you measured) on the <b>y-axis</b>.</li><li><b>Labels:</b> each axis labelled with the quantity <b>and its unit</b>, e.g. \"Distance (m)\".</li><li><b>Scale:</b> goes up in equal steps (1, 2, 5, 10, 20, 50…) and the plotted points fill <b>more than half</b> of the grid in both directions.</li><li><b>Plot:</b> small, neat crosses (×) with a sharp pencil.</li><li><b>Line:</b> best fit (ruler or smooth curve) or dot-to-dot — decide which <i>before</i> you draw.</li><li><b>Title</b> if asked, e.g. \"Distance–time graph for a cyclist\".</li></ol>"
+    },
+    {
+     "kind": "explain",
+     "title": "Gradient",
+     "html": "<p>The <b>gradient</b> is a number that tells you <b>how steep</b> a line is. It is \"how much the line goes up for every 1 it goes across\":</p>$$\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x} = \\dfrac{\\text{rise}}{\\text{run}}$$<p><b>Method:</b></p><ol class=\"list\"><li>Choose two points <b>on the line</b>, as far apart as possible (big triangles give more accurate answers).</li><li>Draw a right-angled triangle between them.</li><li>Read off the change in $y$ (the vertical side) and the change in $x$ (the horizontal side).</li><li>Divide: change in $y$ ÷ change in $x$.</li></ol><p><b>Positive or negative?</b></p><ul class=\"list\"><li>A line that slopes <b>up to the right</b> has a <b>positive</b> gradient — $y$ gets bigger as $x$ gets bigger.</li><li>A line that slopes <b>down to the right</b> has a <b>negative</b> gradient — $y$ gets smaller as $x$ gets bigger.</li><li>A <b>horizontal</b> line has a gradient of <b>zero</b> — $y$ doesn't change at all.</li><li>The <b>bigger</b> the number (ignoring the sign), the <b>steeper</b> the line.</li></ul>"
+    },
+    {
+     "kind": "worked",
+     "title": "Finding a gradient",
+     "question": "Find the gradient of the line shown.",
+     "graph": {
+      "x": {
+       "label": "x",
+       "min": 0,
+       "max": 10,
+       "step": 1,
+       "minor": 1
+      },
+      "y": {
+       "label": "y",
+       "min": 0,
+       "max": 50,
+       "step": 10,
+       "minor": 2
+      },
+      "series": [
+       {
+        "kind": "line",
+        "points": [
+         [
+          0,
+          0
+         ],
+         [
+          10,
+          50
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          2,
+          10
+         ],
+         [
+          8,
+          10
+         ],
+         [
+          8,
+          40
+         ]
+        ]
+       }
+      ],
+      "marks": [
+       {
+        "x": 2,
+        "y": 10,
+        "label": "(2, 10)",
+        "dx": -58,
+        "dy": -8
+       },
+       {
+        "x": 8,
+        "y": 40,
+        "label": "(8, 40)",
+        "dx": -62,
+        "dy": 4
+       }
+      ],
+      "labels": [
+       {
+        "x": 5,
+        "y": 6,
+        "text": "change in x = 6",
+        "anchor": "middle"
+       },
+       {
+        "x": 8.3,
+        "y": 24,
+        "text": "change in y = 30",
+        "anchor": "start"
+       }
+      ],
+      "alt": "A straight line through the origin, with a triangle drawn between (2, 10) and (8, 40)"
+     },
+     "steps": [
+      "Choose two points on the line, far apart: $(2,\\ 10)$ and $(8,\\ 40)$.",
+      "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+      "<b>Working:</b> $\\text{gradient} = \\dfrac{40 - 10}{8 - 2} = \\dfrac{30}{6}$",
+      "<b>Answer:</b> $= 5$",
+      "<b>Units:</b> (units of $y$ ÷ units of $x$)",
+      "The gradient is $+5$: the line goes up 5 for every 1 it goes across.",
+      "A line from $(0,\\ 20)$ to $(10,\\ 0)$ would have gradient $\\dfrac{0 - 20}{10 - 0} = \\dfrac{-20}{10} = -2$ — negative, because it slopes downwards."
+     ]
+    },
+    {
+     "kind": "practice",
+     "title": "Graph skills",
+     "questions": [
+      {
+       "id": "p3-s2-q1",
+       "type": "group",
+       "text": "For each investigation, decide whether you would draw a <b>line graph</b> or a <b>scatter graph</b>.",
+       "parts": [
+        {
+         "id": "p3-s2-q1a",
+         "type": "choice",
+         "text": "Extension of a spring when you hang different masses on it.",
+         "options": [
+          "Line graph",
+          "Scatter graph"
+         ],
+         "correct": 0,
+         "explain": "You chose the masses (the independent variable), so this is a line graph.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s2-q1b",
+         "type": "choice",
+         "text": "Height and hand span of every pupil in your class.",
+         "options": [
+          "Line graph",
+          "Scatter graph"
+         ],
+         "correct": 1,
+         "explain": "Both variables were measured and you are looking for a correlation, so this is a scatter graph.",
+         "label": "b"
+        },
+        {
+         "id": "p3-s2-q1c",
+         "type": "choice",
+         "text": "Temperature of a cup of tea measured every minute as it cools.",
+         "options": [
+          "Line graph",
+          "Scatter graph"
+         ],
+         "correct": 0,
+         "explain": "You chose when to take each reading, so this is a line graph.",
+         "label": "c"
+        },
+        {
+         "id": "p3-s2-q1d",
+         "type": "choice",
+         "text": "Hours of sleep and test score for 30 pupils.",
+         "options": [
+          "Line graph",
+          "Scatter graph"
+         ],
+         "correct": 1,
+         "explain": "Both were measured, so this is a scatter graph looking for a correlation.",
+         "label": "d"
+        }
+       ]
+      },
+      {
+       "id": "p3-s2-q2",
+       "type": "group",
+       "text": "For each graph, decide whether you would draw a <b>line of best fit</b> or join the points <b>dot-to-dot</b>.",
+       "parts": [
+        {
+         "id": "p3-s2-q2a",
+         "type": "choice",
+         "text": "Extension of a spring against the force applied.",
+         "options": [
+          "Line of best fit",
+          "Dot-to-dot"
+         ],
+         "correct": 0,
+         "explain": "A smooth pattern is expected and small measurement errors scatter the points — line of best fit.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s2-q2b",
+         "type": "choice",
+         "text": "Distance a car has travelled, recorded every 10 s on a journey that includes a stop at traffic lights.",
+         "options": [
+          "Line of best fit",
+          "Dot-to-dot"
+         ],
+         "correct": 1,
+         "explain": "The motion changes suddenly at the lights, so there is no smooth pattern to expect — dot-to-dot.",
+         "label": "b"
+        },
+        {
+         "id": "p3-s2-q2c",
+         "type": "choice",
+         "text": "Temperature of water heated by a steady flame, recorded every 30 s.",
+         "options": [
+          "Line of best fit",
+          "Dot-to-dot"
+         ],
+         "correct": 0,
+         "explain": "Steady heating gives a smooth pattern — line of best fit.",
+         "label": "c"
+        }
+       ]
+      },
+      {
+       "id": "p3-s2-q3",
+       "type": "group",
+       "text": "Calculate the gradient of the straight line passing through each pair of points.",
+       "parts": [
+        {
+         "id": "p3-s2-q3a",
+         "type": "numeric",
+         "text": "$(0,\\ 0)$ and $(4,\\ 12)$",
+         "answer": {
+          "value": 3,
+          "unit": ""
+         },
+         "hint": "Change in y over change in x.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{12 - 0}{4 - 0} = \\dfrac{12}{4}$",
+          "<b>Answer:</b> $= 3$",
+          "<b>Units:</b> none"
+         ],
+         "label": "a"
+        },
+        {
+         "id": "p3-s2-q3b",
+         "type": "numeric",
+         "text": "$(1,\\ 5)$ and $(5,\\ 25)$",
+         "answer": {
+          "value": 5,
+          "unit": ""
+         },
+         "hint": "Subtract the first point from the second, top and bottom.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{25 - 5}{5 - 1} = \\dfrac{20}{4}$",
+          "<b>Answer:</b> $= 5$",
+          "<b>Units:</b> none"
+         ],
+         "label": "b"
+        },
+        {
+         "id": "p3-s2-q3c",
+         "type": "numeric",
+         "text": "$(0,\\ 30)$ and $(6,\\ 0)$",
+         "answer": {
+          "value": -5,
+          "unit": ""
+         },
+         "hint": "The line goes down as x increases, so expect a negative answer.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{0 - 30}{6 - 0} = \\dfrac{-30}{6}$",
+          "<b>Answer:</b> $= -5$",
+          "<b>Units:</b> none",
+          "Negative — the line slopes downwards."
+         ],
+         "label": "c"
+        }
+       ]
+      },
+      {
+       "id": "p3-s2-q4",
+       "type": "group",
+       "text": "Look at the three lines on the graph.",
+       "parts": [
+        {
+         "id": "p3-s2-q4a",
+         "type": "choice",
+         "text": "Which line has a negative gradient?",
+         "options": [
+          "A",
+          "B",
+          "C"
+         ],
+         "correct": 2,
+         "explain": "C slopes down to the right, so its gradient is negative.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s2-q4b",
+         "type": "choice",
+         "text": "Which line is the steepest?",
+         "options": [
+          "A",
+          "B",
+          "C"
+         ],
+         "correct": 0,
+         "explain": "A rises 40 for every 10 across — the biggest gradient, ignoring sign.",
+         "label": "b"
+        },
+        {
+         "id": "p3-s2-q4c",
+         "type": "numeric",
+         "text": "Calculate the gradient of line A.",
+         "answer": {
+          "value": 4,
+          "unit": ""
+         },
+         "hint": "A goes from (0, 0) to (10, 40).",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{40 - 0}{10 - 0}$",
+          "<b>Answer:</b> $= 4$",
+          "<b>Units:</b> none"
+         ],
+         "label": "c"
+        },
+        {
+         "id": "p3-s2-q4d",
+         "type": "numeric",
+         "text": "Calculate the gradient of line B.",
+         "answer": {
+          "value": 1,
+          "unit": ""
+         },
+         "hint": "B goes from (0, 0) to (10, 10).",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{10 - 0}{10 - 0}$",
+          "<b>Answer:</b> $= 1$",
+          "<b>Units:</b> none"
+         ],
+         "label": "d"
+        },
+        {
+         "id": "p3-s2-q4e",
+         "type": "numeric",
+         "text": "Calculate the gradient of line C.",
+         "answer": {
+          "value": -3,
+          "unit": ""
+         },
+         "hint": "C goes from (0, 30) to (10, 0). Watch the sign.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{0 - 30}{10 - 0}$",
+          "<b>Answer:</b> $= -3$",
+          "<b>Units:</b> none"
+         ],
+         "label": "e"
+        }
+       ],
+       "graph": {
+        "x": {
+         "label": "x",
+         "min": 0,
+         "max": 10,
+         "step": 1,
+         "minor": 1
+        },
+        "y": {
+         "label": "y",
+         "min": 0,
+         "max": 40,
+         "step": 5,
+         "minor": 1
+        },
+        "series": [
+         {
+          "kind": "line",
+          "points": [
+           [
+            0,
+            0
+           ],
+           [
+            10,
+            40
+           ]
+          ]
+         },
+         {
+          "kind": "line",
+          "points": [
+           [
+            0,
+            0
+           ],
+           [
+            10,
+            10
+           ]
+          ]
+         },
+         {
+          "kind": "line",
+          "points": [
+           [
+            0,
+            30
+           ],
+           [
+            10,
+            0
+           ]
+          ]
+         }
+        ],
+        "labels": [
+         {
+          "x": 9.2,
+          "y": 38.5,
+          "text": "A",
+          "anchor": "middle"
+         },
+         {
+          "x": 9.2,
+          "y": 11.8,
+          "text": "B",
+          "anchor": "middle"
+         },
+         {
+          "x": 0.5,
+          "y": 32,
+          "text": "C",
+          "anchor": "middle"
+         }
+        ],
+        "alt": "Three straight lines: A rising steeply, B rising gently, C falling"
+       }
+      },
+      {
+       "id": "p3-s2-q5",
+       "type": "group",
+       "text": "A pupil measures how far a toy car has travelled along a corridor every 10 s:<table class=\"tbl data\"><tr><th>Time (s)</th><td>0</td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td></tr><tr><th>Distance (m)</th><td>0</td><td>21</td><td>39</td><td>62</td><td>80</td><td>99</td></tr></table>",
+       "parts": [
+        {
+         "id": "p3-s2-q5a",
+         "type": "draw",
+         "text": "Plot the data on the grid (tap to place the crosses, or draw on paper). Label both axes with units. The car was travelling at a steady speed, so on paper draw a <b>line of best fit</b>.",
+         "grid": {
+          "x": {
+           "label": "Time (s)",
+           "min": 0,
+           "max": 50,
+           "step": 10,
+           "minor": 5
+          },
+          "y": {
+           "label": "Distance (m)",
+           "min": 0,
+           "max": 100,
+           "step": 20,
+           "minor": 4
+          },
+          "series": [],
+          "alt": "A blank grid for plotting"
+         },
+         "answerGraph": {
+          "x": {
+           "label": "Time (s)",
+           "min": 0,
+           "max": 50,
+           "step": 10,
+           "minor": 5
+          },
+          "y": {
+           "label": "Distance (m)",
+           "min": 0,
+           "max": 100,
+           "step": 20,
+           "minor": 4
+          },
+          "series": [
+           {
+            "kind": "data",
+            "points": [
+             [
+              0,
+              0
+             ],
+             [
+              10,
+              21
+             ],
+             [
+              20,
+              39
+             ],
+             [
+              30,
+              62
+             ],
+             [
+              40,
+              80
+             ],
+             [
+              50,
+              99
+             ]
+            ],
+            "fit": [
+             [
+              0,
+              0
+             ],
+             [
+              50,
+              100
+             ]
+            ]
+           },
+           {
+            "kind": "dashed",
+            "points": [
+             [
+              10,
+              20
+             ],
+             [
+              50,
+              20
+             ],
+             [
+              50,
+              100
+             ]
+            ]
+           }
+          ],
+          "labels": [
+           {
+            "x": 30,
+            "y": 14,
+            "text": "change in x = 40",
+            "anchor": "middle"
+           },
+           {
+            "x": 45,
+            "y": 60,
+            "text": "change in y = 80",
+            "anchor": "end"
+           }
+          ],
+          "alt": "The toy-car data plotted with a straight line of best fit through the origin"
+         },
+         "model": "<p>Time (s) on the x-axis and Distance (m) on the y-axis, both labelled with units. Points plotted as small crosses, and a single straight ruled line of best fit through the middle of the points (it passes very close to the origin).</p>",
+         "check": false,
+         "label": "a"
+        },
+        {
+         "id": "p3-s2-q5b",
+         "type": "numeric",
+         "text": "Use a large triangle on your line to calculate its gradient.",
+         "answer": {
+          "value": 2,
+          "unit": "m/s",
+          "tolerance": 0.08
+         },
+         "hint": "Pick two points far apart on your line, for example at 10 s and 50 s.",
+         "walkthrough": [
+          "Read two points far apart on the line of best fit, e.g. $(10,\\ 20)$ and $(50,\\ 100)$.",
+          "<b>Equation:</b> $\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{100 - 20}{50 - 10} = \\dfrac{80}{40}$",
+          "<b>Answer:</b> $= 2$",
+          "<b>Units:</b> m/s",
+          "Anything from 1.9 to 2.1 m/s is fine — it depends on your line."
+         ],
+         "label": "b"
+        },
+        {
+         "id": "p3-s2-q5c",
+         "type": "choice",
+         "text": "What does the gradient of this graph tell you?",
+         "options": [
+          "The car's speed",
+          "The distance the car travelled",
+          "The time taken"
+         ],
+         "correct": 0,
+         "explain": "Distance ÷ time is speed, so the gradient of a distance–time graph is the speed: about 2 m/s.",
+         "label": "c"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "distance-time",
+   "lessons": "Lessons 6–7",
+   "title": "Distance–time graphs",
+   "blurb": "Reading the shape of a distance–time graph, finding the speed from its gradient, and drawing one from a description of a journey.",
+   "equations": [
+    "\\text{speed} = \\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}"
+   ],
+   "checklist": [
+    "Know how constant speed, stationary, constant speed towards home, speeding up and slowing down are shown on a distance–time graph",
+    "Use the gradient to work out the speed from a distance–time graph",
+    "Draw a distance–time graph to represent a journey"
+   ],
+   "parts": [
+    {
+     "kind": "explain",
+     "title": "Reading a distance–time graph",
+     "html": "<p>A <b>distance–time graph</b> has <b>distance from the start on the y-axis</b> and <b>time on the x-axis</b>. The <b>shape</b> of the line tells you what the object is doing:</p><table class=\"tbl\"><tr><th>Shape of line</th><th>What the object is doing</th></tr><tr><td>Straight line sloping <b>upwards</b></td><td><b>Constant speed</b>, moving away from the start. The steeper the line, the faster it is going.</td></tr><tr><td><b>Horizontal</b> line</td><td><b>Stationary</b> (not moving). Distance stays the same as time passes.</td></tr><tr><td>Straight line sloping <b>downwards</b></td><td><b>Constant speed back towards the start</b> (heading home). The distance from the start is getting smaller.</td></tr><tr><td>Curve getting <b>steeper</b></td><td><b>Speeding up</b> (accelerating) — covering more distance each second.</td></tr><tr><td>Curve getting <b>flatter</b></td><td><b>Slowing down</b> (decelerating) — covering less distance each second.</td></tr></table>",
+     "graph": {
+      "x": {
+       "label": "Time (s)",
+       "min": 0,
+       "max": 50,
+       "step": 10,
+       "minor": 2
+      },
+      "y": {
+       "label": "Distance (m)",
+       "min": 0,
+       "max": 100,
+       "step": 20,
+       "minor": 2
+      },
+      "series": [
+       {
+        "kind": "line",
+        "points": [
+         [
+          0,
+          0
+         ],
+         [
+          10,
+          50
+         ]
+        ]
+       },
+       {
+        "kind": "line",
+        "points": [
+         [
+          10,
+          50
+         ],
+         [
+          20,
+          50
+         ]
+        ]
+       },
+       {
+        "kind": "line",
+        "points": [
+         [
+          20,
+          50
+         ],
+         [
+          30,
+          0
+         ]
+        ]
+       },
+       {
+        "kind": "curve",
+        "points": [
+         [
+          30.0,
+          0.0
+         ],
+         [
+          31.667,
+          1.111
+         ],
+         [
+          33.333,
+          4.444
+         ],
+         [
+          35.0,
+          10.0
+         ],
+         [
+          36.667,
+          17.778
+         ],
+         [
+          38.333,
+          27.778
+         ],
+         [
+          40.0,
+          40.0
+         ]
+        ]
+       },
+       {
+        "kind": "curve",
+        "points": [
+         [
+          40.0,
+          40.0
+         ],
+         [
+          41.667,
+          52.222
+         ],
+         [
+          43.333,
+          62.222
+         ],
+         [
+          45.0,
+          70.0
+         ],
+         [
+          46.667,
+          75.556
+         ],
+         [
+          48.333,
+          78.889
+         ],
+         [
+          50.0,
+          80.0
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          10,
+          0
+         ],
+         [
+          10,
+          100
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          20,
+          0
+         ],
+         [
+          20,
+          100
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          30,
+          0
+         ],
+         [
+          30,
+          100
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          40,
+          0
+         ],
+         [
+          40,
+          100
+         ]
+        ]
+       }
+      ],
+      "labels": [
+       {
+        "x": 5,
+        "y": 70,
+        "text": "constant speed",
+        "anchor": "middle"
+       },
+       {
+        "x": 15,
+        "y": 70,
+        "text": "stationary",
+        "anchor": "middle"
+       },
+       {
+        "x": 25,
+        "y": 70,
+        "text": "constant speed,",
+        "anchor": "middle"
+       },
+       {
+        "x": 25,
+        "y": 62,
+        "text": "heading home",
+        "anchor": "middle"
+       },
+       {
+        "x": 35,
+        "y": 70,
+        "text": "speeding up",
+        "anchor": "middle"
+       },
+       {
+        "x": 45,
+        "y": 36,
+        "text": "slowing down",
+        "anchor": "middle"
+       }
+      ],
+      "alt": "The five shapes on a distance–time graph: rising line, flat line, falling line, curve getting steeper, curve getting flatter"
+     },
+     "after": "<p><b>The gradient of a distance–time graph is the speed.</b> That is because gradient $= \\dfrac{\\text{change in } y}{\\text{change in } x} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$ — which is exactly the speed equation.</p><p>A <b>negative</b> gradient just means the object is moving <b>back towards the start</b>. Its speed is still a positive number (the size of the gradient).</p>"
+    },
+    {
+     "kind": "worked",
+     "title": "Finding speeds from a distance–time graph",
+     "question": "The graph shows a pupil walking to a post box and back. Describe each stage and find the speed in each.",
+     "graph": {
+      "x": {
+       "label": "Time (s)",
+       "min": 0,
+       "max": 60,
+       "step": 10,
+       "minor": 2
+      },
+      "y": {
+       "label": "Distance from home (m)",
+       "min": 0,
+       "max": 120,
+       "step": 20,
+       "minor": 2
+      },
+      "series": [
+       {
+        "kind": "line",
+        "points": [
+         [
+          0,
+          0
+         ],
+         [
+          20,
+          100
+         ],
+         [
+          40,
+          100
+         ],
+         [
+          60,
+          0
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          20,
+          0
+         ],
+         [
+          20,
+          120
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          40,
+          0
+         ],
+         [
+          40,
+          120
+         ]
+        ]
+       }
+      ],
+      "marks": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 20,
+        "y": 100
+       },
+       {
+        "x": 40,
+        "y": 100
+       },
+       {
+        "x": 60,
+        "y": 0
+       }
+      ],
+      "labels": [
+       {
+        "x": 10,
+        "y": 110,
+        "text": "A",
+        "anchor": "middle"
+       },
+       {
+        "x": 30,
+        "y": 110,
+        "text": "B",
+        "anchor": "middle"
+       },
+       {
+        "x": 50,
+        "y": 110,
+        "text": "C",
+        "anchor": "middle"
+       }
+      ],
+      "alt": "Distance–time graph: up to 100 m in 20 s, flat for 20 s, back to 0 in 20 s"
+     },
+     "steps": [
+      "<b>A (0–20 s):</b> straight sloping line — constant speed away from home.",
+      "<b>B (20–40 s):</b> horizontal — stationary (posting the letter).",
+      "<b>C (40–60 s):</b> straight line sloping down — constant speed back towards home.",
+      "<b>Speed in A</b> — gradient between $(0,\\ 0)$ and $(20,\\ 100)$:",
+      "<b>Equation:</b> $\\text{speed} = \\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+      "<b>Working:</b> $\\text{speed} = \\dfrac{100 - 0}{20 - 0} = \\dfrac{100}{20}$",
+      "<b>Answer:</b> $= 5$",
+      "<b>Units:</b> m/s",
+      "<b>Speed in B:</b> the line is horizontal, so the gradient is 0 and the speed is <b>0 m/s</b>.",
+      "<b>Speed in C</b> — between $(40,\\ 100)$ and $(60,\\ 0)$: gradient $= \\dfrac{0 - 100}{60 - 40} = \\dfrac{-100}{20} = -5$. The gradient is negative because she is heading home; her <b>speed is 5 m/s</b>."
+     ]
+    },
+    {
+     "kind": "explain",
+     "title": "Drawing a distance–time graph for a journey",
+     "html": "<ol class=\"list\"><li>Read the journey carefully and split it into stages. Write down the <b>time at the end of each stage</b> (add the times up as you go) and the <b>distance from the start</b> at that moment.</li><li>Plot each of these as a point.</li><li>Join the points <b>dot-to-dot</b> with a ruler (a journey can change suddenly, so no line of best fit).</li><li>Check: stationary stages must be horizontal; returning home must slope back down to zero.</li></ol>"
+    },
+    {
+     "kind": "practice",
+     "title": "Distance–time graphs",
+     "questions": [
+      {
+       "id": "p3-s3-q1",
+       "type": "group",
+       "text": "The graph shows a delivery robot's journey.",
+       "parts": [
+        {
+         "id": "p3-s3-q1a",
+         "type": "written",
+         "text": "Describe what the robot is doing in each stage, A to D.",
+         "model": "<p><b>A (0–10 s):</b> constant speed away from the start. <b>B (10–20 s):</b> stationary. <b>C (20–30 s):</b> constant speed away from the start, faster than in A (steeper). <b>D (30–60 s):</b> constant speed back towards the start, arriving back at 60 s.</p>",
+         "lines": 4,
+         "label": "a"
+        },
+        {
+         "id": "p3-s3-q1b",
+         "type": "numeric",
+         "text": "Calculate the robot's speed in stage A.",
+         "answer": {
+          "value": 6,
+          "unit": "m/s"
+         },
+         "hint": "Gradient of stage A: it goes from (0, 0) to (10, 60).",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{speed} = \\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+          "<b>Working:</b> $\\text{speed} = \\dfrac{60 - 0}{10 - 0}$",
+          "<b>Answer:</b> $= 6$",
+          "<b>Units:</b> m/s"
+         ],
+         "label": "b"
+        },
+        {
+         "id": "p3-s3-q1c",
+         "type": "numeric",
+         "text": "Calculate the robot's speed in stage C.",
+         "answer": {
+          "value": 9,
+          "unit": "m/s"
+         },
+         "hint": "Stage C goes from (20, 60) to (30, 150).",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{speed} = \\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+          "<b>Working:</b> $\\text{speed} = \\dfrac{150 - 60}{30 - 20} = \\dfrac{90}{10}$",
+          "<b>Answer:</b> $= 9$",
+          "<b>Units:</b> m/s"
+         ],
+         "label": "c"
+        },
+        {
+         "id": "p3-s3-q1d",
+         "type": "numeric",
+         "text": "Calculate the robot's speed in stage D.",
+         "answer": {
+          "value": 5,
+          "unit": "m/s",
+          "tolerance": 0.02
+         },
+         "hint": "Stage D goes from (30, 150) down to (60, 0). Speed is the size of the gradient.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{speed} = \\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+          "<b>Working:</b> $\\text{gradient} = \\dfrac{0 - 150}{60 - 30} = \\dfrac{-150}{30}$",
+          "<b>Answer:</b> $= -5$",
+          "<b>Units:</b> m/s",
+          "The gradient is −5, so the <b>speed is 5 m/s</b>, heading back towards the start. (An answer of −5 is marked right here too.)"
+         ],
+         "label": "d"
+        },
+        {
+         "id": "p3-s3-q1e",
+         "type": "choice",
+         "text": "In which stage is the robot moving fastest?",
+         "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+         ],
+         "correct": 2,
+         "explain": "Stage C has the steepest line, so the biggest gradient and the greatest speed.",
+         "label": "e"
+        },
+        {
+         "id": "p3-s3-q1f",
+         "type": "numeric",
+         "text": "Calculate the robot's <b>average speed</b> for the whole journey. (Careful: total <i>distance travelled</i>, not final distance from the start!)",
+         "answer": {
+          "value": 5,
+          "unit": "m/s"
+         },
+         "hint": "Add up the distance covered in every stage: 60 + 0 + 90 + 150. The whole journey takes 60 s.",
+         "walkthrough": [
+          "Total distance travelled $= 60 + 0 + 90 + 150 = 300$ m. Total time $= 60$ s.",
+          "<b>Equation:</b> $\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}$",
+          "<b>Working:</b> $\\text{average speed} = \\dfrac{300}{60}$",
+          "<b>Answer:</b> $= 5$",
+          "<b>Units:</b> m/s"
+         ],
+         "label": "f"
+        }
+       ],
+       "graph": {
+        "x": {
+         "label": "Time (s)",
+         "min": 0,
+         "max": 60,
+         "step": 10,
+         "minor": 2
+        },
+        "y": {
+         "label": "Distance from start (m)",
+         "min": 0,
+         "max": 150,
+         "step": 30,
+         "minor": 3
+        },
+        "series": [
+         {
+          "kind": "line",
+          "points": [
+           [
+            0,
+            0
+           ],
+           [
+            10,
+            60
+           ],
+           [
+            20,
+            60
+           ],
+           [
+            30,
+            150
+           ],
+           [
+            60,
+            0
+           ]
+          ]
+         },
+         {
+          "kind": "dashed",
+          "points": [
+           [
+            10,
+            0
+           ],
+           [
+            10,
+            150
+           ]
+          ]
+         },
+         {
+          "kind": "dashed",
+          "points": [
+           [
+            20,
+            0
+           ],
+           [
+            20,
+            150
+           ]
+          ]
+         },
+         {
+          "kind": "dashed",
+          "points": [
+           [
+            30,
+            0
+           ],
+           [
+            30,
+            150
+           ]
+          ]
+         }
+        ],
+        "marks": [
+         {
+          "x": 10,
+          "y": 60
+         },
+         {
+          "x": 20,
+          "y": 60
+         },
+         {
+          "x": 30,
+          "y": 150
+         },
+         {
+          "x": 60,
+          "y": 0
+         }
+        ],
+        "labels": [
+         {
+          "x": 5,
+          "y": 140,
+          "text": "A",
+          "anchor": "middle"
+         },
+         {
+          "x": 15,
+          "y": 140,
+          "text": "B",
+          "anchor": "middle"
+         },
+         {
+          "x": 25,
+          "y": 140,
+          "text": "C",
+          "anchor": "middle"
+         },
+         {
+          "x": 45,
+          "y": 140,
+          "text": "D",
+          "anchor": "middle"
+         }
+        ],
+        "alt": "Distance–time graph for a delivery robot with four stages A to D"
+       }
+      },
+      {
+       "id": "p3-s3-q2",
+       "type": "group",
+       "text": "Two distance–time graphs are shown.",
+       "parts": [
+        {
+         "id": "p3-s3-q2a",
+         "type": "choice",
+         "text": "Which graph shows an object <b>speeding up</b>?",
+         "options": [
+          "P",
+          "Q"
+         ],
+         "correct": 0,
+         "explain": "P gets steeper as time goes on, so more distance is covered each second — speeding up. Q gets flatter — slowing down.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s3-q2b",
+         "type": "written",
+         "text": "Explain how you can tell from the shape of the lines.",
+         "model": "<p>On P the curve gets <b>steeper</b>, so the gradient (the speed) is increasing — the object covers more distance each second. On Q the curve gets <b>flatter</b>, so the gradient is decreasing — less distance each second, slowing down.</p>",
+         "lines": 3,
+         "label": "b"
+        }
+       ],
+       "graph": {
+        "x": {
+         "label": "Time (s)",
+         "min": 0,
+         "max": 30,
+         "step": 5,
+         "minor": 1
+        },
+        "y": {
+         "label": "Distance (m)",
+         "min": 0,
+         "max": 100,
+         "step": 20,
+         "minor": 2
+        },
+        "series": [
+         {
+          "kind": "curve",
+          "points": [
+           [
+            0.0,
+            0.0
+           ],
+           [
+            3.75,
+            1.562
+           ],
+           [
+            7.5,
+            6.25
+           ],
+           [
+            11.25,
+            14.062
+           ],
+           [
+            15.0,
+            25.0
+           ],
+           [
+            18.75,
+            39.062
+           ],
+           [
+            22.5,
+            56.25
+           ],
+           [
+            26.25,
+            76.562
+           ],
+           [
+            30.0,
+            100.0
+           ]
+          ]
+         },
+         {
+          "kind": "curve",
+          "points": [
+           [
+            0.0,
+            0.0
+           ],
+           [
+            3.0,
+            31.623
+           ],
+           [
+            6.0,
+            44.721
+           ],
+           [
+            9.0,
+            54.772
+           ],
+           [
+            12.0,
+            63.246
+           ],
+           [
+            15.0,
+            70.711
+           ],
+           [
+            18.0,
+            77.46
+           ],
+           [
+            21.0,
+            83.666
+           ],
+           [
+            24.0,
+            89.443
+           ],
+           [
+            27.0,
+            94.868
+           ],
+           [
+            30.0,
+            100.0
+           ]
+          ]
+         }
+        ],
+        "labels": [
+         {
+          "x": 24,
+          "y": 48,
+          "text": "P",
+          "anchor": "middle"
+         },
+         {
+          "x": 10,
+          "y": 66,
+          "text": "Q",
+          "anchor": "middle"
+         }
+        ],
+        "alt": "Two curves: P gets steeper, Q gets flatter"
+       }
+      },
+      {
+       "id": "p3-s3-q3",
+       "type": "group",
+       "text": "Sam walks 200 m to the shop at a constant speed, taking 100 s. He spends 50 s inside the shop. He then jogs home at a constant speed, taking 50 s.",
+       "parts": [
+        {
+         "id": "p3-s3-q3a",
+         "type": "draw",
+         "text": "Draw a distance–time graph for Sam's journey: tap the grid to place the points in order, or draw it on paper (and label the axes with units).",
+         "grid": {
+          "x": {
+           "label": "Time (s)",
+           "min": 0,
+           "max": 250,
+           "step": 50,
+           "minor": 5
+          },
+          "y": {
+           "label": "Distance from home (m)",
+           "min": 0,
+           "max": 250,
+           "step": 50,
+           "minor": 5
+          },
+          "series": [],
+          "alt": "A blank grid for drawing a distance–time graph"
+         },
+         "answerGraph": {
+          "x": {
+           "label": "Time (s)",
+           "min": 0,
+           "max": 250,
+           "step": 50,
+           "minor": 5
+          },
+          "y": {
+           "label": "Distance from home (m)",
+           "min": 0,
+           "max": 250,
+           "step": 50,
+           "minor": 5
+          },
+          "series": [
+           {
+            "kind": "line",
+            "points": [
+             [
+              0,
+              0
+             ],
+             [
+              100,
+              200
+             ],
+             [
+              150,
+              200
+             ],
+             [
+              200,
+              0
+             ]
+            ]
+           }
+          ],
+          "marks": [
+           {
+            "x": 100,
+            "y": 200
+           },
+           {
+            "x": 150,
+            "y": 200
+           },
+           {
+            "x": 200,
+            "y": 0
+           }
+          ],
+          "alt": "Sam's journey: up to 200 m in 100 s, flat for 50 s, back to 0 in 50 s"
+         },
+         "model": "<p>Points at (0 s, 0 m), (100 s, 200 m), (150 s, 200 m) and (200 s, 0 m), joined dot-to-dot with a ruler: a line up to 200 m, a horizontal line for 50 s, then a line back down to 0 m.</p>",
+         "check": true,
+         "hint": "Work out the time at the end of each stage: 100 s, then 150 s, then 200 s.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s3-q3b",
+         "type": "numeric",
+         "text": "Calculate Sam's jogging speed on the way home.",
+         "answer": {
+          "value": 4,
+          "unit": "m/s"
+         },
+         "hint": "He covers 200 m in 50 s.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+          "<b>Working:</b> $\\text{speed} = \\dfrac{200}{50}$",
+          "<b>Answer:</b> $= 4$",
+          "<b>Units:</b> m/s",
+          "(The gradient of that part of the graph is −4, because he is heading home, but his speed is 4 m/s.)"
+         ],
+         "label": "b"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acceleration",
+   "lessons": "Lessons 8–10",
+   "title": "Acceleration",
+   "blurb": "What acceleration means, calculating it (including deceleration), and planning a practical to measure it with good measurements.",
+   "equations": [
+    "a = \\dfrac{v - u}{t}"
+   ],
+   "checklist": [
+    "Know what is meant by the term 'acceleration'",
+    "Calculate the size of the acceleration of an object",
+    "Devise a practical to measure the acceleration of an object",
+    "Take appropriate measurements in a practical"
+   ],
+   "parts": [
+    {
+     "kind": "explain",
+     "title": "What is acceleration?",
+     "html": "<p><b>Acceleration</b> is <b>how quickly the speed changes</b> — the change in speed every second.</p>$$\\text{acceleration} = \\dfrac{\\text{change in speed}}{\\text{time taken}} = \\dfrac{\\text{final speed} - \\text{initial speed}}{\\text{time taken}}$$<p>Using symbols, where $u$ is the <b>initial</b> (starting) speed and $v$ is the <b>final</b> speed:</p>$$a = \\dfrac{v - u}{t}$$<p><b>Units:</b> speed is in m/s and time is in s, so acceleration is in (m/s) per s, written <b>m/s²</b> (\"metres per second squared\"). An acceleration of 3 m/s² means the speed increases by 3 m/s <i>every second</i>.</p><ul class=\"list\"><li>If the object is <b>speeding up</b>, the acceleration is <b>positive</b>.</li><li>If the object is <b>slowing down</b>, the acceleration is <b>negative</b>. This is called a <b>deceleration</b>.</li><li>\"From rest\" or \"starts from stationary\" means $u = 0$. \"Comes to a stop\" means $v = 0$.</li></ul>"
+    },
+    {
+     "kind": "worked",
+     "title": "Calculating acceleration",
+     "question": "A car accelerates from rest to 24 m/s in 8 s. Calculate its acceleration.",
+     "steps": [
+      "From rest means the initial speed $u = 0$ m/s. Final speed $v = 24$ m/s. Time $t = 8$ s.",
+      "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+      "<b>Working:</b> $a = \\dfrac{24 - 0}{8} = \\dfrac{24}{8}$",
+      "<b>Answer:</b> $= 3$",
+      "<b>Units:</b> m/s²"
+     ]
+    },
+    {
+     "kind": "worked",
+     "title": "Deceleration",
+     "question": "A cyclist slows from 10 m/s to 4 m/s in 3 s. Calculate her acceleration.",
+     "steps": [
+      "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+      "<b>Working:</b> $a = \\dfrac{4 - 10}{3} = \\dfrac{-6}{3}$",
+      "<b>Answer:</b> $= -2$",
+      "<b>Units:</b> m/s²",
+      "The minus sign shows she is slowing down: a <b>deceleration of 2 m/s²</b>."
+     ]
+    },
+    {
+     "kind": "practice",
+     "title": "Acceleration",
+     "questions": [
+      {
+       "id": "p3-s4-q1",
+       "type": "choice",
+       "text": "Acceleration is the change in … every second.",
+       "options": [
+        "speed",
+        "distance",
+        "time"
+       ],
+       "correct": 0,
+       "explain": "Acceleration is the change in speed every second. Its unit is m/s²."
+      },
+      {
+       "id": "p3-s4-q2",
+       "type": "numeric",
+       "text": "A train starts from rest and reaches 30 m/s after 60 s. Calculate its acceleration.",
+       "answer": {
+        "value": 0.5,
+        "unit": "m/s²"
+       },
+       "hint": "From rest means u = 0.",
+       "walkthrough": [
+        "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+        "<b>Working:</b> $a = \\dfrac{30 - 0}{60}$",
+        "<b>Answer:</b> $= 0.5$",
+        "<b>Units:</b> m/s²"
+       ]
+      },
+      {
+       "id": "p3-s4-q3",
+       "type": "numeric",
+       "text": "A ball speeds up from 2 m/s to 14 m/s in 4 s. Calculate its acceleration.",
+       "answer": {
+        "value": 3,
+        "unit": "m/s²"
+       },
+       "hint": "Final speed minus initial speed, divided by the time.",
+       "walkthrough": [
+        "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+        "<b>Working:</b> $a = \\dfrac{14 - 2}{4} = \\dfrac{12}{4}$",
+        "<b>Answer:</b> $= 3$",
+        "<b>Units:</b> m/s²"
+       ]
+      },
+      {
+       "id": "p3-s4-q4",
+       "type": "numeric",
+       "text": "A car brakes from 20 m/s to 5 m/s in 5 s. Calculate its acceleration. (Include the sign.)",
+       "answer": {
+        "value": -3,
+        "unit": "m/s²"
+       },
+       "hint": "It is slowing down, so expect a negative answer.",
+       "walkthrough": [
+        "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+        "<b>Working:</b> $a = \\dfrac{5 - 20}{5} = \\dfrac{-15}{5}$",
+        "<b>Answer:</b> $= -3$",
+        "<b>Units:</b> m/s²",
+        "The negative sign shows the car is slowing down — a deceleration of 3 m/s²."
+       ]
+      },
+      {
+       "id": "p3-s4-q5",
+       "type": "numeric",
+       "text": "A rocket sled accelerates from rest at 2 m/s² for 6 s. What is its final speed?",
+       "answer": {
+        "value": 12,
+        "unit": "m/s"
+       },
+       "hint": "Rearrange: change in speed = acceleration × time. It started from rest.",
+       "walkthrough": [
+        "<b>Equation:</b> $\\text{change in speed} = a \\times t$",
+        "<b>Working:</b> $\\text{change in speed} = 2 \\times 6$",
+        "<b>Answer:</b> $= 12$",
+        "<b>Units:</b> m/s",
+        "It started from rest, so final speed $= 0 + 12 = 12$ m/s."
+       ]
+      },
+      {
+       "id": "p3-s4-q6",
+       "type": "written",
+       "text": "Explain why the unit of acceleration is m/s² and not m/s.",
+       "model": "<p>Acceleration is a change in speed (m/s) divided by a time (s). (m/s) ÷ s = m/s². It tells you how many m/s the speed changes by <i>each second</i>, which is a different kind of quantity from a speed.</p>",
+       "lines": 2
+      }
+     ]
+    },
+    {
+     "kind": "explain",
+     "title": "Devising a practical to measure acceleration",
+     "html": "<p>To find an acceleration you need to measure <b>two things</b>: the <b>change in speed</b> and the <b>time</b> it took. Here is a method for a trolley rolling down a ramp.</p><figure class=\"diagram\"><svg class=\"ramp-svg\" viewBox=\"0 0 520 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A trolley with a card on top rolls down a ramp through two light gates connected to a timer\">\n<line x1=\"20\" y1=\"170\" x2=\"500\" y2=\"170\" stroke=\"currentColor\" stroke-width=\"1.6\"/>\n<polygon points=\"60,40 60,170 460,170\" class=\"d-fill\" stroke=\"currentColor\" stroke-width=\"1.6\"/>\n<g transform=\"translate(158,46) rotate(18)\">\n<rect x=\"0\" y=\"0\" width=\"60\" height=\"18\" class=\"d-ink\"/>\n<rect x=\"12\" y=\"-26\" width=\"36\" height=\"26\" class=\"d-accent\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<circle cx=\"12\" cy=\"22\" r=\"6\" class=\"d-ink\"/><circle cx=\"48\" cy=\"22\" r=\"6\" class=\"d-ink\"/>\n</g>\n<text x=\"190\" y=\"26\" text-anchor=\"middle\">card (length measured)</text>\n<rect x=\"250\" y=\"80\" width=\"10\" height=\"70\" class=\"d-accent\"/>\n<rect x=\"380\" y=\"118\" width=\"10\" height=\"52\" class=\"d-accent\"/>\n<text x=\"255\" y=\"72\" text-anchor=\"middle\" font-weight=\"600\">light gate 1</text>\n<text x=\"385\" y=\"112\" text-anchor=\"middle\" font-weight=\"600\">light gate 2</text>\n<rect x=\"420\" y=\"20\" width=\"80\" height=\"40\" rx=\"3\" class=\"d-ink\"/>\n<text x=\"460\" y=\"45\" text-anchor=\"middle\" class=\"d-readout\">0.600 s</text>\n<text x=\"460\" y=\"75\" text-anchor=\"middle\">timer</text>\n<line x1=\"260\" y1=\"85\" x2=\"420\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<line x1=\"390\" y1=\"122\" x2=\"430\" y2=\"60\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"42\" y=\"190\" font-size=\"11\">release point</text>\n</svg>\n</figure><h4>Equipment</h4><p>Trolley, ramp, two light gates connected to a timer/datalogger, a card of known length fixed to the trolley, a ruler, a stopwatch (as a back-up).</p><h4>Method</h4><ol class=\"list\"><li><b>Measure the length of the card</b> with a ruler (in metres).</li><li>Release the trolley from the same mark on the ramp each time (<b>don't push it</b>).</li><li>Each light gate records how long the card takes to pass through it. <b>Speed at a gate</b> $= \\dfrac{\\text{card length}}{\\text{time to pass through}}$. This gives $u$ at gate 1 and $v$ at gate 2.</li><li>The timer also records the <b>time taken to travel from gate 1 to gate 2</b>. This is $t$.</li><li>Calculate $a = \\dfrac{v - u}{t}$.</li><li><b>Repeat</b> at least three times and calculate a <b>mean</b>. Ignore any anomalous result.</li></ol><h4>Why light gates and not a stopwatch?</h4><p>A person's <b>reaction time</b> (about 0.2 s) makes stopwatch timings unreliable when the times are short. Light gates start and stop automatically, so the measurement is more <b>accurate</b>.</p><h4>Variables</h4><table class=\"tbl\"><tr><th>Type</th><th>In this experiment</th></tr><tr><td><b>Independent</b> (the one you change)</td><td>e.g. the height (steepness) of the ramp, if you are investigating what affects the acceleration.</td></tr><tr><td><b>Dependent</b> (the one you measure)</td><td>The acceleration of the trolley (found from the speeds and time).</td></tr><tr><td><b>Control</b> (kept the same)</td><td>Same trolley, same mass, same release point, same distance between the light gates, same surface.</td></tr></table><h4>Taking good measurements</h4><ul class=\"list\"><li>Use the <b>right instrument</b>: ruler for the card length, light gates for short times.</li><li>Read scales at eye level to avoid parallax error.</li><li>Record results in a <b>table</b> with headings and units, and repeat to spot anomalies.</li><li>Write times to a sensible number of decimal places (what the timer actually shows).</li></ul>"
+    },
+    {
+     "kind": "practice",
+     "title": "Planning and measuring",
+     "questions": [
+      {
+       "id": "p3-s4-q7",
+       "type": "written",
+       "text": "A pupil wants to measure the acceleration of a toy car rolling down a slope. Describe a method she could use. Include: the equipment, <b>what she would measure</b>, how she would calculate the acceleration, and <b>one</b> way to make the results more reliable.",
+       "model": "<p>A good answer includes: equipment (slope, toy car, two light gates and timer — or a stopwatch — ruler, card); measuring the card length with a ruler; measuring the speed at two points (card length ÷ time through each light gate); measuring the time between the two points; calculating $a = \\dfrac{v - u}{t}$; releasing from the same point without pushing; repeating at least three times and finding a mean, discarding anomalies; keeping the slope angle and car the same.</p>",
+       "lines": 7
+      },
+      {
+       "id": "p3-s4-q8",
+       "type": "group",
+       "text": "In the light-gate experiment, the card is 0.10 m long. It takes 0.050 s to pass through gate 1 and 0.020 s to pass through gate 2. The trolley takes 0.60 s to travel between the gates.",
+       "parts": [
+        {
+         "id": "p3-s4-q8a",
+         "type": "numeric",
+         "text": "Calculate the speed at gate 1.",
+         "answer": {
+          "value": 2,
+          "unit": "m/s"
+         },
+         "hint": "Speed = card length ÷ time to pass through.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+          "<b>Working:</b> $\\text{speed} = \\dfrac{0.10}{0.050}$",
+          "<b>Answer:</b> $= 2$",
+          "<b>Units:</b> m/s"
+         ],
+         "label": "a"
+        },
+        {
+         "id": "p3-s4-q8b",
+         "type": "numeric",
+         "text": "Calculate the speed at gate 2.",
+         "answer": {
+          "value": 5,
+          "unit": "m/s"
+         },
+         "hint": "Same card, shorter time — so a faster speed.",
+         "walkthrough": [
+          "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$",
+          "<b>Working:</b> $\\text{speed} = \\dfrac{0.10}{0.020}$",
+          "<b>Answer:</b> $= 5$",
+          "<b>Units:</b> m/s"
+         ],
+         "label": "b"
+        },
+        {
+         "id": "p3-s4-q8c",
+         "type": "numeric",
+         "text": "Calculate the acceleration of the trolley.",
+         "answer": {
+          "value": 5,
+          "unit": "m/s²"
+         },
+         "hint": "u is the speed at gate 1, v the speed at gate 2, t the time between them.",
+         "walkthrough": [
+          "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+          "<b>Working:</b> $a = \\dfrac{5 - 2}{0.60} = \\dfrac{3}{0.60}$",
+          "<b>Answer:</b> $= 5$",
+          "<b>Units:</b> m/s²"
+         ],
+         "label": "c"
+        }
+       ]
+      },
+      {
+       "id": "p3-s4-q9",
+       "type": "written",
+       "text": "Explain why using a stopwatch to time the card through a light gate's position would give a less accurate result than using the light gate itself.",
+       "model": "<p>The time for a card to pass through a gate is very short (a fraction of a second). Human reaction time (about 0.2 s) is a large fraction of that, so the stopwatch reading would be far too inaccurate. A light gate starts and stops the timer automatically.</p>",
+       "lines": 2
+      },
+      {
+       "id": "p3-s4-q10",
+       "type": "written",
+       "text": "A pupil's three repeat readings for the time between gates are 0.61 s, 0.59 s and 0.92 s. Which reading is anomalous, and what should the pupil do about it?",
+       "model": "<p>0.92 s is anomalous — it is much larger than the other two. The pupil should ignore it when calculating the mean (and repeat the reading if possible). Mean of the other two $= \\dfrac{0.61 + 0.59}{2} = 0.60$ s.</p>",
+       "lines": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "speed-time",
+   "lessons": "Lessons 11 onwards",
+   "title": "Speed–time graphs",
+   "blurb": "Reading the shape of a speed–time graph, finding acceleration from the gradient, finding distance from the area under the line, and drawing one from a description.",
+   "equations": [
+    "a = \\text{gradient} = \\dfrac{\\text{change in speed}}{\\text{change in time}}",
+    "\\text{distance} = \\text{area under the graph}"
+   ],
+   "checklist": [
+    "Know how constant speed, stationary, acceleration and deceleration are shown on a speed–time graph",
+    "Use the gradient to work out the acceleration from a speed–time graph",
+    "Use the area under a slope or horizontal line to work out the distance travelled in that time",
+    "Draw a speed–time graph to represent a journey"
+   ],
+   "parts": [
+    {
+     "kind": "explain",
+     "title": "Watch out!",
+     "tone": "warn",
+     "html": "<p>A speed–time graph looks similar to a distance–time graph but means something completely different. <b>Always read the y-axis label first.</b> A horizontal line on a distance–time graph means <i>stationary</i>; a horizontal line on a speed–time graph means <i>constant speed</i>.</p>"
+    },
+    {
+     "kind": "explain",
+     "title": "Reading a speed–time graph",
+     "html": "<p>A <b>speed–time graph</b> has <b>speed on the y-axis</b> and <b>time on the x-axis</b>.</p><table class=\"tbl\"><tr><th>Shape of line</th><th>What the object is doing</th></tr><tr><td><b>Horizontal</b> line above the x-axis</td><td><b>Constant speed</b>. Speed is not changing.</td></tr><tr><td>Horizontal line <b>along the x-axis</b> (speed = 0)</td><td><b>Stationary</b>.</td></tr><tr><td>Straight line sloping <b>upwards</b></td><td><b>Constant acceleration</b> — speeding up steadily. Steeper = bigger acceleration.</td></tr><tr><td>Straight line sloping <b>downwards</b></td><td><b>Constant deceleration</b> — slowing down steadily.</td></tr></table>",
+     "graph": {
+      "x": {
+       "label": "Time (s)",
+       "min": 0,
+       "max": 40,
+       "step": 10,
+       "minor": 2
+      },
+      "y": {
+       "label": "Speed (m/s)",
+       "min": 0,
+       "max": 30,
+       "step": 5,
+       "minor": 1
+      },
+      "series": [
+       {
+        "kind": "line",
+        "points": [
+         [
+          0,
+          0
+         ],
+         [
+          10,
+          20
+         ]
+        ]
+       },
+       {
+        "kind": "line",
+        "points": [
+         [
+          10,
+          20
+         ],
+         [
+          20,
+          20
+         ]
+        ]
+       },
+       {
+        "kind": "line",
+        "points": [
+         [
+          20,
+          20
+         ],
+         [
+          30,
+          0
+         ]
+        ]
+       },
+       {
+        "kind": "line",
+        "points": [
+         [
+          30,
+          0
+         ],
+         [
+          40,
+          0
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          10,
+          0
+         ],
+         [
+          10,
+          30
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          20,
+          0
+         ],
+         [
+          20,
+          30
+         ]
+        ]
+       },
+       {
+        "kind": "dashed",
+        "points": [
+         [
+          30,
+          0
+         ],
+         [
+          30,
+          30
+         ]
+        ]
+       }
+      ],
+      "labels": [
+       {
+        "x": 5,
+        "y": 26,
+        "text": "accelerating",
+        "anchor": "middle"
+       },
+       {
+        "x": 15,
+        "y": 26,
+        "text": "constant speed",
+        "anchor": "middle"
+       },
+       {
+        "x": 25,
+        "y": 26,
+        "text": "decelerating",
+        "anchor": "middle"
+       },
+       {
+        "x": 35,
+        "y": 26,
+        "text": "stationary",
+        "anchor": "middle"
+       },
+       {
+        "x": 35,
+        "y": 23,
+        "text": "(speed = 0)",
+        "anchor": "middle"
+       }
+      ],
+      "alt": "The shapes on a speed–time graph: rising line, flat line, falling line, line along the axis"
+     },
+     "after": "<p><b>The gradient of a speed–time graph is the acceleration</b>, because gradient $= \\dfrac{\\text{change in speed}}{\\text{change in time}}$, which is the acceleration equation. A negative gradient is a deceleration.</p>"
+    },
+    {
+     "kind": "explain",
+     "title": "Area under a speed–time graph = distance travelled",
+     "html": "<p>Because distance $=$ speed $\\times$ time, the <b>area between the line and the x-axis</b> gives the distance travelled.</p><ul class=\"list\"><li>Under a <b>horizontal line</b> (constant speed) the shape is a <b>rectangle</b>: area $= \\text{speed} \\times \\text{time}$.</li><li>Under a <b>sloping line</b> (accelerating from rest, or decelerating to rest) the shape is a <b>triangle</b>: area $= \\tfrac{1}{2} \\times \\text{base} \\times \\text{height} = \\tfrac{1}{2} \\times \\text{time} \\times \\text{speed}$.</li></ul><p><b>Method:</b> split the area into rectangles and triangles, work out each one, then <b>add them up</b>. Use the <i>numbers on the axes</i>, not centimetres on the paper.</p>"
+    },
+    {
+     "kind": "worked",
+     "title": "Acceleration and distance from a speed–time graph",
+     "question": "The graph shows a tram journey between two stops. Describe the journey, find the acceleration in the first 10 s, and find the total distance travelled.",
+     "graph": {
+      "x": {
+       "label": "Time (s)",
+       "min": 0,
+       "max": 40,
+       "step": 5,
+       "minor": 1
+      },
+      "y": {
+       "label": "Speed (m/s)",
+       "min": 0,
+       "max": 25,
+       "step": 5,
+       "minor": 1
+      },
+      "series": [
+       {
+        "kind": "line",
+        "points": [
+         [
+          0,
+          0
+         ],
+         [
+          10,
+          20
+         ],
+         [
+          30,
+          20
+         ],
+         [
+          40,
+          0
+         ]
+        ]
+       }
+      ],
+      "shade": [
+       {
+        "series": 0,
+        "from": 0,
+        "to": 10
+       },
+       {
+        "series": 0,
+        "from": 10,
+        "to": 30
+       },
+       {
+        "series": 0,
+        "from": 30,
+        "to": 40
+       }
+      ],
+      "marks": [
+       {
+        "x": 10,
+        "y": 20
+       },
+       {
+        "x": 30,
+        "y": 20
+       },
+       {
+        "x": 40,
+        "y": 0
+       }
+      ],
+      "labels": [
+       {
+        "x": 7,
+        "y": 3,
+        "text": "triangle 1",
+        "anchor": "middle"
+       },
+       {
+        "x": 20,
+        "y": 9,
+        "text": "rectangle",
+        "anchor": "middle"
+       },
+       {
+        "x": 33,
+        "y": 3,
+        "text": "triangle 2",
+        "anchor": "middle"
+       }
+      ],
+      "alt": "Speed–time graph: up to 20 m/s in 10 s, constant to 30 s, down to 0 at 40 s, with the area split into two triangles and a rectangle"
+     },
+     "steps": [
+      "<b>Describe:</b> 0–10 s constant acceleration from rest; 10–30 s constant speed of 20 m/s; 30–40 s constant deceleration to rest.",
+      "<b>Acceleration in the first 10 s</b> — gradient from $(0,\\ 0)$ to $(10,\\ 20)$:",
+      "<b>Equation:</b> $a = \\text{gradient} = \\dfrac{\\text{change in speed}}{\\text{change in time}}$",
+      "<b>Working:</b> $a = \\dfrac{20 - 0}{10 - 0} = \\dfrac{20}{10}$",
+      "<b>Answer:</b> $= 2$",
+      "<b>Units:</b> m/s²",
+      "<b>Deceleration in the last 10 s:</b> $\\dfrac{0 - 20}{40 - 30} = \\dfrac{-20}{10} = -2$ m/s², a deceleration of 2 m/s².",
+      "<b>Total distance</b> — add the three areas:",
+      "<b>Equation:</b> $\\text{distance} = \\text{triangle 1} + \\text{rectangle} + \\text{triangle 2}$",
+      "<b>Working:</b> $= \\left(\\tfrac{1}{2} \\times 10 \\times 20\\right) + (20 \\times 20) + \\left(\\tfrac{1}{2} \\times 10 \\times 20\\right) = 100 + 400 + 100$",
+      "<b>Answer:</b> $= 600$",
+      "<b>Units:</b> m"
+     ]
+    },
+    {
+     "kind": "explain",
+     "title": "Drawing a speed–time graph for a journey",
+     "html": "<ol class=\"list\"><li>Split the journey into stages and write down the <b>time at the end of each stage</b> and the <b>speed</b> at that moment.</li><li>Plot each point and join them <b>dot-to-dot</b> with a ruler.</li><li>Check: \"constant speed\" must be horizontal; \"accelerates from rest\" starts at speed 0; \"comes to a stop\" finishes at speed 0.</li></ol>"
+    },
+    {
+     "kind": "practice",
+     "title": "Speed–time graphs",
+     "questions": [
+      {
+       "id": "p3-s5-q1",
+       "type": "group",
+       "text": "The graph shows a motorbike's journey.",
+       "parts": [
+        {
+         "id": "p3-s5-q1a",
+         "type": "written",
+         "text": "Describe the motion in each of the three stages.",
+         "model": "<p>0–5 s: constant acceleration from rest to 15 m/s. 5–20 s: constant speed of 15 m/s. 20–30 s: constant deceleration to a stop.</p>",
+         "lines": 3,
+         "label": "a"
+        },
+        {
+         "id": "p3-s5-q1b",
+         "type": "numeric",
+         "text": "Calculate the acceleration during the first 5 s.",
+         "answer": {
+          "value": 3,
+          "unit": "m/s²"
+         },
+         "hint": "Gradient: the speed goes from 0 to 15 m/s in 5 s.",
+         "walkthrough": [
+          "<b>Equation:</b> $a = \\text{gradient} = \\dfrac{\\text{change in speed}}{\\text{change in time}}$",
+          "<b>Working:</b> $a = \\dfrac{15 - 0}{5 - 0}$",
+          "<b>Answer:</b> $= 3$",
+          "<b>Units:</b> m/s²"
+         ],
+         "label": "b"
+        },
+        {
+         "id": "p3-s5-q1c",
+         "type": "numeric",
+         "text": "Calculate the acceleration between 20 s and 30 s. (Include the sign.)",
+         "answer": {
+          "value": -1.5,
+          "unit": "m/s²"
+         },
+         "hint": "The speed falls from 15 m/s to 0 in 10 s, so the gradient is negative.",
+         "walkthrough": [
+          "<b>Equation:</b> $a = \\text{gradient} = \\dfrac{\\text{change in speed}}{\\text{change in time}}$",
+          "<b>Working:</b> $a = \\dfrac{0 - 15}{30 - 20} = \\dfrac{-15}{10}$",
+          "<b>Answer:</b> $= -1.5$",
+          "<b>Units:</b> m/s²",
+          "A deceleration of 1.5 m/s²."
+         ],
+         "label": "c"
+        },
+        {
+         "id": "p3-s5-q1d",
+         "type": "numeric",
+         "text": "Calculate the total distance travelled. Show each area separately.",
+         "answer": {
+          "value": 337.5,
+          "unit": "m"
+         },
+         "hint": "Split the area into a triangle (0–5 s), a rectangle (5–20 s) and a triangle (20–30 s).",
+         "walkthrough": [
+          "Triangle (0–5 s): $\\tfrac{1}{2} \\times 5 \\times 15 = 37.5$ m.",
+          "Rectangle (5–20 s): $15 \\times 15 = 225$ m.",
+          "Triangle (20–30 s): $\\tfrac{1}{2} \\times 10 \\times 15 = 75$ m.",
+          "<b>Equation:</b> $\\text{distance} = \\text{area under the graph}$",
+          "<b>Working:</b> $\\text{distance} = 37.5 + 225 + 75$",
+          "<b>Answer:</b> $= 337.5$",
+          "<b>Units:</b> m"
+         ],
+         "label": "d"
+        }
+       ],
+       "graph": {
+        "x": {
+         "label": "Time (s)",
+         "min": 0,
+         "max": 30,
+         "step": 5,
+         "minor": 1
+        },
+        "y": {
+         "label": "Speed (m/s)",
+         "min": 0,
+         "max": 20,
+         "step": 5,
+         "minor": 1
+        },
+        "series": [
+         {
+          "kind": "line",
+          "points": [
+           [
+            0,
+            0
+           ],
+           [
+            5,
+            15
+           ],
+           [
+            20,
+            15
+           ],
+           [
+            30,
+            0
+           ]
+          ]
+         },
+         {
+          "kind": "dashed",
+          "points": [
+           [
+            5,
+            0
+           ],
+           [
+            5,
+            20
+           ]
+          ]
+         },
+         {
+          "kind": "dashed",
+          "points": [
+           [
+            20,
+            0
+           ],
+           [
+            20,
+            20
+           ]
+          ]
+         }
+        ],
+        "marks": [
+         {
+          "x": 5,
+          "y": 15
+         },
+         {
+          "x": 20,
+          "y": 15
+         },
+         {
+          "x": 30,
+          "y": 0
+         }
+        ],
+        "alt": "Speed–time graph for a motorbike: up to 15 m/s in 5 s, constant to 20 s, down to 0 at 30 s"
+       }
+      },
+      {
+       "id": "p3-s5-q2",
+       "type": "group",
+       "text": "A horizontal line appears on two different graphs.",
+       "parts": [
+        {
+         "id": "p3-s5-q2a",
+         "type": "choice",
+         "text": "On a <b>distance–time</b> graph, a horizontal line means the object is…",
+         "options": [
+          "stationary",
+          "moving at constant speed",
+          "accelerating"
+         ],
+         "correct": 0,
+         "explain": "Distance is not changing as time passes, so the object is stationary.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s5-q2b",
+         "type": "choice",
+         "text": "On a <b>speed–time</b> graph, a horizontal line above the axis means the object is…",
+         "options": [
+          "stationary",
+          "moving at constant speed",
+          "accelerating"
+         ],
+         "correct": 1,
+         "explain": "Speed is not changing — but it is not zero, so the object is moving at a constant speed.",
+         "label": "b"
+        }
+       ]
+      },
+      {
+       "id": "p3-s5-q3",
+       "type": "group",
+       "text": "A bus accelerates from rest to 12 m/s in 6 s. It travels at 12 m/s for 14 s, then decelerates to a stop in 4 s.",
+       "parts": [
+        {
+         "id": "p3-s5-q3a",
+         "type": "draw",
+         "text": "Draw a speed–time graph of the journey: tap the grid to place the points in order, or draw it on paper (and label the axes with units).",
+         "grid": {
+          "x": {
+           "label": "Time (s)",
+           "min": 0,
+           "max": 24,
+           "step": 4,
+           "minor": 4
+          },
+          "y": {
+           "label": "Speed (m/s)",
+           "min": 0,
+           "max": 15,
+           "step": 5,
+           "minor": 5
+          },
+          "series": [],
+          "alt": "A blank grid for drawing a speed–time graph"
+         },
+         "answerGraph": {
+          "x": {
+           "label": "Time (s)",
+           "min": 0,
+           "max": 24,
+           "step": 4,
+           "minor": 4
+          },
+          "y": {
+           "label": "Speed (m/s)",
+           "min": 0,
+           "max": 15,
+           "step": 5,
+           "minor": 5
+          },
+          "series": [
+           {
+            "kind": "line",
+            "points": [
+             [
+              0,
+              0
+             ],
+             [
+              6,
+              12
+             ],
+             [
+              20,
+              12
+             ],
+             [
+              24,
+              0
+             ]
+            ]
+           }
+          ],
+          "marks": [
+           {
+            "x": 6,
+            "y": 12
+           },
+           {
+            "x": 20,
+            "y": 12
+           },
+           {
+            "x": 24,
+            "y": 0
+           }
+          ],
+          "alt": "The bus journey: up to 12 m/s in 6 s, constant to 20 s, down to 0 at 24 s"
+         },
+         "model": "<p>Points at (0 s, 0 m/s), (6 s, 12 m/s), (20 s, 12 m/s) and (24 s, 0 m/s), joined with ruled straight lines. Axes: Time (s) and Speed (m/s).</p>",
+         "check": true,
+         "hint": "The constant-speed stage ends at 6 + 14 = 20 s, and the bus stops at 24 s.",
+         "label": "a"
+        },
+        {
+         "id": "p3-s5-q3b",
+         "type": "numeric",
+         "text": "Calculate the acceleration in the first 6 s.",
+         "answer": {
+          "value": 2,
+          "unit": "m/s²"
+         },
+         "hint": "Speed goes from 0 to 12 m/s in 6 s.",
+         "walkthrough": [
+          "<b>Equation:</b> $a = \\text{gradient} = \\dfrac{\\text{change in speed}}{\\text{change in time}}$",
+          "<b>Working:</b> $a = \\dfrac{12 - 0}{6}$",
+          "<b>Answer:</b> $= 2$",
+          "<b>Units:</b> m/s²"
+         ],
+         "label": "b"
+        },
+        {
+         "id": "p3-s5-q3c",
+         "type": "numeric",
+         "text": "Calculate the acceleration in the last 4 s. (Include the sign.)",
+         "answer": {
+          "value": -3,
+          "unit": "m/s²"
+         },
+         "hint": "Speed falls from 12 m/s to 0 in 4 s.",
+         "walkthrough": [
+          "<b>Equation:</b> $a = \\text{gradient} = \\dfrac{\\text{change in speed}}{\\text{change in time}}$",
+          "<b>Working:</b> $a = \\dfrac{0 - 12}{4}$",
+          "<b>Answer:</b> $= -3$",
+          "<b>Units:</b> m/s²",
+          "A deceleration of 3 m/s²."
+         ],
+         "label": "c"
+        },
+        {
+         "id": "p3-s5-q3d",
+         "type": "numeric",
+         "text": "Use your graph to calculate the total distance the bus travels.",
+         "answer": {
+          "value": 228,
+          "unit": "m"
+         },
+         "hint": "Triangle + rectangle + triangle.",
+         "walkthrough": [
+          "Triangle (0–6 s): $\\tfrac{1}{2} \\times 6 \\times 12 = 36$ m.",
+          "Rectangle (6–20 s): $14 \\times 12 = 168$ m.",
+          "Triangle (20–24 s): $\\tfrac{1}{2} \\times 4 \\times 12 = 24$ m.",
+          "<b>Equation:</b> $\\text{distance} = \\text{area under the graph}$",
+          "<b>Working:</b> $\\text{distance} = 36 + 168 + 24$",
+          "<b>Answer:</b> $= 228$",
+          "<b>Units:</b> m"
+         ],
+         "label": "d"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "key-facts",
+   "lessons": "Whole topic",
+   "title": "Key facts",
+   "blurb": "Cover and test yourself: tap a card to flip it, or cover the right-hand column on the printout.",
+   "equations": [],
+   "checklist": [],
+   "parts": [
+    {
+     "kind": "facts",
+     "title": "Cover and test yourself",
+     "items": [
+      {
+       "q": "What is the speed equation?",
+       "a": "$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$"
+      },
+      {
+       "q": "Unit of speed (in physics)?",
+       "a": "m/s"
+      },
+      {
+       "q": "How do you find distance from speed and time?",
+       "a": "$\\text{distance} = \\text{speed} \\times \\text{time}$"
+      },
+      {
+       "q": "What does EWAU stand for?",
+       "a": "Equation, Working, Answer, Units"
+      },
+      {
+       "q": "Average speed equation?",
+       "a": "$\\text{average speed} = \\dfrac{\\text{total distance}}{\\text{total time}}$ (including stops)"
+      },
+      {
+       "q": "What is instantaneous speed?",
+       "a": "The speed at one particular moment"
+      },
+      {
+       "q": "Gradient equation?",
+       "a": "$\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$"
+      },
+      {
+       "q": "What does a negative gradient look like?",
+       "a": "A line sloping down to the right"
+      },
+      {
+       "q": "Horizontal line on a distance–time graph means…",
+       "a": "Stationary"
+      },
+      {
+       "q": "Gradient of a distance–time graph gives…",
+       "a": "Speed"
+      },
+      {
+       "q": "Curve getting steeper on a distance–time graph means…",
+       "a": "Speeding up (accelerating)"
+      },
+      {
+       "q": "Acceleration equation?",
+       "a": "$a = \\dfrac{v - u}{t}$ (change in speed ÷ time)"
+      },
+      {
+       "q": "Unit of acceleration?",
+       "a": "m/s²"
+      },
+      {
+       "q": "A negative acceleration is called…",
+       "a": "A deceleration"
+      },
+      {
+       "q": "Horizontal line on a speed–time graph means…",
+       "a": "Constant speed"
+      },
+      {
+       "q": "Gradient of a speed–time graph gives…",
+       "a": "Acceleration"
+      },
+      {
+       "q": "Area under a speed–time graph gives…",
+       "a": "Distance travelled"
+      },
+      {
+       "q": "Area of a triangle?",
+       "a": "$\\tfrac{1}{2} \\times \\text{base} \\times \\text{height}$"
+      },
+      {
+       "q": "Why use light gates rather than a stopwatch?",
+       "a": "They remove human reaction time, so timings are more accurate"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

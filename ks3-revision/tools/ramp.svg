@@ -1,0 +1,20 @@
+<svg class="ramp-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A trolley with a card on top rolls down a ramp through two light gates connected to a timer">
+<line x1="20" y1="170" x2="500" y2="170" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="60,40 60,170 460,170" class="d-fill" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(158,46) rotate(18)">
+<rect x="0" y="0" width="60" height="18" class="d-ink"/>
+<rect x="12" y="-26" width="36" height="26" class="d-accent" stroke="currentColor" stroke-width="1"/>
+<circle cx="12" cy="22" r="6" class="d-ink"/><circle cx="48" cy="22" r="6" class="d-ink"/>
+</g>
+<text x="190" y="26" text-anchor="middle">card (length measured)</text>
+<rect x="250" y="80" width="10" height="70" class="d-accent"/>
+<rect x="380" y="118" width="10" height="52" class="d-accent"/>
+<text x="255" y="72" text-anchor="middle" font-weight="600">light gate 1</text>
+<text x="385" y="112" text-anchor="middle" font-weight="600">light gate 2</text>
+<rect x="420" y="20" width="80" height="40" rx="3" class="d-ink"/>
+<text x="460" y="45" text-anchor="middle" class="d-readout">0.600 s</text>
+<text x="460" y="75" text-anchor="middle">timer</text>
+<line x1="260" y1="85" x2="420" y2="40" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="390" y1="122" x2="430" y2="60" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="42" y="190" font-size="11">release point</text>
+</svg>

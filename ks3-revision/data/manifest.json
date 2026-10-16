@@ -1,0 +1,6 @@
+{
+  "_note": "hand-maintained list of topic files; add a line here when a new tools/build_*.py writes a new data file",
+  "topics": [
+    { "file": "p3-motion.json" }
+  ]
+}

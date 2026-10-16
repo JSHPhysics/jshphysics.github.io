@@ -137,6 +137,16 @@
       "tags": ["A-Level", "Study Tool", "Teacher Tool"]
     },
     {
+      "title": "KS3 Revision",
+      "url": "https://jshphysics.github.io/ks3-revision/",
+      "section": "tools",
+      "category": "Revision booklets",
+      "description": "Self-guiding Key Stage 3 revision booklets that follow the topic checklist line by line: clear explanations, worked examples revealed step by step, and practice questions checked as you go — with hints, EWAU walkthroughs, tap-to-draw graphs and a printable booklet. Starts with P3 Motion.",
+      "pedagogy": "A revision checklist tells students what to know but not how to get there, so most revision collapses into re-reading. Here every checklist line is turned into a short cycle of explain, worked example, then immediate retrieval practice, which is the sequencing the worked-example effect and testing effect both point to. Answers are checked on the spot with diagnostic feedback (a factor-of-ten slip is named as a unit-conversion error), worked examples reveal one step at a time so students predict before they see, and the traffic-light self-check at the end of each section makes the next revision session a decision rather than a guess.",
+      "image": "ks3-revision.png",
+      "tags": ["KS3", "Study Tool"]
+    },
+    {
       "title": "Revision Tracker",
       "url": "https://jshphysics.github.io/revision_tracker/",
       "section": "tools",
