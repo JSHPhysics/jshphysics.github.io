@@ -1797,11 +1797,19 @@ figure.diagram .d-readout { fill: var(--ok); font-family: var(--font-mono); font
     font-size: 9pt;
     break-inside: avoid;
   }
-  .p-ewau div { min-height: 7mm; padding: 1pt 4pt; border-bottom: 1px dashed #bbb; }
+  .p-ewau div { min-height: 6mm; padding: 1pt 4pt; border-bottom: 1px dashed #bbb; }
   .p-ewau div:nth-child(odd) { border-right: 1px dashed #bbb; color: #555; }
   .p-ewau div:nth-last-child(-n+2) { border-bottom: 0; }
   .p-q .graph.blank { max-width: 150mm; }
-  .p-selfcheck { margin-top: 10pt; break-inside: avoid; }
+  .p-selfcheck { break-before: page; }
+  .p-selfcheck h3 { font-size: 14pt; border-bottom: 1px solid #000; padding-bottom: 3pt; margin: 0 0 8pt; }
+  .p-selfcheck .p-label { margin-top: 12pt; }
+  .p-selfcheck .p-lines { margin-left: 0; }
+  .p-cover .p-checklist-head { break-before: page; margin-top: 0; }
+  .p-group > .p-q:first-child { break-after: avoid; }
+  .p-practice .p-label, .p-worked .p-label, .p-explain h3, .p-topic h2 { break-after: avoid; }
+  .p-q .p-lines, .p-q .p-ewau, .p-q .graph { break-before: avoid; }
+  .p-lines div { height: 6.5mm; }
   .p-facts .p-check td { width: 50%; }
   .p-ans .p-why { font-size: 9.5pt; color: #333; margin: 1pt 0 3pt 14pt; }
   .p-ans .p-why p { margin: 0 0 2pt; }

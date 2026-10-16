@@ -1439,7 +1439,7 @@
       html += "<li>" + rich(line).replace(/type the answer to check it/g, "check it against the answers at the back") + "</li>";
     });
     html += "</ol>";
-    html += "<h3>The checklist — can you…?</h3><table class=\"p-check\">";
+    html += "<h3 class=\"p-checklist-head\">The checklist — can you…?</h3><table class=\"p-check\">";
     topic.sections.forEach(function (section) {
       (section.checklist || []).forEach(function (item, itemIndex) {
         html += "<tr>" + (itemIndex === 0 ? "<td class=\"p-lesson\" rowspan=\"" + section.checklist.length + "\">" + escapeHtml(section.lessons || "") + "</td>" : "") +
@@ -1481,12 +1481,19 @@
           html += "</table></div>";
         }
       });
+      // Each section ends with its own review page: the traffic-light
+      // self-check plus space to write revision targets
       if (section.checklist && section.checklist.length > 0) {
-        html += "<div class=\"p-selfcheck\"><div class=\"p-label\">Self-check · I can…</div><table class=\"p-check\"><tr><th></th><th>🔴</th><th>🟠</th><th>🟢</th></tr>";
+        html += "<div class=\"p-selfcheck\"><h3>Section review · " + escapeHtml(section.title) + "</h3>";
+        html += "<div class=\"p-label\">Self-check · I can…</div><p class=\"p-intro\">Be honest: red means \"not yet\", amber means \"with help\", green means \"on my own\".</p>";
+        html += "<table class=\"p-check\"><tr><th></th><th>🔴</th><th>🟠</th><th>🟢</th></tr>";
         section.checklist.forEach(function (item) {
           html += "<tr><td>" + escapeHtml(item) + "</td><td class=\"p-box\">☐</td><td class=\"p-box\">☐</td><td class=\"p-box\">☐</td></tr>";
         });
-        html += "</table></div>";
+        html += "</table>";
+        html += "<div class=\"p-label\">What I need to revise (anything red or amber)</div><div class=\"p-lines\"><div></div><div></div><div></div><div></div><div></div><div></div></div>";
+        html += "<div class=\"p-label\">Questions to ask my teacher</div><div class=\"p-lines\"><div></div><div></div><div></div><div></div></div>";
+        html += "</div>";
       }
       html += "</section>";
     });
