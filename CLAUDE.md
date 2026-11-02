@@ -8,6 +8,7 @@ Static site served from `main` via GitHub Pages.
 - `pedagogy.html` — "On the design of these tools" subpage with lightbox + hotspots
 - `tools.json` — **single source of truth** for both pages. Both fetch this on load and build their content from it. The `_instructions` block at the top documents every field.
 - `images/` — screenshots referenced by filename in `tools.json`
+- `ks3-revision/`, `non-negotiables/`, `gcse-revision/` — the booklet/practice apps, each self-contained with its own README. `gcse-revision/` is the KS3 shell plus *bands* (sections grouped under headings with per-band numbering); content is authored in `tools/t2_*.py` and built with `tools/build_t2_forces_motion.py`. All three share one origin, so each uses its own localStorage prefix (`ks3-*`, `gcse-*`).
 - `lessons/` — self-paced animated "Cover Lessons" (`distance-time-graphs/`, `reflection-refraction-tir/`), each a single `index.html`; `lessons/vendor/` is the shared self-hosted KaTeX. Built with the `animated-physics-lesson` skill from the artifact pages: the artifact HTML is wrapped in doctype/head/body and `vendor/` paths become `../vendor/`. Edit the source lesson and re-wrap rather than editing the copy here.
 - `annotate.html` — local-only authoring tool (NOT committed; see "Authoring annotations" below)
 - `.claude/launch.json` — local-only, used by Claude Preview tooling. Don't commit.
@@ -94,4 +95,4 @@ Big session — built out the entire pedagogy hotspot system end-to-end.
 
 - Added **Cover Lessons** section (§ 02) to `index.html` and `pedagogy.html`; Tools renumbered § 03. `tools.json` `section` now accepts `lessons`; pedagogy kicker labels them "Lesson".
 - Added `lessons/distance-time-graphs/` (KS3) and `lessons/reflection-refraction-tir/` (GCSE 5.1P) with shared `lessons/vendor/` KaTeX, plus `images/distance-time-lesson.png` and `images/optics-lesson.png`.
-
+- Added `gcse-revision/` (GCSE Revision): the KS3 Revision shell with section *bands*, first topic "Topic 2 - Forces and Motion (LEH, U4)" (Edexcel 1PH0 2.1–2.33P, 29 sections, 182 questions, 26 graphs incl. tangents to curves). Card added to `tools.json` after KS3 Revision, plus `images/gcse-revision.png`. Tested headless (Playwright) before pushing: no console errors, answer checking, booklet PDF, phone width.

@@ -167,6 +167,16 @@
       "tags": ["KS3", "Study Tool"]
     },
     {
+      "title": "GCSE Revision",
+      "url": "https://jshphysics.github.io/gcse-revision/",
+      "section": "tools",
+      "category": "Revision booklets",
+      "description": "Self-guiding GCSE physics revision built the same way as the KS3 booklets, with each topic split into the non-negotiables (recall and single-step calculations that must be automatic) and the tricky bits (multi-step calculations, explanation marks and the misconceptions that cost marks). Explanations, worked examples revealed step by step, practice checked as you go, exam-style graphs with tangents, flip-card key facts and a printable booklet. Starts with Edexcel Topic 2, Forces and Motion.",
+      "pedagogy": "Splitting a topic into non-negotiables and tricky bits is a deliberate ordering: the fluent, low-load skills are secured first so that working memory is free when the multi-step problems arrive, which is what the worked-example and expertise-reversal literature points to. The tricky bits are built around the errors examiners report every year (third-law pairs confused with balanced forces, the missing rectangle under a trapezium, safety features explained without the time step), each shown as a trap, then practised. Explanation questions carry mark-scheme model answers so students self-mark against the points that actually score, and the self-check at the end of each section turns the next revision session into a decision rather than a guess.",
+      "image": "gcse-revision.png",
+      "tags": ["GCSE", "Study Tool", "Forces", "Mechanics"]
+    },
+    {
       "title": "Revision Tracker",
       "url": "https://jshphysics.github.io/revision_tracker/",
       "section": "tools",
