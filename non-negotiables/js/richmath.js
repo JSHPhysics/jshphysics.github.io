@@ -99,14 +99,14 @@
     "hPa", "kHz", "MHz", "GHz", "THz", "mA", "μA", "nA", "kA", "mV", "kV", "MV",
     "μV", "kΩ", "MΩ", "mΩ", "μF", "nF", "pF", "mF", "mH", "μH", "mT", "μT", "nT",
     "kWh", "Wh", "MWh", "GWh", "eV/c²", "MeV/c²", "GeV/c²", "keV/c²", "°C⁻¹", "K⁻¹",
-    "turns", "lines", "yr⁻¹",
+    "turns", "lines", "yr⁻¹", "counts", "count",
   ];
   const UNIT_SET = new Set(BASE_UNITS);
 
   // Units that are unambiguous even without a number in front ("turns" and
   // "lines" are only units after a number or another unit: "Wb turns")
   const STRONG_UNITS = new Set(BASE_UNITS.filter(function (unit) {
-    return unit.length >= 2 && !IDENTIFIERS.has(unit) && unit !== "turns" && unit !== "lines";
+    return unit.length >= 2 && !IDENTIFIERS.has(unit) && unit !== "turns" && unit !== "lines" && unit !== "counts" && unit !== "count";
   }));
 
   function isDigit(character) {
@@ -449,13 +449,17 @@
       const previous = previousMeaningful(tokens, index);
       const previousIsNumber = previous && previous.type === "num";
       const previousIsIn = previous && previous.type === "word" && previous.text === "in";
+      // "m/s", "kg/m³", "J/kg °C": a unit after a slash that follows a unit
+      const previousIndex = tokens.indexOf(previous);
+      const beforeSlash = previous && previous.type === "op" && previous.text === "/" ? previousMeaningful(tokens, previousIndex) : null;
+      const previousIsSlashAfterUnit = !!(beforeSlash && beforeSlash.type === "word" && beforeSlash.isUnit);
       const previousIsUnit = previous && previous.type === "word" && previous.isUnit;
       const hasNegativeExponent = parts.sup.indexOf("⁻") >= 0;
       const next = nextMeaningful(tokens, index);
       const nextIsExponentUnit = next && next.type === "word" && unitBase(next.text) && splitWord(next.text).sup.indexOf("⁻") >= 0;
       const strong = STRONG_UNITS.has(base) && !ENGLISH.has(base);
 
-      if (previousIsNumber || previousIsUnit || previousIsIn || hasNegativeExponent || nextIsExponentUnit || strong) {
+      if (previousIsNumber || previousIsUnit || previousIsIn || previousIsSlashAfterUnit || hasNegativeExponent || nextIsExponentUnit || strong) {
         token.isUnit = true;
         return "M";
       }
@@ -744,9 +748,10 @@
     const parts = splitWord(word);
     let core = parts.core;
     if (core === "°C") {
-      core = "^\\circ C";
+      // An empty group before the superscript keeps KaTeX happy after a spacing command
+      core = "{}^\\circ C";
     } else if (core === "°") {
-      core = "^\\circ";
+      core = "{}^\\circ";
     } else if (core === "Ω") {
       core = "\\Omega";
     } else if (core === "kΩ") {
@@ -1013,6 +1018,8 @@
       if (atom.kind === "unit" && previous) {
         if (previousKind === "unit") {
           piece = "\\," + piece;
+        } else if (previousKind === "slash") {
+          piece = piece;
         } else if (previousKind === "num" || previousKind === "group" || previousKind === "paren" || previousKind === "sup" || previousKind === "id") {
           piece = "\\ " + piece;
         }
@@ -1107,14 +1114,24 @@
   function renderRich(text, displayStyle) {
     const parts = segment(text);
     let html = "";
-    for (const part of parts) {
+    for (let index = 0; index < parts.length; index += 1) {
+      const part = parts[index];
       if (part.kind === "math") {
         // Skip rendering a bare integer in prose (years, counts)
         if (/^\d+$/.test(part.text.trim())) {
           html += escapeHtml(part.text);
-        } else {
-          html += renderTex(tokensToTex(part.tokens), !!displayStyle);
+          continue;
         }
+        let rendered = renderTex(tokensToTex(part.tokens), !!displayStyle);
+        // Punctuation straight after maths stays glued to it, so a line
+        // never breaks between "30 N" and its full stop
+        const next = parts[index + 1];
+        const punctuation = next && next.kind === "prose" ? /^[.,;:!?)]+/.exec(next.text) : null;
+        if (punctuation) {
+          rendered = "<span class=\"nowrap\">" + rendered + escapeHtml(punctuation[0]) + "</span>";
+          next.text = next.text.slice(punctuation[0].length);
+        }
+        html += rendered;
       } else {
         html += escapeHtml(part.text);
       }
@@ -1140,7 +1157,17 @@
         parts.push(token.base + (token.sup ? "^{" + superscriptToAscii(token.sup) + "}" : ""));
       }
     }
-    return renderTex("\\mathrm{" + parts.join("\\,") + "}", false);
+    // Thin spaces between the parts, except around a slash (m/s, not m / s)
+    let joined = "";
+    for (let index = 0; index < parts.length; index += 1) {
+      const part = parts[index];
+      const previous = index > 0 ? parts[index - 1] : null;
+      if (index > 0 && part !== "/" && previous !== "/") {
+        joined += "\\,";
+      }
+      joined += part;
+    }
+    return renderTex("\\mathrm{" + joined + "}", false);
   }
 
   return {

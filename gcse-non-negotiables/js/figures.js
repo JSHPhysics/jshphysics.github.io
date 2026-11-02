@@ -1,0 +1,644 @@
+/*
+ * figures.js — one technical drawing per topic, as inline SVG.
+ *
+ * Each figure is drawn in a 320 × 200 box in the style of a blueprint or a
+ * graph-paper sketch: thin strokes in currentColor, dashed construction
+ * lines, dimension arrows, and a small number of accent strokes. Parts that
+ * move carry classes the stylesheet animates (.draw, .swing, .orbit, .travel,
+ * .pulse). Everything is pure markup, so the same figure can sit on a card
+ * and in a page header and be morphed between them.
+ *
+ * figures.render(topicId) → SVG string (empty string for an unknown id)
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) {
+    module.exports = factory();
+  } else {
+    root.figures = factory();
+  }
+}(typeof self !== "undefined" ? self : this, function () {
+
+  /* ------------------------------------------------------------------
+     Drawing helpers
+     ------------------------------------------------------------------ */
+
+  // A line with an arrowhead at the end
+  function arrow(x1, y1, x2, y2, cls) {
+    const angle = Math.atan2(y2 - y1, x2 - x1);
+    const size = 7;
+    const leftX = x2 - size * Math.cos(angle - 0.45);
+    const leftY = y2 - size * Math.sin(angle - 0.45);
+    const rightX = x2 - size * Math.cos(angle + 0.45);
+    const rightY = y2 - size * Math.sin(angle + 0.45);
+    const className = cls ? " class=\"" + cls + "\"" : "";
+    return "<line" + className + " x1=\"" + x1 + "\" y1=\"" + y1 + "\" x2=\"" + x2 + "\" y2=\"" + y2 + "\"/>" +
+      "<polyline" + className + " points=\"" + leftX.toFixed(1) + "," + leftY.toFixed(1) + " " + x2 + "," + y2 + " " +
+      rightX.toFixed(1) + "," + rightY.toFixed(1) + "\"/>";
+  }
+
+  // A dimension line between two points with end ticks and a label
+  function dimension(x1, y1, x2, y2, label, offset) {
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const length = Math.hypot(dx, dy) || 1;
+    const nx = -dy / length;
+    const ny = dx / length;
+    const shift = offset || 0;
+    const ax = x1 + nx * shift;
+    const ay = y1 + ny * shift;
+    const bx = x2 + nx * shift;
+    const by = y2 + ny * shift;
+    const tick = 4;
+    const midX = (ax + bx) / 2 + nx * 10;
+    const midY = (ay + by) / 2 + ny * 10;
+    return "<g class=\"dim\">" +
+      "<line x1=\"" + ax + "\" y1=\"" + ay + "\" x2=\"" + bx + "\" y2=\"" + by + "\"/>" +
+      "<line x1=\"" + (ax - nx * tick) + "\" y1=\"" + (ay - ny * tick) + "\" x2=\"" + (ax + nx * tick) + "\" y2=\"" + (ay + ny * tick) + "\"/>" +
+      "<line x1=\"" + (bx - nx * tick) + "\" y1=\"" + (by - ny * tick) + "\" x2=\"" + (bx + nx * tick) + "\" y2=\"" + (by + ny * tick) + "\"/>" +
+      "<text x=\"" + midX.toFixed(1) + "\" y=\"" + midY.toFixed(1) + "\" text-anchor=\"middle\">" + label + "</text>" +
+      "</g>";
+  }
+
+  // Dashed construction line
+  function dash(x1, y1, x2, y2) {
+    return "<line class=\"cons\" x1=\"" + x1 + "\" y1=\"" + y1 + "\" x2=\"" + x2 + "\" y2=\"" + y2 + "\"/>";
+  }
+
+  function text(x, y, label, anchor) {
+    return "<text x=\"" + x + "\" y=\"" + y + "\" text-anchor=\"" + (anchor || "start") + "\">" + label + "</text>";
+  }
+
+  // Points along a sine wave as an SVG path
+  function sinePath(x0, y0, width, amplitude, cycles, steps) {
+    let path = "";
+    const count = steps || 80;
+    for (let index = 0; index <= count; index += 1) {
+      const x = x0 + (width * index) / count;
+      const y = y0 - amplitude * Math.sin((2 * Math.PI * cycles * index) / count);
+      path += (index === 0 ? "M" : "L") + x.toFixed(1) + "," + y.toFixed(1);
+    }
+    return path;
+  }
+
+  // A resistor between two points (horizontal): the IEC / BS 3939 rectangle
+  function resistor(x, y, width) {
+    const height = 14;
+    return "<rect x=\"" + x + "\" y=\"" + (y - height / 2) + "\" width=\"" + width + "\" height=\"" + height + "\"/>";
+  }
+
+  // A coil spring between (x, y1) and (x, y2), vertical
+  function spring(x, y1, y2, coils) {
+    const n = coils || 8;
+    const step = (y2 - y1) / n;
+    let path = "M" + x + "," + y1;
+    for (let index = 0; index < n; index += 1) {
+      const y = y1 + step * (index + 0.5);
+      path += "L" + (x + (index % 2 === 0 ? 10 : -10)) + "," + y.toFixed(1);
+    }
+    path += "L" + x + "," + y2;
+    return path;
+  }
+
+  function wrap(inner, cls) {
+    return "<svg class=\"fig " + (cls || "") + "\" viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" focusable=\"false\">" +
+      inner + "</svg>";
+  }
+
+  /* ------------------------------------------------------------------
+     The figures
+     ------------------------------------------------------------------ */
+
+  const drawings = {
+
+    // A vernier-style scale with a bracketed reading and its uncertainty
+    "measurements": function () {
+      let ticks = "";
+      for (let index = 0; index <= 24; index += 1) {
+        const x = 30 + index * 11;
+        const height = index % 5 === 0 ? 18 : (index % 5 === 0 ? 12 : 8);
+        ticks += "<line x1=\"" + x + "\" y1=\"118\" x2=\"" + x + "\" y2=\"" + (118 - height) + "\"/>";
+      }
+      let labels = "";
+      for (let index = 0; index <= 24; index += 5) {
+        labels += text(30 + index * 11, 132, String(index), "middle");
+      }
+      return wrap(
+        "<g class=\"draw\">" +
+        "<line x1=\"20\" y1=\"118\" x2=\"300\" y2=\"118\"/>" + ticks +
+        "</g>" +
+        "<g class=\"lbl\">" + labels + "</g>" +
+        // The object being measured
+        "<rect class=\"acc draw\" x=\"52\" y=\"62\" width=\"123\" height=\"30\" rx=\"2\"/>" +
+        dimension(52, 50, 175, 50, "11.2 ± 0.1", 0) +
+        // Reading pointer
+        dash(175, 62, 175, 118) +
+        "<g class=\"pulse\">" + arrow(175, 160, 175, 124, "acc") + "</g>"
+      );
+    },
+
+    // A projectile arc with velocity components and range
+    "kinematics": function () {
+      // Parabola from (40,160) peaking at (160, 60) landing at (280,160)
+      const path = "M40,160 Q160,-40 280,160";
+      return wrap(
+        "<line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\"/>" +
+        "<path class=\"draw arc\" d=\"" + path + "\"/>" +
+
+        // Initial velocity and its components
+        arrow(40, 160, 92, 108, "acc") +
+        arrow(40, 160, 92, 160, "cons") +
+        arrow(40, 160, 40, 108, "cons") +
+        text(96, 104, "u") +
+        text(96, 174, "u cos θ") +
+        text(16, 104, "u sin θ", "start") +
+        // Angle arc
+        "<path class=\"cons\" d=\"M66,160 A26,26 0 0 0 58,142\"/>" +
+        text(70, 150, "θ") +
+        dimension(40, 182, 280, 182, "R", 0) +
+        dimension(160, 160, 160, 60, "H", 0) +
+        // Travelling dot
+        "<circle class=\"travel acc\" r=\"4\" style=\"offset-path: path('" + path + "')\"/>"
+      );
+    },
+
+    // A block on an incline with weight resolved into components
+    "forces": function () {
+      // Incline from (30,170) to (270,70)
+      const angle = Math.atan2(100, 240);
+      const bx = 150;
+      const by = 170 - (bx - 30) * Math.tan(angle);
+      const cos = Math.cos(angle);
+      const sin = Math.sin(angle);
+      // Block corners (a square sitting on the slope)
+      const size = 34;
+      const ux = cos;
+      const uy = -sin;
+      const vx = sin;
+      const vy = cos;
+      const p1x = bx - (size / 2) * ux;
+      const p1y = by - (size / 2) * uy;
+      const p2x = bx + (size / 2) * ux;
+      const p2y = by + (size / 2) * uy;
+      const p3x = p2x - size * vx;
+      const p3y = p2y - size * vy;
+      const p4x = p1x - size * vx;
+      const p4y = p1y - size * vy;
+      const cx = (p1x + p3x) / 2;
+      const cy = (p1y + p3y) / 2;
+      return wrap(
+        "<polygon class=\"draw\" points=\"30,170 270,170 270,70\"/>" +
+        "<polygon class=\"acc draw\" points=\"" + [p1x, p1y, p2x, p2y, p3x, p3y, p4x, p4y].map(function (n) { return n.toFixed(1); }).join(",") + "\"/>" +
+        // Weight straight down
+        arrow(cx, cy, cx, cy + 70, "") +
+        text(cx + 6, cy + 74, "W") +
+        // Components: along and perpendicular to slope
+        arrow(cx, cy, cx - 70 * sin * cos, cy + 70 * sin * sin, "cons") +
+        arrow(cx, cy, cx + 70 * sin * cos, cy + 70 * cos * cos, "cons") +
+        text(cx - 60, cy + 14, "W sin θ", "end") +
+        text(cx + 8, cy + 52, "W cos θ") +
+        // Normal reaction
+        arrow(cx, cy, cx - 55 * sin, cy - 55 * cos, "acc") +
+        text(cx - 55 * sin - 4, cy - 55 * cos - 6, "R", "end") +
+        // Slope angle at the bottom-right vertex (270,170): arc from the base
+        // round to the hypotenuse, label on the bisector just inside the arc
+        "<path class=\"cons\" d=\"M234,170 A36,36 0 0 1 " + (270 - 36 * cos).toFixed(1) + "," + (170 - 36 * sin).toFixed(1) + "\"/>" +
+        text(221, 164, "θ", "middle")
+      );
+    },
+
+    // Two trolleys about to collide, with momentum arrows
+    "momentum-energy": function () {
+      return wrap(
+        "<line x1=\"20\" y1=\"140\" x2=\"300\" y2=\"140\"/>" +
+        // Trolley 1 (moving)
+        "<g class=\"slide-right\">" +
+        "<rect class=\"acc draw\" x=\"50\" y=\"100\" width=\"60\" height=\"34\" rx=\"3\"/>" +
+        "<circle cx=\"64\" cy=\"137\" r=\"5\"/><circle cx=\"96\" cy=\"137\" r=\"5\"/>" +
+        arrow(110, 117, 160, 117, "acc") +
+        text(80, 92, "m₁", "middle") +
+        text(135, 110, "u₁", "middle") +
+        "</g>" +
+        // Trolley 2 (at rest)
+        "<rect class=\"draw\" x=\"200\" y=\"100\" width=\"60\" height=\"34\" rx=\"3\"/>" +
+        "<circle cx=\"214\" cy=\"137\" r=\"5\"/><circle cx=\"246\" cy=\"137\" r=\"5\"/>" +
+        text(230, 92, "m₂", "middle") +
+        // Energy bar underneath: KE before / after
+        "<g class=\"lbl\">" +
+        text(50, 176, "p = m₁u₁ + m₂u₂") +
+        "</g>" +
+        dash(200, 60, 200, 100) +
+        dash(50, 60, 50, 100) +
+        dimension(50, 60, 200, 60, "s", 0)
+      );
+    },
+
+    // A spring under load with extension dimensioned
+    "materials": function () {
+      return wrap(
+        // Ceiling
+        "<line x1=\"120\" y1=\"20\" x2=\"200\" y2=\"20\"/>" +
+        "<g class=\"hatch\">" +
+        "<line x1=\"125\" y1=\"20\" x2=\"118\" y2=\"12\"/><line x1=\"140\" y1=\"20\" x2=\"133\" y2=\"12\"/>" +
+        "<line x1=\"155\" y1=\"20\" x2=\"148\" y2=\"12\"/><line x1=\"170\" y1=\"20\" x2=\"163\" y2=\"12\"/>" +
+        "<line x1=\"185\" y1=\"20\" x2=\"178\" y2=\"12\"/><line x1=\"200\" y1=\"20\" x2=\"193\" y2=\"12\"/>" +
+        "</g>" +
+        // Unstretched spring (construction)
+        "<path class=\"cons\" d=\"" + spring(90, 20, 100, 8) + "\"/>" +
+        dash(70, 100, 110, 100) +
+        // Stretched spring (animated between two lengths)
+        "<g class=\"stretch\">" +
+        "<path class=\"acc\" d=\"" + spring(160, 20, 130, 8) + "\"/>" +
+        "<rect class=\"acc draw\" x=\"142\" y=\"130\" width=\"36\" height=\"26\" rx=\"2\"/>" +
+        arrow(160, 156, 160, 186, "") +
+        text(166, 186, "F") +
+        "</g>" +
+        // Natural length level (fixed) and the moving spring-end level
+        dash(160, 100, 230, 100) +
+        "<g class=\"shift\">" + dash(160, 130, 230, 130) + "</g>" +
+        // Δx: a dimension whose lower end tracks the spring (scaled about y = 100),
+        // with the label moved to its midpoint separately so the glyph is not squashed
+        "<g class=\"dim dx-line\" style=\"transform-origin: 230px 100px\">" +
+        "<line x1=\"230\" y1=\"100\" x2=\"230\" y2=\"130\"/>" +
+        "<line x1=\"226\" y1=\"100\" x2=\"234\" y2=\"100\"/>" +
+        "<line x1=\"226\" y1=\"130\" x2=\"234\" y2=\"130\"/>" +
+        "</g>" +
+        "<g class=\"dim dx-label\"><text x=\"242\" y=\"119\">Δx</text></g>" +
+        dimension(60, 20, 60, 100, "L", 0)
+      );
+    },
+
+    // A travelling wave with wavelength and amplitude marked. The markers
+    // sit inside the moving group, duplicated one wavelength back, so they
+    // travel with the crests and the wrap-around is seamless.
+    "waves": function () {
+      const wave = sinePath(0, 100, 320, 36, 2.5, 120);
+      // Crests at x = 32, 160, 288 (period 128); troughs at 96, 224
+      // One wavelength's worth of markers; repeated every 128 px so the
+      // pattern is continuous across the box however far the group has moved
+      function markers(shift) {
+        return "<g transform=\"translate(" + shift + ",0)\">" +
+          dash(32, 44, 32, 64) + dash(160, 44, 160, 64) +
+          dimension(32, 44, 160, 44, "λ", 0) +
+          dimension(224, 100, 224, 136, "A", 0) +
+          "</g>";
+      }
+      return wrap(
+        "<line class=\"cons\" x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\"/>" +
+        "<g class=\"wave\">" +
+        "<path class=\"acc draw\" d=\"" + wave + "\"/>" +
+        "<path class=\"acc\" transform=\"translate(-128,0)\" d=\"" + wave + "\"/>" +
+        markers(-256) + markers(-128) + markers(0) + markers(128) +
+        "</g>" +
+        text(300, 92, "x", "end")
+      );
+    },
+
+    // Energy levels with a downward transition emitting a photon
+    "quantum": function () {
+      const levels = [160, 118, 92, 76, 66];
+      // 96 px wide, 4 cycles, amplitude 5: path length 128.75 (used by the CSS dashes)
+      const photon = sinePath(140, 106, 96, 5, 4, 80);
+      let lines = "";
+      const names = ["n = 1", "n = 2", "n = 3", "n = 4", "∞"];
+      levels.forEach(function (y, index) {
+        lines += "<line x1=\"60\" y1=\"" + y + "\" x2=\"200\" y2=\"" + y + "\"/>" + text(206, y + 4, names[index]);
+      });
+      return wrap(
+        "<g class=\"draw\">" + lines + "</g>" +
+        // Electron dropping from n=3 to n=2
+        "<g class=\"drop\">" +
+        "<circle class=\"acc\" cx=\"130\" cy=\"92\" r=\"4\"/>" +
+        "</g>" +
+        arrow(130, 92, 130, 120, "acc") +
+        // Photon leaving: a wavefront dot runs along a sinusoidal path and
+        // leaves the wave as a fading trail (three dash windows of
+        // increasing length behind the head, see figures.css)
+        "<path class=\"acc trail t1\" d=\"" + photon + "\"/>" +
+        "<path class=\"acc trail t2\" d=\"" + photon + "\"/>" +
+        "<path class=\"acc trail t3\" d=\"" + photon + "\"/>" +
+        "<circle class=\"acc fill photon-head\" r=\"3\" style=\"offset-path: path('" + photon + "')\"/>" +
+        text(244, 110, "hf") +
+        dimension(44, 118, 44, 92, "ΔE", 0) +
+        text(60, 186, "E = −13.6 eV / n²")
+      );
+    },
+
+    // A series circuit with current markers moving round it
+    "electricity": function (options) {
+      const settings = options || {};
+      // A-level labels the cell with its EMF and internal resistance; GCSE just has a cell
+      const cellLabel = settings.cellLabel === undefined ? "ε, r" : settings.cellLabel;
+      const loop = "M60,50 L260,50 L260,150 L60,150 Z";
+      return wrap(
+        // Wires: gaps for the resistor (130–190 on top) and the ammeter (circle r = 12 at 160 on the bottom)
+        "<path class=\"draw\" d=\"M60,50 L130,50 M190,50 L260,50 L260,150 L174,150 M146,150 L60,150\"/>" +
+        // Cell on the left side
+        "<line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"88\"/><line x1=\"60\" y1=\"112\" x2=\"60\" y2=\"150\"/>" +
+        "<line x1=\"46\" y1=\"88\" x2=\"74\" y2=\"88\"/><line x1=\"52\" y1=\"98\" x2=\"68\" y2=\"98\"/>" +
+        "<line x1=\"46\" y1=\"104\" x2=\"74\" y2=\"104\"/><line x1=\"52\" y1=\"112\" x2=\"68\" y2=\"112\"/>" +
+        (cellLabel ? text(28, 104, cellLabel) : "") +
+        // Resistor on top
+        "<g class=\"acc\">" + resistor(130, 50, 60) + "</g>" +
+        text(160, 74, "R", "middle") +
+        // Ammeter at the bottom
+        "<circle cx=\"160\" cy=\"150\" r=\"12\"/>" + text(160, 154, "A", "middle") +
+        // Voltmeter across R
+        "<path class=\"cons\" d=\"M130,50 L130,22 L190,22 L190,50\"/>" +
+        "<circle class=\"cons-fill\" cx=\"160\" cy=\"22\" r=\"10\"/>" + text(160, 26, "V", "middle") +
+        // Charge carriers
+        "<circle class=\"travel acc\" r=\"3\" style=\"offset-path: path('" + loop + "'); animation-delay: 0s\"/>" +
+        "<circle class=\"travel acc\" r=\"3\" style=\"offset-path: path('" + loop + "'); animation-delay: -1.3s\"/>" +
+        "<circle class=\"travel acc\" r=\"3\" style=\"offset-path: path('" + loop + "'); animation-delay: -2.6s\"/>" +
+        text(272, 104, "I")
+      );
+    },
+
+    // A pendulum swinging through its arc
+    "circular-shm": function () {
+      return wrap(
+        "<line x1=\"100\" y1=\"28\" x2=\"220\" y2=\"28\"/>" +
+        "<g class=\"hatch\"><line x1=\"110\" y1=\"28\" x2=\"104\" y2=\"20\"/><line x1=\"130\" y1=\"28\" x2=\"124\" y2=\"20\"/>" +
+        "<line x1=\"150\" y1=\"28\" x2=\"144\" y2=\"20\"/><line x1=\"170\" y1=\"28\" x2=\"164\" y2=\"20\"/>" +
+        "<line x1=\"190\" y1=\"28\" x2=\"184\" y2=\"20\"/><line x1=\"210\" y1=\"28\" x2=\"204\" y2=\"20\"/></g>" +
+        dash(160, 28, 160, 170) +
+        // Arc of motion
+        "<path class=\"cons\" d=\"M98,142 A130,130 0 0 0 222,142\"/>" +
+        // Amplitude marks
+        dimension(160, 176, 222, 176, "A", 0) +
+        // Pendulum: string and bob rotate about the pivot
+        "<g class=\"swing\" style=\"transform-origin: 160px 28px\">" +
+        "<line class=\"acc\" x1=\"160\" y1=\"28\" x2=\"160\" y2=\"158\"/>" +
+        "<circle class=\"acc fill\" cx=\"160\" cy=\"164\" r=\"9\"/>" +
+        "</g>" +
+        // Angle marker: a dashed arc from the vertical to the string. The
+        // visible part of this circle is a dash whose length follows the
+        // swing angle (see fig-theta-arc in figures.css)
+        "<circle class=\"cons theta-arc\" cx=\"160\" cy=\"28\" r=\"42\" style=\"transform-origin: 160px 28px\"/>" +
+        // θ sits at the middle of that arc: an arm rotated by half the
+        // swing angle, with the glyph counter-rotated so it stays upright
+        "<g class=\"theta-arm\" style=\"transform-origin: 160px 28px\">" +
+        "<text class=\"theta-glyph\" x=\"160\" y=\"88\" text-anchor=\"middle\">θ</text>" +
+        "</g>" +
+        text(130, 100, "L", "end")
+      );
+    },
+
+    // Gas particles in a box with a piston
+    "thermal-gases": function (options) {
+      const settings = options || {};
+      const caption = settings.caption || "pV = NkT";
+      const particles = [
+        [80, 70, 3, 2], [130, 120, -2, 3], [190, 80, 2, -3], [110, 150, -3, -1],
+        [220, 140, 1, 2], [160, 60, -2, -2], [90, 110, 2, 2], [200, 110, -3, 2],
+        [150, 95, 3, 1], [240, 70, -1, 3],
+      ];
+      let dots = "";
+      particles.forEach(function (particle, index) {
+        dots += "<g class=\"jitter\" style=\"--dx: " + (particle[2] * 4) + "px; --dy: " + (particle[3] * 4) + "px; animation-delay: " + (-index * 0.37) + "s\">" +
+          "<circle class=\"acc fill\" cx=\"" + particle[0] + "\" cy=\"" + particle[1] + "\" r=\"3.5\"/></g>";
+      });
+      return wrap(
+        "<path class=\"draw\" d=\"M60,40 L60,170 L260,170 L260,40\"/>" +
+        // Piston
+        "<rect class=\"draw\" x=\"60\" y=\"40\" width=\"200\" height=\"10\"/>" +
+        "<line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"14\"/>" +
+        arrow(160, 14, 160, 36, "acc") +
+        text(170, 24, "p") +
+        dots +
+        dimension(276, 50, 276, 170, "V", 0) +
+        text(60, 190, caption)
+      );
+    },
+
+    // A planet with a satellite in a circular orbit. The radius vector, the
+    // satellite and its velocity vector rotate together; the labels are
+    // counter-rotated so they stay upright.
+    "gravitational-fields": function () {
+      return wrap(
+        "<circle class=\"draw\" cx=\"160\" cy=\"100\" r=\"28\"/>" +
+        "<g class=\"hatch\"><path d=\"M143,82 Q160,96 177,82 M137,100 Q160,112 183,100 M143,118 Q160,106 177,118\"/></g>" +
+        "<circle class=\"cons\" cx=\"160\" cy=\"100\" r=\"88\"/>" +
+        text(160, 104, "M", "middle") +
+        "<g class=\"orbit ccw\" style=\"transform-origin: 160px 100px\">" +
+        arrow(160, 100, 243, 100, "") +
+        "<g class=\"upright\"><text x=\"204\" y=\"94\" text-anchor=\"middle\">r</text></g>" +
+        "<rect class=\"acc fill\" x=\"243\" y=\"95\" width=\"10\" height=\"10\"/>" +
+        arrow(248, 100, 248, 58, "acc") +
+        "<g class=\"upright\"><text class=\"acc\" x=\"258\" y=\"66\">v</text></g>" +
+        "</g>" +
+        text(40, 186, "F = GMm / r²")
+      );
+    },
+
+    // Two equal and opposite point charges with their field lines, traced
+    // numerically from the dipole field (+Q at (100,100), −q at (220,100)):
+    // forwards from +Q, and backwards from −q for the lines that arrive from
+    // beyond the frame. Every line leaves +Q and ends on −q.
+    "electric-fields-capacitors": function () {
+      const fieldLines = [
+        { d: "M113.0,100.0L119.0,100.0L125.0,100.0L131.0,100.0L137.0,100.0L143.0,100.0L149.0,100.0L155.0,100.0L161.0,100.0L167.0,100.0L173.0,100.0L179.0,100.0L185.0,100.0L191.0,100.0L197.0,100.0L203.0,100.0L209.0,100.0", head: "155.6,102.4 160.0,100.0 155.6,97.6" },
+        { d: "M111.3,93.5L116.5,90.6L121.8,87.8L127.2,85.1L132.7,82.7L138.3,80.5L144.0,78.8L149.9,77.5L155.8,76.8L161.8,76.7L167.8,77.2L173.7,78.2L179.5,79.8L185.2,81.8L190.7,84.1L196.1,86.7L201.4,89.5L206.7,92.3L210.2,94.3", head: "154.6,79.3 158.8,76.6 154.3,74.5" },
+        { d: "M106.5,88.7L109.6,83.6L112.9,78.6L116.3,73.6L120.0,68.9L123.9,64.4L128.2,60.2L132.8,56.3L137.8,53.0L143.1,50.3L148.8,48.3L154.6,47.0L160.6,46.7L166.6,47.2L172.4,48.6L178.0,50.8L183.3,53.7L188.2,57.1L192.7,61.0L196.9,65.3L200.8,69.9L204.4,74.6L207.8,79.6L211.0,84.7L214.1,89.8", head: "151.7,49.9 155.6,46.8 150.9,45.2" },
+        { d: "M100.0,87.0L100.1,81.0L100.4,75.0L100.8,69.0L101.5,63.1L102.3,57.1L103.5,51.2L105.0,45.4L106.8,39.7L108.9,34.1L111.4,28.7L114.4,23.4L117.7,18.4L121.5,13.8L125.6,9.5L130.2,5.6L135.2,2.2L140.5,-0.5L146.1,-2.7L151.9,-4.1L157.9,-4.7L163.9,-4.6L169.8,-3.7L175.6,-2.1L181.1,0.2L186.4,3.2L191.2,6.7L195.7,10.7L199.7,15.1L203.4,19.9L206.6,25.0L209.4,30.3L211.8,35.8L213.8,41.4L215.5,47.2L216.9,53.0L218.0,58.9L218.8,64.9L219.3,70.8L219.7,76.8L219.9,82.8L220.0,88.8", head: "132.1,7.2 134.3,2.7 129.3,3.2" },
+        { d: "M93.5,88.7L90.6,83.5L87.7,78.2L85.0,72.9L82.3,67.5L79.8,62.0L77.5,56.5L75.2,51.0L73.1,45.3L71.2,39.7L69.4,33.9L67.9,28.1L66.5,22.3L65.3,16.4L64.2,10.5L63.4,4.6L62.8,-1.4L62.4,-7.4L62.2,-13.4L62.3,-19.4L62.5,-25.4L63.0,-31.3", head: "77.9,51.4 74.1,48.2 73.5,53.1" },
+        { d: "M88.7,93.5L83.6,90.5L78.4,87.4L73.3,84.3L68.2,81.1L63.1,77.9L58.1,74.6L53.1,71.3L48.2,67.9L43.2,64.5L38.3,61.0L33.5,57.4L28.7,53.8L24.0,50.2L19.2,46.5L14.6,42.7L9.9,38.9L5.4,35.0L0.8,31.1L-3.7,27.1L-8.1,23.1L-12.5,19.0L-16.9,14.9L-21.2,10.7L-25.5,6.5L-29.7,2.2L-31.1,0.8", head: "50.7,66.7 45.7,66.2 47.9,70.7" },
+        { d: "M87.0,100.0L81.0,100.0L75.0,100.0L69.0,100.0L63.0,100.0L57.0,100.0L51.0,100.0L45.0,100.0L39.0,100.0L33.0,100.0L27.0,100.0L21.0,100.0L15.0,100.0L9.0,100.0L3.0,100.0L-3.0,100.0L-9.0,100.0L-15.0,100.0L-21.0,100.0L-27.0,100.0L-31.0,100.0", head: "50.4,97.6 46.0,100.0 50.4,102.4" },
+        { d: "M88.7,106.5L83.6,109.5L78.4,112.6L73.3,115.7L68.2,118.9L63.1,122.1L58.1,125.4L53.1,128.7L48.2,132.1L43.2,135.5L38.3,139.0L33.5,142.6L28.7,146.2L24.0,149.8L19.2,153.5L14.6,157.3L9.9,161.1L5.4,165.0L0.8,168.9L-3.7,172.9L-8.1,176.9L-12.5,181.0L-16.9,185.1L-21.2,189.3L-25.5,193.5L-29.7,197.8L-31.1,199.2", head: "47.9,129.3 45.7,133.8 50.7,133.3" },
+        { d: "M93.5,111.3L90.6,116.5L87.7,121.8L85.0,127.1L82.3,132.5L79.8,138.0L77.5,143.5L75.2,149.0L73.1,154.7L71.2,160.3L69.4,166.1L67.9,171.9L66.5,177.7L65.3,183.6L64.2,189.5L63.4,195.4L62.8,201.4L62.4,207.4L62.2,213.4L62.3,219.4L62.5,225.4L63.0,231.3", head: "73.5,146.9 74.1,151.8 77.9,148.6" },
+        { d: "M100.0,113.0L100.1,119.0L100.4,125.0L100.8,131.0L101.5,136.9L102.3,142.9L103.5,148.8L105.0,154.6L106.8,160.3L108.9,165.9L111.4,171.3L114.4,176.6L117.7,181.6L121.5,186.2L125.6,190.5L130.2,194.4L135.2,197.8L140.5,200.5L146.1,202.7L151.9,204.1L157.9,204.7L163.9,204.6L169.8,203.7L175.6,202.1L181.1,199.8L186.4,196.8L191.2,193.3L195.7,189.3L199.7,184.9L203.4,180.1L206.6,175.0L209.4,169.7L211.8,164.2L213.8,158.6L215.5,152.8L216.9,147.0L218.0,141.1L218.8,135.1L219.3,129.2L219.7,123.2L219.9,117.2L220.0,111.2", head: "129.3,196.8 134.3,197.3 132.1,192.8" },
+        { d: "M106.5,111.3L109.6,116.4L112.9,121.4L116.3,126.4L120.0,131.1L123.9,135.6L128.2,139.8L132.8,143.7L137.8,147.0L143.1,149.7L148.8,151.7L154.6,153.0L160.6,153.3L166.6,152.8L172.4,151.4L178.0,149.2L183.3,146.3L188.2,142.9L192.7,139.0L196.9,134.7L200.8,130.1L204.4,125.4L207.8,120.4L211.0,115.3L214.1,110.2", head: "150.9,154.8 155.6,153.2 151.7,150.1" },
+        { d: "M111.3,106.5L116.5,109.4L121.8,112.2L127.2,114.9L132.7,117.3L138.3,119.5L144.0,121.2L149.9,122.5L155.8,123.2L161.8,123.3L167.8,122.8L173.7,121.8L179.5,120.2L185.2,118.2L190.7,115.9L196.1,113.3L201.4,110.5L206.7,107.7L210.2,105.7", head: "154.3,125.5 158.8,123.4 154.6,120.7" },
+        { d: "M351.0,100.0L345.0,100.0L339.0,100.0L333.0,100.0L327.0,100.0L321.0,100.0L315.0,100.0L309.0,100.0L303.0,100.0L297.0,100.0L291.0,100.0L285.0,100.0L279.0,100.0L273.0,100.0L267.0,100.0L261.0,100.0L255.0,100.0L249.0,100.0L243.0,100.0L237.0,100.0L233.0,100.0", head: "282.4,97.6 278.0,100.0 282.4,102.4" },
+        { d: "M351.1,0.8L346.9,5.1L342.6,9.3L338.3,13.5L334.0,17.6L329.6,21.7L325.2,25.8L320.7,29.8L316.2,33.7L311.6,37.6L307.0,41.4L302.3,45.2L297.6,48.9L292.9,52.6L288.1,56.2L283.3,59.8L278.4,63.3L273.5,66.8L268.5,70.2L263.6,73.5L258.5,76.8L253.5,80.0L248.4,83.2L243.3,86.3L238.2,89.4L233.0,92.5L231.3,93.5", head: "281.4,58.2 279.2,62.7 284.2,62.1" },
+        { d: "M257.0,-31.3L257.5,-25.4L257.7,-19.4L257.8,-13.4L257.6,-7.4L257.2,-1.4L256.6,4.6L255.8,10.5L254.7,16.4L253.5,22.3L252.1,28.1L250.6,33.9L248.8,39.7L246.9,45.3L244.8,51.0L242.5,56.5L240.2,62.0L237.7,67.5L235.0,72.9L232.3,78.2L229.4,83.5L226.5,88.7", head: "246.3,39.5 247.2,44.4 250.9,41.0" },
+        { d: "M257.0,231.3L257.5,225.4L257.7,219.4L257.8,213.4L257.6,207.4L257.2,201.4L256.6,195.4L255.8,189.5L254.7,183.6L253.5,177.7L252.1,171.9L250.6,166.1L248.8,160.3L246.9,154.7L244.8,149.0L242.5,143.5L240.2,138.0L237.7,132.5L235.0,127.1L232.3,121.8L229.4,116.5L226.5,111.3", head: "250.9,159.0 247.2,155.6 246.3,160.5" },
+        { d: "M351.1,199.2L346.9,194.9L342.6,190.7L338.3,186.5L334.0,182.4L329.6,178.3L325.2,174.2L320.7,170.2L316.2,166.3L311.6,162.4L307.0,158.6L302.3,154.8L297.6,151.1L292.9,147.4L288.1,143.8L283.3,140.2L278.4,136.7L273.5,133.2L268.5,129.8L263.6,126.5L258.5,123.2L253.5,120.0L248.4,116.8L243.3,113.7L238.2,110.6L233.0,107.5L231.3,106.5", head: "284.2,137.9 279.2,137.3 281.4,141.8" }
+      ];
+      let lines = "";
+      fieldLines.forEach(function (line) {
+        lines += "<path class=\"draw\" d=\"" + line.d + "\"/>";
+        lines += "<polyline points=\"" + line.head + "\"/>";
+      });
+      return wrap(
+        lines +
+        "<circle class=\"acc fill\" cx=\"100\" cy=\"100\" r=\"12\"/>" +
+        "<circle class=\"acc fill\" cx=\"220\" cy=\"100\" r=\"12\"/>" +
+        "<g class=\"on-fill\"><line x1=\"94\" y1=\"100\" x2=\"106\" y2=\"100\"/><line x1=\"100\" y1=\"94\" x2=\"100\" y2=\"106\"/>" +
+        "<line x1=\"214\" y1=\"100\" x2=\"226\" y2=\"100\"/></g>" +
+        "<g class=\"halo\">" +
+        dimension(100, 150, 220, 150, "r", 0) +
+        text(84, 80, "+Q", "end") + text(236, 80, "−q") +
+        text(40, 186, "F = Qq / 4πε₀r²") +
+        "</g>"
+      );
+    },
+
+    // A charged particle circling in a magnetic field out of the page
+    "magnetic-fields-induction": function () {
+      let dots = "";
+      for (let row = 0; row < 4; row += 1) {
+        for (let column = 0; column < 6; column += 1) {
+          const x = 60 + column * 40;
+          const y = 50 + row * 40;
+          dots += "<circle class=\"bdot\" cx=\"" + x + "\" cy=\"" + y + "\" r=\"4\"/><circle class=\"fill\" cx=\"" + x + "\" cy=\"" + y + "\" r=\"1.2\"/>";
+        }
+      }
+      return wrap(
+        dots +
+        "<circle class=\"cons\" cx=\"160\" cy=\"110\" r=\"56\"/>" +
+        // Radius, particle, velocity (tangent) and force (to the centre) rotate as one
+        "<g class=\"orbit ccw\" style=\"transform-origin: 160px 110px\">" +
+        arrow(160, 110, 212, 110, "") +
+        "<g class=\"upright\"><text x=\"186\" y=\"104\" text-anchor=\"middle\">r</text></g>" +
+        "<circle class=\"acc fill\" cx=\"216\" cy=\"110\" r=\"5\"/>" +
+        arrow(216, 110, 216, 70, "acc") +
+        "<g class=\"upright\"><text class=\"acc\" x=\"222\" y=\"76\">v</text></g>" +
+        arrow(216, 110, 180, 110, "acc") +
+        "<g class=\"upright\"><text class=\"acc\" x=\"190\" y=\"124\">F</text></g>" +
+        "</g>" +
+        text(282, 54, "B", "end") +
+        text(40, 186, "r = mv / BQ")
+      );
+    },
+
+    // The motor effect: a current-carrying wire between the poles of a
+    // magnet, field lines N → S, current into the page, force upwards
+    "magnetism": function () {
+      let fieldLines = "";
+      for (let index = 0; index < 5; index += 1) {
+        const y = 62 + index * 19;
+        fieldLines += arrow(96, y, 224, y, "cons");
+      }
+      return wrap(
+        // Pole pieces
+        "<rect class=\"draw\" x=\"40\" y=\"50\" width=\"56\" height=\"100\"/>" +
+        "<rect class=\"draw\" x=\"224\" y=\"50\" width=\"56\" height=\"100\"/>" +
+        text(68, 106, "N", "middle") + text(252, 106, "S", "middle") +
+        // Field lines
+        fieldLines +
+        // The wire, seen end on, current out of the page (dot)
+        "<circle class=\"acc fill\" cx=\"160\" cy=\"100\" r=\"9\"/>" +
+        "<circle class=\"on-fill-dot\" cx=\"160\" cy=\"100\" r=\"2.2\"/>" +
+        text(172, 118, "I") +
+        // Force on the wire (Fleming's left hand: B right, I out of page → F up)
+        "<g class=\"nudge\">" + arrow(160, 88, 160, 30, "acc") + "</g>" +
+        "<g class=\"halo\">" + text(168, 40, "F") + text(236, 176, "B") + "</g>" +
+        arrow(200, 180, 236, 180, "") +
+        text(40, 186, "F = B × I × l")
+      );
+    },
+
+    // A decay curve with half-life steps
+    "nuclear-particles": function (options) {
+      const settings = options || {};
+      const caption = settings.caption || "N = N₀e^(−λt)";
+      let path = "";
+      for (let index = 0; index <= 100; index += 1) {
+        const x = 50 + index * 2.4;
+        const y = 160 - 120 * Math.pow(0.5, index / 25);
+        path += (index === 0 ? "M" : "L") + x.toFixed(1) + "," + y.toFixed(1);
+      }
+      return wrap(
+        "<line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"160\"/>" +
+        arrow(50, 160, 300, 160, "") +
+        "<path class=\"acc draw slow\" d=\"" + path + "\"/>" +
+        dash(50, 100, 110, 100) + dash(110, 100, 110, 160) +
+        dash(50, 130, 170, 130) + dash(170, 130, 170, 160) +
+        dash(50, 145, 230, 145) + dash(230, 145, 230, 160) +
+        text(44, 44, "N₀", "end") + text(44, 104, "N₀/2", "end") + text(44, 134, "N₀/4", "end") +
+        text(110, 176, "t½", "middle") + text(170, 176, "2t½", "middle") + text(230, 176, "3t½", "middle") +
+        text(300, 150, "t", "end") +
+        text(190, 60, caption)
+      );
+    },
+
+    // ---- GCSE variants: the same drawings without A-level notation ----
+
+    "circuit": function () {
+      return drawings["electricity"]({ cellLabel: "" });
+    },
+
+    "particle-model": function () {
+      return drawings["thermal-gases"]({ caption: "P₁ × V₁ = P₂ × V₂" });
+    },
+
+    "half-life": function () {
+      return drawings["nuclear-particles"]({ caption: "<tspan class=\"lbl\">halves every</tspan> t½" });
+    },
+
+    // A velocity–time graph: speed up, cruise, slow down. The area under the
+    // line is hatched (distance) and a gradient triangle sits on the first
+    // section (acceleration). A dot travels along the line.
+    "motion-graph": function () {
+      const originX = 50;
+      const originY = 160;
+      // The three sections of the journey, in graph coordinates
+      const line = "M50,160 L110,70 L210,70 L290,160";
+      // Hatching under the trapezium: vertical lines clipped to the shape
+      let hatch = "";
+      for (let x = 62; x < 290; x += 12) {
+        let top;
+        if (x < 110) {
+          top = 160 - (x - 50) * (90 / 60);
+        } else if (x <= 210) {
+          top = 70;
+        } else {
+          top = 70 + (x - 210) * (90 / 80);
+        }
+        hatch += "<line x1=\"" + x + "\" y1=\"" + originY + "\" x2=\"" + x + "\" y2=\"" + top.toFixed(1) + "\"/>";
+      }
+      return wrap(
+        // Axes
+        arrow(originX, originY, originX, 24, "") +
+        arrow(originX, originY, 306, originY, "") +
+        text(40, 30, "v", "end") + text(306, 178, "t", "end") +
+        // Area under the graph
+        "<g class=\"hatch\">" + hatch + "</g>" +
+        "<g class=\"lbl\">" + text(160, 126, "area = distance", "middle") + "</g>" +
+        // The journey
+        "<path class=\"acc draw\" d=\"" + line + "\"/>" +
+        // Gradient triangle on the accelerating section
+        dash(50, 70, 110, 70) + dash(110, 70, 110, 160) +
+        "<g class=\"lbl\">" + text(104, 64, "gradient = a", "end") + "</g>" +
+        // A point moving along the line
+        "<circle class=\"travel acc fill\" r=\"3.5\" style=\"offset-path: path('" + line + "')\"/>"
+      );
+    },
+
+    // Stellar parallax: the Earth's orbit, the Sun and a nearby star
+    "astrophysics": function () {
+      return wrap(
+        // Distant stars
+        "<g class=\"lbl\"><text x=\"40\" y=\"30\">✦</text><text x=\"280\" y=\"50\">✦</text><text x=\"230\" y=\"24\">✦</text><text x=\"60\" y=\"70\">✦</text></g>" +
+        // Earth's orbit (seen edge on as an ellipse)
+        "<ellipse class=\"cons\" cx=\"100\" cy=\"150\" rx=\"60\" ry=\"18\"/>" +
+        "<circle class=\"acc fill\" cx=\"100\" cy=\"150\" r=\"7\"/>" +
+        text(100, 178, "Sun", "middle") +
+        // Earth at two positions
+        "<circle class=\"fill\" cx=\"40\" cy=\"150\" r=\"4\"/>" +
+        "<circle class=\"fill\" cx=\"160\" cy=\"150\" r=\"4\"/>" +
+        // Nearby star
+        "<g class=\"pulse\"><circle class=\"acc fill\" cx=\"250\" cy=\"60\" r=\"5\"/></g>" +
+        // Sight lines
+        "<line class=\"draw\" x1=\"40\" y1=\"150\" x2=\"250\" y2=\"60\"/>" +
+        "<line class=\"draw\" x1=\"160\" y1=\"150\" x2=\"250\" y2=\"60\"/>" +
+        dash(100, 150, 250, 60) +
+        // Parallax angle
+        "<path class=\"acc\" d=\"M222,72 A30,30 0 0 1 224,84\"/>" +
+        text(214, 84, "p", "end") +
+        dimension(40, 118, 100, 118, "1 AU", 0) +
+        text(40, 196, "d = 1 / p")
+      );
+    },
+  };
+
+  function render(topicId) {
+    const draw = drawings[topicId];
+    if (!draw) {
+      return "";
+    }
+    return draw();
+  }
+
+  return { render: render, ids: Object.keys(drawings) };
+}));

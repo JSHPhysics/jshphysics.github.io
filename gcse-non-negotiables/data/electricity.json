@@ -1,0 +1,1292 @@
+{
+  "id": "electricity",
+  "title": "Electricity",
+  "subtitle": "Charge, current, potential difference, resistance, power and energy",
+  "order": 70,
+  "figure": "circuit",
+  "types": [
+    {
+      "id": "charge",
+      "name": "Charge, current and time",
+      "equations": [
+        "Q = I × t"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Charge is current multiplied by time. Current must be in amps and time in seconds, so convert mA to A (divide by 1000) and minutes to seconds (multiply by 60) before you substitute. To find I or t, rearrange: I = Q / t and t = Q / I.",
+      "commonErrors": [
+        "Leaving time in minutes, so the charge comes out 60 times too small",
+        "Forgetting to change mA into A before multiplying",
+        "Dividing the wrong way round when finding the time"
+      ],
+      "worked": {
+        "id": "charge-w",
+        "question": "A torch bulb carries a current of 0.25 A for 2 minutes. Calculate the charge that flows through the bulb.",
+        "steps": [
+          "Known: I = 0.25 A, t = 2 minutes = 2 × 60 = 120 s. Unknown: Q.",
+          "Q = I × t",
+          "Q = 0.25 × 120",
+          "Q = 30 C"
+        ],
+        "answer": {
+          "value": 30,
+          "unit": "C"
+        }
+      },
+      "practice": [
+        {
+          "id": "charge-p1",
+          "question": "A kettle element carries a current of 8 A for 150 s. Calculate the charge that flows through the element.",
+          "hint": "Use Q = I × t; the time is already in seconds.",
+          "walkthrough": [
+            "I = 8 A, t = 150 s, find Q.",
+            "Q = I × t = 8 × 150",
+            "Q = 1200 C"
+          ],
+          "answer": {
+            "value": 1200,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "charge-p2",
+          "question": "A car starter motor takes a current of 120 A for 3 s while the engine starts. Calculate the charge that flows through the motor.",
+          "hint": "Charge equals current multiplied by time.",
+          "walkthrough": [
+            "I = 120 A, t = 3 s, find Q.",
+            "Q = I × t = 120 × 3",
+            "Q = 360 C"
+          ],
+          "answer": {
+            "value": 360,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "charge-p3",
+          "question": "A charge of 450 C flows through a hair dryer in 90 s. Calculate the current in the hair dryer.",
+          "hint": "Rearrange Q = I × t to I = Q / t.",
+          "walkthrough": [
+            "Q = 450 C, t = 90 s, find I.",
+            "Q = I × t → I = Q / t",
+            "I = 450 / 90",
+            "I = 5 A"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "charge-p4",
+          "question": "An LED on a games console carries a current of 20 mA. Calculate the charge that flows through the LED in 5 minutes.",
+          "hint": "Change 20 mA into amps and 5 minutes into seconds before using Q = I × t.",
+          "walkthrough": [
+            "I = 20 mA = 20 / 1000 = 0.020 A, t = 5 minutes = 5 × 60 = 300 s, find Q.",
+            "Q = I × t = 0.020 × 300",
+            "Q = 6 C"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "charge-p5",
+          "question": "A smoke alarm transfers 0.9 C of charge every 2.5 minutes. Calculate the current in the smoke alarm. Give your answer in mA.",
+          "hint": "Convert 2.5 minutes to seconds, find I = Q / t in amps, then multiply by 1000 for mA.",
+          "walkthrough": [
+            "Q = 0.9 C, t = 2.5 minutes = 2.5 × 60 = 150 s, find I.",
+            "I = Q / t = 0.9 / 150",
+            "I = 0.006 A",
+            "I = 0.006 × 1000 = 6 mA"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "mA"
+          }
+        },
+        {
+          "id": "charge-p6",
+          "question": "A 12 Ω heater is connected across a 24 V supply for 3 minutes. Calculate the charge that flows through the heater.",
+          "hint": "Find the current first using V = I × R, then use Q = I × t with the time in seconds.",
+          "walkthrough": [
+            "V = 24 V, R = 12 Ω, t = 3 minutes = 180 s, find Q.",
+            "First the current: I = V / R = 24 / 12 = 2 A",
+            "Q = I × t = 2 × 180",
+            "Q = 360 C"
+          ],
+          "answer": {
+            "value": 360,
+            "unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ohm",
+      "name": "Potential difference, current and resistance",
+      "equations": [
+        "V = I × R"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Potential difference is current multiplied by resistance. Put current in amps and resistance in ohms, so change mA to A (divide by 1000) and kΩ to Ω (multiply by 1000) first. To find I or R, rearrange: I = V / R and R = V / I.",
+      "commonErrors": [
+        "Multiplying V by I to find R instead of dividing",
+        "Using a kΩ value as if it were in ohms",
+        "Giving the answer for a current in mA when the question asked for amps, or the other way round"
+      ],
+      "worked": {
+        "id": "ohm-w",
+        "question": "A buzzer has a resistance of 6 Ω and carries a current of 0.5 A. Calculate the potential difference across the buzzer.",
+        "steps": [
+          "Known: I = 0.5 A, R = 6 Ω. Unknown: V.",
+          "V = I × R",
+          "V = 0.5 × 6",
+          "V = 3 V"
+        ],
+        "answer": {
+          "value": 3,
+          "unit": "V"
+        }
+      },
+      "practice": [
+        {
+          "id": "ohm-p1",
+          "question": "A car headlamp has a resistance of 3 Ω and carries a current of 4 A. Calculate the potential difference across the headlamp.",
+          "hint": "Use V = I × R with the numbers as given.",
+          "walkthrough": [
+            "I = 4 A, R = 3 Ω, find V.",
+            "V = I × R = 4 × 3",
+            "V = 12 V"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "ohm-p2",
+          "question": "The motor in a toy robot has a resistance of 20 Ω. A current of 0.3 A flows through it. Calculate the potential difference across the motor.",
+          "hint": "Potential difference equals current multiplied by resistance.",
+          "walkthrough": [
+            "I = 0.3 A, R = 20 Ω, find V.",
+            "V = I × R = 0.3 × 20",
+            "V = 6 V"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "ohm-p3",
+          "question": "A kettle connected to the 230 V mains takes a current of 10 A. Calculate the resistance of the kettle element.",
+          "hint": "Rearrange V = I × R to R = V / I.",
+          "walkthrough": [
+            "V = 230 V, I = 10 A, find R.",
+            "V = I × R → R = V / I",
+            "R = 230 / 10",
+            "R = 23 Ω"
+          ],
+          "answer": {
+            "value": 23,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "ohm-p4",
+          "question": "A 2.2 kΩ resistor in an LED circuit carries a current of 5 mA. Calculate the potential difference across the resistor.",
+          "hint": "Convert 2.2 kΩ to ohms and 5 mA to amps, then use V = I × R.",
+          "walkthrough": [
+            "R = 2.2 kΩ = 2200 Ω, I = 5 mA = 0.005 A, find V.",
+            "V = I × R = 0.005 × 2200",
+            "V = 11 V"
+          ],
+          "answer": {
+            "value": 11,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "ohm-p5",
+          "question": "A 9 V battery is connected across a 1.5 kΩ resistor in a sensor circuit. Calculate the current in the resistor. Give your answer in mA.",
+          "hint": "Change 1.5 kΩ to ohms, find I = V / R in amps, then multiply by 1000 to give mA.",
+          "walkthrough": [
+            "V = 9 V, R = 1.5 kΩ = 1500 Ω, find I.",
+            "I = V / R = 9 / 1500",
+            "I = 0.006 A",
+            "I = 0.006 × 1000 = 6 mA"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "mA"
+          }
+        },
+        {
+          "id": "ohm-p6",
+          "question": "A charge of 90 C flows through a 4 Ω resistor in 30 s. Calculate the potential difference across the resistor.",
+          "hint": "Find the current first with I = Q / t, then use V = I × R.",
+          "walkthrough": [
+            "Q = 90 C, t = 30 s, R = 4 Ω, find V.",
+            "First the current: I = Q / t = 90 / 30 = 3 A",
+            "V = I × R = 3 × 4",
+            "V = 12 V"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "id": "eqv",
+      "name": "Energy transferred by a charge",
+      "equations": [
+        "E = Q × V"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Energy transferred is charge multiplied by potential difference. Charge in coulombs and p.d. in volts gives energy in joules. If the question gives a current and a time instead of a charge, find Q = I × t first. To find Q or V, rearrange: Q = E / V and V = E / Q.",
+      "commonErrors": [
+        "Multiplying current by potential difference and calling the result energy",
+        "Forgetting to convert kJ to J before rearranging",
+        "Using the time in minutes when finding the charge first"
+      ],
+      "worked": {
+        "id": "eqv-w",
+        "question": "A charge of 20 C flows through a lamp connected to a 12 V car battery. Calculate the energy transferred by the lamp.",
+        "steps": [
+          "Known: Q = 20 C, V = 12 V. Unknown: E.",
+          "E = Q × V",
+          "E = 20 × 12",
+          "E = 240 J"
+        ],
+        "answer": {
+          "value": 240,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "eqv-p1",
+          "question": "A 1.5 V cell pushes 40 C of charge through a torch bulb. Calculate the energy transferred.",
+          "hint": "Use E = Q × V directly.",
+          "walkthrough": [
+            "Q = 40 C, V = 1.5 V, find E.",
+            "E = Q × V = 40 × 1.5",
+            "E = 60 J"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "eqv-p2",
+          "question": "A hair dryer is connected to the 230 V mains. Calculate the energy transferred when 50 C of charge flows through it.",
+          "hint": "Energy equals charge multiplied by potential difference.",
+          "walkthrough": [
+            "Q = 50 C, V = 230 V, find E.",
+            "E = Q × V = 50 × 230",
+            "E = 11 500 J"
+          ],
+          "answer": {
+            "value": 11500,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "eqv-p3",
+          "question": "A motorbike battery transfers 900 J of energy when 75 C of charge flows through the starter motor. Calculate the potential difference of the battery.",
+          "hint": "Rearrange E = Q × V to V = E / Q.",
+          "walkthrough": [
+            "E = 900 J, Q = 75 C, find V.",
+            "E = Q × V → V = E / Q",
+            "V = 900 / 75",
+            "V = 12 V"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "eqv-p4",
+          "question": "A 6 V lantern battery transfers 3 kJ of energy to a lamp. Calculate the charge that flows through the lamp.",
+          "hint": "Change 3 kJ to joules, then rearrange E = Q × V to Q = E / V.",
+          "walkthrough": [
+            "E = 3 kJ = 3000 J, V = 6 V, find Q.",
+            "E = Q × V → Q = E / V",
+            "Q = 3000 / 6",
+            "Q = 500 C"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "C"
+          }
+        },
+        {
+          "id": "eqv-p5",
+          "question": "A games console connected to the 230 V mains draws a current of 0.5 A for 20 minutes. Calculate the energy transferred to the console.",
+          "hint": "Find the charge first with Q = I × t (time in seconds), then use E = Q × V.",
+          "walkthrough": [
+            "I = 0.5 A, t = 20 minutes = 20 × 60 = 1200 s, V = 230 V, find E.",
+            "First the charge: Q = I × t = 0.5 × 1200 = 600 C",
+            "E = Q × V = 600 × 230",
+            "E = 138 000 J"
+          ],
+          "answer": {
+            "value": 138000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "eqv-p6",
+          "question": "A bicycle dynamo supplies a current of 0.2 A to a rear lamp for 2 minutes and transfers 72 J of energy. Calculate the potential difference across the lamp.",
+          "hint": "Work out the charge with Q = I × t first, then rearrange E = Q × V to V = E / Q.",
+          "walkthrough": [
+            "I = 0.2 A, t = 2 minutes = 120 s, E = 72 J, find V.",
+            "First the charge: Q = I × t = 0.2 × 120 = 24 C",
+            "V = E / Q = 72 / 24",
+            "V = 3 V"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "id": "electrical-power",
+      "name": "Electrical power",
+      "equations": [
+        "P = I × V",
+        "P = I² × R"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Electrical power is current multiplied by potential difference, or current squared multiplied by resistance. Choose the form that uses the two quantities you are given: I and V, or I and R. Change kW to W (multiply by 1000) before rearranging. To find I from P and V use I = P / V; to find R from P and I use R = P / I².",
+      "commonErrors": [
+        "Forgetting to square the current in P = I² × R",
+        "Leaving the power in kW while the other quantities are in base units",
+        "Picking P = I × V when the question gives resistance and no p.d."
+      ],
+      "worked": {
+        "id": "electrical-power-w",
+        "question": "A kettle connected to the 230 V mains takes a current of 10 A. Calculate the power of the kettle.",
+        "steps": [
+          "Known: I = 10 A, V = 230 V. Unknown: P. We have I and V, so use P = I × V.",
+          "P = I × V",
+          "P = 10 × 230",
+          "P = 2300 W"
+        ],
+        "answer": {
+          "value": 2300,
+          "unit": "W"
+        }
+      },
+      "practice": [
+        {
+          "id": "electrical-power-p1",
+          "question": "A laptop charger supplies 20 V at a current of 3 A. Calculate the power delivered to the laptop.",
+          "hint": "You have current and p.d., so use P = I × V.",
+          "walkthrough": [
+            "I = 3 A, V = 20 V, find P.",
+            "P = I × V = 3 × 20",
+            "P = 60 W"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "electrical-power-p2",
+          "question": "The heating element of a toaster has a resistance of 12 Ω and carries a current of 2 A. Calculate the power of the element.",
+          "hint": "You have current and resistance, so use P = I² × R; square the current first.",
+          "walkthrough": [
+            "I = 2 A, R = 12 Ω, find P.",
+            "P = I² × R = 2² × 12 = 4 × 12",
+            "P = 48 W"
+          ],
+          "answer": {
+            "value": 48,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "electrical-power-p3",
+          "question": "A 1.84 kW fan heater is plugged into the 230 V mains. Calculate the current in the heater.",
+          "hint": "Change 1.84 kW into watts, then rearrange P = I × V to I = P / V.",
+          "walkthrough": [
+            "P = 1.84 kW = 1840 W, V = 230 V, find I.",
+            "P = I × V → I = P / V",
+            "I = 1840 / 230",
+            "I = 8 A"
+          ],
+          "answer": {
+            "value": 8,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "electrical-power-p4",
+          "question": "A car rear-window heater carries a current of 5 A and transfers energy at a rate of 60 W. Calculate the resistance of the heater.",
+          "hint": "Rearrange P = I² × R to R = P / I², remembering to square the current.",
+          "walkthrough": [
+            "P = 60 W, I = 5 A, find R.",
+            "P = I² × R → R = P / I²",
+            "R = 60 / 5² = 60 / 25",
+            "R = 2.4 Ω"
+          ],
+          "answer": {
+            "value": 2.4,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "electrical-power-p5",
+          "question": "An immersion heater has a resistance of 46 Ω and is connected to the 230 V mains. Calculate the power of the heater.",
+          "hint": "Find the current first with I = V / R, then use P = I × V.",
+          "walkthrough": [
+            "V = 230 V, R = 46 Ω, find P.",
+            "First the current: I = V / R = 230 / 46 = 5 A",
+            "P = I × V = 5 × 230",
+            "P = 1150 W"
+          ],
+          "answer": {
+            "value": 1150,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "electrical-power-p6",
+          "question": "A lamp is rated 24 W at 12 V. Calculate the resistance of the lamp when it is working normally.",
+          "hint": "Find the current first with I = P / V, then use R = V / I.",
+          "walkthrough": [
+            "P = 24 W, V = 12 V, find R.",
+            "First the current: I = P / V = 24 / 12 = 2 A",
+            "R = V / I = 12 / 2",
+            "R = 6 Ω"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "Ω"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ept",
+      "name": "Energy, power and time",
+      "equations": [
+        "E = P × t",
+        "E = I × V × t"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Energy transferred is power multiplied by time, and because power is I × V this is also current multiplied by p.d. multiplied by time. Time must be in seconds: multiply minutes by 60 and hours by 3600. Change kW to W and kJ to J before rearranging. To find P or t, rearrange: P = E / t and t = E / P.",
+      "commonErrors": [
+        "Using the time in minutes or hours instead of seconds",
+        "Forgetting that a kW is 1000 W and a kJ is 1000 J",
+        "Multiplying current by time and forgetting the potential difference"
+      ],
+      "worked": {
+        "id": "ept-w",
+        "question": "A 2 kW kettle takes 3 minutes to boil. Calculate the energy transferred to the kettle.",
+        "steps": [
+          "Known: P = 2 kW = 2000 W, t = 3 minutes = 3 × 60 = 180 s. Unknown: E.",
+          "E = P × t",
+          "E = 2000 × 180",
+          "E = 360 000 J"
+        ],
+        "answer": {
+          "value": 360000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "ept-p1",
+          "question": "A 60 W desk lamp is switched on for 50 s. Calculate the energy transferred by the lamp.",
+          "hint": "Use E = P × t; the time is already in seconds.",
+          "walkthrough": [
+            "P = 60 W, t = 50 s, find E.",
+            "E = P × t = 60 × 50",
+            "E = 3000 J"
+          ],
+          "answer": {
+            "value": 3000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "ept-p2",
+          "question": "A television connected to the 230 V mains draws a current of 0.5 A. Calculate the energy transferred in 40 s.",
+          "hint": "Use E = I × V × t with the time in seconds.",
+          "walkthrough": [
+            "I = 0.5 A, V = 230 V, t = 40 s, find E.",
+            "E = I × V × t = 0.5 × 230 × 40",
+            "E = 4600 J"
+          ],
+          "answer": {
+            "value": 4600,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "ept-p3",
+          "question": "A microwave oven transfers 90 kJ of energy in 2 minutes. Calculate the power of the microwave oven.",
+          "hint": "Change kJ to J and minutes to seconds, then rearrange E = P × t to P = E / t.",
+          "walkthrough": [
+            "E = 90 kJ = 90 000 J, t = 2 minutes = 120 s, find P.",
+            "E = P × t → P = E / t",
+            "P = 90 000 / 120",
+            "P = 750 W"
+          ],
+          "answer": {
+            "value": 750,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "ept-p4",
+          "question": "A 1.5 kW electric heater transfers 450 kJ of energy. Calculate how long the heater was switched on for. Give your answer in minutes.",
+          "hint": "Convert both to base units, rearrange to t = E / P, then divide the time in seconds by 60.",
+          "walkthrough": [
+            "P = 1.5 kW = 1500 W, E = 450 kJ = 450 000 J, find t.",
+            "E = P × t → t = E / P",
+            "t = 450 000 / 1500 = 300 s",
+            "t = 300 / 60 = 5 minutes"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "minutes"
+          }
+        },
+        {
+          "id": "ept-p5",
+          "question": "A heating element in a lab water bath has a resistance of 12 Ω and carries a current of 5 A. Calculate the energy transferred by the element in 4 minutes.",
+          "hint": "Find the power first with P = I² × R, then use E = P × t with the time in seconds.",
+          "walkthrough": [
+            "I = 5 A, R = 12 Ω, t = 4 minutes = 240 s, find E.",
+            "First the power: P = I² × R = 5² × 12 = 25 × 12 = 300 W",
+            "E = P × t = 300 × 240",
+            "E = 72 000 J"
+          ],
+          "answer": {
+            "value": 72000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "ept-p6",
+          "question": "A phone charger supplies 5 V at a current of 2 A for 1.5 hours. Calculate the energy transferred to the phone. Give your answer in kJ.",
+          "hint": "Change 1.5 hours to seconds, use E = I × V × t, then divide by 1000 for kJ.",
+          "walkthrough": [
+            "I = 2 A, V = 5 V, t = 1.5 hours = 1.5 × 3600 = 5400 s, find E.",
+            "Power first: P = I × V = 2 × 5 = 10 W",
+            "E = P × t = 10 × 5400 = 54 000 J",
+            "E = 54 000 / 1000 = 54 kJ"
+          ],
+          "answer": {
+            "value": 54,
+            "unit": "kJ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "circuits",
+      "name": "Series and parallel circuits",
+      "equations": [
+        "R total = R₁ + R₂",
+        "V = I × R"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "In series the current is the same everywhere, the p.d.s across the components add up to the supply p.d., and the total resistance is the resistances added together. In parallel every branch has the same p.d. as the supply, and the branch currents add up to the current from the supply. Decide which rule applies, then use V = I × R on the part of the circuit you know about.",
+      "commonErrors": [
+        "Adding resistances when the components are in parallel",
+        "Using the supply p.d. across one series component instead of the p.d. across that component",
+        "Forgetting that the current from the battery is the sum of the branch currents in parallel"
+      ],
+      "worked": {
+        "id": "circuits-w",
+        "question": "A 3 Ω resistor and a 9 Ω resistor are connected in series with a 6 V battery. Calculate the current in the circuit.",
+        "steps": [
+          "Known: R₁ = 3 Ω, R₂ = 9 Ω in series, V = 6 V. Unknown: I.",
+          "In series the resistances add: R total = 3 + 9 = 12 Ω",
+          "V = I × R → I = V / R",
+          "I = 6 / 12",
+          "I = 0.5 A"
+        ],
+        "answer": {
+          "value": 0.5,
+          "unit": "A"
+        }
+      },
+      "practice": [
+        {
+          "id": "circuits-p1",
+          "question": "Three resistors of 5 Ω, 15 Ω and 20 Ω are connected in series. Calculate the total resistance of the combination.",
+          "hint": "In series the resistances simply add.",
+          "walkthrough": [
+            "R₁ = 5 Ω, R₂ = 15 Ω, R₃ = 20 Ω in series, find R total.",
+            "R total = 5 + 15 + 20",
+            "R total = 40 Ω"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "Ω"
+          }
+        },
+        {
+          "id": "circuits-p2",
+          "question": "Two sidelights on a car are connected in parallel across the battery. One takes a current of 0.3 A and the other 0.5 A. Calculate the current supplied by the battery.",
+          "hint": "In parallel the branch currents add up to the supply current.",
+          "walkthrough": [
+            "Branch currents 0.3 A and 0.5 A in parallel, find the supply current.",
+            "I supply = 0.3 + 0.5",
+            "I supply = 0.8 A"
+          ],
+          "answer": {
+            "value": 0.8,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "circuits-p3",
+          "question": "A buzzer and a 30 Ω resistor are connected in series. The current in the buzzer is 0.2 A. Calculate the potential difference across the resistor.",
+          "hint": "In series the current is the same in every component, so use V = I × R on the resistor.",
+          "walkthrough": [
+            "Series, so the resistor also carries I = 0.2 A; R = 30 Ω, find V.",
+            "V = I × R = 0.2 × 30",
+            "V = 6 V"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "V"
+          }
+        },
+        {
+          "id": "circuits-p4",
+          "question": "Two LEDs are connected in parallel across a cell. The currents in the LEDs are 15 mA and 25 mA. Calculate the current from the cell. Give your answer in amps.",
+          "hint": "Add the branch currents, then divide by 1000 to change mA to A.",
+          "walkthrough": [
+            "Branch currents 15 mA and 25 mA in parallel, find the cell current in A.",
+            "I cell = 15 + 25 = 40 mA",
+            "I cell = 40 / 1000 = 0.04 A"
+          ],
+          "answer": {
+            "value": 0.04,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "circuits-p5",
+          "question": "An 8 Ω resistor and a 16 Ω resistor are connected in series with a 12 V battery. Calculate the potential difference across the 16 Ω resistor.",
+          "hint": "Find the total resistance and the circuit current first, then use V = I × R on the 16 Ω resistor alone.",
+          "walkthrough": [
+            "R₁ = 8 Ω, R₂ = 16 Ω in series, V supply = 12 V, find V across 16 Ω.",
+            "R total = 8 + 16 = 24 Ω",
+            "I = V / R = 12 / 24 = 0.5 A, the same in both resistors",
+            "V across 16 Ω = I × R = 0.5 × 16",
+            "V = 8 V"
+          ],
+          "answer": {
+            "value": 8,
+            "unit": "V"
+          },
+          "boards": [
+            "Higher"
+          ]
+        },
+        {
+          "id": "circuits-p6",
+          "question": "A 3 Ω resistor and a 6 Ω resistor are connected in parallel across a 6 V battery. Calculate the current supplied by the battery.",
+          "hint": "Each branch has the full 6 V across it; find each branch current with I = V / R and add them.",
+          "walkthrough": [
+            "Parallel, so each resistor has 6 V across it; find the two branch currents.",
+            "I through 3 Ω = V / R = 6 / 3 = 2 A",
+            "I through 6 Ω = V / R = 6 / 6 = 1 A",
+            "I supply = 2 + 1",
+            "I supply = 3 A"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "A"
+          },
+          "boards": [
+            "Higher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iv-graph",
+      "name": "Reading electrical graphs",
+      "equations": [
+        "V = I × R"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "On a current–potential difference graph, read the current and the p.d. at the marked point and divide: R = V / I. A straight line through the origin is a resistor at constant temperature; a curve that flattens out is a filament lamp; a line that stays at zero and then rises steeply is a diode. On a resistance–temperature graph for a thermistor you simply read the resistance off at the temperature asked.",
+      "commonErrors": [
+        "Dividing I by V instead of V by I",
+        "Reading a current axis in mA and treating it as amps",
+        "Taking the gradient of a curve as if it were a straight line through the origin"
+      ],
+      "worked": {
+        "id": "iv-graph-w",
+        "question": "The graph shows how the current in a resistor varies with the potential difference across it. Use the graph to determine the resistance of the resistor at point X.",
+        "steps": [
+          "At X the graph gives V = 6 V and I = 1.5 A. Unknown: R.",
+          "V = I × R → R = V / I",
+          "R = 6 / 1.5",
+          "R = 4 Ω"
+        ],
+        "answer": {
+          "value": 4,
+          "unit": "Ω"
+        },
+        "graph": {
+          "x": {
+            "label": "potential difference in V",
+            "min": 0,
+            "max": 8,
+            "step": 1
+          },
+          "y": {
+            "label": "current in A",
+            "min": 0,
+            "max": 2,
+            "step": 0.25
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  2
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 6,
+              "y": 1.5,
+              "label": "X",
+              "drop": true
+            }
+          ],
+          "alt": "Straight line through the origin from (0, 0) to (8 V, 2 A), with point X marked at 6 V and 1.5 A"
+        }
+      },
+      "practice": [
+        {
+          "id": "iv-graph-p1",
+          "question": "The graph shows the current–potential difference graph for a wire kept at a constant temperature. Use the graph to determine the resistance of the wire at point X.",
+          "hint": "Read V and I at X, then divide V by I.",
+          "walkthrough": [
+            "At X: V = 4 V, I = 0.8 A.",
+            "R = V / I = 4 / 0.8",
+            "R = 5 Ω"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "potential difference in V",
+              "min": 0,
+              "max": 5,
+              "step": 0.5
+            },
+            "y": {
+              "label": "current in A",
+              "min": 0,
+              "max": 1,
+              "step": 0.1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    1
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 0.8,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line through the origin from (0, 0) to (5 V, 1 A), with point X marked at 4 V and 0.8 A"
+          }
+        },
+        {
+          "id": "iv-graph-p2",
+          "question": "The graph shows how the current in a fixed resistor changes with the potential difference across it. Use the graph to determine the resistance of the resistor at point P.",
+          "hint": "Use the coordinates of P in R = V / I.",
+          "walkthrough": [
+            "At P: V = 5 V, I = 0.2 A.",
+            "R = V / I = 5 / 0.2",
+            "R = 25 Ω"
+          ],
+          "answer": {
+            "value": 25,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "potential difference in V",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "current in A",
+              "min": 0,
+              "max": 0.5,
+              "step": 0.05
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    0.4
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 5,
+                "y": 0.2,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line through the origin from (0, 0) to (10 V, 0.4 A), with point P marked at 5 V and 0.2 A"
+          }
+        },
+        {
+          "id": "iv-graph-p3",
+          "question": "The graph shows the current–potential difference graph for a resistor in a radio. Use the graph to determine the resistance of the resistor at point X. Give your answer in Ω.",
+          "hint": "The current axis is in mA; change the reading at X into amps before dividing V by I.",
+          "walkthrough": [
+            "At X: V = 3 V, I = 60 mA = 60 / 1000 = 0.06 A.",
+            "R = V / I = 3 / 0.06",
+            "R = 50 Ω"
+          ],
+          "answer": {
+            "value": 50,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "potential difference in V",
+              "min": 0,
+              "max": 4,
+              "step": 0.5
+            },
+            "y": {
+              "label": "current in mA",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    80
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 3,
+                "y": 60,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line through the origin from (0, 0) to (4 V, 80 mA), with point X marked at 3 V and 60 mA"
+          }
+        },
+        {
+          "id": "iv-graph-p4",
+          "question": "The graph shows the current–potential difference graph for a filament lamp. Use the graph to determine the resistance of the lamp at point X.",
+          "hint": "Resistance at a point on a curve is still V / I using the two readings at that point, not the gradient.",
+          "walkthrough": [
+            "At X: V = 6 V, I = 2 A.",
+            "R = V / I = 6 / 2",
+            "R = 3 Ω"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "potential difference in V",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "current in A",
+              "min": 0,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.5,
+                    0.251
+                  ],
+                  [
+                    1,
+                    0.483
+                  ],
+                  [
+                    1.5,
+                    0.696
+                  ],
+                  [
+                    2,
+                    0.892
+                  ],
+                  [
+                    3,
+                    1.24
+                  ],
+                  [
+                    4,
+                    1.54
+                  ],
+                  [
+                    5,
+                    1.79
+                  ],
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    7,
+                    2.18
+                  ],
+                  [
+                    8,
+                    2.33
+                  ],
+                  [
+                    9,
+                    2.47
+                  ],
+                  [
+                    10,
+                    2.58
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 2,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Curve rising from the origin and flattening as the p.d. increases, reaching about 2.6 A at 10 V, with point X marked at 6 V and 2 A"
+          }
+        },
+        {
+          "id": "iv-graph-p5",
+          "question": "The graph shows the current–potential difference graph for a diode in the forward direction. Use the graph to determine the current in the diode when the potential difference across it is 0.7 V. Give your answer in mA.",
+          "hint": "Go up from 0.7 V on the p.d. axis to the curve, then across to the current axis.",
+          "walkthrough": [
+            "Find 0.7 V on the p.d. axis and go up to the curve.",
+            "Read across to the current axis: 20 mA.",
+            "I = 20 mA"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "mA"
+          },
+          "graph": {
+            "x": {
+              "label": "potential difference in V",
+              "min": 0,
+              "max": 0.8,
+              "step": 0.1
+            },
+            "y": {
+              "label": "current in mA",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.05,
+                    0.0037
+                  ],
+                  [
+                    0.1,
+                    0.0104
+                  ],
+                  [
+                    0.15,
+                    0.0227
+                  ],
+                  [
+                    0.2,
+                    0.0451
+                  ],
+                  [
+                    0.25,
+                    0.0859
+                  ],
+                  [
+                    0.3,
+                    0.16
+                  ],
+                  [
+                    0.35,
+                    0.295
+                  ],
+                  [
+                    0.4,
+                    0.542
+                  ],
+                  [
+                    0.45,
+                    0.991
+                  ],
+                  [
+                    0.5,
+                    1.81
+                  ],
+                  [
+                    0.55,
+                    3.3
+                  ],
+                  [
+                    0.6,
+                    6.02
+                  ],
+                  [
+                    0.65,
+                    11
+                  ],
+                  [
+                    0.7,
+                    20
+                  ],
+                  [
+                    0.75,
+                    36.4
+                  ],
+                  [
+                    0.8,
+                    66.4
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0.7,
+                    0
+                  ],
+                  [
+                    0.7,
+                    20
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    0.7,
+                    20
+                  ]
+                ]
+              }
+            ],
+            "alt": "Diode curve: almost no current up to about 0.5 V, then rising steeply to about 66 mA at 0.8 V; dashed lines mark the reading of 20 mA at 0.7 V"
+          }
+        },
+        {
+          "id": "iv-graph-p6",
+          "question": "The graph shows how the resistance of a thermistor changes with temperature. Use the graph to determine the resistance of the thermistor at 40 °C. Give your answer in Ω.",
+          "hint": "Read the resistance at 40 °C in kΩ, then multiply by 1000 to give ohms.",
+          "walkthrough": [
+            "Find 40 °C on the temperature axis and go up to the curve.",
+            "Read across to the resistance axis: 2 kΩ.",
+            "R = 2 × 1000 = 2000 Ω"
+          ],
+          "answer": {
+            "value": 2000,
+            "unit": "Ω"
+          },
+          "graph": {
+            "x": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "resistance in kΩ",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    10
+                  ],
+                  [
+                    5,
+                    8.18
+                  ],
+                  [
+                    10,
+                    6.69
+                  ],
+                  [
+                    15,
+                    5.47
+                  ],
+                  [
+                    20,
+                    4.47
+                  ],
+                  [
+                    25,
+                    3.66
+                  ],
+                  [
+                    30,
+                    2.99
+                  ],
+                  [
+                    35,
+                    2.45
+                  ],
+                  [
+                    40,
+                    2
+                  ],
+                  [
+                    45,
+                    1.64
+                  ],
+                  [
+                    50,
+                    1.34
+                  ],
+                  [
+                    55,
+                    1.09
+                  ],
+                  [
+                    60,
+                    0.894
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 40,
+                "y": 2,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "alt": "Curve falling from 10 kΩ at 0 °C, steeply at first and then more gently, to just under 1 kΩ at 60 °C, with point X marked at 40 °C and 2 kΩ"
+          }
+        }
+      ]
+    }
+  ]
+}

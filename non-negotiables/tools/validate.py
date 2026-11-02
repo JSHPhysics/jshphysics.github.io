@@ -6,11 +6,25 @@ Exit code 0 when every file passes, 1 otherwise.
 """
 
 import json
+import os
 import re
 import sys
 
-# The five exam-board tags the app understands
+# The filter tags the app understands: read from data/config.json next to
+# the files being validated when it exists, else the A-level boards
 VALID_BOARDS = {"AQA", "OCR A", "OCR B", "Edexcel", "WJEC"}
+
+
+def load_board_tags(path):
+    """Set VALID_BOARDS from the config.json in the same folder as `path`."""
+    global VALID_BOARDS
+    config_path = os.path.join(os.path.dirname(os.path.abspath(path)), "config.json")
+    if os.path.exists(config_path):
+        with open(config_path, encoding="utf-8") as handle:
+            config = json.load(handle)
+        options = config.get("filter", {}).get("options")
+        if options:
+            VALID_BOARDS = set(options)
 
 # kebab-case identifiers only
 KEBAB = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
@@ -228,6 +242,7 @@ def check_type(problems, where, ctype, seen_type_ids):
 def validate_file(path):
     """Validate one topic file; return a list of problem strings."""
     problems = []
+    load_board_tags(path)
 
     try:
         with open(path, encoding="utf-8") as handle:

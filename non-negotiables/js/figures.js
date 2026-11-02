@@ -324,7 +324,10 @@
     },
 
     // A series circuit with current markers moving round it
-    "electricity": function () {
+    "electricity": function (options) {
+      const settings = options || {};
+      // A-level labels the cell with its EMF and internal resistance; GCSE just has a cell
+      const cellLabel = settings.cellLabel === undefined ? "ε, r" : settings.cellLabel;
       const loop = "M60,50 L260,50 L260,150 L60,150 Z";
       return wrap(
         // Wires: gaps for the resistor (130–190 on top) and the ammeter (circle r = 12 at 160 on the bottom)
@@ -333,7 +336,7 @@
         "<line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"88\"/><line x1=\"60\" y1=\"112\" x2=\"60\" y2=\"150\"/>" +
         "<line x1=\"46\" y1=\"88\" x2=\"74\" y2=\"88\"/><line x1=\"52\" y1=\"98\" x2=\"68\" y2=\"98\"/>" +
         "<line x1=\"46\" y1=\"104\" x2=\"74\" y2=\"104\"/><line x1=\"52\" y1=\"112\" x2=\"68\" y2=\"112\"/>" +
-        text(28, 104, "ε, r") +
+        (cellLabel ? text(28, 104, cellLabel) : "") +
         // Resistor on top
         "<g class=\"acc\">" + resistor(130, 50, 60) + "</g>" +
         text(160, 74, "R", "middle") +
@@ -381,7 +384,9 @@
     },
 
     // Gas particles in a box with a piston
-    "thermal-gases": function () {
+    "thermal-gases": function (options) {
+      const settings = options || {};
+      const caption = settings.caption || "pV = NkT";
       const particles = [
         [80, 70, 3, 2], [130, 120, -2, 3], [190, 80, 2, -3], [110, 150, -3, -1],
         [220, 140, 1, 2], [160, 60, -2, -2], [90, 110, 2, 2], [200, 110, -3, 2],
@@ -401,7 +406,7 @@
         text(170, 24, "p") +
         dots +
         dimension(276, 50, 276, 170, "V", 0) +
-        text(60, 190, "pV = NkT")
+        text(60, 190, caption)
       );
     },
 
@@ -496,8 +501,37 @@
       );
     },
 
+    // The motor effect: a current-carrying wire between the poles of a
+    // magnet, field lines N → S, current into the page, force upwards
+    "magnetism": function () {
+      let fieldLines = "";
+      for (let index = 0; index < 5; index += 1) {
+        const y = 62 + index * 19;
+        fieldLines += arrow(96, y, 224, y, "cons");
+      }
+      return wrap(
+        // Pole pieces
+        "<rect class=\"draw\" x=\"40\" y=\"50\" width=\"56\" height=\"100\"/>" +
+        "<rect class=\"draw\" x=\"224\" y=\"50\" width=\"56\" height=\"100\"/>" +
+        text(68, 106, "N", "middle") + text(252, 106, "S", "middle") +
+        // Field lines
+        fieldLines +
+        // The wire, seen end on, current out of the page (dot)
+        "<circle class=\"acc fill\" cx=\"160\" cy=\"100\" r=\"9\"/>" +
+        "<circle class=\"on-fill-dot\" cx=\"160\" cy=\"100\" r=\"2.2\"/>" +
+        text(172, 118, "I") +
+        // Force on the wire (Fleming's left hand: B right, I out of page → F up)
+        "<g class=\"nudge\">" + arrow(160, 88, 160, 30, "acc") + "</g>" +
+        "<g class=\"halo\">" + text(168, 40, "F") + text(236, 176, "B") + "</g>" +
+        arrow(200, 180, 236, 180, "") +
+        text(40, 186, "F = B × I × l")
+      );
+    },
+
     // A decay curve with half-life steps
-    "nuclear-particles": function () {
+    "nuclear-particles": function (options) {
+      const settings = options || {};
+      const caption = settings.caption || "N = N₀e^(−λt)";
       let path = "";
       for (let index = 0; index <= 100; index += 1) {
         const x = 50 + index * 2.4;
@@ -514,7 +548,60 @@
         text(44, 44, "N₀", "end") + text(44, 104, "N₀/2", "end") + text(44, 134, "N₀/4", "end") +
         text(110, 176, "t½", "middle") + text(170, 176, "2t½", "middle") + text(230, 176, "3t½", "middle") +
         text(300, 150, "t", "end") +
-        text(190, 60, "N = N₀e^(−λt)")
+        text(190, 60, caption)
+      );
+    },
+
+    // ---- GCSE variants: the same drawings without A-level notation ----
+
+    "circuit": function () {
+      return drawings["electricity"]({ cellLabel: "" });
+    },
+
+    "particle-model": function () {
+      return drawings["thermal-gases"]({ caption: "P₁ × V₁ = P₂ × V₂" });
+    },
+
+    "half-life": function () {
+      return drawings["nuclear-particles"]({ caption: "<tspan class=\"lbl\">halves every</tspan> t½" });
+    },
+
+    // A velocity–time graph: speed up, cruise, slow down. The area under the
+    // line is hatched (distance) and a gradient triangle sits on the first
+    // section (acceleration). A dot travels along the line.
+    "motion-graph": function () {
+      const originX = 50;
+      const originY = 160;
+      // The three sections of the journey, in graph coordinates
+      const line = "M50,160 L110,70 L210,70 L290,160";
+      // Hatching under the trapezium: vertical lines clipped to the shape
+      let hatch = "";
+      for (let x = 62; x < 290; x += 12) {
+        let top;
+        if (x < 110) {
+          top = 160 - (x - 50) * (90 / 60);
+        } else if (x <= 210) {
+          top = 70;
+        } else {
+          top = 70 + (x - 210) * (90 / 80);
+        }
+        hatch += "<line x1=\"" + x + "\" y1=\"" + originY + "\" x2=\"" + x + "\" y2=\"" + top.toFixed(1) + "\"/>";
+      }
+      return wrap(
+        // Axes
+        arrow(originX, originY, originX, 24, "") +
+        arrow(originX, originY, 306, originY, "") +
+        text(40, 30, "v", "end") + text(306, 178, "t", "end") +
+        // Area under the graph
+        "<g class=\"hatch\">" + hatch + "</g>" +
+        "<g class=\"lbl\">" + text(160, 126, "area = distance", "middle") + "</g>" +
+        // The journey
+        "<path class=\"acc draw\" d=\"" + line + "\"/>" +
+        // Gradient triangle on the accelerating section
+        dash(50, 70, 110, 70) + dash(110, 70, 110, 160) +
+        "<g class=\"lbl\">" + text(104, 64, "gradient = a", "end") + "</g>" +
+        // A point moving along the line
+        "<circle class=\"travel acc fill\" r=\"3.5\" style=\"offset-path: path('" + line + "')\"/>"
       );
     },
 

@@ -157,6 +157,16 @@
       "tags": ["A-Level", "Study Tool", "Teacher Tool"]
     },
     {
+      "title": "The GCSE Non-negotiables",
+      "url": "https://jshphysics.github.io/gcse-non-negotiables/",
+      "section": "tools",
+      "category": "Calculation practice",
+      "description": "Every calculation in Edexcel GCSE Physics (1PH0) — 62 of them across 10 topics — each with a worked example and six practice questions checked as you go, with hints, walkthroughs, exam-style graphs and a printable booklet. Filter to Foundation or Higher tier.",
+      "pedagogy": "GCSE physics marks are lost less often on ideas than on the routine of picking the equation, converting the unit and rearranging. Here each of those routines is isolated as one skill with a worked example that reveals one step at a time and six graded questions, so a student can drill the exact step they get wrong instead of re-sitting whole papers. Answers are checked instantly with diagnostic feedback — a power-of-ten slip is named as a unit-conversion error, a sign slip as a direction error — which closes the feedback loop that marking a week later cannot. The tier filter keeps Foundation students on Foundation content while Higher students see the extra rearrangements, momentum, transformers and tangents to curves.",
+      "image": "gcse-non-negotiables.png",
+      "tags": ["GCSE", "Study Tool", "Teacher Tool"]
+    },
+    {
       "title": "KS3 Revision",
       "url": "https://jshphysics.github.io/ks3-revision/",
       "section": "tools",

@@ -1,0 +1,386 @@
+{
+  "id": "magnetism",
+  "title": "Magnetism and transformers",
+  "subtitle": "The motor effect and transformers",
+  "order": 80,
+  "figure": "magnetism",
+  "types": [
+    {
+      "id": "motor-force",
+      "name": "Force on a current-carrying conductor",
+      "equations": ["F = B × I × l"],
+      "boards": ["Higher"],
+      "method": "The force on a wire at right angles to a magnetic field is magnetic flux density multiplied by current multiplied by the length of wire in the field. B is in tesla, I in amps and l in metres, so change cm to m (divide by 100) first. The equation is on the equation sheet; to find B, I or l, divide F by the other two.",
+      "commonErrors": [
+        "Leaving the length in cm, so the force is 100 times too big",
+        "Mixing up B (flux density, in T) and F (force, in N)",
+        "Forgetting that the force is zero if the wire runs along the field rather than across it"
+      ],
+      "worked": {
+        "id": "motor-force-w",
+        "question": "A straight wire 0.5 m long carries a current of 3 A at right angles to a magnetic field of flux density 0.4 T. Calculate the force on the wire.",
+        "steps": [
+          "Known: B = 0.4 T, I = 3 A, l = 0.5 m. Unknown: F.",
+          "F = B × I × l",
+          "F = 0.4 × 3 × 0.5",
+          "F = 0.6 N"
+        ],
+        "answer": { "value": 0.6, "unit": "N" }
+      },
+      "practice": [
+        {
+          "id": "motor-force-p1",
+          "question": "In a lab experiment a wire 0.4 m long rests on a top-pan balance between the poles of a magnet. The flux density is 0.1 T and the wire carries 2.5 A at right angles to the field. Calculate the force on the wire.",
+          "hint": "Use F = B × I × l with the values as given.",
+          "walkthrough": [
+            "B = 0.1 T, I = 2.5 A, l = 0.4 m, find F.",
+            "F = B × I × l = 0.1 × 2.5 × 0.4",
+            "F = 0.1 N"
+          ],
+          "answer": { "value": 0.1, "unit": "N" }
+        },
+        {
+          "id": "motor-force-p2",
+          "question": "The coil of a loudspeaker has 1.2 m of wire in a radial magnetic field of flux density 0.5 T. The current in the coil is 0.3 A. Calculate the force on the coil.",
+          "hint": "Force equals flux density multiplied by current multiplied by length.",
+          "walkthrough": [
+            "B = 0.5 T, I = 0.3 A, l = 1.2 m, find F.",
+            "F = B × I × l = 0.5 × 0.3 × 1.2",
+            "F = 0.18 N"
+          ],
+          "answer": { "value": 0.18, "unit": "N" }
+        },
+        {
+          "id": "motor-force-p3",
+          "question": "A wire 0.2 m long in the gap of an electromagnet carries a current of 1.5 A and experiences a force of 0.06 N. Calculate the magnetic flux density in the gap.",
+          "hint": "Rearrange F = B × I × l to B = F / (I × l).",
+          "walkthrough": [
+            "F = 0.06 N, I = 1.5 A, l = 0.2 m, find B.",
+            "F = B × I × l → B = F / (I × l)",
+            "B = 0.06 / (1.5 × 0.2) = 0.06 / 0.3",
+            "B = 0.2 T"
+          ],
+          "answer": { "value": 0.2, "unit": "T" }
+        },
+        {
+          "id": "motor-force-p4",
+          "question": "One side of the coil in a toy car motor is 8 cm long and carries a current of 5 A in a field of flux density 0.15 T. Calculate the force on that side of the coil.",
+          "hint": "Change 8 cm to metres before using F = B × I × l.",
+          "walkthrough": [
+            "B = 0.15 T, I = 5 A, l = 8 cm = 0.08 m, find F.",
+            "F = B × I × l = 0.15 × 5 × 0.08",
+            "F = 0.06 N"
+          ],
+          "answer": { "value": 0.06, "unit": "N" }
+        },
+        {
+          "id": "motor-force-p5",
+          "question": "A 30 cm length of wire in a crane motor sits in a field of flux density 0.2 T. The force on the wire is 0.12 N. Calculate the current in the wire.",
+          "hint": "Convert 30 cm to metres, then rearrange to I = F / (B × l).",
+          "walkthrough": [
+            "F = 0.12 N, B = 0.2 T, l = 30 cm = 0.3 m, find I.",
+            "F = B × I × l → I = F / (B × l)",
+            "I = 0.12 / (0.2 × 0.3) = 0.12 / 0.06",
+            "I = 2 A"
+          ],
+          "answer": { "value": 2, "unit": "A" }
+        },
+        {
+          "id": "motor-force-p6",
+          "question": "A 0.5 m length of wire on a model train has a resistance of 2 Ω and is connected across a 6 V supply. The wire is at right angles to a field of flux density 0.1 T. Calculate the force on the wire.",
+          "hint": "Find the current first with I = V / R, then use F = B × I × l.",
+          "walkthrough": [
+            "V = 6 V, R = 2 Ω, B = 0.1 T, l = 0.5 m, find F.",
+            "First the current: I = V / R = 6 / 2 = 3 A",
+            "F = B × I × l = 0.1 × 3 × 0.5",
+            "F = 0.15 N"
+          ],
+          "answer": { "value": 0.15, "unit": "N" }
+        }
+      ]
+    },
+    {
+      "id": "turns",
+      "name": "Transformer turns ratio",
+      "equations": ["V_p / V_s = N_p / N_s"],
+      "boards": ["Higher"],
+      "method": "The ratio of the p.d.s across the two coils equals the ratio of the numbers of turns. Write the equation as a pair of fractions, put in the three values you know, and solve for the fourth: V_s = V_p × N_s / N_p, N_s = N_p × V_s / V_p, and so on. A step-up transformer has more turns on the secondary and a larger output p.d.; a step-down transformer has fewer.",
+      "commonErrors": [
+        "Putting primary on top of one fraction and secondary on top of the other",
+        "Expecting a step-down transformer to give a bigger p.d. out",
+        "Mixing kV and V in the same fraction"
+      ],
+      "worked": {
+        "id": "turns-w",
+        "question": "A mains adapter contains a transformer with 2300 turns on the primary coil and 120 turns on the secondary coil. The primary is connected to the 230 V mains. Calculate the output potential difference.",
+        "steps": [
+          "Known: V_p = 230 V, N_p = 2300, N_s = 120. Unknown: V_s.",
+          "V_p / V_s = N_p / N_s → V_s = V_p × N_s / N_p",
+          "V_s = 230 × 120 / 2300",
+          "V_s = 12 V"
+        ],
+        "answer": { "value": 12, "unit": "V" }
+      },
+      "practice": [
+        {
+          "id": "turns-p1",
+          "question": "A lab transformer has 100 turns on the primary coil and 500 turns on the secondary coil. The input is 12 V a.c. Calculate the output potential difference.",
+          "hint": "V_s = V_p × N_s / N_p; more secondary turns means a bigger output.",
+          "walkthrough": [
+            "V_p = 12 V, N_p = 100, N_s = 500, find V_s.",
+            "V_s = V_p × N_s / N_p = 12 × 500 / 100",
+            "V_s = 60 V"
+          ],
+          "answer": { "value": 60, "unit": "V" }
+        },
+        {
+          "id": "turns-p2",
+          "question": "The transformer in a phone charger has 1150 turns on the primary and 25 turns on the secondary. It is plugged into the 230 V mains. Calculate the output potential difference.",
+          "hint": "Use V_s = V_p × N_s / N_p.",
+          "walkthrough": [
+            "V_p = 230 V, N_p = 1150, N_s = 25, find V_s.",
+            "V_s = V_p × N_s / N_p = 230 × 25 / 1150",
+            "V_s = 5 V"
+          ],
+          "answer": { "value": 5, "unit": "V" }
+        },
+        {
+          "id": "turns-p3",
+          "question": "A doorbell transformer steps the 230 V mains down to 8 V. The primary coil has 920 turns. Calculate the number of turns on the secondary coil.",
+          "hint": "Rearrange the turns ratio to N_s = N_p × V_s / V_p.",
+          "walkthrough": [
+            "V_p = 230 V, V_s = 8 V, N_p = 920, find N_s.",
+            "V_p / V_s = N_p / N_s → N_s = N_p × V_s / V_p",
+            "N_s = 920 × 8 / 230",
+            "N_s = 32 turns"
+          ],
+          "answer": { "value": 32, "unit": "turns" }
+        },
+        {
+          "id": "turns-p4",
+          "question": "A laptop charger steps the 230 V mains down to 20 V. The secondary coil has 40 turns. Calculate the number of turns on the primary coil.",
+          "hint": "Rearrange the turns ratio to N_p = N_s × V_p / V_s.",
+          "walkthrough": [
+            "V_p = 230 V, V_s = 20 V, N_s = 40, find N_p.",
+            "V_p / V_s = N_p / N_s → N_p = N_s × V_p / V_s",
+            "N_p = 40 × 230 / 20",
+            "N_p = 460 turns"
+          ],
+          "answer": { "value": 460, "unit": "turns" }
+        },
+        {
+          "id": "turns-p5",
+          "question": "A step-up transformer at a power station raises the p.d. from 25 kV to 400 kV. Its primary coil has 1500 turns. Calculate the number of turns on the secondary coil.",
+          "hint": "Both p.d.s are in kV so the ratio works as it stands; use N_s = N_p × V_s / V_p.",
+          "walkthrough": [
+            "V_p = 25 kV, V_s = 400 kV, N_p = 1500, find N_s.",
+            "N_s = N_p × V_s / V_p = 1500 × 400 / 25",
+            "N_s = 1500 × 16",
+            "N_s = 24 000 turns"
+          ],
+          "answer": { "value": 24000, "unit": "turns" }
+        },
+        {
+          "id": "turns-p6",
+          "question": "The transformer in a model railway controller has 2000 turns in total. 1600 of them are on the primary coil, which is connected to the 230 V mains. Calculate the output potential difference.",
+          "hint": "Find the number of secondary turns first, then use V_s = V_p × N_s / N_p.",
+          "walkthrough": [
+            "V_p = 230 V, N_p = 1600, total turns 2000, find V_s.",
+            "First the secondary turns: N_s = 2000 − 1600 = 400",
+            "V_s = V_p × N_s / N_p = 230 × 400 / 1600",
+            "V_s = 57.5 V"
+          ],
+          "answer": { "value": 57.5, "unit": "V" }
+        }
+      ]
+    },
+    {
+      "id": "tx-power",
+      "name": "Transformer power",
+      "equations": ["V_p × I_p = V_s × I_s"],
+      "boards": ["Higher"],
+      "method": "For a transformer that is 100% efficient the power into the primary equals the power out of the secondary, so V_p × I_p = V_s × I_s. Put in the three values you know and divide to find the fourth. If a p.d. is missing, find it from the turns ratio first. Stepping the p.d. up steps the current down by the same factor.",
+      "commonErrors": [
+        "Expecting the current to go up when the p.d. goes up",
+        "Forgetting to change mA to A before multiplying",
+        "Using the turns ratio with currents as if currents were p.d.s"
+      ],
+      "worked": {
+        "id": "tx-power-w",
+        "question": "A transformer connected to the 230 V mains takes a primary current of 0.5 A. The output p.d. is 23 V. Assuming the transformer is 100% efficient, calculate the current in the secondary coil.",
+        "steps": [
+          "Known: V_p = 230 V, I_p = 0.5 A, V_s = 23 V. Unknown: I_s.",
+          "V_p × I_p = V_s × I_s → I_s = V_p × I_p / V_s",
+          "I_s = 230 × 0.5 / 23 = 115 / 23",
+          "I_s = 5 A"
+        ],
+        "answer": { "value": 5, "unit": "A" }
+      },
+      "practice": [
+        {
+          "id": "tx-power-p1",
+          "question": "A lab step-up transformer has an input of 12 V at 2 A and an output p.d. of 48 V. Assuming it is 100% efficient, calculate the output current.",
+          "hint": "Power in equals power out: I_s = V_p × I_p / V_s.",
+          "walkthrough": [
+            "V_p = 12 V, I_p = 2 A, V_s = 48 V, find I_s.",
+            "I_s = V_p × I_p / V_s = 12 × 2 / 48 = 24 / 48",
+            "I_s = 0.5 A"
+          ],
+          "answer": { "value": 0.5, "unit": "A" }
+        },
+        {
+          "id": "tx-power-p2",
+          "question": "A games console adapter is connected to the 230 V mains and supplies 11.5 V at 6 A. Assuming the transformer inside is 100% efficient, calculate the current drawn from the mains.",
+          "hint": "Rearrange V_p × I_p = V_s × I_s to I_p = V_s × I_s / V_p.",
+          "walkthrough": [
+            "V_p = 230 V, V_s = 11.5 V, I_s = 6 A, find I_p.",
+            "I_p = V_s × I_s / V_p = 11.5 × 6 / 230 = 69 / 230",
+            "I_p = 0.3 A"
+          ],
+          "answer": { "value": 0.3, "unit": "A" }
+        },
+        {
+          "id": "tx-power-p3",
+          "question": "A phone charger takes a current of 20 mA from the 230 V mains and supplies the phone at 5 V. Assuming the transformer is 100% efficient, calculate the current supplied to the phone. Give your answer in amps.",
+          "hint": "Change 20 mA to amps first, then use I_s = V_p × I_p / V_s.",
+          "walkthrough": [
+            "V_p = 230 V, I_p = 20 mA = 0.02 A, V_s = 5 V, find I_s.",
+            "I_s = V_p × I_p / V_s = 230 × 0.02 / 5 = 4.6 / 5",
+            "I_s = 0.92 A"
+          ],
+          "answer": { "value": 0.92, "unit": "A" }
+        },
+        {
+          "id": "tx-power-p4",
+          "question": "A transformer for a set of halogen lights takes 0.2 A from the 230 V mains and supplies the lamps with a current of 4 A. Assuming it is 100% efficient, calculate the p.d. across the lamps.",
+          "hint": "Rearrange V_p × I_p = V_s × I_s to V_s = V_p × I_p / I_s.",
+          "walkthrough": [
+            "V_p = 230 V, I_p = 0.2 A, I_s = 4 A, find V_s.",
+            "V_s = V_p × I_p / I_s = 230 × 0.2 / 4 = 46 / 4",
+            "V_s = 11.5 V"
+          ],
+          "answer": { "value": 11.5, "unit": "V" }
+        },
+        {
+          "id": "tx-power-p5",
+          "question": "A garden-lighting transformer has 1000 turns on the primary and 50 turns on the secondary. It is connected to the 230 V mains and the lights draw 2 A from the secondary. Assuming the transformer is 100% efficient, calculate the current in the primary coil.",
+          "hint": "Find the secondary p.d. from the turns ratio first, then use I_p = V_s × I_s / V_p.",
+          "walkthrough": [
+            "V_p = 230 V, N_p = 1000, N_s = 50, I_s = 2 A, find I_p.",
+            "First the output p.d.: V_s = V_p × N_s / N_p = 230 × 50 / 1000 = 11.5 V",
+            "I_p = V_s × I_s / V_p = 11.5 × 2 / 230 = 23 / 230",
+            "I_p = 0.1 A"
+          ],
+          "answer": { "value": 0.1, "unit": "A" }
+        },
+        {
+          "id": "tx-power-p6",
+          "question": "A lab step-up transformer with 60 turns on the primary and 1200 turns on the secondary is connected to a 12 V a.c. supply. The primary current is 5 A. Assuming the transformer is 100% efficient, calculate the current in the secondary coil.",
+          "hint": "Use the turns ratio to find V_s, then I_s = V_p × I_p / V_s.",
+          "walkthrough": [
+            "V_p = 12 V, N_p = 60, N_s = 1200, I_p = 5 A, find I_s.",
+            "First the output p.d.: V_s = V_p × N_s / N_p = 12 × 1200 / 60 = 240 V",
+            "I_s = V_p × I_p / V_s = 12 × 5 / 240 = 60 / 240",
+            "I_s = 0.25 A"
+          ],
+          "answer": { "value": 0.25, "unit": "A" }
+        }
+      ]
+    },
+    {
+      "id": "loss",
+      "name": "Power loss in transmission cables",
+      "equations": ["P = I² × R", "P = I × V"],
+      "boards": ["Higher"],
+      "method": "The power wasted as heat in a cable is current squared multiplied by the resistance of the cable. If the question gives the power being transmitted and the transmission p.d., find the current first from I = P / V, then square it and multiply by the cable resistance. Stepping the p.d. up by a factor cuts the current by the same factor and the loss by that factor squared.",
+      "commonErrors": [
+        "Forgetting to square the current",
+        "Using the transmission p.d. in P = I × V to find the loss instead of the cable's resistance",
+        "Leaving the transmitted power in kW when finding the current"
+      ],
+      "worked": {
+        "id": "loss-w",
+        "question": "A transmission cable has a total resistance of 5 Ω and carries a current of 20 A. Calculate the power wasted as heat in the cable.",
+        "steps": [
+          "Known: I = 20 A, R = 5 Ω. Unknown: P lost.",
+          "P = I² × R",
+          "P = 20² × 5 = 400 × 5",
+          "P = 2000 W"
+        ],
+        "answer": { "value": 2000, "unit": "W" }
+      },
+      "practice": [
+        {
+          "id": "loss-p1",
+          "question": "An overhead line supplying a farm has a resistance of 0.5 Ω and carries a current of 40 A. Calculate the power lost in the line.",
+          "hint": "Use P = I² × R; square the current first.",
+          "walkthrough": [
+            "I = 40 A, R = 0.5 Ω, find P lost.",
+            "P = I² × R = 40² × 0.5 = 1600 × 0.5",
+            "P = 800 W"
+          ],
+          "answer": { "value": 800, "unit": "W" }
+        },
+        {
+          "id": "loss-p2",
+          "question": "A section of power line has a resistance of 10 Ω. It carries a current of 50 A. Calculate the power wasted in this section.",
+          "hint": "Power lost equals current squared multiplied by resistance.",
+          "walkthrough": [
+            "I = 50 A, R = 10 Ω, find P lost.",
+            "P = I² × R = 50² × 10 = 2500 × 10",
+            "P = 25 000 W"
+          ],
+          "answer": { "value": 25000, "unit": "W" }
+        },
+        {
+          "id": "loss-p3",
+          "question": "The cable from a wind turbine has a resistance of 2 Ω and wastes 1800 W as heat. Calculate the current in the cable.",
+          "hint": "Rearrange P = I² × R to I² = P / R, then take the square root.",
+          "walkthrough": [
+            "P = 1800 W, R = 2 Ω, find I.",
+            "P = I² × R → I² = P / R = 1800 / 2 = 900",
+            "I = √900",
+            "I = 30 A"
+          ],
+          "answer": { "value": 30, "unit": "A" }
+        },
+        {
+          "id": "loss-p4",
+          "question": "A power line has a resistance of 0.05 Ω for every kilometre of its length. The line is 20 km long and carries a current of 60 A. Calculate the power lost in the line.",
+          "hint": "Find the total resistance of the 20 km first, then use P = I² × R.",
+          "walkthrough": [
+            "Resistance per km = 0.05 Ω, length 20 km, I = 60 A, find P lost.",
+            "First the resistance: R = 0.05 × 20 = 1 Ω",
+            "P = I² × R = 60² × 1 = 3600 × 1",
+            "P = 3600 W"
+          ],
+          "answer": { "value": 3600, "unit": "W" }
+        },
+        {
+          "id": "loss-p5",
+          "question": "A small hydroelectric generator transmits 100 kW of power at 2000 V through cables of total resistance 4 Ω. Calculate the power lost in the cables. Give your answer in kW.",
+          "hint": "Find the current first with I = P / V (power in watts), then use P = I² × R and change to kW.",
+          "walkthrough": [
+            "P transmitted = 100 kW = 100 000 W, V = 2000 V, R = 4 Ω, find P lost.",
+            "First the current: I = P / V = 100 000 / 2000 = 50 A",
+            "P lost = I² × R = 50² × 4 = 2500 × 4 = 10 000 W",
+            "P lost = 10 kW"
+          ],
+          "answer": { "value": 10, "unit": "kW" }
+        },
+        {
+          "id": "loss-p6",
+          "question": "A factory is supplied with 60 kW of power through cables of total resistance 0.4 Ω. At 400 V the power lost in the cables is 9000 W. A transformer is fitted so the same 60 kW is transmitted at 4000 V instead. Calculate the power lost in the cables now.",
+          "hint": "Find the new, smaller current from I = P / V at 4000 V, then use P = I² × R.",
+          "walkthrough": [
+            "P transmitted = 60 kW = 60 000 W, new V = 4000 V, R = 0.4 Ω, find the new P lost.",
+            "New current: I = P / V = 60 000 / 4000 = 15 A",
+            "P lost = I² × R = 15² × 0.4 = 225 × 0.4",
+            "P lost = 90 W (down from 9000 W: ten times the p.d., one hundredth of the loss)"
+          ],
+          "answer": { "value": 90, "unit": "W" }
+        }
+      ]
+    }
+  ]
+}

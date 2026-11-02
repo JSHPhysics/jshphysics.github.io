@@ -1,0 +1,1337 @@
+{
+  "id": "motion",
+  "title": "Motion",
+  "subtitle": "Speed, acceleration, the motion equations and motion graphs",
+  "order": 20,
+  "figure": "motion-graph",
+  "types": [
+    {
+      "id": "speed",
+      "name": "Speed, distance and time",
+      "equations": [
+        "average speed = distance / time"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Average speed is the distance travelled divided by the time taken. You need to recall this one: it is not on the equation sheet. Make sure the distance is in metres and the time in seconds before dividing, and to find distance or time, rearrange: distance = speed × time, time = distance / speed.",
+      "commonErrors": [
+        "Dividing time by distance",
+        "Leaving the distance in km or the time in minutes",
+        "Averaging two speeds instead of dividing the total distance by the total time",
+        "Forgetting the unit, or writing m/s when the question asks for km/h"
+      ],
+      "worked": {
+        "id": "speed-w",
+        "question": "A cyclist travels 120 m along a straight road in 8 s. Calculate the average speed of the cyclist.",
+        "steps": [
+          "Known: distance = 120 m, time = 8 s. Unknown: average speed.",
+          "average speed = distance / time",
+          "average speed = 120 / 8",
+          "Average speed = 15 m/s"
+        ],
+        "answer": {
+          "value": 15,
+          "unit": "m/s"
+        }
+      },
+      "practice": [
+        {
+          "id": "speed-p1",
+          "question": "A sprinter runs 200 m in 25 s. Calculate the average speed of the sprinter.",
+          "hint": "average speed = distance / time; both values are already in m and s.",
+          "walkthrough": [
+            "distance = 200 m, time = 25 s.",
+            "average speed = 200 / 25",
+            "Average speed = 8 m/s"
+          ],
+          "answer": {
+            "value": 8,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "speed-p2",
+          "question": "Thunder is heard 2.5 s after a lightning flash. Sound travels at 340 m/s. Calculate how far away the lightning was.",
+          "hint": "Rearrange to distance = speed × time.",
+          "walkthrough": [
+            "speed = 340 m/s, time = 2.5 s, find distance.",
+            "distance = speed × time = 340 × 2.5",
+            "Distance = 850 m"
+          ],
+          "answer": {
+            "value": 850,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "speed-p3",
+          "question": "A car travels 36 km in 30 minutes. Calculate the average speed of the car in m/s.",
+          "hint": "Change 36 km to metres and 30 minutes to seconds before dividing.",
+          "walkthrough": [
+            "distance = 36 × 1000 = 36 000 m",
+            "time = 30 × 60 = 1800 s",
+            "average speed = 36 000 / 1800",
+            "Average speed = 20 m/s"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "speed-p4",
+          "question": "A walker moves at a steady 1.5 m/s. Calculate the time taken to walk 2.7 km. Give your answer in seconds.",
+          "hint": "Change 2.7 km to metres, then use time = distance / speed.",
+          "walkthrough": [
+            "distance = 2.7 × 1000 = 2700 m, speed = 1.5 m/s, find time.",
+            "time = distance / speed = 2700 / 1.5",
+            "Time = 1800 s"
+          ],
+          "answer": {
+            "value": 1800,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "speed-p5",
+          "question": "A train travels 45 km in 25 minutes, then a further 15 km in 5 minutes. Calculate the average speed of the train for the whole journey in m/s.",
+          "hint": "Add up the total distance in metres and the total time in seconds, then divide.",
+          "walkthrough": [
+            "total distance = 45 + 15 = 60 km = 60 000 m",
+            "total time = 25 + 5 = 30 minutes = 1800 s",
+            "average speed = 60 000 / 1800 = 33.3",
+            "Average speed = 33.3 m/s"
+          ],
+          "answer": {
+            "value": 33.3,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "speed-p6",
+          "question": "A runner covers the first 100 m of a race at 5 m/s and the second 100 m at 4 m/s. Calculate the average speed over the whole 200 m.",
+          "hint": "Find the time for each 100 m first (time = distance / speed), then divide the total distance by the total time.",
+          "walkthrough": [
+            "first 100 m: time = 100 / 5 = 20 s",
+            "second 100 m: time = 100 / 4 = 25 s",
+            "total time = 20 + 25 = 45 s",
+            "average speed = 200 / 45 = 4.44",
+            "Average speed = 4.44 m/s"
+          ],
+          "answer": {
+            "value": 4.44,
+            "unit": "m/s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "acceleration",
+      "name": "Acceleration from a change in velocity",
+      "equations": [
+        "a = (v − u) / t"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Acceleration is the change in velocity divided by the time taken: a = (v − u) / t, where u is the initial velocity and v the final velocity. Work out v − u first, then divide by t. If the object slows down, v − u is negative and so is the acceleration; a question asking for the deceleration wants the size of that value, without the minus sign.",
+      "commonErrors": [
+        "Dividing the final velocity by the time instead of the change in velocity",
+        "Taking u − v instead of v − u and losing the sign",
+        "Forgetting to convert km/h to m/s before subtracting",
+        "Rearranging for v as v = a × t and forgetting to add u"
+      ],
+      "worked": {
+        "id": "acceleration-w",
+        "question": "A motorbike speeds up from 5 m/s to 23 m/s in 4 s. Calculate its acceleration.",
+        "steps": [
+          "Known: u = 5 m/s, v = 23 m/s, t = 4 s. Unknown: a.",
+          "a = (v − u) / t",
+          "a = (23 − 5) / 4 = 18 / 4",
+          "a = 4.5 m/s²"
+        ],
+        "answer": {
+          "value": 4.5,
+          "unit": "m/s²"
+        }
+      },
+      "practice": [
+        {
+          "id": "acceleration-p1",
+          "question": "A sprinter leaves the blocks from rest and reaches 9 m/s after 3 s. Calculate the acceleration of the sprinter.",
+          "hint": "From rest means u = 0; use a = (v − u) / t.",
+          "walkthrough": [
+            "u = 0, v = 9 m/s, t = 3 s.",
+            "a = (9 − 0) / 3",
+            "a = 3 m/s²"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "acceleration-p2",
+          "question": "A train slows from 30 m/s to 12 m/s in 20 s as it approaches a station. Taking the direction of travel as positive, calculate the acceleration of the train.",
+          "hint": "v − u is negative because the train is slowing down; keep the minus sign in your answer.",
+          "walkthrough": [
+            "u = 30 m/s, v = 12 m/s, t = 20 s.",
+            "a = (12 − 30) / 20 = −18 / 20",
+            "a = −0.9 m/s²"
+          ],
+          "answer": {
+            "value": -0.9,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "acceleration-p3",
+          "question": "A cyclist travelling at 3 m/s accelerates at 0.5 m/s² for 8 s. Calculate the final velocity of the cyclist.",
+          "hint": "Rearrange to v = u + a × t.",
+          "walkthrough": [
+            "u = 3 m/s, a = 0.5 m/s², t = 8 s, find v.",
+            "a = (v − u) / t → v = u + a × t",
+            "v = 3 + 0.5 × 8 = 3 + 4",
+            "v = 7 m/s"
+          ],
+          "answer": {
+            "value": 7,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "acceleration-p4",
+          "question": "A car accelerates from 54 km/h to 90 km/h in 5 s. Calculate the acceleration of the car in m/s².",
+          "hint": "Convert both speeds to m/s (× 1000, ÷ 3600) before finding the change in velocity.",
+          "walkthrough": [
+            "u = 54 × 1000 / 3600 = 15 m/s, v = 90 × 1000 / 3600 = 25 m/s",
+            "a = (v − u) / t = (25 − 15) / 5",
+            "a = 10 / 5",
+            "a = 2 m/s²"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "acceleration-p5",
+          "question": "A lift starts from rest and accelerates upwards at 1.2 m/s² for 5 s. It then slows down steadily and stops 4 s later. Calculate the deceleration of the lift while it is slowing down.",
+          "hint": "Find the top speed first with v = u + a × t, then use that as u for the slowing-down part.",
+          "walkthrough": [
+            "Speeding up: v = 0 + 1.2 × 5 = 6 m/s",
+            "Slowing down: u = 6 m/s, v = 0, t = 4 s",
+            "a = (0 − 6) / 4 = −1.5 m/s²",
+            "Deceleration = 1.5 m/s²"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "acceleration-p6",
+          "question": "A car is travelling at 72 km/h when the driver brakes. The car decelerates at 4 m/s² until it stops. Calculate the time taken to stop.",
+          "hint": "Convert 72 km/h to m/s, take a = −4 m/s² and v = 0, then rearrange for t.",
+          "walkthrough": [
+            "u = 72 × 1000 / 3600 = 20 m/s, v = 0, a = −4 m/s², find t.",
+            "a = (v − u) / t → t = (v − u) / a",
+            "t = (0 − 20) / (−4) = −20 / −4",
+            "t = 5 s"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v2-u2",
+      "name": "Velocity, acceleration and distance without time",
+      "equations": [
+        "v² − u² = 2 × a × x"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Use this equation when a question gives a distance x but no time. Square the velocities first, then substitute. For an object dropped from rest u = 0; for an object thrown upwards v = 0 at the top and a = −10 m/s². When the unknown is v or u, you end up with v² or u², so take the square root as the last step.",
+      "commonErrors": [
+        "Forgetting to square the velocities before substituting",
+        "Forgetting to take the square root at the end",
+        "Using a = +10 m/s² for an object moving upwards",
+        "Using this equation when a time is given and a = (v − u) / t is quicker"
+      ],
+      "worked": {
+        "id": "v2-u2-w",
+        "question": "A go-kart travelling at 5 m/s accelerates at 4 m/s² over a distance of 18 m. Calculate its final velocity.",
+        "steps": [
+          "Known: u = 5 m/s, a = 4 m/s², x = 18 m. Unknown: v.",
+          "v² − u² = 2 × a × x → v² = u² + 2 × a × x",
+          "v² = 5² + 2 × 4 × 18 = 25 + 144 = 169",
+          "v = √169 = 13 m/s"
+        ],
+        "answer": {
+          "value": 13,
+          "unit": "m/s"
+        }
+      },
+      "practice": [
+        {
+          "id": "v2-u2-p1",
+          "question": "A diver steps off a 5 m board and falls into the pool. Calculate the velocity of the diver when she reaches the water. Ignore air resistance.",
+          "hint": "u = 0 and a = g = 10 m/s²; find v² first, then take the square root.",
+          "walkthrough": [
+            "u = 0, a = 10 m/s², x = 5 m, find v.",
+            "v² = u² + 2 × a × x = 0 + 2 × 10 × 5 = 100",
+            "v = √100 = 10 m/s"
+          ],
+          "answer": {
+            "value": 10,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "v2-u2-p2",
+          "question": "A car accelerates from rest to 30 m/s over a distance of 150 m. Calculate the acceleration of the car.",
+          "hint": "Rearrange to a = (v² − u²) / (2 × x) with u = 0.",
+          "walkthrough": [
+            "u = 0, v = 30 m/s, x = 150 m, find a.",
+            "a = (v² − u²) / (2 × x)",
+            "a = (900 − 0) / (2 × 150) = 900 / 300",
+            "a = 3 m/s²"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "v2-u2-p3",
+          "question": "An aeroplane lands at 60 m/s and decelerates at 3 m/s² until it stops. Calculate the distance it travels along the runway.",
+          "hint": "v = 0 and a = −3 m/s²; rearrange to x = (v² − u²) / (2 × a).",
+          "walkthrough": [
+            "u = 60 m/s, v = 0, a = −3 m/s², find x.",
+            "x = (v² − u²) / (2 × a)",
+            "x = (0 − 3600) / (2 × −3) = −3600 / −6",
+            "x = 600 m"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "v2-u2-p4",
+          "question": "A tennis ball is hit straight upwards and rises 11.25 m before it stops. Calculate the velocity at which it left the racket.",
+          "hint": "At the top v = 0 and a = −10 m/s²; rearrange for u² and take the square root.",
+          "walkthrough": [
+            "v = 0, a = −10 m/s², x = 11.25 m, find u.",
+            "v² − u² = 2 × a × x → u² = v² − 2 × a × x",
+            "u² = 0 − 2 × (−10) × 11.25 = 225",
+            "u = √225 = 15 m/s"
+          ],
+          "answer": {
+            "value": 15,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
+        },
+        {
+          "id": "v2-u2-p5",
+          "question": "A car travelling at 72 km/h brakes with a deceleration of 5 m/s². Calculate the distance the car travels before it stops.",
+          "hint": "Convert 72 km/h to m/s first; then v = 0 and a = −5 m/s², and rearrange for x.",
+          "walkthrough": [
+            "u = 72 × 1000 / 3600 = 20 m/s, v = 0, a = −5 m/s², find x.",
+            "x = (v² − u²) / (2 × a)",
+            "x = (0 − 400) / (2 × −5) = −400 / −10",
+            "x = 40 m"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "v2-u2-p6",
+          "question": "A toy rocket is launched straight up from a spring launcher and rises 320 cm before it stops. Calculate the velocity at which it left the launcher.",
+          "hint": "Change 320 cm to metres; at the top v = 0 and a = −10 m/s², so u² = −2 × a × x.",
+          "walkthrough": [
+            "x = 320 / 100 = 3.2 m, v = 0, a = −10 m/s², find u.",
+            "u² = v² − 2 × a × x",
+            "u² = 0 − 2 × (−10) × 3.2 = 64",
+            "u = √64 = 8 m/s"
+          ],
+          "answer": {
+            "value": 8,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dt-graph",
+      "name": "Reading a distance–time graph",
+      "equations": [
+        "speed = gradient of a distance–time graph",
+        "average speed = total distance / total time"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "On a distance–time graph the gradient of a section is the speed: pick two points on the straight section where it crosses gridlines and divide the change in distance by the change in time. A flat section means the object is stationary; a steeper section means a higher speed. For an average speed over a whole journey, divide the total distance travelled by the total time, including any stops.",
+      "commonErrors": [
+        "Reading the distance value instead of working out the gradient",
+        "Dividing the time by the distance",
+        "Using the time axis in minutes with distance in metres and calling the answer m/s",
+        "Leaving out the return journey when adding up the total distance travelled"
+      ],
+      "worked": {
+        "id": "dt-graph-w",
+        "question": "The graph shows the distance travelled by a runner. Use the graph to calculate the speed of the runner during the first 6 s.",
+        "steps": [
+          "Speed is the gradient of the distance–time graph.",
+          "Pick two points on the first section: (0 s, 0 m) and A at (6 s, 30 m).",
+          "gradient = change in distance / change in time = (30 − 0) / (6 − 0)",
+          "speed = 30 / 6",
+          "Speed = 5 m/s"
+        ],
+        "answer": {
+          "value": 5,
+          "unit": "m/s"
+        },
+        "graph": {
+          "x": {
+            "label": "time in s",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          },
+          "y": {
+            "label": "distance in m",
+            "min": 0,
+            "max": 40,
+            "step": 5
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  30
+                ],
+                [
+                  10,
+                  30
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 6,
+              "y": 30,
+              "label": "A",
+              "drop": true
+            }
+          ],
+          "alt": "Distance–time graph rising in a straight line from the origin to 30 m at 6 s, then flat at 30 m until 10 s"
+        }
+      },
+      "practice": [
+        {
+          "id": "dt-graph-p1",
+          "question": "The graph shows the distance travelled by a cyclist. Use the graph to find how far the cyclist had travelled after 40 s, at the point marked P.",
+          "hint": "Go up from 40 s on the time axis to the line, then across to the distance axis.",
+          "walkthrough": [
+            "Find 40 s on the time axis and go up to point P on the line.",
+            "Read across to the distance axis.",
+            "Distance = 160 m"
+          ],
+          "answer": {
+            "value": 160,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 50,
+              "step": 5
+            },
+            "y": {
+              "label": "distance in m",
+              "min": 0,
+              "max": 200,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    20,
+                    120
+                  ],
+                  [
+                    30,
+                    120
+                  ],
+                  [
+                    50,
+                    200
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 40,
+                "y": 160,
+                "label": "P",
+                "drop": true,
+                "dx": 10,
+                "dy": 16
+              }
+            ],
+            "alt": "Distance–time graph rising to 120 m at 20 s, flat until 30 s, then rising to 200 m at 50 s, with point P marked at 40 s"
+          }
+        },
+        {
+          "id": "dt-graph-p2",
+          "question": "The graph shows the distance of a dog walker from home. Use the graph to calculate the walker's speed on the way back home, between 100 s and 150 s.",
+          "hint": "The gradient of the last section: the distance changes from 90 m to 0 m while the time goes from 100 s to 150 s.",
+          "walkthrough": [
+            "Two points on the return section: (100 s, 90 m) and (150 s, 0 m).",
+            "change in distance = 90 m, change in time = 150 − 100 = 50 s",
+            "speed = 90 / 50",
+            "Speed = 1.8 m/s"
+          ],
+          "answer": {
+            "value": 1.8,
+            "unit": "m/s"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 150,
+              "step": 10
+            },
+            "y": {
+              "label": "distance from home in m",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    60,
+                    90
+                  ],
+                  [
+                    100,
+                    90
+                  ],
+                  [
+                    150,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "alt": "Distance–time graph rising to 90 m at 60 s, flat until 100 s, then falling back to zero at 150 s"
+          }
+        },
+        {
+          "id": "dt-graph-p3",
+          "question": "The graph shows the motion of a car in two sections, A (0 to 4 s) and B (4 s to 10 s). Use the graph to calculate how many times faster the car is moving in section A than in section B.",
+          "hint": "Work out the gradient of each section separately, then divide the speed in A by the speed in B.",
+          "walkthrough": [
+            "Section A: from (0 s, 0 m) to (4 s, 80 m): speed = 80 / 4 = 20 m/s",
+            "Section B: from (4 s, 80 m) to (10 s, 140 m): speed = (140 − 80) / (10 − 4) = 60 / 6 = 10 m/s",
+            "ratio = 20 / 10",
+            "The car is 2 times faster in section A"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": ""
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "distance in m",
+              "min": 0,
+              "max": 160,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    80
+                  ],
+                  [
+                    10,
+                    140
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 4,
+                "y": 80,
+                "label": "",
+                "drop": true
+              }
+            ],
+            "labels": [
+              {
+                "x": 1.2,
+                "y": 60,
+                "text": "A"
+              },
+              {
+                "x": 6.5,
+                "y": 95,
+                "text": "B"
+              }
+            ],
+            "alt": "Distance–time graph with a steep section A from the origin to 80 m at 4 s, then a shallower section B to 140 m at 10 s"
+          }
+        },
+        {
+          "id": "dt-graph-p4",
+          "question": "The graph shows the distance travelled by a bus, with the time in minutes. Use the graph to calculate the speed of the bus during the first 10 minutes. Give your answer in m/s.",
+          "hint": "Read the distance at Q, change 10 minutes to seconds, then divide.",
+          "walkthrough": [
+            "At Q the bus has travelled 1500 m in 10 minutes.",
+            "10 minutes = 10 × 60 = 600 s",
+            "speed = 1500 / 600",
+            "Speed = 2.5 m/s"
+          ],
+          "answer": {
+            "value": 2.5,
+            "unit": "m/s"
+          },
+          "graph": {
+            "x": {
+              "label": "time in minutes",
+              "min": 0,
+              "max": 30,
+              "step": 5
+            },
+            "y": {
+              "label": "distance in m",
+              "min": 0,
+              "max": 3000,
+              "step": 500
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    1500
+                  ],
+                  [
+                    15,
+                    1500
+                  ],
+                  [
+                    30,
+                    3000
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 10,
+                "y": 1500,
+                "label": "Q",
+                "drop": true
+              }
+            ],
+            "alt": "Distance–time graph with time in minutes, rising to 1500 m at 10 minutes, flat until 15 minutes, then rising to 3000 m at 30 minutes"
+          }
+        },
+        {
+          "id": "dt-graph-p5",
+          "question": "The graph shows the distance of a delivery van from its depot. The van drives out, stops to make a delivery, then drives back. Use the graph to calculate the average speed of the van for the whole journey.",
+          "hint": "The total distance travelled is the distance out plus the distance back; divide it by the total time of 80 s.",
+          "walkthrough": [
+            "Distance out = 300 m, distance back = 300 m",
+            "total distance travelled = 300 + 300 = 600 m",
+            "total time = 80 s",
+            "average speed = 600 / 80",
+            "Average speed = 7.5 m/s"
+          ],
+          "answer": {
+            "value": 7.5,
+            "unit": "m/s"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "y": {
+              "label": "distance from depot in m",
+              "min": 0,
+              "max": 400,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    30,
+                    300
+                  ],
+                  [
+                    50,
+                    300
+                  ],
+                  [
+                    80,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "alt": "Distance–time graph rising to 300 m at 30 s, flat until 50 s, then falling back to zero at 80 s"
+          }
+        },
+        {
+          "id": "dt-graph-p6",
+          "question": "The graph shows the distance travelled by a train leaving a station. Use the graph to calculate the speed of the train between R and S. Give your answer in km/h.",
+          "hint": "Find the gradient between R and S in m/s first, then convert to km/h (× 3600, ÷ 1000).",
+          "walkthrough": [
+            "R is (40 s, 200 m) and S is (60 s, 900 m).",
+            "speed = (900 − 200) / (60 − 40) = 700 / 20 = 35 m/s",
+            "In 1 hour: 35 × 3600 = 126 000 m = 126 km",
+            "Speed = 126 km/h"
+          ],
+          "answer": {
+            "value": 126,
+            "unit": "km/h"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "distance in m",
+              "min": 0,
+              "max": 1000,
+              "step": 100
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    20,
+                    200
+                  ],
+                  [
+                    40,
+                    200
+                  ],
+                  [
+                    60,
+                    900
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 40,
+                "y": 200,
+                "label": "R",
+                "drop": true,
+                "dx": 6,
+                "dy": 16
+              },
+              {
+                "x": 60,
+                "y": 900,
+                "label": "S",
+                "drop": true,
+                "dx": -16,
+                "dy": -6
+              }
+            ],
+            "alt": "Distance–time graph rising to 200 m at 20 s, flat until 40 s at point R, then rising steeply to 900 m at 60 s at point S"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vt-graph",
+      "name": "Reading a velocity–time graph",
+      "equations": [
+        "acceleration = gradient of a velocity–time graph",
+        "distance travelled = area under a velocity–time graph"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "On a velocity–time graph the gradient of a section is the acceleration (change in velocity divided by time) and the area between the line and the time axis is the distance travelled. Split the area into rectangles and triangles: a rectangle is base × height, a triangle is ½ × base × height. A line sloping downwards means the object is decelerating. Where the graph is curved, the acceleration at a point is the gradient of the tangent drawn there.",
+      "commonErrors": [
+        "Working out the gradient when the question asks for the distance (or the other way round)",
+        "Forgetting the ½ for a triangular area",
+        "Reading the velocity at a point and calling it the acceleration",
+        "Using the point X itself to find a tangent's gradient instead of the two ends of the tangent"
+      ],
+      "worked": {
+        "id": "vt-graph-w",
+        "question": "The graph shows the velocity of a car pulling away from traffic lights. Use the graph to calculate the acceleration of the car during the first 8 s.",
+        "steps": [
+          "Acceleration is the gradient of the velocity–time graph.",
+          "Two points on the first section: (0 s, 0 m/s) and A at (8 s, 20 m/s).",
+          "gradient = change in velocity / change in time = (20 − 0) / (8 − 0)",
+          "acceleration = 20 / 8",
+          "Acceleration = 2.5 m/s²"
+        ],
+        "answer": {
+          "value": 2.5,
+          "unit": "m/s²"
+        },
+        "graph": {
+          "x": {
+            "label": "time in s",
+            "min": 0,
+            "max": 12,
+            "step": 2
+          },
+          "y": {
+            "label": "velocity in m/s",
+            "min": 0,
+            "max": 25,
+            "step": 5
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  20
+                ],
+                [
+                  12,
+                  20
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 8,
+              "y": 20,
+              "label": "A",
+              "drop": true
+            }
+          ],
+          "alt": "Velocity–time graph rising in a straight line from the origin to 20 m/s at 8 s, then constant at 20 m/s until 12 s"
+        }
+      },
+      "practice": [
+        {
+          "id": "vt-graph-p1",
+          "question": "The graph shows the velocity of a train between two stations. Use the shaded area to calculate the distance the train travels while moving at a constant velocity, between 10 s and 50 s.",
+          "hint": "The shaded area is a rectangle: base × height.",
+          "walkthrough": [
+            "The shaded area is a rectangle from 10 s to 50 s at 15 m/s.",
+            "base = 50 − 10 = 40 s, height = 15 m/s",
+            "distance = 40 × 15",
+            "Distance = 600 m"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 20,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    15
+                  ],
+                  [
+                    50,
+                    15
+                  ],
+                  [
+                    60,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 10,
+                "to": 50
+              }
+            ],
+            "alt": "Velocity–time graph rising to 15 m/s at 10 s, constant until 50 s with that section shaded, then falling to zero at 60 s"
+          }
+        },
+        {
+          "id": "vt-graph-p2",
+          "question": "The graph shows the velocity of a sprinter at the start of a race. Use the shaded area to calculate the distance the sprinter runs while accelerating, in the first 4 s.",
+          "hint": "The shaded area is a triangle: ½ × base × height.",
+          "walkthrough": [
+            "The shaded area is a triangle with base 4 s and height 10 m/s.",
+            "distance = ½ × base × height = ½ × 4 × 10",
+            "Distance = 20 m"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    10
+                  ],
+                  [
+                    10,
+                    10
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 4
+              }
+            ],
+            "alt": "Velocity–time graph rising from the origin to 10 m/s at 4 s with that triangle shaded, then constant at 10 m/s until 10 s"
+          }
+        },
+        {
+          "id": "vt-graph-p3",
+          "question": "The graph shows the velocity of a car as it approaches a junction. Use the graph to calculate the deceleration of the car between B and the moment it stops.",
+          "hint": "Gradient of the sloping section from B at (6 s, 20 m/s) to (14 s, 0 m/s); the deceleration is the size of the gradient.",
+          "walkthrough": [
+            "Two points on the sloping section: B at (6 s, 20 m/s) and (14 s, 0 m/s).",
+            "gradient = (0 − 20) / (14 − 6) = −20 / 8 = −2.5 m/s²",
+            "Deceleration = 2.5 m/s²"
+          ],
+          "answer": {
+            "value": 2.5,
+            "unit": "m/s²"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 16,
+              "step": 2
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 25,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    6,
+                    20
+                  ],
+                  [
+                    14,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 20,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "alt": "Velocity–time graph constant at 20 m/s until 6 s at point B, then falling in a straight line to zero at 14 s"
+          }
+        },
+        {
+          "id": "vt-graph-p4",
+          "question": "The graph shows the velocity of a motorbike that is already moving when timing starts. Use the shaded area to calculate the distance travelled in the first 6 s.",
+          "hint": "The shaded area is a trapezium: split it into a rectangle (10 m/s high) and a triangle on top, or use ½ × (10 + 25) × 6.",
+          "walkthrough": [
+            "Rectangle: 6 × 10 = 60 m",
+            "Triangle on top: ½ × 6 × (25 − 10) = ½ × 6 × 15 = 45 m",
+            "distance = 60 + 45",
+            "Distance = 105 m"
+          ],
+          "answer": {
+            "value": 105,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 30,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    10
+                  ],
+                  [
+                    6,
+                    25
+                  ],
+                  [
+                    8,
+                    25
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 6
+              }
+            ],
+            "alt": "Velocity–time graph starting at 10 m/s and rising in a straight line to 25 m/s at 6 s with that trapezium shaded, then constant until 8 s"
+          }
+        },
+        {
+          "id": "vt-graph-p5",
+          "question": "The graph shows the velocity of a model rocket whose acceleration increases as it burns fuel. The tangent to the curve at X is drawn. Use the tangent to calculate the acceleration of the rocket at X.",
+          "hint": "Use the two ends of the tangent, (4 s, 0 m/s) and (12 s, 32 m/s), to find its gradient; the acceleration at X is that gradient.",
+          "walkthrough": [
+            "The tangent passes through (4 s, 0 m/s) and (12 s, 32 m/s).",
+            "gradient = change in velocity / change in time = (32 − 0) / (12 − 4)",
+            "gradient = 32 / 8",
+            "Acceleration at X = 4 m/s²"
+          ],
+          "answer": {
+            "value": 4,
+            "unit": "m/s²"
+          },
+          "boards": [
+            "Higher"
+          ],
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 12,
+              "step": 2
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 40,
+              "step": 4
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    0.25
+                  ],
+                  [
+                    2,
+                    1
+                  ],
+                  [
+                    3,
+                    2.25
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    6.25
+                  ],
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    7,
+                    12.25
+                  ],
+                  [
+                    8,
+                    16
+                  ],
+                  [
+                    9,
+                    20.25
+                  ],
+                  [
+                    10,
+                    25
+                  ],
+                  [
+                    11,
+                    30.25
+                  ],
+                  [
+                    12,
+                    36
+                  ]
+                ]
+              },
+              {
+                "kind": "tangent",
+                "points": [
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    12,
+                    32
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 16,
+                "label": "X",
+                "drop": true,
+                "dx": 10,
+                "dy": 16
+              }
+            ],
+            "alt": "Velocity–time curve bending upwards from the origin to 36 m/s at 12 s, with point X at 8 s and the tangent at X drawn from (4, 0) to (12, 32)"
+          }
+        },
+        {
+          "id": "vt-graph-p6",
+          "question": "The graph shows the velocity of a tram between two stops: it speeds up, travels at a constant velocity, then slows to a stop. Use the shaded area to calculate the total distance between the two stops.",
+          "hint": "Split the shaded area at the dashed lines into a triangle, a rectangle and a triangle, and add the three areas.",
+          "walkthrough": [
+            "Speeding up (0 to 10 s): triangle = ½ × 10 × 20 = 100 m",
+            "Constant velocity (10 s to 30 s): rectangle = 20 × 20 = 400 m",
+            "Slowing down (30 s to 40 s): triangle = ½ × 10 × 20 = 100 m",
+            "total distance = 100 + 400 + 100",
+            "Total distance = 600 m"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "m"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 40,
+              "step": 5
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 25,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    20
+                  ],
+                  [
+                    30,
+                    20
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    10,
+                    0
+                  ],
+                  [
+                    10,
+                    20
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    30,
+                    0
+                  ],
+                  [
+                    30,
+                    20
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 40
+              }
+            ],
+            "alt": "Velocity–time graph rising to 20 m/s at 10 s, constant until 30 s, then falling to zero at 40 s, with the whole area under the line shaded and dashed lines at 10 s and 30 s"
+          }
+        }
+      ]
+    }
+  ]
+}

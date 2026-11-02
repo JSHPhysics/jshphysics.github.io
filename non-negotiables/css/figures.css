@@ -34,6 +34,7 @@
 }
 
 .fig .lbl text { font-style: normal; font-size: 9.5px; opacity: 0.8; }
+.fig tspan.lbl { font-style: normal; }
 .fig .cons { stroke-dasharray: 4 4; stroke-width: 1; opacity: 0.75; }
 .fig .cons-fill { fill: var(--bg); }
 .fig .dim line { stroke-width: 1; }
@@ -45,6 +46,7 @@
 .fig .mask { fill: var(--bg); stroke: none; }
 .fig .bdot { stroke-width: 1; opacity: 0.6; }
 .fig .on-fill line { stroke: var(--bg); stroke-width: 1.6; }
+.fig .on-fill-dot { fill: var(--bg); stroke: none; }
 /* Labels that sit over linework get a paper halo */
 .fig .halo text { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
 
@@ -98,6 +100,8 @@
 .fig .trail.t3 { stroke-dasharray: 70 200; stroke-dashoffset: 70; animation: fig-trail-3 4s linear infinite; }
 .fig .photon-head { offset-rotate: 0deg; opacity: 0; animation: fig-photon-head 4s linear infinite; }
 .fig .slide-right { animation: fig-slide 3.4s ease-in infinite; }
+/* The force arrow in the motor-effect drawing lifts gently */
+.fig .nudge { animation: fig-nudge 2.2s ease-in-out infinite alternate; }
 
 /* A figure paused until it enters the viewport or its card is hovered */
 .fig-paused .fig * { animation-play-state: paused; }
@@ -214,6 +218,7 @@
   95.83% { transform: rotate(3.11deg); }
   100.00% { transform: rotate(0.00deg); }
 }
+@keyframes fig-nudge { from { transform: translateY(0); } to { transform: translateY(-8px); } }
 @keyframes fig-orbit { to { transform: rotate(360deg); } }
 @keyframes fig-orbit-ccw { to { transform: rotate(-360deg); } }
 @keyframes fig-counter { to { transform: rotate(360deg); } }

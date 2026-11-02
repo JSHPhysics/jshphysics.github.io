@@ -12,8 +12,27 @@
      Constants and state
      =================================================================== */
 
-  // Boards in display order; must match the tags in the data files
-  const BOARDS = ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"];
+  // Site configuration: data/config.json overrides these defaults. The
+  // "filter" is the segmented control (exam boards for A-level, tiers for
+  // GCSE); its option ids are the tags used in the data files' "boards".
+  const config = {
+    title: "The Non-negotiables",
+    titleWords: ["The", "Non-", "negotiables"],
+    lede: "The calculations every A-level physicist has to be able to do without thinking. Each one comes with a worked example and six to practise, checked as you go.",
+    credit: "Joshua Stafford-Haworth, JSHPhysics",
+    printSubtitle: "A-level physics calculations, complete set",
+    filter: {
+      label: "Exam board",
+      prompt: "Show what my board examines",
+      all: "All boards",
+      options: ["AQA", "OCR A", "OCR B", "Edexcel", "WJEC"],
+      defaultOption: "all",
+      none: "Nothing in this topic is examined by {option}. Choose another board or another topic.",
+    },
+  };
+
+  // Filter options in display order; must match the tags in the data files
+  let BOARDS = config.filter.options;
 
   // Fraction of the stored answer within which an entry counts as correct
   const DEFAULT_TOLERANCE = 0.02;
@@ -21,14 +40,40 @@
   // All loaded topics, in sidebar order
   let topics = [];
 
-  // Current board filter: one of BOARDS or "all"
-  let board = readStorage("nn-board") || "all";
+  // Sibling sites (A-level and GCSE) can share one origin, so each page
+  // names its own localStorage prefix on <html data-storage="...">
+  const STORAGE_PREFIX = document.documentElement.getAttribute("data-storage") || "nn-";
+
+  // Current filter choice: one of BOARDS or "all"
+  let board = readStorage(STORAGE_PREFIX + "board") || "all";
+
+  // Merge a loaded config over the defaults and re-derive what depends on it
+  function applyConfig(loaded) {
+    Object.keys(loaded).forEach(function (key) {
+      if (key === "filter" && loaded.filter) {
+        Object.assign(config.filter, loaded.filter);
+      } else {
+        config[key] = loaded[key];
+      }
+    });
+    BOARDS = config.filter.options;
+    // A stored choice that the config no longer offers falls back to the default
+    const allowed = BOARDS.concat(config.filter.all ? ["all"] : []);
+    if (allowed.indexOf(board) < 0) {
+      board = config.filter.defaultOption || (config.filter.all ? "all" : BOARDS[0]);
+    }
+    document.title = config.title;
+    const brandName = document.querySelector(".brand span");
+    if (brandName) {
+      brandName.textContent = config.title;
+    }
+  }
 
   // Progress per question id: { status, attempts }
-  let progress = readJson("nn-progress", {});
+  let progress = readJson(STORAGE_PREFIX + "progress", {});
 
   // Ids of skill cards the user has collapsed
-  let collapsed = new Set(readJson("nn-collapsed", []));
+  let collapsed = new Set(readJson(STORAGE_PREFIX + "collapsed", []));
 
   // The topic that was last opened, so the home grid can morph back to it
   let lastTopicId = null;
@@ -71,11 +116,11 @@
   }
 
   function saveProgress() {
-    writeStorage("nn-progress", JSON.stringify(progress));
+    writeStorage(STORAGE_PREFIX + "progress", JSON.stringify(progress));
   }
 
   function saveCollapsed() {
-    writeStorage("nn-collapsed", JSON.stringify(Array.from(collapsed)));
+    writeStorage(STORAGE_PREFIX + "collapsed", JSON.stringify(Array.from(collapsed)));
   }
 
   /* ===================================================================
@@ -83,6 +128,16 @@
      =================================================================== */
 
   async function loadAll() {
+    // Optional site configuration
+    try {
+      const configResponse = await fetch("data/config.json");
+      if (configResponse.ok) {
+        applyConfig(await configResponse.json());
+      }
+    } catch (error) {
+      // No config: the A-level defaults apply
+    }
+
     const manifestResponse = await fetch("data/manifest.json");
     if (!manifestResponse.ok) {
       throw new Error("manifest.json " + manifestResponse.status);
@@ -371,15 +426,15 @@
 
   function renderBoardPicker(container) {
     container.innerHTML = "";
-    const options = ["all"].concat(BOARDS);
+    const options = (config.filter.all ? ["all"] : []).concat(BOARDS);
     for (const option of options) {
       const button = document.createElement("button");
       button.type = "button";
-      button.textContent = option === "all" ? "All boards" : option;
+      button.textContent = option === "all" ? config.filter.all : option;
       button.setAttribute("aria-pressed", board === option ? "true" : "false");
       button.addEventListener("click", function () {
         board = option;
-        writeStorage("nn-board", board);
+        writeStorage(STORAGE_PREFIX + "board", board);
         renderBoardPicker(document.getElementById("board-seg"));
         const heroPicker = document.getElementById("hero-seg");
         if (heroPicker) {
@@ -405,7 +460,7 @@
       }, 0);
     }, 0);
 
-    const words = ["The", "Non-", "negotiables"];
+    const words = config.titleWords;
     let title = "";
     words.forEach(function (word, index) {
       title += "<span class=\"word\"><span style=\"--i: " + index + "\">" + word + "</span></span>";
@@ -418,8 +473,8 @@
     html += "<section class=\"hero" + (heroPlayed ? "" : " animate") + "\">";
     html += "<h1>" + title + "</h1>";
     html += "<div class=\"dimline\"><span class=\"tag\">" + totalTypes + " calculations</span><span class=\"rule\"></span><span class=\"tag tag-end\">" + totalQuestions + " questions</span></div>";
-    html += "<p class=\"lede\">The calculations every A-level physicist has to be able to do without thinking. Each one comes with a worked example and six to practise, checked as you go.</p>";
-    html += "<div class=\"hero-controls\"><span class=\"label\">Show what my board examines</span><div class=\"seg\" id=\"hero-seg\" role=\"group\" aria-label=\"Exam board\"></div></div>";
+    html += "<p class=\"lede\">" + escapeHtml(config.lede) + "</p>";
+    html += "<div class=\"hero-controls\"><span class=\"label\">" + escapeHtml(config.filter.prompt) + "</span><div class=\"seg\" id=\"hero-seg\" role=\"group\" aria-label=\"" + escapeHtml(config.filter.label) + "\"></div></div>";
     html += "</section>";
 
     html += "<section class=\"topics\" aria-label=\"Topics\">";
@@ -433,7 +488,7 @@
       const done = summary.total > 0 && summary.correct === summary.total;
       const shared = topic.id === lastTopicId ? " shared" : "";
       html += "<a class=\"topic-card" + (done ? " done" : "") + "\" href=\"#" + topic.id + "\" data-topic=\"" + topic.id + "\" style=\"--i: " + index + "\">";
-      html += "<div class=\"figwrap" + shared + "\">" + figures.render(topic.id) + "</div>";
+      html += "<div class=\"figwrap" + shared + "\">" + figures.render(topic.figure || topic.id) + "</div>";
       html += "<div class=\"meta corner-ticks\">";
       html += "<h3>" + escapeHtml(topic.title) + "</h3>";
       html += "<p class=\"sub\">" + escapeHtml(topic.subtitle) + "</p>";
@@ -491,14 +546,14 @@
 
   // Topics the user has opened before; on a first visit every skill but the
   // first starts collapsed so the page is scannable
-  let seenTopics = new Set(readJson("nn-seen", []));
+  let seenTopics = new Set(readJson(STORAGE_PREFIX + "seen", []));
 
   function applyFirstVisitDefaults(topic, types, typeId) {
     if (seenTopics.has(topic.id)) {
       return;
     }
     seenTopics.add(topic.id);
-    writeStorage("nn-seen", JSON.stringify(Array.from(seenTopics)));
+    writeStorage(STORAGE_PREFIX + "seen", JSON.stringify(Array.from(seenTopics)));
     types.forEach(function (type, index) {
       const keepOpen = index === 0 || type.id === typeId;
       if (!keepOpen) {
@@ -526,11 +581,11 @@
     html += "<p class=\"sub\">" + escapeHtml(topic.subtitle) + "</p>";
     html += "<div class=\"progress-line\"><span>" + summary.correct + " of " + summary.total + " questions correct" + (board === "all" ? "" : " for " + escapeHtml(board)) + "</span><div class=\"bar\"><i style=\"--p: " + percent.toFixed(1) + "%\"></i></div></div>";
     html += "</div>";
-    html += "<div class=\"figwrap shared\">" + figures.render(topic.id) + "</div>";
+    html += "<div class=\"figwrap shared\">" + figures.render(topic.figure || topic.id) + "</div>";
     html += "</header>";
 
     if (types.length === 0) {
-      html += "<div class=\"notice\">Nothing in this topic is examined by " + escapeHtml(board) + ". Choose another board or another topic.</div>";
+      html += "<div class=\"notice\">" + escapeHtml(config.filter.none.replace("{option}", board)) + "</div>";
     } else {
       html += "<div class=\"skillbar\"><div class=\"pills\">";
       types.forEach(function (type, typeIndex) {
@@ -616,7 +671,7 @@
   }
 
   function footerHtml() {
-    return "<footer class=\"site-foot\"><span>The Non-negotiables</span><span>Joshua Stafford-Haworth, JSHPhysics</span></footer>";
+    return "<footer class=\"site-foot\"><span>" + escapeHtml(config.title) + "</span><span>" + escapeHtml(config.credit) + "</span></footer>";
   }
 
   /* ===================================================================
@@ -684,7 +739,13 @@
     const correct = isCorrect(question.id);
     let html = "";
     html += "<div class=\"question" + (correct ? " correct" : "") + "\" data-qid=\"" + question.id + "\">";
-    html += "<div class=\"q-top\"><span class=\"qn\">" + (index + 1) + "</span><span class=\"level\">" + levelLabel(question) + "</span></div>";
+    html += "<div class=\"q-top\"><span class=\"qn\">" + (index + 1) + "</span><span class=\"level\">" + levelLabel(question) + "</span>";
+    if (question.boards) {
+      question.boards.forEach(function (tag) {
+        html += "<span class=\"level narrow\">" + escapeHtml(tag) + "</span>";
+      });
+    }
+    html += "</div>";
     html += "<p class=\"q-text\">" + rich(question.question) + "</p>";
     html += graphHtml(question.graph);
 
@@ -978,7 +1039,7 @@
      =================================================================== */
 
   function applySavedTheme() {
-    const saved = readStorage("nn-theme");
+    const saved = readStorage(STORAGE_PREFIX + "theme");
     if (saved) {
       document.documentElement.setAttribute("data-theme", saved);
     }
@@ -990,7 +1051,7 @@
     const effective = current || (systemDark ? "dark" : "light");
     const next = effective === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-    writeStorage("nn-theme", next);
+    writeStorage(STORAGE_PREFIX + "theme", next);
   }
 
   /* ===================================================================
@@ -1008,11 +1069,11 @@
     const route = currentRoute();
     const currentTopic = findTopic(route.topicId);
     const chosen = scope === "all" || !currentTopic ? topics : [currentTopic];
-    const boardLabel = board === "all" ? "All exam boards" : board;
+    const boardLabel = board === "all" ? config.filter.all : config.filter.label + ": " + board;
 
     let html = "";
-    html += "<div class=\"p-cover\"><h1>The Non-negotiables</h1>";
-    html += "<div class=\"p-sub\">" + (chosen.length > 1 ? "A-level physics calculations, complete set" : escapeHtml(chosen[0].title)) + "</div>";
+    html += "<div class=\"p-cover\"><h1>" + escapeHtml(config.title) + "</h1>";
+    html += "<div class=\"p-sub\">" + (chosen.length > 1 ? escapeHtml(config.printSubtitle) : escapeHtml(chosen[0].title)) + "</div>";
     html += "<div class=\"p-meta\">" + escapeHtml(boardLabel) + (answersMode === "none" ? ". Questions only." : ". Answers at the back.") + "</div>";
     html += "<div class=\"p-name\">Name <span></span></div></div>";
 
@@ -1080,7 +1141,7 @@
       html += "</section>";
     }
 
-    html += "<div class=\"p-foot\">The Non-negotiables, Joshua Stafford-Haworth, JSHPhysics</div>";
+    html += "<div class=\"p-foot\">" + escapeHtml(config.title) + ", " + escapeHtml(config.credit) + "</div>";
     document.getElementById("print-root").innerHTML = html;
   }
 
@@ -1116,6 +1177,11 @@
         "<code>" + escapeHtml(error.message) + "</code></div>";
       return;
     }
+
+    // The config may have changed the filter options, so draw the header picker again
+    const headerPicker = document.getElementById("board-seg");
+    headerPicker.setAttribute("aria-label", config.filter.label);
+    renderBoardPicker(headerPicker);
 
     renderRoute(false);
 
@@ -1170,7 +1236,7 @@
       seenTopics = new Set();
       saveProgress();
       saveCollapsed();
-      writeStorage("nn-seen", "[]");
+      writeStorage(STORAGE_PREFIX + "seen", "[]");
     },
   };
 

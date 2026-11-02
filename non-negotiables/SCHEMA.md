@@ -23,6 +23,12 @@ beyond two steps, no extended "explain" parts, no data analysis.
 
 - `id` — lowercase kebab-case, matches the file name (`data/kinematics.json`).
 - `order` — integer used to sort topics in the sidebar (gaps of 10 between topics).
+- `figure` — optional; the id of the animated drawing (from `js/figures.js`) shown on the
+  topic's card and cover. Defaults to the topic `id`. Available ids: measurements,
+  kinematics, forces, momentum-energy, materials, waves, quantum, electricity,
+  circular-shm, thermal-gases, gravitational-fields, electric-fields-capacitors,
+  magnetic-fields-induction, magnetism, nuclear-particles, astrophysics, and the
+  GCSE variants circuit, particle-model, half-life and motion-graph.
 
 ## Calculation type
 

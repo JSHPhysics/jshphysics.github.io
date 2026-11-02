@@ -1,0 +1,618 @@
+{
+  "id": "units-and-equations",
+  "title": "Units and equations",
+  "subtitle": "Converting units, standard form and rearranging the equations",
+  "order": 10,
+  "figure": "measurements",
+  "types": [
+    {
+      "id": "si-conversions",
+      "name": "Converting lengths, masses and times to SI units",
+      "equations": [
+        "1 m = 100 cm = 1000 mm",
+        "1 kg = 1000 g",
+        "1 tonne = 1000 kg",
+        "1 hour = 60 minutes = 3600 s",
+        "1 m² = 10 000 cm²",
+        "1 m³ = 1 000 000 cm³"
+      ],
+      "boards": ["Foundation", "Higher"],
+      "method": "Every equation on the sheet expects metres, kilograms and seconds, so convert before you substitute. Going from a small unit to a larger one (mm to m, g to kg) divides; going the other way multiplies. For areas and volumes, square or cube the length conversion: 1 m² is 100 × 100 cm² and 1 m³ is 100 × 100 × 100 cm³.",
+      "commonErrors": [
+        "Multiplying when you should divide (120 cm is 1.2 m, not 12 000 m)",
+        "Converting hours to seconds by multiplying by 60 only once",
+        "Dividing cm² by 100 instead of by 10 000",
+        "Dividing cm³ by 100 or 1000 instead of by 1 000 000"
+      ],
+      "worked": {
+        "id": "si-conversions-w",
+        "question": "A bolt is 35 mm long. Convert this length to metres.",
+        "steps": [
+          "Known: length = 35 mm. Unknown: length in m.",
+          "There are 1000 mm in 1 m, so divide by 1000.",
+          "35 / 1000 = 0.035",
+          "Length = 0.035 m"
+        ],
+        "answer": { "value": 0.035, "unit": "m" }
+      },
+      "practice": [
+        {
+          "id": "si-conversions-p1",
+          "question": "A desk is 120 cm wide. Convert this width to metres.",
+          "hint": "There are 100 cm in 1 m, so divide by 100.",
+          "walkthrough": [
+            "120 cm → m: divide by 100.",
+            "120 / 100 = 1.2",
+            "Width = 1.2 m"
+          ],
+          "answer": { "value": 1.2, "unit": "m" }
+        },
+        {
+          "id": "si-conversions-p2",
+          "question": "A packet of rice has a mass of 750 g. Convert this mass to kilograms.",
+          "hint": "There are 1000 g in 1 kg, so divide by 1000.",
+          "walkthrough": [
+            "750 g → kg: divide by 1000.",
+            "750 / 1000 = 0.75",
+            "Mass = 0.75 kg"
+          ],
+          "answer": { "value": 0.75, "unit": "kg" }
+        },
+        {
+          "id": "si-conversions-p3",
+          "question": "A lorry carries 3.2 tonnes of gravel. 1 tonne = 1000 kg. Convert this mass to kilograms.",
+          "hint": "A tonne is bigger than a kilogram, so the number of kilograms must be bigger: multiply by 1000.",
+          "walkthrough": [
+            "3.2 tonnes → kg: multiply by 1000.",
+            "3.2 × 1000 = 3200",
+            "Mass = 3200 kg"
+          ],
+          "answer": { "value": 3200, "unit": "kg" }
+        },
+        {
+          "id": "si-conversions-p4",
+          "question": "A film lasts 2.5 hours. Convert this time to seconds.",
+          "hint": "Change hours to minutes first (× 60), then minutes to seconds (× 60 again).",
+          "walkthrough": [
+            "2.5 hours → minutes: 2.5 × 60 = 150 minutes",
+            "150 minutes → seconds: 150 × 60 = 9000 s",
+            "Time = 9000 s"
+          ],
+          "answer": { "value": 9000, "unit": "s" }
+        },
+        {
+          "id": "si-conversions-p5",
+          "question": "The front cover of a book has an area of 450 cm². Convert this area to m².",
+          "hint": "1 m² is 100 cm × 100 cm = 10 000 cm², so divide by 10 000.",
+          "walkthrough": [
+            "1 m² = 100 × 100 cm² = 10 000 cm²",
+            "450 cm² → m²: divide by 10 000.",
+            "450 / 10 000 = 0.045",
+            "Area = 0.045 m²"
+          ],
+          "answer": { "value": 0.045, "unit": "m²" }
+        },
+        {
+          "id": "si-conversions-p6",
+          "question": "A kettle holds 1500 cm³ of water. Convert this volume to m³.",
+          "hint": "1 m³ is 100 cm × 100 cm × 100 cm = 1 000 000 cm³, so divide by 1 000 000.",
+          "walkthrough": [
+            "1 m³ = 100 × 100 × 100 cm³ = 1 000 000 cm³",
+            "1500 cm³ → m³: divide by 1 000 000.",
+            "1500 / 1 000 000 = 0.0015",
+            "Volume = 0.0015 m³"
+          ],
+          "answer": { "value": 0.0015, "unit": "m³" }
+        }
+      ]
+    },
+    {
+      "id": "prefixes",
+      "name": "Using prefixes: kilo, mega, giga, milli, micro, nano",
+      "equations": [
+        "1 kJ = 1000 J",
+        "1 MW = 1 000 000 W",
+        "1 GW = 1 000 000 000 W",
+        "1 mA = 0.001 A",
+        "1 μs = 0.000 001 s",
+        "1 nm = 0.000 000 001 m"
+      ],
+      "boards": ["Foundation", "Higher"],
+      "method": "A prefix in front of a unit is a multiplier. Kilo (k) means × 1000, mega (M) × 1 000 000 and giga (G) × 1 000 000 000. Milli (m) means ÷ 1000, micro (μ) ÷ 1 000 000 and nano (n) ÷ 1 000 000 000. Strip the prefix, apply the multiplier, and the value is in the base unit ready for the equation.",
+      "commonErrors": [
+        "Mixing up milli (÷ 1000) and mega (× 1 000 000)",
+        "Treating a small prefix as a multiply: 20 mA is 0.02 A, not 20 000 A",
+        "Losing a zero in micro or nano: count the zeros, three per step",
+        "Leaving the prefix in and getting an answer 1000 times too big or too small"
+      ],
+      "worked": {
+        "id": "prefixes-w",
+        "question": "A kettle transfers 540 kJ of energy to the water. Convert this energy to joules.",
+        "steps": [
+          "Known: energy = 540 kJ. Unknown: energy in J.",
+          "kilo means × 1000.",
+          "540 × 1000 = 540 000",
+          "Energy = 540 000 J"
+        ],
+        "answer": { "value": 540000, "unit": "J" }
+      },
+      "practice": [
+        {
+          "id": "prefixes-p1",
+          "question": "The current through an LED is 20 mA. Convert this current to amps.",
+          "hint": "milli means ÷ 1000.",
+          "walkthrough": [
+            "20 mA → A: divide by 1000.",
+            "20 / 1000 = 0.02",
+            "Current = 0.02 A"
+          ],
+          "answer": { "value": 0.02, "unit": "A" }
+        },
+        {
+          "id": "prefixes-p2",
+          "question": "A power station has an output of 1.8 GW. Convert this power to watts.",
+          "hint": "giga means × 1 000 000 000 (nine zeros).",
+          "walkthrough": [
+            "1.8 GW → W: multiply by 1 000 000 000.",
+            "1.8 × 1 000 000 000 = 1 800 000 000",
+            "Power = 1 800 000 000 W"
+          ],
+          "answer": { "value": 1800000000, "unit": "W" }
+        },
+        {
+          "id": "prefixes-p3",
+          "question": "A wind turbine generates 2.5 MW on a windy day. Convert this power to watts.",
+          "hint": "mega means × 1 000 000 (six zeros).",
+          "walkthrough": [
+            "2.5 MW → W: multiply by 1 000 000.",
+            "2.5 × 1 000 000 = 2 500 000",
+            "Power = 2 500 000 W"
+          ],
+          "answer": { "value": 2500000, "unit": "W" }
+        },
+        {
+          "id": "prefixes-p4",
+          "question": "A resistor in a radio is labelled 4.7 kΩ. Convert this resistance to ohms.",
+          "hint": "kilo means × 1000, whatever the unit.",
+          "walkthrough": [
+            "4.7 kΩ → Ω: multiply by 1000.",
+            "4.7 × 1000 = 4700",
+            "Resistance = 4700 Ω"
+          ],
+          "answer": { "value": 4700, "unit": "Ω" }
+        },
+        {
+          "id": "prefixes-p5",
+          "question": "A camera flash lasts 250 μs. Convert this time to seconds.",
+          "hint": "micro means ÷ 1 000 000 (six zeros).",
+          "walkthrough": [
+            "250 μs → s: divide by 1 000 000.",
+            "250 / 1 000 000 = 0.000 25",
+            "Time = 0.00025 s"
+          ],
+          "answer": { "value": 0.00025, "unit": "s" }
+        },
+        {
+          "id": "prefixes-p6",
+          "question": "Red light has a wavelength of 650 nm. Convert this wavelength to metres.",
+          "hint": "nano means ÷ 1 000 000 000 (nine zeros).",
+          "walkthrough": [
+            "650 nm → m: divide by 1 000 000 000.",
+            "650 / 1 000 000 000 = 0.000 000 65",
+            "Wavelength = 0.00000065 m (6.5 × 10⁻⁷ m)"
+          ],
+          "answer": { "value": 6.5e-7, "unit": "m" }
+        }
+      ]
+    },
+    {
+      "id": "compound-units",
+      "name": "Converting compound units: km/h, g/cm³ and kWh",
+      "equations": [
+        "1 km/h = 1000 m / 3600 s",
+        "1 g/cm³ = 1000 kg/m³",
+        "1 kWh = 3 600 000 J"
+      ],
+      "boards": ["Foundation", "Higher"],
+      "method": "A compound unit is two units combined, so convert each part in turn. For km/h to m/s, change the kilometres to metres (× 1000) and the hours to seconds (÷ 3600). For g/cm³ to kg/m³, change grams to kilograms (÷ 1000) and cm³ to m³ (÷ 1 000 000), which comes out as × 1000 overall. A kilowatt-hour is 1000 W for 3600 s, so 1 kWh = 3 600 000 J.",
+      "commonErrors": [
+        "Converting the distance but forgetting the time (or the other way round)",
+        "Dividing by 3600 when going from m/s to km/h instead of multiplying",
+        "Using 1000 cm³ in a m³ instead of 1 000 000",
+        "Taking 1 kWh to be 1000 J or 3600 J"
+      ],
+      "worked": {
+        "id": "compound-units-w",
+        "question": "A car travels at 90 km/h. Convert this speed to m/s.",
+        "steps": [
+          "Known: speed = 90 km/h. Unknown: speed in m/s.",
+          "90 km in 1 hour is 90 × 1000 = 90 000 m in 3600 s.",
+          "speed = 90 000 / 3600 = 25",
+          "Speed = 25 m/s"
+        ],
+        "answer": { "value": 25, "unit": "m/s" }
+      },
+      "practice": [
+        {
+          "id": "compound-units-p1",
+          "question": "A train travels at 108 km/h. Convert this speed to m/s.",
+          "hint": "Change km to m (× 1000) and hours to seconds (÷ 3600).",
+          "walkthrough": [
+            "108 km = 108 × 1000 = 108 000 m, in 1 hour = 3600 s.",
+            "speed = 108 000 / 3600 = 30",
+            "Speed = 30 m/s"
+          ],
+          "answer": { "value": 30, "unit": "m/s" }
+        },
+        {
+          "id": "compound-units-p2",
+          "question": "A television uses 1.5 kWh of energy in a day. 1 kWh = 3 600 000 J. Convert this energy to joules.",
+          "hint": "Multiply the number of kWh by 3 600 000.",
+          "walkthrough": [
+            "1.5 kWh → J: multiply by 3 600 000.",
+            "1.5 × 3 600 000 = 5 400 000",
+            "Energy = 5 400 000 J"
+          ],
+          "answer": { "value": 5400000, "unit": "J" }
+        },
+        {
+          "id": "compound-units-p3",
+          "question": "A cyclist rides at 12 m/s. Convert this speed to km/h.",
+          "hint": "Work out how many metres are covered in one hour (3600 s), then change to km.",
+          "walkthrough": [
+            "In 1 hour the cyclist covers 12 × 3600 = 43 200 m.",
+            "43 200 m = 43 200 / 1000 = 43.2 km",
+            "Speed = 43.2 km/h"
+          ],
+          "answer": { "value": 43.2, "unit": "km/h" }
+        },
+        {
+          "id": "compound-units-p4",
+          "question": "Aluminium has a density of 2.7 g/cm³. Convert this density to kg/m³.",
+          "hint": "Change the grams to kilograms (÷ 1000) and the cm³ to m³ (÷ 1 000 000); a division in the bottom turns into a multiplication.",
+          "walkthrough": [
+            "2.7 g = 2.7 / 1000 = 0.0027 kg",
+            "1 cm³ = 1 / 1 000 000 m³ = 0.000 001 m³",
+            "density = 0.0027 / 0.000 001 = 2700",
+            "Density = 2700 kg/m³"
+          ],
+          "answer": { "value": 2700, "unit": "kg/m³" }
+        },
+        {
+          "id": "compound-units-p5",
+          "question": "A snail moves 15 cm in one minute. Calculate its speed in m/s.",
+          "hint": "Change 15 cm to metres and 1 minute to seconds before dividing.",
+          "walkthrough": [
+            "15 cm = 15 / 100 = 0.15 m",
+            "1 minute = 60 s",
+            "speed = 0.15 / 60 = 0.0025",
+            "Speed = 0.0025 m/s"
+          ],
+          "answer": { "value": 0.0025, "unit": "m/s" }
+        },
+        {
+          "id": "compound-units-p6",
+          "question": "A bath tap delivers 12 litres of water per minute. 1 litre = 1000 cm³. Calculate the flow rate in m³/s.",
+          "hint": "Change 12 litres to cm³, then to m³ (÷ 1 000 000), then divide by 60 s.",
+          "walkthrough": [
+            "12 litres = 12 × 1000 = 12 000 cm³",
+            "12 000 cm³ = 12 000 / 1 000 000 = 0.012 m³",
+            "flow rate = 0.012 / 60 = 0.0002",
+            "Flow rate = 0.0002 m³/s"
+          ],
+          "answer": { "value": 0.0002, "unit": "m³/s" }
+        }
+      ]
+    },
+    {
+      "id": "standard-form",
+      "name": "Standard form for very large and very small values",
+      "equations": [
+        "a × 10ⁿ, where 1 ≤ a < 10",
+        "× 10ⁿ moves the decimal point n places to the right",
+        "× 10⁻ⁿ moves the decimal point n places to the left"
+      ],
+      "boards": ["Higher"],
+      "method": "Standard form writes a number as a × 10ⁿ with a between 1 and 10. A positive power moves the decimal point to the right (a big number); a negative power moves it to the left (a small number). To write an ordinary number in standard form, count how many places the decimal point moves to leave one non-zero digit in front of it. Where a question asks for n, give the power alone; otherwise give the ordinary number.",
+      "commonErrors": [
+        "Counting the zeros instead of the places the decimal point moves (2 500 000 is 2.5 × 10⁶, not 10⁵)",
+        "Dropping the minus sign on the power for a small number",
+        "Writing 25 × 10⁵ instead of 2.5 × 10⁶ (the front number must be less than 10)",
+        "Adding powers when you should be multiplying the front numbers too"
+      ],
+      "worked": {
+        "id": "standard-form-w",
+        "question": "A radio station broadcasts at a frequency of 9.8 × 10⁷ Hz. Write this frequency as an ordinary number.",
+        "steps": [
+          "Known: frequency = 9.8 × 10⁷ Hz. Unknown: the ordinary number.",
+          "The power is +7, so move the decimal point 7 places to the right.",
+          "9.8 → 98 000 000 (one place uses the 8, then six zeros)",
+          "Frequency = 98 000 000 Hz"
+        ],
+        "answer": { "value": 98000000, "unit": "Hz" }
+      },
+      "practice": [
+        {
+          "id": "standard-form-p1",
+          "question": "A microwave oven uses waves of wavelength 1.2 × 10⁻² m. Write this wavelength as an ordinary number.",
+          "hint": "A negative power moves the decimal point to the left: 2 places here.",
+          "walkthrough": [
+            "Power is −2, so move the decimal point 2 places to the left.",
+            "1.2 → 0.012",
+            "Wavelength = 0.012 m"
+          ],
+          "answer": { "value": 0.012, "unit": "m" }
+        },
+        {
+          "id": "standard-form-p2",
+          "question": "The radius of the Earth is 6.4 × 10⁶ m. Write this distance as an ordinary number.",
+          "hint": "A positive power moves the decimal point to the right: 6 places here.",
+          "walkthrough": [
+            "Power is +6, so move the decimal point 6 places to the right.",
+            "6.4 → 6 400 000 (one place uses the 4, then five zeros)",
+            "Radius = 6 400 000 m"
+          ],
+          "answer": { "value": 6400000, "unit": "m" }
+        },
+        {
+          "id": "standard-form-p3",
+          "question": "An ultrasound scanner uses a frequency of 2 500 000 Hz. In standard form this is 2.5 × 10ⁿ Hz. State the value of n.",
+          "hint": "Count how many places the decimal point moves from the end of 2 500 000 to sit after the 2.",
+          "walkthrough": [
+            "Put the decimal point after the first digit: 2.5",
+            "From 2 500 000. to 2.5 the point moves 6 places to the left.",
+            "2 500 000 = 2.5 × 10⁶",
+            "n = 6"
+          ],
+          "answer": { "value": 6, "unit": "" }
+        },
+        {
+          "id": "standard-form-p4",
+          "question": "Blue light has a wavelength of 0.000 000 45 m. In standard form this is 4.5 × 10ⁿ m. State the value of n.",
+          "hint": "The number is smaller than 1, so n is negative; count the places the point moves to the right to sit after the 4.",
+          "walkthrough": [
+            "Put the decimal point after the first non-zero digit: 4.5",
+            "From 0.000 000 45 to 4.5 the point moves 7 places to the right.",
+            "A small number needs a negative power: 4.5 × 10⁻⁷",
+            "n = −7"
+          ],
+          "answer": { "value": -7, "unit": "" }
+        },
+        {
+          "id": "standard-form-p5",
+          "question": "A laser pulse lasts 2 × 10⁻⁶ s. Light travels at 3 × 10⁸ m/s. Use distance = speed × time to calculate how far the pulse travels in that time. Give your answer as an ordinary number.",
+          "hint": "Multiply the front numbers (3 × 2) and add the powers (8 + (−6)), then write the result out in full.",
+          "walkthrough": [
+            "distance = speed × time = 3 × 10⁸ × 2 × 10⁻⁶",
+            "Front numbers: 3 × 2 = 6. Powers: 8 + (−6) = 2.",
+            "distance = 6 × 10² = 600",
+            "Distance = 600 m"
+          ],
+          "answer": { "value": 600, "unit": "m" }
+        },
+        {
+          "id": "standard-form-p6",
+          "question": "Each electron carries a charge of 1.6 × 10⁻¹⁹ C. In one second 5 × 10¹⁹ electrons pass a point in a wire. Calculate the total charge that passes. Give your answer as an ordinary number.",
+          "hint": "Total charge = number of electrons × charge on one electron; multiply the front numbers and add the powers.",
+          "walkthrough": [
+            "total charge = 5 × 10¹⁹ × 1.6 × 10⁻¹⁹",
+            "Front numbers: 5 × 1.6 = 8. Powers: 19 + (−19) = 0.",
+            "total charge = 8 × 10⁰ = 8",
+            "Charge = 8 C"
+          ],
+          "answer": { "value": 8, "unit": "C" }
+        }
+      ]
+    },
+    {
+      "id": "rearranging",
+      "name": "Rearranging an equation to find the unknown",
+      "equations": [
+        "P = I × V",
+        "W = m × g",
+        "ρ = m / V",
+        "GPE = m × g × h",
+        "KE = ½ × m × v²",
+        "v² − u² = 2 × a × x",
+        "E = ½ × k × x²"
+      ],
+      "boards": ["Foundation", "Higher"],
+      "method": "Write the equation, list what you know, and circle the one quantity you do not. Undo whatever is being done to that quantity: a quantity that is multiplied is found by dividing, a quantity that is divided is found by multiplying, and a quantity that is squared is found by taking the square root last. Substitute only after rearranging, or substitute first and then solve, but keep the units with the numbers.",
+      "commonErrors": [
+        "Dividing the wrong way round (I = V / P instead of I = P / V)",
+        "Forgetting to take the square root at the end when the unknown is squared",
+        "Taking the square root before dividing out the other quantities",
+        "Rearranging ρ = m / V to V = ρ / m instead of V = m / ρ"
+      ],
+      "worked": {
+        "id": "rearranging-w",
+        "question": "A kettle has a power of 2300 W and is connected to the 230 V mains. Use P = I × V to calculate the current in the kettle.",
+        "steps": [
+          "Known: P = 2300 W, V = 230 V. Unknown: I.",
+          "P = I × V → I = P / V",
+          "I = 2300 / 230",
+          "I = 10 A"
+        ],
+        "answer": { "value": 10, "unit": "A" }
+      },
+      "practice": [
+        {
+          "id": "rearranging-p1",
+          "question": "A sack of potatoes has a weight of 450 N. Use W = m × g to calculate its mass.",
+          "hint": "m is multiplied by g, so divide the weight by g = 10 N/kg.",
+          "walkthrough": [
+            "W = 450 N, g = 10 N/kg, find m.",
+            "W = m × g → m = W / g",
+            "m = 450 / 10",
+            "m = 45 kg"
+          ],
+          "answer": { "value": 45, "unit": "kg" }
+        },
+        {
+          "id": "rearranging-p2",
+          "question": "Glass has a density of 2500 kg/m³. A glass block has a mass of 5 kg. Use ρ = m / V to calculate its volume.",
+          "hint": "V is on the bottom of the fraction: swap V and ρ so that V = m / ρ.",
+          "walkthrough": [
+            "ρ = 2500 kg/m³, m = 5 kg, find V.",
+            "ρ = m / V → V = m / ρ",
+            "V = 5 / 2500",
+            "V = 0.002 m³"
+          ],
+          "answer": { "value": 0.002, "unit": "m³" }
+        },
+        {
+          "id": "rearranging-p3",
+          "question": "A climber of mass 60 kg gains 3000 J of gravitational potential energy on a climbing wall. Use GPE = m × g × h to calculate the height climbed.",
+          "hint": "h is multiplied by both m and g, so divide the energy by m × g.",
+          "walkthrough": [
+            "GPE = 3000 J, m = 60 kg, g = 10 N/kg, find h.",
+            "GPE = m × g × h → h = GPE / (m × g)",
+            "h = 3000 / (60 × 10) = 3000 / 600",
+            "h = 5 m"
+          ],
+          "answer": { "value": 5, "unit": "m" }
+        },
+        {
+          "id": "rearranging-p4",
+          "question": "A cyclist and bike of total mass 50 kg have 3600 J of kinetic energy. Use KE = ½ × m × v² to calculate the speed of the cyclist.",
+          "hint": "First find v² by doubling the energy and dividing by the mass; take the square root last.",
+          "walkthrough": [
+            "KE = 3600 J, m = 50 kg, find v.",
+            "KE = ½ × m × v² → v² = 2 × KE / m",
+            "v² = 2 × 3600 / 50 = 7200 / 50 = 144",
+            "v = √144 = 12 m/s"
+          ],
+          "answer": { "value": 12, "unit": "m/s" },
+          "boards": ["Higher"]
+        },
+        {
+          "id": "rearranging-p5",
+          "question": "A train accelerates at 2 m/s² over a distance of 200 m and reaches a velocity of 30 m/s. Use v² − u² = 2 × a × x to calculate its initial velocity.",
+          "hint": "Find u² first: u² = v² − 2 × a × x, then take the square root.",
+          "walkthrough": [
+            "v = 30 m/s, a = 2 m/s², x = 200 m, find u.",
+            "v² − u² = 2 × a × x → u² = v² − 2 × a × x",
+            "u² = 30² − 2 × 2 × 200 = 900 − 800 = 100",
+            "u = √100 = 10 m/s"
+          ],
+          "answer": { "value": 10, "unit": "m/s" },
+          "boards": ["Higher"]
+        },
+        {
+          "id": "rearranging-p6",
+          "question": "A spring with a spring constant of 50 N/m stores 1 J of elastic potential energy. Use E = ½ × k × x² to calculate its extension.",
+          "hint": "Find x² by doubling the energy and dividing by k, then take the square root.",
+          "walkthrough": [
+            "E = 1 J, k = 50 N/m, find x.",
+            "E = ½ × k × x² → x² = 2 × E / k",
+            "x² = 2 × 1 / 50 = 0.04",
+            "x = √0.04 = 0.2 m"
+          ],
+          "answer": { "value": 0.2, "unit": "m" },
+          "boards": ["Higher"]
+        }
+      ]
+    },
+    {
+      "id": "percentages-ratios",
+      "name": "Percentages and ratios in physics",
+      "equations": [
+        "efficiency = useful energy output / total energy input",
+        "percentage = (part / whole) × 100",
+        "percentage change = (change / original value) × 100"
+      ],
+      "boards": ["Foundation", "Higher"],
+      "method": "A percentage is a fraction of the whole multiplied by 100. Efficiency is the useful output divided by the total input; multiply by 100 to give it as a percentage. For a percentage change, divide the change by the original value, not the new one. A ratio of two quantities is one divided by the other and has no unit.",
+      "commonErrors": [
+        "Dividing the input by the output and getting an efficiency over 100%",
+        "Dividing a percentage change by the new value instead of the original",
+        "Forgetting to multiply by 100 when a percentage is asked for",
+        "Using the wasted energy as the useful output"
+      ],
+      "worked": {
+        "id": "percentages-ratios-w",
+        "question": "An electric motor is supplied with 500 J of energy and does 350 J of useful work lifting a load. Calculate the efficiency of the motor as a percentage.",
+        "steps": [
+          "Known: useful output = 350 J, total input = 500 J. Unknown: efficiency.",
+          "efficiency = useful energy output / total energy input",
+          "efficiency = 350 / 500 = 0.7",
+          "As a percentage: 0.7 × 100 = 70%"
+        ],
+        "answer": { "value": 70, "unit": "%" }
+      },
+      "practice": [
+        {
+          "id": "percentages-ratios-p1",
+          "question": "A kettle is supplied with 360 000 J of energy and transfers 324 000 J to the water. Calculate the efficiency of the kettle as a percentage.",
+          "hint": "Useful output divided by total input, then × 100.",
+          "walkthrough": [
+            "efficiency = useful energy output / total energy input",
+            "efficiency = 324 000 / 360 000 = 0.9",
+            "0.9 × 100 = 90%"
+          ],
+          "answer": { "value": 90, "unit": "%" }
+        },
+        {
+          "id": "percentages-ratios-p2",
+          "question": "A transformer has 400 turns on its primary coil and 50 turns on its secondary coil. Calculate the ratio of primary turns to secondary turns.",
+          "hint": "Divide the primary turns by the secondary turns; a ratio has no unit.",
+          "walkthrough": [
+            "ratio = primary turns / secondary turns",
+            "ratio = 400 / 50",
+            "ratio = 8"
+          ],
+          "answer": { "value": 8, "unit": "" }
+        },
+        {
+          "id": "percentages-ratios-p3",
+          "question": "A car's speed increases from 20 m/s to 25 m/s. Calculate the percentage increase in speed.",
+          "hint": "Find the change first, then divide by the original speed (20 m/s), not the new one.",
+          "walkthrough": [
+            "change = 25 − 20 = 5 m/s",
+            "percentage change = (change / original) × 100",
+            "percentage change = (5 / 20) × 100",
+            "Increase = 25%"
+          ],
+          "answer": { "value": 25, "unit": "%" }
+        },
+        {
+          "id": "percentages-ratios-p4",
+          "question": "A litre of petrol stores 30 MJ of chemical energy. A car engine transfers 28% of this usefully. Calculate the useful energy transferred, in joules.",
+          "hint": "Change 30 MJ to joules first, then find 28% by multiplying by 0.28.",
+          "walkthrough": [
+            "30 MJ = 30 × 1 000 000 = 30 000 000 J",
+            "28% = 28 / 100 = 0.28",
+            "useful energy = 0.28 × 30 000 000",
+            "Useful energy = 8 400 000 J"
+          ],
+          "answer": { "value": 8400000, "unit": "J" }
+        },
+        {
+          "id": "percentages-ratios-p5",
+          "question": "An LED lamp has an input power of 12 W. It wastes 2.4 W as heat. Calculate the efficiency of the lamp as a percentage.",
+          "hint": "Find the useful power first by subtracting the wasted power from the input.",
+          "walkthrough": [
+            "useful power = 12 − 2.4 = 9.6 W",
+            "efficiency = useful power output / total power input",
+            "efficiency = 9.6 / 12 = 0.8",
+            "0.8 × 100 = 80%"
+          ],
+          "answer": { "value": 80, "unit": "%" }
+        },
+        {
+          "id": "percentages-ratios-p6",
+          "question": "A 0.5 kg ball is dropped from a height of 2.0 m and bounces back up to a height of 1.4 m. Calculate the percentage of its gravitational potential energy that is lost in the bounce.",
+          "hint": "Work out the GPE at each height with GPE = m × g × h, find the energy lost, then divide by the original GPE and × 100.",
+          "walkthrough": [
+            "GPE before = 0.5 × 10 × 2.0 = 10 J",
+            "GPE after = 0.5 × 10 × 1.4 = 7 J",
+            "energy lost = 10 − 7 = 3 J",
+            "percentage lost = (3 / 10) × 100",
+            "Percentage lost = 30%"
+          ],
+          "answer": { "value": 30, "unit": "%" }
+        }
+      ]
+    }
+  ]
+}

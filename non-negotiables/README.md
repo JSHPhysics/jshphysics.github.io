@@ -32,6 +32,7 @@ js/richmath.js         plain-text physics notation → KaTeX
 js/figures.js          one animated technical drawing per topic
 js/graphs.js           exam-style graphs from a question's "graph" spec
 vendor/                KaTeX and the fonts (no CDN requests at all)
+data/config.json       site title, lede and filter options (optional)
 data/manifest.json     list of topic files (generated — do not edit by hand)
 data/<topic>.json      one file per topic; see SCHEMA.md for the format
 tools/validate.py      checks a topic file against the schema

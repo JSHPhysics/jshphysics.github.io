@@ -133,6 +133,7 @@ h1, h2, h3, h4 {
 p { margin: 0; }
 
 [hidden] { display: none !important; }
+.nowrap { white-space: nowrap; }
 
 a { color: inherit; }
 
@@ -945,6 +946,8 @@ details.errors li::marker { color: var(--accent); }
   padding: 1px 8px;
 }
 
+.q-top .level.narrow { color: var(--accent-ink); border-color: var(--accent); }
+
 .q-text {
   max-width: var(--measure);
   font-size: 1.04rem;
@@ -1298,17 +1301,22 @@ details.errors li::marker { color: var(--accent); }
 .graph .ylabel {
   grid-row: 1;
   grid-column: 1;
-  display: grid;
-  place-items: center;
+  position: relative;
   width: 2em;
+  min-width: 0;
   height: 100%;
   font-size: 0.95rem;
   color: var(--ink-2);
 }
 
+/* Taken out of the flow, so a long label cannot widen its column and
+   push into the tick numbers; it is rotated about its own centre */
 .graph .ylabel > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: block;
-  transform: rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
   white-space: nowrap;
 }
 

@@ -1,0 +1,22 @@
+{
+  "title": "The GCSE Non-negotiables",
+  "titleWords": [
+    "The GCSE",
+    "Non-",
+    "negotiables"
+  ],
+  "lede": "Every calculation in Edexcel GCSE Physics, the way it turns up in the paper. Each one comes with a worked example and six to practise, checked as you go.",
+  "credit": "Joshua Stafford-Haworth, JSHPhysics",
+  "printSubtitle": "Edexcel GCSE Physics calculations, complete set",
+  "filter": {
+    "label": "Tier",
+    "prompt": "Show the questions for my tier",
+    "all": null,
+    "options": [
+      "Foundation",
+      "Higher"
+    ],
+    "defaultOption": "Higher",
+    "none": "Nothing in this topic is on the {option} tier."
+  }
+}

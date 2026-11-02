@@ -1,0 +1,1138 @@
+{
+  "id": "particle-model",
+  "title": "Particle model and thermal energy",
+  "subtitle": "Density, specific heat capacity, latent heat, gas pressure and temperature",
+  "order": 90,
+  "figure": "particle-model",
+  "types": [
+    {
+      "id": "density",
+      "name": "Density",
+      "equations": [
+        "ρ = m / V"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Density is mass divided by volume. Decide which unit the question wants: grams with cm³ gives g/cm³, kilograms with m³ gives kg/m³. If you are given the sides of a cuboid, multiply length × width × height to get the volume first, then divide the mass by it.",
+      "commonErrors": [
+        "Dividing volume by mass instead of mass by volume",
+        "Mixing grams with m³, or kilograms with cm³, in the same calculation",
+        "Forgetting that 1 m³ is 1 000 000 cm³ (not 100 cm³) when converting"
+      ],
+      "worked": {
+        "id": "density-w",
+        "question": "A block of aluminium has a mass of 540 g and a volume of 200 cm³. Calculate the density of aluminium in g/cm³.",
+        "steps": [
+          "Known: m = 540 g, V = 200 cm³. Unknown: ρ.",
+          "ρ = m / V",
+          "ρ = 540 / 200",
+          "ρ = 2.7 g/cm³"
+        ],
+        "answer": {
+          "value": 2.7,
+          "unit": "g/cm³"
+        }
+      },
+      "practice": [
+        {
+          "id": "density-p1",
+          "question": "A pebble has a mass of 150 g. When it is lowered into a measuring cylinder the water level rises by 60 cm³. Calculate the density of the pebble in g/cm³.",
+          "hint": "The rise in water level is the volume of the pebble; use ρ = m / V.",
+          "walkthrough": [
+            "m = 150 g, V = 60 cm³, find ρ.",
+            "ρ = m / V = 150 / 60",
+            "ρ = 2.5 g/cm³"
+          ],
+          "answer": {
+            "value": 2.5,
+            "unit": "g/cm³"
+          }
+        },
+        {
+          "id": "density-p2",
+          "question": "A lorry delivers 3 m³ of concrete with a total mass of 7200 kg. Calculate the density of the concrete in kg/m³.",
+          "hint": "Divide the mass in kg by the volume in m³.",
+          "walkthrough": [
+            "m = 7200 kg, V = 3 m³, find ρ.",
+            "ρ = m / V = 7200 / 3",
+            "ρ = 2400 kg/m³"
+          ],
+          "answer": {
+            "value": 2400,
+            "unit": "kg/m³"
+          }
+        },
+        {
+          "id": "density-p3",
+          "question": "Olive oil has a density of 0.92 g/cm³. Calculate the mass of the oil in a full 500 cm³ bottle. Give your answer in g.",
+          "hint": "Rearrange ρ = m / V to m = ρ × V.",
+          "walkthrough": [
+            "ρ = 0.92 g/cm³, V = 500 cm³, find m.",
+            "ρ = m / V → m = ρ × V",
+            "m = 0.92 × 500",
+            "m = 460 g"
+          ],
+          "answer": {
+            "value": 460,
+            "unit": "g"
+          }
+        },
+        {
+          "id": "density-p4",
+          "question": "The density of air is 1.2 kg/m³. The air in a small office has a mass of 60 kg. Calculate the volume of the office in m³.",
+          "hint": "Rearrange ρ = m / V to V = m / ρ.",
+          "walkthrough": [
+            "ρ = 1.2 kg/m³, m = 60 kg, find V.",
+            "ρ = m / V → V = m / ρ",
+            "V = 60 / 1.2",
+            "V = 50 m³"
+          ],
+          "answer": {
+            "value": 50,
+            "unit": "m³"
+          }
+        },
+        {
+          "id": "density-p5",
+          "question": "A house brick measures 20 cm by 10 cm by 6 cm and has a mass of 2.16 kg. Calculate the density of the brick in g/cm³.",
+          "hint": "Find the volume from length × width × height, change the mass to grams, then divide.",
+          "walkthrough": [
+            "V = 20 × 10 × 6 = 1200 cm³",
+            "m = 2.16 kg = 2160 g",
+            "ρ = m / V = 2160 / 1200",
+            "ρ = 1.8 g/cm³"
+          ],
+          "answer": {
+            "value": 1.8,
+            "unit": "g/cm³"
+          }
+        },
+        {
+          "id": "density-p6",
+          "question": "A steel bolt has a volume of 25 cm³ and a mass of 0.195 kg. Calculate the density of steel in kg/m³.",
+          "hint": "Change 25 cm³ to m³ by dividing by 1 000 000, then use ρ = m / V.",
+          "walkthrough": [
+            "V = 25 cm³ = 25 / 1 000 000 = 0.000025 m³",
+            "m = 0.195 kg",
+            "ρ = m / V = 0.195 / 0.000025",
+            "ρ = 7800 kg/m³"
+          ],
+          "answer": {
+            "value": 7800,
+            "unit": "kg/m³"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shc",
+      "name": "Specific heat capacity",
+      "equations": [
+        "ΔQ = m × c × Δθ"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Thermal energy transferred equals mass × specific heat capacity × change in temperature. Work out the temperature change Δθ first (final minus start), make sure the mass is in kg, then multiply. To find c, m or Δθ, divide ΔQ by the other two.",
+      "commonErrors": [
+        "Using the final temperature instead of the temperature change",
+        "Leaving the mass in grams, which makes the answer 1000 times too big",
+        "Forgetting to change kJ to J before dividing"
+      ],
+      "worked": {
+        "id": "shc-w",
+        "question": "A pan holds 2 kg of water at 20 °C. Calculate the energy needed to heat the water to 70 °C. Specific heat capacity of water = 4200 J/kg °C.",
+        "steps": [
+          "Known: m = 2 kg, c = 4200 J/kg °C, Δθ = 70 − 20 = 50 °C. Unknown: ΔQ.",
+          "ΔQ = m × c × Δθ",
+          "ΔQ = 2 × 4200 × 50",
+          "ΔQ = 420 000 J"
+        ],
+        "answer": {
+          "value": 420000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "shc-p1",
+          "question": "An empty aluminium saucepan of mass 1.5 kg is heated on a hob from 15 °C to 115 °C. Calculate the energy transferred to the pan. Specific heat capacity of aluminium = 900 J/kg °C.",
+          "hint": "Find Δθ = 115 − 15 first, then use ΔQ = m × c × Δθ.",
+          "walkthrough": [
+            "m = 1.5 kg, c = 900 J/kg °C, Δθ = 115 − 15 = 100 °C",
+            "ΔQ = m × c × Δθ = 1.5 × 900 × 100",
+            "ΔQ = 135 000 J"
+          ],
+          "answer": {
+            "value": 135000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "shc-p2",
+          "question": "A 0.5 kg copper block in a school experiment warms up by 40 °C. Calculate the energy transferred to the block. Specific heat capacity of copper = 390 J/kg °C.",
+          "hint": "The temperature change is given directly; multiply m × c × Δθ.",
+          "walkthrough": [
+            "m = 0.5 kg, c = 390 J/kg °C, Δθ = 40 °C",
+            "ΔQ = m × c × Δθ = 0.5 × 390 × 40",
+            "ΔQ = 7800 J"
+          ],
+          "answer": {
+            "value": 7800,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "shc-p3",
+          "question": "A 2 kg iron weight in a gym is left in the sun and gains 50 000 J of energy. Its temperature rises by 50 °C. Calculate the specific heat capacity of iron.",
+          "hint": "Rearrange to c = ΔQ / (m × Δθ).",
+          "walkthrough": [
+            "ΔQ = 50 000 J, m = 2 kg, Δθ = 50 °C, find c.",
+            "ΔQ = m × c × Δθ → c = ΔQ / (m × Δθ)",
+            "c = 50 000 / (2 × 50) = 50 000 / 100",
+            "c = 500 J/kg °C"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "J/kg °C"
+          }
+        },
+        {
+          "id": "shc-p4",
+          "question": "A mug contains 250 g of water. A microwave transfers 42 000 J of energy to the water. Calculate the rise in temperature of the water. Specific heat capacity of water = 4200 J/kg °C.",
+          "hint": "Change 250 g to kg, then rearrange to Δθ = ΔQ / (m × c).",
+          "walkthrough": [
+            "m = 250 g = 0.25 kg, ΔQ = 42 000 J, c = 4200 J/kg °C, find Δθ.",
+            "Δθ = ΔQ / (m × c)",
+            "Δθ = 42 000 / (0.25 × 4200) = 42 000 / 1050",
+            "Δθ = 40 °C"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "shc-p5",
+          "question": "A 2 kW kettle contains 1 kg of water. It is switched on for 105 s. Calculate the rise in temperature of the water, assuming all the energy goes into the water. Specific heat capacity of water = 4200 J/kg °C.",
+          "hint": "First find the energy from E = P × t (2 kW = 2000 W), then use Δθ = ΔQ / (m × c).",
+          "walkthrough": [
+            "Energy supplied: E = P × t = 2000 × 105 = 210 000 J",
+            "Δθ = ΔQ / (m × c)",
+            "Δθ = 210 000 / (1 × 4200)",
+            "Δθ = 50 °C"
+          ],
+          "answer": {
+            "value": 50,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "shc-p6",
+          "question": "A 3 kW immersion heater warms 60 kg of water in a hot-water tank from 15 °C to 55 °C. Calculate the time this takes in seconds, assuming no energy is wasted. Specific heat capacity of water = 4200 J/kg °C.",
+          "hint": "Find the energy needed with ΔQ = m × c × Δθ, then use t = E / P with P = 3000 W.",
+          "walkthrough": [
+            "Δθ = 55 − 15 = 40 °C",
+            "ΔQ = m × c × Δθ = 60 × 4200 × 40 = 10 080 000 J",
+            "t = E / P = 10 080 000 / 3000",
+            "t = 3360 s"
+          ],
+          "answer": {
+            "value": 3360,
+            "unit": "s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "latent",
+      "name": "Specific latent heat",
+      "equations": [
+        "Q = m × L"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "The energy to change the state of a substance, with no change in temperature, is mass × specific latent heat. Use the latent heat of fusion for melting or freezing and the latent heat of vaporisation for boiling or condensing. Keep the mass in kg; to find m or L, divide Q by the other one.",
+      "commonErrors": [
+        "Using the latent heat of fusion for boiling, or vaporisation for melting",
+        "Including a temperature change: there is none while the state is changing",
+        "Leaving the mass in grams"
+      ],
+      "worked": {
+        "id": "latent-w",
+        "question": "Calculate the energy needed to melt 0.5 kg of ice at 0 °C. Specific latent heat of fusion of ice = 334 000 J/kg.",
+        "steps": [
+          "Known: m = 0.5 kg, L = 334 000 J/kg. Unknown: Q.",
+          "Q = m × L",
+          "Q = 0.5 × 334 000",
+          "Q = 167 000 J"
+        ],
+        "answer": {
+          "value": 167000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "latent-p1",
+          "question": "A pan of 2 kg of water at 100 °C is left boiling until it has all turned to steam. Calculate the energy transferred to the water. Specific latent heat of vaporisation of water = 2 260 000 J/kg.",
+          "hint": "The water is boiling, so use the latent heat of vaporisation in Q = m × L.",
+          "walkthrough": [
+            "m = 2 kg, L = 2 260 000 J/kg, find Q.",
+            "Q = m × L = 2 × 2 260 000",
+            "Q = 4 520 000 J"
+          ],
+          "answer": {
+            "value": 4520000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "latent-p2",
+          "question": "A freezer turns 1.5 kg of water at 0 °C into ice at 0 °C. Calculate the energy the freezer removes from the water. Specific latent heat of fusion of ice = 334 000 J/kg.",
+          "hint": "Freezing releases the same energy as melting would take: Q = m × L with the latent heat of fusion.",
+          "walkthrough": [
+            "m = 1.5 kg, L = 334 000 J/kg, find Q.",
+            "Q = m × L = 1.5 × 334 000",
+            "Q = 501 000 J"
+          ],
+          "answer": {
+            "value": 501000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "latent-p3",
+          "question": "A steam iron transfers 1 130 000 J of energy to boil water into steam. Calculate the mass of water boiled. Specific latent heat of vaporisation of water = 2 260 000 J/kg.",
+          "hint": "Rearrange Q = m × L to m = Q / L.",
+          "walkthrough": [
+            "Q = 1 130 000 J, L = 2 260 000 J/kg, find m.",
+            "Q = m × L → m = Q / L",
+            "m = 1 130 000 / 2 260 000",
+            "m = 0.5 kg"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "latent-p4",
+          "question": "It takes 52 500 J of energy to melt 300 g of candle wax at its melting point. Calculate the specific latent heat of fusion of the wax.",
+          "hint": "Change 300 g to kg, then rearrange to L = Q / m.",
+          "walkthrough": [
+            "Q = 52 500 J, m = 300 g = 0.3 kg, find L.",
+            "Q = m × L → L = Q / m",
+            "L = 52 500 / 0.3",
+            "L = 175 000 J/kg"
+          ],
+          "answer": {
+            "value": 175000,
+            "unit": "J/kg"
+          }
+        },
+        {
+          "id": "latent-p5",
+          "question": "A 1.5 kW kettle is left boiling for 4 minutes. Calculate the mass of water that boils away in this time, assuming all the energy goes into making steam. Specific latent heat of vaporisation of water = 2 260 000 J/kg.",
+          "hint": "First find the energy from E = P × t with the time in seconds, then use m = Q / L.",
+          "walkthrough": [
+            "t = 4 × 60 = 240 s, P = 1500 W",
+            "E = P × t = 1500 × 240 = 360 000 J",
+            "m = Q / L = 360 000 / 2 260 000",
+            "m = 0.159 kg"
+          ],
+          "answer": {
+            "value": 0.159,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "latent-p6",
+          "question": "A 400 W heater is used to melt 2 kg of ice at 0 °C. Calculate the time it takes to melt all the ice, in seconds, assuming all the energy goes into the ice. Specific latent heat of fusion of ice = 334 000 J/kg.",
+          "hint": "Find the energy needed with Q = m × L, then use t = E / P.",
+          "walkthrough": [
+            "Q = m × L = 2 × 334 000 = 668 000 J",
+            "t = E / P = 668 000 / 400",
+            "t = 1670 s"
+          ],
+          "answer": {
+            "value": 1670,
+            "unit": "s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "change-of-state",
+      "name": "Heating with a change of state",
+      "equations": [
+        "ΔQ = m × c × Δθ",
+        "Q = m × L"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "When a substance is heated through a melting or boiling point there are two parts: a temperature change (use ΔQ = m × c × Δθ) and a change of state at constant temperature (use Q = m × L). Work out each part separately and add them. If a heater is involved, the total energy equals power × time.",
+      "commonErrors": [
+        "Only doing one of the two parts",
+        "Using the temperature change in the latent heat part: the state changes at one temperature",
+        "Forgetting to change minutes to seconds when a power is given"
+      ],
+      "worked": {
+        "id": "change-of-state-w",
+        "question": "A drink contains 0.5 kg of ice at 0 °C. Calculate the total energy needed to melt the ice and then warm the water to 20 °C. Specific latent heat of fusion of ice = 334 000 J/kg. Specific heat capacity of water = 4200 J/kg °C.",
+        "steps": [
+          "Known: m = 0.5 kg, L = 334 000 J/kg, c = 4200 J/kg °C, Δθ = 20 − 0 = 20 °C.",
+          "Melting: Q = m × L = 0.5 × 334 000 = 167 000 J",
+          "Warming: ΔQ = m × c × Δθ = 0.5 × 4200 × 20 = 42 000 J",
+          "Total = 167 000 + 42 000",
+          "Total = 209 000 J"
+        ],
+        "answer": {
+          "value": 209000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "change-of-state-p1",
+          "question": "A pan holds 2 kg of water at 80 °C. Calculate the total energy needed to heat the water to 100 °C and then boil all of it into steam. Specific heat capacity of water = 4200 J/kg °C. Specific latent heat of vaporisation of water = 2 260 000 J/kg.",
+          "hint": "Warming part: m × c × Δθ with Δθ = 20 °C. Boiling part: m × L. Add them.",
+          "walkthrough": [
+            "Warming: ΔQ = 2 × 4200 × (100 − 80) = 168 000 J",
+            "Boiling: Q = 2 × 2 260 000 = 4 520 000 J",
+            "Total = 168 000 + 4 520 000",
+            "Total = 4 688 000 J"
+          ],
+          "answer": {
+            "value": 4688000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "change-of-state-p2",
+          "question": "A 0.2 kg block of ice at 0 °C is taken from a freezer, melted and the water warmed to 40 °C. Calculate the total energy transferred to the ice. Specific latent heat of fusion of ice = 334 000 J/kg. Specific heat capacity of water = 4200 J/kg °C.",
+          "hint": "Melt first (m × L), then warm the water (m × c × Δθ) and add.",
+          "walkthrough": [
+            "Melting: Q = 0.2 × 334 000 = 66 800 J",
+            "Warming: ΔQ = 0.2 × 4200 × 40 = 33 600 J",
+            "Total = 66 800 + 33 600",
+            "Total = 100 400 J"
+          ],
+          "answer": {
+            "value": 100400,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "change-of-state-p3",
+          "question": "A kettle contains 500 g of water at 60 °C. Calculate the total energy needed to heat the water to 100 °C and boil all of it away. Specific heat capacity of water = 4200 J/kg °C. Specific latent heat of vaporisation of water = 2 260 000 J/kg.",
+          "hint": "Change 500 g to 0.5 kg, then add the warming energy and the boiling energy.",
+          "walkthrough": [
+            "m = 500 g = 0.5 kg, Δθ = 100 − 60 = 40 °C",
+            "Warming: ΔQ = 0.5 × 4200 × 40 = 84 000 J",
+            "Boiling: Q = 0.5 × 2 260 000 = 1 130 000 J",
+            "Total = 84 000 + 1 130 000 = 1 214 000 J"
+          ],
+          "answer": {
+            "value": 1214000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "change-of-state-p4",
+          "question": "A tray holds 0.4 kg of water at 30 °C. It is put in a freezer, cooled to 0 °C and frozen solid. Calculate the total energy removed from the water, in kJ. Specific heat capacity of water = 4200 J/kg °C. Specific latent heat of fusion of ice = 334 000 J/kg.",
+          "hint": "Cooling part: m × c × Δθ with Δθ = 30 °C. Freezing part: m × L. Add, then divide by 1000 for kJ.",
+          "walkthrough": [
+            "Cooling: ΔQ = 0.4 × 4200 × 30 = 50 400 J",
+            "Freezing: Q = 0.4 × 334 000 = 133 600 J",
+            "Total = 50 400 + 133 600 = 184 000 J",
+            "Total = 184 kJ"
+          ],
+          "answer": {
+            "value": 184,
+            "unit": "kJ"
+          }
+        },
+        {
+          "id": "change-of-state-p5",
+          "question": "A 2 kW heater is used to melt 1 kg of ice at 0 °C and then warm the water to 30 °C. Calculate the time this takes in seconds, assuming all the energy goes into the ice and water. Specific latent heat of fusion of ice = 334 000 J/kg. Specific heat capacity of water = 4200 J/kg °C.",
+          "hint": "Find the total energy (melt + warm), then t = E / P with P = 2000 W.",
+          "walkthrough": [
+            "Melting: Q = 1 × 334 000 = 334 000 J",
+            "Warming: ΔQ = 1 × 4200 × 30 = 126 000 J",
+            "Total = 334 000 + 126 000 = 460 000 J",
+            "t = E / P = 460 000 / 2000 = 230 s"
+          ],
+          "answer": {
+            "value": 230,
+            "unit": "s"
+          },
+          "boards": [
+            "Higher"
+          ]
+        },
+        {
+          "id": "change-of-state-p6",
+          "question": "A camping stove heats 1.5 kg of water from 60 °C to 100 °C and then boils all of it away. This takes 25 minutes. Calculate the useful power of the stove in W. Specific heat capacity of water = 4200 J/kg °C. Specific latent heat of vaporisation of water = 2 260 000 J/kg.",
+          "hint": "Find the total energy (warm + boil), change 25 minutes to seconds, then P = E / t.",
+          "walkthrough": [
+            "Warming: ΔQ = 1.5 × 4200 × 40 = 252 000 J",
+            "Boiling: Q = 1.5 × 2 260 000 = 3 390 000 J",
+            "Total = 252 000 + 3 390 000 = 3 642 000 J",
+            "t = 25 × 60 = 1500 s",
+            "P = E / t = 3 642 000 / 1500 = 2428 W"
+          ],
+          "answer": {
+            "value": 2428,
+            "unit": "W"
+          },
+          "boards": [
+            "Higher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature scales",
+      "equations": [
+        "temperature in K = temperature in °C + 273"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "To change °C to kelvin add 273; to change kelvin to °C subtract 273. Absolute zero is 0 K, which is −273 °C. A change in temperature is the same number in °C and in K, so do not add 273 to a temperature difference.",
+      "commonErrors": [
+        "Subtracting 273 when changing °C to K",
+        "Adding 273 to a temperature change",
+        "Writing °K: the kelvin has no degree sign"
+      ],
+      "worked": {
+        "id": "temperature-w",
+        "question": "A laboratory is at 25 °C. Convert this temperature to kelvin.",
+        "steps": [
+          "Known: 25 °C. Unknown: the temperature in K.",
+          "K = °C + 273",
+          "K = 25 + 273",
+          "Temperature = 298 K"
+        ],
+        "answer": {
+          "value": 298,
+          "unit": "K"
+        }
+      },
+      "practice": [
+        {
+          "id": "temperature-p1",
+          "question": "Water boils at 100 °C at normal atmospheric pressure. Convert this temperature to kelvin.",
+          "hint": "Add 273 to the Celsius temperature.",
+          "walkthrough": [
+            "K = °C + 273",
+            "K = 100 + 273",
+            "Temperature = 373 K"
+          ],
+          "answer": {
+            "value": 373,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "temperature-p2",
+          "question": "Absolute zero is 0 K, the lowest possible temperature. Give absolute zero in °C.",
+          "hint": "Subtract 273 from the kelvin temperature.",
+          "walkthrough": [
+            "°C = K − 273",
+            "°C = 0 − 273",
+            "Temperature = −273 °C"
+          ],
+          "answer": {
+            "value": -273,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "temperature-p3",
+          "question": "The temperature in a cold store for frozen food is −40 °C. Convert this temperature to kelvin.",
+          "hint": "Add 273 to −40, keeping the minus sign in mind.",
+          "walkthrough": [
+            "K = °C + 273",
+            "K = −40 + 273",
+            "Temperature = 233 K"
+          ],
+          "answer": {
+            "value": 233,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "temperature-p4",
+          "question": "A gas in a sealed container is warmed from 20 °C to 80 °C. Calculate the change in its temperature in kelvin.",
+          "hint": "A temperature change is the same size in °C and in K; do not add 273.",
+          "walkthrough": [
+            "Change in °C = 80 − 20 = 60 °C",
+            "A change of 60 °C is a change of 60 K",
+            "Change in temperature = 60 K"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "K"
+          }
+        },
+        {
+          "id": "temperature-p5",
+          "question": "A gas in a bicycle pump is at 27 °C. It is heated until its kelvin temperature has doubled. Calculate its new temperature in °C.",
+          "hint": "Change 27 °C to kelvin, double it, then change back to °C.",
+          "walkthrough": [
+            "Start: 27 + 273 = 300 K",
+            "Doubled: 2 × 300 = 600 K",
+            "Back to °C: 600 − 273",
+            "New temperature = 327 °C"
+          ],
+          "answer": {
+            "value": 327,
+            "unit": "°C"
+          }
+        },
+        {
+          "id": "temperature-p6",
+          "question": "A kitchen is at 22 °C. The inside of the freezer is at 255 K. Calculate the difference in temperature between the kitchen and the freezer, in °C.",
+          "hint": "Change 255 K to °C first, then subtract it from 22 °C.",
+          "walkthrough": [
+            "Freezer: 255 − 273 = −18 °C",
+            "Difference = 22 − (−18) = 22 + 18",
+            "Difference = 40 °C"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "°C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boyle",
+      "name": "Gas pressure and volume at constant temperature",
+      "equations": [
+        "P₁ × V₁ = P₂ × V₂"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "For a fixed mass of gas at constant temperature, pressure × volume stays the same. Write down P₁ and V₁ before the change and P₂ or V₂ after, multiply P₁ × V₁, then divide by the one you know to find the one you do not. Any units work as long as both pressures match and both volumes match.",
+      "commonErrors": [
+        "Mixing kPa with Pa, or cm³ with litres, on the two sides of the equation",
+        "Multiplying P₁ by V₂ instead of pairing the before values together",
+        "Expecting the volume to go up when the pressure goes up: they move in opposite directions"
+      ],
+      "worked": {
+        "id": "boyle-w",
+        "question": "A gas has a volume of 600 cm³ at a pressure of 100 kPa. It is compressed slowly to 200 cm³ at the same temperature. Calculate the new pressure in kPa.",
+        "steps": [
+          "Known: P₁ = 100 kPa, V₁ = 600 cm³, V₂ = 200 cm³. Unknown: P₂.",
+          "P₁ × V₁ = P₂ × V₂ → P₂ = P₁ × V₁ / V₂",
+          "P₂ = 100 × 600 / 200 = 60 000 / 200",
+          "P₂ = 300 kPa"
+        ],
+        "answer": {
+          "value": 300,
+          "unit": "kPa"
+        }
+      },
+      "practice": [
+        {
+          "id": "boyle-p1",
+          "question": "A sealed syringe contains 50 cm³ of air at 100 kPa. The plunger is pushed in until the volume is 20 cm³, with no change in temperature. Calculate the new pressure of the air in kPa.",
+          "hint": "P₂ = P₁ × V₁ / V₂; the volume goes down so the pressure goes up.",
+          "walkthrough": [
+            "P₁ = 100 kPa, V₁ = 50 cm³, V₂ = 20 cm³, find P₂.",
+            "P₂ = P₁ × V₁ / V₂ = 100 × 50 / 20",
+            "P₂ = 250 kPa"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "kPa"
+          }
+        },
+        {
+          "id": "boyle-p2",
+          "question": "An air bubble of volume 2 cm³ is released by a diver where the pressure is 300 kPa. It rises to the surface, where the pressure is 100 kPa. Calculate the volume of the bubble at the surface in cm³, assuming the temperature stays the same.",
+          "hint": "V₂ = P₁ × V₁ / P₂; the pressure drops so the bubble grows.",
+          "walkthrough": [
+            "P₁ = 300 kPa, V₁ = 2 cm³, P₂ = 100 kPa, find V₂.",
+            "V₂ = P₁ × V₁ / P₂ = 300 × 2 / 100",
+            "V₂ = 6 cm³"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "cm³"
+          }
+        },
+        {
+          "id": "boyle-p3",
+          "question": "A party balloon holds 1.5 litres of air at 100 kPa. It is squeezed until the pressure inside is 120 kPa at the same temperature. Calculate the new volume of the balloon in cm³. (1 litre = 1000 cm³)",
+          "hint": "Change 1.5 litres to cm³ first, then use V₂ = P₁ × V₁ / P₂.",
+          "walkthrough": [
+            "V₁ = 1.5 litres = 1500 cm³",
+            "V₂ = P₁ × V₁ / P₂ = 100 × 1500 / 120",
+            "V₂ = 150 000 / 120",
+            "V₂ = 1250 cm³"
+          ],
+          "answer": {
+            "value": 1250,
+            "unit": "cm³"
+          }
+        },
+        {
+          "id": "boyle-p4",
+          "question": "A diver's cylinder has a volume of 12 litres. When all the air inside is released at a pressure of 100 kPa it fills 2400 litres. Calculate the pressure of the air in the cylinder in kPa, assuming constant temperature.",
+          "hint": "Rearrange to P₁ = P₂ × V₂ / V₁; both volumes are already in litres.",
+          "walkthrough": [
+            "V₁ = 12 litres, P₂ = 100 kPa, V₂ = 2400 litres, find P₁.",
+            "P₁ = P₂ × V₂ / V₁ = 100 × 2400 / 12",
+            "P₁ = 240 000 / 12",
+            "P₁ = 20 000 kPa"
+          ],
+          "answer": {
+            "value": 20000,
+            "unit": "kPa"
+          }
+        },
+        {
+          "id": "boyle-p5",
+          "question": "A bicycle pump contains 240 cm³ of air at 100 kPa. The handle is pushed in until the pressure is 160 kPa, with no change in temperature. Calculate the decrease in the volume of the air in cm³.",
+          "hint": "Find the new volume from V₂ = P₁ × V₁ / P₂, then subtract it from 240 cm³.",
+          "walkthrough": [
+            "V₂ = P₁ × V₁ / P₂ = 100 × 240 / 160 = 150 cm³",
+            "Decrease = V₁ − V₂ = 240 − 150",
+            "Decrease = 90 cm³"
+          ],
+          "answer": {
+            "value": 90,
+            "unit": "cm³"
+          }
+        },
+        {
+          "id": "boyle-p6",
+          "question": "A gas cylinder has a cross-sectional area of 20 cm². A piston traps a column of gas 15 cm long at a pressure of 100 kPa. The piston is pushed in until the column is 5 cm long, at the same temperature. Calculate the new pressure in kPa.",
+          "hint": "Volume = area × length; find V₁ and V₂ first, then use P₂ = P₁ × V₁ / V₂.",
+          "walkthrough": [
+            "V₁ = 20 × 15 = 300 cm³",
+            "V₂ = 20 × 5 = 100 cm³",
+            "P₂ = P₁ × V₁ / V₂ = 100 × 300 / 100",
+            "P₂ = 300 kPa"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "kPa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heating-graph",
+      "name": "Reading a heating graph",
+      "equations": [
+        "E = P × t",
+        "ΔQ = m × c × Δθ",
+        "Q = m × L"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "A heating graph shows temperature against time while a heater supplies energy at a steady rate. A flat section is a change of state: its height is the melting or boiling point and its length is the time the change takes. Multiply that time (in seconds) by the heater power to get the energy for the change of state. On a sloping section the gradient is the rate of temperature rise; power = m × c × gradient, so c = P / (m × gradient).",
+      "commonErrors": [
+        "Reading the time at the end of the flat section instead of its length",
+        "Leaving the time in minutes when multiplying by a power in watts",
+        "Taking the gradient of the flat section, which is zero, instead of a sloping section"
+      ],
+      "worked": {
+        "id": "heating-graph-w",
+        "question": "A sample of wax is heated at a steady rate. The graph shows how its temperature changes with time. Use the graph to determine the melting point of the wax.",
+        "steps": [
+          "The melting point is the temperature of the flat section, where the wax changes state without warming up.",
+          "The flat section runs from 4 min to 8 min.",
+          "Reading across to the temperature axis, the flat section is at 60 °C.",
+          "Melting point = 60 °C"
+        ],
+        "answer": {
+          "value": 60,
+          "unit": "°C"
+        },
+        "graph": {
+          "x": {
+            "label": "time in min",
+            "min": 0,
+            "max": 12,
+            "step": 2
+          },
+          "y": {
+            "label": "temperature in °C",
+            "min": 0,
+            "max": 100,
+            "step": 10
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  20
+                ],
+                [
+                  4,
+                  60
+                ],
+                [
+                  8,
+                  60
+                ],
+                [
+                  12,
+                  100
+                ]
+              ]
+            }
+          ],
+          "alt": "Temperature–time graph rising from 20 °C to 60 °C over 4 minutes, flat at 60 °C until 8 minutes, then rising to 100 °C at 12 minutes"
+        }
+      },
+      "practice": [
+        {
+          "id": "heating-graph-p1",
+          "question": "A liquid is heated in a beaker by a heater supplying energy at a steady rate. The graph shows its temperature against time. Use the graph to determine the boiling point of the liquid.",
+          "hint": "The boiling point is the temperature of the flat section, where the temperature stops rising.",
+          "walkthrough": [
+            "The temperature rises until 3 min and then stays constant: the liquid is boiling.",
+            "Reading across from the flat section to the temperature axis gives 80 °C.",
+            "Boiling point = 80 °C"
+          ],
+          "answer": {
+            "value": 80,
+            "unit": "°C"
+          },
+          "graph": {
+            "x": {
+              "label": "time in min",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    3,
+                    80
+                  ],
+                  [
+                    10,
+                    80
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature–time graph rising from 20 °C to 80 °C over 3 minutes and then flat at 80 °C to 10 minutes"
+          }
+        },
+        {
+          "id": "heating-graph-p2",
+          "question": "A block of ice from a freezer is heated at a steady rate. The graph shows its temperature against time. Use the graph to determine the time, in seconds, that the ice spends melting.",
+          "hint": "Melting happens along the flat section at 0 °C; find the time at each end of it and subtract.",
+          "walkthrough": [
+            "The flat section at 0 °C starts at 60 s and ends at 540 s.",
+            "Time melting = 540 − 60",
+            "Time melting = 480 s"
+          ],
+          "answer": {
+            "value": 480,
+            "unit": "s"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 600,
+              "step": 60
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": -10,
+              "max": 10,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    -10
+                  ],
+                  [
+                    60,
+                    0
+                  ],
+                  [
+                    540,
+                    0
+                  ],
+                  [
+                    600,
+                    5
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature–time graph rising from −10 °C to 0 °C in 60 s, flat at 0 °C until 540 s, then rising to 5 °C at 600 s"
+          }
+        },
+        {
+          "id": "heating-graph-p3",
+          "question": "A kettle heats water at a steady rate. The graph shows the temperature of the water against time. Use the graph to determine the rise in temperature of the water during the first 2 minutes.",
+          "hint": "Read the temperature at 0 min and at 2 min from the sloping line, then subtract.",
+          "walkthrough": [
+            "At 0 min the temperature is 20 °C.",
+            "At 2 min (the dashed line) the temperature is 60 °C.",
+            "Rise = 60 − 20",
+            "Rise = 40 °C"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "°C"
+          },
+          "graph": {
+            "x": {
+              "label": "time in min",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    4,
+                    100
+                  ],
+                  [
+                    8,
+                    100
+                  ]
+                ]
+              },
+              {
+                "kind": "dashed",
+                "points": [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    60
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature–time graph rising from 20 °C to 100 °C over 4 minutes then flat at 100 °C, with a dashed line marking 2 minutes"
+          }
+        },
+        {
+          "id": "heating-graph-p4",
+          "question": "A solid is heated by a 30 W heater. The graph shows its temperature against time. Use the graph to determine the energy supplied by the heater while the solid is melting.",
+          "hint": "Find how long the flat section lasts, change it to seconds, then use E = P × t.",
+          "walkthrough": [
+            "The flat section runs from 2 min to 7 min, so melting takes 5 min.",
+            "t = 5 × 60 = 300 s",
+            "E = P × t = 30 × 300",
+            "E = 9000 J"
+          ],
+          "answer": {
+            "value": 9000,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "time in min",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    2,
+                    50
+                  ],
+                  [
+                    7,
+                    50
+                  ],
+                  [
+                    10,
+                    80
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature–time graph rising from 20 °C to 50 °C in 2 minutes, flat at 50 °C until 7 minutes, then rising to 80 °C at 10 minutes"
+          }
+        },
+        {
+          "id": "heating-graph-p5",
+          "question": "A 0.4 kg block of a solid is heated by a 40 W heater. The graph shows its temperature against time. Use the gradient of the first straight section of the graph to determine the specific heat capacity of the solid.",
+          "hint": "Gradient = temperature rise / time; then power = m × c × gradient, so c = P / (m × gradient).",
+          "walkthrough": [
+            "First section: (0 s, 10 °C) to (200 s, 50 °C)",
+            "Gradient = (50 − 10) / (200 − 0) = 40 / 200 = 0.2 °C/s",
+            "P = m × c × gradient → c = P / (m × gradient)",
+            "c = 40 / (0.4 × 0.2) = 40 / 0.08",
+            "c = 500 J/kg °C"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "J/kg °C"
+          },
+          "boards": [
+            "Higher"
+          ],
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 600,
+              "step": 100
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    10
+                  ],
+                  [
+                    200,
+                    50
+                  ],
+                  [
+                    500,
+                    50
+                  ],
+                  [
+                    600,
+                    60
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature–time graph rising from 10 °C to 50 °C in 200 s, flat at 50 °C until 500 s, then rising to 60 °C at 600 s"
+          }
+        },
+        {
+          "id": "heating-graph-p6",
+          "question": "A 0.2 kg sample of a solid is heated by a 40 W heater. The graph shows its temperature against time. Use the graph to determine the specific latent heat of fusion of the solid.",
+          "hint": "Energy for melting = power × length of the flat section in seconds; then L = Q / m.",
+          "walkthrough": [
+            "The flat section runs from 100 s to 500 s, so melting takes 400 s.",
+            "Q = P × t = 40 × 400 = 16 000 J",
+            "L = Q / m = 16 000 / 0.2",
+            "L = 80 000 J/kg"
+          ],
+          "answer": {
+            "value": 80000,
+            "unit": "J/kg"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 800,
+              "step": 100
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    20
+                  ],
+                  [
+                    100,
+                    50
+                  ],
+                  [
+                    500,
+                    50
+                  ],
+                  [
+                    800,
+                    80
+                  ]
+                ]
+              }
+            ],
+            "alt": "Temperature–time graph rising from 20 °C to 50 °C in 100 s, flat at 50 °C until 500 s, then rising to 80 °C at 800 s"
+          }
+        }
+      ]
+    }
+  ]
+}

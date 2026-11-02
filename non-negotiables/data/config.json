@@ -1,0 +1,25 @@
+{
+  "title": "The Non-negotiables",
+  "titleWords": [
+    "The",
+    "Non-",
+    "negotiables"
+  ],
+  "lede": "The calculations every A-level physicist has to be able to do without thinking. Each one comes with a worked example and six to practise, checked as you go.",
+  "credit": "Joshua Stafford-Haworth, JSHPhysics",
+  "printSubtitle": "A-level physics calculations, complete set",
+  "filter": {
+    "label": "Exam board",
+    "prompt": "Show what my board examines",
+    "all": "All boards",
+    "options": [
+      "AQA",
+      "OCR A",
+      "OCR B",
+      "Edexcel",
+      "WJEC"
+    ],
+    "defaultOption": "all",
+    "none": "Nothing in this topic is examined by {option}. Choose another board or another topic."
+  }
+}

@@ -1,0 +1,1169 @@
+{
+  "id": "energy",
+  "title": "Energy",
+  "subtitle": "Kinetic and gravitational energy, work, power and efficiency",
+  "order": 40,
+  "figure": "circular-shm",
+  "types": [
+    {
+      "id": "kinetic-energy",
+      "name": "Kinetic energy",
+      "equations": [
+        "KE = ½ × m × v²"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Kinetic energy = ½ × mass × speed². Square the speed first, multiply by the mass, then halve it. The mass must be in kg and the speed in m/s, so convert grams, km/h or kJ before you start. To find the speed from the kinetic energy, work out v² = 2 × KE / m and then take the square root.",
+      "commonErrors": [
+        "Squaring the mass as well as the speed, or forgetting to square the speed at all",
+        "Halving the speed before squaring instead of halving the whole answer",
+        "Leaving the speed in km/h or the mass in grams"
+      ],
+      "worked": {
+        "id": "kinetic-energy-w",
+        "question": "A runner of mass 60 kg is moving at 8 m/s. Calculate the runner's kinetic energy.",
+        "steps": [
+          "Known: m = 60 kg, v = 8 m/s. Unknown: KE.",
+          "KE = ½ × m × v²",
+          "KE = ½ × 60 × 8² = ½ × 60 × 64",
+          "KE = 1920 J"
+        ],
+        "answer": {
+          "value": 1920,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "kinetic-energy-p1",
+          "question": "A car of mass 1000 kg travels at 20 m/s. Calculate the kinetic energy of the car.",
+          "hint": "Use KE = ½ × m × v²; square the speed first.",
+          "walkthrough": [
+            "m = 1000 kg, v = 20 m/s, find KE.",
+            "KE = ½ × 1000 × 20² = ½ × 1000 × 400",
+            "KE = 200000 J"
+          ],
+          "answer": {
+            "value": 200000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-p2",
+          "question": "A cricket ball of mass 0.16 kg is thrown at 30 m/s. Calculate its kinetic energy.",
+          "hint": "30² = 900; then multiply by the mass and halve.",
+          "walkthrough": [
+            "m = 0.16 kg, v = 30 m/s, find KE.",
+            "KE = ½ × 0.16 × 30² = ½ × 0.16 × 900",
+            "KE = 72 J"
+          ],
+          "answer": {
+            "value": 72,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-p3",
+          "question": "A delivery van of mass 1500 kg travels at 72 km/h. Calculate the kinetic energy of the van. Give your answer in kJ.",
+          "hint": "Change 72 km/h to m/s (divide by 3.6) before squaring, and divide the final answer by 1000 for kJ.",
+          "walkthrough": [
+            "72 km/h = 72000 m / 3600 s = 20 m/s.",
+            "KE = ½ × 1500 × 20² = ½ × 1500 × 400 = 300000 J",
+            "KE = 300 kJ"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "kJ"
+          }
+        },
+        {
+          "id": "kinetic-energy-p4",
+          "question": "A basketball of mass 250 g is thrown at 12 m/s. Calculate the kinetic energy of the ball.",
+          "hint": "Convert 250 g to kg first.",
+          "walkthrough": [
+            "m = 250 g = 0.25 kg, v = 12 m/s, find KE.",
+            "KE = ½ × 0.25 × 12² = ½ × 0.25 × 144",
+            "KE = 18 J"
+          ],
+          "answer": {
+            "value": 18,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "kinetic-energy-p5",
+          "question": "A cyclist and bike with a total mass of 80 kg have 2560 J of kinetic energy. Calculate the speed of the cyclist.",
+          "hint": "Rearrange to v² = 2 × KE / m, then square root.",
+          "walkthrough": [
+            "KE = 2560 J, m = 80 kg, find v.",
+            "v² = 2 × KE / m = 2 × 2560 / 80 = 64",
+            "v = √64",
+            "v = 8 m/s"
+          ],
+          "answer": {
+            "value": 8,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
+        },
+        {
+          "id": "kinetic-energy-p6",
+          "question": "A lorry of mass 20000 kg has a kinetic energy of 2500 kJ. Calculate the speed of the lorry.",
+          "hint": "Change 2500 kJ to J, then use v² = 2 × KE / m and square root.",
+          "walkthrough": [
+            "KE = 2500 kJ = 2500000 J, m = 20000 kg, find v.",
+            "v² = 2 × KE / m = 2 × 2500000 / 20000 = 250",
+            "v = √250 = 15.81…",
+            "v = 15.8 m/s"
+          ],
+          "answer": {
+            "value": 15.8,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravitational-potential-energy",
+      "name": "Gravitational potential energy",
+      "equations": [
+        "GPE = m × g × h"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Change in gravitational potential energy = mass × gravitational field strength × change in height. Multiply the mass in kg by 10 N/kg and by the height in m. To find the height or the mass, divide the energy by the other two quantities. If you are given a weight instead of a mass, remember weight already equals m × g.",
+      "commonErrors": [
+        "Leaving out g and multiplying mass by height only",
+        "Using the height in centimetres or the mass in grams",
+        "Multiplying a weight by g again, which counts g twice"
+      ],
+      "worked": {
+        "id": "gravitational-potential-energy-w",
+        "question": "A climber of mass 50 kg climbs 12 m up a climbing wall. Calculate the climber's gain in gravitational potential energy.",
+        "steps": [
+          "Known: m = 50 kg, g = 10 N/kg, h = 12 m. Unknown: GPE.",
+          "GPE = m × g × h",
+          "GPE = 50 × 10 × 12",
+          "GPE = 6000 J"
+        ],
+        "answer": {
+          "value": 6000,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "gravitational-potential-energy-p1",
+          "question": "A 2 kg textbook is lifted from the floor onto a shelf 1.5 m high. Calculate the gain in gravitational potential energy of the book.",
+          "hint": "Use GPE = m × g × h with g = 10 N/kg.",
+          "walkthrough": [
+            "m = 2 kg, g = 10 N/kg, h = 1.5 m, find GPE.",
+            "GPE = 2 × 10 × 1.5",
+            "GPE = 30 J"
+          ],
+          "answer": {
+            "value": 30,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "gravitational-potential-energy-p2",
+          "question": "A lift car of mass 800 kg rises 20 m up a shaft. Calculate the gain in gravitational potential energy of the lift car.",
+          "hint": "Multiply mass, g and height together.",
+          "walkthrough": [
+            "m = 800 kg, g = 10 N/kg, h = 20 m, find GPE.",
+            "GPE = 800 × 10 × 20",
+            "GPE = 160000 J"
+          ],
+          "answer": {
+            "value": 160000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "gravitational-potential-energy-p3",
+          "question": "A person of mass 60 kg walks up a staircase and gains 9000 J of gravitational potential energy. Calculate the height of the staircase.",
+          "hint": "Rearrange GPE = m × g × h to h = GPE / (m × g).",
+          "walkthrough": [
+            "GPE = 9000 J, m = 60 kg, g = 10 N/kg, find h.",
+            "GPE = m × g × h → h = GPE / (m × g)",
+            "h = 9000 / (60 × 10) = 9000 / 600",
+            "h = 15 m"
+          ],
+          "answer": {
+            "value": 15,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "gravitational-potential-energy-p4",
+          "question": "A crane lifts a load 15 m. The load gains 45 kJ of gravitational potential energy. Calculate the mass of the load.",
+          "hint": "Change 45 kJ to J, then use m = GPE / (g × h).",
+          "walkthrough": [
+            "GPE = 45 kJ = 45000 J, g = 10 N/kg, h = 15 m, find m.",
+            "GPE = m × g × h → m = GPE / (g × h)",
+            "m = 45000 / (10 × 15) = 45000 / 150",
+            "m = 300 kg"
+          ],
+          "answer": {
+            "value": 300,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "gravitational-potential-energy-p5",
+          "question": "A warehouse worker lifts a box weighing 150 N from the ground onto a shelf 2.4 m above the ground. Calculate the gain in gravitational potential energy of the box.",
+          "hint": "Find the mass from the weight first (m = W / g), then use GPE = m × g × h.",
+          "walkthrough": [
+            "Mass: m = W / g = 150 / 10 = 15 kg.",
+            "GPE = m × g × h = 15 × 10 × 2.4",
+            "GPE = 360 J"
+          ],
+          "answer": {
+            "value": 360,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "gravitational-potential-energy-p6",
+          "question": "A hiker of mass 70 kg climbs 500 stone steps. Each step is 20 cm high. Calculate the hiker's gain in gravitational potential energy. Give your answer in kJ.",
+          "hint": "Work out the total height climbed in metres first, then use GPE = m × g × h.",
+          "walkthrough": [
+            "Height: h = 500 × 20 cm = 10000 cm = 100 m.",
+            "GPE = m × g × h = 70 × 10 × 100 = 70000 J",
+            "GPE = 70 kJ"
+          ],
+          "answer": {
+            "value": 70,
+            "unit": "kJ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "work-done",
+      "name": "Work done",
+      "equations": [
+        "W = F × d"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Work done = force × distance moved in the direction of the force. Here W means work done, in joules, not weight. Multiply the force in N by the distance in m. To find the force or the distance, divide the work done by the other one. Change kJ to J before dividing.",
+      "commonErrors": [
+        "Mixing up W for work done with W for weight",
+        "Forgetting to change kJ into J before rearranging",
+        "Using a distance the object did not move along the line of the force"
+      ],
+      "worked": {
+        "id": "work-done-w",
+        "question": "A shopper pushes a trolley with a force of 40 N for a distance of 5 m. Calculate the work done by the shopper.",
+        "steps": [
+          "Known: F = 40 N, d = 5 m. Unknown: W (work done).",
+          "W = F × d",
+          "W = 40 × 5",
+          "W = 200 J"
+        ],
+        "answer": {
+          "value": 200,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "work-done-p1",
+          "question": "A horse pulls a cart along a track with a force of 600 N. The cart moves 50 m. Calculate the work done by the horse.",
+          "hint": "Use W = F × d.",
+          "walkthrough": [
+            "F = 600 N, d = 50 m, find W.",
+            "W = F × d = 600 × 50",
+            "W = 30000 J"
+          ],
+          "answer": {
+            "value": 30000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "work-done-p2",
+          "question": "A climber hauls a bag up a 3 m rock step with an upward force of 120 N. Calculate the work done on the bag.",
+          "hint": "Multiply the force by the distance it moves the suitcase.",
+          "walkthrough": [
+            "F = 120 N, d = 3 m, find W.",
+            "W = F × d = 120 × 3",
+            "W = 360 J"
+          ],
+          "answer": {
+            "value": 360,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "work-done-p3",
+          "question": "A gardener does 4500 J of work pushing a lawnmower 30 m across a lawn. Calculate the force the gardener pushes with.",
+          "hint": "Rearrange W = F × d to F = W / d.",
+          "walkthrough": [
+            "W = 4500 J, d = 30 m, find F.",
+            "W = F × d → F = W / d",
+            "F = 4500 / 30",
+            "F = 150 N"
+          ],
+          "answer": {
+            "value": 150,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "work-done-p4",
+          "question": "A dog pulls a sledge with a steady force of 20 N and does 2.5 kJ of work. Calculate the distance the sledge is pulled.",
+          "hint": "Change 2.5 kJ to J, then use d = W / F.",
+          "walkthrough": [
+            "W = 2.5 kJ = 2500 J, F = 20 N, find d.",
+            "W = F × d → d = W / F",
+            "d = 2500 / 20",
+            "d = 125 m"
+          ],
+          "answer": {
+            "value": 125,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "work-done-p5",
+          "question": "A tugboat pulls a barge with a force of 3000 N. The barge moves at a steady 2 m/s for 60 s. Calculate the work done by the tugboat. Give your answer in kJ.",
+          "hint": "Find the distance from speed × time first, then use W = F × d.",
+          "walkthrough": [
+            "Distance: d = speed × time = 2 × 60 = 120 m.",
+            "W = F × d = 3000 × 120 = 360000 J",
+            "W = 360 kJ"
+          ],
+          "answer": {
+            "value": 360,
+            "unit": "kJ"
+          }
+        },
+        {
+          "id": "work-done-p6",
+          "question": "A car of mass 1200 kg accelerates at 2 m/s² along a straight road for 50 m. Calculate the work done by the resultant force on the car. Give your answer in kJ.",
+          "hint": "Find the resultant force with F = m × a first, then multiply by the distance.",
+          "walkthrough": [
+            "Resultant force: F = m × a = 1200 × 2 = 2400 N.",
+            "W = F × d = 2400 × 50 = 120000 J",
+            "W = 120 kJ"
+          ],
+          "answer": {
+            "value": 120,
+            "unit": "kJ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "equations": [
+        "P = E / t",
+        "P = W / t"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Power is the energy transferred (or work done) per second: power = energy ÷ time, in watts. Make sure the energy is in J and the time is in s before dividing: change kJ to J, kW to W and minutes to seconds. If the energy is not given, find it first, for example GPE = m × g × h for a motor lifting a load.",
+      "commonErrors": [
+        "Leaving the time in minutes instead of seconds",
+        "Forgetting that a kW is 1000 W and a kJ is 1000 J",
+        "Multiplying power by time when the question asks for power"
+      ],
+      "worked": {
+        "id": "power-w",
+        "question": "An electric motor does 3000 J of work in 20 s. Calculate the power of the motor.",
+        "steps": [
+          "Known: W = 3000 J, t = 20 s. Unknown: P.",
+          "P = W / t",
+          "P = 3000 / 20",
+          "P = 150 W"
+        ],
+        "answer": {
+          "value": 150,
+          "unit": "W"
+        }
+      },
+      "practice": [
+        {
+          "id": "power-p1",
+          "question": "A kettle transfers 180000 J of energy to the water in 90 s. Calculate the power of the kettle.",
+          "hint": "Use P = E / t.",
+          "walkthrough": [
+            "E = 180000 J, t = 90 s, find P.",
+            "P = E / t = 180000 / 90",
+            "P = 2000 W"
+          ],
+          "answer": {
+            "value": 2000,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-p2",
+          "question": "A weightlifter does 1500 J of work lifting a bar in 2.5 s. Calculate the weightlifter's power.",
+          "hint": "Divide the work done by the time taken.",
+          "walkthrough": [
+            "W = 1500 J, t = 2.5 s, find P.",
+            "P = W / t = 1500 / 2.5",
+            "P = 600 W"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-p3",
+          "question": "A 2 kW fan heater runs for 5 minutes. Calculate the energy transferred by the heater. Give your answer in kJ.",
+          "hint": "Change 2 kW to W and 5 minutes to seconds, then use E = P × t.",
+          "walkthrough": [
+            "P = 2 kW = 2000 W, t = 5 × 60 = 300 s, find E.",
+            "P = E / t → E = P × t",
+            "E = 2000 × 300 = 600000 J",
+            "E = 600 kJ"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "kJ"
+          }
+        },
+        {
+          "id": "power-p4",
+          "question": "A 60 W light bulb transfers 9000 J of energy. Calculate how long the bulb was switched on for.",
+          "hint": "Rearrange P = E / t to t = E / P.",
+          "walkthrough": [
+            "P = 60 W, E = 9000 J, find t.",
+            "P = E / t → t = E / P",
+            "t = 9000 / 60",
+            "t = 150 s"
+          ],
+          "answer": {
+            "value": 150,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "power-p5",
+          "question": "A motor lifts a 50 kg load through a height of 8 m in 20 s. Calculate the useful power output of the motor.",
+          "hint": "Find the gain in GPE with m × g × h first, then divide by the time.",
+          "walkthrough": [
+            "Energy: GPE = m × g × h = 50 × 10 × 8 = 4000 J.",
+            "P = E / t = 4000 / 20",
+            "P = 200 W"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "W"
+          }
+        },
+        {
+          "id": "power-p6",
+          "question": "A winch pulls a boat up a slipway with a force of 1500 N. The boat moves 12 m in 30 s. Calculate the power of the winch.",
+          "hint": "Find the work done with W = F × d first, then divide by the time.",
+          "walkthrough": [
+            "Work done: W = F × d = 1500 × 12 = 18000 J.",
+            "P = W / t = 18000 / 30",
+            "P = 600 W"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "W"
+          }
+        }
+      ]
+    },
+    {
+      "id": "efficiency",
+      "name": "Efficiency",
+      "equations": [
+        "efficiency = useful energy output / total energy input",
+        "efficiency = useful power output / total power input"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Efficiency = useful energy (or power) output ÷ total energy (or power) input. The answer is a number between 0 and 1 with no unit, or multiply by 100 to give a percentage; the question says which. To find the useful output, multiply the input by the efficiency as a decimal; to find the input, divide the useful output by the efficiency as a decimal.",
+      "commonErrors": [
+        "Dividing the input by the output, which gives an efficiency bigger than 1",
+        "Using 80 instead of 0.8 when multiplying or dividing by a percentage efficiency",
+        "Mixing energy in kJ with energy in J in the same fraction"
+      ],
+      "worked": {
+        "id": "efficiency-w",
+        "question": "An electric motor is supplied with 500 J of energy. It does 350 J of useful work. Calculate the efficiency of the motor as a decimal.",
+        "steps": [
+          "Known: useful output = 350 J, total input = 500 J. Unknown: efficiency.",
+          "efficiency = useful energy output / total energy input",
+          "efficiency = 350 / 500",
+          "efficiency = 0.7"
+        ],
+        "answer": {
+          "value": 0.7,
+          "unit": ""
+        }
+      },
+      "practice": [
+        {
+          "id": "efficiency-p1",
+          "question": "A kettle is supplied with 120 kJ of energy and transfers 108 kJ usefully to the water. Calculate the efficiency of the kettle as a percentage.",
+          "hint": "Divide the useful output by the input, then multiply by 100.",
+          "walkthrough": [
+            "Useful output = 108 kJ, total input = 120 kJ.",
+            "efficiency = 108 / 120 = 0.9",
+            "efficiency = 0.9 × 100 = 90 %"
+          ],
+          "answer": {
+            "value": 90,
+            "unit": "%"
+          }
+        },
+        {
+          "id": "efficiency-p2",
+          "question": "A filament lamp has a power input of 60 W. It gives out 6 W of light. Calculate the efficiency of the lamp as a decimal.",
+          "hint": "Efficiency works with powers too: useful power output ÷ total power input.",
+          "walkthrough": [
+            "Useful output = 6 W, total input = 60 W.",
+            "efficiency = 6 / 60",
+            "efficiency = 0.1"
+          ],
+          "answer": {
+            "value": 0.1,
+            "unit": ""
+          }
+        },
+        {
+          "id": "efficiency-p3",
+          "question": "A motor is 80 % efficient. It is supplied with 2500 J of energy. Calculate the useful energy output of the motor.",
+          "hint": "Change 80 % to 0.8, then useful output = efficiency × input.",
+          "walkthrough": [
+            "efficiency = 80 % = 0.8, total input = 2500 J, find useful output.",
+            "useful output = efficiency × total input",
+            "useful output = 0.8 × 2500",
+            "useful output = 2000 J"
+          ],
+          "answer": {
+            "value": 2000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "efficiency-p4",
+          "question": "A petrol engine is 30 % efficient. It produces 45 kJ of useful energy. Calculate the total energy input to the engine. Give your answer in kJ.",
+          "hint": "Rearrange to total input = useful output / efficiency, using 0.3 for 30 %.",
+          "walkthrough": [
+            "efficiency = 30 % = 0.3, useful output = 45 kJ, find total input.",
+            "total input = useful output / efficiency",
+            "total input = 45 / 0.3",
+            "total input = 150 kJ"
+          ],
+          "answer": {
+            "value": 150,
+            "unit": "kJ"
+          }
+        },
+        {
+          "id": "efficiency-p5",
+          "question": "A crane is supplied with 20000 J of energy while it lifts a 50 kg load through a height of 24 m. Calculate the efficiency of the crane as a decimal.",
+          "hint": "The useful output is the gain in GPE, m × g × h; divide it by the energy supplied.",
+          "walkthrough": [
+            "Useful output: GPE = m × g × h = 50 × 10 × 24 = 12000 J.",
+            "efficiency = useful output / total input = 12000 / 20000",
+            "efficiency = 0.6"
+          ],
+          "answer": {
+            "value": 0.6,
+            "unit": ""
+          }
+        },
+        {
+          "id": "efficiency-p6",
+          "question": "A 400 W motor runs for 30 s and does 9000 J of useful work. Calculate the efficiency of the motor as a percentage.",
+          "hint": "Find the energy input from E = P × t first, then divide the useful work by it and multiply by 100.",
+          "walkthrough": [
+            "Energy input: E = P × t = 400 × 30 = 12000 J.",
+            "efficiency = 9000 / 12000 = 0.75",
+            "efficiency = 0.75 × 100 = 75 %"
+          ],
+          "answer": {
+            "value": 75,
+            "unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "energy-transfers",
+      "name": "Energy transfers with conservation",
+      "equations": [
+        "GPE lost = KE gained",
+        "m × g × h = ½ × m × v²"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "When something falls or drops down a slope with no friction, the gravitational potential energy it loses becomes kinetic energy: m × g × h = ½ × m × v². To find a speed, work out the GPE lost, set it equal to ½ × m × v² and solve for v (the mass cancels, so v² = 2 × g × h). To find a height from a launch speed, do the same the other way round. If some energy is wasted as heat, subtract it from the GPE before finding the KE.",
+      "commonErrors": [
+        "Forgetting to take the square root at the end, so the answer is v² not v",
+        "Using the height in centimetres",
+        "Adding the wasted energy to the GPE instead of subtracting it"
+      ],
+      "worked": {
+        "id": "energy-transfers-w",
+        "question": "A ball is dropped from a height of 5 m. Ignore air resistance. Calculate the speed of the ball just before it hits the ground.",
+        "steps": [
+          "Known: h = 5 m, g = 10 N/kg. Unknown: v.",
+          "GPE lost = KE gained: m × g × h = ½ × m × v²",
+          "The mass cancels: g × h = ½ × v², so v² = 2 × g × h",
+          "v² = 2 × 10 × 5 = 100",
+          "v = √100 = 10 m/s"
+        ],
+        "answer": {
+          "value": 10,
+          "unit": "m/s"
+        }
+      },
+      "practice": [
+        {
+          "id": "energy-transfers-p1",
+          "question": "A roller-coaster car of mass 500 kg drops 20 m from the top of the first hill to the bottom. Ignore friction. Calculate the kinetic energy of the car at the bottom.",
+          "hint": "The KE gained equals the GPE lost, m × g × h.",
+          "walkthrough": [
+            "GPE lost = m × g × h = 500 × 10 × 20 = 100000 J.",
+            "KE gained = GPE lost",
+            "KE = 100000 J"
+          ],
+          "answer": {
+            "value": 100000,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "energy-transfers-p2",
+          "question": "A diver steps off a platform 7.2 m above the water. Ignore air resistance. Calculate the speed of the diver as she enters the water.",
+          "hint": "Use v² = 2 × g × h, then square root.",
+          "walkthrough": [
+            "h = 7.2 m, g = 10 N/kg, find v.",
+            "v² = 2 × g × h = 2 × 10 × 7.2 = 144",
+            "v = √144",
+            "v = 12 m/s"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "energy-transfers-p3",
+          "question": "A tennis ball is thrown straight up at 14 m/s. Ignore air resistance. Calculate the height the ball rises before it stops.",
+          "hint": "At the top all the KE has become GPE: ½ × v² = g × h, so h = v² / (2 × g).",
+          "walkthrough": [
+            "v = 14 m/s, g = 10 N/kg, find h.",
+            "KE lost = GPE gained: ½ × m × v² = m × g × h → h = v² / (2 × g)",
+            "h = 14² / (2 × 10) = 196 / 20",
+            "h = 9.8 m"
+          ],
+          "answer": {
+            "value": 9.8,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "energy-transfers-p4",
+          "question": "A phone slips from a hand 180 cm above a hard floor. Ignore air resistance. Calculate the speed of the phone when it hits the floor.",
+          "hint": "Change 180 cm to metres before using v² = 2 × g × h.",
+          "walkthrough": [
+            "h = 180 cm = 1.8 m, g = 10 N/kg, find v.",
+            "v² = 2 × g × h = 2 × 10 × 1.8 = 36",
+            "v = √36",
+            "v = 6 m/s"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "energy-transfers-p5",
+          "question": "A skier of mass 60 kg starts from rest and slides 30 m vertically down a slope. 6000 J of energy is wasted as heat because of friction. Calculate the skier's speed at the bottom of the slope.",
+          "hint": "Work out the GPE lost, subtract the wasted energy to get the KE, then use v² = 2 × KE / m.",
+          "walkthrough": [
+            "GPE lost = m × g × h = 60 × 10 × 30 = 18000 J.",
+            "KE at the bottom = 18000 − 6000 = 12000 J.",
+            "v² = 2 × KE / m = 2 × 12000 / 60 = 400",
+            "v = √400 = 20 m/s"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
+        },
+        {
+          "id": "energy-transfers-p6",
+          "question": "A 2 kg block is released from rest at the top of a ramp 4 m high. It reaches the bottom moving at 6 m/s. Calculate the energy wasted as heat on the way down.",
+          "hint": "Find the GPE lost and the KE gained separately; the difference is the wasted energy.",
+          "walkthrough": [
+            "GPE lost = m × g × h = 2 × 10 × 4 = 80 J.",
+            "KE gained = ½ × m × v² = ½ × 2 × 6² = 36 J.",
+            "Energy wasted = 80 − 36",
+            "Energy wasted = 44 J"
+          ],
+          "answer": {
+            "value": 44,
+            "unit": "J"
+          },
+          "boards": [
+            "Higher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "energy-graph",
+      "name": "Reading energy graphs",
+      "equations": [
+        "area under F–d graph = work done",
+        "gradient of E–t graph = power",
+        "gradient of GPE–h graph = m × g",
+        "gradient of KE–v² graph = ½ × m"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Check the axes before anything else. On a force–distance graph the area under the line is the work done; split the shape into rectangles and triangles. On an energy–time graph the gradient is the power. A straight-line graph of GPE against height has gradient m × g, and KE against v² has gradient ½ × m, so a gradient leads to the mass in one more step.",
+      "commonErrors": [
+        "Reading a single value off the graph when the question needs a gradient or an area",
+        "Forgetting to halve the area of a triangle",
+        "Stopping at the gradient instead of turning it into the mass or the efficiency the question asks for"
+      ],
+      "worked": {
+        "id": "energy-graph-w",
+        "question": "A gardener pushes a heavy roller across a lawn with a steady force. The graph shows the force against the distance moved. Use the graph to determine the work done in pushing the roller the first 8 m, shown by the shaded area.",
+        "steps": [
+          "Work done = area under the force–distance graph.",
+          "The shaded area is a rectangle: force 150 N, distance 8 m.",
+          "Area = 150 × 8",
+          "Work done = 1200 J"
+        ],
+        "answer": {
+          "value": 1200,
+          "unit": "J"
+        },
+        "graph": {
+          "x": {
+            "label": "distance in m",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          },
+          "y": {
+            "label": "force in N",
+            "min": 0,
+            "max": 200,
+            "step": 50
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  150
+                ],
+                [
+                  10,
+                  150
+                ]
+              ]
+            },
+            {
+              "kind": "dashed",
+              "points": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  150
+                ]
+              ]
+            }
+          ],
+          "shade": [
+            {
+              "series": 0,
+              "from": 0,
+              "to": 8
+            }
+          ],
+          "alt": "Force–distance graph with a horizontal line at 150 N from 0 to 10 m; the area under it from 0 to 8 m is shaded"
+        }
+      },
+      "practice": [
+        {
+          "id": "energy-graph-p1",
+          "question": "An archer draws back a bowstring. The graph shows how the force on the string changes with the distance it is pulled back. Use the graph to determine the work done by the archer in drawing the string back 0.5 m, shown by the shaded area.",
+          "hint": "The shaded area is a triangle: ½ × base × height.",
+          "walkthrough": [
+            "Work done = area under the force–distance graph.",
+            "The shaded area is a triangle with base 0.5 m and height 120 N.",
+            "Area = ½ × 0.5 × 120",
+            "Work done = 30 J"
+          ],
+          "answer": {
+            "value": 30,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "distance in m",
+              "min": 0,
+              "max": 0.5,
+              "step": 0.1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 160,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.5,
+                    120
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 0.5,
+                "y": 120,
+                "label": "X",
+                "drop": true,
+                "dx": -16,
+                "dy": -6
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 0.5
+              }
+            ],
+            "alt": "Force–distance graph with a straight line from the origin to point X at 0.5 m and 120 N; the triangle under the line is shaded"
+          }
+        },
+        {
+          "id": "energy-graph-p2",
+          "question": "A bucket is pulled up out of a well. The graph shows the gravitational potential energy gained by the bucket against the height it has risen. Point X is marked on the line. Use the graph to determine the mass of the bucket.",
+          "hint": "GPE = m × g × h, so the gradient of the line is m × g; find the gradient using the origin and X, then divide by 10 N/kg.",
+          "walkthrough": [
+            "Gradient of a GPE–height graph = m × g.",
+            "Using (0, 0) and X at (5 m, 400 J): gradient = (400 − 0) / (5 − 0) = 80 J/m",
+            "m × g = 80, so m = 80 / 10",
+            "m = 8 kg"
+          ],
+          "answer": {
+            "value": 8,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "height in m",
+              "min": 0,
+              "max": 5,
+              "step": 1
+            },
+            "y": {
+              "label": "GPE in J",
+              "min": 0,
+              "max": 400,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    400
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 5,
+                "y": 400,
+                "label": "X",
+                "drop": true,
+                "dx": -20,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line through the origin on a GPE–height graph reaching point X at 5 m and 400 J"
+          }
+        },
+        {
+          "id": "energy-graph-p3",
+          "question": "The graph shows the total energy transferred by a games console against time. Point X is marked on the line. Use the graph to determine the power of the console.",
+          "hint": "Power is the gradient of an energy–time graph; use the origin and X.",
+          "walkthrough": [
+            "Power = gradient of the energy–time graph.",
+            "Using (0, 0) and X at (20 s, 3000 J): gradient = (3000 − 0) / (20 − 0)",
+            "P = 3000 / 20",
+            "P = 150 W"
+          ],
+          "answer": {
+            "value": 150,
+            "unit": "W"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "energy transferred in J",
+              "min": 0,
+              "max": 3000,
+              "step": 500
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    20,
+                    3000
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 20,
+                "y": 3000,
+                "label": "X",
+                "drop": true,
+                "dx": -20,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line through the origin on an energy–time graph reaching point X at 20 s and 3000 J"
+          }
+        },
+        {
+          "id": "energy-graph-p4",
+          "question": "A child pulls a sledge across a playground. For the first 6 m the pulling force is steady; over the last 4 m the sledge reaches ice and the force needed falls steadily to zero. The graph shows the force against distance. Use the graph to determine the total work done by the child, shown by the shaded area.",
+          "hint": "Split the shaded area into a rectangle (0 to 6 m) and a triangle (6 to 10 m), and add them.",
+          "walkthrough": [
+            "Work done = area under the force–distance graph.",
+            "Rectangle: 100 × 6 = 600 J. Triangle: ½ × 4 × 100 = 200 J.",
+            "Total area = 600 + 200",
+            "Work done = 800 J"
+          ],
+          "answer": {
+            "value": 800,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "distance in m",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 120,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    100
+                  ],
+                  [
+                    6,
+                    100
+                  ],
+                  [
+                    10,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 10
+              }
+            ],
+            "alt": "Force–distance graph: a horizontal line at 100 N from 0 to 6 m, then a straight line falling to zero at 10 m; the whole area underneath is shaded"
+          }
+        },
+        {
+          "id": "energy-graph-p5",
+          "question": "A student measures the kinetic energy of a bowling ball at different speeds and plots kinetic energy against speed squared. The points lie on a straight line through the origin. Point X is marked on the line. Use the graph to determine the mass of the ball.",
+          "hint": "KE = ½ × m × v², so the gradient of KE against v² is ½ × m; double the gradient to get the mass.",
+          "walkthrough": [
+            "Gradient of a KE–v² graph = ½ × m.",
+            "Using (0, 0) and X at (100 m²/s², 250 J): gradient = (250 − 0) / (100 − 0) = 2.5 kg",
+            "½ × m = 2.5, so m = 2 × 2.5",
+            "m = 5 kg"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "kg"
+          },
+          "boards": [
+            "Higher"
+          ],
+          "graph": {
+            "x": {
+              "label": "v² in m²/s²",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "y": {
+              "label": "kinetic energy in J",
+              "min": 0,
+              "max": 250,
+              "step": 50
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    100,
+                    250
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 100,
+                "y": 250,
+                "label": "X",
+                "drop": true,
+                "dx": -20,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line through the origin on a graph of kinetic energy against speed squared, reaching point X at 100 m²/s² and 250 J"
+          }
+        },
+        {
+          "id": "energy-graph-p6",
+          "question": "An electric motor has a power input of 500 W. The graph shows the useful energy output of the motor against time. Point X is marked on the line. Use the graph to determine the efficiency of the motor as a percentage.",
+          "hint": "The gradient of the line is the useful power output; divide it by the 500 W input and multiply by 100.",
+          "walkthrough": [
+            "Useful power output = gradient of the energy–time graph.",
+            "Using (0, 0) and X at (20 s, 6000 J): gradient = (6000 − 0) / (20 − 0) = 300 W",
+            "efficiency = useful power output / total power input = 300 / 500 = 0.6",
+            "efficiency = 0.6 × 100 = 60 %"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "%"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "useful energy output in J",
+              "min": 0,
+              "max": 6000,
+              "step": 1000
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    20,
+                    6000
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 20,
+                "y": 6000,
+                "label": "X",
+                "drop": true,
+                "dx": -20,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line through the origin on a useful energy output–time graph reaching point X at 20 s and 6000 J"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1199 @@
+{
+  "id": "forces-and-matter",
+  "title": "Forces and matter",
+  "subtitle": "Springs, elastic energy, moments and pressure",
+  "order": 100,
+  "figure": "materials",
+  "types": [
+    {
+      "id": "hooke",
+      "name": "Hooke's law",
+      "equations": [
+        "F = k × x"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Force equals spring constant × extension, as long as the spring has not passed its limit of proportionality. The extension is how much longer the spring is than its natural length, not the total length. Put the extension in metres so that k comes out in N/m; to find k or x, divide F by the other one.",
+      "commonErrors": [
+        "Using the stretched length instead of the extension",
+        "Leaving the extension in cm or mm, which gives the wrong spring constant",
+        "Dividing the extension by the force when finding k"
+      ],
+      "worked": {
+        "id": "hooke-w",
+        "question": "A spring has a spring constant of 25 N/m. Calculate the force needed to stretch it by 0.2 m.",
+        "steps": [
+          "Known: k = 25 N/m, x = 0.2 m. Unknown: F.",
+          "F = k × x",
+          "F = 25 × 0.2",
+          "F = 5 N"
+        ],
+        "answer": {
+          "value": 5,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "hooke-p1",
+          "question": "A spring in a laboratory has a spring constant of 40 N/m. Calculate the force needed to produce an extension of 0.15 m.",
+          "hint": "Multiply the spring constant by the extension.",
+          "walkthrough": [
+            "k = 40 N/m, x = 0.15 m, find F.",
+            "F = k × x = 40 × 0.15",
+            "F = 6 N"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "hooke-p2",
+          "question": "The spring inside a kitchen scale has a spring constant of 500 N/m. A bag of flour compresses it by 0.04 m. Calculate the force the flour exerts on the spring.",
+          "hint": "F = k × x works for compression as well as stretching.",
+          "walkthrough": [
+            "k = 500 N/m, x = 0.04 m, find F.",
+            "F = k × x = 500 × 0.04",
+            "F = 20 N"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "hooke-p3",
+          "question": "A force of 8 N stretches a bungee cord model by 16 cm. Calculate the spring constant of the cord in N/m.",
+          "hint": "Change 16 cm to metres, then rearrange to k = F / x.",
+          "walkthrough": [
+            "F = 8 N, x = 16 cm = 0.16 m, find k.",
+            "F = k × x → k = F / x",
+            "k = 8 / 0.16",
+            "k = 50 N/m"
+          ],
+          "answer": {
+            "value": 50,
+            "unit": "N/m"
+          }
+        },
+        {
+          "id": "hooke-p4",
+          "question": "A spring inside a mattress has a spring constant of 2000 N/m. Calculate the compression produced by a force of 30 N. Give your answer in mm.",
+          "hint": "Rearrange to x = F / k, which gives metres, then change to mm.",
+          "walkthrough": [
+            "k = 2000 N/m, F = 30 N, find x.",
+            "F = k × x → x = F / k",
+            "x = 30 / 2000 = 0.015 m",
+            "x = 15 mm"
+          ],
+          "answer": {
+            "value": 15,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "hooke-p5",
+          "question": "A 0.6 kg mass is hung from a spring with a spring constant of 120 N/m. Calculate the extension of the spring in cm.",
+          "hint": "Find the weight first with W = m × g, then use x = F / k and change to cm.",
+          "walkthrough": [
+            "W = m × g = 0.6 × 10 = 6 N",
+            "x = F / k = 6 / 120",
+            "x = 0.05 m",
+            "x = 5 cm"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "cm"
+          }
+        },
+        {
+          "id": "hooke-p6",
+          "question": "A spring has a natural length of 15 cm. When a force of 1.8 N is applied its length becomes 21 cm. Calculate the spring constant in N/m.",
+          "hint": "Extension = stretched length − natural length; change it to metres, then k = F / x.",
+          "walkthrough": [
+            "x = 21 − 15 = 6 cm = 0.06 m",
+            "k = F / x = 1.8 / 0.06",
+            "k = 30 N/m"
+          ],
+          "answer": {
+            "value": 30,
+            "unit": "N/m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "elastic",
+      "name": "Energy stored in a stretched spring",
+      "equations": [
+        "E = ½ × k × x²"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "The energy stored in a stretched or compressed spring is half × spring constant × extension squared. Change the extension to metres, square it, multiply by k, then halve. To find the extension from the energy, divide E by ½ × k and take the square root.",
+      "commonErrors": [
+        "Forgetting to square the extension",
+        "Squaring the extension in cm: change to metres first",
+        "Forgetting the ½"
+      ],
+      "worked": {
+        "id": "elastic-w",
+        "question": "A spring with a spring constant of 200 N/m is stretched by 0.1 m. Calculate the energy stored in the spring.",
+        "steps": [
+          "Known: k = 200 N/m, x = 0.1 m. Unknown: E.",
+          "E = ½ × k × x²",
+          "E = ½ × 200 × 0.1² = ½ × 200 × 0.01",
+          "E = 1 J"
+        ],
+        "answer": {
+          "value": 1,
+          "unit": "J"
+        }
+      },
+      "practice": [
+        {
+          "id": "elastic-p1",
+          "question": "The spring in a toy dart launcher has a spring constant of 400 N/m. It is compressed by 0.05 m. Calculate the energy stored in the spring.",
+          "hint": "Square the compression first, then multiply by ½ × k.",
+          "walkthrough": [
+            "k = 400 N/m, x = 0.05 m, find E.",
+            "E = ½ × k × x² = ½ × 400 × 0.05²",
+            "E = ½ × 400 × 0.0025",
+            "E = 0.5 J"
+          ],
+          "answer": {
+            "value": 0.5,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-p2",
+          "question": "A toy catapult uses an elastic cord with a spring constant of 30 N/m. The cord is stretched by 0.4 m. Calculate the energy stored in the cord.",
+          "hint": "E = ½ × k × x²; remember to square 0.4.",
+          "walkthrough": [
+            "k = 30 N/m, x = 0.4 m, find E.",
+            "E = ½ × 30 × 0.4² = ½ × 30 × 0.16",
+            "E = 2.4 J"
+          ],
+          "answer": {
+            "value": 2.4,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-p3",
+          "question": "A spring in a lab has a spring constant of 150 N/m. It is stretched by 8 cm. Calculate the energy stored in the spring.",
+          "hint": "Change 8 cm to metres before you square it.",
+          "walkthrough": [
+            "x = 8 cm = 0.08 m, k = 150 N/m",
+            "E = ½ × k × x² = ½ × 150 × 0.08²",
+            "E = ½ × 150 × 0.0064",
+            "E = 0.48 J"
+          ],
+          "answer": {
+            "value": 0.48,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-p4",
+          "question": "A stiff spring in a door closer has a spring constant of 6000 N/m. It is compressed by 15 mm. Calculate the energy stored in the spring.",
+          "hint": "Change 15 mm to metres (divide by 1000), then use E = ½ × k × x².",
+          "walkthrough": [
+            "x = 15 mm = 0.015 m, k = 6000 N/m",
+            "E = ½ × 6000 × 0.015² = ½ × 6000 × 0.000225",
+            "E = 0.675 J"
+          ],
+          "answer": {
+            "value": 0.675,
+            "unit": "J"
+          }
+        },
+        {
+          "id": "elastic-p5",
+          "question": "A spring with a spring constant of 20 N/m stores 0.9 J of energy. Calculate the extension of the spring in m.",
+          "hint": "Rearrange to x² = E / (½ × k), then take the square root.",
+          "walkthrough": [
+            "E = 0.9 J, k = 20 N/m, find x.",
+            "E = ½ × k × x² → x² = E / (½ × k)",
+            "x² = 0.9 / 10 = 0.09",
+            "x = √0.09 = 0.3 m"
+          ],
+          "answer": {
+            "value": 0.3,
+            "unit": "m"
+          },
+          "boards": [
+            "Higher"
+          ]
+        },
+        {
+          "id": "elastic-p6",
+          "question": "The spring in a retractable pen has a spring constant of 1000 N/m. When fully pressed it stores 0.45 J of energy. Calculate how far the spring is compressed. Give your answer in cm.",
+          "hint": "Find x² = E / (½ × k), square root it to get metres, then change to cm.",
+          "walkthrough": [
+            "x² = E / (½ × k) = 0.45 / 500 = 0.0009",
+            "x = √0.0009 = 0.03 m",
+            "x = 3 cm"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "cm"
+          },
+          "boards": [
+            "Higher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moment",
+      "name": "Moment of a force",
+      "equations": [
+        "moment of a force = force × distance normal to the direction of the force"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "The moment, or turning effect, of a force is force × perpendicular distance from the pivot to the line of the force. Change the distance to metres so the moment is in N m. To find the force or the distance, divide the moment by the other one.",
+      "commonErrors": [
+        "Leaving the distance in cm, which gives a moment 100 times too big",
+        "Using the mass instead of the weight when a mass is given",
+        "Writing the unit as N/m or J: the moment is in N m"
+      ],
+      "worked": {
+        "id": "moment-w",
+        "question": "A force of 20 N is applied to the end of a lever, 0.5 m from the pivot and at right angles to it. Calculate the moment of the force.",
+        "steps": [
+          "Known: F = 20 N, d = 0.5 m. Unknown: moment.",
+          "moment = force × distance",
+          "moment = 20 × 0.5",
+          "moment = 10 N m"
+        ],
+        "answer": {
+          "value": 10,
+          "unit": "N m"
+        }
+      },
+      "practice": [
+        {
+          "id": "moment-p1",
+          "question": "A mechanic pushes on the end of a spanner with a force of 50 N. The spanner is 0.3 m long and the force is at right angles to it. Calculate the moment about the nut.",
+          "hint": "Multiply the force by the perpendicular distance from the nut.",
+          "walkthrough": [
+            "F = 50 N, d = 0.3 m, find the moment.",
+            "moment = F × d = 50 × 0.3",
+            "moment = 15 N m"
+          ],
+          "answer": {
+            "value": 15,
+            "unit": "N m"
+          }
+        },
+        {
+          "id": "moment-p2",
+          "question": "A door handle is 0.75 m from the hinges. A person pushes the handle with a force of 8 N at right angles to the door. Calculate the moment about the hinges.",
+          "hint": "The hinges are the pivot; moment = force × distance from the hinges.",
+          "walkthrough": [
+            "F = 8 N, d = 0.75 m, find the moment.",
+            "moment = F × d = 8 × 0.75",
+            "moment = 6 N m"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "N m"
+          }
+        },
+        {
+          "id": "moment-p3",
+          "question": "A cyclist pushes down on a pedal with a force of 150 N. The pedal is 40 cm from the centre of the crank. Calculate the moment about the centre of the crank in N m.",
+          "hint": "Change 40 cm to metres before multiplying.",
+          "walkthrough": [
+            "F = 150 N, d = 40 cm = 0.4 m",
+            "moment = F × d = 150 × 0.4",
+            "moment = 60 N m"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "N m"
+          }
+        },
+        {
+          "id": "moment-p4",
+          "question": "A wheel nut on a van needs a moment of 36 N m to loosen it. The wheel brace is 0.9 m long. Calculate the force needed at the end of the brace, applied at right angles to it.",
+          "hint": "Rearrange to force = moment / distance.",
+          "walkthrough": [
+            "moment = 36 N m, d = 0.9 m, find F.",
+            "moment = F × d → F = moment / d",
+            "F = 36 / 0.9",
+            "F = 40 N"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "moment-p5",
+          "question": "A 2 kg mass hangs from a metre rule 25 cm from the pivot. Calculate the moment of the mass about the pivot in N m.",
+          "hint": "Find the weight with W = m × g first, change 25 cm to metres, then multiply.",
+          "walkthrough": [
+            "W = m × g = 2 × 10 = 20 N",
+            "d = 25 cm = 0.25 m",
+            "moment = F × d = 20 × 0.25",
+            "moment = 5 N m"
+          ],
+          "answer": {
+            "value": 5,
+            "unit": "N m"
+          }
+        },
+        {
+          "id": "moment-p6",
+          "question": "A 1.5 kg bag hangs from a horizontal shelf bracket and produces a moment of 3 N m about the wall. Calculate the distance of the bag from the wall in cm.",
+          "hint": "Find the weight with W = m × g, then distance = moment / force and change to cm.",
+          "walkthrough": [
+            "W = m × g = 1.5 × 10 = 15 N",
+            "d = moment / F = 3 / 15 = 0.2 m",
+            "d = 20 cm"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "cm"
+          }
+        }
+      ]
+    },
+    {
+      "id": "balance",
+      "name": "The principle of moments",
+      "equations": [
+        "sum of clockwise moments = sum of anticlockwise moments"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "When a see-saw or beam is balanced, the total clockwise moment about the pivot equals the total anticlockwise moment. Work out the moment you can (force × distance), set it equal to the unknown side, and divide to find the missing force or distance. If two forces act on one side, add their moments before equating.",
+      "commonErrors": [
+        "Equating forces instead of moments",
+        "Using a distance measured from the end of the beam rather than from the pivot",
+        "Forgetting one of the forces when two act on the same side"
+      ],
+      "worked": {
+        "id": "balance-w",
+        "question": "A see-saw is balanced on a pivot at its centre. A child weighing 300 N sits 2 m from the pivot on the left. Calculate how far from the pivot a child weighing 400 N must sit on the right to balance it.",
+        "steps": [
+          "Known: left side F = 300 N at d = 2 m; right side F = 400 N. Unknown: d on the right.",
+          "anticlockwise moment = clockwise moment",
+          "300 × 2 = 400 × d",
+          "d = 600 / 400",
+          "d = 1.5 m"
+        ],
+        "answer": {
+          "value": 1.5,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "balance-p1",
+          "question": "A metre rule is balanced on a pivot at its centre. A 20 N weight hangs 0.3 m to the left of the pivot. A force F pulls down 0.6 m to the right of the pivot and the rule is balanced. Calculate F.",
+          "hint": "Set 20 × 0.3 equal to F × 0.6 and divide.",
+          "walkthrough": [
+            "anticlockwise moment = clockwise moment",
+            "20 × 0.3 = F × 0.6",
+            "F = 6 / 0.6",
+            "F = 10 N"
+          ],
+          "answer": {
+            "value": 10,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "balance-p2",
+          "question": "A beam is balanced on a pivot. A 50 N load sits 0.4 m from the pivot on one side. An 80 N load balances it on the other side. Calculate the distance of the 80 N load from the pivot.",
+          "hint": "50 × 0.4 = 80 × d; divide to find d.",
+          "walkthrough": [
+            "50 × 0.4 = 80 × d",
+            "d = 20 / 80",
+            "d = 0.25 m"
+          ],
+          "answer": {
+            "value": 0.25,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "balance-p3",
+          "question": "A mobile hangs from a thread tied to a light rod. A 6 N ornament hangs 25 cm from the thread on one side. Another ornament hangs 15 cm from the thread on the other side and the rod is level. Calculate the weight of the second ornament.",
+          "hint": "Both distances are in cm, so they cancel: 6 × 25 = F × 15.",
+          "walkthrough": [
+            "6 × 25 = F × 15",
+            "F = 150 / 15",
+            "F = 10 N"
+          ],
+          "answer": {
+            "value": 10,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "balance-p4",
+          "question": "A 40 kg child sits 1.5 m from the pivot of a see-saw. Calculate how far from the pivot a 30 kg child must sit on the other side to balance it.",
+          "hint": "Change each mass to a weight with W = m × g, then equate the moments.",
+          "walkthrough": [
+            "Weights: 40 × 10 = 400 N and 30 × 10 = 300 N",
+            "400 × 1.5 = 300 × d",
+            "d = 600 / 300",
+            "d = 2 m"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "balance-p5",
+          "question": "A metre rule is pivoted at its centre. On the left, a 10 N weight hangs 0.2 m from the pivot and a 5 N weight hangs 0.6 m from the pivot. A single force F acting 0.5 m to the right of the pivot balances the rule. Calculate F.",
+          "hint": "Add the two anticlockwise moments first, then set the total equal to F × 0.5.",
+          "walkthrough": [
+            "Left moments: 10 × 0.2 + 5 × 0.6 = 2 + 3 = 5 N m",
+            "5 = F × 0.5",
+            "F = 5 / 0.5",
+            "F = 10 N"
+          ],
+          "answer": {
+            "value": 10,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "balance-p6",
+          "question": "A plank rests on a pivot. On the left of the pivot, a 300 N box sits 1 m away and a 200 N box sits 2 m away. A person weighing 350 N stands on the right so that the plank balances. Calculate how far from the pivot the person stands.",
+          "hint": "Total the left-hand moments, then divide by 350 N.",
+          "walkthrough": [
+            "Left moments: 300 × 1 + 200 × 2 = 300 + 400 = 700 N m",
+            "700 = 350 × d",
+            "d = 700 / 350",
+            "d = 2 m"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pressure",
+      "name": "Pressure on a surface",
+      "equations": [
+        "P = F / A"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Pressure is force divided by the area the force acts on. The force is usually a weight, so find W = m × g if you are given a mass. Change the area to m² (1 m² = 10 000 cm²) so the pressure comes out in pascals; 1 kPa = 1000 Pa.",
+      "commonErrors": [
+        "Dividing by the area in cm² instead of m²",
+        "Using the mass instead of the weight as the force",
+        "Multiplying force by area instead of dividing"
+      ],
+      "worked": {
+        "id": "pressure-w",
+        "question": "A crate weighing 600 N rests on the floor. The base of the crate has an area of 0.5 m². Calculate the pressure on the floor.",
+        "steps": [
+          "Known: F = 600 N, A = 0.5 m². Unknown: P.",
+          "P = F / A",
+          "P = 600 / 0.5",
+          "P = 1200 Pa"
+        ],
+        "answer": {
+          "value": 1200,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "pressure-p1",
+          "question": "A box weighing 200 N stands on a table. Its base has an area of 0.4 m². Calculate the pressure the box exerts on the table.",
+          "hint": "Divide the weight by the area of the base.",
+          "walkthrough": [
+            "F = 200 N, A = 0.4 m², find P.",
+            "P = F / A = 200 / 0.4",
+            "P = 500 Pa"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p2",
+          "question": "A person weighing 900 N stands on both feet. The total area of their shoes in contact with the ground is 0.03 m². Calculate the pressure on the ground.",
+          "hint": "P = F / A with the total area of both shoes.",
+          "walkthrough": [
+            "F = 900 N, A = 0.03 m², find P.",
+            "P = F / A = 900 / 0.03",
+            "P = 30 000 Pa"
+          ],
+          "answer": {
+            "value": 30000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p3",
+          "question": "A trophy weighing 50 N stands on a shelf. Its base has an area of 20 cm². Calculate the pressure the trophy exerts on the shelf. Give your answer in Pa.",
+          "hint": "Change 20 cm² to m² by dividing by 10 000, then divide the force by it.",
+          "walkthrough": [
+            "A = 20 cm² = 20 / 10 000 = 0.002 m²",
+            "P = F / A = 50 / 0.002",
+            "P = 25 000 Pa"
+          ],
+          "answer": {
+            "value": 25000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p4",
+          "question": "The air in a car tyre is at a pressure of 200 kPa. The tyre touches the road over an area of 0.015 m². Calculate the force the tyre exerts on the road.",
+          "hint": "Change 200 kPa to Pa, then rearrange to F = P × A.",
+          "walkthrough": [
+            "P = 200 kPa = 200 000 Pa, A = 0.015 m², find F.",
+            "P = F / A → F = P × A",
+            "F = 200 000 × 0.015",
+            "F = 3000 N"
+          ],
+          "answer": {
+            "value": 3000,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "pressure-p5",
+          "question": "A 60 kg hiker stands on soft ground. The total area of her boots in contact with the ground is 0.04 m². Calculate the pressure on the ground.",
+          "hint": "Find the weight with W = m × g first, then P = F / A.",
+          "walkthrough": [
+            "W = m × g = 60 × 10 = 600 N",
+            "P = F / A = 600 / 0.04",
+            "P = 15 000 Pa"
+          ],
+          "answer": {
+            "value": 15000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p6",
+          "question": "An elephant has a mass of 4000 kg. Its four feet have a total area of 2000 cm² in contact with the ground. Calculate the pressure on the ground in kPa.",
+          "hint": "Find the weight, change 2000 cm² to m², divide, then change Pa to kPa.",
+          "walkthrough": [
+            "W = m × g = 4000 × 10 = 40 000 N",
+            "A = 2000 cm² = 2000 / 10 000 = 0.2 m²",
+            "P = F / A = 40 000 / 0.2 = 200 000 Pa",
+            "P = 200 kPa"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "kPa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "liquid",
+      "name": "Pressure in a liquid",
+      "equations": [
+        "P = h × ρ × g"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "The pressure due to a column of liquid is depth × density × gravitational field strength. Use g = 10 N/kg and the density given in the question, with the depth in metres, to get the pressure in Pa. If the question asks for the total pressure, add atmospheric pressure on top.",
+      "commonErrors": [
+        "Forgetting to add atmospheric pressure when the total pressure is asked for",
+        "Using the depth in cm",
+        "Mixing up h (depth) and ρ (density) when rearranging"
+      ],
+      "worked": {
+        "id": "liquid-w",
+        "question": "Calculate the pressure due to the water at the bottom of a tank 3 m deep. Density of water = 1000 kg/m³.",
+        "steps": [
+          "Known: h = 3 m, ρ = 1000 kg/m³, g = 10 N/kg. Unknown: P.",
+          "P = h × ρ × g",
+          "P = 3 × 1000 × 10",
+          "P = 30 000 Pa"
+        ],
+        "answer": {
+          "value": 30000,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "liquid-p1",
+          "question": "A swimming pool is 2 m deep. Calculate the pressure due to the water at the bottom of the pool. Density of water = 1000 kg/m³.",
+          "hint": "Multiply depth × density × g with g = 10 N/kg.",
+          "walkthrough": [
+            "h = 2 m, ρ = 1000 kg/m³, g = 10 N/kg, find P.",
+            "P = h × ρ × g = 2 × 1000 × 10",
+            "P = 20 000 Pa"
+          ],
+          "answer": {
+            "value": 20000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "liquid-p2",
+          "question": "A submarine is 50 m below the surface of the sea. Calculate the pressure due to the sea water at this depth. Density of sea water = 1030 kg/m³.",
+          "hint": "P = h × ρ × g, using the density of sea water given.",
+          "walkthrough": [
+            "h = 50 m, ρ = 1030 kg/m³, g = 10 N/kg, find P.",
+            "P = h × ρ × g = 50 × 1030 × 10",
+            "P = 515 000 Pa"
+          ],
+          "answer": {
+            "value": 515000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "liquid-p3",
+          "question": "The pressure due to the liquid at the bottom of a 0.5 m deep tank of cooking oil is 4500 Pa. Calculate the density of the oil.",
+          "hint": "Rearrange to ρ = P / (h × g).",
+          "walkthrough": [
+            "P = 4500 Pa, h = 0.5 m, g = 10 N/kg, find ρ.",
+            "P = h × ρ × g → ρ = P / (h × g)",
+            "ρ = 4500 / (0.5 × 10) = 4500 / 5",
+            "ρ = 900 kg/m³"
+          ],
+          "answer": {
+            "value": 900,
+            "unit": "kg/m³"
+          }
+        },
+        {
+          "id": "liquid-p4",
+          "question": "The pressure due to the water on a diver is 120 kPa. Calculate the depth of the diver. Density of water = 1000 kg/m³.",
+          "hint": "Change 120 kPa to Pa, then rearrange to h = P / (ρ × g).",
+          "walkthrough": [
+            "P = 120 kPa = 120 000 Pa, ρ = 1000 kg/m³, g = 10 N/kg, find h.",
+            "P = h × ρ × g → h = P / (ρ × g)",
+            "h = 120 000 / (1000 × 10) = 120 000 / 10 000",
+            "h = 12 m"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "liquid-p5",
+          "question": "A diver is 15 m below the surface of a lake. Atmospheric pressure at the surface is 100 kPa. Calculate the total pressure on the diver in kPa. Density of water = 1000 kg/m³.",
+          "hint": "Find the pressure due to the water with P = h × ρ × g, change it to kPa, then add the 100 kPa of the atmosphere.",
+          "walkthrough": [
+            "Water: P = h × ρ × g = 15 × 1000 × 10 = 150 000 Pa = 150 kPa",
+            "Total = 150 + 100",
+            "Total pressure = 250 kPa"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "kPa"
+          }
+        },
+        {
+          "id": "liquid-p6",
+          "question": "A submarine hatch has an area of 0.5 m². The submarine is 40 m below the surface of the sea. Calculate the force on the outside of the hatch due to the sea water. Density of sea water = 1030 kg/m³.",
+          "hint": "Find the pressure with P = h × ρ × g, then use F = P × A.",
+          "walkthrough": [
+            "P = h × ρ × g = 40 × 1030 × 10 = 412 000 Pa",
+            "F = P × A = 412 000 × 0.5",
+            "F = 206 000 N"
+          ],
+          "answer": {
+            "value": 206000,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fx-graph",
+      "name": "Reading a force–extension graph",
+      "equations": [
+        "F = k × x",
+        "E = ½ × k × x²"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "On a force–extension graph the straight part through the origin is where the spring obeys Hooke's law. Its gradient is the spring constant: pick a point on the line, change the extension to metres and divide the force by it. The area under the line up to a point is the energy stored, a triangle of area ½ × extension × force. Where the line stops being straight is the limit of proportionality.",
+      "commonErrors": [
+        "Taking the gradient with the extension still in cm or mm",
+        "Using force / extension at a point on the curved part, beyond the limit of proportionality",
+        "Forgetting the ½ when finding the area of the triangle"
+      ],
+      "worked": {
+        "id": "fx-graph-w",
+        "question": "The graph shows how the extension of a spring changes with the force applied. The line is straight up to point P. Use the gradient of the straight part of the graph to determine the spring constant of the spring in N/m.",
+        "steps": [
+          "Choose a point on the straight part: P at (8 cm, 16 N).",
+          "Change the extension to metres: 8 cm = 0.08 m.",
+          "k = F / x = 16 / 0.08",
+          "k = 200 N/m"
+        ],
+        "answer": {
+          "value": 200,
+          "unit": "N/m"
+        },
+        "graph": {
+          "x": {
+            "label": "extension in cm",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          },
+          "y": {
+            "label": "force in N",
+            "min": 0,
+            "max": 20,
+            "step": 2
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  16
+                ]
+              ]
+            },
+            {
+              "kind": "curve",
+              "points": [
+                [
+                  8.0,
+                  16.0
+                ],
+                [
+                  8.25,
+                  16.48
+                ],
+                [
+                  8.5,
+                  16.9
+                ],
+                [
+                  8.75,
+                  17.27
+                ],
+                [
+                  9.0,
+                  17.6
+                ],
+                [
+                  9.25,
+                  17.88
+                ],
+                [
+                  9.5,
+                  18.1
+                ],
+                [
+                  9.75,
+                  18.27
+                ],
+                [
+                  10.0,
+                  18.4
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 8,
+              "y": 16,
+              "label": "P",
+              "drop": true
+            }
+          ],
+          "alt": "Force–extension graph: a straight line from the origin to P at 8 cm and 16 N, then curving more gently to 18.4 N at 10 cm"
+        }
+      },
+      "practice": [
+        {
+          "id": "fx-graph-p1",
+          "question": "The graph shows the force applied to a spring in a newton meter against its extension. Point A is marked. Use the graph to determine the extension of the spring when the force is 3 N.",
+          "hint": "Find 3 N on the force axis, go across to the line at A and read down to the extension axis.",
+          "walkthrough": [
+            "A is on the line at a force of 3 N.",
+            "Reading down from A to the extension axis gives 6 cm.",
+            "Extension = 6 cm"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "cm"
+          },
+          "graph": {
+            "x": {
+              "label": "extension in cm",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 6,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    12,
+                    6
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 3,
+                "label": "A",
+                "drop": true
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to 6 N at 12 cm, with point A marked at 3 N and 6 cm"
+          }
+        },
+        {
+          "id": "fx-graph-p2",
+          "question": "The graph shows how the extension of a spring changes with the force applied. The line is straight up to point L and curves after it. Use the graph to determine the force at which the spring stops obeying Hooke's law.",
+          "hint": "Hooke's law holds only on the straight part; read the force at L, where the line starts to curve.",
+          "walkthrough": [
+            "The line is straight from the origin up to L and then curves.",
+            "Reading across from L to the force axis gives 12 N.",
+            "Force at the limit of proportionality = 12 N"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "N"
+          },
+          "graph": {
+            "x": {
+              "label": "extension in cm",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 18,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    6,
+                    12
+                  ]
+                ]
+              },
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    6.0,
+                    12.0
+                  ],
+                  [
+                    6.5,
+                    12.95
+                  ],
+                  [
+                    7.0,
+                    13.8
+                  ],
+                  [
+                    7.5,
+                    14.55
+                  ],
+                  [
+                    8.0,
+                    15.2
+                  ],
+                  [
+                    8.5,
+                    15.75
+                  ],
+                  [
+                    9.0,
+                    16.2
+                  ],
+                  [
+                    9.5,
+                    16.55
+                  ],
+                  [
+                    10.0,
+                    16.8
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 12,
+                "label": "L",
+                "drop": true
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to L at 6 cm and 12 N, then a curve flattening to 16.8 N at 10 cm"
+          }
+        },
+        {
+          "id": "fx-graph-p3",
+          "question": "The graph shows the force applied to the spring in a toy against its extension. Use the shaded area under the line to determine the energy stored in the spring at an extension of 10 cm.",
+          "hint": "The shaded area is a triangle: ½ × base × height, with the extension in metres.",
+          "walkthrough": [
+            "At 10 cm the force is 8 N; 10 cm = 0.1 m.",
+            "Energy = area = ½ × 0.1 × 8",
+            "Energy = 0.4 J"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "extension in cm",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    8
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 10
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to 8 N at 10 cm, with the triangle under the line shaded"
+          }
+        },
+        {
+          "id": "fx-graph-p4",
+          "question": "The graph shows the force applied to the small spring from a pen against its extension in mm. Use the gradient of the graph to determine the spring constant in N/m.",
+          "hint": "Pick a point on the line, change the extension from mm to metres (divide by 1000), then k = F / x.",
+          "walkthrough": [
+            "Point on the line: (40 mm, 10 N)",
+            "40 mm = 0.04 m",
+            "k = F / x = 10 / 0.04",
+            "k = 250 N/m"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "N/m"
+          },
+          "graph": {
+            "x": {
+              "label": "extension in mm",
+              "min": 0,
+              "max": 40,
+              "step": 5
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    40,
+                    10
+                  ]
+                ]
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to 10 N at 40 mm"
+          }
+        },
+        {
+          "id": "fx-graph-p5",
+          "question": "The graph shows the force applied to a trampoline spring against its extension. Point X is marked. Use the shaded area under the line up to X to determine the energy stored in the spring at X.",
+          "hint": "Read both coordinates of X, change the extension to metres, then area = ½ × extension × force.",
+          "walkthrough": [
+            "X is at (6 cm, 9 N); 6 cm = 0.06 m.",
+            "Energy = area of triangle = ½ × 0.06 × 9",
+            "Energy = 0.27 J"
+          ],
+          "answer": {
+            "value": 0.27,
+            "unit": "J"
+          },
+          "graph": {
+            "x": {
+              "label": "extension in cm",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    8,
+                    12
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 9,
+                "label": "X",
+                "drop": true
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 6
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to 12 N at 8 cm, with X marked at 6 cm and 9 N and the triangle under the line up to X shaded"
+          }
+        },
+        {
+          "id": "fx-graph-p6",
+          "question": "The graph shows the force applied to a spring against its extension. A mass hung from the spring produces an extension of 8 cm, marked as point B. Use the graph to find the force, and so calculate the mass hung from the spring.",
+          "hint": "Read the force at B, then use W = m × g with g = 10 N/kg to find the mass.",
+          "walkthrough": [
+            "At B the extension is 8 cm and the force is 4 N.",
+            "The force is the weight of the mass: W = m × g",
+            "m = W / g = 4 / 10",
+            "m = 0.4 kg"
+          ],
+          "answer": {
+            "value": 0.4,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "extension in cm",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 5,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    5
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 8,
+                "y": 4,
+                "label": "B",
+                "drop": true
+              }
+            ],
+            "alt": "Force–extension graph: a straight line from the origin to 5 N at 10 cm, with B marked at 8 cm and 4 N"
+          }
+        }
+      ]
+    }
+  ]
+}

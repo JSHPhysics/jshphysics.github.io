@@ -1,0 +1,74 @@
+{
+  "topics": [
+    {
+      "id": "units-and-equations",
+      "file": "units-and-equations.json",
+      "title": "Units and equations",
+      "order": 10,
+      "types": 6
+    },
+    {
+      "id": "motion",
+      "file": "motion.json",
+      "title": "Motion",
+      "order": 20,
+      "types": 5
+    },
+    {
+      "id": "forces-and-momentum",
+      "file": "forces-and-momentum.json",
+      "title": "Forces and momentum",
+      "order": 30,
+      "types": 8
+    },
+    {
+      "id": "energy",
+      "file": "energy.json",
+      "title": "Energy",
+      "order": 40,
+      "types": 7
+    },
+    {
+      "id": "waves",
+      "file": "waves.json",
+      "title": "Waves",
+      "order": 50,
+      "types": 5
+    },
+    {
+      "id": "radioactivity",
+      "file": "radioactivity.json",
+      "title": "Radioactivity",
+      "order": 60,
+      "types": 6
+    },
+    {
+      "id": "electricity",
+      "file": "electricity.json",
+      "title": "Electricity",
+      "order": 70,
+      "types": 7
+    },
+    {
+      "id": "magnetism",
+      "file": "magnetism.json",
+      "title": "Magnetism and transformers",
+      "order": 80,
+      "types": 4
+    },
+    {
+      "id": "particle-model",
+      "file": "particle-model.json",
+      "title": "Particle model and thermal energy",
+      "order": 90,
+      "types": 7
+    },
+    {
+      "id": "forces-and-matter",
+      "file": "forces-and-matter.json",
+      "title": "Forces and matter",
+      "order": 100,
+      "types": 7
+    }
+  ]
+}

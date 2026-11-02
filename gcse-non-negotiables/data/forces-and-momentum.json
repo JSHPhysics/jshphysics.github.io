@@ -1,0 +1,1394 @@
+{
+  "id": "forces-and-momentum",
+  "title": "Forces and momentum",
+  "subtitle": "Newton's second law, weight, stopping, momentum and collisions",
+  "order": 30,
+  "figure": "momentum-energy",
+  "types": [
+    {
+      "id": "weight-and-mass",
+      "name": "Weight and mass",
+      "equations": [
+        "W = m × g"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Weight is the force of gravity on an object: weight = mass × gravitational field strength. On Earth g = 10 N/kg, so multiply the mass in kg by 10 to get the weight in N. To find mass from weight, divide by g; to find g on another planet, divide the weight there by the mass (mass is the same everywhere).",
+      "commonErrors": [
+        "Using the mass in grams instead of kilograms",
+        "Treating weight and mass as the same thing, so the answer is 65 N for a 65 kg person",
+        "Changing the mass when an object moves to another planet (mass stays the same, weight changes)"
+      ],
+      "worked": {
+        "id": "weight-and-mass-w",
+        "question": "A student has a mass of 65 kg. Calculate the student's weight on Earth.",
+        "steps": [
+          "Known: m = 65 kg, g = 10 N/kg. Unknown: W.",
+          "W = m × g",
+          "W = 65 × 10",
+          "W = 650 N"
+        ],
+        "answer": {
+          "value": 650,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "weight-and-mass-p1",
+          "question": "A car has a mass of 1200 kg. Calculate the weight of the car on Earth.",
+          "hint": "Use W = m × g with g = 10 N/kg.",
+          "walkthrough": [
+            "m = 1200 kg, g = 10 N/kg, find W.",
+            "W = m × g = 1200 × 10",
+            "W = 12000 N"
+          ],
+          "answer": {
+            "value": 12000,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p2",
+          "question": "A bag of flour has a mass of 2.5 kg. Calculate its weight.",
+          "hint": "Multiply the mass in kg by g = 10 N/kg.",
+          "walkthrough": [
+            "m = 2.5 kg, g = 10 N/kg, find W.",
+            "W = m × g = 2.5 × 10",
+            "W = 25 N"
+          ],
+          "answer": {
+            "value": 25,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p3",
+          "question": "A chair weighs 48 N on Earth. Calculate the mass of the chair.",
+          "hint": "Rearrange W = m × g to m = W / g.",
+          "walkthrough": [
+            "W = 48 N, g = 10 N/kg, find m.",
+            "W = m × g → m = W / g",
+            "m = 48 / 10",
+            "m = 4.8 kg"
+          ],
+          "answer": {
+            "value": 4.8,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "weight-and-mass-p4",
+          "question": "A tin of beans has a mass of 400 g. Calculate the weight of the tin in newtons.",
+          "hint": "Change 400 g into kg first, then multiply by g = 10 N/kg.",
+          "walkthrough": [
+            "m = 400 g = 0.4 kg, g = 10 N/kg, find W.",
+            "W = m × g = 0.4 × 10",
+            "W = 4 N"
+          ],
+          "answer": {
+            "value": 4,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p5",
+          "question": "An astronaut weighs 800 N on Earth. On the Moon the gravitational field strength is 1.6 N/kg. Calculate the astronaut's weight on the Moon.",
+          "hint": "Find the mass from the weight on Earth first; the mass is the same on the Moon.",
+          "walkthrough": [
+            "On Earth: m = W / g = 800 / 10 = 80 kg.",
+            "Mass is the same on the Moon.",
+            "On the Moon: W = m × g = 80 × 1.6",
+            "W = 128 N"
+          ],
+          "answer": {
+            "value": 128,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-and-mass-p6",
+          "question": "A space lander weighs 1500 N on Earth. On Mars the same lander weighs 555 N. Calculate the gravitational field strength on Mars.",
+          "hint": "Use the Earth weight to find the mass, then divide the Mars weight by that mass.",
+          "walkthrough": [
+            "On Earth: m = W / g = 1500 / 10 = 150 kg.",
+            "On Mars: W = m × g → g = W / m",
+            "g = 555 / 150",
+            "g = 3.7 N/kg"
+          ],
+          "answer": {
+            "value": 3.7,
+            "unit": "N/kg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resultant-force",
+      "name": "Resultant force in a straight line",
+      "equations": [
+        "resultant force = sum of forces in one direction − sum of forces in the other direction"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "When forces act along the same line, add the forces that point the same way and subtract the forces that point the opposite way. The answer is the resultant force, and its direction is the direction of the bigger total. If you are given the resultant and one force, subtract to find the missing force.",
+      "commonErrors": [
+        "Adding all the forces together without checking their directions",
+        "Forgetting to convert kN into N before subtracting",
+        "Leaving out the weight when an object is held up by a cable or by air resistance"
+      ],
+      "worked": {
+        "id": "resultant-force-w",
+        "question": "In a tug of war, team A pulls the rope to the left with a force of 850 N and team B pulls to the right with a force of 920 N. Calculate the resultant force on the rope.",
+        "steps": [
+          "Known: 850 N to the left, 920 N to the right. Unknown: resultant force.",
+          "The forces act in opposite directions, so subtract.",
+          "Resultant = 920 − 850",
+          "Resultant = 70 N to the right"
+        ],
+        "answer": {
+          "value": 70,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "resultant-force-p1",
+          "question": "A car engine provides a forward force of 3000 N. Friction and air resistance together act backwards with a force of 1200 N. Calculate the resultant force on the car.",
+          "hint": "The forces are in opposite directions, so subtract the smaller from the larger.",
+          "walkthrough": [
+            "Forward 3000 N, backward 1200 N, find the resultant.",
+            "Resultant = 3000 − 1200",
+            "Resultant = 1800 N forwards"
+          ],
+          "answer": {
+            "value": 1800,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-force-p2",
+          "question": "Two people push a broken-down van in the same direction, one with a force of 150 N and the other with a force of 220 N. Calculate the resultant force on the van.",
+          "hint": "Forces in the same direction add together.",
+          "walkthrough": [
+            "Both forces act the same way, so add them.",
+            "Resultant = 150 + 220",
+            "Resultant = 370 N"
+          ],
+          "answer": {
+            "value": 370,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-force-p3",
+          "question": "A motorboat's engine produces a forward thrust of 4500 N. The resultant force on the boat is 1700 N forwards. Calculate the drag force from the water.",
+          "hint": "Thrust − drag = resultant, so drag = thrust − resultant.",
+          "walkthrough": [
+            "Thrust 4500 N forwards, resultant 1700 N forwards, find drag.",
+            "Drag = thrust − resultant = 4500 − 1700",
+            "Drag = 2800 N"
+          ],
+          "answer": {
+            "value": 2800,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-force-p4",
+          "question": "A model rocket has a thrust of 2.4 kN upwards. Its weight is 1800 N. Calculate the resultant force on the rocket at take-off.",
+          "hint": "Change 2.4 kN into newtons before subtracting the weight.",
+          "walkthrough": [
+            "Thrust = 2.4 kN = 2400 N upwards, weight = 1800 N downwards.",
+            "Resultant = 2400 − 1800",
+            "Resultant = 600 N upwards"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-force-p5",
+          "question": "A skydiver has a mass of 70 kg. At one moment during the fall the air resistance on the skydiver is 560 N. Calculate the resultant force on the skydiver at this moment.",
+          "hint": "Find the weight with W = m × g first, then subtract the air resistance.",
+          "walkthrough": [
+            "Weight: W = m × g = 70 × 10 = 700 N downwards.",
+            "Air resistance = 560 N upwards.",
+            "Resultant = 700 − 560",
+            "Resultant = 140 N downwards"
+          ],
+          "answer": {
+            "value": 140,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "resultant-force-p6",
+          "question": "A lift car of mass 500 kg hangs from a steel cable. The tension in the cable is 6200 N. Calculate the resultant force on the lift car.",
+          "hint": "Work out the weight of the lift first; the tension pulls up and the weight pulls down.",
+          "walkthrough": [
+            "Weight: W = m × g = 500 × 10 = 5000 N downwards.",
+            "Tension = 6200 N upwards.",
+            "Resultant = 6200 − 5000",
+            "Resultant = 1200 N upwards"
+          ],
+          "answer": {
+            "value": 1200,
+            "unit": "N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "newtons-second-law",
+      "name": "Newton's second law",
+      "equations": [
+        "F = m × a"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Force = mass × acceleration, where F is the resultant force. Spot it when a question gives any two of resultant force, mass and acceleration and asks for the third. If two forces act, find the resultant first by subtracting, then put the resultant into F = m × a.",
+      "commonErrors": [
+        "Using the engine force or thrust instead of the resultant force",
+        "Forgetting to convert grams to kilograms or kN to N",
+        "Dividing the wrong way round when rearranging: a = F / m, not m / F"
+      ],
+      "worked": {
+        "id": "newtons-second-law-w",
+        "question": "A car of mass 1500 kg accelerates at 2 m/s². Calculate the resultant force on the car.",
+        "steps": [
+          "Known: m = 1500 kg, a = 2 m/s². Unknown: F.",
+          "F = m × a",
+          "F = 1500 × 2",
+          "F = 3000 N"
+        ],
+        "answer": {
+          "value": 3000,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "newtons-second-law-p1",
+          "question": "A laboratory trolley of mass 2 kg accelerates at 1.5 m/s². Calculate the resultant force on the trolley.",
+          "hint": "Use F = m × a.",
+          "walkthrough": [
+            "m = 2 kg, a = 1.5 m/s², find F.",
+            "F = m × a = 2 × 1.5",
+            "F = 3 N"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "newtons-second-law-p2",
+          "question": "A cyclist and her bike have a total mass of 80 kg. She accelerates at 0.75 m/s². Calculate the resultant force acting on her.",
+          "hint": "Multiply the total mass by the acceleration.",
+          "walkthrough": [
+            "m = 80 kg, a = 0.75 m/s², find F.",
+            "F = m × a = 80 × 0.75",
+            "F = 60 N"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "newtons-second-law-p3",
+          "question": "A resultant force of 18 kN gives a lorry an acceleration of 1.2 m/s². Calculate the mass of the lorry.",
+          "hint": "Change 18 kN to N, then rearrange to m = F / a.",
+          "walkthrough": [
+            "F = 18 kN = 18000 N, a = 1.2 m/s², find m.",
+            "F = m × a → m = F / a",
+            "m = 18000 / 1.2",
+            "m = 15000 kg"
+          ],
+          "answer": {
+            "value": 15000,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "newtons-second-law-p4",
+          "question": "A toy car has a mass of 300 g. A resultant force of 0.6 N acts on it. Calculate the acceleration of the toy car.",
+          "hint": "Convert 300 g to kg, then use a = F / m.",
+          "walkthrough": [
+            "m = 300 g = 0.3 kg, F = 0.6 N, find a.",
+            "F = m × a → a = F / m",
+            "a = 0.6 / 0.3",
+            "a = 2 m/s²"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "newtons-second-law-p5",
+          "question": "A car of mass 1200 kg has an engine force of 2500 N. The resistive forces on the car total 700 N. Calculate the acceleration of the car.",
+          "hint": "Find the resultant force first (engine force − resistive forces), then use a = F / m.",
+          "walkthrough": [
+            "Resultant force = 2500 − 700 = 1800 N.",
+            "F = m × a → a = F / m",
+            "a = 1800 / 1200",
+            "a = 1.5 m/s²"
+          ],
+          "answer": {
+            "value": 1.5,
+            "unit": "m/s²"
+          }
+        },
+        {
+          "id": "newtons-second-law-p6",
+          "question": "A rocket of mass 500 kg produces a thrust of 8000 N upwards at take-off. Calculate the acceleration of the rocket.",
+          "hint": "The resultant force is thrust − weight; find the weight with W = m × g first.",
+          "walkthrough": [
+            "Weight: W = m × g = 500 × 10 = 5000 N.",
+            "Resultant force = 8000 − 5000 = 3000 N upwards.",
+            "a = F / m = 3000 / 500",
+            "a = 6 m/s²"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "m/s²"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stopping-distance",
+      "name": "Stopping distance",
+      "equations": [
+        "thinking distance = speed × reaction time",
+        "stopping distance = thinking distance + braking distance"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Thinking distance is how far the vehicle travels while the driver reacts: speed × reaction time. Braking distance is how far it travels once the brakes are on. Stopping distance is the two added together. Work out whichever part you are not given, then add or subtract.",
+      "commonErrors": [
+        "Adding the reaction time to the speed instead of multiplying",
+        "Forgetting to convert km/h to m/s before multiplying by a time in seconds",
+        "Giving the thinking distance as the stopping distance and forgetting the braking distance"
+      ],
+      "worked": {
+        "id": "stopping-distance-w",
+        "question": "A car travels at 15 m/s. The driver's reaction time is 0.6 s and the braking distance is 14 m. Calculate the stopping distance of the car.",
+        "steps": [
+          "Known: speed = 15 m/s, reaction time = 0.6 s, braking distance = 14 m. Unknown: stopping distance.",
+          "Thinking distance = speed × reaction time = 15 × 0.6 = 9 m",
+          "Stopping distance = thinking distance + braking distance",
+          "Stopping distance = 9 + 14",
+          "Stopping distance = 23 m"
+        ],
+        "answer": {
+          "value": 23,
+          "unit": "m"
+        }
+      },
+      "practice": [
+        {
+          "id": "stopping-distance-p1",
+          "question": "A motorbike travels at 20 m/s. The rider's reaction time is 0.7 s. Calculate the thinking distance.",
+          "hint": "Thinking distance = speed × reaction time.",
+          "walkthrough": [
+            "speed = 20 m/s, reaction time = 0.7 s, find thinking distance.",
+            "Thinking distance = 20 × 0.7",
+            "Thinking distance = 14 m"
+          ],
+          "answer": {
+            "value": 14,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "stopping-distance-p2",
+          "question": "A bus has a thinking distance of 12 m and a braking distance of 24 m. Calculate its stopping distance.",
+          "hint": "Stopping distance is thinking distance plus braking distance.",
+          "walkthrough": [
+            "Thinking distance = 12 m, braking distance = 24 m.",
+            "Stopping distance = 12 + 24",
+            "Stopping distance = 36 m"
+          ],
+          "answer": {
+            "value": 36,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "stopping-distance-p3",
+          "question": "A tired lorry driver travelling at 24 m/s has a thinking distance of 18 m. Calculate the driver's reaction time.",
+          "hint": "Rearrange thinking distance = speed × reaction time to reaction time = thinking distance / speed.",
+          "walkthrough": [
+            "Thinking distance = 18 m, speed = 24 m/s, find reaction time.",
+            "Reaction time = thinking distance / speed",
+            "Reaction time = 18 / 24",
+            "Reaction time = 0.75 s"
+          ],
+          "answer": {
+            "value": 0.75,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "stopping-distance-p4",
+          "question": "A van travels through a town at 54 km/h. The driver's reaction time is 0.8 s. Calculate the thinking distance in metres.",
+          "hint": "Change 54 km/h into m/s (divide by 3.6) before multiplying by the reaction time.",
+          "walkthrough": [
+            "54 km/h = 54000 m / 3600 s = 15 m/s.",
+            "Thinking distance = speed × reaction time = 15 × 0.8",
+            "Thinking distance = 12 m"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "stopping-distance-p5",
+          "question": "A car on a motorway travels at 30 m/s. The driver's reaction time is 0.5 s and the braking distance is 75 m. Calculate the stopping distance.",
+          "hint": "Find the thinking distance first, then add the braking distance.",
+          "walkthrough": [
+            "Thinking distance = speed × reaction time = 30 × 0.5 = 15 m.",
+            "Stopping distance = thinking distance + braking distance",
+            "Stopping distance = 15 + 75",
+            "Stopping distance = 90 m"
+          ],
+          "answer": {
+            "value": 90,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "stopping-distance-p6",
+          "question": "A taxi travelling at 25 m/s has a total stopping distance of 60 m. The driver's reaction time is 0.8 s. Calculate the braking distance.",
+          "hint": "Work out the thinking distance, then subtract it from the stopping distance.",
+          "walkthrough": [
+            "Thinking distance = speed × reaction time = 25 × 0.8 = 20 m.",
+            "Braking distance = stopping distance − thinking distance",
+            "Braking distance = 60 − 20",
+            "Braking distance = 40 m"
+          ],
+          "answer": {
+            "value": 40,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "momentum",
+      "name": "Momentum",
+      "equations": [
+        "p = m × v"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "Momentum = mass × velocity, measured in kg m/s. Multiply the mass in kg by the velocity in m/s. To find mass or velocity, divide the momentum by the quantity you know. Momentum has a direction, so say which way it points if the question asks.",
+      "commonErrors": [
+        "Using the mass in grams instead of kilograms",
+        "Writing the unit as kg/m/s or N instead of kg m/s",
+        "Mixing up momentum (m × v) with kinetic energy (½ × m × v²)"
+      ],
+      "worked": {
+        "id": "momentum-w",
+        "question": "A car of mass 1200 kg travels at 15 m/s. Calculate the momentum of the car.",
+        "steps": [
+          "Known: m = 1200 kg, v = 15 m/s. Unknown: p.",
+          "p = m × v",
+          "p = 1200 × 15",
+          "p = 18000 kg m/s"
+        ],
+        "answer": {
+          "value": 18000,
+          "unit": "kg m/s"
+        }
+      },
+      "practice": [
+        {
+          "id": "momentum-p1",
+          "question": "A runner of mass 70 kg sprints at 8 m/s. Calculate the runner's momentum.",
+          "hint": "Use p = m × v.",
+          "walkthrough": [
+            "m = 70 kg, v = 8 m/s, find p.",
+            "p = m × v = 70 × 8",
+            "p = 560 kg m/s"
+          ],
+          "answer": {
+            "value": 560,
+            "unit": "kg m/s"
+          }
+        },
+        {
+          "id": "momentum-p2",
+          "question": "A cricket ball of mass 0.16 kg is bowled at 35 m/s. Calculate the momentum of the ball.",
+          "hint": "Multiply the mass by the velocity.",
+          "walkthrough": [
+            "m = 0.16 kg, v = 35 m/s, find p.",
+            "p = m × v = 0.16 × 35",
+            "p = 5.6 kg m/s"
+          ],
+          "answer": {
+            "value": 5.6,
+            "unit": "kg m/s"
+          }
+        },
+        {
+          "id": "momentum-p3",
+          "question": "A lorry travelling at 16 m/s has a momentum of 240000 kg m/s. Calculate the mass of the lorry.",
+          "hint": "Rearrange p = m × v to m = p / v.",
+          "walkthrough": [
+            "p = 240000 kg m/s, v = 16 m/s, find m.",
+            "p = m × v → m = p / v",
+            "m = 240000 / 16",
+            "m = 15000 kg"
+          ],
+          "answer": {
+            "value": 15000,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "momentum-p4",
+          "question": "A football of mass 450 g has a momentum of 9 kg m/s. Calculate the velocity of the football.",
+          "hint": "Change 450 g to kg, then use v = p / m.",
+          "walkthrough": [
+            "m = 450 g = 0.45 kg, p = 9 kg m/s, find v.",
+            "p = m × v → v = p / m",
+            "v = 9 / 0.45",
+            "v = 20 m/s"
+          ],
+          "answer": {
+            "value": 20,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "momentum-p5",
+          "question": "A cyclist and bike have a total mass of 75 kg. The cyclist covers 100 m in 12.5 s at a steady speed. Calculate the momentum of the cyclist and bike.",
+          "hint": "Find the speed from distance ÷ time first, then use p = m × v.",
+          "walkthrough": [
+            "Speed = distance / time = 100 / 12.5 = 8 m/s.",
+            "p = m × v = 75 × 8",
+            "p = 600 kg m/s"
+          ],
+          "answer": {
+            "value": 600,
+            "unit": "kg m/s"
+          }
+        },
+        {
+          "id": "momentum-p6",
+          "question": "A loaded shopping trolley weighs 150 N. A shopper pushes it along at 1.2 m/s. Calculate the momentum of the trolley.",
+          "hint": "Find the mass from the weight using m = W / g, then multiply by the velocity.",
+          "walkthrough": [
+            "Mass: m = W / g = 150 / 10 = 15 kg.",
+            "p = m × v = 15 × 1.2",
+            "p = 18 kg m/s"
+          ],
+          "answer": {
+            "value": 18,
+            "unit": "kg m/s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conservation-of-momentum",
+      "name": "Conservation of momentum",
+      "equations": [
+        "total momentum before = total momentum after",
+        "p = m × v"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "In a collision or explosion with no outside forces, the total momentum before equals the total momentum after. Work out the total momentum before (anything at rest has zero momentum). If the objects stick together, divide by the combined mass to get the shared velocity. In an explosion from rest the total is zero, so the two parts have equal and opposite momentum.",
+      "commonErrors": [
+        "Dividing by the mass of one object instead of the combined mass when they stick together",
+        "Forgetting that a stationary object has zero momentum before the collision",
+        "Using grams for one mass and kilograms for the other in the same calculation"
+      ],
+      "worked": {
+        "id": "conservation-of-momentum-w",
+        "question": "A 2 kg trolley moving at 3 m/s collides with a stationary 1 kg trolley. The trolleys stick together. Calculate their velocity after the collision.",
+        "steps": [
+          "Known: m₁ = 2 kg, u₁ = 3 m/s, m₂ = 1 kg, u₂ = 0. Unknown: shared velocity v.",
+          "Momentum before = 2 × 3 + 1 × 0 = 6 kg m/s",
+          "Momentum after = (2 + 1) × v = 3 × v",
+          "Momentum is conserved: 3 × v = 6",
+          "v = 6 / 3 = 2 m/s"
+        ],
+        "answer": {
+          "value": 2,
+          "unit": "m/s"
+        }
+      },
+      "practice": [
+        {
+          "id": "conservation-of-momentum-p1",
+          "question": "A 1200 kg car travelling at 10 m/s runs into the back of a stationary 800 kg car. The two cars lock together. Calculate their velocity immediately after the collision.",
+          "hint": "Momentum before = 1200 × 10; after the collision the combined mass is 2000 kg.",
+          "walkthrough": [
+            "Momentum before = 1200 × 10 + 800 × 0 = 12000 kg m/s.",
+            "Momentum after = (1200 + 800) × v = 2000 × v",
+            "2000 × v = 12000 → v = 12000 / 2000",
+            "v = 6 m/s"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "conservation-of-momentum-p2",
+          "question": "A railway truck of mass 8000 kg rolls at 4 m/s into a stationary truck of mass 12000 kg. The trucks couple together. Calculate their velocity after coupling.",
+          "hint": "Total momentum before is all from the moving truck; divide it by the total mass of 20000 kg.",
+          "walkthrough": [
+            "Momentum before = 8000 × 4 = 32000 kg m/s.",
+            "Momentum after = (8000 + 12000) × v = 20000 × v",
+            "v = 32000 / 20000",
+            "v = 1.6 m/s"
+          ],
+          "answer": {
+            "value": 1.6,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "conservation-of-momentum-p3",
+          "question": "Two ice skaters stand still, facing each other, and push apart. The 60 kg skater moves off at 2 m/s. Calculate the speed of the 40 kg skater.",
+          "hint": "Total momentum is zero before and after, so the two skaters have equal and opposite momentum.",
+          "walkthrough": [
+            "Momentum before = 0, so the skaters' momenta are equal and opposite.",
+            "60 × 2 = 40 × v",
+            "v = 120 / 40",
+            "v = 3 m/s"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "conservation-of-momentum-p4",
+          "question": "A 4 kg rifle fires a 10 g bullet at 400 m/s. Calculate the recoil speed of the rifle.",
+          "hint": "Change 10 g to kg; the rifle's momentum backwards equals the bullet's momentum forwards.",
+          "walkthrough": [
+            "Bullet: m = 10 g = 0.01 kg, momentum = 0.01 × 400 = 4 kg m/s.",
+            "Total momentum before = 0, so the rifle gains 4 kg m/s backwards.",
+            "4 × v = 4 → v = 4 / 4",
+            "v = 1 m/s"
+          ],
+          "answer": {
+            "value": 1,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "conservation-of-momentum-p5",
+          "question": "A 0.5 kg snooker ball moving at 6 m/s hits a stationary 0.3 kg ball. After the collision the 0.5 kg ball carries on in the same direction at 1.5 m/s. Calculate the velocity of the 0.3 kg ball after the collision.",
+          "hint": "Find the total momentum before, subtract the 0.5 kg ball's momentum after, and the rest belongs to the 0.3 kg ball.",
+          "walkthrough": [
+            "Momentum before = 0.5 × 6 + 0.3 × 0 = 3 kg m/s.",
+            "Momentum of 0.5 kg ball after = 0.5 × 1.5 = 0.75 kg m/s.",
+            "Momentum of 0.3 kg ball after = 3 − 0.75 = 2.25 kg m/s.",
+            "v = 2.25 / 0.3 = 7.5 m/s"
+          ],
+          "answer": {
+            "value": 7.5,
+            "unit": "m/s"
+          }
+        },
+        {
+          "id": "conservation-of-momentum-p6",
+          "question": "A 3 kg trolley moving at 4 m/s catches up with a 2 kg trolley moving at 1.5 m/s in the same direction. They stick together. Calculate their velocity after the collision.",
+          "hint": "Both trolleys have momentum before; add them, then divide by the combined mass.",
+          "walkthrough": [
+            "Momentum before = 3 × 4 + 2 × 1.5 = 12 + 3 = 15 kg m/s.",
+            "Momentum after = (3 + 2) × v = 5 × v",
+            "v = 15 / 5",
+            "v = 3 m/s"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "m/s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "force-from-momentum-change",
+      "name": "Force from a change in momentum",
+      "equations": [
+        "F = (mv − mu) / t"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "Force = change in momentum ÷ time taken. Work out the momentum after (mv) and the momentum before (mu), subtract, then divide by the time the force acts for. The same change in momentum over a longer time gives a smaller force, which is why crumple zones, air bags and helmets work.",
+      "commonErrors": [
+        "Dividing the final momentum by the time instead of the change in momentum",
+        "Forgetting to convert grams to kilograms",
+        "Mixing up the time of the collision with the time the object had been moving"
+      ],
+      "worked": {
+        "id": "force-from-momentum-change-w",
+        "question": "A footballer kicks a stationary 0.4 kg football. The ball leaves the boot at 20 m/s. The boot is in contact with the ball for 0.05 s. Calculate the average force on the ball.",
+        "steps": [
+          "Known: m = 0.4 kg, u = 0, v = 20 m/s, t = 0.05 s. Unknown: F.",
+          "F = (mv − mu) / t",
+          "F = (0.4 × 20 − 0.4 × 0) / 0.05 = 8 / 0.05",
+          "F = 160 N"
+        ],
+        "answer": {
+          "value": 160,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "force-from-momentum-change-p1",
+          "question": "A 1000 kg car travelling at 15 m/s is brought to rest in 3 s. Calculate the size of the average braking force.",
+          "hint": "Change in momentum is 1000 × 15; divide by the time.",
+          "walkthrough": [
+            "m = 1000 kg, u = 15 m/s, v = 0, t = 3 s, find F.",
+            "F = (mv − mu) / t = (0 − 1000 × 15) / 3 = −15000 / 3",
+            "F = −5000 N, so the braking force is 5000 N"
+          ],
+          "answer": {
+            "value": 5000,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "force-from-momentum-change-p2",
+          "question": "A tennis ball of mass 0.06 kg is served from rest and leaves the racket at 50 m/s. The ball is in contact with the racket for 0.004 s. Calculate the average force on the ball.",
+          "hint": "Use F = (mv − mu) / t with u = 0.",
+          "walkthrough": [
+            "m = 0.06 kg, u = 0, v = 50 m/s, t = 0.004 s, find F.",
+            "F = (0.06 × 50 − 0) / 0.004 = 3 / 0.004",
+            "F = 750 N"
+          ],
+          "answer": {
+            "value": 750,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "force-from-momentum-change-p3",
+          "question": "A 1200 kg car travelling at 12 m/s crashes into a wall and stops. The crumple zone limits the average force to 72000 N. Calculate the time taken for the car to stop.",
+          "hint": "Rearrange to t = change in momentum / F.",
+          "walkthrough": [
+            "Change in momentum = 1200 × 12 − 0 = 14400 kg m/s.",
+            "F = (mv − mu) / t → t = (mv − mu) / F",
+            "t = 14400 / 72000",
+            "t = 0.2 s"
+          ],
+          "answer": {
+            "value": 0.2,
+            "unit": "s"
+          }
+        },
+        {
+          "id": "force-from-momentum-change-p4",
+          "question": "An ice hockey puck of mass 160 g is hit from rest and leaves the stick at 30 m/s. The stick is in contact with the puck for 0.02 s. Calculate the average force on the puck.",
+          "hint": "Convert 160 g to kg before finding the change in momentum.",
+          "walkthrough": [
+            "m = 160 g = 0.16 kg, u = 0, v = 30 m/s, t = 0.02 s.",
+            "F = (mv − mu) / t = (0.16 × 30 − 0) / 0.02 = 4.8 / 0.02",
+            "F = 240 N"
+          ],
+          "answer": {
+            "value": 240,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "force-from-momentum-change-p5",
+          "question": "A climber weighing 800 N slips and is falling at 6 m/s when the rope goes tight. The rope stretches and brings the climber to rest in 0.4 s. Calculate the average resultant force on the climber while the rope brings them to rest.",
+          "hint": "Find the mass from the weight first, then use change in momentum ÷ time.",
+          "walkthrough": [
+            "Mass: m = W / g = 800 / 10 = 80 kg.",
+            "Change in momentum = 80 × 6 − 0 = 480 kg m/s.",
+            "F = 480 / 0.4",
+            "F = 1200 N"
+          ],
+          "answer": {
+            "value": 1200,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "force-from-momentum-change-p6",
+          "question": "A 0.2 kg ball is rolling at 8 m/s. A player strikes it with a force of 60 N for 0.05 s in the direction it is already moving. Calculate the velocity of the ball after the strike.",
+          "hint": "Force × time gives the change in momentum; add it to the momentum before, then divide by the mass.",
+          "walkthrough": [
+            "Change in momentum = F × t = 60 × 0.05 = 3 kg m/s.",
+            "Momentum before = 0.2 × 8 = 1.6 kg m/s.",
+            "Momentum after = 1.6 + 3 = 4.6 kg m/s.",
+            "v = 4.6 / 0.2 = 23 m/s"
+          ],
+          "answer": {
+            "value": 23,
+            "unit": "m/s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "force-graph",
+      "name": "Reading force graphs",
+      "equations": [
+        "F = m × a",
+        "gradient of a–F graph = 1 / m",
+        "area under F–t graph = change in momentum"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Read what the axes are first. On an acceleration–force graph the gradient is 1 / m, so mass = change in force ÷ change in acceleration; where the line cuts the force axis is the friction force. On a velocity–time graph for a falling object the flat part gives terminal velocity and the gradient of the straight start gives the acceleration. On a force–time graph the area under the line is the change in momentum.",
+      "commonErrors": [
+        "Reading the gradient as the mass instead of 1 / mass on an acceleration–force graph",
+        "Taking the gradient from one point instead of the change in y over the change in x between two points",
+        "Forgetting that time in milliseconds must be changed to seconds when finding an area in kg m/s"
+      ],
+      "worked": {
+        "id": "force-graph-w",
+        "question": "The graph shows how the acceleration of a laboratory trolley depends on the resultant force applied to it. Use the graph to determine the mass of the trolley.",
+        "steps": [
+          "The gradient of an acceleration–force graph is 1 / m.",
+          "Choose two points on the line: (0, 0) and X at (8 N, 4 m/s²).",
+          "Gradient = (4 − 0) / (8 − 0) = 0.5 m/s² per N",
+          "m = 1 / gradient = 1 / 0.5",
+          "m = 2 kg"
+        ],
+        "answer": {
+          "value": 2,
+          "unit": "kg"
+        },
+        "graph": {
+          "x": {
+            "label": "force in N",
+            "min": 0,
+            "max": 10,
+            "step": 2
+          },
+          "y": {
+            "label": "acceleration in m/s²",
+            "min": 0,
+            "max": 5,
+            "step": 1
+          },
+          "series": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  10,
+                  5
+                ]
+              ]
+            }
+          ],
+          "marks": [
+            {
+              "x": 8,
+              "y": 4,
+              "label": "X",
+              "drop": true
+            }
+          ],
+          "alt": "Straight line through the origin on an acceleration–force graph, reaching 5 m/s² at 10 N, with point X marked at 8 N and 4 m/s²"
+        }
+      },
+      "practice": [
+        {
+          "id": "force-graph-p1",
+          "question": "The graph shows the velocity of a skydiver from the moment she jumps until she reaches a steady speed. Use the graph to determine her terminal velocity.",
+          "hint": "Terminal velocity is the steady value the curve levels off at; read it from the flat part of the graph.",
+          "walkthrough": [
+            "The curve flattens out as the air resistance grows to equal the weight.",
+            "The flat part of the graph is at 50 m/s.",
+            "Terminal velocity = 50 m/s"
+          ],
+          "answer": {
+            "value": 50,
+            "unit": "m/s"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 40,
+              "step": 5
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.5,
+                    13.42
+                  ],
+                  [
+                    5.0,
+                    23.24
+                  ],
+                  [
+                    7.5,
+                    30.42
+                  ],
+                  [
+                    10.0,
+                    35.67
+                  ],
+                  [
+                    12.5,
+                    39.52
+                  ],
+                  [
+                    15.0,
+                    42.33
+                  ],
+                  [
+                    17.5,
+                    44.39
+                  ],
+                  [
+                    20.0,
+                    45.9
+                  ],
+                  [
+                    22.5,
+                    47.0
+                  ],
+                  [
+                    25.0,
+                    47.8
+                  ],
+                  [
+                    27.5,
+                    48.39
+                  ],
+                  [
+                    30.0,
+                    48.82
+                  ],
+                  [
+                    32.5,
+                    49.14
+                  ],
+                  [
+                    35.0,
+                    49.37
+                  ],
+                  [
+                    37.5,
+                    49.54
+                  ],
+                  [
+                    40.0,
+                    49.66
+                  ]
+                ]
+              }
+            ],
+            "alt": "Velocity–time curve for a skydiver rising steeply from zero and levelling off at 50 m/s by about 35 s"
+          }
+        },
+        {
+          "id": "force-graph-p2",
+          "question": "The graph shows how the acceleration of a remote-controlled car depends on the resultant force on it. Point P is marked on the line. Use the graph to determine the resultant force needed to give the car an acceleration of 1.5 m/s².",
+          "hint": "Find 1.5 m/s² on the acceleration axis, go across to the line at P and read down to the force axis.",
+          "walkthrough": [
+            "P is the point on the line where acceleration = 1.5 m/s².",
+            "Reading down from P to the force axis gives 6 N.",
+            "Resultant force = 6 N"
+          ],
+          "answer": {
+            "value": 6,
+            "unit": "N"
+          },
+          "graph": {
+            "x": {
+              "label": "force in N",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "acceleration in m/s²",
+              "min": 0,
+              "max": 2,
+              "step": 0.25
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    8,
+                    2
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 6,
+                "y": 1.5,
+                "label": "P",
+                "drop": true
+              }
+            ],
+            "alt": "Straight line through the origin on an acceleration–force graph, reaching 2 m/s² at 8 N, with point P marked at 6 N and 1.5 m/s²"
+          }
+        },
+        {
+          "id": "force-graph-p3",
+          "question": "The graph shows the velocity of a skydiver during the first 20 s of his jump. The line is straight from the start until point A. Use the graph to determine the acceleration of the skydiver during this straight section.",
+          "hint": "Acceleration is the gradient of a velocity–time graph; use the points (0, 0) and A.",
+          "walkthrough": [
+            "Acceleration = gradient of the straight section.",
+            "From (0, 0) to A at (2 s, 20 m/s).",
+            "Gradient = (20 − 0) / (2 − 0) = 20 / 2",
+            "a = 10 m/s²"
+          ],
+          "answer": {
+            "value": 10,
+            "unit": "m/s²"
+          },
+          "graph": {
+            "x": {
+              "label": "time in s",
+              "min": 0,
+              "max": 20,
+              "step": 2
+            },
+            "y": {
+              "label": "velocity in m/s",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2,
+                    20
+                  ]
+                ]
+              },
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    2.0,
+                    20.0
+                  ],
+                  [
+                    3.0,
+                    28.85
+                  ],
+                  [
+                    4.0,
+                    35.74
+                  ],
+                  [
+                    5.0,
+                    41.11
+                  ],
+                  [
+                    6.0,
+                    45.28
+                  ],
+                  [
+                    7.0,
+                    48.54
+                  ],
+                  [
+                    8.0,
+                    51.07
+                  ],
+                  [
+                    9.0,
+                    53.05
+                  ],
+                  [
+                    10.0,
+                    54.59
+                  ],
+                  [
+                    11.0,
+                    55.78
+                  ],
+                  [
+                    12.0,
+                    56.72
+                  ],
+                  [
+                    13.0,
+                    57.44
+                  ],
+                  [
+                    14.0,
+                    58.01
+                  ],
+                  [
+                    15.0,
+                    58.45
+                  ],
+                  [
+                    16.0,
+                    58.79
+                  ],
+                  [
+                    17.0,
+                    59.06
+                  ],
+                  [
+                    18.0,
+                    59.27
+                  ],
+                  [
+                    19.0,
+                    59.43
+                  ],
+                  [
+                    20.0,
+                    59.56
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2,
+                "y": 20,
+                "label": "A",
+                "drop": true
+              }
+            ],
+            "alt": "Velocity–time graph for a skydiver: a straight line from the origin to point A at 2 s and 20 m/s, then a curve that levels off towards 60 m/s by 20 s"
+          }
+        },
+        {
+          "id": "force-graph-p4",
+          "question": "A wooden block is pulled across a bench with a newton meter. The graph shows how the acceleration of the block depends on the pulling force. The line does not pass through the origin because friction acts on the block. Use the graph to determine the friction force.",
+          "hint": "The block only starts to accelerate once the pull is bigger than friction; read the force where the line meets the force axis.",
+          "walkthrough": [
+            "The acceleration is zero until the pull equals the friction force.",
+            "The line cuts the force axis at F = 2 N (point F on the graph).",
+            "Friction force = 2 N"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": "N"
+          },
+          "graph": {
+            "x": {
+              "label": "pulling force in N",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "acceleration in m/s²",
+              "min": 0,
+              "max": 2.5,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    10,
+                    2
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 2,
+                "y": 0,
+                "label": "F",
+                "dy": -10
+              }
+            ],
+            "alt": "Straight line on an acceleration–pulling force graph starting at 2 N on the force axis and rising to 2 m/s² at 10 N, with the intercept marked F"
+          }
+        },
+        {
+          "id": "force-graph-p5",
+          "question": "The graph shows the force a tennis racket exerts on a ball during a serve. Use the graph to determine the change in momentum of the ball. Give your answer in kg m/s.",
+          "hint": "The change in momentum is the shaded area under the force–time line; split it into two triangles and a rectangle, and remember the time axis is in milliseconds.",
+          "walkthrough": [
+            "Change in momentum = area under the force–time graph.",
+            "Triangle 0–2 ms: ½ × 2 × 400 = 400 N ms. Rectangle 2–6 ms: 4 × 400 = 1600 N ms. Triangle 6–8 ms: ½ × 2 × 400 = 400 N ms.",
+            "Total area = 400 + 1600 + 400 = 2400 N ms",
+            "2400 N ms = 2400 × 0.001 N s = 2.4 N s",
+            "Change in momentum = 2.4 kg m/s"
+          ],
+          "answer": {
+            "value": 2.4,
+            "unit": "kg m/s"
+          },
+          "boards": [
+            "Higher"
+          ],
+          "graph": {
+            "x": {
+              "label": "time in ms",
+              "min": 0,
+              "max": 8,
+              "step": 1
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 500,
+              "step": 100
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2,
+                    400
+                  ],
+                  [
+                    6,
+                    400
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "shade": [
+              {
+                "series": 0,
+                "from": 0,
+                "to": 8
+              }
+            ],
+            "alt": "Force–time graph in the shape of a trapezium: the force rises from zero to 400 N at 2 ms, stays at 400 N until 6 ms, then falls to zero at 8 ms, with the area underneath shaded"
+          }
+        },
+        {
+          "id": "force-graph-p6",
+          "question": "A sledge is pulled across snow. The graph shows how the acceleration of the sledge depends on the pulling force. The line does not pass through the origin because friction acts on the sledge. Points A and B are marked on the line. Use the graph to determine the mass of the sledge.",
+          "hint": "From F = m × a, mass = change in force ÷ change in acceleration between A and B.",
+          "walkthrough": [
+            "A is at (3 N, 0 m/s²) and B is at (12 N, 3 m/s²).",
+            "Gradient = (3 − 0) / (12 − 3) = 3 / 9 m/s² per N",
+            "Gradient = 1 / m, so m = change in force / change in acceleration",
+            "m = 9 / 3",
+            "m = 3 kg"
+          ],
+          "answer": {
+            "value": 3,
+            "unit": "kg"
+          },
+          "graph": {
+            "x": {
+              "label": "pulling force in N",
+              "min": 0,
+              "max": 12,
+              "step": 1
+            },
+            "y": {
+              "label": "acceleration in m/s²",
+              "min": 0,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    3,
+                    0
+                  ],
+                  [
+                    12,
+                    3
+                  ]
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "x": 3,
+                "y": 0,
+                "label": "A",
+                "dy": -10
+              },
+              {
+                "x": 12,
+                "y": 3,
+                "label": "B",
+                "drop": true,
+                "dx": -20,
+                "dy": 4
+              }
+            ],
+            "alt": "Straight line on an acceleration–pulling force graph from point A at 3 N on the force axis to point B at 12 N and 3 m/s²"
+          }
+        }
+      ]
+    }
+  ]
+}

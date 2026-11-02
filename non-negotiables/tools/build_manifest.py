@@ -20,10 +20,16 @@ def main():
     data_dir = os.path.join(root, "data")
 
     paths = sorted(glob.glob(os.path.join(data_dir, "*.json")))
-    paths = [path for path in paths if not path.endswith("manifest.json")]
+    paths = [path for path in paths if not path.endswith("manifest.json") and not path.endswith("config.json")]
 
     entries = []
     failed = False
+
+    # Type ids and question ids must be unique across the whole site, not
+    # just within a file: the app looks questions up by id alone, so two
+    # "power" types in different topics would share progress and answers.
+    seen_type_ids = {}
+    seen_question_ids = {}
 
     for path in paths:
         problems = validate_file(path)
@@ -36,6 +42,23 @@ def main():
 
         with open(path, encoding="utf-8") as handle:
             topic = json.load(handle)
+
+        clashes = []
+        for calc_type in topic["types"]:
+            if calc_type["id"] in seen_type_ids:
+                clashes.append(f"type id '{calc_type['id']}' is also used in {seen_type_ids[calc_type['id']]}")
+            seen_type_ids[calc_type["id"]] = topic["id"]
+            questions = [calc_type["worked"]] + calc_type["practice"]
+            for question in questions:
+                if question["id"] in seen_question_ids:
+                    clashes.append(f"question id '{question['id']}' is also used in {seen_question_ids[question['id']]}")
+                seen_question_ids[question["id"]] = topic["id"]
+        if clashes:
+            failed = True
+            print(f"FAIL {os.path.basename(path)}")
+            for clash in clashes:
+                print(f"  - {clash}")
+            continue
 
         entries.append({
             "id": topic["id"],
