@@ -32,6 +32,29 @@ import t2_tricky_b  # noqa: E402
 
 
 # ---------------------------------------------------------------------
+# Sections hidden from the U4 page
+#
+# The modules hold the whole of Topic 2, but the U4 scheme stops short of
+# Newton's third law, momentum, circular motion, inertial mass and the
+# stopping-distance work (those spec points come later). Listing a section
+# id here keeps its content in the modules but leaves it out of the JSON —
+# and out of its key-fact cards — so the page only shows what U4 have been
+# taught. Remove an id from this set to publish that section.
+# ---------------------------------------------------------------------
+
+HIDDEN_SECTIONS = {
+    "newton-third",            # N13 · Newton's third law (2.23)
+    "momentum",                # N14 · Momentum p = mv (2.24)
+    "stopping-distance",       # N15 · Stopping distances and reaction time (2.27–2.30)
+    "circular-motion",         # T6 · Circular motion (2.20–2.21)
+    "inertial-mass",           # T7 · Inertial mass (2.22)
+    "conservation-momentum",   # T8 · Conservation of momentum (2.23–2.25)
+    "force-momentum",          # T9 · F = Δp/t and safety features (2.26, 2.31)
+    "braking-v-squared",       # T10 · Braking distance ∝ v² (2.32P, 2.33P)
+}
+
+
+# ---------------------------------------------------------------------
 # The topic
 # ---------------------------------------------------------------------
 
@@ -39,7 +62,7 @@ topic = {
     "id": "t2-forces-motion",
     "order": 1,
     "title": "Topic 2 - Forces and Motion (LEH, U4)",
-    "subtitle": "Vectors, motion graphs, Newton's laws, circular motion, momentum and stopping distances — Edexcel GCSE Physics 1PH0, spec points 2.1 to 2.33P",
+    "subtitle": "Vectors, motion graphs, Newton's first and second laws, the force–mass–acceleration practical, reaction time and estimation — the Topic 2 spec points taught in U4 (Edexcel GCSE Physics 1PH0)",
     "stage": "GCSE Physics · Edexcel 1PH0",
     "lede": (
         "Everything in Topic 2, split into two bands. <b>The non-negotiables</b> are the facts and single-step calculations you must get right every time, "
@@ -77,14 +100,36 @@ topic = {
     "sections": [],
 }
 
-topic["sections"].extend(t2_nn_a.SECTIONS)
-topic["sections"].extend(t2_nn_b.SECTIONS)
-topic["sections"].extend(t2_tricky_a.SECTIONS)
-topic["sections"].extend(t2_tricky_b.SECTIONS)
+all_sections = []
+all_sections.extend(t2_nn_a.SECTIONS)
+all_sections.extend(t2_nn_b.SECTIONS)
+all_sections.extend(t2_tricky_a.SECTIONS)
+all_sections.extend(t2_tricky_b.SECTIONS)
 
-# The key facts are their own band at the end
-t2_tricky_b.section_facts["band"] = "facts"
-topic["sections"].append(t2_tricky_b.section_facts)
+# Leave out the sections that are not on the U4 page
+for section in all_sections:
+    if section["id"] in HIDDEN_SECTIONS:
+        continue
+    topic["sections"].append(section)
+
+# The key facts are their own band at the end; drop the cards of hidden sections
+facts = t2_tricky_b.section_facts
+facts["band"] = "facts"
+for part in facts["parts"]:
+    kept_items = []
+    for item in part["items"]:
+        if item["section"] in HIDDEN_SECTIONS:
+            continue
+        kept_items.append(item)
+    part["items"] = kept_items
+topic["sections"].append(facts)
+
+# Every hidden id must be a real section, or a typo would silently hide nothing
+known_ids = {section["id"] for section in all_sections}
+for hidden_id in HIDDEN_SECTIONS:
+    if hidden_id not in known_ids:
+        print("PROBLEM: hidden section id not found:", hidden_id)
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------
@@ -182,7 +227,8 @@ def main():
     count = 0
     for section in topic["sections"]:
         count += len(leaf_questions(section))
-    print("wrote", os.path.normpath(out), "-", len(topic["sections"]), "sections,", count, "questions")
+    print("wrote", os.path.normpath(out), "-", len(topic["sections"]), "sections,", count, "questions;",
+          len(HIDDEN_SECTIONS), "sections hidden:", ", ".join(sorted(HIDDEN_SECTIONS)))
 
 
 if __name__ == "__main__":

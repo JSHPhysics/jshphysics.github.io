@@ -574,43 +574,43 @@ section_t13 = {
 
 
 # =====================================================================
-# Key facts — flip cards
+# Key facts — flip cards: (question, answer, section id)
 # =====================================================================
 
 key_facts = [
-    ("Scalar or vector: velocity?", "Vector (speed in a stated direction)"),
-    ("Scalar or vector: mass? weight?", "Mass is a scalar; weight is a vector"),
-    ("Scalar or vector: momentum? energy?", "Momentum is a vector; energy is a scalar"),
-    ("Speed equation (symbols)?", r"$v = \dfrac{x}{t}$"),
-    ("Convert km/h to m/s?", "Divide by 3.6 (×1000 ÷ 3600)"),
-    ("Acceleration equation?", r"$a = \dfrac{v - u}{t}$"),
-    ("Equation with no time in it?", r"$v^2 - u^2 = 2ax$"),
-    ("Gradient of a distance–time graph gives…", "Speed"),
-    ("Gradient of a velocity–time graph gives…", "Acceleration"),
-    ("Area under a velocity–time graph gives…", "Distance travelled"),
-    ("Instantaneous speed on a curved graph?", "Gradient of the tangent at that point"),
-    ("Value of g?", "10 m/s² (or 10 N/kg)"),
-    ("Typical speeds: walking, cycling, sound?", "1.5 m/s, 6 m/s, 340 m/s"),
-    ("Newton's first law?", "Zero resultant force → stays at rest or at constant velocity"),
-    ("Newton's second law?", r"$F = m \times a$ (F is the resultant force)"),
-    ("Newton's third law?", "A on B is equal and opposite to B on A — same type, different objects"),
-    ("Weight equation?", r"$W = m \times g$"),
-    ("How is weight measured?", "With a newtonmeter (calibrated spring balance)"),
-    ("Why does an object in a circle at constant speed accelerate?", "Its direction, and so its velocity, is changing"),
-    ("Direction of the centripetal force?", "Towards the centre of the circle"),
-    ("Inertial mass is defined as…", r"The ratio $F \div a$: how hard it is to change velocity"),
-    ("Momentum equation and unit?", r"$p = m \times v$, kg m/s"),
-    ("Conservation of momentum?", "Total momentum before = total after, if no external force"),
-    ("Force from momentum?", r"$F = \dfrac{mv - mu}{t}$"),
-    ("How do airbags reduce injury?", "Same momentum change, longer time, smaller force"),
-    ("Stopping distance =", "Thinking distance + braking distance"),
-    ("Factors affecting thinking distance?", "Speed, and reaction time (tiredness, alcohol, drugs, distractions)"),
-    ("Factors affecting braking distance?", "Speed, mass, brakes, tyres, road surface (friction)"),
-    ("Typical human reaction time?", "0.2–0.9 s"),
-    ("Double the speed: thinking and braking distances?", "Thinking ×2, braking ×4"),
-    ("Why is braking distance ∝ v²?", r"Work done by brakes $F d$ = KE $\tfrac{1}{2}mv^2$"),
-    ("Core practical: why move masses from trolley to hanger?", "To change the force while keeping the total mass constant"),
-    ("Ruler drop: distance to time?", r"$t = \sqrt{2x \div g}$"),
+    ("Scalar or vector: velocity?", "Vector (speed in a stated direction)", "scalars-vectors"),
+    ("Scalar or vector: mass? weight?", "Mass is a scalar; weight is a vector", "scalars-vectors"),
+    ("Scalar or vector: momentum? energy?", "Momentum is a vector; energy is a scalar", "scalars-vectors"),
+    ("Speed equation (symbols)?", r"$v = \dfrac{x}{t}$", "speed"),
+    ("Convert km/h to m/s?", "Divide by 3.6 (×1000 ÷ 3600)", "speed"),
+    ("Acceleration equation?", r"$a = \dfrac{v - u}{t}$", "acceleration"),
+    ("Equation with no time in it?", r"$v^2 - u^2 = 2ax$", "suvat"),
+    ("Gradient of a distance–time graph gives…", "Speed", "dt-graphs"),
+    ("Gradient of a velocity–time graph gives…", "Acceleration", "vt-graphs"),
+    ("Area under a velocity–time graph gives…", "Distance travelled", "vt-graphs"),
+    ("Instantaneous speed on a curved graph?", "Gradient of the tangent at that point", "curved-graphs"),
+    ("Value of g?", "10 m/s² (or 10 N/kg)", "typical-speeds"),
+    ("Typical speeds: walking, cycling, sound?", "1.5 m/s, 6 m/s, 340 m/s", "typical-speeds"),
+    ("Newton's first law?", "Zero resultant force → stays at rest or at constant velocity", "newton-first"),
+    ("Newton's second law?", r"$F = m \times a$ (F is the resultant force)", "f-ma"),
+    ("Newton's third law?", "A on B is equal and opposite to B on A — same type, different objects", "newton-third"),
+    ("Weight equation?", r"$W = m \times g$", "weight"),
+    ("How is weight measured?", "With a newtonmeter (calibrated spring balance)", "weight"),
+    ("Why does an object in a circle at constant speed accelerate?", "Its direction, and so its velocity, is changing", "circular-motion"),
+    ("Direction of the centripetal force?", "Towards the centre of the circle", "circular-motion"),
+    ("Inertial mass is defined as…", r"The ratio $F \div a$: how hard it is to change velocity", "inertial-mass"),
+    ("Momentum equation and unit?", r"$p = m \times v$, kg m/s", "momentum"),
+    ("Conservation of momentum?", "Total momentum before = total after, if no external force", "conservation-momentum"),
+    ("Force from momentum?", r"$F = \dfrac{mv - mu}{t}$", "force-momentum"),
+    ("How do airbags reduce injury?", "Same momentum change, longer time, smaller force", "force-momentum"),
+    ("Stopping distance =", "Thinking distance + braking distance", "stopping-distance"),
+    ("Factors affecting thinking distance?", "Speed, and reaction time (tiredness, alcohol, drugs, distractions)", "stopping-distance"),
+    ("Factors affecting braking distance?", "Speed, mass, brakes, tyres, road surface (friction)", "stopping-distance"),
+    ("Typical human reaction time?", "0.2–0.9 s", "reaction-time"),
+    ("Double the speed: thinking and braking distances?", "Thinking ×2, braking ×4", "braking-v-squared"),
+    ("Why is braking distance ∝ v²?", r"Work done by brakes $F d$ = KE $\tfrac{1}{2}mv^2$", "braking-v-squared"),
+    ("Core practical: why move masses from trolley to hanger?", "To change the force while keeping the total mass constant", "core-practical-analysis"),
+    ("Ruler drop: distance to time?", r"$t = \sqrt{2x \div g}$", "reaction-time"),
 ]
 
 section_facts = {
@@ -625,7 +625,9 @@ section_facts = {
         {
             "kind": "facts",
             "title": "Cover and test yourself",
-            "items": [{"q": question, "a": answer} for question, answer in key_facts],
+            # Each card carries the id of the section it belongs to, so that a hidden
+    # section (see the build script) also hides its cards
+    "items": [{"q": question, "a": answer, "section": section_id} for question, answer, section_id in key_facts],
         }
     ],
 }

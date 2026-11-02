@@ -2,7 +2,7 @@
  "id": "t2-forces-motion",
  "order": 1,
  "title": "Topic 2 - Forces and Motion (LEH, U4)",
- "subtitle": "Vectors, motion graphs, Newton's laws, circular motion, momentum and stopping distances — Edexcel GCSE Physics 1PH0, spec points 2.1 to 2.33P",
+ "subtitle": "Vectors, motion graphs, Newton's first and second laws, the force–mass–acceleration practical, reaction time and estimation — the Topic 2 spec points taught in U4 (Edexcel GCSE Physics 1PH0)",
  "stage": "GCSE Physics · Edexcel 1PH0",
  "lede": "Everything in Topic 2, split into two bands. <b>The non-negotiables</b> are the facts and single-step calculations you must get right every time, without thinking. <b>The tricky bits</b> are where the marks are usually lost: multi-step calculations, explanations, and the ideas that look simple but have a trap in them. Each item is explained, shown in a worked example, then practised straight away.",
  "howto": [
@@ -1493,7 +1493,7 @@
     {
      "kind": "explain",
      "title": "Resultant force and what it does",
-     "html": "<p>The <b>resultant force</b> is the single force that would have the same effect as all the forces acting together. For forces along one line: add the ones pointing the same way, subtract the ones pointing the opposite way.</p><p><b>Newton's first law:</b> an object stays at rest, or keeps moving at a <b>constant velocity</b> (same speed, same direction), unless a <b>resultant force</b> acts on it.</p><table class='tbl'><tr><th>Resultant force</th><th>What happens</th></tr><tr><td>Zero (forces balanced)</td><td>Stationary object stays still; moving object keeps the same velocity</td></tr><tr><td>Not zero, same direction as motion</td><td>Speeds up</td></tr><tr><td>Not zero, opposite to motion</td><td>Slows down</td></tr><tr><td>Not zero, at an angle to motion</td><td>Changes direction (see circular motion)</td></tr></table><p><b>The common mistake:</b> thinking a moving object needs a force to keep it moving. It does not. A car at a steady 20 m/s has a driving force exactly balanced by friction and air resistance — the resultant is zero.</p>"
+     "html": "<p>The <b>resultant force</b> is the single force that would have the same effect as all the forces acting together. For forces along one line: add the ones pointing the same way, subtract the ones pointing the opposite way.</p><p><b>Newton's first law:</b> an object stays at rest, or keeps moving at a <b>constant velocity</b> (same speed, same direction), unless a <b>resultant force</b> acts on it.</p><table class='tbl'><tr><th>Resultant force</th><th>What happens</th></tr><tr><td>Zero (forces balanced)</td><td>Stationary object stays still; moving object keeps the same velocity</td></tr><tr><td>Not zero, same direction as motion</td><td>Speeds up</td></tr><tr><td>Not zero, opposite to motion</td><td>Slows down</td></tr><tr><td>Not zero, at an angle to motion</td><td>Changes direction</td></tr></table><p><b>The common mistake:</b> thinking a moving object needs a force to keep it moving. It does not. A car at a steady 20 m/s has a driving force exactly balanced by friction and air resistance — the resultant is zero.</p>"
     },
     {
      "kind": "worked",
@@ -1992,383 +1992,6 @@
        ],
        "correct": 0,
        "explain": "F = ma means a is directly proportional to F: doubling the force doubles the acceleration, so the graph is a straight line through the origin. Its gradient is 1/m."
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "newton-third",
-   "band": "nn",
-   "lessons": "2.23",
-   "title": "Newton's third law",
-   "blurb": "Forces come in pairs: same size, opposite direction, same type, acting on different objects.",
-   "equations": [],
-   "checklist": [
-    "State Newton's third law",
-    "Identify the pair force for a given force (what acts on what)",
-    "Give the four features of a third-law pair"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Forces come in pairs",
-     "html": "<p><b>Newton's third law:</b> when object A exerts a force on object B, object B exerts a force on object A that is <b>equal in size and opposite in direction</b>.</p><p>A third-law pair always has these four features — write all four in an exam:</p><table class='tbl'><tr><th>Feature</th><th>Example: you push a wall with 50 N</th></tr><tr><td>Same size</td><td>The wall pushes you with 50 N</td></tr><tr><td>Opposite direction</td><td>You push east; the wall pushes you west</td></tr><tr><td>Same type of force</td><td>Both are contact (push) forces</td></tr><tr><td>Act on <b>different</b> objects</td><td>Your force acts on the wall; the wall's force acts on you</td></tr></table><p>The quick way to find the partner: swap the two objects round. \"The Earth pulls the apple down\" pairs with \"the apple pulls the Earth up\". The Earth's acceleration is tiny because its mass is enormous, but the force is the same size.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "Finding the pair force",
-     "question": "A book rests on a table. The table pushes up on the book with a contact force of 20 N. State the Newton's third law pair of this force.",
-     "steps": [
-      "Swap the objects: the force is <i>table on book</i>, so the partner is <i>book on table</i>.",
-      "The book pushes <b>down</b> on the table with a contact force of <b>20 N</b>.",
-      "Check the four features: 20 N and 20 N (same size); up and down (opposite); both contact forces (same type); one acts on the book, the other on the table (different objects).",
-      "Note: the book's <i>weight</i> is NOT the partner of the table's push — weight acts on the book too, so they act on the same object. The tricky bits deal with this."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Newton's third law",
-     "questions": [
-      {
-       "id": "t2-n13-q1",
-       "type": "choice",
-       "text": "The Earth pulls an apple downwards with a gravitational force of 1 N. What is the Newton's third law pair of this force?",
-       "options": [
-        "The table pushing the apple up with 1 N",
-        "The apple pulling the Earth upwards with 1 N",
-        "The apple's weight",
-        "Air resistance on the apple"
-       ],
-       "correct": 1,
-       "explain": "Swap the objects: Earth-on-apple pairs with apple-on-Earth. Same size (1 N), opposite direction, both gravitational, acting on different objects."
-      },
-      {
-       "id": "t2-n13-q2",
-       "type": "choice",
-       "text": "A swimmer pushes the water backwards with her hands. Which force makes her move forwards?",
-       "options": [
-        "Her weight",
-        "The water pushing her forwards",
-        "Upthrust",
-        "Friction with the pool floor"
-       ],
-       "correct": 1,
-       "explain": "By Newton's third law the water pushes back on her with an equal force in the opposite direction — forwards."
-      },
-      {
-       "id": "t2-n13-q3",
-       "type": "numeric",
-       "text": "A rocket engine pushes exhaust gases downwards with a force of 5000 N. What size force do the gases exert on the rocket?",
-       "answer": {
-        "value": 5000,
-        "unit": "N"
-       },
-       "hint": "Third-law pairs are equal in size.",
-       "walkthrough": [
-        "The gases push the rocket upwards with a force of 5000 N — equal in size, opposite in direction."
-       ]
-      },
-      {
-       "id": "t2-n13-q4",
-       "type": "written",
-       "text": "State Newton's third law of motion.",
-       "model": "<ul><li>When one object exerts a force on a second object,</li><li>the second object exerts a force on the first that is equal in size and opposite in direction.</li></ul>",
-       "lines": 2
-      },
-      {
-       "id": "t2-n13-q5",
-       "type": "choice",
-       "text": "Which of these is NOT a feature of a Newton's third law pair?",
-       "options": [
-        "The two forces are the same size",
-        "The two forces are the same type",
-        "The two forces act on the same object",
-        "The two forces act in opposite directions"
-       ],
-       "correct": 2,
-       "explain": "Pair forces always act on <i>different</i> objects. Two forces on the same object can balance, but they are never a third-law pair."
-      },
-      {
-       "id": "t2-n13-q6",
-       "type": "choice",
-       "text": "A person leans against a wall with a force of 80 N. The wall does not move. Which statement is correct?",
-       "options": [
-        "The wall pushes back with less than 80 N because it does not move",
-        "The wall pushes back with exactly 80 N",
-        "The wall pushes back with more than 80 N",
-        "The wall exerts no force"
-       ],
-       "correct": 1,
-       "explain": "Third-law pairs are always equal in size, whether or not anything moves. The wall does not move because the ground holds it in place — that is a separate force."
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "momentum",
-   "band": "nn",
-   "lessons": "2.24",
-   "title": "Momentum: p = mv",
-   "blurb": "Mass times velocity, in kg m/s. A vector — so its direction matters, which is what makes collisions work in the tricky bits.",
-   "equations": [
-    "p = m \\times v"
-   ],
-   "checklist": [
-    "Define momentum and use p = mv",
-    "Give the unit of momentum, kg m/s",
-    "Rearrange to find a mass or a velocity"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Momentum",
-     "html": "$$p = m \\times v$$<p><b>Momentum</b> $=$ mass $\\times$ velocity. The unit is <b>kg m/s</b> (kilogram metres per second). Momentum is a <b>vector</b>: it has the same direction as the velocity, so a car going north and an identical car going south have opposite momentum.</p><p>Roughly, momentum measures how hard something is to stop: a slow lorry and a fast cricket ball can have similar momentum.</p><table class='tbl'><tr><th>To find…</th><th>Use…</th></tr><tr><td>momentum</td><td>$p = m \\times v$</td></tr><tr><td>velocity</td><td>$v = \\dfrac{p}{m}$</td></tr><tr><td>mass</td><td>$m = \\dfrac{p}{v}$</td></tr></table><p>Mass in <b>kg</b>, velocity in <b>m/s</b>. A stationary object has zero momentum.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "Calculating momentum",
-     "question": "A car of mass 1200 kg travels at 15 m/s. Calculate its momentum.",
-     "steps": [
-      "<b>Equation:</b> $p = m \\times v$",
-      "<b>Working:</b> $p = 1200 \\times 15$",
-      "<b>Answer:</b> $= 18\\,000$",
-      "<b>Units:</b> kg m/s"
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Momentum",
-     "questions": [
-      {
-       "id": "t2-n14-q1",
-       "type": "numeric",
-       "text": "Calculate the momentum of a 0.5 kg football kicked at 20 m/s.",
-       "answer": {
-        "value": 10.0,
-        "unit": "kg m/s"
-       },
-       "hint": "Mass times velocity.",
-       "walkthrough": [
-        "<b>Equation:</b> $p = m \\times v$",
-        "<b>Working:</b> $p = 0.5 \\times 20$",
-        "<b>Answer:</b> $= 10$",
-        "<b>Units:</b> kg m/s"
-       ]
-      },
-      {
-       "id": "t2-n14-q2",
-       "type": "numeric",
-       "text": "An 80 kg rugby player runs at 5 m/s. Calculate his momentum.",
-       "answer": {
-        "value": 400,
-        "unit": "kg m/s"
-       },
-       "hint": "p = mv.",
-       "walkthrough": [
-        "<b>Equation:</b> $p = m \\times v$",
-        "<b>Working:</b> $p = 80 \\times 5$",
-        "<b>Answer:</b> $= 400$",
-        "<b>Units:</b> kg m/s"
-       ]
-      },
-      {
-       "id": "t2-n14-q3",
-       "type": "numeric",
-       "text": "A 900 kg car has a momentum of 4500 kg m/s. Calculate its velocity.",
-       "answer": {
-        "value": 5.0,
-        "unit": "m/s"
-       },
-       "hint": "v = p ÷ m.",
-       "walkthrough": [
-        "<b>Equation:</b> $v = \\dfrac{p}{m}$",
-        "<b>Working:</b> $v = \\dfrac{4500}{900}$",
-        "<b>Answer:</b> $= 5$",
-        "<b>Units:</b> m/s"
-       ]
-      },
-      {
-       "id": "t2-n14-q4",
-       "type": "numeric",
-       "text": "An object moving at 4 m/s has a momentum of 60 kg m/s. Calculate its mass.",
-       "answer": {
-        "value": 15.0,
-        "unit": "kg"
-       },
-       "hint": "m = p ÷ v.",
-       "walkthrough": [
-        "<b>Equation:</b> $m = \\dfrac{p}{v}$",
-        "<b>Working:</b> $m = \\dfrac{60}{4}$",
-        "<b>Answer:</b> $= 15$",
-        "<b>Units:</b> kg"
-       ]
-      },
-      {
-       "id": "t2-n14-q5",
-       "type": "numeric",
-       "text": "A 160 g cricket ball is bowled at 25 m/s. Calculate its momentum.",
-       "answer": {
-        "value": 4.0,
-        "unit": "kg m/s"
-       },
-       "hint": "160 g = 0.16 kg.",
-       "walkthrough": [
-        "$160 \\text{ g} = 0.16$ kg.",
-        "<b>Equation:</b> $p = m \\times v$",
-        "<b>Working:</b> $p = 0.16 \\times 25$",
-        "<b>Answer:</b> $= 4$",
-        "<b>Units:</b> kg m/s"
-       ]
-      },
-      {
-       "id": "t2-n14-q6",
-       "type": "numeric",
-       "text": "A 2000 kg van travels at 72 km/h. Calculate its momentum in kg m/s.",
-       "answer": {
-        "value": 40000,
-        "unit": "kg m/s"
-       },
-       "hint": "Convert 72 km/h to m/s first (divide by 3.6).",
-       "walkthrough": [
-        "$72 \\text{ km/h} = \\dfrac{72\\,000}{3600} = 20$ m/s.",
-        "<b>Equation:</b> $p = m \\times v$",
-        "<b>Working:</b> $p = 2000 \\times 20$",
-        "<b>Answer:</b> $= 40\\,000$",
-        "<b>Units:</b> kg m/s"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "stopping-distance",
-   "band": "nn",
-   "lessons": "2.27–2.30",
-   "title": "Stopping distances and reaction time",
-   "blurb": "Stopping = thinking + braking. Which factors change which part, and the typical human reaction time.",
-   "equations": [
-    "\\text{stopping distance} = \\text{thinking distance} + \\text{braking distance}",
-    "\\text{thinking distance} = \\text{speed} \\times \\text{reaction time}"
-   ],
-   "checklist": [
-    "Recall that stopping distance = thinking distance + braking distance",
-    "List the factors that affect thinking distance and those that affect braking distance",
-    "Recall a typical human reaction time (0.2–0.9 s)",
-    "Calculate a thinking distance from speed and reaction time"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Thinking distance and braking distance",
-     "html": "$$\\text{stopping distance} = \\text{thinking distance} + \\text{braking distance}$$<table class='tbl'><tr><th></th><th>Thinking distance</th><th>Braking distance</th></tr><tr><td>What it is</td><td>Distance travelled <b>during the driver's reaction time</b>, before the brakes are touched</td><td>Distance travelled <b>while the brakes are on</b>, until the car stops</td></tr><tr><td>Depends on the car's speed?</td><td>Yes — doubling the speed doubles it</td><td>Yes — doubling the speed <i>quadruples</i> it (see the tricky bits)</td></tr><tr><td>Other factors</td><td><b>Driver's reaction time:</b> tiredness, alcohol, drugs, distractions (phones, passengers)</td><td><b>Mass of the vehicle</b> (loaded lorry), <b>condition of the brakes</b>, <b>condition of the tyres</b>, <b>state of the road</b> (wet, icy, gravel) — anything that changes the friction</td></tr></table>$$\\text{thinking distance} = \\text{speed} \\times \\text{reaction time}$$<p>A typical human <b>reaction time</b> is <b>0.2 s to 0.9 s</b>. The Highway Code assumes about 0.7 s. Tiredness, alcohol, drugs and distractions all make it <i>longer</i>, which makes the thinking distance longer.</p><p>The exam loves asking which part a factor affects. Ice does not change how fast you <i>react</i>; a phone does not change how well the <i>brakes</i> grip.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "Stopping distance",
-     "question": "A car travels at 20 m/s. The driver's reaction time is 0.7 s and the braking distance is 30 m. Calculate (a) the thinking distance and (b) the stopping distance.",
-     "steps": [
-      "<b>(a)</b> During the reaction time the car keeps going at 20 m/s.",
-      "$\\text{thinking distance} = 20 \\times 0.7 = 14$ m.",
-      "<b>(b)</b> $\\text{stopping distance} = 14 + 30 = 44$ m."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Stopping distances",
-     "questions": [
-      {
-       "id": "t2-n15-q1",
-       "type": "numeric",
-       "text": "A car travels at 15 m/s and the driver's reaction time is 0.6 s. Calculate the thinking distance.",
-       "answer": {
-        "value": 9.0,
-        "unit": "m"
-       },
-       "hint": "Speed × reaction time.",
-       "walkthrough": [
-        "<b>Equation:</b> $\\text{thinking distance} = \\text{speed} \\times \\text{reaction time}$",
-        "<b>Working:</b> $\\text{thinking distance} = 15 \\times 0.6$",
-        "<b>Answer:</b> $= 9$",
-        "<b>Units:</b> m"
-       ]
-      },
-      {
-       "id": "t2-n15-q2",
-       "type": "numeric",
-       "text": "The braking distance of the car in question 1 is 21 m. Calculate its stopping distance.",
-       "answer": {
-        "value": 30.0,
-        "unit": "m"
-       },
-       "hint": "Thinking distance + braking distance.",
-       "walkthrough": [
-        "<b>Equation:</b> $\\text{stopping distance} = \\text{thinking distance} + \\text{braking distance}$",
-        "<b>Working:</b> $\\text{stopping distance} = 9 + 21$",
-        "<b>Answer:</b> $= 30$",
-        "<b>Units:</b> m"
-       ]
-      },
-      {
-       "id": "t2-n15-q3",
-       "type": "choice",
-       "text": "Which of these increases the <b>thinking</b> distance but not the braking distance?",
-       "options": [
-        "A wet road",
-        "A tired driver",
-        "Worn brake pads",
-        "A heavily loaded car"
-       ],
-       "correct": 1,
-       "explain": "Tiredness lengthens the reaction time, so the car travels further before braking starts. The other three all affect the braking distance."
-      },
-      {
-       "id": "t2-n15-q4",
-       "type": "choice",
-       "text": "Which of these increases the <b>braking</b> distance but not the thinking distance?",
-       "options": [
-        "Alcohol",
-        "An icy road",
-        "Using a mobile phone",
-        "Tiredness"
-       ],
-       "correct": 1,
-       "explain": "Ice reduces friction between the tyres and the road, so the brakes take longer to stop the car. The other three affect the driver's reaction time."
-      },
-      {
-       "id": "t2-n15-q5",
-       "type": "choice",
-       "text": "Which is a typical reaction time for a human driver?",
-       "options": [
-        "0.02 s",
-        "0.5 s",
-        "2 s",
-        "5 s"
-       ],
-       "correct": 1,
-       "explain": "Typical reaction times are 0.2–0.9 s. 2 s would be dangerously slow; 0.02 s is faster than any human nerve signal."
-      },
-      {
-       "id": "t2-n15-q6",
-       "type": "numeric",
-       "text": "A lorry's stopping distance is 60 m and its thinking distance is 18 m. Calculate its braking distance.",
-       "answer": {
-        "value": 42,
-        "unit": "m"
-       },
-       "hint": "Rearrange: braking = stopping − thinking.",
-       "walkthrough": [
-        "$\\text{braking distance} = 60 - 18 = 42$ m."
-       ]
-      },
-      {
-       "id": "t2-n15-q7",
-       "type": "written",
-       "text": "Give three factors that affect a driver's reaction time.",
-       "model": "<ul><li>Tiredness</li><li>Alcohol</li><li>Drugs (including some medicines)</li><li>Distractions, e.g. mobile phones or passengers</li><li>(Any three.)</li></ul>",
-       "lines": 2
       }
      ]
     }
@@ -3613,599 +3236,6 @@
    ]
   },
   {
-   "id": "circular-motion",
-   "band": "tricky",
-   "lessons": "2.20–2.21",
-   "title": "Circular motion",
-   "blurb": "Constant speed, changing velocity, a resultant force towards the centre — and the word \"centripetal\" is a job description, not a new force.",
-   "equations": [],
-   "checklist": [
-    "Explain why an object moving in a circle at constant speed has a changing velocity",
-    "State that a resultant (centripetal) force acts towards the centre of the circle",
-    "Say which real force provides the centripetal force in a given situation",
-    "Predict what happens when the centripetal force is removed"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Constant speed but changing velocity",
-     "html": "<p>A satellite orbiting at a steady 7500 m/s, a car going round a roundabout at 10 m/s, a hammer being swung round a thrower's head: each has a <b>constant speed</b>. But velocity is a vector, and the <b>direction</b> is changing all the time — so the <b>velocity is changing</b>.</p><p>A changing velocity is an acceleration. By Newton's first law, an accelerating object must have a <b>resultant force</b> on it. For circular motion that resultant force acts <b>towards the centre of the circle</b> — at right angles to the velocity, which is why it changes the direction and not the speed. We call it the <b>centripetal force</b> (\"centre-seeking\").</p><p><b>Centripetal force is not an extra force.</b> It is the name for whichever real force happens to be doing the job of pulling the object towards the centre:</p><table class='tbl'><tr><th>Situation</th><th>What provides the centripetal force</th></tr><tr><td>Satellite or planet in orbit</td><td>Gravity</td></tr><tr><td>Car going round a bend or roundabout</td><td>Friction between the tyres and the road</td></tr><tr><td>Ball on a string, hammer throw</td><td>Tension in the string / wire</td></tr><tr><td>Clothes in a spinning washing machine drum</td><td>The contact (normal) force from the drum</td></tr><tr><td>Electron orbiting a nucleus (old model)</td><td>Electrostatic attraction</td></tr></table><p><b>Remove the force</b> (the string breaks, the road is icy) and the object no longer accelerates: it carries on in a straight line at a tangent to the circle, at the speed it had — Newton's first law again.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "A satellite in orbit",
-     "question": "A satellite moves in a circular orbit around the Earth at a constant speed. Explain why it is accelerating, and state what provides the force.",
-     "steps": [
-      "Velocity is a vector: speed <i>and</i> direction.",
-      "The satellite's speed is constant, but its direction of motion is continually changing as it goes round the circle.",
-      "So its velocity is changing, and a changing velocity means it is accelerating.",
-      "An acceleration needs a resultant force. Here it is the Earth's gravitational pull on the satellite, which acts towards the centre of the Earth — the centre of the orbit.",
-      "Gravity is the centripetal force. It acts at right angles to the velocity, so it changes the direction of motion without changing the speed."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Circular motion",
-     "questions": [
-      {
-       "id": "t2-t6-q1",
-       "type": "written",
-       "text": "A car drives round a roundabout at a steady 8 m/s. Explain why the car's velocity is changing even though its speed is not.",
-       "model": "<ul><li>Velocity is a vector quantity — it has a direction as well as a size.</li><li>The car's direction of motion is continually changing as it goes round the roundabout.</li><li>So its velocity is changing (and it is accelerating) even though its speed stays at 8 m/s.</li></ul>",
-       "lines": 3
-      },
-      {
-       "id": "t2-t6-q2",
-       "type": "choice",
-       "text": "Which force provides the centripetal force on a car going round a roundabout?",
-       "options": [
-        "The engine's driving force",
-        "Friction between the tyres and the road",
-        "The car's weight",
-        "Air resistance"
-       ],
-       "correct": 1,
-       "explain": "Friction from the road acts sideways on the tyres, towards the centre of the roundabout. On ice there is little friction, which is why cars slide straight on."
-      },
-      {
-       "id": "t2-t6-q3",
-       "type": "choice",
-       "text": "In which direction does the resultant force act on an object moving in a circle at constant speed?",
-       "options": [
-        "In the direction of motion",
-        "Opposite to the direction of motion",
-        "Towards the centre of the circle",
-        "Away from the centre of the circle"
-       ],
-       "correct": 2,
-       "explain": "Towards the centre. If it had a component along the motion the speed would change; a force at right angles only changes the direction."
-      },
-      {
-       "id": "t2-t6-q4",
-       "type": "choice",
-       "text": "A hammer thrower swings the hammer in a circle on a wire. What provides the centripetal force?",
-       "options": [
-        "Gravity",
-        "The tension in the wire",
-        "Air resistance",
-        "The hammer's momentum"
-       ],
-       "correct": 1,
-       "explain": "The wire pulls the hammer inwards towards the thrower: tension. Momentum is not a force."
-      },
-      {
-       "id": "t2-t6-q5",
-       "type": "written",
-       "text": "A ball is whirled round on a string. Describe and explain what happens to the ball if the string snaps.",
-       "model": "<ul><li>The ball moves off in a straight line, along a tangent to the circle (not outwards along the radius).</li><li>It keeps the speed it had at that moment.</li><li>Because the tension — the centripetal force — has gone, there is no resultant force, so by Newton's first law the ball continues at constant velocity.</li></ul>",
-       "lines": 3
-      },
-      {
-       "id": "t2-t6-q6",
-       "type": "choice",
-       "text": "Which statement about centripetal force is correct?",
-       "options": [
-        "It is an extra force that appears whenever something moves in a circle",
-        "It is the name given to whichever force acts towards the centre, such as gravity or tension",
-        "It acts outwards, which is why you feel pushed to the outside on a roundabout",
-        "It is only present for objects moving at high speed"
-       ],
-       "correct": 1,
-       "explain": "Centripetal is a role, not a new force. The outward feeling on a roundabout is your body trying to go straight on (Newton's first law) while the car turns under you."
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "inertial-mass",
-   "band": "tricky",
-   "lessons": "2.22",
-   "title": "Inertial mass",
-   "blurb": "Mass as a measure of how hard it is to change an object's velocity — defined as force ÷ acceleration — and why it is not the same idea as weight.",
-   "equations": [
-    "\\text{inertial mass} = \\dfrac{F}{a}"
-   ],
-   "checklist": [
-    "Explain what inertial mass measures",
-    "State that inertial mass is defined as the ratio of force to acceleration",
-    "Explain why inertial mass does not change on the Moon even though weight does"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Mass as resistance to changing velocity",
-     "html": "<p><b>Inertia</b> is the tendency of an object to keep doing what it is doing — to stay at rest, or to keep moving at constant velocity (Newton's first law).</p><p><b>Inertial mass</b> is a measure of <b>how difficult it is to change the velocity</b> of an object — to get it moving from rest, to speed it up, slow it down, or change its direction. It is <b>defined as the ratio of force to acceleration</b>:</p>$$\\text{inertial mass} = \\dfrac{F}{a}$$<p>So if the same force gives one object half the acceleration of another, the first object has twice the inertial mass. This is just $F = ma$ rearranged, but the exam wants the <i>idea</i>: mass is what makes velocity hard to change.</p><table class='tbl'><tr><th></th><th>Inertial mass</th><th>Weight</th></tr><tr><td>Measures</td><td>Resistance to acceleration</td><td>The pull of gravity</td></tr><tr><td>Found from</td><td>$F \\div a$</td><td>$m \\times g$</td></tr><tr><td>On the Moon</td><td>Unchanged — a 1000 kg buggy is just as hard to push into motion</td><td>About one sixth</td></tr><tr><td>In deep space (no gravity)</td><td>Unchanged</td><td>Zero</td></tr></table><p>An astronaut floating in orbit is \"weightless\", but a loaded cargo pallet is still hard to push: its inertial mass is the same as on Earth.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "Comparing inertial masses",
-     "question": "A resultant force of 12 N gives trolley A an acceleration of 3 m/s². The same force gives trolley B an acceleration of 1.5 m/s². Calculate the inertial mass of each trolley and say which is harder to get moving.",
-     "steps": [
-      "Trolley A: $m = \\dfrac{F}{a} = \\dfrac{12}{3} = 4$ kg.",
-      "Trolley B: $m = \\dfrac{12}{1.5} = 8$ kg.",
-      "Trolley B has twice the inertial mass: for the same force it accelerates half as much, so it is harder to change its velocity."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Inertial mass",
-     "questions": [
-      {
-       "id": "t2-t7-q1",
-       "type": "numeric",
-       "text": "A resultant force of 50 N gives a crate an acceleration of 2.5 m/s². Calculate the inertial mass of the crate.",
-       "answer": {
-        "value": 20.0,
-        "unit": "kg"
-       },
-       "hint": "Force divided by acceleration.",
-       "walkthrough": [
-        "<b>Equation:</b> $\\text{inertial mass} = \\dfrac{F}{a}$",
-        "<b>Working:</b> $m = \\dfrac{50}{2.5}$",
-        "<b>Answer:</b> $= 20$",
-        "<b>Units:</b> kg"
-       ]
-      },
-      {
-       "id": "t2-t7-q2",
-       "type": "numeric",
-       "text": "A 20 N push gives a loaded trolley an acceleration of 8 m/s². Calculate its inertial mass.",
-       "answer": {
-        "value": 2.5,
-        "unit": "kg"
-       },
-       "hint": "m = F ÷ a.",
-       "walkthrough": [
-        "<b>Equation:</b> $\\text{inertial mass} = \\dfrac{F}{a}$",
-        "<b>Working:</b> $m = \\dfrac{20}{8}$",
-        "<b>Answer:</b> $= 2.5$",
-        "<b>Units:</b> kg"
-       ]
-      },
-      {
-       "id": "t2-t7-q3",
-       "type": "written",
-       "text": "Explain what is meant by the inertial mass of an object.",
-       "model": "<ul><li>A measure of how difficult it is to change the velocity of the object (including starting it from rest).</li><li>It is defined as the ratio of the force applied to the acceleration produced: m = F ÷ a.</li></ul>",
-       "lines": 2
-      },
-      {
-       "id": "t2-t7-q4",
-       "type": "choice",
-       "text": "The same resultant force is applied to a tennis ball and to a bowling ball. Which statement is correct?",
-       "options": [
-        "They have the same acceleration",
-        "The bowling ball accelerates less because it has more inertial mass",
-        "The bowling ball accelerates more because it is heavier",
-        "The tennis ball accelerates less because it is lighter"
-       ],
-       "correct": 1,
-       "explain": "a = F ÷ m: with the same F, the larger mass gets the smaller acceleration. The bowling ball's velocity is harder to change."
-      },
-      {
-       "id": "t2-t7-q5",
-       "type": "numeric",
-       "text": "On Earth a shopping trolley needs a resultant force of 50 N to accelerate at 2 m/s². On the Moon, what resultant force would give the same trolley the same acceleration?",
-       "answer": {
-        "value": 50,
-        "unit": "N"
-       },
-       "hint": "Inertial mass does not depend on gravity.",
-       "walkthrough": [
-        "Inertial mass $= \\dfrac{50}{2} = 25$ kg — the same on the Moon.",
-        "$F = m \\times a = 25 \\times 2 = 50$ N, exactly as on Earth.",
-        "Its weight on the Moon is smaller (about 40 N instead of 250 N), but its resistance to acceleration is unchanged."
-       ]
-      },
-      {
-       "id": "t2-t7-q6",
-       "type": "choice",
-       "text": "An astronaut in orbit is \"weightless\". Which statement about a 500 kg satellite she is trying to push is correct?",
-       "options": [
-        "It is easy to push because it has no weight",
-        "It is just as hard to accelerate as on Earth because its inertial mass is unchanged",
-        "It cannot be moved at all",
-        "It has no mass in orbit"
-       ],
-       "correct": 1,
-       "explain": "Weight depends on gravity; inertial mass does not. Changing the satellite's velocity needs the same force in orbit as it would on Earth."
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "conservation-momentum",
-   "band": "tricky",
-   "lessons": "2.23–2.25",
-   "title": "Conservation of momentum",
-   "blurb": "Total momentum before = total momentum after, as long as no outside force acts. The method is always the same; the directions are where it goes wrong.",
-   "equations": [
-    "\\text{total momentum before} = \\text{total momentum after}",
-    "p = m \\times v"
-   ],
-   "checklist": [
-    "Apply conservation of momentum to objects that stick together",
-    "Use a sign convention so that opposite directions have opposite signs",
-    "Handle explosions and recoil, where the total momentum is zero",
-    "Find the velocity of one object after a collision when the other's is known"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Before equals after",
-     "html": "<p>In any collision or explosion where no external force acts (a <b>closed system</b>), the <b>total momentum is conserved</b>: the total before equals the total after. This follows from Newton's third law (see the pairs section).</p>$$\\text{total momentum before} = \\text{total momentum after}$$<p><b>Method, every time:</b></p><ol class='list'><li>Choose a positive direction (usually the direction the first object moves). Anything moving the other way gets a <b>minus sign</b>.</li><li>Write the momentum of each object <b>before</b>: $m \\times v$ each, with signs. Add them.</li><li>Write the momentum of each object <b>after</b>, using a symbol for the unknown velocity. Add them.</li><li>Set before = after and solve. A negative answer means that object moves in the negative direction.</li></ol><table class='tbl'><tr><th>Type</th><th>What to watch</th></tr><tr><td>Objects stick together</td><td>After the collision there is one object with the <b>combined mass</b> and one velocity</td></tr><tr><td>Head-on collision</td><td>The two velocities before have <b>opposite signs</b></td></tr><tr><td>Explosion / recoil (gun, rocket, skater throwing something)</td><td>Total momentum before is <b>zero</b>, so afterwards the two momenta are equal and opposite</td></tr><tr><td>One object's final velocity given</td><td>Put it in; the other final velocity is the unknown</td></tr></table>"
-    },
-    {
-     "kind": "worked",
-     "title": "Sticking together",
-     "question": "A 2 kg trolley moving at 3 m/s collides with a stationary 1 kg trolley. They stick together. Calculate their velocity after the collision.",
-     "steps": [
-      "Positive direction: the direction of the moving trolley.",
-      "Before: $p = (2 \\times 3) + (1 \\times 0) = 6$ kg m/s.",
-      "After: one object of mass $2 + 1 = 3$ kg at velocity $v$: $p = 3v$.",
-      "Conservation: $3v = 6$, so $v = 2$ m/s, in the original direction of the 2 kg trolley."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Collisions and explosions",
-     "questions": [
-      {
-       "id": "t2-t8-q1",
-       "type": "numeric",
-       "text": "A 1500 kg car travelling at 10 m/s runs into the back of a stationary 1000 kg car. The two cars lock together. Calculate their velocity immediately after the collision.",
-       "answer": {
-        "value": 6.0,
-        "unit": "m/s"
-       },
-       "hint": "Momentum before is all in the moving car. After, the combined mass is 2500 kg.",
-       "walkthrough": [
-        "Before: $1500 \\times 10 + 1000 \\times 0 = 15\\,000$ kg m/s.",
-        "After: $2500 \\times v$.",
-        "$2500v = 15\\,000$, so $v = 6$ m/s."
-       ]
-      },
-      {
-       "id": "t2-t8-q2",
-       "type": "numeric",
-       "text": "A 4 kg rifle fires a 20 g bullet at 300 m/s. Calculate the recoil speed of the rifle (just the size).",
-       "answer": {
-        "value": 1.5,
-        "unit": "m/s"
-       },
-       "hint": "Before firing the total momentum is zero, so afterwards the rifle's momentum is equal and opposite to the bullet's. 20 g = 0.02 kg.",
-       "walkthrough": [
-        "Before: $0$ (nothing moving).",
-        "After: $(0.02 \\times 300) + (4 \\times v) = 0$.",
-        "$6 + 4v = 0$, so $v = -1.5$ m/s. The rifle recoils at 1.5 m/s in the opposite direction to the bullet."
-       ]
-      },
-      {
-       "id": "t2-t8-q3",
-       "type": "numeric",
-       "text": "A 2 kg trolley moving to the right at 4 m/s collides head-on with a 3 kg trolley moving to the left at 1 m/s. They stick together. Calculate their velocity after the collision (take right as positive).",
-       "answer": {
-        "value": 1.0,
-        "unit": "m/s"
-       },
-       "hint": "The 3 kg trolley's velocity is −1 m/s.",
-       "walkthrough": [
-        "Before: $(2 \\times 4) + (3 \\times (-1)) = 8 - 3 = 5$ kg m/s.",
-        "After: $(2 + 3) \\times v = 5v$.",
-        "$5v = 5$, so $v = 1$ m/s to the right (positive)."
-       ]
-      },
-      {
-       "id": "t2-t8-q4",
-       "type": "numeric",
-       "text": "A 0.5 kg snooker ball moving at 6 m/s hits an identical stationary ball. After the collision the first ball continues in the same direction at 2 m/s. Calculate the velocity of the second ball.",
-       "answer": {
-        "value": 4.0,
-        "unit": "m/s"
-       },
-       "hint": "The balls do not stick. Put in the first ball's final velocity; the second ball's is the unknown.",
-       "walkthrough": [
-        "Before: $(0.5 \\times 6) + (0.5 \\times 0) = 3$ kg m/s.",
-        "After: $(0.5 \\times 2) + (0.5 \\times v) = 1 + 0.5v$.",
-        "$1 + 0.5v = 3$, so $v = 4$ m/s in the original direction."
-       ]
-      },
-      {
-       "id": "t2-t8-q5",
-       "type": "written",
-       "text": "State what is meant by \"momentum is conserved\" in a collision, and give the condition for it to be true.",
-       "model": "<ul><li>The total momentum of the objects before the collision equals the total momentum after it.</li><li>This is true provided no external (outside) forces act on the system — it is a closed system.</li></ul>",
-       "lines": 2
-      },
-      {
-       "id": "t2-t8-q6",
-       "type": "numeric",
-       "text": "A 50 kg skater standing still on ice throws a 5 kg bag horizontally at 4 m/s. Calculate the skater's recoil speed (just the size).",
-       "answer": {
-        "value": 0.4,
-        "unit": "m/s"
-       },
-       "hint": "Total momentum before is zero.",
-       "walkthrough": [
-        "After: $(5 \\times 4) + (50 \\times v) = 0$.",
-        "$20 + 50v = 0$, so $v = -0.4$ m/s: the skater moves at 0.4 m/s the opposite way to the bag."
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "force-momentum",
-   "band": "tricky",
-   "lessons": "2.26, 2.31",
-   "title": "Force = change in momentum ÷ time, and safety features",
-   "blurb": "Why airbags, crumple zones, seatbelts and helmets work: the momentum change is fixed, so make the time longer and the force gets smaller.",
-   "equations": [
-    "F = \\dfrac{mv - mu}{t}"
-   ],
-   "checklist": [
-    "Use F = (mv − mu) ÷ t to find a force, a time or a change in momentum",
-    "Explain how a safety feature reduces injury, using momentum, time and force in the right order",
-    "Explain why large decelerations are dangerous"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Newton's second law, momentum version",
-     "html": "$$\\text{force} = \\dfrac{\\text{change in momentum}}{\\text{time}}\\qquad F = \\dfrac{mv - mu}{t}$$<p>The change in momentum is $mv - mu$: final momentum minus initial momentum. For something stopping, $v = 0$, so the change is just $-mu$ (the size of the force is $mu \\div t$; the minus sign says it acts against the motion).</p><p><b>The key idea:</b> in a collision the change in momentum is fixed — the car <i>is</i> going to stop. The only thing a safety feature can change is <b>how long the stopping takes</b>. A longer time means a smaller force, and it is the force that does the damage.</p><table class='tbl'><tr><th>Feature</th><th>How it increases the time</th></tr><tr><td>Crumple zone</td><td>The front of the car crushes progressively instead of stopping dead</td></tr><tr><td>Airbag</td><td>Cushions the head: it stops over the depth of the bag, not against the hard dashboard</td></tr><tr><td>Seatbelt</td><td>Stretches slightly, and stops the person over the same time as the car rather than when they hit the windscreen</td></tr><tr><td>Cycle helmet</td><td>Foam compresses on impact</td></tr><tr><td>Crash mat, bending your knees on landing</td><td>Same idea: longer stopping time</td></tr></table><p><b>The 4-mark answer, in order:</b> (1) the momentum change is the same with or without the feature; (2) the feature increases the time taken to stop; (3) force = change in momentum ÷ time, so (4) the force on the person is smaller, so less injury. Students who write \"it absorbs the impact\" get nothing.</p><p><b>Large decelerations are dangerous</b> because a large deceleration means a large force on the body ($F = ma$). Forces of many times a person's weight can break bones, tear organs and injure the brain against the skull — even without hitting anything, because the body's own tissues have to supply the stopping force.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "With and without an airbag",
-     "question": "A 60 kg driver is travelling at 15 m/s when the car crashes and stops. (a) Calculate the force on the driver if she stops in 0.05 s against the steering wheel. (b) Calculate the force if an airbag increases her stopping time to 0.3 s.",
-     "steps": [
-      "Change in momentum $= mv - mu = (60 \\times 0) - (60 \\times 15) = -900$ kg m/s (the size is 900 kg m/s, acting against her motion).",
-      "<b>(a)</b> $F = \\dfrac{900}{0.05} = 18\\,000$ N — about 30 times her weight.",
-      "<b>(b)</b> $F = \\dfrac{900}{0.3} = 3000$ N.",
-      "Same change in momentum, six times the time, one sixth of the force."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Force and momentum",
-     "questions": [
-      {
-       "id": "t2-t9-q1",
-       "type": "numeric",
-       "text": "A 0.16 kg cricket ball travelling at 30 m/s is caught and brought to rest in 0.02 s. Calculate the size of the average force on the ball.",
-       "answer": {
-        "value": 240,
-        "unit": "N"
-       },
-       "hint": "Change in momentum is 0.16 × 30, then divide by the time.",
-       "walkthrough": [
-        "Change in momentum $= (0.16 \\times 0) - (0.16 \\times 30) = -4.8$ kg m/s: a size of 4.8 kg m/s, against the ball's motion.",
-        "<b>Equation:</b> $F = \\dfrac{mv - mu}{t}$",
-        "<b>Working:</b> $F = \\dfrac{4.8}{0.02}$",
-        "<b>Answer:</b> $= 240$",
-        "<b>Units:</b> N (acting against the ball's motion)"
-       ]
-      },
-      {
-       "id": "t2-t9-q2",
-       "type": "numeric",
-       "text": "A 1200 kg car travelling at 20 m/s hits a wall and stops in 0.5 s. Calculate the size of the average force on the car.",
-       "answer": {
-        "value": 48000,
-        "unit": "N"
-       },
-       "hint": "mu = 1200 × 20.",
-       "walkthrough": [
-        "Change in momentum $= 0 - (1200 \\times 20) = -24\\,000$ kg m/s: a size of 24 000 kg m/s.",
-        "<b>Equation:</b> $F = \\dfrac{mv - mu}{t}$",
-        "<b>Working:</b> $F = \\dfrac{24\\,000}{0.5}$",
-        "<b>Answer:</b> $= 48\\,000$",
-        "<b>Units:</b> N (48 kN, acting against the motion)"
-       ]
-      },
-      {
-       "id": "t2-t9-q3",
-       "type": "numeric",
-       "text": "A 70 kg passenger without a seatbelt is moving at 12 m/s when the car stops suddenly. He hits the dashboard and stops in 0.1 s. Calculate the size of the force on him.",
-       "answer": {
-        "value": 8400,
-        "unit": "N"
-       },
-       "hint": "Momentum change 70 × 12, time 0.1 s.",
-       "walkthrough": [
-        "Change in momentum $= 0 - (70 \\times 12) = -840$ kg m/s: a size of 840 kg m/s.",
-        "<b>Equation:</b> $F = \\dfrac{mv - mu}{t}$",
-        "<b>Working:</b> $F = \\dfrac{840}{0.1}$",
-        "<b>Answer:</b> $= 8400$",
-        "<b>Units:</b> N — about 12 times his weight"
-       ]
-      },
-      {
-       "id": "t2-t9-q4",
-       "type": "numeric",
-       "text": "A 60 kg gymnast lands from a vault at 10 m/s. The maximum safe force on her legs is 2000 N. Calculate the minimum time she must take to stop.",
-       "answer": {
-        "value": 0.3,
-        "unit": "s"
-       },
-       "hint": "Rearrange: t = change in momentum ÷ force.",
-       "walkthrough": [
-        "Change in momentum $= 60 \\times 10 = 600$ kg m/s.",
-        "$t = \\dfrac{600}{2000} = 0.3$ s.",
-        "She bends her knees so that the stop takes at least 0.3 s."
-       ]
-      },
-      {
-       "id": "t2-t9-q5",
-       "type": "written",
-       "text": "Explain how an airbag reduces the injury to a driver in a crash.",
-       "model": "<ul><li>The driver's change in momentum is the same whether or not the airbag is there (she goes from her speed to rest).</li><li>The airbag increases the time taken for her head to stop.</li><li>Force = change in momentum ÷ time, so a longer time means a smaller force on her.</li><li>A smaller force means less injury.</li></ul>",
-       "lines": 4
-      },
-      {
-       "id": "t2-t9-q6",
-       "type": "choice",
-       "text": "Which of these is the reason a crumple zone reduces the force on passengers?",
-       "options": [
-        "It reduces the change in momentum of the car",
-        "It increases the time over which the car's momentum changes",
-        "It increases the mass of the car",
-        "It makes the car stop more quickly"
-       ],
-       "correct": 1,
-       "explain": "The momentum change is fixed by the car's speed. A crumple zone makes the stop take longer, and F = Δp ÷ t gets smaller."
-      },
-      {
-       "id": "t2-t9-q7",
-       "type": "written",
-       "text": "Explain why a large deceleration is dangerous for a person in a vehicle.",
-       "model": "<ul><li>A large deceleration means a large resultant force on the person (F = ma).</li><li>The force on the body can be many times the person's weight.</li><li>Such forces can break bones, damage internal organs, or injure the brain as it strikes the inside of the skull.</li></ul>",
-       "lines": 3
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "braking-v-squared",
-   "band": "tricky",
-   "lessons": "2.32P, 2.33P",
-   "title": "Braking distance and speed squared",
-   "blurb": "The brakes do work to remove the car's kinetic energy. Because KE depends on v², doubling the speed quadruples the braking distance.",
-   "equations": [
-    "\\tfrac{1}{2} m v^2 = F \\times d"
-   ],
-   "checklist": [
-    "Use work done = kinetic energy to calculate a braking distance or a braking force",
-    "Explain why braking distance is proportional to speed squared",
-    "Estimate how stopping distance changes across typical speeds (thinking ∝ v, braking ∝ v²)"
-   ],
-   "parts": [
-    {
-     "kind": "explain",
-     "title": "Work done by the brakes = kinetic energy lost",
-     "html": "<p>To stop a car, the brakes must remove all of its kinetic energy. The braking force does work over the braking distance:</p>$$\\text{work done} = F \\times d\\qquad\\qquad KE = \\tfrac{1}{2} \\times m \\times v^2$$<p>Setting them equal:</p>$$\\tfrac{1}{2} m v^2 = F \\times d\\qquad\\Rightarrow\\qquad d = \\dfrac{\\tfrac{1}{2} m v^2}{F}$$<p>The braking force $F$ is roughly constant for a given car and road (it depends on the brakes, tyres and surface). So:</p><ul><li><b>Braking distance ∝ $v^2$.</b> Double the speed → four times the braking distance. Treble it → nine times.</li><li><b>Thinking distance ∝ $v$</b>, because it is speed × reaction time. Double the speed → double the thinking distance.</li><li>A heavier car (more $m$) or a wet road (less $F$) also increases the braking distance.</li></ul><table class='tbl'><tr><th>Speed</th><th>Thinking distance</th><th>Braking distance</th><th>Stopping distance</th></tr><tr><td>20 mph (9 m/s)</td><td>6 m</td><td>6 m</td><td>12 m</td></tr><tr><td>30 mph (13 m/s)</td><td>9 m</td><td>14 m</td><td>23 m</td></tr><tr><td>40 mph (18 m/s)</td><td>12 m</td><td>24 m</td><td>36 m</td></tr><tr><td>50 mph (22 m/s)</td><td>15 m</td><td>38 m</td><td>53 m</td></tr><tr><td>60 mph (27 m/s)</td><td>18 m</td><td>55 m</td><td>73 m</td></tr><tr><td>70 mph (31 m/s)</td><td>21 m</td><td>75 m</td><td>96 m</td></tr></table><p>(Highway Code figures, for a dry road and an alert driver.) Notice the thinking column goes up in equal steps; the braking column grows faster and faster.</p>"
-    },
-    {
-     "kind": "worked",
-     "title": "Braking distance from work done",
-     "question": "A 1200 kg car travelling at 20 m/s brakes with a constant braking force of 6000 N. Calculate its braking distance.",
-     "steps": [
-      "Kinetic energy to remove: $KE = \\tfrac{1}{2} \\times 1200 \\times 20^2 = \\tfrac{1}{2} \\times 1200 \\times 400 = 240\\,000$ J.",
-      "The brakes do this much work: $F \\times d = 240\\,000$.",
-      "$d = \\dfrac{240\\,000}{6000} = 40$ m."
-     ]
-    },
-    {
-     "kind": "practice",
-     "title": "Braking and speed",
-     "questions": [
-      {
-       "id": "t2-t10-q1",
-       "type": "numeric",
-       "text": "The same 1200 kg car with the same 6000 N braking force is now travelling at 30 m/s. Calculate its braking distance.",
-       "answer": {
-        "value": 90.0,
-        "unit": "m"
-       },
-       "hint": "KE = ½ × 1200 × 30². Then divide by 6000 N.",
-       "walkthrough": [
-        "$KE = \\tfrac{1}{2} \\times 1200 \\times 30^2 = 540\\,000$ J.",
-        "$d = \\dfrac{540\\,000}{6000} = 90$ m.",
-        "1.5 times the speed gives $1.5^2 = 2.25$ times the braking distance ($2.25 \\times 40 = 90$ m). ✓"
-       ]
-      },
-      {
-       "id": "t2-t10-q2",
-       "type": "numeric",
-       "text": "A 1000 kg car travelling at 15 m/s stops in a braking distance of 25 m. Calculate the average braking force.",
-       "answer": {
-        "value": 4500,
-        "unit": "N"
-       },
-       "hint": "Find the KE, then F = KE ÷ d.",
-       "walkthrough": [
-        "$KE = \\tfrac{1}{2} \\times 1000 \\times 15^2 = 112\\,500$ J.",
-        "$F = \\dfrac{112\\,500}{25} = 4500$ N."
-       ]
-      },
-      {
-       "id": "t2-t10-q3",
-       "type": "choice",
-       "text": "A driver doubles her speed. What happens to the braking distance?",
-       "options": [
-        "It doubles",
-        "It stays the same",
-        "It quadruples (×4)",
-        "It halves"
-       ],
-       "correct": 2,
-       "explain": "Braking distance ∝ v². Doubling v multiplies v² by 4, so the braking distance is four times as long. (Thinking distance only doubles.)"
-      },
-      {
-       "id": "t2-t10-q4",
-       "type": "numeric",
-       "text": "At 30 mph (13 m/s) a car's thinking distance is 9 m and its braking distance is 14 m. Estimate its stopping distance at 60 mph (26 m/s).",
-       "answer": {
-        "value": 74.2,
-        "unit": "m",
-        "tolerance": 0.06
-       },
-       "hint": "Thinking distance doubles; braking distance goes up by 2² = 4.",
-       "walkthrough": [
-        "Thinking distance $\\propto v$: $9 \\times 2 = 18$ m.",
-        "Braking distance $\\propto v^2$: $14 \\times 2^2 = 56$ m.",
-        "Stopping distance $\\approx 18 + 56 = 74$ m — roughly three times the 23 m at 30 mph, not twice."
-       ]
-      },
-      {
-       "id": "t2-t10-q5",
-       "type": "written",
-       "text": "Explain why the braking distance of a car is proportional to the square of its speed.",
-       "model": "<ul><li>The brakes must do work equal to the car's kinetic energy to stop it: F × d = ½mv².</li><li>The braking force F is roughly constant (it depends on the brakes, tyres and road, not on speed).</li><li>So d = ½mv² ÷ F, and d is proportional to v²: doubling the speed quadruples the braking distance.</li></ul>",
-       "lines": 3
-      },
-      {
-       "id": "t2-t10-q6",
-       "type": "choice",
-       "text": "Which factor increases the braking distance by reducing the braking force?",
-       "options": [
-        "A heavier load in the car",
-        "A higher speed",
-        "A wet or icy road",
-        "A faster reaction time"
-       ],
-       "correct": 2,
-       "explain": "Water or ice reduces the friction between the tyres and the road, so the braking force is smaller and the same KE takes a longer distance to remove. A heavier load increases the KE instead."
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "core-practical-analysis",
    "band": "tricky",
    "lessons": "2.19",
@@ -4669,135 +3699,103 @@
      "items": [
       {
        "q": "Scalar or vector: velocity?",
-       "a": "Vector (speed in a stated direction)"
+       "a": "Vector (speed in a stated direction)",
+       "section": "scalars-vectors"
       },
       {
        "q": "Scalar or vector: mass? weight?",
-       "a": "Mass is a scalar; weight is a vector"
+       "a": "Mass is a scalar; weight is a vector",
+       "section": "scalars-vectors"
       },
       {
        "q": "Scalar or vector: momentum? energy?",
-       "a": "Momentum is a vector; energy is a scalar"
+       "a": "Momentum is a vector; energy is a scalar",
+       "section": "scalars-vectors"
       },
       {
        "q": "Speed equation (symbols)?",
-       "a": "$v = \\dfrac{x}{t}$"
+       "a": "$v = \\dfrac{x}{t}$",
+       "section": "speed"
       },
       {
        "q": "Convert km/h to m/s?",
-       "a": "Divide by 3.6 (×1000 ÷ 3600)"
+       "a": "Divide by 3.6 (×1000 ÷ 3600)",
+       "section": "speed"
       },
       {
        "q": "Acceleration equation?",
-       "a": "$a = \\dfrac{v - u}{t}$"
+       "a": "$a = \\dfrac{v - u}{t}$",
+       "section": "acceleration"
       },
       {
        "q": "Equation with no time in it?",
-       "a": "$v^2 - u^2 = 2ax$"
+       "a": "$v^2 - u^2 = 2ax$",
+       "section": "suvat"
       },
       {
        "q": "Gradient of a distance–time graph gives…",
-       "a": "Speed"
+       "a": "Speed",
+       "section": "dt-graphs"
       },
       {
        "q": "Gradient of a velocity–time graph gives…",
-       "a": "Acceleration"
+       "a": "Acceleration",
+       "section": "vt-graphs"
       },
       {
        "q": "Area under a velocity–time graph gives…",
-       "a": "Distance travelled"
+       "a": "Distance travelled",
+       "section": "vt-graphs"
       },
       {
        "q": "Instantaneous speed on a curved graph?",
-       "a": "Gradient of the tangent at that point"
+       "a": "Gradient of the tangent at that point",
+       "section": "curved-graphs"
       },
       {
        "q": "Value of g?",
-       "a": "10 m/s² (or 10 N/kg)"
+       "a": "10 m/s² (or 10 N/kg)",
+       "section": "typical-speeds"
       },
       {
        "q": "Typical speeds: walking, cycling, sound?",
-       "a": "1.5 m/s, 6 m/s, 340 m/s"
+       "a": "1.5 m/s, 6 m/s, 340 m/s",
+       "section": "typical-speeds"
       },
       {
        "q": "Newton's first law?",
-       "a": "Zero resultant force → stays at rest or at constant velocity"
+       "a": "Zero resultant force → stays at rest or at constant velocity",
+       "section": "newton-first"
       },
       {
        "q": "Newton's second law?",
-       "a": "$F = m \\times a$ (F is the resultant force)"
-      },
-      {
-       "q": "Newton's third law?",
-       "a": "A on B is equal and opposite to B on A — same type, different objects"
+       "a": "$F = m \\times a$ (F is the resultant force)",
+       "section": "f-ma"
       },
       {
        "q": "Weight equation?",
-       "a": "$W = m \\times g$"
+       "a": "$W = m \\times g$",
+       "section": "weight"
       },
       {
        "q": "How is weight measured?",
-       "a": "With a newtonmeter (calibrated spring balance)"
-      },
-      {
-       "q": "Why does an object in a circle at constant speed accelerate?",
-       "a": "Its direction, and so its velocity, is changing"
-      },
-      {
-       "q": "Direction of the centripetal force?",
-       "a": "Towards the centre of the circle"
-      },
-      {
-       "q": "Inertial mass is defined as…",
-       "a": "The ratio $F \\div a$: how hard it is to change velocity"
-      },
-      {
-       "q": "Momentum equation and unit?",
-       "a": "$p = m \\times v$, kg m/s"
-      },
-      {
-       "q": "Conservation of momentum?",
-       "a": "Total momentum before = total after, if no external force"
-      },
-      {
-       "q": "Force from momentum?",
-       "a": "$F = \\dfrac{mv - mu}{t}$"
-      },
-      {
-       "q": "How do airbags reduce injury?",
-       "a": "Same momentum change, longer time, smaller force"
-      },
-      {
-       "q": "Stopping distance =",
-       "a": "Thinking distance + braking distance"
-      },
-      {
-       "q": "Factors affecting thinking distance?",
-       "a": "Speed, and reaction time (tiredness, alcohol, drugs, distractions)"
-      },
-      {
-       "q": "Factors affecting braking distance?",
-       "a": "Speed, mass, brakes, tyres, road surface (friction)"
+       "a": "With a newtonmeter (calibrated spring balance)",
+       "section": "weight"
       },
       {
        "q": "Typical human reaction time?",
-       "a": "0.2–0.9 s"
-      },
-      {
-       "q": "Double the speed: thinking and braking distances?",
-       "a": "Thinking ×2, braking ×4"
-      },
-      {
-       "q": "Why is braking distance ∝ v²?",
-       "a": "Work done by brakes $F d$ = KE $\\tfrac{1}{2}mv^2$"
+       "a": "0.2–0.9 s",
+       "section": "reaction-time"
       },
       {
        "q": "Core practical: why move masses from trolley to hanger?",
-       "a": "To change the force while keeping the total mass constant"
+       "a": "To change the force while keeping the total mass constant",
+       "section": "core-practical-analysis"
       },
       {
        "q": "Ruler drop: distance to time?",
-       "a": "$t = \\sqrt{2x \\div g}$"
+       "a": "$t = \\sqrt{2x \\div g}$",
+       "section": "reaction-time"
       }
      ]
     }

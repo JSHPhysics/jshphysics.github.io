@@ -60,7 +60,7 @@ section_n9 = {
                 "<tr><td>Zero (forces balanced)</td><td>Stationary object stays still; moving object keeps the same velocity</td></tr>"
                 "<tr><td>Not zero, same direction as motion</td><td>Speeds up</td></tr>"
                 "<tr><td>Not zero, opposite to motion</td><td>Slows down</td></tr>"
-                "<tr><td>Not zero, at an angle to motion</td><td>Changes direction (see circular motion)</td></tr></table>"
+                "<tr><td>Not zero, at an angle to motion</td><td>Changes direction</td></tr></table>"
                 "<p><b>The common mistake:</b> thinking a moving object needs a force to keep it moving. It does not. "
                 "A car at a steady 20 m/s has a driving force exactly balanced by friction and air resistance — the resultant is zero.</p>"
             ),
