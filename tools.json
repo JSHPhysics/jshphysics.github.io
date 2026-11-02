@@ -5,7 +5,7 @@
     "fields": {
       "title": "Display name shown in large text on the card.",
       "url": "Full URL to the live tool (or release page / download link for desktop apps).",
-      "section": "Either \"simulations\" or \"tools\". Determines which page section the card appears in.",
+      "section": "One of \"simulations\", \"lessons\" (Cover Lessons) or \"tools\". Determines which page section the card appears in.",
       "category": "Short label shown above the title (e.g. \"Mechanics\", \"Nuclear\", \"Cipher\"). The \"NN / \" number prefix is added automatically.",
       "description": "1–2 sentences of body text. Plain text — no HTML.",
       "pedagogy": "Used by /pedagogy.html only. 2–4 sentences explaining why this tool is pedagogically powerful compared to traditional teaching of the same content. Name the cognitive mechanism or the specific traditional method being improved on. Plain text — no HTML.",
@@ -125,6 +125,26 @@
         {"x": 3.25, "y": 36.79, "w": 92.64, "h": 62.26, "title": "Gated Progression", "note": "Each step of the derivation requires a student to understand the last part of the derivation. When wrong, students are told WHY they're wrong. Then they progress onward. After the derivation, self-marking practice questions exist too."}
       ],
       "tags": ["GCSE", "A-Level"]
+    },
+    {
+      "title": "Distance–Time Graphs",
+      "url": "https://jshphysics.github.io/lessons/distance-time-graphs/",
+      "section": "lessons",
+      "category": "KS3 · P3 Motion",
+      "description": "A self-paced KS3 lesson with motion. A car drives along a road while a pen records the distance–time graph live; the animation pauses so a teacher-style pointer explains one thing at a time, and every step ends with a check the student must pass before the next unlocks. Finishes with the student drawing a journey on the graph themselves.",
+      "pedagogy": "Students read a distance–time graph as a picture of the road. This lesson dissolves that by making the graph visibly a recording of the journey: the road sits beside the graph on the same distance scale, and the pen is always level with the car. Each idea is shown, then named in a single sentence while the pointer is on the evidence, then tested immediately — concrete to abstract in one cycle. Checks are gated, so no one coasts through, and the final step inverts the lesson: given a journey in words, the student draws the line and the car obeys it.",
+      "image": "distance-time-lesson.png",
+      "tags": ["KS3", "Cover lesson"]
+    },
+    {
+      "title": "Reflection, Refraction and TIR",
+      "url": "https://jshphysics.github.io/lessons/reflection-refraction-tir/",
+      "section": "lessons",
+      "category": "GCSE · 5.1P Light",
+      "description": "A self-paced GCSE lesson with motion. A ray box turns slowly at a mirror, then a glass block, while a pen plots angle out against angle in — so the law of reflection, refraction towards and away from the normal, the critical angle and total internal reflection each appear as a shape on the graph. Checks after every step; finishes with the student completing ray diagrams by tapping where the ray goes.",
+      "pedagogy": "Ray diagrams are usually taught as pictures to copy, so students measure angles from the surface and treat total internal reflection as something that sometimes happens. Here every angle is measured from the normal on a drawn protractor, and the diagram is recorded as data: the law of reflection becomes a straight line through the origin, refraction out of glass curves up to 90° and then the pen lifts because no ray gets out. The critical angle is seen before it is named. The drawing step makes students commit to a side and an angle, and the feedback diagnoses the side first.",
+      "image": "optics-lesson.png",
+      "tags": ["GCSE", "Cover lesson"]
     },
     {
       "title": "The Non-negotiables",

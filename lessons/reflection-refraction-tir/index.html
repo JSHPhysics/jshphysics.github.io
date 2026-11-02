@@ -1,0 +1,3007 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A self-paced GCSE lesson on reflection, refraction and total internal reflection: a ray box turns while a pen plots angle out against angle in, with checks after every step. By Joshua Stafford-Haworth.">
+<title>Reflection, Refraction and TIR</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../vendor/katex.min.css">
+<style>
+/* =====================================================================
+   Reflection, refraction and TIR — a GCSE lesson with motion
+   Layout: one reading column; each step is a figure (graph beside ray box)
+   with its explanation underneath and its check at the bottom.
+   ===================================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* colour: cool paper, slate ink, one signal red for the moving things */
+  --bg: #f4f6f9;
+  --bg-2: #e9edf3;
+  --surface: #ffffff;
+  --ink: #15243b;
+  --ink-2: #4a5873;
+  --ink-3: #8390a8;
+  --rule: #c9d1de;
+  --rule-soft: #e1e6ee;
+  --accent: #d93a2b;
+  --accent-ink: #b32b1e;
+  --accent-soft: #fbe9e6;
+  --second: #2456a6;
+  --second-soft: #e4ecfa;
+  --ok: #1f7a4d;
+  --ok-soft: #e3f3ea;
+  --warn: #9a6200;
+  --warn-soft: #fbf1dc;
+  --road: #d8dde6;
+  --road-line: #ffffff;
+
+  /* type */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 66ch;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111a2b;
+    --bg-2: #18233a;
+    --surface: #1b2740;
+    --ink: #e8edf6;
+    --ink-2: #b7c2d8;
+    --ink-3: #7f8caa;
+    --rule: #3b4a68;
+    --rule-soft: #2a3652;
+    --accent: #ff7a66;
+    --accent-ink: #ffa394;
+    --accent-soft: #3a2626;
+    --second: #8db3ff;
+    --second-soft: #22304f;
+    --ok: #6fd39a;
+    --ok-soft: #1d3a2b;
+    --warn: #ffcf6b;
+    --warn-soft: #3a3020;
+    --road: #2b3650;
+    --road-line: #7f8caa;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #111a2b;
+  --bg-2: #18233a;
+  --surface: #1b2740;
+  --ink: #e8edf6;
+  --ink-2: #b7c2d8;
+  --ink-3: #7f8caa;
+  --rule: #3b4a68;
+  --rule-soft: #2a3652;
+  --accent: #ff7a66;
+  --accent-ink: #ffa394;
+  --accent-soft: #3a2626;
+  --second: #8db3ff;
+  --second-soft: #22304f;
+  --ok: #6fd39a;
+  --ok-soft: #1d3a2b;
+  --warn: #ffcf6b;
+  --warn-soft: #3a3020;
+  --road: #2b3650;
+  --road-line: #7f8caa;
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  padding-block: 0 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+h1, h2, h3, h4 { margin: 0; line-height: 1.1; text-wrap: balance; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+[hidden] { display: none !important; }
+
+.wrap { max-width: 880px; margin: 0 auto; }
+
+/* ---------- Header ---------- */
+.masthead {
+  padding-block: 40px 20px;
+  display: grid;
+  gap: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead .eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  letter-spacing: -0.02em;
+}
+
+.masthead .lede {
+  max-width: var(--measure);
+  color: var(--ink-2);
+  font-size: 1.12rem;
+}
+
+.masthead .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  font-size: 0.92rem;
+  color: var(--ink-3);
+}
+
+.linkish {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--ink-2);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+
+/* ---------- Progress rail ---------- */
+.rail {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--bg);
+  padding-block: 10px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--bg);
+}
+
+.rail ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.rail ol::-webkit-scrollbar { display: none; }
+
+.rail li {
+  flex: 0 0 auto;
+}
+
+.rail a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  border: 1px solid var(--rule-soft);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink-2);
+  font-size: 0.84rem;
+  white-space: nowrap;
+  background: var(--surface);
+}
+
+.rail a .n {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--bg-2);
+  color: var(--ink-3);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.rail a.done { color: var(--ok); border-color: var(--ok); }
+.rail a.done .n { background: var(--ok); color: var(--surface); }
+.rail a.locked { color: var(--ink-3); }
+.rail a.current { border-color: var(--ink); color: var(--ink); }
+
+/* ---------- Steps ---------- */
+.steps { display: grid; gap: 28px; margin-top: 28px; }
+
+.step {
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  scroll-margin-top: 70px;
+}
+
+.step-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: baseline;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.step-head .n {
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+  font-size: 0.95rem;
+}
+
+.step-head h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-variation-settings: "opsz" 40;
+  font-size: 1.55rem;
+  letter-spacing: -0.01em;
+}
+
+.step-head .status {
+  font-size: 0.82rem;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.step.done .step-head .status { color: var(--ok); font-weight: 600; }
+
+.step-body {
+  padding: 20px 22px 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.step.locked .step-body { display: none; }
+
+.step.locked .step-head { border-bottom: 0; opacity: 0.6; }
+
+.prose {
+  max-width: var(--measure);
+  display: grid;
+  gap: 10px;
+}
+
+.prose b { color: var(--ink); }
+.prose .katex { font-size: 1.05em; }
+
+.callout {
+  max-width: var(--measure);
+  padding: 12px 16px;
+  border-left: 3px solid var(--second);
+  background: var(--second-soft);
+  font-size: 0.98rem;
+}
+
+.callout.key { border-color: var(--accent); background: var(--accent-soft); }
+
+/* ---------- Figure: road + graph ---------- */
+.figure {
+  display: grid;
+  gap: 10px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--rule-soft);
+  background: var(--bg);
+}
+
+.figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.figure svg text { fill: var(--ink-2); }
+.figure .road { fill: var(--road); }
+.figure .road-line { stroke: var(--road-line); stroke-width: 2; stroke-dasharray: 8 8; fill: none; }
+.figure .road-edge { stroke: var(--rule); stroke-width: 1; fill: none; }
+.figure .grid line { stroke: var(--rule-soft); stroke-width: 1; }
+.figure .grid-x line { stroke: var(--rule-soft); stroke-width: 1; stroke-dasharray: 2 4; }
+.figure .axis line { stroke: var(--ink); stroke-width: 1.5; }
+.figure .axis-title { font-weight: 600; fill: var(--ink); }
+.figure .trace { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.figure .trace.second { stroke: var(--second); }
+.figure .trace.target { stroke: var(--ink-3); stroke-dasharray: 6 5; stroke-width: 2; }
+.figure .trace.static { stroke: var(--ink); }
+.figure .proj { stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 4 4; fill: none; opacity: 0.8; }
+.figure .pen { fill: var(--accent); }
+.figure .pentool .barrel { fill: var(--accent); }
+.figure .pentool .cap { fill: var(--ink); }
+.figure .pentool .band { fill: var(--ink-3); }
+.figure .pentool .nib { fill: var(--ink); }
+.figure .pentool.second .barrel { fill: var(--second); }
+.figure .pen-ring { fill: none; stroke: var(--accent); stroke-width: 1.5; opacity: 0.5; }
+.figure .car .body { fill: var(--accent); }
+.figure .car.second .body { fill: var(--second); }
+.figure .car .glass { fill: var(--surface); opacity: 0.85; }
+.figure .dot { fill: var(--ink); opacity: 0.75; }
+.figure .dot.second { fill: var(--second); }
+.figure .home { font-weight: 600; fill: var(--ink); }
+.figure .tri { fill: none; stroke: var(--second); stroke-width: 2; }
+.figure .tri-label { fill: var(--second); font-weight: 600; font-style: italic; }
+.figure .seg { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; pointer-events: none; }
+.figure .seg-hit { fill: none; stroke: transparent; stroke-width: 22; cursor: pointer; }
+.figure .seg.picked-wrong { stroke: var(--accent); }
+.figure .seg.picked-right { stroke: var(--ok); stroke-width: 4; }
+.figure .line-label { font-weight: 700; font-size: 14px; fill: var(--ink); }
+.figure .stage-label { font-weight: 600; fill: var(--ink-3); }
+.figure svg.can-draw { cursor: crosshair; touch-action: manipulation; }
+.figure .g-user .cross { fill: none; stroke: var(--accent-ink); stroke-width: 2.2; stroke-linecap: round; }
+.figure .g-user .planned { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 3 4; opacity: 0.7; stroke-linejoin: round; }
+.figure .g-user .pt-label { font-size: 11px; font-weight: 600; fill: var(--accent-ink); }
+.draw-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.draw-tools .note { font-size: 0.9rem; color: var(--ink-2); }
+.draw-btns { display: inline-flex; gap: 6px; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.controls .readouts {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls .readouts b { color: var(--accent-ink); font-weight: 500; }
+
+/* ---------- Teacher pointer and speech bubble (pauses in the animation) ---------- */
+.figure { position: relative; }
+
+/* The chalk ring that glides from one thing to the next */
+.figure .pointer {
+  transition: transform 520ms var(--ease);
+}
+
+.figure .pointer ellipse {
+  fill: none;
+  stroke: var(--second);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  /* dasharray and dashoffset are set to the ring's real length in script */
+  transition: rx 400ms var(--ease), ry 400ms var(--ease);
+}
+
+.figure .pointer.drawn ellipse {
+  animation: chalk 700ms var(--ease) forwards;
+}
+
+@keyframes chalk {
+  to { stroke-dashoffset: 0; }
+}
+
+/* A highlighted stretch of the line, drawn on like chalk over the trace */
+.figure .hl-seg {
+  fill: none;
+  stroke: var(--second);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.55;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: chalk-seg 900ms var(--ease) forwards;
+}
+
+@keyframes chalk-seg {
+  to { stroke-dashoffset: 0; }
+}
+
+/* The speech bubble, placed next to whatever the ring is around */
+.bubble {
+  position: absolute;
+  z-index: 3;
+  width: min(270px, 52%);
+  padding: 12px 14px 10px;
+  border: 1.5px solid var(--second);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 14px 34px -18px rgba(20, 30, 60, 0.45);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  transform-origin: var(--tail-x, 0) var(--tail-y, 0);
+  animation: bubble-in 320ms var(--ease) both;
+}
+
+.bubble.leaving { animation: bubble-out 180ms var(--ease) both; }
+
+@keyframes bubble-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bubble-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.9); }
+}
+
+/* The tail: a small rotated square on the edge nearest the target */
+.bubble::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--surface);
+  border-left: 1.5px solid var(--second);
+  border-bottom: 1.5px solid var(--second);
+  transform: rotate(45deg);
+}
+
+.bubble.tail-left::before { left: -8px; top: var(--tail-at, 18px); }
+.bubble.tail-right::before { right: -8px; top: var(--tail-at, 18px); transform: rotate(-135deg); }
+.bubble.tail-top::before { top: -8px; left: var(--tail-at, 18px); transform: rotate(135deg); }
+.bubble.tail-bottom::before { bottom: -8px; left: var(--tail-at, 18px); transform: rotate(-45deg); }
+
+/* On a narrow screen the bubble sits under the graph instead of over it */
+.bubble.docked {
+  position: static;
+  width: auto;
+  margin-top: 4px;
+  animation: pause-in 320ms var(--ease) both;
+}
+
+.bubble.docked::before { display: none; }
+
+.bubble .say {
+  min-height: 1.5em;
+}
+
+.bubble .say mark { background: transparent; color: var(--accent-ink); font-weight: 600; }
+.bubble .say .word { opacity: 0; animation: word-in 160ms var(--ease) forwards; }
+
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bubble .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bubble .count {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-3);
+}
+
+.bubble .btn { padding: 6px 12px; font-size: 0.88rem; }
+
+@keyframes pause-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.figure .hl-point { fill: var(--surface); stroke: var(--second); stroke-width: 2.5; }
+.figure .hl-drop { stroke: var(--second); stroke-width: 1.4; stroke-dasharray: 4 3; fill: none; }
+.figure .hl-label { fill: var(--second); font-weight: 700; font-size: 13px; }
+.figure .hl-brace { stroke: var(--second); stroke-width: 2; fill: none; }
+.figure .hl-dim { font-weight: 600; fill: var(--second); font-size: 12px; }
+
+.scrub {
+  flex: 1 1 160px;
+  min-width: 120px;
+  accent-color: var(--accent);
+}
+
+.slider-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+}
+
+.slider-row input[type="range"] { flex: 1 1 140px; accent-color: var(--second); }
+.slider-row output { font-family: var(--font-mono); color: var(--ink); min-width: 5ch; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 160ms var(--ease), background-color 160ms var(--ease), transform 160ms var(--ease);
+}
+
+.btn:hover { border-color: var(--ink); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.solid { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.btn.solid:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.quiet { border-color: transparent; color: var(--ink-2); background: transparent; }
+.btn.quiet:hover { background: var(--bg-2); color: var(--ink); }
+.btn.pressed { background: var(--bg-2); border-color: var(--ink); }
+.btn svg { width: 14px; height: 14px; }
+
+/* ---------- Checks ---------- */
+.check {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ok);
+  padding: 14px 18px 16px;
+  display: grid;
+  gap: 12px;
+  background: var(--bg);
+}
+
+.check .kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ok);
+}
+
+.check .q { font-size: 1.02rem; max-width: var(--measure); }
+
+.choices { display: grid; gap: 6px; max-width: 560px; }
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--surface);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms, background-color 160ms;
+}
+
+.choice:hover { border-color: var(--ink); }
+.choice .letter {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.choice.right { border-color: var(--ok); background: var(--ok-soft); }
+.choice.right .letter { background: var(--ok); border-color: var(--ok); color: #fff; }
+.choice.wrong { border-color: var(--accent); background: var(--accent-soft); }
+.choice:disabled { cursor: default; }
+.choice .mini { width: 92px; height: 56px; flex: 0 0 auto; }
+.choice .mini path { fill: none; stroke: var(--ink); stroke-width: 2; }
+.choice .mini .ax { stroke: var(--ink-3); stroke-width: 1; }
+
+.feedback {
+  min-height: 1.4em;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback:empty { display: none; }
+.feedback.ok { color: var(--ok); font-weight: 600; }
+.feedback.nudge { color: var(--warn); }
+.feedback.bad { color: var(--accent-ink); }
+
+.why {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 320ms var(--ease);
+}
+
+.why.open { grid-template-rows: 1fr; }
+.why > .inner { overflow: hidden; min-height: 0; }
+.why .box {
+  margin-top: 4px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--second);
+  background: var(--second-soft);
+  max-width: var(--measure);
+  font-size: 0.98rem;
+}
+
+.answer-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; }
+
+.answer-field {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: 1 1 200px;
+  max-width: 320px;
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 4px;
+}
+
+.answer-field input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 6px 2px;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+.answer-field input:focus { outline: none; }
+.answer-field .unit { color: var(--ink-2); white-space: nowrap; }
+
+.steps-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps-list li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  padding: 6px 0;
+  border-top: 1px dashed var(--rule-soft);
+}
+
+.steps-list li:first-child { border-top: 0; }
+.steps-list li::before { counter-increment: step; content: counter(step); font-size: 0.78rem; color: var(--ink-3); font-family: var(--font-mono); }
+.steps-list li.hidden-step { display: none; }
+.steps-list li.reveal { animation: step-in 420ms var(--ease) both; }
+.steps-list li b { color: var(--ink); }
+
+@keyframes step-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.continue-row { display: flex; justify-content: flex-end; }
+
+/* ---------- Journey builder ---------- */
+.builder { display: grid; gap: 10px; }
+
+.stage-list { display: grid; gap: 6px; }
+
+.stage-row {
+  display: grid;
+  grid-template-columns: 28px minmax(140px, 1fr) auto auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--rule-soft);
+  background: var(--surface);
+  font-size: 0.92rem;
+}
+
+.stage-row .n { font-family: var(--font-mono); color: var(--ink-3); }
+.stage-row select, .stage-row input[type="number"] {
+  padding: 5px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+.stage-row input[type="number"] { width: 5.5em; font-family: var(--font-mono); }
+.stage-row label { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); white-space: nowrap; }
+.stage-row .remove { padding: 4px 8px; }
+
+.builder-note { font-size: 0.9rem; color: var(--warn); min-height: 1.3em; }
+
+/* ---------- Summary ---------- */
+.shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+
+.shape {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--rule-soft);
+  background: var(--surface);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.shape svg { width: 100%; height: auto; }
+.shape svg path { fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
+.shape svg .ax { stroke: var(--ink-3); stroke-width: 1; }
+.shape b { color: var(--ink); }
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  align-items: baseline;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+}
+
+.score .big { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.score .lbl { color: var(--ink-2); font-size: 0.95rem; }
+
+.rag-list { display: grid; border: 1px solid var(--rule-soft); background: var(--surface); }
+.rag-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 0.95rem;
+}
+.rag-row:first-child { border-top: 0; }
+.rag-btns { display: inline-flex; gap: 6px; }
+.rag { width: 30px; height: 30px; border-radius: 999px; border: 1.5px solid var(--rule); background: transparent; cursor: pointer; transition: transform 160ms var(--ease); }
+.rag:hover { transform: scale(1.1); }
+.rag.r { border-color: #d2422f; } .rag.a { border-color: #d9930c; } .rag.g { border-color: #1f7a4d; }
+.rag.r.on { background: #d2422f; } .rag.a.on { background: #d9930c; } .rag.g.on { background: #1f7a4d; }
+
+.site-foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule-soft); font-size: 0.86rem; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .step-head { grid-template-columns: auto 1fr; padding: 14px 16px; }
+  .step-head .status { grid-column: 2; }
+  .step-body { padding: 16px 16px 20px; }
+  .controls .readouts { margin-left: 0; width: 100%; }
+  .stage-row { grid-template-columns: 28px 1fr; }
+  .stage-row .remove { justify-self: end; }
+  .rag-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ---------- Optics scene ---------- */
+.figure .paper { fill: var(--surface); stroke: var(--rule-soft); }
+.figure .glass { fill: var(--second); opacity: 0.12; }
+.figure .glass-edge { stroke: var(--second); stroke-width: 1.2; fill: none; opacity: 0.6; }
+.figure .mirror { stroke: var(--ink); stroke-width: 4; }
+.figure .mirror-hatch { stroke: var(--ink-3); stroke-width: 1; }
+.figure .boundary { stroke: var(--ink); stroke-width: 1.6; }
+.figure .normal { stroke: var(--ink-2); stroke-width: 1.2; stroke-dasharray: 6 5; fill: none; }
+.figure .medium-label { font-size: 12px; font-style: italic; fill: var(--ink-3); }
+.figure .normal-label { font-size: 11px; fill: var(--ink-2); font-style: italic; }
+.figure .ray { stroke: var(--accent); stroke-width: 2.6; stroke-linecap: round; fill: none; }
+.figure .ray.faint { stroke-width: 1.4; opacity: 0.35; }
+.figure .ray.ghost { stroke: var(--ink-3); stroke-dasharray: 5 4; stroke-width: 1.8; opacity: 0.8; }
+.figure .ray.user { stroke: var(--second); }
+.figure .arrow { fill: var(--accent); }
+.figure .arrow.faint { opacity: 0.35; }
+.figure .arrow.user { fill: var(--second); }
+.figure .arc { fill: none; stroke: var(--ink-2); stroke-width: 1.4; }
+.figure .arc.out { stroke: var(--second); }
+.figure .arc-label { font-size: 12px; font-weight: 600; fill: var(--ink); }
+.figure .arc-label.out { fill: var(--second); }
+.figure .raybox { fill: var(--ink); }
+.figure .raybox-slot { fill: var(--accent); }
+.figure .result { fill: none; stroke: var(--ink); stroke-width: 1.6; opacity: 0.8; }
+.figure .nothing-out { font-size: 12px; font-weight: 600; fill: var(--accent-ink); }
+.figure svg.can-draw { cursor: crosshair; touch-action: manipulation; }
+.choice .mini-ray { width: 92px; height: 60px; flex: 0 0 auto; }
+.choice .mini-ray .b { stroke: var(--ink); stroke-width: 1.5; }
+.choice .mini-ray .n { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.choice .mini-ray .r { stroke: var(--accent); stroke-width: 2; fill: none; }
+.choice .mini-ray .g { fill: var(--second); opacity: 0.15; }
+.shape .mini-ray { width: 100%; height: auto; }
+.shape .mini-ray .b { stroke: var(--ink); stroke-width: 1.5; }
+.shape .mini-ray .n { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.shape .mini-ray .r { stroke: var(--accent); stroke-width: 2; fill: none; }
+.shape .mini-ray .g { fill: var(--second); opacity: 0.15; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">GCSE Physics · Light · 5.1P</p>
+  <h1>Reflection, refraction and total internal reflection</h1>
+  <p class="lede">A ray diagram is not a picture of a light beam. It is a <b>record</b> of what a ray did when it met a surface, with every angle measured from the <b>normal</b>. Here a ray box turns slowly while a pen records the angle out against the angle in — so the law of reflection, refraction and the critical angle each show up as a shape on the graph.</p>
+  <div class="meta">
+    <span>7 steps · about 25 minutes</span>
+    <span>Each step unlocks when you pass its check</span>
+    <button class="linkish" id="btn-unlock" type="button">Teacher: unlock every step</button>
+    <button class="linkish" id="btn-reset" type="button">Start again</button>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Lesson steps">
+  <ol id="rail"></ol>
+</nav>
+
+<div class="steps" id="steps"></div>
+
+<footer class="site-foot">
+  <span>Reflection, refraction and TIR · GCSE lesson</span>
+  <span>Joshua Stafford-Haworth, JSHPhysics</span>
+</footer>
+
+</div>
+
+<script src="../vendor/katex.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ===================================================================
+     Geometry shared by every figure
+     The graph (angle out against angle in) sits on the left; the ray-box
+     experiment sits on the right, with the normal drawn and both angles
+     measured from it.
+     =================================================================== */
+
+  const VIEW_W = 640;
+  const VIEW_H = 360;
+  const PLOT_LEFT = 64;
+  const PLOT_RIGHT = 318;
+  const PLOT_TOP = 36;
+  const PLOT_BOTTOM = 300;
+
+  // The scene: a sheet of paper with the surface across its middle
+  const SCENE = { left: 372, right: 632, top: 28, bottom: 332 };
+  const SCENE_WIDE = { left: 120, right: 520, top: 28, bottom: 332 };
+  const RAY_LENGTH = 106;
+  const ARC_IN = 46;
+  const ARC_OUT = 34;
+  const INDEX = Math.SQRT2;          // this block's refractive index, so its critical angle is exactly 45°
+  const CRITICAL = 45;
+
+  // The point where the ray meets the surface, for a given scene box
+  function originOf(box) {
+    return { x: (box.left + box.right) / 2, y: (box.top + box.bottom) / 2 + 6 };
+  }
+
+  // Pixel x for an angle of incidence
+  function scaleX(angle, aMax) {
+    return PLOT_LEFT + (angle / aMax) * (PLOT_RIGHT - PLOT_LEFT);
+  }
+
+  // Pixel y for an angle out
+  function scaleY(angle, aMax) {
+    return PLOT_BOTTOM - (angle / aMax) * (PLOT_BOTTOM - PLOT_TOP);
+  }
+
+  function rad(degrees) {
+    return (degrees * Math.PI) / 180;
+  }
+
+  function deg(radians) {
+    return (radians * 180) / Math.PI;
+  }
+  function fmt(number, decimals) {
+    return Number(number).toFixed(decimals);
+  }
+
+  // Pick one of two values without a ternary, so the choice reads as a sentence
+  function pick(condition, whenTrue, whenFalse) {
+    if (condition) {
+      return whenTrue;
+    }
+    return whenFalse;
+  }
+
+  // The HTML for a feedback line, filled in when the check has already been passed
+  function feedbackHtml(already) {
+    if (already) {
+      return "<div class=\"feedback ok\" data-feedback>" + tickIcon() + "Correct</div>";
+    }
+    return "<div class=\"feedback\" data-feedback></div>";
+  }
+
+  // Smooth scrolling unless the viewer prefers reduced motion
+  function scrollBehaviour() {
+    if (reducedMotion) {
+      return "auto";
+    }
+    return "smooth";
+  }
+
+  function clamp(value, low, high) {
+    if (value < low) {
+      return low;
+    }
+    if (value > high) {
+      return high;
+    }
+    return value;
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ===================================================================
+     The optics model
+     A scene is { kind: "mirror" | "into" | "out" }:
+       mirror  air above a plane mirror
+       into    air above, glass below: the ray goes into the glass
+       out     glass below, air above: the ray starts inside the glass
+     The model answers, for an angle of incidence i (degrees):
+       out(i)        the angle plotted on the graph (reflection for a mirror,
+                     refraction otherwise), or null when there is no ray out
+       reflected(i)  the angle of the reflected ray (always i)
+       strongReflection(i)  true when the reflected ray carries all the light
+     =================================================================== */
+
+  function buildScene(kind) {
+    function refraction(i) {
+      if (kind === "mirror") {
+        return null;
+      }
+      if (kind === "into") {
+        return deg(Math.asin(Math.sin(rad(i)) / INDEX));
+      }
+      // out of the glass: no refracted ray beyond the critical angle
+      const s = INDEX * Math.sin(rad(i));
+      if (s > 1 + 1e-9) {
+        return null;
+      }
+      return deg(Math.asin(Math.min(1, s)));
+    }
+
+    function out(i) {
+      if (kind === "mirror") {
+        return i;
+      }
+      return refraction(i);
+    }
+
+    function strongReflection(i) {
+      if (kind === "mirror") {
+        return true;
+      }
+      if (kind === "out") {
+        return i >= CRITICAL - 1e-9;
+      }
+      return false;
+    }
+
+    return {
+      kind: kind,
+      // Where the incident ray comes from: above the surface for air, below for glass
+      fromAbove: kind !== "out",
+      refraction: refraction,
+      out: out,
+      reflected: function (i) { return i; },
+      strongReflection: strongReflection,
+    };
+  }
+
+  // The graph path of a scene's results from 0 up to `until` degrees;
+  // the pen lifts where there is no ray out
+  function tracePath(scene, until, aMax) {
+    const step = 0.5;
+    let d = "";
+    let pen = false;
+    let a = 0;
+    while (a <= until + 1e-9) {
+      const value = scene.out(Math.min(a, until));
+      if (value === null) {
+        pen = false;
+      } else {
+        d += pick(pen, "L", "M") + fmt(scaleX(Math.min(a, until), aMax), 1) + "," + fmt(scaleY(value, aMax), 1);
+        pen = true;
+      }
+      a += step;
+    }
+    return d;
+  }
+
+  // Direction vectors for the rays, in the scene, for angle a from the normal
+  function rayGeometry(scene, origin, i) {
+    const si = Math.sin(rad(i));
+    const ci = Math.cos(rad(i));
+    let incomingFrom;
+    let reflectedTo;
+    let refractedTo = null;
+    const r = scene.refraction(i);
+    if (scene.fromAbove) {
+      incomingFrom = { x: origin.x - RAY_LENGTH * si, y: origin.y - RAY_LENGTH * ci };
+      reflectedTo = { x: origin.x + RAY_LENGTH * si, y: origin.y - RAY_LENGTH * ci };
+      if (r !== null) {
+        refractedTo = { x: origin.x + RAY_LENGTH * Math.sin(rad(r)), y: origin.y + RAY_LENGTH * Math.cos(rad(r)) };
+      }
+    } else {
+      incomingFrom = { x: origin.x - RAY_LENGTH * si, y: origin.y + RAY_LENGTH * ci };
+      reflectedTo = { x: origin.x + RAY_LENGTH * si, y: origin.y + RAY_LENGTH * ci };
+      if (r !== null) {
+        refractedTo = { x: origin.x + RAY_LENGTH * Math.sin(rad(r)), y: origin.y - RAY_LENGTH * Math.cos(rad(r)) };
+      }
+    }
+    return { incomingFrom: incomingFrom, reflectedTo: reflectedTo, refractedTo: refractedTo, r: r };
+  }
+
+  /* ===================================================================
+     Figure: graph + ray-box scene
+     =================================================================== */
+
+  // A ray from a to b with an arrowhead two thirds of the way along
+  function raySvg(a, b, cls) {
+    const mx = a.x + (b.x - a.x) * 0.62;
+    const my = a.y + (b.y - a.y) * 0.62;
+    const angle = Math.atan2(b.y - a.y, b.x - a.x);
+    const size = 7;
+    const p1 = { x: mx + size * Math.cos(angle), y: my + size * Math.sin(angle) };
+    const p2 = { x: mx + size * Math.cos(angle + 2.5), y: my + size * Math.sin(angle + 2.5) };
+    const p3 = { x: mx + size * Math.cos(angle - 2.5), y: my + size * Math.sin(angle - 2.5) };
+    return "<line class=\"ray " + cls + "\" x1=\"" + fmt(a.x, 1) + "\" y1=\"" + fmt(a.y, 1) + "\" x2=\"" + fmt(b.x, 1) + "\" y2=\"" + fmt(b.y, 1) + "\"/>" +
+      "<polygon class=\"arrow " + cls + "\" points=\"" + fmt(p1.x, 1) + "," + fmt(p1.y, 1) + " " + fmt(p2.x, 1) + "," + fmt(p2.y, 1) + " " + fmt(p3.x, 1) + "," + fmt(p3.y, 1) + "\"/>";
+  }
+
+  // A protractor arc from the normal to a ray, with its label.
+  // side: -1 for the left of the normal, +1 for the right; up: true when the
+  // ray is above the surface.
+  function arcSvg(origin, radius, angle, side, up, cls, label) {
+    if (angle < 0.5) {
+      return "";
+    }
+    let dirY = -1;
+    if (!up) {
+      dirY = 1;
+    }
+    const start = { x: origin.x, y: origin.y + dirY * radius };
+    const end = { x: origin.x + side * radius * Math.sin(rad(angle)), y: origin.y + dirY * radius * Math.cos(rad(angle)) };
+    // Sweep direction depends on which quadrant the arc lives in
+    let sweep = 1;
+    if ((side === -1 && up) || (side === 1 && !up)) {
+      sweep = 0;
+    }
+    const mid = angle / 2;
+    // The label sits just beyond the arc, pushed sideways so it clears the normal
+    const labelAt = { x: origin.x + side * ((radius + 14) * Math.sin(rad(mid)) + 6), y: origin.y + dirY * (radius + 14) * Math.cos(rad(mid)) };
+    let anchor = "start";
+    if (side === -1) {
+      anchor = "end";
+    }
+    return "<path class=\"arc " + cls + "\" d=\"M" + fmt(start.x, 1) + "," + fmt(start.y, 1) + " A" + radius + "," + radius + " 0 0 " + sweep + " " + fmt(end.x, 1) + "," + fmt(end.y, 1) + "\"/>" +
+      "<text class=\"arc-label " + cls + "\" x=\"" + fmt(labelAt.x, 1) + "\" y=\"" + fmt(labelAt.y + 4, 1) + "\" text-anchor=\"" + anchor + "\">" + escapeHtml(label) + "</text>";
+  }
+
+  function figureSvg(options) {
+    const aMax = options.aMax;
+    const scene = options.scene;
+    let box = SCENE;
+    if (options.graph === false) {
+      box = SCENE_WIDE;
+    }
+    const origin = originOf(box);
+    const aStep = options.aStep || 15;
+
+    let svg = "";
+    svg += "<svg viewBox=\"0 0 " + VIEW_W + " " + VIEW_H + "\" role=\"img\" aria-label=\"" + (options.alt || "A ray diagram beside a graph of angle out against angle in") + "\">";
+
+    if (options.graph !== false) {
+      // Grid
+      svg += "<g class=\"grid\">";
+      for (let a = 0; a <= aMax; a += aStep) {
+        const y = fmt(scaleY(a, aMax), 1);
+        svg += "<line x1=\"" + PLOT_LEFT + "\" y1=\"" + y + "\" x2=\"" + PLOT_RIGHT + "\" y2=\"" + y + "\"/>";
+      }
+      svg += "</g><g class=\"grid-x\">";
+      for (let a = aStep; a <= aMax; a += aStep) {
+        const x = fmt(scaleX(a, aMax), 1);
+        svg += "<line x1=\"" + x + "\" y1=\"" + PLOT_TOP + "\" x2=\"" + x + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+      }
+      svg += "</g>";
+      // Axes and ticks
+      svg += "<g class=\"axis\">";
+      svg += "<line x1=\"" + PLOT_LEFT + "\" y1=\"" + PLOT_TOP + "\" x2=\"" + PLOT_LEFT + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+      svg += "<line x1=\"" + PLOT_LEFT + "\" y1=\"" + PLOT_BOTTOM + "\" x2=\"" + PLOT_RIGHT + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+      svg += "</g>";
+      for (let a = 0; a <= aMax; a += aStep) {
+        svg += "<text x=\"" + (PLOT_LEFT - 8) + "\" y=\"" + fmt(scaleY(a, aMax) + 4, 1) + "\" text-anchor=\"end\">" + a + "</text>";
+        svg += "<text x=\"" + fmt(scaleX(a, aMax), 1) + "\" y=\"" + (PLOT_BOTTOM + 18) + "\" text-anchor=\"middle\">" + a + "</text>";
+      }
+      svg += "<text class=\"axis-title\" x=\"" + ((PLOT_LEFT + PLOT_RIGHT) / 2) + "\" y=\"" + (PLOT_BOTTOM + 40) + "\" text-anchor=\"middle\">Angle in, from the normal (°)</text>";
+      svg += "<text class=\"axis-title\" transform=\"translate(" + (PLOT_LEFT - 40) + " " + ((PLOT_TOP + PLOT_BOTTOM) / 2) + ") rotate(-90)\" text-anchor=\"middle\">Angle out, from the normal (°)</text>";
+      svg += "<g data-results></g>";
+      svg += "<path class=\"trace target\" data-target d=\"\"/>";
+      svg += "<path class=\"trace\" data-trace d=\"\"/>";
+    }
+
+    // The scene: paper, the medium below the surface, the surface, the normal
+    svg += "<rect class=\"paper\" x=\"" + box.left + "\" y=\"" + box.top + "\" width=\"" + (box.right - box.left) + "\" height=\"" + (box.bottom - box.top) + "\" rx=\"4\"/>";
+    if (scene.kind === "mirror") {
+      svg += "<line class=\"mirror\" x1=\"" + (box.left + 10) + "\" y1=\"" + origin.y + "\" x2=\"" + (box.right - 10) + "\" y2=\"" + origin.y + "\"/>";
+      for (let x = box.left + 14; x < box.right - 10; x += 12) {
+        svg += "<line class=\"mirror-hatch\" x1=\"" + x + "\" y1=\"" + (origin.y + 3) + "\" x2=\"" + (x - 7) + "\" y2=\"" + (origin.y + 11) + "\"/>";
+      }
+      svg += "<text class=\"medium-label\" x=\"" + (box.left + 12) + "\" y=\"" + (origin.y + 26) + "\">mirror</text>";
+      svg += "<text class=\"medium-label\" x=\"" + (box.left + 12) + "\" y=\"" + (origin.y - 10) + "\">air</text>";
+    } else {
+      svg += "<rect class=\"glass\" x=\"" + (box.left + 10) + "\" y=\"" + origin.y + "\" width=\"" + (box.right - box.left - 20) + "\" height=\"" + (box.bottom - origin.y - 10) + "\"/>";
+      svg += "<rect class=\"glass-edge\" x=\"" + (box.left + 10) + "\" y=\"" + origin.y + "\" width=\"" + (box.right - box.left - 20) + "\" height=\"" + (box.bottom - origin.y - 10) + "\"/>";
+      svg += "<line class=\"boundary\" x1=\"" + (box.left + 10) + "\" y1=\"" + origin.y + "\" x2=\"" + (box.right - 10) + "\" y2=\"" + origin.y + "\"/>";
+      svg += "<text class=\"medium-label\" x=\"" + (box.left + 14) + "\" y=\"" + (origin.y - 10) + "\">air</text>";
+      svg += "<text class=\"medium-label\" x=\"" + (box.left + 14) + "\" y=\"" + (origin.y + 20) + "\">glass</text>";
+    }
+    svg += "<line class=\"normal\" x1=\"" + origin.x + "\" y1=\"" + (box.top + 10) + "\" x2=\"" + origin.x + "\" y2=\"" + (box.bottom - 10) + "\"/>";
+    svg += "<text class=\"normal-label\" x=\"" + (origin.x + 6) + "\" y=\"" + (box.top + 22) + "\">normal</text>";
+
+    // Layers the animation draws into
+    svg += "<g data-rays></g>";
+    svg += "<g data-static></g>";
+    svg += "<g data-overlay></g>";
+    svg += "<g class=\"pointer\" data-pointer transform=\"translate(-200 -200)\"><ellipse cx=\"0\" cy=\"0\" rx=\"16\" ry=\"16\"/></g>";
+    if (options.graph !== false) {
+      svg += penSvg("pentool", "data-pentool");
+      svg += "<circle class=\"pen-ring\" data-penring cx=\"0\" cy=\"0\" r=\"9\"/>";
+      svg += "<circle class=\"pen\" data-pen cx=\"0\" cy=\"0\" r=\"4.5\"/>";
+    }
+    svg += "</svg>";
+    return svg;
+  }
+
+  // A pen held at an angle, with its nib at (0, 0) so it writes on the line
+  function penSvg(className, attr) {
+    return "<g class=\"" + className + "\" " + attr + " transform=\"translate(-100 -100)\">" +
+      "<g transform=\"rotate(-38)\">" +
+      "<polygon class=\"nib\" points=\"0,0 -5,-13 5,-13\"/>" +
+      "<rect class=\"band\" x=\"-5.5\" y=\"-17\" width=\"11\" height=\"5\"/>" +
+      "<rect class=\"barrel\" x=\"-5\" y=\"-56\" width=\"10\" height=\"40\" rx=\"2\"/>" +
+      "<rect class=\"cap\" x=\"-5\" y=\"-62\" width=\"10\" height=\"7\" rx=\"2.5\"/>" +
+      "</g></g>";
+  }
+
+  // The ray box: a small box at the far end of the incident ray, pointing at the surface
+  function rayBoxSvg(from, origin) {
+    const angle = deg(Math.atan2(origin.y - from.y, origin.x - from.x));
+    return "<g class=\"raybox\" transform=\"translate(" + fmt(from.x, 1) + " " + fmt(from.y, 1) + ") rotate(" + fmt(angle, 1) + ")\">" +
+      "<rect x=\"-22\" y=\"-10\" width=\"22\" height=\"20\" rx=\"3\"/>" +
+      "<rect class=\"raybox-slot\" x=\"-3\" y=\"-4\" width=\"4\" height=\"8\"/>" +
+      "</g>";
+  }
+
+  // Everything the scene shows for one angle of incidence
+  function sceneSvg(scene, box, i) {
+    const origin = originOf(box);
+    const g = rayGeometry(scene, origin, i);
+    let svg = "";
+    svg += rayBoxSvg(g.incomingFrom, origin);
+    svg += raySvg(g.incomingFrom, origin, "in");
+    // Reflected ray: faint when most light goes through, strong otherwise
+    let reflClass = "faint";
+    if (scene.strongReflection(i)) {
+      reflClass = "strong";
+    }
+    svg += raySvg(origin, g.reflectedTo, reflClass);
+    if (g.refractedTo) {
+      svg += raySvg(origin, g.refractedTo, "refr");
+    }
+    // Arcs: the angle of incidence on the incoming side; the angle out on the other
+    const up = scene.fromAbove;
+    svg += arcSvg(origin, ARC_IN, i, -1, up, "in", "i = " + fmt(i, 0) + "°");
+    if (scene.kind === "mirror") {
+      svg += arcSvg(origin, ARC_OUT, i, 1, up, "out", "r = " + fmt(i, 0) + "°");
+    } else if (g.r !== null) {
+      svg += arcSvg(origin, ARC_OUT, g.r, 1, !up, "out", "r = " + fmt(g.r, 0) + "°");
+    } else {
+      svg += arcSvg(origin, ARC_OUT, i, 1, up, "out", "r = " + fmt(i, 0) + "°");
+      svg += "<text class=\"nothing-out\" x=\"" + fmt(origin.x + 14, 1) + "\" y=\"" + fmt(origin.y - 52, 1) + "\">no ray gets out</text>";
+    }
+    return svg;
+  }
+
+  // A labelled point on the graph with dashed drops to both axes
+  function highlightPoint(a, value, aMax, label, labelSide) {
+    const px = scaleX(a, aMax);
+    const py = scaleY(value, aMax);
+    let svg = "";
+    svg += "<line class=\"hl-drop\" x1=\"" + fmt(px, 1) + "\" y1=\"" + fmt(py, 1) + "\" x2=\"" + fmt(px, 1) + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+    svg += "<line class=\"hl-drop\" x1=\"" + PLOT_LEFT + "\" y1=\"" + fmt(py, 1) + "\" x2=\"" + fmt(px, 1) + "\" y2=\"" + fmt(py, 1) + "\"/>";
+    svg += "<circle class=\"hl-point\" cx=\"" + fmt(px, 1) + "\" cy=\"" + fmt(py, 1) + "\" r=\"5\"/>";
+    let anchor = "start";
+    let dx = 10;
+    let dy = -8;
+    if (labelSide === "left") {
+      anchor = "end";
+      dx = -10;
+    }
+    if (labelSide === "below-right") {
+      dy = 18;
+    }
+    svg += "<text class=\"hl-label\" x=\"" + fmt(px + dx, 1) + "\" y=\"" + fmt(py + dy, 1) + "\" text-anchor=\"" + anchor + "\">" + escapeHtml(label) + "</text>";
+    return svg;
+  }
+
+  /*
+   * A Demo owns one figure and one clock. The clock is the angle of
+   * incidence in degrees: it runs from 0 to options.aMax as the ray box turns.
+   * Options: scene, aMax, sweepTo (where the run stops, default aMax),
+   * degreesPerSecond, pauses, reference (draw the dashed "out = in" line).
+   */
+  function makeDemo(container, options) {
+    const aMax = options.aMax;
+    const tMax = options.sweepTo || aMax;
+    const scene = options.scene;
+    const box = SCENE;
+    const origin = originOf(box);
+    const unitsPerSecond = options.degreesPerSecond || 5;
+    let time = 0;
+    let playing = false;
+    // Playback speed: 2× by default; the button cycles 2× → 4× → 1×
+    const RATES = [2, 4, 1];
+    let rate = RATES[0];
+    let lastStamp = null;
+    let frameHandle = null;
+
+    const pauses = options.pauses || [];
+    let firedPauses = [];
+
+    container.classList.add("figure");
+    container.innerHTML = figureSvg(options) + controlsHtml();
+
+    const svg = container.querySelector("svg");
+    const trace = svg.querySelector("[data-trace]");
+    const results = svg.querySelector("[data-results]");
+    const rays = svg.querySelector("[data-rays]");
+    const pen = svg.querySelector("[data-pen]");
+    const penTool = svg.querySelector("[data-pentool]");
+    const penRing = svg.querySelector("[data-penring]");
+    const playButton = container.querySelector("[data-play]");
+    const restartButton = container.querySelector("[data-restart]");
+    const rateButton = container.querySelector("[data-rate]");
+    const scrub = container.querySelector("[data-scrub]");
+    const readT = container.querySelector("[data-read-t]");
+    const readD = container.querySelector("[data-read-d]");
+    const overlay = svg.querySelector("[data-overlay]");
+
+    scrub.max = String(tMax);
+    scrub.step = "1";
+
+    if (options.reference) {
+      svg.querySelector("[data-target]").setAttribute("d", "M" + fmt(scaleX(0, aMax), 1) + "," + fmt(scaleY(0, aMax), 1) + "L" + fmt(scaleX(aMax, aMax), 1) + "," + fmt(scaleY(aMax, aMax), 1));
+    }
+
+    // ---- Teacher pauses: a ring glides to each thing in turn, with a bubble ----
+    const pointer = svg.querySelector("[data-pointer]");
+    const pointerRing = pointer.querySelector("ellipse");
+    let bubble = null;
+    let activePause = null;
+    let beatIndex = 0;
+    let typingTimer = null;
+    let currentTarget = null;
+
+    // Where a beat's target is, in SVG units, plus how big the ring should be
+    function resolveTarget(target) {
+      const i = Math.min(time, tMax);
+      const g = rayGeometry(scene, origin, i);
+      const value = scene.out(i);
+      if (target === "pen") {
+        let y = scaleY(90, aMax);
+        if (value !== null) {
+          y = scaleY(value, aMax);
+        }
+        return { x: scaleX(i, aMax), y: y, rx: 18, ry: 18 };
+      }
+      if (target === "raybox") {
+        return { x: g.incomingFrom.x, y: g.incomingFrom.y, rx: 24, ry: 24 };
+      }
+      if (target === "ray-in") {
+        return { x: (g.incomingFrom.x + origin.x) / 2, y: (g.incomingFrom.y + origin.y) / 2, rx: 22, ry: 22 };
+      }
+      if (target === "ray-refl") {
+        return { x: (g.reflectedTo.x + origin.x) / 2, y: (g.reflectedTo.y + origin.y) / 2, rx: 22, ry: 22 };
+      }
+      if (target === "ray-refr" && g.refractedTo) {
+        return { x: (g.refractedTo.x + origin.x) / 2, y: (g.refractedTo.y + origin.y) / 2, rx: 22, ry: 22 };
+      }
+      if (target === "arc-in") {
+        const mid = i / 2;
+        let dirY = -1;
+        if (!scene.fromAbove) {
+          dirY = 1;
+        }
+        return { x: origin.x - (ARC_IN + 6) * Math.sin(rad(mid)), y: origin.y + dirY * (ARC_IN + 6) * Math.cos(rad(mid)), rx: 26, ry: 26 };
+      }
+      if (target === "arc-out") {
+        let angle = i;
+        let up = scene.fromAbove;
+        if (scene.kind !== "mirror" && g.r !== null) {
+          angle = g.r;
+          up = !scene.fromAbove;
+        }
+        const mid = angle / 2;
+        let dirY = -1;
+        if (!up) {
+          dirY = 1;
+        }
+        return { x: origin.x + (ARC_OUT + 8) * Math.sin(rad(mid)), y: origin.y + dirY * (ARC_OUT + 8) * Math.cos(rad(mid)), rx: 26, ry: 26 };
+      }
+      if (target === "normal") {
+        return { x: origin.x, y: (box.top + box.bottom) / 2, rx: 14, ry: (box.bottom - box.top) / 2 - 10 };
+      }
+      if (target === "surface") {
+        return { x: origin.x, y: origin.y, rx: (box.right - box.left) / 2 - 12, ry: 14 };
+      }
+      if (target === "glass") {
+        return { x: origin.x, y: (origin.y + box.bottom) / 2, rx: (box.right - box.left) / 2 - 12, ry: (box.bottom - origin.y) / 2 - 8 };
+      }
+      if (target === "nothing-out") {
+        return { x: origin.x + 60, y: origin.y - 56, rx: 58, ry: 14 };
+      }
+      if (target.kind === "point") {
+        return { x: scaleX(target.a, aMax), y: scaleY(target.value, aMax), rx: 14, ry: 14 };
+      }
+      if (target.kind === "results") {
+        // The result crosses between two angles
+        const a0 = target.a0;
+        const a1 = target.a1;
+        const x0 = scaleX(a0, aMax);
+        const x1 = scaleX(a1, aMax);
+        let lo = 90;
+        let hi = 0;
+        for (let a = a0; a <= a1; a += 5) {
+          const v = scene.out(a);
+          if (v !== null) {
+            lo = Math.min(lo, v);
+            hi = Math.max(hi, v);
+          }
+        }
+        return { x: (x0 + x1) / 2, y: (scaleY(lo, aMax) + scaleY(hi, aMax)) / 2, rx: (x1 - x0) / 2 + 14, ry: (scaleY(lo, aMax) - scaleY(hi, aMax)) / 2 + 14 };
+      }
+      if (target.kind === "segment") {
+        const x0 = scaleX(target.a0, aMax);
+        const x1 = scaleX(target.a1, aMax);
+        const midA = (target.a0 + target.a1) / 2;
+        let midV = scene.out(midA);
+        if (midV === null) {
+          midV = 90;
+        }
+        const y0 = scaleY(scene.out(target.a0) || 0, aMax);
+        const y1 = scaleY(scene.out(target.a1) || 90, aMax);
+        return { x: scaleX(midA, aMax), y: scaleY(midV, aMax), rx: 14, ry: 14, noRing: true, spanX: (x1 - x0) / 2, spanY: Math.abs(y1 - y0) / 2 };
+      }
+      if (target.kind === "xspan") {
+        const x0 = scaleX(target.a0, aMax);
+        const x1 = scaleX(target.a1, aMax);
+        return { x: (x0 + x1) / 2, y: PLOT_BOTTOM + 14, rx: (x1 - x0) / 2 + 10, ry: 14 };
+      }
+      if (target.kind === "yspan") {
+        const y0 = scaleY(target.v0, aMax);
+        const y1 = scaleY(target.v1, aMax);
+        return { x: PLOT_LEFT - 16, y: (y0 + y1) / 2, rx: 18, ry: (y0 - y1) / 2 + 10 };
+      }
+      return { x: target.x, y: target.y, rx: target.rx || 16, ry: target.ry || 16 };
+    }
+
+    // A chalk highlight over a stretch of the results line
+    function segmentMark(target) {
+      const d = tracePath(scene, target.a1, aMax);
+      // tracePath draws from 0; clip by rebuilding from a0
+      let path = "";
+      let pen = false;
+      for (let a = target.a0; a <= target.a1 + 1e-9; a += 0.5) {
+        const v = scene.out(Math.min(a, target.a1));
+        if (v === null) {
+          pen = false;
+        } else {
+          path += pick(pen, "L", "M") + fmt(scaleX(Math.min(a, target.a1), aMax), 1) + "," + fmt(scaleY(v, aMax), 1);
+          pen = true;
+        }
+      }
+      return "<path class=\"hl-seg\" d=\"" + path + "\"/>";
+    }
+    function movePointer(spot) {
+      if (spot.noRing) {
+        hidePointer();
+        return;
+      }
+      pointer.setAttribute("transform", "translate(" + fmt(spot.x, 1) + " " + fmt(spot.y, 1) + ")");
+      pointerRing.setAttribute("rx", fmt(spot.rx, 1));
+      pointerRing.setAttribute("ry", fmt(spot.ry, 1));
+      // Restart the chalk draw-on, sized to this ring's actual length so a
+      // long ellipse (round an axis) draws all the way round
+      pointer.classList.remove("drawn");
+      // Ramanujan's estimate of the ellipse's perimeter, from the target
+      // radii (the ring is still mid-transition, so measuring it would be wrong)
+      const a = spot.rx;
+      const b = spot.ry;
+      const h = ((a - b) * (a - b)) / ((a + b) * (a + b));
+      const length = Math.PI * (a + b) * (1 + (3 * h) / (10 + Math.sqrt(4 - 3 * h))) + 4;
+      pointerRing.style.strokeDasharray = fmt(length, 1);
+      pointerRing.style.strokeDashoffset = fmt(length, 1);
+      void pointer.getBoundingClientRect();
+      pointer.classList.add("drawn");
+    }
+
+    function hidePointer() {
+      pointer.classList.remove("drawn");
+      pointer.setAttribute("transform", "translate(-200 -200)");
+    }
+
+    // Place the bubble beside the target, or dock it under the graph on a phone.
+    // Eight positions around the target are tried; the one that hides the
+    // least of what is drawn (the line so far, the marks, the road) wins.
+    function placeBubble(spot) {
+      const svgRect = svg.getBoundingClientRect();
+      const figRect = container.getBoundingClientRect();
+      const scale = svgRect.width / VIEW_W;
+      const narrow = svgRect.width < 520;
+      bubble.classList.remove("tail-left", "tail-right", "tail-top", "tail-bottom");
+      if (narrow) {
+        bubble.classList.add("docked");
+        svg.insertAdjacentElement("afterend", bubble);
+        return;
+      }
+      bubble.classList.remove("docked");
+      container.appendChild(bubble);
+
+      const offX = svgRect.left - figRect.left;
+      const offY = svgRect.top - figRect.top;
+      const px = offX + spot.x * scale;
+      const py = offY + spot.y * scale;
+      let rx = spot.rx * scale;
+      let ry = spot.ry * scale;
+      if (spot.noRing) {
+        // Keep clear of the whole highlighted stretch, not just its midpoint
+        rx = Math.max(rx, spot.spanX * scale);
+        ry = Math.max(ry, spot.spanY * scale);
+      }
+      const width = bubble.offsetWidth;
+      const height = bubble.offsetHeight;
+      const gap = 16;
+
+      // Things the bubble should not cover, as points in figure pixels
+      const avoid = [];
+      // The results line drawn so far
+      for (let a = 0; a <= Math.min(time, tMax); a += 2) {
+        const v = scene.out(a);
+        if (v !== null) {
+          avoid.push([offX + scaleX(a, aMax) * scale, offY + scaleY(v, aMax) * scale]);
+        }
+      }
+      // The y-axis title and tick labels, the x-axis title and tick labels
+      for (let y = PLOT_TOP; y <= PLOT_BOTTOM; y += 12) {
+        avoid.push([offX + (PLOT_LEFT - 40) * scale, offY + y * scale]);
+        avoid.push([offX + (PLOT_LEFT - 16) * scale, offY + y * scale]);
+      }
+      // Axis labels are text a student reads, so each counts three times
+      for (let x = PLOT_LEFT; x <= PLOT_RIGHT; x += 30) {
+        for (let w = 0; w < 3; w += 1) {
+          avoid.push([offX + x * scale, offY + (PLOT_BOTTOM + 40) * scale]);
+          avoid.push([offX + x * scale, offY + (PLOT_BOTTOM + 16) * scale]);
+        }
+      }
+      // The pen, leaning up and to the left of its nib
+      const penValue = scene.out(Math.min(time, tMax));
+      if (penValue !== null) {
+        const nibX = scaleX(Math.min(time, tMax), aMax);
+        const nibY = scaleY(penValue, aMax);
+        for (let k = 0; k <= 60; k += 12) {
+          avoid.push([offX + (nibX - 0.616 * k) * scale, offY + (nibY - 0.788 * k) * scale]);
+        }
+      }
+      // The rays, the arcs and the ray box in the scene
+      const g = rayGeometry(scene, origin, Math.min(time, tMax));
+      function addRay(a, b) {
+        for (let f = 0; f <= 1; f += 0.1) {
+          avoid.push([offX + (a.x + (b.x - a.x) * f) * scale, offY + (a.y + (b.y - a.y) * f) * scale]);
+        }
+      }
+      addRay(g.incomingFrom, origin);
+      addRay(origin, g.reflectedTo);
+      if (g.refractedTo) {
+        addRay(origin, g.refractedTo);
+      }
+      avoid.push([offX + g.incomingFrom.x * scale, offY + g.incomingFrom.y * scale]);
+      // The two angle labels beside the arcs
+      const iNow = Math.min(time, tMax);
+      let dirIn = -1;
+      if (!scene.fromAbove) {
+        dirIn = 1;
+      }
+      let outAngle = iNow;
+      let dirOut = dirIn;
+      if (scene.kind !== "mirror" && g.r !== null) {
+        outAngle = g.r;
+        dirOut = -dirIn;
+      }
+      const labelIn = { x: origin.x - ((ARC_IN + 14) * Math.sin(rad(iNow / 2)) + 6), y: origin.y + dirIn * (ARC_IN + 14) * Math.cos(rad(iNow / 2)) };
+      const labelOut = { x: origin.x + (ARC_OUT + 14) * Math.sin(rad(outAngle / 2)) + 6, y: origin.y + dirOut * (ARC_OUT + 14) * Math.cos(rad(outAngle / 2)) };
+      for (let w = 0; w < 3; w += 1) {
+        avoid.push([offX + (labelIn.x - 20) * scale, offY + labelIn.y * scale]);
+        avoid.push([offX + labelIn.x * scale, offY + labelIn.y * scale]);
+        avoid.push([offX + (labelOut.x + 20) * scale, offY + labelOut.y * scale]);
+        avoid.push([offX + labelOut.x * scale, offY + labelOut.y * scale]);
+      }
+      for (let yy = box.top; yy <= box.bottom; yy += 14) {
+        avoid.push([offX + origin.x * scale, offY + yy * scale]);
+      }
+      avoid.push([offX + (origin.x - 30) * scale, offY + (origin.y - 30) * scale]);
+      avoid.push([offX + (origin.x + 30) * scale, offY + (origin.y - 30) * scale]);
+      avoid.push([offX + (origin.x + 30) * scale, offY + (origin.y + 30) * scale]);
+      avoid.push([offX + (origin.x - 30) * scale, offY + (origin.y + 30) * scale]);
+      // Marks and labels already on the overlay
+      // Labels matter most: sample each one's box densely so covering it costs a lot
+      overlay.querySelectorAll("circle, text").forEach(function (node) {
+        const box = node.getBoundingClientRect();
+        const xs = [box.left, box.left + box.width / 2, box.right];
+        const ys = [box.top, box.bottom];
+        xs.forEach(function (x) {
+          ys.forEach(function (y) {
+            avoid.push([x - figRect.left, y - figRect.top]);
+          });
+        });
+      });
+
+      // The "far" positions leave room for a point's own label beside it
+      const labelRoom = 78 * scale;
+      const candidates = [
+        { name: "right", left: px + rx + gap, top: py - 24, tail: "tail-left" },
+        { name: "left", left: px - rx - gap - width, top: py - 24, tail: "tail-right" },
+        { name: "right-mid", left: px + rx + gap, top: py - height / 2, tail: "tail-left" },
+        { name: "left-mid", left: px - rx - gap - width, top: py - height / 2, tail: "tail-right" },
+        { name: "right-far", left: px + rx + gap + labelRoom, top: py - 24, tail: "tail-left" },
+        { name: "left-far", left: px - rx - gap - width - labelRoom, top: py - 24, tail: "tail-right" },
+        { name: "above", left: px - width / 2, top: py - ry - gap - height, tail: "tail-bottom" },
+        { name: "below", left: px - width / 2, top: py + ry + gap, tail: "tail-top" },
+        { name: "above-left", left: px - rx - width + 30, top: py - ry - gap - height, tail: "tail-bottom" },
+        { name: "above-right", left: px + rx - 30, top: py - ry - gap - height, tail: "tail-bottom" },
+        { name: "below-left", left: px - rx - width + 30, top: py + ry + gap, tail: "tail-top" },
+        { name: "below-right", left: px + rx - 30, top: py + ry + gap, tail: "tail-top" },
+      ];
+
+      let best = null;
+      candidates.forEach(function (candidate, order) {
+        // Nudge inside the graph's own box (never over the controls), and
+        // count how far it had to move
+        const left = Math.min(Math.max(6, candidate.left), figRect.width - width - 6);
+        const top = Math.min(Math.max(offY + 4, candidate.top), offY + svgRect.height - height - 4);
+        const moved = Math.abs(left - candidate.left) + Math.abs(top - candidate.top);
+        let covered = 0;
+        avoid.forEach(function (point) {
+          if (point[0] >= left - 4 && point[0] <= left + width + 4 && point[1] >= top - 4 && point[1] <= top + height + 4) {
+            covered += 1;
+          }
+        });
+        // Covering the target itself is the worst thing a bubble can do
+        if (px >= left && px <= left + width && py >= top && py <= top + height) {
+          covered += 50;
+        }
+        const score = covered * 10 + moved * 0.5 + order;
+        if (window.__bubbleDebug) {
+          window.__bubbleDebug.push({ name: candidate.name, covered: covered, moved: moved, score: score, left: left, top: top, width: width, height: height, hits: avoid.filter(function (pt) { return pt[0] >= left - 4 && pt[0] <= left + width + 4 && pt[1] >= top - 4 && pt[1] <= top + height + 4; }).map(function (pt) { return [Math.round((pt[0] - offX) / scale), Math.round((pt[1] - offY) / scale)]; }) });
+        }
+        if (!best || score < best.score) {
+          best = { left: left, top: top, tail: candidate.tail, score: score };
+        }
+      });
+
+      bubble.classList.add(best.tail);
+      bubble.style.left = fmt(best.left, 0) + "px";
+      bubble.style.top = fmt(best.top, 0) + "px";
+      // Point the tail at the target
+      if (best.tail === "tail-left" || best.tail === "tail-right") {
+        bubble.style.setProperty("--tail-at", fmt(Math.min(Math.max(10, py - best.top - 7), height - 24), 0) + "px");
+      } else {
+        bubble.style.setProperty("--tail-at", fmt(Math.min(Math.max(12, px - best.left - 7), width - 26), 0) + "px");
+      }
+      bubble.style.setProperty("--tail-x", fmt(px - best.left, 0) + "px");
+      bubble.style.setProperty("--tail-y", fmt(py - best.top, 0) + "px");
+    }
+
+    // Write a sentence into the bubble one word at a time
+    function typeWords(target, html, done) {
+      clearTimeout(typingTimer);
+      target.innerHTML = "";
+      if (reducedMotion) {
+        target.innerHTML = rich(html);
+        done();
+        return;
+      }
+      // Letter by letter: tags arrive whole so bold words never show half-formed
+      const pieces = rich(html).match(/<[^>]+>|[\s\S]/g) || [];
+      let index = 0;
+      let shown = "";
+      function next() {
+        if (index >= pieces.length) {
+          done();
+          return;
+        }
+        const piece = pieces[index];
+        index += 1;
+        shown += piece;
+        if (piece.charAt(0) === "<") {
+          next();
+          return;
+        }
+        // An unfinished tag is closed by the browser, so the prefix renders cleanly
+        target.innerHTML = shown;
+        let delay = 28;
+        if (/[.,:;!?]/.test(piece)) {
+          delay = 320;
+        }
+        typingTimer = setTimeout(next, delay);
+      }
+      next();
+    }
+
+    function finishTyping(target, html) {
+      clearTimeout(typingTimer);
+      target.innerHTML = rich(html);
+    }
+
+    function showBeat() {
+      const beats = activePause.beats;
+      const beat = beats[beatIndex];
+      const atEnd = time >= tMax - 1e-9;
+      const last = beatIndex === beats.length - 1;
+
+      // Marks accumulate through a pause so earlier points stay labelled
+      if (beat.mark) {
+        overlay.insertAdjacentHTML("beforeend", beat.mark(time));
+      }
+      if (beat.target && beat.target.kind === "segment") {
+        overlay.insertAdjacentHTML("beforeend", segmentMark(beat.target));
+      }
+
+      const spot = resolveTarget(beat.target);
+      currentTarget = spot;
+      movePointer(spot);
+
+      let say = beat.say;
+      if (typeof say === "function") {
+        say = say(time);
+      }
+      let nextLabel = "Next ›";
+      if (last) {
+        nextLabel = pick(atEnd, "OK, got it", "Carry on ▶");
+      }
+
+      if (bubble) {
+        bubble.remove();
+      }
+      bubble = el("<div class=\"bubble\"><div class=\"say\"></div><div class=\"foot\"><span class=\"count\">" + (beatIndex + 1) + " / " + beats.length + "</span><button class=\"btn solid\" type=\"button\" data-next>" + nextLabel + "</button></div></div>");
+      container.appendChild(bubble);
+
+      const sayBox = bubble.querySelector(".say");
+      const nextButton = bubble.querySelector("[data-next]");
+      // Measure the bubble with its whole sentence in place, so the position
+      // allows for the full height before the words start arriving
+      sayBox.innerHTML = rich(say);
+      placeBubble(spot);
+      sayBox.innerHTML = "";
+      let typed = false;
+      typeWords(sayBox, say, function () {
+        typed = true;
+      });
+
+      nextButton.addEventListener("click", function () {
+        if (!typed) {
+          // A tap while the words are still arriving just finishes the sentence
+          finishTyping(sayBox, say);
+          typed = true;
+          return;
+        }
+        if (last) {
+          hidePause();
+          if (!atEnd) {
+            play();
+          }
+          return;
+        }
+        beatIndex += 1;
+        showBeat();
+      });
+    }
+
+    function showPause(pause) {
+      activePause = pause;
+      beatIndex = 0;
+      overlay.innerHTML = "";
+      showBeat();
+    }
+
+    function hidePause() {
+      clearTimeout(typingTimer);
+      activePause = null;
+      currentTarget = null;
+      if (bubble) {
+        bubble.remove();
+        bubble = null;
+      }
+      hidePointer();
+      overlay.innerHTML = "";
+    }
+
+    // Keep the bubble beside its target if the window changes size
+    window.addEventListener("resize", function () {
+      if (bubble && currentTarget) {
+        placeBubble(currentTarget);
+      }
+    });
+
+    // The next pause that this run has not reached yet, if the clock has just crossed it
+    function duePause(before, after) {
+      for (const pause of pauses) {
+        if (firedPauses.indexOf(pause) >= 0) {
+          continue;
+        }
+        if (before < pause.at && after >= pause.at) {
+          return pause;
+        }
+      }
+      return null;
+    }
+    if (options.readouts === false) {
+      container.querySelector(".readouts").hidden = true;
+    }
+
+    function controlsHtml() {
+      let html = "<div class=\"controls\">";
+      html += "<button class=\"btn solid\" type=\"button\" data-play>" + pick(reducedMotion, "Step +5°", "Play") + "</button>";
+      html += "<button class=\"btn\" type=\"button\" data-restart>Restart</button>";
+      html += "<button class=\"btn quiet\" type=\"button\" data-rate" + pick(reducedMotion, " hidden", "") + " title=\"Playback speed\">2×</button>";
+      html += "<input class=\"scrub\" type=\"range\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" data-scrub aria-label=\"Turn the ray box\">";
+      html += "<div class=\"readouts\"><span>in = <b data-read-t>0</b>°</span><span>out = <b data-read-d>0</b>°</span></div>";
+      html += "</div>";
+      return html;
+    }
+
+    // A result cross every 5° on the graph, like the readings in the practical
+    function drawResults() {
+      let html = "";
+      for (let a = 0; a <= Math.floor(time + 1e-9) && a <= tMax; a += 5) {
+        const v = scene.out(a);
+        if (v === null) {
+          continue;
+        }
+        const px = scaleX(a, aMax);
+        const py = scaleY(v, aMax);
+        html += "<path class=\"result\" d=\"M" + fmt(px - 3.5, 1) + "," + fmt(py - 3.5, 1) + "L" + fmt(px + 3.5, 1) + "," + fmt(py + 3.5, 1) + "M" + fmt(px - 3.5, 1) + "," + fmt(py + 3.5, 1) + "L" + fmt(px + 3.5, 1) + "," + fmt(py - 3.5, 1) + "\"/>";
+      }
+      results.innerHTML = html;
+    }
+
+    function render() {
+      const i = Math.min(time, tMax);
+      const value = scene.out(i);
+
+      rays.innerHTML = sceneSvg(scene, box, i);
+
+      if (trace) {
+        trace.setAttribute("d", tracePath(scene, i, aMax));
+        drawResults();
+        const px = scaleX(i, aMax);
+        if (value === null) {
+          // The pen lifts: nothing to plot
+          pen.setAttribute("cx", "-100");
+          penTool.setAttribute("transform", "translate(-100 -100)");
+          penRing.style.display = "none";
+        } else {
+          const py = scaleY(value, aMax);
+          pen.setAttribute("cx", fmt(px, 1));
+          pen.setAttribute("cy", fmt(py, 1));
+          penTool.setAttribute("transform", "translate(" + fmt(px, 1) + " " + fmt(py, 1) + ")");
+          penRing.setAttribute("cx", fmt(px, 1));
+          penRing.setAttribute("cy", fmt(py, 1));
+          penRing.style.display = pick(playing, "", "none");
+        }
+      }
+
+      scrub.value = String(Math.round(i));
+      readT.textContent = fmt(i, 0);
+      if (value === null) {
+        readD.textContent = "none";
+      } else {
+        readD.textContent = fmt(value, 0);
+      }
+
+      if (options.onFrame) {
+        options.onFrame(i, value);
+      }
+    }
+    function frame(stamp) {
+      if (!playing) {
+        return;
+      }
+      if (lastStamp === null) {
+        lastStamp = stamp;
+      }
+      const dt = (stamp - lastStamp) / 1000;
+      lastStamp = stamp;
+      const before = time;
+      time += dt * rate * unitsPerSecond;
+      if (time >= tMax) {
+        time = tMax;
+        stop();
+      }
+      // Stop exactly on a pause point and explain what is on screen
+      const pause = duePause(before, time);
+      if (pause) {
+        time = pause.at;
+        firedPauses.push(pause);
+        stop();
+        showPause(pause);
+        return;
+      }
+      render();
+      if (playing) {
+        frameHandle = requestAnimationFrame(frame);
+      }
+    }
+
+    // A pause with at: 0 is an introduction: it shows before anything moves
+    function openingPause() {
+      if (time > 1e-9) {
+        return null;
+      }
+      for (const pause of pauses) {
+        if (pause.at === 0 && firedPauses.indexOf(pause) < 0) {
+          return pause;
+        }
+      }
+      return null;
+    }
+
+    function play() {
+      const opening = openingPause();
+      if (opening) {
+        firedPauses.push(opening);
+        hidePause();
+        render();
+        showPause(opening);
+        return;
+      }
+      if (reducedMotion) {
+        // Step a whole second per press instead of animating; the teacher
+        // pauses still appear, they just do not glide into place
+        hidePause();
+        const before = time;
+        time = Math.min(tMax, Math.floor(time / 5 + 1e-9) * 5 + 5);
+        render();
+        const pause = duePause(before, time);
+        if (pause) {
+          time = pause.at;
+          firedPauses.push(pause);
+          render();
+          showPause(pause);
+        }
+        return;
+      }
+      if (time >= tMax) {
+        time = 0;
+        firedPauses = [];
+      }
+      hidePause();
+      playing = true;
+      lastStamp = null;
+      playButton.textContent = "Pause";
+      frameHandle = requestAnimationFrame(frame);
+    }
+
+    function stop() {
+      playing = false;
+      playButton.textContent = "Play";
+      if (frameHandle) {
+        cancelAnimationFrame(frameHandle);
+        frameHandle = null;
+      }
+      render();
+    }
+
+    playButton.addEventListener("click", function () {
+      if (playing) {
+        stop();
+      } else {
+        play();
+      }
+    });
+
+    restartButton.addEventListener("click", function () {
+      stop();
+      hidePause();
+      time = 0;
+      firedPauses = [];
+      render();
+    });
+
+    rateButton.addEventListener("click", function () {
+      // Move to the next speed in the cycle, wrapping round at the end
+      const current = RATES.indexOf(rate);
+      let next = current + 1;
+      if (next >= RATES.length) {
+        next = 0;
+      }
+      rate = RATES[next];
+      rateButton.textContent = rate + "×";
+    });
+
+    scrub.addEventListener("input", function () {
+      // Read the slider before stop(), because stop() re-renders and would
+      // write the old time back into the slider
+      const wanted = Number(scrub.value);
+      stop();
+      hidePause();
+      time = wanted;
+      render();
+    });
+
+    render();
+
+    return {
+      svg: svg,
+      render: render,
+      play: play,
+      stop: stop,
+      getTime: function () { return time; },
+      setTime: function (t) { stop(); time = t; render(); },
+      static: svg.querySelector("[data-static]"),
+      overlay: svg.querySelector("[data-overlay]"),
+      target: svg.querySelector("[data-target]"),
+    };
+  }
+  /* ===================================================================
+     Maths
+     =================================================================== */
+
+  function tex(source, display) {
+    if (window.katex) {
+      try {
+        return katex.renderToString(source, { displayMode: !!display, throwOnError: false });
+      } catch (error) {
+        // fall through to plain text
+      }
+    }
+    return "<code>" + escapeHtml(source) + "</code>";
+  }
+
+  function escapeHtml(text) {
+    return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  // Prose with $...$ maths inside it
+  function rich(text) {
+    let output = String(text).replace(/\$\$([\s\S]+?)\$\$/g, function (match, source) {
+      return "<div class=\"math-display\">" + tex(source, true) + "</div>";
+    });
+    output = output.replace(/\$([^$\n]+?)\$/g, function (match, source) {
+      return tex(source, false);
+    });
+    return output;
+  }
+
+  /* ===================================================================
+     Progress and checks
+     =================================================================== */
+
+  const STORAGE_KEY = "optics-lesson-v1";
+
+  let state = loadState();
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        return JSON.parse(raw);
+      }
+    } catch (error) {
+      // storage unavailable: start fresh
+    }
+    return { done: {}, checks: {}, unlockedAll: false, rag: {} };
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (error) {
+      // nothing to do
+    }
+  }
+
+  // Record an attempt at a check; returns the attempt count so far
+  function recordAttempt(checkId, passed) {
+    const entry = state.checks[checkId] || { attempts: 0, passed: false, firstTry: false };
+    entry.attempts += 1;
+    if (passed && !entry.passed) {
+      entry.passed = true;
+      entry.firstTry = entry.attempts === 1;
+    }
+    state.checks[checkId] = entry;
+    saveState();
+    return entry;
+  }
+
+  function tickIcon() {
+    return "<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7\"/></svg>";
+  }
+
+  /*
+   * Each step declares the checks it contains; the step is complete when
+   * every check has passed. `stepChecks[stepIndex] = [checkId, ...]`.
+   */
+  const stepChecks = {};
+  const stepElements = [];
+
+  function registerCheck(stepIndex, checkId) {
+    stepChecks[stepIndex] = stepChecks[stepIndex] || [];
+    stepChecks[stepIndex].push(checkId);
+  }
+
+  function checkPassed(checkId) {
+    return !!state.checks[checkId] && state.checks[checkId].passed;
+  }
+
+  function stepComplete(stepIndex) {
+    const ids = stepChecks[stepIndex] || [];
+    if (ids.length === 0) {
+      // A step with nothing to check (the summary) is done once reached
+      if (stepIndex === 0) {
+        return true;
+      }
+      return stepComplete(stepIndex - 1);
+    }
+    return ids.every(checkPassed);
+  }
+
+  function refreshSteps() {
+    stepElements.forEach(function (element, index) {
+      const complete = stepComplete(index);
+      const previousComplete = index === 0 || stepComplete(index - 1) || state.unlockedAll;
+      const locked = !previousComplete && !state.unlockedAll;
+      element.classList.toggle("done", complete);
+      element.classList.toggle("locked", locked);
+      const status = element.querySelector(".status");
+      if (complete) {
+        status.innerHTML = tickIcon() + " Done";
+      } else if (locked) {
+        status.textContent = "Locked — pass step " + index + " first";
+      } else {
+        const ids = stepChecks[index] || [];
+        const passed = ids.filter(checkPassed).length;
+        status.textContent = pick(ids.length > 0, passed + " of " + ids.length + " checks passed", "");
+      }
+      const continueRow = element.querySelector("[data-continue]");
+      if (continueRow) {
+        continueRow.hidden = !complete || index === stepElements.length - 1;
+      }
+    });
+    refreshRail();
+  }
+
+  function refreshRail() {
+    const rail = document.getElementById("rail");
+    rail.querySelectorAll("a").forEach(function (link, index) {
+      link.classList.toggle("done", stepComplete(index));
+      link.classList.toggle("locked", stepElements[index].classList.contains("locked"));
+    });
+  }
+
+  /* ---------- Multiple choice ---------- */
+
+  function mcq(container, spec) {
+    registerCheck(spec.step, spec.id);
+    const already = checkPassed(spec.id);
+
+    let html = "<div class=\"check\">";
+    html += "<span class=\"kicker\">Check " + spec.label + "</span>";
+    html += "<p class=\"q\">" + rich(spec.q) + "</p>";
+    html += "<div class=\"choices\">";
+    spec.options.forEach(function (option, index) {
+      // An option is either a plain string or { text, mini } with a small graph
+      let mini = "";
+      let text = option;
+      if (option.text !== undefined) {
+        text = option.text;
+        mini = option.mini || "";
+      }
+      html += "<button type=\"button\" class=\"choice" + pick(already && index === spec.correct, " right", "") + "\" data-choice=\"" + index + "\">" +
+        "<span class=\"letter\">" + String.fromCharCode(65 + index) + "</span>" + mini + "<span>" + rich(text) + "</span></button>";
+    });
+    html += "</div>";
+    html += feedbackHtml(already);
+    html += "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\">" + rich(spec.why) + "</div></div></div>";
+    html += "</div>";
+    container.innerHTML = html;
+
+    const feedback = container.querySelector("[data-feedback]");
+    const why = container.querySelector("[data-why]");
+    const buttons = container.querySelectorAll("[data-choice]");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (checkPassed(spec.id)) {
+          return;
+        }
+        const chosen = Number(button.getAttribute("data-choice"));
+        buttons.forEach(function (other) {
+          other.classList.remove("wrong");
+        });
+        if (chosen === spec.correct) {
+          recordAttempt(spec.id, true);
+          button.classList.add("right");
+          feedback.className = "feedback ok";
+          feedback.innerHTML = tickIcon() + "Correct";
+          why.classList.add("open");
+          refreshSteps();
+        } else {
+          const entry = recordAttempt(spec.id, false);
+          button.classList.add("wrong");
+          if (entry.attempts >= 2) {
+            feedback.className = "feedback bad";
+            feedback.textContent = "Not that one. Read the reasoning below, then choose again.";
+            why.classList.add("open");
+          } else {
+            feedback.className = "feedback nudge";
+            feedback.textContent = spec.nudge;
+          }
+        }
+      });
+    });
+  }
+
+  /* ---------- Numeric answer ---------- */
+
+  function parseEntry(text) {
+    const cleaned = String(text).replace(/[\s,]/g, "").replace(/−/g, "-");
+    if (cleaned === "") {
+      return NaN;
+    }
+    return Number(cleaned);
+  }
+
+  function numeric(container, spec) {
+    registerCheck(spec.step, spec.id);
+    const already = checkPassed(spec.id);
+
+    let html = "<div class=\"check\">";
+    html += "<span class=\"kicker\">Check " + spec.label + "</span>";
+    html += "<p class=\"q\">" + rich(spec.q) + "</p>";
+    html += "<div class=\"answer-row\"><label class=\"answer-field\"><input type=\"text\" inputmode=\"decimal\" placeholder=\"your answer\" id=\"" + spec.id + "-input\" data-input" + pick(already, " value=\"" + spec.value + "\"", "") + "><span class=\"unit\">" + spec.unit + "</span></label>";
+    html += "<button class=\"btn solid\" type=\"button\" data-check>Check</button>";
+    html += "<button class=\"btn\" type=\"button\" data-hint>Hint</button></div>";
+    html += feedbackHtml(already);
+    html += "<div class=\"why\" data-hintbox><div class=\"inner\"><div class=\"box\">" + rich(spec.hint) + "</div></div></div>";
+    html += "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\"><b>Walkthrough (EWAU)</b><ol class=\"steps-list\">";
+    spec.walkthrough.forEach(function (line) {
+      html += "<li><span>" + rich(line) + "</span></li>";
+    });
+    html += "</ol></div></div></div>";
+    html += "</div>";
+    container.innerHTML = html;
+
+    const input = container.querySelector("[data-input]");
+    const feedback = container.querySelector("[data-feedback]");
+    const why = container.querySelector("[data-why]");
+    const hintBox = container.querySelector("[data-hintbox]");
+
+    function runCheck() {
+      if (checkPassed(spec.id)) {
+        return;
+      }
+      const entered = parseEntry(input.value);
+      if (Number.isNaN(entered)) {
+        feedback.className = "feedback bad";
+        feedback.textContent = "Type a number, such as 4 or 2.5.";
+        return;
+      }
+      const tolerance = spec.tolerance || 0.02;
+      const relative = Math.abs(entered - spec.value) / Math.abs(spec.value);
+      if (relative <= tolerance) {
+        recordAttempt(spec.id, true);
+        feedback.className = "feedback ok";
+        feedback.innerHTML = tickIcon() + "Correct";
+        why.classList.add("open");
+        refreshSteps();
+        return;
+      }
+      const entry = recordAttempt(spec.id, false);
+      // A factor-of-ten slip is nearly always a reading or unit error
+      const ratio = Math.abs(entered / spec.value);
+      const exponent = Math.log10(ratio);
+      const nearest = Math.round(exponent);
+      if (nearest !== 0 && Math.abs(exponent - nearest) < 0.01 && Math.abs(nearest) <= 3) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "Out by a factor of " + Math.pow(10, Math.abs(nearest)) + " — check the numbers you read off the axes.";
+        return;
+      }
+      if (Math.abs(entered + spec.value) / Math.abs(spec.value) <= tolerance) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "Right size, wrong sign. Speed is the size of the gradient.";
+        return;
+      }
+      if (entry.attempts >= 2) {
+        feedback.className = "feedback bad";
+        feedback.textContent = "Not yet. Open the walkthrough and follow the EWAU lines.";
+        why.classList.add("open");
+      } else {
+        feedback.className = "feedback nudge";
+        feedback.textContent = spec.nudge;
+      }
+    }
+
+    container.querySelector("[data-check]").addEventListener("click", runCheck);
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        runCheck();
+      }
+    });
+    container.querySelector("[data-hint]").addEventListener("click", function () {
+      hintBox.classList.toggle("open");
+    });
+  }
+  /* ===================================================================
+     Steps
+     =================================================================== */
+
+  const steps = [];
+
+  function addStep(title, build) {
+    steps.push({ title: title, build: build });
+  }
+
+  function stepShell(index, title) {
+    const article = document.createElement("article");
+    article.className = "step";
+    article.id = "step-" + (index + 1);
+    article.innerHTML =
+      "<div class=\"step-head\"><span class=\"n\">" + String(index + 1).padStart(2, "0") + "</span><h2>" + title + "</h2><span class=\"status\"></span></div>" +
+      "<div class=\"step-body\"></div>";
+    return article;
+  }
+
+  function continueButton(body, index) {
+    if (index >= steps.length - 1) {
+      return;
+    }
+    const row = document.createElement("div");
+    row.className = "continue-row";
+    row.setAttribute("data-continue", "");
+    row.hidden = true;
+    row.innerHTML = "<button class=\"btn solid\" type=\"button\">Continue to step " + (index + 2) + " →</button>";
+    row.querySelector("button").addEventListener("click", function () {
+      const next = document.getElementById("step-" + (index + 2));
+      next.scrollIntoView({ behavior: scrollBehaviour(), block: "start" });
+    });
+    body.appendChild(row);
+  }
+
+  function el(html) {
+    const template = document.createElement("template");
+    template.innerHTML = html.trim();
+    return template.content.firstElementChild;
+  }
+
+  function miniGraph(path) {
+    return "<svg class=\"mini\" viewBox=\"0 0 92 56\" aria-hidden=\"true\"><path class=\"ax\" d=\"M10 4V48H88\"/><path d=\"" + path + "\"/></svg>";
+  }
+
+  // A small ray diagram for answer options and the summary: the surface
+  // across the middle, the normal dashed, a ray in from the top-left and a
+  // ray out at `outAngle` from the normal; side "down" means into the glass,
+  // "up" means back into the air.
+  function miniRay(outAngle, side, glass) {
+    const o = { x: 46, y: 32 };
+    const L = 26;
+    const inFrom = { x: o.x - L * Math.sin(rad(40)), y: o.y - L * Math.cos(rad(40)) };
+    let outTo;
+    if (side === "down") {
+      outTo = { x: o.x + L * Math.sin(rad(outAngle)), y: o.y + L * Math.cos(rad(outAngle)) };
+    } else {
+      outTo = { x: o.x + L * Math.sin(rad(outAngle)), y: o.y - L * Math.cos(rad(outAngle)) };
+    }
+    let svg = "<svg class=\"mini-ray\" viewBox=\"0 0 92 64\" aria-hidden=\"true\">";
+    if (glass) {
+      svg += "<rect class=\"g\" x=\"6\" y=\"32\" width=\"80\" height=\"28\"/>";
+    }
+    svg += "<line class=\"b\" x1=\"6\" y1=\"32\" x2=\"86\" y2=\"32\"/>";
+    svg += "<line class=\"n\" x1=\"46\" y1=\"4\" x2=\"46\" y2=\"60\"/>";
+    svg += "<path class=\"r\" d=\"M" + fmt(inFrom.x, 1) + "," + fmt(inFrom.y, 1) + "L" + fmt(o.x, 1) + "," + fmt(o.y, 1) + "L" + fmt(outTo.x, 1) + "," + fmt(outTo.y, 1) + "\"/>";
+    svg += "</svg>";
+    return svg;
+  }
+
+  // A mini diagram for a ray that starts inside the glass (from the bottom-left)
+  function miniRayOut(outAngle, tir) {
+    const o = { x: 46, y: 32 };
+    const L = 26;
+    const inFrom = { x: o.x - L * Math.sin(rad(40)), y: o.y + L * Math.cos(rad(40)) };
+    let outTo;
+    if (tir) {
+      outTo = { x: o.x + L * Math.sin(rad(40)), y: o.y + L * Math.cos(rad(40)) };
+    } else {
+      outTo = { x: o.x + L * Math.sin(rad(outAngle)), y: o.y - L * Math.cos(rad(outAngle)) };
+    }
+    let svg = "<svg class=\"mini-ray\" viewBox=\"0 0 92 64\" aria-hidden=\"true\">";
+    svg += "<rect class=\"g\" x=\"6\" y=\"32\" width=\"80\" height=\"28\"/>";
+    svg += "<line class=\"b\" x1=\"6\" y1=\"32\" x2=\"86\" y2=\"32\"/>";
+    svg += "<line class=\"n\" x1=\"46\" y1=\"4\" x2=\"46\" y2=\"60\"/>";
+    svg += "<path class=\"r\" d=\"M" + fmt(inFrom.x, 1) + "," + fmt(inFrom.y, 1) + "L" + fmt(o.x, 1) + "," + fmt(o.y, 1) + "L" + fmt(outTo.x, 1) + "," + fmt(outTo.y, 1) + "\"/>";
+    svg += "</svg>";
+    return svg;
+  }
+
+  /* ---------- Step 1: reflection ---------- */
+  addStep("Reflection: the angle in equals the angle out", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>On the right, a ray box shines a thin ray of light at a flat mirror lying on a sheet of paper. The dashed line is the <b>normal</b>: a line drawn at right angles to the mirror, where the ray hits it. Every angle in this topic is measured from the normal, not from the mirror.</p>" +
+      "<p>The ray box will turn slowly, so the angle of the ray going in grows. On the left, a pen records the angle of the ray coming out against the angle going in.</p>" +
+      "<p>Before you press play: as the angle in grows, what do you think happens to the angle out?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      aMax: 90, sweepTo: 75, scene: buildScene("mirror"),
+      alt: "A ray box turning in front of a mirror while a pen plots angle out against angle in",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: { kind: "yspan", v0: 0, v1: 90 }, say: "This is the y-axis. It shows the angle of the ray coming <mark>out</mark>, in degrees." },
+            { target: { kind: "xspan", a0: 0, a1: 90 }, say: "This is the x-axis. It shows the angle of the ray going <mark>in</mark>, in degrees." },
+            { target: "surface", say: "This is the mirror." },
+            { target: "normal", say: "This dashed line is the <b>normal</b>: a line at right angles to the mirror. Every angle is measured from it." },
+            { target: "raybox", say: "The ray box will turn slowly, so the angle of the ray going in grows from 0 to 75 degrees." },
+          ],
+        },
+        {
+          at: 45,
+          beats: [
+            { target: { kind: "point", a: 45, value: 45 }, mark: function () { return highlightPoint(45, 45, 90, "45° in, 45° out", "left"); },
+              say: "This point is at 45 degrees in, and 45 degrees out." },
+            { target: "arc-in", say: "On the mirror, the angle between the ray going in and the normal is 45 degrees. This is the <b>angle of incidence</b>." },
+            { target: "arc-out", say: "The angle between the ray coming out and the normal is also 45 degrees. This is the <b>angle of reflection</b>." },
+            { target: { kind: "segment", a0: 0, a1: 45 }, say: "Every result is on the same straight line through the origin: the angle out always equals the angle in." },
+            { target: { kind: "segment", a0: 0, a1: 45 }, say: "The <b>law of reflection</b>: the angle of reflection equals the angle of incidence." },
+          ],
+        },
+        {
+          at: 75,
+          beats: [
+            { target: { kind: "results", a0: 45, a1: 75 }, say: "Every cross sits on the same line. The law of reflection was true at every angle." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("The <b>law of reflection</b>: the angle of reflection equals the angle of incidence, $i = r$. Both angles are measured from the <b>normal</b>, the line at right angles to the surface.") + "</div>"));
+
+    const c1a = el("<div></div>");
+    const c1b = el("<div></div>");
+    body.appendChild(c1a);
+    body.appendChild(c1b);
+    mcq(c1a, {
+      step: index, id: "c1a", label: "1a",
+      q: "Which angle is the <b>angle of incidence</b>?",
+      options: [
+        "The angle between the ray going in and the <b>normal</b>",
+        "The angle between the ray going in and the <b>mirror</b>",
+        "The angle between the ray going in and the ray coming out",
+      ],
+      correct: 0,
+      nudge: "Look at where the arc labelled i was drawn on the diagram: from the dashed line, not from the mirror.",
+      why: "Angles in ray diagrams are always measured from the normal, the dashed line at right angles to the surface. The angle of incidence is between the incoming ray and the normal.",
+    });
+    numeric(c1b, {
+      step: index, id: "c1b", label: "1b",
+      q: "A ray hits a mirror at <b>25° to the surface of the mirror</b>. What is the angle of reflection?",
+      value: 65, unit: "°",
+      hint: "The normal is at 90° to the mirror. If the ray makes 25° with the mirror, it makes $90 - 25$ with the normal.",
+      nudge: "Careful: 25° is measured from the mirror, but the law of reflection uses angles measured from the normal.",
+      walkthrough: [
+        "<b>Equation:</b> angle of incidence $= 90° - $ angle to the surface; angle of reflection $=$ angle of incidence",
+        "<b>Working:</b> $i = 90 - 25 = 65°$, so $r = i = 65°$",
+        "<b>Answer:</b> $= 65$",
+        "<b>Units:</b> degrees",
+      ],
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 2: into glass ---------- */
+  addStep("Into glass: the ray bends towards the normal", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>The mirror is swapped for a <b>glass block</b>. The ray goes from the air into the glass, and this time the ray that matters is the one that goes <b>through</b> into the glass.</p>" +
+      "<p>The dashed grey line on the graph shows where the results would be if the ray did not bend at all. Before you press play: will the results land above that line, on it, or below it?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      aMax: 90, sweepTo: 75, scene: buildScene("into"), reference: true,
+      alt: "A ray going from air into a glass block, bending towards the normal; the graph curves below the line out = in",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "glass", say: "This time the ray goes from the air <mark>into glass</mark>. Watch which way the ray bends, and where the results land compared with the dashed line." },
+          ],
+        },
+        {
+          at: 45,
+          beats: [
+            { target: { kind: "point", a: 45, value: 30 }, mark: function () { return highlightPoint(45, 30, 90, "45° in, 30° out", "left"); },
+              say: "This point is at 45 degrees in, and 30 degrees out." },
+            { target: "arc-out", say: "The ray has bent <b>towards the normal</b>: 30 is smaller than 45." },
+            { target: { kind: "segment", a0: 0, a1: 45 }, say: "Every result is below the dashed line, so the angle out is always smaller than the angle in." },
+            { target: { kind: "segment", a0: 0, a1: 45 }, say: "When light goes from air into glass, it slows down and bends <b>towards the normal</b>: the angle of refraction is smaller than the angle of incidence." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("When light goes from air into glass, it slows down and bends <b>towards the normal</b>: the <b>angle of refraction</b> is smaller than the angle of incidence. A ray along the normal does not bend at all.") + "</div>"));
+
+    const c2a = el("<div></div>");
+    const c2b = el("<div></div>");
+    body.appendChild(c2a);
+    body.appendChild(c2b);
+    mcq(c2a, {
+      step: index, id: "c2a", label: "2a",
+      q: "Which diagram shows a ray going from air into glass correctly?",
+      options: [
+        { text: "Diagram A", mini: miniRay(26, "down", true) },
+        { text: "Diagram B", mini: miniRay(58, "down", true) },
+        { text: "Diagram C", mini: miniRay(40, "down", true) },
+      ],
+      correct: 0,
+      nudge: "Going into glass, the ray should end up closer to the dashed normal than it started.",
+      why: "In diagram A the ray inside the glass is closer to the normal than the ray in the air: it has bent towards the normal. B bends away, and C does not bend at all.",
+    });
+    mcq(c2b, {
+      step: index, id: "c2b", label: "2b",
+      q: "A ray goes from air into glass with an angle of incidence of 60°. The angle of refraction is…",
+      options: ["Smaller than 60°", "Bigger than 60°", "Exactly 60°"],
+      correct: 0,
+      nudge: "Look at the graph: were the results above or below the dashed line?",
+      why: "Going into glass the ray bends towards the normal, so the angle of refraction is smaller than the angle of incidence. (For this block, 60° in gives about 38° out.)",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 3: out of glass, the critical angle ---------- */
+  addStep("Out of glass: away from the normal, and the critical angle", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>Now the ray starts <b>inside</b> the glass and tries to get out into the air. The ray box turns from 0 up to 45 degrees.</p>" +
+      "<p>Before you press play: which way will the ray bend this time, and where will the results land compared with the dashed line?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      aMax: 90, sweepTo: 45, scene: buildScene("out"), reference: true,
+      alt: "A ray inside a glass block going out into air, bending away from the normal; the graph rises above the line out = in and reaches 90 degrees at 45 degrees in",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "ray-in", say: "Now the ray starts <mark>inside the glass</mark> and tries to get out. Watch which way it bends this time." },
+          ],
+        },
+        {
+          at: 30,
+          beats: [
+            { target: { kind: "point", a: 30, value: 45 }, mark: function () { return highlightPoint(30, 45, 90, "30° in, 45° out", "below-right"); },
+              say: "This point is at 30 degrees in, and 45 degrees out." },
+            { target: "arc-out", say: "The ray has bent <b>away from the normal</b>: 45 is bigger than 30." },
+            { target: { kind: "segment", a0: 0, a1: 30 }, say: "Every result is above the dashed line, so the angle out is always bigger than the angle in." },
+            { target: { kind: "segment", a0: 0, a1: 30 }, say: "When light goes from glass into air, it speeds up and bends <b>away from the normal</b>: the angle of refraction is bigger than the angle of incidence." },
+          ],
+        },
+        {
+          at: 45,
+          beats: [
+            { target: { kind: "point", a: 45, value: 90 }, mark: function () { return highlightPoint(45, 90, 90, "45° in, 90° out", "right"); },
+              say: "This point is at 45 degrees in, and 90 degrees out." },
+            { target: "ray-refr", say: "At 90 degrees, the ray coming out skims along the surface of the glass. It only just gets out." },
+            { target: "arc-in", say: "The <b>critical angle</b> is the angle of incidence inside the glass that gives an angle of refraction of 90 degrees. For this block it is 45 degrees." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("When light goes from glass into air, it speeds up and bends <b>away from the normal</b>: the angle of refraction is bigger than the angle of incidence. The <b>critical angle</b> is the angle of incidence inside the glass that gives an angle of refraction of exactly 90°. For this block it is 45°; for real glass it is about 42°.") + "</div>"));
+
+    const c3a = el("<div></div>");
+    const c3b = el("<div></div>");
+    body.appendChild(c3a);
+    body.appendChild(c3b);
+    mcq(c3a, {
+      step: index, id: "c3a", label: "3a",
+      q: "A ray inside a glass block hits the surface with an angle of incidence of 20°. The angle of refraction as it leaves is…",
+      options: ["Bigger than 20°", "Smaller than 20°", "Exactly 20°"],
+      correct: 0,
+      nudge: "Which side of the dashed line were the results on this time?",
+      why: "Leaving glass for air, the ray bends away from the normal, so the angle of refraction is bigger than the angle of incidence.",
+    });
+    numeric(c3b, {
+      step: index, id: "c3b", label: "3b",
+      q: "A ray inside the block hits the surface at exactly the critical angle. What is its angle of refraction?",
+      value: 90, unit: "°",
+      hint: "At the critical angle the ray coming out runs along the surface. What angle does the surface make with the normal?",
+      nudge: "Think about where the ray out went in the animation when the angle in reached 45°.",
+      walkthrough: [
+        "<b>Equation:</b> at the critical angle, the refracted ray runs along the surface",
+        "<b>Working:</b> the surface is at $90°$ to the normal",
+        "<b>Answer:</b> $= 90$",
+        "<b>Units:</b> degrees",
+      ],
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 4: total internal reflection ---------- */
+  addStep("Past the critical angle: total internal reflection", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>Same glass block, same ray starting inside it. This time the ray box keeps turning <b>past 45 degrees</b>.</p>" +
+      "<p>Before you press play: once the angle in is bigger than the critical angle, where can the ray go?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      aMax: 90, sweepTo: 75, scene: buildScene("out"), reference: true,
+      alt: "A ray inside glass hitting the surface beyond the critical angle: no ray gets out and all of it is reflected",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "ray-in", say: "This time the ray box keeps turning <mark>past 45 degrees</mark>. Keep your eye on the faint reflected ray." },
+          ],
+        },
+        {
+          at: 60,
+          beats: [
+            { target: "arc-in", say: "The angle of incidence is now 60 degrees: more than the critical angle." },
+            { target: "nothing-out", say: "No ray gets out of the glass at all." },
+            { target: "ray-refl", say: "All of the light is reflected back inside the glass, at 60 degrees to the normal: it obeys the law of reflection." },
+            { target: "pen", say: "There is no result to plot past 45 degrees, because there is no ray coming out. The pen has lifted." },
+            { target: "ray-refl", say: "<b>Total internal reflection</b> happens when light inside glass meets the surface with an angle of incidence <b>bigger than the critical angle</b>. All the light is reflected." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("<b>Total internal reflection (TIR)</b> happens when light inside glass (or another denser material) meets the surface with an angle of incidence <b>bigger than the critical angle</b>. No light gets out: all of it is reflected inside, obeying the law of reflection.") + "</div>"));
+
+    const c4a = el("<div></div>");
+    const c4b = el("<div></div>");
+    body.appendChild(c4a);
+    body.appendChild(c4b);
+    mcq(c4a, {
+      step: index, id: "c4a", label: "4a",
+      q: "The critical angle of a glass block is 42°. A ray inside the block hits the surface with an angle of incidence of <b>50°</b>. What happens?",
+      options: [
+        { text: "All of it is reflected back inside the glass", mini: miniRayOut(0, true) },
+        { text: "It leaves the glass, bending away from the normal", mini: miniRayOut(62, false) },
+        { text: "It leaves the glass, bending towards the normal", mini: miniRayOut(25, false) },
+      ],
+      correct: 0,
+      nudge: "Compare 50° with the critical angle, 42°. Is it bigger or smaller?",
+      why: "50° is bigger than the critical angle, so none of the light can get out: it is totally internally reflected, at 50° on the other side of the normal.",
+    });
+    mcq(c4b, {
+      step: index, id: "c4b", label: "4b",
+      q: "Same block (critical angle 42°). A ray inside hits the surface with an angle of incidence of <b>30°</b>. What happens?",
+      options: [
+        { text: "All of it is reflected back inside the glass", mini: miniRayOut(0, true) },
+        { text: "It leaves the glass, bending away from the normal", mini: miniRayOut(48, false) },
+        { text: "It leaves the glass, bending towards the normal", mini: miniRayOut(18, false) },
+      ],
+      correct: 1,
+      nudge: "30° is less than the critical angle. Which way does light bend when it leaves glass?",
+      why: "30° is smaller than the critical angle, so the ray does get out. Leaving glass for air it bends away from the normal.",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 5: why only inside ---------- */
+  addStep("Why TIR only happens inside the glass", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>Back to light going from the air <b>into</b> the glass, with the ray box turning all the way round to 75 degrees.</p>" +
+      "<p>Before you press play: can the ray going into the glass ever be totally internally reflected?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      aMax: 90, sweepTo: 75, scene: buildScene("into"), reference: true,
+      alt: "A ray going from air into glass at angles up to 75 degrees; it always gets into the glass",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "raybox", say: "Light going <mark>into</mark> the glass again, turning all the way round to 75 degrees. Can the angle out ever reach 90 degrees?" },
+          ],
+        },
+        {
+          at: 75,
+          beats: [
+            { target: "ray-refr", say: "Even at 75 degrees in, the ray still gets into the glass." },
+            { target: { kind: "results", a0: 0, a1: 75 }, say: "The results never reach the top of the graph: going into glass, the angle out is always smaller than the angle in." },
+            { target: "glass", say: "Total internal reflection can only happen when the light is <b>inside</b> the glass trying to get out. Going in, the ray always refracts." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("TIR needs two things: the light must be <b>inside the denser material</b> (glass, water, perspex) heading out, <b>and</b> the angle of incidence must be <b>bigger than the critical angle</b>. Light going from air into glass always refracts, however big the angle.") + "</div>"));
+
+    const c5 = el("<div></div>");
+    body.appendChild(c5);
+    mcq(c5, {
+      step: index, id: "c5", label: "5",
+      q: "A ray goes from <b>air into glass</b> with an angle of incidence of 70°. The critical angle of the glass is 42°. What happens?",
+      options: [
+        { text: "It refracts into the glass, bending towards the normal", mini: miniRay(40, "down", true) },
+        { text: "It is totally internally reflected, because 70° is bigger than 42°", mini: miniRay(70, "up", true) },
+        { text: "It refracts into the glass, bending away from the normal", mini: miniRay(80, "down", true) },
+      ],
+      correct: 0,
+      nudge: "Which way is the light going: into the glass, or out of it?",
+      why: "The light is going from air into glass, so the critical angle does not apply: it refracts in, bending towards the normal. TIR only happens to light inside the glass heading out.",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 6: draw the ray ---------- */
+
+  // One drawing task: a scene at a fixed angle of incidence with the outgoing
+  // ray missing. The student taps where the ray goes; the ray from the surface
+  // to the tap is drawn, and its angle from the normal is compared with the answer.
+  function drawTask(container, spec) {
+    registerCheck(spec.step, spec.id);
+    const already = checkPassed(spec.id);
+    const scene = buildScene(spec.kind);
+    const box = SCENE_WIDE;
+    const origin = originOf(box);
+    const g = rayGeometry(scene, origin, spec.i);
+
+    let html = "<div class=\"check\">";
+    html += "<span class=\"kicker\">Check " + spec.label + "</span>";
+    html += "<p class=\"q\">" + rich(spec.q) + "</p>";
+    html += "<div class=\"figure\" data-fig></div>";
+    html += "<div class=\"draw-tools\"><span class=\"note\" data-note>Tap the paper where the ray goes next. The ray is drawn from the surface to your tap.</span><span class=\"draw-btns\"><button class=\"btn small\" type=\"button\" data-clear>Clear</button><button class=\"btn solid small\" type=\"button\" data-check-ray>Check my ray</button><button class=\"btn small\" type=\"button\" data-show>Show the answer</button></span></div>";
+    html += feedbackHtml(already);
+    html += "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\">" + rich(spec.why) + "</div></div></div>";
+    html += "</div>";
+    container.innerHTML = html;
+
+    const fig = container.querySelector("[data-fig]");
+    fig.innerHTML = figureSvg({ aMax: 90, scene: scene, graph: false, alt: spec.alt });
+    const svg = fig.querySelector("svg");
+    svg.classList.add("can-draw");
+    const rays = svg.querySelector("[data-rays]");
+    const userLayer = svg.querySelector("[data-static]");
+    const overlay = svg.querySelector("[data-overlay]");
+    const note = container.querySelector("[data-note]");
+    const feedback = container.querySelector("[data-feedback]");
+    const why = container.querySelector("[data-why]");
+
+    // Only the incoming ray and its arc are drawn; the student supplies the rest
+    const up = scene.fromAbove;
+    rays.innerHTML = rayBoxSvg(g.incomingFrom, origin) + raySvg(g.incomingFrom, origin, "in") + arcSvg(origin, ARC_IN, spec.i, -1, up, "in", "i = " + spec.i + "°");
+
+    let tapped = null;
+
+    function userRayHtml(point) {
+      // Extend the tapped direction to the standard ray length
+      const dx = point.x - origin.x;
+      const dy = point.y - origin.y;
+      const len = Math.sqrt(dx * dx + dy * dy);
+      if (len < 1) {
+        return "";
+      }
+      const end = { x: origin.x + (dx / len) * RAY_LENGTH, y: origin.y + (dy / len) * RAY_LENGTH };
+      // Angle from the normal, and which half of the paper the ray is in
+      const angle = deg(Math.atan2(Math.abs(dx), Math.abs(dy)));
+      let half = "above";
+      if (dy > 0) {
+        half = "below";
+      }
+      return raySvg(origin, end, "user") + arcSvg(origin, ARC_OUT, angle, pick(dx >= 0, 1, -1), dy <= 0, "out", fmt(angle, 0) + "°");
+    }
+
+    svg.addEventListener("click", function (event) {
+      const pt = svg.createSVGPoint();
+      pt.x = event.clientX;
+      pt.y = event.clientY;
+      const local = pt.matrixTransform(svg.getScreenCTM().inverse());
+      if (local.x < box.left || local.x > box.right || local.y < box.top || local.y > box.bottom) {
+        return;
+      }
+      tapped = { x: local.x, y: local.y };
+      userLayer.innerHTML = userRayHtml(tapped);
+      const dx = tapped.x - origin.x;
+      const dy = tapped.y - origin.y;
+      const angle = deg(Math.atan2(Math.abs(dx), Math.abs(dy)));
+      note.textContent = "Your ray makes " + fmt(angle, 0) + "° with the normal. Press Check my ray when you are happy with it.";
+    });
+
+    container.querySelector("[data-clear]").addEventListener("click", function () {
+      tapped = null;
+      userLayer.innerHTML = "";
+      overlay.innerHTML = "";
+      note.textContent = "Cleared. Tap the paper where the ray goes next.";
+    });
+
+    container.querySelector("[data-show]").addEventListener("click", function () {
+      // The correct ray, dashed, so the student can compare
+      let end = g.reflectedTo;
+      if (spec.expect === "refracted") {
+        end = g.refractedTo;
+      }
+      overlay.innerHTML = raySvg(origin, end, "ghost");
+      why.classList.add("open");
+    });
+
+    container.querySelector("[data-check-ray]").addEventListener("click", function () {
+      if (checkPassed(spec.id)) {
+        return;
+      }
+      if (!tapped) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "Tap the paper first, where you think the ray goes.";
+        return;
+      }
+      const dx = tapped.x - origin.x;
+      const dy = tapped.y - origin.y;
+      const angle = deg(Math.atan2(Math.abs(dx), Math.abs(dy)));
+      let expected;
+      let expectedAbove;
+      if (spec.expect === "refracted") {
+        expected = g.r;
+        expectedAbove = !scene.fromAbove;
+      } else {
+        expected = spec.i;
+        expectedAbove = scene.fromAbove;
+      }
+      const isAbove = dy < 0;
+      const rightSide = dx > 0;
+      const correct = rightSide && isAbove === expectedAbove && Math.abs(angle - expected) <= 5;
+      const entry = recordAttempt(spec.id, correct);
+      if (!rightSide) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "The ray carries on past the normal: it comes out on the other side of the dashed line, not back the way it came.";
+        return;
+      }
+      if (isAbove !== expectedAbove) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = spec.sideNudge;
+        if (entry.attempts >= 2) {
+          why.classList.add("open");
+        }
+        return;
+      }
+      if (correct) {
+        feedback.className = "feedback ok";
+        feedback.innerHTML = tickIcon() + "Correct: " + fmt(expected, 0) + "° from the normal";
+        why.classList.add("open");
+        refreshSteps();
+        return;
+      }
+      feedback.className = "feedback nudge";
+      feedback.textContent = "Your ray makes " + fmt(angle, 0) + "° with the normal. " + spec.angleNudge;
+      if (entry.attempts >= 2) {
+        why.classList.add("open");
+      }
+    });
+
+    if (already) {
+      let end = g.reflectedTo;
+      if (spec.expect === "refracted") {
+        end = g.refractedTo;
+      }
+      userLayer.innerHTML = raySvg(origin, end, "user");
+    }
+  }
+
+  addStep("Draw the ray", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>Now you complete the ray diagrams. In each one the ray going in is drawn for you, with its angle from the normal. <b>Tap the paper</b> where you think the ray goes next, and a ray is drawn from the surface to your tap, with its angle measured for you.</p>" +
+      "<p>Measure from the dashed normal, never from the surface.</p>" +
+      "</div>"));
+
+    const d1 = el("<div></div>");
+    const d2 = el("<div></div>");
+    const d3 = el("<div></div>");
+    body.appendChild(d1);
+    body.appendChild(d2);
+    body.appendChild(d3);
+
+    drawTask(d1, {
+      step: index, id: "c6a", label: "6a", kind: "mirror", i: 40, expect: "reflected",
+      q: "A ray hits a <b>mirror</b> with an angle of incidence of 40°. Draw the reflected ray.",
+      sideNudge: "A mirror reflects: the ray stays in the air, above the mirror.",
+      angleNudge: "The law of reflection says the angle of reflection equals the angle of incidence, 40°, measured from the normal.",
+      why: "The reflected ray leaves on the other side of the normal, at the same angle to the normal as the ray came in: 40°.",
+      alt: "A ray hitting a mirror at 40 degrees, with the reflected ray to be drawn",
+    });
+    drawTask(d2, {
+      step: index, id: "c6b", label: "6b", kind: "out", i: 30, expect: "refracted",
+      q: "A ray <b>inside the glass block</b> (critical angle 45°) hits the surface with an angle of incidence of 30°. Draw the ray that leaves the glass.",
+      sideNudge: "30° is less than the critical angle, so the ray does get out: it carries on into the air, above the surface.",
+      angleNudge: "Leaving glass for air the ray bends away from the normal, so its angle should be bigger than 30°. For this block, 30° in gives 45° out.",
+      why: "30° is smaller than the critical angle, so the ray leaves the glass. It bends away from the normal: for this block, 30° in gives 45° out.",
+      alt: "A ray inside glass hitting the surface at 30 degrees, with the refracted ray to be drawn",
+    });
+    drawTask(d3, {
+      step: index, id: "c6c", label: "6c", kind: "out", i: 60, expect: "reflected",
+      q: "A ray <b>inside the same block</b> hits the surface with an angle of incidence of 60°. Draw what happens to the ray.",
+      sideNudge: "60° is bigger than the critical angle, so no ray gets out. All the light stays inside the glass, below the surface.",
+      angleNudge: "Total internal reflection obeys the law of reflection: the ray leaves at 60° to the normal, on the other side.",
+      why: "60° is bigger than the critical angle (45°), so the ray is totally internally reflected: it stays in the glass and leaves the surface at 60° to the normal, on the other side.",
+      alt: "A ray inside glass hitting the surface at 60 degrees, with the totally internally reflected ray to be drawn",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 7: summary ---------- */
+  addStep("What the diagrams mean", function (body, index) {
+    const shapes = [
+      { name: "Reflection", note: "angle out = angle in, from the normal", svg: miniRay(40, "up", false) },
+      { name: "Into glass", note: "bends towards the normal", svg: miniRay(26, "down", true) },
+      { name: "Out of glass", note: "bends away from the normal", svg: miniRayOut(62, false) },
+      { name: "Critical angle", note: "the ray out runs along the surface", svg: miniRayOut(89, false) },
+      { name: "Total internal reflection", note: "angle in bigger than the critical angle", svg: miniRayOut(0, true) },
+    ];
+    let shapesHtml = "<div class=\"shapes\">";
+    shapes.forEach(function (shape) {
+      shapesHtml += "<div class=\"shape\">" + shape.svg + "<b>" + shape.name + "</b><span>" + shape.note + "</span></div>";
+    });
+    shapesHtml += "</div>";
+    body.appendChild(el(shapesHtml));
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("Every angle is measured from the <b>normal</b>. <b>Law of reflection:</b> $i = r$. <b>Refraction:</b> into glass bends <b>towards</b> the normal; out of glass bends <b>away</b> from it. The <b>critical angle</b> is the angle of incidence inside the glass that gives 90° out (about 42° for glass). Beyond it, light inside the glass is <b>totally internally reflected</b>.") + "</div>"));
+
+    const score = el("<div class=\"score\"><div><div class=\"big\" data-score>–</div><div class=\"lbl\">checks passed first time</div></div><div><div class=\"big\" data-passed>–</div><div class=\"lbl\">checks passed in total</div></div></div>");
+    body.appendChild(score);
+
+    function refreshScore() {
+      const ids = Object.keys(stepChecks).reduce(function (all, key) { return all.concat(stepChecks[key]); }, []);
+      let first = 0;
+      let passed = 0;
+      ids.forEach(function (id) {
+        const entry = state.checks[id];
+        if (entry && entry.passed) {
+          passed += 1;
+          if (entry.firstTry) {
+            first += 1;
+          }
+        }
+      });
+      score.querySelector("[data-score]").textContent = first + " / " + ids.length;
+      score.querySelector("[data-passed]").textContent = passed + " / " + ids.length;
+    }
+    document.addEventListener("dt-progress", refreshScore);
+    refreshScore();
+
+    const items = [
+      "State the law of reflection, and measure both angles from the normal",
+      "Draw and explain a ray diagram for refraction into and out of glass",
+      "Explain what the critical angle is and when total internal reflection happens",
+      "Complete a ray diagram for reflection, refraction or TIR",
+    ];
+    let ragHtml = "<div><p class=\"q\" style=\"margin-bottom:8px\"><b>Self-check.</b> Red = not yet, amber = with help, green = on my own.</p><div class=\"rag-list\">";
+    items.forEach(function (item, i) {
+      const chosen = state.rag[i] || "";
+      ragHtml += "<div class=\"rag-row\" data-rag=\"" + i + "\"><span>" + item + "</span><span class=\"rag-btns\">";
+      ["r", "a", "g"].forEach(function (level) {
+        const titles = { r: "Not yet", a: "With help", g: "On my own" };
+        const title = titles[level];
+        ragHtml += "<button type=\"button\" class=\"rag " + level + pick(chosen === level, " on", "") + "\" data-level=\"" + level + "\" title=\"" + title + "\" aria-label=\"" + title + "\"></button>";
+      });
+      ragHtml += "</span></div>";
+    });
+    ragHtml += "</div></div>";
+    const rag = el(ragHtml);
+    body.appendChild(rag);
+    rag.querySelectorAll(".rag-row").forEach(function (row) {
+      const i = row.getAttribute("data-rag");
+      row.querySelectorAll(".rag").forEach(function (button) {
+        button.addEventListener("click", function () {
+          state.rag[i] = button.getAttribute("data-level");
+          saveState();
+          row.querySelectorAll(".rag").forEach(function (other) {
+            other.classList.toggle("on", other === button);
+          });
+        });
+      });
+    });
+  });
+  /* ===================================================================
+     Boot
+     =================================================================== */
+
+  function buildPage() {
+    const container = document.getElementById("steps");
+    const rail = document.getElementById("rail");
+    container.innerHTML = "";
+    rail.innerHTML = "";
+    stepElements.length = 0;
+    Object.keys(stepChecks).forEach(function (key) { delete stepChecks[key]; });
+
+    steps.forEach(function (step, index) {
+      const article = stepShell(index, step.title);
+      container.appendChild(article);
+      stepElements.push(article);
+      step.build(article.querySelector(".step-body"), index);
+
+      const item = document.createElement("li");
+      item.innerHTML = "<a href=\"#step-" + (index + 1) + "\"><span class=\"n\">" + (index + 1) + "</span>" + step.title + "</a>";
+      rail.appendChild(item);
+    });
+
+    // Wrap refreshSteps so the summary's score follows along
+    refreshSteps();
+    document.dispatchEvent(new Event("dt-progress"));
+  }
+
+  const originalRefresh = refreshSteps;
+  refreshSteps = function () {
+    originalRefresh();
+    document.dispatchEvent(new Event("dt-progress"));
+  };
+
+  document.getElementById("btn-unlock").addEventListener("click", function () {
+    state.unlockedAll = !state.unlockedAll;
+    saveState();
+    document.getElementById("btn-unlock").textContent = pick(state.unlockedAll, "Teacher: lock steps again", "Teacher: unlock every step");
+    refreshSteps();
+  });
+
+  document.getElementById("btn-reset").addEventListener("click", function () {
+    state = { done: {}, checks: {}, unlockedAll: false, rag: {} };
+    saveState();
+    buildPage();
+    window.scrollTo({ top: 0 });
+  });
+
+  if (state.unlockedAll) {
+    document.getElementById("btn-unlock").textContent = "Teacher: lock steps again";
+  }
+
+  buildPage();
+}());
+</script>
+</body>
+</html>

@@ -8,10 +8,13 @@ Static site served from `main` via GitHub Pages.
 - `pedagogy.html` — "On the design of these tools" subpage with lightbox + hotspots
 - `tools.json` — **single source of truth** for both pages. Both fetch this on load and build their content from it. The `_instructions` block at the top documents every field.
 - `images/` — screenshots referenced by filename in `tools.json`
+- `lessons/` — self-paced animated "Cover Lessons" (`distance-time-graphs/`, `reflection-refraction-tir/`), each a single `index.html`; `lessons/vendor/` is the shared self-hosted KaTeX. Built with the `animated-physics-lesson` skill from the artifact pages: the artifact HTML is wrapped in doctype/head/body and `vendor/` paths become `../vendor/`. Edit the source lesson and re-wrap rather than editing the copy here.
 - `annotate.html` — local-only authoring tool (NOT committed; see "Authoring annotations" below)
 - `.claude/launch.json` — local-only, used by Claude Preview tooling. Don't commit.
 
 To add or change a tool: edit only `tools.json`. No HTML changes needed.
+
+Sections (`section` field): `simulations` (§ 01), `lessons` (§ 02 "Cover Lessons"), `tools` (§ 03). Both pages have a grid/entry-list per section; card numbers run across all three in DOM order.
 
 ## Pedagogy lightbox + hotspots
 
@@ -86,3 +89,9 @@ Big session — built out the entire pedagogy hotspot system end-to-end.
 - **iPad/iOS Safari hardening pass** on the lightbox (see "iPad presentation notes").
 - **Entry image sizing fix** — replaced cropping with JS aspect-fit (see "Entry image sizing").
 - **Lede copy iterated**: now mentions cognitive-load minimisation + iPad/handwriting-first design priority.
+
+### 2026-11-02 (Fable 5.1)
+
+- Added **Cover Lessons** section (§ 02) to `index.html` and `pedagogy.html`; Tools renumbered § 03. `tools.json` `section` now accepts `lessons`; pedagogy kicker labels them "Lesson".
+- Added `lessons/distance-time-graphs/` (KS3) and `lessons/reflection-refraction-tir/` (GCSE 5.1P) with shared `lessons/vendor/` KaTeX, plus `images/distance-time-lesson.png` and `images/optics-lesson.png`.
+

@@ -1,0 +1,3079 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A self-paced KS3 lesson on distance–time graphs: a car drives along a road while a pen records the graph live, with checks for understanding after every step. By Joshua Stafford-Haworth.">
+<title>Distance–Time Graphs</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../vendor/katex.min.css">
+<style>
+/* =====================================================================
+   Distance–Time Graphs — a KS3 lesson with motion
+   Layout: one reading column; each step is a figure (road beside graph)
+   with its explanation underneath and its check at the bottom.
+   ===================================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* colour: cool paper, slate ink, one signal red for the moving things */
+  --bg: #f4f6f9;
+  --bg-2: #e9edf3;
+  --surface: #ffffff;
+  --ink: #15243b;
+  --ink-2: #4a5873;
+  --ink-3: #8390a8;
+  --rule: #c9d1de;
+  --rule-soft: #e1e6ee;
+  --accent: #d93a2b;
+  --accent-ink: #b32b1e;
+  --accent-soft: #fbe9e6;
+  --second: #2456a6;
+  --second-soft: #e4ecfa;
+  --ok: #1f7a4d;
+  --ok-soft: #e3f3ea;
+  --warn: #9a6200;
+  --warn-soft: #fbf1dc;
+  --road: #d8dde6;
+  --road-line: #ffffff;
+
+  /* type */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 66ch;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111a2b;
+    --bg-2: #18233a;
+    --surface: #1b2740;
+    --ink: #e8edf6;
+    --ink-2: #b7c2d8;
+    --ink-3: #7f8caa;
+    --rule: #3b4a68;
+    --rule-soft: #2a3652;
+    --accent: #ff7a66;
+    --accent-ink: #ffa394;
+    --accent-soft: #3a2626;
+    --second: #8db3ff;
+    --second-soft: #22304f;
+    --ok: #6fd39a;
+    --ok-soft: #1d3a2b;
+    --warn: #ffcf6b;
+    --warn-soft: #3a3020;
+    --road: #2b3650;
+    --road-line: #7f8caa;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #111a2b;
+  --bg-2: #18233a;
+  --surface: #1b2740;
+  --ink: #e8edf6;
+  --ink-2: #b7c2d8;
+  --ink-3: #7f8caa;
+  --rule: #3b4a68;
+  --rule-soft: #2a3652;
+  --accent: #ff7a66;
+  --accent-ink: #ffa394;
+  --accent-soft: #3a2626;
+  --second: #8db3ff;
+  --second-soft: #22304f;
+  --ok: #6fd39a;
+  --ok-soft: #1d3a2b;
+  --warn: #ffcf6b;
+  --warn-soft: #3a3020;
+  --road: #2b3650;
+  --road-line: #7f8caa;
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  padding-block: 0 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+h1, h2, h3, h4 { margin: 0; line-height: 1.1; text-wrap: balance; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+[hidden] { display: none !important; }
+
+.wrap { max-width: 880px; margin: 0 auto; }
+
+/* ---------- Header ---------- */
+.masthead {
+  padding-block: 40px 20px;
+  display: grid;
+  gap: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead .eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  letter-spacing: -0.02em;
+}
+
+.masthead .lede {
+  max-width: var(--measure);
+  color: var(--ink-2);
+  font-size: 1.12rem;
+}
+
+.masthead .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  font-size: 0.92rem;
+  color: var(--ink-3);
+}
+
+.linkish {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--ink-2);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+
+/* ---------- Progress rail ---------- */
+.rail {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--bg);
+  padding-block: 10px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--bg);
+}
+
+.rail ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.rail ol::-webkit-scrollbar { display: none; }
+
+.rail li {
+  flex: 0 0 auto;
+}
+
+.rail a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  border: 1px solid var(--rule-soft);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink-2);
+  font-size: 0.84rem;
+  white-space: nowrap;
+  background: var(--surface);
+}
+
+.rail a .n {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--bg-2);
+  color: var(--ink-3);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.rail a.done { color: var(--ok); border-color: var(--ok); }
+.rail a.done .n { background: var(--ok); color: var(--surface); }
+.rail a.locked { color: var(--ink-3); }
+.rail a.current { border-color: var(--ink); color: var(--ink); }
+
+/* ---------- Steps ---------- */
+.steps { display: grid; gap: 28px; margin-top: 28px; }
+
+.step {
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  scroll-margin-top: 70px;
+}
+
+.step-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: baseline;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.step-head .n {
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+  font-size: 0.95rem;
+}
+
+.step-head h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-variation-settings: "opsz" 40;
+  font-size: 1.55rem;
+  letter-spacing: -0.01em;
+}
+
+.step-head .status {
+  font-size: 0.82rem;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.step.done .step-head .status { color: var(--ok); font-weight: 600; }
+
+.step-body {
+  padding: 20px 22px 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.step.locked .step-body { display: none; }
+
+.step.locked .step-head { border-bottom: 0; opacity: 0.6; }
+
+.prose {
+  max-width: var(--measure);
+  display: grid;
+  gap: 10px;
+}
+
+.prose b { color: var(--ink); }
+.prose .katex { font-size: 1.05em; }
+
+.callout {
+  max-width: var(--measure);
+  padding: 12px 16px;
+  border-left: 3px solid var(--second);
+  background: var(--second-soft);
+  font-size: 0.98rem;
+}
+
+.callout.key { border-color: var(--accent); background: var(--accent-soft); }
+
+/* ---------- Figure: road + graph ---------- */
+.figure {
+  display: grid;
+  gap: 10px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--rule-soft);
+  background: var(--bg);
+}
+
+.figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.figure svg text { fill: var(--ink-2); }
+.figure .road { fill: var(--road); }
+.figure .road-line { stroke: var(--road-line); stroke-width: 2; stroke-dasharray: 8 8; fill: none; }
+.figure .road-edge { stroke: var(--rule); stroke-width: 1; fill: none; }
+.figure .grid line { stroke: var(--rule-soft); stroke-width: 1; }
+.figure .grid-x line { stroke: var(--rule-soft); stroke-width: 1; stroke-dasharray: 2 4; }
+.figure .axis line { stroke: var(--ink); stroke-width: 1.5; }
+.figure .axis-title { font-weight: 600; fill: var(--ink); }
+.figure .trace { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.figure .trace.second { stroke: var(--second); }
+.figure .trace.target { stroke: var(--ink-3); stroke-dasharray: 6 5; stroke-width: 2; }
+.figure .trace.static { stroke: var(--ink); }
+.figure .proj { stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 4 4; fill: none; opacity: 0.8; }
+.figure .pen { fill: var(--accent); }
+.figure .pentool .barrel { fill: var(--accent); }
+.figure .pentool .cap { fill: var(--ink); }
+.figure .pentool .band { fill: var(--ink-3); }
+.figure .pentool .nib { fill: var(--ink); }
+.figure .pentool.second .barrel { fill: var(--second); }
+.figure .pen-ring { fill: none; stroke: var(--accent); stroke-width: 1.5; opacity: 0.5; }
+.figure .car .body { fill: var(--accent); }
+.figure .car.second .body { fill: var(--second); }
+.figure .car .glass { fill: var(--surface); opacity: 0.85; }
+.figure .dot { fill: var(--ink); opacity: 0.75; }
+.figure .dot.second { fill: var(--second); }
+.figure .home { font-weight: 600; fill: var(--ink); }
+.figure .tri { fill: none; stroke: var(--second); stroke-width: 2; }
+.figure .tri-label { fill: var(--second); font-weight: 600; font-style: italic; }
+.figure .seg { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; pointer-events: none; }
+.figure .seg-hit { fill: none; stroke: transparent; stroke-width: 22; cursor: pointer; }
+.figure .seg.picked-wrong { stroke: var(--accent); }
+.figure .seg.picked-right { stroke: var(--ok); stroke-width: 4; }
+.figure .line-label { font-weight: 700; font-size: 14px; fill: var(--ink); }
+.figure .stage-label { font-weight: 600; fill: var(--ink-3); }
+.figure svg.can-draw { cursor: crosshair; touch-action: manipulation; }
+.figure .g-user .cross { fill: none; stroke: var(--accent-ink); stroke-width: 2.2; stroke-linecap: round; }
+.figure .g-user .planned { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 3 4; opacity: 0.7; stroke-linejoin: round; }
+.figure .g-user .pt-label { font-size: 11px; font-weight: 600; fill: var(--accent-ink); }
+.draw-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.draw-tools .note { font-size: 0.9rem; color: var(--ink-2); }
+.draw-btns { display: inline-flex; gap: 6px; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.controls .readouts {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls .readouts b { color: var(--accent-ink); font-weight: 500; }
+
+/* ---------- Teacher pointer and speech bubble (pauses in the animation) ---------- */
+.figure { position: relative; }
+
+/* The chalk ring that glides from one thing to the next */
+.figure .pointer {
+  transition: transform 520ms var(--ease);
+}
+
+.figure .pointer ellipse {
+  fill: none;
+  stroke: var(--second);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  /* dasharray and dashoffset are set to the ring's real length in script */
+  transition: rx 400ms var(--ease), ry 400ms var(--ease);
+}
+
+.figure .pointer.drawn ellipse {
+  animation: chalk 700ms var(--ease) forwards;
+}
+
+@keyframes chalk {
+  to { stroke-dashoffset: 0; }
+}
+
+/* A highlighted stretch of the line, drawn on like chalk over the trace */
+.figure .hl-seg {
+  fill: none;
+  stroke: var(--second);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.55;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: chalk-seg 900ms var(--ease) forwards;
+}
+
+@keyframes chalk-seg {
+  to { stroke-dashoffset: 0; }
+}
+
+/* The speech bubble, placed next to whatever the ring is around */
+.bubble {
+  position: absolute;
+  z-index: 3;
+  width: min(270px, 52%);
+  padding: 12px 14px 10px;
+  border: 1.5px solid var(--second);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 14px 34px -18px rgba(20, 30, 60, 0.45);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  transform-origin: var(--tail-x, 0) var(--tail-y, 0);
+  animation: bubble-in 320ms var(--ease) both;
+}
+
+.bubble.leaving { animation: bubble-out 180ms var(--ease) both; }
+
+@keyframes bubble-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bubble-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.9); }
+}
+
+/* The tail: a small rotated square on the edge nearest the target */
+.bubble::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--surface);
+  border-left: 1.5px solid var(--second);
+  border-bottom: 1.5px solid var(--second);
+  transform: rotate(45deg);
+}
+
+.bubble.tail-left::before { left: -8px; top: var(--tail-at, 18px); }
+.bubble.tail-right::before { right: -8px; top: var(--tail-at, 18px); transform: rotate(-135deg); }
+.bubble.tail-top::before { top: -8px; left: var(--tail-at, 18px); transform: rotate(135deg); }
+.bubble.tail-bottom::before { bottom: -8px; left: var(--tail-at, 18px); transform: rotate(-45deg); }
+
+/* On a narrow screen the bubble sits under the graph instead of over it */
+.bubble.docked {
+  position: static;
+  width: auto;
+  margin-top: 4px;
+  animation: pause-in 320ms var(--ease) both;
+}
+
+.bubble.docked::before { display: none; }
+
+.bubble .say {
+  min-height: 1.5em;
+}
+
+.bubble .say mark { background: transparent; color: var(--accent-ink); font-weight: 600; }
+.bubble .say .word { opacity: 0; animation: word-in 160ms var(--ease) forwards; }
+
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bubble .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bubble .count {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-3);
+}
+
+.bubble .btn { padding: 6px 12px; font-size: 0.88rem; }
+
+@keyframes pause-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.figure .hl-point { fill: var(--surface); stroke: var(--second); stroke-width: 2.5; }
+.figure .hl-drop { stroke: var(--second); stroke-width: 1.4; stroke-dasharray: 4 3; fill: none; }
+.figure .hl-label { fill: var(--second); font-weight: 700; font-size: 13px; }
+.figure .hl-brace { stroke: var(--second); stroke-width: 2; fill: none; }
+.figure .hl-dim { font-weight: 600; fill: var(--second); font-size: 12px; }
+
+.scrub {
+  flex: 1 1 160px;
+  min-width: 120px;
+  accent-color: var(--accent);
+}
+
+.slider-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+}
+
+.slider-row input[type="range"] { flex: 1 1 140px; accent-color: var(--second); }
+.slider-row output { font-family: var(--font-mono); color: var(--ink); min-width: 5ch; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 160ms var(--ease), background-color 160ms var(--ease), transform 160ms var(--ease);
+}
+
+.btn:hover { border-color: var(--ink); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.solid { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.btn.solid:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.quiet { border-color: transparent; color: var(--ink-2); background: transparent; }
+.btn.quiet:hover { background: var(--bg-2); color: var(--ink); }
+.btn.pressed { background: var(--bg-2); border-color: var(--ink); }
+.btn svg { width: 14px; height: 14px; }
+
+/* ---------- Checks ---------- */
+.check {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ok);
+  padding: 14px 18px 16px;
+  display: grid;
+  gap: 12px;
+  background: var(--bg);
+}
+
+.check .kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ok);
+}
+
+.check .q { font-size: 1.02rem; max-width: var(--measure); }
+
+.choices { display: grid; gap: 6px; max-width: 560px; }
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--surface);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms, background-color 160ms;
+}
+
+.choice:hover { border-color: var(--ink); }
+.choice .letter {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.choice.right { border-color: var(--ok); background: var(--ok-soft); }
+.choice.right .letter { background: var(--ok); border-color: var(--ok); color: #fff; }
+.choice.wrong { border-color: var(--accent); background: var(--accent-soft); }
+.choice:disabled { cursor: default; }
+.choice .mini { width: 92px; height: 56px; flex: 0 0 auto; }
+.choice .mini path { fill: none; stroke: var(--ink); stroke-width: 2; }
+.choice .mini .ax { stroke: var(--ink-3); stroke-width: 1; }
+
+.feedback {
+  min-height: 1.4em;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback:empty { display: none; }
+.feedback.ok { color: var(--ok); font-weight: 600; }
+.feedback.nudge { color: var(--warn); }
+.feedback.bad { color: var(--accent-ink); }
+
+.why {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 320ms var(--ease);
+}
+
+.why.open { grid-template-rows: 1fr; }
+.why > .inner { overflow: hidden; min-height: 0; }
+.why .box {
+  margin-top: 4px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--second);
+  background: var(--second-soft);
+  max-width: var(--measure);
+  font-size: 0.98rem;
+}
+
+.answer-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; }
+
+.answer-field {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: 1 1 200px;
+  max-width: 320px;
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 4px;
+}
+
+.answer-field input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 6px 2px;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+.answer-field input:focus { outline: none; }
+.answer-field .unit { color: var(--ink-2); white-space: nowrap; }
+
+.steps-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps-list li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  padding: 6px 0;
+  border-top: 1px dashed var(--rule-soft);
+}
+
+.steps-list li:first-child { border-top: 0; }
+.steps-list li::before { counter-increment: step; content: counter(step); font-size: 0.78rem; color: var(--ink-3); font-family: var(--font-mono); }
+.steps-list li.hidden-step { display: none; }
+.steps-list li.reveal { animation: step-in 420ms var(--ease) both; }
+.steps-list li b { color: var(--ink); }
+
+@keyframes step-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.continue-row { display: flex; justify-content: flex-end; }
+
+/* ---------- Journey builder ---------- */
+.builder { display: grid; gap: 10px; }
+
+.stage-list { display: grid; gap: 6px; }
+
+.stage-row {
+  display: grid;
+  grid-template-columns: 28px minmax(140px, 1fr) auto auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--rule-soft);
+  background: var(--surface);
+  font-size: 0.92rem;
+}
+
+.stage-row .n { font-family: var(--font-mono); color: var(--ink-3); }
+.stage-row select, .stage-row input[type="number"] {
+  padding: 5px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+.stage-row input[type="number"] { width: 5.5em; font-family: var(--font-mono); }
+.stage-row label { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); white-space: nowrap; }
+.stage-row .remove { padding: 4px 8px; }
+
+.builder-note { font-size: 0.9rem; color: var(--warn); min-height: 1.3em; }
+
+/* ---------- Summary ---------- */
+.shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+
+.shape {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--rule-soft);
+  background: var(--surface);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.shape svg { width: 100%; height: auto; }
+.shape svg path { fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
+.shape svg .ax { stroke: var(--ink-3); stroke-width: 1; }
+.shape b { color: var(--ink); }
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  align-items: baseline;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+}
+
+.score .big { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.score .lbl { color: var(--ink-2); font-size: 0.95rem; }
+
+.rag-list { display: grid; border: 1px solid var(--rule-soft); background: var(--surface); }
+.rag-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 0.95rem;
+}
+.rag-row:first-child { border-top: 0; }
+.rag-btns { display: inline-flex; gap: 6px; }
+.rag { width: 30px; height: 30px; border-radius: 999px; border: 1.5px solid var(--rule); background: transparent; cursor: pointer; transition: transform 160ms var(--ease); }
+.rag:hover { transform: scale(1.1); }
+.rag.r { border-color: #d2422f; } .rag.a { border-color: #d9930c; } .rag.g { border-color: #1f7a4d; }
+.rag.r.on { background: #d2422f; } .rag.a.on { background: #d9930c; } .rag.g.on { background: #1f7a4d; }
+
+.site-foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule-soft); font-size: 0.86rem; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .step-head { grid-template-columns: auto 1fr; padding: 14px 16px; }
+  .step-head .status { grid-column: 2; }
+  .step-body { padding: 16px 16px 20px; }
+  .controls .readouts { margin-left: 0; width: 100%; }
+  .stage-row { grid-template-columns: 28px 1fr; }
+  .stage-row .remove { justify-self: end; }
+  .rag-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============================================================ -->
+<header class="masthead">
+  <p class="eyebrow">Key Stage 3 · P3 Motion · Lessons 6–7</p>
+  <h1>Distance–time graphs</h1>
+  <p class="lede">A distance–time graph is not a picture of the road. It is a <b>recording</b> of a journey, drawn by a pen that moves to the right as time passes and moves up as the car gets further from home. Watch one being drawn, then learn to read one yourself.</p>
+  <div class="meta">
+    <span>8 steps · about 25 minutes</span>
+    <span>Each step unlocks when you pass its check</span>
+    <button class="linkish" id="btn-unlock" type="button">Teacher: unlock every step</button>
+    <button class="linkish" id="btn-reset" type="button">Start again</button>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Lesson steps">
+  <ol id="rail"></ol>
+</nav>
+
+<div class="steps" id="steps"></div>
+
+<footer class="site-foot">
+  <span>Distance–time graphs · KS3 lesson</span>
+  <span>Joshua Stafford-Haworth, JSHPhysics</span>
+</footer>
+
+</div>
+
+<script src="../vendor/katex.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ===================================================================
+     House rules for the lesson's writing and animation
+     (codified from the author's corrections — apply to every step)
+
+     1. Checks are written for a child: no coordinate notation, no jargon
+        ("part" not "stage", "not moving" not "stationary" in options);
+        say where things are in words; nudges say what to look at.
+     2. A point is always stated the same way: "This point is at 5
+        seconds, and 25 metres."
+     3. No introductions of things that need none; go straight to the
+        point being made.
+     4. Scales serve the points: choose dStep so every number a beat
+        mentions sits on a labelled gridline.
+     5. The teacher points, then speaks: one thing ringed per beat, one
+        sentence, words arriving at reading pace. Nothing is dumped in a
+        block under the figure.
+     6. First play introduces the graph before anything moves (an at: 0
+        pause): what to watch for in this journey.
+     7. Rules are stated as rules, about "the object" on "a distance–time
+        graph", with the key term in <b>bold</b> — not as a remark about
+        this particular car.
+     8. "Distance travelled", never "distance from home", on axes and in
+        explanations.
+     9. The road stands to the right of the graph so the pen-to-car link
+        never crosses an axis; rings draw fully; playback is 2× by default.
+     =================================================================== */
+
+  /* ===================================================================
+     Geometry shared by every figure
+     The road stands beside the y-axis so that the car's height on the
+     road is the pen's height on the graph.
+     =================================================================== */
+
+  const VIEW_W = 640;
+  const VIEW_H = 360;
+  // The graph sits on the left; the road stands to its right, so the dotted
+  // link from the pen to the car crosses the empty part of the plot
+  const PLOT_LEFT = 64;
+  const PLOT_RIGHT = 496;
+  const TAPE_X = 516;         // where the ticker-tape dots start (they drift right with time)
+  const ROAD_X = 584;         // centre line of the road
+  const ROAD_HALF = 16;       // half the road's width
+  const PLOT_TOP = 36;
+  const PLOT_BOTTOM = 300;
+
+  // Pixel x for a time
+  function scaleX(time, tMax) {
+    return PLOT_LEFT + (time / tMax) * (PLOT_RIGHT - PLOT_LEFT);
+  }
+
+  // Pixel y for a distance (shared by the road and the graph)
+  function scaleY(distance, dMax) {
+    return PLOT_BOTTOM - (distance / dMax) * (PLOT_BOTTOM - PLOT_TOP);
+  }
+
+  function fmt(number, decimals) {
+    return Number(number).toFixed(decimals);
+  }
+
+  // Pick one of two values without a ternary, so the choice reads as a sentence
+  function pick(condition, whenTrue, whenFalse) {
+    if (condition) {
+      return whenTrue;
+    }
+    return whenFalse;
+  }
+
+  // The HTML for a feedback line, filled in when the check has already been passed
+  function feedbackHtml(already) {
+    if (already) {
+      return "<div class=\"feedback ok\" data-feedback>" + tickIcon() + "Correct</div>";
+    }
+    return "<div class=\"feedback\" data-feedback></div>";
+  }
+
+  // Smooth scrolling unless the viewer prefers reduced motion
+  function scrollBehaviour() {
+    if (reducedMotion) {
+      return "auto";
+    }
+    return "smooth";
+  }
+
+  function clamp(value, low, high) {
+    if (value < low) {
+      return low;
+    }
+    if (value > high) {
+      return high;
+    }
+    return value;
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ===================================================================
+     Journeys
+     A journey is a list of stages. Each stage lasts `t` seconds:
+       { kind: "go",    v: 5, t: 10 }   drive north at v m/s
+       { kind: "stop",        t: 5  }   stay still
+       { kind: "back",  v: 5, t: 10 }   drive back towards home at v m/s
+       { kind: "accel", u: 0, a: 0.5, t: 10 }   start at u m/s, change by a m/s each second
+     buildJourney turns that into a position function clamped to the road.
+     =================================================================== */
+
+  function buildJourney(stages, dMax) {
+    const segments = [];
+    let time = 0;
+    let distance = 0;
+
+    stages.forEach(function (stage) {
+      const segment = {
+        kind: stage.kind,
+        t0: time,
+        t1: time + stage.t,
+        d0: distance,
+        v: stage.v || 0,
+        u: stage.u || 0,
+        a: stage.a || 0,
+      };
+      segments.push(segment);
+      time = segment.t1;
+      distance = clamp(rawPosition(segment, segment.t1), 0, dMax);
+      segment.d1 = distance;
+    });
+
+    function rawPosition(segment, t) {
+      const elapsed = t - segment.t0;
+      if (segment.kind === "go") {
+        return segment.d0 + segment.v * elapsed;
+      }
+      if (segment.kind === "back") {
+        return segment.d0 - segment.v * elapsed;
+      }
+      if (segment.kind === "accel") {
+        return segment.d0 + segment.u * elapsed + 0.5 * segment.a * elapsed * elapsed;
+      }
+      return segment.d0;
+    }
+
+    function position(t) {
+      if (segments.length === 0) {
+        return 0;
+      }
+      if (t <= 0) {
+        return 0;
+      }
+      for (const segment of segments) {
+        if (t <= segment.t1) {
+          return clamp(rawPosition(segment, t), 0, dMax);
+        }
+      }
+      return segments[segments.length - 1].d1;
+    }
+
+    return {
+      segments: segments,
+      tEnd: time,
+      position: position,
+    };
+  }
+
+  // The SVG path of a journey from time 0 up to `until`
+  function tracePath(journey, until, tMax, dMax) {
+    const step = 0.1;
+    let d = "";
+    let t = 0;
+    while (t < until) {
+      d += pick(t === 0, "M", "L") + fmt(scaleX(t, tMax), 1) + "," + fmt(scaleY(journey.position(t), dMax), 1);
+      t += step;
+    }
+    const last = Math.min(until, journey.tEnd);
+    d += pick(d === "", "M", "L") + fmt(scaleX(last, tMax), 1) + "," + fmt(scaleY(journey.position(last), dMax), 1);
+    return d;
+  }
+
+  /* ===================================================================
+     Figure: road + graph, with optional animation
+     =================================================================== */
+
+  function figureSvg(options) {
+    const tMax = options.tMax;
+    const dMax = options.dMax;
+    const dStep = options.dStep || 20;
+    const tStep = options.tStep || 5;
+
+    let svg = "";
+    svg += "<svg viewBox=\"0 0 " + VIEW_W + " " + VIEW_H + "\" role=\"img\" aria-label=\"" + (options.alt || "A road beside a distance–time graph") + "\">";
+
+    // Shared horizontal gridlines run from the road to the graph, so the
+    // eye can carry a distance across
+    svg += "<g class=\"grid\">";
+    for (let d = 0; d <= dMax; d += dStep) {
+      const y = fmt(scaleY(d, dMax), 1);
+      let gridEnd = PLOT_RIGHT;
+      if (options.road !== false) {
+        gridEnd = ROAD_X - ROAD_HALF - 4;
+      }
+      svg += "<line x1=\"" + PLOT_LEFT + "\" y1=\"" + y + "\" x2=\"" + gridEnd + "\" y2=\"" + y + "\"/>";
+    }
+    svg += "</g>";
+    svg += "<g class=\"grid-x\">";
+    for (let t = tStep; t <= tMax; t += tStep) {
+      const x = fmt(scaleX(t, tMax), 1);
+      svg += "<line x1=\"" + x + "\" y1=\"" + PLOT_TOP + "\" x2=\"" + x + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+    }
+    svg += "</g>";
+
+    // The road (map view: home at the bottom, north at the top)
+    if (options.road !== false) {
+      svg += "<rect class=\"road\" x=\"" + (ROAD_X - ROAD_HALF) + "\" y=\"" + (PLOT_TOP - 14) + "\" width=\"" + (ROAD_HALF * 2) + "\" height=\"" + (PLOT_BOTTOM - PLOT_TOP + 24) + "\" rx=\"4\"/>";
+      svg += "<line class=\"road-line\" x1=\"" + ROAD_X + "\" y1=\"" + (PLOT_TOP - 8) + "\" x2=\"" + ROAD_X + "\" y2=\"" + (PLOT_BOTTOM + 6) + "\"/>";
+      svg += "<text class=\"home\" x=\"" + ROAD_X + "\" y=\"" + (PLOT_BOTTOM + 24) + "\" text-anchor=\"middle\">home</text>";
+      svg += "<text x=\"" + ROAD_X + "\" y=\"" + (PLOT_TOP - 20) + "\" text-anchor=\"middle\">north ↑</text>";
+      // Distance markers on the road's left edge
+      for (let d = 0; d <= dMax; d += dStep) {
+        svg += "<text x=\"" + (ROAD_X + ROAD_HALF + 6) + "\" y=\"" + fmt(scaleY(d, dMax) + 4, 1) + "\" text-anchor=\"start\" font-size=\"11\">" + d + "</text>";
+      }
+      svg += "<g class=\"dots\" data-dots></g>";
+      svg += "<g class=\"dots second\" data-dots2></g>";
+    }
+
+    // Axes and tick labels
+    svg += "<g class=\"axis\">";
+    svg += "<line x1=\"" + PLOT_LEFT + "\" y1=\"" + PLOT_TOP + "\" x2=\"" + PLOT_LEFT + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+    svg += "<line x1=\"" + PLOT_LEFT + "\" y1=\"" + PLOT_BOTTOM + "\" x2=\"" + PLOT_RIGHT + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+    svg += "</g>";
+    for (let d = 0; d <= dMax; d += dStep) {
+      svg += "<text x=\"" + (PLOT_LEFT - 8) + "\" y=\"" + fmt(scaleY(d, dMax) + 4, 1) + "\" text-anchor=\"end\">" + d + "</text>";
+    }
+    for (let t = 0; t <= tMax; t += tStep) {
+      svg += "<text x=\"" + fmt(scaleX(t, tMax), 1) + "\" y=\"" + (PLOT_BOTTOM + 18) + "\" text-anchor=\"middle\">" + t + "</text>";
+    }
+    svg += "<text class=\"axis-title\" x=\"" + ((PLOT_LEFT + PLOT_RIGHT) / 2) + "\" y=\"" + (PLOT_BOTTOM + 40) + "\" text-anchor=\"middle\">Time (s)</text>";
+    svg += "<text class=\"axis-title\" transform=\"translate(" + (PLOT_LEFT - 36) + " " + ((PLOT_TOP + PLOT_BOTTOM) / 2) + ") rotate(-90)\" text-anchor=\"middle\">Distance travelled (m)</text>";
+
+    // Layers that the animation updates
+    svg += "<g data-static></g>";
+    svg += "<path class=\"trace target\" data-target d=\"\"/>";
+    svg += "<path class=\"trace second\" data-trace2 d=\"\"/>";
+    svg += "<path class=\"trace\" data-trace d=\"\"/>";
+    svg += "<g data-overlay></g>";
+    svg += "<g class=\"pointer\" data-pointer transform=\"translate(-200 -200)\"><ellipse cx=\"0\" cy=\"0\" rx=\"16\" ry=\"16\"/></g>";
+    svg += "<line class=\"proj\" data-proj x1=\"0\" y1=\"0\" x2=\"0\" y2=\"0\"/>";
+    svg += "<line class=\"proj\" data-proj2 x1=\"0\" y1=\"0\" x2=\"0\" y2=\"0\" style=\"stroke: var(--second)\"/>";
+    svg += carSvg("car second", "data-car2");
+    svg += carSvg("car", "data-car");
+    svg += "<circle class=\"pen-ring\" data-penring cx=\"0\" cy=\"0\" r=\"9\"/>";
+    svg += penSvg("pentool second", "data-pentool2");
+    svg += penSvg("pentool", "data-pentool");
+    svg += "<circle class=\"pen\" data-pen cx=\"0\" cy=\"0\" r=\"4.5\"/>";
+    svg += "<circle class=\"pen\" data-pen2 cx=\"0\" cy=\"0\" r=\"4.5\" style=\"fill: var(--second)\"/>";
+    svg += "</svg>";
+    return svg;
+  }
+
+  // A pen held at an angle, with its nib at (0, 0) so it writes on the line
+  function penSvg(className, attr) {
+    return "<g class=\"" + className + "\" " + attr + " transform=\"translate(-100 -100)\">" +
+      "<g transform=\"rotate(-38)\">" +
+      "<polygon class=\"nib\" points=\"0,0 -5,-13 5,-13\"/>" +
+      "<rect class=\"band\" x=\"-5.5\" y=\"-17\" width=\"11\" height=\"5\"/>" +
+      "<rect class=\"barrel\" x=\"-5\" y=\"-56\" width=\"10\" height=\"40\" rx=\"2\"/>" +
+      "<rect class=\"cap\" x=\"-5\" y=\"-62\" width=\"10\" height=\"7\" rx=\"2.5\"/>" +
+      "</g></g>";
+  }
+
+  // A small top-down car, pointing north
+  function carSvg(className, attr) {
+    return "<g class=\"" + className + "\" " + attr + " transform=\"translate(-100 -100)\">" +
+      "<rect class=\"body\" x=\"-9\" y=\"-16\" width=\"18\" height=\"32\" rx=\"5\"/>" +
+      "<rect class=\"glass\" x=\"-6\" y=\"-9\" width=\"12\" height=\"7\" rx=\"2\"/>" +
+      "<rect class=\"glass\" x=\"-6\" y=\"5\" width=\"12\" height=\"5\" rx=\"2\"/>" +
+      "</g>";
+  }
+
+  // A highlighted point on the graph with dashed drops to both axes and a label
+  function highlightPoint(t, d, tMax, dMax, label, labelSide) {
+    const px = scaleX(t, tMax);
+    const py = scaleY(d, dMax);
+    let svg = "";
+    svg += "<line class=\"hl-drop\" x1=\"" + fmt(px, 1) + "\" y1=\"" + fmt(py, 1) + "\" x2=\"" + fmt(px, 1) + "\" y2=\"" + PLOT_BOTTOM + "\"/>";
+    svg += "<line class=\"hl-drop\" x1=\"" + PLOT_LEFT + "\" y1=\"" + fmt(py, 1) + "\" x2=\"" + fmt(px, 1) + "\" y2=\"" + fmt(py, 1) + "\"/>";
+    svg += "<circle class=\"hl-point\" cx=\"" + fmt(px, 1) + "\" cy=\"" + fmt(py, 1) + "\" r=\"5\"/>";
+    let anchor = "start";
+    let dx = 10;
+    if (labelSide === "left") {
+      anchor = "end";
+      dx = -10;
+    }
+    svg += "<text class=\"hl-label\" x=\"" + fmt(px + dx, 1) + "\" y=\"" + fmt(py - 8, 1) + "\" text-anchor=\"" + anchor + "\">" + escapeHtml(label) + "</text>";
+    return svg;
+  }
+
+  // A labelled horizontal span under the axis, e.g. "time doubles"
+  function spanLabel(t0, t1, tMax, text, yOffset) {
+    const x0 = scaleX(t0, tMax);
+    const x1 = scaleX(t1, tMax);
+    const y = PLOT_BOTTOM + (yOffset || 0);
+    return "<text class=\"hl-dim\" x=\"" + fmt((x0 + x1) / 2, 1) + "\" y=\"" + fmt(y, 1) + "\" text-anchor=\"middle\">" + escapeHtml(text) + "</text>";
+  }
+
+  /*
+   * A Demo owns one figure and one clock. Options:
+   *   journey   the main (red) journey
+   *   journey2  an optional second (blue) journey, e.g. a race
+   *   tMax, dMax
+   *   dots      drop a ticker-tape dot every second (default true)
+   *   readouts  show t and d (default true)
+   *   onFrame   callback(t) for extra drawing
+   */
+  function makeDemo(container, options) {
+    const tMax = options.tMax;
+    const dMax = options.dMax;
+    let journey = options.journey;
+    let journey2 = options.journey2 || null;
+    let time = 0;
+    let playing = false;
+    // Playback speed: journeys are shown at double speed by default, because
+    // waiting 20 real seconds is a long time in a lesson. Tapping the button
+    // cycles 2× → 4× → 1× so a student can slow it down or hurry it along.
+    const RATES = [2, 4, 1];
+    let rate = RATES[0];
+    let lastStamp = null;
+    let frameHandle = null;
+
+    // Pause points: { at: seconds, html: string or function(t), marks: function(t) → svg }
+    // Each one fires once per run, only while playing (not while dragging the slider)
+    const pauses = options.pauses || [];
+    let firedPauses = [];
+
+    container.classList.add("figure");
+    container.innerHTML = figureSvg(options) + controlsHtml();
+
+    const svg = container.querySelector("svg");
+    const trace = svg.querySelector("[data-trace]");
+    const trace2 = svg.querySelector("[data-trace2]");
+    const car = svg.querySelector("[data-car]");
+    const car2 = svg.querySelector("[data-car2]");
+    const pen = svg.querySelector("[data-pen]");
+    const pen2 = svg.querySelector("[data-pen2]");
+    const penTool = svg.querySelector("[data-pentool]");
+    const penTool2 = svg.querySelector("[data-pentool2]");
+    const penRing = svg.querySelector("[data-penring]");
+    const proj = svg.querySelector("[data-proj]");
+    const proj2 = svg.querySelector("[data-proj2]");
+    const dots = svg.querySelector("[data-dots]");
+    const dots2 = svg.querySelector("[data-dots2]");
+    const playButton = container.querySelector("[data-play]");
+    const restartButton = container.querySelector("[data-restart]");
+    const rateButton = container.querySelector("[data-rate]");
+    const scrub = container.querySelector("[data-scrub]");
+    const readT = container.querySelector("[data-read-t]");
+    const readD = container.querySelector("[data-read-d]");
+    const overlay = svg.querySelector("[data-overlay]");
+
+    scrub.max = String(tMax);
+
+    // ---- Teacher pauses: a ring glides to each thing in turn, with a bubble ----
+    const pointer = svg.querySelector("[data-pointer]");
+    const pointerRing = pointer.querySelector("ellipse");
+    let bubble = null;
+    let activePause = null;
+    let beatIndex = 0;
+    let typingTimer = null;
+    let currentTarget = null;
+
+    // Where a beat's target is, in SVG units, plus how big the ring should be
+    function resolveTarget(target) {
+      const d = journey.position(time);
+      if (target === "pen") {
+        return { x: scaleX(time, tMax), y: scaleY(d, dMax), rx: 18, ry: 18 };
+      }
+      if (target === "pen2" && journey2) {
+        return { x: scaleX(time, tMax), y: scaleY(journey2.position(time), dMax), rx: 16, ry: 16 };
+      }
+      if (target === "car") {
+        return { x: ROAD_X, y: scaleY(d, dMax), rx: 20, ry: 26 };
+      }
+      if (target === "car2" && journey2) {
+        return { x: ROAD_X, y: scaleY(journey2.position(time), dMax), rx: 20, ry: 26 };
+      }
+      if (target.kind === "point") {
+        return { x: scaleX(target.t, tMax), y: scaleY(target.d, dMax), rx: 14, ry: 14 };
+      }
+      if (target.kind === "dots") {
+        // The ticker-tape dots between two times
+        const midT = (target.t0 + target.t1) / 2;
+        let which = journey;
+        if (target.second) {
+          which = journey2;
+        }
+        const x = TAPE_X + midT * (28 / Math.max(tMax, 1));
+        const yTop = scaleY(which.position(target.t1), dMax);
+        const yBottom = scaleY(which.position(target.t0), dMax);
+        return { x: x, y: (yTop + yBottom) / 2, rx: 16, ry: Math.max(18, (yBottom - yTop) / 2 + 10) };
+      }
+      if (target.kind === "segment") {
+        // A stretch of the line: ring its midpoint, and the mark highlights it
+        let which = journey;
+        if (target.second) {
+          which = journey2;
+        }
+        const midT = (target.t0 + target.t1) / 2;
+        const x0 = scaleX(target.t0, tMax);
+        const x1 = scaleX(target.t1, tMax);
+        const y0 = scaleY(which.position(target.t0), dMax);
+        const y1 = scaleY(which.position(target.t1), dMax);
+        // The chalk highlight along the line is the pointer here, so no ring
+        return { x: scaleX(midT, tMax), y: scaleY(which.position(midT), dMax), rx: 14, ry: 14, noRing: true, spanX: (x1 - x0) / 2, spanY: Math.abs(y1 - y0) / 2 };
+      }
+      if (target.kind === "xspan") {
+        const x0 = scaleX(target.t0, tMax);
+        const x1 = scaleX(target.t1, tMax);
+        return { x: (x0 + x1) / 2, y: PLOT_BOTTOM + 14, rx: (x1 - x0) / 2 + 10, ry: 14 };
+      }
+      if (target.kind === "yspan") {
+        const y0 = scaleY(target.d0, dMax);
+        const y1 = scaleY(target.d1, dMax);
+        return { x: PLOT_LEFT - 16, y: (y0 + y1) / 2, rx: 18, ry: (y0 - y1) / 2 + 10 };
+      }
+      return { x: target.x, y: target.y, rx: target.rx || 16, ry: target.ry || 16 };
+    }
+
+    // A chalk highlight over a stretch of the trace
+    function segmentMark(target) {
+      let which = journey;
+      if (target.second) {
+        which = journey2;
+      }
+      const step = 0.1;
+      let d = "";
+      let t = target.t0;
+      while (t < target.t1) {
+        d += pick(t === target.t0, "M", "L") + fmt(scaleX(t, tMax), 1) + "," + fmt(scaleY(which.position(t), dMax), 1);
+        t += step;
+      }
+      d += "L" + fmt(scaleX(target.t1, tMax), 1) + "," + fmt(scaleY(which.position(target.t1), dMax), 1);
+      return "<path class=\"hl-seg\" d=\"" + d + "\"/>";
+    }
+
+    function movePointer(spot) {
+      if (spot.noRing) {
+        hidePointer();
+        return;
+      }
+      pointer.setAttribute("transform", "translate(" + fmt(spot.x, 1) + " " + fmt(spot.y, 1) + ")");
+      pointerRing.setAttribute("rx", fmt(spot.rx, 1));
+      pointerRing.setAttribute("ry", fmt(spot.ry, 1));
+      // Restart the chalk draw-on, sized to this ring's actual length so a
+      // long ellipse (round an axis) draws all the way round
+      pointer.classList.remove("drawn");
+      // Ramanujan's estimate of the ellipse's perimeter, from the target
+      // radii (the ring is still mid-transition, so measuring it would be wrong)
+      const a = spot.rx;
+      const b = spot.ry;
+      const h = ((a - b) * (a - b)) / ((a + b) * (a + b));
+      const length = Math.PI * (a + b) * (1 + (3 * h) / (10 + Math.sqrt(4 - 3 * h))) + 4;
+      pointerRing.style.strokeDasharray = fmt(length, 1);
+      pointerRing.style.strokeDashoffset = fmt(length, 1);
+      void pointer.getBoundingClientRect();
+      pointer.classList.add("drawn");
+    }
+
+    function hidePointer() {
+      pointer.classList.remove("drawn");
+      pointer.setAttribute("transform", "translate(-200 -200)");
+    }
+
+    // Place the bubble beside the target, or dock it under the graph on a phone.
+    // Eight positions around the target are tried; the one that hides the
+    // least of what is drawn (the line so far, the marks, the road) wins.
+    function placeBubble(spot) {
+      const svgRect = svg.getBoundingClientRect();
+      const figRect = container.getBoundingClientRect();
+      const scale = svgRect.width / VIEW_W;
+      const narrow = svgRect.width < 520;
+      bubble.classList.remove("tail-left", "tail-right", "tail-top", "tail-bottom");
+      if (narrow) {
+        bubble.classList.add("docked");
+        svg.insertAdjacentElement("afterend", bubble);
+        return;
+      }
+      bubble.classList.remove("docked");
+      container.appendChild(bubble);
+
+      const offX = svgRect.left - figRect.left;
+      const offY = svgRect.top - figRect.top;
+      const px = offX + spot.x * scale;
+      const py = offY + spot.y * scale;
+      let rx = spot.rx * scale;
+      let ry = spot.ry * scale;
+      if (spot.noRing) {
+        // Keep clear of the whole highlighted stretch, not just its midpoint
+        rx = Math.max(rx, spot.spanX * scale);
+        ry = Math.max(ry, spot.spanY * scale);
+      }
+      const width = bubble.offsetWidth;
+      const height = bubble.offsetHeight;
+      const gap = 16;
+
+      // Things the bubble should not cover, as points in figure pixels
+      const avoid = [];
+      function addTrace(which, until) {
+        for (let t = 0; t <= until; t += 0.4) {
+          avoid.push([offX + scaleX(t, tMax) * scale, offY + scaleY(which.position(t), dMax) * scale]);
+        }
+      }
+      addTrace(journey, Math.min(time, tMax));
+      if (journey2) {
+        addTrace(journey2, Math.min(time, tMax));
+      }
+      // The road, its dots, and the y-axis title and tick labels
+      for (let y = PLOT_TOP; y <= PLOT_BOTTOM; y += 12) {
+        avoid.push([offX + ROAD_X * scale, offY + y * scale]);
+        avoid.push([offX + (TAPE_X + 14) * scale, offY + y * scale]);
+        avoid.push([offX + (PLOT_LEFT - 36) * scale, offY + y * scale]);
+        avoid.push([offX + (PLOT_LEFT - 16) * scale, offY + y * scale]);
+      }
+      // The "north" label above the road and the time-axis title below the plot
+      avoid.push([offX + ROAD_X * scale, offY + (PLOT_TOP - 20) * scale]);
+      for (let x = PLOT_LEFT; x <= PLOT_RIGHT; x += 40) {
+        avoid.push([offX + x * scale, offY + (PLOT_BOTTOM + 40) * scale]);
+        avoid.push([offX + x * scale, offY + (PLOT_BOTTOM + 16) * scale]);
+      }
+      // Marks and labels already on the overlay
+      // Labels matter most: sample each one's box densely so covering it costs a lot
+      overlay.querySelectorAll("circle, text").forEach(function (node) {
+        const box = node.getBoundingClientRect();
+        const xs = [box.left, box.left + box.width / 2, box.right];
+        const ys = [box.top, box.bottom];
+        xs.forEach(function (x) {
+          ys.forEach(function (y) {
+            avoid.push([x - figRect.left, y - figRect.top]);
+          });
+        });
+      });
+
+      // The "far" positions leave room for a point's own label beside it
+      const labelRoom = 78 * scale;
+      const candidates = [
+        { name: "right", left: px + rx + gap, top: py - 24, tail: "tail-left" },
+        { name: "left", left: px - rx - gap - width, top: py - 24, tail: "tail-right" },
+        { name: "right-mid", left: px + rx + gap, top: py - height / 2, tail: "tail-left" },
+        { name: "left-mid", left: px - rx - gap - width, top: py - height / 2, tail: "tail-right" },
+        { name: "right-far", left: px + rx + gap + labelRoom, top: py - 24, tail: "tail-left" },
+        { name: "left-far", left: px - rx - gap - width - labelRoom, top: py - 24, tail: "tail-right" },
+        { name: "above", left: px - width / 2, top: py - ry - gap - height, tail: "tail-bottom" },
+        { name: "below", left: px - width / 2, top: py + ry + gap, tail: "tail-top" },
+        { name: "above-left", left: px - rx - width + 30, top: py - ry - gap - height, tail: "tail-bottom" },
+        { name: "above-right", left: px + rx - 30, top: py - ry - gap - height, tail: "tail-bottom" },
+        { name: "below-left", left: px - rx - width + 30, top: py + ry + gap, tail: "tail-top" },
+        { name: "below-right", left: px + rx - 30, top: py + ry + gap, tail: "tail-top" },
+      ];
+
+      let best = null;
+      candidates.forEach(function (candidate, order) {
+        // Nudge inside the graph's own box (never over the controls), and
+        // count how far it had to move
+        const left = Math.min(Math.max(6, candidate.left), figRect.width - width - 6);
+        const top = Math.min(Math.max(offY + 4, candidate.top), offY + svgRect.height - height - 4);
+        const moved = Math.abs(left - candidate.left) + Math.abs(top - candidate.top);
+        let covered = 0;
+        avoid.forEach(function (point) {
+          if (point[0] >= left - 4 && point[0] <= left + width + 4 && point[1] >= top - 4 && point[1] <= top + height + 4) {
+            covered += 1;
+          }
+        });
+        // Covering the target itself is the worst thing a bubble can do
+        if (px >= left && px <= left + width && py >= top && py <= top + height) {
+          covered += 50;
+        }
+        const score = covered * 10 + moved * 0.5 + order;
+        if (window.__bubbleDebug) {
+          window.__bubbleDebug.push({ name: candidate.name, covered: covered, moved: moved, score: score, left: left, top: top, width: width, height: height });
+        }
+        if (!best || score < best.score) {
+          best = { left: left, top: top, tail: candidate.tail, score: score };
+        }
+      });
+
+      bubble.classList.add(best.tail);
+      bubble.style.left = fmt(best.left, 0) + "px";
+      bubble.style.top = fmt(best.top, 0) + "px";
+      // Point the tail at the target
+      if (best.tail === "tail-left" || best.tail === "tail-right") {
+        bubble.style.setProperty("--tail-at", fmt(Math.min(Math.max(10, py - best.top - 7), height - 24), 0) + "px");
+      } else {
+        bubble.style.setProperty("--tail-at", fmt(Math.min(Math.max(12, px - best.left - 7), width - 26), 0) + "px");
+      }
+      bubble.style.setProperty("--tail-x", fmt(px - best.left, 0) + "px");
+      bubble.style.setProperty("--tail-y", fmt(py - best.top, 0) + "px");
+    }
+
+    // Write a sentence into the bubble one word at a time
+    function typeWords(target, html, done) {
+      clearTimeout(typingTimer);
+      target.innerHTML = "";
+      if (reducedMotion) {
+        target.innerHTML = rich(html);
+        done();
+        return;
+      }
+      // Letter by letter: tags arrive whole so bold words never show half-formed
+      const pieces = rich(html).match(/<[^>]+>|[\s\S]/g) || [];
+      let index = 0;
+      let shown = "";
+      function next() {
+        if (index >= pieces.length) {
+          done();
+          return;
+        }
+        const piece = pieces[index];
+        index += 1;
+        shown += piece;
+        if (piece.charAt(0) === "<") {
+          next();
+          return;
+        }
+        // An unfinished tag is closed by the browser, so the prefix renders cleanly
+        target.innerHTML = shown;
+        let delay = 28;
+        if (/[.,:;!?]/.test(piece)) {
+          delay = 320;
+        }
+        typingTimer = setTimeout(next, delay);
+      }
+      next();
+    }
+
+    function finishTyping(target, html) {
+      clearTimeout(typingTimer);
+      target.innerHTML = rich(html);
+    }
+
+    function showBeat() {
+      const beats = activePause.beats;
+      const beat = beats[beatIndex];
+      const atEnd = time >= tMax - 1e-9;
+      const last = beatIndex === beats.length - 1;
+
+      // Marks accumulate through a pause so earlier points stay labelled
+      if (beat.mark) {
+        overlay.insertAdjacentHTML("beforeend", beat.mark(time));
+      }
+      if (beat.target && beat.target.kind === "segment") {
+        overlay.insertAdjacentHTML("beforeend", segmentMark(beat.target));
+      }
+
+      const spot = resolveTarget(beat.target);
+      currentTarget = spot;
+      movePointer(spot);
+
+      let say = beat.say;
+      if (typeof say === "function") {
+        say = say(time);
+      }
+      let nextLabel = "Next ›";
+      if (last) {
+        nextLabel = pick(atEnd, "OK, got it", "Carry on ▶");
+      }
+
+      if (bubble) {
+        bubble.remove();
+      }
+      bubble = el("<div class=\"bubble\"><div class=\"say\"></div><div class=\"foot\"><span class=\"count\">" + (beatIndex + 1) + " / " + beats.length + "</span><button class=\"btn solid\" type=\"button\" data-next>" + nextLabel + "</button></div></div>");
+      container.appendChild(bubble);
+
+      const sayBox = bubble.querySelector(".say");
+      const nextButton = bubble.querySelector("[data-next]");
+      // Measure the bubble with its whole sentence in place, so the position
+      // allows for the full height before the words start arriving
+      sayBox.innerHTML = rich(say);
+      placeBubble(spot);
+      sayBox.innerHTML = "";
+      let typed = false;
+      typeWords(sayBox, say, function () {
+        typed = true;
+      });
+
+      nextButton.addEventListener("click", function () {
+        if (!typed) {
+          // A tap while the words are still arriving just finishes the sentence
+          finishTyping(sayBox, say);
+          typed = true;
+          return;
+        }
+        if (last) {
+          hidePause();
+          if (!atEnd) {
+            play();
+          }
+          return;
+        }
+        beatIndex += 1;
+        showBeat();
+      });
+    }
+
+    function showPause(pause) {
+      activePause = pause;
+      beatIndex = 0;
+      overlay.innerHTML = "";
+      showBeat();
+    }
+
+    function hidePause() {
+      clearTimeout(typingTimer);
+      activePause = null;
+      currentTarget = null;
+      if (bubble) {
+        bubble.remove();
+        bubble = null;
+      }
+      hidePointer();
+      overlay.innerHTML = "";
+    }
+
+    // Keep the bubble beside its target if the window changes size
+    window.addEventListener("resize", function () {
+      if (bubble && currentTarget) {
+        placeBubble(currentTarget);
+      }
+    });
+
+    // The next pause that this run has not reached yet, if the clock has just crossed it
+    function duePause(before, after) {
+      for (const pause of pauses) {
+        if (firedPauses.indexOf(pause) >= 0) {
+          continue;
+        }
+        if (before < pause.at && after >= pause.at) {
+          return pause;
+        }
+      }
+      return null;
+    }
+
+    if (options.readouts === false) {
+      container.querySelector(".readouts").hidden = true;
+    }
+
+    function controlsHtml() {
+      let html = "<div class=\"controls\">";
+      html += "<button class=\"btn solid\" type=\"button\" data-play>" + pick(reducedMotion, "Step +1 s", "Play") + "</button>";
+      html += "<button class=\"btn\" type=\"button\" data-restart>Restart</button>";
+      html += "<button class=\"btn quiet\" type=\"button\" data-rate" + pick(reducedMotion, " hidden", "") + " title=\"Playback speed\">2×</button>";
+      html += "<input class=\"scrub\" type=\"range\" min=\"0\" max=\"10\" step=\"0.1\" value=\"0\" data-scrub aria-label=\"Scrub through time\">";
+      html += "<div class=\"readouts\"><span>t = <b data-read-t>0.0</b> s</span><span>d = <b data-read-d>0</b> m</span></div>";
+      html += "</div>";
+      return html;
+    }
+
+    function drawDots(group, which, cls) {
+      // One dot per whole second, placed at that second's distance; the dots
+      // drift right with time so a stop shows as a row and a drive as a slope
+      let html = "";
+      for (let k = 0; k <= Math.floor(time + 1e-9) && k <= which.tEnd; k += 1) {
+        const x = TAPE_X + k * (28 / Math.max(tMax, 1));
+        const y = scaleY(which.position(k), dMax);
+        html += "<circle class=\"dot " + cls + "\" cx=\"" + fmt(x, 1) + "\" cy=\"" + fmt(y, 1) + "\" r=\"2.6\"/>";
+      }
+      group.innerHTML = html;
+    }
+
+    function render() {
+      const t = Math.min(time, tMax);
+      const d = journey.position(t);
+      const px = scaleX(t, tMax);
+      const py = scaleY(d, dMax);
+
+      trace.setAttribute("d", tracePath(journey, t, tMax, dMax));
+      car.setAttribute("transform", "translate(" + fmt(ROAD_X, 1) + " " + fmt(py, 1) + ")");
+      pen.setAttribute("cx", fmt(px, 1));
+      pen.setAttribute("cy", fmt(py, 1));
+      penTool.setAttribute("transform", "translate(" + fmt(px, 1) + " " + fmt(py, 1) + ")");
+      penRing.setAttribute("cx", fmt(px, 1));
+      penRing.setAttribute("cy", fmt(py, 1));
+      penRing.style.display = pick(playing, "", "none");
+      proj.setAttribute("x1", fmt(ROAD_X - ROAD_HALF, 1));
+      proj.setAttribute("y1", fmt(py, 1));
+      proj.setAttribute("x2", fmt(px, 1));
+      proj.setAttribute("y2", fmt(py, 1));
+
+      if (options.dots !== false && dots) {
+        drawDots(dots, journey, "");
+      }
+
+      if (journey2) {
+        const d2 = journey2.position(t);
+        const py2 = scaleY(d2, dMax);
+        trace2.setAttribute("d", tracePath(journey2, t, tMax, dMax));
+        car2.setAttribute("transform", "translate(" + fmt(ROAD_X, 1) + " " + fmt(py2, 1) + ")");
+        pen2.setAttribute("cx", fmt(px, 1));
+        pen2.setAttribute("cy", fmt(py2, 1));
+        penTool2.setAttribute("transform", "translate(" + fmt(px, 1) + " " + fmt(py2, 1) + ")");
+        proj2.setAttribute("x1", fmt(ROAD_X - ROAD_HALF, 1));
+        proj2.setAttribute("y1", fmt(py2, 1));
+        proj2.setAttribute("x2", fmt(px, 1));
+        proj2.setAttribute("y2", fmt(py2, 1));
+        if (options.dots !== false && dots2) {
+          drawDots(dots2, journey2, "second");
+        }
+      } else {
+        car2.setAttribute("transform", "translate(-100 -100)");
+        penTool2.setAttribute("transform", "translate(-100 -100)");
+        pen2.setAttribute("cx", "-100");
+        proj2.setAttribute("x1", "-100");
+        proj2.setAttribute("x2", "-100");
+        trace2.setAttribute("d", "");
+      }
+
+      scrub.value = String(t);
+      readT.textContent = fmt(t, 1);
+      readD.textContent = fmt(d, 0);
+
+      if (options.onFrame) {
+        options.onFrame(t, d);
+      }
+    }
+
+    function frame(stamp) {
+      if (!playing) {
+        return;
+      }
+      if (lastStamp === null) {
+        lastStamp = stamp;
+      }
+      const dt = (stamp - lastStamp) / 1000;
+      lastStamp = stamp;
+      const before = time;
+      time += dt * rate;
+      if (time >= tMax) {
+        time = tMax;
+        stop();
+      }
+      // Stop exactly on a pause point and explain what is on screen
+      const pause = duePause(before, time);
+      if (pause) {
+        time = pause.at;
+        firedPauses.push(pause);
+        stop();
+        showPause(pause);
+        return;
+      }
+      render();
+      if (playing) {
+        frameHandle = requestAnimationFrame(frame);
+      }
+    }
+
+    // A pause with at: 0 is an introduction: it shows before anything moves
+    function openingPause() {
+      if (time > 1e-9) {
+        return null;
+      }
+      for (const pause of pauses) {
+        if (pause.at === 0 && firedPauses.indexOf(pause) < 0) {
+          return pause;
+        }
+      }
+      return null;
+    }
+
+    function play() {
+      const opening = openingPause();
+      if (opening) {
+        firedPauses.push(opening);
+        hidePause();
+        render();
+        showPause(opening);
+        return;
+      }
+      if (reducedMotion) {
+        // Step a whole second per press instead of animating; the teacher
+        // pauses still appear, they just do not glide into place
+        hidePause();
+        const before = time;
+        time = Math.min(tMax, Math.floor(time + 1e-9) + 1);
+        render();
+        const pause = duePause(before, time);
+        if (pause) {
+          time = pause.at;
+          firedPauses.push(pause);
+          render();
+          showPause(pause);
+        }
+        return;
+      }
+      if (time >= tMax) {
+        time = 0;
+        firedPauses = [];
+      }
+      hidePause();
+      playing = true;
+      lastStamp = null;
+      playButton.textContent = "Pause";
+      frameHandle = requestAnimationFrame(frame);
+    }
+
+    function stop() {
+      playing = false;
+      playButton.textContent = "Play";
+      if (frameHandle) {
+        cancelAnimationFrame(frameHandle);
+        frameHandle = null;
+      }
+      render();
+    }
+
+    playButton.addEventListener("click", function () {
+      if (playing) {
+        stop();
+      } else {
+        play();
+      }
+    });
+
+    restartButton.addEventListener("click", function () {
+      stop();
+      hidePause();
+      time = 0;
+      firedPauses = [];
+      render();
+    });
+
+    rateButton.addEventListener("click", function () {
+      // Move to the next speed in the cycle, wrapping round at the end
+      const current = RATES.indexOf(rate);
+      let next = current + 1;
+      if (next >= RATES.length) {
+        next = 0;
+      }
+      rate = RATES[next];
+      rateButton.textContent = rate + "×";
+    });
+
+    scrub.addEventListener("input", function () {
+      // Read the slider before stop(), because stop() re-renders and would
+      // write the old time back into the slider
+      const wanted = Number(scrub.value);
+      stop();
+      hidePause();
+      time = wanted;
+      render();
+    });
+
+    render();
+
+    return {
+      svg: svg,
+      render: render,
+      play: play,
+      stop: stop,
+      getTime: function () { return time; },
+      setTime: function (t) { stop(); time = t; render(); },
+      setJourney: function (next) { journey = next; stop(); time = 0; render(); },
+      setJourney2: function (next) { journey2 = next; stop(); time = 0; render(); },
+      static: svg.querySelector("[data-static]"),
+      overlay: svg.querySelector("[data-overlay]"),
+      target: svg.querySelector("[data-target]"),
+    };
+  }
+
+  /* ===================================================================
+     Maths
+     =================================================================== */
+
+  function tex(source, display) {
+    if (window.katex) {
+      try {
+        return katex.renderToString(source, { displayMode: !!display, throwOnError: false });
+      } catch (error) {
+        // fall through to plain text
+      }
+    }
+    return "<code>" + escapeHtml(source) + "</code>";
+  }
+
+  function escapeHtml(text) {
+    return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  // Prose with $...$ maths inside it
+  function rich(text) {
+    let output = String(text).replace(/\$\$([\s\S]+?)\$\$/g, function (match, source) {
+      return "<div class=\"math-display\">" + tex(source, true) + "</div>";
+    });
+    output = output.replace(/\$([^$\n]+?)\$/g, function (match, source) {
+      return tex(source, false);
+    });
+    return output;
+  }
+
+  /* ===================================================================
+     Progress and checks
+     =================================================================== */
+
+  const STORAGE_KEY = "dt-lesson-v1";
+
+  let state = loadState();
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        return JSON.parse(raw);
+      }
+    } catch (error) {
+      // storage unavailable: start fresh
+    }
+    return { done: {}, checks: {}, unlockedAll: false, rag: {} };
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (error) {
+      // nothing to do
+    }
+  }
+
+  // Record an attempt at a check; returns the attempt count so far
+  function recordAttempt(checkId, passed) {
+    const entry = state.checks[checkId] || { attempts: 0, passed: false, firstTry: false };
+    entry.attempts += 1;
+    if (passed && !entry.passed) {
+      entry.passed = true;
+      entry.firstTry = entry.attempts === 1;
+    }
+    state.checks[checkId] = entry;
+    saveState();
+    return entry;
+  }
+
+  function tickIcon() {
+    return "<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7\"/></svg>";
+  }
+
+  /*
+   * Each step declares the checks it contains; the step is complete when
+   * every check has passed. `stepChecks[stepIndex] = [checkId, ...]`.
+   */
+  const stepChecks = {};
+  const stepElements = [];
+
+  function registerCheck(stepIndex, checkId) {
+    stepChecks[stepIndex] = stepChecks[stepIndex] || [];
+    stepChecks[stepIndex].push(checkId);
+  }
+
+  function checkPassed(checkId) {
+    return !!state.checks[checkId] && state.checks[checkId].passed;
+  }
+
+  function stepComplete(stepIndex) {
+    const ids = stepChecks[stepIndex] || [];
+    if (ids.length === 0) {
+      // A step with nothing to check (the summary) is done once reached
+      if (stepIndex === 0) {
+        return true;
+      }
+      return stepComplete(stepIndex - 1);
+    }
+    return ids.every(checkPassed);
+  }
+
+  function refreshSteps() {
+    stepElements.forEach(function (element, index) {
+      const complete = stepComplete(index);
+      const previousComplete = index === 0 || stepComplete(index - 1) || state.unlockedAll;
+      const locked = !previousComplete && !state.unlockedAll;
+      element.classList.toggle("done", complete);
+      element.classList.toggle("locked", locked);
+      const status = element.querySelector(".status");
+      if (complete) {
+        status.innerHTML = tickIcon() + " Done";
+      } else if (locked) {
+        status.textContent = "Locked — pass step " + index + " first";
+      } else {
+        const ids = stepChecks[index] || [];
+        const passed = ids.filter(checkPassed).length;
+        status.textContent = pick(ids.length > 0, passed + " of " + ids.length + " checks passed", "");
+      }
+      const continueRow = element.querySelector("[data-continue]");
+      if (continueRow) {
+        continueRow.hidden = !complete || index === stepElements.length - 1;
+      }
+    });
+    refreshRail();
+  }
+
+  function refreshRail() {
+    const rail = document.getElementById("rail");
+    rail.querySelectorAll("a").forEach(function (link, index) {
+      link.classList.toggle("done", stepComplete(index));
+      link.classList.toggle("locked", stepElements[index].classList.contains("locked"));
+    });
+  }
+
+  /* ---------- Multiple choice ---------- */
+
+  function mcq(container, spec) {
+    registerCheck(spec.step, spec.id);
+    const already = checkPassed(spec.id);
+
+    let html = "<div class=\"check\">";
+    html += "<span class=\"kicker\">Check " + spec.label + "</span>";
+    html += "<p class=\"q\">" + rich(spec.q) + "</p>";
+    html += "<div class=\"choices\">";
+    spec.options.forEach(function (option, index) {
+      // An option is either a plain string or { text, mini } with a small graph
+      let mini = "";
+      let text = option;
+      if (option.text !== undefined) {
+        text = option.text;
+        mini = option.mini || "";
+      }
+      html += "<button type=\"button\" class=\"choice" + pick(already && index === spec.correct, " right", "") + "\" data-choice=\"" + index + "\">" +
+        "<span class=\"letter\">" + String.fromCharCode(65 + index) + "</span>" + mini + "<span>" + rich(text) + "</span></button>";
+    });
+    html += "</div>";
+    html += feedbackHtml(already);
+    html += "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\">" + rich(spec.why) + "</div></div></div>";
+    html += "</div>";
+    container.innerHTML = html;
+
+    const feedback = container.querySelector("[data-feedback]");
+    const why = container.querySelector("[data-why]");
+    const buttons = container.querySelectorAll("[data-choice]");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (checkPassed(spec.id)) {
+          return;
+        }
+        const chosen = Number(button.getAttribute("data-choice"));
+        buttons.forEach(function (other) {
+          other.classList.remove("wrong");
+        });
+        if (chosen === spec.correct) {
+          recordAttempt(spec.id, true);
+          button.classList.add("right");
+          feedback.className = "feedback ok";
+          feedback.innerHTML = tickIcon() + "Correct";
+          why.classList.add("open");
+          refreshSteps();
+        } else {
+          const entry = recordAttempt(spec.id, false);
+          button.classList.add("wrong");
+          if (entry.attempts >= 2) {
+            feedback.className = "feedback bad";
+            feedback.textContent = "Not that one. Read the reasoning below, then choose again.";
+            why.classList.add("open");
+          } else {
+            feedback.className = "feedback nudge";
+            feedback.textContent = spec.nudge;
+          }
+        }
+      });
+    });
+  }
+
+  /* ---------- Numeric answer ---------- */
+
+  function parseEntry(text) {
+    const cleaned = String(text).replace(/[\s,]/g, "").replace(/−/g, "-");
+    if (cleaned === "") {
+      return NaN;
+    }
+    return Number(cleaned);
+  }
+
+  function numeric(container, spec) {
+    registerCheck(spec.step, spec.id);
+    const already = checkPassed(spec.id);
+
+    let html = "<div class=\"check\">";
+    html += "<span class=\"kicker\">Check " + spec.label + "</span>";
+    html += "<p class=\"q\">" + rich(spec.q) + "</p>";
+    html += "<div class=\"answer-row\"><label class=\"answer-field\"><input type=\"text\" inputmode=\"decimal\" placeholder=\"your answer\" id=\"" + spec.id + "-input\" data-input" + pick(already, " value=\"" + spec.value + "\"", "") + "><span class=\"unit\">" + spec.unit + "</span></label>";
+    html += "<button class=\"btn solid\" type=\"button\" data-check>Check</button>";
+    html += "<button class=\"btn\" type=\"button\" data-hint>Hint</button></div>";
+    html += feedbackHtml(already);
+    html += "<div class=\"why\" data-hintbox><div class=\"inner\"><div class=\"box\">" + rich(spec.hint) + "</div></div></div>";
+    html += "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\"><b>Walkthrough (EWAU)</b><ol class=\"steps-list\">";
+    spec.walkthrough.forEach(function (line) {
+      html += "<li><span>" + rich(line) + "</span></li>";
+    });
+    html += "</ol></div></div></div>";
+    html += "</div>";
+    container.innerHTML = html;
+
+    const input = container.querySelector("[data-input]");
+    const feedback = container.querySelector("[data-feedback]");
+    const why = container.querySelector("[data-why]");
+    const hintBox = container.querySelector("[data-hintbox]");
+
+    function runCheck() {
+      if (checkPassed(spec.id)) {
+        return;
+      }
+      const entered = parseEntry(input.value);
+      if (Number.isNaN(entered)) {
+        feedback.className = "feedback bad";
+        feedback.textContent = "Type a number, such as 4 or 2.5.";
+        return;
+      }
+      const tolerance = spec.tolerance || 0.02;
+      const relative = Math.abs(entered - spec.value) / Math.abs(spec.value);
+      if (relative <= tolerance) {
+        recordAttempt(spec.id, true);
+        feedback.className = "feedback ok";
+        feedback.innerHTML = tickIcon() + "Correct";
+        why.classList.add("open");
+        refreshSteps();
+        return;
+      }
+      const entry = recordAttempt(spec.id, false);
+      // A factor-of-ten slip is nearly always a reading or unit error
+      const ratio = Math.abs(entered / spec.value);
+      const exponent = Math.log10(ratio);
+      const nearest = Math.round(exponent);
+      if (nearest !== 0 && Math.abs(exponent - nearest) < 0.01 && Math.abs(nearest) <= 3) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "Out by a factor of " + Math.pow(10, Math.abs(nearest)) + " — check the numbers you read off the axes.";
+        return;
+      }
+      if (Math.abs(entered + spec.value) / Math.abs(spec.value) <= tolerance) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "Right size, wrong sign. Speed is the size of the gradient.";
+        return;
+      }
+      if (entry.attempts >= 2) {
+        feedback.className = "feedback bad";
+        feedback.textContent = "Not yet. Open the walkthrough and follow the EWAU lines.";
+        why.classList.add("open");
+      } else {
+        feedback.className = "feedback nudge";
+        feedback.textContent = spec.nudge;
+      }
+    }
+
+    container.querySelector("[data-check]").addEventListener("click", runCheck);
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        runCheck();
+      }
+    });
+    container.querySelector("[data-hint]").addEventListener("click", function () {
+      hintBox.classList.toggle("open");
+    });
+  }
+
+  /* ---------- Tap a stage on a graph ---------- */
+
+  function tapStage(container, spec) {
+    registerCheck(spec.step, spec.id);
+    const already = checkPassed(spec.id);
+    const tMax = spec.tMax;
+    const dMax = spec.dMax;
+    const journey = buildJourney(spec.stages, dMax);
+
+    let html = "<div class=\"check\">";
+    html += "<span class=\"kicker\">Check " + spec.label + "</span>";
+    html += "<p class=\"q\">" + rich(spec.q) + "</p>";
+    html += "<div class=\"figure\" data-fig></div>";
+    html += feedbackHtml(already);
+    html += "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\">" + rich(spec.why) + "</div></div></div>";
+    html += "</div>";
+    container.innerHTML = html;
+
+    const fig = container.querySelector("[data-fig]");
+    fig.innerHTML = figureSvg({ tMax: tMax, dMax: dMax, road: false, alt: spec.alt });
+    const svg = fig.querySelector("svg");
+    const layer = svg.querySelector("[data-static]");
+
+    let segs = "";
+    journey.segments.forEach(function (segment, index) {
+      const x0 = fmt(scaleX(segment.t0, tMax), 1);
+      const y0 = fmt(scaleY(segment.d0, dMax), 1);
+      const x1 = fmt(scaleX(segment.t1, tMax), 1);
+      const y1 = fmt(scaleY(segment.d1, dMax), 1);
+      const picked = pick(already && index === spec.correct, " picked-right", "");
+      segs += "<line class=\"seg-hit\" data-seg=\"" + index + "\" x1=\"" + x0 + "\" y1=\"" + y0 + "\" x2=\"" + x1 + "\" y2=\"" + y1 + "\"/>";
+      segs += "<line class=\"seg" + picked + "\" data-segline=\"" + index + "\" x1=\"" + x0 + "\" y1=\"" + y0 + "\" x2=\"" + x1 + "\" y2=\"" + y1 + "\"/>";
+      const lx = fmt((scaleX(segment.t0, tMax) + scaleX(segment.t1, tMax)) / 2, 1);
+      segs += "<text class=\"stage-label\" x=\"" + lx + "\" y=\"" + (PLOT_TOP + 14) + "\" text-anchor=\"middle\">" + String.fromCharCode(65 + index) + "</text>";
+    });
+    layer.innerHTML = segs;
+    // Hide the animated bits this static figure does not use
+    svg.querySelectorAll("[data-car],[data-car2],[data-pen],[data-pen2],[data-pentool],[data-pentool2],[data-penring],[data-proj],[data-proj2]").forEach(function (node) {
+      node.style.display = "none";
+    });
+
+    const feedback = container.querySelector("[data-feedback]");
+    const why = container.querySelector("[data-why]");
+
+    svg.querySelectorAll("[data-seg]").forEach(function (hit) {
+      hit.addEventListener("click", function () {
+        if (checkPassed(spec.id)) {
+          return;
+        }
+        const index = Number(hit.getAttribute("data-seg"));
+        svg.querySelectorAll("[data-segline]").forEach(function (line) {
+          line.classList.remove("picked-wrong");
+        });
+        const line = svg.querySelector("[data-segline=\"" + index + "\"]");
+        if (index === spec.correct) {
+          recordAttempt(spec.id, true);
+          line.classList.add("picked-right");
+          feedback.className = "feedback ok";
+          feedback.innerHTML = tickIcon() + "Correct — part " + String.fromCharCode(65 + index);
+          why.classList.add("open");
+          refreshSteps();
+        } else {
+          const entry = recordAttempt(spec.id, false);
+          line.classList.add("picked-wrong");
+          if (entry.attempts >= 2) {
+            feedback.className = "feedback bad";
+            feedback.textContent = "Not that stage. " + spec.nudge;
+            why.classList.add("open");
+          } else {
+            feedback.className = "feedback nudge";
+            feedback.textContent = spec.nudge;
+          }
+        }
+      });
+    });
+  }
+
+  /* ===================================================================
+     Steps
+     =================================================================== */
+
+  const steps = [];
+
+  function addStep(title, build) {
+    steps.push({ title: title, build: build });
+  }
+
+  function stepShell(index, title) {
+    const article = document.createElement("article");
+    article.className = "step";
+    article.id = "step-" + (index + 1);
+    article.innerHTML =
+      "<div class=\"step-head\"><span class=\"n\">" + String(index + 1).padStart(2, "0") + "</span><h2>" + title + "</h2><span class=\"status\"></span></div>" +
+      "<div class=\"step-body\"></div>";
+    return article;
+  }
+
+  function continueButton(body, index) {
+    if (index >= steps.length - 1) {
+      return;
+    }
+    const row = document.createElement("div");
+    row.className = "continue-row";
+    row.setAttribute("data-continue", "");
+    row.hidden = true;
+    row.innerHTML = "<button class=\"btn solid\" type=\"button\">Continue to step " + (index + 2) + " →</button>";
+    row.querySelector("button").addEventListener("click", function () {
+      const next = document.getElementById("step-" + (index + 2));
+      next.scrollIntoView({ behavior: scrollBehaviour(), block: "start" });
+    });
+    body.appendChild(row);
+  }
+
+  function el(html) {
+    const template = document.createElement("template");
+    template.innerHTML = html.trim();
+    return template.content.firstElementChild;
+  }
+
+  function miniGraph(path) {
+    return "<svg class=\"mini\" viewBox=\"0 0 92 56\" aria-hidden=\"true\"><path class=\"ax\" d=\"M10 4V48H88\"/><path d=\"" + path + "\"/></svg>";
+  }
+
+  /* ---------- Step 1: watch it being drawn ---------- */
+  addStep("Watch the graph being drawn", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>The grey road goes <b>north</b> from home, straight up the page. The red car drives along it at a steady <b>5 metres every second</b>.</p>" +
+      "<p>Next to the road is a graph, and a red pen draws on it. As time passes, the pen moves to the <b>right</b>. As the car gets further from home, the pen moves <b>up</b>. The pen is always exactly level with the car — the dotted line shows that.</p>" +
+      "<p>Press <b>Play</b>. The animation will stop a few times so I can point things out — press <b>Next</b> to follow along. Afterwards, drag the slider backwards and forwards and watch the pen and the car move together.</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      // The distance scale goes up in 25s so the two marked points sit on labelled gridlines
+      tMax: 20, dMax: 100, dStep: 25,
+      journey: buildJourney([{ kind: "go", v: 5, t: 20 }], 100),
+      alt: "A car driving north at 5 m/s while a pen draws a straight rising line",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: { kind: "yspan", d0: 0, d1: 100 }, say: "This is the <b>y-axis</b>. It shows the <mark>distance travelled</mark>, in metres." },
+            { target: { kind: "xspan", t0: 0, t1: 20 }, say: "This is the <b>x-axis</b>. It shows the <mark>time taken so far</mark>, in seconds." },
+            { target: "car", say: "This is the car. It is at home, about to drive north along the road." },
+            { target: { x: TAPE_X + 6, y: scaleY(6, 100), rx: 14, ry: 22 }, say: "Each second, we'll place a dot here to show where the car was at that second." },
+          ],
+        },
+        {
+          at: 10,
+          beats: [
+            { target: { kind: "point", t: 5, d: 25 }, mark: function () { return highlightPoint(5, 25, 20, 100, "5 s, 25 m", "left"); },
+              say: "This point is at <mark>5 seconds</mark>, and <mark>25 metres</mark>." },
+            { target: { kind: "point", t: 10, d: 50 }, mark: function () { return highlightPoint(10, 50, 20, 100, "10 s, 50 m", "left"); },
+              say: "This point is at <mark>10 seconds</mark>, and <mark>50 metres</mark>." },
+            { target: { kind: "xspan", t0: 5, t1: 10 }, say: "From 5 to 10 — the time has <b>doubled</b>…" },
+            { target: { kind: "yspan", d0: 25, d1: 50 }, say: "…and from 25 to 50, the distance has <b>doubled</b> too." },
+            { target: { kind: "dots", t0: 0, t1: 10 }, say: "Look at the dots by the road. They are evenly spaced, because the car gains the same <mark>5 metres</mark> in every second." },
+            { target: { kind: "segment", t0: 0, t1: 10 }, say: "The same gain every second. We call that <b>constant speed</b>." },
+          ],
+        },
+        {
+          at: 20,
+          beats: [
+            { target: { kind: "segment", t0: 0, t1: 20 }, say: "The journey is over. The line is <b>straight</b> all the way." },
+            { target: "car", say: "A straight line going upwards on a distance–time graph means the object is travelling at <b>constant speed</b>." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("Every point on a distance–time graph tells you two things: <b>how much time has passed</b> (read it off the bottom) and <b>how far the object has travelled</b> (read it off the side). A straight line going upwards means the object is travelling at <b>constant speed</b>.") + "</div>"));
+
+    const check = el("<div></div>");
+    body.appendChild(check);
+    mcq(check, {
+      step: index, id: "c1", label: "1",
+      q: "Drag the slider to 10 s. The car has travelled 50 m. Where is the pen on the graph?",
+      options: [
+        "Level with <b>10</b> on the time axis (along the bottom) and level with <b>50</b> on the distance axis (up the side)",
+        "Level with <b>50</b> on the time axis (along the bottom) and level with <b>10</b> on the distance axis (up the side)",
+        "Level with <b>10</b> on the time axis (along the bottom) and level with <b>100</b> on the distance axis (up the side)",
+      ],
+      correct: 0,
+      nudge: "Time is along the bottom. Distance is up the side. Drag the slider to 10 s and look where the pen is.",
+      why: "The pen moves right as time passes, so at 10 s it is above the 10 on the bottom axis. It moves up as the car gets further away, so at 50 m it is level with the 50 on the side axis.",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 2: faster means steeper ---------- */
+  addStep("Faster means steeper", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>Two cars start from home at the same moment. The <b style=\"color:var(--accent-ink)\">red car</b> always drives at 4 metres every second. You choose how fast the <b style=\"color:var(--second)\">blue car</b> goes, using the slider.</p>" +
+      "<p>Play the race. Then change the blue car's speed and play it again.</p>" +
+      "</div>"));
+
+    const sliderRow = el("<div class=\"slider-row\"><label for=\"race-speed\">Blue car's speed</label><input type=\"range\" id=\"race-speed\" min=\"1\" max=\"10\" step=\"1\" value=\"8\"><output for=\"race-speed\" id=\"race-out\">8 m/s</output></div>");
+    body.appendChild(sliderRow);
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    const demo = makeDemo(fig, {
+      // Distance in 10s: the blue car's distance after 10 s is 10 × its speed, so it is always on a gridline
+      tMax: 25, dMax: 100, dStep: 10,
+      journey: buildJourney([{ kind: "go", v: 4, t: 25 }], 100),
+      journey2: buildJourney([{ kind: "go", v: 8, t: 25 }], 100),
+      alt: "Two cars racing north; two lines of different steepness",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "car", say: "Two cars this time. The red car will drive at <mark>4 metres</mark> every second." },
+            { target: "car2", say: function () {
+                return "The blue car will drive at <mark>" + sliderRow.querySelector("input").value + " metres</mark> every second. Watch which line is steeper.";
+              } },
+          ],
+        },
+        {
+          at: 10,
+          beats: [
+            { target: "pen", mark: function () { return highlightPoint(10, 40, 25, 100, "10 s, 40 m", "right"); },
+              say: "This point is at <mark>10 seconds</mark>, and <mark>40 metres</mark>. That is the red car." },
+            { target: "pen2", mark: function () {
+                const blue = Math.min(100, Number(sliderRow.querySelector("input").value) * 10);
+                return highlightPoint(10, blue, 25, 100, "10 s, " + blue + " m", "right");
+              },
+              say: function () {
+                const blue = Math.min(100, Number(sliderRow.querySelector("input").value) * 10);
+                return "This point is at <mark>10 seconds</mark>, and <mark>" + blue + " metres</mark>. That is the blue car.";
+              } },
+            { target: { kind: "segment", t0: 0, t1: 10, second: true },
+              say: function () {
+                const v = Number(sliderRow.querySelector("input").value);
+                if (v > 4) {
+                  return "The blue car went further in the same time, so its line is <b>steeper</b>.";
+                }
+                if (v < 4) {
+                  return "The blue car went less far in the same time, so its line is <b>less steep</b>.";
+                }
+                return "Both cars went the same distance in the same time, so the lines are exactly as steep as each other.";
+              } },
+            { target: { kind: "segment", t0: 0, t1: 10 },
+              say: "On a distance–time graph, a <b>steeper line</b> means the object is travelling <b>faster</b>." },
+          ],
+        },
+      ],
+    });
+
+    const slider = sliderRow.querySelector("input");
+    const out = sliderRow.querySelector("output");
+    slider.addEventListener("input", function () {
+      const v = Number(slider.value);
+      out.textContent = v + " m/s";
+      demo.setJourney2(buildJourney([{ kind: "go", v: v, t: 25 }], 100));
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("On a distance–time graph, a <b>steeper line</b> means the object is travelling <b>faster</b>: it goes further in each second. The road is 100 m long. When a car gets to the end it parks, and its line goes flat.") + "</div>"));
+
+    // A static three-line graph for the check
+    const check = el("<div></div>");
+    body.appendChild(check);
+    const linesFig = "<div class=\"figure\" data-lines></div>";
+    check.innerHTML = linesFig;
+    const linesBox = check.querySelector("[data-lines]");
+    linesBox.innerHTML = figureSvg({ tMax: 20, dMax: 100, road: false, alt: "Three straight lines A, B and C" });
+    const linesSvg = linesBox.querySelector("svg");
+    linesSvg.querySelectorAll("[data-car],[data-car2],[data-pen],[data-pen2],[data-pentool],[data-pentool2],[data-penring],[data-proj],[data-proj2]").forEach(function (node) {
+      node.style.display = "none";
+    });
+    const lineSpecs = [
+      { label: "A", path: "M" + scaleX(0, 20) + "," + scaleY(0, 100) + "L" + scaleX(10, 20) + "," + scaleY(100, 100) + "L" + scaleX(20, 20) + "," + scaleY(100, 100), lx: scaleX(9.3, 20), ly: scaleY(100, 100) - 8 },
+      { label: "B", path: "M" + scaleX(0, 20) + "," + scaleY(0, 100) + "L" + scaleX(20, 20) + "," + scaleY(60, 100), lx: scaleX(20, 20) - 10, ly: scaleY(60, 100) + 18 },
+      { label: "C", path: "M" + scaleX(0, 20) + "," + scaleY(0, 100) + "L" + scaleX(20, 20) + "," + scaleY(100, 100), lx: scaleX(20, 20) - 10, ly: scaleY(100, 100) - 8 },
+    ];
+    let staticHtml = "";
+    lineSpecs.forEach(function (spec) {
+      staticHtml += "<path class=\"trace static\" d=\"" + spec.path + "\"/>";
+      staticHtml += "<text class=\"line-label\" x=\"" + fmt(spec.lx, 1) + "\" y=\"" + fmt(spec.ly, 1) + "\" text-anchor=\"middle\">" + spec.label + "</text>";
+    });
+    linesSvg.querySelector("[data-static]").innerHTML = staticHtml;
+
+    const c2a = el("<div></div>");
+    const c2b = el("<div></div>");
+    check.appendChild(c2a);
+    check.appendChild(c2b);
+    mcq(c2a, {
+      step: index, id: "c2a", label: "2a",
+      q: "Three cars set off from home at the same time. Their journeys are drawn on the graph above. Which car is going <b>fastest</b>?",
+      options: ["Car A", "Car B", "Car C"], correct: 0,
+      nudge: "Look at the first 10 seconds. Which line is the steepest?",
+      why: "Car A gets to 100 m in only 10 s, so its line is the steepest. After that it parks at the end of the road, which is why its line goes flat. Car C takes 20 s to go the same 100 m, and car B only gets to 60 m in 20 s.",
+    });
+    mcq(c2b, {
+      step: index, id: "c2b", label: "2b",
+      q: "Which car is going <b>slowest</b>?",
+      options: ["Car A", "Car B", "Car C"], correct: 1,
+      nudge: "The slowest car gets the least far in the same amount of time. Its line is the least steep.",
+      why: "Car B's line is the least steep. After 20 s it has only gone 60 m, so its speed is $60 \\div 20 = 3$ m/s. Car C does 5 m/s and car A does 10 m/s.",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 3: stopped ---------- */
+  addStep("Stopped: the line goes flat", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>This car drives north for 8 seconds, then <b>stops for 6 seconds</b>, then drives on again.</p>" +
+      "<p>Before you press play: what do you think the line will do while the car is stopped?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      tMax: 22, dMax: 100,
+      journey: buildJourney([{ kind: "go", v: 5, t: 8 }, { kind: "stop", t: 6 }, { kind: "go", v: 5, t: 8 }], 100),
+      alt: "A car that drives, stops, then drives again; the line rises, goes flat, then rises",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "car", say: "This car will drive, then <mark>stop for 6 seconds</mark>, then drive on. Watch what the pen does while the car is stopped." },
+          ],
+        },
+        {
+          at: 11,
+          beats: [
+            { target: { kind: "point", t: 8, d: 40 }, mark: function () { return highlightPoint(8, 40, 22, 100, "8 s, 40 m", "left"); },
+              say: "This point is at <mark>8 seconds</mark>, and <mark>40 metres</mark>. The car stopped here." },
+            { target: "pen", mark: function () { return highlightPoint(11, 40, 22, 100, "11 s, 40 m", "right"); },
+              say: "This point is at <mark>11 seconds</mark>, and <mark>40 metres</mark>. Three seconds have passed, but the distance is the same." },
+            { target: { kind: "segment", t0: 8, t1: 11 }, say: "Time kept going, so the pen moved to the right. The distance didn't change, so the pen didn't move up. That makes a <b>flat line</b>." },
+            { target: { kind: "dots", t0: 8, t1: 11 }, say: "The dots show it too: while the car waits, every new dot lands at the same height." },
+            { target: { kind: "segment", t0: 8, t1: 11 }, say: "On a distance–time graph, a <b>flat line</b> means the object is <b>stationary</b> — not moving." },
+          ],
+        },
+        {
+          at: 15,
+          beats: [
+            { target: { kind: "point", t: 14, d: 40 }, mark: function () { return highlightPoint(14, 40, 22, 100, "14 s, 40 m", "left"); },
+              say: "This point is at <mark>14 seconds</mark>, and <mark>40 metres</mark>. The car set off again here, and the line started climbing again." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("On a distance–time graph, a <b>flat (horizontal) line</b> means the object is <b>stationary</b> — not moving. The line is flat because the distance travelled isn't changing. It has nothing to do with the ground being flat.") + "</div>"));
+
+    const check = el("<div></div>");
+    body.appendChild(check);
+    tapStage(check, {
+      step: index, id: "c3", label: "3",
+      q: "Here is the graph of a different car's journey. It has three parts: A, B and C. <b>Tap the part of the line</b> where the car is not moving.",
+      tMax: 25, dMax: 100,
+      stages: [{ kind: "go", v: 4, t: 10 }, { kind: "stop", t: 5 }, { kind: "go", v: 4, t: 10 }],
+      correct: 1,
+      nudge: "Look for the part where the distance travelled stays the same while the time keeps going.",
+      why: "In part B the line is flat. Between 10 s and 15 s the car stays at 40 m, so it isn't moving. In parts A and C the distance is going up, so the car is moving.",
+      alt: "A graph that rises, is flat, then rises",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 4: heading home ---------- */
+  addStep("Heading home: the line comes down", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>This time the car drives 60 metres north, waits for 4 seconds, then <b>turns round and drives back home</b>.</p>" +
+      "<p>Before you press play: what do you think the line will do on the way home?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      // Distance in 10s so that 60 m and 30 m both sit on labelled gridlines
+      tMax: 26, dMax: 100, dStep: 10,
+      journey: buildJourney([{ kind: "go", v: 5, t: 12 }, { kind: "stop", t: 4 }, { kind: "back", v: 6, t: 10 }], 100),
+      alt: "A car that drives north, waits, then returns home; the line rises, is flat, then falls back to zero",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "car", say: "This car will drive north, wait, then <mark>turn round and drive home</mark>. Watch what the pen does on the way home." },
+          ],
+        },
+        {
+          at: 21,
+          beats: [
+            { target: { kind: "point", t: 16, d: 60 }, mark: function () { return highlightPoint(16, 60, 26, 100, "16 s, 60 m", "left"); },
+              say: "This point is at <mark>16 seconds</mark>, and <mark>60 metres</mark>. The car turned round here." },
+            { target: "pen", mark: function () { return highlightPoint(21, 30, 26, 100, "21 s, 30 m", "right"); },
+              say: "This point is at <mark>21 seconds</mark>, and <mark>30 metres</mark>. The car is closer to home than it was — the distance has gone <b>down</b>." },
+            { target: { kind: "segment", t0: 16, t1: 21 }, say: "The pen follows the car down, so the line slopes <b>downwards</b>." },
+            { target: { kind: "segment", t0: 16, t1: 21 }, say: "On a distance–time graph, a line sloping <b>downwards</b> means the object is travelling <b>back towards the start</b>." },
+          ],
+        },
+        {
+          at: 26,
+          beats: [
+            { target: "car", say: "This point is at <mark>26 seconds</mark>, and <mark>0 metres</mark>. The car is back home." },
+            { target: { kind: "segment", t0: 16, t1: 26 }, say: "The way home is a little <b>steeper</b> than the way out, because the car drove home faster: 6 metres every second instead of 5." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("On a distance–time graph, a line sloping <b>downwards</b> means the object is travelling <b>back towards the start</b>: its distance from the start is getting smaller. It still has a speed on the way back — this car does 6 m/s — and a steeper slope still means faster.") + "</div>"));
+
+    const check = el("<div></div>");
+    body.appendChild(check);
+    mcq(check, {
+      step: index, id: "c4", label: "4",
+      q: "Look at the last part of the journey, from 16 seconds to 26 seconds. The line slopes downwards. What is the car doing?",
+      options: ["Driving back towards home at a steady speed", "Slowing down", "Not moving", "Driving down a hill"],
+      correct: 0,
+      nudge: "The side axis is <b>distance travelled</b> from home. In that part of the graph, is that distance getting bigger or smaller?",
+      why: "The distance travelled from home goes down steadily, from 60 m to 0 m. That means the car is driving home, and because the line is straight, it is going at a steady speed. The graph can't tell you about hills — the side axis is distance travelled, not height.",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 5: speeding up and slowing down ---------- */
+  addStep("Speeding up and slowing down: curves", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>So far every car has driven at a steady speed, and every sloping line has been straight. This car is different. It starts from standing still and <b>speeds up</b> for 4 seconds. Then it <b>slows down</b> for 4 seconds until it stops.</p>" +
+      "<p>Before you press play: can a line on this graph be anything other than straight?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    makeDemo(fig, {
+      // Speeding up at 5 m/s² then slowing at 5 m/s² puts the car at 10, 40, 70 and 80 m
+      // after 2, 4, 6 and 8 s — every one on a 10 m gridline
+      tMax: 8, dMax: 100, dStep: 10, tStep: 1,
+      journey: buildJourney([{ kind: "accel", u: 0, a: 5, t: 4 }, { kind: "accel", u: 20, a: -5, t: 4 }], 100),
+      alt: "A car that speeds up then slows down; the line curves upward then flattens",
+      pauses: [
+        {
+          at: 0,
+          beats: [
+            { target: "car", say: "This car starts from standing still. It will <mark>speed up</mark> for 4 seconds, then <mark>slow down</mark> for 4 seconds. Watch the gaps between the dots." },
+          ],
+        },
+        {
+          at: 4,
+          beats: [
+            { target: { kind: "point", t: 2, d: 10 }, mark: function () { return highlightPoint(2, 10, 8, 100, "2 s, 10 m", "left"); },
+              say: "This point is at <mark>2 seconds</mark>, and <mark>10 metres</mark>." },
+            { target: { kind: "point", t: 4, d: 40 }, mark: function () { return highlightPoint(4, 40, 8, 100, "4 s, 40 m", "left"); },
+              say: "This point is at <mark>4 seconds</mark>, and <mark>40 metres</mark>. In the first 2 seconds the car went 10 metres. In the next 2 seconds it went <b>30 metres</b>." },
+            { target: { kind: "dots", t0: 0, t1: 4 }, say: "The dots start close together and get <b>further apart</b>: the car goes further in each second than the one before. It is <b>speeding up</b>." },
+            { target: { kind: "segment", t0: 0, t1: 4 }, say: "On a distance–time graph, a curve that is getting <b>steeper</b> means the object is <b>speeding up</b>." },
+          ],
+        },
+        {
+          at: 8,
+          beats: [
+            { target: { kind: "point", t: 6, d: 70 }, mark: function () { return highlightPoint(6, 70, 8, 100, "6 s, 70 m", "left"); },
+              say: "This point is at <mark>6 seconds</mark>, and <mark>70 metres</mark>: 30 metres in 2 seconds." },
+            { target: { kind: "point", t: 8, d: 80 }, mark: function () { return highlightPoint(8, 80, 8, 100, "8 s, 80 m", "left"); },
+              say: "This point is at <mark>8 seconds</mark>, and <mark>80 metres</mark>: only <b>10 metres</b> in the last 2 seconds." },
+            { target: { kind: "dots", t0: 4, t1: 8 }, say: "The dots get <b>closer together</b> again: the car goes less far in each second. It is <b>slowing down</b>." },
+            { target: { kind: "segment", t0: 4, t1: 8 }, say: "On a distance–time graph, a curve that is getting <b>flatter</b> means the object is <b>slowing down</b>." },
+          ],
+        },
+      ],
+    });
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("On a distance–time graph, a curve that is getting <b>steeper</b> means the object is <b>speeding up</b> — it goes further in each second. A curve that is getting <b>flatter</b> means the object is <b>slowing down</b> — it goes less far in each second.") + "</div>"));
+
+    const check = el("<div></div>");
+    body.appendChild(check);
+    const c5a = el("<div></div>");
+    const c5b = el("<div></div>");
+    check.appendChild(c5a);
+    check.appendChild(c5b);
+    const curveP = "M10 48 C 40 48, 70 36, 88 6";
+    const curveQ = "M10 48 C 20 20, 50 8, 88 6";
+    mcq(c5a, {
+      step: index, id: "c5a", label: "5a",
+      q: "Here are two more graphs. Which one shows a car that is <b>getting faster and faster</b>?",
+      options: [{ text: "Graph P", mini: miniGraph(curveP) }, { text: "Graph Q", mini: miniGraph(curveQ) }],
+      correct: 0,
+      nudge: "A car that is getting faster goes further in each second, so its line gets steeper as you go along.",
+      why: "Graph P starts off almost flat and gets steeper and steeper, so the car is going further in each second: it is speeding up. Graph Q starts steep and gets flatter: that car is slowing down.",
+    });
+    mcq(c5b, {
+      step: index, id: "c5b", label: "5b",
+      q: "Which one shows a car that is <b>getting slower and slower</b>?",
+      options: [{ text: "Graph P", mini: miniGraph(curveP) }, { text: "Graph Q", mini: miniGraph(curveQ) }],
+      correct: 1,
+      nudge: "A car that is slowing down goes less far in each second, so its line gets flatter as you go along.",
+      why: "Graph Q gets flatter and flatter. Each second the car goes less far than it did in the second before, until the line is nearly flat and the car has almost stopped.",
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 6: gradient is speed ---------- */
+  addStep("The gradient is the speed", function (body, index) {
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>You already know that a steeper line means a faster object. The <b>gradient</b> is a way of turning \"how steep\" into a number — and that number is the speed. Here is the 5 m/s car from step 1 again. Press <b>Draw the triangle</b>.</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+    const demo = makeDemo(fig, {
+      tMax: 20, dMax: 100, dStep: 25, dots: false,
+      journey: buildJourney([{ kind: "go", v: 5, t: 20 }], 100),
+      alt: "The 5 m/s line with a gradient triangle drawn under it",
+    });
+    demo.setTime(20);
+    demo.svg.querySelector("[data-pentool]").style.display = "none";
+
+    // Triangle pieces drawn in sequence
+    const overlay = demo.overlay;
+    const x0 = scaleX(0, 20);
+    const y0 = scaleY(0, 100);
+    const x1 = scaleX(20, 20);
+    const y1 = scaleY(100, 100);
+    overlay.innerHTML =
+      "<line class=\"tri\" data-run x1=\"" + x0 + "\" y1=\"" + y0 + "\" x2=\"" + x0 + "\" y2=\"" + y0 + "\"/>" +
+      "<line class=\"tri\" data-rise x1=\"" + x1 + "\" y1=\"" + y0 + "\" x2=\"" + x1 + "\" y2=\"" + y0 + "\"/>" +
+      "<text class=\"tri-label\" data-runlabel x=\"" + ((x0 + x1) / 2) + "\" y=\"" + (y0 - 8) + "\" text-anchor=\"middle\" opacity=\"0\">change in time = 20 s</text>" +
+      "<text class=\"tri-label\" data-riselabel x=\"" + (x1 - 8) + "\" y=\"" + ((y0 + y1) / 2) + "\" text-anchor=\"end\" opacity=\"0\">change in distance = 100 m</text>";
+    const runLine = overlay.querySelector("[data-run]");
+    const riseLine = overlay.querySelector("[data-rise]");
+    const runLabel = overlay.querySelector("[data-runlabel]");
+    const riseLabel = overlay.querySelector("[data-riselabel]");
+
+    const walk = el("<div class=\"callout\"><p><b>Working it out</b></p><ol class=\"steps-list\" id=\"grad-steps\"></ol><div style=\"margin-top:10px;display:flex;gap:8px;flex-wrap:wrap\"><button class=\"btn solid\" type=\"button\" id=\"btn-tri\">Draw the triangle</button><button class=\"btn\" type=\"button\" id=\"btn-grad-next\" hidden>Next line</button></div></div>");
+    body.appendChild(walk);
+    const lines = [
+      "Pick two points on the line, far apart: $(0\\ \\text{s},\\ 0\\ \\text{m})$ and $(20\\ \\text{s},\\ 100\\ \\text{m})$.",
+      "<b>Equation:</b> $\\text{speed} = \\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+      "<b>Working:</b> $\\text{speed} = \\dfrac{100 - 0}{20 - 0} = \\dfrac{100}{20}$",
+      "<b>Answer:</b> $= 5$",
+      "<b>Units:</b> m/s — which is exactly the speed the car was driving at.",
+    ];
+    const list = walk.querySelector("#grad-steps");
+    lines.forEach(function (line) {
+      list.appendChild(el("<li class=\"hidden-step\"><span>" + rich(line) + "</span></li>"));
+    });
+    const triButton = walk.querySelector("#btn-tri");
+    const nextButton = walk.querySelector("#btn-grad-next");
+
+    function animateLine(line, fromAttr, toAttr, target, duration) {
+      return new Promise(function (resolve) {
+        if (reducedMotion) {
+          line.setAttribute(toAttr, target);
+          resolve();
+          return;
+        }
+        const start = Number(line.getAttribute(fromAttr));
+        let startStamp = null;
+        function tick(stamp) {
+          if (startStamp === null) {
+            startStamp = stamp;
+          }
+          const progress = Math.min(1, (stamp - startStamp) / duration);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          line.setAttribute(toAttr, fmt(start + (target - start) * eased, 1));
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            resolve();
+          }
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+
+    function revealNextLine() {
+      const hidden = list.querySelector(".hidden-step");
+      if (hidden) {
+        hidden.classList.remove("hidden-step");
+        hidden.classList.add("reveal");
+      }
+      if (!list.querySelector(".hidden-step")) {
+        nextButton.hidden = true;
+      }
+    }
+
+    triButton.addEventListener("click", function () {
+      triButton.disabled = true;
+      animateLine(runLine, "x1", "x2", x1, 700).then(function () {
+        runLabel.setAttribute("opacity", "1");
+        return animateLine(riseLine, "y1", "y2", y1, 700);
+      }).then(function () {
+        riseLabel.setAttribute("opacity", "1");
+        revealNextLine();
+        nextButton.hidden = false;
+      });
+    });
+    nextButton.addEventListener("click", revealNextLine);
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("The gradient is how far the line goes <b>up</b> divided by how far it goes <b>along</b>: $\\text{gradient} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$. Distance divided by time is the speed equation. So <b>the gradient of a distance–time graph is the speed</b>. Lay the working out as EWAU every time: Equation, Working, Answer, Units.") + "</div>"));
+
+    // The check: read a speed from a three-stage graph
+    const check = el("<div></div>");
+    body.appendChild(check);
+    const graphBox = el("<div class=\"figure\"></div>");
+    check.appendChild(graphBox);
+    const cj = buildJourney([{ kind: "go", v: 3, t: 10 }, { kind: "stop", t: 5 }, { kind: "go", v: 7, t: 10 }], 100);
+    graphBox.innerHTML = figureSvg({ tMax: 25, dMax: 100, dStep: 10, road: false, alt: "A graph with parts A, B and C" });
+    const cSvg = graphBox.querySelector("svg");
+    cSvg.querySelectorAll("[data-car],[data-car2],[data-pen],[data-pen2],[data-pentool],[data-pentool2],[data-penring],[data-proj],[data-proj2]").forEach(function (node) {
+      node.style.display = "none";
+    });
+    let cHtml = "<path class=\"trace static\" d=\"" + tracePath(cj, 25, 25, 100) + "\"/>";
+    cj.segments.forEach(function (segment, i) {
+      cHtml += "<text class=\"stage-label\" x=\"" + fmt((scaleX(segment.t0, 25) + scaleX(segment.t1, 25)) / 2, 1) + "\" y=\"" + (PLOT_TOP + 14) + "\" text-anchor=\"middle\">" + String.fromCharCode(65 + i) + "</text>";
+      cHtml += "<circle class=\"pen\" style=\"fill: var(--ink)\" cx=\"" + fmt(scaleX(segment.t1, 25), 1) + "\" cy=\"" + fmt(scaleY(segment.d1, 100), 1) + "\" r=\"3.5\"/>";
+    });
+    cSvg.querySelector("[data-static]").innerHTML = cHtml;
+
+    const c6a = el("<div></div>");
+    const c6b = el("<div></div>");
+    check.appendChild(c6a);
+    check.appendChild(c6b);
+    numeric(c6a, {
+      step: index, id: "c6a", label: "6a",
+      q: "Look at part <b>A</b> of the graph above. How fast was the car going in part A? Use the gradient: how far the line goes up, divided by how far it goes along.",
+      value: 3, unit: "m/s",
+      hint: "Part A starts at 0 s and 0 m. It ends at 10 s and 30 m. So the distance changed by 30 m and the time changed by 10 s.",
+      nudge: "Find where part A starts and where it ends. How many metres did the distance change by? How many seconds did the time change by? Divide the metres by the seconds.",
+      walkthrough: [
+        "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+        "<b>Working:</b> $\\text{speed} = \\dfrac{30 - 0}{10 - 0} = \\dfrac{30}{10}$",
+        "<b>Answer:</b> $= 3$",
+        "<b>Units:</b> m/s",
+      ],
+    });
+    numeric(c6b, {
+      step: index, id: "c6b", label: "6b",
+      q: "Now do the same for part <b>C</b>. How fast was the car going in part C?",
+      value: 7, unit: "m/s",
+      hint: "Part C starts at 15 s and 30 m. It ends at 25 s and 100 m. Take the start away from the end to get the change: $100 - 30$ metres, and $25 - 15$ seconds.",
+      nudge: "Careful: the change in distance is the distance at the <b>end</b> take away the distance at the <b>start</b> — not just the distance at the end.",
+      walkthrough: [
+        "<b>Equation:</b> $\\text{speed} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$",
+        "<b>Working:</b> $\\text{speed} = \\dfrac{100 - 30}{25 - 15} = \\dfrac{70}{10}$",
+        "<b>Answer:</b> $= 7$",
+        "<b>Units:</b> m/s — faster than part A, which you can see because C is steeper.",
+      ],
+    });
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 7: draw the journey ---------- */
+
+  // A journey made from points the student has placed on the graph, joined
+  // dot-to-dot. position(t) is read straight off the drawn line, so the car
+  // obeys whatever was drawn.
+  function journeyFromPoints(points, dMax) {
+    const segments = [];
+    for (let index = 0; index < points.length - 1; index += 1) {
+      segments.push({ kind: "drawn", t0: points[index][0], t1: points[index + 1][0], d0: points[index][1], d1: points[index + 1][1] });
+    }
+    let tEnd = 0;
+    if (points.length > 0) {
+      tEnd = points[points.length - 1][0];
+    }
+
+    function position(t) {
+      if (points.length === 0) {
+        return 0;
+      }
+      if (t <= points[0][0]) {
+        return clamp(points[0][1], 0, dMax);
+      }
+      for (const segment of segments) {
+        if (t <= segment.t1) {
+          const fraction = (t - segment.t0) / (segment.t1 - segment.t0);
+          return clamp(segment.d0 + fraction * (segment.d1 - segment.d0), 0, dMax);
+        }
+      }
+      return clamp(points[points.length - 1][1], 0, dMax);
+    }
+
+    return { segments: segments, tEnd: tEnd, position: position, points: points };
+  }
+
+  addStep("Draw the journey", function (body, index) {
+    const T_MAX = 30;
+    const D_MAX = 100;
+    const T_SNAP = 1;
+    const D_SNAP = 5;
+
+    body.appendChild(el("<div class=\"prose\">" +
+      "<p>Now you draw the graph, and the car has to obey it. <b>Tap the graph</b> to place the next point of the journey — the line joins the points in order, and the car starts at home. Then press play and watch the car follow the line you drew.</p>" +
+      "<p>Before you press play each time: what will the car do on each part of your line?</p>" +
+      "</div>"));
+
+    const fig = el("<div></div>");
+    body.appendChild(fig);
+
+    // The student's points, in order; the first is always home at 0 s
+    let points = [[0, 0]];
+
+    const demo = makeDemo(fig, {
+      tMax: T_MAX, dMax: D_MAX, dStep: 10,
+      journey: journeyFromPoints(points, D_MAX),
+      alt: "The graph you draw, with the car obeying it",
+    });
+
+    const svg = demo.svg;
+    svg.classList.add("can-draw");
+
+    // Drawing tools sit between the figure and the challenge
+    const tools = el("<div class=\"draw-tools\"><span class=\"note\" data-draw-note>Tap the graph to place the next point. Each point must be later in time than the one before.</span><span class=\"draw-btns\"><button class=\"btn small\" type=\"button\" data-draw-undo>Undo</button><button class=\"btn small\" type=\"button\" data-draw-clear>Clear</button></span></div>");
+    fig.appendChild(tools);
+    const drawNote = tools.querySelector("[data-draw-note]");
+
+    function redrawPoints() {
+      let markup = "";
+      // The planned line, drawn thinly so the red trace can be drawn over it when the car plays
+      if (points.length > 1) {
+        let d = "";
+        points.forEach(function (point, pointIndex) {
+          d += pick(pointIndex === 0, "M", "L") + fmt(scaleX(point[0], T_MAX), 1) + "," + fmt(scaleY(point[1], D_MAX), 1);
+        });
+        markup += "<path class=\"planned\" d=\"" + d + "\"/>";
+      }
+      points.forEach(function (point, pointIndex) {
+        const px = scaleX(point[0], T_MAX);
+        const py = scaleY(point[1], D_MAX);
+        markup += "<path class=\"cross\" d=\"M" + fmt(px - 5, 1) + "," + fmt(py - 5, 1) + "L" + fmt(px + 5, 1) + "," + fmt(py + 5, 1) +
+          "M" + fmt(px - 5, 1) + "," + fmt(py + 5, 1) + "L" + fmt(px + 5, 1) + "," + fmt(py - 5, 1) + "\"/>";
+        if (pointIndex > 0) {
+          markup += "<text class=\"pt-label\" x=\"" + fmt(px, 1) + "\" y=\"" + fmt(py - 10, 1) + "\" text-anchor=\"middle\">" + point[0] + " s, " + point[1] + " m</text>";
+        }
+      });
+      demo.static.innerHTML = "<g class=\"g-user\">" + markup + "</g>";
+    }
+
+    function applyPoints() {
+      demo.setJourney(journeyFromPoints(points, D_MAX));
+      redrawPoints();
+      if (challengeOn) {
+        demo.target.setAttribute("d", tracePath(target, target.tEnd, T_MAX, D_MAX));
+      }
+    }
+
+    function snap(value, step) {
+      return Math.round(value / step) * step;
+    }
+
+    svg.addEventListener("click", function (event) {
+      // Where on the graph was tapped, in data units
+      const point = svg.createSVGPoint();
+      point.x = event.clientX;
+      point.y = event.clientY;
+      const local = point.matrixTransform(svg.getScreenCTM().inverse());
+      if (local.x < PLOT_LEFT - 8 || local.x > PLOT_RIGHT + 8 || local.y < PLOT_TOP - 8 || local.y > PLOT_BOTTOM + 8) {
+        return;
+      }
+      const t = clamp(snap(((local.x - PLOT_LEFT) / (PLOT_RIGHT - PLOT_LEFT)) * T_MAX, T_SNAP), 0, T_MAX);
+      const d = clamp(snap(((PLOT_BOTTOM - local.y) / (PLOT_BOTTOM - PLOT_TOP)) * D_MAX, D_SNAP), 0, D_MAX);
+      const last = points[points.length - 1];
+      if (t <= last[0]) {
+        drawNote.textContent = "That point is not later than the last one (" + last[0] + " s). Tap further to the right, or press Undo.";
+        return;
+      }
+      drawNote.textContent = "Point placed at " + t + " s, " + d + " m. Tap again for the next one, or press Play.";
+      points.push([t, d]);
+      applyPoints();
+    });
+
+    tools.querySelector("[data-draw-undo]").addEventListener("click", function () {
+      if (points.length > 1) {
+        points.pop();
+      }
+      drawNote.textContent = "Last point removed.";
+      applyPoints();
+    });
+
+    tools.querySelector("[data-draw-clear]").addEventListener("click", function () {
+      points = [[0, 0]];
+      drawNote.textContent = "Cleared. The car is back at home — tap the graph to draw a new journey.";
+      applyPoints();
+    });
+
+    body.appendChild(el("<div class=\"callout\">" + rich("Try drawing these first, and press play after each: a car that drives north and then <b>stops</b>; a car that goes out and comes all the way <b>home</b>; a car with <b>two</b> stops. Watch the car do exactly what your line says.") + "</div>"));
+
+    // ----- The challenge: draw the graph for a journey described in words -----
+    const target = buildJourney([{ kind: "go", v: 5, t: 10 }, { kind: "stop", t: 6 }, { kind: "back", v: 5, t: 10 }], D_MAX);
+    let challengeOn = false;
+    registerCheck(index, "c7");
+    const challenge = el("<div class=\"check\"><span class=\"kicker\">Check 7 — the big one</span>" +
+      "<p class=\"q\">Draw the distance–time graph for this journey: a car drives north at <b>5 metres every second</b> for <b>10 seconds</b>, <b>stops for 6 seconds</b>, then drives back home at <b>5 metres every second</b> for <b>10 seconds</b>. Press play to check the car does what the words say, then press <b>Check my graph</b>.</p>" +
+      "<div style=\"display:flex;gap:8px;flex-wrap:wrap\"><button class=\"btn solid\" type=\"button\" data-check-journey>Check my graph</button><button class=\"btn\" type=\"button\" data-show-target>Show me the answer line</button></div>" +
+      "<div class=\"feedback\" data-feedback></div>" +
+      "<div class=\"why\" data-why><div class=\"inner\"><div class=\"box\">" + rich("Work out where each part ends. North at 5 metres every second for 10 seconds gets the car to 50 metres, at 10 seconds. Stopping for 6 seconds keeps it at 50 metres until 16 seconds. Driving home at 5 metres every second takes 10 seconds, so the car is back at 0 metres at 26 seconds. The points to tap are 10 s and 50 m, then 16 s and 50 m, then 26 s and 0 m.") + "</div></div></div>" +
+      "</div>");
+    body.appendChild(challenge);
+    const feedback = challenge.querySelector("[data-feedback]");
+    const why = challenge.querySelector("[data-why]");
+    const showButton = challenge.querySelector("[data-show-target]");
+
+    if (checkPassed("c7")) {
+      feedback.className = "feedback ok";
+      feedback.innerHTML = tickIcon() + "Correct — your graph matches the journey";
+    }
+
+    showButton.addEventListener("click", function () {
+      challengeOn = !challengeOn;
+      showButton.classList.toggle("pressed", challengeOn);
+      showButton.textContent = pick(challengeOn, "Hide the answer line", "Show me the answer line");
+      if (!challengeOn) {
+        demo.target.setAttribute("d", "");
+      }
+      applyPoints();
+      if (challengeOn) {
+        fig.scrollIntoView({ behavior: scrollBehaviour(), block: "center" });
+      }
+    });
+
+    challenge.querySelector("[data-check-journey]").addEventListener("click", function () {
+      const drawn = journeyFromPoints(points, D_MAX);
+      if (points.length < 2) {
+        feedback.className = "feedback nudge";
+        feedback.textContent = "Tap the graph to draw the journey first.";
+        return;
+      }
+      let firstBad = null;
+      for (let t = 0; t <= target.tEnd; t += 1) {
+        const mine = drawn.position(t);
+        const theirs = target.position(t);
+        if (Math.abs(mine - theirs) > 3) {
+          firstBad = { t: t, mine: mine, theirs: theirs };
+          break;
+        }
+      }
+      const lengthOk = Math.abs(drawn.tEnd - target.tEnd) <= 1;
+      if (!firstBad && lengthOk) {
+        recordAttempt("c7", true);
+        feedback.className = "feedback ok";
+        feedback.innerHTML = tickIcon() + "Correct — your graph matches the journey";
+        why.classList.add("open");
+        refreshSteps();
+        return;
+      }
+      const entry = recordAttempt("c7", false);
+      feedback.className = "feedback nudge";
+      if (firstBad) {
+        feedback.textContent = "Not yet. At " + firstBad.t + " seconds the car should be at " + fmt(firstBad.theirs, 0) + " m, but your line puts it at " + fmt(firstBad.mine, 0) + " m. Drag the slider to " + firstBad.t + " s and watch where the car is.";
+      } else {
+        feedback.textContent = "The shape is right but your journey lasts " + drawn.tEnd + " seconds; the words describe " + target.tEnd + " seconds.";
+      }
+      if (entry.attempts >= 2) {
+        why.classList.add("open");
+      }
+    });
+
+    applyPoints();
+    continueButton(body, index);
+  });
+
+  /* ---------- Step 8: summary ---------- */
+  addStep("What the shapes mean", function (body, index) {
+    const shapes = [
+      { name: "Constant speed", note: "straight line going up", path: "M10 48L88 8" },
+      { name: "Stationary", note: "horizontal line", path: "M10 28L88 28" },
+      { name: "Heading home", note: "straight line going down", path: "M10 8L88 48" },
+      { name: "Speeding up", note: "curve getting steeper", path: "M10 48 C 40 48, 70 36, 88 6" },
+      { name: "Slowing down", note: "curve getting flatter", path: "M10 48 C 20 20, 50 8, 88 6" },
+    ];
+    let shapesHtml = "<div class=\"shapes\">";
+    shapes.forEach(function (shape) {
+      shapesHtml += "<div class=\"shape\"><svg viewBox=\"0 0 98 56\" aria-hidden=\"true\"><path class=\"ax\" d=\"M10 4V48H94\"/><path d=\"" + shape.path + "\"/></svg><b>" + shape.name + "</b><span>" + shape.note + "</span></div>";
+    });
+    shapesHtml += "</div>";
+    body.appendChild(el(shapesHtml));
+
+    body.appendChild(el("<div class=\"callout key\">" + rich("The gradient of a distance–time graph is the <b>speed</b>: $\\text{speed} = \\dfrac{\\text{change in distance}}{\\text{change in time}}$. Steeper means faster; a flat line means stationary; sloping down means travelling back towards the start; a curve means the speed is changing.") + "</div>"));
+
+    const score = el("<div class=\"score\"><div><div class=\"big\" data-score>–</div><div class=\"lbl\">checks passed first time</div></div><div><div class=\"big\" data-passed>–</div><div class=\"lbl\">checks passed in total</div></div></div>");
+    body.appendChild(score);
+
+    function refreshScore() {
+      const ids = Object.keys(stepChecks).reduce(function (all, key) { return all.concat(stepChecks[key]); }, []);
+      let first = 0;
+      let passed = 0;
+      ids.forEach(function (id) {
+        const entry = state.checks[id];
+        if (entry && entry.passed) {
+          passed += 1;
+          if (entry.firstTry) {
+            first += 1;
+          }
+        }
+      });
+      score.querySelector("[data-score]").textContent = first + " / " + ids.length;
+      score.querySelector("[data-passed]").textContent = passed + " / " + ids.length;
+    }
+    document.addEventListener("dt-progress", refreshScore);
+    refreshScore();
+
+    const items = [
+      "Say what a horizontal line, a rising line, a falling line and a curve each mean on a distance–time graph",
+      "Use the gradient to work out a speed from a distance–time graph, laid out as EWAU",
+      "Draw a distance–time graph to represent a journey I am told about",
+    ];
+    let ragHtml = "<div><p class=\"q\" style=\"margin-bottom:8px\"><b>Self-check.</b> Red = not yet, amber = with help, green = on my own.</p><div class=\"rag-list\">";
+    items.forEach(function (item, i) {
+      const chosen = state.rag[i] || "";
+      ragHtml += "<div class=\"rag-row\" data-rag=\"" + i + "\"><span>" + item + "</span><span class=\"rag-btns\">";
+      ["r", "a", "g"].forEach(function (level) {
+        const titles = { r: "Not yet", a: "With help", g: "On my own" };
+        const title = titles[level];
+        ragHtml += "<button type=\"button\" class=\"rag " + level + pick(chosen === level, " on", "") + "\" data-level=\"" + level + "\" title=\"" + title + "\" aria-label=\"" + title + "\"></button>";
+      });
+      ragHtml += "</span></div>";
+    });
+    ragHtml += "</div></div>";
+    const rag = el(ragHtml);
+    body.appendChild(rag);
+    rag.querySelectorAll(".rag-row").forEach(function (row) {
+      const i = row.getAttribute("data-rag");
+      row.querySelectorAll(".rag").forEach(function (button) {
+        button.addEventListener("click", function () {
+          state.rag[i] = button.getAttribute("data-level");
+          saveState();
+          row.querySelectorAll(".rag").forEach(function (other) {
+            other.classList.toggle("on", other === button);
+          });
+        });
+      });
+    });
+  });
+
+  /* ===================================================================
+     Boot
+     =================================================================== */
+
+  function buildPage() {
+    const container = document.getElementById("steps");
+    const rail = document.getElementById("rail");
+    container.innerHTML = "";
+    rail.innerHTML = "";
+    stepElements.length = 0;
+    Object.keys(stepChecks).forEach(function (key) { delete stepChecks[key]; });
+
+    steps.forEach(function (step, index) {
+      const article = stepShell(index, step.title);
+      container.appendChild(article);
+      stepElements.push(article);
+      step.build(article.querySelector(".step-body"), index);
+
+      const item = document.createElement("li");
+      item.innerHTML = "<a href=\"#step-" + (index + 1) + "\"><span class=\"n\">" + (index + 1) + "</span>" + step.title + "</a>";
+      rail.appendChild(item);
+    });
+
+    // Wrap refreshSteps so the summary's score follows along
+    refreshSteps();
+    document.dispatchEvent(new Event("dt-progress"));
+  }
+
+  const originalRefresh = refreshSteps;
+  refreshSteps = function () {
+    originalRefresh();
+    document.dispatchEvent(new Event("dt-progress"));
+  };
+
+  document.getElementById("btn-unlock").addEventListener("click", function () {
+    state.unlockedAll = !state.unlockedAll;
+    saveState();
+    document.getElementById("btn-unlock").textContent = pick(state.unlockedAll, "Teacher: lock steps again", "Teacher: unlock every step");
+    refreshSteps();
+  });
+
+  document.getElementById("btn-reset").addEventListener("click", function () {
+    state = { done: {}, checks: {}, unlockedAll: false, rag: {} };
+    saveState();
+    buildPage();
+    window.scrollTo({ top: 0 });
+  });
+
+  if (state.unlockedAll) {
+    document.getElementById("btn-unlock").textContent = "Teacher: lock steps again";
+  }
+
+  buildPage();
+}());
+</script>
+</body>
+</html>
