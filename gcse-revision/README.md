@@ -15,7 +15,7 @@ grouped under headings, each with its own numbering prefix.
 2.1–2.33P in three bands: *The non-negotiables* (N1–N15, recall and
 single-step calculations), *The tricky bits* (T1–T13, multi-step
 calculations, explanations and misconceptions) and *Key facts* (flip cards).
-21 sections and 132 questions on the U4 page (29 and 182 in the modules).
+20 sections and 126 questions on the U4 page (29 and 182 in the modules).
 
 ## Running it
 
@@ -61,7 +61,7 @@ To add a topic, copy the build script and its modules, give the topic a new
 
 `HIDDEN_SECTIONS` at the top of `tools/build_t2_forces_motion.py` lists
 section ids that stay in the modules but are left out of the JSON (and whose
-key-fact cards are dropped). The U4 page currently hides Newton's third law,
+key-fact cards are dropped). The U4 page currently hides Newton's third law (and its balanced-forces section),
 momentum, circular motion, inertial mass and the stopping-distance sections,
 because those spec points are taught later. Remove an id from the set and
 rebuild to publish it; the remaining sections renumber themselves.

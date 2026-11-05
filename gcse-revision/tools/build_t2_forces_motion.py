@@ -35,8 +35,8 @@ import t2_tricky_b  # noqa: E402
 # Sections hidden from the U4 page
 #
 # The modules hold the whole of Topic 2, but the U4 scheme stops short of
-# Newton's third law, momentum, circular motion, inertial mass and the
-# stopping-distance work (those spec points come later). Listing a section
+# Newton's third law (and its balanced-forces trap), momentum, circular
+# motion, inertial mass and the stopping-distance work (those spec points come later). Listing a section
 # id here keeps its content in the modules but leaves it out of the JSON —
 # and out of its key-fact cards — so the page only shows what U4 have been
 # taught. Remove an id from this set to publish that section.
@@ -46,6 +46,7 @@ HIDDEN_SECTIONS = {
     "newton-third",            # N13 · Newton's third law (2.23)
     "momentum",                # N14 · Momentum p = mv (2.24)
     "stopping-distance",       # N15 · Stopping distances and reaction time (2.27–2.30)
+    "third-law-trap",          # T5 · Third-law pairs vs balanced forces (2.23)
     "circular-motion",         # T6 · Circular motion (2.20–2.21)
     "inertial-mass",           # T7 · Inertial mass (2.22)
     "conservation-momentum",   # T8 · Conservation of momentum (2.23–2.25)
