@@ -413,12 +413,13 @@ section_t11 = {
 
 
 def mark_scheme(points, extra=None):
-    """A 6-mark scheme laid out as a table: one row per mark.
+    """A 6-mark scheme laid out as a table: one row per point (seven points, any six score).
 
     `points` is a list of (short label, what the student must write).
     `extra` is an optional list of lines about what is also accepted or
     what gets no credit."""
-    html = "<table class='tbl'><tr><th>Mark</th><th>For</th><th>What you need to write</th></tr>"
+    html = "<p><b>6 marks</b> — one mark per row below, any six of the seven.</p>"
+    html += "<table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr>"
     number = 0
     for short, detail in points:
         number += 1
@@ -437,7 +438,7 @@ section_planning = {
     "band": "tricky",
     "lessons": "2.11, 2.19",
     "title": "Planning a practical: the 6-mark method question",
-    "blurb": "\"Describe how you would investigate…\" is worth six marks and most students get two. The same five steps answer every version of it.",
+    "blurb": "\"Describe how you would investigate…\" is worth six marks and most students get two. The same seven steps answer every version of it.",
     "equations": [],
     "checklist": [
         "Pick out the two variables a \"describe a method\" question is asking about",
@@ -445,14 +446,16 @@ section_planning = {
         "Say which variable you change, how you change it, and what you keep the same",
         "Say which variable you measure, how, and with what equipment",
         "Say what you will do with the results (a calculation or a graph)",
+        "Give one specific detail that makes the results accurate",
+        "Say you will repeat the readings and calculate a mean (both halves, or no mark)",
     ],
     "parts": [
         {
             "kind": "explain",
-            "title": "Five steps, every time",
+            "title": "Seven steps, every time",
             "html": (
                 "<p>Whenever a question says <i>describe how you would investigate</i>, <i>plan an experiment</i> or <i>design a method</i>, "
-                "write your answer in these five steps, in this order. Each step is a mark or more, and examiners are looking for exactly these things.</p>"
+                "write your answer in these seven steps, in this order. Each step is a mark, and examiners are looking for exactly these things.</p>"
                 "<ol class='list'>"
                 "<li><b>Read the question, and write down the two variables you are being asked to investigate.</b> "
                 "One is the thing you will change (the independent variable); the other is the thing you will measure (the dependent variable).</li>"
@@ -460,8 +463,12 @@ section_planning = {
                 "<li><b>Say which one you will change and how you will change it</b> — e.g. \"add masses to the trolley\". "
                 "Give a range or a number of values (\"five different masses\"), and say what you will keep the same so it is a fair test.</li>"
                 "<li><b>Say which one you will measure, and how you will measure it, including the equipment to use</b> — "
-                "e.g. \"record the speed at each light gate, and measure the distance between them with a ruler\". Say you will repeat and take a mean.</li>"
+                "e.g. \"record the speed at each light gate, and measure the distance between them with a ruler\".</li>"
                 "<li><b>Say what you will do with the result</b> — e.g. \"use $a = F \\div m$ to calculate the acceleration\" or \"plot a graph of $F$ against $a$ and calculate the gradient\".</li>"
+                "<li><b>Add a detail about the practical to make sure you get accurate results</b> — e.g. \"release the trolley from the same point each time\", "
+                "\"keep the ramp at the same angle\", \"use light gates rather than a stopwatch so there is no reaction time\". One specific, relevant detail is enough.</li>"
+                "<li><b>Say you will repeat the readings and calculate a mean.</b> Both halves are needed: writing \"repeat the experiment\" on its own does <b>not</b> get the mark — "
+                "you must also say that you will <b>calculate a mean</b> of the repeats.</li>"
                 "</ol>"
                 "<p>Write the steps as numbered points, not as one paragraph. A labelled diagram of the equipment is worth adding if you have time, but it does not replace the words.</p>"
             ),
@@ -474,7 +481,8 @@ section_planning = {
                 "<p>The two most common ways to lose marks are <b>describing the equipment without saying what you measure with it</b> "
                 "(\"use light gates\" earns nothing; \"use light gates to record the speed at each point\" does), "
                 "and <b>stopping after you have collected the data</b>. The question asked how you would <i>investigate</i> the link between the two variables, "
-                "so the last step — the calculation or the graph that shows the link — is where the final mark lives.</p>"
+                "so the calculation or graph that shows the link is a mark in its own right. "
+                "And the easiest mark on the paper is the one most often thrown away: <b>\"repeat\" alone scores nothing — \"repeat and calculate a mean\" scores</b>.</p>"
             ),
         },
         {
@@ -485,15 +493,17 @@ section_planning = {
                 r"<b>Step 1 — the two variables.</b> I am investigating <b>force</b> (independent variable, the one I change) and <b>acceleration</b> (dependent variable, the one I measure).",
                 r"<b>Step 2 — the formula.</b> They are linked by $F = m \times a$. That means the mass must be kept constant, and at the end I expect $a$ to be proportional to $F$.",
                 r"<b>Step 3 — what I change and how.</b> The force is the weight of a mass hanging on a string that runs over a pulley to the trolley. I change the force by moving a slotted mass from the trolley to the hanger, so that the total mass being accelerated stays the same. I use five different forces.",
-                r"<b>Step 4 — what I measure and how.</b> I put a card of known length on the trolley and set up two light gates connected to a data logger. The data logger records the speed at each gate and the time to travel between them. I measure the distance between the gates with a metre rule. I release the trolley from the same point each time, repeat each force three times and take a mean.",
+                r"<b>Step 4 — what I measure and how.</b> I put a card of known length on the trolley and set up two light gates connected to a data logger. The data logger records the speed at each gate and the time to travel between them. I measure the distance between the gates with a metre rule.",
                 r"<b>Step 5 — what I do with the results.</b> I calculate the acceleration with $a = (v - u) \div t$ from the two speeds and the time between the gates, then plot a graph of $a$ against $F$. A straight line through the origin shows that $a \propto F$; the gradient is $1 \div m$.",
-                r"<b>As it would be written in the exam:</b> five numbered sentences, one per step — about eight lines. Every sentence contains either a variable, a piece of equipment and what it measures, or what is done with a number.",
+                r"<b>Step 6 — accuracy.</b> I release the trolley from the same marked point each time, and I tilt the runway slightly first so that the trolley runs at a constant speed with no hanging mass — this compensates for friction, so the hanging weight is the only resultant force.",
+                r"<b>Step 7 — repeat and mean.</b> I repeat the readings for each force three times and <b>calculate a mean</b> acceleration for each force before plotting.",
+                r"<b>As it would be written in the exam:</b> seven numbered sentences, one per step — about ten lines. Every sentence contains either a variable, a piece of equipment and what it measures, or what is done with a number.",
             ],
         },
         {
             "kind": "practice",
             "title": "Planning a practical",
-            "intro": "Write the full answer on paper, as five numbered points, before you open the mark scheme. Then mark yourself one mark per row.",
+            "intro": "Write the full answer on paper, as seven numbered points, before you open the mark scheme. Then mark yourself one mark per row — the question is out of six, so any six of the seven rows score.",
             "questions": [
                 written(
                     "t2-tp-q1",
@@ -502,10 +512,11 @@ section_planning = {
                     mark_scheme([
                         ("Variables", "Identifies the two variables: the <b>mass</b> of the trolley is changed (independent) and the <b>acceleration</b> is measured (dependent)."),
                         ("Formula", "States that they are linked by $F = m \\times a$ (or $a = F \\div m$)."),
-                        ("Change", "Changes the mass by adding slotted masses to the trolley, using at least five different masses."),
-                        ("Fair test", "Keeps the force the same by leaving the same mass on the hanger every time (and releases the trolley from the same point)."),
-                        ("Measure", "Measures the acceleration using the card and two light gates with a data logger: speed at each gate, time between the gates, $a = (v - u) \\div t$ (or the data logger calculates it). Repeats and takes a mean."),
+                        ("Change", "Changes the mass by adding slotted masses to the trolley, using at least five different masses, and keeps the force the same by leaving the same mass on the hanger every time."),
+                        ("Measure", "Measures the acceleration using the card and two light gates with a data logger: speed at each gate, time between the gates, $a = (v - u) \\div t$ (or the data logger calculates it)."),
                         ("Use the result", "Plots a graph of acceleration against mass (or against $1 \\div \\text{mass}$) and describes the link — $a$ decreases as $m$ increases; $a$ against $1/m$ is a straight line through the origin with gradient $F$."),
+                        ("Accuracy", "One specific detail that makes the results accurate: releases the trolley from the same marked point each time, or tilts the runway to compensate for friction, or measures the card length precisely with a ruler."),
+                        ("Repeat &amp; mean", "Repeats the readings for each mass <b>and calculates a mean</b>. \"Repeat\" on its own does not score."),
                     ], extra=[
                         "\"Use light gates\" on its own does not earn the <i>Measure</i> mark — you must say what the light gates measure.",
                         "The <i>Use the result</i> mark needs a graph or a calculation that links the two variables, not just \"record the results in a table\".",
@@ -520,9 +531,10 @@ section_planning = {
                         ("Variables", "Identifies the two variables: the <b>distance travelled down the ramp</b> is changed (independent) and the <b>velocity</b> at that point is measured (dependent)."),
                         ("Formula", "States that they are linked by $v^2 - u^2 = 2 \\times a \\times x$, and that $u = 0$ because the trolley starts from rest (so $v^2 = 2ax$)."),
                         ("Change", "Changes the distance by moving a light gate to different positions down the ramp, measuring the distance from the release point to the gate with a metre rule, for at least five distances."),
-                        ("Fair test", "Releases the trolley from the same marked point each time, without pushing it, and keeps the ramp at the same angle."),
-                        ("Measure", "Measures the velocity at the gate: a card of measured length on the trolley breaks the light-gate beam, the timer records the time, and velocity $= \\text{card length} \\div \\text{time}$. Repeats each distance and takes a mean."),
+                        ("Measure", "Measures the velocity at the gate: a card of measured length on the trolley breaks the light-gate beam, the timer records the time, and velocity $= \\text{card length} \\div \\text{time}$."),
                         ("Use the result", "Plots a graph of $v^2$ against $x$. A straight line through the origin shows that $v^2 \\propto x$ (the acceleration is constant); the gradient equals $2a$, so the acceleration is half the gradient."),
+                        ("Accuracy", "One specific detail that makes the results accurate: releases the trolley from the same marked point each time without pushing it, or keeps the ramp at the same angle throughout, or measures the distance to the gate from the front of the card."),
+                        ("Repeat &amp; mean", "Repeats the readings at each distance <b>and calculates a mean</b> velocity. \"Repeat\" on its own does not score."),
                     ], extra=[
                         "Plotting $v$ against $x$ and saying \"it curves\" earns the graph part of the last mark only if you say the curve shows $v$ is not proportional to $x$; the full mark needs $v^2$ against $x$.",
                         "A stopwatch instead of a light gate is accepted for the <i>Measure</i> mark only if you say what distance and time you would use to find the velocity, and note that reaction time makes it less accurate.",
@@ -739,7 +751,7 @@ key_facts = [
     ("Double the speed: thinking and braking distances?", "Thinking ×2, braking ×4", "braking-v-squared"),
     ("Why is braking distance ∝ v²?", r"Work done by brakes $F d$ = KE $\tfrac{1}{2}mv^2$", "braking-v-squared"),
     ("Core practical: why move masses from trolley to hanger?", "To change the force while keeping the total mass constant", "core-practical-analysis"),
-    ("Five steps to describe a practical?", "Two variables → formula → what you change and how → what you measure and how (equipment) → what you do with the result", "planning-practical"),
+    ("Seven steps to describe a practical?", "Two variables → formula → what you change and how → what you measure and how (equipment) → what you do with the result → one accuracy detail → repeat and calculate a mean", "planning-practical"),
     ("Ruler drop: distance to time?", r"$t = \sqrt{2x \div g}$", "reaction-time"),
 ]
 
