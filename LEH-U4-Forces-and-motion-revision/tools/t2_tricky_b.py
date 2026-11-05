@@ -408,6 +408,135 @@ section_t11 = {
 
 
 # =====================================================================
+# T11b · Planning a practical — the 6-mark "describe a method" question
+# =====================================================================
+
+
+def mark_scheme(points, extra=None):
+    """A 6-mark scheme laid out as a table: one row per mark.
+
+    `points` is a list of (short label, what the student must write).
+    `extra` is an optional list of lines about what is also accepted or
+    what gets no credit."""
+    html = "<table class='tbl'><tr><th>Mark</th><th>For</th><th>What you need to write</th></tr>"
+    number = 0
+    for short, detail in points:
+        number += 1
+        html += "<tr><td><b>" + str(number) + "</b></td><td>" + short + "</td><td>" + detail + "</td></tr>"
+    html += "</table>"
+    if extra:
+        html += "<ul>"
+        for line in extra:
+            html += "<li>" + line + "</li>"
+        html += "</ul>"
+    return html
+
+
+section_planning = {
+    "id": "planning-practical",
+    "band": "tricky",
+    "lessons": "2.11, 2.19",
+    "title": "Planning a practical: the 6-mark method question",
+    "blurb": "\"Describe how you would investigate…\" is worth six marks and most students get two. The same five steps answer every version of it.",
+    "equations": [],
+    "checklist": [
+        "Pick out the two variables a \"describe a method\" question is asking about",
+        "Name the formula that links them",
+        "Say which variable you change, how you change it, and what you keep the same",
+        "Say which variable you measure, how, and with what equipment",
+        "Say what you will do with the results (a calculation or a graph)",
+    ],
+    "parts": [
+        {
+            "kind": "explain",
+            "title": "Five steps, every time",
+            "html": (
+                "<p>Whenever a question says <i>describe how you would investigate</i>, <i>plan an experiment</i> or <i>design a method</i>, "
+                "write your answer in these five steps, in this order. Each step is a mark or more, and examiners are looking for exactly these things.</p>"
+                "<ol class='list'>"
+                "<li><b>Read the question, and write down the two variables you are being asked to investigate.</b> "
+                "One is the thing you will change (the independent variable); the other is the thing you will measure (the dependent variable).</li>"
+                "<li><b>Figure out which formula links them.</b> Write it down. It tells you what else must be kept the same, and what to do with the results at the end.</li>"
+                "<li><b>Say which one you will change and how you will change it</b> — e.g. \"add masses to the trolley\". "
+                "Give a range or a number of values (\"five different masses\"), and say what you will keep the same so it is a fair test.</li>"
+                "<li><b>Say which one you will measure, and how you will measure it, including the equipment to use</b> — "
+                "e.g. \"record the speed at each light gate, and measure the distance between them with a ruler\". Say you will repeat and take a mean.</li>"
+                "<li><b>Say what you will do with the result</b> — e.g. \"use $a = F \\div m$ to calculate the acceleration\" or \"plot a graph of $F$ against $a$ and calculate the gradient\".</li>"
+                "</ol>"
+                "<p>Write the steps as numbered points, not as one paragraph. A labelled diagram of the equipment is worth adding if you have time, but it does not replace the words.</p>"
+            ),
+        },
+        {
+            "kind": "explain",
+            "tone": "warn",
+            "title": "Where the marks go missing",
+            "html": (
+                "<p>The two most common ways to lose marks are <b>describing the equipment without saying what you measure with it</b> "
+                "(\"use light gates\" earns nothing; \"use light gates to record the speed at each point\" does), "
+                "and <b>stopping after you have collected the data</b>. The question asked how you would <i>investigate</i> the link between the two variables, "
+                "so the last step — the calculation or the graph that shows the link — is where the final mark lives.</p>"
+            ),
+        },
+        {
+            "kind": "worked",
+            "title": "Investigating force and acceleration",
+            "question": "Describe how you would investigate how the acceleration of a trolley depends on the resultant force acting on it. (6 marks)",
+            "steps": [
+                r"<b>Step 1 — the two variables.</b> I am investigating <b>force</b> (independent variable, the one I change) and <b>acceleration</b> (dependent variable, the one I measure).",
+                r"<b>Step 2 — the formula.</b> They are linked by $F = m \times a$. That means the mass must be kept constant, and at the end I expect $a$ to be proportional to $F$.",
+                r"<b>Step 3 — what I change and how.</b> The force is the weight of a mass hanging on a string that runs over a pulley to the trolley. I change the force by moving a slotted mass from the trolley to the hanger, so that the total mass being accelerated stays the same. I use five different forces.",
+                r"<b>Step 4 — what I measure and how.</b> I put a card of known length on the trolley and set up two light gates connected to a data logger. The data logger records the speed at each gate and the time to travel between them. I measure the distance between the gates with a metre rule. I release the trolley from the same point each time, repeat each force three times and take a mean.",
+                r"<b>Step 5 — what I do with the results.</b> I calculate the acceleration with $a = (v - u) \div t$ from the two speeds and the time between the gates, then plot a graph of $a$ against $F$. A straight line through the origin shows that $a \propto F$; the gradient is $1 \div m$.",
+                r"<b>As it would be written in the exam:</b> five numbered sentences, one per step — about eight lines. Every sentence contains either a variable, a piece of equipment and what it measures, or what is done with a number.",
+            ],
+        },
+        {
+            "kind": "practice",
+            "title": "Planning a practical",
+            "intro": "Write the full answer on paper, as five numbered points, before you open the mark scheme. Then mark yourself one mark per row.",
+            "questions": [
+                written(
+                    "t2-tp-q1",
+                    "A student has a trolley, a set of slotted masses, a mass hanger, a string and pulley, a card, two light gates and a data logger. "
+                    "Describe how the student could investigate how the <b>acceleration</b> of the trolley depends on its <b>mass</b>. (6 marks)",
+                    mark_scheme([
+                        ("Variables", "Identifies the two variables: the <b>mass</b> of the trolley is changed (independent) and the <b>acceleration</b> is measured (dependent)."),
+                        ("Formula", "States that they are linked by $F = m \\times a$ (or $a = F \\div m$)."),
+                        ("Change", "Changes the mass by adding slotted masses to the trolley, using at least five different masses."),
+                        ("Fair test", "Keeps the force the same by leaving the same mass on the hanger every time (and releases the trolley from the same point)."),
+                        ("Measure", "Measures the acceleration using the card and two light gates with a data logger: speed at each gate, time between the gates, $a = (v - u) \\div t$ (or the data logger calculates it). Repeats and takes a mean."),
+                        ("Use the result", "Plots a graph of acceleration against mass (or against $1 \\div \\text{mass}$) and describes the link — $a$ decreases as $m$ increases; $a$ against $1/m$ is a straight line through the origin with gradient $F$."),
+                    ], extra=[
+                        "\"Use light gates\" on its own does not earn the <i>Measure</i> mark — you must say what the light gates measure.",
+                        "The <i>Use the result</i> mark needs a graph or a calculation that links the two variables, not just \"record the results in a table\".",
+                    ]),
+                    lines=8,
+                    hint="Step 1: the variables are mass and acceleration. Which one will you add masses to change, and what must then stay the same?",
+                ),
+                written(
+                    "t2-tp-q2",
+                    "A trolley is released from rest at the top of a ramp. Describe how you would investigate how the <b>velocity</b> of the trolley depends on the <b>distance</b> it has travelled down the ramp. (6 marks)",
+                    mark_scheme([
+                        ("Variables", "Identifies the two variables: the <b>distance travelled down the ramp</b> is changed (independent) and the <b>velocity</b> at that point is measured (dependent)."),
+                        ("Formula", "States that they are linked by $v^2 - u^2 = 2 \\times a \\times x$, and that $u = 0$ because the trolley starts from rest (so $v^2 = 2ax$)."),
+                        ("Change", "Changes the distance by moving a light gate to different positions down the ramp, measuring the distance from the release point to the gate with a metre rule, for at least five distances."),
+                        ("Fair test", "Releases the trolley from the same marked point each time, without pushing it, and keeps the ramp at the same angle."),
+                        ("Measure", "Measures the velocity at the gate: a card of measured length on the trolley breaks the light-gate beam, the timer records the time, and velocity $= \\text{card length} \\div \\text{time}$. Repeats each distance and takes a mean."),
+                        ("Use the result", "Plots a graph of $v^2$ against $x$. A straight line through the origin shows that $v^2 \\propto x$ (the acceleration is constant); the gradient equals $2a$, so the acceleration is half the gradient."),
+                    ], extra=[
+                        "Plotting $v$ against $x$ and saying \"it curves\" earns the graph part of the last mark only if you say the curve shows $v$ is not proportional to $x$; the full mark needs $v^2$ against $x$.",
+                        "A stopwatch instead of a light gate is accepted for the <i>Measure</i> mark only if you say what distance and time you would use to find the velocity, and note that reaction time makes it less accurate.",
+                    ]),
+                    lines=8,
+                    hint="Which equation has velocity, distance and no time in it? What does it say you should plot to get a straight line?",
+                ),
+            ],
+        },
+    ],
+}
+
+
+# =====================================================================
 # T12 · Measuring reaction time (2.27)
 # =====================================================================
 
@@ -610,6 +739,7 @@ key_facts = [
     ("Double the speed: thinking and braking distances?", "Thinking ×2, braking ×4", "braking-v-squared"),
     ("Why is braking distance ∝ v²?", r"Work done by brakes $F d$ = KE $\tfrac{1}{2}mv^2$", "braking-v-squared"),
     ("Core practical: why move masses from trolley to hanger?", "To change the force while keeping the total mass constant", "core-practical-analysis"),
+    ("Five steps to describe a practical?", "Two variables → formula → what you change and how → what you measure and how (equipment) → what you do with the result", "planning-practical"),
     ("Ruler drop: distance to time?", r"$t = \sqrt{2x \div g}$", "reaction-time"),
 ]
 
@@ -633,4 +763,4 @@ section_facts = {
 }
 
 
-SECTIONS = [section_t8, section_t9, section_t10, section_t11, section_t12, section_t13]
+SECTIONS = [section_t8, section_t9, section_t10, section_t11, section_planning, section_t12, section_t13]

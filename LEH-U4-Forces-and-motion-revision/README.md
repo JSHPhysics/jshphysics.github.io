@@ -15,7 +15,7 @@ grouped under headings, each with its own numbering prefix.
 2.1–2.33P in three bands: *The non-negotiables* (N1–N15, recall and
 single-step calculations), *The tricky bits* (T1–T13, multi-step
 calculations, explanations and misconceptions) and *Key facts* (flip cards).
-20 sections and 126 questions on the U4 page (29 and 182 in the modules).
+21 sections and 128 questions on the U4 page (29 and 182 in the modules).
 
 ## Running it
 
