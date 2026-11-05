@@ -62,7 +62,7 @@ section_t1 = {
     "blurb": "Areas that are not simple triangles, graphs that go below the axis, and turning a shape into a sentence (or a sentence into a shape).",
     "equations": [VT_AREA_EQ, TRAP_EQ],
     "checklist": [
-        "Find the area under a sloping section that does not start at zero (trapezium, or rectangle + triangle)",
+        "Find the area under a section that isn't a simple triangle or rectangle (trapezium, or rectangle + triangle)",
         "Interpret a negative velocity on a velocity–time graph",
         "Tell displacement from distance when the graph goes below the axis",
         "Describe the motion shown by a graph in words, and sketch a graph from a description",
@@ -72,9 +72,10 @@ section_t1 = {
             "kind": "explain",
             "title": "Three things that catch people out",
             "html": (
-                "<p><b>1. A sloping section that does not start at zero.</b> The area under it is a trapezium. Either use "
-                "$\\tfrac{1}{2}(a + b) \\times h$ with $a$ and $b$ the two parallel sides (the velocities at each end) and $h$ the time, "
-                "or split it into a rectangle (the lower velocity × time) plus a triangle on top.</p>"
+                "<p><b>1. When the section isn't a simple triangle or rectangle.</b> If a sloping line starts above the time axis — say the velocity goes "
+                "from 10 m/s up to 20 m/s — the area under it is a <b>trapezium</b>. Either use $\\tfrac{1}{2}(a + b) \\times h$ with $a$ and $b$ the two "
+                "parallel sides (the velocity at the start and at the end of the section) and $h$ the time it lasts, "
+                "or split it into a rectangle (the lower velocity × time) with a triangle sitting on top.</p>"
                 "<p><b>2. Velocity below the axis.</b> A negative velocity means the object is moving <b>in the opposite direction</b> — not slowing down. "
                 "The line passing through zero is the moment it changes direction. Area <i>below</i> the axis is distance travelled backwards: "
                 "add it for total <b>distance</b>, subtract it for <b>displacement</b>.</p>"
