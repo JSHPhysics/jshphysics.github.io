@@ -10,7 +10,7 @@ The content lives in four modules next to this script:
     t2_tricky_b.py  The tricky bits T8–T13, plus the key-facts flip cards
 
 Every numeric answer is computed in Python inside those modules, never
-typed from memory. Run from the gcse-revision folder:
+typed from memory. Run from the app folder (LEH-U4-Forces-and-motion-revision):
 
     python3 tools/build_t2_forces_motion.py
 

@@ -22,8 +22,8 @@ calculations, explanations and misconceptions) and *Key facts* (flip cards).
 The page loads its data with `fetch`, so it has to be served over HTTP
 rather than opened straight from disk.
 
-- **GitHub Pages:** drop this folder into `jshphysics.github.io/` as
-  `gcse-revision/` and add a card to `tools.json`. No build step.
+- **GitHub Pages:** lives at `jshphysics.github.io/LEH-U4-Forces-and-motion-revision/`; `gcse-revision/` is a redirect stub to it. Drop this folder into `jshphysics.github.io/` as
+  `LEH-U4-Forces-and-motion-revision/` (its live path) and add a card to `tools.json`. No build step.
 - **Locally:** `python3 -m http.server` inside this folder, then open
   `http://localhost:8000`.
 
