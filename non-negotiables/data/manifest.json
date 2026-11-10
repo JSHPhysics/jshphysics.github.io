@@ -33,7 +33,7 @@
       "file": "materials.json",
       "title": "Materials and fluids",
       "order": 50,
-      "types": 10
+      "types": 12
     },
     {
       "id": "waves",

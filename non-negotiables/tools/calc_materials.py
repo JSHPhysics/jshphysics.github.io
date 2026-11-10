@@ -301,43 +301,127 @@ volume_up6 = weight_up6 / (1000 * g)
 record("upthrust-p6", volume_up6 / 0.020, "m")
 
 
+def stokes_drag(viscosity, radius, speed):
+    """Viscous drag on a sphere from Stokes' law, F = 6πηrv."""
+    drag = 6 * math.pi * viscosity * radius * speed
+    return drag
+
+
+def terminal_speed(radius, density_difference, viscosity):
+    """Terminal speed of a sphere from the force balance.
+
+    Sinking:  W = U + D  ->  (ρ_s − ρ_f)(4/3)πr³g = 6πηrv
+    Rising:   W + D = U  ->  (ρ_f − ρ_s)(4/3)πr³g = 6πηrv
+    Either way v = 2 r² g Δρ / (9η), with Δρ the positive difference.
+    """
+    speed = 2 * radius ** 2 * g * density_difference / (9 * viscosity)
+    return speed
+
+
 # ---------------------------------------------------------------
-# Type 9: stokes-terminal
+# Type 9: stokes-drag
+# ---------------------------------------------------------------
+
+# w: ball bearing diameter 5.0 mm at 0.030 m/s in glycerol eta 1.4 -> drag
+radius_sdw = 5.0e-3 / 2
+record("stokes-drag-w", stokes_drag(1.4, radius_sdw, 0.030), "N")
+
+# p1: sphere r = 2.0 mm, v = 0.050 m/s, engine oil eta 0.85 -> drag
+record("stokes-drag-p1", stokes_drag(0.85, 2.0e-3, 0.050), "N")
+
+# p2: pollen grain r = 20 um at 0.050 m/s in air eta 1.8e-5 (laminar) -> drag
+radius_sdp2 = 20e-6
+record("stokes-drag-p2", stokes_drag(1.8e-5, radius_sdp2, 0.050), "N")
+
+# p3: ball r = 1.5 mm at 0.020 m/s in honey, drag 1.2e-3 N -> viscosity
+record("stokes-drag-p3", 1.2e-3 / (6 * math.pi * 1.5e-3 * 0.020), "Pa s")
+
+# p4: sphere diameter 3.0 mm, drag 4.5e-4 N, syrup eta 0.30 -> speed
+radius_sdp4 = 3.0e-3 / 2
+record("stokes-drag-p4", 4.5e-4 / (6 * math.pi * 0.30 * radius_sdp4), "m s⁻¹")
+
+# p5: sphere in engine oil eta 0.60 at 0.080 m/s, drag 3.6e-3 N -> radius in mm
+radius_sdp5_m = 3.6e-3 / (6 * math.pi * 0.60 * 0.080)
+record("stokes-drag-p5", radius_sdp5_m * 1000, "mm")
+
+# p6: sphere diameter 1.20 cm in honey eta 8.0, drag 0.12 N -> speed in mm/s
+radius_sdp6 = 1.20e-2 / 2
+speed_sdp6_m = 0.12 / (6 * math.pi * 8.0 * radius_sdp6)
+record("stokes-drag-p6", speed_sdp6_m * 1000, "mm s⁻¹")
+
+
+# ---------------------------------------------------------------
+# Type 10: terminal-sinking  (W = U + D)
 # ---------------------------------------------------------------
 
 # w: steel ball r = 1.0 mm, 7800, in glycerol 1260, eta 1.4 -> terminal velocity
-radius_sw = 1.0e-3
-volume_sw = sphere_volume(radius_sw)
-weight_sw = 7800 * volume_sw * g
-upthrust_sw = 1260 * volume_sw * g
-drag_sw = weight_sw - upthrust_sw
-record("stokes-terminal-w", drag_sw / (6 * math.pi * 1.4 * radius_sw), "m s⁻¹")
+radius_tsw = 1.0e-3
+record("terminal-sinking-w", terminal_speed(radius_tsw, 7800 - 1260, 1.4), "m s⁻¹")
 
-# p1: sphere r = 2.0 mm, v = 0.050 m/s, eta 0.85 -> drag
-record("stokes-terminal-p1", 6 * math.pi * 0.85 * 2.0e-3 * 0.050, "N")
+# p1: brass sphere V = 2.0e-7 m^3, 8500, at terminal velocity in water 1000 -> drag = W - U
+weight_tsp1 = 8500 * 2.0e-7 * g
+upthrust_tsp1 = 1000 * 2.0e-7 * g
+record("terminal-sinking-p1", weight_tsp1 - upthrust_tsp1, "N")
 
-# p2: raindrop r = 0.50 mm at 4.0 m/s in air eta 1.8e-5 -> drag
-record("stokes-terminal-p2", 6 * math.pi * 1.8e-5 * 0.50e-3 * 4.0, "N")
+# p2: glass bead r = 0.60 mm, 2500, in oil 920, eta 0.30 -> terminal velocity
+radius_tsp2 = 0.60e-3
+record("terminal-sinking-p2", terminal_speed(radius_tsp2, 2500 - 920, 0.30), "m s⁻¹")
 
-# p3: ball r = 1.5 mm at 0.020 m/s, drag 1.2e-3 N -> viscosity
-record("stokes-terminal-p3", 1.2e-3 / (6 * math.pi * 1.5e-3 * 0.020), "Pa s")
+# p3: falling-ball viscometer: steel ball r = 1.0 mm, 7800, oil 880, v = 0.060 m/s -> eta
+radius_tsp3 = 1.0e-3
+viscosity_tsp3 = 2 * radius_tsp3 ** 2 * g * (7800 - 880) / (9 * 0.060)
+record("terminal-sinking-p3", viscosity_tsp3, "Pa s")
 
-# p4: sphere diameter 3.0 mm, drag 4.5e-4 N, eta 0.30 -> speed
-radius_sp4 = 3.0e-3 / 2
-record("stokes-terminal-p4", 4.5e-4 / (6 * math.pi * 0.30 * radius_sp4), "m s⁻¹")
+# p4: steel sphere r = 2.0 mm, 7800, in syrup eta 1.5, v = 0.0375 m/s -> fluid density
+radius_tsp4 = 2.0e-3
+density_difference_tsp4 = 9 * 1.5 * 0.0375 / (2 * radius_tsp4 ** 2 * g)
+record("terminal-sinking-p4", 7800 - density_difference_tsp4, "kg m⁻³")
 
-# p5: fog droplet r = 10 um, 1000, air eta 1.8e-5, ignore upthrust -> terminal velocity
-radius_sp5 = 10e-6
-weight_sp5 = 1000 * sphere_volume(radius_sp5) * g
-record("stokes-terminal-p5", weight_sp5 / (6 * math.pi * 1.8e-5 * radius_sp5), "m s⁻¹")
+# p5: lead shot 11300 in glycerol 1260, eta 1.4, v = 0.050 m/s -> radius in mm
+radius_tsp5_squared = 9 * 1.4 * 0.050 / (2 * g * (11300 - 1260))
+radius_tsp5_m = math.sqrt(radius_tsp5_squared)
+record("terminal-sinking-p5", radius_tsp5_m * 1000, "mm")
 
-# p6: glass bead r = 0.80 mm, 2500, in oil 900, eta 0.25 -> terminal velocity
-radius_sp6 = 0.80e-3
-volume_sp6 = sphere_volume(radius_sp6)
-weight_sp6 = 2500 * volume_sp6 * g
-upthrust_sp6 = 900 * volume_sp6 * g
-drag_sp6 = weight_sp6 - upthrust_sp6
-record("stokes-terminal-p6", drag_sp6 / (6 * math.pi * 0.25 * radius_sp6), "m s⁻¹")
+# p6: fog droplet r = 8.0 um, 1000, in air eta 1.8e-5, upthrust ignored (W = D) -> terminal velocity
+radius_tsp6 = 8.0e-6
+record("terminal-sinking-p6", terminal_speed(radius_tsp6, 1000, 1.8e-5), "m s⁻¹")
+
+
+# ---------------------------------------------------------------
+# Type 11: terminal-rising  (W + D = U)
+# ---------------------------------------------------------------
+
+# w: air bubble r = 2.0 mm, air 1.2, in glycerol 1260, eta 1.4 -> terminal velocity
+radius_trw = 2.0e-3
+record("terminal-rising-w", terminal_speed(radius_trw, 1260 - 1.2, 1.4), "m s⁻¹")
+
+# p1: table-tennis ball rising at terminal velocity, U = 0.330 N, W = 0.026 N -> drag = U - W
+record("terminal-rising-p1", 0.330 - 0.026, "N")
+
+# p2: polystyrene bead r = 50 um, 50, rising in water 1000, eta 1.0e-3 -> terminal velocity
+radius_trp2 = 50e-6
+record("terminal-rising-p2", terminal_speed(radius_trp2, 1000 - 50, 1.0e-3), "m s⁻¹")
+
+# p3: oil droplet r = 0.10 mm, 900, rising in water 1000, eta 1.0e-3 -> terminal velocity
+radius_trp3 = 0.10e-3
+record("terminal-rising-p3", terminal_speed(radius_trp3, 1000 - 900, 1.0e-3), "m s⁻¹")
+
+# p4: bubble r = 1.5 mm rises at 2.0 mm/s in syrup 1400, weight negligible (D = U) -> eta
+radius_trp4 = 1.5e-3
+speed_trp4 = 2.0e-3
+viscosity_trp4 = 2 * radius_trp4 ** 2 * g * 1400 / (9 * speed_trp4)
+record("terminal-rising-p4", viscosity_trp4, "Pa s")
+
+# p5: wooden bead r = 1.0 mm rises at 0.0030 m/s in oil 900, eta 0.40 -> bead density
+radius_trp5 = 1.0e-3
+density_difference_trp5 = 9 * 0.40 * 0.0030 / (2 * radius_trp5 ** 2 * g)
+record("terminal-rising-p5", 900 - density_difference_trp5, "kg m⁻³")
+
+# p6: air bubble rises at 5.0 mm/s in water 1000, eta 1.0e-3, weight negligible -> radius in um
+speed_trp6 = 5.0e-3
+radius_trp6_squared = 9 * 1.0e-3 * speed_trp6 / (2 * g * 1000)
+radius_trp6_m = math.sqrt(radius_trp6_squared)
+record("terminal-rising-p6", radius_trp6_m * 1e6, "μm")
 
 
 # ---------------------------------------------------------------

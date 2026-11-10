@@ -1,7 +1,7 @@
 {
   "id": "materials",
   "title": "Materials and fluids",
-  "subtitle": "Density, Hooke's law, Young modulus, elastic energy, pressure and upthrust",
+  "subtitle": "Density, Hooke's law, Young modulus, elastic energy, pressure, upthrust and viscous drag",
   "order": 50,
   "types": [
     {
@@ -998,42 +998,38 @@
       ]
     },
     {
-      "id": "stokes-terminal",
-      "name": "Stokes' law and terminal velocity",
+      "id": "stokes-drag",
+      "name": "Viscous drag from Stokes' law",
       "equations": [
-        "F = 6πηrv",
-        "At terminal velocity: weight = upthrust + drag",
-        "V(sphere) = (4/3)πr³"
+        "F = 6πηrv"
       ],
       "boards": [
         "Edexcel"
       ],
-      "method": "Stokes' law gives the viscous drag on a small sphere moving slowly through a fluid: F = 6πηrv, with r the radius in metres and η the viscosity in Pa s. At terminal velocity the forces balance, so set weight − upthrust equal to the drag and solve for v. Work out the sphere's volume, weight and upthrust as separate steps.",
+      "method": "Stokes' law gives the viscous drag on a small sphere moving slowly through a fluid, when the flow around it is laminar: F = 6πηrv, with r the radius in metres and η the viscosity in Pa s. Convert the radius to metres first (halve a diameter), then substitute, or rearrange for whichever of η, v or r is wanted.",
       "commonErrors": [
         "Using the diameter instead of the radius in 6πηrv",
-        "Forgetting the upthrust when finding terminal velocity in a liquid",
-        "Using the density of the fluid for the weight or the density of the sphere for the upthrust"
+        "Leaving the radius in mm or μm instead of converting to metres",
+        "Applying Stokes' law to a large or fast sphere, where the flow is turbulent and the law does not hold"
       ],
       "worked": {
-        "id": "stokes-terminal-w",
-        "question": "A steel ball bearing of radius 1.0 mm and density 7800 kg m⁻³ falls through glycerol of density 1260 kg m⁻³ and viscosity 1.4 Pa s. Calculate its terminal velocity.",
+        "id": "stokes-drag-w",
+        "question": "A steel ball bearing of diameter 5.0 mm sinks at a steady 0.030 m s⁻¹ through glycerol of viscosity 1.4 Pa s. Calculate the viscous drag on the ball bearing.",
         "steps": [
-          "Known: r = 1.0 × 10⁻³ m, ρ(steel) = 7800 kg m⁻³, ρ(glycerol) = 1260 kg m⁻³, η = 1.4 Pa s. Unknown: v.",
-          "V = (4/3)πr³ = (4/3) × π × (1.0 × 10⁻³)³ = 4.19 × 10⁻⁹ m³",
-          "Weight = ρ(steel)Vg = 7800 × 4.19 × 10⁻⁹ × 9.81 = 3.21 × 10⁻⁴ N",
-          "Upthrust = ρ(glycerol)Vg = 1260 × 4.19 × 10⁻⁹ × 9.81 = 5.18 × 10⁻⁵ N",
-          "At terminal velocity, drag = weight − upthrust = 2.69 × 10⁻⁴ N",
-          "v = F / (6πηr) = 2.69 × 10⁻⁴ / (6 × π × 1.4 × 1.0 × 10⁻³) = 2.69 × 10⁻⁴ / 0.0264",
-          "v = 0.0102 m s⁻¹"
+          "Known: d = 5.0 mm so r = 2.5 × 10⁻³ m, v = 0.030 m s⁻¹, η = 1.4 Pa s. Unknown: F.",
+          "The ball is small and slow, so the flow is laminar and Stokes' law applies: F = 6πηrv",
+          "F = 6 × π × 1.4 × 2.5 × 10⁻³ × 0.030",
+          "F = 0.0660 × 0.030",
+          "F = 1.98 × 10⁻³ N"
         ],
         "answer": {
-          "value": 0.0102,
-          "unit": "m s⁻¹"
+          "value": 0.00198,
+          "unit": "N"
         }
       },
       "practice": [
         {
-          "id": "stokes-terminal-p1",
+          "id": "stokes-drag-p1",
           "question": "A sphere of radius 2.0 mm moves at 0.050 m s⁻¹ through engine oil of viscosity 0.85 Pa s. Calculate the viscous drag on the sphere.",
           "hint": "Substitute into F = 6πηrv with r in metres.",
           "walkthrough": [
@@ -1047,21 +1043,23 @@
           }
         },
         {
-          "id": "stokes-terminal-p2",
-          "question": "A raindrop of radius 0.50 mm falls at 4.0 m s⁻¹ through air of viscosity 1.8 × 10⁻⁵ Pa s. Calculate the viscous drag on the raindrop according to Stokes' law.",
-          "hint": "F = 6πηrv; the radius must be in metres.",
+          "id": "stokes-drag-p2",
+          "question": "A pollen grain of radius 20 μm drifts downwards at 0.050 m s⁻¹ through still air of viscosity 1.8 × 10⁻⁵ Pa s. The grain is tiny and slow-moving, so the air flow around it is laminar and Stokes' law applies. Calculate the viscous drag on the grain.",
+          "hint": "Convert 20 μm to metres (1 μm = 10⁻⁶ m), then substitute into F = 6πηrv.",
           "walkthrough": [
-            "r = 0.50 mm = 5.0 × 10⁻⁴ m, v = 4.0 m s⁻¹, η = 1.8 × 10⁻⁵ Pa s",
-            "F = 6πηrv = 6 × π × 1.8 × 10⁻⁵ × 5.0 × 10⁻⁴ × 4.0",
-            "F = 6.79 × 10⁻⁷ N"
+            "r = 20 μm = 2.0 × 10⁻⁵ m, v = 0.050 m s⁻¹, η = 1.8 × 10⁻⁵ Pa s",
+            "Small sphere, low speed, laminar flow: Stokes' law applies.",
+            "F = 6πηrv = 6 × π × 1.8 × 10⁻⁵ × 2.0 × 10⁻⁵ × 0.050",
+            "F = 6.79 × 10⁻⁹ × 0.050",
+            "F = 3.39 × 10⁻¹⁰ N"
           ],
           "answer": {
-            "value": 6.79e-07,
+            "value": 3.39e-10,
             "unit": "N"
           }
         },
         {
-          "id": "stokes-terminal-p3",
+          "id": "stokes-drag-p3",
           "question": "In a viscosity experiment a ball of radius 1.5 mm moving at 0.020 m s⁻¹ through honey experiences a viscous drag of 1.2 × 10⁻³ N. Calculate the viscosity of the honey.",
           "hint": "Rearrange F = 6πηrv to make η the subject.",
           "walkthrough": [
@@ -1075,7 +1073,7 @@
           }
         },
         {
-          "id": "stokes-terminal-p4",
+          "id": "stokes-drag-p4",
           "question": "A sphere of diameter 3.0 mm moves through a sugar syrup of viscosity 0.30 Pa s. The viscous drag on it is 4.5 × 10⁻⁴ N. Calculate the speed of the sphere.",
           "hint": "Halve the diameter to get the radius in metres, then rearrange for v.",
           "walkthrough": [
@@ -1090,36 +1088,302 @@
           }
         },
         {
-          "id": "stokes-terminal-p5",
-          "question": "A fog droplet of radius 10 μm and density 1000 kg m⁻³ falls through still air of viscosity 1.8 × 10⁻⁵ Pa s. Ignoring upthrust, calculate the terminal velocity of the droplet.",
-          "hint": "Find the droplet's weight from its volume and density, then set it equal to 6πηrv.",
+          "id": "stokes-drag-p5",
+          "question": "A small sphere moves at 0.080 m s⁻¹ through engine oil of viscosity 0.60 Pa s and experiences a viscous drag of 3.6 × 10⁻³ N. Calculate the radius of the sphere in mm.",
+          "hint": "Rearrange F = 6πηrv for r, then convert the answer from metres to millimetres.",
           "walkthrough": [
-            "r = 10 μm = 1.0 × 10⁻⁵ m",
-            "V = (4/3)πr³ = (4/3) × π × (1.0 × 10⁻⁵)³ = 4.19 × 10⁻¹⁵ m³",
-            "Weight = ρVg = 1000 × 4.19 × 10⁻¹⁵ × 9.81 = 4.11 × 10⁻¹¹ N",
-            "v = W / (6πηr) = 4.11 × 10⁻¹¹ / (6 × π × 1.8 × 10⁻⁵ × 1.0 × 10⁻⁵) = 4.11 × 10⁻¹¹ / 3.39 × 10⁻⁹",
-            "v = 0.0121 m s⁻¹"
+            "r = F / (6πηv)",
+            "r = 3.6 × 10⁻³ / (6 × π × 0.60 × 0.080) = 3.6 × 10⁻³ / 0.905",
+            "r = 3.98 × 10⁻³ m",
+            "r = 3.98 mm"
           ],
           "answer": {
-            "value": 0.0121,
+            "value": 3.98,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "stokes-drag-p6",
+          "question": "A steel sphere of diameter 1.20 cm sinks steadily through honey of viscosity 8.0 Pa s. The viscous drag on it is 0.12 N. Calculate the speed of the sphere in mm s⁻¹.",
+          "hint": "Halve the diameter and convert to metres, rearrange for v, then convert m s⁻¹ to mm s⁻¹.",
+          "walkthrough": [
+            "r = 1.20 cm / 2 = 0.60 cm = 6.0 × 10⁻³ m",
+            "v = F / (6πηr) = 0.12 / (6 × π × 8.0 × 6.0 × 10⁻³) = 0.12 / 0.905",
+            "v = 0.133 m s⁻¹",
+            "v = 133 mm s⁻¹"
+          ],
+          "answer": {
+            "value": 133,
+            "unit": "mm s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "terminal-sinking",
+      "name": "Terminal velocity of a sinking sphere",
+      "equations": [
+        "W = U + D (sinking sphere at terminal velocity)",
+        "W = ρ_s V g, U = ρ_f V g, D = 6πηrv",
+        "V = (4/3)πr³",
+        "v = 2r²g(ρ_s − ρ_f) / (9η)"
+      ],
+      "boards": [
+        "Edexcel"
+      ],
+      "method": "A sphere denser than the fluid sinks: weight acts down, upthrust and drag act up. At terminal velocity the resultant force is zero, so W = U + D. Write out each force — W = ρ_s V g, U = ρ_f V g, D = 6πηrv, with V = (4/3)πr³ — then the force balance gives (ρ_s − ρ_f)(4/3)πr³g = 6πηrv, which rearranges to v = 2r²g(ρ_s − ρ_f) / (9η). Solve that for whichever quantity is unknown. When the fluid is a gas the upthrust is negligible and the balance is just W = D.",
+      "commonErrors": [
+        "Forgetting the upthrust, or adding it to the weight instead of subtracting it",
+        "Using the fluid's density for the weight or the sphere's density for the upthrust",
+        "Forgetting to square the radius in v = 2r²g(ρ_s − ρ_f) / (9η), or not square-rooting when finding r",
+        "Using the diameter as r"
+      ],
+      "worked": {
+        "id": "terminal-sinking-w",
+        "question": "A steel ball bearing of radius 1.0 mm and density 7800 kg m⁻³ falls through glycerol of density 1260 kg m⁻³ and viscosity 1.4 Pa s. Calculate its terminal velocity.",
+        "steps": [
+          "Known: r = 1.0 × 10⁻³ m, ρ_s = 7800 kg m⁻³, ρ_f = 1260 kg m⁻³, η = 1.4 Pa s. Unknown: v.",
+          "Weight acts down; upthrust and drag act up. At terminal velocity the resultant force is zero: W = U + D",
+          "W = ρ_s V g, U = ρ_f V g, D = 6πηrv, with V = (4/3)πr³",
+          "So (ρ_s − ρ_f)(4/3)πr³g = 6πηrv",
+          "Cancel πr and rearrange: v = 2r²g(ρ_s − ρ_f) / (9η)",
+          "v = 2 × (1.0 × 10⁻³)² × 9.81 × (7800 − 1260) / (9 × 1.4) = 0.128 / 12.6",
+          "v = 0.0102 m s⁻¹"
+        ],
+        "answer": {
+          "value": 0.0102,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "terminal-sinking-p1",
+          "question": "A brass sphere of volume 2.0 × 10⁻⁷ m³ and density 8500 kg m⁻³ falls at terminal velocity through water of density 1000 kg m⁻³. Calculate the viscous drag on the sphere.",
+          "hint": "At terminal velocity W = U + D, so D = W − U; find each force from ρVg.",
+          "walkthrough": [
+            "Weight down, upthrust and drag up. At terminal velocity W = U + D, so D = W − U",
+            "W = ρ_s V g = 8500 × 2.0 × 10⁻⁷ × 9.81 = 1.67 × 10⁻² N",
+            "U = ρ_f V g = 1000 × 2.0 × 10⁻⁷ × 9.81 = 1.96 × 10⁻³ N",
+            "D = 1.67 × 10⁻² − 1.96 × 10⁻³",
+            "D = 0.0147 N"
+          ],
+          "answer": {
+            "value": 0.0147,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "terminal-sinking-p2",
+          "question": "A glass bead of radius 0.60 mm and density 2500 kg m⁻³ sinks through cooking oil of density 920 kg m⁻³ and viscosity 0.30 Pa s. Calculate its terminal velocity.",
+          "hint": "W = U + D with W = ρ_s V g, U = ρ_f V g and D = 6πηrv leads to v = 2r²g(ρ_s − ρ_f) / (9η).",
+          "walkthrough": [
+            "r = 0.60 mm = 6.0 × 10⁻⁴ m. Weight down, upthrust and drag up: at terminal velocity W = U + D",
+            "ρ_s V g = ρ_f V g + 6πηrv, with V = (4/3)πr³, so (ρ_s − ρ_f)(4/3)πr³g = 6πηrv",
+            "v = 2r²g(ρ_s − ρ_f) / (9η) = 2 × (6.0 × 10⁻⁴)² × 9.81 × (2500 − 920) / (9 × 0.30)",
+            "v = 0.0112 / 2.7",
+            "v = 4.13 × 10⁻³ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.00413,
             "unit": "m s⁻¹"
           }
         },
         {
-          "id": "stokes-terminal-p6",
-          "question": "A glass bead of radius 0.80 mm and density 2500 kg m⁻³ falls through oil of density 900 kg m⁻³ and viscosity 0.25 Pa s. Calculate the terminal velocity of the bead.",
-          "hint": "At terminal velocity drag = weight − upthrust; find both from the bead's volume, then v = F / (6πηr).",
+          "id": "terminal-sinking-p3",
+          "question": "In a falling-ball viscometer a steel ball of radius 1.0 mm and density 7800 kg m⁻³ falls at a steady 0.060 m s⁻¹ through engine oil of density 880 kg m⁻³. Calculate the viscosity of the oil.",
+          "hint": "Start from W = U + D at terminal velocity and rearrange v = 2r²g(ρ_s − ρ_f) / (9η) to make η the subject.",
           "walkthrough": [
-            "V = (4/3)πr³ = (4/3) × π × (8.0 × 10⁻⁴)³ = 2.14 × 10⁻⁹ m³",
-            "Weight = 2500 × 2.14 × 10⁻⁹ × 9.81 = 5.26 × 10⁻⁵ N",
-            "Upthrust = 900 × 2.14 × 10⁻⁹ × 9.81 = 1.89 × 10⁻⁵ N",
-            "Drag = 5.26 × 10⁻⁵ − 1.89 × 10⁻⁵ = 3.37 × 10⁻⁵ N",
-            "v = F / (6πηr) = 3.37 × 10⁻⁵ / (6 × π × 0.25 × 8.0 × 10⁻⁴) = 3.37 × 10⁻⁵ / 3.77 × 10⁻³",
-            "v = 8.93 × 10⁻³ m s⁻¹"
+            "At terminal velocity W = U + D: ρ_s V g = ρ_f V g + 6πηrv, with V = (4/3)πr³",
+            "(ρ_s − ρ_f)(4/3)πr³g = 6πηrv → η = 2r²g(ρ_s − ρ_f) / (9v)",
+            "η = 2 × (1.0 × 10⁻³)² × 9.81 × (7800 − 880) / (9 × 0.060)",
+            "η = 0.136 / 0.54",
+            "η = 0.251 Pa s"
           ],
           "answer": {
-            "value": 0.00893,
+            "value": 0.251,
+            "unit": "Pa s"
+          }
+        },
+        {
+          "id": "terminal-sinking-p4",
+          "question": "A steel sphere of radius 2.0 mm and density 7800 kg m⁻³ falls at a terminal velocity of 0.0375 m s⁻¹ through a sugar syrup of viscosity 1.5 Pa s. Calculate the density of the syrup.",
+          "hint": "From W = U + D, ρ_s − ρ_f = 9ηv / (2r²g); then subtract that difference from ρ_s.",
+          "walkthrough": [
+            "At terminal velocity W = U + D: ρ_s V g = ρ_f V g + 6πηrv, with V = (4/3)πr³",
+            "(ρ_s − ρ_f)(4/3)πr³g = 6πηrv → ρ_s − ρ_f = 9ηv / (2r²g)",
+            "ρ_s − ρ_f = 9 × 1.5 × 0.0375 / (2 × (2.0 × 10⁻³)² × 9.81) = 0.506 / 7.85 × 10⁻⁵ = 6450 kg m⁻³",
+            "ρ_f = 7800 − 6450",
+            "ρ_f = 1350 kg m⁻³"
+          ],
+          "answer": {
+            "value": 1350,
+            "unit": "kg m⁻³"
+          }
+        },
+        {
+          "id": "terminal-sinking-p5",
+          "question": "Lead shot of density 11300 kg m⁻³ falls through glycerol of density 1260 kg m⁻³ and viscosity 1.4 Pa s with a terminal velocity of 0.050 m s⁻¹. Calculate the radius of the shot in mm.",
+          "hint": "Rearrange v = 2r²g(ρ_s − ρ_f) / (9η) for r², then square-root and convert to mm.",
+          "walkthrough": [
+            "At terminal velocity W = U + D, which gives v = 2r²g(ρ_s − ρ_f) / (9η)",
+            "r² = 9ηv / (2g(ρ_s − ρ_f)) = 9 × 1.4 × 0.050 / (2 × 9.81 × (11300 − 1260))",
+            "r² = 0.63 / 1.97 × 10⁵ = 3.20 × 10⁻⁶ m²",
+            "r = √(3.20 × 10⁻⁶) = 1.79 × 10⁻³ m",
+            "r = 1.79 mm"
+          ],
+          "answer": {
+            "value": 1.79,
+            "unit": "mm"
+          }
+        },
+        {
+          "id": "terminal-sinking-p6",
+          "question": "A fog droplet of radius 8.0 μm and density 1000 kg m⁻³ falls through still air of viscosity 1.8 × 10⁻⁵ Pa s. The upthrust from the air is negligible, so ignore it. Calculate the terminal velocity of the droplet.",
+          "hint": "With no upthrust the force balance is W = D: ρ_s(4/3)πr³g = 6πηrv.",
+          "walkthrough": [
+            "r = 8.0 μm = 8.0 × 10⁻⁶ m. Ignoring upthrust, at terminal velocity W = D",
+            "ρ_s (4/3)πr³ g = 6πηrv → v = 2r²gρ_s / (9η)",
+            "v = 2 × (8.0 × 10⁻⁶)² × 9.81 × 1000 / (9 × 1.8 × 10⁻⁵)",
+            "v = 1.26 × 10⁻⁶ / 1.62 × 10⁻⁴",
+            "v = 7.75 × 10⁻³ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.00775,
             "unit": "m s⁻¹"
+          }
+        }
+      ]
+    },
+    {
+      "id": "terminal-rising",
+      "name": "Terminal velocity of a rising sphere or bubble",
+      "equations": [
+        "W + D = U (rising sphere at terminal velocity)",
+        "W = ρ_s V g, U = ρ_f V g, D = 6πηrv",
+        "V = (4/3)πr³",
+        "v = 2r²g(ρ_f − ρ_s) / (9η)"
+      ],
+      "boards": [
+        "Edexcel"
+      ],
+      "method": "A sphere less dense than the fluid rises: the upthrust acts up and wins, so the weight and the drag both act down (drag always opposes the motion). At terminal velocity the resultant force is zero, so W + D = U. Writing W = ρ_s V g, U = ρ_f V g and D = 6πηrv with V = (4/3)πr³ gives (ρ_f − ρ_s)(4/3)πr³g = 6πηrv, so v = 2r²g(ρ_f − ρ_s) / (9η). For a gas bubble the weight is negligible and the balance is simply D = U.",
+      "commonErrors": [
+        "Drawing the drag upwards: drag opposes motion, so on a rising sphere it acts downwards",
+        "Writing W = U + D as for a sinking sphere, which gives a negative density difference",
+        "Using the fluid's density for the weight or the sphere's density for the upthrust",
+        "Forgetting to square the radius, or to square-root when finding r"
+      ],
+      "worked": {
+        "id": "terminal-rising-w",
+        "question": "An air bubble of radius 2.0 mm rises through glycerol of density 1260 kg m⁻³ and viscosity 1.4 Pa s. Take the density of air as 1.2 kg m⁻³. Calculate the terminal velocity of the bubble.",
+        "steps": [
+          "Known: r = 2.0 × 10⁻³ m, ρ_s = 1.2 kg m⁻³ (air), ρ_f = 1260 kg m⁻³, η = 1.4 Pa s. Unknown: v.",
+          "The bubble rises, so upthrust acts up; weight and drag act down. At terminal velocity the resultant force is zero: W + D = U",
+          "W = ρ_s V g, U = ρ_f V g, D = 6πηrv, with V = (4/3)πr³",
+          "So (ρ_f − ρ_s)(4/3)πr³g = 6πηrv",
+          "Cancel πr and rearrange: v = 2r²g(ρ_f − ρ_s) / (9η)",
+          "v = 2 × (2.0 × 10⁻³)² × 9.81 × (1260 − 1.2) / (9 × 1.4) = 0.0988 / 12.6",
+          "v = 7.84 × 10⁻³ m s⁻¹"
+        ],
+        "answer": {
+          "value": 0.00784,
+          "unit": "m s⁻¹"
+        }
+      },
+      "practice": [
+        {
+          "id": "terminal-rising-p1",
+          "question": "A table-tennis ball released under water rises at terminal velocity. The upthrust on it is 0.330 N and its weight is 0.026 N. Calculate the drag force on the ball.",
+          "hint": "Upthrust up, weight and drag down; at terminal velocity W + D = U, so D = U − W.",
+          "walkthrough": [
+            "Upthrust acts upwards; weight and drag both act downwards on a rising ball",
+            "At terminal velocity W + D = U, so D = U − W",
+            "D = 0.330 − 0.026",
+            "D = 0.304 N"
+          ],
+          "answer": {
+            "value": 0.304,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "terminal-rising-p2",
+          "question": "A polystyrene bead of radius 50 μm and density 50 kg m⁻³ rises through water of density 1000 kg m⁻³ and viscosity 1.0 × 10⁻³ Pa s. Calculate its terminal velocity.",
+          "hint": "W + D = U with W = ρ_s V g, U = ρ_f V g and D = 6πηrv gives v = 2r²g(ρ_f − ρ_s) / (9η).",
+          "walkthrough": [
+            "r = 50 μm = 5.0 × 10⁻⁵ m. Rising bead: upthrust up, weight and drag down, so W + D = U",
+            "ρ_s V g + 6πηrv = ρ_f V g, with V = (4/3)πr³, so (ρ_f − ρ_s)(4/3)πr³g = 6πηrv",
+            "v = 2r²g(ρ_f − ρ_s) / (9η) = 2 × (5.0 × 10⁻⁵)² × 9.81 × (1000 − 50) / (9 × 1.0 × 10⁻³)",
+            "v = 4.66 × 10⁻⁵ / 9.0 × 10⁻³",
+            "v = 5.18 × 10⁻³ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.00518,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "terminal-rising-p3",
+          "question": "A droplet of oil of radius 0.10 mm and density 900 kg m⁻³ rises through water of density 1000 kg m⁻³ and viscosity 1.0 × 10⁻³ Pa s. Calculate the terminal velocity of the droplet.",
+          "hint": "The droplet is less dense than water, so W + D = U; rearrange for v.",
+          "walkthrough": [
+            "r = 0.10 mm = 1.0 × 10⁻⁴ m. Upthrust up, weight and drag down: W + D = U",
+            "(ρ_f − ρ_s)(4/3)πr³g = 6πηrv → v = 2r²g(ρ_f − ρ_s) / (9η)",
+            "v = 2 × (1.0 × 10⁻⁴)² × 9.81 × (1000 − 900) / (9 × 1.0 × 10⁻³)",
+            "v = 1.96 × 10⁻⁵ / 9.0 × 10⁻³",
+            "v = 2.18 × 10⁻³ m s⁻¹"
+          ],
+          "answer": {
+            "value": 0.00218,
+            "unit": "m s⁻¹"
+          }
+        },
+        {
+          "id": "terminal-rising-p4",
+          "question": "An air bubble of radius 1.5 mm rises at a steady 2.0 mm s⁻¹ through a syrup of density 1400 kg m⁻³. The weight of the bubble is negligible. Calculate the viscosity of the syrup.",
+          "hint": "With negligible weight the balance is D = U: 6πηrv = ρ_f(4/3)πr³g; convert mm s⁻¹ to m s⁻¹ and solve for η.",
+          "walkthrough": [
+            "r = 1.5 × 10⁻³ m, v = 2.0 mm s⁻¹ = 2.0 × 10⁻³ m s⁻¹",
+            "Weight negligible, so at terminal velocity drag (down) = upthrust (up): D = U",
+            "6πηrv = ρ_f (4/3)πr³ g → η = 2r²gρ_f / (9v)",
+            "η = 2 × (1.5 × 10⁻³)² × 9.81 × 1400 / (9 × 2.0 × 10⁻³) = 0.0618 / 0.018",
+            "η = 3.43 Pa s"
+          ],
+          "answer": {
+            "value": 3.43,
+            "unit": "Pa s"
+          }
+        },
+        {
+          "id": "terminal-rising-p5",
+          "question": "A wooden bead of radius 1.0 mm rises at a terminal velocity of 0.0030 m s⁻¹ through oil of density 900 kg m⁻³ and viscosity 0.40 Pa s. Calculate the density of the wood.",
+          "hint": "From W + D = U, ρ_f − ρ_s = 9ηv / (2r²g); subtract this difference from the oil's density.",
+          "walkthrough": [
+            "Rising bead: upthrust up, weight and drag down, so W + D = U",
+            "ρ_s V g + 6πηrv = ρ_f V g with V = (4/3)πr³ → ρ_f − ρ_s = 9ηv / (2r²g)",
+            "ρ_f − ρ_s = 9 × 0.40 × 0.0030 / (2 × (1.0 × 10⁻³)² × 9.81) = 0.0108 / 1.96 × 10⁻⁵ = 550 kg m⁻³",
+            "ρ_s = 900 − 550",
+            "ρ_s = 350 kg m⁻³"
+          ],
+          "answer": {
+            "value": 350,
+            "unit": "kg m⁻³"
+          }
+        },
+        {
+          "id": "terminal-rising-p6",
+          "question": "A small air bubble rises through water of density 1000 kg m⁻³ and viscosity 1.0 × 10⁻³ Pa s at a steady 5.0 mm s⁻¹. The weight of the bubble is negligible. Calculate the radius of the bubble in μm.",
+          "hint": "D = U gives 6πηrv = ρ_f(4/3)πr³g; solve for r² and square-root, then convert to μm.",
+          "walkthrough": [
+            "v = 5.0 mm s⁻¹ = 5.0 × 10⁻³ m s⁻¹. Weight negligible, so at terminal velocity D = U",
+            "6πηrv = ρ_f (4/3)πr³ g → r² = 9ηv / (2gρ_f)",
+            "r² = 9 × 1.0 × 10⁻³ × 5.0 × 10⁻³ / (2 × 9.81 × 1000) = 4.5 × 10⁻⁵ / 1.96 × 10⁴ = 2.29 × 10⁻⁹ m²",
+            "r = √(2.29 × 10⁻⁹) = 4.79 × 10⁻⁵ m",
+            "r = 47.9 μm"
+          ],
+          "answer": {
+            "value": 47.9,
+            "unit": "μm"
           }
         }
       ]
