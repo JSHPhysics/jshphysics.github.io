@@ -127,6 +127,16 @@
       "tags": ["GCSE", "A-Level"]
     },
     {
+      "title": "Hairdryer Anatomy",
+      "url": "https://jshphysics.github.io/hairdryer-anatomy/",
+      "section": "simulations",
+      "category": "Magnetism",
+      "description": "A 3D hairdryer you can turn round and open up, with its DC motor enlarged beside it. Strip the motor down to magnets, armature, commutator and brushes, then follow the current through a live wiring diagram with field lines and forces.",
+      "pedagogy": "The textbook motor is one rectangular coil between two flat magnets, which no student will ever find inside a real appliance. Starting from an object they own and stripping it down to the working parts ties the abstract diagram to something concrete, and the wiring view keeps the 3D model and the 2D representation moving in step so neither has to be held in working memory. Stepping the armature by hand lets students predict what the commutator will do next before they see it, and the three-coil motor exposes why the one-coil version has dead spots.",
+      "image": "hairdryer-anatomy.png",
+      "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
+    },
+    {
       "title": "Distance–Time Graphs",
       "url": "https://jshphysics.github.io/lessons/distance-time-graphs/",
       "section": "lessons",

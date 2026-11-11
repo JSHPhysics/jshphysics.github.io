@@ -1,0 +1,2065 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hairdryer Anatomy · JSHPhysics</title>
+<meta name="description" content="Interactive 3D hairdryer and DC motor: turn it round, strip it down, and see how the coils, commutator and magnets make it turn.">
+<meta name="author" content="Joshua Stafford-Haworth (JSHPhysics)">
+<script>
+// Use the theme chosen on the gallery page, if there is one.
+try {
+  var savedTheme = localStorage.getItem("jsh-theme");
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }
+} catch (error) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../lessons/vendor/katex.min.css">
+<style>
+.iso{
+  --anatomy-page:#0b0b0b;--anatomy-card:#131313;--anatomy-text:#a3a3a3;--anatomy-strong:#e6e6e6;--anatomy-muted:#6e6e6e;
+  --anatomy-paper:#131313;--anatomy-face:#1b1b1b;--anatomy-top:#1c1c1c;
+  --anatomy-shade-0:#0f0f0f;--anatomy-shade-1:#121212;--anatomy-shade-2:#151515;--anatomy-shade-3:#181818;
+  --anatomy-lit-top:#262626;--anatomy-lit-shade:#1d1d1d;
+  --anatomy-hi:#d4d4d4;--anatomy-mid:#6a6a6a;--anatomy-lo:#3e3e3e;--anatomy-faint:#2a2a2a;--anatomy-lit:#ffffff;
+  --anatomy-halo:#050505;--anatomy-halo-opacity:.9;--anatomy-dot:#e6e6e6;
+  --anatomy-red:#ff6b6b;--anatomy-green:#6be0a0;--anatomy-blue:#6b9bff;
+  --anatomy-weight:.6px;--anatomy-ease:cubic-bezier(.32,.72,0,1);
+  --anatomy-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --anatomy-lift:inset 0 1px 0 0 #ffffff0a,inset 0 0 0 1px #ffffff06,0 0 0 1px #00000026,0 1px 1px -.5px #00000014,0 3px 3px -1.5px #00000014,0 6px 6px -3px #00000014,0 12px 12px -6px #00000014;
+}
+.iso[data-theme="light"]{
+  --anatomy-page:#f2f2ef;--anatomy-card:#fbfbfa;--anatomy-text:#57575a;--anatomy-strong:#18181a;--anatomy-muted:#8c8c90;
+  --anatomy-paper:#fbfbfa;--anatomy-face:#ffffff;--anatomy-top:#ffffff;
+  --anatomy-shade-0:#dcdcd9;--anatomy-shade-1:#e5e5e2;--anatomy-shade-2:#ededea;--anatomy-shade-3:#f4f4f1;
+  --anatomy-lit-top:#ffffff;--anatomy-lit-shade:#eeeeeb;
+  --anatomy-hi:#26262a;--anatomy-mid:#8a8a8f;--anatomy-lo:#b4b4b8;--anatomy-faint:#d4d4d6;--anatomy-lit:#000000;
+  --anatomy-halo:#8a8a80;--anatomy-halo-opacity:.32;--anatomy-dot:#3a3a3e;
+  --anatomy-red:#e5484d;--anatomy-green:#30a46c;--anatomy-blue:#3e63dd;
+  --anatomy-lift:inset 0 1px 0 0 #ffffff,0 0 0 1px #0000000f,0 1px 1px -.5px #0000000a,0 3px 3px -1.5px #0000000a,0 6px 6px -3px #0000000a,0 12px 12px -6px #0000000a;
+}
+.iso-svg{display:block;width:100%;height:auto;overflow:visible}
+.iso-svg path,.iso-svg circle{vector-effect:non-scaling-stroke}
+.iso-fill{fill:var(--anatomy-paper);stroke:none}
+.iso-solid[data-lit]>.iso-fill{fill:var(--anatomy-face)}
+.iso-shade,.iso-top{stroke:none}
+.iso-shade[data-shade="0"]{fill:var(--anatomy-shade-0)}
+.iso-shade[data-shade="1"]{fill:var(--anatomy-shade-1)}
+.iso-shade[data-shade="2"]{fill:var(--anatomy-shade-2)}
+.iso-shade[data-shade="3"]{fill:var(--anatomy-shade-3)}
+.iso-top{fill:var(--anatomy-top)}
+.iso-solid[data-lit]>.iso-top{fill:var(--anatomy-lit-top)}
+.iso-solid[data-lit]>.iso-shade{fill:var(--anatomy-lit-shade)}
+.iso-solid[data-seamless]>.iso-shade,.iso-solid[data-seamless]>.iso-top{stroke-width:.4;stroke-linejoin:round}
+.iso-solid[data-seamless]>.iso-shade[data-shade="0"]{stroke:var(--anatomy-shade-0)}
+.iso-solid[data-seamless]>.iso-shade[data-shade="1"]{stroke:var(--anatomy-shade-1)}
+.iso-solid[data-seamless]>.iso-shade[data-shade="2"]{stroke:var(--anatomy-shade-2)}
+.iso-solid[data-seamless]>.iso-shade[data-shade="3"]{stroke:var(--anatomy-shade-3)}
+.iso-solid[data-seamless]>.iso-top{stroke:var(--anatomy-top)}
+.iso-solid[data-seamless][data-lit]>.iso-top{stroke:var(--anatomy-lit-top)}
+.iso-solid[data-seamless][data-lit]>.iso-shade{stroke:var(--anatomy-lit-shade)}
+.iso-solid[data-lit]>.iso-edge{stroke:var(--anatomy-lit)}
+.iso-halo{fill:var(--anatomy-halo);stroke:none;filter:blur(9px);opacity:var(--anatomy-halo-opacity);transform:translateY(3px)}
+.iso-line{fill:none;stroke:var(--anatomy-lo);stroke-width:var(--anatomy-weight);stroke-linecap:round;stroke-linejoin:round}
+.iso-line[data-tone="hi"]{stroke:var(--anatomy-hi)}
+.iso-line[data-tone="mid"]{stroke:var(--anatomy-mid)}
+.iso-line[data-tone="lo"]{stroke:var(--anatomy-lo)}
+.iso-line[data-tone="faint"]{stroke:var(--anatomy-faint)}
+.iso-line[data-tone="lit"]{stroke:var(--anatomy-lit)}
+.iso-line[data-tone="red"]{stroke:var(--anatomy-red)}
+.iso-line[data-tone="green"]{stroke:var(--anatomy-green)}
+.iso-line[data-tone="blue"]{stroke:var(--anatomy-blue)}
+.iso-line[data-dotted]{stroke-dasharray:.01 3.5;stroke-width:1}
+.iso-line[data-dashed]{stroke-dasharray:3 3}
+.iso-line[data-flow]{stroke-dasharray:2 6}
+.iso-wire-end{fill:var(--anatomy-paper);stroke:var(--anatomy-lo);stroke-width:var(--anatomy-weight)}
+.iso-wire[data-tone="hi"] .iso-wire-end{stroke:var(--anatomy-hi)}
+.iso-wire[data-tone="mid"] .iso-wire-end{stroke:var(--anatomy-mid)}
+.iso-wire[data-tone="faint"] .iso-wire-end{stroke:var(--anatomy-faint)}
+.iso-wire[data-tone="lit"] .iso-wire-end{stroke:var(--anatomy-lit)}
+.iso-dots circle{fill:var(--anatomy-dot);stroke:none;opacity:.32}
+.iso-dots[data-tone="hi"] circle{opacity:.85}
+.iso-dots[data-tone="mid"] circle{opacity:.45}
+.iso-dots[data-tone="lo"] circle{opacity:.22}
+.iso-dots[data-tone="faint"] circle{opacity:.12}
+.iso-face-text{fill:var(--anatomy-mid);font-family:var(--anatomy-mono);letter-spacing:.04em}
+.iso-face-text[data-tone="hi"]{fill:var(--anatomy-hi)}
+.iso-face-text[data-tone="lo"]{fill:var(--anatomy-lo)}
+.iso-face-text[data-tone="faint"]{fill:var(--anatomy-faint)}
+.tb-body{fill:var(--anatomy-shade-2);stroke:none}
+.tb-shine{fill:var(--anatomy-top);stroke:none}
+.tb-shade{fill:var(--anatomy-shade-0);stroke:none}
+.tb-ring{fill:none;stroke:var(--anatomy-lo);stroke-width:.45;stroke-linecap:butt;stroke-linejoin:round}
+.tb-ring[data-tone="mid"]{stroke:var(--anatomy-mid)}
+.tb-ring[data-tone="faint"]{stroke:var(--anatomy-faint)}
+.tb-ring[data-tone="hi"]{stroke:var(--anatomy-hi)}
+@keyframes iso-flow{to{stroke-dashoffset:-32}}
+@keyframes iso-pulse{0%,100%{opacity:.18}12%{opacity:1}40%{opacity:.18}}
+.iso-line[data-flow]{animation:iso-flow 1600ms linear infinite}
+.iso-dots circle[data-pulse]{animation:iso-pulse 1600ms steps(1,end) infinite;animation-delay:var(--pulse-at,0ms)}
+.iso-figure{margin:32px 0 36px}
+.iso-plate{position:relative;padding:52px 24px;border-radius:0;background:var(--anatomy-card);box-shadow:0 0 0 1px var(--anatomy-mid);--anatomy-paper:var(--anatomy-card)}
+.iso-plate-corners{position:absolute;inset:18px 20px;pointer-events:none}
+.iso-plate-corner{position:absolute;color:var(--anatomy-muted);font-family:var(--anatomy-mono);font-size:10.5px;line-height:1;letter-spacing:.04em;white-space:nowrap}
+.iso-plate-corner[data-corner="fig"]{top:0;left:0;color:var(--anatomy-text)}
+.iso-plate-corner[data-corner="title"]{top:0;right:0;text-transform:uppercase;letter-spacing:.1em}
+.iso-plate-corner[data-corner="hint"]{bottom:0;left:0;text-transform:uppercase;letter-spacing:.1em}
+.iso-plate-corner[data-corner="readout"]{right:0;bottom:0;color:var(--anatomy-text);font-variant-numeric:tabular-nums}
+.iso-plate .iso-svg{margin:0 auto}
+.iso-legend{display:grid;gap:8px;margin-top:12px;color:var(--anatomy-muted);font-size:13px;line-height:1.55}
+.iso-keys{display:flex;flex-wrap:wrap;gap:6px 18px}
+.iso-key{display:inline-flex;align-items:center;gap:7px}
+.iso-swatch{width:16px;height:10px;flex:none;overflow:visible}
+.iso-swatch path{fill:none;stroke:var(--anatomy-hi);stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round}
+.iso-swatch[data-mark="raised"] path,.iso-swatch[data-mark="flat"] path{stroke:var(--anatomy-mid)}
+.iso-swatch[data-mark="lit"] path{stroke:var(--anatomy-lit)}
+.iso-swatch[data-mark="dim"] path{stroke:var(--anatomy-lo)}
+.iso-swatch[data-mark="dotted"] path{stroke-dasharray:.01 3;stroke-width:1.4}
+.iso-swatch[data-mark="dashed"] path{stroke-dasharray:3 2.5}
+.iso-swatch[data-mark="red"] path{stroke:var(--anatomy-red)}
+.iso-swatch[data-mark="green"] path{stroke:var(--anatomy-green)}
+.iso-swatch[data-mark="blue"] path{stroke:var(--anatomy-blue)}
+.iso-swatch-crease{stroke:var(--anatomy-lo)!important}
+@media (max-width:560px){.iso-plate{padding:48px 12px 70px}.iso-plate-corner[data-corner="hint"]{bottom:18px}}
+@media (prefers-reduced-motion:reduce){.iso-line[data-flow],.iso-dots circle[data-pulse]{animation:none}}
+
+/* Layout: one reading column; two framed figures, each followed by a grid of short notes. */
+:root,.iso{--anatomy-page:#f2f2ef;--anatomy-card:#fbfbfa;--anatomy-text:#57575a;--anatomy-strong:#18181a;--anatomy-muted:#8c8c90;
+  --anatomy-paper:#fbfbfa;--anatomy-face:#ffffff;--anatomy-top:#ffffff;
+  --anatomy-shade-0:#dcdcd9;--anatomy-shade-1:#e5e5e2;--anatomy-shade-2:#ededea;--anatomy-shade-3:#f4f4f1;
+  --anatomy-lit-top:#ffffff;--anatomy-lit-shade:#eeeeeb;
+  --anatomy-hi:#26262a;--anatomy-mid:#8a8a8f;--anatomy-lo:#b4b4b8;--anatomy-faint:#d4d4d6;--anatomy-lit:#000000;
+  --anatomy-halo:#8a8a80;--anatomy-halo-opacity:.32;--anatomy-dot:#3a3a3e;
+  --anatomy-red:#e5484d;--anatomy-green:#30a46c;--anatomy-blue:#3e63dd;
+  --anatomy-lift:inset 0 1px 0 0 #ffffff,0 0 0 1px #0000000f,0 1px 1px -.5px #0000000a,0 3px 3px -1.5px #0000000a,0 6px 6px -3px #0000000a,0 12px 12px -6px #0000000a;;--anatomy-page:#f5f1ea;--anatomy-card:#fbf8f1;--anatomy-text:#4a4d54;--anatomy-strong:#1a1d22;--anatomy-muted:#8a8d94;--anatomy-paper:#fbf8f1;--anatomy-face:#fffdf8;--anatomy-top:#fffdf8;--anatomy-shade-0:#ddd6c8;--anatomy-shade-1:#e6e0d3;--anatomy-shade-2:#eee8dc;--anatomy-shade-3:#f4efe5;--anatomy-lit-top:#ffffff;--anatomy-lit-shade:#f1ebdf;--anatomy-hi:#1a1d22;--anatomy-mid:#8a8578;--anatomy-lo:#b9b3a4;--anatomy-faint:#d8d2c4;--anatomy-lit:#000000;--anatomy-dot:#33363c;--anatomy-red:#d7263d;--anatomy-green:#3f7d4f;--anatomy-blue:#2b5fb8;--anatomy-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--accent:#c4502b;--heat:#c4502b;--cav-paper:#efe9dd;--cav-0:#d3ccbd;--cav-1:#dcd5c7;--cav-2:#e4ddd0;--cav-3:#eae4d8;--btn:#fffdf8;--btn-on:#1a1d22;--btn-on-text:#f5f1ea;--rule:#d8d2c4;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]),:root:not([data-theme="light"]) .iso{--anatomy-page:#0b0b0b;--anatomy-card:#131313;--anatomy-text:#a3a3a3;--anatomy-strong:#e6e6e6;--anatomy-muted:#6e6e6e;
+  --anatomy-paper:#131313;--anatomy-face:#1b1b1b;--anatomy-top:#1c1c1c;
+  --anatomy-shade-0:#0f0f0f;--anatomy-shade-1:#121212;--anatomy-shade-2:#151515;--anatomy-shade-3:#181818;
+  --anatomy-lit-top:#262626;--anatomy-lit-shade:#1d1d1d;
+  --anatomy-hi:#d4d4d4;--anatomy-mid:#6a6a6a;--anatomy-lo:#3e3e3e;--anatomy-faint:#2a2a2a;--anatomy-lit:#ffffff;
+  --anatomy-halo:#050505;--anatomy-halo-opacity:.9;--anatomy-dot:#e6e6e6;
+  --anatomy-red:#ff6b6b;--anatomy-green:#6be0a0;--anatomy-blue:#6b9bff;
+  --anatomy-weight:.6px;--anatomy-ease:cubic-bezier(.32,.72,0,1);
+  --anatomy-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --anatomy-lift:inset 0 1px 0 0 #ffffff0a,inset 0 0 0 1px #ffffff06,0 0 0 1px #00000026,0 1px 1px -.5px #00000014,0 3px 3px -1.5px #00000014,0 6px 6px -3px #00000014,0 12px 12px -6px #00000014;;--anatomy-page:#16181d;--anatomy-card:#1d2027;--anatomy-text:#b8b3a8;--anatomy-strong:#ede7db;--anatomy-muted:#8a877f;--anatomy-paper:#1d2027;--anatomy-face:#262a33;--anatomy-top:#282c35;--anatomy-shade-0:#15171c;--anatomy-shade-1:#191b21;--anatomy-shade-2:#1d2026;--anatomy-shade-3:#21242b;--anatomy-lit-top:#343945;--anatomy-lit-shade:#292d37;--anatomy-hi:#d9d3c7;--anatomy-mid:#7b7a75;--anatomy-lo:#4a4b4f;--anatomy-faint:#33353c;--anatomy-lit:#ffffff;--anatomy-dot:#ede7db;--anatomy-red:#ff7b72;--anatomy-green:#8fd19e;--anatomy-blue:#7fa8ff;--anatomy-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--accent:#e8a382;--heat:#f08a55;--cav-paper:#14161a;--cav-0:#0f1114;--cav-1:#121418;--cav-2:#15171b;--cav-3:#181a1f;--btn:#262a33;--btn-on:#ede7db;--btn-on-text:#16181d;--rule:#2c2f37;color-scheme:dark}}
+:root[data-theme="dark"],:root[data-theme="dark"] .iso{--anatomy-page:#0b0b0b;--anatomy-card:#131313;--anatomy-text:#a3a3a3;--anatomy-strong:#e6e6e6;--anatomy-muted:#6e6e6e;
+  --anatomy-paper:#131313;--anatomy-face:#1b1b1b;--anatomy-top:#1c1c1c;
+  --anatomy-shade-0:#0f0f0f;--anatomy-shade-1:#121212;--anatomy-shade-2:#151515;--anatomy-shade-3:#181818;
+  --anatomy-lit-top:#262626;--anatomy-lit-shade:#1d1d1d;
+  --anatomy-hi:#d4d4d4;--anatomy-mid:#6a6a6a;--anatomy-lo:#3e3e3e;--anatomy-faint:#2a2a2a;--anatomy-lit:#ffffff;
+  --anatomy-halo:#050505;--anatomy-halo-opacity:.9;--anatomy-dot:#e6e6e6;
+  --anatomy-red:#ff6b6b;--anatomy-green:#6be0a0;--anatomy-blue:#6b9bff;
+  --anatomy-weight:.6px;--anatomy-ease:cubic-bezier(.32,.72,0,1);
+  --anatomy-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --anatomy-lift:inset 0 1px 0 0 #ffffff0a,inset 0 0 0 1px #ffffff06,0 0 0 1px #00000026,0 1px 1px -.5px #00000014,0 3px 3px -1.5px #00000014,0 6px 6px -3px #00000014,0 12px 12px -6px #00000014;;--anatomy-page:#16181d;--anatomy-card:#1d2027;--anatomy-text:#b8b3a8;--anatomy-strong:#ede7db;--anatomy-muted:#8a877f;--anatomy-paper:#1d2027;--anatomy-face:#262a33;--anatomy-top:#282c35;--anatomy-shade-0:#15171c;--anatomy-shade-1:#191b21;--anatomy-shade-2:#1d2026;--anatomy-shade-3:#21242b;--anatomy-lit-top:#343945;--anatomy-lit-shade:#292d37;--anatomy-hi:#d9d3c7;--anatomy-mid:#7b7a75;--anatomy-lo:#4a4b4f;--anatomy-faint:#33353c;--anatomy-lit:#ffffff;--anatomy-dot:#ede7db;--anatomy-red:#ff7b72;--anatomy-green:#8fd19e;--anatomy-blue:#7fa8ff;--anatomy-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--accent:#e8a382;--heat:#f08a55;--cav-paper:#14161a;--cav-0:#0f1114;--cav-1:#121418;--cav-2:#15171b;--cav-3:#181a1f;--btn:#262a33;--btn-on:#ede7db;--btn-on-text:#16181d;--rule:#2c2f37;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--anatomy-page);color:var(--anatomy-text);font:16px/1.6 "IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.hd-page{max-width:960px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hd-eyebrow{margin:0 0 12px;font-family:var(--anatomy-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.hd-back{display:inline-block;margin:0 0 28px;font-family:var(--anatomy-mono);font-size:12px;letter-spacing:.06em;color:var(--anatomy-muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
+.hd-back:hover,.hd-back:focus-visible{color:var(--accent);border-color:var(--accent)}
+.hd-head h1{margin:0 0 14px;font-family:"Fraunces",Georgia,"Times New Roman",serif;font-size:clamp(32px,6vw,52px);line-height:1.05;font-weight:500;letter-spacing:-.02em;color:var(--anatomy-strong);text-wrap:balance}
+.hd-lede{margin:0;max-width:62ch;font-size:17px}
+.iso-figure{margin:32px 0 20px}
+.iso-stage{outline:none}
+.iso-stage:focus-visible{outline:2px solid var(--anatomy-blue);outline-offset:6px}
+.iso-legend{font-size:13.5px}
+.iso-caption{max-width:75ch}
+/* cavity tones: the inside of the casing and of the motor can */
+.cav{--anatomy-paper:var(--cav-paper);--anatomy-shade-0:var(--cav-0);--anatomy-shade-1:var(--cav-1);--anatomy-shade-2:var(--cav-2);--anatomy-shade-3:var(--cav-3);--anatomy-top:var(--cav-3)}
+.hd-void{fill:var(--cav-0);stroke:none}
+.hd-tint{stroke:none}
+.hd-tint[data-pole="n"]{fill:var(--anatomy-red)}
+.hd-tint[data-pole="s"]{fill:var(--anatomy-blue)}
+.hd-heat{stroke:color-mix(in srgb,var(--heat) calc(var(--hot,0)*100%),var(--anatomy-mid));stroke-width:1.5px}
+.hd-heat[data-level="2"]{stroke-width:1.1px}
+/* controls */
+.hd-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;margin-top:14px}
+.hd-controls button{min-width:72px;padding:8px 16px;border:1px solid var(--anatomy-mid);border-radius:999px;background:var(--btn);color:var(--anatomy-strong);font:600 13px/1 var(--anatomy-mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.hd-controls button[aria-pressed="true"][data-level]{background:var(--btn-on);color:var(--btn-on-text);border-color:var(--btn-on)}
+.hd-controls button:focus-visible,.hd-slider input:focus-visible{outline:2px solid var(--anatomy-blue);outline-offset:2px}
+.hd-slider{display:flex;align-items:center;gap:10px;font:12px/1 var(--anatomy-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--anatomy-muted)}
+.hd-slider input{width:min(320px,48vw);accent-color:var(--anatomy-strong)}
+.hd-slider output{min-width:4ch;color:var(--anatomy-strong);font-variant-numeric:tabular-nums}
+/* notes */
+.hd-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px 32px;margin:0 0 48px;padding-top:20px;border-top:1px solid var(--rule)}
+.hd-notes>div{min-width:0}
+.hd-notes h2{margin:0 0 6px;font-family:"Fraunces",Georgia,"Times New Roman",serif;font-size:19px;font-weight:500;letter-spacing:-.01em;color:var(--anatomy-strong)}
+.hd-notes p{margin:0 0 8px;font-size:15px}
+.hd-math{overflow-x:auto;max-width:100%;margin:10px 0}.hd-notes math{font-size:17px;color:var(--anatomy-strong)}
+.hd-foot{padding-top:16px;border-top:1px solid var(--rule);font-family:var(--anatomy-mono);font-size:11px;letter-spacing:.06em;color:var(--anatomy-muted)}
+@media (max-width:560px){.iso-plate{padding:48px 10px 76px}}
+.iso-stage{cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.iso-stage[data-dragging]{cursor:grabbing}
+.hd-lead{stroke-width:2px}
+.hd-label circle{fill:var(--anatomy-card);stroke:var(--anatomy-hi);stroke-width:1.2px}
+.hd-label text{font:700 11px/1 var(--anatomy-mono);fill:var(--anatomy-strong)}
+.hd-label[data-kind="n"] circle{stroke:var(--anatomy-red)}
+.hd-label[data-kind="n"] text{fill:var(--anatomy-red)}
+.hd-label[data-kind="s"] circle{stroke:var(--anatomy-blue)}
+.hd-label[data-kind="s"] text{fill:var(--anatomy-blue)}
+.hd-group{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px}
+.hd-group>span{margin-right:4px;font:11px/1 var(--anatomy-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--anatomy-muted)}
+.hd-controls button[aria-pressed="true"]{background:var(--btn-on);color:var(--btn-on-text);border-color:var(--btn-on)}
+.hd-flat{cursor:default;max-width:470px;margin:0 auto}
+.hd-wtext{font:700 15px/1 var(--anatomy-mono);fill:var(--anatomy-strong)}
+.hd-wn{fill:var(--anatomy-red)}
+.hd-ws{fill:var(--anatomy-blue)}
+.hd-wpole{fill:var(--anatomy-face);stroke:var(--anatomy-mid);stroke-width:1px}
+.hd-wname{paint-order:stroke;stroke:var(--anatomy-card);stroke-width:5px;stroke-linejoin:round}
+.hd-wseg{fill:none;stroke:var(--heat);stroke-width:9px;stroke-linecap:butt}
+.hd-wtab{fill:var(--heat);stroke:none}
+.hd-wshaft{fill:var(--anatomy-face);stroke:var(--anatomy-mid);stroke-width:1px}
+.hd-wbrush{fill:var(--anatomy-strong);stroke:none}
+.hd-wsign{fill:var(--anatomy-card)}
+.hd-warrow{fill:var(--anatomy-mid);stroke:none}
+.hd-warrow[data-tone="lit"]{fill:var(--anatomy-lit)}
+.hd-wside{fill:var(--anatomy-card);stroke:var(--anatomy-mid);stroke-width:1.4px}
+.hd-wside[data-tone="lit"]{stroke:var(--anatomy-lit);stroke-width:2.2px}
+.hd-wdot{fill:var(--anatomy-strong);stroke:none}
+.hd-wcross{fill:none;stroke:var(--anatomy-strong);stroke-width:1.6px;stroke-linecap:round}
+.hd-wforce{fill:none;stroke:var(--anatomy-green);stroke-width:2.4px;stroke-linecap:round}
+.hd-wforcehead{fill:var(--anatomy-green);stroke:none}
+.hd-wfield{fill:none;stroke:var(--anatomy-lo);stroke-width:1px;stroke-dasharray:4 5}
+.hd-wfieldhead{fill:var(--anatomy-lo);stroke:none}
+.hd-wflux{fill:none;stroke:var(--anatomy-mid);stroke-width:.9px;stroke-linecap:round;opacity:.75}
+.hd-wfluxhead{fill:var(--anatomy-mid);stroke:none}
+.hd-wyoke{fill:none;stroke:var(--anatomy-shade-1);stroke-width:14px}
+.hd-math .katex{font-size:1.15em;color:var(--anatomy-strong)}
+.hd-math .katex-display{margin:.4em 0}
+.hd-wseg{stroke:var(--accent)}
+.hd-wtab{fill:var(--accent)}
+.iso-plate{border-radius:2px}
+</style>
+</head>
+<body>
+<div class="iso hd-page">
+<header class="hd-head">
+<a class="hd-back" href="../">← All JSHPhysics tools</a>
+<p class="hd-eyebrow">JSHPhysics · Electricity and magnetism</p><h1>Inside a hairdryer</h1>
+<p class="hd-lede">A hairdryer does two jobs. A small DC motor drives a fan that pushes air through the barrel, and a coil of resistance wire heats that air on its way out. Turn the dryer round, hide its casing, then take the motor apart.</p>
+</header>
+<figure class="iso-figure"><div class="iso-plate"><div class="iso-plate-corners" aria-hidden="true"><span class="iso-plate-corner" data-corner="fig">Fig 1</span><span class="iso-plate-corner" data-corner="title">Hairdryer</span><span class="iso-plate-corner" data-corner="hint">Drag to turn it round</span><span class="iso-plate-corner" data-corner="readout" data-readout>off</span></div><div class="iso-stage" id="stage1" tabindex="0" role="group" aria-label="A hairdryer you can turn round. Inside the casing, from the back: a fan, a small DC motor on three struts, and a heater made of two coils of wire on crossed mica boards. Arrow keys turn the view; keys 0, 1 and 2 set the switch to off, low and high."><svg xmlns="http://www.w3.org/2000/svg" class="iso-svg" viewBox="0 0 860 600" role="img" aria-label="A hairdryer you can turn round. Inside the casing, from the back: a fan, a small DC motor on three struts, and a heater made of two coils of wire on crossed mica boards. Arrow keys turn the view; keys 0, 1 and 2 set the switch to off, low and high."><g data-scene=""></g></svg></div><div class="hd-controls"><div class="hd-group" role="group" aria-label="Hairdryer switch"><span>Switch</span><button type="button" id="level-0" data-level="0" aria-pressed="true">Off</button><button type="button" id="level-1" data-level="1" aria-pressed="false">Low</button><button type="button" id="level-2" data-level="2" aria-pressed="false">High</button></div><div class="hd-group" role="group" aria-label="Casing"><span>Casing</span><button type="button" id="case-0" data-case="0" aria-pressed="false">Solid</button><button type="button" id="case-1" data-case="1" aria-pressed="true">See-through</button><button type="button" id="case-2" data-case="2" aria-pressed="false">Hidden</button></div></div></div><figcaption class="iso-legend"><span class="iso-keys"><span class="iso-key"><svg class="iso-swatch" data-mark="lit" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Motor armature: the part that turns</span><span class="iso-key"><svg class="iso-swatch" data-mark="raised" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Casing: make it solid, see-through or hidden</span><span class="iso-key"><svg class="iso-swatch" data-mark="dim" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>Heater coils glow orange when current flows</span></span><span class="iso-caption">From the back: air inlet, fan, motor, heater, nozzle. The motor and fan are drawn about 400 times slower than real life so you can see them turn.</span></figcaption></figure>
+<section class="hd-notes" aria-label="Parts of the hairdryer">
+<div><h2>Fan and motor</h2><p>The fan sits on the motor's shaft, just inside the air inlet. The motor is a low-voltage DC type, so the mains supply reaches it through a dropper coil and four diodes (the bridge rectifier: the row of four small blocks on the heater board).</p></div>
+<div><h2>Heater</h2><p>Nichrome wire wound on a cross of mica boards. Mica does not conduct and does not burn. Low uses one element (900 W), High uses both (1800 W).</p></div>
+<div><h2>Safety parts</h2><p>The square block on the board is a bimetallic thermostat. It opens the circuit if the air stops moving and the heater gets too hot. The long block beside it is a one-shot thermal fuse.</p></div>
+<div><h2>How hot is the air?</h2><p>All the electrical power ends up heating the air that passes through. On High, 0.036 kg of air (specific heat capacity 1005 J/(kg K)) passes each second:</p><div class="hd-math" data-tex="\Delta T = \dfrac{P}{\dot{m}\,c} = \dfrac{1800}{0.036 \times 1005} \approx 50\ \mathrm{K}"></div><p>Room air at 20 °C leaves at about 70 °C.</p></div>
+</section>
+<figure class="iso-figure"><div class="iso-plate"><div class="iso-plate-corners" aria-hidden="true"><span class="iso-plate-corner" data-corner="fig">Fig 2</span><span class="iso-plate-corner" data-corner="title">The motor, enlarged</span><span class="iso-plate-corner" data-corner="hint">Drag to turn it round</span><span class="iso-plate-corner" data-corner="readout" data-readout></span></div><div class="iso-stage" id="stage2" tabindex="0" role="group" aria-label="The hairdryer's DC motor, which you can turn round. Two curved magnets, one north and one south, sit either side of a three-pole armature. Two carbon brushes press on a three-segment commutator, and leads run from the brushes to the positive and negative terminals of a supply. Arrow keys turn the view; space starts and stops the armature."><svg xmlns="http://www.w3.org/2000/svg" class="iso-svg" viewBox="0 0 860 560" role="img" aria-label="The hairdryer's DC motor, which you can turn round. Two curved magnets, one north and one south, sit either side of a three-pole armature. Two carbon brushes press on a three-segment commutator, and leads run from the brushes to the positive and negative terminals of a supply. Arrow keys turn the view; space starts and stops the armature."><g data-scene=""></g></svg></div><div class="hd-controls"><div class="hd-group"><button type="button" id="strip">Strip down</button><button type="button" id="labels" aria-pressed="true">Labels</button><button type="button" id="spin" aria-pressed="true">Pause</button></div><label class="hd-slider" for="angle"><span>Armature</span><input type="range" id="angle" min="0" max="359" step="1" value="0"><output id="angle-out" for="angle">0°</output></label></div></div><figcaption class="iso-legend"><span class="iso-keys"><span class="iso-key"><svg class="iso-swatch" data-mark="red" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>North pole</span><span class="iso-key"><svg class="iso-swatch" data-mark="blue" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>South pole</span><span class="iso-key"><svg class="iso-swatch" data-mark="lit" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Lead from the + terminal</span><span class="iso-key"><svg class="iso-swatch" data-mark="raised" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Lead from the − terminal</span></span><span class="iso-caption">Strip down slides the parts apart, removes the can and end caps, then closes up what is left: two magnets, the armature, the commutator, two brushes and the supply. Each armature pole is an electromagnet. Strong tint: that coil carries the full current. Pale tint: it shares the current with another coil.</span></figcaption></figure>
+<figure class="iso-figure"><div class="iso-plate"><div class="iso-plate-corners" aria-hidden="true"><span class="iso-plate-corner" data-corner="fig">Fig 3</span><span class="iso-plate-corner" data-corner="title">Wiring, seen along the shaft</span><span class="iso-plate-corner" data-corner="hint">Turns with Fig 2</span><span class="iso-plate-corner" data-corner="readout" data-readout></span></div><div class="iso-stage hd-flat" id="stage3"><svg xmlns="http://www.w3.org/2000/svg" class="iso-svg" viewBox="0 0 460 430" role="img" aria-label="End-on wiring diagram of the motor. Three coils, A, B and C, are joined in a ring. Each join connects to one of three commutator segments. Two fixed brushes, plus and minus, touch the commutator on opposite sides. Current flows from the plus brush through one coil directly, and through the other two coils in series, to the minus brush."><g data-scene=""></g></svg></div><div class="hd-controls"><div class="hd-group" role="group" aria-label="Magnetic field"><span>Field</span><button type="button" id="field-curved" data-field="curved" aria-pressed="true">Curved</button><button type="button" id="field-straight" data-field="straight" aria-pressed="false">Straight</button><button type="button" id="field-computed" data-field="computed" aria-pressed="false">Computed</button></div></div></div><figcaption class="iso-legend"><span class="iso-keys"><span class="iso-key"><svg class="iso-swatch" data-mark="lit" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Full current: one coil on its own between the brushes</span><span class="iso-key"><svg class="iso-swatch" data-mark="raised" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Half current: two coils in series</span><span class="iso-key"><svg class="iso-swatch" data-mark="red" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>North pole</span><span class="iso-key"><svg class="iso-swatch" data-mark="blue" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>South pole</span><span class="iso-key"><svg class="iso-swatch" data-mark="green" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>Force on each side of a coil</span></span><span class="iso-caption">The three coils A, B and C are joined end to end in a ring. Each join is soldered to one commutator segment (the dots). The + and − brushes touch two of the three segments, so the current always has two routes round the ring. Beside each coil, a dot marks current coming out of the page and a cross marks current going in. The thin lines are the magnetic field, drawn from the inner face of the N magnet to the inner face of the S magnet. Curved and Straight are simplified pictures. Computed solves for the field in this cross-section, including the iron arms, the steel can and the coil currents.</span></figcaption></figure>
+<section class="hd-notes" aria-label="How the motor works">
+<div><h2>Three coils, two brushes</h2><p>The coils are not wired to the terminals one each. They form a closed ring, and the brushes tap that ring at two points. From the + brush the current splits: one route goes through a single coil, the other through the remaining two in series. All three coils carry current all the time.</p></div>
+<div><h2>Using Fleming's left-hand rule</h2><p>Each coil is wound round its arm, so its two long sides run along the shaft: in Fig 3 they point out of and into the page (the dot and the cross). Apply the rule to those sides, with the field running from N to S. The stripes across each coil are only its end turns. They lie in the page, and the forces on the front and back end turns cancel.</p></div>
+<div><h2>Two forces make a turning pair</h2><p>The current in the two sides of a coil is in opposite directions, so the two forces are opposite. Together they twist the coil, exactly as in the one-coil motor. Each of these coils is that same rectangular coil, moved out from the shaft on its arm.</p></div>
+<div><h2>What the computed field shows</h2><p>Switch Field to Computed for this. Iron carries flux far more easily than air, so the lines crowd into whichever arms face the magnets, cross the air gap almost at right angles to the iron, and return round the steel can. The copper sits beside the arms where the field is weak. In this model only about a fifth of the turning force acts on the copper. The rest acts on the iron.</p></div>
+<div><h2>Cogging</h2><p>Three iron arms passing two magnets also give a pull that has nothing to do with the current: the arms prefer to sit lined up with the magnets. It adds to the drive for part of each sixth of a turn and opposes it for the rest, averaging zero. You can feel it as notches when you turn a small motor by hand.</p></div>
+<div><h2>What changes as it turns</h2><p>Every sixth of a turn a gap in the commutator passes a brush. That brush moves on to the next segment, so a different coil becomes the one on its own, and one coil has its current reversed. Pause Fig 2 and drag the Armature slider to step through it.</p></div>
+<div><h2>Where the current goes</h2><p>Follow the lead from the + terminal: it reaches one carbon brush, crosses to the copper commutator, runs through the armature coils, and leaves by the other brush to the − terminal.</p></div>
+<div><h2>Force on a wire</h2><p>A wire carrying a current across a magnetic field feels a force at right angles to both:</p><div class="hd-math" data-tex="F = BIL"></div><p>The coils sit in the field between the N and S magnets, so the forces on them turn the armature.</p></div>
+<div><h2>Commutator and brushes</h2><p>The brushes stay still. The commutator turns with the armature. Each time a gap passes a brush, the current in one coil reverses, so its pole swaps between north and south.</p></div>
+<div><h2>Why it keeps turning</h2><p>A pole swaps to south just as it reaches the S magnet. Like poles repel, so it is pushed on round instead of stopping there. Pause it and drag the Armature slider slowly past a magnet to watch the tint change.</p></div>
+<div><h2>Why three poles?</h2><p>The one-coil motor in a textbook has two dead spots each turn where the force is zero. With three coils at 120° there is always at least one in a good position, so the motor starts from any angle.</p></div>
+</section>
+<footer class="hd-foot">Joshua Stafford-Haworth · JSHPhysics · @educatorJSH</footer>
+</div>
+<script src="../lessons/vendor/katex.min.js"></script>
+<script>
+// Typeset the equations.
+document.querySelectorAll("[data-tex]").forEach(function (box) {
+  if (window.katex) {
+    window.katex.render(box.getAttribute("data-tex"), box, { displayMode: true, throwOnError: false });
+  } else {
+    box.textContent = box.getAttribute("data-tex");
+  }
+});
+</script>
+<script type="module">// Shared geometry for the hairdryer figures.
+// The build script imports this file, and the page inlines it (with "export" removed),
+// so the moving parts are drawn by the same code at build time and in the browser.
+
+const TAU = Math.PI * 2;
+const DEG = Math.PI / 180;
+
+// Light bands: the same four-tone thresholds the Anatomy kit uses.
+const BANDS = [0, 0.2, 0.42, 0.62];
+
+// ---------- camera ----------
+
+function cam(P) {
+  const a = (P.azimuth ?? 45) * DEG;
+  const e = (P.elevation ?? 30) * DEG;
+  return {
+    sa: Math.sin(a),
+    ca: Math.cos(a),
+    se: Math.sin(e),
+    ce: Math.cos(e),
+    k: P.scale * Math.sqrt(1.6),
+  };
+}
+
+// World point -> screen point.
+function flat(p, P) {
+  const c = cam(P);
+  const sx = P.origin[0] + (p[0] * c.sa - p[1] * c.ca) * c.k;
+  const sy = P.origin[1] + ((p[0] * c.ca + p[1] * c.sa) * c.se - p[2] * c.ce) * c.k;
+  return [sx, sy];
+}
+
+// Unit vector pointing at the viewer.
+function viewDir(P) {
+  const c = cam(P);
+  return [c.ca * c.ce, c.sa * c.ce, c.se];
+}
+
+// Unit vector pointing at the light.
+function lightDir(P) {
+  const c = cam(P);
+  const raw = [-c.sa, c.ca, 1.2];
+  const length = Math.hypot(raw[0], raw[1], raw[2]);
+  return [raw[0] / length, raw[1] / length, raw[2] / length];
+}
+
+const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+
+function bandOf(score) {
+  let tone = 0;
+  while (tone < BANDS.length && score >= BANDS[tone]) {
+    tone += 1;
+  }
+  return tone;
+}
+
+// ---------- frames along the x axis ----------
+// Every round part in these figures lies along x.
+// A frame is { o: [x, y, z], S: scale }.  Angle 0 points along +y, 90 degrees points up.
+
+function pt(F, s, r, angle) {
+  return [F.o[0] + s, F.o[1] + r * Math.cos(angle), F.o[2] + r * Math.sin(angle)];
+}
+
+const radial = (angle) => [0, Math.cos(angle), Math.sin(angle)];
+const tangent = (angle) => [0, -Math.sin(angle), Math.cos(angle)];
+const AXIS = [1, 0, 0];
+const neg = (v) => [-v[0], -v[1], -v[2]];
+
+// ---------- mesh painter ----------
+
+const tenth = (value) => {
+  const text = (Math.round(value * 10) / 10).toFixed(1).replace(/\.0$/, "");
+  return text === "-0" ? "0" : text;
+};
+
+function pathOf(points, closed) {
+  let d = "";
+  for (let index = 0; index < points.length; index += 1) {
+    d += (index ? "L" : "M") + tenth(points[index][0]) + " " + tenth(points[index][1]);
+  }
+  return d + (closed ? "Z" : "");
+}
+
+function signedArea(points) {
+  let area = 0;
+  for (let index = 0; index < points.length; index += 1) {
+    const a = points[index];
+    const b = points[(index + 1) % points.length];
+    area += a[0] * b[1] - b[0] * a[1];
+  }
+  return area / 2;
+}
+
+// faces: [{ pts: [p3, ...], n: [x, y, z], soft: [bool per edge], two: bool }]
+// Edge i joins pts[i] to pts[i + 1].  A "soft" edge lies inside one curved surface.
+// Returns the paths for one solid: fill, tone buckets, creases and outline.
+function mesh(faces, P) {
+  const V = viewDir(P);
+  const L = lightDir(P);
+  const fills = [];
+  const buckets = [[], [], [], [], []];
+  const edges = new Map();
+  let sum = [0, 0, 0];
+  let count = 0;
+
+  for (const face of faces) {
+    let normal = face.n;
+    let facing = dot(normal, V);
+    if (face.two && facing < 0) {
+      normal = neg(normal);
+      facing = -facing;
+    }
+    for (const p of face.pts) {
+      sum = [sum[0] + p[0], sum[1] + p[1], sum[2] + p[2]];
+      count += 1;
+    }
+    if (facing <= 1e-6) {
+      continue;
+    }
+    const screen = face.pts.map((p) => flat(p, P));
+    const ordered = signedArea(screen) < 0 ? [...screen].reverse() : screen;
+    const d = pathOf(ordered, true);
+    fills.push(d);
+    buckets[bandOf(dot(normal, L))].push(d);
+
+    for (let index = 0; index < screen.length; index += 1) {
+      const a = screen[index];
+      const b = screen[(index + 1) % screen.length];
+      const ka = tenth(a[0]) + " " + tenth(a[1]);
+      const kb = tenth(b[0]) + " " + tenth(b[1]);
+      if (ka === kb) {
+        continue;
+      }
+      const key = ka < kb ? ka + "|" + kb : kb + "|" + ka;
+      const soft = Boolean(face.soft && face.soft[index]);
+      const seen = edges.get(key);
+      if (seen) {
+        seen.count += 1;
+        seen.soft = seen.soft && soft;
+      } else {
+        edges.set(key, { count: 1, soft, d: "M" + ka + "L" + kb });
+      }
+    }
+  }
+
+  let outline = "";
+  let crease = "";
+  for (const edge of edges.values()) {
+    if (edge.count === 1) {
+      // Seen by one visible face only: a silhouette or a limb.
+      outline += edge.d;
+    } else if (!edge.soft) {
+      // Shared by two visible faces across a real corner.
+      crease += edge.d;
+    }
+  }
+
+  return {
+    fill: fills.join(""),
+    shades: buckets.slice(0, 4).map((list) => list.join("")),
+    top: buckets[4].join(""),
+    crease,
+    outline,
+    centre: count ? [sum[0] / count, sum[1] / count, sum[2] / count] : [0, 0, 0],
+  };
+}
+
+// One solid as SVG, using the kit's own classes so it takes the kit's tones.
+// options.alpha (0 to 1) makes the solid see-through: used for casings.
+function meshSvg(m, options = {}) {
+  const tone = options.tone || "hi";
+  const crease = options.crease || "faint";
+  const cls = options.cls ? " " + options.cls : "";
+  const lit = options.lit ? ' data-lit=""' : "";
+  const ghost = options.alpha !== undefined && options.alpha < 0.999;
+  let fillOpen = "";
+  let fillClose = "";
+  let edgeOpacity = "";
+  if (ghost) {
+    fillOpen = '<g opacity="' + options.alpha.toFixed(3) + '">';
+    fillClose = "</g>";
+    edgeOpacity = ' opacity="' + Math.min(1, options.alpha * 2.4).toFixed(3) + '"';
+  }
+  let out = '<g class="iso-solid' + cls + '" data-seamless=""' + lit + ">";
+  out += fillOpen;
+  out += '<path class="iso-fill" d="' + m.fill + '"/>';
+  m.shades.forEach((d, shade) => {
+    if (d) {
+      out += '<path class="iso-shade" data-shade="' + shade + '" d="' + d + '"/>';
+    }
+  });
+  if (m.top) {
+    out += '<path class="iso-top" d="' + m.top + '"/>';
+  }
+  if (options.tint) {
+    out += '<path class="hd-tint" data-pole="' + options.tint.pole + '" style="opacity:' + options.tint.alpha + '" d="' + m.fill + '"/>';
+  }
+  out += fillClose;
+  if (m.crease) {
+    out += '<path class="iso-line iso-crease" data-tone="' + crease + '"' + edgeOpacity + ' d="' + m.crease + '"/>';
+  }
+  if (options.inner) {
+    out += options.inner;
+  }
+  out += '<path class="iso-line iso-edge" data-tone="' + tone + '"' + edgeOpacity + ' d="' + m.outline + '"/>';
+  return out + "</g>";
+}
+
+// ---------- shapes ----------
+
+// A piece of tube wall between angles a0 and a1 (radians), following a profile [[s, r], ...].
+// t is the wall thickness.  Returns the faces in groups so a cutaway can paint
+// the far inside wall before the things inside it and the near outside wall after them.
+function sector(F, profile, t, a0, a1, options = {}) {
+  const ends = options.ends || [false, false];
+  const full = Math.abs(a1 - a0 - TAU) < 1e-9;
+  const steps = Math.max(2, Math.ceil((a1 - a0) / ((options.step || 6) * DEG)));
+  const angleAt = (index) => a0 + ((a1 - a0) * index) / steps;
+  const outer = [];
+  const inner = [];
+  const cuts = [];
+  const caps = [];
+  const last = profile.length - 2;
+
+  for (let j = 0; j <= last; j += 1) {
+    const [s0, r0] = profile[j];
+    const [s1, r1] = profile[j + 1];
+    const slope = (r1 - r0) / (s1 - s0 || 1);
+    const norm = Math.hypot(1, slope);
+
+    for (let i = 0; i < steps; i += 1) {
+      const ta = angleAt(i);
+      const tb = angleAt(i + 1);
+      const mid = radial((ta + tb) / 2);
+      const n = [-slope / norm, mid[1] / norm, mid[2] / norm];
+      const firstSide = !full && i === 0;
+      const lastSide = !full && i === steps - 1;
+      // Edge order: rim at s0, side at tb, rim at s1, side at ta.
+      const soft = [j !== 0, !lastSide, j !== last, !firstSide];
+      outer.push({
+        pts: [pt(F, s0, r0, ta), pt(F, s0, r0, tb), pt(F, s1, r1, tb), pt(F, s1, r1, ta)],
+        n,
+        soft,
+      });
+      inner.push({
+        pts: [pt(F, s0, r0 - t, ta), pt(F, s0, r0 - t, tb), pt(F, s1, r1 - t, tb), pt(F, s1, r1 - t, ta)],
+        n: neg(n),
+        soft,
+      });
+    }
+
+    if (!full) {
+      // The two flat faces where the wall was cut along its length.
+      cuts.push({
+        pts: [pt(F, s0, r0 - t, a0), pt(F, s0, r0, a0), pt(F, s1, r1, a0), pt(F, s1, r1 - t, a0)],
+        n: neg(tangent(a0)),
+        soft: [j !== 0, false, j !== last, false],
+      });
+      cuts.push({
+        pts: [pt(F, s0, r0 - t, a1), pt(F, s0, r0, a1), pt(F, s1, r1, a1), pt(F, s1, r1 - t, a1)],
+        n: tangent(a1),
+        soft: [j !== 0, false, j !== last, false],
+      });
+    }
+  }
+
+  // The ring-shaped faces at either end.
+  [0, 1].forEach((which) => {
+    if (!ends[which]) {
+      return;
+    }
+    const [s, r] = which === 0 ? profile[0] : profile[profile.length - 1];
+    for (let i = 0; i < steps; i += 1) {
+      const ta = angleAt(i);
+      const tb = angleAt(i + 1);
+      const firstSide = !full && i === 0;
+      const lastSide = !full && i === steps - 1;
+      caps.push({
+        pts: [pt(F, s, r - t, ta), pt(F, s, r, ta), pt(F, s, r, tb), pt(F, s, r - t, tb)],
+        n: which === 0 ? neg(AXIS) : AXIS,
+        soft: [!firstSide, false, !lastSide, false],
+      });
+    }
+  });
+
+  return { outer, inner, cuts, caps, all: [...outer, ...inner, ...cuts, ...caps] };
+}
+
+// A box that points outward from the axis at angle psi:
+// s0..s1 along the axis, r0..r1 away from it, and w either side.
+function radialBox(F, s0, s1, r0, r1, w, psi) {
+  const c = Math.cos(psi);
+  const n = Math.sin(psi);
+  const at = (s, r, t) => [F.o[0] + s, F.o[1] + r * c - t * n, F.o[2] + r * n + t * c];
+  const R = radial(psi);
+  const T = tangent(psi);
+  return [
+    { pts: [at(s0, r1, -w), at(s1, r1, -w), at(s1, r1, w), at(s0, r1, w)], n: R },
+    { pts: [at(s0, r0, -w), at(s1, r0, -w), at(s1, r0, w), at(s0, r0, w)], n: neg(R) },
+    { pts: [at(s0, r0, w), at(s1, r0, w), at(s1, r1, w), at(s0, r1, w)], n: T },
+    { pts: [at(s0, r0, -w), at(s1, r0, -w), at(s1, r1, -w), at(s0, r1, -w)], n: neg(T) },
+    { pts: [at(s1, r0, -w), at(s1, r1, -w), at(s1, r1, w), at(s1, r0, w)], n: AXIS },
+    { pts: [at(s0, r0, -w), at(s0, r1, -w), at(s0, r1, w), at(s0, r0, w)], n: neg(AXIS) },
+  ];
+}
+
+// ---------- the motor's electrical model ----------
+// Three coils, joined in a ring, each joint soldered to one commutator segment.
+// Two brushes, half a turn apart, press on the commutator.
+// Angles are in the same frame as the drawing: 0 along +y, 90 degrees up.
+
+const MOTOR = {
+  north: 105 * DEG, // middle of the north magnet
+  south: 285 * DEG, // middle of the south magnet
+  brushPlus: 123 * DEG,
+  brushMinus: 303 * DEG,
+  segmentLag: 42 * DEG, // each segment sits this far behind its pole
+  flip: 195 * DEG, // a pole is "north" while it is within a quarter turn of this angle
+};
+
+const wrap = (angle) => {
+  let value = angle % TAU;
+  if (value > Math.PI) {
+    value -= TAU;
+  }
+  if (value <= -Math.PI) {
+    value += TAU;
+  }
+  return value;
+};
+
+// Current in coil k (0, 1, 2) when the rotor is at angle phi.
+// +1 or -1: this coil is alone between the brushes and takes the full current.
+// +0.5 or -0.5: it shares the other path with a second coil.
+// Positive current makes the pole's outer face a north pole.
+function coilCurrent(k, phi) {
+  const psi = phi + (k * TAU) / 3;
+  const x = wrap(psi - MOTOR.flip);
+  const size = Math.abs(x);
+  if (size < 30 * DEG) {
+    return 1;
+  }
+  if (size < 90 * DEG) {
+    return 0.5;
+  }
+  if (size > 150 * DEG) {
+    return -1;
+  }
+  return -0.5;
+}
+
+// Turning effect on pole k, as a share of the largest one pole can feel.
+function coilTorque(k, phi) {
+  const psi = phi + (k * TAU) / 3;
+  return coilCurrent(k, phi) * Math.sin(MOTOR.south - psi);
+}
+
+// ---------- the moving parts ----------
+
+// The three-pole armature at angle phi.  Rebuilt every frame.
+function rotorSvg(cfg, phi, P) {
+  const F = { o: cfg.o };
+  const m = (value) => value * cfg.S;
+  const V = viewDir(P);
+  const pieces = [];
+
+  for (let k = 0; k < 3; k += 1) {
+    const psi = phi + (k * TAU) / 3;
+    const current = coilCurrent(k, phi);
+
+    // The winding: a block of wire wrapped round the pole's arm.
+    const windingFaces = radialBox(F, m(11.2), m(28.8), m(3.6), m(8), m(4.4), psi);
+    const winding = mesh(windingFaces, P);
+    // Wire turns: lines round the block at four levels.
+    let turns = "";
+    const c = Math.cos(psi);
+    const n = Math.sin(psi);
+    const at = (s, r, t) => flat([F.o[0] + s, F.o[1] + r * c - t * n, F.o[2] + r * n + t * c], P);
+    const sides = [
+      { normal: tangent(psi), a: [m(11.2), m(4.4)], b: [m(28.8), m(4.4)] },
+      { normal: neg(tangent(psi)), a: [m(11.2), -m(4.4)], b: [m(28.8), -m(4.4)] },
+      { normal: AXIS, a: [m(28.8), -m(4.4)], b: [m(28.8), m(4.4)] },
+    ];
+    for (const side of sides) {
+      if (dot(side.normal, V) <= 0.02) {
+        continue;
+      }
+      for (let level = 1; level <= 4; level += 1) {
+        const r = m(3.6) + (m(4.4) * level) / 5;
+        turns += pathOf([at(side.a[0], r, side.a[1]), at(side.b[0], r, side.b[1])], false);
+      }
+    }
+    pieces.push({
+      depth: dot(winding.centre, V),
+      svg: meshSvg(winding, { tone: "mid", inner: turns ? '<path class="iso-line" data-tone="lo" d="' + turns + '"/>' : "" }),
+    });
+
+    // The pole shoe: the curved iron face that passes the magnets.
+    const shoeFaces = sector(F, [[m(13), m(10.5)], [m(27), m(10.5)]], m(2.5), psi - 38 * DEG, psi + 38 * DEG, { ends: [true, true], step: 12 }).all;
+    const shoe = mesh(shoeFaces, P);
+    const tint = cfg.tint ? { pole: current > 0 ? "n" : "s", alpha: Math.abs(current) === 1 ? 0.42 : 0.16 } : null;
+    pieces.push({
+      depth: dot(shoe.centre, V),
+      svg: meshSvg(shoe, { tone: "hi", crease: "lo", lit: Boolean(cfg.lit), tint }),
+    });
+  }
+
+  pieces.sort((a, b) => a.depth - b.depth);
+  return pieces.map((piece) => piece.svg).join("");
+}
+
+// The gaps between the three commutator segments, and the mark on the shaft end.
+function commutatorSvg(cfg, phi, P) {
+  const F = { o: cfg.o };
+  const m = (value) => value * cfg.S;
+  const V = viewDir(P);
+  let gaps = "";
+  for (let k = 0; k < 3; k += 1) {
+    // A segment is centred segmentLag behind its pole, so the gaps sit 60 degrees either side of that.
+    const angle = phi + (k * TAU) / 3 - MOTOR.segmentLag + 60 * DEG;
+    if (dot(radial(angle), V) < 0.06) {
+      continue;
+    }
+    gaps += pathOf([flat(pt(F, m(3.5), m(4.2), angle), P), flat(pt(F, m(8.5), m(4.2), angle), P)], false);
+  }
+  const mark = pathOf([flat(pt(F, m(40), 0, 0), P), flat(pt(F, m(40), m(3.4), phi), P)], false);
+  return {
+    gaps: gaps ? '<path class="iso-line" data-tone="hi" d="' + gaps + '"/>' : "",
+    mark: '<path class="iso-line" data-tone="lit" d="' + mark + '"/>',
+  };
+}
+
+// The fan blades at angle phi, split into those behind the hub and those in front.
+function fanSvg(cfg, phi, P) {
+  const F = { o: cfg.o };
+  const V = viewDir(P);
+  const hubDepth = dot(pt(F, cfg.s, 0, 0), V);
+  const blades = [];
+  for (let k = 0; k < cfg.blades; k += 1) {
+    const t = phi + (k * TAU) / cfg.blades;
+    const a = pt(F, cfg.s - 4, cfg.r0, t - 0.34);
+    const b = pt(F, cfg.s + 4, cfg.r0, t + 0.34);
+    const c = pt(F, cfg.s + 5, cfg.r1, t + 0.13);
+    const d = pt(F, cfg.s - 5, cfg.r1, t - 0.13);
+    // Normal of the (slightly twisted) blade, from its two diagonals.
+    const p = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
+    const q = [d[0] - b[0], d[1] - b[1], d[2] - b[2]];
+    const raw = [p[1] * q[2] - p[2] * q[1], p[2] * q[0] - p[0] * q[2], p[0] * q[1] - p[1] * q[0]];
+    const length = Math.hypot(raw[0], raw[1], raw[2]) || 1;
+    const blade = mesh([{ pts: [a, b, c, d], n: [raw[0] / length, raw[1] / length, raw[2] / length], two: true }], P);
+    blades.push({ depth: dot(blade.centre, V), svg: meshSvg(blade, { tone: "mid" }) });
+  }
+  blades.sort((x, y) => x.depth - y.depth);
+  let back = "";
+  let front = "";
+  for (const blade of blades) {
+    if (blade.depth < hubDepth) {
+      back += blade.svg;
+    } else {
+      front += blade.svg;
+    }
+  }
+  return { back, front };
+}
+
+// A small 2D magnetic field solver for the wiring diagram (Fig 3).
+//
+// It solves for the vector potential A (pointing out of the page) on a square grid:
+//     div( nu grad A ) = -J - curl(M)
+// where nu = 1/mu_r, J is the current density in the coil sides and M is the magnets' magnetisation.
+// In 2D the flux lines are the contours of A, and B = (dA/dy, -dA/dx).
+//
+// Coordinates are the diagram's own: x to the right, y up, origin on the shaft, in diagram units.
+
+const FIELD_GRID = {
+  cells: 100, // cells along each side
+  half: 200, // the grid covers -200..200 in x and y
+  ironMu: 100, // relative permeability used for iron
+  hub: 70, // radius of the iron hub
+  arm: { r0: 60, r1: 138, halfWidth: 24 }, // each iron arm
+  coil: { r0: 82, r1: 134, t0: 24, t1: 38 }, // the copper either side of an arm
+  magnet: { r0: 150, r1: 172, halfAngle: (40 * Math.PI) / 180 },
+  yoke: { r0: 172, r1: 186 }, // the steel can, which carries the flux back round
+  ampTurns: 8, // full-current coil, compared with 22 for one magnet (its thickness times M = 1)
+};
+
+function makeField() {
+  const n = FIELD_GRID.cells;
+  const nodes = (n + 1) * (n + 1);
+  return {
+    n,
+    h: (2 * FIELD_GRID.half) / n,
+    A: new Float32Array(nodes),
+    nu: new Float32Array(n * n),
+    mx: new Float32Array(n * n),
+    my: new Float32Array(n * n),
+    // Per-node coefficients for the relaxation sweep.
+    east: new Float32Array(nodes),
+    west: new Float32Array(nodes),
+    north: new Float32Array(nodes),
+    south: new Float32Array(nodes),
+    total: new Float32Array(nodes),
+    source: new Float32Array(nodes),
+    reference: 0,
+  };
+}
+
+// Describe the materials and currents for the rotor at angle phi.
+// currents: the three coil currents (+1, +0.5, -0.5 or -1).
+// north, south: the angles of the middles of the two magnets.
+function setRotor(field, phi, currents, north, south) {
+  const G = FIELD_GRID;
+  const n = field.n;
+  const h = field.h;
+  const ironNu = 1 / G.ironMu;
+  const TAU = Math.PI * 2;
+  // Both magnets are magnetised along the line from the north magnet to the south magnet.
+  const mDirX = Math.cos(south);
+  const mDirY = Math.sin(south);
+  const cosines = [0, 1, 2].map((k) => Math.cos(phi + (k * TAU) / 3));
+  const sines = [0, 1, 2].map((k) => Math.sin(phi + (k * TAU) / 3));
+
+  const angleGap = (a, b) => {
+    let gap = (a - b) % TAU;
+    if (gap > Math.PI) {
+      gap -= TAU;
+    }
+    if (gap < -Math.PI) {
+      gap += TAU;
+    }
+    return Math.abs(gap);
+  };
+
+  // Materials, cell by cell.
+  for (let j = 0; j < n; j += 1) {
+    const y = -G.half + (j + 0.5) * h;
+    for (let i = 0; i < n; i += 1) {
+      const x = -G.half + (i + 0.5) * h;
+      const index = j * n + i;
+      const r = Math.hypot(x, y);
+      let nu = 1;
+      let mx = 0;
+      let my = 0;
+      if (r < G.hub) {
+        nu = ironNu;
+      } else if (r >= G.yoke.r0 && r < G.yoke.r1) {
+        nu = ironNu;
+      } else if (r >= G.magnet.r0 && r < G.magnet.r1) {
+        const angle = Math.atan2(y, x);
+        if (angleGap(angle, north) < G.magnet.halfAngle || angleGap(angle, south) < G.magnet.halfAngle) {
+          mx = mDirX;
+          my = mDirY;
+        }
+      } else if (r < G.arm.r1 + h) {
+        for (let k = 0; k < 3; k += 1) {
+          const along = x * cosines[k] + y * sines[k];
+          const across = -x * sines[k] + y * cosines[k];
+          if (along > G.arm.r0 && along < G.arm.r1 && Math.abs(across) < G.arm.halfWidth) {
+            nu = ironNu;
+          }
+        }
+      }
+      field.nu[index] = nu;
+      field.mx[index] = mx;
+      field.my[index] = my;
+    }
+  }
+
+  // Coefficients and sources, node by node (edge nodes stay at A = 0).
+  const J0 = G.ampTurns / ((G.coil.r1 - G.coil.r0) * (G.coil.t1 - G.coil.t0));
+  const row = n + 1;
+  for (let j = 1; j < n; j += 1) {
+    const y = -G.half + j * h;
+    for (let i = 1; i < n; i += 1) {
+      const x = -G.half + i * h;
+      const node = j * row + i;
+      // The four cells round this node.
+      const sw = (j - 1) * n + (i - 1);
+      const se = sw + 1;
+      const nw = j * n + (i - 1);
+      const ne = nw + 1;
+      const e = (field.nu[se] + field.nu[ne]) / 2;
+      const w = (field.nu[sw] + field.nu[nw]) / 2;
+      const nn = (field.nu[nw] + field.nu[ne]) / 2;
+      const s = (field.nu[sw] + field.nu[se]) / 2;
+      field.east[node] = e;
+      field.west[node] = w;
+      field.north[node] = nn;
+      field.south[node] = s;
+      field.total[node] = e + w + nn + s;
+
+      // Circulation of M round the node, anticlockwise.
+      const circulation = ((field.mx[sw] + field.mx[se]) - (field.mx[ne] + field.mx[nw]) + (field.my[se] + field.my[ne]) - (field.my[nw] + field.my[sw])) * (h / 2);
+
+      // Current in the coil sides.  For a positive coil current it comes out of the page
+      // on the anticlockwise side of the arm and goes in on the other side.
+      let current = 0;
+      const r = Math.hypot(x, y);
+      if (r > G.coil.r0 - h && r < G.coil.r1 + G.coil.t1) {
+        for (let k = 0; k < 3; k += 1) {
+          const along = x * cosines[k] + y * sines[k];
+          const across = -x * sines[k] + y * cosines[k];
+          const side = Math.abs(across);
+          if (along > G.coil.r0 && along < G.coil.r1 && side > G.coil.t0 && side < G.coil.t1) {
+            current = (across > 0 ? 1 : -1) * currents[k] * J0;
+          }
+        }
+      }
+      field.source[node] = current * h * h + circulation;
+    }
+  }
+}
+
+// Gauss-Seidel sweeps with over-relaxation.  Returns the largest change in the last sweep.
+function relax(field, sweeps) {
+  const n = field.n;
+  const row = n + 1;
+  const A = field.A;
+  const omega = 1.9;
+  let largest = 0;
+  for (let sweep = 0; sweep < sweeps; sweep += 1) {
+    largest = 0;
+    for (let j = 1; j < n; j += 1) {
+      for (let i = 1; i < n; i += 1) {
+        const node = j * row + i;
+        const target = (field.east[node] * A[node + 1] + field.west[node] * A[node - 1] + field.north[node] * A[node + row] + field.south[node] * A[node - row] + field.source[node]) / field.total[node];
+        const change = omega * (target - A[node]);
+        A[node] += change;
+        const size = change < 0 ? -change : change;
+        if (size > largest) {
+          largest = size;
+        }
+      }
+    }
+  }
+  return largest;
+}
+
+// B at a point, from the slope of A across the cell that holds it.
+function fieldAt(field, x, y) {
+  const G = FIELD_GRID;
+  const n = field.n;
+  const row = n + 1;
+  const h = field.h;
+  let i = Math.floor((x + G.half) / h);
+  let j = Math.floor((y + G.half) / h);
+  i = Math.min(n - 1, Math.max(0, i));
+  j = Math.min(n - 1, Math.max(0, j));
+  const a00 = field.A[j * row + i];
+  const a10 = field.A[j * row + i + 1];
+  const a01 = field.A[(j + 1) * row + i];
+  const a11 = field.A[(j + 1) * row + i + 1];
+  const dAdx = (a10 - a00 + a11 - a01) / (2 * h);
+  const dAdy = (a01 - a00 + a11 - a10) / (2 * h);
+  return [dAdy, -dAdx];
+}
+
+// Flux lines: contours of A at evenly spaced levels.
+// Returns { d, heads } where d is SVG path data and heads are [x, y, angle] for arrowheads,
+// placed where a line crosses the air gap.  toScreen turns diagram x, y into screen x, y.
+function fluxLines(field, spacing, toScreen) {
+  const G = FIELD_GRID;
+  const n = field.n;
+  const row = n + 1;
+  const h = field.h;
+  const A = field.A;
+  const gap = (G.arm.r1 + G.magnet.r0) / 2;
+  let d = "";
+  const heads = [];
+  const fixed = (value) => value.toFixed(1);
+
+  for (let j = 0; j < n; j += 1) {
+    const y0 = -G.half + j * h;
+    for (let i = 0; i < n; i += 1) {
+      const x0 = -G.half + i * h;
+      const a = A[j * row + i];
+      const b = A[j * row + i + 1];
+      const c = A[(j + 1) * row + i + 1];
+      const e = A[(j + 1) * row + i];
+      const low = Math.min(a, b, c, e);
+      const high = Math.max(a, b, c, e);
+      const first = Math.ceil(low / spacing - 0.5);
+      const last = Math.floor(high / spacing - 0.5);
+      for (let step = first; step <= last; step += 1) {
+        // Levels sit half way between multiples of the spacing, so none lies exactly on A = 0.
+        const level = (step + 0.5) * spacing;
+        const points = [];
+        // Where the level crosses each edge of the cell.
+        if ((a - level) * (b - level) < 0) {
+          points.push([x0 + (h * (level - a)) / (b - a), y0]);
+        }
+        if ((b - level) * (c - level) < 0) {
+          points.push([x0 + h, y0 + (h * (level - b)) / (c - b)]);
+        }
+        if ((e - level) * (c - level) < 0) {
+          points.push([x0 + (h * (level - e)) / (c - e), y0 + h]);
+        }
+        if ((a - level) * (e - level) < 0) {
+          points.push([x0, y0 + (h * (level - a)) / (e - a)]);
+        }
+        for (let index = 0; index + 1 < points.length; index += 2) {
+          const p = points[index];
+          const q = points[index + 1];
+          const sp = toScreen(p[0], p[1]);
+          const sq = toScreen(q[0], q[1]);
+          d += "M" + fixed(sp[0]) + " " + fixed(sp[1]) + "L" + fixed(sq[0]) + " " + fixed(sq[1]);
+          // An arrowhead where this line crosses the middle of the air gap.
+          const rp = Math.hypot(p[0], p[1]);
+          const rq = Math.hypot(q[0], q[1]);
+          if ((rp - gap) * (rq - gap) < 0) {
+            const mid = [(p[0] + q[0]) / 2, (p[1] + q[1]) / 2];
+            const B = fieldAt(field, mid[0], mid[1]);
+            const tip = toScreen(mid[0] + B[0], mid[1] + B[1]);
+            const base = toScreen(mid[0], mid[1]);
+            heads.push([base[0], base[1], (Math.atan2(tip[1] - base[1], tip[0] - base[0]) * 180) / Math.PI]);
+          }
+        }
+      }
+    }
+  }
+  return { d, heads };
+}
+
+// Turning effect on everything inside the air gap, from the Maxwell stress on a circle in the gap.
+// Positive is anticlockwise.  Units are arbitrary but consistent with copperTorque().
+function gapTorque(field) {
+  const G = FIELD_GRID;
+  const R = (G.arm.r1 + G.magnet.r0) / 2;
+  const steps = 360;
+  let sum = 0;
+  for (let index = 0; index < steps; index += 1) {
+    const angle = (index / steps) * Math.PI * 2;
+    const c = Math.cos(angle);
+    const s = Math.sin(angle);
+    const B = fieldAt(field, R * c, R * s);
+    const radialPart = B[0] * c + B[1] * s;
+    const tangentPart = -B[0] * s + B[1] * c;
+    sum += radialPart * tangentPart;
+  }
+  return (sum / steps) * Math.PI * 2 * R * R;
+}
+
+// Turning effect from the force on the copper alone: sum of r x (J x B) over the coil sides.
+function copperTorque(field, phi, currents) {
+  const G = FIELD_GRID;
+  const J0 = G.ampTurns / ((G.coil.r1 - G.coil.r0) * (G.coil.t1 - G.coil.t0));
+  const TAU = Math.PI * 2;
+  const step = 2;
+  let sum = 0;
+  for (let k = 0; k < 3; k += 1) {
+    const c = Math.cos(phi + (k * TAU) / 3);
+    const s = Math.sin(phi + (k * TAU) / 3);
+    for (const side of [1, -1]) {
+      for (let along = G.coil.r0 + step / 2; along < G.coil.r1; along += step) {
+        for (let across = G.coil.t0 + step / 2; across < G.coil.t1; across += step) {
+          const x = along * c - side * across * s;
+          const y = along * s + side * across * c;
+          const B = fieldAt(field, x, y);
+          const J = side * currents[k] * J0;
+          // Force per area on current J (out of page): (-J By, J Bx).  Torque = x Fy - y Fx.
+          sum += (x * (J * B[0]) - y * (-J * B[1])) * step * step;
+        }
+      }
+    }
+  }
+  return sum;
+}
+
+
+// ---------------------------------------------------------------
+// Scenes.  Everything is redrawn from geometry each frame, so the
+// camera can go anywhere.  geom.mjs is inlined above this file.
+// ---------------------------------------------------------------
+
+// A camera that keeps one world point in the middle of the picture.
+function cameraFor(view) {
+  const P = { origin: [0, 0], scale: view.scale, azimuth: view.azimuth, elevation: view.elevation };
+  const middle = flat(view.centre, P);
+  P.origin = [view.width / 2 - middle[0], view.height / 2 - middle[1]];
+  return P;
+}
+
+// A flat round face at position s along the axis.  side is +1 (faces +x) or -1.
+// It uses the same angular steps as the wall it closes, so their edges line up.
+function discFace(F, s, r, side, stepDegrees) {
+  const count = Math.ceil(360 / stepDegrees);
+  const pts = [];
+  for (let index = 0; index < count; index += 1) {
+    pts.push(pt(F, s, r, (TAU * index) / count));
+  }
+  return { pts, n: side > 0 ? AXIS : neg(AXIS) };
+}
+
+// A solid cylinder along the axis from s0 to s1.
+function cylinder(F, s0, s1, r) {
+  const wall = sector(F, [[s0, r], [s1, r]], 0, 0, TAU, { step: 12 });
+  return [...wall.outer, discFace(F, s0, r, -1, 12), discFace(F, s1, r, 1, 12)];
+}
+
+// A box in the local directions of angle psi round the axis:
+// s along the axis, r outward at psi, t sideways (a quarter turn on from psi).
+function localBox(F, psi, s0, s1, r0, r1, t0, t1) {
+  const c = Math.cos(psi);
+  const n = Math.sin(psi);
+  const at = (s, r, t) => [F.o[0] + s, F.o[1] + r * c - t * n, F.o[2] + r * n + t * c];
+  const R = radial(psi);
+  const T = tangent(psi);
+  return [
+    { pts: [at(s0, r1, t0), at(s1, r1, t0), at(s1, r1, t1), at(s0, r1, t1)], n: R },
+    { pts: [at(s0, r0, t0), at(s1, r0, t0), at(s1, r0, t1), at(s0, r0, t1)], n: neg(R) },
+    { pts: [at(s0, r0, t1), at(s1, r0, t1), at(s1, r1, t1), at(s0, r1, t1)], n: T },
+    { pts: [at(s0, r0, t0), at(s1, r0, t0), at(s1, r1, t0), at(s0, r1, t0)], n: neg(T) },
+    { pts: [at(s1, r0, t0), at(s1, r1, t0), at(s1, r1, t1), at(s1, r0, t1)], n: AXIS },
+    { pts: [at(s0, r0, t0), at(s0, r1, t0), at(s0, r1, t1), at(s0, r0, t1)], n: neg(AXIS) },
+  ];
+}
+
+// Centre of such a box, for depth sorting.
+function localPoint(F, psi, s, r, t) {
+  return [F.o[0] + s, F.o[1] + r * Math.cos(psi) - t * Math.sin(psi), F.o[2] + r * Math.sin(psi) + t * Math.cos(psi)];
+}
+
+// A box set square to the world axes.
+function worldBox(x0, x1, y0, y1, z0, z1) {
+  const p = (x, y, z) => [x, y, z];
+  return [
+    { pts: [p(x0, y0, z1), p(x1, y0, z1), p(x1, y1, z1), p(x0, y1, z1)], n: [0, 0, 1] },
+    { pts: [p(x0, y0, z0), p(x1, y0, z0), p(x1, y1, z0), p(x0, y1, z0)], n: [0, 0, -1] },
+    { pts: [p(x1, y0, z0), p(x1, y1, z0), p(x1, y1, z1), p(x1, y0, z1)], n: [1, 0, 0] },
+    { pts: [p(x0, y0, z0), p(x0, y1, z0), p(x0, y1, z1), p(x0, y0, z1)], n: [-1, 0, 0] },
+    { pts: [p(x0, y1, z0), p(x1, y1, z0), p(x1, y1, z1), p(x0, y1, z1)], n: [0, 1, 0] },
+    { pts: [p(x0, y0, z0), p(x1, y0, z0), p(x1, y0, z1), p(x0, y0, z1)], n: [0, -1, 0] },
+  ];
+}
+
+// A line through world points, as an SVG path.
+function wirePath(points, P, cls, tone) {
+  const d = pathOf(points.map((point) => flat(point, P)), false);
+  return '<path class="iso-line ' + cls + '" data-tone="' + tone + '" d="' + d + '"/>';
+}
+
+// A small round label that always faces the viewer.
+function labelSvg(point, P, text, kind) {
+  const [x, y] = flat(point, P);
+  return '<g class="hd-label" data-kind="' + kind + '" transform="translate(' + x.toFixed(1) + " " + y.toFixed(1) + ')"><circle r="9"/><text y="4" text-anchor="middle">' + text + "</text></g>";
+}
+
+// Sort things that sit round the axis: far ones first.
+function byDepthSvg(items, P) {
+  const V = viewDir(P);
+  const sorted = [...items].sort((a, b) => dot(a.at, V) - dot(b.at, V));
+  return sorted.map((item) => item.svg).join("");
+}
+
+// Painter's order for parts strung along the x axis.
+// zones:  [{ x, svg }]                   things at one place along the axis
+// shells: [{ x0, x1, back, front }]      tubes that wrap whatever lies between x0 and x1
+// A shell's far inside wall is painted first, then what is inside it, then its near outside wall.
+function compose(zones, shells, P) {
+  const towards = viewDir(P)[0] >= 0 ? 1 : -1;
+  if (shells.length === 0) {
+    const sorted = [...zones].sort((a, b) => (a.x - b.x) * towards);
+    return sorted.map((zone) => zone.svg).join("");
+  }
+  const ordered = [...shells].sort((a, b) => b.x1 - b.x0 - (a.x1 - a.x0));
+  const big = ordered[0];
+  const rest = ordered.slice(1);
+  const inside = zones.filter((zone) => zone.x > big.x0 && zone.x < big.x1);
+  const outside = zones.filter((zone) => !(zone.x > big.x0 && zone.x < big.x1));
+  const insideShells = rest.filter((shell) => shell.x0 >= big.x0 - 1e-6 && shell.x1 <= big.x1 + 1e-6);
+  const outsideShells = rest.filter((shell) => !(shell.x0 >= big.x0 - 1e-6 && shell.x1 <= big.x1 + 1e-6));
+  const packed = { x: (big.x0 + big.x1) / 2, svg: big.back + compose(inside, insideShells, P) + big.front };
+  return compose([...outside, packed], outsideShells, P);
+}
+
+// A casing tube as a shell.  alpha is how solid it looks (0 = gone).
+function tubeShell(F, profile, t, alpha, options) {
+  const x0 = F.o[0] + profile[0][0];
+  const x1 = F.o[0] + profile[profile.length - 1][0];
+  if (alpha < 0.02) {
+    return { x0, x1, back: "", front: "" };
+  }
+  const tube = sector(F, profile, t, 0, TAU, { step: options.step || 9, ends: options.ends || [false, false] });
+  const back = meshSvg(mesh(tube.inner, P_NOW), { tone: "lo", cls: "cav", alpha: Math.min(1, alpha * 1.6) });
+  const front = meshSvg(mesh([...tube.outer, ...tube.caps], P_NOW), { tone: "hi", crease: "lo", alpha });
+  return { x0, x1, back, front };
+}
+
+// The camera in use while a scene is being drawn.
+let P_NOW = null;
+
+// ---------------- the motor ----------------
+// cfg:   { o: [x, y, z] centre of the rear face, S: size, tint, lit, supply }
+// state: { phi, explode (0-1), caseAlpha (0-1), labels }
+// Returns { zones, shells, labels } in world x, ready for compose().
+function motorParts(cfg, state, P) {
+  const S = cfg.S;
+  const m = (value) => value * S;
+  const e = state.explode;
+  const alpha = state.caseAlpha;
+  const zones = [];
+  const shells = [];
+  let labels = "";
+
+  // How far each group has slid along the axis.
+  const capOff = m(-14) * e;
+  const brushOff = m(-5) * e;
+  const canOff = m(34) * e;
+  const frontOff = m(44) * e;
+  const at = (offset) => ({ o: [cfg.o[0] + offset, cfg.o[1], cfg.o[2]] });
+  const F = at(0);
+  const solid = (faces, options) => meshSvg(mesh(faces, P), options);
+
+  // Shaft, in pieces so each can be ordered against the caps.
+  zones.push({ x: cfg.o[0] + m(-6), svg: solid(cylinder(F, m(-10), m(-2), m(1.5)), { tone: "mid" }) });
+  zones.push({ x: cfg.o[0] + m(0.75), svg: solid(cylinder(F, m(-2), m(3.5), m(1.5)), { tone: "mid" }) });
+  zones.push({ x: cfg.o[0] + m(31), svg: solid(cylinder(F, m(28.8), m(33), m(1.5)), { tone: "mid" }) });
+  zones.push({ x: cfg.o[0] + m(35.2), svg: solid(cylinder(F, m(33), m(37.5), m(1.5)), { tone: "mid" }) });
+  const comm = commutatorSvg(cfg, state.phi, P);
+  zones.push({ x: cfg.o[0] + m(38.8), svg: solid(cylinder(F, m(37.5), m(40), m(1.5)), { tone: "mid" }) + (viewDir(P)[0] > 0.05 ? comm.mark : "") });
+
+  // Rear cap (plastic, carries the brushes) and front end of the can.
+  if (alpha >= 0.02) {
+    const FC = at(capOff);
+    const rear = solid([...cylinder(FC, m(-2), 0, m(4)), ...cylinder(FC, 0, m(2.5), m(14))], { tone: "mid", alpha });
+    shells.push({ x0: FC.o[0] + m(-2), x1: FC.o[0] + m(2.5), back: "", front: rear });
+    const FF = at(frontOff);
+    const front = solid([...cylinder(FF, m(33), m(35.5), m(14)), ...cylinder(FF, m(35.5), m(37.5), m(4))], { tone: "hi", crease: "lo", alpha });
+    shells.push({ x0: FF.o[0] + m(33), x1: FF.o[0] + m(37.5), back: "", front });
+  }
+
+  // The steel can.
+  const FK = at(canOff);
+  shells.push(tubeShell(FK, [[m(2.5), m(14)], [m(33), m(14)]], m(1.2), alpha, { step: 10 }));
+
+  // Supply, terminal tags and leads (large motor only).  They travel with the rear cap.
+  if (cfg.supply) {
+    const FC = at(capOff);
+    const FB = at(brushOff);
+    const items = [];
+    const box = worldBox(FC.o[0] + m(-22), FC.o[0] + m(-8), cfg.o[1] - m(9), cfg.o[1] + m(9), cfg.o[2] - m(30), cfg.o[2] - m(21));
+    items.push({ at: [FC.o[0] + m(-15), cfg.o[1], cfg.o[2] - m(25.5)], svg: solid(box, { tone: "mid" }) });
+    [
+      { angle: MOTOR.brushPlus, y: -5, sign: "+", tone: "lit" },
+      { angle: MOTOR.brushMinus, y: 5, sign: "−", tone: "mid" },
+    ].forEach((lead) => {
+      const post = worldBox(FC.o[0] + m(-16.2), FC.o[0] + m(-13.8), cfg.o[1] + m(lead.y - 1.2), cfg.o[1] + m(lead.y + 1.2), cfg.o[2] - m(21), cfg.o[2] - m(18.5));
+      const postTop = [FC.o[0] + m(-15), cfg.o[1] + m(lead.y), cfg.o[2] - m(18.5)];
+      items.push({ at: postTop, svg: solid(post, { tone: "hi", crease: "lo" }) });
+      // Lead: from the brush arm, back through the cap, then down to the supply post.
+      const a = pt(FB, m(2.5), m(7.6), lead.angle);
+      const b = pt(FC, m(-15), m(7.6), lead.angle);
+      items.push({ at: [(a[0] + b[0]) / 2, (b[1] + postTop[1]) / 2, (b[2] + postTop[2]) / 2], svg: wirePath([a, b, postTop], P, "hd-lead", lead.tone) });
+      if (state.labels) {
+        labels += labelSvg([postTop[0], cfg.o[1] + m(lead.y * 2.7), postTop[2] - m(1)], P, lead.sign, lead.sign === "+" ? "plus" : "minus");
+      }
+    });
+    zones.push({ x: FC.o[0] + m(-15), svg: byDepthSvg(items, P) });
+  }
+
+  // Commutator and the two brushes.
+  {
+    const FB = at(brushOff);
+    const items = [];
+    items.push({ at: pt(F, m(6), 0, 0), svg: solid(cylinder(F, m(3.5), m(8.5), m(4.2)), { tone: "hi", crease: "lo" }) + comm.gaps + solid(cylinder(F, m(8.5), m(11.2), m(1.5)), { tone: "mid" }) });
+    [MOTOR.brushPlus, MOTOR.brushMinus].forEach((angle) => {
+      const arm = solid(radialBox(FB, m(2.5), m(6.2), m(7.2), m(8), m(1), angle), { tone: "mid" });
+      const carbon = solid(radialBox(FB, m(4.6), m(7.4), m(4.2), m(7.2), m(1.3), angle), { tone: "hi", crease: "lo" });
+      items.push({ at: pt(FB, m(6), m(6), angle), svg: arm + carbon });
+    });
+    zones.push({ x: cfg.o[0] + m(6), svg: byDepthSvg(items, P) });
+  }
+
+  // Magnets and armature.
+  {
+    const items = [];
+    items.push({ at: pt(F, m(20), 0, 0), svg: rotorSvg(cfg, state.phi, P) });
+    [
+      { centre: MOTOR.north, pole: "n", text: "N" },
+      { centre: MOTOR.south, pole: "s", text: "S" },
+    ].forEach((magnet) => {
+      const faces = sector(F, [[m(11), m(12.8)], [m(30), m(12.8)]], m(1.8), magnet.centre - 34 * DEG, magnet.centre + 34 * DEG, { ends: [true, true] }).all;
+      items.push({ at: pt(F, m(20), m(12), magnet.centre), svg: solid(faces, { tone: "mid", crease: "lo", tint: { pole: magnet.pole, alpha: 0.5 } }) });
+      if (state.labels) {
+        labels += labelSvg(pt(F, m(20.5), m(19), magnet.centre), P, magnet.text, magnet.pole);
+      }
+    });
+    zones.push({ x: cfg.o[0] + m(20), svg: byDepthSvg(items, P) });
+  }
+
+  return { zones, shells, labels };
+}
+
+// ---------------- the whole dryer ----------------
+const DRYER = {
+  axis: [0, 0, 110],
+  profile: [[-66, 36], [28, 36], [86, 25]],
+  motor: { o: [-36, 0, 110], S: 1, lit: true, tint: false, supply: false },
+  fan: { o: [0, 0, 110], s: -52, r0: 7.4, r1: 31.5, blades: 9 },
+};
+
+// A coil of wire round the axis, split into the part behind the axis and the part in front.
+function helixPaths(F, x0, x1, r, turns, start, P) {
+  const V = viewDir(P);
+  const count = Math.round(turns * 28);
+  let back = "";
+  let front = "";
+  let run = [];
+  let near = null;
+  for (let index = 0; index <= count; index += 1) {
+    const share = index / count;
+    const angle = start + share * turns * TAU;
+    const screen = flat(pt(F, x0 + (x1 - x0) * share, r, angle), P);
+    const facing = dot(radial(angle), V) > 0;
+    if (near === null) {
+      near = facing;
+    }
+    if (facing !== near) {
+      run.push(screen);
+      if (near) {
+        front += pathOf(run, false);
+      } else {
+        back += pathOf(run, false);
+      }
+      run = [screen];
+      near = facing;
+      continue;
+    }
+    run.push(screen);
+  }
+  if (run.length > 1) {
+    if (near) {
+      front += pathOf(run, false);
+    } else {
+      back += pathOf(run, false);
+    }
+  }
+  return { back, front };
+}
+
+// state: { phi, caseAlpha, knob (0-2), labels }
+function dryerSvg(state, P) {
+  P_NOW = P;
+  const V = viewDir(P);
+  const F = { o: DRYER.axis };
+  const Z = DRYER.axis[2];
+  const alpha = state.caseAlpha;
+  const solid = (faces, options) => meshSvg(mesh(faces, P), options);
+  const zones = [];
+  const shells = [];
+
+  // Handle and switch.  The viewer is always above, so the handle is painted first.
+  const handle = solid(worldBox(-27, 3, -11, 11, Z - 118, Z - 34), { tone: "hi", crease: "lo" });
+  const knobZ = Z - 78 + state.knob * 9;
+  const slot = wirePath([[3.05, -3.6, Z - 80], [3.05, 3.6, Z - 80], [3.05, 3.6, Z - 50], [3.05, -3.6, Z - 50], [3.05, -3.6, Z - 80]], P, "", "mid");
+  const knob = solid(worldBox(3, 5.4, -2.8, 2.8, knobZ, knobZ + 8), { tone: "hi", crease: "lo" });
+  let out = V[0] > 0 ? handle + slot + knob : knob + handle;
+
+  // Casing: rear cap, body tube, nozzle.
+  if (alpha >= 0.02) {
+    const rear = [...sector(F, [[-84, 31], [-80, 36], [-66, 36]], 0, 0, TAU, { step: 9 }).outer, discFace(F, -84, 31, -1, 9), discFace(F, -66, 36, 1, 9)];
+    zones.push({ x: -75, svg: solid(rear, { tone: "hi", crease: "lo", alpha }) });
+  }
+  shells.push(tubeShell(F, DRYER.profile, 2, alpha, { step: 9 }));
+  shells.push(tubeShell(F, [[86, 25], [108, 23.5]], 2, alpha, { step: 9, ends: [false, true] }));
+
+  // Fan.
+  const fan = fanSvg(DRYER.fan, state.phi, P);
+  zones.push({ x: -52, svg: fan.back + solid(cylinder(F, -58, -46, 8), { tone: "hi", crease: "lo" }) + fan.front });
+
+  // Motor on three struts.
+  const motorState = { phi: state.phi, explode: 0, caseAlpha: 0.3, labels: false };
+  const motor = motorParts(DRYER.motor, motorState, P);
+  const struts = [130, 215, 300].map((degrees) => {
+    const angle = degrees * DEG;
+    return { at: pt(F, -18, 24, angle), svg: solid(radialBox(F, -19.2, -16.8, 14, 34, 1.2, angle), { tone: "mid" }) };
+  });
+  const farStruts = struts.filter((strut) => dot(strut.at, V) - dot(pt(F, -18, 0, 0), V) < 0);
+  const nearStruts = struts.filter((strut) => dot(strut.at, V) - dot(pt(F, -18, 0, 0), V) >= 0);
+  zones.push({ x: -18, svg: byDepthSvg(farStruts, P) + compose(motor.zones, motor.shells, P) + byDepthSvg(nearStruts, P) });
+
+  // Heater: two coils on a cross of mica boards, with the safety parts on one board.
+  {
+    const outer = helixPaths(F, 12, 70, 19, 6.5, 45 * DEG, P);
+    const inner = helixPaths(F, 12, 70, 9, 9.5, 225 * DEG, P);
+    const heat = (d, level) => (d ? '<path class="iso-line hd-heat" data-level="' + level + '" d="' + d + '"/>' : "");
+    const items = [];
+    [45, 135, 225, 315].forEach((degrees) => {
+      const angle = degrees * DEG;
+      items.push({ at: pt(F, 41, 11, angle), svg: solid(radialBox(F, 8, 74, 0.5, 22, 0.5, angle), { tone: "mid" }) });
+    });
+    // Parts on the board faces that look towards +y and up: four diodes, a thermal fuse and a thermostat.
+    const up = 135 * DEG;
+    const down = 315 * DEG;
+    [16, 20, 24, 28].forEach((s) => {
+      items.push({ at: localPoint(F, up, s, 11, -2), svg: solid(localBox(F, up, s - 1, s + 1, 10.6, 15.4, -2.5, -0.5), { tone: "hi", crease: "lo" }) });
+    });
+    items.push({ at: localPoint(F, down, 42, 11, 2), svg: solid(localBox(F, down, 37, 47, 11.8, 14.2, 0.5, 2.9), { tone: "hi", crease: "lo" }) });
+    items.push({ at: localPoint(F, down, 58, 11, 2), svg: solid(localBox(F, down, 55, 61, 10, 16, 0.5, 3.1), { tone: "hi", crease: "lo" }) });
+    zones.push({ x: 41, svg: heat(outer.back, 1) + heat(inner.back, 2) + byDepthSvg(items, P) + heat(inner.front, 2) + heat(outer.front, 1) });
+  }
+
+  // Ring that holds the front of the heater.
+  zones.push({ x: 75, svg: solid(sector(F, [[74, 25], [76, 25]], 5, 0, TAU, { step: 9, ends: [true, true] }).all, { tone: "mid" }) });
+
+  out += compose(zones, shells, P);
+  return out;
+}
+
+// The motor on its own, with supply, labels and the strip-down animation.
+function motorSvg(cfg, state, P) {
+  P_NOW = P;
+  const parts = motorParts(cfg, state, P);
+  return compose(parts.zones, parts.shells, P) + parts.labels;
+}
+
+
+// ---------------------------------------------------------------
+// Live behaviour.  geom.mjs and scene.js are inlined above this.
+// ---------------------------------------------------------------
+
+const TURN = Math.PI * 2;
+const calm = matchMedia("(prefers-reduced-motion: reduce)");
+
+// Ease a value toward a target.  "seconds" is roughly how long it takes.
+function ease(value, target, dt, seconds) {
+  if (calm.matches) {
+    return target;
+  }
+  const next = value + (target - value) * (1 - Math.exp(-dt / seconds));
+  if (Math.abs(target - next) < 0.002) {
+    return target;
+  }
+  return next;
+}
+
+// Smooth start and stop between 0 and 1.
+function smooth(t) {
+  const x = Math.min(1, Math.max(0, t));
+  return x * x * (3 - 2 * x);
+}
+
+// Mark one button in a group as pressed.
+function press(buttons, chosen) {
+  buttons.forEach((button) => {
+    button.setAttribute("aria-pressed", button === chosen ? "true" : "false");
+  });
+}
+
+// Let the viewer turn a figure by dragging it or with the arrow keys.
+function makeTurnable(figure) {
+  const stage = figure.stage;
+  let from = null;
+
+  stage.addEventListener("pointerdown", (event) => {
+    from = { x: event.clientX, y: event.clientY, azimuth: figure.view.azimuth, elevation: figure.view.elevation };
+    stage.setPointerCapture(event.pointerId);
+    stage.setAttribute("data-dragging", "");
+    figure.touched = true;
+  });
+
+  stage.addEventListener("pointermove", (event) => {
+    if (!from) {
+      return;
+    }
+    figure.view.azimuth = from.azimuth - (event.clientX - from.x) * 0.45;
+    // Touch keeps vertical movement for scrolling the page.
+    if (event.pointerType !== "touch") {
+      const tilt = from.elevation + (event.clientY - from.y) * 0.3;
+      figure.view.elevation = Math.min(70, Math.max(6, tilt));
+    }
+    figure.dirty = true;
+  });
+
+  const release = () => {
+    from = null;
+    stage.removeAttribute("data-dragging");
+  };
+  stage.addEventListener("pointerup", release);
+  stage.addEventListener("pointercancel", release);
+
+  stage.addEventListener("keydown", (event) => {
+    let handled = true;
+    if (event.key === "ArrowLeft") {
+      figure.view.azimuth += 15;
+    } else if (event.key === "ArrowRight") {
+      figure.view.azimuth -= 15;
+    } else if (event.key === "ArrowUp") {
+      figure.view.elevation = Math.min(70, figure.view.elevation + 8);
+    } else if (event.key === "ArrowDown") {
+      figure.view.elevation = Math.max(6, figure.view.elevation - 8);
+    } else {
+      handled = false;
+    }
+    if (handled) {
+      event.preventDefault();
+      figure.touched = true;
+      figure.dirty = true;
+    }
+  });
+}
+
+// ---------------- Figure 1: the whole dryer ----------------
+
+// What each switch position does in a typical 1800 W dryer.
+const LEVELS = [
+  { name: "off", rpm: 0, watts: 0 },
+  { name: "low", rpm: 15000, watts: 900 },
+  { name: "high", rpm: 15000, watts: 1800 },
+];
+const AIR_FLOW = 0.036; // kg of air per second through the barrel
+const AIR_HEAT_CAPACITY = 1005; // J per kg per kelvin
+const ROOM = 20; // degrees C
+const SHOWN_SPEED = 0.6; // turns per second on screen (the real fan does 250)
+const CASE_ALPHA = [1, 0.2, 0]; // solid, see-through, hidden
+
+const one = {
+  stage: document.getElementById("stage1"),
+  scene: document.querySelector("#stage1 [data-scene]"),
+  readout: document.querySelectorAll("[data-readout]")[0],
+  levelButtons: [...document.querySelectorAll("button[data-level]")],
+  caseButtons: [...document.querySelectorAll("button[data-case]")],
+  view: { azimuth: 60, elevation: 28, scale: 2.5, centre: [12, 0, 72], width: 860, height: 600 },
+  level: 0,
+  caseMode: 1,
+  caseAlpha: CASE_ALPHA[1],
+  touring: !calm.matches,
+  touched: false,
+  tourClock: 0,
+  phi: 0.4, // angle of fan and armature
+  speed: 0, // share of full speed, 0 to 1
+  hot: 0, // share of full heater power, 0 to 1
+  knob: 0,
+  visible: true,
+  dirty: true,
+  lastText: "",
+};
+
+function drawOne() {
+  const P = cameraFor(one.view);
+  one.scene.innerHTML = dryerSvg({ phi: one.phi, caseAlpha: one.caseAlpha, knob: one.knob }, P);
+  one.stage.style.setProperty("--hot", one.hot.toFixed(3));
+
+  // Readout, from where the parts are now.
+  const setting = LEVELS[one.level];
+  const rpm = Math.round((setting.rpm * one.speed) / 500) * 500;
+  const rise = (1800 * one.hot) / (AIR_FLOW * AIR_HEAT_CAPACITY);
+  let text = setting.name + " · " + rpm.toLocaleString("en-GB") + " rpm · " + setting.watts.toLocaleString("en-GB") + " W";
+  if (one.speed > 0.05) {
+    text += " · air out " + Math.round(ROOM + rise) + " °C";
+  }
+  if (text !== one.lastText) {
+    one.readout.textContent = text;
+    one.lastText = text;
+  }
+  one.dirty = false;
+}
+
+function setLevel(level, byUser) {
+  one.level = level;
+  if (byUser) {
+    one.touring = false;
+  }
+  press(one.levelButtons, one.levelButtons[level]);
+}
+
+function setCase(mode) {
+  one.caseMode = mode;
+  one.touring = false;
+  press(one.caseButtons, one.caseButtons[mode]);
+}
+
+function stepOne(dt) {
+  // Until someone touches it, the figure walks through Off, Low, High by itself.
+  if (one.touched) {
+    one.touring = false;
+  }
+  if (one.touring) {
+    one.tourClock += dt;
+    const stop = Math.floor(one.tourClock / 3.5) % 3;
+    if (stop !== one.level) {
+      setLevel(stop, false);
+    }
+  }
+  const setting = LEVELS[one.level];
+  const before = [one.speed, one.hot, one.knob, one.caseAlpha].join();
+  one.speed = ease(one.speed, setting.rpm > 0 ? 1 : 0, dt, 0.5);
+  one.hot = ease(one.hot, setting.watts / 1800, dt, 0.9);
+  one.knob = ease(one.knob, one.level, dt, 0.12);
+  one.caseAlpha = ease(one.caseAlpha, CASE_ALPHA[one.caseMode], dt, 0.35);
+  const after = [one.speed, one.hot, one.knob, one.caseAlpha].join();
+  if (!calm.matches && one.speed > 0) {
+    one.phi += one.speed * SHOWN_SPEED * TURN * dt;
+    one.dirty = true;
+  }
+  if (before !== after) {
+    one.dirty = true;
+  }
+  if (one.dirty) {
+    drawOne();
+  }
+}
+
+one.levelButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setLevel(Number(button.dataset.level), true);
+  });
+});
+
+one.caseButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setCase(Number(button.dataset.case));
+  });
+});
+
+one.stage.addEventListener("keydown", (event) => {
+  if (event.key === "0" || event.key === "1" || event.key === "2") {
+    event.preventDefault();
+    setLevel(Number(event.key), true);
+  }
+});
+
+makeTurnable(one);
+
+// ---------------- Figure 2: the motor ----------------
+
+const MOTOR_CFG = { o: [0, 0, 0], S: 3, tint: true, lit: false, supply: true };
+const STRIP_SECONDS = 4.2; // length of the strip-down animation
+
+const two = {
+  stage: document.getElementById("stage2"),
+  scene: document.querySelector("#stage2 [data-scene]"),
+  readout: document.querySelectorAll("[data-readout]")[1],
+  stripButton: document.getElementById("strip"),
+  labelButton: document.getElementById("labels"),
+  spinButton: document.getElementById("spin"),
+  slider: document.getElementById("angle"),
+  sliderOut: document.getElementById("angle-out"),
+  view: { azimuth: 60, elevation: 28, scale: 1.8, centre: [27, 0, -20], width: 860, height: 560 },
+  spinning: !calm.matches,
+  labels: true,
+  phi: 0.35,
+  stripTarget: 0, // 0 = cased, 1 = stripped to the working parts
+  strip: 0, // progress of the animation, 0 to 1
+  visible: true,
+  dirty: true,
+  touched: false,
+};
+
+// Where the strip-down animation has got to:
+// first the parts slide apart, then the casing fades, then what is left closes up again.
+function stripPose(progress) {
+  let explode = 0;
+  if (progress < 0.4) {
+    explode = smooth(progress / 0.4);
+  } else if (progress < 0.62) {
+    explode = 1;
+  } else {
+    explode = 1 - smooth((progress - 0.62) / 0.38);
+  }
+  const fade = smooth((progress - 0.36) / 0.24);
+  return { explode, caseAlpha: 0.3 * (1 - fade) };
+}
+
+function drawTwo() {
+  const pose = stripPose(two.strip);
+  // Keep the parts in the middle of the picture as they spread out.
+  two.view.centre[0] = 27 + 42 * pose.explode;
+  const P = cameraFor(two.view);
+  two.scene.innerHTML = motorSvg(MOTOR_CFG, { phi: two.phi, explode: pose.explode, caseAlpha: pose.caseAlpha, labels: two.labels }, P);
+
+  // Angle of the armature, and the total turning effect from the three coils.
+  const degrees = Math.round((((two.phi % TURN) + TURN) % TURN) / TURN * 360) % 360;
+  let torque = 0;
+  let full = 0;
+  for (let coil = 0; coil < 3; coil += 1) {
+    torque += coilTorque(coil, two.phi);
+    if (Math.abs(coilCurrent(coil, two.phi)) === 1) {
+      full += 1;
+    }
+  }
+  // The three coils together peak at 1.5 times what one coil gives at its best.
+  const share = Math.round((torque / 1.5) * 100);
+  let phase = "cased";
+  if (two.strip > 0 && two.strip < 1) {
+    phase = two.stripTarget === 1 ? "taking apart" : "rebuilding";
+  } else if (two.strip === 1) {
+    phase = "working parts only";
+  }
+  two.readout.textContent = phase + " · " + degrees + "° · " + full + " coil on full current · turning force " + share + "%";
+  two.slider.value = String(degrees);
+  two.sliderOut.textContent = degrees + "°";
+  two.dirty = false;
+}
+
+function setSpinning(on) {
+  two.spinning = on;
+  two.spinButton.textContent = on ? "Pause" : "Spin";
+  two.spinButton.setAttribute("aria-pressed", on ? "true" : "false");
+}
+
+function stepTwo(dt) {
+  if (two.spinning) {
+    two.phi += 0.12 * TURN * dt;
+    two.dirty = true;
+  }
+  if (two.strip !== two.stripTarget) {
+    const step = calm.matches ? 1 : dt / STRIP_SECONDS;
+    if (two.stripTarget > two.strip) {
+      two.strip = Math.min(1, two.strip + step);
+    } else {
+      two.strip = Math.max(0, two.strip - step);
+    }
+    two.dirty = true;
+  }
+  if (two.dirty) {
+    drawTwo();
+  }
+}
+
+two.stripButton.addEventListener("click", () => {
+  two.stripTarget = two.stripTarget === 1 ? 0 : 1;
+  two.stripButton.textContent = two.stripTarget === 1 ? "Rebuild" : "Strip down";
+});
+
+two.labelButton.addEventListener("click", () => {
+  two.labels = !two.labels;
+  two.labelButton.setAttribute("aria-pressed", two.labels ? "true" : "false");
+  two.dirty = true;
+});
+
+two.spinButton.addEventListener("click", () => {
+  setSpinning(!two.spinning);
+});
+
+two.slider.addEventListener("input", () => {
+  // Turning it by hand stops the automatic spin.
+  setSpinning(false);
+  two.phi = (Number(two.slider.value) / 360) * TURN;
+  two.dirty = true;
+});
+
+two.stage.addEventListener("keydown", (event) => {
+  if (event.key === " ") {
+    event.preventDefault();
+    setSpinning(!two.spinning);
+  }
+});
+
+makeTurnable(two);
+
+
+// ---------------- Figure 3: the wiring, seen end-on ----------------
+// A flat diagram looking along the shaft.  It turns with the armature in Fig 2.
+
+const three = {
+  stage: document.getElementById("stage3"),
+  scene: document.querySelector("#stage3 [data-scene]"),
+  readout: document.querySelectorAll("[data-readout]")[2],
+  fieldButtons: [...document.querySelectorAll("button[data-field]")],
+  mode: "curved", // "curved", "straight" or "computed" (flux lines from the solver)
+  field: makeField(),
+  fieldPhi: null, // rotor angle the solver was last set up for
+  settling: 0, // frames still to spend refining the solution
+  shown: null,
+  visible: true,
+};
+const FLUX_SPACING = 4; // difference in A between neighbouring flux lines
+const COIL_NAMES = ["A", "B", "C"];
+// Direction of the magnetic field in the diagram: from the north magnet towards the south magnet.
+const FIELD = [Math.cos(MOTOR.south), Math.sin(MOTOR.south)];
+
+// Which commutator segment (0, 1, 2) a brush at this angle is touching.
+function segmentUnder(brushAngle, phi) {
+  let best = 0;
+  let bestGap = 10;
+  for (let k = 0; k < 3; k += 1) {
+    const centre = phi + (k * TURN) / 3 - MOTOR.segmentLag;
+    let gap = (centre - brushAngle) % TURN;
+    if (gap > Math.PI) {
+      gap -= TURN;
+    }
+    if (gap < -Math.PI) {
+      gap += TURN;
+    }
+    if (Math.abs(gap) < bestGap) {
+      bestGap = Math.abs(gap);
+      best = k;
+    }
+  }
+  return best;
+}
+
+function wiringSvg(phi, mode) {
+  const computed = mode === "computed";
+  const cx = 230;
+  const cy = 215;
+  // Angles run anticlockwise from the right, as in a maths diagram.
+  const pol = (r, a) => [cx + r * Math.cos(a), cy - r * Math.sin(a)];
+  const xy = (p) => p[0].toFixed(1) + " " + p[1].toFixed(1);
+  const arc = (r, a0, a1) => {
+    let d = "";
+    const steps = 16;
+    for (let index = 0; index <= steps; index += 1) {
+      d += (index ? "L" : "M") + xy(pol(r, a0 + ((a1 - a0) * index) / steps));
+    }
+    return d;
+  };
+  const text = (p, value, cls) => '<text class="hd-wtext ' + cls + '" x="' + p[0].toFixed(1) + '" y="' + (p[1] + 5).toFixed(1) + '" text-anchor="middle">' + value + "</text>";
+  let out = "";
+
+  if (computed) {
+    // The steel can, which carries the flux back round the outside.
+    out += '<circle class="hd-wyoke" cx="' + cx + '" cy="' + cy + '" r="' + (FIELD_GRID.yoke.r0 + FIELD_GRID.yoke.r1) / 2 + '"/>';
+    // Flux lines from the solver, with arrowheads where they cross the air gap.
+    const lines = fluxLines(three.field, FLUX_SPACING, (x, y) => [cx + x, cy - y]);
+    out += '<path class="hd-wflux" d="' + lines.d + '"/>';
+    lines.heads.forEach((head) => {
+      out += '<path class="hd-wfluxhead" transform="translate(' + head[0].toFixed(1) + " " + head[1].toFixed(1) + ") rotate(" + head[2].toFixed(1) + ')" d="M5 0L-4 -4L-4 4Z"/>';
+    });
+  } else if (mode === "curved") {
+    // Smooth lines from the inner face of the north magnet to the inner face of the south magnet.
+    // The faces are curved, and a field line leaves a pole face at right angles to it,
+    // so each line sets off straight towards the shaft and the lines draw together in the middle.
+    [-33, -22, -11, 0, 11, 22, 33].forEach((offset) => {
+      const startAngle = MOTOR.north + offset * DEG;
+      const endAngle = MOTOR.south - offset * DEG;
+      const p0 = pol(150, startAngle);
+      const p3 = pol(150, endAngle);
+      // Control points on the same radius as each end, so the line starts and finishes radially.
+      const p1 = pol(60, startAngle);
+      const p2 = pol(60, endAngle);
+      out += '<path class="hd-wflux" d="M' + xy(p0) + "C" + xy(p1) + " " + xy(p2) + " " + xy(p3) + '"/>';
+      // Arrowhead a fifth of the way along, pointing from north to south.
+      const t = 0.2;
+      const u = 1 - t;
+      const at = [0, 1].map((i) => u * u * u * p0[i] + 3 * u * u * t * p1[i] + 3 * u * t * t * p2[i] + t * t * t * p3[i]);
+      const slope = [0, 1].map((i) => 3 * u * u * (p1[i] - p0[i]) + 6 * u * t * (p2[i] - p1[i]) + 3 * t * t * (p3[i] - p2[i]));
+      const turn = (Math.atan2(slope[1], slope[0]) * 180) / Math.PI;
+      out += '<path class="hd-wfluxhead" transform="translate(' + xy(at) + ") rotate(" + turn.toFixed(1) + ')" d="M5 0L-4 -4L-4 4Z"/>';
+    });
+  } else {
+    // The field, drawn as straight lines from the north magnet to the south magnet.
+    [-120, -40, 40, 120].forEach((offset) => {
+      // Across the field direction by "offset", then along it.
+      const along = (distance) => [cx + FIELD[0] * distance - FIELD[1] * offset, cy - (FIELD[1] * distance + FIELD[0] * offset)];
+      const reach = Math.sqrt(150 * 150 - offset * offset) - 8;
+      const turn = (Math.atan2(-FIELD[1], FIELD[0]) * 180) / Math.PI;
+      out += '<path class="hd-wfield" d="M' + xy(along(-reach)) + "L" + xy(along(reach)) + '"/>';
+      out += '<path class="hd-wfieldhead" transform="translate(' + xy(along(0)) + ") rotate(" + turn.toFixed(1) + ')" d="M5 0L-4 -4L-4 4Z"/>';
+    });
+  }
+
+  // The two fixed magnets.
+  [
+    { centre: MOTOR.north, pole: "n", name: "N" },
+    { centre: MOTOR.south, pole: "s", name: "S" },
+  ].forEach((magnet) => {
+    const a0 = magnet.centre - 40 * DEG;
+    const a1 = magnet.centre + 40 * DEG;
+    const band = arc(150, a0, a1) + arc(170, a1, a0).replace("M", "L") + "Z";
+    out += '<path class="hd-tint" data-pole="' + magnet.pole + '" style="opacity:.5" d="' + band + '"/>';
+    out += '<path class="iso-line" data-tone="mid" d="' + band + '"/>';
+    out += text(pol(160, magnet.centre), magnet.name, "hd-wname hd-w" + magnet.pole);
+  });
+
+  // The three poles with their coils, and the wires to the commutator.
+  for (let k = 0; k < 3; k += 1) {
+    const psi = phi + (k * TURN) / 3;
+    const current = coilCurrent(k, phi);
+    const width = Math.abs(current) === 1 ? 3.4 : 1.6;
+    const tone = Math.abs(current) === 1 ? "lit" : "mid";
+
+    // The pole: a block pointing outward, tinted by the pole it has become.
+    const c = Math.cos(psi);
+    const n = Math.sin(psi);
+    const local = (r, t) => [cx + r * c - t * n, cy - (r * n + t * c)];
+    const block = "M" + xy(local(78, -24)) + "L" + xy(local(138, -24)) + "L" + xy(local(138, 24)) + "L" + xy(local(78, 24)) + "Z";
+    out += '<path class="hd-wpole" d="' + block + '"/>';
+    out += '<path class="hd-tint" data-pole="' + (current > 0 ? "n" : "s") + '" style="opacity:' + (Math.abs(current) === 1 ? 0.45 : 0.18) + '" d="' + block + '"/>';
+    // The wire across the near end of the coil.  These parts lie in the page and give no turning force.
+    let turns = "";
+    for (let level = 0; level < 5; level += 1) {
+      const r = 88 + level * 10;
+      turns += "M" + xy(local(r, -24)) + "L" + xy(local(r, 24));
+    }
+    out += '<path class="iso-line" data-tone="lo" d="' + turns + '"/>';
+
+    // The two long sides of the coil run along the shaft, so in this view they are seen end-on.
+    // A dot means current coming out of the page, a cross means current going in.
+    // For a north pole the current comes out on the anticlockwise side and goes in on the other.
+    [1, -1].forEach((side) => {
+      const outOfPage = current * side > 0;
+      const at = local(108, side * 33);
+      out += '<circle class="hd-wside" data-tone="' + tone + '" cx="' + at[0].toFixed(1) + '" cy="' + at[1].toFixed(1) + '" r="7.5"/>';
+      if (outOfPage) {
+        out += '<circle class="hd-wdot" cx="' + at[0].toFixed(1) + '" cy="' + at[1].toFixed(1) + '" r="2.4"/>';
+      } else {
+        out += '<path class="hd-wcross" d="M' + (at[0] - 4.4).toFixed(1) + " " + (at[1] - 4.4).toFixed(1) + "l8.8 8.8m0 -8.8l-8.8 8.8" + '"/>';
+      }
+      // Force on this side, from Fleming's left-hand rule: F is at right angles to the current and to the field.
+      // With the current along the shaft and the field in the page, F = I x B lies in the page.
+      const sign = outOfPage ? 1 : -1;
+      let fy = -sign * FIELD[1];
+      let fz = sign * FIELD[0];
+      let length = Math.abs(current) === 1 ? 34 : 20;
+      if (computed) {
+        // Use the field the solver found at this spot instead of the straight-line one.
+        const B = fieldAt(three.field, at[0] - cx, cy - at[1]);
+        const strength = Math.hypot(B[0], B[1]) || 1e-9;
+        fy = (-sign * B[1]) / strength;
+        fz = (sign * B[0]) / strength;
+        length = Math.min(46, (Math.abs(current) * strength * 34) / 0.3);
+      }
+      const start = [at[0] + fy * 10, at[1] - fz * 10];
+      const end = [at[0] + fy * (10 + length), at[1] - fz * (10 + length)];
+      const turn = (Math.atan2(end[1] - start[1], end[0] - start[0]) * 180) / Math.PI;
+      out += '<path class="hd-wforce" d="M' + xy(start) + "L" + xy(end) + '"/>';
+      out += '<path class="hd-wforcehead" transform="translate(' + xy(end) + ") rotate(" + turn.toFixed(1) + ')" d="M6 0L-4 -5L-4 5Z"/>';
+    });
+    out += text(local(108, 0), COIL_NAMES[k], "hd-wname");
+
+    // Each coil joins the segment behind it to the segment ahead of it.
+    const tabBehind = pol(46, psi - MOTOR.segmentLag);
+    const tabAhead = pol(46, psi - MOTOR.segmentLag + TURN / 3);
+    const wires = [
+      [tabBehind, local(62, -17), local(88, -24)],
+      [local(88, 24), local(62, 17), tabAhead],
+    ];
+    wires.forEach((points) => {
+      out += '<path class="iso-line" data-tone="' + tone + '" style="stroke-width:' + width + 'px" d="M' + points.map(xy).join("L") + '"/>';
+      // An arrowhead half way along, pointing the way the current flows.
+      const a = current > 0 ? points[0] : points[2];
+      const b = points[1];
+      const angle = (Math.atan2(b[1] - a[1], b[0] - a[0]) * 180) / Math.PI;
+      const mid = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+      out += '<path class="hd-warrow" data-tone="' + tone + '" transform="translate(' + xy(mid) + ") rotate(" + angle.toFixed(1) + ')" d="M5 0L-4 -4.5L-4 4.5Z"/>';
+    });
+  }
+
+  // Commutator: three copper segments with gaps between them.
+  for (let k = 0; k < 3; k += 1) {
+    const centre = phi + (k * TURN) / 3 - MOTOR.segmentLag;
+    out += '<path class="hd-wseg" d="' + arc(38, centre - 54 * DEG, centre + 54 * DEG) + '"/>';
+    out += '<circle class="hd-wtab" cx="' + pol(46, centre)[0].toFixed(1) + '" cy="' + pol(46, centre)[1].toFixed(1) + '" r="3"/>';
+  }
+  out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="9"/>';
+
+  // The two fixed brushes, pressing on the commutator from inside the diagram's ring.
+  [
+    { angle: MOTOR.brushPlus, sign: "+" },
+    { angle: MOTOR.brushMinus, sign: "−" },
+  ].forEach((brush) => {
+    const c = Math.cos(brush.angle);
+    const n = Math.sin(brush.angle);
+    const local = (r, t) => [cx + r * c - t * n, cy - (r * n + t * c)];
+    out += '<path class="hd-wbrush" d="M' + xy(local(13, -8)) + "L" + xy(local(33, -8)) + "L" + xy(local(33, 8)) + "L" + xy(local(13, 8)) + 'Z"/>';
+    out += text(local(23, 0), brush.sign, "hd-wsign");
+  });
+  return out;
+}
+
+// Bring the solver up to date with the rotor, a few sweeps at a time.
+// Returns true while the picture is still changing.
+function refineField(phi) {
+  if (three.fieldPhi !== phi) {
+    const currents = [coilCurrent(0, phi), coilCurrent(1, phi), coilCurrent(2, phi)];
+    setRotor(three.field, phi, currents, MOTOR.north, MOTOR.south);
+    // The first solve starts from nothing, so give it a head start.
+    const sweeps = three.fieldPhi === null ? 700 : 14;
+    three.fieldPhi = phi;
+    relax(three.field, sweeps);
+    three.settling = 240;
+    return true;
+  }
+  if (three.settling > 0) {
+    three.settling -= 1;
+    const change = relax(three.field, 14);
+    if (change < 2e-4) {
+      three.settling = 0;
+    }
+    return true;
+  }
+  return false;
+}
+
+function drawThree(phi) {
+  const stamp = three.mode + phi;
+  let changed = three.shown !== stamp;
+  if (three.mode === "computed" && refineField(phi)) {
+    changed = true;
+  }
+  if (!changed) {
+    return;
+  }
+  three.shown = stamp;
+  three.scene.innerHTML = wiringSvg(phi, three.mode);
+
+  // Say in words which way the current is going.
+  const plus = segmentUnder(MOTOR.brushPlus, phi);
+  const minus = segmentUnder(MOTOR.brushMinus, phi);
+  let alone = 0;
+  let pair = [];
+  if (minus === (plus + 1) % 3) {
+    // Coil "plus" joins the two live segments directly.
+    alone = plus;
+    pair = [(plus + 2) % 3, (plus + 1) % 3];
+  } else {
+    alone = minus;
+    pair = [plus, (plus + 1) % 3];
+  }
+  three.readout.textContent = "+ → " + COIL_NAMES[alone] + " → −   and   + → " + COIL_NAMES[pair[0]] + " → " + COIL_NAMES[pair[1]] + " → −";
+}
+
+three.fieldButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    three.mode = button.dataset.field;
+    press(three.fieldButtons, button);
+  });
+});
+
+// ---------------- one loop for all the figures ----------------
+
+// Only animate a figure while it is on screen.
+const watcher = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.target === one.stage) {
+      one.visible = entry.isIntersecting;
+    }
+    if (entry.target === two.stage) {
+      two.visible = entry.isIntersecting;
+    }
+    if (entry.target === three.stage) {
+      three.visible = entry.isIntersecting;
+    }
+  }
+}, { rootMargin: "120px 0px" });
+watcher.observe(one.stage);
+watcher.observe(two.stage);
+watcher.observe(three.stage);
+
+let lastTime = 0;
+
+function frame(now) {
+  let dt = 1 / 60;
+  if (lastTime) {
+    dt = Math.min((now - lastTime) / 1000, 1 / 20);
+  }
+  lastTime = now;
+  if (one.visible) {
+    stepOne(dt);
+  }
+  // The armature keeps turning if either the motor or its wiring diagram is on screen.
+  if (two.visible || three.visible) {
+    stepTwo(dt);
+  }
+  if (three.visible) {
+    drawThree(two.phi);
+  }
+  requestAnimationFrame(frame);
+}
+
+// Test hook: lets a check script pose the figures directly.
+window.__hairdryer = { one, two, setLevel, setCase, setSpinning, drawOne, drawTwo };
+
+if (calm.matches) {
+  setSpinning(false);
+}
+drawOne();
+drawTwo();
+drawThree(two.phi);
+// Self-check: the coil the words call "alone" must be the one the model gives full current.
+for (let d = 5; d < 360; d += 10) {
+  const angle = (d / 360) * TURN;
+  const p = segmentUnder(MOTOR.brushPlus, angle);
+  const q = segmentUnder(MOTOR.brushMinus, angle);
+  const lone = q === (p + 1) % 3 ? p : q;
+  console.assert(Math.abs(coilCurrent(lone, angle)) === 1 && p !== q, "wiring mismatch at " + d);
+  console.assert(Math.sign(coilCurrent(lone, angle)) === (q === (p + 1) % 3 ? 1 : -1), "direction mismatch at " + d);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
