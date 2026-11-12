@@ -158,6 +158,16 @@
       "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
     },
     {
+      "title": "Line Spectra",
+      "url": "https://jshphysics.github.io/line-spectra/",
+      "section": "simulations",
+      "category": "Atoms and light",
+      "description": "How emission and absorption spectra work. A spectroscope shows the three kinds of spectrum, then one hydrogen atom shows why: each electron jump between shells is animated with the light it gives out or absorbs and the line it makes. Six real elements to mix, and eight unknown spectra to decipher. Switches between GCSE and A-level wording.",
+      "pedagogy": "Textbooks show the shell diagram, the energy-level diagram and the spectrum as three separate pictures and leave students to connect them. Here one electron is shown in all three at once, so each jump visibly produces its own line, and the dark absorption lines can be seen landing on the same wavelengths as the bright emission lines. A step-through builds the idea one jump at a time before students move the electron themselves. The questions then make them use the fingerprint idea: dragging real reference spectra over an unknown turns pattern-matching into something they do, with traps such as helium and sodium's near-identical yellow lines to force them to check every line, not just one.",
+      "image": "line-spectra.png",
+      "tags": ["GCSE", "A-Level", "Quantum", "Light"]
+    },
+    {
       "title": "Distance–Time Graphs",
       "url": "https://jshphysics.github.io/lessons/distance-time-graphs/",
       "section": "lessons",
