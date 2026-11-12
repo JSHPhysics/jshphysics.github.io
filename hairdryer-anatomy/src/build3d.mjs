@@ -166,12 +166,18 @@ function pageBody(target) {
     heat: site ? `<div class="hd-math" data-tex="${TEX.heat}"></div>` : `<div class="hd-math">${MATHML.heat}</div>`,
   };
   const back = site ? `<a class="hd-back" href="../">← All JSHPhysics tools</a>` : "";
-  const eyebrow = `<p class="hd-eyebrow">JSHPhysics · Electricity and magnetism</p>`;
+  const eyebrow = `<p class="hd-eyebrow">JSHPhysics · Electricity and magnetism · Extension</p>`;
+  // The school motor page: a sibling folder on the site, the published artifact otherwise.
+  let simpleMotorHref = "https://claude.ai/artifact/49fEvnGTUczN14L8yqfr99";
+  if (site) {
+    simpleMotorHref = "../simple-motor/";
+  }
   return `<div class="iso hd-page">
 <header class="hd-head">
 ${back}
 ${eyebrow}<h1>Inside a hairdryer</h1>
 <p class="hd-lede">A hairdryer does two jobs. A small DC motor drives a fan that pushes air through the barrel, and a coil of resistance wire heats that air on its way out. Turn the dryer round, hide its casing, then take the motor apart.</p>
+<aside class="hd-ext" role="note" aria-label="Extension content"><p class="hd-ext-tag">Extension · beyond A-level</p><p><strong>This page is for interest only.</strong> A real motor with three coils and a three-part commutator goes further than GCSE and further than A-level physics. Nothing here needs to be memorised, and none of it will be examined.</p><p>The one part you do need is the boxed exam-style explanation near the end, which is the same for every motor. For the motor you need to know, see <a href="${simpleMotorHref}">Simple Motor and Loudspeaker</a>.</p></aside>
 </header>
 ${plate1}
 <section class="hd-notes" aria-label="Parts of the hairdryer">

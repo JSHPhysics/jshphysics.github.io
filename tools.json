@@ -17,6 +17,7 @@
     "tagConventions": {
       "note": "Level tags (KS3, GCSE, A-Level) are colour-coded automatically — KS3 green, GCSE blue, A-Level coral. Every other tag renders in the default neutral grey. New tags can be added freely as plain strings; they just won't get a special colour unless a CSS rule is added for them.",
       "levels": ["KS3", "GCSE", "A-Level"],
+      "extension": "Use \"Extension\" instead of a level tag for content that goes beyond the A-level course and is for interest only (not examined, not to be memorised). It renders in the default neutral grey.",
       "types": ["Teacher Tool", "Study Tool"],
       "physicsTopics": [
         "Mechanics", "Forces", "Energy", "Electricity", "Magnetism",
@@ -131,10 +132,10 @@
       "url": "https://jshphysics.github.io/hairdryer-anatomy/",
       "section": "simulations",
       "category": "Magnetism",
-      "description": "A 3D hairdryer you can turn round and open up, with its DC motor enlarged beside it. Strip the motor down to magnets, armature, commutator and brushes, then follow the current through a live wiring diagram with field lines and forces.",
+      "description": "Extension, beyond A-level and purely for interest: nothing here needs memorising. A 3D hairdryer you can turn round and open up, with its DC motor enlarged beside it. Strip the motor down to magnets, armature, commutator and brushes, then follow the current through a live wiring diagram with field lines and forces.",
       "pedagogy": "The textbook motor is one rectangular coil between two flat magnets, which no student will ever find inside a real appliance. Starting from an object they own and stripping it down to the working parts ties the abstract diagram to something concrete, and the wiring view keeps the 3D model and the 2D representation moving in step so neither has to be held in working memory. Stepping the armature by hand lets students predict what the commutator will do next before they see it, and the three-coil motor exposes why the one-coil version has dead spots.",
       "image": "hairdryer-anatomy.png",
-      "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
+      "tags": ["Extension", "Magnetism", "Electricity"]
     },
     {
       "title": "Simple Motor and Loudspeaker",
