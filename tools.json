@@ -148,6 +148,16 @@
       "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
     },
     {
+      "title": "Electromagnetic Induction",
+      "url": "https://jshphysics.github.io/induction/",
+      "section": "simulations",
+      "category": "Magnetism",
+      "description": "Push a magnet into a coil and watch the meter kick, then see the same idea in a coil turned between two magnets. Switch between an AC generator with slip rings and a dynamo with a split ring, and compare the output each one gives.",
+      "pedagogy": "Induction is usually met as a rule to recite, so the page starts with the one experiment every student has seen: a magnet moved through a coil. The meter trace is drawn alongside the motion, so the link between how fast the field through the coil changes and the size and sign of the reading is visible rather than stated. The generator and the dynamo then reuse the same coil-between-magnets model as the motor page, which lets students see that the only difference between them is the rings, and what that difference does to the output graph. An exam-style explanation gives the chain of reasoning in the form an answer needs.",
+      "image": "induction.png",
+      "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
+    },
+    {
       "title": "Distance–Time Graphs",
       "url": "https://jshphysics.github.io/lessons/distance-time-graphs/",
       "section": "lessons",

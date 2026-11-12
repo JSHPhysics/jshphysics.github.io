@@ -40,7 +40,7 @@ const css = read("page.css")
   .replace("/*LIGHT*/", LIGHT + LIGHT_EXTRA)
   .replaceAll("/*DARK*/", DARK + DARK_EXTRA);
 
-const script = read("geom.mjs").replace(/^export /gm, "") + "\n" + read("field.mjs").replace(/^export /gm, "") + "\n" + read("scene.js") + "\n" + read("live3d.js");
+const script = read("geom.mjs").replace(/^export /gm, "") + "\n" + read("field.mjs").replace(/^export /gm, "") + "\n" + read("scene.js") + "\n" + read("live3d.js") + "\n" + read("touch.js");
 
 // An empty drawing that the page script fills in.
 const stage = (id, width, height, label) =>

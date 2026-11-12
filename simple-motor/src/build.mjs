@@ -41,7 +41,7 @@ const css = read("page.css")
   .replace("/*LIGHT*/", LIGHT + LIGHT_EXTRA)
   .replaceAll("/*DARK*/", DARK + DARK_EXTRA);
 
-const script = read("geom.mjs").replace(/^export /gm, "") + "\n" + read("motor.js") + "\n" + read("speaker.js");
+const script = read("geom.mjs").replace(/^export /gm, "") + "\n" + read("motor.js") + "\n" + read("speaker.js") + "\n" + read("touch.js");
 
 // An empty drawing that the page script fills in.
 const stage = (id, width, height, label, flat) =>

@@ -82,6 +82,12 @@ function makeTurnable(figure) {
       figure.dirty = true;
     }
   });
+  addTiltButtons(stage, (step) => {
+    const tilt = figure.view.elevation + step;
+    figure.view.elevation = Math.min(70, Math.max(6, tilt));
+    figure.touched = true;
+    figure.dirty = true;
+  });
 }
 
 // ---------------- Figure 1: the whole dryer ----------------

@@ -715,6 +715,11 @@ motor.toggles.forEach((button) => {
       motor.dirty = true;
     }
   });
+  addTiltButtons(stage, (step) => {
+    const tilt = motor.view.elevation + step;
+    motor.view.elevation = Math.min(70, Math.max(8, tilt));
+    motor.dirty = true;
+  });
 }
 
 let lastTime = 0;

@@ -544,6 +544,11 @@ spk.slider.addEventListener("input", () => {
     event.preventDefault();
     spk.dirty = true;
   });
+  addTiltButtons(stage, (step) => {
+    const tilt = spk.view.elevation + step;
+    spk.view.elevation = Math.min(70, Math.max(8, tilt));
+    spk.dirty = true;
+  });
 }
 
 // Only animate while the speaker is on screen.

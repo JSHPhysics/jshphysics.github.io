@@ -154,3 +154,16 @@ body{margin:0;background:var(--anatomy-page);color:var(--anatomy-text);font:16px
 .exam-box ol{margin:0;padding-left:1.5em;font-size:15.5px;line-height:1.5;color:var(--anatomy-text)}
 .exam-box li{margin:5px 0;padding-left:4px}
 .exam-box li::marker{font-family:var(--anatomy-mono);font-size:13px;color:var(--accent)}
+/* touch screens (iPad in landscape): 44px targets, no tap flash, no double-tap zoom, no long-press callout */
+.hd-page{-webkit-tap-highlight-color:transparent}
+.hd-page button{min-height:44px;touch-action:manipulation}
+.hd-back{padding-top:14px;touch-action:manipulation}
+.iso-stage{position:relative;-webkit-touch-callout:none}
+.hd-page input[type=range]{-webkit-appearance:none;appearance:none;height:44px;margin:0;background:transparent;cursor:pointer;touch-action:pan-y}
+.hd-page input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:var(--anatomy-mid)}
+.hd-page input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:var(--anatomy-mid)}
+.hd-page input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;margin-top:-11px;border-radius:50%;border:2px solid var(--anatomy-card);background:var(--anatomy-strong)}
+.hd-page input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;border:2px solid var(--anatomy-card);background:var(--anatomy-strong)}
+.hd-tilt{display:none;position:absolute;right:0;top:50%;transform:translateY(-50%);flex-direction:column;gap:8px}
+.hd-tilt button{width:44px;height:44px;min-width:0;padding:0;border:1px solid var(--anatomy-mid);border-radius:50%;background:var(--btn);color:var(--anatomy-strong);font:13px/1 var(--anatomy-mono);cursor:pointer}
+@media (hover:none),(pointer:coarse){.hd-tilt{display:flex}}
