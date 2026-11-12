@@ -303,9 +303,12 @@ function cam(P) {
 }
 
 // World point -> screen point.
+// The viewer stands in the direction (cos a, sin a) from the origin, looking back at it, with z up.
+// Their right-hand side is then (-sin a, cos a), which keeps the picture right-handed,
+// so the 3D motor turns the same way as the end-on diagram in Fig 3.
 function flat(p, P) {
   const c = cam(P);
-  const sx = P.origin[0] + (p[0] * c.sa - p[1] * c.ca) * c.k;
+  const sx = P.origin[0] + (-p[0] * c.sa + p[1] * c.ca) * c.k;
   const sy = P.origin[1] + ((p[0] * c.ca + p[1] * c.sa) * c.se - p[2] * c.ce) * c.k;
   return [sx, sy];
 }
