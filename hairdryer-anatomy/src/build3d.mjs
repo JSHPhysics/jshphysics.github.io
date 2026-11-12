@@ -117,6 +117,47 @@ const MATHML = {
 };
 const FONTS = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">`;
 
+// An "exam-style explanation": a titled, numbered chain of reasoning in the author's own wording.
+function examBox(title, steps) {
+  const items = steps.map((step) => `<li>${step}</li>`).join("");
+  return `<div class="exam-box"><p class="exam-kicker">Exam-style explanation</p><h2>${title}</h2><ol>${items}</ol></div>`;
+}
+function examSection(boxes) {
+  return `<section class="exam" aria-label="Exam-style explanations">${boxes.join("")}</section>`;
+}
+const EXAM = {
+  wire: examBox("The motor effect on a single wire", [
+    "There is a current in the wire.",
+    "This creates a magnetic field around the wire.",
+    "This interacts with the permanent magnetic field.",
+    "This causes a resultant force on the wire, so the wire accelerates.",
+    "You can find the direction of the force using Fleming's left-hand rule.",
+  ]),
+  motor: examBox("The motor effect in a motor", [
+    "There is a current in the coil.",
+    "This creates a magnetic field around the coil.",
+    "This interacts with the permanent magnetic field.",
+    "This causes a resultant force on the coil.",
+    "The direction of the force is opposite on either side of the coil.",
+    "So the coil rotates.",
+  ]),
+  speaker: examBox("The motor effect in a loudspeaker", [
+    "There is a current in the coil.",
+    "This creates a magnetic field around the coil.",
+    "This interacts with the permanent magnetic field.",
+    "This causes a resultant force on the coil.",
+    "The direction of the force is the same on either side of the coil.",
+    "So the coil moves forwards or backwards. You can find the direction using Fleming's left-hand rule.",
+    "With an alternating current, the force alternates back and forth at the same frequency as the current.",
+  ]),
+  induction: examBox("Induction", [
+    "The wire or coil moves through the magnetic field of the permanent magnet.",
+    "So the wire or coil experiences a changing magnetic field.",
+    "This induces a potential difference across the wire or coil.",
+    "If the wire or coil is in a closed circuit, a current flows.",
+  ]),
+};
+
 // target: "artifact" (a fragment for the Artifact viewer) or "site" (the copy that lives in the GitHub Pages repo).
 function pageBody(target) {
   const site = target === "site";
@@ -141,6 +182,7 @@ ${plate1}
 </section>
 ${plate2}
 ${plate3}
+${examSection([EXAM.motor])}
 <section class="hd-notes" aria-label="How the motor works">
 <div><h2>Three coils, two brushes</h2><p>The coils are not wired to the terminals one each. They form a closed ring, and the brushes tap that ring at two points. From the + brush the current splits: one route goes through a single coil, the other through the remaining two in series. All three coils carry current all the time.</p></div>
 <div><h2>Using Fleming's left-hand rule</h2><p>Each coil is wound round its arm, so its two long sides run along the shaft: in Fig 3 they point out of and into the page (the dot and the cross). Apply the rule to those sides, with the field running from N to S. The stripes across each coil are only its end turns. They lie in the page, and the forces on the front and back end turns cancel.</p></div>

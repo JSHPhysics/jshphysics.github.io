@@ -154,6 +154,47 @@ const MATHML = {
 };
 const FONTS = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">`;
 
+// An "exam-style explanation": a titled, numbered chain of reasoning in the author's own wording.
+function examBox(title, steps) {
+  const items = steps.map((step) => `<li>${step}</li>`).join("");
+  return `<div class="exam-box"><p class="exam-kicker">Exam-style explanation</p><h2>${title}</h2><ol>${items}</ol></div>`;
+}
+function examSection(boxes) {
+  return `<section class="exam" aria-label="Exam-style explanations">${boxes.join("")}</section>`;
+}
+const EXAM = {
+  wire: examBox("The motor effect on a single wire", [
+    "There is a current in the wire.",
+    "This creates a magnetic field around the wire.",
+    "This interacts with the permanent magnetic field.",
+    "This causes a resultant force on the wire, so the wire accelerates.",
+    "You can find the direction of the force using Fleming's left-hand rule.",
+  ]),
+  motor: examBox("The motor effect in a motor", [
+    "There is a current in the coil.",
+    "This creates a magnetic field around the coil.",
+    "This interacts with the permanent magnetic field.",
+    "This causes a resultant force on the coil.",
+    "The direction of the force is opposite on either side of the coil.",
+    "So the coil rotates.",
+  ]),
+  speaker: examBox("The motor effect in a loudspeaker", [
+    "There is a current in the coil.",
+    "This creates a magnetic field around the coil.",
+    "This interacts with the permanent magnetic field.",
+    "This causes a resultant force on the coil.",
+    "The direction of the force is the same on either side of the coil.",
+    "So the coil moves forwards or backwards. You can find the direction using Fleming's left-hand rule.",
+    "With an alternating current, the force alternates back and forth at the same frequency as the current.",
+  ]),
+  induction: examBox("Induction", [
+    "The wire or coil moves through the magnetic field of the permanent magnet.",
+    "So the wire or coil experiences a changing magnetic field.",
+    "This induces a potential difference across the wire or coil.",
+    "If the wire or coil is in a closed circuit, a current flows.",
+  ]),
+};
+
 // target: "artifact" or "site".
 function pageBody(target) {
   const site = target === "site";
@@ -168,6 +209,7 @@ ${back}
 <p class="hd-lede">One coil of wire, two magnets, and a split ring that swaps the connections every half turn. Run it, turn it by hand, then reverse the cell or swap the magnets and predict which way it will go. The loudspeaker at the end uses the same force to make sound.</p>
 </header>
 ${plate1}
+${examSection([EXAM.wire, EXAM.motor])}
 <section class="hd-notes" data-for="split" aria-label="How the motor works">
 <div><h2>The motor effect</h2><p>A wire carrying a current across a magnetic field feels a force at right angles to both the current and the field:</p>${math("force")}<p>Only the two long sides of the coil count. The field runs across them, so one is pushed up and the other down.</p></div>
 <div><h2>Fleming's left-hand rule</h2><p>First finger along the field (N to S), second finger along the current, and the thumb gives the force. Pause the motor, pick a side of the coil, and check the green arrow against your hand.</p></div>
@@ -185,6 +227,7 @@ ${plate3}
 <h2 class="ind-part"><span>Also the motor effect</span>The loudspeaker</h2>
 ${plate4}
 ${plate5}
+${examSection([EXAM.speaker])}
 <section class="hd-notes" aria-label="How the loudspeaker works">
 <div><h2>The same force, in a straight line</h2><p>The coil sits in the gap between the centre pole and the outer ring, where the field points outwards. The current runs round the coil, at right angles to that field, so the force on every part of the coil is along the axis:</p>${math("force")}<p>Use Fleming's left-hand rule on any circle in Fig 5 to check the arrow.</p></div>
 <div><h2>Why it vibrates</h2><p>The signal is an alternating current. Each time the current reverses, the force reverses, so the coil is pushed out, then pulled in. The cone is fixed to the coil and moves with it.</p></div>
