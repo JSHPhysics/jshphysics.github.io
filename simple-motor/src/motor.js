@@ -107,35 +107,6 @@ function turningEffect(phi, battery, magnets) {
   return battery * magnets * Math.abs(Math.cos(phi));
 }
 
-// What the coil is doing, for either design.
-// state.design is "split" (DC motor with a split-ring commutator) or "slip" (AC generator with slip rings).
-// Returns { sign, live, value }:
-//   sign  - direction of the current in side A (+1 is towards the ring end of the axle)
-//   live  - 0 to 1, used to fade arrows out when there is no current
-//   value - the current in side A as a share of its largest size, with its sign
-function coilState(state) {
-  if (state.design === "slip") {
-    // Generator: the coil is turned by hand.  Side A moves at right angles to the axle,
-    // and the current induced in it is largest when it cuts straight across the field (coil flat)
-    // and zero when it moves along the field (coil upright).  It reverses every half turn.
-    const value = -state.magnets * state.turnWay * Math.cos(state.phi);
-    const size = Math.abs(value);
-    return { sign: value >= 0 ? 1 : -1, live: Math.min(1, size / 0.12), value };
-  }
-  const live = brushContact(state.phi);
-  const sign = currentInSideA(state.phi, state.battery);
-  return { sign, live, value: live > 0 ? sign : 0 };
-}
-
-// Where each brush sits along the axle.  Split ring: both brushes on the one ring.
-// Slip rings: one brush on each ring.
-function brushSpan(state, side) {
-  if (state.design === "slip") {
-    return side < 0 ? [51, 56] : [60, 65];
-  }
-  return [55, 61];
-}
-
 // ---------------- the 3D scene ----------------
 
 function motorScene(state, P) {
@@ -143,9 +114,7 @@ function motorScene(state, P) {
   const F = { o: [0, 0, 0] };
   const solid = (faces, options) => meshSvg(mesh(faces, P), options);
   const phi = state.phi;
-  const coil = coilState(state);
-  const sideA = coil.sign;
-  const slip = state.design === "slip";
+  const sideA = currentInSideA(phi, state.battery);
   const items = [];
   // Depth for sorting: mostly how far towards the viewer across the floor, with a little for height.
   const depth = (point) => point[0] * V[0] + point[1] * V[1] + 0.15 * point[2] * V[2];
@@ -160,30 +129,23 @@ function motorScene(state, P) {
   let out = solid(worldBox(-72, 98, -88, 88, BASE_Z - 6, BASE_Z), { tone: "mid" });
   const plusSide = state.battery > 0 ? -1 : 1; // the positive brush is on the -y side when battery = +1
   [-1, 1].forEach((side) => {
-    let tone = side === plusSide ? "lit" : "mid";
-    if (slip) {
-      tone = "hi";
-    }
-    const span = brushSpan(state, side);
-    const postX = (span[0] + span[1]) / 2;
+    const tone = side === plusSide ? "lit" : "mid";
     const route = [
-      [postX, side * 32, BASE_Z + 0.2],
+      [58, side * 32, BASE_Z + 0.2],
       [88, side * 32, BASE_Z + 0.2],
       [88, side * 15, BASE_Z + 0.2],
     ];
     out += linePath(route, P, "hd-lead", tone);
-    // An arrowhead on the lead, pointing the way conventional current flows in it.
-    if (state.showCurrent && coil.live > 0) {
-      // Motor: from the + terminal to its brush, and from the other brush back to the - terminal.
-      let towardsBrush = side === plusSide;
-      if (slip) {
-        // Generator: current leaves the coil through the ring joined to whichever side carries it towards the rings.
-        // The -y brush is on side A's ring.
-        const leavesHere = side < 0 ? sideA > 0 : sideA < 0;
-        towardsBrush = !leavesHere;
+    // An arrowhead on the lead: conventional current runs from the + terminal to its brush,
+    // and from the other brush back to the - terminal.
+    const contact = brushContact(phi);
+    if (state.showCurrent && contact > 0) {
+      let along = 1;
+      if (side === plusSide) {
+        along = -1;
       }
-      const head = arrowHead([(postX + 88) / 2, side * 32, BASE_Z + 0.2], [towardsBrush ? -1 : 1, 0, 0], P, "sm-currenthead");
-      out += '<g opacity="' + coil.live.toFixed(2) + '">' + head + "</g>";
+      const head = arrowHead([73, side * 32, BASE_Z + 0.2], [along, 0, 0], P, "sm-currenthead");
+      out += '<g opacity="' + contact.toFixed(2) + '">' + head + "</g>";
     }
   });
 
@@ -231,23 +193,11 @@ function motorScene(state, P) {
     add(pt(F, 0, COIL.half, psi), long);
     const nearEnd = solid(radialBox(F, COIL.x1 - w, COIL.x1 + w, RING.r - 1, COIL.half + w, w, psi), { tone: "hi", crease: "lo", tint });
     add(pt(F, COIL.x1, COIL.half / 2 + 4, psi), nearEnd);
-    const ringTint = { pole: index === 0 ? "a" : "cu", alpha: 0.75 };
-    if (slip) {
-      // Slip rings: two complete rings side by side.  Side A joins the first, side B the second,
-      // so side B's lead has to pass through the middle of the first ring to reach its own.
-      const ringSpan = index === 0 ? [50, 57] : [59, 66];
-      const leadEnd = index === 0 ? 50 : 59;
-      const leadR = index === 0 ? [RING.r - 2.6, RING.r] : [2.4, 5];
-      add(pt(F, 45, leadR[1], psi), solid(radialBox(F, COIL.x1, leadEnd, leadR[0], leadR[1], w, psi), { tone: "hi", crease: "lo", tint }));
-      const ring = sector(F, [[ringSpan[0], RING.r], [ringSpan[1], RING.r]], RING.thick, 0, TAU, { ends: [true, true], step: 10 }).all;
-      add(pt(F, (ringSpan[0] + ringSpan[1]) / 2, 0, 0), solid(ring, { tone: "hi", crease: "lo", tint: ringTint }));
-    } else {
-      const lead = solid(radialBox(F, COIL.x1, RING.x0, RING.r - 2.6, RING.r, w, psi), { tone: "hi", crease: "lo", tint });
-      add(pt(F, 45, RING.r, psi), lead);
-      // Each half of the split ring is joined to one side of the coil and turns with it.
-      const half = sector(F, [[RING.x0, RING.r], [RING.x1, RING.r]], RING.thick, psi - RING.halfAngle, psi + RING.halfAngle, { ends: [true, true], step: 10 }).all;
-      add(pt(F, 58, RING.r - 1.5, psi), solid(half, { tone: "hi", crease: "lo", tint: ringTint }));
-    }
+    const lead = solid(radialBox(F, COIL.x1, RING.x0, RING.r - 2.6, RING.r, w, psi), { tone: "hi", crease: "lo", tint });
+    add(pt(F, 45, RING.r, psi), lead);
+    // Each half of the split ring is joined to one side of the coil and turns with it.
+    const half = sector(F, [[RING.x0, RING.r], [RING.x1, RING.r]], RING.thick, psi - RING.halfAngle, psi + RING.halfAngle, { ends: [true, true], step: 10 }).all;
+    add(pt(F, 58, RING.r - 1.5, psi), solid(half, { tone: "hi", crease: "lo", tint: { pole: index === 0 ? "a" : "cu", alpha: 0.75 } }));
   });
   add(pt(F, COIL.x0, 0, 0), solid(radialBox(F, COIL.x0 - w, COIL.x0 + w, -COIL.half - w, COIL.half + w, w, phi), { tone: "hi", crease: "lo" }));
 
@@ -255,10 +205,8 @@ function motorScene(state, P) {
   [-1, 1].forEach((side) => {
     const y0 = side < 0 ? -32 : RING.r;
     const y1 = side < 0 ? -RING.r : 32;
-    const span = brushSpan(state, side);
-    const postX = (span[0] + span[1]) / 2;
-    add([postX, side * 18, 0], solid(worldBox(span[0], span[1], y0, y1, -2.5, 2.5), { tone: "hi", crease: "lo" }));
-    add([postX, side * 32, -28], solid(worldBox(postX - 2.5, postX + 2.5, side * 32 - 2.5, side * 32 + 2.5, BASE_Z, 2.5), { tone: "mid" }));
+    add([58, side * 18, 0], solid(worldBox(55, 61, y0, y1, -2.5, 2.5), { tone: "hi", crease: "lo" }));
+    add([58, side * 32, -28], solid(worldBox(55.5, 60.5, side * 32 - 2.5, side * 32 + 2.5, BASE_Z, 2.5), { tone: "mid" }));
   });
 
   // --- the cell, with a terminal each side ---
@@ -268,17 +216,9 @@ function motorScene(state, P) {
       cell += solid(worldBox(86, 90, Math.min(side * 12, side * 15), Math.max(side * 12, side * 15), BASE_Z + 4, BASE_Z + 8), { tone: "mid" });
     });
     // The + and - labels belong to the cell, so anything in front of the cell hides them too.
-    if (state.labels && !slip) {
+    if (state.labels) {
       cell += labelSvg([88, plusSide * 25, BASE_Z + 14], P, "+", "plus");
       cell += labelSvg([88, -plusSide * 25, BASE_Z + 14], P, "−", "minus");
-    }
-    if (slip) {
-      // In the generator the box is a centre-zero meter: its needle swings one way, then the other.
-      const top = BASE_Z + 12.2;
-      const swing = coil.value * 0.95;
-      const tip = [88 - 9 * Math.cos(swing), 9 * Math.sin(swing), top];
-      cell += linePath([[84, -8, top], [80, 0, top], [84, 8, top]], P, "", "lo");
-      cell += linePath([[92, 0, top], tip], P, "sm-needle", "lit");
     }
     add([88, 0, BASE_Z + 6], cell);
   }
@@ -288,7 +228,7 @@ function motorScene(state, P) {
 
   // --- overlays: current arrows, force arrows and labels ---
   // Arrows fade out as the brushes reach the gaps in the ring, and back in on the other side.
-  const live = coil.live;
+  const live = brushContact(phi);
   if (live > 0) {
     out += '<g opacity="' + live.toFixed(2) + '">';
   }
@@ -302,18 +242,7 @@ function motorScene(state, P) {
     const farWay = sideA > 0 ? across : neg(across);
     out += arrowHead(pt(F, COIL.x0, 0.01, phi), farWay, P, "sm-currenthead");
   }
-  if (state.showForces && slip) {
-    // Generator: show which way each long side is moving (for Fleming's right-hand rule).
-    [0, 1].forEach((index) => {
-      const psi = phi + index * Math.PI;
-      const way = tangent(psi);
-      const start = pt(F, 0, COIL.half, psi);
-      const end = [start[0], start[1] + way[1] * state.turnWay * 28, start[2] + way[2] * state.turnWay * 28];
-      out += linePath([start, end], P, "sm-motion", "hi");
-      out += arrowHead(end, [0, way[1] * state.turnWay, way[2] * state.turnWay], P, "sm-motionhead");
-    });
-  }
-  if (state.showForces && live > 0 && !slip) {
+  if (state.showForces && live > 0) {
     [0, 1].forEach((index) => {
       const psi = phi + index * Math.PI;
       const current = index === 0 ? sideA : -sideA;
@@ -342,9 +271,7 @@ function endOnSvg(state) {
   const cx = 230;
   const cy = 170;
   const phi = state.phi;
-  const coil = coilState(state);
-  const sideA = coil.sign;
-  const slip = state.design === "slip";
+  const sideA = currentInSideA(phi, state.battery);
   const xy = (p) => p[0].toFixed(1) + " " + p[1].toFixed(1);
   // Seen from the commutator end: +y is to the right and up is up.
   const pol = (r, angle) => [cx + r * Math.cos(angle), cy - r * Math.sin(angle)];
@@ -372,36 +299,25 @@ function endOnSvg(state) {
   // The coil, seen edge-on: a line through the axle with a long side at each end.
   out += '<path class="sm-coilline" d="M' + xy(pol(110, phi)) + "L" + xy(pol(110, phi + Math.PI)) + '"/>';
 
-  if (slip) {
-    // Slip rings: two complete rings.  They are really the same size, one behind the other;
-    // the far one (yellow, joined to the yellow side) is drawn larger so both can be seen.
-    out += '<circle class="sm-ring" data-half="a" cx="' + cx + '" cy="' + cy + '" r="30"/>';
-    out += '<circle class="sm-ring" data-half="b" cx="' + cx + '" cy="' + cy + '" r="19"/>';
-    out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="7"/>';
-    // One brush on each ring.
-    out += '<rect class="hd-wbrush" x="' + (cx - 56) + '" y="' + (cy - 8) + '" width="22" height="16"/>';
-    out += '<rect class="hd-wbrush" x="' + (cx + 23) + '" y="' + (cy - 8) + '" width="33" height="16"/>';
-  } else {
-    // Split ring: half A is joined to side A.
-    [0, 1].forEach((index) => {
-      const centre = phi + index * Math.PI;
-      let d = "";
-      for (let step = 0; step <= 16; step += 1) {
-        const angle = centre - RING.halfAngle + (2 * RING.halfAngle * step) / 16;
-        d += (step ? "L" : "M") + xy(pol(24, angle));
-      }
-      out += '<path class="sm-ring" data-half="' + (index === 0 ? "a" : "b") + '" d="' + d + '"/>';
-    });
-    out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="7"/>';
+  // Split ring: half A is joined to side A.
+  [0, 1].forEach((index) => {
+    const centre = phi + index * Math.PI;
+    let d = "";
+    for (let step = 0; step <= 16; step += 1) {
+      const angle = centre - RING.halfAngle + (2 * RING.halfAngle * step) / 16;
+      d += (step ? "L" : "M") + xy(pol(24, angle));
+    }
+    out += '<path class="sm-ring" data-half="' + (index === 0 ? "a" : "b") + '" d="' + d + '"/>';
+  });
+  out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="7"/>';
 
-    // Brushes, fixed either side of the ring.  The positive one is on the left when battery = +1.
-    [-1, 1].forEach((side) => {
-      const positive = (side < 0) === (state.battery > 0);
-      const x = side < 0 ? cx - 50 : cx + 30;
-      out += '<rect class="hd-wbrush" x="' + x + '" y="' + (cy - 9) + '" width="20" height="18"/>';
-      out += text([x + 10, cy], positive ? "+" : "−", "hd-wsign");
-    });
-  }
+  // Brushes, fixed either side of the ring.  The positive one is on the left when battery = +1.
+  [-1, 1].forEach((side) => {
+    const positive = (side < 0) === (state.battery > 0);
+    const x = side < 0 ? cx - 50 : cx + 30;
+    out += '<rect class="hd-wbrush" x="' + x + '" y="' + (cy - 9) + '" width="20" height="18"/>';
+    out += text([x + 10, cy], positive ? "+" : "−", "hd-wsign");
+  });
 
   // The two long sides, end-on, with their currents and the force on each.
   [0, 1].forEach((index) => {
@@ -409,19 +325,8 @@ function endOnSvg(state) {
     const current = index === 0 ? sideA : -sideA;
     const at = pol(110, psi);
     out += '<circle class="hd-wside" data-side="' + (index === 0 ? "a" : "b") + '" cx="' + at[0].toFixed(1) + '" cy="' + at[1].toFixed(1) + '" r="10"/>';
-    if (slip) {
-      // Generator: an arrow showing which way this side is moving.
-      const way = tangent(psi);
-      const fromX = at[0] + way[1] * state.turnWay * 13;
-      const fromY = at[1] - way[2] * state.turnWay * 13;
-      const toX = at[0] + way[1] * state.turnWay * 44;
-      const toY = at[1] - way[2] * state.turnWay * 44;
-      const turn = (Math.atan2(toY - fromY, toX - fromX) * 180) / Math.PI;
-      out += '<path class="sm-motionline" d="M' + fromX.toFixed(1) + " " + fromY.toFixed(1) + "L" + toX.toFixed(1) + " " + toY.toFixed(1) + '"/>';
-      out += '<path class="sm-motionhead" transform="translate(' + toX.toFixed(1) + " " + toY.toFixed(1) + ") rotate(" + turn.toFixed(1) + ')" d="M6 0L-4 -5L-4 5Z"/>';
-    }
-    // No dot, cross or force arrow when there is no current.
-    const live = coil.live;
+    // No dot, cross or force arrow while the brushes are over the gaps: there is no current.
+    const live = brushContact(phi);
     if (live === 0) {
       return;
     }
@@ -432,39 +337,24 @@ function endOnSvg(state) {
     } else {
       out += '<path class="hd-wcross" d="M' + (at[0] - 5.5).toFixed(1) + " " + (at[1] - 5.5).toFixed(1) + 'l11 11m0 -11l-11 11"/>';
     }
-    if (!slip) {
-      const up = current * state.magnets;
-      const startY = at[1] - up * 14;
-      const endY = at[1] - up * 52;
-      out += '<path class="hd-wforce" d="M' + at[0].toFixed(1) + " " + startY.toFixed(1) + "L" + at[0].toFixed(1) + " " + endY.toFixed(1) + '"/>';
-      out += '<path class="hd-wforcehead" transform="translate(' + at[0].toFixed(1) + " " + endY.toFixed(1) + ") rotate(" + (up > 0 ? -90 : 90) + ')" d="M6 0L-4 -5L-4 5Z"/>';
-    }
+    const up = current * state.magnets;
+    const startY = at[1] - up * 14;
+    const endY = at[1] - up * 52;
+    out += '<path class="hd-wforce" d="M' + at[0].toFixed(1) + " " + startY.toFixed(1) + "L" + at[0].toFixed(1) + " " + endY.toFixed(1) + '"/>';
+    out += '<path class="hd-wforcehead" transform="translate(' + at[0].toFixed(1) + " " + endY.toFixed(1) + ") rotate(" + (up > 0 ? -90 : 90) + ')" d="M6 0L-4 -5L-4 5Z"/>';
     out += "</g>";
   });
 
-  // --- graph over one turn: turning effect (motor) or current through the meter (generator) ---
+  // --- graph: size of the turning effect over one turn ---
   const gx = 40;
   const gy = 425;
   const gw = 380;
   const gh = 70;
-  // The generator's current goes both ways, so its zero line is half way up.
-  const valueAt = (angle) => {
-    if (slip) {
-      // Which direction the meter calls positive is a free choice; this one starts the graph at a peak.
-      return -coilState({ design: "slip", phi: angle, magnets: state.magnets, turnWay: state.turnWay }).value;
-    }
-    return Math.abs(turningEffect(angle, 1, 1));
-  };
-  const yOf = (value) => {
-    if (slip) {
-      return gy - gh / 2 - (gh / 2) * value;
-    }
-    return gy - gh * value;
-  };
-  out += '<path class="sm-axis" d="M' + gx + " " + (gy - gh) + "L" + gx + " " + gy + "M" + gx + " " + yOf(0) + "L" + (gx + gw) + " " + yOf(0) + '"/>';
+  out += '<path class="sm-axis" d="M' + gx + " " + (gy - gh) + "L" + gx + " " + gy + "L" + (gx + gw) + " " + gy + '"/>';
   let curve = "";
   for (let degrees = 0; degrees <= 360; degrees += 1) {
-    curve += (degrees ? "L" : "M") + (gx + (gw * degrees) / 360).toFixed(1) + " " + yOf(valueAt(degrees * DEG)).toFixed(1);
+    const value = Math.abs(turningEffect(degrees * DEG, 1, 1));
+    curve += (degrees ? "L" : "M") + (gx + (gw * degrees) / 360).toFixed(1) + " " + (gy - gh * value).toFixed(1);
   }
   out += '<path class="sm-curve" d="' + curve + '"/>';
   [0, 90, 180, 270, 360].forEach((degrees) => {
@@ -472,11 +362,11 @@ function endOnSvg(state) {
     out += '<path class="sm-axis" d="M' + x + " " + gy + "L" + x + " " + (gy + 4) + '"/>';
     out += '<text class="sm-tick" x="' + x + '" y="' + (gy + 17) + '" text-anchor="middle">' + degrees + "°</text>";
   });
-  out += '<text class="sm-tick" x="' + gx + '" y="' + (gy - gh - 8) + '">' + (slip ? "current through the meter" : "turning effect") + "</text>";
+  out += '<text class="sm-tick" x="' + gx + '" y="' + (gy - gh - 8) + '">turning effect</text>';
   const turns = (((phi % TURN) + TURN) % TURN) / TURN;
   const markX = gx + gw * turns;
-  const markY = yOf(valueAt(phi));
-  out += '<path class="sm-markline" d="M' + markX.toFixed(1) + " " + yOf(0) + "L" + markX.toFixed(1) + " " + markY.toFixed(1) + '"/>';
+  const markY = gy - gh * Math.abs(turningEffect(phi, 1, 1));
+  out += '<path class="sm-markline" d="M' + markX.toFixed(1) + " " + gy + "L" + markX.toFixed(1) + " " + markY.toFixed(1) + '"/>';
   out += '<circle class="sm-mark" cx="' + markX.toFixed(1) + '" cy="' + markY.toFixed(1) + '" r="4.5"/>';
   return out;
 }
@@ -484,7 +374,7 @@ function endOnSvg(state) {
 // ---------------- the split ring, close up, for the step-through ----------------
 
 // One half turn, stage by stage.  Angles are for side A (yellow), with the cell and magnets the normal way round.
-const STAGES_SPLIT = [
+const STAGES = [
   {
     angle: 0,
     title: "Coil flat: full turning effect",
@@ -522,60 +412,12 @@ const STAGES_SPLIT = [
   },
 ];
 
-// One full turn of the generator, stage by stage.  Turning anticlockwise, magnets the normal way round.
-const STAGES_SLIP = [
-  {
-    angle: 0,
-    title: "Coil flat: largest current",
-    body: "The yellow side is moving straight up through the field and the other side straight down, so they cut across the field as fast as they can. The induced current is at its largest. It leaves through the copper ring, goes through the meter, and comes back through the yellow ring.",
-  },
-  {
-    angle: 45,
-    title: "Turning: current falling",
-    body: "The sides are now moving partly along the field, so they cut across it more slowly and the current is smaller. Its direction has not changed. Each ring is on the same brush as before, and always will be.",
-  },
-  {
-    angle: 90,
-    title: "Coil upright: no current",
-    body: "For a moment both sides are moving along the field lines and not cutting them, so nothing is induced. Nothing has been disconnected: each ring is still touching its own brush.",
-  },
-  {
-    angle: 135,
-    title: "Current reversed",
-    body: "The yellow side is now moving down through the field, so the current in it has reversed. The yellow ring is still on the same brush, so the current through the meter has reversed too. A split ring would have swapped brushes here and kept the meter current the same way.",
-  },
-  {
-    angle: 180,
-    title: "Flat again: largest current, the other way",
-    body: "Half a turn done. The sides have swapped places and the current is at its largest again, in the opposite direction to stage 1.",
-  },
-  {
-    angle: 270,
-    title: "Upright again: no current",
-    body: "The sides are moving along the field once more, and the current passes through zero on its way back.",
-  },
-  {
-    angle: 360,
-    title: "One turn, one cycle",
-    body: "Back at the start. One full turn of the coil gives one full cycle of alternating current: one way, zero, the other way, zero. Slip rings pass on whatever the coil produces. A split ring swaps the connections every half turn.",
-  },
-];
-
-function stagesFor(state) {
-  if (state.design === "slip") {
-    return STAGES_SLIP;
-  }
-  return STAGES_SPLIT;
-}
-
 function ringSvg(state) {
   const cx = 230;
   const cy = 200;
   const phi = state.phi;
-  const coil = coilState(state);
-  const sideA = coil.sign;
-  const live = coil.live;
-  const slip = state.design === "slip";
+  const sideA = currentInSideA(phi, state.battery);
+  const live = brushContact(phi);
   const xy = (p) => p[0].toFixed(1) + " " + p[1].toFixed(1);
   const pol = (r, angle) => [cx + r * Math.cos(angle), cy - r * Math.sin(angle)];
   const text = (p, value, cls) => '<text class="hd-wtext ' + cls + '" x="' + p[0].toFixed(1) + '" y="' + (p[1] + 5).toFixed(1) + '" text-anchor="middle">' + value + "</text>";
@@ -589,90 +431,46 @@ function ringSvg(state) {
   out += '<path class="hd-wfluxhead" transform="translate(' + (northLeft ? 390 : 70) + " 26) rotate(" + (northLeft ? 0 : 180) + ')" d="M6 0L-5 -5L-5 5Z"/>';
   out += '<text class="sm-tick" x="230" y="18" text-anchor="middle">field</text>';
 
-  // Leads.  Each leaves the outer end of its brush and drops down, clear of the coil when the coil is flat.
-  const bottom = cy + 168;
+  // Leads and brushes.  The + brush is on the left when the cell is the normal way round.
   [-1, 1].forEach((side) => {
+    const positive = (side < 0) === (state.battery > 0);
+    const brushX = side < 0 ? cx - 106 : cx + 70;
+    // The lead leaves the outer end of the brush and drops to a terminal at the bottom,
+    // which keeps it clear of the coil when the coil is flat.
     const elbowX = side < 0 ? cx - 112 : cx + 112;
     const brushEnd = side < 0 ? cx - 106 : cx + 106;
-    let d = "M" + brushEnd + " " + cy + "L" + elbowX + " " + cy + "L" + elbowX + " " + bottom;
-    if (slip) {
-      // Generator: both leads run on to the meter in the middle.
-      d += "L" + (cx + side * 16) + " " + bottom;
-    }
-    out += '<path class="sm-lead" data-live="' + (live > 0 ? "1" : "0") + '" d="' + d + '"/>';
-
-    // Which way conventional current flows in this lead: up towards the brush, or down away from it.
-    let up = false;
-    if (slip) {
-      // Current leaves the coil through the ring joined to whichever side carries it towards the rings.
-      // The left brush is on the yellow ring (side A).
-      const leavesHere = side < 0 ? sideA > 0 : sideA < 0;
-      up = !leavesHere;
-    } else {
-      const positive = (side < 0) === (state.battery > 0);
-      up = positive;
-      out += '<circle class="hd-wside" cx="' + elbowX + '" cy="' + (bottom + 12) + '" r="12"/>';
-      out += text([elbowX, bottom + 12], positive ? "+" : "−", "");
-    }
+    const bottom = cy + 168;
+    out += '<path class="sm-lead" data-live="' + (live > 0 ? "1" : "0") + '" d="M' + brushEnd + " " + cy + "L" + elbowX + " " + cy + "L" + elbowX + " " + bottom + '"/>';
+    out += '<circle class="hd-wside" cx="' + elbowX + '" cy="' + (bottom + 12) + '" r="12"/>';
+    out += text([elbowX, bottom + 12], positive ? "+" : "−", "");
     if (live > 0) {
-      out += '<path class="sm-leadhead" opacity="' + live.toFixed(2) + '" transform="translate(' + elbowX + " " + (cy + 100) + ") rotate(" + (up ? -90 : 90) + ')" d="M7 0L-5 -6L-5 6Z"/>';
+      // Conventional current comes up from the + terminal to its brush, and goes down from the other brush to the - terminal.
+      const turn = positive ? -90 : 90;
+      out += '<path class="sm-leadhead" opacity="' + live.toFixed(2) + '" transform="translate(' + elbowX + " " + (cy + 110) + ") rotate(" + turn + ')" d="M7 0L-5 -6L-5 6Z"/>';
     }
+    out += '<rect class="hd-wbrush" x="' + brushX + '" y="' + (cy - 15) + '" width="36" height="30"/>';
+    
   });
-  if (slip) {
-    // The meter: a dial whose needle swings either side of zero.
-    out += '<circle class="hd-wside" cx="' + cx + '" cy="' + bottom + '" r="17"/>';
-    const swing = coil.value * 1.0;
-    out += '<path class="sm-meterneedle" d="M' + cx + " " + (bottom + 8) + "L" + (cx + 15 * Math.sin(swing)).toFixed(1) + " " + (bottom + 8 - 15 * Math.cos(swing)).toFixed(1) + '"/>';
-    out += '<path class="sm-axis" d="M' + cx + " " + (bottom - 17) + "L" + cx + " " + (bottom - 12) + '"/>';
-  }
 
-  // The coil, edge-on, joined to the ring or rings.
+  // The coil, edge-on, joined to the two halves of the ring.
   out += '<path class="sm-coilline" d="M' + xy(pol(128, phi)) + "L" + xy(pol(128, phi + Math.PI)) + '"/>';
-  if (slip) {
-    // Two complete rings, really the same size and one behind the other.
-    // The far one (yellow, joined to the yellow side) is drawn larger so both can be seen.
-    out += '<circle class="sm-ring sm-ringbig" data-half="a" cx="' + cx + '" cy="' + cy + '" r="60"/>';
-    out += '<circle class="sm-ring sm-ringbig" data-half="b" cx="' + cx + '" cy="' + cy + '" r="34"/>';
-    // A mark on each ring so its turning can be seen, on the side its part of the coil joins.
-    out += '<path class="sm-ringmark" d="M' + xy(pol(52, phi)) + "L" + xy(pol(68, phi)) + '"/>';
-    out += '<path class="sm-ringmark" d="M' + xy(pol(26, phi + Math.PI)) + "L" + xy(pol(42, phi + Math.PI)) + '"/>';
-    out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="12"/>';
-    // Left brush on the outer (yellow) ring; right brush reaches over to the inner (copper) ring.
-    out += '<rect class="hd-wbrush" x="' + (cx - 106) + '" y="' + (cy - 15) + '" width="37" height="30"/>';
-    out += '<rect class="hd-wbrush" x="' + (cx + 43) + '" y="' + (cy - 15) + '" width="63" height="30"/>';
-  } else {
-    [0, 1].forEach((index) => {
-      const centre = phi + index * Math.PI;
-      let d = "";
-      for (let step = 0; step <= 24; step += 1) {
-        const angle = centre - RING.halfAngle + (2 * RING.halfAngle * step) / 24;
-        d += (step ? "L" : "M") + xy(pol(62, angle));
-      }
-      out += '<path class="sm-ring sm-ringbig" data-half="' + (index === 0 ? "a" : "b") + '" d="' + d + '"/>';
-    });
-    out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="12"/>';
-    [-1, 1].forEach((side) => {
-      const brushX = side < 0 ? cx - 106 : cx + 70;
-      out += '<rect class="hd-wbrush" x="' + brushX + '" y="' + (cy - 15) + '" width="36" height="30"/>';
-    });
-  }
+  [0, 1].forEach((index) => {
+    const centre = phi + index * Math.PI;
+    let d = "";
+    for (let step = 0; step <= 24; step += 1) {
+      const angle = centre - RING.halfAngle + (2 * RING.halfAngle * step) / 24;
+      d += (step ? "L" : "M") + xy(pol(62, angle));
+    }
+    out += '<path class="sm-ring sm-ringbig" data-half="' + (index === 0 ? "a" : "b") + '" d="' + d + '"/>';
+  });
+  out += '<circle class="hd-wshaft" cx="' + cx + '" cy="' + cy + '" r="12"/>';
 
-  // The two long sides with their currents, and forces (motor) or motion (generator).
+  // The two long sides with their currents and forces.
   [0, 1].forEach((index) => {
     const psi = phi + index * Math.PI;
     const current = index === 0 ? sideA : -sideA;
     const at = pol(128, psi);
     out += '<circle class="hd-wside" data-side="' + (index === 0 ? "a" : "b") + '" cx="' + at[0].toFixed(1) + '" cy="' + at[1].toFixed(1) + '" r="11"/>';
-    if (slip) {
-      const way = tangent(psi);
-      const fromX = at[0] + way[1] * state.turnWay * 15;
-      const fromY = at[1] - way[2] * state.turnWay * 15;
-      const toX = at[0] + way[1] * state.turnWay * 46;
-      const toY = at[1] - way[2] * state.turnWay * 46;
-      const turn = (Math.atan2(toY - fromY, toX - fromX) * 180) / Math.PI;
-      out += '<path class="sm-motionline" d="M' + fromX.toFixed(1) + " " + fromY.toFixed(1) + "L" + toX.toFixed(1) + " " + toY.toFixed(1) + '"/>';
-      out += '<path class="sm-motionhead" transform="translate(' + toX.toFixed(1) + " " + toY.toFixed(1) + ") rotate(" + turn.toFixed(1) + ')" d="M6 0L-4 -5L-4 5Z"/>';
-    }
     if (live === 0) {
       return;
     }
@@ -682,13 +480,11 @@ function ringSvg(state) {
     } else {
       out += '<path class="hd-wcross" d="M' + (at[0] - 6).toFixed(1) + " " + (at[1] - 6).toFixed(1) + 'l12 12m0 -12l-12 12"/>';
     }
-    if (!slip) {
-      const up = current * state.magnets;
-      const startY = at[1] - up * 15;
-      const endY = at[1] - up * 50;
-      out += '<path class="hd-wforce" d="M' + at[0].toFixed(1) + " " + startY.toFixed(1) + "L" + at[0].toFixed(1) + " " + endY.toFixed(1) + '"/>';
-      out += '<path class="hd-wforcehead" transform="translate(' + at[0].toFixed(1) + " " + endY.toFixed(1) + ") rotate(" + (up > 0 ? -90 : 90) + ')" d="M6 0L-4 -5L-4 5Z"/>';
-    }
+    const up = current * state.magnets;
+    const startY = at[1] - up * 15;
+    const endY = at[1] - up * 50;
+    out += '<path class="hd-wforce" d="M' + at[0].toFixed(1) + " " + startY.toFixed(1) + "L" + at[0].toFixed(1) + " " + endY.toFixed(1) + '"/>';
+    out += '<path class="hd-wforcehead" transform="translate(' + at[0].toFixed(1) + " " + endY.toFixed(1) + ") rotate(" + (up > 0 ? -90 : 90) + ')" d="M6 0L-4 -5L-4 5Z"/>';
     out += "</g>";
   });
   return out;
@@ -713,10 +509,6 @@ const motor = {
   slider: document.getElementById("angle"),
   sliderOut: document.getElementById("angle-out"),
   batteryButton: document.getElementById("battery"),
-  forcesButton: document.getElementById("show-forces"),
-  designButtons: [...document.querySelectorAll("button[data-design]")],
-  design: "split", // "split": DC motor with a split ring.  "slip": AC generator with slip rings.
-  turnWay: 1, // generator only: +1 turned anticlockwise (seen from the ring end), -1 clockwise
   magnetButton: document.getElementById("magnets"),
   toggles: [...document.querySelectorAll("button[data-show]")],
   view: { azimuth: 38, elevation: 30, scale: 2.35, centre: [10, 0, -20], width: 860, height: 560 },
@@ -739,39 +531,23 @@ function draw() {
   motor.ring.innerHTML = ringSvg(motor);
 
   const degrees = Math.round((((motor.phi % TURN) + TURN) % TURN) / TURN * 360) % 360;
-  if (motor.design === "slip") {
-    // Generator readouts.
-    const value = coilState(motor).value;
-    const share = Math.round(Math.abs(value) * 100);
-    let text = degrees + "° · current " + share + "% of its largest";
-    if (share < 3) {
-      text = degrees + "° · coil upright: sides moving along the field, no current";
-    }
-    let turned = "turned anticlockwise";
-    if (motor.turnWay < 0) {
-      turned = "turned clockwise";
-    }
-    motor.readouts[0].textContent = text;
-    motor.readouts[1].textContent = "seen from the ring end · " + turned;
-    motor.readouts[2].textContent = degrees + "° · each ring on its own brush";
-  } else {
-    // Motor readouts.
-    const effect = turningEffect(motor.phi, motor.battery, motor.magnets);
-    const share = Math.round(Math.abs(effect) * 100);
-    let way = "anticlockwise";
-    if (motor.battery * motor.magnets < 0) {
-      way = "clockwise";
-    }
-    let text = degrees + "° · turning effect " + share + "% · " + way;
-    let contact = "each half of the ring on a brush";
-    if (brushContact(motor.phi) === 0) {
-      text = degrees + "° · brushes over the gaps: no current, no force";
-      contact = "brushes over the gaps";
-    }
-    motor.readouts[0].textContent = text;
-    motor.readouts[1].textContent = "seen from the commutator end · " + way;
-    motor.readouts[2].textContent = degrees + "° · " + contact;
+  const effect = turningEffect(motor.phi, motor.battery, motor.magnets);
+  const share = Math.round(Math.abs(effect) * 100);
+  let way = "anticlockwise";
+  if (motor.battery * motor.magnets < 0) {
+    way = "clockwise";
   }
+  let text = degrees + "° · turning effect " + share + "% · " + way;
+  if (brushContact(motor.phi) === 0) {
+    text = degrees + "° · brushes over the gaps: no current, no force";
+  }
+  motor.readouts[0].textContent = text;
+  motor.readouts[1].textContent = "seen from the commutator end · " + way;
+  let contact = "each half of the ring on a brush";
+  if (brushContact(motor.phi) === 0) {
+    contact = "brushes over the gaps";
+  }
+  motor.readouts[2].textContent = degrees + "° · " + contact;
   motor.slider.value = String(degrees);
   motor.sliderOut.textContent = degrees + "°";
   motor.dirty = false;
@@ -788,61 +564,29 @@ function setSpinning(on) {
 
 // Show one stage of the step-through and send the coil to its angle.
 function showStage(index) {
-  const stages = stagesFor(motor);
   motor.stageIndex = index;
   if (index < 0) {
     motor.target = null;
     motor.stepCount.textContent = "Step-through";
-    if (motor.design === "slip") {
-      motor.stepTitle.textContent = "One full turn, stage by stage";
-      motor.stepBody.textContent = "Press Next to stop the generator and walk through what the slip rings do. All three figures move together.";
-    } else {
-      motor.stepTitle.textContent = "One half turn, stage by stage";
-      motor.stepBody.textContent = "Press Next to stop the motor and walk through what the split ring does. All three figures move together.";
-    }
+    motor.stepTitle.textContent = "One half turn, stage by stage";
+    motor.stepBody.textContent = "Press Next to stop the motor and walk through what the split ring does. All three figures move together.";
     motor.stepBack.disabled = true;
     motor.stepNext.disabled = false;
     return;
   }
-  // The explanations assume the cell, the magnets and the turning are all the normal way round.
+  // The explanations assume the cell and magnets are the normal way round.
   motor.battery = 1;
   motor.magnets = 1;
-  motor.turnWay = 1;
   motor.batteryButton.setAttribute("aria-pressed", "false");
   motor.magnetButton.setAttribute("aria-pressed", "false");
   setSpinning(false);
-  const stageNow = stages[index];
+  const stageNow = STAGES[index];
   motor.target = stageNow.angle * DEG;
-  motor.stepCount.textContent = "Stage " + (index + 1) + " of " + stages.length + " · coil at " + stageNow.angle + "°";
+  motor.stepCount.textContent = "Stage " + (index + 1) + " of " + STAGES.length + " · coil at " + stageNow.angle + "°";
   motor.stepTitle.textContent = stageNow.title;
   motor.stepBody.textContent = stageNow.body;
   motor.stepBack.disabled = index === 0;
-  motor.stepNext.disabled = index === stages.length - 1;
-  motor.dirty = true;
-}
-
-// Switch between the DC motor (split ring) and the AC generator (slip rings).
-function setDesign(name) {
-  motor.design = name;
-  motor.speed = 0;
-  motor.designButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", button.dataset.design === name ? "true" : "false");
-  });
-  // Some controls mean something different for each machine.
-  if (name === "slip") {
-    motor.batteryButton.textContent = "Reverse turning";
-    motor.batteryButton.setAttribute("aria-pressed", motor.turnWay < 0 ? "true" : "false");
-    motor.forcesButton.textContent = "Motion";
-  } else {
-    motor.batteryButton.textContent = "Reverse cell";
-    motor.batteryButton.setAttribute("aria-pressed", motor.battery < 0 ? "true" : "false");
-    motor.forcesButton.textContent = "Forces";
-  }
-  // Show the notes that belong to this machine.
-  document.querySelectorAll("[data-for]").forEach((block) => {
-    block.hidden = block.dataset.for !== name;
-  });
-  showStage(-1);
+  motor.stepNext.disabled = index === STAGES.length - 1;
   motor.dirty = true;
 }
 
@@ -865,12 +609,7 @@ function step(dt) {
     }
     motor.dirty = true;
   }
-  if (motor.spinning && motor.design === "slip") {
-    // Generator: someone turns the handle at a steady speed.
-    motor.phi += motor.turnWay * 1.5 * dt;
-    motor.dirty = true;
-  }
-  if (motor.spinning && motor.design !== "slip") {
+  if (motor.spinning) {
     // The turning effect speeds the coil up; friction slows it down.
     // So it surges twice a turn and coasts through the upright position.
     const push = 4.1 * turningEffect(motor.phi, motor.battery, motor.magnets);
@@ -893,7 +632,7 @@ motor.spinButton.addEventListener("click", () => {
 });
 
 motor.stepNext.addEventListener("click", () => {
-  showStage(Math.min(stagesFor(motor).length - 1, motor.stageIndex + 1));
+  showStage(Math.min(STAGES.length - 1, motor.stageIndex + 1));
 });
 
 motor.stepBack.addEventListener("click", () => {
@@ -909,21 +648,9 @@ motor.slider.addEventListener("input", () => {
 });
 
 motor.batteryButton.addEventListener("click", () => {
-  // Motor: turn the cell round.  Generator: turn the handle the other way.
-  if (motor.design === "slip") {
-    motor.turnWay = -motor.turnWay;
-    motor.batteryButton.setAttribute("aria-pressed", motor.turnWay < 0 ? "true" : "false");
-  } else {
-    motor.battery = -motor.battery;
-    motor.batteryButton.setAttribute("aria-pressed", motor.battery < 0 ? "true" : "false");
-  }
+  motor.battery = -motor.battery;
+  motor.batteryButton.setAttribute("aria-pressed", motor.battery < 0 ? "true" : "false");
   motor.dirty = true;
-});
-
-motor.designButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setDesign(button.dataset.design);
-  });
 });
 
 motor.magnetButton.addEventListener("click", () => {
@@ -1003,11 +730,11 @@ function frame(now) {
 }
 
 // Test hook: lets a check script pose the model directly.
-window.__motor = { motor, setSpinning, draw, showStage, setDesign };
+window.__motor = { motor, setSpinning, draw, showStage };
 
 if (calm.matches) {
   setSpinning(false);
 }
-setDesign("split");
+showStage(-1);
 draw();
 requestAnimationFrame(frame);

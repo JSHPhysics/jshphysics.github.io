@@ -49,21 +49,20 @@ const stage = (id, width, height, label, flat) =>
 
 const plate1 = k.plateHtml({
   fig: "Fig 1",
-  title: "Coil, magnets and rings",
+  title: "Simple DC motor",
   hint: "Drag to turn it round",
   readout: "",
   keys: [
     { mark: "red", label: "North pole" },
     { mark: "blue", label: "South pole" },
     { mark: "dashed", label: "Magnetic field, N to S" },
-    { mark: "green", label: "Force on each long side (motor)" },
+    { mark: "green", label: "Force on each long side of the coil" },
   ],
   caption:
-    "One side of the coil and the ring it joins are coloured yellow so you can follow them round. The white arrowheads show conventional current. In the generator, the orange arrows show which way each long side is moving, and the box on the board is a meter.",
+    "One side of the coil and its half of the split ring are coloured yellow so you can follow them round. The white arrowheads show conventional current. The dashed lines are the magnetic field, from N to S.",
   body:
-    stage("stage1", 860, 560, "A model on a baseboard that you can turn round. A rectangular coil sits on an axle between a north and a south magnet. As a DC motor, the ends of the coil join the two halves of a split-ring commutator and leads run from two brushes to a cell. As an AC generator, the ends join two separate slip rings, each with its own brush, and the leads run to a meter. Arrow keys turn the view; space starts and stops it.") +
+    stage("stage1", 860, 560, "A simple DC motor on a baseboard that you can turn round. A rectangular coil sits on an axle between a north and a south magnet. The ends of the coil join the two halves of a split-ring commutator, which two brushes touch. Leads run from the brushes to a cell. Arrow keys turn the view; space starts and stops the motor.") +
     `<div class="hd-controls">` +
-    `<div class="hd-group" role="group" aria-label="Machine"><span>Machine</span><button type="button" id="design-split" data-design="split" aria-pressed="true">DC motor · split ring</button><button type="button" id="design-slip" data-design="slip" aria-pressed="false">AC generator · slip rings</button></div>` +
     `<div class="hd-group"><button type="button" id="spin" aria-pressed="true">Pause</button><button type="button" id="battery" aria-pressed="false">Reverse cell</button><button type="button" id="magnets" aria-pressed="false">Swap magnets</button></div>` +
     `<label class="hd-slider" for="angle"><span>Coil</span><input type="range" id="angle" min="0" max="359" step="1" value="0"><output id="angle-out" for="angle">0°</output></label>` +
     `<div class="hd-group" role="group" aria-label="Show"><span>Show</span><button type="button" id="show-current" data-show="showCurrent" aria-pressed="true">Current</button><button type="button" id="show-forces" data-show="showForces" aria-pressed="true">Forces</button><button type="button" id="show-field" data-show="showField" aria-pressed="true">Field</button><button type="button" id="show-labels" data-show="labels" aria-pressed="true">Labels</button></div>` +
@@ -76,27 +75,27 @@ const plate2 = k.plateHtml({
   hint: "Turns with Fig 1",
   readout: "",
   keys: [
-    { mark: "green", label: "Force (motor), and the graph line" },
+    { mark: "green", label: "Force, and the size of the turning effect" },
     { mark: "red", label: "North pole" },
     { mark: "blue", label: "South pole" },
   ],
   caption:
-    "The view from the ring end of the axle. A dot is current coming towards you, a cross is current going away. The graph shows one turn: the turning effect for the motor, or the current through the meter for the generator.",
+    "The view from the commutator end. A dot is current coming towards you, a cross is current going away. The graph shows how the turning effect changes over one turn.",
   body: stage("stage2", 460, 460, "The motor seen along its axle from the commutator end, with a north magnet on one side and a south magnet on the other. The coil appears as a line with a circle at each end showing the current direction, a force arrow on each, the split ring in the middle and a brush on each side. Below it, a graph of turning effect against coil angle rises and falls twice per turn, dropping to zero while the coil is within 10 degrees of upright.", true),
 });
 
 const plate3 = k.plateHtml({
   fig: "Fig 3",
-  title: "The rings, step by step",
+  title: "The split ring, step by step",
   hint: "Next and Back move all three figures",
   readout: "",
   keys: [
-    { mark: "lit", label: "Yellow ring or half-ring: joined to the yellow side of the coil" },
-    { mark: "raised", label: "Copper ring or half-ring: joined to the other side" },
-    { mark: "green", label: "Force (motor)" },
+    { mark: "lit", label: "Yellow half-ring: joined to the yellow side of the coil" },
+    { mark: "raised", label: "Copper half-ring: joined to the other side" },
+    { mark: "green", label: "Force" },
   ],
   caption:
-    "A close-up from the same end as Fig 2. The rings turn with the coil; the brushes and their leads stay still. The arrowheads on the leads show conventional current. The two slip rings are really the same size, one behind the other. The far one is drawn larger so you can see both.",
+    "A close-up of the split-ring commutator from the same end as Fig 2. The ring turns with the coil; the two brushes and their leads stay still. The arrowheads on the leads show conventional current.",
   body:
     `<div class="sm-stepper">` +
     stage("stage3", 460, 410, "Close-up of the split-ring commutator seen along the axle. Two half-rings, one yellow and one copper, turn with the coil between a fixed positive brush and a fixed negative brush. Circles at the ends of the coil show the current direction in each side, with a force arrow on each.", true) +
@@ -165,8 +164,8 @@ function pageBody(target) {
 <header class="hd-head">
 ${back}
 <p class="hd-eyebrow">JSHPhysics · Electricity and magnetism</p>
-<h1>The simple motor and generator</h1>
-<p class="hd-lede">One coil of wire between two magnets makes a DC motor with a split ring, or an AC generator with slip rings. Switch between the two, run each one, and step through what the rings do. The loudspeaker at the end uses the same force to make sound.</p>
+<h1>The simple motor and loudspeaker</h1>
+<p class="hd-lede">One coil of wire, two magnets, and a split ring that swaps the connections every half turn. Run it, turn it by hand, then reverse the cell or swap the magnets and predict which way it will go. The loudspeaker at the end uses the same force to make sound.</p>
 </header>
 ${plate1}
 <section class="hd-notes" data-for="split" aria-label="How the motor works">
@@ -175,12 +174,6 @@ ${plate1}
 <div><h2>The split ring</h2><p>Each half of the ring is joined to one side of the coil and turns with it. The brushes stay still. Every half turn the two halves swap brushes, so the current in the coil reverses and the side that is now on the left is still pushed the same way.</p></div>
 <div><h2>Why it needs the split ring</h2><p>Without it, the yellow side would be pushed up on one side of the axle and still pushed up on the other, which would turn the coil back again. It would rock to the upright position and stop.</p></div>
 </section>
-<section class="hd-notes" data-for="slip" aria-label="How the generator works" hidden>
-<div><h2>The generator effect</h2><p>Turn a coil in a magnetic field and its long sides cut across the field. That induces a potential difference across the ends of the coil, and a current if the circuit is complete. There is no cell: the energy comes from whoever turns the handle.</p></div>
-<div><h2>Fleming's right-hand rule</h2><p>First finger along the field (N to S), thumb along the motion, and the second finger gives the induced current. Pause it, pick a side of the coil, and check the orange motion arrow and the white arrowhead against your hand.</p></div>
-<div><h2>Slip rings</h2><p>Two complete rings, one joined to each end of the coil. Each ring always touches the same brush. Whatever the coil produces is passed straight on to the circuit, with nothing swapped.</p></div>
-<div><h2>Why the current alternates</h2><p>Each long side moves up through the field for half a turn and down through it for the other half. The current induced in it reverses each time, so the current through the meter goes one way, then the other.</p></div>
-</section>
 ${plate2}
 ${plate3}
 <section class="hd-notes" data-for="split" aria-label="Turning effect">
@@ -188,25 +181,6 @@ ${plate3}
 <div><h2>The dead zone</h2><p>Near upright, each brush is over a gap in the split ring. The circuit is broken, no current flows, and the force arrows disappear. A running motor coasts through on its own momentum, then the brushes meet the other halves of the ring and the forces return. Stop it in the dead zone and it will not start again without a push.</p></div>
 <div><h2>Reversing it</h2><p>Reverse the cell and the current in each side reverses, so both forces reverse. Swap the magnets and the field reverses, with the same result. Do both and the motor turns the original way.</p></div>
 <div><h2>Making it better</h2><p>More turns on the coil, a larger current or stronger magnets all give a larger force. Real motors also use several coils at different angles, so there is never a dead spot.${sibling}</p></div>
-</section>
-<section class="hd-notes" data-for="slip" aria-label="Size of the current" hidden>
-<div><h2>Largest when flat</h2><p>The induced current depends on how fast the sides cut across the field. When the coil is flat the sides are moving straight across it, so the current is largest.</p></div>
-<div><h2>Zero when upright</h2><p>When the coil is upright the sides are moving along the field lines and not cutting them, so for a moment nothing is induced. Unlike the motor's dead zone, nothing is disconnected.</p></div>
-<div><h2>Reversing it</h2><p>Turn the coil the other way and every current reverses. Swap the magnets and the same thing happens. Do both and the current is back the way it started.</p></div>
-<div><h2>Making it bigger</h2><p>Turn the coil faster, use stronger magnets or put more turns on the coil. Turning it faster also raises the frequency: more cycles each second.</p></div>
-</section>
-<section class="sm-compare" aria-label="Split ring and slip rings compared">
-<h2>Split ring or slip rings?</h2>
-<div class="sm-tablewrap"><table>
-<thead><tr><th scope="col"></th><th scope="col">Split-ring commutator</th><th scope="col">Slip rings</th></tr></thead>
-<tbody>
-<tr><th scope="row">What it is</th><td>One ring cut into two halves, with a gap between them</td><td>Two complete rings, side by side on the axle</td></tr>
-<tr><th scope="row">Joined to the coil</th><td>One half to each end of the coil</td><td>One ring to each end of the coil</td></tr>
-<tr><th scope="row">At the brushes</th><td>The halves swap brushes every half turn</td><td>Each ring stays on its own brush</td></tr>
-<tr><th scope="row">What that does</th><td>Reverses the connection to the coil every half turn</td><td>Passes the coil's current on unchanged</td></tr>
-<tr><th scope="row">Found in</th><td>DC motor; dynamo (DC generator)</td><td>AC generator (alternator)</td></tr>
-</tbody>
-</table></div>
 </section>
 <h2 class="ind-part"><span>Also the motor effect</span>The loudspeaker</h2>
 ${plate4}
@@ -227,7 +201,7 @@ const moduleScript = `<script type="module">${script.replace(/<\/(script)/gi, "<
 const style = `<style>${k.ISO_CSS}${css}</style>`;
 
 // 1. The artifact: a fragment, wrapped by the viewer.
-const body = `<title>Simple Motor and Generator</title>
+const body = `<title>Simple Motor and Loudspeaker</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 ${FONTS}
 ${style}
@@ -241,8 +215,8 @@ const sitePage = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Simple Motor and Generator · JSHPhysics</title>
-<meta name="description" content="Interactive 3D model of the simple DC motor (split ring) and AC generator (slip rings), with current, field and force arrows and a step-by-step guide to the rings, plus a moving-coil loudspeaker.">
+<title>Simple Motor and Loudspeaker · JSHPhysics</title>
+<meta name="description" content="Interactive 3D models of the simple DC motor, with a step-by-step guide to its split-ring commutator, and the moving-coil loudspeaker.">
 <meta name="author" content="Joshua Stafford-Haworth (JSHPhysics)">
 <script>
 // Use the theme chosen on the gallery page, if there is one.
@@ -280,7 +254,7 @@ mkdirSync(join(HERE, "site"), { recursive: true });
 writeFileSync(join(HERE, "site", "index.html"), sitePage);
 
 // 3. Test pages.  A hash such as #phi=0.5&az=120&el=25&battery=-1&magnets=-1 poses the model for a screenshot.
-const poser = `<script>addEventListener("load",()=>setTimeout(()=>{const h=window.__motor;if(!h)return;const q=new URLSearchParams(location.hash.slice(1));const m=h.motor;if(q.has("phi")){h.setSpinning(false);m.phi=Number(q.get("phi"))}if(q.has("az"))m.view.azimuth=Number(q.get("az"));if(q.has("el"))m.view.elevation=Number(q.get("el"));if(q.has("battery"))m.battery=Number(q.get("battery"));if(q.has("magnets"))m.magnets=Number(q.get("magnets"));if(q.has("design"))h.setDesign(q.get("design"));const s=window.__speaker;if(s&&q.has("spk")){s.setSpeakerPlaying(false);s.spk.current=Number(q.get("spk"));s.spk.dirty=true}if(s&&q.has("spkaz")){s.spk.view.azimuth=Number(q.get("spkaz"));s.spk.dirty=true}if(q.has("stage"))h.showStage(Number(q.get("stage")));m.dirty=true},300))</script>`;
+const poser = `<script>addEventListener("load",()=>setTimeout(()=>{const h=window.__motor;if(!h)return;const q=new URLSearchParams(location.hash.slice(1));const m=h.motor;if(q.has("phi")){h.setSpinning(false);m.phi=Number(q.get("phi"))}if(q.has("az"))m.view.azimuth=Number(q.get("az"));if(q.has("el"))m.view.elevation=Number(q.get("el"));if(q.has("battery"))m.battery=Number(q.get("battery"));if(q.has("magnets"))m.magnets=Number(q.get("magnets"));const s=window.__speaker;if(s&&q.has("spk")){s.setSpeakerPlaying(false);s.spk.current=Number(q.get("spk"));s.spk.dirty=true}if(s&&q.has("spkaz")){s.spk.view.azimuth=Number(q.get("spkaz"));s.spk.dirty=true}if(q.has("stage"))h.showStage(Number(q.get("stage")));m.dirty=true},300))</script>`;
 for (const theme of ["light", "dark"]) {
   const page = `<!doctype html><html lang="en" data-theme="${theme}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0;font:14px system-ui,sans-serif}[hidden]{display:none!important}</style></head><body>${body}${poser}</body></html>`;
   writeFileSync(join(HERE, `test-${theme}.html`), page);

@@ -137,12 +137,12 @@
       "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
     },
     {
-      "title": "Simple Motor and Generator",
+      "title": "Simple Motor and Loudspeaker",
       "url": "https://jshphysics.github.io/simple-motor/",
       "section": "simulations",
       "category": "Magnetism",
-      "description": "The school DC motor and AC generator as one 3D model: a single coil between two magnets, with a split-ring commutator or a pair of slip rings. Run it, turn it by hand, reverse the cell or swap the magnets, and step through what the rings do stage by stage. A moving-coil loudspeaker, cut in half to show its W-shaped magnet, sits at the end.",
-      "pedagogy": "Split rings and slip rings are easy to confuse because students usually meet them as two separate static diagrams. Here the same coil and magnets carry both, so the only thing that changes is the rings, and the comparison is direct. One side of the coil is coloured so it can be followed through the half-turn where the split ring swaps the connections. The 3D model, the end-on exam view and the close-up of the rings move together, so students can check Fleming's left-hand or right-hand rule on whichever view they find easier, and the force arrows vanish in the dead zone rather than pretending the turning effect is constant.",
+      "description": "The school DC motor as a 3D model: a single coil between two magnets with a split-ring commutator. Run it, turn it by hand, reverse the cell or swap the magnets, and step through what the split ring does stage by stage. A moving-coil loudspeaker, cut in half to show its W-shaped magnet, sits at the end.",
+      "pedagogy": "The split ring is the part of the motor students find hardest, because a static diagram cannot show the moment the connections swap. One side of the coil is coloured so it can be followed through that half-turn, and a step-through walks the stages one at a time with the 3D model, the end-on exam view and a close-up of the ring all moving together. Students can check Fleming's left-hand rule on whichever view they find easier, and the force arrows vanish in the dead zone rather than pretending the turning effect is constant. The loudspeaker follows as a second use of the same force, cut open so the coil in the magnet's gap is visible.",
       "image": "simple-motor.png",
       "tags": ["GCSE", "A-Level", "Magnetism", "Electricity"]
     },
