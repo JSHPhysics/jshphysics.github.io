@@ -41,7 +41,7 @@ const css = read("page.css")
   .replace("/*LIGHT*/", LIGHT + LIGHT_EXTRA)
   .replaceAll("/*DARK*/", DARK + DARK_EXTRA);
 
-const script = read("geom.mjs").replace(/^export /gm, "") + "\n" + read("motor.js");
+const script = read("geom.mjs").replace(/^export /gm, "") + "\n" + read("motor.js") + "\n" + read("speaker.js");
 
 // An empty drawing that the page script fills in.
 const stage = (id, width, height, label, flat) =>
@@ -105,6 +105,45 @@ const plate3 = k.plateHtml({
     `</div>`,
 });
 
+const plate4 = k.plateHtml({
+  fig: "Fig 4",
+  title: "Loudspeaker, cut in half",
+  hint: "Drag to turn it round",
+  readout: "",
+  keys: [
+    { mark: "red", label: "North pole (centre)" },
+    { mark: "blue", label: "South pole (outer ring)" },
+    { mark: "dashed", label: "Magnetic field in the gap" },
+    { mark: "green", label: "Force on the coil" },
+  ],
+  caption:
+    "A moving-coil loudspeaker sliced down the middle. The magnet's cut face is a W on its side: a centre pole inside an outer ring. The coil sits in the gap round the centre pole and is fixed to the paper cone. The motion is drawn far slower than a real speaker.",
+  body:
+    stage("stage4", 860, 520, "A loudspeaker cut in half that you can turn round. A magnet with a centre north pole and an outer south ring has a coil in the gap round the centre pole. The coil is wound on a light tube joined to a paper cone, whose outer edge hangs from a fixed rim. Leads run from the coil to a signal source. Arrow keys turn the view; space starts and stops it.") +
+    `<div class="hd-controls">` +
+    `<div class="hd-group"><button type="button" id="spk-play" aria-pressed="true">Pause</button></div>` +
+    `<div class="hd-group" role="group" aria-label="Pitch"><span>Pitch</span><button type="button" id="pitch-low" data-pitch="low" aria-pressed="true">Low</button><button type="button" id="pitch-high" data-pitch="high" aria-pressed="false">High</button></div>` +
+    `<div class="hd-group" role="group" aria-label="Volume"><span>Volume</span><button type="button" id="volume-quiet" data-volume="0.5" aria-pressed="true">Quiet</button><button type="button" id="volume-loud" data-volume="1" aria-pressed="false">Loud</button></div>` +
+    `<label class="hd-slider" for="spk-current"><span>Current by hand</span><input type="range" id="spk-current" min="-100" max="100" step="1" value="0"></label>` +
+    `<div class="hd-group" role="group" aria-label="Show"><span>Show</span><button type="button" id="spk-show-current" data-spk-show="showCurrent" aria-pressed="true">Current</button><button type="button" id="spk-show-forces" data-spk-show="showForces" aria-pressed="true">Forces</button><button type="button" id="spk-show-field" data-spk-show="showField" aria-pressed="true">Field</button><button type="button" id="spk-show-labels" data-spk-show="labels" aria-pressed="true">Labels</button></div>` +
+    `</div>`,
+});
+
+const plate5 = k.plateHtml({
+  fig: "Fig 5",
+  title: "Cross-section, with the signal",
+  hint: "Moves with Fig 4",
+  readout: "",
+  keys: [
+    { mark: "green", label: "Force on the coil, and the graph line" },
+    { mark: "red", label: "North pole" },
+    { mark: "blue", label: "South pole" },
+  ],
+  caption:
+    "The same cut face, flat on. Each turn of the coil shows as a circle above and below the centre pole. A dot is current coming towards you, a cross is current going away. The curved lines to the right are the sound leaving the cone.",
+  body: stage("stage5", 460, 430, "Cross-section of the loudspeaker. The magnet is a W shape on its side with a north pole in the middle and south poles outside. The coil appears as circles in the two gaps, with dots and crosses for the current and an arrow for the force. The cone flares out to the right. Below, a graph shows the alternating current in the coil against time.", true),
+});
+
 // The equations.  The artifact uses the browser's built-in MathML; the site copy uses the shared KaTeX.
 const TEX = {
   force: "F = BIL",
@@ -127,7 +166,7 @@ function pageBody(target) {
 ${back}
 <p class="hd-eyebrow">JSHPhysics · Electricity and magnetism</p>
 <h1>The simple motor and generator</h1>
-<p class="hd-lede">One coil of wire between two magnets makes a DC motor with a split ring, or an AC generator with slip rings. Switch between the two, run each one, and step through what the rings do.</p>
+<p class="hd-lede">One coil of wire between two magnets makes a DC motor with a split ring, or an AC generator with slip rings. Switch between the two, run each one, and step through what the rings do. The loudspeaker at the end uses the same force to make sound.</p>
 </header>
 ${plate1}
 <section class="hd-notes" data-for="split" aria-label="How the motor works">
@@ -169,6 +208,17 @@ ${plate3}
 </tbody>
 </table></div>
 </section>
+<h2 class="ind-part"><span>Also the motor effect</span>The loudspeaker</h2>
+${plate4}
+${plate5}
+<section class="hd-notes" aria-label="How the loudspeaker works">
+<div><h2>The same force, in a straight line</h2><p>The coil sits in the gap between the centre pole and the outer ring, where the field points outwards. The current runs round the coil, at right angles to that field, so the force on every part of the coil is along the axis:</p>${math("force")}<p>Use Fleming's left-hand rule on any circle in Fig 5 to check the arrow.</p></div>
+<div><h2>Why it vibrates</h2><p>The signal is an alternating current. Each time the current reverses, the force reverses, so the coil is pushed out, then pulled in. The cone is fixed to the coil and moves with it.</p></div>
+<div><h2>Making sound</h2><p>The moving cone pushes the air in front of it, squashing it and then stretching it. Those pressure changes travel away as a sound wave with the same frequency as the current.</p></div>
+<div><h2>Pitch and volume</h2><p>A higher frequency current makes the cone vibrate more times each second: a higher note. A larger current gives a larger force, so the cone moves further: a louder sound. Try the Pitch and Volume buttons.</p></div>
+<div><h2>A steady current</h2><p>Pause it and drag Current by hand. The cone moves to a new position and stays there. A steady current makes no sound, because the cone has to keep moving to make a wave.</p></div>
+<div><h2>Why the magnet is this shape</h2><p>With a centre pole inside a ring, the field crosses the gap in every direction outwards, so the whole length of the coil sits in the field and every part of it is pushed the same way.</p></div>
+</section>
 <footer class="hd-foot">Joshua Stafford-Haworth · JSHPhysics · @educatorJSH</footer>
 </div>`;
 }
@@ -192,7 +242,7 @@ const sitePage = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Simple Motor and Generator · JSHPhysics</title>
-<meta name="description" content="Interactive 3D model of the simple DC motor (split ring) and AC generator (slip rings), with current, field and force arrows and a step-by-step guide to the rings.">
+<meta name="description" content="Interactive 3D model of the simple DC motor (split ring) and AC generator (slip rings), with current, field and force arrows and a step-by-step guide to the rings, plus a moving-coil loudspeaker.">
 <meta name="author" content="Joshua Stafford-Haworth (JSHPhysics)">
 <script>
 // Use the theme chosen on the gallery page, if there is one.
@@ -230,7 +280,7 @@ mkdirSync(join(HERE, "site"), { recursive: true });
 writeFileSync(join(HERE, "site", "index.html"), sitePage);
 
 // 3. Test pages.  A hash such as #phi=0.5&az=120&el=25&battery=-1&magnets=-1 poses the model for a screenshot.
-const poser = `<script>addEventListener("load",()=>setTimeout(()=>{const h=window.__motor;if(!h)return;const q=new URLSearchParams(location.hash.slice(1));const m=h.motor;if(q.has("phi")){h.setSpinning(false);m.phi=Number(q.get("phi"))}if(q.has("az"))m.view.azimuth=Number(q.get("az"));if(q.has("el"))m.view.elevation=Number(q.get("el"));if(q.has("battery"))m.battery=Number(q.get("battery"));if(q.has("magnets"))m.magnets=Number(q.get("magnets"));if(q.has("design"))h.setDesign(q.get("design"));if(q.has("stage"))h.showStage(Number(q.get("stage")));m.dirty=true},300))</script>`;
+const poser = `<script>addEventListener("load",()=>setTimeout(()=>{const h=window.__motor;if(!h)return;const q=new URLSearchParams(location.hash.slice(1));const m=h.motor;if(q.has("phi")){h.setSpinning(false);m.phi=Number(q.get("phi"))}if(q.has("az"))m.view.azimuth=Number(q.get("az"));if(q.has("el"))m.view.elevation=Number(q.get("el"));if(q.has("battery"))m.battery=Number(q.get("battery"));if(q.has("magnets"))m.magnets=Number(q.get("magnets"));if(q.has("design"))h.setDesign(q.get("design"));const s=window.__speaker;if(s&&q.has("spk")){s.setSpeakerPlaying(false);s.spk.current=Number(q.get("spk"));s.spk.dirty=true}if(s&&q.has("spkaz")){s.spk.view.azimuth=Number(q.get("spkaz"));s.spk.dirty=true}if(q.has("stage"))h.showStage(Number(q.get("stage")));m.dirty=true},300))</script>`;
 for (const theme of ["light", "dark"]) {
   const page = `<!doctype html><html lang="en" data-theme="${theme}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0;font:14px system-ui,sans-serif}[hidden]{display:none!important}</style></head><body>${body}${poser}</body></html>`;
   writeFileSync(join(HERE, `test-${theme}.html`), page);
