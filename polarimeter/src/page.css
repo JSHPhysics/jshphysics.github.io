@@ -1,0 +1,541 @@
+/* Page and live-layer styles for the polarimeter. */
+
+/* Cream-and-ink paper in the light theme. */
+.iso[data-theme="light"] {
+  --anatomy-page: #f3eee3;
+  --anatomy-card: #fbf8f1;
+  --anatomy-face: #fffdf8;
+  --anatomy-top: #fffdf8;
+  --anatomy-shade-0: #ddd7c9;
+  --anatomy-shade-1: #e6e0d3;
+  --anatomy-shade-2: #eee9dd;
+  --anatomy-shade-3: #f5f1e7;
+  --pm-light: #d97706;
+  --pm-light-soft: #e8a23a;
+  --pm-plane: #7c2d12;
+  --pm-glass: #cfe6f2;
+  --pm-filter: #b9c4d6;
+  --pm-accent: #c2410c;
+}
+
+.iso {
+  --pm-light: #ffc247;
+  --pm-light-soft: #d49a2a;
+  --pm-plane: #fff1c9;
+  --pm-glass: #3b5563;
+  --pm-filter: #46536b;
+  --pm-accent: #ffa35c;
+  --anatomy-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+body {
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.iso-page {
+  margin: 10px auto 16px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.iso-figure {
+  margin: 0;
+}
+
+.iso-plate {
+  padding: 38px 10px 34px;
+}
+
+/* The figure never grows taller than the screen. */
+.iso-plate .iso-svg {
+  max-height: calc(100vh - 230px);
+  min-height: 240px;
+  /* When a step zooms in, the rest of the bench must not spill out of the card. */
+  overflow: hidden;
+}
+
+.iso-stage {
+  touch-action: none;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+
+.iso-stage:focus-visible {
+  box-shadow: 0 0 0 2px var(--pm-accent);
+}
+
+/* ---------- parts with their own colours ---------- */
+
+.iso-svg g[data-move] {
+  transition: opacity 0.25s;
+}
+
+.pm-bulb .iso-face,
+.pm-bulb path[class*="shade"],
+.pm-bulb path[class*="top"] {
+  fill: var(--pm-light-soft);
+}
+
+.pm-glass {
+  opacity: 0.6;
+}
+
+.pm-filter {
+  opacity: 0.72;
+}
+
+.pm-filter path[class*="top"],
+.pm-filter .iso-face {
+  fill: var(--pm-filter);
+}
+
+.pm-window {
+  fill: var(--pm-light);
+  stroke: var(--anatomy-hi);
+  stroke-width: 0.8;
+}
+
+.pm-glasswindow {
+  fill: var(--pm-glass);
+  fill-opacity: 0.7;
+  stroke: none;
+}
+
+.pm-tube {
+  fill: var(--pm-glass);
+  fill-opacity: 0.42;
+  stroke: none;
+}
+
+.pm-tube-edge {
+  fill: none;
+  stroke: var(--anatomy-hi);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.pm-shine {
+  fill: none;
+  stroke: #ffffff;
+  stroke-opacity: 0.75;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.pm-grain {
+  fill: none;
+  stroke: var(--anatomy-hi);
+  stroke-opacity: 0.55;
+  stroke-width: 0.6;
+  stroke-linecap: round;
+}
+
+/* ---------- the light ---------- */
+
+.pm-beam {
+  pointer-events: none;
+}
+
+.pm-ray {
+  fill: none;
+  stroke: var(--pm-light-soft);
+  stroke-width: 0.8;
+  stroke-opacity: 0.7;
+}
+
+.pm-wave {
+  fill: none;
+  stroke: var(--pm-light);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pm-wave-soft {
+  stroke-width: 1.1;
+  stroke-opacity: 0.75;
+}
+
+.pm-plane {
+  fill: none;
+  stroke: var(--pm-plane);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pm-pointer {
+  fill: none;
+  stroke: var(--pm-accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.pm-pointer-dot {
+  fill: var(--pm-accent);
+}
+
+/* ---------- numbered pins ---------- */
+
+.pm-pin path {
+  fill: none;
+  stroke: var(--anatomy-mid);
+  stroke-width: 0.8;
+}
+
+.pm-pin circle {
+  fill: var(--anatomy-card);
+  stroke: var(--anatomy-hi);
+  stroke-width: 0.9;
+}
+
+.pm-pin text {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: central;
+  fill: var(--anatomy-strong);
+  pointer-events: none;
+}
+
+.pm-pin-on circle {
+  fill: var(--pm-accent);
+  stroke: var(--pm-accent);
+}
+
+.pm-pin-on text {
+  fill: var(--anatomy-card);
+}
+
+/* ---------- under the card ---------- */
+
+.pins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 8px;
+}
+
+.pin-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 3px 11px 3px 4px;
+  border: 1px solid var(--anatomy-mid);
+  border-radius: 999px;
+  background: var(--anatomy-card);
+  color: var(--anatomy-text);
+  font: 500 13px "IBM Plex Sans", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.pin-chip b {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--anatomy-hi);
+  border-radius: 50%;
+  font: 500 11px "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.pin-chip[aria-pressed="true"] {
+  border-color: var(--pm-accent);
+  color: var(--anatomy-strong);
+}
+
+.pin-chip[aria-pressed="true"] b {
+  background: var(--pm-accent);
+  border-color: var(--pm-accent);
+  color: var(--anatomy-card);
+}
+
+.note {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--anatomy-muted);
+  max-width: 86ch;
+}
+
+/* ---------- panel ---------- */
+
+.panel {
+  display: grid;
+  gap: 10px;
+  color: var(--anatomy-text);
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--anatomy-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--anatomy-muted);
+}
+
+.panel h1 {
+  margin: 2px 0 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--anatomy-strong);
+}
+
+.walk {
+  padding: 10px 14px 12px;
+  border: 1px solid var(--anatomy-mid);
+  border-left: 3px solid var(--pm-accent);
+  background: var(--anatomy-card);
+}
+
+.walk-count {
+  margin: 0;
+  font-family: var(--anatomy-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--anatomy-muted);
+}
+
+.walk h2 {
+  margin: 1px 0 4px;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.2;
+  color: var(--anatomy-strong);
+}
+
+.walk-text {
+  margin: 0 0 8px;
+  min-height: 8.6em;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.walk-buttons,
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.plain {
+  min-height: 34px;
+  padding: 4px 12px;
+  border: 1px solid var(--anatomy-mid);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--anatomy-text);
+  font: 500 13px "IBM Plex Sans", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.plain:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.plain.primary {
+  min-width: 96px;
+  background: var(--anatomy-strong);
+  border-color: var(--anatomy-strong);
+  color: var(--anatomy-card);
+}
+
+.plain[aria-pressed="true"] {
+  border-color: var(--pm-accent);
+  color: var(--anatomy-strong);
+}
+
+.bench-controls {
+  display: grid;
+  gap: 6px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  min-height: 32px;
+  padding: 3px 10px;
+  border: 1px solid var(--anatomy-mid);
+  border-radius: 6px;
+  background: var(--anatomy-card);
+  color: var(--anatomy-strong);
+  font: 500 13.5px "IBM Plex Sans", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--anatomy-strong);
+  border-color: var(--anatomy-strong);
+  color: var(--anatomy-card);
+}
+
+.chip:focus-visible,
+.plain:focus-visible,
+.pin-chip:focus-visible {
+  outline: 2px solid var(--pm-accent);
+  outline-offset: 2px;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 96px 1fr 84px;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.slider input {
+  width: 100%;
+  accent-color: var(--pm-accent);
+}
+
+.slider output {
+  font-family: var(--anatomy-mono);
+  font-size: 12px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.view {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.eye {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 5px solid #1b1b1d;
+  box-sizing: border-box;
+  background: #000;
+}
+
+.view-label {
+  margin: 0;
+  font-family: var(--anatomy-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--anatomy-muted);
+}
+
+.view-number {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--anatomy-strong);
+  font-variant-numeric: tabular-nums;
+}
+
+.view-hint {
+  margin: 0;
+  font-size: 13px;
+  min-height: 1.5em;
+}
+
+.sum {
+  padding-top: 6px;
+  border-top: 1px solid var(--anatomy-mid);
+}
+
+.sum math {
+  font-size: 18px;
+  color: var(--anatomy-strong);
+}
+
+.sum math[display="block"] {
+  margin: 2px 0;
+  text-align: left;
+}
+
+.sum-line {
+  margin: 2px 0;
+}
+
+.sum-line math {
+  font-size: 16px;
+}
+
+.sum-note {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--anatomy-muted);
+}
+
+/* Narrow screens: the panel goes under the figure. */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .iso-plate .iso-svg {
+    max-height: 56vh;
+  }
+
+  .walk-text {
+    min-height: 0;
+  }
+}
+
+/* ---------- site build: iPad touch sizes and the link back to the gallery ---------- */
+
+.site-back {
+  display: inline-block;
+  margin: 0 0 6px;
+  font-family: var(--anatomy-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--anatomy-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--anatomy-mid);
+  padding-bottom: 2px;
+}
+
+.site-back:hover,
+.site-back:focus-visible {
+  color: var(--anatomy-strong);
+}
+
+.site .chip,
+.site .plain,
+.site .pin-chip {
+  min-height: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site .slider input {
+  height: 44px;
+  touch-action: manipulation;
+}
+
+.site .toggles label {
+  min-height: 44px;
+}
+
+.site .toggles input {
+  width: 22px;
+  height: 22px;
+}

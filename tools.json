@@ -5,7 +5,7 @@
     "fields": {
       "title": "Display name shown in large text on the card.",
       "url": "Full URL to the live tool (or release page / download link for desktop apps).",
-      "section": "One of \"simulations\", \"lessons\" (Cover Lessons) or \"tools\". Determines which page section the card appears in.",
+      "section": "One of \"simulations\", \"lessons\" (Cover Lessons), \"tools\" or \"chemistry\" (Chemistry Bits). Determines which page section the card appears in.",
       "category": "Short label shown above the title (e.g. \"Mechanics\", \"Nuclear\", \"Cipher\"). The \"NN / \" number prefix is added automatically.",
       "description": "1–2 sentences of body text. Plain text — no HTML.",
       "pedagogy": "Used by /pedagogy.html only. 2–4 sentences explaining why this tool is pedagogically powerful compared to traditional teaching of the same content. Name the cognitive mechanism or the specific traditional method being improved on. Plain text — no HTML.",
@@ -26,7 +26,7 @@
       ]
     },
     "orderingAndNumbering": "Cards are numbered (01, 02, 03…) automatically by CSS, based on document order. Reorder cards by reordering objects in this array. Numbering runs continuously across both sections (so if simulations has 3 entries, the first tool will be 04).",
-    "sectionsAvailable": ["simulations", "tools"]
+    "sectionsAvailable": ["simulations", "lessons", "tools", "chemistry"]
   },
   "tools": [
     {
@@ -343,6 +343,26 @@
         {"x": 67.34, "y": 63.19, "w": 2.03, "h": 2.9, "title": "Lessons flagged for depth", "note": ""}
       ],
       "tags": ["Teacher Tool"]
+    },
+    {
+      "title": "Shapes of Molecules",
+      "url": "https://jshphysics.github.io/molecule-shapes/",
+      "section": "chemistry",
+      "category": "Bonding",
+      "description": "A ball-and-stick molecule on a stand that turns and tilts. Fifteen molecules from two to six electron pairs, each with its shape name, its lone pairs shown, and a protractor that measures the angle between any two bonds you tap.",
+      "pedagogy": "Shapes of molecules are usually taught from flat wedge-and-dash drawings, which ask students to imagine the third dimension for themselves. Here the model can be turned and tilted, so a tetrahedron stops looking like a cross. Switching within one family swaps a bond for a lone pair while the others swing closer together, so the squeeze from 109.5° to 107° to 104.5° is seen happening instead of being memorised as three separate numbers. Every angle shown is measured from the model itself, and each shape lists the alternative names different exam boards use.",
+      "image": "molecule-shapes.png",
+      "tags": ["A-Level", "Chemistry"]
+    },
+    {
+      "title": "The Polarimeter",
+      "url": "https://jshphysics.github.io/polarimeter/",
+      "section": "chemistry",
+      "category": "Optical isomerism",
+      "description": "A polarimeter on an optical bench that can be taken apart and put back together. An eight-step walkthrough follows the light through the polariser, the sample and the analyser, then students turn the analyser themselves to measure the rotation for each enantiomer, a racemic mixture and sucrose.",
+      "pedagogy": "Most students never use a polarimeter, so 'rotates the plane of plane-polarised light' stays a phrase to recite. Here the plane is drawn as a wave that visibly twists along the sample tube, and the view through the eyepiece dims and brightens as the analyser is turned, so finding the dark point and reading the angle is something they do. Stepping from one enantiomer to its mirror image to the racemic mixture shows equal and opposite rotations and their cancelling as measurements, and the working line ties the reading to concentration and tube length.",
+      "image": "polarimeter.png",
+      "tags": ["A-Level", "Chemistry"]
     }
   ]
 }
