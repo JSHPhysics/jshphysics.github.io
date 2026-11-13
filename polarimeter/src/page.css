@@ -60,8 +60,9 @@ body {
 }
 
 .iso-stage {
-  touch-action: none;
-  cursor: ew-resize;
+  /* Sideways drags turn the bench; up-and-down is left for scrolling the page. */
+  touch-action: pan-y;
+  cursor: grab;
   user-select: none;
   -webkit-user-select: none;
   outline: none;

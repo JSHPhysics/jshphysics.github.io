@@ -1,8 +1,10 @@
 // Live layer of the polarimeter.
 // The build script puts these names in scope before this file:
-//   iso, cameraOf, translateAlong   (from the drawing kit)
+//   iso, cameraOf, towardViewer, translateAlong   (from the drawing kit)
 //   M                               (the physics, model.mjs)
-//   P, WIDTH, AXIS_Z, X, MOVES, PINS (the bench's dimensions and parts)
+//   SCENE                           (the part builders, scene.mjs)
+//   P                               (the camera now; it starts as the walkthrough's camera)
+//   WIDTH, HEIGHT, AXIS_Z, X, MOVES, PINS (the bench's dimensions and parts)
 
 const stage = document.querySelector(".iso-stage");
 const svg = stage.querySelector("svg");
@@ -26,6 +28,22 @@ const state = {
   focus: [], // families to highlight; empty means all
   step: 0,
 };
+
+// The camera: where the bench is seen from. The targets are what it eases to.
+const view = {
+  azimuth: SCENE.HOME.azimuth,
+  elevation: SCENE.HOME.elevation,
+  azimuthTarget: SCENE.HOME.azimuth,
+  elevationTarget: SCENE.HOME.elevation,
+  drawnAzimuth: SCENE.HOME.azimuth, // what the bench was last drawn for
+  drawnElevation: SCENE.HOME.elevation,
+  drawnApart: 0,
+};
+
+// True while the eyepiece end of the bench is the nearer end.
+function eyepieceEndNearer() {
+  return towardViewer(P)[0] >= 0;
+}
 
 function trueAlpha() {
   return M.rotation(state.sample, state.concentration);
@@ -114,9 +132,41 @@ function planeMarkup(x, angle, strength) {
   return '<path class="pm-plane" d="' + d + '"/>';
 }
 
-const beamGroups = [];
-for (let index = 0; index < 6; index++) {
-  beamGroups.push(svg.querySelector('[data-beam="' + index + '"]'));
+// These groups are replaced whenever the bench is redrawn from a new angle,
+// so bindScene() looks them up again each time.
+const sceneGroup = svg.querySelector('[data-part="scene"]');
+let beamGroups = [];
+let grainGroup = null;
+let pointerGroup = null;
+let pinGroup = null;
+let movers = [];
+
+function bindScene() {
+  beamGroups = [];
+  for (let index = 0; index < 6; index++) {
+    beamGroups.push(svg.querySelector('[data-beam="' + index + '"]'));
+  }
+  grainGroup = svg.querySelector('[data-live="grain"]');
+  pointerGroup = svg.querySelector('[data-live="pointer"]');
+  pinGroup = svg.querySelector('[data-live="pins"]');
+  movers = [];
+  for (const group of svg.querySelectorAll("[data-move]")) {
+    movers.push({ group: group, move: MOVES[group.dataset.move], family: group.dataset.family, progress: 0 });
+  }
+}
+
+bindScene();
+
+// Redraw every part for the camera's current angles.
+function redrawScene() {
+  // The picture makes room for the parts as they come apart.
+  const apart = smoothstep(state.apartTime);
+  P = SCENE.projectionFor(view.azimuth, view.elevation, apart);
+  sceneGroup.innerHTML = SCENE.build(P).join("");
+  bindScene();
+  view.drawnAzimuth = view.azimuth;
+  view.drawnElevation = view.elevation;
+  view.drawnApart = state.apartTime;
 }
 
 function unpolarisedMarkup(x0, x1, phase) {
@@ -171,13 +221,16 @@ function drawBeam(phase) {
 
 // ---------- the analyser's moving marks ----------
 
-const grainGroup = svg.querySelector('[data-live="grain"]');
-const pointerGroup = svg.querySelector('[data-live="pointer"]');
 
 function drawAnalyser() {
   // Fine lines on the filter show the direction it lets light oscillate in.
   const direction = 90 + state.reading;
-  const face = X.analyser + 4.5;
+  const nearer = eyepieceEndNearer();
+  // The grain is drawn on whichever face of the filter is towards the viewer.
+  let face = X.analyser + 3;
+  if (nearer) {
+    face = X.analyser + 4.5;
+  }
   let d = "";
   for (const offset of [-9, -6, -3, 0, 3, 6, 9]) {
     const reach = Math.sqrt(13 * 13 - offset * offset) - 0.8;
@@ -191,6 +244,11 @@ function drawAnalyser() {
   grainGroup.innerHTML = '<path class="pm-grain" d="' + d + '"/>';
 
   // The pointer on the collar reads against the fixed scale behind it.
+  // It is on the eyepiece side, so it cannot be seen from the lamp end.
+  if (!nearer) {
+    pointerGroup.innerHTML = "";
+    return;
+  }
   const collarFace = X.analyser + 9.5;
   const inner = onBeam(collarFace, state.reading, 11.5);
   const outer = onBeam(collarFace, state.reading, 18.5);
@@ -202,10 +260,6 @@ function drawAnalyser() {
 
 // ---------- taking it apart ----------
 
-const movers = [];
-for (const group of svg.querySelectorAll("[data-move]")) {
-  movers.push({ group: group, move: MOVES[group.dataset.move], family: group.dataset.family, progress: 0 });
-}
 
 function progressOf(name) {
   const move = MOVES[name];
@@ -233,7 +287,6 @@ function placeParts() {
 
 // ---------- the numbered pins ----------
 
-const pinGroup = svg.querySelector('[data-live="pins"]');
 
 function drawPins() {
   let out = "";
@@ -413,6 +466,12 @@ function aimZoom() {
 
 const STEPS = [
   {
+    title: "The whole instrument",
+    text: "This is a polarimeter. It measures how far a substance rotates plane-polarised light. Drag the bench to turn it, take it apart to see each piece, or tap a numbered part below the picture. Press Next to follow the light through it, one part at a time.",
+    focus: [], sample: "water", concentration: 0.5, reading: 90,
+    frame: null,
+  },
+  {
     title: "Light from the lamp",
     text: "A sodium lamp gives light of a single wavelength (589 nm), so all of it is rotated by the same amount. The lens makes the beam parallel. This light is unpolarised: it oscillates in every plane at right angles to its direction of travel.",
     focus: ["lamp", "lens"], sample: "water", concentration: 0.5, reading: 90,
@@ -470,6 +529,19 @@ const walk = {
   next: document.querySelector("button[data-walk='next']"),
 };
 
+// Turn the bench back to the angle the walkthrough uses, by the shorter way round.
+function homeView() {
+  let azimuth = SCENE.HOME.azimuth;
+  while (azimuth - view.azimuth > 180) {
+    azimuth = azimuth - 360;
+  }
+  while (view.azimuth - azimuth > 180) {
+    azimuth = azimuth + 360;
+  }
+  view.azimuthTarget = azimuth;
+  view.elevationTarget = SCENE.HOME.elevation;
+}
+
 function setSample(id) {
   state.sample = M.SAMPLES.find((sample) => sample.id === id);
   markSample();
@@ -478,7 +550,13 @@ function setSample(id) {
 function showStep(index) {
   state.step = clamp(index, 0, STEPS.length - 1);
   const step = STEPS[state.step];
-  walk.count.textContent = "Step " + (state.step + 1) + " of " + STEPS.length;
+  if (state.step === 0) {
+    walk.count.textContent = "Overview";
+  } else {
+    walk.count.textContent = "Step " + state.step + " of " + (STEPS.length - 1);
+  }
+  // Each step is shown from the same angle, so the zoom frames what it describes.
+  homeView();
   walk.title.textContent = step.title;
   walk.text.textContent = step.text;
   walk.back.disabled = state.step === 0;
@@ -596,25 +674,46 @@ try {
   // No saved theme: keep the page's own.
 }
 
-// ---------- pointer and keys: turn the analyser ----------
+// ---------- pointer and keys: turn and tilt the bench ----------
 
 let hold = null;
 
+function tiltBy(amount) {
+  view.elevationTarget = clamp(view.elevationTarget + amount, SCENE.TILT_RANGE[0], SCENE.TILT_RANGE[1]);
+  redraw();
+}
+
 stage.addEventListener("pointerdown", (event) => {
-  stage.setPointerCapture(event.pointerId);
-  hold = { x: event.clientX, reading: state.readingTarget };
+  hold = { x: event.clientX, y: event.clientY, azimuth: view.azimuth, elevation: view.elevation, touch: event.pointerType === "touch", turning: false };
 });
 
 stage.addEventListener("pointermove", (event) => {
   if (!hold) {
     return;
   }
-  const box = svg.getBoundingClientRect();
-  const dx = ((event.clientX - hold.x) / box.width) * WIDTH;
-  // (The turn per pixel stays the same however far the figure is zoomed in.)
-  if (Math.abs(dx) > 3) {
-    setReading(hold.reading + dx * 0.25);
+  const dx = event.clientX - hold.x;
+  const dy = event.clientY - hold.y;
+  if (!hold.turning) {
+    // A mostly sideways move starts a turn; on a touch screen an up-and-down
+    // move is left alone so the page can still scroll.
+    if (Math.abs(dx) < 6 && Math.abs(dy) < 6) {
+      return;
+    }
+    if (hold.touch && Math.abs(dy) > Math.abs(dx)) {
+      hold = null;
+      return;
+    }
+    hold.turning = true;
+    stage.setPointerCapture(event.pointerId);
   }
+  view.azimuth = hold.azimuth + dx * 0.45;
+  view.azimuthTarget = view.azimuth;
+  if (!hold.touch) {
+    // With a mouse, dragging up and down tilts the bench as well.
+    view.elevation = clamp(hold.elevation + dy * 0.3, SCENE.TILT_RANGE[0], SCENE.TILT_RANGE[1]);
+    view.elevationTarget = view.elevation;
+  }
+  redraw();
 });
 
 function release() {
@@ -625,14 +724,30 @@ stage.addEventListener("pointerup", release);
 stage.addEventListener("pointercancel", release);
 
 stage.addEventListener("keydown", (event) => {
+  let used = true;
   if (event.key === "ArrowRight") {
-    setReading(state.readingTarget + 0.5);
-    event.preventDefault();
+    view.azimuthTarget = view.azimuthTarget + 15;
+  } else if (event.key === "ArrowLeft") {
+    view.azimuthTarget = view.azimuthTarget - 15;
+  } else if (event.key === "ArrowUp") {
+    tiltBy(8);
+  } else if (event.key === "ArrowDown") {
+    tiltBy(-8);
+  } else {
+    used = false;
   }
-  if (event.key === "ArrowLeft") {
-    setReading(state.readingTarget - 0.5);
+  if (used) {
     event.preventDefault();
+    redraw();
   }
+});
+
+document.querySelector("[data-action='tilt-up']").addEventListener("click", () => tiltBy(8));
+document.querySelector("[data-action='tilt-down']").addEventListener("click", () => tiltBy(-8));
+
+document.querySelector("[data-action='reset-view']").addEventListener("click", () => {
+  homeView();
+  redraw();
 });
 
 // ---------- the frame loop ----------
@@ -687,6 +802,15 @@ function tick(now) {
     state.apartTime = Math.max(apartGoal, state.apartTime - dt / 1.1);
   }
 
+  // The camera eases to its targets; the bench is redrawn only when it has moved.
+  view.azimuth = ease(view.azimuth, view.azimuthTarget, dt, 0.25);
+  view.elevation = ease(view.elevation, view.elevationTarget, dt, 0.25);
+  const cameraSettled = view.azimuth === view.azimuthTarget && view.elevation === view.elevationTarget;
+  if (view.azimuth !== view.drawnAzimuth || view.elevation !== view.drawnElevation || state.apartTime !== view.drawnApart) {
+    redrawScene();
+    aimZoom();
+  }
+
   // The view glides to the part the step is about.
   let zoomSettled = true;
   for (let index = 0; index < 4; index++) {
@@ -697,7 +821,7 @@ function tick(now) {
   }
   svg.setAttribute("viewBox", zoom.box.map((value) => value.toFixed(2)).join(" "));
 
-  const settled = zoomSettled && state.reading === state.readingTarget && state.alpha === trueAlpha() && state.apartTime === apartGoal;
+  const settled = cameraSettled && zoomSettled && state.reading === state.readingTarget && state.alpha === trueAlpha() && state.apartTime === apartGoal;
 
   // The wave travels towards the eyepiece.
   if (!still.matches) {
