@@ -344,6 +344,8 @@ export function createScene(k, G) {
       // The scale is engraved on the side that faces the eyepiece.
       if (FRONT) {
         out.push(L(G.circleOf(AXIS, X_ANALYSER + 3, 20.5, P), { tone: "lo" }));
+        // The fine ticks stand on their own ring, like the track of a dial.
+        out.push(L(G.circleOf(AXIS, X_ANALYSER + 3, 23.6, P), { tone: "lo" }));
         out.push(L(G.spokesOf(AXIS, X_ANALYSER + 3, 23.6, 27, 72, P), { tone: "lo" }));
         out.push(L(G.spokesOf(AXIS, X_ANALYSER + 3, 20.5, 27, 12, P), { tone: "mid" }));
         // The zero of the scale is at the top.
