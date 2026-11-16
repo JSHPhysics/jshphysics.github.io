@@ -67,7 +67,7 @@ def check_lines(problems, where, lines, lo, hi):
         check_text(problems, f"{where}[{index}]", line)
 
 
-def check_answer(problems, where, answer):
+def check_answer(problems, where, answer, max_tolerance=0.2):
     """Check an answer object: numeric value, string unit, optional tolerance."""
     if not isinstance(answer, dict):
         problems.append(f"{where}: expected an object")
@@ -79,10 +79,10 @@ def check_answer(problems, where, answer):
         problems.append(f"{where}.unit: must be a string (use \"\" if dimensionless)")
     tolerance = answer.get("tolerance")
     if tolerance is not None:
-        if not isinstance(tolerance, (int, float)) or not (0 < tolerance <= 0.2):
-            problems.append(f"{where}.tolerance: must be a fraction between 0 and 0.2")
+        if not isinstance(tolerance, (int, float)) or not (0 < tolerance <= max_tolerance):
+            problems.append(f"{where}.tolerance: must be a fraction between 0 and {max_tolerance}")
     # Flag suspicious precision: an answer with more than 5 s.f. is usually unrounded
-    if isinstance(value, float):
+    if isinstance(value, float) and not value.is_integer():
         digits = re.sub(r"[^0-9]", "", repr(value).split("e")[0]).lstrip("0")
         if len(digits) > 5:
             problems.append(f"{where}.value: {value!r} looks unrounded (give 3 s.f.)")
@@ -352,7 +352,8 @@ def check_section_question(problems, where, question, seen_question_ids, allow_g
         return
 
     if qtype == "numeric":
-        check_answer(problems, where, question.get("answer"))
+        # Estimation questions accept a wide spread, so the cap is looser here
+        check_answer(problems, where, question.get("answer"), max_tolerance=0.6)
         walkthrough = question.get("walkthrough")
         if not isinstance(walkthrough, list) or not walkthrough:
             problems.append(f"{where}.walkthrough: must be a non-empty list of lines")

@@ -1116,3 +1116,15 @@ figure.diagram .d-readout {
     margin-top: 10pt;
   }
 }
+
+figure.diagram figcaption {
+  margin: 6px 2px 4px;
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+
+/* A long formula in the strip scrolls inside its own box on a narrow screen */
+.formulas .formula {
+  max-width: 100%;
+  overflow-x: auto;
+}

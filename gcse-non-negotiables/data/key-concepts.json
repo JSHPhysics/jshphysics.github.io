@@ -5,6 +5,2838 @@
   "spec": "Topic 1",
   "order": 10,
   "figure": "measurements",
+  "lede": "Topic 1 is short — units, prefixes, converting, significant figures, standard form — but it is the toolkit every other topic uses, so this page also carries the skills that are examined everywhere: the equation sheet, rearranging, proportion, EWAU, command words, graphs, and the practical-method questions.",
+  "howto": [
+    "Start with the non-negotiables and do not move on from a section until its practice is green.",
+    "Read each explanation, then cover it and say it back. For a table of units or prefixes, test yourself with the flashcards at the bottom.",
+    "Study the worked example one step at a time and notice <i>how</i> the answer is laid out, not just what it is.",
+    "Do the practice questions before opening the hint or walkthrough. Calculations on paper in EWAU, then type the answer to check it.",
+    "For \"explain\" questions, write the answer in full sentences first, then compare it with the model answer point by point before you mark yourself.",
+    "Fill in the self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "Units, prefixes, conversions and the maths every calculation needs. These must be automatic: nothing in any other topic works without them."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "Working as a physicist: reading the question, command words, graphs, proportionality, planning and evaluating a practical, and estimating. These are the marks that are not about knowing any physics at all."
+    }
+  ],
+  "sections": [
+    {
+      "id": "si-units",
+      "band": "nn",
+      "title": "SI units and the quantities they measure",
+      "spec": "1.1",
+      "equations": [
+        "\\text{metre, m}",
+        "\\text{kilogram, kg}",
+        "\\text{second, s}",
+        "\\text{ampere, A}",
+        "\\text{kelvin, K}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The units you must know",
+          "html": "<p><b>SI units</b> are the standard set of units that all scientists use. The equations on the Edexcel sheet only work when every quantity is in its SI unit — that is why so much of physics is converting first.</p><table class='tbl'><tr><th>Quantity</th><th>SI unit</th><th>Symbol</th><th>Notes</th></tr><tr><td>length, distance, displacement</td><td>metre</td><td>m</td><td>base unit</td></tr><tr><td>mass</td><td>kilogram</td><td>kg</td><td>base unit — not the gram</td></tr><tr><td>time</td><td>second</td><td>s</td><td>base unit</td></tr><tr><td>current</td><td>ampere (amp)</td><td>A</td><td>base unit</td></tr><tr><td>temperature</td><td>kelvin</td><td>K</td><td>base unit; °C is accepted where the question uses it</td></tr><tr><td>force, weight</td><td>newton</td><td>N</td><td>$1\\ \\text{N} = 1\\ \\text{kg m/s}^2$</td></tr><tr><td>energy, work done</td><td>joule</td><td>J</td><td>$1\\ \\text{J} = 1\\ \\text{N m}$</td></tr><tr><td>power</td><td>watt</td><td>W</td><td>$1\\ \\text{W} = 1\\ \\text{J/s}$</td></tr><tr><td>pressure</td><td>pascal</td><td>Pa</td><td>$1\\ \\text{Pa} = 1\\ \\text{N/m}^2$</td></tr><tr><td>frequency</td><td>hertz</td><td>Hz</td><td>$1\\ \\text{Hz} = 1$ per second</td></tr><tr><td>potential difference</td><td>volt</td><td>V</td><td>$1\\ \\text{V} = 1\\ \\text{J/C}$</td></tr><tr><td>resistance</td><td>ohm</td><td>Ω</td><td></td></tr><tr><td>charge</td><td>coulomb</td><td>C</td><td>$1\\ \\text{C} = 1\\ \\text{A s}$</td></tr><tr><td>speed, velocity</td><td>metre per second</td><td>m/s</td><td></td></tr><tr><td>acceleration</td><td>metre per second squared</td><td>m/s²</td><td></td></tr><tr><td>density</td><td>kilogram per cubic metre</td><td>kg/m³</td><td></td></tr><tr><td>momentum</td><td>kilogram metre per second</td><td>kg m/s</td><td></td></tr><tr><td>specific heat capacity</td><td>joule per kilogram per degree</td><td>J/kg °C</td><td></td></tr><tr><td>gravitational field strength</td><td>newton per kilogram</td><td>N/kg</td><td>same size as m/s²</td></tr></table><p><b>Base</b> units are the seven the system is built from (you meet six: m, kg, s, A, K and the mole). Every other unit is <b>derived</b> — built by multiplying or dividing base units, which is why $\\text{m/s}$ is \"metres divided by seconds\".</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Capitals and symbols",
+          "html": "<p>A unit named after a person gets a <b>capital symbol</b> but a lower-case name: newton, N; joule, J; watt, W; hertz, Hz; pascal, Pa. Units not named after people are lower case: m, kg, s. Writing <i>n</i> for newtons or <i>hz</i> for hertz is marked wrong. The exception is the litre, L, which is capitalised to avoid confusion with 1.</p><p>Write compound units with a slash, as the exam papers do: $\\text{m/s}$, $\\text{kg/m}^3$, $\\text{J/kg °C}$.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Choosing the unit from the equation",
+          "question": "A student calculates $P = I \\times V = 2 \\times 12$. State the answer with its unit, and explain how the unit can be checked from the equation.",
+          "steps": [
+            "$P = 2 \\times 12 = 24$. Power is measured in <b>watts</b>, so $P = 24$ W.",
+            "Check from the equation: current in amps × potential difference in volts gives $\\text{A} \\times \\text{V}$, and $1\\ \\text{A V} = 1\\ \\text{W}$. The unit of the answer follows from the units going in.",
+            "If the current had been in milliamps the answer would have come out in milliwatts — which is why everything is converted to SI units <i>before</i> substituting."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "si-conversions"
+          ],
+          "title": "Calculation: converting to SI units"
+        },
+        {
+          "kind": "practice",
+          "title": "SI units",
+          "questions": [
+            {
+              "id": "kc-n1-q1",
+              "type": "choice",
+              "text": "What is the SI unit of mass?",
+              "options": [
+                "gram",
+                "kilogram",
+                "newton",
+                "tonne"
+              ],
+              "correct": 1,
+              "explain": "The kilogram is the base unit of mass. Newtons measure weight (a force); grams and tonnes have to be converted."
+            },
+            {
+              "id": "kc-n1-q2",
+              "type": "choice",
+              "text": "Which of these is a <b>base</b> unit?",
+              "options": [
+                "newton",
+                "joule",
+                "second",
+                "watt"
+              ],
+              "correct": 2,
+              "explain": "The second is one of the base units. Newtons, joules and watts are derived from base units (a newton is a kg m/s²)."
+            },
+            {
+              "id": "kc-n1-q3",
+              "type": "choice",
+              "text": "A student writes an answer as \"50 hz\". What is wrong with it?",
+              "options": [
+                "Nothing",
+                "Frequency is measured in watts",
+                "The symbol should be Hz, with a capital H",
+                "Frequency has no unit"
+              ],
+              "correct": 2,
+              "explain": "Hertz is named after Heinrich Hertz, so its symbol takes a capital letter: Hz. The name stays lower case."
+            },
+            {
+              "id": "kc-n1-q4",
+              "type": "numeric",
+              "text": "A rope is 2.5 km long. Give its length in the SI unit.",
+              "answer": {
+                "value": 2500,
+                "unit": "m"
+              },
+              "hint": "The SI unit of length is the metre; 1 km = 1000 m.",
+              "walkthrough": [
+                "$2.5 \\times 1000 = 2500$ m."
+              ]
+            },
+            {
+              "id": "kc-n1-q5",
+              "type": "numeric",
+              "text": "A battery supplies a current of 45 mA. Give the current in the SI unit.",
+              "answer": {
+                "value": 0.045,
+                "unit": "A"
+              },
+              "hint": "The SI unit of current is the ampere; 1 mA = 0.001 A.",
+              "walkthrough": [
+                "$45 \\div 1000 = 0.045$ A."
+              ]
+            },
+            {
+              "id": "kc-n1-q6",
+              "type": "written",
+              "text": "A student measures a pressure and writes the unit as N/m². Another student writes Pa. Explain why both are correct.",
+              "model": "<ul><li>Pressure = force ÷ area, so its unit is newtons per square metre, N/m².</li><li>The pascal is defined as 1 N/m² — it is the same unit with a special name.</li><li>Either is accepted; Pa is the SI name.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Give the SI unit for every quantity met at GCSE",
+        "Tell a base unit (m, kg, s, A, K, mol) from a derived unit (N, J, W …)",
+        "Write a unit with the correct symbol and capital letters (N not n, Hz not hz)"
+      ],
+      "blurb": "Every quantity in physics has one standard unit. Exam answers need the right one every time: a number without a unit, or with the wrong one, loses the mark."
+    },
+    {
+      "id": "prefixes-nn",
+      "band": "nn",
+      "title": "Prefixes: giga to nano",
+      "spec": "1.2",
+      "equations": [
+        "\\text{G} = 10^{9}",
+        "\\text{M} = 10^{6}",
+        "\\text{k} = 10^{3}",
+        "\\text{c} = 10^{-2}",
+        "\\text{m} = 10^{-3}",
+        "\\mu = 10^{-6}",
+        "\\text{n} = 10^{-9}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The seven prefixes",
+          "html": "<table class='tbl'><tr><th>Prefix</th><th>Symbol</th><th>Multiply by</th><th>In words</th><th>Example</th></tr><tr><td>giga</td><td>G</td><td>$10^{9}$ = 1 000 000 000</td><td>a thousand million</td><td>a 2 GW power station</td></tr><tr><td>mega</td><td>M</td><td>$10^{6}$ = 1 000 000</td><td>a million</td><td>a 3 MJ meal</td></tr><tr><td>kilo</td><td>k</td><td>$10^{3}$ = 1000</td><td>a thousand</td><td>a 2 kW kettle</td></tr><tr><td>centi</td><td>c</td><td>$10^{-2}$ = 0.01</td><td>a hundredth</td><td>30 cm ruler</td></tr><tr><td>milli</td><td>m</td><td>$10^{-3}$ = 0.001</td><td>a thousandth</td><td>a 20 mA current</td></tr><tr><td>micro</td><td>μ</td><td>$10^{-6}$ = 0.000 001</td><td>a millionth</td><td>a 50 μs pulse</td></tr><tr><td>nano</td><td>n</td><td>$10^{-9}$ = 0.000 000 001</td><td>a thousand-millionth</td><td>500 nm light</td></tr></table><p>Each step down the table from giga to kilo, and from milli to nano, is a factor of 1000. Centi is the odd one out (a factor of 100) and only really appears with metres.</p><p><b>Into the base unit:</b> multiply by the prefix's value. $2.5\\ \\text{kW} = 2.5 \\times 1000 = 2500$ W. <b>Out of the base unit:</b> divide. $0.004\\ \\text{A} = 0.004 \\div 0.001 = 4$ mA.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "m means two things",
+          "html": "<p>Lower-case m is both the <i>metre</i> and the prefix <i>milli</i>. Read $\\text{mm}$ as \"milli-metre\" and $\\text{ms}$ as \"milli-second\" — the prefix always comes first. And capital M (mega) is a million times bigger than small m (milli): $1\\ \\text{MW}$ is a million watts, $1\\ \\text{mW}$ is a thousandth of one.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Stripping a prefix",
+          "question": "A laser emits light of wavelength 650 nm. Write the wavelength in metres.",
+          "steps": [
+            "nano means $\\times 10^{-9}$, so $650\\ \\text{nm} = 650 \\times 10^{-9}$ m.",
+            "$650 \\times 10^{-9} = 6.5 \\times 10^{-7}$ m (or 0.000 000 65 m).",
+            "Keep it in standard form: it goes straight into $v = f \\times \\lambda$ without a counting-the-zeros mistake."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "prefixes"
+          ],
+          "title": "Calculation: using prefixes"
+        },
+        {
+          "kind": "practice",
+          "title": "Prefixes",
+          "questions": [
+            {
+              "id": "kc-n2-q1",
+              "type": "choice",
+              "text": "What does the prefix <b>mega</b> mean?",
+              "options": [
+                "× 1000",
+                "× 1 000 000",
+                "× 1 000 000 000",
+                "÷ 1 000 000"
+              ],
+              "correct": 1,
+              "explain": "Mega (M) means a million, 10⁶. Kilo is a thousand, giga a thousand million."
+            },
+            {
+              "id": "kc-n2-q2",
+              "type": "numeric",
+              "text": "A power station has an output of 2.5 MW. Give this in watts.",
+              "answer": {
+                "value": 2500000,
+                "unit": "W"
+              },
+              "hint": "Mega = × 1 000 000.",
+              "walkthrough": [
+                "$2.5 \\times 1\\,000\\,000 = 2\\,500\\,000$ W, or $2.5 \\times 10^{6}$ W."
+              ]
+            },
+            {
+              "id": "kc-n2-q3",
+              "type": "choice",
+              "text": "Which is the largest current?",
+              "options": [
+                "250 μA",
+                "25 mA",
+                "0.02 A",
+                "2500 nA"
+              ],
+              "correct": 1,
+              "explain": "Convert all to amps: 250 μA = 0.000 25 A; 25 mA = 0.025 A; 0.02 A; 2500 nA = 0.000 0025 A. 25 mA is largest."
+            },
+            {
+              "id": "kc-n2-q4",
+              "type": "numeric",
+              "text": "Write 500 nm in metres.",
+              "answer": {
+                "value": 5e-07,
+                "unit": "m"
+              },
+              "hint": "Nano = × 10⁻⁹.",
+              "walkthrough": [
+                "$500 \\times 10^{-9} = 5 \\times 10^{-7}$ m. Type it as 5e-7."
+              ]
+            },
+            {
+              "id": "kc-n2-q5",
+              "type": "choice",
+              "text": "A kettle is labelled 3 kW. How many watts is that?",
+              "options": [
+                "0.003 W",
+                "30 W",
+                "300 W",
+                "3000 W"
+              ],
+              "correct": 3,
+              "explain": "Kilo = × 1000, so 3 kW = 3000 W."
+            },
+            {
+              "id": "kc-n2-q6",
+              "type": "written",
+              "text": "Explain the difference between 5 mW and 5 MW.",
+              "model": "<ul><li>m (milli) means a thousandth: 5 mW = 0.005 W.</li><li>M (mega) means a million: 5 MW = 5 000 000 W.</li><li>They differ by a factor of a thousand million (10⁹).</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Recall what G, M, k, c, m, μ and n multiply by",
+        "Convert a value with a prefix into the base unit, and back again",
+        "Spot a prefix hidden in a question (a 2 kW kettle, a 250 nm wavelength)"
+      ],
+      "blurb": "A prefix in front of a unit is a multiplier. Strip it off and apply the multiplier before any equation sees the number."
+    },
+    {
+      "id": "converting",
+      "band": "nn",
+      "title": "Converting between units",
+      "spec": "1.3",
+      "equations": [
+        "1\\ \\text{h} = 3600\\ \\text{s}",
+        "1\\ \\text{km/h} = \\dfrac{1000}{3600}\\ \\text{m/s}",
+        "1\\ \\text{kWh} = 3.6 \\times 10^{6}\\ \\text{J}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The conversions that come up",
+          "html": "<table class='tbl'><tr><th>From</th><th>To</th><th>Do this</th><th>Example</th></tr><tr><td>minutes</td><td>seconds</td><td>× 60</td><td>4 min = 240 s</td></tr><tr><td>hours</td><td>seconds</td><td>× 3600</td><td>2 h = 7200 s</td></tr><tr><td>days</td><td>seconds</td><td>× 24 × 3600 = × 86 400</td><td>1 day = 86 400 s</td></tr><tr><td>km</td><td>m</td><td>× 1000</td><td>1.2 km = 1200 m</td></tr><tr><td>cm</td><td>m</td><td>÷ 100</td><td>35 cm = 0.35 m</td></tr><tr><td>g</td><td>kg</td><td>÷ 1000</td><td>250 g = 0.25 kg</td></tr><tr><td>km/h</td><td>m/s</td><td>÷ 3.6 (× 1000 ÷ 3600)</td><td>72 km/h = 20 m/s</td></tr><tr><td>cm²</td><td>m²</td><td>÷ 10 000</td><td>50 cm² = 0.005 m²</td></tr><tr><td>cm³</td><td>m³</td><td>÷ 1 000 000</td><td>250 cm³ = 0.000 25 m³</td></tr><tr><td>g/cm³</td><td>kg/m³</td><td>× 1000</td><td>2.7 g/cm³ = 2700 kg/m³</td></tr><tr><td>kWh</td><td>J</td><td>× 3 600 000</td><td>2 kWh = 7.2 × 10⁶ J</td></tr></table><p><b>Areas and volumes:</b> if 1 m = 100 cm, then 1 m² = 100 × 100 = 10 000 cm² and 1 m³ = 100 × 100 × 100 = 1 000 000 cm³. Square or cube the length factor — the most common slip in Topic 14 density questions.</p><p><b>Sense check:</b> converting to a <i>bigger</i> unit gives a <i>smaller</i> number (3500 m = 3.5 km). If the number gets bigger when the unit gets bigger, the conversion went the wrong way.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "km/h to m/s",
+          "question": "A car travels at 108 km/h. Convert this speed to m/s.",
+          "steps": [
+            "Convert the distance: $108\\ \\text{km} = 108 \\times 1000 = 108\\,000$ m.",
+            "Convert the time: $1\\ \\text{h} = 60 \\times 60 = 3600$ s.",
+            "$\\text{speed} = \\dfrac{108\\,000}{3600} = 30$ m/s.",
+            "Shortcut: $108 \\div 3.6 = 30$ m/s. ✓"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "compound-units"
+          ],
+          "title": "Calculation: compound units"
+        },
+        {
+          "kind": "practice",
+          "title": "Converting",
+          "questions": [
+            {
+              "id": "kc-n3-q1",
+              "type": "numeric",
+              "text": "A film lasts 90 minutes. How many seconds is that?",
+              "answer": {
+                "value": 5400,
+                "unit": "s"
+              },
+              "hint": "× 60.",
+              "walkthrough": [
+                "$90 \\times 60 = 5400$ s."
+              ]
+            },
+            {
+              "id": "kc-n3-q2",
+              "type": "numeric",
+              "text": "A tank holds 0.5 m³ of water. Give the volume in cm³.",
+              "answer": {
+                "value": 500000,
+                "unit": "cm³"
+              },
+              "hint": "1 m³ = 1 000 000 cm³ (100 cubed).",
+              "walkthrough": [
+                "$0.5 \\times 1\\,000\\,000 = 500\\,000$ cm³."
+              ]
+            },
+            {
+              "id": "kc-n3-q3",
+              "type": "numeric",
+              "text": "A satellite takes 2.5 days to complete an orbit. Give this time in seconds.",
+              "answer": {
+                "value": 216000,
+                "unit": "s"
+              },
+              "hint": "Days → hours → seconds: × 24 × 3600.",
+              "walkthrough": [
+                "$2.5 \\times 24 = 60$ hours. $60 \\times 3600 = 216\\,000$ s."
+              ]
+            },
+            {
+              "id": "kc-n3-q4",
+              "type": "numeric",
+              "text": "A cyclist's speed is 54 km/h. Convert this to m/s.",
+              "answer": {
+                "value": 15,
+                "unit": "m/s"
+              },
+              "hint": "Divide by 3.6.",
+              "walkthrough": [
+                "$54 \\times 1000 = 54\\,000$ m per $3600$ s.",
+                "$\\dfrac{54\\,000}{3600} = 15$ m/s."
+              ]
+            },
+            {
+              "id": "kc-n3-q5",
+              "type": "numeric",
+              "text": "An electric heater uses 1.5 kWh of energy. Give this in joules.",
+              "answer": {
+                "value": 5400000,
+                "unit": "J"
+              },
+              "hint": "1 kWh = 1000 W × 3600 s = 3 600 000 J.",
+              "walkthrough": [
+                "$1.5 \\times 3\\,600\\,000 = 5\\,400\\,000$ J, or $5.4 \\times 10^{6}$ J."
+              ]
+            },
+            {
+              "id": "kc-n3-q6",
+              "type": "choice",
+              "text": "A student converts 20 cm² to m² and gets 0.2 m². What has gone wrong?",
+              "options": [
+                "Nothing, it is correct",
+                "They divided by 100 instead of 10 000",
+                "They should have multiplied by 100",
+                "cm² cannot be converted to m²"
+              ],
+              "correct": 1,
+              "explain": "1 m² = 100 cm × 100 cm = 10 000 cm², so 20 cm² = 20 ÷ 10 000 = 0.002 m². Dividing by 100 only converts a length."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Convert minutes, hours and days into seconds",
+        "Convert km/h into m/s (and back)",
+        "Convert areas and volumes, remembering to square or cube the length conversion",
+        "Convert kWh into joules"
+      ],
+      "blurb": "Minutes and hours into seconds, kilometres into metres, cubic centimetres into cubic metres. Convert first; the equation comes second."
+    },
+    {
+      "id": "sig-figs",
+      "band": "nn",
+      "title": "Significant figures and rounding",
+      "spec": "1.4",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Counting and rounding",
+          "html": "<p><b>Significant figures</b> (s.f.) are the digits that carry information. Counting them:</p><ul><li>All non-zero digits are significant: 3.52 has 3 s.f.</li><li>Zeros <i>between</i> non-zero digits are significant: 2.05 has 3 s.f.</li><li>Leading zeros are <b>not</b>: 0.0047 has 2 s.f. (the 4 and the 7).</li><li>Trailing zeros after a decimal point are significant: 2.50 has 3 s.f. — it says the value is known to the hundredths.</li><li>Trailing zeros in a whole number are ambiguous: 1500 might be 2, 3 or 4 s.f. Standard form removes the doubt: $1.5 \\times 10^3$ is 2 s.f.</li></ul><p><b>Rounding to n s.f.:</b> count n digits from the first non-zero digit; look at the next digit; 5 or more rounds up. Then keep the size of the number the same with zeros if needed: 48 367 to 2 s.f. is 48 000, not 48.</p><table class='tbl data'><tr><th>Value</th><th>s.f.</th><th>To 2 s.f.</th><th>To 3 s.f.</th></tr><tr><td>3.14159</td><td>6</td><td>3.1</td><td>3.14</td></tr><tr><td>0.004 762</td><td>4</td><td>0.0048</td><td>0.004 76</td></tr><tr><td>27 850</td><td>4</td><td>28 000</td><td>27 900</td></tr><tr><td>2.996</td><td>4</td><td>3.0</td><td>3.00</td></tr></table>"
+        },
+        {
+          "kind": "explain",
+          "title": "How many to give",
+          "html": "<p>If the question says \"to 2 significant figures\", give exactly two. If it does not say, give <b>the same number of significant figures as the least precise piece of data</b> in the question — usually 2 or 3. An answer of 2.857 142 857 m/s from data given to 2 s.f. is marked as 2.9 m/s (and the extra digits may cost a mark for \"inappropriate precision\").</p><p><b>Round only at the end.</b> If you round part-way through a two-step calculation, the error grows. Keep the full calculator value (or at least one more figure than you will give) until the final line.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Rounding a calculated answer",
+          "question": "A student calculates a density: $\\rho = \\dfrac{m}{V} = \\dfrac{47}{18} = 2.611\\,111\\ldots$ g/cm³. The mass was measured to 2 s.f. and the volume to 2 s.f. Give the answer to an appropriate number of significant figures.",
+          "steps": [
+            "The data has 2 significant figures, so the answer should too.",
+            "Count two digits from the first non-zero digit: 2.6|11… The next digit is 1, which is less than 5, so round down.",
+            "$\\rho = 2.6$ g/cm³ (to 2 s.f.).",
+            "The answer line in the exam: \\\"2.6 g/cm³\\\". The full value stays in the working above it."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Significant figures",
+          "questions": [
+            {
+              "id": "kc-n4-q1",
+              "type": "choice",
+              "text": "How many significant figures does 0.0305 have?",
+              "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "correct": 1,
+              "explain": "Leading zeros do not count; the zero between the 3 and the 5 does. Three significant figures: 3, 0, 5."
+            },
+            {
+              "id": "kc-n4-q2",
+              "type": "choice",
+              "text": "Round 0.047 83 to 2 significant figures.",
+              "options": [
+                "0.05",
+                "0.048",
+                "0.0478",
+                "0.04"
+              ],
+              "correct": 1,
+              "explain": "The first significant figure is the 4. Two figures: 4, 7; the next digit (8) rounds the 7 up to 8: 0.048."
+            },
+            {
+              "id": "kc-n4-q3",
+              "type": "choice",
+              "text": "Round 364 920 to 3 significant figures.",
+              "options": [
+                "364",
+                "365",
+                "365 000",
+                "364 900"
+              ],
+              "correct": 2,
+              "explain": "Three figures: 3, 6, 4; the next digit (9) rounds the 4 up to 5. Keep the size of the number with zeros: 365 000."
+            },
+            {
+              "id": "kc-n4-q4",
+              "type": "choice",
+              "text": "A speed is calculated as 12.4873 m/s from a distance given to 2 s.f. and a time given to 3 s.f. How should the answer be given?",
+              "options": [
+                "12.4873 m/s",
+                "12.49 m/s",
+                "12 m/s",
+                "10 m/s"
+              ],
+              "correct": 2,
+              "explain": "Match the least precise data: 2 significant figures. 12.4873 to 2 s.f. is 12 m/s."
+            },
+            {
+              "id": "kc-n4-q5",
+              "type": "choice",
+              "text": "Which value is written to 3 significant figures?",
+              "options": [
+                "0.5",
+                "2.50",
+                "1500",
+                "3.1416"
+              ],
+              "correct": 1,
+              "explain": "2.50 has three: the trailing zero after the decimal point is significant. 0.5 has one; 1500 is ambiguous; 3.1416 has five."
+            },
+            {
+              "id": "kc-n4-q6",
+              "type": "written",
+              "text": "A student finds a wave speed in two steps. She rounds the frequency to 1 s.f. after the first step, then uses it in the second. Explain why her final answer may be wrong, and what she should do instead.",
+              "model": "<ul><li>Rounding part-way through throws away information, so the error is carried into the second calculation and can grow.</li><li>She should keep the full (unrounded) value from the first step — or at least one extra figure — in the working.</li><li>Round only the final answer, to the same number of significant figures as the least precise data.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Count the significant figures in a number (including ones with leading zeros)",
+        "Round an answer to a stated number of significant figures",
+        "Choose a sensible number of significant figures when the question does not say",
+        "Keep full precision in the working and round only the final answer"
+      ],
+      "blurb": "Give an answer to a sensible number of significant figures, round only at the end, and never give more figures than the data had."
+    },
+    {
+      "id": "standard-form-nn",
+      "band": "nn",
+      "title": "Standard form",
+      "spec": "1.4",
+      "equations": [
+        "a \\times 10^{n},\\quad 1 \\le a < 10"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Reading and writing standard form",
+          "html": "<p>A number in <b>standard form</b> is written $a \\times 10^{n}$, where $a$ is between 1 and 10 (it can be 1, but not 10) and $n$ is a whole number.</p><ul><li>A <b>positive</b> power means a big number: $3 \\times 10^{8}$ m/s is 300 000 000 m/s — the point moves 8 places to the right.</li><li>A <b>negative</b> power means a small number: $5 \\times 10^{-7}$ m is 0.000 000 5 m — the point moves 7 places to the left.</li></ul><p><b>Writing a number in standard form:</b> move the decimal point until there is one non-zero digit in front of it; the number of places moved is $n$ (positive if the original number was 10 or more, negative if it was less than 1).</p><table class='tbl data'><tr><th>Ordinary</th><th>Standard form</th><th>Calculator shows</th></tr><tr><td>340 000 000</td><td>$3.4 \\times 10^{8}$</td><td>3.4E8</td></tr><tr><td>0.000 025</td><td>$2.5 \\times 10^{-5}$</td><td>2.5E-5</td></tr><tr><td>6 400 000</td><td>$6.4 \\times 10^{6}$</td><td>6.4E6</td></tr><tr><td>0.0016</td><td>$1.6 \\times 10^{-3}$</td><td>1.6E-3</td></tr></table><p>On the calculator use the <b>×10ˣ</b> key (sometimes marked EXP or EE): type 3.4, press ×10ˣ, type 8. Typing \"3.4 × 10 ^ 8\" also works but is where the brackets go wrong when you then divide by something.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "The E on the screen is not a unit",
+          "html": "<p>A display of <i>2.5E-5</i> means $2.5 \\times 10^{-5}$. Write it in the exam as $2.5 \\times 10^{-5}$, never as \"2.5E-5\" or \"2.5⁻⁵\". And $12 \\times 10^{4}$ is not standard form — the front number must be below 10: $1.2 \\times 10^{5}$.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "A calculation with standard form",
+          "question": "Red light has a wavelength of $7 \\times 10^{-7}$ m and travels at $3 \\times 10^{8}$ m/s. Calculate its frequency using $v = f \\times \\lambda$.",
+          "steps": [
+            "Rearrange: $f = \\dfrac{v}{\\lambda}$.",
+            "Enter on the calculator: 3 ×10ˣ 8 ÷ 7 ×10ˣ −7. The display shows 4.2857E14.",
+            "$f = 4.3 \\times 10^{14}$ Hz (to 2 s.f.).",
+            "Sense check: the power is 8 − (−7) = 15 before the division by 7 brings it down to 14. Visible light is around $10^{14}$ Hz. ✓"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "standard-form"
+          ],
+          "title": "Calculation: standard form"
+        },
+        {
+          "kind": "practice",
+          "title": "Standard form",
+          "questions": [
+            {
+              "id": "kc-n5-q1",
+              "type": "numeric",
+              "text": "Write 300 000 000 in standard form. (Type it as 3e8.)",
+              "answer": {
+                "value": 300000000,
+                "unit": ""
+              },
+              "hint": "One non-zero digit in front of the point; count the places.",
+              "walkthrough": [
+                "$300\\,000\\,000 = 3 \\times 10^{8}$: the point moves 8 places."
+              ]
+            },
+            {
+              "id": "kc-n5-q2",
+              "type": "numeric",
+              "text": "Write 0.000 045 in standard form.",
+              "answer": {
+                "value": 4.5e-05,
+                "unit": ""
+              },
+              "hint": "Small number, so the power is negative.",
+              "walkthrough": [
+                "$0.000\\,045 = 4.5 \\times 10^{-5}$: the point moves 5 places to the right to get 4.5."
+              ]
+            },
+            {
+              "id": "kc-n5-q3",
+              "type": "choice",
+              "text": "Which of these is correctly written in standard form?",
+              "options": [
+                "$12 \\times 10^{3}$",
+                "$0.8 \\times 10^{-4}$",
+                "$1.2 \\times 10^{4}$",
+                "$10 \\times 10^{2}$"
+              ],
+              "correct": 2,
+              "explain": "The number in front must be at least 1 and less than 10. Only 1.2 × 10⁴ qualifies."
+            },
+            {
+              "id": "kc-n5-q4",
+              "type": "numeric",
+              "text": "The radius of the Earth is $6.4 \\times 10^{6}$ m. Give this in kilometres.",
+              "answer": {
+                "value": 6400,
+                "unit": "km"
+              },
+              "hint": "Divide by 1000, which lowers the power by 3.",
+              "walkthrough": [
+                "$6.4 \\times 10^{6} \\div 10^{3} = 6.4 \\times 10^{3}$ km $= 6400$ km."
+              ]
+            },
+            {
+              "id": "kc-n5-q5",
+              "type": "choice",
+              "text": "A calculator shows 1.6E-19 after a calculation. How should this be written on the answer line?",
+              "options": [
+                "1.6E-19",
+                "$1.6 \\times 10^{-19}$",
+                "$1.6^{-19}$",
+                "0.000 16"
+              ],
+              "correct": 1,
+              "explain": "E on the display stands for × 10 to the power. Write the power of ten out in full."
+            },
+            {
+              "id": "kc-n5-q6",
+              "type": "choice",
+              "text": "Which is the larger number: $2 \\times 10^{-3}$ or $5 \\times 10^{-4}$?",
+              "options": [
+                "$2 \\times 10^{-3}$",
+                "$5 \\times 10^{-4}$",
+                "They are equal"
+              ],
+              "correct": 0,
+              "explain": "$2 \\times 10^{-3} = 0.002$ and $5 \\times 10^{-4} = 0.0005$. The less negative power wins, whatever the front number."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write a large or small number in standard form",
+        "Convert from standard form to an ordinary number",
+        "Enter standard form on a calculator with the ×10ˣ (EXP) key, not by typing × 10 ^",
+        "Read a calculator display such as 3.2E-5 and write it correctly"
+      ],
+      "blurb": "Very large and very small numbers written as a number between 1 and 10 times a power of ten. The calculator does the arithmetic; your job is to enter it correctly and read it back.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "equation-sheet",
+      "band": "nn",
+      "title": "The equation sheet and the symbols",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Recall, or look up?",
+          "html": "<p>In the exam you get an <b>equation sheet</b> with the longer equations on it. The short, everyday ones you must <b>recall</b>. If you spend revision time learning the sheet, you are learning the wrong half.</p><table class='tbl'><tr><th>You must recall</th><th>Given on the sheet</th></tr><tr><td>$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$ &nbsp; $a = \\dfrac{v - u}{t}$ &nbsp; $F = m \\times a$ &nbsp; $W = m \\times g$ &nbsp; $p = m \\times v$</td><td>$v^2 - u^2 = 2 \\times a \\times x$ &nbsp; $F = \\dfrac{mv - mu}{t}$</td></tr><tr><td>$KE = \\tfrac{1}{2} \\times m \\times v^2$ &nbsp; $GPE = m \\times g \\times h$ &nbsp; $E = F \\times d$ (work) &nbsp; $P = \\dfrac{E}{t}$ &nbsp; efficiency</td><td>$E = \\tfrac{1}{2} \\times k \\times x^2$ &nbsp; $\\Delta Q = m \\times c \\times \\Delta\\theta$ &nbsp; $Q = m \\times L$</td></tr><tr><td>$v = f \\times \\lambda$ &nbsp; $v = \\dfrac{x}{t}$ &nbsp; $T = \\dfrac{1}{f}$</td><td>$\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}$ &nbsp; $V_p I_p = V_s I_s$ &nbsp; $F = B \\times I \\times l$</td></tr><tr><td>$Q = I \\times t$ &nbsp; $V = I \\times R$ &nbsp; $P = I \\times V$ &nbsp; $P = I^2 \\times R$ &nbsp; $E = Q \\times V$ &nbsp; $E = P \\times t$</td><td>$E = I \\times V \\times t$ &nbsp; $P = h \\times \\rho \\times g$ &nbsp; $P_1 V_1 = P_2 V_2$</td></tr><tr><td>$\\rho = \\dfrac{m}{V}$ &nbsp; $F = k \\times x$ &nbsp; $p = \\dfrac{F}{A}$ &nbsp; $\\text{moment} = F \\times d$</td><td></td></tr></table><p>Check the current specification's list before the exam; the split above is the usual one.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Symbols that mean two things",
+          "html": "<table class='tbl'><tr><th>Symbol</th><th>Can mean</th><th>How to tell</th></tr><tr><td>$W$</td><td>weight (N) <i>or</i> work done (J)</td><td>$W = m \\times g$ is weight; $W = F \\times d$ (written $E = F \\times d$ on the sheet) is work</td></tr><tr><td>$Q$</td><td>charge (C) <i>or</i> thermal energy (J)</td><td>$Q = I \\times t$ is charge; $\\Delta Q = m c \\Delta\\theta$ and $Q = m L$ are energy</td></tr><tr><td>$P$</td><td>power (W) <i>or</i> pressure (Pa)</td><td>$P = \\dfrac{E}{t}$, $P = I V$ are power; $P = \\dfrac{F}{A}$, $P = h \\rho g$ are pressure</td></tr><tr><td>$x$</td><td>distance (m) <i>or</i> extension (m)</td><td>Edexcel uses $x$ for distance in motion equations and for extension in $F = k x$</td></tr><tr><td>$v$</td><td>velocity (m/s) <i>or</i> wave speed (m/s)</td><td>context</td></tr><tr><td>$V$</td><td>potential difference (V) <i>or</i> volume (m³)</td><td>capital $V$ with $I$ and $R$ is p.d.; with $m$ and $\\rho$ it is volume</td></tr><tr><td>$E$</td><td>energy (J)</td><td>any energy — kinetic, work done, electrical</td></tr><tr><td>$\\rho$ (rho)</td><td>density (kg/m³)</td><td>not to be confused with $p$, momentum or pressure</td></tr></table><p>In your own working, write what each symbol stands for the first time you use it: \"$W$ = weight = …\". It costs two seconds and stops you substituting a weight into a work equation.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Picking the equation",
+          "question": "A question gives a mass of 2 kg, a height of 5 m and asks for the energy transferred when the object is lifted. Which equation, and why?",
+          "steps": [
+            "List what is given: mass $m$, height $h$. Wanted: energy $E$.",
+            "Scan the equations for one with $m$, $h$ and an energy: $GPE = m \\times g \\times h$. ($g = 10$ N/kg is a known constant, so it does not need to be given.)",
+            "Substitute: $GPE = 2 \\times 10 \\times 5 = 100$ J.",
+            "The method: list the given symbols, find the equation that contains exactly those and the unknown. It also tells you which quantity you have been given but do not need."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The equation sheet",
+          "questions": [
+            {
+              "id": "kc-n6-q1",
+              "type": "choice",
+              "text": "Which of these equations is on the Edexcel sheet rather than one you must recall?",
+              "options": [
+                "$F = m \\times a$",
+                "$v^2 - u^2 = 2 \\times a \\times x$",
+                "$V = I \\times R$",
+                "$\\text{speed} = \\text{distance} \\div \\text{time}$"
+              ],
+              "correct": 1,
+              "explain": "The three-term kinematics equation is given on the sheet; the other three are recall equations."
+            },
+            {
+              "id": "kc-n6-q2",
+              "type": "choice",
+              "text": "In $W = m \\times g$, what does $W$ stand for?",
+              "options": [
+                "Work done",
+                "Weight",
+                "Watts",
+                "Wavelength"
+              ],
+              "correct": 1,
+              "explain": "With mass and gravitational field strength, W is weight in newtons. Work done uses W = F × d (E = F × d on the sheet)."
+            },
+            {
+              "id": "kc-n6-q3",
+              "type": "choice",
+              "text": "A question gives a current, a resistance and a time, and asks for the energy transferred. Which pair of equations do you need?",
+              "options": [
+                "$V = I R$ then $E = Q V$",
+                "$P = I^2 R$ then $E = P t$",
+                "$Q = I t$ then $V = I R$",
+                "$P = I V$ then $Q = I t$"
+              ],
+              "correct": 1,
+              "explain": "Current and resistance give power through P = I²R; power and time give energy through E = P × t. (V = IR then P = IV then E = Pt also works — one step longer.)"
+            },
+            {
+              "id": "kc-n6-q4",
+              "type": "choice",
+              "text": "In $\\Delta Q = m \\times c \\times \\Delta\\theta$, what is $Q$?",
+              "options": [
+                "Charge in coulombs",
+                "Thermal energy in joules",
+                "Heat capacity",
+                "Temperature"
+              ],
+              "correct": 1,
+              "explain": "Here Q is thermal energy (J): mass × specific heat capacity × temperature change. The same letter means charge in Q = I × t."
+            },
+            {
+              "id": "kc-n6-q5",
+              "type": "written",
+              "text": "A student is asked for the pressure at the bottom of a swimming pool and writes down $P = I \\times V$. Explain the mistake and state the correct equation.",
+              "model": "<ul><li>$P = I \\times V$ is electrical power; the symbol P means pressure in a different equation.</li><li>Pressure in a liquid: $P = h \\times \\rho \\times g$ (depth × density × gravitational field strength).</li><li>The quantities given (depth, density) point to the right equation — match the symbols you have to the equation.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "kc-n6-q6",
+              "type": "choice",
+              "text": "Which equation must be <b>recalled</b> (it is not on the sheet)?",
+              "options": [
+                "$E = \\tfrac{1}{2} \\times k \\times x^2$",
+                "$F = \\dfrac{mv - mu}{t}$",
+                "$KE = \\tfrac{1}{2} \\times m \\times v^2$",
+                "$P_1 V_1 = P_2 V_2$"
+              ],
+              "correct": 2,
+              "explain": "Kinetic energy is a recall equation. The spring energy, momentum-force and gas equations are on the sheet."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Recall the equations that are not on the sheet",
+        "Recognise every symbol on the sheet, including the ones that mean two things",
+        "Pick the right equation from the quantities a question gives you"
+      ],
+      "blurb": "Edexcel gives you some equations on a sheet and expects you to recall the rest. Know which is which, and what every symbol means."
+    },
+    {
+      "id": "rearranging-nn",
+      "band": "nn",
+      "title": "Rearranging an equation",
+      "spec": "WS",
+      "equations": [
+        "\\text{Do the same thing to both sides}",
+        "F = m \\times a \\;\\Rightarrow\\; a = \\dfrac{F}{m}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Two methods",
+          "html": "<p><b>Method 1 — the formula triangle</b> works for any equation of the form <i>one thing = two things multiplied</i>, such as $F = m \\times a$, $V = I \\times R$, $v = f \\times \\lambda$, $\\rho = m \\div V$ (that is $m = \\rho \\times V$). Put the single quantity at the top; cover the one you want; what you can see is the answer.</p><figure class='diagram'><svg viewBox='0 0 480 170' role='img'><polygon points='150,20 40,150 260,150' fill='none' class='d-ink' style='fill:none;stroke:var(--line);stroke-width:2'/><line x1='75' y1='108' x2='225' y2='108' style='stroke:var(--line);stroke-width:2'/><line x1='150' y1='108' x2='150' y2='150' style='stroke:var(--line);stroke-width:2'/><text x='150' y='88' text-anchor='middle' font-size='26' style='fill:var(--accent);font-weight:700'>F</text><text x='112' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>m</text><text x='188' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>a</text><text x='300' y='70' font-size='14' style='fill:var(--ink-2)'>cover F:  F = m × a</text><text x='300' y='100' font-size='14' style='fill:var(--ink-2)'>cover m:  m = F ÷ a</text><text x='300' y='130' font-size='14' style='fill:var(--ink-2)'>cover a:  a = F ÷ m</text></svg><figcaption>The F = m × a triangle. Cover the quantity you want; the other two tell you whether to multiply (side by side) or divide (one above the other).</figcaption></figure><p><b>Method 2 — do the same to both sides</b> works for every equation, including the ones with squares and fractions that triangles cannot handle:</p><ol class='list'><li>Write the equation. Circle the quantity you want.</li><li>Ask what is being done to it: multiplied by something? divided? squared? having something subtracted?</li><li>Undo it, on both sides: divide to undo a multiply, multiply to undo a divide, square-root to undo a square, add to undo a subtract.</li><li>Repeat until the quantity is on its own.</li></ol><table class='tbl'><tr><th>Equation</th><th>Make … the subject</th><th>Result</th><th>Because</th></tr><tr><td>$KE = \\tfrac{1}{2} m v^2$</td><td>$v$</td><td>$v = \\sqrt{\\dfrac{2 \\times KE}{m}}$</td><td>× 2, ÷ m, then square-root both sides</td></tr><tr><td>$a = \\dfrac{v - u}{t}$</td><td>$v$</td><td>$v = u + a t$</td><td>× t to clear the fraction, then + u</td></tr><tr><td>$a = \\dfrac{v - u}{t}$</td><td>$t$</td><td>$t = \\dfrac{v - u}{a}$</td><td>× t, then ÷ a (t and a swap places)</td></tr><tr><td>$GPE = m g h$</td><td>$h$</td><td>$h = \\dfrac{GPE}{m g}$</td><td>÷ m and ÷ g</td></tr><tr><td>$P = \\dfrac{E}{t}$</td><td>$t$</td><td>$t = \\dfrac{E}{P}$</td><td>× t, ÷ P</td></tr></table>"
+        },
+        {
+          "kind": "explain",
+          "title": "Substitute first if the algebra scares you",
+          "html": "<p>Marks are for the right answer with working, not for elegant algebra. If you cannot see how to rearrange $v^2 - u^2 = 2 a x$ for $a$, put the numbers in first: $0 - 20^2 = 2 \\times a \\times 50$, so $-400 = 100a$, so $a = -4$ m/s². Numbers are easier to push around than letters.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Rearranging with a square",
+          "question": "A ball has 180 J of kinetic energy and a mass of 0.4 kg. Calculate its speed.",
+          "steps": [
+            "Equation: $KE = \\tfrac{1}{2} \\times m \\times v^2$. Wanted: $v$.",
+            "Undo the × ½ and the × m: $v^2 = \\dfrac{2 \\times KE}{m} = \\dfrac{2 \\times 180}{0.4} = 900$.",
+            "Undo the square with a square root: $v = \\sqrt{900} = 30$ m/s.",
+            "Forgetting the square root (answering 900 m/s) is the most common lost mark on this equation — 900 m/s is nearly three times the speed of sound, which is the clue."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "rearranging"
+          ],
+          "title": "Calculation: rearranging"
+        },
+        {
+          "kind": "practice",
+          "title": "Rearranging",
+          "questions": [
+            {
+              "id": "kc-n7-q1",
+              "type": "numeric",
+              "text": "A resultant force of 1200 N acts on a car of mass 400 kg. Calculate the acceleration.",
+              "answer": {
+                "value": 3,
+                "unit": "m/s²"
+              },
+              "hint": "Cover a in the triangle: a = F ÷ m.",
+              "walkthrough": [
+                "<b>Equation:</b> $a = \\dfrac{F}{m}$",
+                "<b>Working:</b> $a = \\dfrac{1200}{400}$",
+                "<b>Answer:</b> $= 3$",
+                "<b>Units:</b> m/s²"
+              ]
+            },
+            {
+              "id": "kc-n7-q2",
+              "type": "numeric",
+              "text": "A wave has speed 36 m/s and frequency 4 Hz. Calculate its wavelength using $v = f \\times \\lambda$.",
+              "answer": {
+                "value": 9,
+                "unit": "m"
+              },
+              "hint": "λ = v ÷ f.",
+              "walkthrough": [
+                "<b>Equation:</b> $\\lambda = \\dfrac{v}{f}$",
+                "<b>Working:</b> $\\lambda = \\dfrac{36}{4}$",
+                "<b>Answer:</b> $= 9$",
+                "<b>Units:</b> m"
+              ]
+            },
+            {
+              "id": "kc-n7-q3",
+              "type": "numeric",
+              "text": "An object gains 1500 J of gravitational potential energy when lifted 25 m. Calculate its mass. (g = 10 N/kg.)",
+              "answer": {
+                "value": 6,
+                "unit": "kg"
+              },
+              "hint": "GPE = m g h, so m = GPE ÷ (g × h).",
+              "walkthrough": [
+                "<b>Equation:</b> $m = \\dfrac{GPE}{g \\times h}$",
+                "<b>Working:</b> $m = \\dfrac{1500}{10 \\times 25}$",
+                "<b>Answer:</b> $= 6$",
+                "<b>Units:</b> kg"
+              ]
+            },
+            {
+              "id": "kc-n7-q4",
+              "type": "numeric",
+              "text": "A 1600 kg car has 800 J of kinetic energy. Calculate its speed.",
+              "answer": {
+                "value": 1,
+                "unit": "m/s"
+              },
+              "hint": "v² = 2 × KE ÷ m, then square-root.",
+              "walkthrough": [
+                "$v^2 = \\dfrac{2 \\times 800}{1600} = 1$.",
+                "$v = \\sqrt{1} = 1$ m/s."
+              ]
+            },
+            {
+              "id": "kc-n7-q5",
+              "type": "numeric",
+              "text": "A car accelerates from 10 m/s to 22.5 m/s in 5 s. Calculate its acceleration.",
+              "answer": {
+                "value": 2.5,
+                "unit": "m/s²"
+              },
+              "hint": "a = (v − u) ÷ t.",
+              "walkthrough": [
+                "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
+                "<b>Working:</b> $a = \\dfrac{22.5 - 10}{5} = \\dfrac{12.5}{5}$",
+                "<b>Answer:</b> $= 2.5$",
+                "<b>Units:</b> m/s²"
+              ]
+            },
+            {
+              "id": "kc-n7-q6",
+              "type": "numeric",
+              "text": "A motor transfers 450 J of energy in 5 s. Calculate its power.",
+              "answer": {
+                "value": 90,
+                "unit": "W"
+              },
+              "hint": "P = E ÷ t.",
+              "walkthrough": [
+                "<b>Equation:</b> $P = \\dfrac{E}{t}$",
+                "<b>Working:</b> $P = \\dfrac{450}{5}$",
+                "<b>Answer:</b> $= 90$",
+                "<b>Units:</b> W"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Make any quantity the subject of a three-term equation (triangle or algebra)",
+        "Rearrange an equation with a square (KE, spring energy) including the square root",
+        "Rearrange an equation with a fraction (a = (v − u) ÷ t) for the quantity on the top or the bottom",
+        "Substitute first, then rearrange, when the algebra looks hard"
+      ],
+      "blurb": "The subject of an equation is the thing on its own. To make a different quantity the subject, undo what is being done to it, on both sides."
+    },
+    {
+      "id": "proportion",
+      "band": "nn",
+      "title": "Percentages, ratios and proportion",
+      "spec": "WS",
+      "equations": [
+        "\\text{percentage} = \\dfrac{\\text{part}}{\\text{whole}} \\times 100",
+        "y \\propto x \\;\\Rightarrow\\; \\text{double } x,\\ \\text{double } y"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Percentages and ratios",
+          "html": "<p>A <b>percentage</b> is a fraction with 100 on the bottom. Three jobs:</p><table class='tbl'><tr><th>Job</th><th>Do this</th><th>Example</th></tr><tr><td>Part as a percentage of a whole</td><td>$\\dfrac{\\text{part}}{\\text{whole}} \\times 100$</td><td>useful 30 J of 120 J in: $\\dfrac{30}{120} \\times 100 = 25\\%$</td></tr><tr><td>A percentage of a quantity</td><td>$\\dfrac{\\%}{100} \\times \\text{quantity}$</td><td>40% of 500 J: $0.4 \\times 500 = 200$ J</td></tr><tr><td>Percentage change</td><td>$\\dfrac{\\text{new} - \\text{old}}{\\text{old}} \\times 100$</td><td>20 m/s to 25 m/s: $\\dfrac{5}{20} \\times 100 = 25\\%$ increase</td></tr></table><p><b>Efficiency</b> is the percentage job in disguise: $\\text{efficiency} = \\dfrac{\\text{useful energy output}}{\\text{total energy input}}$, as a decimal or × 100 as a percentage. It can never be more than 1 (100%).</p><p>A <b>ratio</b> compares two quantities: a transformer with 200 turns on the primary and 50 on the secondary has a turns ratio of 4 : 1, so the voltage is divided by 4.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Proportion",
+          "html": "<p><b>Directly proportional</b> ($y \\propto x$): double one, the other doubles; halve one, the other halves; the graph is a straight line <b>through the origin</b>. Force and extension of a spring (up to the limit), current and p.d. for a fixed resistor, distance and time at constant speed.</p><p><b>Inversely proportional</b> ($y \\propto \\dfrac{1}{x}$): double one, the other halves. Pressure and volume of a gas at constant temperature; acceleration and mass for a fixed force.</p><p><b>Proportional to the square</b> ($y \\propto x^2$): double one, the other goes up by $2^2 = 4$. Kinetic energy and speed; braking distance and speed.</p><p>The <b>doubling test</b> answers most \"what happens if…\" questions without a calculator. Look at the equation: if the quantity is on the top, the answer scales the same way; on the bottom, the opposite way; squared, by the square of the factor.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A doubling question",
+          "question": "The kinetic energy of a car is 200 kJ. State the kinetic energy if its speed is trebled, and explain your answer.",
+          "steps": [
+            "$KE = \\tfrac{1}{2} m v^2$: kinetic energy is proportional to the <b>square</b> of the speed.",
+            "Trebling $v$ multiplies $v^2$ by $3^2 = 9$.",
+            "$KE = 9 \\times 200 = 1800$ kJ.",
+            "The sentence the examiner wants: \\\"KE is proportional to $v^2$, so trebling the speed makes the KE nine times bigger.\\\""
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "percentages-ratios"
+          ],
+          "title": "Calculation: percentages and ratios"
+        },
+        {
+          "kind": "practice",
+          "title": "Proportion",
+          "questions": [
+            {
+              "id": "kc-n8-q1",
+              "type": "numeric",
+              "text": "A lamp transfers 200 J of energy, of which 60 J is useful light. Calculate its efficiency as a percentage.",
+              "answer": {
+                "value": 30,
+                "unit": "%"
+              },
+              "hint": "Useful ÷ total × 100.",
+              "walkthrough": [
+                "$\\dfrac{60}{200} \\times 100 = 30\\%$."
+              ]
+            },
+            {
+              "id": "kc-n8-q2",
+              "type": "numeric",
+              "text": "A motor is 35% efficient. It is supplied with 2000 J. Calculate the useful energy output.",
+              "answer": {
+                "value": 700,
+                "unit": "J"
+              },
+              "hint": "35% of 2000.",
+              "walkthrough": [
+                "$0.35 \\times 2000 = 700$ J."
+              ]
+            },
+            {
+              "id": "kc-n8-q3",
+              "type": "numeric",
+              "text": "A car's speed increases from 20 m/s to 24 m/s. Calculate the percentage increase.",
+              "answer": {
+                "value": 20,
+                "unit": "%"
+              },
+              "hint": "Change ÷ original × 100.",
+              "walkthrough": [
+                "$\\dfrac{24 - 20}{20} \\times 100 = 20\\%$."
+              ]
+            },
+            {
+              "id": "kc-n8-q4",
+              "type": "choice",
+              "text": "The pressure of a fixed mass of gas at constant temperature is inversely proportional to its volume. The volume is halved. What happens to the pressure?",
+              "options": [
+                "It halves",
+                "It stays the same",
+                "It doubles",
+                "It goes up by 4"
+              ],
+              "correct": 2,
+              "explain": "Inversely proportional: when one halves the other doubles."
+            },
+            {
+              "id": "kc-n8-q5",
+              "type": "numeric",
+              "text": "A spring extends by 3 cm with a 2 N load. The load is increased to 8 N. Calculate the new extension (Hooke's law applies).",
+              "answer": {
+                "value": 12,
+                "unit": "cm"
+              },
+              "hint": "Extension is directly proportional to force: the force is 4 times bigger.",
+              "walkthrough": [
+                "$8 \\div 2 = 4$ times the force, so $4 \\times 3 = 12$ cm."
+              ]
+            },
+            {
+              "id": "kc-n8-q6",
+              "type": "written",
+              "text": "The braking distance of a car is proportional to the square of its speed. A driver doubles her speed. Explain what happens to the braking distance.",
+              "model": "<ul><li>Braking distance ∝ speed², so the distance scales with the square of the factor the speed changes by.</li><li>Doubling the speed multiplies speed² by 2² = 4.</li><li>The braking distance becomes four times as long.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find a percentage of a quantity, and a quantity as a percentage of another",
+        "Calculate a percentage change",
+        "Use \"directly proportional\" and \"inversely proportional\" correctly in a sentence and in a calculation",
+        "Answer a \"what happens if x is doubled\" question without a calculator"
+      ],
+      "blurb": "Efficiency, percentage change, scaling a recipe up: the same three skills behind a quarter of the marks on every paper."
+    },
+    {
+      "id": "ewau",
+      "band": "nn",
+      "title": "EWAU: how a calculation is marked",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Where the marks are",
+          "html": "<p>A 3-mark calculation is usually marked like this:</p><table class='tbl'><tr><th>Line</th><th>What you write</th><th>Mark for</th></tr><tr><td><b>E</b>quation</td><td>$a = \\dfrac{v - u}{t}$</td><td>choosing (or recalling) the right equation</td></tr><tr><td><b>W</b>orking</td><td>$a = \\dfrac{20 - 5}{6}$</td><td>substituting the right numbers (after any conversion)</td></tr><tr><td><b>A</b>nswer</td><td>$= 2.5$</td><td>evaluating correctly</td></tr><tr><td><b>U</b>nits</td><td>m/s²</td><td>the unit (sometimes part of the answer mark)</td></tr></table><p><b>Why it matters:</b> if you make a slip on the calculator but have written the equation and the substitution, you still get 2 of the 3 marks. If you write only \"2.6 m/s²\", you get nothing. The working is not for you — it is for the examiner.</p><p><b>Rearranging</b> goes between E and W: write the equation as given, then the rearranged form, then substitute. Or substitute into the original and rearrange the numbers — both score.</p><p><b>Two-step questions</b> get EWAU twice: finish the first quantity with its unit, then start the second equation on a new line.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A full EWAU answer",
+          "question": "A kettle transfers 180 kJ of energy in 2 minutes. Calculate its power.",
+          "steps": [
+            "<b>Convert first:</b> $180\\ \\text{kJ} = 180\\,000$ J; $2\\ \\text{min} = 120$ s. (Conversions sit above the E line.)",
+            "<b>E:</b> $P = \\dfrac{E}{t}$",
+            "<b>W:</b> $P = \\dfrac{180\\,000}{120}$",
+            "<b>A:</b> $= 1500$",
+            "<b>U:</b> W",
+            "Final answer line: $P = 1500$ W (or 1.5 kW). Every mark is visible on its own line."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "EWAU",
+          "questions": [
+            {
+              "id": "kc-n9-q1",
+              "type": "written",
+              "text": "A student answers \"calculate the weight of a 12 kg box\" by writing only \"120 N\". She gets 1 mark out of 2. Explain why, and write the answer that earns both marks.",
+              "model": "<ul><li>No equation and no working are shown, so only the answer mark is available.</li><li>Full answer: $W = m \\times g$; $W = 12 \\times 10$; $= 120$; N.</li><li>With the working shown, a slip on the calculator would still earn the equation and substitution marks.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "kc-n9-q2",
+              "type": "choice",
+              "text": "In a 3-mark calculation, which line usually earns the first mark?",
+              "options": [
+                "The final number",
+                "The unit",
+                "The correct equation",
+                "Underlining the answer"
+              ],
+              "correct": 2,
+              "explain": "The first mark is for the equation (recalled or chosen from the sheet); the second for the substitution; the third for the evaluated answer with its unit."
+            },
+            {
+              "id": "kc-n9-q3",
+              "type": "written",
+              "text": "Write out, in EWAU layout, the calculation of the acceleration of a car that speeds up from 8 m/s to 20 m/s in 4 s.",
+              "model": "<ul><li>E: $a = \\dfrac{v - u}{t}$</li><li>W: $a = \\dfrac{20 - 8}{4} = \\dfrac{12}{4}$</li><li>A: $= 3$</li><li>U: m/s²</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "kc-n9-q4",
+              "type": "choice",
+              "text": "A question gives a time of 5 minutes. Where in an EWAU answer should the conversion to seconds appear?",
+              "options": [
+                "It is not needed",
+                "Above the equation line, before substituting",
+                "In the units line",
+                "After the answer"
+              ],
+              "correct": 1,
+              "explain": "Convert before you substitute: write 5 min = 300 s above the E line, so the W line uses 300."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Lay out every calculation as Equation, Working, Answer, Units",
+        "Show the substituted numbers, not just the equation and the answer",
+        "Earn the working marks even when the final answer is wrong"
+      ],
+      "blurb": "Equation, Working, Answer, Units. Four lines, in that order, every time — because that is how the marks are given out."
+    },
+    {
+      "id": "command-words",
+      "band": "tricky",
+      "title": "Command words: what the examiner wants",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The command words, and what scores",
+          "html": "<table class='tbl'><tr><th>Command word</th><th>It wants</th><th>Model one-liner</th></tr><tr><td><b>State</b> / <b>Give</b> / <b>Name</b> / <b>Write down</b></td><td>A short answer, no reasoning. One word or one line.</td><td>\"State the unit of power.\" — <i>watt.</i></td></tr><tr><td><b>Describe</b></td><td>Say <i>what</i> happens or what something is like, in order. No <i>why</i>.</td><td>\"Describe the motion shown.\" — <i>It accelerates for 5 s, then moves at a constant 10 m/s.</i></td></tr><tr><td><b>Explain</b></td><td>Say <i>why</i>, with a reason or a mechanism. Use <i>because</i>, <i>so</i>, <i>therefore</i>.</td><td>\"Explain why the car slows.\" — <i>Friction acts backwards, so there is a resultant force opposite to the motion, so it decelerates.</i></td></tr><tr><td><b>Calculate</b></td><td>A number, from an equation, with working and a unit (EWAU).</td><td>\"Calculate the speed.\" — <i>v = x ÷ t = 100 ÷ 8 = 12.5 m/s.</i></td></tr><tr><td><b>Determine</b></td><td>A number, but you must get some of the data yourself — usually from a graph (a gradient, an area, a read-off).</td><td>\"Determine the acceleration from the graph.\" — <i>draw the triangle, show the two values, divide.</i></td></tr><tr><td><b>Show that</b></td><td>The answer is given; you must produce it with full working, to one more figure than quoted.</td><td>\"Show that the force is about 50 N.\" — <i>F = ma = 2.5 × 20.4 = 51 N ≈ 50 N.</i></td></tr><tr><td><b>Estimate</b></td><td>A rough value from sensible assumed numbers that you state.</td><td>\"Estimate the mass of a car.\" — <i>about 1000 kg.</i></td></tr><tr><td><b>Compare</b></td><td>Similarities <i>and</i> differences between both things named — mention both every time.</td><td>\"Compare alpha and beta.\" — <i>Both are ionising; alpha is more ionising but less penetrating.</i></td></tr><tr><td><b>Evaluate</b></td><td>Points for and against, using the information given, then a conclusion that follows from them.</td><td>\"Evaluate the use of nuclear power.\" — <i>for … against … so overall …</i></td></tr><tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the choice of a 5 A fuse.\" — <i>I = P ÷ V = 920 ÷ 230 = 4 A, so 5 A is the next size up.</i></td></tr><tr><td><b>Suggest</b></td><td>Apply your knowledge to an unfamiliar situation; a sensible, physics-based idea scores even if it is not the one in the mark scheme.</td><td>\"Suggest why the reading was lower.\" — <i>some energy was transferred to the surroundings.</i></td></tr><tr><td><b>Predict</b></td><td>Say what will happen, from the physics.</td><td>\"Predict the current if the p.d. doubles.\" — <i>it doubles (Ohm's law).</i></td></tr><tr><td><b>Draw</b> / <b>Sketch</b> / <b>Plot</b></td><td>Draw: accurate with a ruler. Sketch: the shape and key features, labelled. Plot: points on given axes.</td><td></td></tr><tr><td><b>Complete</b></td><td>Fill in the missing parts of a diagram, table or sentence.</td><td></td></tr></table><p>The marks are in the word. A 2-mark \"describe\" is two things that happen; a 2-mark \"explain\" is one thing that happens and the reason for it.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Describe is not explain",
+          "html": "<p>The most expensive habit at GCSE is answering every question with an explanation. \"Describe how the velocity changes\" is answered by reading the graph: <i>it increases, then stays constant, then decreases to zero</i>. Writing about forces there earns nothing, however correct. Likewise \"explain\" answered with a description — <i>the ball slows down</i> — scores nothing without the <i>because</i>.</p><p>Underline the command word before you read anything else.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Same situation, three command words",
+          "question": "A ball is dropped and bounces. For each command word, write the kind of answer that scores: (a) <b>Describe</b> the motion of the ball as it falls. (b) <b>Explain</b> why the ball speeds up as it falls. (c) <b>Calculate</b> its speed after 2 s.",
+          "steps": [
+            "<b>(a) Describe:</b> \\\"The ball starts from rest and its speed increases (it accelerates) all the way down.\\\" What happens — no reasons.",
+            "<b>(b) Explain:</b> \\\"The ball's weight acts downwards and there is no force balancing it, so there is a resultant force downwards, so the ball accelerates (Newton's second law).\\\" Each <i>so</i> is a reason.",
+            "<b>(c) Calculate:</b> $v = u + a t = 0 + 10 \\times 2 = 20$ m/s. Equation, working, answer, unit.",
+            "Three questions about one ball; three different answers. The command word decides which."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Command words",
+          "questions": [
+            {
+              "id": "kc-t1-q1",
+              "type": "choice",
+              "text": "\"Describe how the current changes as the potential difference is increased.\" Which answer scores?",
+              "options": [
+                "The current increases because the electrons are pushed harder",
+                "The current increases",
+                "V = I × R",
+                "The resistance stays the same"
+              ],
+              "correct": 1,
+              "explain": "Describe wants what happens, not why. The first option is an explanation — correct physics, wrong command word."
+            },
+            {
+              "id": "kc-t1-q2",
+              "type": "choice",
+              "text": "\"Explain why a parachutist reaches a terminal velocity.\" Which answer scores full marks?",
+              "options": [
+                "The parachutist stops accelerating",
+                "Air resistance increases with speed until it equals the weight, so the resultant force is zero, so the velocity stays constant",
+                "Terminal velocity is the maximum velocity",
+                "Because of air resistance"
+              ],
+              "correct": 1,
+              "explain": "Explain needs the chain of reasons: air resistance grows → balances weight → zero resultant → constant velocity. The others describe or give half a reason."
+            },
+            {
+              "id": "kc-t1-q3",
+              "type": "choice",
+              "text": "What does \"determine\" usually mean in a graph question?",
+              "options": [
+                "Guess a value",
+                "Read or work out a value from the graph, showing how",
+                "Describe the shape",
+                "Draw the graph"
+              ],
+              "correct": 1,
+              "explain": "Determine means find a value, and you must get some of the data from the graph yourself — a gradient triangle, an area or a read-off, shown on the graph."
+            },
+            {
+              "id": "kc-t1-q4",
+              "type": "written",
+              "text": "A question says: \"Show that the kinetic energy of a 1200 kg car moving at 15 m/s is about 135 kJ.\" Write the answer that earns full marks.",
+              "model": "<ul><li>$KE = \\tfrac{1}{2} \\times m \\times v^2$</li><li>$= \\tfrac{1}{2} \\times 1200 \\times 15^2 = \\tfrac{1}{2} \\times 1200 \\times 225$</li><li>$= 135\\,000$ J $= 135$ kJ — the full calculation, ending with the value quoted (give it to at least the precision in the question).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "kc-t1-q5",
+              "type": "written",
+              "text": "\"Compare the properties of alpha and beta radiation.\" A student writes: \"Alpha is stopped by paper and is very ionising.\" Explain why this answer scores poorly, and improve it.",
+              "model": "<ul><li>A compare answer must mention both things in the question — this answer only talks about alpha.</li><li>It should pair each property: alpha is stopped by paper <b>whereas</b> beta passes through paper and is stopped by a few mm of aluminium.</li><li>Alpha is more ionising <b>than</b> beta. Both are ionising (a similarity) — one similarity and two differences is a safe shape.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "kc-t1-q6",
+              "type": "choice",
+              "text": "An \"evaluate\" question is worth 6 marks. What must the answer contain to reach the top band?",
+              "options": [
+                "Only the advantages",
+                "A list of facts about the topic",
+                "Points for and against, using the data given, and a conclusion that follows from them",
+                "A calculation"
+              ],
+              "correct": 2,
+              "explain": "Evaluate = weigh up. Both sides, drawing on the information in the question, then a judgement that is justified by the points made."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Tell a describe question from an explain question, and answer each the right way",
+        "Know what calculate, determine and show that each require",
+        "Structure an evaluate or compare answer so both sides and a conclusion appear"
+      ],
+      "blurb": "The first word of a question tells you what kind of answer scores. Answer a \"describe\" with an explanation and you have wasted the marks on the wrong thing."
+    },
+    {
+      "id": "reading-questions",
+      "band": "tricky",
+      "title": "Reading the question",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "A routine for every calculation question",
+          "html": "<ol class='list'><li><b>Underline the command word</b> and read the last sentence first: it says what to find and how to give it (\"to 2 s.f.\", \"in kJ\", \"include the sign\").</li><li><b>List every value</b> as symbol = number unit. $m = 250$ g, $t = 3$ min, $v = 15$ m/s. Write the unknown with a question mark: $P = ?$</li><li><b>Convert</b> anything not in SI: 250 g → 0.25 kg; 3 min → 180 s; 2 kW → 2000 W. Cross out the old value so you cannot pick it up by mistake.</li><li><b>Add the standard values</b> the question will not give you: $g = 10$ N/kg, speed of light $3 \\times 10^8$ m/s. (Speed of sound, density of water and specific heat capacity of water are usually given.)</li><li><b>Cross out distractors</b>: a question that gives a car's mass, speed and colour of paint — or its mass, speed and the length of the road — may include a value you do not need. If a symbol does not appear in your equation, leave it.</li><li><b>Look back</b> at the earlier parts: part (c) often needs the answer to part (b). \"Use your answer to (b)\" means exactly that, even if (b) was wrong — the marks follow through.</li></ol>"
+        },
+        {
+          "kind": "explain",
+          "title": "The traps, named",
+          "html": "<table class='tbl'><tr><th>Trap</th><th>What it looks like</th><th>Defence</th></tr><tr><td>Mixed units</td><td>\"a 500 g mass … 2 km … 5 minutes\"</td><td>Convert in the list, before any equation</td></tr><tr><td>Diameter for radius, or area given as a length</td><td>\"a pipe of diameter 4 cm\" then a question needing the radius or the area</td><td>Read the quantity's name, not just its number</td></tr><tr><td>Weight for mass</td><td>\"a 600 N box\" used in $F = m a$</td><td>A value in newtons is a weight; divide by $g$ to get the mass</td></tr><tr><td>Total vs per second</td><td>\"transfers 3000 J every minute\" in a power question</td><td>Power is per second: ÷ 60</td></tr><tr><td>Stated precision</td><td>\"Give your answer to 2 significant figures\"</td><td>Circle it; round at the end</td></tr><tr><td>Hidden zero</td><td>\"starts from rest\", \"comes to a stop\", \"dropped\", \"at the top of its flight\"</td><td>$u = 0$ or $v = 0$</td></tr><tr><td>Hidden sign</td><td>\"decelerates\", \"slows\", \"thrown upwards\"</td><td>Negative $a$ (or negative $v$ for the opposite direction)</td></tr></table>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "A question with three traps",
+          "question": "A cyclist of mass 70 kg, riding a 12 kg bicycle, travels 540 m along a flat road in 3 minutes. Calculate the cyclist's average speed in m/s.",
+          "steps": [
+            "Last sentence first: <i>average speed, in m/s</i>. So the answer needs metres and seconds.",
+            "List: $m_\\text{cyclist} = 70$ kg, $m_\\text{bike} = 12$ kg, $x = 540$ m, $t = 3$ min. Wanted: $v = ?$",
+            "Convert: $3\\ \\text{min} = 180$ s. Distractors: the two masses — speed does not depend on them. Cross them out.",
+            "$v = \\dfrac{x}{t} = \\dfrac{540}{180} = 3$ m/s.",
+            "A sense check costs five seconds: 3 m/s is a gentle cycling speed. ✓"
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Reading the question",
+          "questions": [
+            {
+              "id": "kc-t2-q1",
+              "type": "numeric",
+              "text": "A bag of sugar has a mass of 250 g. Calculate its weight. (g = 10 N/kg.)",
+              "answer": {
+                "value": 2.5,
+                "unit": "N"
+              },
+              "hint": "Grams to kilograms first.",
+              "walkthrough": [
+                "$250\\ \\text{g} = 0.25$ kg.",
+                "<b>Equation:</b> $W = m \\times g$",
+                "<b>Working:</b> $W = 0.25 \\times 10$",
+                "<b>Answer:</b> $= 2.5$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "kc-t2-q2",
+              "type": "numeric",
+              "text": "A lift raises a 300 kg load through 2.5 km of mine shaft in 5 minutes. Calculate the average speed of the lift in m/s.",
+              "answer": {
+                "value": 8.33,
+                "unit": "m/s"
+              },
+              "hint": "Which values does speed need? Convert those; ignore the rest.",
+              "walkthrough": [
+                "$2.5\\ \\text{km} = 2500$ m; $5\\ \\text{min} = 300$ s. The mass is not needed.",
+                "$v = \\dfrac{2500}{300} = 8.3$ m/s (2 s.f.)."
+              ]
+            },
+            {
+              "id": "kc-t2-q3",
+              "type": "numeric",
+              "text": "A 800 g ball is thrown at 12 m/s. Calculate its kinetic energy.",
+              "answer": {
+                "value": 57.6,
+                "unit": "J"
+              },
+              "hint": "800 g = 0.8 kg; square the speed.",
+              "walkthrough": [
+                "<b>Equation:</b> $KE = \\tfrac{1}{2} \\times m \\times v^2$",
+                "<b>Working:</b> $KE = \\tfrac{1}{2} \\times 0.8 \\times 12^2 = 0.4 \\times 144$",
+                "<b>Answer:</b> $= 57.6$",
+                "<b>Units:</b> J"
+              ]
+            },
+            {
+              "id": "kc-t2-q4",
+              "type": "numeric",
+              "text": "A heater transfers 400 J of energy every second. It is 75% efficient. Calculate the useful power output.",
+              "answer": {
+                "value": 300,
+                "unit": "W"
+              },
+              "hint": "400 J every second is a power of 400 W. Then take 75% of it.",
+              "walkthrough": [
+                "Input power $= 400$ W.",
+                "Useful output $= 0.75 \\times 400 = 300$ W."
+              ]
+            },
+            {
+              "id": "kc-t2-q5",
+              "type": "choice",
+              "text": "A question says: \"A stone is dropped from a bridge. Calculate its speed after falling for 1.5 s.\" Which value is given without being written down?",
+              "options": [
+                "The height of the bridge",
+                "The initial speed, u = 0, because it is dropped",
+                "The mass of the stone",
+                "The time"
+              ],
+              "correct": 1,
+              "explain": "\"Dropped\" means it starts from rest: u = 0. With a = g = 10 m/s², v = 0 + 10 × 1.5 = 15 m/s. No height or mass is needed."
+            },
+            {
+              "id": "kc-t2-q6",
+              "type": "written",
+              "text": "A student is asked for the acceleration of a car that slows from 30 m/s to 10 m/s in 4 s, \"including the sign\". She writes 5 m/s² and loses a mark. Explain the mistake.",
+              "model": "<ul><li>The car is slowing, so $v$ is smaller than $u$: $a = \\dfrac{10 - 30}{4} = -5$ m/s².</li><li>The question said to include the sign, so the negative sign is part of the answer.</li><li>Reading the last line of the question first would have caught it.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Pull out every value with its unit, and convert the ones that need it, before starting",
+        "Spot the quantities given that are not needed, and the standard values not given",
+        "Notice instructions such as \"to 2 significant figures\", \"ignore air resistance\", \"include the sign\"",
+        "Use information from earlier parts of a question in later parts"
+      ],
+      "blurb": "Most lost marks are not physics mistakes. They are a number in the wrong unit, a value that was given but not needed, or an instruction in the last line that was never read."
+    },
+    {
+      "id": "multi-step",
+      "band": "tricky",
+      "title": "Multi-step calculations",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Finding the chain",
+          "html": "<p>A 4- or 5-mark calculation almost always needs two equations. The method:</p><ol class='list'><li>Write the equation that contains the <b>quantity you want</b>. Which of its inputs are you missing?</li><li>Find an equation that gives that <b>missing quantity</b> from the values you do have. That is step one.</li><li>Do step one in full, with its unit. Do step two with the unrounded result.</li></ol><p>Chains that come up again and again:</p><table class='tbl'><tr><th>Want</th><th>Given</th><th>Chain</th></tr><tr><td>force on a car</td><td>mass, change in speed, time</td><td>$a = \\dfrac{v - u}{t}$ then $F = m a$</td></tr><tr><td>energy from the mains</td><td>current, p.d., time</td><td>$P = I V$ then $E = P t$</td></tr><tr><td>work done lifting</td><td>mass, height</td><td>$W = m g$ then $E = F \\times d$ (or $GPE = m g h$ in one go)</td></tr><tr><td>mass of a block</td><td>dimensions, density</td><td>$V = l \\times w \\times h$ then $m = \\rho V$</td></tr><tr><td>speed at the bottom of a drop</td><td>height</td><td>$GPE = m g h$, set $KE = GPE$, then $v = \\sqrt{2 KE / m}$</td></tr><tr><td>power of a motor</td><td>force, distance, time</td><td>$E = F d$ then $P = E / t$</td></tr><tr><td>wavelength</td><td>speed, period</td><td>$f = 1 / T$ then $\\lambda = v / f$</td></tr></table>"
+        },
+        {
+          "kind": "explain",
+          "title": "Do not round in the middle",
+          "html": "<p>If step one gives $a = 2.666\\,6\\ldots$ m/s², use <b>2.6666</b> (or the calculator's memory) in step two, not 2.7. Rounding to 2.7 then multiplying by 1500 kg gives 4050 N instead of 4000 N — outside the examiner's tolerance, and a lost mark for a correct method.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Two equations, one chain",
+          "question": "A car of mass 1500 kg accelerates from rest to 24 m/s in 8 s. Calculate the resultant force on the car.",
+          "steps": [
+            "Want: force. $F = m \\times a$ — have $m$, missing $a$.",
+            "Get $a$ from the speeds and time: $a = \\dfrac{v - u}{t} = \\dfrac{24 - 0}{8} = 3$ m/s².",
+            "Now $F = m \\times a = 1500 \\times 3 = 4500$ N.",
+            "Two EWAUs, each with its unit; the second uses the first's unrounded result."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Multi-step",
+          "questions": [
+            {
+              "id": "kc-t3-q1",
+              "type": "group",
+              "text": "A 1200 kg car travels 60 m in 3 s at constant speed.",
+              "parts": [
+                {
+                  "id": "kc-t3-q1a",
+                  "type": "numeric",
+                  "text": "Calculate its speed.",
+                  "answer": {
+                    "value": 20,
+                    "unit": "m/s"
+                  },
+                  "hint": "x ÷ t.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $v = \\dfrac{x}{t}$",
+                    "<b>Working:</b> $v = \\dfrac{60}{3}$",
+                    "<b>Answer:</b> $= 20$",
+                    "<b>Units:</b> m/s"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "kc-t3-q1b",
+                  "type": "numeric",
+                  "text": "Calculate its momentum.",
+                  "answer": {
+                    "value": 24000,
+                    "unit": "kg m/s"
+                  },
+                  "hint": "p = m × v with the speed from (a).",
+                  "walkthrough": [
+                    "<b>Equation:</b> $p = m \\times v$",
+                    "<b>Working:</b> $p = 1200 \\times 20$",
+                    "<b>Answer:</b> $= 24\\,000$",
+                    "<b>Units:</b> kg m/s"
+                  ],
+                  "label": "b"
+                }
+              ]
+            },
+            {
+              "id": "kc-t3-q2",
+              "type": "numeric",
+              "text": "A 230 V hairdryer draws a current of 2.5 A for 3 minutes. Calculate the energy transferred.",
+              "answer": {
+                "value": 103500,
+                "unit": "J"
+              },
+              "hint": "Power first (P = IV), then energy (E = P t) with the time in seconds.",
+              "walkthrough": [
+                "$P = I \\times V = 2.5 \\times 230 = 575$ W.",
+                "$t = 3 \\times 60 = 180$ s.",
+                "$E = P \\times t = 575 \\times 180 = 103\\,500$ J."
+              ]
+            },
+            {
+              "id": "kc-t3-q3",
+              "type": "numeric",
+              "text": "A crane lifts a 50 kg load through 12 m. Calculate the work done. (g = 10 N/kg.)",
+              "answer": {
+                "value": 6000,
+                "unit": "J"
+              },
+              "hint": "Weight first, then work = force × distance.",
+              "walkthrough": [
+                "$W = m \\times g = 50 \\times 10 = 500$ N.",
+                "$E = F \\times d = 500 \\times 12 = 6000$ J."
+              ]
+            },
+            {
+              "id": "kc-t3-q4",
+              "type": "numeric",
+              "text": "A steel block measures 2 cm × 10 cm × 5 cm. The density of steel is 8000 kg/m³. Calculate the mass of the block.",
+              "answer": {
+                "value": 0.8,
+                "unit": "kg"
+              },
+              "hint": "Volume in m³ first (convert each length to metres), then m = ρ × V.",
+              "walkthrough": [
+                "$V = 0.02 \\times 0.10 \\times 0.05 = 0.0001$ m³ ($= 1 \\times 10^{-4}$ m³).",
+                "$m = \\rho \\times V = 8000 \\times 0.0001 = 0.8$ kg."
+              ]
+            },
+            {
+              "id": "kc-t3-q5",
+              "type": "group",
+              "text": "A 0.5 kg ball is dropped from a height of 1.8 m. Ignore air resistance. (g = 10 N/kg.)",
+              "parts": [
+                {
+                  "id": "kc-t3-q5a",
+                  "type": "numeric",
+                  "text": "Calculate the gravitational potential energy lost by the ball as it falls.",
+                  "answer": {
+                    "value": 9,
+                    "unit": "J"
+                  },
+                  "hint": "GPE = m g h.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $GPE = m \\times g \\times h$",
+                    "<b>Working:</b> $GPE = 0.5 \\times 10 \\times 1.8$",
+                    "<b>Answer:</b> $= 9$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "kc-t3-q5b",
+                  "type": "numeric",
+                  "text": "Calculate the speed of the ball just before it hits the ground.",
+                  "answer": {
+                    "value": 6,
+                    "unit": "m/s"
+                  },
+                  "hint": "All the GPE becomes KE: ½ m v² = 9 J, then square-root.",
+                  "walkthrough": [
+                    "$KE = GPE = 9$ J.",
+                    "$v^2 = \\dfrac{2 \\times 9}{0.5} = 36$.",
+                    "$v = \\sqrt{36} = 6$ m/s."
+                  ],
+                  "label": "b"
+                }
+              ]
+            },
+            {
+              "id": "kc-t3-q6",
+              "type": "written",
+              "text": "A student calculates a force in two steps. In step one she gets an acceleration of 1.333… m/s² and writes it down as 1.3 m/s². In step two she multiplies by 900 kg and gets 1170 N; the mark scheme says 1200 N. Explain why she lost the final mark and what she should have done.",
+              "model": "<ul><li>She rounded the intermediate value (1.333… to 1.3) and the rounding error was multiplied up in step two.</li><li>1.333… × 900 = 1200 N; 1.3 × 900 = 1170 N, which is outside the accepted range.</li><li>Carry the full value (or at least one extra significant figure) between steps; round only the final answer.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Plan the chain: which equation gives the quantity the second equation needs?",
+        "Carry the full value from step one into step two",
+        "Lay out each step as its own EWAU with its own unit",
+        "Check that the final unit matches what was asked for"
+      ],
+      "blurb": "Two equations, one after the other. The hard part is seeing which quantity links them, and not rounding in between."
+    },
+    {
+      "id": "graph-skills",
+      "band": "tricky",
+      "title": "Graph skills: plotting, best fit, gradient",
+      "spec": "WS",
+      "equations": [
+        "\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Plotting and the line of best fit",
+          "html": "<p><b>Axes:</b> the independent variable (the one you changed) goes on the $x$-axis, the dependent (the one you measured) on the $y$-axis. Label each with <i>quantity in unit</i>, as Edexcel does: <i>extension in m</i>. <b>Scale:</b> pick a scale so the points fill more than half the grid in each direction, going up in 1s, 2s, 5s or 10s (never 3s or 7s). The axes do not have to start at zero — unless you need the origin, for proportionality or an intercept.</p><p><b>Points:</b> small, neat crosses (×), plotted to within half a small square. Big blobs cost the plotting mark.</p><p><b>Line of best fit:</b> a single thin straight line (ruler) or smooth curve that follows the trend with about as many points above it as below. It does <b>not</b> join the dots, does not have to pass through every point, and does not have to go through the origin unless the physics says so. An <b>anomalous</b> point — one clearly off the trend — is circled and ignored.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Gradient and intercept",
+          "html": "<p>To find a gradient:</p><ol class='list'><li>Draw a right-angled triangle on the line of best fit, as large as possible — at least half the length of the line. Small triangles give inaccurate gradients and lose the mark.</li><li>Use two points <b>on the line</b> where it crosses grid lines, not two of the plotted data points (they are not on the line).</li><li>$\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$, with the two values read from the axes and written down.</li><li>The gradient has a unit: $y$-unit per $x$-unit. For force against extension it is N/m — the spring constant.</li></ol><p>The <b>intercept</b> is where the line crosses the $y$-axis (at $x = 0$). It usually means a value \"at the start\" or a fixed offset: the initial velocity on a $v$–$t$ graph, the friction that must be overcome before a trolley moves, the resistance of the leads in a circuit.</p>",
+          "graph": {
+            "x": {
+              "label": "extension in m",
+              "min": 0,
+              "max": 0.12,
+              "step": 0.02
+            },
+            "y": {
+              "label": "force in N",
+              "min": 0,
+              "max": 3,
+              "step": 0.5
+            },
+            "series": [
+              {
+                "kind": "data",
+                "points": [
+                  [
+                    0.02,
+                    0.6
+                  ],
+                  [
+                    0.04,
+                    0.9
+                  ],
+                  [
+                    0.06,
+                    1.6
+                  ],
+                  [
+                    0.08,
+                    1.9
+                  ],
+                  [
+                    0.1,
+                    2.6
+                  ],
+                  [
+                    0.12,
+                    2.9
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.12,
+                    3.0
+                  ]
+                ]
+              }
+            ],
+            "alt": "Force against extension: six plotted points scattered closely around a straight line of best fit from the origin to (0.12, 3.0).",
+            "marks": [
+              {
+                "x": 0.12,
+                "y": 3.0,
+                "label": "B",
+                "drop": true
+              },
+              {
+                "x": 0.04,
+                "y": 1.0,
+                "label": "A",
+                "drop": true
+              }
+            ]
+          },
+          "after": "<p>In the graph above, the triangle from A to B spans most of the line: $\\text{gradient} = \\dfrac{3.0 - 1.0}{0.12 - 0.04} = \\dfrac{2.0}{0.08} = 25$ N/m. Using two data points instead (say the first and last) would give 23.0 N/m — close, but it is not what the line says, and the examiner is checking that you used the line.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Determining a value from a graph",
+          "question": "The graph in the explanation shows force against extension for a spring. Determine the spring constant.",
+          "steps": [
+            "The spring constant is the gradient of a force–extension graph ($F = k \\times x$, so $k = F \\div x$).",
+            "Choose two points on the line of best fit on gridline crossings: A $(0.04,\\ 1.0)$ and B $(0.12,\\ 3.0)$.",
+            "$\\text{gradient} = \\dfrac{3.0 - 1.0}{0.12 - 0.04} = \\dfrac{2.0}{0.08} = 25$.",
+            "$k = 25$ N/m. The unit comes from the axes: newtons on $y$ per metre on $x$."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Graphs",
+          "questions": [
+            {
+              "id": "kc-t4-q1",
+              "type": "group",
+              "text": "The graph shows the velocity of a car.",
+              "parts": [
+                {
+                  "id": "kc-t4-q1a",
+                  "type": "numeric",
+                  "text": "Determine the gradient of the line.",
+                  "answer": {
+                    "value": 2,
+                    "unit": "m/s²"
+                  },
+                  "hint": "Pick two points on the line: (0, 4) and P (10, 24).",
+                  "walkthrough": [
+                    "$\\text{gradient} = \\dfrac{24 - 4}{10 - 0} = \\dfrac{20}{10} = 2$ m/s²."
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "kc-t4-q1b",
+                  "type": "numeric",
+                  "text": "State the intercept on the velocity axis.",
+                  "answer": {
+                    "value": 4,
+                    "unit": "m/s"
+                  },
+                  "hint": "Where the line meets the vertical axis.",
+                  "walkthrough": [
+                    "The line crosses the velocity axis at 4 m/s."
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "kc-t4-q1c",
+                  "type": "choice",
+                  "text": "What does the intercept represent?",
+                  "options": [
+                    "The maximum velocity",
+                    "The velocity at time zero — the car was already moving at 4 m/s",
+                    "The acceleration",
+                    "The distance travelled"
+                  ],
+                  "correct": 1,
+                  "explain": "At t = 0 the velocity is 4 m/s: the car was already moving when timing started. The gradient (2 m/s²) is the acceleration.",
+                  "label": "c"
+                }
+              ],
+              "graph": {
+                "x": {
+                  "label": "time in s",
+                  "min": 0,
+                  "max": 10,
+                  "step": 2
+                },
+                "y": {
+                  "label": "velocity in m/s",
+                  "min": 0,
+                  "max": 25,
+                  "step": 5
+                },
+                "series": [
+                  {
+                    "kind": "line",
+                    "points": [
+                      [
+                        0,
+                        4
+                      ],
+                      [
+                        10,
+                        24
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Velocity–time graph: a straight line from (0, 4) to (10, 24).",
+                "marks": [
+                  {
+                    "x": 10,
+                    "y": 24,
+                    "label": "P",
+                    "drop": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": "kc-t4-q2",
+              "type": "group",
+              "text": "A student measures the resistance of different lengths of the same wire and plots the results.",
+              "parts": [
+                {
+                  "id": "kc-t4-q2a",
+                  "type": "numeric",
+                  "text": "Determine the gradient of the line of best fit.",
+                  "answer": {
+                    "value": 5,
+                    "unit": "Ω/m"
+                  },
+                  "hint": "Use the line, not the points: it runs from the origin to (1.0, 5.0).",
+                  "walkthrough": [
+                    "$\\text{gradient} = \\dfrac{5.0 - 0}{1.0 - 0} = 5$ Ω/m."
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "kc-t4-q2b",
+                  "type": "choice",
+                  "text": "Why is a large triangle used to find the gradient?",
+                  "options": [
+                    "It looks neater",
+                    "Reading errors on the axes are a smaller fraction of a large change, so the gradient is more accurate",
+                    "Small triangles are not allowed",
+                    "The line is only straight in the middle"
+                  ],
+                  "correct": 1,
+                  "explain": "Each reading has an uncertainty of about half a small square; the bigger the triangle, the smaller that is as a fraction of the values used.",
+                  "label": "b"
+                },
+                {
+                  "id": "kc-t4-q2c",
+                  "type": "written",
+                  "text": "The point at 0.6 m lies slightly above the line. Explain whether the student should have drawn the line through it.",
+                  "model": "<ul><li>No. A line of best fit follows the overall trend of all the points, with points balanced on either side.</li><li>It does not need to pass through every point (or any of them); the scatter is normal experimental variation.</li><li>Only a point far from the trend is treated as anomalous — this one is close to the line and is simply left where it is.</li></ul>",
+                  "lines": 3,
+                  "label": "c"
+                }
+              ],
+              "graph": {
+                "x": {
+                  "label": "length in m",
+                  "min": 0,
+                  "max": 1.0,
+                  "step": 0.2
+                },
+                "y": {
+                  "label": "resistance in Ω",
+                  "min": 0,
+                  "max": 6,
+                  "step": 1
+                },
+                "series": [
+                  {
+                    "kind": "data",
+                    "points": [
+                      [
+                        0.2,
+                        1.1
+                      ],
+                      [
+                        0.4,
+                        2.0
+                      ],
+                      [
+                        0.6,
+                        3.1
+                      ],
+                      [
+                        0.8,
+                        3.9
+                      ],
+                      [
+                        1.0,
+                        5.1
+                      ]
+                    ]
+                  },
+                  {
+                    "kind": "line",
+                    "points": [
+                      [
+                        0,
+                        0
+                      ],
+                      [
+                        1.0,
+                        5.0
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Resistance of a wire against its length: five points close to a straight line of best fit from the origin to (1.0, 5.0)."
+              }
+            },
+            {
+              "id": "kc-t4-q3",
+              "type": "draw",
+              "text": "A walker covers 20 m in the first 4 s, stands still for 2 s, then walks a further 20 m in the next 2 s. Draw the distance–time graph on the grid (tap the grid to place the points in order, or draw it on paper).",
+              "grid": {
+                "x": {
+                  "label": "time in s",
+                  "min": 0,
+                  "max": 8,
+                  "step": 1
+                },
+                "y": {
+                  "label": "distance in m",
+                  "min": 0,
+                  "max": 40,
+                  "step": 5
+                },
+                "series": [],
+                "alt": "A blank grid for drawing on"
+              },
+              "model": "Three straight sections: from (0, 0) up to (4, 20); flat to (6, 20); then up to (8, 40). The last section is steeper because the walker is faster.",
+              "answerGraph": {
+                "x": {
+                  "label": "time in s",
+                  "min": 0,
+                  "max": 8,
+                  "step": 1
+                },
+                "y": {
+                  "label": "distance in m",
+                  "min": 0,
+                  "max": 40,
+                  "step": 5
+                },
+                "series": [
+                  {
+                    "kind": "line",
+                    "points": [
+                      [
+                        0,
+                        0
+                      ],
+                      [
+                        4,
+                        20
+                      ],
+                      [
+                        6,
+                        20
+                      ],
+                      [
+                        8,
+                        40
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Distance–time graph: 0 to 20 m in 4 s, flat to 6 s, then 20 m to 40 m by 8 s."
+              },
+              "check": true,
+              "hint": "Four points: the start, the end of each stage. Distance keeps the value it had while the walker stands still."
+            },
+            {
+              "id": "kc-t4-q4",
+              "type": "choice",
+              "text": "A student's $y$-axis scale goes up in 3s (0, 3, 6, 9 …). Why would this lose a mark?",
+              "options": [
+                "Scales must start at zero",
+                "Points cannot be plotted accurately when each small square is an awkward fraction",
+                "The axis is too long",
+                "It would not lose a mark"
+              ],
+              "correct": 1,
+              "explain": "With 3 per large square each small square is 0.3 — hard to plot and to read. Scales go up in 1, 2, 5 or 10 (× any power of ten)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Choose axes and a scale that use more than half the grid, with sensible intervals",
+        "Plot points as small crosses, accurate to half a small square",
+        "Draw a line (or smooth curve) of best fit with roughly equal points either side, ignoring anomalies",
+        "Find a gradient from a triangle that spans at least half the line, using points on the line, not data points",
+        "Read an intercept and say what it means"
+      ],
+      "blurb": "Plotting with the right scale, drawing a line of best fit through the scatter, and taking a gradient from a big triangle. Each is a mark, and each is lost the same way every year."
+    },
+    {
+      "id": "proportionality",
+      "band": "tricky",
+      "title": "Proportionality: from graphs and from data",
+      "spec": "WS",
+      "equations": [
+        "y \\propto x \\iff \\dfrac{y}{x} = \\text{constant}",
+        "y \\propto \\dfrac{1}{x} \\iff x \\times y = \\text{constant}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Proportional, linear, or neither",
+          "html": "<table class='tbl'><tr><th>Relationship</th><th>Graph</th><th>Test with numbers</th><th>Say</th></tr><tr><td>Directly proportional, $y \\propto x$</td><td>Straight line <b>through the origin</b></td><td>$y \\div x$ is the same for every pair</td><td>\"$y$ is directly proportional to $x$\"</td></tr><tr><td>Linear with an intercept</td><td>Straight line <b>not</b> through the origin</td><td>equal steps in $x$ give equal steps in $y$, but $y \\div x$ changes</td><td>\"$y$ increases linearly with $x$\" — not proportional</td></tr><tr><td>Inversely proportional, $y \\propto \\dfrac{1}{x}$</td><td>Curve falling towards the axis, never touching it</td><td>$x \\times y$ is the same for every pair</td><td>\"$y$ is inversely proportional to $x$\"</td></tr><tr><td>Proportional to the square, $y \\propto x^2$</td><td>Curve getting steeper through the origin</td><td>$y \\div x^2$ is constant; doubling $x$ gives $4y$</td><td>\"$y$ is proportional to $x$ squared\"</td></tr></table>",
+          "graph": {
+            "x": {
+              "label": "x",
+              "min": 0,
+              "max": 10,
+              "step": 2
+            },
+            "y": {
+              "label": "y",
+              "min": 0,
+              "max": 25,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    10,
+                    20
+                  ]
+                ]
+              },
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    5
+                  ],
+                  [
+                    10,
+                    25
+                  ]
+                ]
+              }
+            ],
+            "alt": "Two parallel straight lines: A from the origin to (10, 20), B from (0, 5) to (10, 25). Only A shows direct proportion.",
+            "labels": [
+              {
+                "x": 9.6,
+                "y": 17.2,
+                "text": "A: through the origin",
+                "anchor": "end"
+              },
+              {
+                "x": 1.6,
+                "y": 11.8,
+                "text": "B: intercept 5",
+                "anchor": "start"
+              }
+            ]
+          },
+          "after": "<p>Line A passes through the origin: doubling $x$ from 4 to 8 doubles $y$ from 8 to 16 — proportional. Line B has the same gradient but an intercept of 5: doubling $x$ from 4 to 8 takes $y$ from 13 to 21, not double. B is <i>linear</i>, and \"$y$ increases by the same amount for each unit increase in $x$\" is the correct description; \"proportional\" would be marked wrong.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Inverse proportion looks like this",
+          "html": "<p>Pressure against volume for a fixed mass of gas at constant temperature ($P_1 V_1 = P_2 V_2$). Every point on the curve has $P \\times V = 20$: $(1, 20)$, $(2, 10)$, $(4, 5)$, $(8, 2.5)$. The curve never reaches either axis.</p><p>To get a straight line from an inverse relationship, plot $y$ against $\\dfrac{1}{x}$ — then it goes through the origin like any proportional graph.</p>",
+          "graph": {
+            "x": {
+              "label": "volume in cm³",
+              "min": 0,
+              "max": 10,
+              "step": 2
+            },
+            "y": {
+              "label": "pressure in kPa",
+              "min": 0,
+              "max": 20,
+              "step": 5
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    1,
+                    20.0
+                  ],
+                  [
+                    1.25,
+                    16.0
+                  ],
+                  [
+                    1.5,
+                    13.33
+                  ],
+                  [
+                    2,
+                    10.0
+                  ],
+                  [
+                    2.5,
+                    8.0
+                  ],
+                  [
+                    3,
+                    6.67
+                  ],
+                  [
+                    4,
+                    5.0
+                  ],
+                  [
+                    5,
+                    4.0
+                  ],
+                  [
+                    6,
+                    3.33
+                  ],
+                  [
+                    8,
+                    2.5
+                  ],
+                  [
+                    10,
+                    2.0
+                  ]
+                ]
+              }
+            ],
+            "alt": "A curve falling from (1, 20) towards the x-axis: pressure against volume at constant temperature."
+          }
+        },
+        {
+          "kind": "worked",
+          "title": "Testing a data table",
+          "question": "A student records the current through a component at several potential differences: 2 V → 0.4 A; 4 V → 0.8 A; 6 V → 1.2 A; 8 V → 1.5 A. Is the current directly proportional to the potential difference?",
+          "steps": [
+            "Test: $I \\div V$ should be constant. $0.4 \\div 2 = 0.2$; $0.8 \\div 4 = 0.2$; $1.2 \\div 6 = 0.2$; $1.5 \\div 8 = 0.1875$.",
+            "The ratio is constant for the first three pairs and drops for the last, so the current is proportional to the p.d. <b>up to about 6 V</b>, then increases less than proportionally.",
+            "On a graph this is a straight line through the origin that starts to curve over — the resistance is increasing (a filament lamp getting hot).",
+            "The sentence: \\\"Up to 6 V, $I$ is directly proportional to $V$ because $I \\div V$ is constant (0.2 A/V); above 6 V it is not, because the ratio falls.\\\""
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Proportionality",
+          "questions": [
+            {
+              "id": "kc-t5-q1",
+              "type": "choice",
+              "text": "A graph of extension against force is a straight line through the origin up to 8 N, then curves upwards. Which statement is correct?",
+              "options": [
+                "Extension is proportional to force for all forces shown",
+                "Extension is proportional to force up to 8 N only",
+                "Extension is never proportional to force",
+                "Extension is inversely proportional to force"
+              ],
+              "correct": 1,
+              "explain": "Through the origin and straight = proportional. Where the line curves, equal increases in force no longer give equal increases in extension — the limit of proportionality has been passed."
+            },
+            {
+              "id": "kc-t5-q2",
+              "type": "numeric",
+              "text": "The kinetic energy of an object is 4 J at a certain speed. Calculate the kinetic energy when the speed is doubled.",
+              "answer": {
+                "value": 16,
+                "unit": "J"
+              },
+              "hint": "KE ∝ v²: double v, multiply KE by 2² = 4.",
+              "walkthrough": [
+                "$KE \\propto v^2$, so $KE = 4 \\times 2^2 = 16$ J."
+              ]
+            },
+            {
+              "id": "kc-t5-q3",
+              "type": "numeric",
+              "text": "A gas has a pressure of 12 kPa at a volume of 2 m³. The temperature stays the same and the volume is increased to 6 m³. Calculate the new pressure.",
+              "answer": {
+                "value": 4,
+                "unit": "kPa"
+              },
+              "hint": "Inversely proportional: P × V is constant.",
+              "walkthrough": [
+                "$P_1 V_1 = P_2 V_2$: $12 \\times 2 = P_2 \\times 6$.",
+                "$P_2 = \\dfrac{24}{6} = 4$ kPa."
+              ]
+            },
+            {
+              "id": "kc-t5-q4",
+              "type": "choice",
+              "text": "A set of results: x = 2, y = 7; x = 4, y = 11; x = 6, y = 15. Which description is correct?",
+              "options": [
+                "y is directly proportional to x",
+                "y increases linearly with x but is not proportional to it",
+                "y is inversely proportional to x",
+                "y is proportional to x²"
+              ],
+              "correct": 1,
+              "explain": "Equal steps (x up by 2, y up by 4) make it linear, but y ÷ x is 3.5, 2.75, 2.5 — not constant — so it is not proportional. The line would have an intercept of 3."
+            },
+            {
+              "id": "kc-t5-q5",
+              "type": "written",
+              "text": "Describe the graph you would expect if you plotted the current through a fixed resistor against the potential difference across it, and state what the graph shows about the relationship.",
+              "model": "<ul><li>A straight line through the origin.</li><li>This shows the current is directly proportional to the potential difference (Ohm's law), because doubling V doubles I.</li><li>The gradient is 1 ÷ R (or: the resistance is constant).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "kc-t5-q6",
+              "type": "written",
+              "text": "A student plots pressure against volume for a gas and gets a curve. Explain how she could plot the data to get a straight line, and what the line would show.",
+              "model": "<ul><li>Plot pressure against 1 ÷ volume (or volume against 1 ÷ pressure).</li><li>If pressure is inversely proportional to volume this gives a straight line through the origin.</li><li>Because P ∝ 1/V means P × V is constant: the gradient of the line is that constant.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State what a graph must show for two quantities to be directly proportional",
+        "Test a data table for direct proportion (constant y ÷ x) and inverse proportion (constant x × y)",
+        "Describe a straight-line graph with an intercept correctly (linear, not proportional)",
+        "Use a proportionality to predict a value"
+      ],
+      "blurb": "\"Directly proportional\" is a precise claim: a straight line through the origin, or a constant ratio. A straight line on its own is not enough."
+    },
+    {
+      "id": "planning-practical",
+      "band": "tricky",
+      "title": "Planning a practical: the 6-mark method question",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Seven steps, every time",
+          "html": "<p>Whenever a question says <i>describe how you would investigate</i>, <i>plan an experiment</i> or <i>design a method</i>, write your answer in these seven steps, in this order. Each step is a mark, and examiners are looking for exactly these things.</p><ol class='list'><li><b>Read the question, and write down the two variables you are being asked to investigate.</b> One is the thing you will change (the independent variable); the other is the thing you will measure (the dependent variable).</li><li><b>Figure out which formula links them.</b> Write it down. It tells you what else must be kept the same, and what to do with the results at the end.</li><li><b>Say which one you will change and how you will change it</b> — e.g. \"add masses to the trolley\". Give a range or a number of values (\"five different masses\"), and say what you will keep the same so it is a fair test.</li><li><b>Say which one you will measure, and how you will measure it, including the equipment to use</b> — e.g. \"record the speed at each light gate, and measure the distance between them with a ruler\".</li><li><b>Say what you will do with the result</b> — e.g. \"use $a = F \\div m$ to calculate the acceleration\" or \"plot a graph of $F$ against $a$ and calculate the gradient\".</li><li><b>Add a detail about the practical to make sure you get accurate results</b> — e.g. \"release the trolley from the same point each time\", \"keep the ramp at the same angle\", \"use light gates rather than a stopwatch so there is no reaction time\". One specific, relevant detail is enough.</li><li><b>Say you will repeat the readings and calculate a mean.</b> Both halves are needed: writing \"repeat the experiment\" on its own does <b>not</b> get the mark — you must also say that you will <b>calculate a mean</b> of the repeats.</li></ol><p>Write the steps as numbered points, not as one paragraph. A labelled diagram of the equipment is worth adding if you have time, but it does not replace the words.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Where the marks go missing",
+          "html": "<p>The two most common ways to lose marks are <b>describing the equipment without saying what you measure with it</b> (\"use a voltmeter\" earns nothing; \"use a voltmeter to measure the potential difference across the wire\" does), and <b>stopping after you have collected the data</b>. The question asked how you would <i>investigate</i> the link between the two variables, so the calculation or graph that shows the link is a mark in its own right. And the easiest mark on the paper is the one most often thrown away: <b>\"repeat\" alone scores nothing — \"repeat and calculate a mean\" scores</b>.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Investigating resistance and length",
+          "question": "Describe how you would investigate how the resistance of a wire depends on its length. (6 marks)",
+          "steps": [
+            "<b>Step 1 — the two variables.</b> I am investigating <b>length</b> of wire (independent, the one I change) and <b>resistance</b> (dependent, the one I measure).",
+            "<b>Step 2 — the formula.</b> Resistance is found from $R = V \\div I$, so I need to measure the potential difference across the wire and the current through it. I expect $R$ to be proportional to length.",
+            "<b>Step 3 — what I change and how.</b> Stretch the wire along a metre rule and connect it into a circuit with crocodile clips. Change the length by moving one clip along the wire: 20 cm, 40 cm, 60 cm, 80 cm, 100 cm. Keep the same wire, the same cell and the current small so the wire does not heat up.",
+            "<b>Step 4 — what I measure and how.</b> For each length, read the potential difference across the wire with a voltmeter in parallel, and the current with an ammeter in series. Measure the length with the metre rule.",
+            "<b>Step 5 — what I do with the results.</b> Calculate $R = V \\div I$ for each length, then plot a graph of resistance against length. A straight line through the origin shows $R \\propto$ length.",
+            "<b>Step 6 — accuracy.</b> Switch the circuit off between readings so the wire does not warm up (its resistance would rise), and check the ammeter reads zero with the circuit open.",
+            "<b>Step 7 — repeat and mean.</b> Take three readings of $V$ and $I$ at each length and <b>calculate a mean</b> resistance before plotting.",
+            "<b>As it would be written in the exam:</b> seven numbered sentences, one per step — about ten lines. Every sentence contains either a variable, a piece of equipment and what it measures, or what is done with a number."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Planning a practical",
+          "questions": [
+            {
+              "id": "kc-t6-q1",
+              "type": "written",
+              "text": "A student has a spring, a clamp stand, a metre rule and a set of 100 g masses. Describe how the student could investigate how the <b>extension</b> of the spring depends on the <b>force</b> applied to it. (6 marks)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Identifies the two variables: the <b>force</b> (weight of the hanging masses) is changed (independent) and the <b>extension</b> is measured (dependent).</td></tr><tr><td><b>2</b></td><td>Formula</td><td>States that they are linked by $F = k \\times x$ (Hooke's law), with $F = m \\times g$ giving the force from each mass.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Changes the force by adding 100 g masses one at a time (at least five values), using the same spring throughout.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Measures the extension with the metre rule: the new length minus the original (unstretched) length, read at eye level against a pointer.</td></tr><tr><td><b>5</b></td><td>Use the result</td><td>Plots a graph of force against extension; a straight line through the origin shows $F \\propto x$ and the gradient is the spring constant $k$.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>One specific detail: reads the rule at eye level to avoid parallax, or fixes a pointer to the spring, or does not exceed the limit of proportionality (checks the spring returns to its original length).</td></tr><tr><td><b>7</b></td><td>Repeat &amp; mean</td><td>Repeats the readings for each force (e.g. by unloading and reloading) <b>and calculates a mean</b> extension. \"Repeat\" on its own does not score.</td></tr></table><ul><li>\"Use a ruler\" on its own does not earn the <i>Measure</i> mark — say what is measured and how the extension is found from it.</li><li>The <i>Use the result</i> mark needs the graph (or the calculation of $k$), not just \"record the results in a table\".</li></ul>",
+              "lines": 8,
+              "hint": "Step 1: the variables are force and extension. What do you add to change the force, and what must you subtract to get the extension?"
+            },
+            {
+              "id": "kc-t6-q2",
+              "type": "written",
+              "text": "Describe how you would investigate how the <b>current</b> through a filament lamp depends on the <b>potential difference</b> across it. (6 marks)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Identifies the two variables: the <b>potential difference</b> across the lamp is changed (independent) and the <b>current</b> through it is measured (dependent).</td></tr><tr><td><b>2</b></td><td>Formula</td><td>States that they are linked by $V = I \\times R$, and that for a filament lamp the resistance is expected to increase as it heats up.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Changes the potential difference using a variable resistor (or a variable power supply) in series, taking at least five values from zero upwards, using the same lamp.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Measures the current with an ammeter in series with the lamp and the potential difference with a voltmeter in parallel across it.</td></tr><tr><td><b>5</b></td><td>Use the result</td><td>Plots a graph of current against potential difference (an $I$–$V$ graph); a curve that flattens shows the resistance increasing. Or calculates $R = V \\div I$ at each p.d. and shows it rising.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>One specific detail: switches off between readings so the lamp cools between measurements, or reverses the connections to take negative values as well, or uses meters with a suitable range.</td></tr><tr><td><b>7</b></td><td>Repeat &amp; mean</td><td>Repeats each reading <b>and calculates a mean</b> current for each potential difference. \"Repeat\" on its own does not score.</td></tr></table><ul><li>Swapping the ammeter and voltmeter round (ammeter in parallel) loses the <i>Measure</i> mark.</li></ul>",
+              "lines": 8,
+              "hint": "What do you put in the circuit to change the p.d.? Where does each meter go?"
+            }
+          ],
+          "intro": "Write the full answer on paper, as seven numbered points, before you open the mark scheme. Then mark yourself one mark per row — the question is out of six, so any six of the seven rows score."
+        }
+      ],
+      "checklist": [
+        "Pick out the two variables a \"describe a method\" question is asking about",
+        "Name the formula or relationship that links them",
+        "Say which variable you change, how, and what you keep the same",
+        "Say which variable you measure, how, and with what equipment",
+        "Say what you will do with the results (a calculation or a graph)",
+        "Give one specific detail that makes the results accurate",
+        "Say you will repeat the readings and calculate a mean (both halves, or no mark)"
+      ],
+      "blurb": "\"Describe how you would investigate…\" is worth six marks and most students get two. The same seven steps answer every version of it, in every topic."
+    },
+    {
+      "id": "evaluating-methods",
+      "band": "tricky",
+      "title": "Evaluating a method: accuracy, precision and errors",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The words",
+          "html": "<table class='tbl'><tr><th>Word</th><th>Means</th><th>Example</th></tr><tr><td><b>Accurate</b></td><td>Close to the true value</td><td>A balance reading 0.500 kg for a 500 g mass</td></tr><tr><td><b>Precise</b></td><td>Repeated readings are close to each other (small spread)</td><td>0.512, 0.513, 0.512 kg — precise, but not accurate if the true value is 0.500 kg</td></tr><tr><td><b>Resolution</b></td><td>The smallest change an instrument can show</td><td>A millimetre rule has a resolution of 1 mm; a digital balance 0.01 g</td></tr><tr><td><b>Repeatable</b></td><td>The <i>same</i> person with the <i>same</i> equipment gets the same result again</td><td>Three timings within 0.1 s of each other</td></tr><tr><td><b>Reproducible</b></td><td>A <i>different</i> person, or different equipment or method, gets the same result</td><td>Another group's value for $g$ agrees with yours</td></tr><tr><td><b>Valid</b></td><td>The experiment actually tests what it claims to — only the independent variable was changed</td><td>Changing the force without also changing the mass</td></tr><tr><td><b>Random error</b></td><td>Scatter: readings vary unpredictably above and below the true value</td><td>Reaction time on a stopwatch; reading a scale from slightly different angles</td></tr><tr><td><b>Systematic error</b></td><td>Every reading is shifted the same way</td><td>A zero error on a balance; a rule with a worn end; a stopwatch that runs slow</td></tr><tr><td><b>Zero error</b></td><td>A systematic error where the instrument reads something when it should read zero</td><td>A newtonmeter that reads 0.2 N with nothing on it</td></tr><tr><td><b>Anomalous result</b></td><td>A reading that does not fit the pattern of the others</td><td>19.8, 20.1, 27.3, 20.0 s — the 27.3 s</td></tr></table>"
+        },
+        {
+          "kind": "explain",
+          "title": "What fixes what",
+          "html": "<p><b>Repeating and taking a mean</b> reduces the effect of <b>random</b> error, because the scatter above and below averages out. It does <b>nothing</b> for a <b>systematic</b> error — if the balance always reads 5 g high, the mean reads 5 g high too. Systematic errors are fixed by checking the zero, calibrating against a known value, or changing the method.</p><p><b>An anomalous result</b> should be repeated if possible. If it cannot be, it is left out of the mean and circled on the graph — but you must say so.</p><p><b>\"Human error\"</b> is never a creditworthy answer. Say what the error actually is: <i>reaction time when starting the stopwatch</i>, <i>parallax when reading the rule</i>, <i>the thermometer not being at the same depth each time</i>. Then say what reduces it: <i>light gates</i>, <i>reading at eye level</i>, <i>a clamp to hold the thermometer</i>.</p><p><b>Higher resolution</b> means a smaller uncertainty in each reading — a digital stopwatch (0.01 s) over a wall clock (1 s) — but it does not help if the reading is dominated by reaction time (about 0.2 s).</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Evaluating a set of results",
+          "question": "A student times a pendulum's swing five times: 1.62 s, 1.58 s, 1.60 s, 1.91 s, 1.59 s. Her stopwatch has a resolution of 0.01 s. (a) Identify any anomalous result. (b) Calculate the mean. (c) Suggest one source of random error and how to reduce it. (d) Explain whether a stopwatch of resolution 0.001 s would improve the result.",
+          "steps": [
+            "<b>(a)</b> 1.91 s is anomalous: it is far from the others, which are all within 0.04 s of each other.",
+            "<b>(b)</b> Leave it out: $\\text{mean} = \\dfrac{1.62 + 1.58 + 1.60 + 1.59}{4} = 1.60$ s (not divided by 5).",
+            "<b>(c)</b> Reaction time when starting and stopping the stopwatch — the student cannot press the button at exactly the end of a swing. Reduce it by timing ten swings and dividing by ten, so the reaction time is a smaller fraction of the measured time; or use a light gate.",
+            "<b>(d)</b> No. The reaction time (about 0.2 s) is much bigger than the resolution of either stopwatch, so a finer scale adds digits without adding accuracy. The limiting error is the method, not the instrument."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Evaluating",
+          "questions": [
+            {
+              "id": "kc-t7-q1",
+              "type": "choice",
+              "text": "A student's three readings of a resistance are 4.72 Ω, 4.71 Ω and 4.73 Ω. The true value is 5.00 Ω. The readings are:",
+              "options": [
+                "Accurate and precise",
+                "Precise but not accurate",
+                "Accurate but not precise",
+                "Neither"
+              ],
+              "correct": 1,
+              "explain": "The readings are close together (precise) but all well below the true value (not accurate) — the sign of a systematic error."
+            },
+            {
+              "id": "kc-t7-q2",
+              "type": "choice",
+              "text": "Which of these is a systematic error?",
+              "options": [
+                "Starting the stopwatch slightly late on some runs and slightly early on others",
+                "A balance that reads 2 g with nothing on the pan",
+                "Reading a ruler from different angles each time",
+                "Wind gusts affecting a falling object"
+              ],
+              "correct": 1,
+              "explain": "A zero error shifts every reading the same way — systematic. The others vary from reading to reading: random."
+            },
+            {
+              "id": "kc-t7-q3",
+              "type": "written",
+              "text": "Explain the difference between a repeatable result and a reproducible result.",
+              "model": "<ul><li>Repeatable: the same experimenter, using the same method and equipment, gets the same (or very similar) result when they do it again.</li><li>Reproducible: a different experimenter, or a different method or equipment, gets the same result.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "kc-t7-q4",
+              "type": "written",
+              "text": "A student measures the time for a ball to fall 2 m using a stopwatch and gets 0.74 s. Another student says \"the error was human error\". Explain why this is a poor evaluation, and give a better one.",
+              "model": "<ul><li>\"Human error\" does not say what went wrong or how to fix it, so it earns no credit.</li><li>The actual source is reaction time: the student cannot start and stop the stopwatch at exactly the right instants, which adds a random error of about 0.2 s to a fall of under a second.</li><li>Improvement: use a light gate or an electromagnetic release with an electronic timer, so the timing starts and stops automatically; or time a longer fall so the reaction time is a smaller fraction.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "kc-t7-q5",
+              "type": "choice",
+              "text": "Repeating readings and calculating a mean reduces the effect of:",
+              "options": [
+                "Systematic errors",
+                "Random errors",
+                "Zero errors",
+                "All errors"
+              ],
+              "correct": 1,
+              "explain": "Averaging cancels scatter — random error. A systematic shift is in every reading, so it survives the averaging unchanged."
+            },
+            {
+              "id": "kc-t7-q6",
+              "type": "written",
+              "text": "A student measures a spring's extension with a rule whose end is worn, so every length reads 2 mm too short. State the type of error, explain its effect on a graph of force against extension, and describe how to correct it.",
+              "model": "<ul><li>A systematic (zero) error.</li><li>Every extension would be wrong by the same amount — but extension is a difference of two lengths, so the 2 mm cancels; if instead the raw lengths were plotted, the whole line would shift and the intercept would be wrong while the gradient stayed correct.</li><li>Correct it by measuring from a clear mark (e.g. the 10 cm line) rather than the worn end, or by subtracting the zero error from each reading.</li></ul>",
+              "lines": 4
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define accuracy, precision, resolution, repeatable and reproducible",
+        "Tell a random error from a systematic error, and say what reduces each",
+        "Identify an anomalous result and say what to do with it",
+        "Explain why repeating and averaging improves a result (and what it does not fix)"
+      ],
+      "blurb": "Accurate is not the same as precise, repeatable is not the same as reproducible, and \"human error\" is not an answer. The vocabulary is examined."
+    },
+    {
+      "id": "estimation",
+      "band": "tricky",
+      "title": "Estimation questions",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "How to answer an estimation question",
+          "html": "<p>An estimation question is marked on your <b>method and sensible values</b>, not on hitting one exact number. The examiner wants to see:</p><ol class='list'><li><b>Assumed values</b>, written down with units — a mass, a speed, a time or distance.</li><li>The <b>equation</b> you are using.</li><li>The <b>calculation</b>, to 1 or 2 significant figures.</li><li>A <b>sense check</b>: compare with something you know.</li></ol><table class='tbl'><tr><th>Useful values to know</th><th></th></tr><tr><td>Mass of an adult</td><td>70 kg</td></tr><tr><td>Mass of a car</td><td>1000–1500 kg</td></tr><tr><td>Height of a room / a floor of a building</td><td>3 m</td></tr><tr><td>Height of a table</td><td>0.8 m</td></tr><tr><td>Walking, running, cycling speed</td><td>1.5, 3, 6 m/s</td></tr><tr><td>Car in town (30 mph), on a motorway (70 mph)</td><td>13, 30 m/s</td></tr><tr><td>Power of a kettle, a car engine, a person</td><td>2 kW, 100 kW, 100 W</td></tr><tr><td>Power of a phone charger, an LED lamp</td><td>5 W, 10 W</td></tr><tr><td>Mass of an apple, a bag of sugar, a litre of water</td><td>0.1 kg, 1 kg, 1 kg</td></tr><tr><td>Reaction time</td><td>0.2–0.7 s</td></tr><tr><td>Speed of sound in air; speed of light</td><td>340 m/s; $3 \\times 10^8$ m/s</td></tr></table><p>Any answer within a factor of two or so of the examiner's will be accepted <i>if your assumptions are stated and sensible</i>. An unexplained number on its own is not.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Estimating an energy",
+          "question": "Estimate the work done by a student climbing one flight of stairs.",
+          "steps": [
+            "<b>Assume:</b> mass $\\approx 70$ kg; height of one floor $\\approx 3$ m; $g = 10$ N/kg.",
+            "Work done against gravity $= $ gain in GPE $= m \\times g \\times h = 70 \\times 10 \\times 3 = 2100$ J.",
+            "Estimate: about $2000$ J (2 kJ).",
+            "<b>Sense check:</b> a chocolate bar stores about 1 MJ, so one flight of stairs is a tiny fraction of it — which matches experience."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Estimation",
+          "questions": [
+            {
+              "id": "kc-t8-q1",
+              "type": "numeric",
+              "text": "Estimate the weight of a family car.",
+              "answer": {
+                "value": 10000,
+                "unit": "N",
+                "tolerance": 0.6
+              },
+              "hint": "Mass of a car ≈ 1000 kg; W = m × g.",
+              "walkthrough": [
+                "Assume $m \\approx 1000$ kg. $W = 1000 \\times 10 = 10\\,000$ N (about 10 kN)."
+              ]
+            },
+            {
+              "id": "kc-t8-q2",
+              "type": "numeric",
+              "text": "Estimate the energy transferred by an electric heater left on for two hours.",
+              "answer": {
+                "value": 14400000,
+                "unit": "J",
+                "tolerance": 0.6
+              },
+              "hint": "A heater is about 2 kW; two hours in seconds.",
+              "walkthrough": [
+                "Assume $P \\approx 2000$ W; $t = 2 \\times 3600 = 7200$ s.",
+                "$E = P \\times t = 2000 \\times 7200 \\approx 1.4 \\times 10^{7}$ J (about 14 MJ, or 4 kWh)."
+              ]
+            },
+            {
+              "id": "kc-t8-q3",
+              "type": "numeric",
+              "text": "Estimate the power of a student who runs up a flight of stairs in 3 s.",
+              "answer": {
+                "value": 700,
+                "unit": "W",
+                "tolerance": 0.5
+              },
+              "hint": "Work done ≈ 2100 J (from the worked example); divide by the time.",
+              "walkthrough": [
+                "$E \\approx 70 \\times 10 \\times 3 = 2100$ J.",
+                "$P = \\dfrac{E}{t} = \\dfrac{2100}{3} = 700$ W — several times the 100 W a person sustains all day, which is why you cannot keep it up."
+              ]
+            },
+            {
+              "id": "kc-t8-q4",
+              "type": "numeric",
+              "text": "Estimate the time it takes sound to travel the length of a football pitch.",
+              "answer": {
+                "value": 0.3,
+                "unit": "s",
+                "tolerance": 0.4
+              },
+              "hint": "A pitch is about 100 m; sound travels at 340 m/s.",
+              "walkthrough": [
+                "$t = \\dfrac{x}{v} = \\dfrac{100}{340} \\approx 0.3$ s."
+              ]
+            },
+            {
+              "id": "kc-t8-q5",
+              "type": "written",
+              "text": "Describe how you would estimate the kinetic energy of a cyclist.",
+              "model": "<ul><li>State sensible assumed values: mass of cyclist plus bicycle about 80 kg; cycling speed about 6 m/s.</li><li>Use $KE = \\tfrac{1}{2} \\times m \\times v^2$.</li><li>$KE \\approx \\tfrac{1}{2} \\times 80 \\times 6^2 \\approx 1400$ J, given to 1 or 2 significant figures.</li><li>Sense-check it against a known value (e.g. a few times the energy to climb a step).</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "kc-t8-q6",
+              "type": "choice",
+              "text": "Which is the best estimate of the height of a two-storey house?",
+              "options": [
+                "1 m",
+                "3 m",
+                "7 m",
+                "30 m"
+              ],
+              "correct": 2,
+              "explain": "Each floor is about 3 m, plus the roof: around 7 m. 30 m is a ten-storey block; 3 m is one floor."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Recall sensible everyday values: masses, speeds, times, heights, powers",
+        "State assumed values before using them",
+        "Give an estimate to one or two significant figures with a unit, and sense-check it"
+      ],
+      "blurb": "\"Estimate…\" means choose sensible values, say what you chose, calculate, and round. The method earns most of the marks, and the exact number is not what is being checked."
+    }
+  ],
+  "facts": [
+    {
+      "q": "SI unit of length?",
+      "a": "metre, m",
+      "section": "si-units"
+    },
+    {
+      "q": "SI unit of mass?",
+      "a": "kilogram, kg (not the gram)",
+      "section": "si-units"
+    },
+    {
+      "q": "SI unit of time?",
+      "a": "second, s",
+      "section": "si-units"
+    },
+    {
+      "q": "SI unit of current?",
+      "a": "ampere (amp), A",
+      "section": "si-units"
+    },
+    {
+      "q": "SI unit of temperature?",
+      "a": "kelvin, K (°C accepted where the question uses it)",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of force and weight?",
+      "a": "newton, N",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of energy and work done?",
+      "a": "joule, J",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of power?",
+      "a": "watt, W (1 W = 1 J/s)",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of pressure?",
+      "a": "pascal, Pa (1 Pa = 1 N/m²)",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of frequency?",
+      "a": "hertz, Hz",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of potential difference?",
+      "a": "volt, V",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of resistance?",
+      "a": "ohm, Ω",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of charge?",
+      "a": "coulomb, C",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of acceleration?",
+      "a": "metre per second squared, m/s²",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of density?",
+      "a": "kilogram per cubic metre, kg/m³",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of momentum?",
+      "a": "kilogram metre per second, kg m/s",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of specific heat capacity?",
+      "a": "J/kg °C",
+      "section": "si-units"
+    },
+    {
+      "q": "Unit of gravitational field strength?",
+      "a": "newton per kilogram, N/kg",
+      "section": "si-units"
+    },
+    {
+      "q": "Which unit symbols take a capital letter?",
+      "a": "Those named after people: N, J, W, Pa, Hz, V, A, C, K, Ω",
+      "section": "si-units"
+    },
+    {
+      "q": "giga (G) means ×…",
+      "a": "$10^{9}$ = 1 000 000 000",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "mega (M) means ×…",
+      "a": "$10^{6}$ = 1 000 000",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "kilo (k) means ×…",
+      "a": "$10^{3}$ = 1000",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "centi (c) means ×…",
+      "a": "$10^{-2}$ = 0.01",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "milli (m) means ×…",
+      "a": "$10^{-3}$ = 0.001",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "micro (μ) means ×…",
+      "a": "$10^{-6}$ = 0.000 001",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "nano (n) means ×…",
+      "a": "$10^{-9}$ = 0.000 000 001",
+      "section": "prefixes-nn"
+    },
+    {
+      "q": "1 hour in seconds?",
+      "a": "3600 s",
+      "section": "converting"
+    },
+    {
+      "q": "1 day in seconds?",
+      "a": "86 400 s (24 × 3600)",
+      "section": "converting"
+    },
+    {
+      "q": "km/h to m/s?",
+      "a": "÷ 3.6 (×1000 ÷ 3600)",
+      "section": "converting"
+    },
+    {
+      "q": "1 m² in cm²?",
+      "a": "10 000 cm² (100 × 100)",
+      "section": "converting"
+    },
+    {
+      "q": "1 m³ in cm³?",
+      "a": "1 000 000 cm³ (100 × 100 × 100)",
+      "section": "converting"
+    },
+    {
+      "q": "1 g/cm³ in kg/m³?",
+      "a": "1000 kg/m³",
+      "section": "converting"
+    },
+    {
+      "q": "1 kWh in joules?",
+      "a": "3 600 000 J ($3.6 \\times 10^{6}$ J)",
+      "section": "converting"
+    },
+    {
+      "q": "Converting to a bigger unit makes the number…",
+      "a": "smaller (3500 m = 3.5 km)",
+      "section": "converting"
+    },
+    {
+      "q": "Do leading zeros count as significant figures?",
+      "a": "No: 0.0047 has 2 s.f.",
+      "section": "sig-figs"
+    },
+    {
+      "q": "How many s.f. should an answer have?",
+      "a": "The same as the least precise data (usually 2 or 3); round only at the end",
+      "section": "sig-figs"
+    },
+    {
+      "q": "Standard form: the rule for the front number?",
+      "a": "Between 1 and 10: $a \\times 10^{n}$ with $1 \\le a < 10$",
+      "section": "standard-form-nn"
+    },
+    {
+      "q": "Calculator shows 2.5E-5. Write it.",
+      "a": "$2.5 \\times 10^{-5}$",
+      "section": "standard-form-nn"
+    },
+    {
+      "q": "$W$ can mean…",
+      "a": "weight (W = m × g) or work done (W = F × d)",
+      "section": "equation-sheet"
+    },
+    {
+      "q": "$Q$ can mean…",
+      "a": "charge (Q = I × t) or thermal energy (ΔQ = m c Δθ)",
+      "section": "equation-sheet"
+    },
+    {
+      "q": "$P$ can mean…",
+      "a": "power (P = E ÷ t) or pressure (P = F ÷ A)",
+      "section": "equation-sheet"
+    },
+    {
+      "q": "Value of $g$ at GCSE?",
+      "a": "10 N/kg (= 10 m/s²)",
+      "section": "equation-sheet"
+    },
+    {
+      "q": "Speed of light?",
+      "a": "$3 \\times 10^{8}$ m/s",
+      "section": "equation-sheet"
+    },
+    {
+      "q": "To undo a square…",
+      "a": "take the square root of both sides",
+      "section": "rearranging-nn"
+    },
+    {
+      "q": "Make $v$ the subject of $KE = \\tfrac{1}{2} m v^2$",
+      "a": "$v = \\sqrt{2 KE \\div m}$",
+      "section": "rearranging-nn"
+    },
+    {
+      "q": "Make $t$ the subject of $a = (v - u) \\div t$",
+      "a": "$t = (v - u) \\div a$",
+      "section": "rearranging-nn"
+    },
+    {
+      "q": "Percentage change =",
+      "a": "(change ÷ original) × 100",
+      "section": "proportion"
+    },
+    {
+      "q": "Efficiency =",
+      "a": "useful energy output ÷ total energy input (× 100 for %)",
+      "section": "proportion"
+    },
+    {
+      "q": "Directly proportional means…",
+      "a": "double one, double the other; straight line through the origin",
+      "section": "proportion"
+    },
+    {
+      "q": "Inversely proportional means…",
+      "a": "double one, halve the other; x × y is constant",
+      "section": "proportion"
+    },
+    {
+      "q": "$y \\propto x^2$: double $x$ and $y$ becomes…",
+      "a": "4 times bigger",
+      "section": "proportion"
+    },
+    {
+      "q": "EWAU stands for…",
+      "a": "Equation, Working, Answer, Units",
+      "section": "ewau"
+    },
+    {
+      "q": "\"State\" wants…",
+      "a": "a short answer, no reasoning",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Describe\" wants…",
+      "a": "what happens, in order — no why",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Explain\" wants…",
+      "a": "why, with reasons: because / so / therefore",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Calculate\" wants…",
+      "a": "a number with working and a unit (EWAU)",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Determine\" wants…",
+      "a": "a value you get from the graph or data yourself",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Show that\" wants…",
+      "a": "full working arriving at the value given",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Compare\" wants…",
+      "a": "similarities and differences, mentioning both things",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Evaluate\" wants…",
+      "a": "for and against, then a justified conclusion",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Justify\" wants…",
+      "a": "the evidence or reasoning for a given statement",
+      "section": "command-words"
+    },
+    {
+      "q": "\"Suggest\" wants…",
+      "a": "a sensible physics idea applied to a new situation",
+      "section": "command-words"
+    },
+    {
+      "q": "Which variable goes on the x-axis?",
+      "a": "The independent variable (the one you changed)",
+      "section": "graph-skills"
+    },
+    {
+      "q": "Gradient =",
+      "a": "change in y ÷ change in x, from a large triangle on the line of best fit",
+      "section": "graph-skills"
+    },
+    {
+      "q": "A line of best fit should…",
+      "a": "follow the trend with points balanced either side; not join the dots",
+      "section": "graph-skills"
+    },
+    {
+      "q": "Straight line not through the origin is…",
+      "a": "linear, not proportional",
+      "section": "proportionality"
+    },
+    {
+      "q": "Seven steps to describe a practical?",
+      "a": "Two variables → formula → change (and keep same) → measure (equipment) → use the result → accuracy detail → repeat and calculate a mean",
+      "section": "planning-practical"
+    },
+    {
+      "q": "\"Repeat\" on its own scores…",
+      "a": "nothing — say \"repeat and calculate a mean\"",
+      "section": "planning-practical"
+    },
+    {
+      "q": "Accurate means…",
+      "a": "close to the true value",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "Precise means…",
+      "a": "repeated readings are close to each other",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "Resolution means…",
+      "a": "the smallest change an instrument can show",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "Repeatable vs reproducible?",
+      "a": "Same person, same equipment, same result / different person or method, same result",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "Random error vs systematic error?",
+      "a": "Scatter above and below / every reading shifted the same way",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "Repeating and averaging reduces…",
+      "a": "random error only (not systematic)",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "What to do with an anomalous result?",
+      "a": "Repeat it if you can; otherwise leave it out of the mean and say so",
+      "section": "evaluating-methods"
+    },
+    {
+      "q": "Mass of an adult? of a car?",
+      "a": "about 70 kg; about 1000–1500 kg",
+      "section": "estimation"
+    },
+    {
+      "q": "Walking, running, cycling speeds?",
+      "a": "about 1.5, 3, 6 m/s",
+      "section": "estimation"
+    },
+    {
+      "q": "Power of a kettle? of a person?",
+      "a": "about 2 kW; about 100 W",
+      "section": "estimation"
+    }
+  ],
+  "factsBlurb": "The whole topic on flip cards: every unit, every prefix, every command word. Cover, say the answer out loud, then flip to check.",
   "types": [
     {
       "id": "si-conversions",
