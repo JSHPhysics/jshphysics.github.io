@@ -116,6 +116,7 @@ Big session — built out the entire pedagogy hotspot system end-to-end.
 ### 2026-11-05 (Fable 5.1)
 
 - `gcse-revision/` renamed to `LEH-U4-Forces-and-motion-revision/` at the author's request (students get that URL); `gcse-revision/index.html` is now a redirect stub that carries the `#topic/section` hash across. Card URL in `tools.json` updated; screenshot filename unchanged.
+- 2026-11-16: that card is now titled "LEH U4 Topic 2 Revision" (was "GCSE Revision"), since the GCSE-wide revision work is going into `gcse-non-negotiables/` instead.
 - U4 revision: new tricky-bits section `planning-practical` (T6, "Planning a practical: the 6-mark method question") — the author's seven-step recipe (variables → formula → change → measure → use the result → one accuracy detail → repeat and calculate a mean; questions stay at 6 marks, any six of the seven points), a worked force–acceleration answer, and two 6-mark written questions whose model answers are mark-scheme tables built by `mark_scheme()` in `t2_tricky_b.py`. Page now 21 sections / 128 questions.
 
 ### 2026-11-11 (Fable 5.2)
