@@ -1,8 +1,9 @@
 {
   "id": "waves",
   "title": "Waves",
-  "subtitle": "The wave equation, wave speed, echoes and wave graphs",
-  "order": 50,
+  "subtitle": "Transverse and longitudinal waves, the wave equation, sound and ultrasound",
+  "spec": "Topic 4",
+  "order": 40,
   "figure": "waves",
   "types": [
     {

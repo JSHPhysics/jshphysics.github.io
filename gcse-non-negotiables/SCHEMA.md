@@ -221,3 +221,110 @@ Rules for graph questions:
 - All points lie inside the axis ranges.
 - Keep a plotted curve to the physical shape (an exponential decay must
   come from an exponential, computed in the script, not sketched).
+
+## Revision content: bands, sections and key facts
+
+Since November 2026 the GCSE site follows the Edexcel 1PH0 specification
+one topic per page (Topics 3 and 8 merged; Topic 1 kept as "key
+concepts"), and a topic file may carry revision notes around its
+calculation types. All of it is optional: a file with only `types`
+renders exactly as before, which is what the A-level site does.
+
+```json
+{
+  "id": "motion-and-forces",
+  "title": "Motion and forces",
+  "subtitle": "…",
+  "spec": "Topic 2",
+  "order": 20,
+  "figure": "motion-graph",
+  "lede": "One paragraph under the progress line (HTML, TeX between $…$).",
+  "howto": ["How to use this topic, one line per step."],
+  "bands": [
+    { "id": "nn", "prefix": "N", "title": "The non-negotiables", "blurb": "…" },
+    { "id": "tricky", "prefix": "T", "title": "The tricky bits", "blurb": "…" }
+  ],
+  "sections": [ …see below… ],
+  "facts": [ { "q": "Unit of momentum?", "a": "kg m/s", "section": "momentum" } ],
+  "types": [ …calculation types, unchanged… ]
+}
+```
+
+- `spec` — the Edexcel topic, shown as a kicker on the card and cover.
+- `placeholder` — a sentence shown instead of content while a topic has
+  neither sections nor types (the topic still appears on the home grid).
+- `bands` — headings the sections are grouped under, in order. Sections
+  are numbered within their band with the band's `prefix`: N1, N2 … T1, T2.
+- `facts` — the flashcards shown as the last band, "Key facts". `section`
+  is the id of the section the card belongs to (used when a section is
+  hidden by the tier filter, and for later tooling).
+
+### Section
+
+```json
+{
+  "id": "vt-graphs",
+  "band": "nn",
+  "title": "Velocity–time graphs",
+  "spec": "2.10",
+  "tags": ["H"],
+  "equations": ["\\text{acceleration} = \\text{gradient}", "\\text{distance} = \\text{area}"],
+  "blurb": "One sentence under the equations.",
+  "checklist": ["Find an acceleration from the gradient", "Find a distance from the area"],
+  "parts": [ … ]
+}
+```
+
+- `id` — kebab-case, unique among the file's sections and types.
+- `tags` — `"H"` for Higher-tier only, `"P"` for separate Physics only
+  (not Combined Science). Shown as badges. On this site an `H` tag also
+  hides the section when the Foundation filter is on.
+- `equations` — TeX (no dollars), shown as the formula strip.
+- `checklist` — the "can you…" lines of the traffic-light self-check and
+  of the printed checklist.
+
+Text in sections is **HTML with TeX between `$…$` (inline) or `$$…$$`
+(display)** — the opposite convention to the calculation types, which use
+plain text. Use `<table class="tbl">` for tables, `<ol class="list">` for
+numbered steps, and `<figure class="diagram">` around an inline SVG.
+
+### Parts, in the order they appear
+
+| kind       | fields                                                     | shows as                                   |
+|------------|------------------------------------------------------------|--------------------------------------------|
+| `explain`  | `title`, `html`, optional `tone: "warn"`, `graph`, `after` | an Explanation box (or a "Careful" box)    |
+| `worked`   | `title`, `question`, `steps[]`, optional `graph`           | a worked example revealed step by step     |
+| `types`    | `ids[]`, optional `title`, `intro`                         | the named calculation types as nested cards, numbered N3.1, N3.2 … |
+| `practice` | `title`, optional `intro`, `questions[]`                   | section questions (below)                  |
+| `facts`    | `title`, `items[{q, a}]`                                   | a flip-card grid inside the section        |
+
+Each calculation type may be embedded by at most one section; types no
+section embeds are shown after the sections in a "Calculations" band, so
+nothing is ever lost during a rewrite.
+
+### Section questions
+
+```json
+{ "id": "t2-n6-q1", "type": "numeric", "text": "…", "answer": { "value": 2, "unit": "m/s²" },
+  "hint": "…", "walkthrough": ["…"], "tags": ["H"] }
+{ "id": "t2-n6-q2", "type": "choice", "text": "…", "options": ["…", "…"], "correct": 1, "explain": "…" }
+{ "id": "t2-n6-q3", "type": "written", "text": "…", "model": "<ul><li>…</li></ul>", "lines": 3 }
+{ "id": "t2-n6-q4", "type": "draw", "text": "…", "grid": { …axes… }, "model": "…",
+  "check": true, "answerGraph": { …graph… } }
+{ "id": "t2-n6-q5", "type": "group", "text": "stem", "graph": { … },
+  "parts": [ { "id": "t2-n6-q5a", "label": "a", "type": "numeric", … } ] }
+```
+
+- Ids are global, like type question ids. Use `<topic>-<section>-q<n>`.
+- `numeric` is checked like a type question (2% tolerance, ×10 and sign
+  nudges). `choice` is checked on tap. `written` and `draw` without `check`
+  are self-marked against the model answer. `draw` with `check: true`
+  compares the student's points with `answerGraph.series[0].points`.
+- `tags: ["H"]` badges a question and hides it under the Foundation filter;
+  `boards` works as on types if finer control is needed.
+- Model answers for explain questions should be mark-scheme style: one
+  `<li>` per scoring point, or a `<table class="tbl">` with one row per mark.
+
+Section content is validated by `tools/validate.py` (ids, band ids,
+part kinds, answer types, graph axes, embedded type ids) and the manifest
+builder checks that question ids are unique across the whole site.

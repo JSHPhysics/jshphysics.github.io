@@ -1,8 +1,9 @@
 {
   "id": "particle-model",
-  "title": "Particle model and thermal energy",
-  "subtitle": "Density, specific heat capacity, latent heat, gas pressure and temperature",
-  "order": 90,
+  "title": "Particle model",
+  "subtitle": "Density, states of matter, specific heat capacity, latent heat and gas pressure",
+  "spec": "Topic 14",
+  "order": 140,
   "figure": "particle-model",
   "types": [
     {

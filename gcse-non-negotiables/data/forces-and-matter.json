@@ -1,8 +1,9 @@
 {
   "id": "forces-and-matter",
   "title": "Forces and matter",
-  "subtitle": "Springs, elastic energy, moments and pressure",
-  "order": 100,
+  "subtitle": "Elastic and inelastic distortion, Hooke's law, energy in a spring, pressure in fluids",
+  "spec": "Topic 15",
+  "order": 150,
   "figure": "materials",
   "types": [
     {
@@ -248,484 +249,6 @@
           "boards": [
             "Higher"
           ]
-        }
-      ]
-    },
-    {
-      "id": "moment",
-      "name": "Moment of a force",
-      "equations": [
-        "moment of a force = force × distance normal to the direction of the force"
-      ],
-      "boards": [
-        "Foundation",
-        "Higher"
-      ],
-      "method": "The moment, or turning effect, of a force is force × perpendicular distance from the pivot to the line of the force. Change the distance to metres so the moment is in N m. To find the force or the distance, divide the moment by the other one.",
-      "commonErrors": [
-        "Leaving the distance in cm, which gives a moment 100 times too big",
-        "Using the mass instead of the weight when a mass is given",
-        "Writing the unit as N/m or J: the moment is in N m"
-      ],
-      "worked": {
-        "id": "moment-w",
-        "question": "A force of 20 N is applied to the end of a lever, 0.5 m from the pivot and at right angles to it. Calculate the moment of the force.",
-        "steps": [
-          "Known: F = 20 N, d = 0.5 m. Unknown: moment.",
-          "moment = force × distance",
-          "moment = 20 × 0.5",
-          "moment = 10 N m"
-        ],
-        "answer": {
-          "value": 10,
-          "unit": "N m"
-        }
-      },
-      "practice": [
-        {
-          "id": "moment-p1",
-          "question": "A mechanic pushes on the end of a spanner with a force of 50 N. The spanner is 0.3 m long and the force is at right angles to it. Calculate the moment about the nut.",
-          "hint": "Multiply the force by the perpendicular distance from the nut.",
-          "walkthrough": [
-            "F = 50 N, d = 0.3 m, find the moment.",
-            "moment = F × d = 50 × 0.3",
-            "moment = 15 N m"
-          ],
-          "answer": {
-            "value": 15,
-            "unit": "N m"
-          }
-        },
-        {
-          "id": "moment-p2",
-          "question": "A door handle is 0.75 m from the hinges. A person pushes the handle with a force of 8 N at right angles to the door. Calculate the moment about the hinges.",
-          "hint": "The hinges are the pivot; moment = force × distance from the hinges.",
-          "walkthrough": [
-            "F = 8 N, d = 0.75 m, find the moment.",
-            "moment = F × d = 8 × 0.75",
-            "moment = 6 N m"
-          ],
-          "answer": {
-            "value": 6,
-            "unit": "N m"
-          }
-        },
-        {
-          "id": "moment-p3",
-          "question": "A cyclist pushes down on a pedal with a force of 150 N. The pedal is 40 cm from the centre of the crank. Calculate the moment about the centre of the crank in N m.",
-          "hint": "Change 40 cm to metres before multiplying.",
-          "walkthrough": [
-            "F = 150 N, d = 40 cm = 0.4 m",
-            "moment = F × d = 150 × 0.4",
-            "moment = 60 N m"
-          ],
-          "answer": {
-            "value": 60,
-            "unit": "N m"
-          }
-        },
-        {
-          "id": "moment-p4",
-          "question": "A wheel nut on a van needs a moment of 36 N m to loosen it. The wheel brace is 0.9 m long. Calculate the force needed at the end of the brace, applied at right angles to it.",
-          "hint": "Rearrange to force = moment / distance.",
-          "walkthrough": [
-            "moment = 36 N m, d = 0.9 m, find F.",
-            "moment = F × d → F = moment / d",
-            "F = 36 / 0.9",
-            "F = 40 N"
-          ],
-          "answer": {
-            "value": 40,
-            "unit": "N"
-          }
-        },
-        {
-          "id": "moment-p5",
-          "question": "A 2 kg mass hangs from a metre rule 25 cm from the pivot. Calculate the moment of the mass about the pivot in N m.",
-          "hint": "Find the weight with W = m × g first, change 25 cm to metres, then multiply.",
-          "walkthrough": [
-            "W = m × g = 2 × 10 = 20 N",
-            "d = 25 cm = 0.25 m",
-            "moment = F × d = 20 × 0.25",
-            "moment = 5 N m"
-          ],
-          "answer": {
-            "value": 5,
-            "unit": "N m"
-          }
-        },
-        {
-          "id": "moment-p6",
-          "question": "A 1.5 kg bag hangs from a horizontal shelf bracket and produces a moment of 3 N m about the wall. Calculate the distance of the bag from the wall in cm.",
-          "hint": "Find the weight with W = m × g, then distance = moment / force and change to cm.",
-          "walkthrough": [
-            "W = m × g = 1.5 × 10 = 15 N",
-            "d = moment / F = 3 / 15 = 0.2 m",
-            "d = 20 cm"
-          ],
-          "answer": {
-            "value": 20,
-            "unit": "cm"
-          }
-        }
-      ]
-    },
-    {
-      "id": "balance",
-      "name": "The principle of moments",
-      "equations": [
-        "sum of clockwise moments = sum of anticlockwise moments"
-      ],
-      "boards": [
-        "Foundation",
-        "Higher"
-      ],
-      "method": "When a see-saw or beam is balanced, the total clockwise moment about the pivot equals the total anticlockwise moment. Work out the moment you can (force × distance), set it equal to the unknown side, and divide to find the missing force or distance. If two forces act on one side, add their moments before equating.",
-      "commonErrors": [
-        "Equating forces instead of moments",
-        "Using a distance measured from the end of the beam rather than from the pivot",
-        "Forgetting one of the forces when two act on the same side"
-      ],
-      "worked": {
-        "id": "balance-w",
-        "question": "A see-saw is balanced on a pivot at its centre. A child weighing 300 N sits 2 m from the pivot on the left. Calculate how far from the pivot a child weighing 400 N must sit on the right to balance it.",
-        "steps": [
-          "Known: left side F = 300 N at d = 2 m; right side F = 400 N. Unknown: d on the right.",
-          "anticlockwise moment = clockwise moment",
-          "300 × 2 = 400 × d",
-          "d = 600 / 400",
-          "d = 1.5 m"
-        ],
-        "answer": {
-          "value": 1.5,
-          "unit": "m"
-        }
-      },
-      "practice": [
-        {
-          "id": "balance-p1",
-          "question": "A metre rule is balanced on a pivot at its centre. A 20 N weight hangs 0.3 m to the left of the pivot. A force F pulls down 0.6 m to the right of the pivot and the rule is balanced. Calculate F.",
-          "hint": "Set 20 × 0.3 equal to F × 0.6 and divide.",
-          "walkthrough": [
-            "anticlockwise moment = clockwise moment",
-            "20 × 0.3 = F × 0.6",
-            "F = 6 / 0.6",
-            "F = 10 N"
-          ],
-          "answer": {
-            "value": 10,
-            "unit": "N"
-          }
-        },
-        {
-          "id": "balance-p2",
-          "question": "A beam is balanced on a pivot. A 50 N load sits 0.4 m from the pivot on one side. An 80 N load balances it on the other side. Calculate the distance of the 80 N load from the pivot.",
-          "hint": "50 × 0.4 = 80 × d; divide to find d.",
-          "walkthrough": [
-            "50 × 0.4 = 80 × d",
-            "d = 20 / 80",
-            "d = 0.25 m"
-          ],
-          "answer": {
-            "value": 0.25,
-            "unit": "m"
-          }
-        },
-        {
-          "id": "balance-p3",
-          "question": "A mobile hangs from a thread tied to a light rod. A 6 N ornament hangs 25 cm from the thread on one side. Another ornament hangs 15 cm from the thread on the other side and the rod is level. Calculate the weight of the second ornament.",
-          "hint": "Both distances are in cm, so they cancel: 6 × 25 = F × 15.",
-          "walkthrough": [
-            "6 × 25 = F × 15",
-            "F = 150 / 15",
-            "F = 10 N"
-          ],
-          "answer": {
-            "value": 10,
-            "unit": "N"
-          }
-        },
-        {
-          "id": "balance-p4",
-          "question": "A 40 kg child sits 1.5 m from the pivot of a see-saw. Calculate how far from the pivot a 30 kg child must sit on the other side to balance it.",
-          "hint": "Change each mass to a weight with W = m × g, then equate the moments.",
-          "walkthrough": [
-            "Weights: 40 × 10 = 400 N and 30 × 10 = 300 N",
-            "400 × 1.5 = 300 × d",
-            "d = 600 / 300",
-            "d = 2 m"
-          ],
-          "answer": {
-            "value": 2,
-            "unit": "m"
-          }
-        },
-        {
-          "id": "balance-p5",
-          "question": "A metre rule is pivoted at its centre. On the left, a 10 N weight hangs 0.2 m from the pivot and a 5 N weight hangs 0.6 m from the pivot. A single force F acting 0.5 m to the right of the pivot balances the rule. Calculate F.",
-          "hint": "Add the two anticlockwise moments first, then set the total equal to F × 0.5.",
-          "walkthrough": [
-            "Left moments: 10 × 0.2 + 5 × 0.6 = 2 + 3 = 5 N m",
-            "5 = F × 0.5",
-            "F = 5 / 0.5",
-            "F = 10 N"
-          ],
-          "answer": {
-            "value": 10,
-            "unit": "N"
-          }
-        },
-        {
-          "id": "balance-p6",
-          "question": "A plank rests on a pivot. On the left of the pivot, a 300 N box sits 1 m away and a 200 N box sits 2 m away. A person weighing 350 N stands on the right so that the plank balances. Calculate how far from the pivot the person stands.",
-          "hint": "Total the left-hand moments, then divide by 350 N.",
-          "walkthrough": [
-            "Left moments: 300 × 1 + 200 × 2 = 300 + 400 = 700 N m",
-            "700 = 350 × d",
-            "d = 700 / 350",
-            "d = 2 m"
-          ],
-          "answer": {
-            "value": 2,
-            "unit": "m"
-          }
-        }
-      ]
-    },
-    {
-      "id": "pressure",
-      "name": "Pressure on a surface",
-      "equations": [
-        "P = F / A"
-      ],
-      "boards": [
-        "Foundation",
-        "Higher"
-      ],
-      "method": "Pressure is force divided by the area the force acts on. The force is usually a weight, so find W = m × g if you are given a mass. Change the area to m² (1 m² = 10 000 cm²) so the pressure comes out in pascals; 1 kPa = 1000 Pa.",
-      "commonErrors": [
-        "Dividing by the area in cm² instead of m²",
-        "Using the mass instead of the weight as the force",
-        "Multiplying force by area instead of dividing"
-      ],
-      "worked": {
-        "id": "pressure-w",
-        "question": "A crate weighing 600 N rests on the floor. The base of the crate has an area of 0.5 m². Calculate the pressure on the floor.",
-        "steps": [
-          "Known: F = 600 N, A = 0.5 m². Unknown: P.",
-          "P = F / A",
-          "P = 600 / 0.5",
-          "P = 1200 Pa"
-        ],
-        "answer": {
-          "value": 1200,
-          "unit": "Pa"
-        }
-      },
-      "practice": [
-        {
-          "id": "pressure-p1",
-          "question": "A box weighing 200 N stands on a table. Its base has an area of 0.4 m². Calculate the pressure the box exerts on the table.",
-          "hint": "Divide the weight by the area of the base.",
-          "walkthrough": [
-            "F = 200 N, A = 0.4 m², find P.",
-            "P = F / A = 200 / 0.4",
-            "P = 500 Pa"
-          ],
-          "answer": {
-            "value": 500,
-            "unit": "Pa"
-          }
-        },
-        {
-          "id": "pressure-p2",
-          "question": "A person weighing 900 N stands on both feet. The total area of their shoes in contact with the ground is 0.03 m². Calculate the pressure on the ground.",
-          "hint": "P = F / A with the total area of both shoes.",
-          "walkthrough": [
-            "F = 900 N, A = 0.03 m², find P.",
-            "P = F / A = 900 / 0.03",
-            "P = 30 000 Pa"
-          ],
-          "answer": {
-            "value": 30000,
-            "unit": "Pa"
-          }
-        },
-        {
-          "id": "pressure-p3",
-          "question": "A trophy weighing 50 N stands on a shelf. Its base has an area of 20 cm². Calculate the pressure the trophy exerts on the shelf. Give your answer in Pa.",
-          "hint": "Change 20 cm² to m² by dividing by 10 000, then divide the force by it.",
-          "walkthrough": [
-            "A = 20 cm² = 20 / 10 000 = 0.002 m²",
-            "P = F / A = 50 / 0.002",
-            "P = 25 000 Pa"
-          ],
-          "answer": {
-            "value": 25000,
-            "unit": "Pa"
-          }
-        },
-        {
-          "id": "pressure-p4",
-          "question": "The air in a car tyre is at a pressure of 200 kPa. The tyre touches the road over an area of 0.015 m². Calculate the force the tyre exerts on the road.",
-          "hint": "Change 200 kPa to Pa, then rearrange to F = P × A.",
-          "walkthrough": [
-            "P = 200 kPa = 200 000 Pa, A = 0.015 m², find F.",
-            "P = F / A → F = P × A",
-            "F = 200 000 × 0.015",
-            "F = 3000 N"
-          ],
-          "answer": {
-            "value": 3000,
-            "unit": "N"
-          }
-        },
-        {
-          "id": "pressure-p5",
-          "question": "A 60 kg hiker stands on soft ground. The total area of her boots in contact with the ground is 0.04 m². Calculate the pressure on the ground.",
-          "hint": "Find the weight with W = m × g first, then P = F / A.",
-          "walkthrough": [
-            "W = m × g = 60 × 10 = 600 N",
-            "P = F / A = 600 / 0.04",
-            "P = 15 000 Pa"
-          ],
-          "answer": {
-            "value": 15000,
-            "unit": "Pa"
-          }
-        },
-        {
-          "id": "pressure-p6",
-          "question": "An elephant has a mass of 4000 kg. Its four feet have a total area of 2000 cm² in contact with the ground. Calculate the pressure on the ground in kPa.",
-          "hint": "Find the weight, change 2000 cm² to m², divide, then change Pa to kPa.",
-          "walkthrough": [
-            "W = m × g = 4000 × 10 = 40 000 N",
-            "A = 2000 cm² = 2000 / 10 000 = 0.2 m²",
-            "P = F / A = 40 000 / 0.2 = 200 000 Pa",
-            "P = 200 kPa"
-          ],
-          "answer": {
-            "value": 200,
-            "unit": "kPa"
-          }
-        }
-      ]
-    },
-    {
-      "id": "liquid",
-      "name": "Pressure in a liquid",
-      "equations": [
-        "P = h × ρ × g"
-      ],
-      "boards": [
-        "Higher"
-      ],
-      "method": "The pressure due to a column of liquid is depth × density × gravitational field strength. Use g = 10 N/kg and the density given in the question, with the depth in metres, to get the pressure in Pa. If the question asks for the total pressure, add atmospheric pressure on top.",
-      "commonErrors": [
-        "Forgetting to add atmospheric pressure when the total pressure is asked for",
-        "Using the depth in cm",
-        "Mixing up h (depth) and ρ (density) when rearranging"
-      ],
-      "worked": {
-        "id": "liquid-w",
-        "question": "Calculate the pressure due to the water at the bottom of a tank 3 m deep. Density of water = 1000 kg/m³.",
-        "steps": [
-          "Known: h = 3 m, ρ = 1000 kg/m³, g = 10 N/kg. Unknown: P.",
-          "P = h × ρ × g",
-          "P = 3 × 1000 × 10",
-          "P = 30 000 Pa"
-        ],
-        "answer": {
-          "value": 30000,
-          "unit": "Pa"
-        }
-      },
-      "practice": [
-        {
-          "id": "liquid-p1",
-          "question": "A swimming pool is 2 m deep. Calculate the pressure due to the water at the bottom of the pool. Density of water = 1000 kg/m³.",
-          "hint": "Multiply depth × density × g with g = 10 N/kg.",
-          "walkthrough": [
-            "h = 2 m, ρ = 1000 kg/m³, g = 10 N/kg, find P.",
-            "P = h × ρ × g = 2 × 1000 × 10",
-            "P = 20 000 Pa"
-          ],
-          "answer": {
-            "value": 20000,
-            "unit": "Pa"
-          }
-        },
-        {
-          "id": "liquid-p2",
-          "question": "A submarine is 50 m below the surface of the sea. Calculate the pressure due to the sea water at this depth. Density of sea water = 1030 kg/m³.",
-          "hint": "P = h × ρ × g, using the density of sea water given.",
-          "walkthrough": [
-            "h = 50 m, ρ = 1030 kg/m³, g = 10 N/kg, find P.",
-            "P = h × ρ × g = 50 × 1030 × 10",
-            "P = 515 000 Pa"
-          ],
-          "answer": {
-            "value": 515000,
-            "unit": "Pa"
-          }
-        },
-        {
-          "id": "liquid-p3",
-          "question": "The pressure due to the liquid at the bottom of a 0.5 m deep tank of cooking oil is 4500 Pa. Calculate the density of the oil.",
-          "hint": "Rearrange to ρ = P / (h × g).",
-          "walkthrough": [
-            "P = 4500 Pa, h = 0.5 m, g = 10 N/kg, find ρ.",
-            "P = h × ρ × g → ρ = P / (h × g)",
-            "ρ = 4500 / (0.5 × 10) = 4500 / 5",
-            "ρ = 900 kg/m³"
-          ],
-          "answer": {
-            "value": 900,
-            "unit": "kg/m³"
-          }
-        },
-        {
-          "id": "liquid-p4",
-          "question": "The pressure due to the water on a diver is 120 kPa. Calculate the depth of the diver. Density of water = 1000 kg/m³.",
-          "hint": "Change 120 kPa to Pa, then rearrange to h = P / (ρ × g).",
-          "walkthrough": [
-            "P = 120 kPa = 120 000 Pa, ρ = 1000 kg/m³, g = 10 N/kg, find h.",
-            "P = h × ρ × g → h = P / (ρ × g)",
-            "h = 120 000 / (1000 × 10) = 120 000 / 10 000",
-            "h = 12 m"
-          ],
-          "answer": {
-            "value": 12,
-            "unit": "m"
-          }
-        },
-        {
-          "id": "liquid-p5",
-          "question": "A diver is 15 m below the surface of a lake. Atmospheric pressure at the surface is 100 kPa. Calculate the total pressure on the diver in kPa. Density of water = 1000 kg/m³.",
-          "hint": "Find the pressure due to the water with P = h × ρ × g, change it to kPa, then add the 100 kPa of the atmosphere.",
-          "walkthrough": [
-            "Water: P = h × ρ × g = 15 × 1000 × 10 = 150 000 Pa = 150 kPa",
-            "Total = 150 + 100",
-            "Total pressure = 250 kPa"
-          ],
-          "answer": {
-            "value": 250,
-            "unit": "kPa"
-          }
-        },
-        {
-          "id": "liquid-p6",
-          "question": "A submarine hatch has an area of 0.5 m². The submarine is 40 m below the surface of the sea. Calculate the force on the outside of the hatch due to the sea water. Density of sea water = 1030 kg/m³.",
-          "hint": "Find the pressure with P = h × ρ × g, then use F = P × A.",
-          "walkthrough": [
-            "P = h × ρ × g = 40 × 1030 × 10 = 412 000 Pa",
-            "F = P × A = 412 000 × 0.5",
-            "F = 206 000 N"
-          ],
-          "answer": {
-            "value": 206000,
-            "unit": "N"
-          }
         }
       ]
     },
@@ -1191,6 +714,243 @@
               }
             ],
             "alt": "Force–extension graph: a straight line from the origin to 5 N at 10 cm, with B marked at 8 cm and 4 N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pressure",
+      "name": "Pressure on a surface",
+      "equations": [
+        "P = F / A"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Pressure is force divided by the area the force acts on. The force is usually a weight, so find W = m × g if you are given a mass. Change the area to m² (1 m² = 10 000 cm²) so the pressure comes out in pascals; 1 kPa = 1000 Pa.",
+      "commonErrors": [
+        "Dividing by the area in cm² instead of m²",
+        "Using the mass instead of the weight as the force",
+        "Multiplying force by area instead of dividing"
+      ],
+      "worked": {
+        "id": "pressure-w",
+        "question": "A crate weighing 600 N rests on the floor. The base of the crate has an area of 0.5 m². Calculate the pressure on the floor.",
+        "steps": [
+          "Known: F = 600 N, A = 0.5 m². Unknown: P.",
+          "P = F / A",
+          "P = 600 / 0.5",
+          "P = 1200 Pa"
+        ],
+        "answer": {
+          "value": 1200,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "pressure-p1",
+          "question": "A box weighing 200 N stands on a table. Its base has an area of 0.4 m². Calculate the pressure the box exerts on the table.",
+          "hint": "Divide the weight by the area of the base.",
+          "walkthrough": [
+            "F = 200 N, A = 0.4 m², find P.",
+            "P = F / A = 200 / 0.4",
+            "P = 500 Pa"
+          ],
+          "answer": {
+            "value": 500,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p2",
+          "question": "A person weighing 900 N stands on both feet. The total area of their shoes in contact with the ground is 0.03 m². Calculate the pressure on the ground.",
+          "hint": "P = F / A with the total area of both shoes.",
+          "walkthrough": [
+            "F = 900 N, A = 0.03 m², find P.",
+            "P = F / A = 900 / 0.03",
+            "P = 30 000 Pa"
+          ],
+          "answer": {
+            "value": 30000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p3",
+          "question": "A trophy weighing 50 N stands on a shelf. Its base has an area of 20 cm². Calculate the pressure the trophy exerts on the shelf. Give your answer in Pa.",
+          "hint": "Change 20 cm² to m² by dividing by 10 000, then divide the force by it.",
+          "walkthrough": [
+            "A = 20 cm² = 20 / 10 000 = 0.002 m²",
+            "P = F / A = 50 / 0.002",
+            "P = 25 000 Pa"
+          ],
+          "answer": {
+            "value": 25000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p4",
+          "question": "The air in a car tyre is at a pressure of 200 kPa. The tyre touches the road over an area of 0.015 m². Calculate the force the tyre exerts on the road.",
+          "hint": "Change 200 kPa to Pa, then rearrange to F = P × A.",
+          "walkthrough": [
+            "P = 200 kPa = 200 000 Pa, A = 0.015 m², find F.",
+            "P = F / A → F = P × A",
+            "F = 200 000 × 0.015",
+            "F = 3000 N"
+          ],
+          "answer": {
+            "value": 3000,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "pressure-p5",
+          "question": "A 60 kg hiker stands on soft ground. The total area of her boots in contact with the ground is 0.04 m². Calculate the pressure on the ground.",
+          "hint": "Find the weight with W = m × g first, then P = F / A.",
+          "walkthrough": [
+            "W = m × g = 60 × 10 = 600 N",
+            "P = F / A = 600 / 0.04",
+            "P = 15 000 Pa"
+          ],
+          "answer": {
+            "value": 15000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "pressure-p6",
+          "question": "An elephant has a mass of 4000 kg. Its four feet have a total area of 2000 cm² in contact with the ground. Calculate the pressure on the ground in kPa.",
+          "hint": "Find the weight, change 2000 cm² to m², divide, then change Pa to kPa.",
+          "walkthrough": [
+            "W = m × g = 4000 × 10 = 40 000 N",
+            "A = 2000 cm² = 2000 / 10 000 = 0.2 m²",
+            "P = F / A = 40 000 / 0.2 = 200 000 Pa",
+            "P = 200 kPa"
+          ],
+          "answer": {
+            "value": 200,
+            "unit": "kPa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "liquid",
+      "name": "Pressure in a liquid",
+      "equations": [
+        "P = h × ρ × g"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "The pressure due to a column of liquid is depth × density × gravitational field strength. Use g = 10 N/kg and the density given in the question, with the depth in metres, to get the pressure in Pa. If the question asks for the total pressure, add atmospheric pressure on top.",
+      "commonErrors": [
+        "Forgetting to add atmospheric pressure when the total pressure is asked for",
+        "Using the depth in cm",
+        "Mixing up h (depth) and ρ (density) when rearranging"
+      ],
+      "worked": {
+        "id": "liquid-w",
+        "question": "Calculate the pressure due to the water at the bottom of a tank 3 m deep. Density of water = 1000 kg/m³.",
+        "steps": [
+          "Known: h = 3 m, ρ = 1000 kg/m³, g = 10 N/kg. Unknown: P.",
+          "P = h × ρ × g",
+          "P = 3 × 1000 × 10",
+          "P = 30 000 Pa"
+        ],
+        "answer": {
+          "value": 30000,
+          "unit": "Pa"
+        }
+      },
+      "practice": [
+        {
+          "id": "liquid-p1",
+          "question": "A swimming pool is 2 m deep. Calculate the pressure due to the water at the bottom of the pool. Density of water = 1000 kg/m³.",
+          "hint": "Multiply depth × density × g with g = 10 N/kg.",
+          "walkthrough": [
+            "h = 2 m, ρ = 1000 kg/m³, g = 10 N/kg, find P.",
+            "P = h × ρ × g = 2 × 1000 × 10",
+            "P = 20 000 Pa"
+          ],
+          "answer": {
+            "value": 20000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "liquid-p2",
+          "question": "A submarine is 50 m below the surface of the sea. Calculate the pressure due to the sea water at this depth. Density of sea water = 1030 kg/m³.",
+          "hint": "P = h × ρ × g, using the density of sea water given.",
+          "walkthrough": [
+            "h = 50 m, ρ = 1030 kg/m³, g = 10 N/kg, find P.",
+            "P = h × ρ × g = 50 × 1030 × 10",
+            "P = 515 000 Pa"
+          ],
+          "answer": {
+            "value": 515000,
+            "unit": "Pa"
+          }
+        },
+        {
+          "id": "liquid-p3",
+          "question": "The pressure due to the liquid at the bottom of a 0.5 m deep tank of cooking oil is 4500 Pa. Calculate the density of the oil.",
+          "hint": "Rearrange to ρ = P / (h × g).",
+          "walkthrough": [
+            "P = 4500 Pa, h = 0.5 m, g = 10 N/kg, find ρ.",
+            "P = h × ρ × g → ρ = P / (h × g)",
+            "ρ = 4500 / (0.5 × 10) = 4500 / 5",
+            "ρ = 900 kg/m³"
+          ],
+          "answer": {
+            "value": 900,
+            "unit": "kg/m³"
+          }
+        },
+        {
+          "id": "liquid-p4",
+          "question": "The pressure due to the water on a diver is 120 kPa. Calculate the depth of the diver. Density of water = 1000 kg/m³.",
+          "hint": "Change 120 kPa to Pa, then rearrange to h = P / (ρ × g).",
+          "walkthrough": [
+            "P = 120 kPa = 120 000 Pa, ρ = 1000 kg/m³, g = 10 N/kg, find h.",
+            "P = h × ρ × g → h = P / (ρ × g)",
+            "h = 120 000 / (1000 × 10) = 120 000 / 10 000",
+            "h = 12 m"
+          ],
+          "answer": {
+            "value": 12,
+            "unit": "m"
+          }
+        },
+        {
+          "id": "liquid-p5",
+          "question": "A diver is 15 m below the surface of a lake. Atmospheric pressure at the surface is 100 kPa. Calculate the total pressure on the diver in kPa. Density of water = 1000 kg/m³.",
+          "hint": "Find the pressure due to the water with P = h × ρ × g, change it to kPa, then add the 100 kPa of the atmosphere.",
+          "walkthrough": [
+            "Water: P = h × ρ × g = 15 × 1000 × 10 = 150 000 Pa = 150 kPa",
+            "Total = 150 + 100",
+            "Total pressure = 250 kPa"
+          ],
+          "answer": {
+            "value": 250,
+            "unit": "kPa"
+          }
+        },
+        {
+          "id": "liquid-p6",
+          "question": "A submarine hatch has an area of 0.5 m². The submarine is 40 m below the surface of the sea. Calculate the force on the outside of the hatch due to the sea water. Density of sea water = 1030 kg/m³.",
+          "hint": "Find the pressure with P = h × ρ × g, then use F = P × A.",
+          "walkthrough": [
+            "P = h × ρ × g = 40 × 1030 × 10 = 412 000 Pa",
+            "F = P × A = 412 000 × 0.5",
+            "F = 206 000 N"
+          ],
+          "answer": {
+            "value": 206000,
+            "unit": "N"
           }
         }
       ]

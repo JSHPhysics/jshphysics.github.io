@@ -12,7 +12,7 @@ import sys
 
 # Import the validator from the same folder
 sys.path.insert(0, os.path.dirname(__file__))
-from validate import validate_file  # noqa: E402
+from validate import validate_file, section_question_ids  # noqa: E402
 
 
 def main():
@@ -53,6 +53,10 @@ def main():
                 if question["id"] in seen_question_ids:
                     clashes.append(f"question id '{question['id']}' is also used in {seen_question_ids[question['id']]}")
                 seen_question_ids[question["id"]] = topic["id"]
+        for question_id in section_question_ids(topic):
+            if question_id in seen_question_ids:
+                clashes.append(f"question id '{question_id}' is also used in {seen_question_ids[question_id]}")
+            seen_question_ids[question_id] = topic["id"]
         if clashes:
             failed = True
             print(f"FAIL {os.path.basename(path)}")
@@ -66,6 +70,7 @@ def main():
             "title": topic["title"],
             "order": topic["order"],
             "types": len(topic["types"]),
+            "sections": len(topic.get("sections") or []),
         })
 
     if failed:

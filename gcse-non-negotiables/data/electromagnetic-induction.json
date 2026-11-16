@@ -1,109 +1,20 @@
 {
-  "id": "magnetism",
-  "title": "Magnetism and transformers",
-  "subtitle": "The motor effect and transformers",
-  "order": 80,
-  "figure": "magnetism",
+  "id": "electromagnetic-induction",
+  "title": "Electromagnetic induction",
+  "subtitle": "Induced potential difference, generators, transformers and the National Grid",
+  "spec": "Topic 13",
+  "order": 130,
+  "figure": "magnetic-fields-induction",
   "types": [
-    {
-      "id": "motor-force",
-      "name": "Force on a current-carrying conductor",
-      "equations": ["F = B × I × l"],
-      "boards": ["Higher"],
-      "method": "The force on a wire at right angles to a magnetic field is magnetic flux density multiplied by current multiplied by the length of wire in the field. B is in tesla, I in amps and l in metres, so change cm to m (divide by 100) first. The equation is on the equation sheet; to find B, I or l, divide F by the other two.",
-      "commonErrors": [
-        "Leaving the length in cm, so the force is 100 times too big",
-        "Mixing up B (flux density, in T) and F (force, in N)",
-        "Forgetting that the force is zero if the wire runs along the field rather than across it"
-      ],
-      "worked": {
-        "id": "motor-force-w",
-        "question": "A straight wire 0.5 m long carries a current of 3 A at right angles to a magnetic field of flux density 0.4 T. Calculate the force on the wire.",
-        "steps": [
-          "Known: B = 0.4 T, I = 3 A, l = 0.5 m. Unknown: F.",
-          "F = B × I × l",
-          "F = 0.4 × 3 × 0.5",
-          "F = 0.6 N"
-        ],
-        "answer": { "value": 0.6, "unit": "N" }
-      },
-      "practice": [
-        {
-          "id": "motor-force-p1",
-          "question": "In a lab experiment a wire 0.4 m long rests on a top-pan balance between the poles of a magnet. The flux density is 0.1 T and the wire carries 2.5 A at right angles to the field. Calculate the force on the wire.",
-          "hint": "Use F = B × I × l with the values as given.",
-          "walkthrough": [
-            "B = 0.1 T, I = 2.5 A, l = 0.4 m, find F.",
-            "F = B × I × l = 0.1 × 2.5 × 0.4",
-            "F = 0.1 N"
-          ],
-          "answer": { "value": 0.1, "unit": "N" }
-        },
-        {
-          "id": "motor-force-p2",
-          "question": "The coil of a loudspeaker has 1.2 m of wire in a radial magnetic field of flux density 0.5 T. The current in the coil is 0.3 A. Calculate the force on the coil.",
-          "hint": "Force equals flux density multiplied by current multiplied by length.",
-          "walkthrough": [
-            "B = 0.5 T, I = 0.3 A, l = 1.2 m, find F.",
-            "F = B × I × l = 0.5 × 0.3 × 1.2",
-            "F = 0.18 N"
-          ],
-          "answer": { "value": 0.18, "unit": "N" }
-        },
-        {
-          "id": "motor-force-p3",
-          "question": "A wire 0.2 m long in the gap of an electromagnet carries a current of 1.5 A and experiences a force of 0.06 N. Calculate the magnetic flux density in the gap.",
-          "hint": "Rearrange F = B × I × l to B = F / (I × l).",
-          "walkthrough": [
-            "F = 0.06 N, I = 1.5 A, l = 0.2 m, find B.",
-            "F = B × I × l → B = F / (I × l)",
-            "B = 0.06 / (1.5 × 0.2) = 0.06 / 0.3",
-            "B = 0.2 T"
-          ],
-          "answer": { "value": 0.2, "unit": "T" }
-        },
-        {
-          "id": "motor-force-p4",
-          "question": "One side of the coil in a toy car motor is 8 cm long and carries a current of 5 A in a field of flux density 0.15 T. Calculate the force on that side of the coil.",
-          "hint": "Change 8 cm to metres before using F = B × I × l.",
-          "walkthrough": [
-            "B = 0.15 T, I = 5 A, l = 8 cm = 0.08 m, find F.",
-            "F = B × I × l = 0.15 × 5 × 0.08",
-            "F = 0.06 N"
-          ],
-          "answer": { "value": 0.06, "unit": "N" }
-        },
-        {
-          "id": "motor-force-p5",
-          "question": "A 30 cm length of wire in a crane motor sits in a field of flux density 0.2 T. The force on the wire is 0.12 N. Calculate the current in the wire.",
-          "hint": "Convert 30 cm to metres, then rearrange to I = F / (B × l).",
-          "walkthrough": [
-            "F = 0.12 N, B = 0.2 T, l = 30 cm = 0.3 m, find I.",
-            "F = B × I × l → I = F / (B × l)",
-            "I = 0.12 / (0.2 × 0.3) = 0.12 / 0.06",
-            "I = 2 A"
-          ],
-          "answer": { "value": 2, "unit": "A" }
-        },
-        {
-          "id": "motor-force-p6",
-          "question": "A 0.5 m length of wire on a model train has a resistance of 2 Ω and is connected across a 6 V supply. The wire is at right angles to a field of flux density 0.1 T. Calculate the force on the wire.",
-          "hint": "Find the current first with I = V / R, then use F = B × I × l.",
-          "walkthrough": [
-            "V = 6 V, R = 2 Ω, B = 0.1 T, l = 0.5 m, find F.",
-            "First the current: I = V / R = 6 / 2 = 3 A",
-            "F = B × I × l = 0.1 × 3 × 0.5",
-            "F = 0.15 N"
-          ],
-          "answer": { "value": 0.15, "unit": "N" }
-        }
-      ]
-    },
     {
       "id": "turns",
       "name": "Transformer turns ratio",
-      "equations": ["V_p / V_s = N_p / N_s"],
-      "boards": ["Higher"],
+      "equations": [
+        "V_p / V_s = N_p / N_s"
+      ],
+      "boards": [
+        "Higher"
+      ],
       "method": "The ratio of the p.d.s across the two coils equals the ratio of the numbers of turns. Write the equation as a pair of fractions, put in the three values you know, and solve for the fourth: V_s = V_p × N_s / N_p, N_s = N_p × V_s / V_p, and so on. A step-up transformer has more turns on the secondary and a larger output p.d.; a step-down transformer has fewer.",
       "commonErrors": [
         "Putting primary on top of one fraction and secondary on top of the other",
@@ -119,7 +30,10 @@
           "V_s = 230 × 120 / 2300",
           "V_s = 12 V"
         ],
-        "answer": { "value": 12, "unit": "V" }
+        "answer": {
+          "value": 12,
+          "unit": "V"
+        }
       },
       "practice": [
         {
@@ -131,7 +45,10 @@
             "V_s = V_p × N_s / N_p = 12 × 500 / 100",
             "V_s = 60 V"
           ],
-          "answer": { "value": 60, "unit": "V" }
+          "answer": {
+            "value": 60,
+            "unit": "V"
+          }
         },
         {
           "id": "turns-p2",
@@ -142,7 +59,10 @@
             "V_s = V_p × N_s / N_p = 230 × 25 / 1150",
             "V_s = 5 V"
           ],
-          "answer": { "value": 5, "unit": "V" }
+          "answer": {
+            "value": 5,
+            "unit": "V"
+          }
         },
         {
           "id": "turns-p3",
@@ -154,7 +74,10 @@
             "N_s = 920 × 8 / 230",
             "N_s = 32 turns"
           ],
-          "answer": { "value": 32, "unit": "turns" }
+          "answer": {
+            "value": 32,
+            "unit": "turns"
+          }
         },
         {
           "id": "turns-p4",
@@ -166,7 +89,10 @@
             "N_p = 40 × 230 / 20",
             "N_p = 460 turns"
           ],
-          "answer": { "value": 460, "unit": "turns" }
+          "answer": {
+            "value": 460,
+            "unit": "turns"
+          }
         },
         {
           "id": "turns-p5",
@@ -178,7 +104,10 @@
             "N_s = 1500 × 16",
             "N_s = 24 000 turns"
           ],
-          "answer": { "value": 24000, "unit": "turns" }
+          "answer": {
+            "value": 24000,
+            "unit": "turns"
+          }
         },
         {
           "id": "turns-p6",
@@ -190,15 +119,22 @@
             "V_s = V_p × N_s / N_p = 230 × 400 / 1600",
             "V_s = 57.5 V"
           ],
-          "answer": { "value": 57.5, "unit": "V" }
+          "answer": {
+            "value": 57.5,
+            "unit": "V"
+          }
         }
       ]
     },
     {
       "id": "tx-power",
       "name": "Transformer power",
-      "equations": ["V_p × I_p = V_s × I_s"],
-      "boards": ["Higher"],
+      "equations": [
+        "V_p × I_p = V_s × I_s"
+      ],
+      "boards": [
+        "Higher"
+      ],
       "method": "For a transformer that is 100% efficient the power into the primary equals the power out of the secondary, so V_p × I_p = V_s × I_s. Put in the three values you know and divide to find the fourth. If a p.d. is missing, find it from the turns ratio first. Stepping the p.d. up steps the current down by the same factor.",
       "commonErrors": [
         "Expecting the current to go up when the p.d. goes up",
@@ -214,7 +150,10 @@
           "I_s = 230 × 0.5 / 23 = 115 / 23",
           "I_s = 5 A"
         ],
-        "answer": { "value": 5, "unit": "A" }
+        "answer": {
+          "value": 5,
+          "unit": "A"
+        }
       },
       "practice": [
         {
@@ -226,7 +165,10 @@
             "I_s = V_p × I_p / V_s = 12 × 2 / 48 = 24 / 48",
             "I_s = 0.5 A"
           ],
-          "answer": { "value": 0.5, "unit": "A" }
+          "answer": {
+            "value": 0.5,
+            "unit": "A"
+          }
         },
         {
           "id": "tx-power-p2",
@@ -237,7 +179,10 @@
             "I_p = V_s × I_s / V_p = 11.5 × 6 / 230 = 69 / 230",
             "I_p = 0.3 A"
           ],
-          "answer": { "value": 0.3, "unit": "A" }
+          "answer": {
+            "value": 0.3,
+            "unit": "A"
+          }
         },
         {
           "id": "tx-power-p3",
@@ -248,7 +193,10 @@
             "I_s = V_p × I_p / V_s = 230 × 0.02 / 5 = 4.6 / 5",
             "I_s = 0.92 A"
           ],
-          "answer": { "value": 0.92, "unit": "A" }
+          "answer": {
+            "value": 0.92,
+            "unit": "A"
+          }
         },
         {
           "id": "tx-power-p4",
@@ -259,7 +207,10 @@
             "V_s = V_p × I_p / I_s = 230 × 0.2 / 4 = 46 / 4",
             "V_s = 11.5 V"
           ],
-          "answer": { "value": 11.5, "unit": "V" }
+          "answer": {
+            "value": 11.5,
+            "unit": "V"
+          }
         },
         {
           "id": "tx-power-p5",
@@ -271,7 +222,10 @@
             "I_p = V_s × I_s / V_p = 11.5 × 2 / 230 = 23 / 230",
             "I_p = 0.1 A"
           ],
-          "answer": { "value": 0.1, "unit": "A" }
+          "answer": {
+            "value": 0.1,
+            "unit": "A"
+          }
         },
         {
           "id": "tx-power-p6",
@@ -283,15 +237,23 @@
             "I_s = V_p × I_p / V_s = 12 × 5 / 240 = 60 / 240",
             "I_s = 0.25 A"
           ],
-          "answer": { "value": 0.25, "unit": "A" }
+          "answer": {
+            "value": 0.25,
+            "unit": "A"
+          }
         }
       ]
     },
     {
       "id": "loss",
       "name": "Power loss in transmission cables",
-      "equations": ["P = I² × R", "P = I × V"],
-      "boards": ["Higher"],
+      "equations": [
+        "P = I² × R",
+        "P = I × V"
+      ],
+      "boards": [
+        "Higher"
+      ],
       "method": "The power wasted as heat in a cable is current squared multiplied by the resistance of the cable. If the question gives the power being transmitted and the transmission p.d., find the current first from I = P / V, then square it and multiply by the cable resistance. Stepping the p.d. up by a factor cuts the current by the same factor and the loss by that factor squared.",
       "commonErrors": [
         "Forgetting to square the current",
@@ -307,7 +269,10 @@
           "P = 20² × 5 = 400 × 5",
           "P = 2000 W"
         ],
-        "answer": { "value": 2000, "unit": "W" }
+        "answer": {
+          "value": 2000,
+          "unit": "W"
+        }
       },
       "practice": [
         {
@@ -319,7 +284,10 @@
             "P = I² × R = 40² × 0.5 = 1600 × 0.5",
             "P = 800 W"
           ],
-          "answer": { "value": 800, "unit": "W" }
+          "answer": {
+            "value": 800,
+            "unit": "W"
+          }
         },
         {
           "id": "loss-p2",
@@ -330,7 +298,10 @@
             "P = I² × R = 50² × 10 = 2500 × 10",
             "P = 25 000 W"
           ],
-          "answer": { "value": 25000, "unit": "W" }
+          "answer": {
+            "value": 25000,
+            "unit": "W"
+          }
         },
         {
           "id": "loss-p3",
@@ -342,7 +313,10 @@
             "I = √900",
             "I = 30 A"
           ],
-          "answer": { "value": 30, "unit": "A" }
+          "answer": {
+            "value": 30,
+            "unit": "A"
+          }
         },
         {
           "id": "loss-p4",
@@ -354,7 +328,10 @@
             "P = I² × R = 60² × 1 = 3600 × 1",
             "P = 3600 W"
           ],
-          "answer": { "value": 3600, "unit": "W" }
+          "answer": {
+            "value": 3600,
+            "unit": "W"
+          }
         },
         {
           "id": "loss-p5",
@@ -366,7 +343,10 @@
             "P lost = I² × R = 50² × 4 = 2500 × 4 = 10 000 W",
             "P lost = 10 kW"
           ],
-          "answer": { "value": 10, "unit": "kW" }
+          "answer": {
+            "value": 10,
+            "unit": "kW"
+          }
         },
         {
           "id": "loss-p6",
@@ -378,7 +358,10 @@
             "P lost = I² × R = 15² × 0.4 = 225 × 0.4",
             "P lost = 90 W (down from 9000 W: ten times the p.d., one hundredth of the loss)"
           ],
-          "answer": { "value": 90, "unit": "W" }
+          "answer": {
+            "value": 90,
+            "unit": "W"
+          }
         }
       ]
     }

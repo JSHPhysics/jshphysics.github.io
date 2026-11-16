@@ -1,7 +1,8 @@
 {
-  "id": "units-and-equations",
-  "title": "Units and equations",
-  "subtitle": "Converting units, standard form and rearranging the equations",
+  "id": "key-concepts",
+  "title": "Key concepts: units and equations",
+  "subtitle": "SI units, prefixes, standard form, converting compound units and rearranging equations",
+  "spec": "Topic 1",
   "order": 10,
   "figure": "measurements",
   "types": [
@@ -16,7 +17,10 @@
         "1 m² = 10 000 cm²",
         "1 m³ = 1 000 000 cm³"
       ],
-      "boards": ["Foundation", "Higher"],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
       "method": "Every equation on the sheet expects metres, kilograms and seconds, so convert before you substitute. Going from a small unit to a larger one (mm to m, g to kg) divides; going the other way multiplies. For areas and volumes, square or cube the length conversion: 1 m² is 100 × 100 cm² and 1 m³ is 100 × 100 × 100 cm³.",
       "commonErrors": [
         "Multiplying when you should divide (120 cm is 1.2 m, not 12 000 m)",
@@ -33,7 +37,10 @@
           "35 / 1000 = 0.035",
           "Length = 0.035 m"
         ],
-        "answer": { "value": 0.035, "unit": "m" }
+        "answer": {
+          "value": 0.035,
+          "unit": "m"
+        }
       },
       "practice": [
         {
@@ -45,7 +52,10 @@
             "120 / 100 = 1.2",
             "Width = 1.2 m"
           ],
-          "answer": { "value": 1.2, "unit": "m" }
+          "answer": {
+            "value": 1.2,
+            "unit": "m"
+          }
         },
         {
           "id": "si-conversions-p2",
@@ -56,7 +66,10 @@
             "750 / 1000 = 0.75",
             "Mass = 0.75 kg"
           ],
-          "answer": { "value": 0.75, "unit": "kg" }
+          "answer": {
+            "value": 0.75,
+            "unit": "kg"
+          }
         },
         {
           "id": "si-conversions-p3",
@@ -67,7 +80,10 @@
             "3.2 × 1000 = 3200",
             "Mass = 3200 kg"
           ],
-          "answer": { "value": 3200, "unit": "kg" }
+          "answer": {
+            "value": 3200,
+            "unit": "kg"
+          }
         },
         {
           "id": "si-conversions-p4",
@@ -78,7 +94,10 @@
             "150 minutes → seconds: 150 × 60 = 9000 s",
             "Time = 9000 s"
           ],
-          "answer": { "value": 9000, "unit": "s" }
+          "answer": {
+            "value": 9000,
+            "unit": "s"
+          }
         },
         {
           "id": "si-conversions-p5",
@@ -90,7 +109,10 @@
             "450 / 10 000 = 0.045",
             "Area = 0.045 m²"
           ],
-          "answer": { "value": 0.045, "unit": "m²" }
+          "answer": {
+            "value": 0.045,
+            "unit": "m²"
+          }
         },
         {
           "id": "si-conversions-p6",
@@ -102,7 +124,10 @@
             "1500 / 1 000 000 = 0.0015",
             "Volume = 0.0015 m³"
           ],
-          "answer": { "value": 0.0015, "unit": "m³" }
+          "answer": {
+            "value": 0.0015,
+            "unit": "m³"
+          }
         }
       ]
     },
@@ -117,7 +142,10 @@
         "1 μs = 0.000 001 s",
         "1 nm = 0.000 000 001 m"
       ],
-      "boards": ["Foundation", "Higher"],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
       "method": "A prefix in front of a unit is a multiplier. Kilo (k) means × 1000, mega (M) × 1 000 000 and giga (G) × 1 000 000 000. Milli (m) means ÷ 1000, micro (μ) ÷ 1 000 000 and nano (n) ÷ 1 000 000 000. Strip the prefix, apply the multiplier, and the value is in the base unit ready for the equation.",
       "commonErrors": [
         "Mixing up milli (÷ 1000) and mega (× 1 000 000)",
@@ -134,7 +162,10 @@
           "540 × 1000 = 540 000",
           "Energy = 540 000 J"
         ],
-        "answer": { "value": 540000, "unit": "J" }
+        "answer": {
+          "value": 540000,
+          "unit": "J"
+        }
       },
       "practice": [
         {
@@ -146,7 +177,10 @@
             "20 / 1000 = 0.02",
             "Current = 0.02 A"
           ],
-          "answer": { "value": 0.02, "unit": "A" }
+          "answer": {
+            "value": 0.02,
+            "unit": "A"
+          }
         },
         {
           "id": "prefixes-p2",
@@ -157,7 +191,10 @@
             "1.8 × 1 000 000 000 = 1 800 000 000",
             "Power = 1 800 000 000 W"
           ],
-          "answer": { "value": 1800000000, "unit": "W" }
+          "answer": {
+            "value": 1800000000,
+            "unit": "W"
+          }
         },
         {
           "id": "prefixes-p3",
@@ -168,7 +205,10 @@
             "2.5 × 1 000 000 = 2 500 000",
             "Power = 2 500 000 W"
           ],
-          "answer": { "value": 2500000, "unit": "W" }
+          "answer": {
+            "value": 2500000,
+            "unit": "W"
+          }
         },
         {
           "id": "prefixes-p4",
@@ -179,7 +219,10 @@
             "4.7 × 1000 = 4700",
             "Resistance = 4700 Ω"
           ],
-          "answer": { "value": 4700, "unit": "Ω" }
+          "answer": {
+            "value": 4700,
+            "unit": "Ω"
+          }
         },
         {
           "id": "prefixes-p5",
@@ -190,7 +233,10 @@
             "250 / 1 000 000 = 0.000 25",
             "Time = 0.00025 s"
           ],
-          "answer": { "value": 0.00025, "unit": "s" }
+          "answer": {
+            "value": 0.00025,
+            "unit": "s"
+          }
         },
         {
           "id": "prefixes-p6",
@@ -201,7 +247,10 @@
             "650 / 1 000 000 000 = 0.000 000 65",
             "Wavelength = 0.00000065 m (6.5 × 10⁻⁷ m)"
           ],
-          "answer": { "value": 6.5e-7, "unit": "m" }
+          "answer": {
+            "value": 6.5e-07,
+            "unit": "m"
+          }
         }
       ]
     },
@@ -213,7 +262,10 @@
         "1 g/cm³ = 1000 kg/m³",
         "1 kWh = 3 600 000 J"
       ],
-      "boards": ["Foundation", "Higher"],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
       "method": "A compound unit is two units combined, so convert each part in turn. For km/h to m/s, change the kilometres to metres (× 1000) and the hours to seconds (÷ 3600). For g/cm³ to kg/m³, change grams to kilograms (÷ 1000) and cm³ to m³ (÷ 1 000 000), which comes out as × 1000 overall. A kilowatt-hour is 1000 W for 3600 s, so 1 kWh = 3 600 000 J.",
       "commonErrors": [
         "Converting the distance but forgetting the time (or the other way round)",
@@ -230,7 +282,10 @@
           "speed = 90 000 / 3600 = 25",
           "Speed = 25 m/s"
         ],
-        "answer": { "value": 25, "unit": "m/s" }
+        "answer": {
+          "value": 25,
+          "unit": "m/s"
+        }
       },
       "practice": [
         {
@@ -242,7 +297,10 @@
             "speed = 108 000 / 3600 = 30",
             "Speed = 30 m/s"
           ],
-          "answer": { "value": 30, "unit": "m/s" }
+          "answer": {
+            "value": 30,
+            "unit": "m/s"
+          }
         },
         {
           "id": "compound-units-p2",
@@ -253,7 +311,10 @@
             "1.5 × 3 600 000 = 5 400 000",
             "Energy = 5 400 000 J"
           ],
-          "answer": { "value": 5400000, "unit": "J" }
+          "answer": {
+            "value": 5400000,
+            "unit": "J"
+          }
         },
         {
           "id": "compound-units-p3",
@@ -264,7 +325,10 @@
             "43 200 m = 43 200 / 1000 = 43.2 km",
             "Speed = 43.2 km/h"
           ],
-          "answer": { "value": 43.2, "unit": "km/h" }
+          "answer": {
+            "value": 43.2,
+            "unit": "km/h"
+          }
         },
         {
           "id": "compound-units-p4",
@@ -276,7 +340,10 @@
             "density = 0.0027 / 0.000 001 = 2700",
             "Density = 2700 kg/m³"
           ],
-          "answer": { "value": 2700, "unit": "kg/m³" }
+          "answer": {
+            "value": 2700,
+            "unit": "kg/m³"
+          }
         },
         {
           "id": "compound-units-p5",
@@ -288,7 +355,10 @@
             "speed = 0.15 / 60 = 0.0025",
             "Speed = 0.0025 m/s"
           ],
-          "answer": { "value": 0.0025, "unit": "m/s" }
+          "answer": {
+            "value": 0.0025,
+            "unit": "m/s"
+          }
         },
         {
           "id": "compound-units-p6",
@@ -300,7 +370,10 @@
             "flow rate = 0.012 / 60 = 0.0002",
             "Flow rate = 0.0002 m³/s"
           ],
-          "answer": { "value": 0.0002, "unit": "m³/s" }
+          "answer": {
+            "value": 0.0002,
+            "unit": "m³/s"
+          }
         }
       ]
     },
@@ -312,7 +385,9 @@
         "× 10ⁿ moves the decimal point n places to the right",
         "× 10⁻ⁿ moves the decimal point n places to the left"
       ],
-      "boards": ["Higher"],
+      "boards": [
+        "Higher"
+      ],
       "method": "Standard form writes a number as a × 10ⁿ with a between 1 and 10. A positive power moves the decimal point to the right (a big number); a negative power moves it to the left (a small number). To write an ordinary number in standard form, count how many places the decimal point moves to leave one non-zero digit in front of it. Where a question asks for n, give the power alone; otherwise give the ordinary number.",
       "commonErrors": [
         "Counting the zeros instead of the places the decimal point moves (2 500 000 is 2.5 × 10⁶, not 10⁵)",
@@ -329,7 +404,10 @@
           "9.8 → 98 000 000 (one place uses the 8, then six zeros)",
           "Frequency = 98 000 000 Hz"
         ],
-        "answer": { "value": 98000000, "unit": "Hz" }
+        "answer": {
+          "value": 98000000,
+          "unit": "Hz"
+        }
       },
       "practice": [
         {
@@ -341,7 +419,10 @@
             "1.2 → 0.012",
             "Wavelength = 0.012 m"
           ],
-          "answer": { "value": 0.012, "unit": "m" }
+          "answer": {
+            "value": 0.012,
+            "unit": "m"
+          }
         },
         {
           "id": "standard-form-p2",
@@ -352,7 +433,10 @@
             "6.4 → 6 400 000 (one place uses the 4, then five zeros)",
             "Radius = 6 400 000 m"
           ],
-          "answer": { "value": 6400000, "unit": "m" }
+          "answer": {
+            "value": 6400000,
+            "unit": "m"
+          }
         },
         {
           "id": "standard-form-p3",
@@ -364,7 +448,10 @@
             "2 500 000 = 2.5 × 10⁶",
             "n = 6"
           ],
-          "answer": { "value": 6, "unit": "" }
+          "answer": {
+            "value": 6,
+            "unit": ""
+          }
         },
         {
           "id": "standard-form-p4",
@@ -376,7 +463,10 @@
             "A small number needs a negative power: 4.5 × 10⁻⁷",
             "n = −7"
           ],
-          "answer": { "value": -7, "unit": "" }
+          "answer": {
+            "value": -7,
+            "unit": ""
+          }
         },
         {
           "id": "standard-form-p5",
@@ -388,7 +478,10 @@
             "distance = 6 × 10² = 600",
             "Distance = 600 m"
           ],
-          "answer": { "value": 600, "unit": "m" }
+          "answer": {
+            "value": 600,
+            "unit": "m"
+          }
         },
         {
           "id": "standard-form-p6",
@@ -400,7 +493,10 @@
             "total charge = 8 × 10⁰ = 8",
             "Charge = 8 C"
           ],
-          "answer": { "value": 8, "unit": "C" }
+          "answer": {
+            "value": 8,
+            "unit": "C"
+          }
         }
       ]
     },
@@ -416,7 +512,10 @@
         "v² − u² = 2 × a × x",
         "E = ½ × k × x²"
       ],
-      "boards": ["Foundation", "Higher"],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
       "method": "Write the equation, list what you know, and circle the one quantity you do not. Undo whatever is being done to that quantity: a quantity that is multiplied is found by dividing, a quantity that is divided is found by multiplying, and a quantity that is squared is found by taking the square root last. Substitute only after rearranging, or substitute first and then solve, but keep the units with the numbers.",
       "commonErrors": [
         "Dividing the wrong way round (I = V / P instead of I = P / V)",
@@ -433,7 +532,10 @@
           "I = 2300 / 230",
           "I = 10 A"
         ],
-        "answer": { "value": 10, "unit": "A" }
+        "answer": {
+          "value": 10,
+          "unit": "A"
+        }
       },
       "practice": [
         {
@@ -446,7 +548,10 @@
             "m = 450 / 10",
             "m = 45 kg"
           ],
-          "answer": { "value": 45, "unit": "kg" }
+          "answer": {
+            "value": 45,
+            "unit": "kg"
+          }
         },
         {
           "id": "rearranging-p2",
@@ -458,7 +563,10 @@
             "V = 5 / 2500",
             "V = 0.002 m³"
           ],
-          "answer": { "value": 0.002, "unit": "m³" }
+          "answer": {
+            "value": 0.002,
+            "unit": "m³"
+          }
         },
         {
           "id": "rearranging-p3",
@@ -470,7 +578,10 @@
             "h = 3000 / (60 × 10) = 3000 / 600",
             "h = 5 m"
           ],
-          "answer": { "value": 5, "unit": "m" }
+          "answer": {
+            "value": 5,
+            "unit": "m"
+          }
         },
         {
           "id": "rearranging-p4",
@@ -482,8 +593,13 @@
             "v² = 2 × 3600 / 50 = 7200 / 50 = 144",
             "v = √144 = 12 m/s"
           ],
-          "answer": { "value": 12, "unit": "m/s" },
-          "boards": ["Higher"]
+          "answer": {
+            "value": 12,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
         },
         {
           "id": "rearranging-p5",
@@ -495,8 +611,13 @@
             "u² = 30² − 2 × 2 × 200 = 900 − 800 = 100",
             "u = √100 = 10 m/s"
           ],
-          "answer": { "value": 10, "unit": "m/s" },
-          "boards": ["Higher"]
+          "answer": {
+            "value": 10,
+            "unit": "m/s"
+          },
+          "boards": [
+            "Higher"
+          ]
         },
         {
           "id": "rearranging-p6",
@@ -508,8 +629,13 @@
             "x² = 2 × 1 / 50 = 0.04",
             "x = √0.04 = 0.2 m"
           ],
-          "answer": { "value": 0.2, "unit": "m" },
-          "boards": ["Higher"]
+          "answer": {
+            "value": 0.2,
+            "unit": "m"
+          },
+          "boards": [
+            "Higher"
+          ]
         }
       ]
     },
@@ -521,7 +647,10 @@
         "percentage = (part / whole) × 100",
         "percentage change = (change / original value) × 100"
       ],
-      "boards": ["Foundation", "Higher"],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
       "method": "A percentage is a fraction of the whole multiplied by 100. Efficiency is the useful output divided by the total input; multiply by 100 to give it as a percentage. For a percentage change, divide the change by the original value, not the new one. A ratio of two quantities is one divided by the other and has no unit.",
       "commonErrors": [
         "Dividing the input by the output and getting an efficiency over 100%",
@@ -538,7 +667,10 @@
           "efficiency = 350 / 500 = 0.7",
           "As a percentage: 0.7 × 100 = 70%"
         ],
-        "answer": { "value": 70, "unit": "%" }
+        "answer": {
+          "value": 70,
+          "unit": "%"
+        }
       },
       "practice": [
         {
@@ -550,7 +682,10 @@
             "efficiency = 324 000 / 360 000 = 0.9",
             "0.9 × 100 = 90%"
           ],
-          "answer": { "value": 90, "unit": "%" }
+          "answer": {
+            "value": 90,
+            "unit": "%"
+          }
         },
         {
           "id": "percentages-ratios-p2",
@@ -561,7 +696,10 @@
             "ratio = 400 / 50",
             "ratio = 8"
           ],
-          "answer": { "value": 8, "unit": "" }
+          "answer": {
+            "value": 8,
+            "unit": ""
+          }
         },
         {
           "id": "percentages-ratios-p3",
@@ -573,7 +711,10 @@
             "percentage change = (5 / 20) × 100",
             "Increase = 25%"
           ],
-          "answer": { "value": 25, "unit": "%" }
+          "answer": {
+            "value": 25,
+            "unit": "%"
+          }
         },
         {
           "id": "percentages-ratios-p4",
@@ -585,7 +726,10 @@
             "useful energy = 0.28 × 30 000 000",
             "Useful energy = 8 400 000 J"
           ],
-          "answer": { "value": 8400000, "unit": "J" }
+          "answer": {
+            "value": 8400000,
+            "unit": "J"
+          }
         },
         {
           "id": "percentages-ratios-p5",
@@ -597,7 +741,10 @@
             "efficiency = 9.6 / 12 = 0.8",
             "0.8 × 100 = 80%"
           ],
-          "answer": { "value": 80, "unit": "%" }
+          "answer": {
+            "value": 80,
+            "unit": "%"
+          }
         },
         {
           "id": "percentages-ratios-p6",
@@ -610,7 +757,10 @@
             "percentage lost = (3 / 10) × 100",
             "Percentage lost = 30%"
           ],
-          "answer": { "value": 30, "unit": "%" }
+          "answer": {
+            "value": 30,
+            "unit": "%"
+          }
         }
       ]
     }

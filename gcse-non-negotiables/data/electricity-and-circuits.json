@@ -1,8 +1,9 @@
 {
-  "id": "electricity",
-  "title": "Electricity",
-  "subtitle": "Charge, current, potential difference, resistance, power and energy",
-  "order": 70,
+  "id": "electricity-and-circuits",
+  "title": "Electricity and circuits",
+  "subtitle": "Charge, current, potential difference, resistance, series and parallel circuits, power and the mains",
+  "spec": "Topic 10",
+  "order": 100,
   "figure": "circuit",
   "types": [
     {

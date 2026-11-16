@@ -1,0 +1,129 @@
+{
+  "id": "magnetism-and-motor-effect",
+  "title": "Magnetism and the motor effect",
+  "subtitle": "Magnetic fields, electromagnets, the motor effect and Fleming's left-hand rule",
+  "spec": "Topic 12",
+  "order": 120,
+  "figure": "magnetism",
+  "types": [
+    {
+      "id": "motor-force",
+      "name": "Force on a current-carrying conductor",
+      "equations": [
+        "F = B × I × l"
+      ],
+      "boards": [
+        "Higher"
+      ],
+      "method": "The force on a wire at right angles to a magnetic field is magnetic flux density multiplied by current multiplied by the length of wire in the field. B is in tesla, I in amps and l in metres, so change cm to m (divide by 100) first. The equation is on the equation sheet; to find B, I or l, divide F by the other two.",
+      "commonErrors": [
+        "Leaving the length in cm, so the force is 100 times too big",
+        "Mixing up B (flux density, in T) and F (force, in N)",
+        "Forgetting that the force is zero if the wire runs along the field rather than across it"
+      ],
+      "worked": {
+        "id": "motor-force-w",
+        "question": "A straight wire 0.5 m long carries a current of 3 A at right angles to a magnetic field of flux density 0.4 T. Calculate the force on the wire.",
+        "steps": [
+          "Known: B = 0.4 T, I = 3 A, l = 0.5 m. Unknown: F.",
+          "F = B × I × l",
+          "F = 0.4 × 3 × 0.5",
+          "F = 0.6 N"
+        ],
+        "answer": {
+          "value": 0.6,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "motor-force-p1",
+          "question": "In a lab experiment a wire 0.4 m long rests on a top-pan balance between the poles of a magnet. The flux density is 0.1 T and the wire carries 2.5 A at right angles to the field. Calculate the force on the wire.",
+          "hint": "Use F = B × I × l with the values as given.",
+          "walkthrough": [
+            "B = 0.1 T, I = 2.5 A, l = 0.4 m, find F.",
+            "F = B × I × l = 0.1 × 2.5 × 0.4",
+            "F = 0.1 N"
+          ],
+          "answer": {
+            "value": 0.1,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "motor-force-p2",
+          "question": "The coil of a loudspeaker has 1.2 m of wire in a radial magnetic field of flux density 0.5 T. The current in the coil is 0.3 A. Calculate the force on the coil.",
+          "hint": "Force equals flux density multiplied by current multiplied by length.",
+          "walkthrough": [
+            "B = 0.5 T, I = 0.3 A, l = 1.2 m, find F.",
+            "F = B × I × l = 0.5 × 0.3 × 1.2",
+            "F = 0.18 N"
+          ],
+          "answer": {
+            "value": 0.18,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "motor-force-p3",
+          "question": "A wire 0.2 m long in the gap of an electromagnet carries a current of 1.5 A and experiences a force of 0.06 N. Calculate the magnetic flux density in the gap.",
+          "hint": "Rearrange F = B × I × l to B = F / (I × l).",
+          "walkthrough": [
+            "F = 0.06 N, I = 1.5 A, l = 0.2 m, find B.",
+            "F = B × I × l → B = F / (I × l)",
+            "B = 0.06 / (1.5 × 0.2) = 0.06 / 0.3",
+            "B = 0.2 T"
+          ],
+          "answer": {
+            "value": 0.2,
+            "unit": "T"
+          }
+        },
+        {
+          "id": "motor-force-p4",
+          "question": "One side of the coil in a toy car motor is 8 cm long and carries a current of 5 A in a field of flux density 0.15 T. Calculate the force on that side of the coil.",
+          "hint": "Change 8 cm to metres before using F = B × I × l.",
+          "walkthrough": [
+            "B = 0.15 T, I = 5 A, l = 8 cm = 0.08 m, find F.",
+            "F = B × I × l = 0.15 × 5 × 0.08",
+            "F = 0.06 N"
+          ],
+          "answer": {
+            "value": 0.06,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "motor-force-p5",
+          "question": "A 30 cm length of wire in a crane motor sits in a field of flux density 0.2 T. The force on the wire is 0.12 N. Calculate the current in the wire.",
+          "hint": "Convert 30 cm to metres, then rearrange to I = F / (B × l).",
+          "walkthrough": [
+            "F = 0.12 N, B = 0.2 T, l = 30 cm = 0.3 m, find I.",
+            "F = B × I × l → I = F / (B × l)",
+            "I = 0.12 / (0.2 × 0.3) = 0.12 / 0.06",
+            "I = 2 A"
+          ],
+          "answer": {
+            "value": 2,
+            "unit": "A"
+          }
+        },
+        {
+          "id": "motor-force-p6",
+          "question": "A 0.5 m length of wire on a model train has a resistance of 2 Ω and is connected across a 6 V supply. The wire is at right angles to a field of flux density 0.1 T. Calculate the force on the wire.",
+          "hint": "Find the current first with I = V / R, then use F = B × I × l.",
+          "walkthrough": [
+            "V = 6 V, R = 2 Ω, B = 0.1 T, l = 0.5 m, find F.",
+            "First the current: I = V / R = 6 / 2 = 3 A",
+            "F = B × I × l = 0.1 × 3 × 0.5",
+            "F = 0.15 N"
+          ],
+          "answer": {
+            "value": 0.15,
+            "unit": "N"
+          }
+        }
+      ]
+    }
+  ]
+}

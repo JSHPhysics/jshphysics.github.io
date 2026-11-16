@@ -1,8 +1,9 @@
 {
-  "id": "energy",
-  "title": "Energy",
-  "subtitle": "Kinetic and gravitational energy, work, power and efficiency",
-  "order": 40,
+  "id": "energy-and-work",
+  "title": "Energy, work and power",
+  "subtitle": "Energy stores and transfers, conservation, efficiency, work done and power",
+  "spec": "Topics 3 and 8",
+  "order": 30,
   "figure": "circular-shm",
   "types": [
     {

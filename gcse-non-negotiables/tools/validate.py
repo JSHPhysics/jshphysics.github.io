@@ -44,6 +44,18 @@ def check_text(problems, where, text, min_len=1):
         problems.append(f"{where}: contains LaTeX or HTML markup: {text[:60]!r}")
 
 
+def check_rich(problems, where, text, min_len=1):
+    """Check a section text field: HTML with TeX between dollars is allowed,
+    but the dollars must pair up."""
+    if not isinstance(text, str):
+        problems.append(f"{where}: expected a string")
+        return
+    if len(text.strip()) < min_len:
+        problems.append(f"{where}: empty or too short")
+    if text.count("$") % 2 == 1:
+        problems.append(f"{where}: unpaired $ in {text[:60]!r}")
+
+
 def check_lines(problems, where, lines, lo, hi):
     """Check an array of plain-text working lines."""
     if not isinstance(lines, list):
@@ -269,15 +281,223 @@ def validate_file(path):
         problems.append("order: must be an integer")
 
     types = topic.get("types")
-    if not isinstance(types, list) or not types:
-        problems.append("types: must be a non-empty list")
+    has_notes = bool(topic.get("sections")) or bool(topic.get("placeholder"))
+    if not isinstance(types, list):
+        problems.append("types: must be a list")
         types = []
+    elif not types and not has_notes:
+        problems.append("types: must be a non-empty list (unless the topic has sections or a placeholder)")
 
     seen_type_ids = set()
     for index, ctype in enumerate(types):
         check_type(problems, f"types[{index}]", ctype, seen_type_ids)
 
+    if "sections" in topic or "bands" in topic or "facts" in topic:
+        check_sections(problems, topic, seen_type_ids)
+
     return problems
+
+
+# ---------------------------------------------------------------------
+# Revision content: bands, sections and key facts (see SCHEMA.md)
+# ---------------------------------------------------------------------
+
+PART_KINDS = {"explain", "worked", "practice", "types", "facts"}
+QUESTION_TYPES = {"numeric", "choice", "written", "draw", "group"}
+SECTION_TAGS = {"H", "P"}
+
+
+def check_tags(problems, where, tags):
+    if tags is None:
+        return
+    if not isinstance(tags, list) or any(tag not in SECTION_TAGS for tag in tags):
+        problems.append(f"{where}.tags: must be a list drawn from {sorted(SECTION_TAGS)}")
+
+
+def check_section_question(problems, where, question, seen_question_ids, allow_group=True):
+    """A question inside a section (TeX notation, several types)."""
+    if not isinstance(question, dict):
+        problems.append(f"{where}: must be an object")
+        return
+    qid = question.get("id")
+    if not isinstance(qid, str) or not qid:
+        problems.append(f"{where}.id: missing")
+    elif qid in seen_question_ids:
+        problems.append(f"{where}.id: '{qid}' is used twice in this file")
+    else:
+        seen_question_ids.add(qid)
+
+    qtype = question.get("type")
+    if qtype not in QUESTION_TYPES:
+        problems.append(f"{where}.type: must be one of {sorted(QUESTION_TYPES)}, got {qtype!r}")
+        return
+    if qtype == "group" and not allow_group:
+        problems.append(f"{where}: a group cannot contain a group")
+        return
+
+    check_rich(problems, f"{where}.text", question.get("text"), min_len=3)
+    check_tags(problems, where, question.get("tags"))
+    if question.get("boards") is not None:
+        check_boards(problems, where, question.get("boards"))
+    if question.get("graph") is not None:
+        check_graph(problems, f"{where}.graph", question["graph"])
+
+    if qtype == "group":
+        parts = question.get("parts")
+        if not isinstance(parts, list) or not parts:
+            problems.append(f"{where}.parts: must be a non-empty list")
+            return
+        for index, child in enumerate(parts):
+            check_section_question(problems, f"{where}.parts[{index}]", child, seen_question_ids, allow_group=False)
+        return
+
+    if qtype == "numeric":
+        check_answer(problems, where, question.get("answer"))
+        walkthrough = question.get("walkthrough")
+        if not isinstance(walkthrough, list) or not walkthrough:
+            problems.append(f"{where}.walkthrough: must be a non-empty list of lines")
+    elif qtype == "choice":
+        options = question.get("options")
+        if not isinstance(options, list) or len(options) < 2:
+            problems.append(f"{where}.options: need at least two")
+        correct = question.get("correct")
+        if not isinstance(correct, int) or not options or not (0 <= correct < len(options)):
+            problems.append(f"{where}.correct: must index an option")
+        check_rich(problems, f"{where}.explain", question.get("explain"), min_len=3)
+    elif qtype == "written":
+        check_rich(problems, f"{where}.model", question.get("model"), min_len=3)
+    elif qtype == "draw":
+        if question.get("grid") is None:
+            problems.append(f"{where}.grid: a draw question needs a grid")
+        else:
+            grid = dict(question["grid"])
+            if not grid.get("series"):
+                # A blank grid is drawn with no series; the checker needs axes only
+                grid["series"] = [{"kind": "line", "points": [[grid["x"]["min"], grid["y"]["min"]], [grid["x"]["max"], grid["y"]["max"]]]}]
+            if not grid.get("alt"):
+                grid["alt"] = "Blank grid for drawing"
+            check_graph(problems, f"{where}.grid", grid)
+        check_rich(problems, f"{where}.model", question.get("model"), min_len=3)
+        if question.get("check") and question.get("answerGraph") is None:
+            problems.append(f"{where}.answerGraph: needed when check is true")
+
+
+def check_sections(problems, topic, type_ids):
+    """Bands, sections (with their parts and questions) and key facts."""
+    bands = topic.get("bands") or []
+    band_ids = set()
+    for index, band in enumerate(bands):
+        where = f"bands[{index}]"
+        if not isinstance(band, dict) or not isinstance(band.get("id"), str):
+            problems.append(f"{where}: needs an id")
+            continue
+        if band["id"] in band_ids:
+            problems.append(f"{where}.id: '{band['id']}' used twice")
+        band_ids.add(band["id"])
+        check_rich(problems, f"{where}.title", band.get("title"), min_len=2)
+
+    sections = topic.get("sections") or []
+    if not isinstance(sections, list):
+        problems.append("sections: must be a list")
+        return
+    seen_section_ids = set()
+    seen_question_ids = set()
+    placed_types = set()
+
+    for index, section in enumerate(sections):
+        where = f"sections[{index}]"
+        if not isinstance(section, dict):
+            problems.append(f"{where}: must be an object")
+            continue
+        sid = section.get("id")
+        if not isinstance(sid, str) or not KEBAB.match(sid):
+            problems.append(f"{where}.id: must be kebab-case, got {sid!r}")
+        elif sid in seen_section_ids or sid in type_ids:
+            problems.append(f"{where}.id: '{sid}' clashes with another section or type")
+        else:
+            seen_section_ids.add(sid)
+        check_rich(problems, f"{where}.title", section.get("title"), min_len=3)
+        if bands and section.get("band") not in band_ids:
+            problems.append(f"{where}.band: '{section.get('band')}' is not a band id")
+        check_tags(problems, where, section.get("tags"))
+        for item_index, item in enumerate(section.get("checklist") or []):
+            check_rich(problems, f"{where}.checklist[{item_index}]", item, min_len=3)
+
+        parts = section.get("parts")
+        if not isinstance(parts, list) or not parts:
+            problems.append(f"{where}.parts: must be a non-empty list")
+            continue
+        for part_index, part in enumerate(parts):
+            pwhere = f"{where}.parts[{part_index}]"
+            kind = part.get("kind") if isinstance(part, dict) else None
+            if kind not in PART_KINDS:
+                problems.append(f"{pwhere}.kind: must be one of {sorted(PART_KINDS)}, got {kind!r}")
+                continue
+            if kind == "explain":
+                check_rich(problems, f"{pwhere}.title", part.get("title"), min_len=2)
+                check_rich(problems, f"{pwhere}.html", part.get("html"), min_len=10)
+                if part.get("graph") is not None:
+                    check_graph(problems, f"{pwhere}.graph", part["graph"])
+            elif kind == "worked":
+                check_rich(problems, f"{pwhere}.title", part.get("title"), min_len=2)
+                check_rich(problems, f"{pwhere}.question", part.get("question"), min_len=5)
+                steps = part.get("steps")
+                if not isinstance(steps, list) or not steps:
+                    problems.append(f"{pwhere}.steps: must be a non-empty list")
+                if part.get("graph") is not None:
+                    check_graph(problems, f"{pwhere}.graph", part["graph"])
+            elif kind == "practice":
+                check_rich(problems, f"{pwhere}.title", part.get("title"), min_len=2)
+                questions = part.get("questions")
+                if not isinstance(questions, list) or not questions:
+                    problems.append(f"{pwhere}.questions: must be a non-empty list")
+                    continue
+                for q_index, question in enumerate(questions):
+                    check_section_question(problems, f"{pwhere}.questions[{q_index}]", question, seen_question_ids)
+            elif kind == "types":
+                ids = part.get("ids")
+                if not isinstance(ids, list) or not ids:
+                    problems.append(f"{pwhere}.ids: must be a non-empty list of type ids")
+                    continue
+                for type_id in ids:
+                    if type_id not in type_ids:
+                        problems.append(f"{pwhere}.ids: '{type_id}' is not a type in this file")
+                    elif type_id in placed_types:
+                        problems.append(f"{pwhere}.ids: '{type_id}' is embedded by two sections")
+                    placed_types.add(type_id)
+            elif kind == "facts":
+                items = part.get("items")
+                if not isinstance(items, list) or not items:
+                    problems.append(f"{pwhere}.items: must be a non-empty list")
+
+    facts = topic.get("facts")
+    if facts is not None:
+        if not isinstance(facts, list) or not facts:
+            problems.append("facts: must be a non-empty list")
+        else:
+            for index, item in enumerate(facts):
+                if not isinstance(item, dict):
+                    problems.append(f"facts[{index}]: must be an object")
+                    continue
+                check_rich(problems, f"facts[{index}].q", item.get("q"), min_len=2)
+                check_rich(problems, f"facts[{index}].a", item.get("a"), min_len=1)
+                if item.get("section") is not None and item["section"] not in seen_section_ids:
+                    problems.append(f"facts[{index}].section: '{item['section']}' is not a section id")
+
+
+def section_question_ids(topic):
+    """Every question id inside a topic's sections, flattening groups."""
+    ids = []
+    for section in topic.get("sections") or []:
+        for part in section.get("parts") or []:
+            if part.get("kind") != "practice":
+                continue
+            for question in part.get("questions") or []:
+                if question.get("type") == "group":
+                    ids.extend(child.get("id") for child in question.get("parts") or [])
+                else:
+                    ids.append(question.get("id"))
+    return ids
 
 
 def main(paths):
@@ -296,7 +516,9 @@ def main(paths):
             with open(path, encoding="utf-8") as handle:
                 topic = json.load(handle)
             type_count = len(topic["types"])
-            print(f"OK   {path}: {type_count} types, {type_count * 7} questions")
+            section_count = len(topic.get("sections") or [])
+            extra = len(section_question_ids(topic))
+            print(f"OK   {path}: {type_count} types, {type_count * 7} questions; {section_count} sections, {extra} section questions, {len(topic.get('facts') or [])} facts")
 
     return 0 if all_ok else 1
 

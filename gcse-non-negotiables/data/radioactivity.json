@@ -1,7 +1,8 @@
 {
   "id": "radioactivity",
   "title": "Radioactivity",
-  "subtitle": "Half-life, activity, nuclear equations and decay graphs",
+  "subtitle": "Atomic structure, types of radiation, decay equations, half-life and uses of radiation",
+  "spec": "Topic 6",
   "order": 60,
   "figure": "half-life",
   "types": [

@@ -1,74 +1,116 @@
 {
   "topics": [
     {
-      "id": "units-and-equations",
-      "file": "units-and-equations.json",
-      "title": "Units and equations",
+      "id": "key-concepts",
+      "file": "key-concepts.json",
+      "title": "Key concepts: units and equations",
       "order": 10,
-      "types": 6
+      "types": 6,
+      "sections": 0
     },
     {
-      "id": "motion",
-      "file": "motion.json",
-      "title": "Motion",
+      "id": "motion-and-forces",
+      "file": "motion-and-forces.json",
+      "title": "Motion and forces",
       "order": 20,
-      "types": 5
+      "types": 13,
+      "sections": 0
     },
     {
-      "id": "forces-and-momentum",
-      "file": "forces-and-momentum.json",
-      "title": "Forces and momentum",
+      "id": "energy-and-work",
+      "file": "energy-and-work.json",
+      "title": "Energy, work and power",
       "order": 30,
-      "types": 8
-    },
-    {
-      "id": "energy",
-      "file": "energy.json",
-      "title": "Energy",
-      "order": 40,
-      "types": 7
+      "types": 7,
+      "sections": 0
     },
     {
       "id": "waves",
       "file": "waves.json",
       "title": "Waves",
+      "order": 40,
+      "types": 5,
+      "sections": 0
+    },
+    {
+      "id": "light-and-em",
+      "file": "light-and-em.json",
+      "title": "Light and the electromagnetic spectrum",
       "order": 50,
-      "types": 5
+      "types": 0,
+      "sections": 0
     },
     {
       "id": "radioactivity",
       "file": "radioactivity.json",
       "title": "Radioactivity",
       "order": 60,
-      "types": 6
+      "types": 6,
+      "sections": 0
     },
     {
-      "id": "electricity",
-      "file": "electricity.json",
-      "title": "Electricity",
+      "id": "astronomy",
+      "file": "astronomy.json",
+      "title": "Astronomy",
       "order": 70,
-      "types": 7
+      "types": 0,
+      "sections": 0
     },
     {
-      "id": "magnetism",
-      "file": "magnetism.json",
-      "title": "Magnetism and transformers",
-      "order": 80,
-      "types": 4
+      "id": "forces-and-their-effects",
+      "file": "forces-and-their-effects.json",
+      "title": "Forces and their effects",
+      "order": 90,
+      "types": 2,
+      "sections": 0
+    },
+    {
+      "id": "electricity-and-circuits",
+      "file": "electricity-and-circuits.json",
+      "title": "Electricity and circuits",
+      "order": 100,
+      "types": 7,
+      "sections": 0
+    },
+    {
+      "id": "static-electricity",
+      "file": "static-electricity.json",
+      "title": "Static electricity",
+      "order": 110,
+      "types": 0,
+      "sections": 0
+    },
+    {
+      "id": "magnetism-and-motor-effect",
+      "file": "magnetism-and-motor-effect.json",
+      "title": "Magnetism and the motor effect",
+      "order": 120,
+      "types": 1,
+      "sections": 0
+    },
+    {
+      "id": "electromagnetic-induction",
+      "file": "electromagnetic-induction.json",
+      "title": "Electromagnetic induction",
+      "order": 130,
+      "types": 3,
+      "sections": 0
     },
     {
       "id": "particle-model",
       "file": "particle-model.json",
-      "title": "Particle model and thermal energy",
-      "order": 90,
-      "types": 7
+      "title": "Particle model",
+      "order": 140,
+      "types": 7,
+      "sections": 0
     },
     {
       "id": "forces-and-matter",
       "file": "forces-and-matter.json",
       "title": "Forces and matter",
-      "order": 100,
-      "types": 7
+      "order": 150,
+      "types": 5,
+      "sections": 0
     }
   ]
 }

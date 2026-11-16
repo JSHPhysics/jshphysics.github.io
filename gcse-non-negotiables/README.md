@@ -1,6 +1,10 @@
 # The GCSE Non-negotiables
 
-A practice site for every calculation in Edexcel GCSE Physics (1PH0):
+A revision site for Edexcel GCSE Physics (1PH0), one page per
+specification topic. Each topic carries its calculation practice and —
+as the notes are written, topic by topic — explanations, worked examples,
+diagrams, the tricky bits and flashcards, in the style of the LEH U4
+Topic 2 page. The calculation side is still the original brief:
 one worked example and six practice questions per calculation type, with
 a hint, a step-by-step walkthrough and instant answer checking. Students
 pick their tier (Foundation or Higher) and see only what their tier
