@@ -838,3 +838,46 @@ if (calm.matches) {
 drawCoil();
 drawGen();
 requestAnimationFrame(frame);
+
+// ---------------- Exam-style explanation: GCSE or A-level ----------------
+{
+  const STORE_KEY = "jsh-induction-level";
+  const buttons = document.querySelectorAll("[data-exam-level]");
+  const boxes = document.querySelectorAll(".exam-box[data-level]");
+
+  // Show the box for one level and mark its button as pressed.
+  const showLevel = (level) => {
+    for (const box of boxes) {
+      box.hidden = box.dataset.level !== level;
+    }
+    for (const button of buttons) {
+      const chosen = button.dataset.examLevel === level;
+      button.setAttribute("aria-pressed", String(chosen));
+    }
+  };
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      const level = button.dataset.examLevel;
+      showLevel(level);
+      // Remember the choice on this device. Storage can be blocked, and the page works without it.
+      try {
+        localStorage.setItem(STORE_KEY, level);
+      } catch (error) {
+        // Nothing to do: the choice simply is not remembered.
+      }
+    });
+  }
+
+  // Start on the level chosen last time, or GCSE.
+  let startLevel = "gcse";
+  try {
+    const saved = localStorage.getItem(STORE_KEY);
+    if (saved === "alevel") {
+      startLevel = "alevel";
+    }
+  } catch (error) {
+    // Keep GCSE.
+  }
+  showLevel(startLevel);
+}

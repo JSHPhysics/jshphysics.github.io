@@ -182,6 +182,31 @@ const EXAM = {
   ]),
 };
 
+// The induction explanation comes in two versions. GCSE is the author's original wording;
+// A-level adds flux linkage, Faraday's law and Lenz's law. A Level switch shows one at a time.
+const INDUCTION_ALEVEL_STEPS = [
+  "The conductor (a coil or a wire) passes through the magnetic field, and experiences a changing magnetic flux linkage.",
+  "According to Faraday's law, this induces a potential difference across the conductor, proportional to the rate of change of flux linkage.",
+  "If the conductor is in a closed circuit, a current flows.",
+  "This current creates a magnetic field, which interacts with the permanent magnet's magnetic field.",
+  "This causes a resultant force on the conductor.",
+  "According to Lenz's law, the direction of this force opposes the motion that is causing the change in flux linkage.",
+];
+const INDUCTION_FURTHER = "The force must oppose the direction of motion to conserve energy, because it causes work to be done against the motion of the conductor.";
+
+function inductionExamHtml() {
+  const stepItems = INDUCTION_ALEVEL_STEPS.map((step) => `<li>${step}</li>`).join("");
+  const further = `<div class="exam-further"><p class="exam-further-lead">In some cases you may wish to go further, and explain why the force must oppose the motion that causes the changing flux:</p><p class="exam-further-point">${INDUCTION_FURTHER}</p></div>`;
+  const alevelBox = `<div class="exam-box" data-level="alevel" hidden><p class="exam-kicker">Exam-style explanation · A-level</p><h2>Induction</h2><ol>${stepItems}</ol>${further}</div>`;
+  // The GCSE box is the shared one, tagged so the switch can find it.
+  const gcseBox = EXAM.induction
+    .replace(`<div class="exam-box">`, `<div class="exam-box" data-level="gcse">`)
+    .replace(`Exam-style explanation</p>`, `Exam-style explanation · GCSE</p>`);
+  const levelSwitch = `<div class="hd-controls exam-levels"><div class="hd-group" role="group" aria-label="Level of the explanation"><span>Level</span><button type="button" data-exam-level="gcse" aria-pressed="true">GCSE</button><button type="button" data-exam-level="alevel" aria-pressed="false">A-level</button></div></div>`;
+  return `<section class="exam exam-switched" aria-label="Exam-style explanation">${levelSwitch}${gcseBox}${alevelBox}</section>`;
+}
+const inductionExam = inductionExamHtml();
+
 // target: "artifact" or "site".
 function pageBody(target) {
   const site = target === "site";
@@ -203,7 +228,7 @@ ${back}
 <h2 class="ind-part"><span>Part 1</span>A magnet and a coil</h2>
 ${plateA}
 ${plateB}
-${examSection([EXAM.induction])}
+${inductionExam}
 <section class="hd-notes" aria-label="A magnet and a coil">
 <div><h2>What it takes</h2><p>A potential difference is induced across the coil only while the magnetic field through it is changing. Leave the magnet still, inside or outside the coil, and the meter reads zero however strong the magnet is.</p></div>
 <div><h2>Making it bigger</h2><p>Move the magnet faster, or put more turns on the coil. Try Fast, then 10 turns. A stronger magnet does the same. Dragging the slider yourself, the quicker you drag, the further the needle swings.</p></div>

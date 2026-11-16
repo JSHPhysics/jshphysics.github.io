@@ -170,3 +170,11 @@ body{margin:0;background:var(--anatomy-page);color:var(--anatomy-text);font:16px
 .hd-tilt{display:none;position:absolute;right:0;top:50%;transform:translateY(-50%);flex-direction:column;gap:8px}
 .hd-tilt button{width:44px;height:44px;min-width:0;padding:0;border:1px solid var(--anatomy-mid);border-radius:50%;background:var(--btn);color:var(--anatomy-strong);font:13px/1 var(--anatomy-mono);cursor:pointer}
 @media (hover:none),(pointer:coarse){.hd-tilt{display:flex}}
+/* GCSE / A-level switch on the exam-style explanation */
+.exam-switched{grid-template-columns:minmax(0,1fr)}
+.exam-levels{justify-content:flex-start;margin-top:0}
+.exam-switched .exam-box{max-width:68ch}
+.exam-further{margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule);font-size:15px;line-height:1.5}
+.exam-further-lead{margin:0 0 6px;color:var(--anatomy-muted)}
+.exam-further-point{margin:0;padding-left:1.5em;text-indent:-1.1em;color:var(--anatomy-text)}
+.exam-further-point::before{content:"\2217\00a0\00a0";font-family:var(--anatomy-mono);color:var(--accent)}

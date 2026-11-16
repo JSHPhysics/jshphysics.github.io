@@ -323,6 +323,14 @@ body{margin:0;background:var(--anatomy-page);color:var(--anatomy-text);font:16px
 .hd-tilt{display:none;position:absolute;right:0;top:50%;transform:translateY(-50%);flex-direction:column;gap:8px}
 .hd-tilt button{width:44px;height:44px;min-width:0;padding:0;border:1px solid var(--anatomy-mid);border-radius:50%;background:var(--btn);color:var(--anatomy-strong);font:13px/1 var(--anatomy-mono);cursor:pointer}
 @media (hover:none),(pointer:coarse){.hd-tilt{display:flex}}
+/* GCSE / A-level switch on the exam-style explanation */
+.exam-switched{grid-template-columns:minmax(0,1fr)}
+.exam-levels{justify-content:flex-start;margin-top:0}
+.exam-switched .exam-box{max-width:68ch}
+.exam-further{margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule);font-size:15px;line-height:1.5}
+.exam-further-lead{margin:0 0 6px;color:var(--anatomy-muted)}
+.exam-further-point{margin:0;padding-left:1.5em;text-indent:-1.1em;color:var(--anatomy-text)}
+.exam-further-point::before{content:"\2217\00a0\00a0";font-family:var(--anatomy-mono);color:var(--accent)}
 </style>
 </head>
 <body>
@@ -336,7 +344,7 @@ body{margin:0;background:var(--anatomy-page);color:var(--anatomy-text);font:16px
 <h2 class="ind-part"><span>Part 1</span>A magnet and a coil</h2>
 <figure class="iso-figure"><div class="iso-plate"><div class="iso-plate-corners" aria-hidden="true"><span class="iso-plate-corner" data-corner="fig">Fig 1</span><span class="iso-plate-corner" data-corner="title">Magnet and coil</span><span class="iso-plate-corner" data-corner="hint">Drag to turn it round</span><span class="iso-plate-corner" data-corner="readout" data-readout></span></div><div class="iso-stage" id="stage-a" tabindex="0" role="group" aria-label="A model you can turn round: a bar magnet on a handle is pushed into and pulled out of a coil of wire wound on a tube. Leads run from the two ends of the coil to a centre-zero meter. Arrow keys turn the view."><svg xmlns="http://www.w3.org/2000/svg" class="iso-svg" viewBox="0 0 860 500" role="img" aria-label="A model you can turn round: a bar magnet on a handle is pushed into and pulled out of a coil of wire wound on a tube. Leads run from the two ends of the coil to a centre-zero meter. Arrow keys turn the view."><g data-scene=""></g></svg></div><div class="hd-controls"><div class="hd-group"><button type="button" id="push">Push in</button><button type="button" id="pull">Pull out</button><button type="button" id="flip" aria-pressed="false">Turn magnet round</button></div><label class="hd-slider" for="magnet"><span>Move it yourself</span><input type="range" id="magnet" min="0" max="100" step="1" value="0"></label><div class="hd-group" role="group" aria-label="Speed"><span>Speed</span><button type="button" id="speed-slow" data-speed="slow" aria-pressed="true">Slow</button><button type="button" id="speed-fast" data-speed="fast" aria-pressed="false">Fast</button></div><div class="hd-group" role="group" aria-label="Turns on the coil"><span>Turns</span><button type="button" id="turns-5" data-turns="5" aria-pressed="true">5</button><button type="button" id="turns-10" data-turns="10" aria-pressed="false">10</button></div><div class="hd-group" role="group" aria-label="Show"><span>Show</span><button type="button" id="coil-current" data-coil-show="showCurrent" aria-pressed="true">Current</button><button type="button" id="coil-labels" data-coil-show="labels" aria-pressed="true">Labels</button></div></div></div><figcaption class="iso-legend"><span class="iso-keys"><span class="iso-key"><svg class="iso-swatch" data-mark="red" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>North pole</span><span class="iso-key"><svg class="iso-swatch" data-mark="blue" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>South pole</span><span class="iso-key"><svg class="iso-swatch" data-mark="lit" viewBox="0 0 16 10" aria-hidden="true"><path d="M2 4.5 8 1.5 14 4.5 14 6 8 9 2 6Z"/><path class="iso-swatch-crease" d="M2 4.5 8 7.5 14 4.5"/></svg>Induced current (conventional)</span><span class="iso-key"><svg class="iso-swatch" data-mark="dashed" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>Dashed labels: the poles the induced current gives the coil</span></span><span class="iso-caption">A bar magnet on a handle, a coil of wire wound on a card tube, and a centre-zero meter. The meter only moves while the magnet is moving.</span></figcaption></figure>
 <figure class="iso-figure"><div class="iso-plate"><div class="iso-plate-corners" aria-hidden="true"><span class="iso-plate-corner" data-corner="fig">Fig 2</span><span class="iso-plate-corner" data-corner="title">From the side, with a trace</span><span class="iso-plate-corner" data-corner="hint">Moves with Fig 1</span><span class="iso-plate-corner" data-corner="readout" data-readout></span></div><div class="iso-stage hd-flat" id="stage-b" role="group" aria-label="Side view of the magnet and the coil. The coil is shown in section as a row of circles above and below the tube, with dots and crosses for the direction of the induced current. Letters at the ends of the coil show which pole each end becomes. Below, a graph traces the meter reading against time."><svg xmlns="http://www.w3.org/2000/svg" class="iso-svg" viewBox="0 0 460 450" role="img" aria-label="Side view of the magnet and the coil. The coil is shown in section as a row of circles above and below the tube, with dots and crosses for the direction of the induced current. Letters at the ends of the coil show which pole each end becomes. Below, a graph traces the meter reading against time."><g data-scene=""></g></svg></div></div><figcaption class="iso-legend"><span class="iso-keys"><span class="iso-key"><svg class="iso-swatch" data-mark="green" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>Trace of the meter reading</span><span class="iso-key"><svg class="iso-swatch" data-mark="dashed" viewBox="0 0 16 10" aria-hidden="true"><path d="M1.5 5h13"/></svg>The magnet's field (sketched)</span></span><span class="iso-caption">The coil is cut through, so each turn shows as a circle at the top and at the bottom. A dot is current coming towards you, a cross is current going away. The trace records the meter reading for the last eight seconds.</span></figcaption></figure>
-<section class="exam" aria-label="Exam-style explanations"><div class="exam-box"><p class="exam-kicker">Exam-style explanation</p><h2>Induction</h2><ol><li>The wire or coil moves through the magnetic field of the permanent magnet.</li><li>So the wire or coil experiences a changing magnetic field.</li><li>This induces a potential difference across the wire or coil.</li><li>If the wire or coil is in a closed circuit, a current flows.</li></ol></div></section>
+<section class="exam exam-switched" aria-label="Exam-style explanation"><div class="hd-controls exam-levels"><div class="hd-group" role="group" aria-label="Level of the explanation"><span>Level</span><button type="button" data-exam-level="gcse" aria-pressed="true">GCSE</button><button type="button" data-exam-level="alevel" aria-pressed="false">A-level</button></div></div><div class="exam-box" data-level="gcse"><p class="exam-kicker">Exam-style explanation · GCSE</p><h2>Induction</h2><ol><li>The wire or coil moves through the magnetic field of the permanent magnet.</li><li>So the wire or coil experiences a changing magnetic field.</li><li>This induces a potential difference across the wire or coil.</li><li>If the wire or coil is in a closed circuit, a current flows.</li></ol></div><div class="exam-box" data-level="alevel" hidden><p class="exam-kicker">Exam-style explanation · A-level</p><h2>Induction</h2><ol><li>The conductor (a coil or a wire) passes through the magnetic field, and experiences a changing magnetic flux linkage.</li><li>According to Faraday's law, this induces a potential difference across the conductor, proportional to the rate of change of flux linkage.</li><li>If the conductor is in a closed circuit, a current flows.</li><li>This current creates a magnetic field, which interacts with the permanent magnet's magnetic field.</li><li>This causes a resultant force on the conductor.</li><li>According to Lenz's law, the direction of this force opposes the motion that is causing the change in flux linkage.</li></ol><div class="exam-further"><p class="exam-further-lead">In some cases you may wish to go further, and explain why the force must oppose the motion that causes the changing flux:</p><p class="exam-further-point">The force must oppose the direction of motion to conserve energy, because it causes work to be done against the motion of the conductor.</p></div></div></section>
 <section class="hd-notes" aria-label="A magnet and a coil">
 <div><h2>What it takes</h2><p>A potential difference is induced across the coil only while the magnetic field through it is changing. Leave the magnet still, inside or outside the coil, and the meter reads zero however strong the magnet is.</p></div>
 <div><h2>Making it bigger</h2><p>Move the magnet faster, or put more turns on the coil. Try Fast, then 10 turns. A stronger magnet does the same. Dragging the slider yourself, the quicker you drag, the further the needle swings.</p></div>
@@ -2225,6 +2233,49 @@ if (calm.matches) {
 drawCoil();
 drawGen();
 requestAnimationFrame(frame);
+
+// ---------------- Exam-style explanation: GCSE or A-level ----------------
+{
+  const STORE_KEY = "jsh-induction-level";
+  const buttons = document.querySelectorAll("[data-exam-level]");
+  const boxes = document.querySelectorAll(".exam-box[data-level]");
+
+  // Show the box for one level and mark its button as pressed.
+  const showLevel = (level) => {
+    for (const box of boxes) {
+      box.hidden = box.dataset.level !== level;
+    }
+    for (const button of buttons) {
+      const chosen = button.dataset.examLevel === level;
+      button.setAttribute("aria-pressed", String(chosen));
+    }
+  };
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      const level = button.dataset.examLevel;
+      showLevel(level);
+      // Remember the choice on this device. Storage can be blocked, and the page works without it.
+      try {
+        localStorage.setItem(STORE_KEY, level);
+      } catch (error) {
+        // Nothing to do: the choice simply is not remembered.
+      }
+    });
+  }
+
+  // Start on the level chosen last time, or GCSE.
+  let startLevel = "gcse";
+  try {
+    const saved = localStorage.getItem(STORE_KEY);
+    if (saved === "alevel") {
+      startLevel = "alevel";
+    }
+  } catch (error) {
+    // Keep GCSE.
+  }
+  showLevel(startLevel);
+}
 
 // ---------------- Touch screens (iPad in landscape) ----------------
 
