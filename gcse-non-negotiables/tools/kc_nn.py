@@ -381,33 +381,41 @@ section_n5 = section(
 # =====================================================================
 
 section_n6 = section(
-    "equation-sheet", "nn", "The equation sheet and the symbols", "WS",
-    blurb="Edexcel gives you some equations on a sheet and expects you to recall the rest. Know which is which, and what every symbol means.",
+    "equation-sheet", "nn", "The equation list: choosing the right equation", "WS",
+    blurb="Every equation is printed on a list in the exam. Nothing to memorise — but the list is no use unless you can find the one equation that fits the question, fast, and know what every symbol in it means.",
     checklist=[
-        "Recall the equations that are not on the sheet",
-        "Recognise every symbol on the sheet, including the ones that mean two things",
-        "Pick the right equation from the quantities a question gives you",
+        "Know what is on the equation list, roughly where, so you can find an equation in seconds",
+        "Pick the right equation from the quantities a question gives you and the one it asks for",
+        "Recognise every symbol on the list, including the ones that mean two things",
     ],
     parts=[
         explain(
-            "Recall, or look up?",
-            "<p>In the exam you get an <b>equation sheet</b> with the longer equations on it. The short, everyday ones you must <b>recall</b>. If you spend revision time learning the sheet, you are learning the wrong half.</p>"
-            "<table class='tbl'><tr><th>You must recall</th><th>Given on the sheet</th></tr>"
-            "<tr><td>$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$ &nbsp; $a = \\dfrac{v - u}{t}$ &nbsp; $F = m \\times a$ &nbsp; $W = m \\times g$ &nbsp; $p = m \\times v$</td>"
-            "<td>$v^2 - u^2 = 2 \\times a \\times x$ &nbsp; $F = \\dfrac{mv - mu}{t}$</td></tr>"
-            "<tr><td>$KE = \\tfrac{1}{2} \\times m \\times v^2$ &nbsp; $GPE = m \\times g \\times h$ &nbsp; $E = F \\times d$ (work) &nbsp; $P = \\dfrac{E}{t}$ &nbsp; efficiency</td>"
-            "<td>$E = \\tfrac{1}{2} \\times k \\times x^2$ &nbsp; $\\Delta Q = m \\times c \\times \\Delta\\theta$ &nbsp; $Q = m \\times L$</td></tr>"
-            "<tr><td>$v = f \\times \\lambda$ &nbsp; $v = \\dfrac{x}{t}$ &nbsp; $T = \\dfrac{1}{f}$</td>"
-            "<td>$\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}$ &nbsp; $V_p I_p = V_s I_s$ &nbsp; $F = B \\times I \\times l$</td></tr>"
-            "<tr><td>$Q = I \\times t$ &nbsp; $V = I \\times R$ &nbsp; $P = I \\times V$ &nbsp; $P = I^2 \\times R$ &nbsp; $E = Q \\times V$ &nbsp; $E = P \\times t$</td>"
-            "<td>$E = I \\times V \\times t$ &nbsp; $P = h \\times \\rho \\times g$ &nbsp; $P_1 V_1 = P_2 V_2$</td></tr>"
-            "<tr><td>$\\rho = \\dfrac{m}{V}$ &nbsp; $F = k \\times x$ &nbsp; $p = \\dfrac{F}{A}$ &nbsp; $\\text{moment} = F \\times d$</td><td></td></tr></table>"
-            "<p>Check the current specification's list before the exam; the split above is the usual one.</p>",
+            "The list, and how to use it",
+            "<p>In the exam you are given a <b>list of every equation</b> in the course. You do not have to remember any of them. The skill the exam tests is <b>selection</b>: "
+            "reading a question, listing the quantities it gives you and the one it wants, and finding the equation that contains exactly those.</p>"
+            "<ol class='list'>"
+            "<li>Write down the symbols for what is given: $m = \\ldots$, $h = \\ldots$, and the unknown with a question mark: $E = ?$</li>"
+            "<li>Scan the list for an equation with <b>those symbols and nothing else unknown</b>. Constants you are expected to know ($g = 10$ N/kg) count as given.</li>"
+            "<li>If no equation has them all, it is a two-step question: find one that gets you a quantity the other needs (see the multi-step section).</li>"
+            "<li>Copy the equation down exactly, symbols first — that is the E of EWAU.</li></ol>"
+            "<p>Knowing the list well is still worth doing, because scanning thirty equations under time pressure is slow. Here it is, by topic:</p>"
+            "<table class='tbl'><tr><th>Topic</th><th>Equations</th></tr>"
+            "<tr><td>2 Motion and forces</td><td>$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$ &nbsp; $a = \\dfrac{v - u}{t}$ &nbsp; $v^2 - u^2 = 2 \\times a \\times x$ &nbsp; $F = m \\times a$ &nbsp; $W = m \\times g$ &nbsp; $p = m \\times v$ &nbsp; $F = \\dfrac{mv - mu}{t}$</td></tr>"
+            "<tr><td>3 &amp; 8 Energy, work and power</td><td>$KE = \\tfrac{1}{2} \\times m \\times v^2$ &nbsp; $\\Delta GPE = m \\times g \\times \\Delta h$ &nbsp; $\\text{efficiency} = \\dfrac{\\text{useful energy output}}{\\text{total energy input}}$ &nbsp; $E = F \\times d$ &nbsp; $P = \\dfrac{E}{t}$ &nbsp; $P = \\dfrac{W}{t}$</td></tr>"
+            "<tr><td>4 Waves</td><td>$v = f \\times \\lambda$ &nbsp; $v = \\dfrac{x}{t}$ &nbsp; $T = \\dfrac{1}{f}$</td></tr>"
+            "<tr><td>5 Light</td><td>$\\text{power of a lens} = \\dfrac{1}{\\text{focal length}}$ &nbsp; (Physics only)</td></tr>"
+            "<tr><td>9 Forces and their effects</td><td>$\\text{moment} = F \\times d$ &nbsp; (distance normal to the force)</td></tr>"
+            "<tr><td>10 Electricity</td><td>$Q = I \\times t$ &nbsp; $V = I \\times R$ &nbsp; $E = Q \\times V$ &nbsp; $P = \\dfrac{E}{t}$ &nbsp; $P = I \\times V$ &nbsp; $P = I^2 \\times R$ &nbsp; $E = I \\times V \\times t$</td></tr>"
+            "<tr><td>12 Magnetism</td><td>$F = B \\times I \\times l$</td></tr>"
+            "<tr><td>13 Induction</td><td>$\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}$ &nbsp; $V_p \\times I_p = V_s \\times I_s$</td></tr>"
+            "<tr><td>14 Particle model</td><td>$\\rho = \\dfrac{m}{V}$ &nbsp; $\\Delta Q = m \\times c \\times \\Delta\\theta$ &nbsp; $Q = m \\times L$ &nbsp; $P_1 V_1 = P_2 V_2$</td></tr>"
+            "<tr><td>15 Forces and matter</td><td>$F = k \\times x$ &nbsp; $E = \\tfrac{1}{2} \\times k \\times x^2$ &nbsp; $p = \\dfrac{F}{A}$ &nbsp; $P = h \\times \\rho \\times g$</td></tr></table>"
+            "<p>Check your own copy of the list before the exam — the layout on the paper is what you need to be able to navigate.</p>",
         ),
         explain(
             "Symbols that mean two things",
             "<table class='tbl'><tr><th>Symbol</th><th>Can mean</th><th>How to tell</th></tr>"
-            "<tr><td>$W$</td><td>weight (N) <i>or</i> work done (J)</td><td>$W = m \\times g$ is weight; $W = F \\times d$ (written $E = F \\times d$ on the sheet) is work</td></tr>"
+            "<tr><td>$W$</td><td>weight (N) <i>or</i> work done (J)</td><td>$W = m \\times g$ is weight; $E = F \\times d$ (work done) is often written $W = F \\times d$</td></tr>"
             "<tr><td>$Q$</td><td>charge (C) <i>or</i> thermal energy (J)</td><td>$Q = I \\times t$ is charge; $\\Delta Q = m c \\Delta\\theta$ and $Q = m L$ are energy</td></tr>"
             "<tr><td>$P$</td><td>power (W) <i>or</i> pressure (Pa)</td><td>$P = \\dfrac{E}{t}$, $P = I V$ are power; $P = \\dfrac{F}{A}$, $P = h \\rho g$ are pressure</td></tr>"
             "<tr><td>$x$</td><td>distance (m) <i>or</i> extension (m)</td><td>Edexcel uses $x$ for distance in motion equations and for extension in $F = k x$</td></tr>"
@@ -423,17 +431,17 @@ section_n6 = section(
             "A question gives a mass of 2 kg, a height of 5 m and asks for the energy transferred when the object is lifted. Which equation, and why?",
             [
                 r"List what is given: mass $m$, height $h$. Wanted: energy $E$.",
-                r"Scan the equations for one with $m$, $h$ and an energy: $GPE = m \times g \times h$. ($g = 10$ N/kg is a known constant, so it does not need to be given.)",
+                r"Scan the list for an equation with $m$, $h$ and an energy: $\Delta GPE = m \times g \times \Delta h$. ($g = 10$ N/kg is a known constant, so it does not need to be given.)",
                 r"Substitute: $GPE = 2 \times 10 \times 5 = 100$ J.",
                 r"The method: list the given symbols, find the equation that contains exactly those and the unknown. It also tells you which quantity you have been given but do not need.",
             ],
         ),
-        practice("The equation sheet", [
-            choice("kc-n6-q1", "Which of these equations is on the Edexcel sheet rather than one you must recall?",
-                   ["$F = m \\times a$", "$v^2 - u^2 = 2 \\times a \\times x$", "$V = I \\times R$", "$\\text{speed} = \\text{distance} \\div \\text{time}$"], 1,
-                   "The three-term kinematics equation is given on the sheet; the other three are recall equations."),
+        practice("Choosing the equation", [
+            choice("kc-n6-q1", "A question gives a force and a distance moved in the direction of the force, and asks for the energy transferred. Which equation from the list?",
+                   ["$F = m \\times a$", "$E = F \\times d$", "$P = \\dfrac{E}{t}$", "$\\text{moment} = F \\times d$"], 1,
+                   "Force, distance and an energy: work done, E = F × d. Moment = F × d has the same symbols but gives a turning effect in N m, not an energy — read what the question asks for."),
             choice("kc-n6-q2", "In $W = m \\times g$, what does $W$ stand for?", ["Work done", "Weight", "Watts", "Wavelength"], 1,
-                   "With mass and gravitational field strength, W is weight in newtons. Work done uses W = F × d (E = F × d on the sheet)."),
+                   "With mass and gravitational field strength, W is weight in newtons. Work done is E = F × d."),
             choice("kc-n6-q3", "A question gives a current, a resistance and a time, and asks for the energy transferred. Which pair of equations do you need?",
                    ["$V = I R$ then $E = Q V$", "$P = I^2 R$ then $E = P t$", "$Q = I t$ then $V = I R$", "$P = I V$ then $Q = I t$"], 1,
                    "Current and resistance give power through P = I²R; power and time give energy through E = P × t. (V = IR then P = IV then E = Pt also works — one step longer.)"),
@@ -443,9 +451,14 @@ section_n6 = section(
                     marks(["$P = I \\times V$ is electrical power; the symbol P means pressure in a different equation.",
                            "Pressure in a liquid: $P = h \\times \\rho \\times g$ (depth × density × gravitational field strength).",
                            "The quantities given (depth, density) point to the right equation — match the symbols you have to the equation."]), lines=3),
-            choice("kc-n6-q6", "Which equation must be <b>recalled</b> (it is not on the sheet)?",
-                   ["$E = \\tfrac{1}{2} \\times k \\times x^2$", "$F = \\dfrac{mv - mu}{t}$", "$KE = \\tfrac{1}{2} \\times m \\times v^2$", "$P_1 V_1 = P_2 V_2$"], 2,
-                   "Kinetic energy is a recall equation. The spring energy, momentum-force and gas equations are on the sheet."),
+            choice("kc-n6-q6", "A question gives an initial velocity, a final velocity and a distance, and asks for the acceleration. Which equation from the list?",
+                   ["$a = \\dfrac{v - u}{t}$", "$v^2 - u^2 = 2 \\times a \\times x$", "$F = m \\times a$", "$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$"], 1,
+                   "No time is given, so the equation with u, v, a and x (and no t) is the one: v² − u² = 2ax. The first option needs a time you do not have."),
+            written("kc-n6-q7", "Describe how you would use the equation list to choose an equation for a calculation question.",
+                    marks(["Write down the symbols for each quantity given in the question, and the symbol for the quantity asked for.",
+                           "Scan the list for the equation that contains exactly those symbols (known constants such as g count as given).",
+                           "If no single equation contains them all, find one that gives a quantity the other needs — a two-step calculation.",
+                           "Copy the equation down exactly before substituting."]), lines=4),
         ]),
     ],
 )
@@ -633,7 +646,7 @@ section_n9 = section(
             "Where the marks are",
             "<p>A 3-mark calculation is usually marked like this:</p>"
             "<table class='tbl'><tr><th>Line</th><th>What you write</th><th>Mark for</th></tr>"
-            "<tr><td><b>E</b>quation</td><td>$a = \\dfrac{v - u}{t}$</td><td>choosing (or recalling) the right equation</td></tr>"
+            "<tr><td><b>E</b>quation</td><td>$a = \\dfrac{v - u}{t}$</td><td>choosing the right equation from the list</td></tr>"
             "<tr><td><b>W</b>orking</td><td>$a = \\dfrac{20 - 5}{6}$</td><td>substituting the right numbers (after any conversion)</td></tr>"
             "<tr><td><b>A</b>nswer</td><td>$= 2.5$</td><td>evaluating correctly</td></tr>"
             "<tr><td><b>U</b>nits</td><td>m/s²</td><td>the unit (sometimes part of the answer mark)</td></tr></table>"
@@ -660,7 +673,7 @@ section_n9 = section(
                            "With the working shown, a slip on the calculator would still earn the equation and substitution marks."]), lines=4),
             choice("kc-n9-q2", "In a 3-mark calculation, which line usually earns the first mark?",
                    ["The final number", "The unit", "The correct equation", "Underlining the answer"], 2,
-                   "The first mark is for the equation (recalled or chosen from the sheet); the second for the substitution; the third for the evaluated answer with its unit."),
+                   "The first mark is for choosing the right equation from the list; the second for the substitution; the third for the evaluated answer with its unit."),
             written("kc-n9-q3", "Write out, in EWAU layout, the calculation of the acceleration of a car that speeds up from 8 m/s to 20 m/s in 4 s.",
                     marks(["E: $a = \\dfrac{v - u}{t}$",
                            "W: $a = \\dfrac{20 - 8}{4} = \\dfrac{12}{4}$",

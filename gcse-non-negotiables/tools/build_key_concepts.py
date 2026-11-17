@@ -35,7 +35,7 @@ TOPIC_PATH = os.path.join(HERE, "..", "data", "key-concepts.json")
 REVISION = {
     "lede": (
         "Topic 1 is short — units, prefixes, converting, significant figures, standard form — but it is the toolkit every "
-        "other topic uses, so this page also carries the skills that are examined everywhere: the equation sheet, rearranging, "
+        "other topic uses, so this page also carries the skills that are examined everywhere: choosing from the equation list, rearranging, "
         "proportion, EWAU, command words, graphs, and the practical-method questions."
     ),
     "howto": [
