@@ -134,6 +134,39 @@ details.howto .lede {
   color: var(--ink-2);
 }
 
+/* A display equation wider than the column scrolls inside its own box */
+.skill-content .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2px;
+}
+
+/* Sub-topic picker on a merged page (Topics 3 and 8): "Both · Topic 3 · Topic 8" */
+.subtopic-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 18px;
+}
+
+.subtopic-bar .label {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+}
+
+.subtopic-bar .seg button {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.subtopic-title {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
 .legend {
   display: flex;
   flex-wrap: wrap;
@@ -226,6 +259,39 @@ table.tbl td {
   border: 1px solid var(--rule-soft);
   text-align: left;
   vertical-align: top;
+}
+
+/* A wide prose table scrolls sideways inside the card on a narrow screen
+   instead of stretching the page (the table keeps its layout, the wrapper
+   is the table element itself in block mode) */
+@media (max-width: 640px) {
+  table.tbl {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Columns keep a readable width and the table scrolls, rather than
+     every cell wrapping one word per line */
+  table.tbl th,
+  table.tbl td {
+    min-width: 9em;
+  }
+
+  table.tbl.data th,
+  table.tbl.data td {
+    min-width: 4em;
+  }
+
+  /* A few pixels of scrollable overflow leak out of a card that holds a
+     block-mode table (Chromium counts the table's inner width); clip the
+     column so the page itself never scrolls sideways */
+  .skills {
+    overflow-x: clip;
+  }
 }
 
 table.tbl th {
@@ -1124,7 +1190,13 @@ figure.diagram figcaption {
 }
 
 /* A long formula in the strip scrolls inside its own box on a narrow screen */
+.formulas {
+  max-width: 100%;
+  min-width: 0;
+}
+
 .formulas .formula {
   max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
 }

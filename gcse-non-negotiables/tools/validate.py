@@ -397,6 +397,17 @@ def check_sections(problems, topic, type_ids):
         band_ids.add(band["id"])
         check_rich(problems, f"{where}.title", band.get("title"), min_len=2)
 
+    subtopics = topic.get("subtopics") or []
+    subtopic_ids = set()
+    for index, subtopic in enumerate(subtopics):
+        where = f"subtopics[{index}]"
+        if not isinstance(subtopic, dict) or not isinstance(subtopic.get("id"), str) or not isinstance(subtopic.get("label"), str):
+            problems.append(f"{where}: needs an id and a label")
+            continue
+        if subtopic["id"] in subtopic_ids:
+            problems.append(f"{where}.id: '{subtopic['id']}' used twice")
+        subtopic_ids.add(subtopic["id"])
+
     sections = topic.get("sections") or []
     if not isinstance(sections, list):
         problems.append("sections: must be a list")
@@ -421,6 +432,10 @@ def check_sections(problems, topic, type_ids):
         if bands and section.get("band") not in band_ids:
             problems.append(f"{where}.band: '{section.get('band')}' is not a band id")
         check_tags(problems, where, section.get("tags"))
+        if "subtopic" in section:
+            names = section["subtopic"]
+            if not isinstance(names, list) or not names or any(name not in subtopic_ids for name in names):
+                problems.append(f"{where}.subtopic: must list ids from the topic's subtopics, got {names!r}")
         for item_index, item in enumerate(section.get("checklist") or []):
             check_rich(problems, f"{where}.checklist[{item_index}]", item, min_len=3)
 

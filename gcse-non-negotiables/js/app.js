@@ -78,6 +78,10 @@
   // Traffic-light self-check choices: { sectionId: { itemIndex: "r" | "a" | "g" } }
   let selfCheck = readJson(STORAGE_PREFIX + "selfcheck", {});
 
+  // Sub-topic filter per topic (a merged page such as Topics 3 and 8 can
+  // show one of them at a time): { topicId: subtopicId | "all" }
+  let subtopicChoice = readJson(STORAGE_PREFIX + "subtopic", {});
+
   // The topic that was last opened, so the home grid can morph back to it
   let lastTopicId = null;
 
@@ -215,6 +219,50 @@
     return tagsMatchBoard(section);
   }
 
+  // A topic may be two spec topics on one page, declared as
+  //   topic.subtopics — [{ id, label, title }]
+  // and each section may name the sub-topics it belongs to in
+  //   section.subtopic — [id, ...]   (omitted: shown under every choice)
+  function hasSubtopics(topic) {
+    return Array.isArray(topic.subtopics) && topic.subtopics.length > 0;
+  }
+
+  // The sub-topic currently chosen for a topic: one of its ids, or "all"
+  function topicSubtopic(topic) {
+    if (!hasSubtopics(topic)) {
+      return "all";
+    }
+    const chosen = subtopicChoice[topic.id];
+    const known = topic.subtopics.some(function (subtopic) {
+      return subtopic.id === chosen;
+    });
+    return known ? chosen : "all";
+  }
+
+  function subtopicMatches(topic, section) {
+    const chosen = topicSubtopic(topic);
+    if (chosen === "all" || !Array.isArray(section.subtopic)) {
+      return true;
+    }
+    return section.subtopic.indexOf(chosen) >= 0;
+  }
+
+  // The flashcards left by the sub-topic filter (each card names its section)
+  function visibleFacts(topic) {
+    if (!topic.facts) {
+      return [];
+    }
+    if (topicSubtopic(topic) === "all") {
+      return topic.facts;
+    }
+    const shown = new Set(topicSections(topic).map(function (section) {
+      return section.id;
+    }));
+    return topic.facts.filter(function (item) {
+      return !item.section || shown.has(item.section);
+    });
+  }
+
   /* ===================================================================
      Sections, bands and key facts
      A topic may carry, beside its calculation types, revision content:
@@ -236,7 +284,9 @@
     if (!hasSections(topic)) {
       return [];
     }
-    return topic.sections.filter(sectionVisible);
+    return topic.sections.filter(function (section) {
+      return sectionVisible(section) && subtopicMatches(topic, section);
+    });
   }
 
   function findSection(topic, sectionId) {
@@ -264,10 +314,11 @@
     return found;
   }
 
-  // Calculation types no section embeds (shown in a band of their own)
+  // Calculation types no section embeds (shown in a band of their own).
+  // A type embedded in a hidden section stays hidden with it.
   function unplacedTypes(topic) {
     const placed = new Set();
-    topicSections(topic).forEach(function (section) {
+    (topic.sections || []).forEach(function (section) {
       sectionTypes(topic, section).forEach(function (type) {
         placed.add(type.id);
       });
@@ -467,18 +518,28 @@
   function topicProgress(topic) {
     let correct = 0;
     let total = 0;
-    for (const type of visibleTypes(topic)) {
-      const summary = typeProgress(type);
+    if (!hasSections(topic)) {
+      for (const type of visibleTypes(topic)) {
+        const summary = typeProgress(type);
+        correct += summary.correct;
+        total += summary.total;
+      }
+      return { correct: correct, total: total };
+    }
+    // With sections, count what the page shows: each visible section's own
+    // questions and embedded types, plus the types no section embeds
+    for (const section of topicSections(topic)) {
+      const summary = sectionProgress(topic, section);
       correct += summary.correct;
       total += summary.total;
     }
-    for (const section of topicSections(topic)) {
-      for (const question of leafQuestions(section)) {
-        total += 1;
-        if (isCorrect(question.id)) {
-          correct += 1;
-        }
+    for (const type of unplacedTypes(topic)) {
+      if (!matchesBoard(type.boards)) {
+        continue;
       }
+      const summary = typeProgress(type);
+      correct += summary.correct;
+      total += summary.total;
     }
     return { correct: correct, total: total };
   }
@@ -885,6 +946,22 @@
       });
       html += "</ol></details>";
     }
+    if (hasSubtopics(topic)) {
+      const chosen = topicSubtopic(topic);
+      html += "<div class=\"subtopic-bar\"><span class=\"label\">Show</span><div class=\"seg\" id=\"subtopic-seg\" role=\"group\" aria-label=\"Sub-topic\">";
+      html += "<button type=\"button\" data-subtopic=\"all\" aria-pressed=\"" + (chosen === "all" ? "true" : "false") + "\">Both</button>";
+      topic.subtopics.forEach(function (subtopic) {
+        html += "<button type=\"button\" data-subtopic=\"" + escapeHtml(subtopic.id) + "\" aria-pressed=\"" + (chosen === subtopic.id ? "true" : "false") + "\">" + escapeHtml(subtopic.label) + "</button>";
+      });
+      html += "</div>";
+      const current = topic.subtopics.find(function (subtopic) {
+        return subtopic.id === chosen;
+      });
+      if (current && current.title) {
+        html += "<span class=\"subtopic-title\">" + escapeHtml(current.title) + "</span>";
+      }
+      html += "</div>";
+    }
     html += "</div>";
     html += "<div class=\"figwrap shared\">" + figures.render(topic.figure || topic.id) + "</div>";
     html += "</header>";
@@ -921,6 +998,14 @@
 
     wireSkills(main);
     lastTopicId = topic.id;
+
+    main.querySelectorAll("[data-subtopic]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        subtopicChoice[topic.id] = button.getAttribute("data-subtopic");
+        writeStorage(STORAGE_PREFIX + "subtopic", JSON.stringify(subtopicChoice));
+        renderRoute(false);
+      });
+    });
 
     const expandAll = document.getElementById("btn-expand-all");
     const collapseAll = document.getElementById("btn-collapse-all");
@@ -974,7 +1059,7 @@
         html += "<a class=\"pill" + (done ? " done" : "") + "\" href=\"#" + topic.id + "/" + type.id + "\" data-pill=\"" + type.id + "\"><span class=\"n\">C" + (typeIndex + 1) + "</span>" + escapeHtml(type.name) + "</a>";
       });
     }
-    if (topic.facts && topic.facts.length > 0) {
+    if (visibleFacts(topic).length > 0) {
       html += "<span class=\"pill-band\">Key facts</span>";
       html += "<a class=\"pill\" href=\"#" + topic.id + "/key-facts\" data-pill=\"key-facts\"><span class=\"n\">K</span>Flashcards</a>";
     }
@@ -993,7 +1078,7 @@
         html += renderSkill(topic, type, "C" + (typeIndex + 1), false);
       });
     }
-    if (topic.facts && topic.facts.length > 0) {
+    if (visibleFacts(topic).length > 0) {
       html += bandHeadHtml({ id: "key-facts", title: "Key facts", blurb: topic.factsBlurb || "The whole topic on flip cards. Cover, say the answer out loud, then flip to check." });
       html += renderFacts(topic);
     }
@@ -1003,13 +1088,14 @@
 
   // The flashcards: a flip-card grid with shuffle and show-all controls
   function renderFacts(topic) {
+    const facts = visibleFacts(topic);
     let html = "<article class=\"skill facts-card\" id=\"card-key-facts\" data-card=\"key-facts\">";
     html += "<div class=\"skill-body\"><div class=\"inner\"><div class=\"skill-content\">";
-    html += "<section class=\"facts\"><div class=\"facts-bar\"><span class=\"practice-kicker\">" + topic.facts.length + " cards</span>";
+    html += "<section class=\"facts\"><div class=\"facts-bar\"><span class=\"practice-kicker\">" + facts.length + " cards</span>";
     html += "<span class=\"facts-tools\"><button class=\"btn small\" type=\"button\" data-facts-shuffle>Shuffle</button><button class=\"btn small\" type=\"button\" data-facts-flip>Show all answers</button></span></div>";
     html += "<p class=\"practice-intro\">Tap a card to flip it. Say the answer out loud before you look — reading it is not the same as knowing it.</p>";
     html += "<div class=\"fact-grid\" data-fact-grid>";
-    topic.facts.forEach(function (item, itemIndex) {
+    facts.forEach(function (item, itemIndex) {
       html += "<button class=\"fact\" type=\"button\" aria-pressed=\"false\" data-fact data-fact-index=\"" + itemIndex + "\">" +
         "<span class=\"fact-q\"><span class=\"n\">" + (itemIndex + 1) + "</span>" + prose(item.q) + "</span>" +
         "<span class=\"fact-a\">" + prose(item.a) + "</span></button>";
@@ -2401,10 +2487,10 @@
       html += "</section>";
     }
 
-    if (topic.facts && topic.facts.length > 0) {
+    if (visibleFacts(topic).length > 0) {
       html += "<div class=\"p-band\"><h2>Key facts</h2><p>Cover the right-hand column. Say the answer, then slide the paper down to check.</p></div>";
       html += "<section class=\"p-topic\"><div class=\"p-facts\"><table class=\"p-check\">";
-      topic.facts.forEach(function (item) {
+      visibleFacts(topic).forEach(function (item) {
         html += "<tr><td>" + prose(item.q) + "</td><td>" + prose(item.a) + "</td></tr>";
       });
       html += "</table></div></section>";

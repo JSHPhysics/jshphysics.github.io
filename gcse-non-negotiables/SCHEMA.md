@@ -328,3 +328,24 @@ nothing is ever lost during a rewrite.
 Section content is validated by `tools/validate.py` (ids, band ids,
 part kinds, answer types, graph axes, embedded type ids) and the manifest
 builder checks that question ids are unique across the whole site.
+
+### Sub-topics (a merged page)
+
+A topic that covers two specification topics on one page (Topics 3 and 8)
+declares them:
+
+```json
+"subtopics": [
+  {"id": "3", "label": "Topic 3", "title": "Conservation of energy"},
+  {"id": "8", "label": "Topic 8", "title": "Energy — forces doing work"}
+]
+```
+
+and each section may say which it belongs to with `"subtopic": ["3"]`,
+`["8"]` or `["3", "8"]`; a section without the field shows under every
+choice. The page then has a "Show: Both · Topic 3 · Topic 8" picker under
+the lede; the choice is remembered per topic (`<prefix>subtopic`). Hidden
+sections take their embedded calculation types, their flashcards and their
+share of the progress count with them, and the booklet prints what is
+shown. Section numbers run over the visible sections, as they do under the
+tier filter.
