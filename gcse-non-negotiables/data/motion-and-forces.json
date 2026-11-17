@@ -3402,13 +3402,13 @@
                   "type": "numeric",
                   "text": "Use the tangent to calculate the skydiver's acceleration at the moment of jumping.",
                   "answer": {
-                    "value": 4,
+                    "value": 10,
                     "unit": "m/s²"
                   },
-                  "hint": "The tangent goes from (0, 0) to (5, 20).",
+                  "hint": "The tangent goes from (0, 0) to (5, 50).",
                   "walkthrough": [
-                    "Gradient of tangent $= \\dfrac{20 - 0}{5 - 0} = 4$ m/s².",
-                    "(With air resistance ignored this would be 10 m/s²; the skydiver's suit and the thin plane air give a smaller value in this example.)"
+                    "Gradient of tangent $= \\dfrac{50 - 0}{5 - 0} = 10$ m/s².",
+                    "At the instant of jumping the skydiver is not yet moving, so there is no air resistance: the only force is the weight and the acceleration is g, 10 m/s². The graph agrees."
                   ],
                   "label": "a"
                 },
@@ -3423,14 +3423,14 @@
                     "It becomes negative"
                   ],
                   "correct": 2,
-                  "explain": "The curve flattens: the gradient of a velocity–time graph is the acceleration, and it drops towards zero as the velocity approaches 20 m/s.",
+                  "explain": "The curve flattens: the gradient of a velocity–time graph is the acceleration, and it drops towards zero as the velocity approaches 50 m/s.",
                   "label": "b"
                 },
                 {
                   "id": "t2-t2-q2c",
                   "type": "written",
                   "text": "Explain, in terms of forces, why the graph has this shape.",
-                  "model": "<ul><li>At first air resistance is small, so there is a large resultant force (weight − air resistance) downwards and a large acceleration.</li><li>As the velocity increases, air resistance increases, so the resultant force and the acceleration decrease.</li><li>Eventually air resistance equals the weight; the resultant force is zero and the velocity is constant: terminal velocity (20 m/s here).</li></ul>",
+                  "model": "<ul><li>At first air resistance is small, so there is a large resultant force (weight − air resistance) downwards and a large acceleration.</li><li>As the velocity increases, air resistance increases, so the resultant force and the acceleration decrease.</li><li>Eventually air resistance equals the weight; the resultant force is zero and the velocity is constant: terminal velocity (50 m/s here).</li></ul>",
                   "lines": 4,
                   "label": "c"
                 }
@@ -3445,8 +3445,8 @@
                 "y": {
                   "label": "v / m/s",
                   "min": 0,
-                  "max": 25,
-                  "step": 5
+                  "max": 60,
+                  "step": 10
                 },
                 "series": [
                   {
@@ -3458,83 +3458,83 @@
                       ],
                       [
                         1.0,
-                        3.6254
+                        9.0635
                       ],
                       [
                         2.0,
-                        6.5936
+                        16.484
                       ],
                       [
                         3.0,
-                        9.0238
+                        22.5594
                       ],
                       [
                         4.0,
-                        11.0134
+                        27.5336
                       ],
                       [
                         5.0,
-                        12.6424
+                        31.606
                       ],
                       [
                         6.0,
-                        13.9761
+                        34.9403
                       ],
                       [
                         7.0,
-                        15.0681
+                        37.6702
                       ],
                       [
                         8.0,
-                        15.9621
+                        39.9052
                       ],
                       [
                         9.0,
-                        16.694
+                        41.7351
                       ],
                       [
                         10.0,
-                        17.2933
+                        43.2332
                       ],
                       [
                         11.0,
-                        17.7839
+                        44.4598
                       ],
                       [
                         12.0,
-                        18.1856
+                        45.4641
                       ],
                       [
                         13.0,
-                        18.5145
+                        46.2863
                       ],
                       [
                         14.0,
-                        18.7838
+                        46.9595
                       ],
                       [
                         15.0,
-                        19.0043
+                        47.5106
                       ],
                       [
                         16.0,
-                        19.1848
+                        47.9619
                       ],
                       [
                         17.0,
-                        19.3325
+                        48.3313
                       ],
                       [
                         18.0,
-                        19.4535
+                        48.6338
                       ],
                       [
                         19.0,
-                        19.5526
+                        48.8815
                       ],
                       [
                         20.0,
-                        19.6337
+                        49.0842
                       ]
                     ]
                   },
@@ -3547,7 +3547,7 @@
                       ],
                       [
                         5,
-                        20
+                        50
                       ]
                     ]
                   },
@@ -3556,20 +3556,20 @@
                     "points": [
                       [
                         0,
-                        20
+                        50
                       ],
                       [
                         20,
-                        20
+                        50
                       ]
                     ]
                   }
                 ],
-                "alt": "Velocity–time graph rising steeply at first then levelling off towards 20 m/s, with a tangent at the origin from (0, 0) to (5, 20) and a dashed line at 20 m/s.",
+                "alt": "Velocity–time graph rising steeply at first then levelling off towards 50 m/s, with a tangent at the origin from (0, 0) to (5, 50) and a dashed line at 50 m/s.",
                 "labels": [
                   {
                     "x": 13,
-                    "y": 22,
+                    "y": 54,
                     "text": "terminal velocity",
                     "anchor": "middle"
                   }
@@ -4145,7 +4145,10 @@
           ]
         }
       ],
-      "spec": "2.20–2.21"
+      "spec": "2.20–2.21",
+      "tags": [
+        "H"
+      ]
     },
     {
       "id": "inertial-mass",
@@ -4263,7 +4266,10 @@
           ]
         }
       ],
-      "spec": "2.22"
+      "spec": "2.22",
+      "tags": [
+        "H"
+      ]
     },
     {
       "id": "conservation-momentum",
@@ -4705,7 +4711,7 @@
               "type": "numeric",
               "text": "At 30 mph (13 m/s) a car's thinking distance is 9 m and its braking distance is 14 m. Estimate its stopping distance at 60 mph (26 m/s).",
               "answer": {
-                "value": 74.2,
+                "value": 74,
                 "unit": "m",
                 "tolerance": 0.06
               },
@@ -5054,7 +5060,7 @@
         {
           "kind": "explain",
           "title": "Two methods",
-          "html": "<table class='tbl'><tr><th>Ruler drop</th><th>Computer test</th></tr><tr><td>A partner holds a ruler vertically with the zero level with your open thumb and finger. Without warning they let go; you catch it as quickly as you can. Read the distance it fell. Repeat several times and take a mean.</td><td>A program shows a signal (a colour change, a sound) at a random moment; you click or press a key as fast as you can. The computer records the time directly, in milliseconds. Repeat and take a mean.</td></tr><tr><td>Gives a <b>distance</b>; you convert it to a time.</td><td>Gives the <b>time</b> directly, more precisely.</td></tr></table><p><b>Converting the drop distance.</b> The ruler falls freely from rest, so with $u = 0$ and $a = g$:</p>$$x = \\tfrac{1}{2} g t^2\\qquad\\Rightarrow\\qquad t = \\sqrt{\\dfrac{2x}{g}}$$<p>Use the distance in <b>metres</b>. A 20 cm drop gives $t = \\sqrt{2 \\times 0.2 \\div 10} = 0.2$ s. (Edexcel do not require you to derive this; they do expect you to use it.)</p><p><b>Evaluating.</b> Repeating and averaging reduces random error. Problems: the catcher may <b>anticipate</b> the drop (so the partner must vary the timing); the catching reaction uses the hand, whereas a driver's foot has further to move to the brake, so <b>real braking reaction times are longer</b>; and a test done when alert does not show the effect of tiredness, alcohol or distraction. Typical results: 0.2–0.3 s for a hand catch; 0.5–0.9 s for a driver.</p>"
+          "html": "<table class='tbl'><tr><th>Ruler drop</th><th>Computer test</th></tr><tr><td>A partner holds a ruler vertically with the zero level with your open thumb and finger. Without warning they let go; you catch it as quickly as you can. Read the distance it fell. Repeat several times and take a mean.</td><td>A program shows a signal (a colour change, a sound) at a random moment; you click or press a key as fast as you can. The computer records the time directly, in milliseconds. Repeat and take a mean.</td></tr><tr><td>Gives a <b>distance</b>; you convert it to a time.</td><td>Gives the <b>time</b> directly, more precisely.</td></tr></table><p><b>Converting the drop distance.</b> The ruler falls freely from rest, so with $u = 0$ and $a = g$:</p>$$x = \\tfrac{1}{2} g t^2\\qquad\\Rightarrow\\qquad t = \\sqrt{\\dfrac{2x}{g}}$$<p>Use the distance in <b>metres</b>. A 20 cm drop gives $t = \\sqrt{2 \\times 0.2 \\div 10} = 0.2$ s. (This equation is not on the equation list. If a question wants the conversion it will give you the equation, or you can get there with $v^2 - u^2 = 2ax$ followed by $a = (v - u) \\div t$.)</p><p><b>Evaluating.</b> Repeating and averaging reduces random error. Problems: the catcher may <b>anticipate</b> the drop (so the partner must vary the timing); the catching reaction uses the hand, whereas a driver's foot has further to move to the brake, so <b>real braking reaction times are longer</b>; and a test done when alert does not show the effect of tiredness, alcohol or distraction. Typical results: 0.2–0.3 s for a hand catch; 0.5–0.9 s for a driver.</p>"
         },
         {
           "kind": "worked",
@@ -5535,8 +5541,8 @@
       "section": "force-momentum"
     },
     {
-      "q": "Equation for GPE and for weight?",
-      "a": "$GPE = m g h$; $W = m g$",
+      "q": "Equation for weight, and the unit of each symbol?",
+      "a": "$W = m \\times g$: W in N, m in kg, g in N/kg (10 N/kg on Earth).",
       "section": "weight"
     },
     {

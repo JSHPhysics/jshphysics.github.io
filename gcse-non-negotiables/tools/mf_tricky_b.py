@@ -220,8 +220,8 @@ t10_1 = 0.5 * 1200 * 30 ** 2 / 6000
 t10_2 = 0.5 * 1000 * 15 ** 2 / 25
 # Highway Code style estimate: 30 mph ≈ 13 m/s, 60 mph ≈ 26 m/s; reaction time 0.7 s;
 # braking 14 m at 30 mph scales with v²
-t10_4_think = 26 * 0.7
-t10_4_brake = 14 * (26 / 13) ** 2
+t10_4_think = 9 * 2            # thinking distance doubles with speed
+t10_4_brake = 14 * 2 ** 2      # braking distance goes with speed squared
 t10_4 = t10_4_think + t10_4_brake
 
 section_t10 = {
@@ -581,7 +581,7 @@ section_t12 = {
                 "<tr><td>Gives a <b>distance</b>; you convert it to a time.</td><td>Gives the <b>time</b> directly, more precisely.</td></tr></table>"
                 "<p><b>Converting the drop distance.</b> The ruler falls freely from rest, so with $u = 0$ and $a = g$:</p>"
                 "$$" + DROP_EQ + r"\qquad\Rightarrow\qquad " + TREACT_EQ + "$$"
-                "<p>Use the distance in <b>metres</b>. A 20 cm drop gives $t = \\sqrt{2 \\times 0.2 \\div 10} = 0.2$ s. (Edexcel do not require you to derive this; they do expect you to use it.)</p>"
+                "<p>Use the distance in <b>metres</b>. A 20 cm drop gives $t = \\sqrt{2 \\times 0.2 \\div 10} = 0.2$ s. (This equation is not on the equation list. If a question wants the conversion it will give you the equation, or you can get there with $v^2 - u^2 = 2ax$ followed by $a = (v - u) \\div t$.)</p>"
                 "<p><b>Evaluating.</b> Repeating and averaging reduces random error. Problems: the catcher may <b>anticipate</b> the drop (so the partner must vary the timing); "
                 "the catching reaction uses the hand, whereas a driver's foot has further to move to the brake, so <b>real braking reaction times are longer</b>; "
                 "and a test done when alert does not show the effect of tiredness, alcohol or distraction. Typical results: 0.2–0.3 s for a hand catch; 0.5–0.9 s for a driver.</p>"

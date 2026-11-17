@@ -177,5 +177,5 @@ facts_extra = [
     fact("Doubling speed does what to KE and braking distance?", "Both ×4 (∝ v²)", "braking-v-squared"),
     fact("Unit of acceleration? of momentum?", "m/s²; kg m/s", "acceleration-nn"),
     fact("Equation linking force, momentum change and time?", "$F = \\dfrac{mv - mu}{t}$", "force-momentum"),
-    fact("Equation for GPE and for weight?", "$GPE = m g h$; $W = m g$", "weight"),
+    fact("Equation for weight, and the unit of each symbol?", "$W = m \\times g$: W in N, m in kg, g in N/kg (10 N/kg on Earth).", "weight"),
 ]

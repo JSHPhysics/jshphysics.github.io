@@ -171,15 +171,15 @@ graph_t2_1 = graph(
 )
 t2_1 = (100 - 40) / (7 - 2)
 
-# v–t curve for a falling object with air resistance: v = 20(1 − e^(−t/5)); initial gradient 4
-curve_vt_terminal = sample(lambda t: 20 * (1 - exp(-t / 5)), 0, 20, 21)
+# v–t curve for a falling object with air resistance: v = 50(1 − e^(−t/5)); initial gradient 10 (= g)
+curve_vt_terminal = sample(lambda t: 50 * (1 - exp(-t / 5)), 0, 20, 21)
 graph_t2_2 = graph(
-    axis("t / s", 20, 5), axis("v / m/s", 25, 5),
-    [curve(curve_vt_terminal), tangent([[0, 0], [5, 20]]), dashed([[0, 20], [20, 20]])],
-    "Velocity–time graph rising steeply at first then levelling off towards 20 m/s, with a tangent at the origin from (0, 0) to (5, 20) and a dashed line at 20 m/s.",
-    labels=[label(13, 22, "terminal velocity")],
+    axis("t / s", 20, 5), axis("v / m/s", 60, 10),
+    [curve(curve_vt_terminal), tangent([[0, 0], [5, 50]]), dashed([[0, 50], [20, 50]])],
+    "Velocity–time graph rising steeply at first then levelling off towards 50 m/s, with a tangent at the origin from (0, 0) to (5, 50) and a dashed line at 50 m/s.",
+    labels=[label(13, 54, "terminal velocity")],
 )
-t2_2 = (20 - 0) / (5 - 0)
+t2_2 = (50 - 0) / (5 - 0)
 
 section_t2 = {
     "id": "curved-graphs",
@@ -249,16 +249,16 @@ section_t2 = {
                 ], graph=graph_t2_1),
                 group("t2-t2-q2", "The graph shows the velocity of a skydiver after jumping from a plane. The tangent at t = 0 is drawn.", [
                     numeric("t2-t2-q2a", "Use the tangent to calculate the skydiver's acceleration at the moment of jumping.", sf(t2_2), "m/s²",
-                            "The tangent goes from (0, 0) to (5, 20).",
-                            [r"Gradient of tangent $= \dfrac{20 - 0}{5 - 0} = 4$ m/s²."]
-                            + ["(With air resistance ignored this would be 10 m/s²; the skydiver's suit and the thin plane air give a smaller value in this example.)"], label="a"),
+                            "The tangent goes from (0, 0) to (5, 50).",
+                            [r"Gradient of tangent $= \dfrac{50 - 0}{5 - 0} = 10$ m/s²."]
+                            + ["At the instant of jumping the skydiver is not yet moving, so there is no air resistance: the only force is the weight and the acceleration is g, 10 m/s². The graph agrees."], label="a"),
                     choice("t2-t2-q2b", "How does the skydiver's acceleration change during the 20 s?",
                            ["It stays the same", "It increases", "It decreases, reaching zero", "It becomes negative"], 2,
-                           "The curve flattens: the gradient of a velocity–time graph is the acceleration, and it drops towards zero as the velocity approaches 20 m/s.", label="b"),
+                           "The curve flattens: the gradient of a velocity–time graph is the acceleration, and it drops towards zero as the velocity approaches 50 m/s.", label="b"),
                     written("t2-t2-q2c", "Explain, in terms of forces, why the graph has this shape.",
                             marks(["At first air resistance is small, so there is a large resultant force (weight − air resistance) downwards and a large acceleration.",
                                    "As the velocity increases, air resistance increases, so the resultant force and the acceleration decrease.",
-                                   "Eventually air resistance equals the weight; the resultant force is zero and the velocity is constant: terminal velocity (20 m/s here)."]), lines=4, label="c"),
+                                   "Eventually air resistance equals the weight; the resultant force is zero and the velocity is constant: terminal velocity (50 m/s here)."]), lines=4, label="c"),
                 ], graph=graph_t2_2),
                 written("t2-t2-q3", "Describe how to find the instantaneous speed of an object at a particular time from a curved distance–time graph.",
                         marks(["Draw a tangent to the curve at that time: a straight line that touches the curve there with the same steepness.",

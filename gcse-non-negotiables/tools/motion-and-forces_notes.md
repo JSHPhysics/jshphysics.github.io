@@ -13,8 +13,10 @@ questions that practise key words against mark-scheme wording.
 
 ## Step 2 — checked against the content list and examiners' reports
 
-Spec points 2.1–2.33 all covered (2.13 and 2.14 P-only tagged where they
-sit; 2.23–2.33 momentum and F = Δp/t tagged H).
+Spec points 2.1–2.33 all covered. Checked against the specification: only
+2.32P and 2.33P are Physics-only (`braking-v-squared` tagged P); the
+Higher-only statements are 2.20–2.22 (circular motion, inertial mass),
+2.23–2.26 (momentum) and 2.31, so those sections carry the H tag.
 
 Reports read: Paper 1H June 2022, June 2023, June 2025 (Pearson
 `1ph0-1h-pef-*.pdf`); June 2023 1H mark scheme (PMT mirror). Findings
@@ -68,8 +70,15 @@ explain, calculate, show that, estimate, draw, plot.
 
 A separate agent recomputed every stored answer and checked every
 definition and model explanation against mark-scheme wording without
-seeing the authoring modules. Its findings and the fixes are logged in the
-CLAUDE.md session entry.
+seeing the authoring modules. Findings (all fixed): the skydiver tangent gave 4 m/s² at the instant of
+jumping, contradicting a = g with no air resistance — curve regenerated
+with terminal velocity 50 m/s and initial gradient 10; t2-t10-q4 stored
+74.2 against a walkthrough of 74 — now whole-number Highway Code
+arithmetic; a flashcard mixed GPE (Topic 3) into the weight card — now
+weight only; the reaction-time section claimed Edexcel expect students to
+use x = ½gt², which is not on the equation list — reworded. The checker
+also could not verify the H/P tags, which led to the spec check above
+(circular motion and inertial mass gained H).
 
 ## Step 8 — headless test
 

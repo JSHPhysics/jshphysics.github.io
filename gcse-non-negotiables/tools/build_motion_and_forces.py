@@ -76,6 +76,8 @@ TAGS = {
     "momentum-nn": ["H"],
     "conservation-momentum": ["H"],
     "force-momentum": ["H"],
+    "circular-motion": ["H"],
+    "inertial-mass": ["H"],
     "braking-v-squared": ["P"],
 }
 
