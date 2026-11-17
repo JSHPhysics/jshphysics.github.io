@@ -5,6 +5,2814 @@
   "spec": "Topic 6",
   "order": 60,
   "figure": "half-life",
+  "lede": "Everything in Topic 6, split into two bands. <b>The non-negotiables</b> are the atom, the three radiations, decay equations, half-life, the dangers and the uses — the facts and one-step calculations you must have at your fingertips. <b>The tricky bits</b> are where the marks go missing: the history of the atomic model, choosing a source with reasons, half-life with a background, the explain questions, and (for Physics) tumours, PET, fission and fusion. Sections marked <b>P</b> are Physics only (not Combined Science); nothing in this topic is Higher-only.",
+  "howto": [
+    "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
+    "Learn the definitions as sentences — the bold words are the ones the mark is for.",
+    "For every decay, say what happens to the mass number and the atomic number; then every equation balances itself.",
+    "Do the practice questions <b>before</b> opening the hint or walkthrough. Half-life calculations: write each halving on its own line.",
+    "For \"explain\" questions, write your answer in full sentences, then compare it with the model answer line by line.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "The atom, isotopes, the radiations, decay equations, half-life, dangers and uses. If any of these is not yet green, it comes before anything in the second band."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "The atomic model, choosing a source, half-life with a background, the explain questions, and the Physics-only nuclear content. Each one is built on something from the first band."
+    }
+  ],
+  "factsBlurb": "Topic 6 on flip cards: every definition, the radiations, every decay's effect on A and Z, the uses with reasons, the dangers, Rutherford's conclusions, the reactor and fusion. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "atom",
+      "band": "nn",
+      "title": "The atom: nucleus, electrons, sizes, masses and charges",
+      "spec": "6.1, 6.2, 6.5, 6.6",
+      "equations": [
+        "\\text{atom} \\approx 10^{-10}\\ \\text{m}",
+        "\\text{nucleus} \\approx 10^{-15}\\ \\text{m}",
+        "p: +1, 1 \\quad n: 0, 1 \\quad e^{-}: -1, \\tfrac{1}{1836}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Structure and numbers",
+          "html": "<p>An atom has a <b>positively charged nucleus</b> made of <b>protons and neutrons</b>, surrounded by <b>negatively charged electrons</b>. The nucleus is <b>very much smaller than the atom</b> — ten to a hundred thousand times smaller across — but contains <b>almost all of its mass</b>.</p><p><b>Sizes:</b> an atom (and a small molecule) is about $1 \\times 10^{-10}$ m across (0.1 nm); the nucleus about $1 \\times 10^{-15}$ m. The 2022 report: converting 0.15 nm to $1.5 \\times 10^{-10}$ m \"was difficult\" — nano is $10^{-9}$.</p><table class='tbl'><tr><th>Particle</th><th>Relative mass</th><th>Relative charge</th><th>Where</th></tr><tr><td><b>Proton</b></td><td>1</td><td>+1</td><td>nucleus</td></tr><tr><td><b>Neutron</b></td><td>1</td><td>0</td><td>nucleus</td></tr><tr><td><b>Electron</b></td><td>about 1/1836 (negligible, ≈ 0.0005)</td><td>−1</td><td>orbiting the nucleus</td></tr><tr><td><b>Positron</b></td><td>same as an electron</td><td>+1</td><td>emitted in β⁺ decay</td></tr></table><p>In a neutral atom the <b>number of protons equals the number of electrons</b>, so the positive and negative charges cancel. The number of protons is what makes an element that element: every nucleus of a given element has the same positive charge.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why the atom is neutral",
+          "question": "A neutral atom of carbon has 6 protons. State how many electrons it has, and explain why the atom has no overall charge. (2 marks)",
+          "steps": [
+            "<b>Number:</b> <b>6 electrons</b> — in a neutral atom the number of electrons equals the number of protons.",
+            "<b>Why neutral:</b> each proton has a charge of <b>+1</b> and each electron <b>−1</b>, so 6 of each give a <b>total charge of zero</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The atom",
+          "questions": [
+            {
+              "id": "ra-n1-q1",
+              "type": "choice",
+              "text": "Which statement about the nucleus is correct?",
+              "options": [
+                "It contains protons and electrons",
+                "It is about the same size as the atom",
+                "It contains almost all the atom's mass and is positively charged",
+                "It has no charge"
+              ],
+              "correct": 2,
+              "explain": "Protons and neutrons; tiny; positive; almost all the mass."
+            },
+            {
+              "id": "ra-n1-q2",
+              "type": "written",
+              "text": "State the relative mass and relative charge of a proton, a neutron and an electron. (3)",
+              "model": "<ul><li>Proton: mass <b>1</b>, charge <b>+1</b>.</li><li>Neutron: mass <b>1</b>, charge <b>0</b>.</li><li>Electron: mass <b>about 1/1836</b> (very small), charge <b>−1</b>.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n1-q3",
+              "type": "choice",
+              "text": "What is the typical size of an atom?",
+              "options": [
+                "1 × 10⁻¹⁵ m",
+                "1 × 10⁻¹⁰ m",
+                "1 × 10⁻⁶ m",
+                "1 × 10⁻³ m"
+              ],
+              "correct": 1,
+              "explain": "About 10⁻¹⁰ m (0.1 nm); the nucleus is about 10⁻¹⁵ m."
+            },
+            {
+              "id": "ra-n1-q4",
+              "type": "numeric",
+              "text": "The diameter of an atom is 0.15 nm. Write this in metres. Type the answer as 1.5e-10.",
+              "answer": {
+                "value": 1.5e-10,
+                "unit": "m"
+              },
+              "hint": "nano = 10⁻⁹.",
+              "walkthrough": [
+                "$0.15\\ \\text{nm} = 0.15 \\times 10^{-9} = 1.5 \\times 10^{-10}$ m."
+              ]
+            },
+            {
+              "id": "ra-n1-q5",
+              "type": "written",
+              "text": "Compare a positron with an electron. (2)",
+              "model": "<ul><li><b>Same mass</b> (about 1/1836 of a proton).</li><li><b>Opposite charge</b>: the positron is <b>+1</b>, the electron −1.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n1-q6",
+              "type": "written",
+              "text": "Explain why an atom has no overall electric charge. (2)",
+              "model": "<ul><li>It has <b>equal numbers of protons and electrons</b>.</li><li>Each proton's +1 charge is cancelled by an electron's −1 charge, so the <b>total is zero</b>.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the structure of the atom and state the typical size of an atom",
+        "Recall the relative masses and charges of the proton, neutron, electron and positron",
+        "Explain why an atom is neutral"
+      ],
+      "blurb": "A tiny, dense, positive nucleus of protons and neutrons, with electrons orbiting far outside it. Almost all the mass is in the nucleus; almost all the volume is empty space."
+    },
+    {
+      "id": "isotopes",
+      "band": "nn",
+      "title": "Isotopes and nuclide notation",
+      "spec": "6.3, 6.4",
+      "equations": [
+        "{}^{A}_{Z}\\mathrm{X}",
+        "A = \\text{protons} + \\text{neutrons}",
+        "\\text{neutrons} = A - Z"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "A, Z and isotopes",
+          "html": "<p>$${}^{A}_{Z}\\mathrm{X} \\qquad A = \\text{mass (nucleon) number} = \\text{protons} + \\text{neutrons} \\qquad Z = \\text{atomic (proton) number} = \\text{protons}$$</p><p>So <b>neutrons = A − Z</b>, and in a neutral atom <b>electrons = Z</b>. ${}^{14}_{6}\\mathrm{C}$: 6 protons, 8 neutrons, 6 electrons.</p><p><b>Isotopes</b> are atoms of the <b>same element</b> (same number of protons, same atomic number) with <b>different numbers of neutrons</b> (different mass numbers). ${}^{12}_{6}\\mathrm{C}$ and ${}^{14}_{6}\\mathrm{C}$ are isotopes of carbon. Because the nucleus of every atom of an element has the same positive charge (same Z), isotopes have the same electrons and the same <b>chemical</b> properties; they differ in <b>mass</b> and, often, in stability — the heavier isotope is frequently radioactive.</p><p>The June 2023 scheme (Q7(a)(i)) rejected every option that did not have the <b>same atomic number</b> as the given element: that is the whole test.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Reading a nuclide",
+          "question": "Uranium-235 is written ²³⁵₉₂U. State the number of protons, neutrons and electrons in a neutral atom. (2 marks)",
+          "steps": [
+            "<b>Protons:</b> Z = <b>92</b>. <b>Electrons:</b> also 92 (neutral atom).",
+            "<b>Neutrons:</b> A − Z = 235 − 92 = <b>143</b>."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "nuclear-notation"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Isotopes",
+          "questions": [
+            {
+              "id": "ra-n2-q1",
+              "type": "written",
+              "text": "State what is meant by isotopes. (2)",
+              "model": "<ul><li>Atoms of the <b>same element</b> — the <b>same number of protons</b> (atomic number)…</li><li>…with <b>different numbers of neutrons</b> (different mass numbers).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n2-q2",
+              "type": "choice",
+              "text": "Which nucleus is an isotope of ¹⁴₇N?",
+              "options": [
+                "¹⁴₆C",
+                "¹⁵₇N",
+                "¹⁴₈O",
+                "¹³₆C"
+              ],
+              "correct": 1,
+              "explain": "Same atomic number (7 = nitrogen), different mass number."
+            },
+            {
+              "id": "ra-n2-q3",
+              "type": "numeric",
+              "text": "How many neutrons are in a nucleus of ⁶⁰₂₇Co?",
+              "answer": {
+                "value": 33,
+                "unit": ""
+              },
+              "hint": "A − Z.",
+              "walkthrough": [
+                "$60 - 27 = 33$ neutrons."
+              ]
+            },
+            {
+              "id": "ra-n2-q4",
+              "type": "written",
+              "text": "Explain why ³⁵Cl and ³⁷Cl have the same chemical properties but different masses. (2)",
+              "model": "<ul><li>Same number of <b>protons</b> (17), so the same number of <b>electrons</b>, which decide the chemistry.</li><li>Different numbers of <b>neutrons</b> (18 and 20), so different mass numbers.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n2-q5",
+              "type": "choice",
+              "text": "In the notation ᴬ_Z X, what does A stand for?",
+              "options": [
+                "The number of protons",
+                "The number of neutrons",
+                "The number of protons plus neutrons (mass number)",
+                "The number of electrons"
+              ],
+              "correct": 2,
+              "explain": "A is the nucleon (mass) number; Z is the proton (atomic) number."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Read A and Z from nuclide notation and find protons, neutrons and electrons",
+        "Define isotope in the mark-scheme form",
+        "Explain why isotopes of an element have the same chemical properties but different masses"
+      ],
+      "blurb": "Every nucleus is written with its mass number on top and its atomic number below. Isotopes of an element have the same atomic number but different mass numbers — same protons, different neutrons."
+    },
+    {
+      "id": "electrons-ions",
+      "band": "nn",
+      "title": "Electrons: set orbits, absorbing and emitting, and ions",
+      "spec": "6.7, 6.8, 6.9",
+      "equations": [
+        "\\text{absorb EM} \\rightarrow \\text{higher orbit}",
+        "\\text{emit EM} \\rightarrow \\text{lower orbit}",
+        "\\text{lose an electron} \\rightarrow \\text{positive ion}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Levels and ions",
+          "html": "<p>In an atom the electrons orbit the nucleus at <b>different set distances</b> — energy levels (the Bohr model, T1). An electron can only sit in one of these levels, not in between.</p><p>An electron moves to a <b>higher orbit</b> (further from the nucleus) when the atom <b>absorbs</b> electromagnetic radiation of the right energy. It falls back to a <b>lower orbit</b> by <b>emitting</b> electromagnetic radiation. This is why hot gases give out light of particular colours (and how fluorescence works, Topic 5).</p><p>If an outer electron gains enough energy it <b>leaves the atom altogether</b>. The atom now has more protons than electrons: it is a <b>positive ion</b>. Anything that knocks electrons out of atoms is <b>ionising</b> — alpha, beta and gamma radiation, X-rays and ultraviolet. The June 2024 scheme (Q8(b)): ionisation is the <b>loss (or gain) of electrons</b> from atoms; \"knocking electrons out\" accepted.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Ionisation by an alpha particle",
+          "question": "An alpha particle passes close to an atom and the atom becomes a positive ion. Explain how. (2 marks)",
+          "steps": [
+            "<b>What happens:</b> the alpha particle transfers energy to an <b>outer electron</b>, which <b>leaves the atom</b> (is knocked out).",
+            "<b>Why positive:</b> the atom now has <b>more protons than electrons</b>, so it has an overall <b>positive charge</b> — a positive ion. The alpha particle loses a little energy each time, which is why it is stopped by a few cm of air."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Electrons and ions",
+          "questions": [
+            {
+              "id": "ra-n3-q1",
+              "type": "written",
+              "text": "Describe what happens to an electron in an atom when the atom absorbs electromagnetic radiation. (1)",
+              "model": "<ul><li>The electron moves to a <b>higher orbit / energy level</b> (further from the nucleus).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n3-q2",
+              "type": "written",
+              "text": "State what is meant by ionisation. (1)",
+              "model": "<ul><li>An atom <b>losing (or gaining) an electron</b>, so that it becomes charged (an ion); for ionising radiation, electrons are knocked out leaving a positive ion.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n3-q3",
+              "type": "choice",
+              "text": "An atom emits electromagnetic radiation. Which has happened?",
+              "options": [
+                "An electron has moved to a higher orbit",
+                "An electron has moved to a lower orbit",
+                "A proton has left the nucleus",
+                "The atom has gained an electron"
+              ],
+              "correct": 1,
+              "explain": "Falling to a lower level releases energy as EM radiation."
+            },
+            {
+              "id": "ra-n3-q4",
+              "type": "written",
+              "text": "Explain how an atom can become a positive ion. (2)",
+              "model": "<ul><li>An outer electron gains enough energy (e.g. from ionising radiation) to <b>leave the atom</b>.</li><li>The atom is left with <b>more protons than electrons</b>, so it is <b>positively charged</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n3-q5",
+              "type": "choice",
+              "text": "Why are alpha, beta and gamma called ionising radiation?",
+              "options": [
+                "They are radioactive",
+                "They have enough energy to knock electrons out of atoms, forming ions",
+                "They come from the nucleus",
+                "They travel at the speed of light"
+              ],
+              "correct": 1,
+              "explain": "Ionising = removes electrons from atoms."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State that electrons orbit at set distances (energy levels) from the nucleus",
+        "Describe how absorbing or emitting EM radiation moves an electron between orbits",
+        "Explain how an atom becomes a positive ion, and link it to ionising radiation"
+      ],
+      "blurb": "Electrons sit in orbits at set distances from the nucleus. They move up when they absorb electromagnetic radiation and down when they emit it; knock one out altogether and you have a positive ion — which is what ionising radiation does."
+    },
+    {
+      "id": "radiation-types",
+      "band": "nn",
+      "title": "Alpha, beta, gamma (and neutrons)",
+      "spec": "6.10, 6.11, 6.15, 6.16",
+      "equations": [
+        "\\alpha = {}^{4}_{2}\\mathrm{He}",
+        "\\beta^{-} = {}^{\\;0}_{-1}\\mathrm{e}",
+        "\\gamma = \\text{EM wave}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The table",
+          "html": "<figure class='diagram'><svg viewBox='0 0 500 270' role='img'><rect x='170' y='30' width='4' height='200' style='fill:var(--line);opacity:0.35'/><text x='172.0' y='24.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>paper</text><rect x='270' y='30' width='10' height='200' style='fill:var(--line);opacity:0.35'/><text x='275.0' y='24.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>aluminium</text><rect x='380' y='30' width='26' height='200' style='fill:var(--line);opacity:0.35'/><text x='393.0' y='24.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>lead</text><circle cx='40' cy='60' r='9' style='fill:var(--accent);opacity:0.8'/><text x='40.0' y='88.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>alpha α</text><line x1='50.0' y1='60.0' x2='170.0' y2='60.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='110.0,60.0 103.9,63.4 103.9,56.6' style='fill:var(--accent)'/><text x='164.0' y='52.0' text-anchor='end' style='fill:var(--accent);font-size:12px;font-weight:normal;'>✕</text><circle cx='40' cy='130' r='9' style='fill:var(--accent);opacity:0.8'/><text x='40.0' y='158.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>beta β</text><line x1='50.0' y1='130.0' x2='270.0' y2='130.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='160.0,130.0 153.9,133.4 153.9,126.6' style='fill:var(--accent)'/><text x='264.0' y='122.0' text-anchor='end' style='fill:var(--accent);font-size:12px;font-weight:normal;'>✕</text><circle cx='40' cy='200' r='9' style='fill:var(--accent);opacity:0.8'/><text x='40.0' y='228.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>gamma γ</text><line x1='50.0' y1='200.0' x2='380.0' y2='200.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='215.0,200.0 208.9,203.4 208.9,196.6' style='fill:var(--accent)'/><line x1='406.0' y1='200.0' x2='470.0' y2='200.0' style='stroke:var(--accent);stroke-width:1'/><polygon points='438.0,200.0 431.9,203.4 431.9,196.6' style='fill:var(--accent)'/><text x='250.0' y='258.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>ionising power: alpha most, then beta, gamma least · penetration the other way round</text></svg><figcaption>Penetration: alpha is stopped by paper, beta by a few millimetres of aluminium, gamma only reduced by thick lead. Ionising power runs the opposite way.</figcaption></figure><table class='tbl'><tr><th></th><th>Alpha α</th><th>Beta-minus β⁻</th><th>Beta-plus β⁺</th><th>Gamma γ</th><th>Neutron n</th></tr><tr><td><b>What it is</b></td><td>a <b>helium nucleus</b>: 2 protons + 2 neutrons</td><td>a fast <b>electron</b> emitted from the nucleus</td><td>a <b>positron</b> emitted from the nucleus</td><td><b>electromagnetic</b> radiation (a wave, no mass, no charge)</td><td>a neutron</td></tr><tr><td><b>Symbol</b></td><td>${}^{4}_{2}\\mathrm{He}$ or ${}^{4}_{2}\\alpha$</td><td>${}^{\\;0}_{-1}\\mathrm{e}$ or ${}^{\\;0}_{-1}\\beta$</td><td>${}^{0}_{+1}\\mathrm{e}$</td><td>${}^{0}_{0}\\gamma$</td><td>${}^{1}_{0}\\mathrm{n}$</td></tr><tr><td><b>Charge</b></td><td>+2</td><td>−1</td><td>+1</td><td>0</td><td>0</td></tr><tr><td><b>Ionising power</b></td><td><b>strongest</b></td><td>medium</td><td>medium</td><td><b>weakest</b></td><td>—</td></tr><tr><td><b>Penetration</b></td><td>a few <b>cm of air</b>; stopped by <b>paper</b> or skin</td><td>about a metre of air; stopped by a few <b>mm of aluminium</b></td><td>as β⁻ (but soon annihilates)</td><td>very far in air; <b>reduced</b> by thick <b>lead</b> or metres of concrete, never fully stopped</td><td>very penetrating</td></tr><tr><td><b>Why</b></td><td>big and doubly charged: ionises a lot, loses energy fast</td><td>small and singly charged</td><td></td><td>no charge, no mass: rarely interacts</td><td>no charge</td></tr></table><p>Radiation is emitted from <b>unstable nuclei</b> in a <b>random</b> process: you cannot say which nucleus will decay next or when (N7). All of alpha, β⁻, β⁺ and gamma are <b>ionising</b>.</p><p><b>Why penetration and ionisation are opposites:</b> an alpha particle is large and carries +2, so it ionises almost every atom it passes, losing its energy within a few centimetres. A gamma ray has no charge and no mass, so it rarely interacts — it ionises little and travels far. The June 2024 scheme (Q8(a)): the charge on an alpha particle is <b>+2</b>.</p><p>\"Alpha is stopped by paper\" scores; \"alpha is the weakest\" does not — say <b>least penetrating</b> or <b>most ionising</b>, never \"strongest\" or \"weakest\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Comparing two radiations",
+          "question": "Compare alpha and gamma radiation. (4 marks)",
+          "steps": [
+            "<b>Nature:</b> alpha is a <b>helium nucleus</b> (2 protons, 2 neutrons, charge +2); gamma is an <b>electromagnetic wave</b> with no mass or charge.",
+            "<b>Ionising:</b> alpha is <b>strongly</b> ionising; gamma is <b>weakly</b> ionising.",
+            "<b>Penetration:</b> alpha travels a few cm in air and is stopped by paper; gamma travels far and is only reduced by thick lead.",
+            "<b>Effect on the nucleus</b> (what the June 2025 6-marker wanted): alpha emission reduces the mass number by 4 and the atomic number by 2 — a new element; gamma emission <b>changes neither</b> — the nucleus just loses energy."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Types of radiation",
+          "questions": [
+            {
+              "id": "ra-n4-q1",
+              "type": "written",
+              "text": "State what an alpha particle, a beta particle and a gamma ray each consist of. (3)",
+              "model": "<ul><li>Alpha: a <b>helium nucleus</b> — two protons and two neutrons.</li><li>Beta(-minus): a fast-moving <b>electron</b> emitted from the nucleus.</li><li>Gamma: <b>electromagnetic radiation</b> (a high-frequency wave).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n4-q2",
+              "type": "choice",
+              "text": "A source is placed near a detector. The count falls to background when a sheet of paper is put in the way. What is the source emitting?",
+              "options": [
+                "Alpha only",
+                "Beta only",
+                "Gamma only",
+                "Beta and gamma"
+              ],
+              "correct": 0,
+              "explain": "Only alpha is stopped by paper."
+            },
+            {
+              "id": "ra-n4-q3",
+              "type": "choice",
+              "text": "Which radiation is the most ionising?",
+              "options": [
+                "Alpha",
+                "Beta",
+                "Gamma",
+                "They are all the same"
+              ],
+              "correct": 0,
+              "explain": "Big, slow and doubly charged: alpha ionises most and penetrates least."
+            },
+            {
+              "id": "ra-n4-q4",
+              "type": "written",
+              "text": "Explain why alpha radiation is strongly ionising but only travels a few centimetres in air. (2)",
+              "model": "<ul><li>It is relatively <b>large and has a +2 charge</b>, so it pulls electrons off almost every atom it passes — strongly ionising.</li><li>Each ionisation <b>transfers some of its energy</b>, so it soon loses all its energy and stops.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n4-q5",
+              "type": "choice",
+              "text": "What is the charge on an alpha particle?",
+              "options": [
+                "0",
+                "+1",
+                "+2",
+                "−1"
+              ],
+              "correct": 2,
+              "explain": "Two protons, no electrons: +2."
+            },
+            {
+              "id": "ra-n4-q6",
+              "type": "written",
+              "text": "A source emits beta and gamma radiation. Describe how you could show, using absorbers and a detector, that it emits both. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Baseline</td><td>Measure the <b>count rate</b> with nothing in the way (and subtract background).</td></tr><tr><td><b>2</b></td><td>Aluminium</td><td>Put a few mm of <b>aluminium</b> between source and detector: the count <b>falls</b> but does not reach background — the beta has been stopped, something more penetrating remains.</td></tr><tr><td><b>3</b></td><td>Lead</td><td>Put thick <b>lead</b> in the way: the count falls again (towards background) — that remaining radiation is <b>gamma</b>.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-n4-q7",
+              "type": "written",
+              "text": "State what is meant by saying radioactive decay is a random process. (1)",
+              "model": "<ul><li>It <b>cannot be predicted which nucleus will decay next, or when</b> a particular nucleus will decay.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State what alpha, beta and gamma radiation are made of",
+        "Compare their penetration (paper, aluminium, lead) and ionising power",
+        "State that emission is a random process from unstable nuclei"
+      ],
+      "blurb": "Unstable nuclei emit alpha particles, beta particles (minus or plus), gamma rays or neutrons, at random. Know what each one is, how far it gets, and how strongly it ionises — the three columns that every comparison question is marked on."
+    },
+    {
+      "id": "background",
+      "band": "nn",
+      "title": "Background radiation and how radiation is detected",
+      "spec": "6.12, 6.13, 6.14",
+      "equations": [
+        "\\text{corrected count rate} = \\text{measured} - \\text{background}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Where it comes from, how it is detected",
+          "html": "<p><b>Background radiation</b> is the low-level ionising radiation that is <b>always present</b> in the environment, from natural and artificial sources.</p><table class='tbl'><tr><th>From the Earth</th><th>From space</th><th>Artificial</th></tr><tr><td><b>radon gas</b> from rocks and soil (the largest share in the UK); <b>rocks and building materials</b> (granite); <b>food and drink</b> (potassium-40 in bananas, Brazil nuts)</td><td><b>cosmic rays</b> — high-energy particles from the Sun and beyond, more at altitude and in aircraft</td><td><b>medical</b> X-rays and scans (the largest artificial share); nuclear industry and weapons-test fallout (tiny)</td></tr></table><p><b>Detecting it.</b> A <b>Geiger–Müller (GM) tube</b> with a counter: each ionising particle or ray entering the tube ionises the gas inside, giving a pulse of current that is counted — the reading is a <b>count rate</b> in counts per second or per minute. <b>Photographic film</b> is <b>darkened</b> (fogged) by ionising radiation, the more radiation the darker — film badges worn by radiographers show the dose they have received.</p><p><b>Measuring the background count</b> (June 2024 Q8(c), 3 marks): use a GM tube and counter with <b>no source nearby</b>; <b>count for a measured time</b> (several minutes, because the counts are random); <b>divide counts by time</b>; <b>repeat and average</b>. Then subtract it from every reading taken with a source: <b>corrected count rate = measured count rate − background count rate</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Correcting a count",
+          "question": "With no source present a GM tube records 90 counts in 5 minutes. With a source in place it records 420 counts per minute. Calculate the corrected count rate of the source.",
+          "steps": [
+            "<b>Background rate:</b> $90 \\div 5 = 18$ counts per minute.",
+            "<b>Corrected:</b> $420 - 18 = 402$ counts per minute. (Subtracting 90 instead of 18 — mixing counts with counts per minute — is the common slip.)"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "background-count"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Background and detection",
+          "questions": [
+            {
+              "id": "ra-n5-q1",
+              "type": "written",
+              "text": "State what is meant by background radiation, and give two natural sources. (3)",
+              "model": "<ul><li>Low-level ionising radiation that is <b>always present</b> in the environment.</li><li>Source 1: <b>radon gas</b> from rocks / rocks and soil / food and drink.</li><li>Source 2: <b>cosmic rays</b> from space.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n5-q2",
+              "type": "choice",
+              "text": "Which is the largest source of background radiation for most people in the UK?",
+              "options": [
+                "Nuclear power stations",
+                "Radon gas from the ground",
+                "Cosmic rays",
+                "Mobile phones"
+              ],
+              "correct": 1,
+              "explain": "Radon seeping from rocks and soil is about half the UK average dose; medical is the biggest artificial source."
+            },
+            {
+              "id": "ra-n5-q3",
+              "type": "written",
+              "text": "Describe how to measure the background count rate in a laboratory. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Equipment</td><td>Use a <b>GM tube and counter</b> with <b>no radioactive sources nearby</b>.</td></tr><tr><td><b>2</b></td><td>Count</td><td>Record the number of <b>counts in a measured time</b> (several minutes) and <b>divide by the time</b>.</td></tr><tr><td><b>3</b></td><td>Repeat</td><td><b>Repeat</b> (in different places / times) and <b>calculate a mean</b>, because the counts arrive at random.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-n5-q4",
+              "type": "numeric",
+              "text": "The background count rate is 20 counts per minute. A source gives a reading of 260 counts per minute. Calculate the corrected count rate.",
+              "answer": {
+                "value": 240,
+                "unit": "counts/min"
+              },
+              "hint": "Subtract the background.",
+              "walkthrough": [
+                "$260 - 20 = 240$ counts per minute."
+              ]
+            },
+            {
+              "id": "ra-n5-q5",
+              "type": "written",
+              "text": "Describe how photographic film can be used to monitor the radiation dose of a hospital worker. (2)",
+              "model": "<ul><li>The film is worn in a <b>badge</b>; ionising radiation <b>darkens (fogs)</b> the film.</li><li>When developed, the <b>darker</b> the film the <b>greater the dose</b> received; windows of different absorbers show which type of radiation.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n5-q6",
+              "type": "written",
+              "text": "Explain why readings of a weak source should be taken over a long time and repeated. (2)",
+              "model": "<ul><li>Decay (and background) is <b>random</b>, so the count in a short time varies a lot from one measurement to the next.</li><li>A <b>long count and a mean of repeats</b> averages out the random variation and gives a more accurate count rate.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State what background radiation is and give sources from the Earth and from space",
+        "Describe how a GM tube and photographic film detect radiation",
+        "Describe how to measure the background count and use it to correct a reading"
+      ],
+      "blurb": "There is always some ionising radiation around us — from rocks, the air, space, food and medicine. A Geiger–Müller tube counts it; photographic film darkens in it. Any measurement of a source must have the background taken off."
+    },
+    {
+      "id": "decays",
+      "band": "nn",
+      "title": "Decay equations: what each decay does to A and Z",
+      "spec": "6.18, 6.19, 6.20, 6.21, 6.22",
+      "equations": [
+        "\\alpha: A-4,\\ Z-2",
+        "\\beta^{-}: Z+1",
+        "\\beta^{+}: Z-1",
+        "\\gamma: \\text{no change}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The five decays",
+          "html": "<table class='tbl'><tr><th>Decay</th><th>What happens in the nucleus</th><th>Mass number A</th><th>Atomic number Z</th><th>Equation pattern</th></tr><tr><td><b>Alpha α</b></td><td>2 protons + 2 neutrons leave as a helium nucleus</td><td><b>−4</b></td><td><b>−2</b></td><td>${}^{A}_{Z}\\mathrm{X} \\rightarrow {}^{A-4}_{Z-2}\\mathrm{Y} + {}^{4}_{2}\\mathrm{He}$</td></tr><tr><td><b>Beta-minus β⁻</b></td><td>a <b>neutron turns into a proton</b> and an electron; the electron is emitted</td><td><b>0</b></td><td><b>+1</b></td><td>${}^{A}_{Z}\\mathrm{X} \\rightarrow {}^{A}_{Z+1}\\mathrm{Y} + {}^{\\;0}_{-1}\\mathrm{e}$</td></tr><tr><td><b>Beta-plus β⁺</b></td><td>a <b>proton turns into a neutron</b> and a positron; the positron is emitted</td><td><b>0</b></td><td><b>−1</b></td><td>${}^{A}_{Z}\\mathrm{X} \\rightarrow {}^{A}_{Z-1}\\mathrm{Y} + {}^{0}_{+1}\\mathrm{e}$</td></tr><tr><td><b>Gamma γ</b></td><td>the nucleus <b>rearranges</b> and loses energy as an EM wave, often just after another decay</td><td><b>0</b></td><td><b>0</b></td><td>${}^{A}_{Z}\\mathrm{X}^{*} \\rightarrow {}^{A}_{Z}\\mathrm{X} + \\gamma$</td></tr><tr><td><b>Neutron emission</b></td><td>a neutron leaves</td><td><b>−1</b></td><td><b>0</b></td><td>${}^{A}_{Z}\\mathrm{X} \\rightarrow {}^{A-1}_{Z}\\mathrm{X} + {}^{1}_{0}\\mathrm{n}$</td></tr></table><p><b>Balancing:</b> the top numbers add up on both sides, and so do the bottom numbers. ${}^{238}_{92}\\mathrm{U} \\rightarrow {}^{234}_{90}\\mathrm{Th} + {}^{4}_{2}\\mathrm{He}$: 238 = 234 + 4 and 92 = 90 + 2. For beta-minus, ${}^{14}_{6}\\mathrm{C} \\rightarrow {}^{14}_{7}\\mathrm{N} + {}^{\\;0}_{-1}\\mathrm{e}$: 14 = 14 + 0 and 6 = 7 + (−1).</p><p>Two things the examiners' reports pick out. <b>β⁺ is not just β⁻ in reverse — think it through</b>: in June 2025 \"a common error was to describe beta-minus emission\" when β⁺ was asked — a proton becomes a neutron and a <b>positron</b> is emitted, so Z goes <b>down</b> by one. And the beta symbol needs its charge: the June 2024 scheme gave a mark for writing β with <b>−1</b>, and a mark for numbers that balance.</p><p><b>Gamma after a decay</b> (6.21): a nucleus that has just emitted an alpha or beta particle is often left with spare energy; it <b>rearranges</b> and gets rid of that energy as a <b>gamma ray</b>. Nothing about A or Z changes.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A beta-minus equation",
+          "question": "Strontium-90 (⁹⁰₃₈Sr) decays by beta-minus emission to yttrium (Y). Write the nuclear equation and describe what happens inside the nucleus. (3 marks)",
+          "steps": [
+            "<b>Rule:</b> β⁻ leaves A the same and raises Z by 1, so the product is ${}^{90}_{39}\\mathrm{Y}$.",
+            "<b>Equation:</b> ${}^{90}_{38}\\mathrm{Sr} \\rightarrow {}^{90}_{39}\\mathrm{Y} + {}^{\\;0}_{-1}\\mathrm{e}$ — check: 90 = 90 + 0; 38 = 39 − 1 ✓",
+            "<b>Inside:</b> a <b>neutron changes into a proton</b> and an <b>electron</b>, and the electron is emitted at high speed."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "nuclear-equations"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Decay equations",
+          "questions": [
+            {
+              "id": "ra-n6-q1",
+              "type": "written",
+              "text": "Describe the process of beta-minus decay. (2)",
+              "model": "<ul><li>A <b>neutron in the nucleus changes into a proton</b>…</li><li>…and an <b>electron</b> (the beta particle) is <b>emitted</b> from the nucleus. Mass number unchanged, atomic number up by 1.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n6-q2",
+              "type": "written",
+              "text": "Describe the process of beta-plus decay. (2)",
+              "model": "<ul><li>A <b>proton in the nucleus changes into a neutron</b>…</li><li>…and a <b>positron</b> is <b>emitted</b>. Mass number unchanged, atomic number down by 1.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n6-q3",
+              "type": "choice",
+              "text": "²²⁶₈₈Ra decays by alpha emission. The product is…",
+              "options": [
+                "²²²₈₆Rn",
+                "²²⁶₈₉Ac",
+                "²²⁴₈₆Rn",
+                "²²²₈₈Ra"
+              ],
+              "correct": 0,
+              "explain": "Alpha: A − 4 = 222, Z − 2 = 86."
+            },
+            {
+              "id": "ra-n6-q4",
+              "type": "choice",
+              "text": "¹⁸₉F decays by β⁺ emission. The product is…",
+              "options": [
+                "¹⁸₁₀Ne",
+                "¹⁸₈O",
+                "¹⁷₉F",
+                "¹⁴₇N"
+              ],
+              "correct": 1,
+              "explain": "β⁺: A unchanged, Z − 1 = 8 (oxygen)."
+            },
+            {
+              "id": "ra-n6-q5",
+              "type": "written",
+              "text": "Explain why the mass number and atomic number of a nucleus do not change when it emits a gamma ray. (2)",
+              "model": "<ul><li>A gamma ray is <b>electromagnetic radiation</b>: it has <b>no mass and no charge</b>.</li><li>So no protons or neutrons leave — the nucleus just <b>loses energy</b> (rearranges into a lower-energy state).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n6-q6",
+              "type": "written",
+              "text": "Complete and check this equation for the alpha decay of polonium-210: ²¹⁰₈₄Po → ? + ⁴₂He. (2)",
+              "model": "<ul><li>Product: ${}^{206}_{82}\\mathrm{Pb}$ (lead) — mass number $210 - 4 = 206$, atomic number $84 - 2 = 82$.</li><li>Check both lines balance: 210 = 206 + 4 and 84 = 82 + 2.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n6-q7",
+              "type": "choice",
+              "text": "A nucleus emits a neutron. What happens to its mass number and atomic number?",
+              "options": [
+                "A − 1, Z unchanged",
+                "A − 1, Z − 1",
+                "A unchanged, Z − 1",
+                "A − 4, Z − 2"
+              ],
+              "correct": 0,
+              "explain": "A neutron has mass 1 and no charge."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe β⁻ decay (neutron → proton + electron) and β⁺ decay (proton → neutron + positron)",
+        "State the effect of α, β⁻, β⁺, γ and neutron emission on the mass number and atomic number",
+        "Balance a nuclear equation for mass and charge"
+      ],
+      "blurb": "Every decay equation balances: the mass numbers add up on both sides, and so do the atomic numbers (charges). Learn what each decay does to A and Z and the equations write themselves."
+    },
+    {
+      "id": "half-life-nn",
+      "band": "nn",
+      "title": "Activity and half-life",
+      "spec": "6.23, 6.24, 6.25, 6.26, 6.27",
+      "equations": [
+        "\\text{activity in Bq} = \\text{decays per second}",
+        "\\text{half-life: time for activity (or undecayed nuclei) to halve}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Definitions, and why activity falls",
+          "html": "<p><b>Activity</b> is the <b>number of decays per second</b> of a source; its unit is the <b>becquerel (Bq)</b>: 1 Bq = 1 decay per second. A GM tube measures a <b>count rate</b>, which is a fraction of the activity (it only catches the radiation that enters the tube).</p><p>The activity <b>decreases over time</b> because each decay uses up one unstable nucleus, so there are <b>fewer undecayed nuclei left</b> to decay; fewer nuclei → fewer decays per second.</p><p><b>Half-life</b> is <b>the time taken for half of the undecayed nuclei to decay</b> — equivalently, <b>the time for the activity (or count rate) to fall to half</b> its value. Either form is credited; give one in full.</p><p><b>Random but predictable:</b> it <b>cannot be predicted when a particular nucleus will decay</b> — each decay is random. But a source contains an enormous number of nuclei, and with large numbers the random behaviour averages out, so the half-life lets you <b>predict how the activity of the whole source</b> will fall. Like dice: you cannot say which die will show a six, but with a thousand dice about a sixth will.</p><p>The calculation types below do the four standard calculations: fraction remaining after n half-lives (1/2ⁿ), activity after a time, time taken for the activity to fall to a value, and reading a half-life from a decay graph (draw the horizontal line at half the activity, drop to the time axis — the June 2024 scheme gave one mark for the line at 48–52 Bq and one for the time read off).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Activity after three half-lives",
+          "question": "A source has an activity of 800 Bq and a half-life of 6 hours. Calculate its activity after 18 hours.",
+          "steps": [
+            "<b>Number of half-lives:</b> $18 \\div 6 = 3$.",
+            "<b>Halve three times:</b> $800 \\rightarrow 400 \\rightarrow 200 \\rightarrow 100$ Bq.",
+            "(Or: fraction left $= \\dfrac{1}{2^{3}} = \\dfrac{1}{8}$; $800 \\times \\dfrac{1}{8} = 100$ Bq.)"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "half-life-fraction",
+            "half-life-time",
+            "decay-graph"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Activity and half-life",
+          "questions": [
+            {
+              "id": "ra-n7-q1",
+              "type": "written",
+              "text": "State what is meant by the half-life of a radioactive isotope. (1)",
+              "model": "<ul><li>The <b>time taken for half the undecayed nuclei to decay</b> (or for the <b>activity to fall to half</b> its original value).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n7-q2",
+              "type": "written",
+              "text": "State what is meant by the activity of a source, and give its unit. (2)",
+              "model": "<ul><li>The <b>number of decays per second</b> (rate of decay).</li><li>Unit: the <b>becquerel, Bq</b> (1 Bq = 1 decay per second).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n7-q3",
+              "type": "written",
+              "text": "Explain why the activity of a radioactive source decreases with time. (2)",
+              "model": "<ul><li>Each decay leaves <b>one fewer undecayed (unstable) nucleus</b>.</li><li>The activity depends on the <b>number of undecayed nuclei</b>, so as they are used up fewer decay each second.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n7-q4",
+              "type": "written",
+              "text": "Radioactive decay is random, yet half-lives can be used to make predictions. Explain. (2)",
+              "model": "<ul><li>It <b>cannot be predicted when any particular nucleus</b> will decay.</li><li>But a source contains a <b>very large number</b> of nuclei, so the overall behaviour averages out and the half-life predicts how the <b>activity of the whole sample</b> changes.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n7-q5",
+              "type": "numeric",
+              "text": "A source has an activity of 6000 Bq and a half-life of 8 days. Calculate its activity after 24 days.",
+              "answer": {
+                "value": 750,
+                "unit": "Bq"
+              },
+              "hint": "24 ÷ 8 = 3 half-lives.",
+              "walkthrough": [
+                "$6000 \\rightarrow 3000 \\rightarrow 1500 \\rightarrow 750$ Bq."
+              ]
+            },
+            {
+              "id": "ra-n7-q6",
+              "type": "numeric",
+              "text": "The activity of a source falls from 1200 Bq to 150 Bq in 45 minutes. Calculate its half-life.",
+              "answer": {
+                "value": 15,
+                "unit": "min"
+              },
+              "hint": "How many halvings from 1200 to 150?",
+              "walkthrough": [
+                "$1200 \\rightarrow 600 \\rightarrow 300 \\rightarrow 150$: three half-lives in 45 min, so one half-life $= 15$ min."
+              ]
+            },
+            {
+              "id": "ra-n7-q7",
+              "type": "choice",
+              "text": "After two half-lives, what fraction of the original undecayed nuclei remain?",
+              "options": [
+                "1/2",
+                "1/3",
+                "1/4",
+                "0"
+              ],
+              "correct": 2,
+              "explain": "½ × ½ = ¼. The source never quite reaches zero."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define activity and its unit, and half-life in both forms",
+        "Explain why decay is random but the half-life is predictable",
+        "Carry out half-life calculations: fraction left, activity after n half-lives, time taken, and from a graph"
+      ],
+      "blurb": "The activity of a source falls over time because there are fewer undecayed nuclei left. The half-life is how long it takes to halve — the same however much you start with, and the one thing about a random process that can be predicted."
+    },
+    {
+      "id": "dangers-precautions",
+      "band": "nn",
+      "title": "Dangers, precautions, contamination and irradiation",
+      "spec": "6.29, 6.31, 6.32",
+      "equations": [
+        "\\text{time} \\downarrow\\ \\text{distance} \\uparrow\\ \\text{shielding} \\uparrow",
+        "\\text{contamination: source on/in}\\quad \\text{irradiation: exposed to}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Dangers",
+          "html": "<p>Ionising radiation <b>knocks electrons out of atoms</b> in living cells. That can <b>damage or kill cells</b> (high doses: radiation burns, radiation sickness) or <b>damage the DNA</b> in a cell so that it <b>mutates</b>; a mutated cell that keeps dividing is <b>cancer</b>. Write <i>mutation</i> and <i>cancer</i> — \"it is dangerous\" or \"it makes you ill\" score nothing.</p><p><b>Precautions when handling a source:</b> keep it in a <b>lead-lined box</b>; handle it with <b>tongs</b>, never fingers, and point it <b>away</b> from people (distance); <b>limit the time</b> of exposure; use <b>shielding</b> (lead); don't eat or drink nearby; wash hands afterwards.</p><p><b>Medical staff and patients</b> (6.31): staff wear <b>film badges</b> to monitor their dose, stand behind <b>lead screens</b> or leave the room, wear <b>lead aprons</b>, and limit their time — they are exposed every day, so their total dose would otherwise be high. Patients have <b>dose limits</b>: use the <b>lowest dose</b> that works, a <b>short half-life</b> tracer, and only when the benefit outweighs the risk. The 2022 report: two precautions must be <b>different kinds</b> — \"gloves and masks\" are both protective clothing and scored one; protective clothing <i>and</i> shielding <i>or</i> limited time scored two. Lead was credited; aluminium ignored.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Contamination and irradiation",
+          "html": "<table class='tbl'><tr><th></th><th>Irradiation</th><th>Contamination</th></tr><tr><td>What it is</td><td>being <b>exposed to radiation</b> from a source <b>outside</b> the object or body</td><td><b>radioactive material</b> getting <b>on or inside</b> the object or body</td></tr><tr><td>Does it make you radioactive?</td><td><b>No</b></td><td><b>Yes</b> — the source is now in or on you</td></tr><tr><td>How long?</td><td>only while the source is there: <b>stops when the source is removed</b> or you move away</td><td><b>continues</b> until the material decays or is removed; hard to remove</td></tr><tr><td>Protection</td><td><b>shielding</b>, distance, time</td><td>gloves, sealed sources, no eating; prevent it in the first place</td></tr><tr><td>Most dangerous radiation</td><td><b>gamma</b> (penetrates to the organs; alpha cannot get through skin)</td><td><b>alpha</b> (strongly ionising, and now inside where it cannot be shielded)</td></tr></table><p>The June 2024 scheme (Q4(c), 2 marks): irradiation <b>does not make the object radioactive</b>; it <b>can be stopped by shielding</b>; the <b>source is outside</b>; it <b>stops when the source is removed</b>; \"you can move away from irradiation\" accepted.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Comparing the hazards",
+          "question": "Explain why an alpha source is more dangerous inside the body than outside it. (3 marks)",
+          "steps": [
+            "<b>Outside (irradiation):</b> alpha particles are <b>stopped by the skin</b> (or a few cm of air), so they cannot reach living cells inside — little harm.",
+            "<b>Inside (contamination):</b> the source is <b>next to living cells</b>, and alpha is the <b>most strongly ionising</b> radiation, so all its energy is absorbed in a small volume of tissue.",
+            "<b>Consequence:</b> many cells are <b>damaged or mutated</b> (risk of cancer), and the source <b>cannot be shielded or removed</b> once inside."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Dangers and precautions",
+          "questions": [
+            {
+              "id": "ra-n8-q1",
+              "type": "written",
+              "text": "Describe the dangers of ionising radiation to the body. (2)",
+              "model": "<ul><li>It <b>ionises atoms in cells</b>, which can <b>kill or damage</b> cells (tissue damage, burns).</li><li>It can damage DNA and cause <b>mutations</b>, which may lead to <b>cancer</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n8-q2",
+              "type": "written",
+              "text": "A technician injects patients with a radioactive tracer. State two different precautions that reduce the technician's exposure. (2)",
+              "model": "<ul><li><b>Shielding</b>: lead apron / lead screen / keep the source in a lead container.</li><li><b>Limit the time</b> near the source / increase the <b>distance</b> (tongs, stand back) / <b>film badge</b> to monitor the dose. (Two different kinds of precaution.)</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-n8-q3",
+              "type": "written",
+              "text": "State the difference between contamination and irradiation. (2)",
+              "model": "<ul><li><b>Contamination</b>: radioactive material is <b>on or in</b> the object (it becomes radioactive).</li><li><b>Irradiation</b>: the object is <b>exposed to radiation</b> from an <b>external</b> source and does <b>not</b> become radioactive; it stops when the source is removed.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n8-q4",
+              "type": "choice",
+              "text": "Food is irradiated with gamma rays to kill bacteria. Does the food become radioactive?",
+              "options": [
+                "Yes, slightly",
+                "No — irradiation does not make the object radioactive",
+                "Yes, for one half-life",
+                "Only if it is contaminated"
+              ],
+              "correct": 1,
+              "explain": "Irradiation = exposure; no radioactive material is left in the food."
+            },
+            {
+              "id": "ra-n8-q5",
+              "type": "written",
+              "text": "Explain why gamma sources are more hazardous than alpha sources for irradiation, but alpha sources are more hazardous for contamination. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Irradiation</td><td>Gamma <b>penetrates</b> the skin and reaches internal organs; alpha is <b>stopped by the skin</b>, so from outside it does little harm.</td></tr><tr><td><b>2</b></td><td>Contamination</td><td>Once inside the body, alpha is the <b>most ionising</b>, so it does the most damage to the cells around it.</td></tr><tr><td><b>3</b></td><td>Link</td><td>Gamma, being weakly ionising, mostly passes out of the body; and an internal source cannot be shielded.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-n8-q6",
+              "type": "written",
+              "text": "Give two precautions that limit the radiation dose to a patient having a tracer scan. (2)",
+              "model": "<ul><li>Use a tracer with a <b>short half-life</b> so the activity falls quickly after the scan / use the <b>smallest activity</b> that gives a clear image.</li><li>Only scan when the <b>benefit outweighs the risk</b>; keep a record of the patient's <b>total dose</b> (dose limits).</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the dangers of ionising radiation (tissue damage, mutation, cancer) in mark-scheme form",
+        "Give precautions for people handling sources and for medical staff and patients",
+        "State the difference between contamination and irradiation and compare their hazards"
+      ],
+      "blurb": "Ionising radiation damages cells. The precautions all come down to less time, more distance, more shielding, and not getting the material on or in you — which is the difference between irradiation and contamination."
+    },
+    {
+      "id": "uses-radioactivity",
+      "band": "nn",
+      "title": "Uses of radioactivity in the home, industry and medicine",
+      "spec": "6.28",
+      "equations": [
+        "\\text{choose by: type (penetration, ionisation) and half-life}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The uses",
+          "html": "<table class='tbl'><tr><th>Use</th><th>Radiation</th><th>Half-life</th><th>Why</th></tr><tr><td><b>Smoke alarm</b> (americium-241)</td><td>alpha</td><td>long (hundreds of years)</td><td>alpha ionises the air between two plates so a small current flows; <b>smoke absorbs the alpha</b>, the current falls, the alarm sounds. Alpha is stopped by the casing and a few cm of air, so it is safe in the home; long half-life means it never needs replacing</td></tr><tr><td><b>Irradiating food</b> / <b>sterilising</b> medical equipment</td><td>gamma</td><td>long</td><td>gamma <b>penetrates the packaging</b> and <b>kills microbes</b> inside it; the food/instrument is irradiated, not contaminated, so it does not become radioactive</td></tr><tr><td><b>Medical tracer</b> (technetium-99m)</td><td>gamma</td><td>short (hours)</td><td>gamma <b>passes out of the body</b> to be detected by a gamma camera; weakly ionising, so little damage; short half-life so the patient's dose soon falls</td></tr><tr><td><b>Industrial tracer</b> (finding a leak in a pipe)</td><td>gamma</td><td>short (days)</td><td>detected through the soil above the pipe; decays away afterwards</td></tr><tr><td><b>Thickness gauging</b> (paper, foil)</td><td>beta</td><td>long</td><td>beta is <b>partly absorbed</b> by the sheet: thicker → fewer counts get through → rollers adjust. Alpha would all be stopped, gamma would all get through; long half-life so the reading does not drift</td></tr><tr><td><b>Diagnosing cancer</b> (PET, tracers)</td><td>β⁺ → gamma</td><td>short</td><td>T6</td></tr><tr><td><b>Treating cancer</b></td><td>gamma beams from outside; beta/alpha sources placed inside</td><td>—</td><td>ionising radiation <b>kills the tumour cells</b>; T5</td></tr></table>"
+        },
+        {
+          "kind": "worked",
+          "title": "Explaining a choice",
+          "question": "Explain why americium-241, an alpha emitter with a half-life of 432 years, is suitable for a smoke alarm. (3 marks)",
+          "steps": [
+            "<b>Alpha and the job:</b> alpha is <b>strongly ionising</b>, so it ionises the air in the detector and a current flows; <b>smoke absorbs</b> the alpha particles, the current drops and the alarm sounds.",
+            "<b>Alpha and safety:</b> alpha is <b>stopped by a few cm of air</b> and the plastic casing, so it cannot reach people in the room.",
+            "<b>Half-life:</b> a <b>long</b> half-life means the activity stays almost constant for the life of the alarm — it does not need replacing."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Uses",
+          "questions": [
+            {
+              "id": "ra-n9-q1",
+              "type": "written",
+              "text": "Explain how a smoke alarm uses an alpha source to detect smoke. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Ionises</td><td>The alpha particles <b>ionise the air</b> between two charged plates, so a small <b>current flows</b>.</td></tr><tr><td><b>2</b></td><td>Smoke</td><td><b>Smoke particles absorb</b> the alpha particles (or the ions), so <b>fewer ions</b> reach the plates…</td></tr><tr><td><b>3</b></td><td>Alarm</td><td>…the <b>current falls</b>, and the circuit sounds the alarm.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-n9-q2",
+              "type": "choice",
+              "text": "Which source is best for a tracer injected into a patient?",
+              "options": [
+                "An alpha emitter with a long half-life",
+                "A gamma emitter with a short half-life",
+                "A beta emitter with a long half-life",
+                "A gamma emitter with a very long half-life"
+              ],
+              "correct": 1,
+              "explain": "Gamma gets out of the body to the detector; a short half-life limits the dose."
+            },
+            {
+              "id": "ra-n9-q3",
+              "type": "written",
+              "text": "Explain why a beta source, not an alpha or gamma source, is used to monitor the thickness of paper in a paper mill. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Beta</td><td>Beta is <b>partly absorbed</b> by paper, so the count rate reaching the detector <b>changes with thickness</b>.</td></tr><tr><td><b>2</b></td><td>Alpha</td><td>Alpha would be <b>completely stopped</b> by any thickness of paper — no change to detect.</td></tr><tr><td><b>3</b></td><td>Gamma</td><td>Gamma would <b>pass straight through</b> whatever the thickness — no change to detect.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-n9-q4",
+              "type": "written",
+              "text": "Explain why gamma rays are used to sterilise surgical instruments in sealed packets. (2)",
+              "model": "<ul><li>Gamma <b>penetrates the packaging</b> and <b>kills microbes</b> (bacteria) on the instruments inside.</li><li>The instruments are only <b>irradiated</b>, so they do not become radioactive and stay sterile in the sealed packet.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-n9-q5",
+              "type": "written",
+              "text": "A radioactive tracer is used to find a leak in an underground water pipe. Explain the choice of radiation and half-life. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Gamma</td><td><b>Gamma</b>, because it <b>penetrates the soil</b> and can be detected at the surface (alpha and beta would be absorbed).</td></tr><tr><td><b>2</b></td><td>Where</td><td>The count rate is <b>highest above the leak</b>, where the tracer collects.</td></tr><tr><td><b>3</b></td><td>Half-life</td><td>A <b>short</b> half-life (days), so the water is not left radioactive for long — but long enough to complete the search.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-n9-q6",
+              "type": "choice",
+              "text": "Why does a thickness gauge need a source with a long half-life?",
+              "options": [
+                "So that it is safer",
+                "So that the activity stays constant and the reading does not drift",
+                "So that it is more penetrating",
+                "So that it is cheaper"
+              ],
+              "correct": 1,
+              "explain": "If the activity fell during use, a falling count would look like thicker paper."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the spec uses: smoke alarms, irradiating food, sterilising equipment, tracers, gauging, diagnosing and treating cancer",
+        "For each, state the type of radiation and the half-life, with the reason",
+        "Explain how a smoke alarm and a thickness gauge work"
+      ],
+      "blurb": "Each use picks a radiation for its penetration and a half-life for how long the source needs to last. Learn the use, the radiation, the half-life and the reason together — the reason is where the marks are."
+    },
+    {
+      "id": "keywords-radioactivity",
+      "band": "nn",
+      "title": "Key words: state what is meant by…",
+      "spec": "6",
+      "equations": [
+        "\\text{definition, word for word}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Isotopes</b></td><td>Atoms of the <b>same element</b> (same number of protons) with <b>different numbers of neutrons</b>.</td><td>\"different versions of an atom\"</td></tr><tr><td><b>Atomic (proton) number</b></td><td>The number of <b>protons</b> in the nucleus.</td><td>the number of particles</td></tr><tr><td><b>Mass (nucleon) number</b></td><td>The number of <b>protons plus neutrons</b> in the nucleus.</td><td>the mass in grams</td></tr><tr><td><b>Ion</b></td><td>An atom that has <b>lost or gained electrons</b> and so has a charge (positive if it has lost them).</td><td>\"a charged particle\" with no cause</td></tr><tr><td><b>Ionising radiation</b></td><td>Radiation with enough energy to <b>knock electrons out of atoms</b>, forming ions.</td><td>\"radioactive radiation\"</td></tr><tr><td><b>Alpha particle</b></td><td>A <b>helium nucleus</b>: two protons and two neutrons, charge +2.</td><td>\"a helium atom\"</td></tr><tr><td><b>Beta-minus particle</b></td><td>A fast <b>electron emitted from the nucleus</b> when a neutron turns into a proton.</td><td>\"an electron from the shell\"</td></tr><tr><td><b>Gamma ray</b></td><td>High-frequency <b>electromagnetic radiation</b> emitted from the nucleus.</td><td>\"a particle\"</td></tr><tr><td><b>Positron</b></td><td>The antiparticle of the electron: same mass, charge <b>+1</b>; emitted in β⁺ decay.</td><td>\"a positive electron in the shell\"</td></tr><tr><td><b>Background radiation</b></td><td>Low-level ionising radiation that is <b>always present</b> in the environment (rocks, radon, cosmic rays, food, medical).</td><td>\"radiation from nuclear power\"</td></tr><tr><td><b>Activity</b></td><td>The <b>number of decays per second</b> of a source, in becquerels (Bq).</td><td>\"how radioactive it is\"</td></tr><tr><td><b>Becquerel</b></td><td><b>One decay per second</b>.</td><td>\"a unit of radiation\"</td></tr><tr><td><b>Half-life</b></td><td>The <b>time for half the undecayed nuclei to decay</b> (or for the activity to halve).</td><td>\"half the life of the source\"</td></tr><tr><td><b>Random (decay)</b></td><td>It <b>cannot be predicted which nucleus will decay or when</b>.</td><td>\"it happens by chance sometimes\"</td></tr><tr><td><b>Count rate</b></td><td>The number of <b>counts per second (or minute)</b> recorded by a detector.</td><td>confusing it with activity (it is only the radiation that reaches the detector)</td></tr><tr><td><b>Irradiation</b></td><td><b>Exposure</b> to radiation from an <b>external</b> source; the object does <b>not</b> become radioactive.</td><td>\"being radiated\"</td></tr><tr><td><b>Contamination</b></td><td>Radioactive material getting <b>on or in</b> an object, which then <b>stays radioactive</b>.</td><td>\"being near radiation\"</td></tr><tr><td><b>Nuclear fission</b></td><td>A <b>large nucleus splits</b> into two smaller nuclei and neutrons, releasing energy (P).</td><td>\"an atom exploding\"</td></tr><tr><td><b>Nuclear fusion</b></td><td>Two <b>small nuclei join</b> to form a larger nucleus, with a loss of mass and a release of energy (P).</td><td>\"atoms joining\" — say nuclei</td></tr><tr><td><b>Chain reaction</b></td><td>Neutrons from one fission go on to cause <b>further fissions</b> (P).</td><td>\"a big explosion\"</td></tr></table>"
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "ra-kw-q1",
+              "type": "written",
+              "text": "State what is meant by the half-life of a radioactive source. (1)",
+              "model": "<ul><li>The <b>time taken for half of the undecayed nuclei to decay</b> (or for the activity to fall to half).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-kw-q2",
+              "type": "written",
+              "text": "State what is meant by an isotope. (1)",
+              "model": "<ul><li>Atoms of the <b>same element</b> (same proton number) with <b>different numbers of neutrons</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-kw-q3",
+              "type": "written",
+              "text": "State what is meant by irradiation. (1)",
+              "model": "<ul><li>Being <b>exposed to radiation</b> from an <b>external</b> source, without the object becoming radioactive.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-kw-q4",
+              "type": "choice",
+              "text": "Which is the correct definition of activity?",
+              "options": [
+                "The energy of the radiation",
+                "The number of decays per second",
+                "The half-life",
+                "The number of nuclei in the source"
+              ],
+              "correct": 1,
+              "explain": "Activity = decays per second, in Bq."
+            },
+            {
+              "id": "ra-kw-q5",
+              "type": "written",
+              "text": "State what is meant by background radiation. (1)",
+              "model": "<ul><li>Low-level ionising radiation that is <b>always present</b> in the environment, from natural (and some artificial) sources.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-kw-q6",
+              "type": "written",
+              "text": "State what is meant by the mass number of a nucleus. (1)",
+              "model": "<ul><li>The total number of <b>protons and neutrons</b> (nucleons) in the nucleus.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-kw-q7",
+              "type": "choice",
+              "text": "A student writes \"a beta particle is an electron from the outer shell of the atom\". What is wrong?",
+              "options": [
+                "Nothing",
+                "A beta-minus particle is an electron emitted from the nucleus, created when a neutron turns into a proton",
+                "Beta particles are protons",
+                "Beta particles are waves"
+              ],
+              "correct": 1,
+              "explain": "The electron comes from the nucleus, not the shells."
+            },
+            {
+              "id": "ra-kw-q8",
+              "type": "written",
+              "text": "State what is meant by contamination. (1)",
+              "model": "<ul><li>Radioactive material getting <b>on or into</b> an object (or person), which then <b>emits radiation</b> itself.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define isotope, atomic number, mass number, ion and ionising",
+        "Define activity, becquerel, half-life, count rate and background radiation",
+        "Define irradiation and contamination (and, for Physics, fission, fusion and chain reaction)"
+      ],
+      "blurb": "One-mark definitions in the form of words the mark schemes credit. The bold words are the ones the marks are attached to."
+    },
+    {
+      "id": "atomic-model",
+      "band": "tricky",
+      "title": "How and why the model of the atom changed",
+      "spec": "6.17",
+      "equations": [
+        "\\text{plum pudding} \\rightarrow \\text{Rutherford (nucleus)} \\rightarrow \\text{Bohr (orbits)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Three models and the evidence",
+          "html": "<p><b>1. Plum pudding (Thomson, after discovering the electron):</b> the atom is a <b>ball of positive charge</b> with <b>negative electrons dotted through it</b> like plums in a pudding. Mass and charge spread evenly.</p><figure class='diagram'><svg viewBox='0 0 600 260' role='img'><rect x='297' y='40' width='6' height='180' style='fill:var(--line);opacity:0.35'/><text x='300.0' y='32.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>gold foil (a few atoms thick)</text><circle cx='300' cy='130' r='4' style='fill:var(--ink)'/><text x='310.0' y='122.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>nucleus</text><line x1='40.0' y1='70.0' x2='560.0' y2='70.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='300.0,70.0 293.9,73.4 293.9,66.6' style='fill:var(--accent)'/><line x1='40.0' y1='100.0' x2='560.0' y2='100.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='300.0,100.0 293.9,103.4 293.9,96.6' style='fill:var(--accent)'/><line x1='40.0' y1='160.0' x2='560.0' y2='160.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='300.0,160.0 293.9,163.4 293.9,156.6' style='fill:var(--accent)'/><line x1='40.0' y1='185.0' x2='560.0' y2='185.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='300.0,185.0 293.9,188.4 293.9,181.6' style='fill:var(--accent)'/><line x1='40.0' y1='118.0' x2='300.0' y2='120.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='170.0,119.0 163.8,122.3 163.9,115.6' style='fill:var(--accent)'/><line x1='300.0' y1='120.0' x2='560.0' y2='70.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='430.0,95.0 424.6,99.5 423.3,92.9' style='fill:var(--accent)'/><line x1='40.0' y1='142.0' x2='300.0' y2='140.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='170.0,141.0 163.9,144.4 163.8,137.7' style='fill:var(--accent)'/><line x1='300.0' y1='140.0' x2='560.0' y2='200.0' style='stroke:var(--accent);stroke-width:1.5'/><polygon points='430.0,170.0 423.3,171.9 424.8,165.3' style='fill:var(--accent)'/><line x1='40.0' y1='130.0' x2='294.0' y2='130.0' style='stroke:var(--ink);stroke-width:2'/><polygon points='167.0,130.0 160.9,133.4 160.9,126.6' style='fill:var(--ink)'/><line x1='294.0' y1='130.0' x2='40.0' y2='150.0' style='stroke:var(--ink);stroke-width:2'/><polygon points='167.0,140.0 172.9,136.2 173.4,142.9' style='fill:var(--ink)'/><text x='100.0' y='58.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>most pass straight through → the atom is mostly empty space</text><text x='330.0' y='228.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>a few deflected → the nucleus is positively charged</text><text x='40.0' y='252.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>very few (about 1 in 8000) bounce back → the nucleus is tiny, dense and holds most of the mass</text></svg><figcaption>Rutherford's alpha-scattering experiment: alpha particles fired at thin gold foil in a vacuum. Most go straight through, a few are deflected, and very few bounce back.</figcaption></figure><p><b>2. Rutherford's nuclear model (from Geiger and Marsden's experiment):</b></p><table class='tbl'><tr><th>Observation</th><th>Conclusion</th></tr><tr><td><b>most</b> alpha particles passed <b>straight through</b> the foil undeflected</td><td>the atom is <b>mostly empty space</b></td></tr><tr><td><b>some</b> were <b>deflected</b> through small angles</td><td>the centre of the atom is <b>positively charged</b> (repels the positive alpha particles)</td></tr><tr><td><b>very few</b> (about 1 in 8000) were <b>deflected back</b> through more than 90°</td><td>the positive charge and <b>most of the mass</b> are concentrated in a <b>tiny, dense nucleus</b></td></tr></table><p>The plum pudding model could not explain this: if the positive charge were spread out thinly, nothing could turn an alpha particle round. So the model changed to a <b>small positive nucleus with electrons orbiting far outside it</b>. (The 2022 scheme credited \"most pass straight through — mostly empty space\" and \"a few reflected through 180° — a dense, small nucleus\"; the Bohr electrons were ignored here.)</p><p><b>3. Bohr:</b> electrons orbiting freely would spiral into the nucleus, and hot gases emit light only at particular frequencies. Bohr proposed that electrons can only occupy <b>certain fixed orbits (energy levels)</b> at set distances, and move between them by absorbing or emitting fixed amounts of EM radiation. This agreed with experiment, so it replaced the free-orbit picture. Later, the nucleus was found to contain <b>protons</b> and (Chadwick, 1932) <b>neutrons</b>.</p><p><b>The pattern for the 6-marker:</b> for each step say the <b>model</b>, the <b>evidence</b>, and <b>why</b> the evidence could not be explained by the old model.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Observation to conclusion",
+          "question": "In the alpha-scattering experiment, a very small number of alpha particles were deflected straight back. Explain what this showed about the atom. (2 marks)",
+          "steps": [
+            "<b>Mass and charge concentrated:</b> to turn a fast, heavy alpha particle round, it must have met something with a <b>large positive charge and a large mass concentrated in a very small volume</b> — a <b>nucleus</b>.",
+            "<b>Tiny:</b> because so <b>few</b> were deflected back, that nucleus must be <b>very small</b> compared with the atom — most alpha particles never came near it."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The atomic model",
+          "questions": [
+            {
+              "id": "ra-t1-q1",
+              "type": "written",
+              "text": "Describe the plum pudding model of the atom. (2)",
+              "model": "<ul><li>A <b>ball (sphere) of positive charge</b>…</li><li>…with <b>negative electrons embedded</b> throughout it.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t1-q2",
+              "type": "written",
+              "text": "In the alpha-scattering experiment, most alpha particles passed straight through the gold foil. Explain what this showed. (1)",
+              "model": "<ul><li>The atom is <b>mostly empty space</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t1-q3",
+              "type": "written",
+              "text": "Explain why the results of the alpha-scattering experiment meant the plum pudding model had to be replaced. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Prediction</td><td>In the plum pudding model the positive charge is <b>spread out</b>, so alpha particles should all pass through with <b>little or no deflection</b>.</td></tr><tr><td><b>2</b></td><td>Observation</td><td>But <b>some were deflected through large angles</b> and a few came <b>straight back</b>.</td></tr><tr><td><b>3</b></td><td>New model</td><td>That needs the positive charge and most of the mass to be <b>concentrated in a tiny nucleus</b> — the nuclear model.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-t1-q4",
+              "type": "written",
+              "text": "Describe how the Bohr model changed the nuclear model, and why. (2)",
+              "model": "<ul><li>Electrons are in <b>fixed orbits (energy levels) at set distances</b> from the nucleus, and move between them by absorbing or emitting EM radiation.</li><li>Because this <b>agreed with experimental observations</b> (e.g. atoms emit light only at particular frequencies) that free orbits could not explain.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t1-q5",
+              "type": "choice",
+              "text": "Which observation showed that the nucleus is positively charged?",
+              "options": [
+                "Most alpha particles passed straight through",
+                "Some alpha particles were deflected away from the nucleus",
+                "The foil glowed",
+                "Alpha particles were absorbed"
+              ],
+              "correct": 1,
+              "explain": "Positive alpha particles repelled by a positive nucleus are deflected."
+            },
+            {
+              "id": "ra-t1-q6",
+              "type": "written",
+              "text": "A student models alpha scattering by rolling marbles at a heavy weight hidden under a sheet of paper. Give two limitations of this model. (2)",
+              "model": "<ul><li>The marble and weight have <b>no charge</b>, so the deflection is by contact rather than electrostatic repulsion; the model is <b>not to scale</b> (the weight is far too big compared with the atom).</li><li>It is <b>two-dimensional</b> / the marbles are slow and visible, whereas alpha particles are fast and detected only by flashes.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the plum pudding model and the Bohr model",
+        "Describe the alpha-scattering experiment: the three observations and the conclusion from each",
+        "Explain why each new piece of evidence changed the model"
+      ],
+      "blurb": "Three models, and the evidence that forced each change. The marks are for linking each observation in the alpha-scattering experiment to the conclusion drawn from it, and for saying why the model had to change."
+    },
+    {
+      "id": "choosing-source",
+      "band": "tricky",
+      "title": "Choosing a source: type and half-life, with reasons",
+      "spec": "6.28, 6.30",
+      "equations": [
+        "\\text{type} \\leftarrow \\text{penetration needed}",
+        "\\text{half-life} \\leftarrow \\text{how long it must last / how soon it must be gone}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The two-reason answer, and the half-life trap",
+          "html": "<p><b>Type:</b> does the radiation need to get <b>out</b> of something (gamma: out of the body, through packaging, through soil)? Be <b>partly stopped</b> (beta: thickness gauge)? Stay <b>inside</b> a small space and ionise strongly (alpha: smoke alarm, internal cancer treatment)?</p><p><b>Half-life</b> — and link it to the job, every time. The June 2022 report (kidney scan, 6-hour tracer): \"too fast / too slow\" scored nothing on its own; the credited answers were <b>\"with a 6-minute half-life the technician would not be able to take a reading (in 30 minutes)\"</b> and <b>\"with a 6-day half-life the patient would be exposed for a long time\"</b>. The June 2023 scheme (RTG on a Mars rover): \"long half-life\" + a reason — the mission lasts years, the source cannot be replaced.</p><table class='tbl'><tr><th>Half-life</th><th>Activity behaviour</th><th>Danger (6.30)</th><th>Suits</th></tr><tr><td><b>short</b> (minutes–days)</td><td>very active now, gone soon</td><td>high dose rate while it lasts, but it <b>does not stay</b> radioactive</td><td>medical tracers, PET, leak detection</td></tr><tr><td><b>long</b> (years–millennia)</td><td>steady low activity for a long time</td><td>low dose rate but the hazard <b>lasts</b> — waste must be stored for thousands of years</td><td>smoke alarms, gauges, RTGs, dating</td></tr></table><p><b>Precautions follow the half-life:</b> a short half-life source needs <b>heavy shielding and distance now</b>; a long half-life source needs <b>secure, long-term storage</b> and keeping out of the environment (contamination).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A tracer",
+          "question": "Technetium-99m emits gamma rays and has a half-life of 6 hours. Explain why it is suitable as a medical tracer. (4 marks)",
+          "steps": [
+            "<b>Type — gets out:</b> gamma <b>penetrates</b> body tissue, so it can be <b>detected outside the body</b> by a gamma camera.",
+            "<b>Type — low damage:</b> gamma is <b>weakly ionising</b>, so it does little damage to cells on its way out.",
+            "<b>Half-life — long enough:</b> 6 hours gives time to <b>inject it, let it reach the organ and take the scan</b>.",
+            "<b>Half-life — short enough:</b> the activity has <b>fallen to a safe level within a day or two</b>, so the patient's dose is limited."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Choosing a source",
+          "questions": [
+            {
+              "id": "ra-t2-q1",
+              "type": "written",
+              "text": "A hospital has tracers with half-lives of 6 minutes, 6 hours and 6 days. Explain why the 6-minute and 6-day sources are unsuitable for a scan that takes 30 minutes. (2)",
+              "model": "<ul><li>6 minutes: the activity would have <b>fallen too far for a reading to be taken</b> (five half-lives in 30 min — 1/32 left) by the time the scan is done.</li><li>6 days: the patient would be left <b>radioactive / exposed for days</b> after the scan — an unnecessarily large dose.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t2-q2",
+              "type": "written",
+              "text": "A radioactive source powers a space probe for a 20-year mission. Explain two properties the source should have. (2)",
+              "model": "<ul><li>A <b>long half-life</b>, so its activity (and power output) stays high for the whole mission — it cannot be replaced in space.</li><li>An <b>alpha</b> emitter (or one with high energy per decay), because alpha is easily absorbed to produce heating and needs little shielding; also high melting point / not chemically reactive.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t2-q3",
+              "type": "choice",
+              "text": "Which source would you choose to check the thickness of aluminium sheet (a few mm thick)?",
+              "options": [
+                "Alpha, short half-life",
+                "Beta, long half-life",
+                "Gamma, long half-life",
+                "Gamma, short half-life"
+              ],
+              "correct": 2,
+              "explain": "Beta is fully stopped by a few mm of aluminium, so gamma (partly absorbed by metal) is needed; a long half-life keeps the reading steady. For paper it would be beta."
+            },
+            {
+              "id": "ra-t2-q4",
+              "type": "written",
+              "text": "Explain why a source with a short half-life can be more dangerous in the short term but less dangerous in the long term than one with a long half-life. (2)",
+              "model": "<ul><li>Short half-life: a <b>high activity</b> (many decays per second) at first, so a <b>high dose rate</b> now — but it soon decays away.</li><li>Long half-life: a <b>lower activity</b> now, but it <b>stays radioactive for years</b>, so the hazard (and the need to store it securely) lasts.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t2-q5",
+              "type": "written",
+              "text": "Explain why alpha sources are not used as medical tracers. (2)",
+              "model": "<ul><li>Alpha is <b>stopped by a few cm of tissue</b>, so it <b>could not be detected outside the body</b>.</li><li>It is <b>strongly ionising</b>, so inside the body it would <b>damage cells</b> near the source.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t2-q6",
+              "type": "written",
+              "text": "Explain the precautions needed for storing waste with a very long half-life. (2)",
+              "model": "<ul><li>It stays radioactive for <b>thousands of years</b>, so it must be <b>stored securely for a very long time</b> (sealed, deep underground, in stable rock).</li><li>It must be kept from <b>contaminating</b> water and soil, and shielded so it does not irradiate people.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Choose the type of radiation for a use from its penetration and ionising power, and say why",
+        "Choose a half-life for a use and say why, linked to the use",
+        "Explain why the danger of a source depends on its half-life"
+      ],
+      "blurb": "\"Explain why this source is suitable\" is marked on reasons, not on naming the right source. Two reasons every time: one for the type of radiation (penetration, ionisation) and one for the half-life (long enough, short enough), each linked to the job."
+    },
+    {
+      "id": "half-life-hard",
+      "band": "tricky",
+      "title": "Half-life the hard way: background, graphs and working backwards",
+      "spec": "6.27",
+      "equations": [
+        "\\text{corrected count} = \\text{measured} - \\text{background}",
+        "\\text{fraction left} = \\dfrac{1}{2^{n}}",
+        "\\text{ratio} = 2^{n}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The extra steps",
+          "html": "<p><b>Background in a graph.</b> A measured count rate never falls to zero — it levels off at the background. Find the background from the flat tail, <b>subtract it</b> from the starting count to get the corrected count, halve <i>that</i>, add the background back, and read the time at which the measured curve reaches it. For the graph below: measured 180, background 20, corrected 160 → half is 80 → measured 100 → at t = 20 min. Halving 180 to 90 gives the wrong half-life (about 24 min).</p><p><b>Working backwards.</b> If the activity is 50 Bq after 3 half-lives, the original was $50 \\times 2^{3} = 400$ Bq. The June 2025 report (fluorine-18 curve): the common error was \"using the original mass as 60.0 mg\" — read the actual starting value off the graph.</p><p><b>Fractions and percentages.</b> After $n$ half-lives the fraction left is $\\dfrac{1}{2^{n}}$: 1/2, 1/4, 1/8, 1/16 → 50%, 25%, 12.5%, 6.25%. The fraction that has <b>decayed</b> is 1 minus that. \"After how many half-lives is the activity below 10%?\" → 4 (6.25%). A ratio question (\"activity of A to B\") is $2^{n}$ to 1.</p><p><b>Reading the graph in the exam:</b> draw the horizontal line at half the (corrected) value, drop a vertical to the axis, label it. The June 2024 scheme gave a mark for the horizontal line and a mark for the time — show both.</p>",
+          "graph": {
+            "x": {
+              "label": "time in minutes",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "y": {
+              "label": "count rate in counts per minute",
+              "min": 0,
+              "max": 200,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    180.0
+                  ],
+                  [
+                    2.0,
+                    169.2853
+                  ],
+                  [
+                    4.0,
+                    159.2881
+                  ],
+                  [
+                    6.0,
+                    149.9604
+                  ],
+                  [
+                    8.0,
+                    141.2573
+                  ],
+                  [
+                    10.0,
+                    133.1371
+                  ],
+                  [
+                    12.0,
+                    125.5606
+                  ],
+                  [
+                    14.0,
+                    118.4916
+                  ],
+                  [
+                    16.0,
+                    111.8959
+                  ],
+                  [
+                    18.0,
+                    105.7419
+                  ],
+                  [
+                    20.0,
+                    100.0
+                  ],
+                  [
+                    22.0,
+                    94.6426
+                  ],
+                  [
+                    24.0,
+                    89.644
+                  ],
+                  [
+                    26.0,
+                    84.9802
+                  ],
+                  [
+                    28.0,
+                    80.6287
+                  ],
+                  [
+                    30.0,
+                    76.5685
+                  ],
+                  [
+                    32.0,
+                    72.7803
+                  ],
+                  [
+                    34.0,
+                    69.2458
+                  ],
+                  [
+                    36.0,
+                    65.9479
+                  ],
+                  [
+                    38.0,
+                    62.8709
+                  ],
+                  [
+                    40.0,
+                    60.0
+                  ],
+                  [
+                    42.0,
+                    57.3213
+                  ],
+                  [
+                    44.0,
+                    54.822
+                  ],
+                  [
+                    46.0,
+                    52.4901
+                  ],
+                  [
+                    48.0,
+                    50.3143
+                  ],
+                  [
+                    50.0,
+                    48.2843
+                  ],
+                  [
+                    52.0,
+                    46.3902
+                  ],
+                  [
+                    54.0,
+                    44.6229
+                  ],
+                  [
+                    56.0,
+                    42.974
+                  ],
+                  [
+                    58.0,
+                    41.4355
+                  ],
+                  [
+                    60.0,
+                    40.0
+                  ],
+                  [
+                    62.0,
+                    38.6607
+                  ],
+                  [
+                    64.0,
+                    37.411
+                  ],
+                  [
+                    66.0,
+                    36.245
+                  ],
+                  [
+                    68.0,
+                    35.1572
+                  ],
+                  [
+                    70.0,
+                    34.1421
+                  ],
+                  [
+                    72.0,
+                    33.1951
+                  ],
+                  [
+                    74.0,
+                    32.3114
+                  ],
+                  [
+                    76.0,
+                    31.487
+                  ],
+                  [
+                    78.0,
+                    30.7177
+                  ],
+                  [
+                    80.0,
+                    30.0
+                  ]
+                ]
+              }
+            ],
+            "alt": "A measured count rate falling from 180 towards 20 counts per minute (the background) over 80 minutes."
+          }
+        },
+        {
+          "kind": "worked",
+          "title": "Half-life with background",
+          "question": "The graph shows the count rate measured near a source. The background count rate is 20 counts per minute. Find the half-life of the source.",
+          "steps": [
+            "<b>Corrected start:</b> measured 180 − background 20 = <b>160</b> counts/min from the source.",
+            "<b>Half of that:</b> 80 counts/min from the source, which is a <b>measured</b> count of 80 + 20 = 100 counts/min.",
+            "<b>Read the time:</b> the curve reaches 100 counts/min at <b>t = 20 minutes</b>. Half-life = 20 min.",
+            "<b>Check:</b> next halving: source 40 → measured 60 at t = 40 min ✓"
+          ],
+          "graph": {
+            "x": {
+              "label": "time in minutes",
+              "min": 0,
+              "max": 80,
+              "step": 10
+            },
+            "y": {
+              "label": "count rate in counts per minute",
+              "min": 0,
+              "max": 200,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    180.0
+                  ],
+                  [
+                    2.0,
+                    169.2853
+                  ],
+                  [
+                    4.0,
+                    159.2881
+                  ],
+                  [
+                    6.0,
+                    149.9604
+                  ],
+                  [
+                    8.0,
+                    141.2573
+                  ],
+                  [
+                    10.0,
+                    133.1371
+                  ],
+                  [
+                    12.0,
+                    125.5606
+                  ],
+                  [
+                    14.0,
+                    118.4916
+                  ],
+                  [
+                    16.0,
+                    111.8959
+                  ],
+                  [
+                    18.0,
+                    105.7419
+                  ],
+                  [
+                    20.0,
+                    100.0
+                  ],
+                  [
+                    22.0,
+                    94.6426
+                  ],
+                  [
+                    24.0,
+                    89.644
+                  ],
+                  [
+                    26.0,
+                    84.9802
+                  ],
+                  [
+                    28.0,
+                    80.6287
+                  ],
+                  [
+                    30.0,
+                    76.5685
+                  ],
+                  [
+                    32.0,
+                    72.7803
+                  ],
+                  [
+                    34.0,
+                    69.2458
+                  ],
+                  [
+                    36.0,
+                    65.9479
+                  ],
+                  [
+                    38.0,
+                    62.8709
+                  ],
+                  [
+                    40.0,
+                    60.0
+                  ],
+                  [
+                    42.0,
+                    57.3213
+                  ],
+                  [
+                    44.0,
+                    54.822
+                  ],
+                  [
+                    46.0,
+                    52.4901
+                  ],
+                  [
+                    48.0,
+                    50.3143
+                  ],
+                  [
+                    50.0,
+                    48.2843
+                  ],
+                  [
+                    52.0,
+                    46.3902
+                  ],
+                  [
+                    54.0,
+                    44.6229
+                  ],
+                  [
+                    56.0,
+                    42.974
+                  ],
+                  [
+                    58.0,
+                    41.4355
+                  ],
+                  [
+                    60.0,
+                    40.0
+                  ],
+                  [
+                    62.0,
+                    38.6607
+                  ],
+                  [
+                    64.0,
+                    37.411
+                  ],
+                  [
+                    66.0,
+                    36.245
+                  ],
+                  [
+                    68.0,
+                    35.1572
+                  ],
+                  [
+                    70.0,
+                    34.1421
+                  ],
+                  [
+                    72.0,
+                    33.1951
+                  ],
+                  [
+                    74.0,
+                    32.3114
+                  ],
+                  [
+                    76.0,
+                    31.487
+                  ],
+                  [
+                    78.0,
+                    30.7177
+                  ],
+                  [
+                    80.0,
+                    30.0
+                  ]
+                ]
+              }
+            ],
+            "alt": "A measured count rate falling from 180 towards 20 counts per minute (the background) over 80 minutes."
+          }
+        },
+        {
+          "kind": "practice",
+          "title": "Half-life the hard way",
+          "questions": [
+            {
+              "id": "ra-t3-q1",
+              "type": "numeric",
+              "text": "Using the graph above (background 20 counts per minute), find the half-life of the source.",
+              "answer": {
+                "value": 20,
+                "unit": "min",
+                "tolerance": 0.1
+              },
+              "hint": "Subtract the background before halving.",
+              "walkthrough": [
+                "Source count 160 → 80 means measured 100, at $t = 20$ min."
+              ],
+              "graph": {
+                "x": {
+                  "label": "time in minutes",
+                  "min": 0,
+                  "max": 80,
+                  "step": 10
+                },
+                "y": {
+                  "label": "count rate in counts per minute",
+                  "min": 0,
+                  "max": 200,
+                  "step": 20
+                },
+                "series": [
+                  {
+                    "kind": "curve",
+                    "points": [
+                      [
+                        0.0,
+                        180.0
+                      ],
+                      [
+                        2.0,
+                        169.2853
+                      ],
+                      [
+                        4.0,
+                        159.2881
+                      ],
+                      [
+                        6.0,
+                        149.9604
+                      ],
+                      [
+                        8.0,
+                        141.2573
+                      ],
+                      [
+                        10.0,
+                        133.1371
+                      ],
+                      [
+                        12.0,
+                        125.5606
+                      ],
+                      [
+                        14.0,
+                        118.4916
+                      ],
+                      [
+                        16.0,
+                        111.8959
+                      ],
+                      [
+                        18.0,
+                        105.7419
+                      ],
+                      [
+                        20.0,
+                        100.0
+                      ],
+                      [
+                        22.0,
+                        94.6426
+                      ],
+                      [
+                        24.0,
+                        89.644
+                      ],
+                      [
+                        26.0,
+                        84.9802
+                      ],
+                      [
+                        28.0,
+                        80.6287
+                      ],
+                      [
+                        30.0,
+                        76.5685
+                      ],
+                      [
+                        32.0,
+                        72.7803
+                      ],
+                      [
+                        34.0,
+                        69.2458
+                      ],
+                      [
+                        36.0,
+                        65.9479
+                      ],
+                      [
+                        38.0,
+                        62.8709
+                      ],
+                      [
+                        40.0,
+                        60.0
+                      ],
+                      [
+                        42.0,
+                        57.3213
+                      ],
+                      [
+                        44.0,
+                        54.822
+                      ],
+                      [
+                        46.0,
+                        52.4901
+                      ],
+                      [
+                        48.0,
+                        50.3143
+                      ],
+                      [
+                        50.0,
+                        48.2843
+                      ],
+                      [
+                        52.0,
+                        46.3902
+                      ],
+                      [
+                        54.0,
+                        44.6229
+                      ],
+                      [
+                        56.0,
+                        42.974
+                      ],
+                      [
+                        58.0,
+                        41.4355
+                      ],
+                      [
+                        60.0,
+                        40.0
+                      ],
+                      [
+                        62.0,
+                        38.6607
+                      ],
+                      [
+                        64.0,
+                        37.411
+                      ],
+                      [
+                        66.0,
+                        36.245
+                      ],
+                      [
+                        68.0,
+                        35.1572
+                      ],
+                      [
+                        70.0,
+                        34.1421
+                      ],
+                      [
+                        72.0,
+                        33.1951
+                      ],
+                      [
+                        74.0,
+                        32.3114
+                      ],
+                      [
+                        76.0,
+                        31.487
+                      ],
+                      [
+                        78.0,
+                        30.7177
+                      ],
+                      [
+                        80.0,
+                        30.0
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "A measured count rate falling from 180 towards 20 counts per minute (the background) over 80 minutes."
+              }
+            },
+            {
+              "id": "ra-t3-q2",
+              "type": "numeric",
+              "text": "A source has a half-life of 15 years. Its activity now is 300 Bq. Calculate its activity 60 years ago.",
+              "answer": {
+                "value": 4800,
+                "unit": "Bq"
+              },
+              "hint": "Four half-lives back: double four times.",
+              "walkthrough": [
+                "$60 \\div 15 = 4$ half-lives; $300 \\times 2^{4} = 300 \\times 16 = 4800$ Bq."
+              ]
+            },
+            {
+              "id": "ra-t3-q3",
+              "type": "numeric",
+              "text": "What percentage of the original undecayed nuclei remain after 4 half-lives?",
+              "answer": {
+                "value": 6.25,
+                "unit": "%"
+              },
+              "hint": "1/2⁴.",
+              "walkthrough": [
+                "$\\dfrac{1}{2^{4}} = \\dfrac{1}{16} = 6.25\\%$."
+              ]
+            },
+            {
+              "id": "ra-t3-q4",
+              "type": "numeric",
+              "text": "Fluorine-18 has a half-life of 110 minutes. A sample has a mass of 48 mg at the start. Calculate the percentage remaining after 220 minutes.",
+              "answer": {
+                "value": 25,
+                "unit": "%"
+              },
+              "hint": "220 ÷ 110 = 2 half-lives → ¼.",
+              "walkthrough": [
+                "$48 \\rightarrow 24 \\rightarrow 12$ mg; $\\dfrac{12}{48} = 25\\%$."
+              ]
+            },
+            {
+              "id": "ra-t3-q5",
+              "type": "group",
+              "text": "Two sources, A and B, start with the same activity. A has a half-life of 2 days, B a half-life of 8 days.",
+              "parts": [
+                {
+                  "id": "ra-t3-q5a",
+                  "type": "numeric",
+                  "text": "After 8 days, what fraction of A's original activity remains? Give it as a decimal.",
+                  "answer": {
+                    "value": 0.0625,
+                    "unit": "",
+                    "tolerance": 0.02
+                  },
+                  "hint": "8 ÷ 2 = 4 half-lives.",
+                  "walkthrough": [
+                    "$\\dfrac{1}{2^{4}} = \\dfrac{1}{16} = 0.0625$."
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "ra-t3-q5b",
+                  "type": "numeric",
+                  "text": "After 8 days, how many times greater is B's activity than A's?",
+                  "answer": {
+                    "value": 8,
+                    "unit": ""
+                  },
+                  "hint": "B has had one half-life (½ left); A has 1/16 left.",
+                  "walkthrough": [
+                    "$\\dfrac{1/2}{1/16} = 8$ times."
+                  ],
+                  "label": "b"
+                }
+              ]
+            },
+            {
+              "id": "ra-t3-q6",
+              "type": "written",
+              "text": "A student finds the half-life from a graph of measured count rate against time by halving the first reading. The graph levels off at 30 counts per minute. Explain the mistake. (2)",
+              "model": "<ul><li>The measured count includes the <b>background</b> (the 30 counts/min the graph levels off at), which does not decay.</li><li>The student should <b>subtract 30</b> from the readings (or halve the <b>corrected</b> count) first; halving the raw count gives a half-life that is too long.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t3-q7",
+              "type": "choice",
+              "text": "A source's activity falls to 1/8 of its original value in 36 hours. Its half-life is…",
+              "options": [
+                "4.5 hours",
+                "12 hours",
+                "18 hours",
+                "36 hours"
+              ],
+              "correct": 1,
+              "explain": "1/8 = three halvings; 36 ÷ 3 = 12 h."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Subtract the background before finding a half-life from a graph",
+        "Work backwards from a later activity to the original",
+        "Give answers as fractions, percentages or ratios of the original",
+        "Read a half-life from a graph correctly (half of the corrected count, then the time)"
+      ],
+      "blurb": "The harder half-life questions hide a background count in the graph, ask for the original activity from a later one, or want a fraction or percentage rather than a number. Each one is the same halving, with one extra step first."
+    },
+    {
+      "id": "contamination-explain",
+      "band": "tricky",
+      "title": "Contamination, irradiation and precautions: the explain marks",
+      "spec": "6.29, 6.31, 6.32",
+      "equations": [
+        "\\text{which? why? for how long? which radiation is worst?}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The answers that score",
+          "html": "<p><b>Irradiation vs contamination</b> — the June 2024 marks: irradiation <b>does not make the object radioactive</b>; it <b>stops when the source is removed</b> (you can move away); the <b>source is outside</b>; it <b>can be shielded</b>. Contamination: the source is <b>on or in</b> the object, which <b>keeps emitting</b> radiation, it is <b>hard to remove</b>, and it <b>cannot be shielded</b> from the inside.</p><p><b>Which radiation is worst?</b> For irradiation from outside, <b>gamma</b> (and beta) — they penetrate to living tissue; alpha is stopped by skin. For contamination inside the body, <b>alpha</b> — all of its strongly ionising energy is absorbed by the surrounding cells. Dust and gas (radon) are the usual contaminants because they are breathed in.</p><p><b>Precautions, by situation</b> (give <i>different kinds</i>):</p><table class='tbl'><tr><th>Who</th><th>Precautions</th></tr><tr><td>School lab</td><td>tongs, point the source away, lead-lined box, short exposure, no eating, wash hands</td></tr><tr><td>Radiographer / technician</td><td>lead apron or lead screen, leave the room, limit time, film badge (dose monitored), keep distance, rotate duties</td></tr><tr><td>Nuclear-industry worker</td><td>full protective suit and breathing apparatus against contamination, remote handling, dose monitoring, shielding</td></tr><tr><td>Patient</td><td>lowest activity that works, short half-life, benefit outweighs risk, dose limits recorded</td></tr></table><p><b>Why staff but not the patient?</b> The patient has one scan; the technician does many every day, so their <b>total dose</b> would otherwise be far higher. That sentence is usually a mark.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Contamination from radon",
+          "question": "Radon is a radioactive gas that seeps from the ground into some houses. Explain why breathing radon is more hazardous than being near a sealed gamma source of the same activity. (3 marks)",
+          "steps": [
+            "<b>Contamination:</b> breathing radon puts the radioactive material <b>inside the lungs</b> — the body is contaminated, and the source stays there emitting.",
+            "<b>Alpha inside:</b> radon decays by <b>alpha</b> emission, which is <b>strongly ionising</b>, so all its energy is absorbed by the lung tissue around it, damaging and mutating cells.",
+            "<b>Irradiation outside:</b> the sealed gamma source only <b>irradiates</b>: gamma is weakly ionising, much passes straight through, and the exposure <b>stops when you move away</b> or shield it."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Explain questions",
+          "questions": [
+            {
+              "id": "ra-t4-q1",
+              "type": "written",
+              "text": "Explain why a radiographer leaves the room while a patient is X-rayed, but the patient does not need protecting from the same exposure. (2)",
+              "model": "<ul><li>The radiographer would be exposed to <b>many X-rays every day</b>, so their <b>total dose</b> (and risk of cell damage / cancer) would be high.</li><li>The patient has <b>one</b> exposure, kept to the lowest useful dose, and the <b>benefit</b> of the diagnosis outweighs the small risk.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t4-q2",
+              "type": "written",
+              "text": "A worker's overalls become contaminated with radioactive dust. Explain why this is more serious than the worker having been irradiated by the same source. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Continues</td><td>The dust <b>keeps emitting</b> radiation, so the exposure <b>continues</b> after the worker leaves the area — irradiation would have stopped.</td></tr><tr><td><b>2</b></td><td>Spread / inside</td><td>The dust can be <b>breathed in or swallowed</b>, putting the source inside the body where it cannot be shielded.</td></tr><tr><td><b>3</b></td><td>Alpha</td><td>Inside the body even <b>alpha</b> (harmless from outside) does serious damage, as it is strongly ionising.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-t4-q3",
+              "type": "choice",
+              "text": "Which is the best way to protect someone from a gamma source across a room?",
+              "options": [
+                "Wear gloves",
+                "A sheet of paper",
+                "Move further away and put a lead screen between",
+                "Hold your breath"
+              ],
+              "correct": 2,
+              "explain": "Gamma: distance and dense shielding. Gloves protect against contamination, not irradiation."
+            },
+            {
+              "id": "ra-t4-q4",
+              "type": "written",
+              "text": "Give three precautions a teacher should take when demonstrating a radioactive source in class, and say which hazard each reduces. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Distance</td><td>Handle with <b>tongs</b> / keep the source at arm's length and pointed away — reduces the <b>dose from irradiation</b> (intensity falls with distance).</td></tr><tr><td><b>2</b></td><td>Time / shielding</td><td>Keep it out of the <b>lead-lined box</b> for as short a time as possible — less exposure; the box <b>shields</b> it when stored.</td></tr><tr><td><b>3</b></td><td>Contamination</td><td>Do not <b>touch</b> the source, eat or drink; wash hands — prevents <b>contamination</b>.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-t4-q5",
+              "type": "written",
+              "text": "Explain why a patient given a radioactive tracer is advised to keep away from young children for a day. (2)",
+              "model": "<ul><li>The patient is <b>contaminated</b> — the tracer inside them keeps emitting gamma rays, so they <b>irradiate</b> people nearby.</li><li>Children's dividing cells are more at risk from radiation; after a day the short-half-life tracer has largely <b>decayed away</b>.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Compare the hazards of contamination and irradiation, saying which radiation is worst for each",
+        "Explain the precautions for a named situation (lab, hospital, nuclear worker), giving different kinds",
+        "Explain why patients' doses are limited and how"
+      ],
+      "blurb": "The comparison and precaution questions are marked on specific phrases: \"does not become radioactive\", \"stops when the source is removed\", \"different kinds of precaution\". Here they are, with the reasoning behind each."
+    },
+    {
+      "id": "tumours",
+      "band": "tricky",
+      "title": "Treating tumours: internal and external radiation",
+      "spec": "6.33P",
+      "equations": [
+        "\\text{external: gamma / X beams from several directions}",
+        "\\text{internal: a source placed in the tumour (short-range, or sealed gamma)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The comparison",
+          "html": "<table class='tbl'><tr><th></th><th>External (radiotherapy)</th><th>Internal (brachytherapy, radioactive implants, injected isotopes)</th></tr><tr><td>How</td><td><b>beams of gamma or X-rays</b> from a machine outside the body, aimed at the tumour; the beam (or the patient) is <b>rotated</b> so the beams cross at the tumour</td><td>a small sealed source is <b>implanted in or next to</b> the tumour — usually a <b>beta or alpha</b> emitter for its short range, sometimes a low-energy <b>gamma</b> emitter — or an isotope that collects in the organ is injected (iodine-131 for the thyroid)</td></tr><tr><td>Why that radiation</td><td>gamma / X <b>penetrate</b> to a tumour deep in the body</td><td>a <b>short-range</b> emitter keeps the dose <b>in the tumour</b>; an implanted gamma source sits where the tumour is, so it too irradiates mainly the tumour</td></tr><tr><td>Rotation</td><td>healthy tissue along any one path gets only a <b>fraction</b> of the dose; the tumour, where all the beams meet, gets it all</td><td>—</td></tr><tr><td>Healthy tissue</td><td><b>some damage</b> to tissue the beams pass through (side effects)</td><td><b>less</b> damage to surrounding tissue; very targeted</td></tr><tr><td>Downsides</td><td>many sessions; not all of the dose reaches the tumour</td><td>needs <b>surgery or injection</b>; the patient is <b>contaminated</b> (radioactive) for a time; source must have a suitable <b>half-life</b></td></tr></table><p>The June 2024 scheme (Q4(a)): of gamma, X-rays, UV and microwaves, <b>gamma</b> is the one that can be applied <b>internally</b> (from an implanted source); the others are applied externally.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why rotate the beam",
+          "question": "In external radiotherapy the gamma beam is rotated around the patient, always pointing at the tumour. Explain why. (2 marks)",
+          "steps": [
+            "<b>Tumour:</b> the tumour is at the <b>centre of rotation</b>, so it is in the beam <b>all the time</b> and receives the <b>full dose</b>, enough to kill its cells.",
+            "<b>Healthy tissue:</b> each part of the healthy tissue is in the beam only <b>briefly</b> as it passes, so each gets a <b>small dose</b> and is less damaged."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Treating tumours",
+          "questions": [
+            {
+              "id": "ra-t5-q1",
+              "type": "written",
+              "text": "Compare the treatment of a tumour using an external gamma source with treatment using an implanted beta source. (4)",
+              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>External how</td><td>Gamma <b>beams from outside</b>, penetrating to the tumour, rotated so they cross at it.</td></tr><tr><td><b>2</b></td><td>External cost</td><td>The beams pass through <b>healthy tissue</b>, which is damaged (less so with rotation); no surgery.</td></tr><tr><td><b>3</b></td><td>Internal how</td><td>A <b>beta source placed in the tumour</b>; beta's <b>short range</b> keeps the dose in the tumour.</td></tr><tr><td><b>4</b></td><td>Internal cost</td><td>Needs <b>surgery / injection</b>; the patient is radioactive for a time; less damage to surrounding tissue.</td></tr></table>",
+              "lines": 5
+            },
+            {
+              "id": "ra-t5-q2",
+              "type": "choice",
+              "text": "Why is a short-range emitter (beta or alpha) a good choice for a source implanted in a tumour?",
+              "options": [
+                "It is cheaper",
+                "Its short range keeps the radiation within the tumour, sparing healthy tissue",
+                "It is not ionising",
+                "It lasts longer"
+              ],
+              "correct": 1,
+              "explain": "Short range = dose stays local. (Sealed gamma sources are also implanted — gamma is the spec's answer for a radiation that can be applied internally.)"
+            },
+            {
+              "id": "ra-t5-q3",
+              "type": "written",
+              "text": "Explain why gamma rays or X-rays, not alpha particles, are used for external radiotherapy. (2)",
+              "model": "<ul><li>Alpha is <b>stopped by the skin</b> (a few cm of air), so from outside it could never reach a tumour inside the body.</li><li>Gamma and X-rays <b>penetrate</b> deep into the body to reach the tumour.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t5-q4",
+              "type": "written",
+              "text": "Iodine-131 (a beta emitter, half-life 8 days) is swallowed to treat thyroid cancer. Explain why this works and why the half-life is suitable. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Targeting</td><td>The thyroid <b>absorbs iodine</b>, so the source collects <b>in the tumour</b>.</td></tr><tr><td><b>2</b></td><td>Beta</td><td>Beta has a <b>short range</b> in tissue, so it <b>kills the thyroid cells</b> while sparing the rest of the body.</td></tr><tr><td><b>3</b></td><td>Half-life</td><td>8 days is <b>long enough to deliver the dose</b> but short enough that the patient is not radioactive for months.</td></tr></table>",
+              "lines": 4
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe external treatment (gamma or X-ray beams, rotated or from several angles)",
+        "Describe internal treatment (a short-range beta or alpha source, or a sealed gamma source, implanted or injected)",
+        "Compare the two: targeting, damage to healthy tissue, the need for surgery, radiation type and half-life"
+      ],
+      "blurb": "Ionising radiation kills cells, so it can kill a tumour. From outside, beams of gamma or X-rays are aimed through the body; from inside, a small source is put into or next to the tumour. Each has a cost.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "pet-scanners",
+      "band": "tricky",
+      "title": "PET scanners and tracers",
+      "spec": "6.34P, 6.35P",
+      "equations": [
+        "e^{+} + e^{-} \\rightarrow 2\\gamma \\text{ (opposite directions)}",
+        "\\text{short half-life} \\Rightarrow \\text{made nearby}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "How PET works, and the half-life problem",
+          "html": "<ol><li>The patient is injected with a <b>tracer</b> containing a <b>positron (β⁺) emitter</b> — usually fluorine-18 attached to glucose (FDG), half-life about 110 minutes.</li><li>The tracer <b>collects where the body uses most glucose</b>: active tissue such as a tumour or a working part of the brain.</li><li>Each emitted <b>positron meets an electron</b> within a millimetre and the two <b>annihilate</b>: their mass becomes energy as <b>two gamma rays</b> travelling in <b>opposite directions</b> (180° apart).</li><li>A <b>ring of gamma detectors</b> around the patient records the two gamma rays arriving at <b>almost the same time</b> on opposite sides; the decay happened on the line between them, and the small <b>time difference</b> says where along the line.</li><li>Millions of such lines are combined by a computer into a <b>3-D image</b> of where the tracer is concentrated.</li></ol><p>These are the June 2024 marks (Q4(b)(i)): annihilate; two gamma rays; opposite directions; detected (gamma camera); at almost the same time; time difference gives the position. The June 2025 scheme for \"positron meets electron\": <b>annihilate</b> and <b>release (a pair of) gamma rays</b>.</p><p><b>Why made nearby</b> (6.35P): positron emitters have <b>short half-lives</b> (F-18 110 min, others minutes), so the activity <b>decays rapidly</b>; if it were transported far it would be <b>too weak to use</b> by the time it arrived. So they are made in a <b>cyclotron</b> at or near the hospital and used within hours.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The two gamma rays",
+          "question": "Explain how a PET scanner locates where a positron was emitted. (3 marks)",
+          "steps": [
+            "<b>Annihilation:</b> the positron meets an electron and they <b>annihilate</b>, producing <b>two gamma rays in opposite directions</b>.",
+            "<b>Detection:</b> the two gamma rays reach <b>detectors on opposite sides</b> of the ring at almost the same time, so the emission was somewhere on the <b>straight line</b> joining those two detectors.",
+            "<b>Position:</b> the <b>difference in arrival times</b> gives where along the line; many lines crossing build the image."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "PET",
+          "questions": [
+            {
+              "id": "ra-t6-q1",
+              "type": "written",
+              "text": "Describe what happens when a positron meets an electron. (2)",
+              "model": "<ul><li>They <b>annihilate</b> (both are destroyed; their mass becomes energy)…</li><li>…producing <b>two gamma rays</b> travelling in <b>opposite directions</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t6-q2",
+              "type": "written",
+              "text": "Explain why isotopes used in PET scanners have to be produced close to the hospital. (2)",
+              "model": "<ul><li>They have <b>very short half-lives</b>, so their activity <b>decays rapidly</b>.</li><li>If transported a long way they would be <b>too weak to use</b> (have decayed) on arrival, so they are made in a nearby cyclotron and used within hours.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t6-q3",
+              "type": "choice",
+              "text": "Why are the gamma rays from annihilation detected in pairs on opposite sides of the patient?",
+              "options": [
+                "The scanner has two detectors",
+                "Momentum is conserved: the two gamma rays leave in opposite directions",
+                "Gamma rays always come in pairs",
+                "The patient reflects them"
+              ],
+              "correct": 1,
+              "explain": "Opposite directions from a near-stationary pair; detecting both fixes a line through the source."
+            },
+            {
+              "id": "ra-t6-q4",
+              "type": "written",
+              "text": "Explain why a positron emitter is used for PET rather than a gamma-emitting tracer such as technetium-99m. (2)",
+              "model": "<ul><li>Annihilation gives <b>two gamma rays in opposite directions</b>, so the source can be located <b>on a line</b> between two detectors — far more precise than a single gamma ray of unknown direction.</li><li>Positron emitters can be attached to <b>glucose</b>, so the image shows <b>how active</b> tissue is (metabolism), not just where it is.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t6-q5",
+              "type": "written",
+              "text": "A hospital 300 km from the nearest cyclotron wants to use fluorine-18 (half-life 110 minutes). A delivery takes 5.5 hours. Calculate the fraction of the activity that would remain, and comment. (3)",
+              "model": "<ul><li>$5.5\\ \\text{h} = 330$ min $= 3$ half-lives.</li><li>Fraction remaining $= \\dfrac{1}{2^{3}} = \\dfrac{1}{8}$ (12.5%).</li><li>So seven-eighths has decayed before use: the dose injected would have to be eight times larger, or the hospital needs its own cyclotron.</li></ul>",
+              "lines": 4
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe how a PET scan works: positron emitter, annihilation, two gamma rays, detector ring, image",
+        "Explain why PET isotopes must be produced close to the scanner",
+        "Explain how a tracer is chosen (where it collects, radiation, half-life)"
+      ],
+      "blurb": "A PET scan injects a positron emitter. Each positron meets an electron and the pair annihilates into two gamma rays flying off in opposite directions; detecting both pins down where the decay happened. The isotope's half-life is so short it has to be made next door.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "fission-reactor",
+      "band": "tricky",
+      "title": "Fission, the chain reaction and the reactor",
+      "spec": "6.37P, 6.38P, 6.39P, 6.40P, 6.41P, 6.42P",
+      "equations": [
+        "{}^{235}\\mathrm{U} + n \\rightarrow \\text{2 daughters} + \\text{2–3 } n + \\text{energy}",
+        "\\text{moderator slows; control rods absorb}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Fission and the chain",
+          "html": "<figure class='diagram'><svg viewBox='0 0 560 262' role='img'><circle cx='30' cy='130' r='4' style='fill:var(--ink)'/><line x1='36.0' y1='130.0' x2='76.0' y2='130.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='56.0,130.0 49.9,133.4 49.9,126.6' style='fill:var(--ink-2)'/><text x='30.0' y='118.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>n</text><circle cx='95' cy='130' r='14' style='fill:var(--accent);opacity:0.25;stroke:var(--accent);stroke-width:1.5'/><text x='95.0' y='134.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>U-235</text><circle cx='118' cy='104' r='7' style='fill:var(--accent);opacity:0.25;stroke:var(--accent);stroke-width:1.5'/><text x='118.0' y='108.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'></text><circle cx='118' cy='156' r='7' style='fill:var(--accent);opacity:0.25;stroke:var(--accent);stroke-width:1.5'/><text x='118.0' y='160.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'></text><text x='70.0' y='190.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>two daughter nuclei</text><line x1='112.0' y1='130.0' x2='160.1' y2='75.4' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='136.1,102.7 134.5,109.5 129.5,105.1' style='fill:var(--ink-2)'/><circle cx='160.11377766511313' cy='75.36305317664417' r='4' style='fill:var(--ink)'/><line x1='112.0' y1='130.0' x2='180.0' y2='130.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='146.0,130.0 139.9,133.4 139.9,126.6' style='fill:var(--ink-2)'/><circle cx='180.0' cy='130.0' r='4' style='fill:var(--ink)'/><line x1='112.0' y1='130.0' x2='160.1' y2='184.6' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='136.1,157.3 129.5,154.9 134.5,150.5' style='fill:var(--ink-2)'/><circle cx='160.11377766511313' cy='184.63694682335583' r='4' style='fill:var(--ink)'/><text x='185.0' y='150.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>2 or 3 neutrons</text><text x='185.0' y='115.0' text-anchor='middle' style='fill:var(--accent);font-size:10px;font-weight:normal;'>+ energy</text><line x1='166.0' y1='73.0' x2='243.0' y2='62.0' style='stroke:var(--ink-2);stroke-width:1.2'/><line x1='166.0' y1='187.0' x2='243.0' y2='198.0' style='stroke:var(--ink-2);stroke-width:1.2'/><circle cx='260' cy='60' r='14' style='fill:var(--accent);opacity:0.25;stroke:var(--accent);stroke-width:1.5'/><text x='260.0' y='64.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>U-235</text><line x1='276.0' y1='60.0' x2='317.3' y2='19.8' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='296.7,39.9 294.6,46.6 289.9,41.8' style='fill:var(--ink-2)'/><circle cx='317.34064310022944' cy='19.84964945542678' r='4' style='fill:var(--ink)'/><line x1='276.0' y1='60.0' x2='330.0' y2='60.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='303.0,60.0 296.9,63.4 296.9,56.6' style='fill:var(--ink-2)'/><circle cx='330.0' cy='60.0' r='4' style='fill:var(--ink)'/><line x1='276.0' y1='60.0' x2='317.3' y2='100.2' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='296.7,80.1 289.9,78.2 294.6,73.4' style='fill:var(--ink-2)'/><circle cx='317.34064310022944' cy='100.15035054457323' r='4' style='fill:var(--ink)'/><circle cx='260' cy='200' r='14' style='fill:var(--accent);opacity:0.25;stroke:var(--accent);stroke-width:1.5'/><text x='260.0' y='204.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>U-235</text><line x1='276.0' y1='200.0' x2='317.3' y2='159.8' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='296.7,179.9 294.6,186.6 289.9,181.8' style='fill:var(--ink-2)'/><circle cx='317.34064310022944' cy='159.84964945542677' r='4' style='fill:var(--ink)'/><line x1='276.0' y1='200.0' x2='330.0' y2='200.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='303.0,200.0 296.9,203.4 296.9,196.6' style='fill:var(--ink-2)'/><circle cx='330.0' cy='200.0' r='4' style='fill:var(--ink)'/><line x1='276.0' y1='200.0' x2='317.3' y2='240.2' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='296.7,220.1 289.9,218.2 294.6,213.4' style='fill:var(--ink-2)'/><circle cx='317.34064310022944' cy='240.15035054457323' r='4' style='fill:var(--ink)'/><text x='400.0' y='135.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>…and so on: a chain reaction</text><text x='20.0' y='250.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>drawn uncontrolled: two neutrons go on each time, so the fissions multiply; in a reactor the control rods absorb neutrons so that on average only one does</text></svg><figcaption>A chain reaction: each fission releases two or three neutrons, which can cause further fissions.</figcaption></figure><p><b>Fission</b> (6.38P): a <b>U-235 nucleus absorbs a slow neutron</b>, becomes unstable (U-236), and <b>splits into two smaller daughter nuclei</b> plus <b>two or three neutrons</b>, <b>releasing energy</b> — mostly as kinetic energy of the fragments. Nuclear reactions (fission, fusion and radioactive decay) are all energy sources (6.37P).</p><p><b>Chain reaction</b> (6.39P): the neutrons released can be absorbed by <b>other U-235 nuclei</b>, causing further fissions, which release more neutrons, and so on. <b>Uncontrolled</b> (every neutron causes another fission): the rate grows exponentially — a bomb. <b>Controlled</b> (on average exactly <b>one</b> neutron from each fission causes another): a steady rate of energy release — a reactor.</p><p>The June 2025 report (Q4(c)) wanted a \"well-structured explanation\" of what happens when one neutron meets one uranium nucleus: absorbed → unstable → splits into two daughter nuclei → releases neutrons → releases energy.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Inside the reactor",
+          "html": "<table class='tbl'><tr><th>Part</th><th>Job</th><th>Why</th></tr><tr><td><b>Fuel rods</b></td><td>contain the uranium (enriched in U-235)</td><td></td></tr><tr><td><b>Moderator</b> (graphite or water)</td><td><b>slows down</b> the fast neutrons released by fission</td><td><b>slow neutrons are far more likely to be absorbed</b> by U-235 and cause fission; fast ones mostly bounce off</td></tr><tr><td><b>Control rods</b> (boron or cadmium)</td><td><b>absorb neutrons</b>; raised or lowered to change how many are absorbed</td><td>fewer neutrons → fewer fissions: this <b>controls the rate</b> of the chain reaction (and can shut it down)</td></tr><tr><td><b>Coolant</b> (water or gas)</td><td>carries the thermal energy out of the core</td><td>the kinetic energy of the fission fragments heats the fuel; the coolant transfers it to the boiler</td></tr><tr><td><b>Boiler, turbine, generator</b></td><td>heat makes <b>steam</b>, steam turns a <b>turbine</b>, the turbine turns a <b>generator</b></td><td>the same as any thermal power station from here on</td></tr><tr><td><b>Concrete and steel shielding</b></td><td>absorbs the radiation from the core</td><td>the <b>fission products are radioactive</b> (6.42P), with long half-lives</td></tr></table><p><b>Moderator vs control rods</b> is the examiner's recurring complaint: in 2022 \"most candidates did not recognise that control rods absorb neutrons\" and confused them with the moderator. <b>Moderator slows; control rods absorb.</b> The June 2023 6-marker on this (Q10(c)): Level 3 needs <b>detail on two of</b> chain reaction / control rods / moderator and a mention of the third — \"neutrons hit other U-235 nuclei; control rods absorb neutrons to reduce the number of fissions; the moderator slows neutrons so they are more likely to cause fission\".</p><p><b>The energy chain</b> (2022 Q4(b)(iii), \"few gained both marks\"): nuclear store of the fuel → <b>kinetic energy of the fission fragments</b> → <b>thermal store of the fuel and coolant</b> (by heating) → <b>steam</b> → <b>kinetic energy of the turbine</b> → generator (electrically). Start with the fragments, not the coolant.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 6-marker, in order",
+          "question": "Explain how a chain reaction in a nuclear reactor is controlled, including the roles of the moderator and the control rods. (6 marks)",
+          "steps": [
+            "<b>Fission:</b> a U-235 nucleus absorbs a neutron and splits into two daughter nuclei, releasing <b>two or three neutrons</b> and energy.",
+            "<b>Chain reaction:</b> those neutrons can be absorbed by <b>other U-235 nuclei</b>, causing further fissions; left alone the number of fissions would grow rapidly.",
+            "<b>Moderator:</b> the neutrons are released fast; the moderator (graphite / water) <b>slows them down</b>, because <b>slow neutrons are much more likely to be absorbed</b> by U-235 and cause fission.",
+            "<b>Control rods:</b> made of boron, they <b>absorb neutrons</b>; lowering them further into the core absorbs more neutrons, so <b>fewer fissions</b> happen.",
+            "<b>Controlled:</b> the rods are set so that, on average, <b>exactly one neutron from each fission</b> goes on to cause another — a steady rate of energy release; pushing them fully in <b>stops</b> the reaction.",
+            "<b>Energy out:</b> the energy heats the coolant, which makes steam for the turbine and generator."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Fission and the reactor",
+          "questions": [
+            {
+              "id": "ra-t7-q1",
+              "type": "written",
+              "text": "Describe what happens when a neutron is absorbed by a uranium-235 nucleus. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Unstable</td><td>The nucleus becomes <b>unstable</b> (uranium-236)…</td></tr><tr><td><b>2</b></td><td>Splits</td><td>…and <b>splits into two smaller (daughter) nuclei</b>…</td></tr><tr><td><b>3</b></td><td>Neutrons + energy</td><td>…releasing <b>two or three neutrons</b> and <b>energy</b> (mostly kinetic energy of the fragments).</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-t7-q2",
+              "type": "written",
+              "text": "Explain the difference between the moderator and the control rods in a nuclear reactor. (2)",
+              "model": "<ul><li>The <b>moderator slows down</b> the neutrons so they are <b>more likely to cause fission</b>.</li><li>The <b>control rods absorb</b> neutrons, so <b>fewer fissions</b> occur — they set the rate of the chain reaction.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t7-q3",
+              "type": "choice",
+              "text": "What does \"controlled chain reaction\" mean?",
+              "options": [
+                "No neutrons are released",
+                "On average one neutron from each fission goes on to cause another fission",
+                "All the neutrons cause fissions",
+                "The reaction has stopped"
+              ],
+              "correct": 1,
+              "explain": "Exactly one on average → steady rate; more than one → runaway; less than one → dies out."
+            },
+            {
+              "id": "ra-t7-q4",
+              "type": "written",
+              "text": "Describe how the energy released by fission in a reactor is used to generate electricity. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Fragments → heat</td><td>The <b>kinetic energy of the fission fragments</b> heats the fuel; the <b>coolant</b> carries this thermal energy out of the core.</td></tr><tr><td><b>2</b></td><td>Steam</td><td>The hot coolant <b>heats water to make steam</b>…</td></tr><tr><td><b>3</b></td><td>Turbine</td><td>…which <b>turns a turbine</b> connected to a <b>generator</b>.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "ra-t7-q5",
+              "type": "written",
+              "text": "Explain why the waste from a nuclear reactor must be stored securely for a very long time. (2)",
+              "model": "<ul><li>The <b>fission products are radioactive</b>, many with <b>long half-lives</b>.</li><li>So they stay dangerous (ionising, causing cell damage and cancer) for thousands of years and must be kept from contaminating the environment.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t7-q6",
+              "type": "choice",
+              "text": "What would happen if the control rods were pulled fully out of the core?",
+              "options": [
+                "The reaction would stop",
+                "More than one neutron per fission would cause further fissions and the rate would rise out of control",
+                "The moderator would melt",
+                "Nothing"
+              ],
+              "correct": 1,
+              "explain": "Nothing absorbing neutrons → an uncontrolled chain reaction."
+            },
+            {
+              "id": "ra-t7-q7",
+              "type": "written",
+              "text": "Explain why fast neutrons must be slowed down in a reactor. (2)",
+              "model": "<ul><li>A U-235 nucleus is <b>much more likely to absorb a slow neutron</b> than a fast one (fast ones tend to pass by or bounce off).</li><li>So without a <b>moderator</b> too few neutrons would cause fission and the chain reaction would die out.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the fission of U-235: absorbs a neutron, splits into two daughter nuclei and two or more neutrons, releases energy",
+        "Explain a chain reaction and what \"controlled\" means",
+        "Explain the jobs of the moderator and the control rods — and keep them apart",
+        "Describe the energy chain from fission to electricity, and state that the products are radioactive"
+      ],
+      "blurb": "A slow neutron splits a uranium-235 nucleus into two smaller nuclei and two or three more neutrons, releasing energy. Those neutrons can split more nuclei: a chain reaction. A reactor keeps it going at a steady rate and turns the energy into electricity.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "fusion",
+      "band": "tricky",
+      "title": "Fusion: stars, conditions, and why it is hard on Earth",
+      "spec": "6.43P, 6.44P, 6.45P, 6.46P",
+      "equations": [
+        "\\text{small nuclei join} \\rightarrow \\text{larger nucleus} + \\text{energy}",
+        "\\text{needs very high temperature and pressure}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Fusion, fission, and the obstacle",
+          "html": "<p><b>Fusion</b> (6.43P): <b>two small nuclei</b> (e.g. hydrogen isotopes) <b>join to form a larger nucleus</b> (helium). The product has slightly <b>less mass</b> than the parts; the <b>lost mass is released as energy</b>. This is the <b>energy source of stars</b>, including the Sun. The June 2025 report: \"the most common errors were to use the words <b>'atoms' or 'particles' instead of 'nuclei'</b>\". Say nuclei.</p><table class='tbl'><tr><th></th><th>Fission</th><th>Fusion</th></tr><tr><td>What</td><td>a <b>large</b> nucleus <b>splits</b> into two smaller ones</td><td>two <b>small</b> nuclei <b>join</b> into a larger one</td></tr><tr><td>Started by</td><td>absorbing a neutron</td><td>extreme temperature and pressure</td></tr><tr><td>Fuel</td><td>uranium-235, plutonium</td><td>hydrogen isotopes (deuterium, tritium)</td></tr><tr><td>Products</td><td><b>radioactive</b> daughter nuclei, neutrons</td><td>helium (not radioactive), neutrons</td></tr><tr><td>Where</td><td>reactors, bombs</td><td>stars; experimental reactors</td></tr><tr><td>Energy per kg of fuel</td><td>very large</td><td>even larger</td></tr></table><p><b>Why it needs high temperature and pressure</b> (6.45P): nuclei are <b>positively charged</b>, so they <b>repel</b> each other electrostatically. To get close enough to fuse they must be moving extremely <b>fast</b> (very <b>high temperature</b>, millions of kelvin) and be crowded <b>close together</b> (very <b>high pressure / density</b>). At low temperature and pressure they never get near enough.</p><p><b>Why no fusion power station yet</b> (6.46P): those conditions are <b>very hard to create and contain</b> on Earth — no material can hold a gas at millions of degrees, so it is confined by magnetic fields; so far the energy put in to reach the conditions is <b>about as much as</b> the energy got out, so it is not yet <b>practical or economic</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why stars fuse and we struggle",
+          "question": "Explain why fusion happens in the core of the Sun but is difficult to achieve on Earth. (4 marks)",
+          "steps": [
+            "<b>Repulsion:</b> nuclei are <b>positively charged</b> and <b>repel</b> each other, so they only fuse if they collide at very high speed and are packed close together.",
+            "<b>In the Sun:</b> gravity compresses the core to an enormous <b>pressure</b> and <b>temperature</b> (about 15 million K), so hydrogen nuclei move fast enough and are close enough to fuse.",
+            "<b>On Earth:</b> reaching those temperatures takes a huge energy input, and the hot plasma must be <b>contained</b> without touching any material (magnetic confinement).",
+            "<b>Economics:</b> so far the energy needed to create the conditions is about the same as the energy released, so it is not yet a <b>practical, economic</b> power source."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Fusion",
+          "questions": [
+            {
+              "id": "ra-t8-q1",
+              "type": "written",
+              "text": "Describe what is meant by nuclear fusion. (2)",
+              "model": "<ul><li>Two <b>small nuclei join</b> (fuse) to form a <b>larger nucleus</b>…</li><li>…with a <b>loss of mass</b> that is released as <b>energy</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t8-q2",
+              "type": "written",
+              "text": "Explain why nuclear fusion does not happen at low temperatures and pressures. (2)",
+              "model": "<ul><li>Nuclei are <b>positively charged</b> and <b>repel</b> each other (electrostatic repulsion between the protons).</li><li>Only at very <b>high temperature</b> (fast-moving nuclei) and <b>high pressure</b> (nuclei close together) do they get close enough to fuse.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t8-q3",
+              "type": "choice",
+              "text": "Which statement about fusion and fission is correct?",
+              "options": [
+                "Both split large nuclei",
+                "Fission splits a large nucleus; fusion joins small nuclei",
+                "Fusion is the energy source of nuclear power stations today",
+                "Fission is the energy source of stars"
+              ],
+              "correct": 1,
+              "explain": "Stars fuse; power stations (so far) fission."
+            },
+            {
+              "id": "ra-t8-q4",
+              "type": "written",
+              "text": "Give two differences between nuclear fusion and nuclear fission. (2)",
+              "model": "<ul><li>Fusion <b>joins small nuclei</b>; fission <b>splits a large nucleus</b>.</li><li>Fusion needs <b>very high temperature and pressure</b> to start; fission is started by a nucleus <b>absorbing a neutron</b>. (Or: fission products are radioactive; fusion's helium is not.)</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ra-t8-q5",
+              "type": "written",
+              "text": "Explain why a fusion power station has not yet been built as a practical source of electricity. (2)",
+              "model": "<ul><li>The <b>temperature and pressure needed are extremely hard to produce and contain</b> on Earth (no container can touch plasma at millions of degrees; magnetic confinement is needed).</li><li>The energy required to reach those conditions has so far been <b>about as much as the energy released</b>, so it is not yet economic.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t8-q6",
+              "type": "written",
+              "text": "A student writes: \"In fusion, two hydrogen atoms join to make a helium atom.\" Correct the statement. (1)",
+              "model": "<ul><li>It is the <b>nuclei</b> that fuse: two hydrogen <b>nuclei</b> join to form a helium <b>nucleus</b>, releasing energy.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe fusion (nuclei, not atoms) and state that it is the energy source of stars",
+        "Explain why fusion needs high temperature and pressure (electrostatic repulsion between protons)",
+        "Compare fusion and fission",
+        "Relate the conditions for fusion to the difficulty of a practical fusion power station"
+      ],
+      "blurb": "Fusion is small nuclei joining into a larger one, losing a little mass that becomes a lot of energy. It powers stars. It needs enormous temperatures and pressures because the nuclei repel each other, which is why nobody has yet built a fusion power station that pays.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "nuclear-power",
+      "band": "tricky",
+      "title": "Nuclear power: the evaluate question",
+      "spec": "6.36P",
+      "equations": [
+        "\\text{advantages} + \\text{disadvantages} + \\text{a judgement}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "For, against, decide",
+          "html": "<table class='tbl'><tr><th>Advantages</th><th>Disadvantages</th></tr><tr><td><b>No carbon dioxide</b> (or other greenhouse gas) produced while generating — does not add to climate change</td><td>The <b>waste is radioactive</b>, with <b>long half-lives</b>: it must be stored securely for thousands of years, and nobody has a permanent solution agreed</td></tr><tr><td><b>Reliable</b>: generates continuously regardless of weather, unlike wind and solar</td><td>Very <b>expensive to build</b> and to <b>decommission</b> (dismantle safely) at the end of its life</td></tr><tr><td>Enormous <b>energy per kilogram of fuel</b>: a small volume of fuel for a huge output, so little mining and transport</td><td>Risk of <b>accidents</b> releasing radioactive material over a wide area (contamination lasting decades)</td></tr><tr><td>Fuel is relatively <b>plentiful</b> and not concentrated in a few countries</td><td>Uranium is <b>non-renewable</b>; mining and enrichment have their own impacts and energy cost</td></tr><tr><td>Small land area compared with wind or solar farms</td><td>Security concerns: fuel and waste could be misused; public opposition</td></tr></table><p><b>The shape of a Level-3 evaluate answer:</b> at least two advantages and two disadvantages, each with the physics reason (\"no CO₂ <i>because</i> the energy comes from fission, not combustion\"; \"waste is dangerous <i>because</i> the fission products are radioactive with long half-lives\"), then a <b>conclusion that follows</b>: e.g. \"nuclear is a good way to supply reliable low-carbon electricity while renewables are built up, provided the waste is stored securely\". A conclusion with no reasons, or reasons with no conclusion, caps the level.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A compact evaluation",
+          "question": "Evaluate the use of nuclear power stations to generate electricity. (6 marks)",
+          "steps": [
+            "<b>For 1:</b> fission releases energy without burning fuel, so <b>no carbon dioxide</b> is produced during generation — it does not contribute to climate change as fossil fuels do.",
+            "<b>For 2:</b> a nuclear station runs <b>continuously</b> whatever the weather, so it provides a reliable baseload that wind and solar cannot; and a tiny mass of fuel gives a huge energy output.",
+            "<b>Against 1:</b> the <b>fission products are radioactive with long half-lives</b>, so the waste must be stored safely for thousands of years and there is no agreed permanent solution.",
+            "<b>Against 2:</b> stations are <b>very expensive to build and decommission</b>, and an accident could contaminate a large area for decades.",
+            "<b>Judgement:</b> because the climate problem is urgent and renewables are intermittent, nuclear power is a <b>reasonable part of a low-carbon mix</b> — provided the waste is dealt with properly and the high costs are accepted; it is not a complete answer on its own because the fuel is non-renewable."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Nuclear power",
+          "questions": [
+            {
+              "id": "ra-t9-q1",
+              "type": "written",
+              "text": "Give two advantages and two disadvantages of generating electricity from nuclear power. (4)",
+              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Advantage 1</td><td><b>No carbon dioxide</b> emitted during generation.</td></tr><tr><td><b>2</b></td><td>Advantage 2</td><td><b>Reliable</b> / huge energy per kg of fuel / small volume of fuel.</td></tr><tr><td><b>3</b></td><td>Disadvantage 1</td><td><b>Radioactive waste</b> with long half-lives that must be stored for thousands of years.</td></tr><tr><td><b>4</b></td><td>Disadvantage 2</td><td><b>Expensive</b> to build and decommission / risk of <b>accident</b> and contamination / non-renewable fuel.</td></tr></table>",
+              "lines": 5
+            },
+            {
+              "id": "ra-t9-q2",
+              "type": "choice",
+              "text": "Why is nuclear waste a long-term problem?",
+              "options": [
+                "It explodes",
+                "The fission products are radioactive with long half-lives, so they stay hazardous for thousands of years",
+                "It is very hot",
+                "It is radioactive for a few days"
+              ],
+              "correct": 1,
+              "explain": "Long half-life = hazard that lasts."
+            },
+            {
+              "id": "ra-t9-q3",
+              "type": "written",
+              "text": "A country is deciding between building a nuclear power station and a gas-fired power station. Use physics to give one argument for each choice. (2)",
+              "model": "<ul><li>Nuclear: no <b>carbon dioxide</b> in generation (gas releases CO₂ when burned) and far more energy per kilogram of fuel.</li><li>Gas: much <b>cheaper and quicker to build</b>, no radioactive waste, can be started and stopped quickly to meet demand.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ra-t9-q4",
+              "type": "written",
+              "text": "Explain why nuclear power is described as low-carbon but not renewable. (2)",
+              "model": "<ul><li>Low-carbon: the energy comes from <b>fission</b>, not combustion, so <b>no carbon dioxide</b> is released during generation.</li><li>Not renewable: the fuel (<b>uranium</b>) is a finite resource that is <b>not replaced</b> as it is used.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Give the advantages of nuclear power (no CO₂ in generation, reliable, energy density, small fuel volume)",
+        "Give the disadvantages (radioactive waste with long half-lives, cost of building and decommissioning, accident risk, non-renewable)",
+        "Finish an evaluate answer with a justified conclusion"
+      ],
+      "blurb": "\"Evaluate\" means give the points for, the points against, and then a conclusion that follows from them. Three or four of each, each one a physics reason rather than an opinion, then decide.",
+      "tags": [
+        "P"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "q": "Structure of the atom?",
+      "a": "A tiny, dense, positive nucleus of protons and neutrons, with electrons orbiting at set distances. Almost all the mass is in the nucleus; most of the atom is empty space.",
+      "section": "atom"
+    },
+    {
+      "q": "Size of an atom? Of the nucleus?",
+      "a": "Atom about 10⁻¹⁰ m; nucleus about 10⁻¹⁵ m (1/10 000 of the atom).",
+      "section": "atom"
+    },
+    {
+      "q": "Relative masses and charges: p, n, e, e⁺?",
+      "a": "Proton 1, +1. Neutron 1, 0. Electron 1/1836, −1. Positron 1/1836, +1.",
+      "section": "atom"
+    },
+    {
+      "q": "Why is an atom neutral?",
+      "a": "Equal numbers of protons (+1) and electrons (−1).",
+      "section": "atom"
+    },
+    {
+      "q": "A and Z?",
+      "a": "A = mass (nucleon) number = protons + neutrons; Z = atomic (proton) number = protons. Neutrons = A − Z.",
+      "section": "isotopes"
+    },
+    {
+      "q": "Isotopes?",
+      "a": "Same element (same protons), different numbers of neutrons (different mass number).",
+      "section": "isotopes"
+    },
+    {
+      "q": "How does an electron move to a higher orbit?",
+      "a": "By absorbing electromagnetic radiation; it emits EM radiation when it falls back.",
+      "section": "electrons-ions"
+    },
+    {
+      "q": "How does an atom become a positive ion?",
+      "a": "It loses an outer electron (e.g. knocked out by ionising radiation), leaving more protons than electrons.",
+      "section": "electrons-ions"
+    },
+    {
+      "q": "Alpha particle?",
+      "a": "A helium nucleus: 2 protons + 2 neutrons, charge +2. Most ionising; stopped by paper or a few cm of air.",
+      "section": "radiation-types"
+    },
+    {
+      "q": "Beta-minus particle?",
+      "a": "A fast electron from the nucleus (a neutron became a proton), charge −1. Stopped by a few mm of aluminium.",
+      "section": "radiation-types"
+    },
+    {
+      "q": "Gamma ray?",
+      "a": "Electromagnetic radiation from the nucleus: no mass, no charge. Least ionising; reduced by thick lead or concrete.",
+      "section": "radiation-types"
+    },
+    {
+      "q": "Penetration order? Ionising order?",
+      "a": "Penetration: alpha < beta < gamma. Ionising: alpha > beta > gamma.",
+      "section": "radiation-types"
+    },
+    {
+      "q": "Sources of background radiation?",
+      "a": "Radon gas from rocks (largest), rocks and buildings, food and drink, cosmic rays, medical X-rays, nuclear industry (tiny).",
+      "section": "background"
+    },
+    {
+      "q": "Two detectors of radiation?",
+      "a": "Geiger–Müller tube with a counter (count rate); photographic film, which darkens (film badges).",
+      "section": "background"
+    },
+    {
+      "q": "Corrected count rate?",
+      "a": "Measured count rate − background count rate. Measure background with no source, over several minutes, repeat and average.",
+      "section": "background"
+    },
+    {
+      "q": "Alpha decay: effect on A and Z?",
+      "a": "A − 4, Z − 2.",
+      "section": "decays"
+    },
+    {
+      "q": "Beta-minus decay: what happens, effect on A and Z?",
+      "a": "Neutron → proton + electron (emitted). A same, Z + 1.",
+      "section": "decays"
+    },
+    {
+      "q": "Beta-plus decay: what happens, effect on A and Z?",
+      "a": "Proton → neutron + positron (emitted). A same, Z − 1.",
+      "section": "decays"
+    },
+    {
+      "q": "Gamma emission: effect on A and Z?",
+      "a": "None. The nucleus rearranges and loses energy, often just after an alpha or beta decay.",
+      "section": "decays"
+    },
+    {
+      "q": "Neutron emission: effect on A and Z?",
+      "a": "A − 1, Z same.",
+      "section": "decays"
+    },
+    {
+      "q": "How do you check a nuclear equation?",
+      "a": "Top numbers (mass) add up on both sides; bottom numbers (charge) add up on both sides.",
+      "section": "decays"
+    },
+    {
+      "q": "Activity and its unit?",
+      "a": "Number of decays per second; becquerel (Bq) = 1 decay per second.",
+      "section": "half-life-nn"
+    },
+    {
+      "q": "Half-life (two forms)?",
+      "a": "Time for half the undecayed nuclei to decay; time for the activity to fall to half.",
+      "section": "half-life-nn"
+    },
+    {
+      "q": "Random but predictable?",
+      "a": "Cannot predict which nucleus decays or when; but with huge numbers of nuclei the half-life predicts the activity of the sample.",
+      "section": "half-life-nn"
+    },
+    {
+      "q": "Fraction left after n half-lives?",
+      "a": "1/2ⁿ: ½, ¼, ⅛, 1/16 (50%, 25%, 12.5%, 6.25%).",
+      "section": "half-life-nn"
+    },
+    {
+      "q": "Dangers of ionising radiation?",
+      "a": "Ionises atoms in cells: kills or damages cells (tissue damage, burns); damages DNA → mutations → cancer.",
+      "section": "dangers-precautions"
+    },
+    {
+      "q": "Precautions for handling a source?",
+      "a": "Tongs, point away, lead-lined box, limit time, keep distance, no eating, wash hands.",
+      "section": "dangers-precautions"
+    },
+    {
+      "q": "Precautions for radiographers?",
+      "a": "Lead apron / lead screen, leave the room, limit time, film badge to monitor dose.",
+      "section": "dangers-precautions"
+    },
+    {
+      "q": "Irradiation?",
+      "a": "Exposure to radiation from an external source: does not make you radioactive; stops when the source is removed; can be shielded.",
+      "section": "dangers-precautions"
+    },
+    {
+      "q": "Contamination?",
+      "a": "Radioactive material on or in the object: it stays radioactive, keeps emitting, hard to remove, cannot be shielded from inside.",
+      "section": "dangers-precautions"
+    },
+    {
+      "q": "Worst radiation for irradiation? For contamination?",
+      "a": "Irradiation: gamma (penetrates). Contamination: alpha (most ionising, now inside).",
+      "section": "dangers-precautions"
+    },
+    {
+      "q": "Smoke alarm: source and why?",
+      "a": "Americium-241, alpha, long half-life. Alpha ionises air so a current flows; smoke absorbs alpha, current falls, alarm. Alpha cannot escape the casing.",
+      "section": "uses-radioactivity"
+    },
+    {
+      "q": "Sterilising / irradiating food: source and why?",
+      "a": "Gamma, long half-life: penetrates packaging and kills microbes; the food is irradiated, not contaminated.",
+      "section": "uses-radioactivity"
+    },
+    {
+      "q": "Medical tracer: source and why?",
+      "a": "Gamma emitter (technetium-99m), short half-life (6 h): gamma escapes the body to the camera; weakly ionising; dose falls quickly.",
+      "section": "uses-radioactivity"
+    },
+    {
+      "q": "Thickness gauge: source and why?",
+      "a": "Beta, long half-life: partly absorbed by paper so the count changes with thickness; alpha all stopped, gamma all through; steady activity.",
+      "section": "uses-radioactivity"
+    },
+    {
+      "q": "Two-reason answer for choosing a source?",
+      "a": "One reason for the type (penetration / ionisation) and one for the half-life — each linked to the job.",
+      "section": "choosing-source"
+    },
+    {
+      "q": "Short vs long half-life: danger?",
+      "a": "Short: high activity now, soon gone. Long: lower activity but the hazard lasts — long-term storage.",
+      "section": "choosing-source"
+    },
+    {
+      "q": "Plum pudding model?",
+      "a": "A ball of positive charge with electrons embedded in it.",
+      "section": "atomic-model"
+    },
+    {
+      "q": "Alpha scattering: three observations and conclusions?",
+      "a": "Most straight through → mostly empty space. Some deflected → positive nucleus. Very few bounced back → tiny, dense nucleus with most of the mass.",
+      "section": "atomic-model"
+    },
+    {
+      "q": "Bohr's change to the model?",
+      "a": "Electrons in fixed orbits (energy levels) at set distances; they move between levels by absorbing or emitting EM radiation — which matched observations.",
+      "section": "atomic-model"
+    },
+    {
+      "q": "Half-life from a graph with background?",
+      "a": "Subtract the background from the start value, halve the corrected count, add the background back, read the time.",
+      "section": "half-life-hard"
+    },
+    {
+      "q": "Working backwards?",
+      "a": "Original activity = later activity × 2ⁿ.",
+      "section": "half-life-hard"
+    },
+    {
+      "q": "Why is the radiographer protected but not the patient?",
+      "a": "The radiographer is exposed many times a day (large total dose); the patient has one exposure where the benefit outweighs the risk.",
+      "section": "contamination-explain"
+    },
+    {
+      "q": "External vs internal tumour treatment?",
+      "a": "External: gamma/X beams rotated to cross at the tumour; no surgery; some healthy tissue damaged. Internal: a source (short-range beta/alpha, or a sealed gamma source) placed in the tumour; targeted; needs surgery; patient radioactive for a while.",
+      "section": "tumours"
+    },
+    {
+      "q": "PET scan in four steps?",
+      "a": "Positron-emitting tracer injected → positron meets electron and they annihilate → two gamma rays in opposite directions → ring of detectors locates the line; many lines make the image.",
+      "section": "pet-scanners"
+    },
+    {
+      "q": "Why are PET isotopes made nearby?",
+      "a": "Very short half-lives: the activity decays rapidly, so they would be too weak after a long journey.",
+      "section": "pet-scanners"
+    },
+    {
+      "q": "Fission of U-235?",
+      "a": "Absorbs a slow neutron → unstable → splits into two daughter nuclei + 2 or 3 neutrons + energy.",
+      "section": "fission-reactor"
+    },
+    {
+      "q": "Chain reaction? Controlled?",
+      "a": "Neutrons from one fission cause further fissions. Controlled: on average one neutron per fission goes on to cause another.",
+      "section": "fission-reactor"
+    },
+    {
+      "q": "Moderator vs control rods?",
+      "a": "Moderator (graphite/water) SLOWS neutrons so they are absorbed and cause fission. Control rods (boron) ABSORB neutrons to set the rate.",
+      "section": "fission-reactor"
+    },
+    {
+      "q": "Energy chain in a reactor?",
+      "a": "Kinetic energy of fission fragments → thermal store of fuel and coolant → steam → kinetic energy of turbine → generator.",
+      "section": "fission-reactor"
+    },
+    {
+      "q": "Fission products?",
+      "a": "Radioactive, with long half-lives — the waste problem.",
+      "section": "fission-reactor"
+    },
+    {
+      "q": "Fusion?",
+      "a": "Two small NUCLEI join to form a larger nucleus; mass is lost and released as energy. The energy source of stars.",
+      "section": "fusion"
+    },
+    {
+      "q": "Why does fusion need high temperature and pressure?",
+      "a": "Nuclei are positive and repel; they must collide fast (high T) and be close together (high P) to get near enough to fuse.",
+      "section": "fusion"
+    },
+    {
+      "q": "Why no fusion power station yet?",
+      "a": "The conditions are extremely hard to create and contain; so far the energy in is about equal to the energy out — not practical or economic.",
+      "section": "fusion"
+    },
+    {
+      "q": "Fission vs fusion in one line each?",
+      "a": "Fission: large nucleus splits, started by a neutron, radioactive products. Fusion: small nuclei join, needs extreme T and P, powers stars.",
+      "section": "fusion"
+    },
+    {
+      "q": "Nuclear power: two for, two against?",
+      "a": "For: no CO₂ in generation; reliable, huge energy per kg. Against: long-lived radioactive waste; expensive to build and decommission, accident risk.",
+      "section": "nuclear-power"
+    },
+    {
+      "q": "State what is meant by: isotopes.",
+      "a": "Atoms of the <b>same element</b> (same number of protons) with <b>different numbers of neutrons</b>.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: atomic (proton) number.",
+      "a": "The number of <b>protons</b> in the nucleus.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: mass (nucleon) number.",
+      "a": "The number of <b>protons plus neutrons</b> in the nucleus.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: ion.",
+      "a": "An atom that has <b>lost or gained electrons</b> and so has a charge (positive if it has lost them).",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: ionising radiation.",
+      "a": "Radiation with enough energy to <b>knock electrons out of atoms</b>, forming ions.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: alpha particle.",
+      "a": "A <b>helium nucleus</b>: two protons and two neutrons, charge +2.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: beta-minus particle.",
+      "a": "A fast <b>electron emitted from the nucleus</b> when a neutron turns into a proton.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: gamma ray.",
+      "a": "High-frequency <b>electromagnetic radiation</b> emitted from the nucleus.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: positron.",
+      "a": "The antiparticle of the electron: same mass, charge <b>+1</b>; emitted in β⁺ decay.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: background radiation.",
+      "a": "Low-level ionising radiation that is <b>always present</b> in the environment (rocks, radon, cosmic rays, food, medical).",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: activity.",
+      "a": "The <b>number of decays per second</b> of a source, in becquerels (Bq).",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: becquerel.",
+      "a": "<b>One decay per second</b>.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: half-life.",
+      "a": "The <b>time for half the undecayed nuclei to decay</b> (or for the activity to halve).",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: random (decay).",
+      "a": "It <b>cannot be predicted which nucleus will decay or when</b>.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: count rate.",
+      "a": "The number of <b>counts per second (or minute)</b> recorded by a detector.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: irradiation.",
+      "a": "<b>Exposure</b> to radiation from an <b>external</b> source; the object does <b>not</b> become radioactive.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: contamination.",
+      "a": "Radioactive material getting <b>on or in</b> an object, which then <b>stays radioactive</b>.",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: nuclear fission.",
+      "a": "A <b>large nucleus splits</b> into two smaller nuclei and neutrons, releasing energy (P).",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: nuclear fusion.",
+      "a": "Two <b>small nuclei join</b> to form a larger nucleus, with a loss of mass and a release of energy (P).",
+      "section": "keywords-radioactivity"
+    },
+    {
+      "q": "State what is meant by: chain reaction.",
+      "a": "Neutrons from one fission go on to cause <b>further fissions</b> (P).",
+      "section": "keywords-radioactivity"
+    }
+  ],
   "types": [
     {
       "id": "nuclear-notation",
