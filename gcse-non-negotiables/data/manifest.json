@@ -37,8 +37,8 @@
       "file": "light-and-em.json",
       "title": "Light and the electromagnetic spectrum",
       "order": 50,
-      "types": 0,
-      "sections": 0
+      "types": 2,
+      "sections": 21
     },
     {
       "id": "radioactivity",
