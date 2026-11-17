@@ -26,6 +26,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 import kc_facts  # noqa: E402
+import kc_keywords  # noqa: E402
 import kc_nn  # noqa: E402
 import kc_tricky  # noqa: E402
 from validate import validate_file  # noqa: E402
@@ -60,8 +61,8 @@ REVISION = {
             "blurb": "Working as a physicist: reading the question, command words, graphs, proportionality, planning and evaluating a practical, and estimating. These are the marks that are not about knowing any physics at all.",
         },
     ],
-    "sections": kc_nn.SECTIONS + kc_tricky.SECTIONS,
-    "facts": kc_facts.FACTS,
+    "sections": kc_nn.SECTIONS + [kc_keywords.section_keywords] + kc_tricky.SECTIONS,
+    "facts": kc_facts.FACTS + kc_keywords.FACTS,
     "factsBlurb": "The whole topic on flip cards: every unit, every prefix, every command word. Cover, say the answer out loud, then flip to check.",
 }
 

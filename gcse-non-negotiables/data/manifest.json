@@ -6,7 +6,7 @@
       "title": "Key concepts: units and equations",
       "order": 10,
       "types": 6,
-      "sections": 17
+      "sections": 18
     },
     {
       "id": "motion-and-forces",
@@ -14,7 +14,7 @@
       "title": "Motion and forces",
       "order": 20,
       "types": 13,
-      "sections": 0
+      "sections": 30
     },
     {
       "id": "energy-and-work",

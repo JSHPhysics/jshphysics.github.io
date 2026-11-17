@@ -1137,6 +1137,123 @@
       "blurb": "Equation, Working, Answer, Units. Four lines, in that order, every time — because that is how the marks are given out."
     },
     {
+      "id": "keywords-ws",
+      "band": "nn",
+      "title": "Key words: the definitions that score",
+      "spec": "WS",
+      "equations": [],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>Learn these as forms of words. In an evaluation, use the right word for the right idea — \"the readings were precise but not accurate\" is a mark; \"the readings were good\" is not.</p><table class='tbl'><tr><th>Term</th><th>Definition that scores</th><th>Common answer that does not</th></tr><tr><td><b>Independent variable</b></td><td>The variable you <b>change</b> (deliberately, in steps)</td><td>\"the one on its own\"</td></tr><tr><td><b>Dependent variable</b></td><td>The variable you <b>measure</b> (that changes as a result)</td><td>\"the one that depends\" — on what?</td></tr><tr><td><b>Control variable</b></td><td>A variable that is <b>kept the same</b> so that it does not affect the result</td><td>\"a variable you control\" — say kept constant</td></tr><tr><td><b>Valid</b></td><td>The experiment tests what it claims to: only the independent variable is changed (a <b>fair test</b>)</td><td>\"correct\"</td></tr><tr><td><b>Accurate</b></td><td><b>Close to the true value</b></td><td>\"precise\" / \"correct\"</td></tr><tr><td><b>Precise</b></td><td>Repeated readings are <b>close to each other</b> (little spread)</td><td>\"accurate\" / \"to lots of decimal places\"</td></tr><tr><td><b>Resolution</b></td><td>The <b>smallest change</b> in a quantity that an instrument <b>can detect</b> (or show)</td><td>\"how accurate the instrument is\"</td></tr><tr><td><b>Repeatable</b></td><td>The <b>same person</b>, with the <b>same method and equipment</b>, gets the <b>same result</b> when the measurement is done again</td><td>\"you can repeat it\"</td></tr><tr><td><b>Reproducible</b></td><td>A <b>different person</b>, or different method or equipment, gets the <b>same result</b></td><td>\"you can do it again\"</td></tr><tr><td><b>Random error</b></td><td>An error that makes readings <b>scatter</b> unpredictably above and below the true value; reduced by <b>repeating and averaging</b></td><td>\"human error\"</td></tr><tr><td><b>Systematic error</b></td><td>An error that shifts <b>every reading by the same amount</b> in the same direction; not reduced by averaging</td><td>\"a big error\"</td></tr><tr><td><b>Zero error</b></td><td>A systematic error where the instrument <b>reads a non-zero value when it should read zero</b></td><td>\"an error of zero\"</td></tr><tr><td><b>Anomalous result</b></td><td>A result that <b>does not fit the pattern</b> of the others; repeat it or leave it out of the mean</td><td>\"a wrong result\"</td></tr><tr><td><b>Uncertainty</b></td><td>The <b>range</b> within which the true value is expected to lie; half the range of repeated readings</td><td>\"the error\"</td></tr><tr><td><b>Mean</b></td><td>The <b>sum of the readings divided by the number of readings</b>, leaving out anomalies</td><td>\"the average\" (accepted, but say how)</td></tr><tr><td><b>Directly proportional</b></td><td>Doubling one quantity <b>doubles</b> the other; the graph is a <b>straight line through the origin</b></td><td>\"a straight line\" — it must go through the origin</td></tr><tr><td><b>Inversely proportional</b></td><td>Doubling one quantity <b>halves</b> the other; their <b>product is constant</b></td><td>\"they go opposite ways\"</td></tr><tr><td><b>Significant figures</b></td><td>The digits in a value that <b>carry meaning</b>, counted from the <b>first non-zero digit</b></td><td>\"the decimal places\"</td></tr></table>"
+        },
+        {
+          "kind": "explain",
+          "title": "The pairs that get swapped",
+          "html": "<p><b>Accurate / precise:</b> accurate is about the true value; precise is about the spread. <b>Repeatable / reproducible:</b> repeatable is the same person again; reproducible is someone else. <b>Random / systematic:</b> random scatters, systematic shifts. If you are writing one of these words, check you have not written its partner.</p>",
+          "tone": "warn"
+        },
+        {
+          "kind": "worked",
+          "title": "Using the words in an evaluation",
+          "question": "A student measures the period of a pendulum five times with a stopwatch: 1.58, 1.62, 1.60, 1.59, 1.61 s. The accepted value is 1.80 s. Describe the quality of her results using the correct terms. (3)",
+          "steps": [
+            "The readings are all within 0.04 s of each other: they are <b>precise</b> (small spread) and <b>repeatable</b>.",
+            "They are all about 0.2 s below the accepted value: they are <b>not accurate</b>.",
+            "Every reading is shifted the same way, so there is a <b>systematic error</b> — perhaps she timed from the wrong point of the swing, or the stopwatch was started late every time. Repeating more would not fix it."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "kc-kw-q1",
+              "type": "written",
+              "text": "State what is meant by a <i>precise</i> set of measurements. (1)",
+              "model": "<ul><li>Measurements that are <b>close to each other</b> (little spread) when repeated.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "kc-kw-q2",
+              "type": "written",
+              "text": "State what is meant by an <i>accurate</i> measurement. (1)",
+              "model": "<ul><li>A measurement that is <b>close to the true value</b>.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "kc-kw-q3",
+              "type": "choice",
+              "text": "Which is the definition of <i>resolution</i>?",
+              "options": [
+                "How accurate an instrument is",
+                "The smallest change in a quantity an instrument can detect",
+                "The number of readings taken",
+                "The range of an instrument"
+              ],
+              "correct": 1,
+              "explain": "Resolution is the smallest change the instrument can show — 1 mm on a rule, 0.01 s on a stopwatch. It is not the same as accuracy."
+            },
+            {
+              "id": "kc-kw-q4",
+              "type": "written",
+              "text": "State the difference between a <i>repeatable</i> and a <i>reproducible</i> result. (2)",
+              "model": "<ul><li>Repeatable: the <b>same person</b> using the <b>same method and equipment</b> gets the same result again.</li><li>Reproducible: a <b>different person</b>, or a different method or equipment, gets the same result.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "kc-kw-q5",
+              "type": "choice",
+              "text": "A thermometer always reads 1 °C too high. This is:",
+              "options": [
+                "A random error",
+                "A systematic error",
+                "An anomalous result",
+                "Poor resolution"
+              ],
+              "correct": 1,
+              "explain": "Every reading is shifted by the same amount in the same direction: systematic (in fact a zero error). Averaging would not remove it."
+            },
+            {
+              "id": "kc-kw-q6",
+              "type": "written",
+              "text": "A student investigates how the extension of a spring depends on the force applied. Name the independent, dependent and one control variable. (3)",
+              "model": "<ul><li>Independent: the <b>force</b> applied (changed by adding masses).</li><li>Dependent: the <b>extension</b> (measured).</li><li>Control: the <b>same spring</b> (or the same original length / temperature) throughout.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "kc-kw-q7",
+              "type": "choice",
+              "text": "Which statement defines <i>directly proportional</i>?",
+              "options": [
+                "Both quantities increase",
+                "The graph is a straight line",
+                "Doubling one quantity doubles the other; the graph is a straight line through the origin",
+                "One quantity depends on the other"
+              ],
+              "correct": 2,
+              "explain": "Proportional needs the straight line through the origin (or the constant ratio). A straight line with an intercept is linear, not proportional."
+            },
+            {
+              "id": "kc-kw-q8",
+              "type": "written",
+              "text": "State what is meant by a <i>random error</i> and give one way of reducing its effect. (2)",
+              "model": "<ul><li>An error that makes readings <b>vary unpredictably</b> (scatter) above and below the true value.</li><li>Reduce its effect by <b>repeating the readings and calculating a mean</b>.</li></ul>",
+              "lines": 2
+            }
+          ],
+          "intro": "Write each answer on paper first. Mark yourself strictly: if the bold words (or their equivalent) are missing, it is not a mark."
+        }
+      ],
+      "checklist": [
+        "Define every bold term using the words the mark scheme credits",
+        "Tell accurate from precise, repeatable from reproducible, and random from systematic",
+        "Name the independent, dependent and control variables of any experiment"
+      ],
+      "blurb": "The working-scientifically words are examined directly (\"state what is meant by…\") and indirectly (an evaluation that uses them correctly scores; one that uses them loosely does not)."
+    },
+    {
       "id": "command-words",
       "band": "tricky",
       "title": "Command words: what the examiner wants",
@@ -2841,6 +2958,31 @@
       "q": "Power of a kettle? of a person?",
       "a": "about 2 kW; about 100 W",
       "section": "estimation"
+    },
+    {
+      "q": "Define the independent variable",
+      "a": "The one you change",
+      "section": "keywords-ws"
+    },
+    {
+      "q": "Define the dependent variable",
+      "a": "The one you measure",
+      "section": "keywords-ws"
+    },
+    {
+      "q": "Define a control variable",
+      "a": "One kept the same so it does not affect the result",
+      "section": "keywords-ws"
+    },
+    {
+      "q": "Define uncertainty",
+      "a": "The range within which the true value is expected to lie",
+      "section": "keywords-ws"
+    },
+    {
+      "q": "Define a zero error",
+      "a": "The instrument reads a non-zero value when it should read zero",
+      "section": "keywords-ws"
     }
   ],
   "factsBlurb": "The whole topic on flip cards: every unit, every prefix, every command word. Cover, say the answer out loud, then flip to check.",
