@@ -5,6 +5,2757 @@
   "spec": "Topic 4",
   "order": 40,
   "figure": "waves",
+  "lede": "Everything in Topic 4, split into two bands. <b>The non-negotiables</b> are the definitions, the two wave equations, the two kinds of wave and the measuring methods you must have at your fingertips. <b>The tricky bits</b> are where the marks go missing: reading the right thing off a graph, the explanation phrases, echo distances, seismic conclusions and the core practical. Sections marked <b>H</b> are Higher tier only; <b>P</b> is Physics only (not Combined Science).",
+  "howto": [
+    "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
+    "Learn the definitions as sentences — the bold words are the ones the mark is for.",
+    "Do the practice questions <b>before</b> opening the hint or walkthrough. Calculations in EWAU layout on paper first, then type the answer to check it.",
+    "For \"explain\" and \"describe how\" questions, write your answer in full sentences, then compare it with the model answer line by line.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "Definitions, the two equations, transverse and longitudinal, measuring methods and the ear. If any of these is not yet green, it comes before anything in the second band."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "Graphs with the wrong axis, explanation phrases, refraction of waves, echo distances, seismic waves and the core practical. Each one is built on something from the first band."
+    }
+  ],
+  "factsBlurb": "Topic 4 on flip cards: every definition, the equations, the methods and the standard explanations. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "what-is-a-wave",
+      "band": "nn",
+      "title": "What a wave is",
+      "spec": "4.1, 4.2",
+      "equations": [
+        "\\text{waves transfer energy and information, not matter}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The statement and the evidence",
+          "html": "<p><b>Waves transfer energy and information without transferring matter.</b> Drop a stone in a pond and the ripples spread out, but the water does not flow outwards; shout across a room and the sound arrives, but no wind blows from your mouth.</p><p><b>Evidence with water waves:</b> a cork or a duck on the water <b>bobs up and down</b> (oscillates) as the ripples pass, but it <b>stays in the same place</b> — it is not carried along. So the wave travels, the water does not.</p><p><b>Evidence with sound:</b> a loudspeaker cone <b>vibrates back and forth</b> and the sound reaches you across the room, but the air does not rush from the speaker to you (a candle flame in front of it flickers but is not blown out; dust in front of a speaker vibrates in place). The air particles oscillate about fixed positions; the wave passes through them.</p><p>The energy is real: sea waves move boats and erode cliffs; sound waves make your eardrum move.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Evidence question",
+          "question": "A student watches a leaf floating on a pond as ripples pass. Explain how the leaf's movement shows that the wave, and not the water, travels across the pond. (2 marks)",
+          "steps": [
+            "<b>Observation:</b> the leaf <b>moves up and down</b> (oscillates) as each ripple passes…",
+            "<b>Conclusion:</b> …but it <b>does not move along</b> with the ripples — it stays in the same place. So the water only oscillates; it is the <b>wave</b> (the energy) that travels across the pond."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Waves carry energy",
+          "questions": [
+            {
+              "id": "wv-n1-q1",
+              "type": "written",
+              "text": "State what a wave transfers, and what it does not transfer. (2)",
+              "model": "<ul><li>Transfers <b>energy</b> (and information)…</li><li>…<b>without transferring matter</b> (the medium does not travel).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n1-q2",
+              "type": "choice",
+              "text": "A cork on a pond bobs up and down as ripples pass but stays where it is. What does this show?",
+              "options": [
+                "The water travels across the pond",
+                "The wave travels but the water does not",
+                "The cork is too heavy to move",
+                "Waves do not carry energy"
+              ],
+              "correct": 1,
+              "explain": "The water only oscillates; the wave (energy) travels."
+            },
+            {
+              "id": "wv-n1-q3",
+              "type": "written",
+              "text": "Describe evidence that it is the sound wave and not the air that travels from a loudspeaker to a listener. (2)",
+              "model": "<ul><li>Dust (or a candle flame) in front of the speaker <b>vibrates in place</b> but is not blown across the room — the air particles <b>oscillate about fixed positions</b>.</li><li>The sound still arrives at the listener, so the <b>wave</b> has travelled through the air without the air moving across the room.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n1-q4",
+              "type": "written",
+              "text": "Give one example that shows waves carry energy. (1)",
+              "model": "<ul><li>Sea waves <b>move boats</b> / erode cliffs; sound waves make the <b>eardrum vibrate</b>; light from the Sun warms the ground; a loud sound can rattle a window.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State that waves transfer energy and information without transferring matter",
+        "Describe the evidence for this with water waves and with sound"
+      ],
+      "blurb": "A wave carries energy (and information) from one place to another without carrying the material along with it. The evidence is that the water or the air only oscillates; it does not travel."
+    },
+    {
+      "id": "wave-words",
+      "band": "nn",
+      "title": "Amplitude, wavelength, frequency, period, wavefront",
+      "spec": "4.3, 4.4",
+      "equations": [
+        "\\lambda\\ \\text{(m)},\\ f\\ \\text{(Hz)},\\ T\\ \\text{(s)},\\ A\\ \\text{(m)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<figure class='diagram'><svg viewBox='0 0 480 270' role='img'><line x1='40.0' y1='150.0' x2='460.0' y2='150.0' style='stroke:var(--line);stroke-width:1'/><line x1='40.0' y1='150.0' x2='460.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:2'/><text x='460.0' y='164.0' text-anchor='end' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>distance →</text><text x='16' y='150' font-size='11' style='fill:var(--ink-2)' transform='rotate(-90 16 150)' text-anchor='middle'>displacement</text><polyline points='40.0,150.0 42.0,145.3 44.0,140.6 46.0,136.0 48.0,131.5 50.0,127.0 52.0,122.8 54.0,118.7 56.0,114.7 58.0,111.0 60.0,107.6 62.0,104.4 64.0,101.5 66.0,98.8 68.0,96.5 70.0,94.6 72.0,92.9 74.0,91.7 76.0,90.7 78.0,90.2 80.0,90.0 82.0,90.2 84.0,90.7 86.0,91.7 88.0,92.9 90.0,94.6 92.0,96.5 94.0,98.8 96.0,101.5 98.0,104.4 100.0,107.6 102.0,111.0 104.0,114.7 106.0,118.7 108.0,122.8 110.0,127.0 112.0,131.5 114.0,136.0 116.0,140.6 118.0,145.3 120.0,150.0 122.0,154.7 124.0,159.4 126.0,164.0 128.0,168.5 130.0,173.0 132.0,177.2 134.0,181.3 136.0,185.3 138.0,189.0 140.0,192.4 142.0,195.6 144.0,198.5 146.0,201.2 148.0,203.5 150.0,205.4 152.0,207.1 154.0,208.3 156.0,209.3 158.0,209.8 160.0,210.0 162.0,209.8 164.0,209.3 166.0,208.3 168.0,207.1 170.0,205.4 172.0,203.5 174.0,201.2 176.0,198.5 178.0,195.6 180.0,192.4 182.0,189.0 184.0,185.3 186.0,181.3 188.0,177.2 190.0,173.0 192.0,168.5 194.0,164.0 196.0,159.4 198.0,154.7 200.0,150.0 202.0,145.3 204.0,140.6 206.0,136.0 208.0,131.5 210.0,127.0 212.0,122.8 214.0,118.7 216.0,114.7 218.0,111.0 220.0,107.6 222.0,104.4 224.0,101.5 226.0,98.8 228.0,96.5 230.0,94.6 232.0,92.9 234.0,91.7 236.0,90.7 238.0,90.2 240.0,90.0 242.0,90.2 244.0,90.7 246.0,91.7 248.0,92.9 250.0,94.6 252.0,96.5 254.0,98.8 256.0,101.5 258.0,104.4 260.0,107.6 262.0,111.0 264.0,114.7 266.0,118.7 268.0,122.8 270.0,127.0 272.0,131.5 274.0,136.0 276.0,140.6 278.0,145.3 280.0,150.0 282.0,154.7 284.0,159.4 286.0,164.0 288.0,168.5 290.0,173.0 292.0,177.2 294.0,181.3 296.0,185.3 298.0,189.0 300.0,192.4 302.0,195.6 304.0,198.5 306.0,201.2 308.0,203.5 310.0,205.4 312.0,207.1 314.0,208.3 316.0,209.3 318.0,209.8 320.0,210.0 322.0,209.8 324.0,209.3 326.0,208.3 328.0,207.1 330.0,205.4 332.0,203.5 334.0,201.2 336.0,198.5 338.0,195.6 340.0,192.4 342.0,189.0 344.0,185.3 346.0,181.3 348.0,177.2 350.0,173.0 352.0,168.5 354.0,164.0 356.0,159.4 358.0,154.7 360.0,150.0 362.0,145.3 364.0,140.6 366.0,136.0 368.0,131.5 370.0,127.0 372.0,122.8 374.0,118.7 376.0,114.7 378.0,111.0 380.0,107.6 382.0,104.4 384.0,101.5 386.0,98.8 388.0,96.5 390.0,94.6 392.0,92.9 394.0,91.7 396.0,90.7 398.0,90.2 400.0,90.0 402.0,90.2 404.0,90.7 406.0,91.7 408.0,92.9 410.0,94.6 412.0,96.5 414.0,98.8 416.0,101.5 418.0,104.4 420.0,107.6 422.0,111.0 424.0,114.7 426.0,118.7 428.0,122.8 430.0,127.0 432.0,131.5 434.0,136.0 436.0,140.6 438.0,145.3 440.0,150.0' style='fill:none;stroke:var(--accent);stroke-width:2.5'/><line x1='80.0' y1='150.0' x2='80.0' y2='90.0' style='stroke:var(--ink);stroke-width:1.2;stroke-dasharray:5 4'/><text x='88.0' y='124.0' text-anchor='start' style='fill:var(--ink);font-size:12px;font-weight:normal;'>amplitude</text><text x='50.0' y='94.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>crest</text><text x='160.0' y='228.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>trough</text><line x1='80.0' y1='68.0' x2='80.0' y2='86.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><line x1='240.0' y1='68.0' x2='240.0' y2='86.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><line x1='80.0' y1='72.0' x2='240.0' y2='72.0' style='stroke:var(--ink);stroke-width:2'/><text x='160.0' y='64.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>wavelength λ (crest to crest)</text><line x1='160.0' y1='240.0' x2='320.0' y2='240.0' style='stroke:var(--ink-2);stroke-width:2'/><text x='240.0' y='254.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>also λ: trough to trough, or any point to the same point on the next wave</text><text x='240.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>A transverse wave: the oscillations are at right angles to the direction the wave travels</text></svg><figcaption>A transverse wave drawn as displacement against distance. The amplitude is measured from the undisturbed (middle) position to a crest, not from trough to crest; the wavelength is crest to crest.</figcaption></figure><table class='tbl'><tr><th>Term</th><th>Definition</th><th>Unit</th></tr><tr><td><b>Amplitude</b></td><td>the <b>maximum displacement</b> of a point on the wave from its <b>undisturbed (rest) position</b></td><td>m</td></tr><tr><td><b>Wavelength λ</b></td><td>the distance from a point on one wave to the <b>same point on the next wave</b> (crest to crest, compression to compression)</td><td>m</td></tr><tr><td><b>Frequency f</b></td><td>the <b>number of waves passing a point per second</b> (or produced per second)</td><td>Hz (hertz, = per second)</td></tr><tr><td><b>Period T</b></td><td>the <b>time for one complete wave</b> to pass a point (one full oscillation)</td><td>s</td></tr><tr><td><b>Wave velocity</b></td><td>the speed (and direction) at which the <b>wave (energy) travels</b> — not the speed of the oscillating particles</td><td>m/s</td></tr><tr><td><b>Wavefront</b></td><td>a line joining points that are at the <b>same stage</b> of the wave (e.g. all the crests) — the lines you see in a ripple tank; the wave travels at right angles to its wavefronts</td><td>—</td></tr></table><p><b>Traps:</b> amplitude is <i>not</i> crest-to-trough (that is twice the amplitude). Frequency is not \"how fast the wave goes\" — that is wave speed. A louder sound has a bigger <b>amplitude</b>; a higher-pitched sound has a higher <b>frequency</b>. The 2022 report: \"learn the difference between frequency and loudness of a sound.\"</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Reading the diagram",
+          "question": "On the diagram above, a crest is 6 cm above the undisturbed position and the crests are 24 cm apart. State the amplitude and the wavelength. (2 marks)",
+          "steps": [
+            "<b>Amplitude:</b> rest position to crest = <b>6 cm</b> (0.06 m). Not 12 cm, which is crest to trough.",
+            "<b>Wavelength:</b> crest to next crest = <b>24 cm</b> (0.24 m)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Wave words",
+          "questions": [
+            {
+              "id": "wv-n2-q1",
+              "type": "written",
+              "text": "State what is meant by the amplitude of a wave. (1)",
+              "model": "<ul><li>The <b>maximum displacement</b> of a point on the wave from its <b>undisturbed (rest) position</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n2-q2",
+              "type": "written",
+              "text": "State what is meant by the frequency of a wave, and give its unit. (2)",
+              "model": "<ul><li>The <b>number of waves passing a point each second</b>.</li><li>Unit: <b>hertz, Hz</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n2-q3",
+              "type": "choice",
+              "text": "On a wave diagram the distance from a crest to the next trough is 10 cm. What is the wavelength?",
+              "options": [
+                "10 cm",
+                "20 cm",
+                "5 cm",
+                "40 cm"
+              ],
+              "correct": 1,
+              "explain": "Crest to trough is half a wavelength; crest to the next crest is 20 cm."
+            },
+            {
+              "id": "wv-n2-q4",
+              "type": "choice",
+              "text": "A sound is made louder without changing its pitch. What has changed?",
+              "options": [
+                "The frequency",
+                "The amplitude",
+                "The wavelength",
+                "The speed"
+              ],
+              "correct": 1,
+              "explain": "Loudness goes with amplitude; pitch goes with frequency."
+            },
+            {
+              "id": "wv-n2-q5",
+              "type": "written",
+              "text": "State what is meant by the period of a wave. (1)",
+              "model": "<ul><li>The <b>time taken for one complete wave</b> (one full oscillation) to pass a point.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n2-q6",
+              "type": "written",
+              "text": "State what is meant by a wavefront. (1)",
+              "model": "<ul><li>A line joining all the points (across the wave) that are at the <b>same stage</b> of their oscillation — e.g. along one crest; the wave travels at right angles to it.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define amplitude, wavelength, frequency and period with units",
+        "Read amplitude and wavelength off a wave diagram",
+        "Use the words wavefront and wave velocity correctly"
+      ],
+      "blurb": "Five words, each with a precise definition and a unit. Most one-mark losses in this topic are a definition that is nearly right."
+    },
+    {
+      "id": "transverse-longitudinal",
+      "band": "nn",
+      "title": "Transverse and longitudinal waves",
+      "spec": "4.5",
+      "equations": [
+        "\\text{transverse: oscillations} \\perp \\text{direction of travel}",
+        "\\text{longitudinal: oscillations} \\parallel \\text{direction of travel}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The two kinds",
+          "html": "<figure class='diagram'><svg viewBox='0 0 480 250' role='img'><line x1='40.0' y1='88.0' x2='40.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='49.4' y1='88.0' x2='49.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='58.6' y1='88.0' x2='58.6' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='67.5' y1='88.0' x2='67.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='75.9' y1='88.0' x2='75.9' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='83.6' y1='88.0' x2='83.6' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='90.7' y1='88.0' x2='90.7' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='97.0' y1='88.0' x2='97.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='102.7' y1='88.0' x2='102.7' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='107.8' y1='88.0' x2='107.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='112.4' y1='88.0' x2='112.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='116.7' y1='88.0' x2='116.7' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='120.8' y1='88.0' x2='120.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='125.0' y1='88.0' x2='125.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='129.4' y1='88.0' x2='129.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='134.2' y1='88.0' x2='134.2' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='139.5' y1='88.0' x2='139.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='145.4' y1='88.0' x2='145.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='152.1' y1='88.0' x2='152.1' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='159.4' y1='88.0' x2='159.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='167.4' y1='88.0' x2='167.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='176.0' y1='88.0' x2='176.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='185.0' y1='88.0' x2='185.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='194.3' y1='88.0' x2='194.3' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='203.8' y1='88.0' x2='203.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='213.1' y1='88.0' x2='213.1' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='222.2' y1='88.0' x2='222.2' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='230.9' y1='88.0' x2='230.9' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='239.0' y1='88.0' x2='239.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='246.5' y1='88.0' x2='246.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='253.3' y1='88.0' x2='253.3' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='259.4' y1='88.0' x2='259.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='264.8' y1='88.0' x2='264.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='269.7' y1='88.0' x2='269.7' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='274.2' y1='88.0' x2='274.2' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='278.4' y1='88.0' x2='278.4' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='282.5' y1='88.0' x2='282.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='286.7' y1='88.0' x2='286.7' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='291.2' y1='88.0' x2='291.2' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='296.2' y1='88.0' x2='296.2' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='301.8' y1='88.0' x2='301.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='308.0' y1='88.0' x2='308.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='314.9' y1='88.0' x2='314.9' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='322.5' y1='88.0' x2='322.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='330.8' y1='88.0' x2='330.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='339.6' y1='88.0' x2='339.6' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='348.7' y1='88.0' x2='348.7' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='358.1' y1='88.0' x2='358.1' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='367.5' y1='88.0' x2='367.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='376.8' y1='88.0' x2='376.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='385.8' y1='88.0' x2='385.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='394.2' y1='88.0' x2='394.2' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='402.1' y1='88.0' x2='402.1' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='409.3' y1='88.0' x2='409.3' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='415.8' y1='88.0' x2='415.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='421.6' y1='88.0' x2='421.6' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='426.8' y1='88.0' x2='426.8' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='431.5' y1='88.0' x2='431.5' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='435.9' y1='88.0' x2='435.9' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><line x1='440.0' y1='88.0' x2='440.0' y2='132.0' style='stroke:var(--accent);stroke-width:1.6'/><text x='120.0' y='76.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>compression</text><text x='280.0' y='76.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>compression</text><text x='200.0' y='154.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>rarefaction</text><text x='360.0' y='154.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>rarefaction</text><line x1='120.0' y1='58.0' x2='280.0' y2='58.0' style='stroke:var(--ink);stroke-width:2'/><text x='200.0' y='52.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>wavelength λ (compression to compression)</text><line x1='40.0' y1='180.0' x2='440.0' y2='180.0' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='240.0,180.0 233.9,183.4 233.9,176.6' style='fill:var(--ink-2)'/><text x='240.0' y='198.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>direction of energy transfer →</text><line x1='200.0' y1='210.0' x2='280.0' y2='210.0' style='stroke:var(--ink);stroke-width:2'/><polygon points='240.0,210.0 233.9,213.4 233.9,206.6' style='fill:var(--ink)'/><line x1='280.0' y1='220.0' x2='200.0' y2='220.0' style='stroke:var(--ink);stroke-width:2'/><polygon points='240.0,220.0 246.1,216.6 246.1,223.4' style='fill:var(--ink)'/><text x='240.0' y='238.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>the coils oscillate back and forth along the same line</text><text x='240.0' y='18.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>A longitudinal wave: the oscillations are parallel to the direction the wave travels</text></svg><figcaption>A longitudinal wave on a slinky: the coils oscillate back and forth along the direction of travel, making compressions (bunched) and rarefactions (spread out). The wavelength is compression to compression.</figcaption></figure><p><b>Transverse:</b> the oscillations (vibrations) are <b>at right angles (perpendicular) to the direction of energy transfer</b>. Examples: <b>all electromagnetic waves</b> (light, radio…), <b>water surface waves</b> (ripples), waves on a string, seismic <b>S</b> waves.</p><p><b>Longitudinal:</b> the oscillations are <b>parallel to the direction of energy transfer</b>. The medium is squashed into <b>compressions</b> and stretched into <b>rarefactions</b>. Examples: <b>sound</b> (and ultrasound and infrasound), seismic <b>P</b> waves, a pushed slinky.</p><p>The mark-scheme phrase (June 2025 Q3(b)(ii)): \"oscillations or vibrations <b>perpendicular to the direction of travel</b> of the wave\" for transverse. Say <i>oscillations</i>, and say which direction they are compared with.</p><p>All <b>mechanical</b> waves — sound, water, seismic, waves on a string, whichever kind — need a <b>medium</b> to travel through; sound cannot cross a vacuum. Electromagnetic waves are the exception: they need no medium.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Explaining the difference",
+          "question": "Explain the difference between a transverse wave and a longitudinal wave, giving an example of each. (3 marks)",
+          "steps": [
+            "<b>Transverse:</b> the oscillations are <b>at right angles to the direction the wave travels</b> — e.g. light / water surface waves.",
+            "<b>Longitudinal:</b> the oscillations are <b>parallel to the direction the wave travels</b>, producing compressions and rarefactions — e.g. sound.",
+            "<b>Examples named</b> correctly for both (third mark)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Transverse and longitudinal",
+          "questions": [
+            {
+              "id": "wv-n3-q1",
+              "type": "choice",
+              "text": "Which of these is a longitudinal wave?",
+              "options": [
+                "Light",
+                "Sound",
+                "A water ripple",
+                "A radio wave"
+              ],
+              "correct": 1,
+              "explain": "Sound is longitudinal; the others are transverse."
+            },
+            {
+              "id": "wv-n3-q2",
+              "type": "written",
+              "text": "Describe how the particles of air move as a sound wave passes. (2)",
+              "model": "<ul><li>They <b>oscillate (vibrate) back and forth</b> about a fixed position…</li><li>…<b>parallel to the direction</b> the sound travels, forming compressions and rarefactions.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n3-q3",
+              "type": "written",
+              "text": "An earthquake produces P waves and S waves. State which is longitudinal and which is transverse. (2)",
+              "model": "<ul><li>P waves: <b>longitudinal</b>.</li><li>S waves: <b>transverse</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n3-q4",
+              "type": "written",
+              "text": "A rock is in the path of a seismic S wave. Describe how the rock moves. (2)",
+              "model": "<ul><li>It <b>oscillates (vibrates)</b>…</li><li>…<b>perpendicular (at right angles) to the direction the wave travels</b> (S waves are transverse).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n3-q5",
+              "type": "choice",
+              "text": "What is a compression in a sound wave?",
+              "options": [
+                "A region where the air particles are closer together (higher pressure)",
+                "A region where the air particles are further apart",
+                "The top of the wave",
+                "The speed of the wave"
+              ],
+              "correct": 0,
+              "explain": "Compression = particles bunched; rarefaction = particles spread out."
+            },
+            {
+              "id": "wv-n3-q6",
+              "type": "written",
+              "text": "Explain why sound cannot travel through a vacuum but light can. (2)",
+              "model": "<ul><li>Sound is a <b>longitudinal</b> wave that needs <b>particles to oscillate</b> (a medium to compress); a vacuum has none.</li><li>Light is an <b>electromagnetic</b> wave that <b>does not need a medium</b>.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define transverse and longitudinal waves in terms of the direction of oscillation",
+        "Give the examples: sound (L), electromagnetic (T), water surface (T), seismic P (L) and S (T)",
+        "Use the words compression and rarefaction for a longitudinal wave"
+      ],
+      "blurb": "Two kinds of wave, told apart by the direction of the oscillations compared with the direction the wave travels. Sound is longitudinal; light and all EM waves are transverse; water-surface waves are transverse; earthquakes send out both."
+    },
+    {
+      "id": "wave-equations",
+      "band": "nn",
+      "title": "The wave equations: v = fλ and v = x/t",
+      "spec": "4.6",
+      "equations": [
+        "v = f \\times \\lambda",
+        "v = \\dfrac{x}{t}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Two equations for all waves",
+          "html": "<p>$$v = f \\times \\lambda \\qquad\\qquad v = \\dfrac{x}{t}$$</p><table class='tbl'><tr><th>Symbol</th><th>Quantity</th><th>Unit</th></tr><tr><td>$v$</td><td>wave speed (velocity)</td><td>m/s</td></tr><tr><td>$f$</td><td>frequency</td><td>Hz</td></tr><tr><td>$\\lambda$</td><td>wavelength</td><td>m</td></tr><tr><td>$x$</td><td>distance travelled</td><td>m</td></tr><tr><td>$t$</td><td>time taken</td><td>s</td></tr></table><p>Why $v = f\\lambda$ works: $f$ waves pass each second and each is $\\lambda$ long, so the front of the wave moves $f \\times \\lambda$ metres every second.</p><p><b>Typical speeds:</b> sound in air about <b>340 m/s</b> (330 is also used), sound in water about 1500 m/s, light and all EM waves <b>3 × 10⁸ m/s</b>, ripples in a tank a few tens of cm/s.</p><p>The June 2023 scheme (Q1(a)): $f = 330 \\div 0.011 = 30\\,000$ Hz; 30, 300 or 3000 (a power-of-ten slip from the 11 mm) got one mark of two. Convert first, substitute into the original equation, then rearrange — the 2022 report: \"substitute in the original equation to be sure of getting a mark for this\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Frequency from wavelength",
+          "question": "A bat's call travels at 330 m/s and has a wavelength of 11 mm. Calculate its frequency.",
+          "steps": [
+            "<b>Convert:</b> $11\\ \\text{mm} = 0.011$ m.",
+            "<b>Equation:</b> $v = f \\times \\lambda \\;\\Rightarrow\\; f = \\dfrac{v}{\\lambda}$",
+            "<b>Working:</b> $f = \\dfrac{330}{0.011}$",
+            "<b>Answer:</b> $= 30\\,000$",
+            "<b>Units:</b> Hz"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "wave-speed-frequency",
+            "wave-speed-distance"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Wave equations",
+          "questions": [
+            {
+              "id": "wv-n4-q1",
+              "type": "numeric",
+              "text": "A bat's call has speed 330 m/s and wavelength 11 mm. Calculate its frequency.",
+              "answer": {
+                "value": 30000,
+                "unit": "Hz"
+              },
+              "hint": "11 mm = 0.011 m; f = v ÷ λ.",
+              "walkthrough": [
+                "<b>Equation:</b> $f = \\dfrac{v}{\\lambda}$",
+                "<b>Working:</b> $f = \\dfrac{330}{0.011}$",
+                "<b>Answer:</b> $= 30\\,000$",
+                "<b>Units:</b> Hz"
+              ]
+            },
+            {
+              "id": "wv-n4-q2",
+              "type": "numeric",
+              "text": "Ultrasound of frequency 1.5 MHz travels through water at 1500 m/s. Calculate its wavelength.",
+              "answer": {
+                "value": 0.001,
+                "unit": "m"
+              },
+              "hint": "1.5 MHz = 1.5 × 10⁶ Hz; λ = v ÷ f. Type 0.001.",
+              "walkthrough": [
+                "<b>Equation:</b> $\\lambda = \\dfrac{v}{f}$",
+                "<b>Working:</b> $\\lambda = \\dfrac{1500}{1.5 \\times 10^{6}}$",
+                "<b>Answer:</b> $= 0.001$",
+                "<b>Units:</b> m (1 mm)"
+              ]
+            },
+            {
+              "id": "wv-n4-q3",
+              "type": "numeric",
+              "text": "Thunder is heard 4.0 s after the lightning. Sound travels at 340 m/s. Calculate the distance to the storm.",
+              "answer": {
+                "value": 1360,
+                "unit": "m"
+              },
+              "hint": "x = v × t.",
+              "walkthrough": [
+                "<b>Equation:</b> $v = \\dfrac{x}{t} \\;\\Rightarrow\\; x = v \\times t$",
+                "<b>Working:</b> $x = 340 \\times 4.0$",
+                "<b>Answer:</b> $= 1360$",
+                "<b>Units:</b> m"
+              ]
+            },
+            {
+              "id": "wv-n4-q4",
+              "type": "numeric",
+              "text": "Water waves in a tank have a frequency of 5 Hz and a wavelength of 4 cm. Calculate their speed.",
+              "answer": {
+                "value": 0.2,
+                "unit": "m/s"
+              },
+              "hint": "4 cm = 0.04 m.",
+              "walkthrough": [
+                "<b>Equation:</b> $v = f \\times \\lambda$",
+                "<b>Working:</b> $v = 5 \\times 0.04$",
+                "<b>Answer:</b> $= 0.2$",
+                "<b>Units:</b> m/s"
+              ]
+            },
+            {
+              "id": "wv-n4-q5",
+              "type": "numeric",
+              "text": "A sound wave travels 1700 m across a lake in 5.0 s. Calculate its speed.",
+              "answer": {
+                "value": 340,
+                "unit": "m/s"
+              },
+              "hint": "v = x ÷ t.",
+              "walkthrough": [
+                "<b>Equation:</b> $v = \\dfrac{x}{t}$",
+                "<b>Working:</b> $v = \\dfrac{1700}{5.0}$",
+                "<b>Answer:</b> $= 340$",
+                "<b>Units:</b> m/s"
+              ]
+            },
+            {
+              "id": "wv-n4-q6",
+              "type": "numeric",
+              "text": "A radio wave has a frequency of 200 kHz. Calculate its wavelength. (v = 3 × 10⁸ m/s)",
+              "answer": {
+                "value": 1500,
+                "unit": "m"
+              },
+              "hint": "200 kHz = 2 × 10⁵ Hz.",
+              "walkthrough": [
+                "<b>Equation:</b> $\\lambda = \\dfrac{v}{f}$",
+                "<b>Working:</b> $\\lambda = \\dfrac{3 \\times 10^{8}}{2 \\times 10^{5}}$",
+                "<b>Answer:</b> $= 1500$",
+                "<b>Units:</b> m"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Select v = fλ and v = x/t and say what each symbol is, with units",
+        "Convert kHz, MHz, mm and cm before substituting",
+        "Rearrange both equations"
+      ],
+      "blurb": "Two equations, both on the list, both for every kind of wave. The first links speed to how often and how long; the second is just speed = distance ÷ time."
+    },
+    {
+      "id": "period-nn",
+      "band": "nn",
+      "title": "Period and frequency",
+      "spec": "4.4",
+      "equations": [
+        "T = \\dfrac{1}{f}",
+        "f = \\dfrac{1}{T}",
+        "f = \\dfrac{\\text{number of waves}}{\\text{time}}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "One over the other",
+          "html": "<p>$$T = \\dfrac{1}{f} \\qquad f = \\dfrac{1}{T}$$</p><p>If 50 waves pass each second ($f = 50$ Hz), each one takes $1/50 = 0.02$ s: that is the <b>period</b>. If a pendulum takes 2 s per swing ($T = 2$ s), its frequency is $1/2 = 0.5$ Hz.</p><p><b>Counting method:</b> $f = \\dfrac{\\text{number of waves}}{\\text{time taken}}$ — count the ripples passing a point in 10 s (or the oscillations of a vibrating ruler) and divide. Counting for a longer time makes the frequency more accurate.</p><p>On a <b>displacement–time</b> graph the period is the time from one crest to the next; on a <b>displacement–distance</b> graph the same gap is the wavelength. Check which axis is which before you read anything off (T1).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Period from frequency",
+          "question": "A loudspeaker vibrates at 250 Hz. Calculate the period of the sound wave.",
+          "steps": [
+            "<b>Equation:</b> $T = \\dfrac{1}{f}$",
+            "<b>Working:</b> $T = \\dfrac{1}{250}$",
+            "<b>Answer:</b> $= 0.004$",
+            "<b>Units:</b> s (4 ms)"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "period-frequency"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Period and frequency",
+          "questions": [
+            {
+              "id": "wv-n5-q1",
+              "type": "numeric",
+              "text": "A wave has a frequency of 250 Hz. Calculate its period.",
+              "answer": {
+                "value": 0.004,
+                "unit": "s"
+              },
+              "hint": "T = 1 ÷ f.",
+              "walkthrough": [
+                "<b>Equation:</b> $T = \\dfrac{1}{f}$",
+                "<b>Working:</b> $T = \\dfrac{1}{250}$",
+                "<b>Answer:</b> $= 0.004$",
+                "<b>Units:</b> s"
+              ]
+            },
+            {
+              "id": "wv-n5-q2",
+              "type": "numeric",
+              "text": "A pendulum takes 0.8 s for one complete swing. Calculate its frequency.",
+              "answer": {
+                "value": 1.25,
+                "unit": "Hz"
+              },
+              "hint": "f = 1 ÷ T.",
+              "walkthrough": [
+                "<b>Equation:</b> $f = \\dfrac{1}{T}$",
+                "<b>Working:</b> $f = \\dfrac{1}{0.8}$",
+                "<b>Answer:</b> $= 1.25$",
+                "<b>Units:</b> Hz"
+              ]
+            },
+            {
+              "id": "wv-n5-q3",
+              "type": "numeric",
+              "text": "A student counts 24 ripples passing a mark in 8.0 s. Calculate the frequency of the ripples.",
+              "answer": {
+                "value": 3,
+                "unit": "Hz"
+              },
+              "hint": "Waves ÷ time.",
+              "walkthrough": [
+                "<b>Equation:</b> $f = \\dfrac{\\text{number of waves}}{\\text{time}}$",
+                "<b>Working:</b> $f = \\dfrac{24}{8.0}$",
+                "<b>Answer:</b> $= 3$",
+                "<b>Units:</b> Hz"
+              ]
+            },
+            {
+              "id": "wv-n5-q4",
+              "type": "numeric",
+              "text": "The UK mains supply has a frequency of 50 Hz. Calculate its period in milliseconds.",
+              "answer": {
+                "value": 20,
+                "unit": "ms"
+              },
+              "hint": "T = 1/50 s, then × 1000.",
+              "walkthrough": [
+                "$T = \\dfrac{1}{50} = 0.02$ s $= 20$ ms."
+              ]
+            },
+            {
+              "id": "wv-n5-q5",
+              "type": "choice",
+              "text": "A wave's period is doubled. What happens to its frequency?",
+              "options": [
+                "It doubles",
+                "It halves",
+                "It stays the same",
+                "It quadruples"
+              ],
+              "correct": 1,
+              "explain": "f = 1/T: doubling T halves f."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Use T = 1/f and f = 1/T",
+        "Find a frequency by counting waves in a measured time",
+        "Read the period from a displacement–time graph"
+      ],
+      "blurb": "Period is the time for one wave; frequency is waves per second. Each is one divided by the other — a 50 Hz wave has a period of 0.02 s."
+    },
+    {
+      "id": "measuring-wave-speed",
+      "band": "nn",
+      "title": "Measuring the speed of sound and of ripples",
+      "spec": "4.7",
+      "equations": [
+        "v = \\dfrac{x}{t}",
+        "v = f \\times \\lambda"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Sound in air",
+          "html": "<p><b>Method A — a long distance and a stopwatch.</b> Two people stand a measured distance apart (100 m or more, by trundle wheel). One bangs cymbals (or fires a starting pistol); the other starts the stopwatch when they <b>see</b> the bang and stops it when they <b>hear</b> it. Speed = distance ÷ time. Light arrives almost instantly, so the time measured is the sound's travel time.</p><p>The problem is <b>reaction time</b> (about 0.2 s) compared with a travel time of about 0.3 s over 100 m. The June 2023 scheme (Q6(a)) had candidates work out that 0.23 s of reaction time was 63% of the 0.364 s travel time over 120 m, and the improvement asked for was <b>increase the distance</b> — a longer time makes the reaction time a smaller fraction. Repeating and averaging helps too.</p><p><b>Method B — two microphones.</b> Connect two microphones, a measured distance apart, to a data logger or oscilloscope; make a sharp sound in line with them; the logger records the <b>time between</b> the sound reaching the first and the second microphone. Speed = separation ÷ time delay. No reaction time, so much more accurate.</p><p><b>Method C — echoes:</b> stand a measured distance from a large wall and clap in time with the echoes; time 20 claps, divide for the time of one round trip, and speed = 2 × distance ÷ time.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Ripples in a tank",
+          "html": "<p>A <b>ripple tank</b>: a shallow tray of water, a <b>vibrating bar (dipper)</b> driven by a motor or signal generator makes straight ripples, and a <b>lamp above</b> casts the wave pattern as light and dark lines on a screen or paper below (the crests focus the light into bright lines).</p><p><b>Way 1 — time a crest:</b> mark two points a measured distance apart on the screen and <b>time a crest</b> travelling between them (or time it crossing the whole tank); $v = x/t$. Better: time it over a longer distance, or film it and use the frame rate.</p><p><b>Way 2 — f and λ:</b> read the <b>frequency</b> off the signal generator (or count waves passing a point in 10 s and divide); measure the <b>wavelength</b> by photographing the pattern with a ruler beside it, or by measuring the distance across <b>ten</b> wavelengths and dividing by ten (one gap is too small to measure accurately); then $v = f \\lambda$. A <b>stroboscope</b> flashing at the wave's frequency \"freezes\" the pattern so the wavelength can be measured.</p><p>June 2025 Q3(a)(iii) gave two marks for either way: \"time a wave crest over a known distance, then speed = distance ÷ time\" or \"count the number of waves in a specified time (to calculate frequency) then use v = f × λ\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Speed of ripples",
+          "question": "In a ripple tank the dipper vibrates at 6 Hz. A student measures the distance across 10 wavelengths on the screen as 30 cm. Calculate the speed of the ripples.",
+          "steps": [
+            "<b>Wavelength:</b> $\\lambda = \\dfrac{30}{10} = 3$ cm $= 0.03$ m (ten gaps measured, then divided — more accurate than one).",
+            "<b>Equation:</b> $v = f \\times \\lambda$",
+            "<b>Working:</b> $v = 6 \\times 0.03$",
+            "<b>Answer:</b> $= 0.18$",
+            "<b>Units:</b> m/s"
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Measuring wave speed",
+          "questions": [
+            {
+              "id": "wv-n6-q1",
+              "type": "written",
+              "text": "Describe how two students could measure the speed of sound in air using a stopwatch. (4)",
+              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Distance</td><td>Stand a <b>large measured distance</b> apart (e.g. 100 m, measured with a trundle wheel / tape).</td></tr><tr><td><b>2</b></td><td>Signal</td><td>One makes a loud sharp sound (cymbals / starting pistol) that the other can <b>see</b> being made.</td></tr><tr><td><b>3</b></td><td>Time</td><td>The other <b>starts the stopwatch on seeing it and stops on hearing it</b>.</td></tr><tr><td><b>4</b></td><td>Calculate</td><td><b>Speed = distance ÷ time</b>; repeat and calculate a mean.</td></tr></table>",
+              "lines": 5
+            },
+            {
+              "id": "wv-n6-q2",
+              "type": "choice",
+              "text": "Why does standing further apart improve the stopwatch method for the speed of sound?",
+              "options": [
+                "Sound travels faster over long distances",
+                "The travel time is longer, so the reaction time is a smaller fraction of it",
+                "The sound is louder",
+                "The stopwatch is more accurate"
+              ],
+              "correct": 1,
+              "explain": "Reaction time is fixed (~0.2 s); a longer travel time makes its percentage effect smaller."
+            },
+            {
+              "id": "wv-n6-q3",
+              "type": "written",
+              "text": "Describe how a student could measure the wavelength of ripples in a ripple tank accurately. (2)",
+              "model": "<ul><li>Measure the distance across <b>several wavelengths</b> (e.g. 10) on the screen (or a photo with a ruler in it)…</li><li>…and <b>divide by the number</b> of wavelengths — or freeze the pattern with a <b>stroboscope</b> first.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n6-q4",
+              "type": "written",
+              "text": "Describe two different methods of finding the speed of water waves in a ripple tank. (4)",
+              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Method 1</td><td><b>Time a crest</b> travelling a <b>measured distance</b> (two marks on the screen / across the tank)…</td></tr><tr><td><b>2</b></td><td>…</td><td>…and use <b>speed = distance ÷ time</b>.</td></tr><tr><td><b>3</b></td><td>Method 2</td><td>Find the <b>frequency</b> (from the signal generator, or count waves passing a point in a measured time) and the <b>wavelength</b> (several wavelengths ÷ number)…</td></tr><tr><td><b>4</b></td><td>…</td><td>…and use <b>v = f × λ</b>.</td></tr></table>",
+              "lines": 5
+            },
+            {
+              "id": "wv-n6-q5",
+              "type": "numeric",
+              "text": "Two microphones 1.7 m apart are connected to a data logger. A clap reaches the second microphone 5.0 ms after the first. Calculate the speed of sound.",
+              "answer": {
+                "value": 340,
+                "unit": "m/s"
+              },
+              "hint": "5.0 ms = 0.005 s; v = x ÷ t.",
+              "walkthrough": [
+                "<b>Equation:</b> $v = \\dfrac{x}{t}$",
+                "<b>Working:</b> $v = \\dfrac{1.7}{0.0050}$",
+                "<b>Answer:</b> $= 340$",
+                "<b>Units:</b> m/s"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe a method for measuring the speed of sound in air",
+        "Describe how to find the speed of ripples in a tank (two ways)",
+        "Say how to make each measurement more accurate"
+      ],
+      "blurb": "Two methods the spec names: the speed of sound in air, and the speed of ripples on water. Each is either \"time it over a known distance\" or \"measure f and λ, multiply\"."
+    },
+    {
+      "id": "boundaries",
+      "band": "nn",
+      "title": "Waves at a boundary: reflected, refracted, transmitted, absorbed",
+      "spec": "4.9P, 4.10, 4.11",
+      "equations": [
+        "\\text{reflected / refracted / transmitted / absorbed}",
+        "\\text{refraction: direction changes because speed changes}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The four effects",
+          "html": "<table class='tbl'><tr><th>Effect</th><th>What happens</th><th>Example</th></tr><tr><td><b>Reflection</b></td><td>the wave bounces back off the boundary (angle of incidence = angle of reflection)</td><td>echoes; a mirror; sonar</td></tr><tr><td><b>Refraction</b></td><td>the wave crosses the boundary and <b>changes direction</b> because its <b>speed changes</b></td><td>light into glass; ripples into shallow water; sound into warmer air</td></tr><tr><td><b>Transmission</b></td><td>the wave passes through the material</td><td>light through a window; radio through walls</td></tr><tr><td><b>Absorption</b></td><td>the wave's energy is taken in by the material (usually warming it)</td><td>microwaves by water in food; sound by curtains and carpet</td></tr></table><p><b>Refraction direction:</b> a wave that <b>slows down</b> on crossing a boundary bends <b>towards the normal</b>; one that <b>speeds up</b> bends <b>away</b> from it. Light slows in glass and water; sound <i>speeds up</i> in water; ripples slow in shallow water. The frequency never changes (T3).</p><p><b>It depends on wavelength:</b> glass transmits visible light but absorbs most ultraviolet; carpet absorbs high-frequency sound better than low; a thick wall reflects or absorbs high frequencies but lets the bass through. June 2024 Q10(c): carpets and curtains <b>absorb</b> more of the sound, so <b>less is reflected</b> back into the room; wooden floors and painted walls <b>reflect</b> it — \"echoes / bounces around\" was accepted for reflection.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Which effect?",
+          "question": "A room with wooden floors and bare walls sounds echoey; adding carpets and curtains makes it quieter. Explain why. (2 marks)",
+          "steps": [
+            "<b>Carpets and curtains:</b> they <b>absorb</b> a larger fraction of the sound that hits them (soft, fibrous materials).",
+            "<b>So:</b> <b>less sound is reflected</b> back into the room; the bare wood and paint <b>reflect</b> most of it, which is what you hear as echoes."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Boundaries",
+          "questions": [
+            {
+              "id": "wv-n7-q1",
+              "type": "choice",
+              "text": "Sound travels from air into water, where it moves faster. Which way does it refract?",
+              "options": [
+                "Towards the normal",
+                "Away from the normal",
+                "It does not change direction",
+                "It reflects back"
+              ],
+              "correct": 1,
+              "explain": "Speeding up → away from the normal (opposite to light into water)."
+            },
+            {
+              "id": "wv-n7-q2",
+              "type": "written",
+              "text": "State the four things that can happen to a wave when it reaches the boundary between two materials. (2)",
+              "model": "<ul><li><b>Reflection</b> and <b>refraction</b>…</li><li>…<b>transmission</b> and <b>absorption</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n7-q3",
+              "type": "written",
+              "text": "Explain why a wave changes direction when it is refracted. (1)",
+              "model": "<ul><li>Its <b>speed changes</b> as it crosses the boundary (and it meets the boundary at an angle), so the wavefront turns.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n7-q4",
+              "type": "written",
+              "text": "A studio wall is covered in foam. Explain why. (2)",
+              "model": "<ul><li>The foam <b>absorbs</b> sound (its energy is transferred to the foam's thermal store)…</li><li>…so <b>less is reflected</b> and there are fewer echoes in the recording.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n7-q5",
+              "type": "choice",
+              "text": "Which is an example of transmission?",
+              "options": [
+                "An echo from a cliff",
+                "Light passing through a window",
+                "A black surface warming in sunlight",
+                "A ripple bending in shallow water"
+              ],
+              "correct": 1,
+              "explain": "Through = transmission; echo = reflection; warming = absorption; bending = refraction."
+            },
+            {
+              "id": "wv-n7-q6",
+              "type": "written",
+              "text": "Give one example of a material that transmits one wavelength of electromagnetic wave but absorbs another. (1)",
+              "model": "<ul><li><b>Glass</b> transmits visible light but absorbs most <b>ultraviolet</b> (or: the atmosphere transmits visible and radio but absorbs X-rays; water transmits light but absorbs microwaves).</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the four effects at an interface and give an example of each",
+        "State which way a wave refracts when it slows down or speeds up",
+        "Give an example of absorption or reflection that depends on wavelength"
+      ],
+      "blurb": "When a wave meets the boundary between two materials, four things can happen, usually more than one at once. Which dominates depends on the materials and on the wavelength."
+    },
+    {
+      "id": "sound-ear",
+      "band": "nn",
+      "title": "Sound, the ear, ultrasound and infrasound",
+      "spec": "4.12P, 4.13P, 4.14P, 4.15P",
+      "equations": [
+        "\\text{hearing: } 20\\ \\text{Hz} \\text{ to } 20\\,000\\ \\text{Hz}",
+        "\\text{ultrasound} > 20\\,000\\ \\text{Hz}",
+        "\\text{infrasound} < 20\\ \\text{Hz}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Numbers and the ear",
+          "html": "<p><b>Human hearing:</b> about <b>20 Hz to 20 000 Hz</b> (20 kHz). <b>Ultrasound</b> is sound with a frequency <b>above 20 000 Hz</b>; <b>infrasound</b> is sound with a frequency <b>below 20 Hz</b>. Both are longitudinal, like all sound; we just cannot hear them.</p><p><b>Sound → vibrations in a solid:</b> the compressions and rarefactions of a sound wave push and pull on a solid surface, making it <b>vibrate at the same frequency</b>. In the ear: the sound makes the <b>eardrum</b> vibrate; the eardrum passes the vibration to the <b>small bones</b> (ossicles), which pass it to the fluid in the <b>cochlea</b>, where hair cells turn it into nerve signals. A microphone's diaphragm works the same way; a loudspeaker does it in reverse.</p><p><b>Why only a limited range:</b> a solid (the eardrum, a diaphragm) can only be made to vibrate efficiently over a <b>limited range of frequencies</b> — its size, mass and stiffness set what it responds to. Very low frequencies do not make the eardrum move enough to be detected; very high frequencies it cannot follow. So we hear nothing below 20 Hz or above 20 kHz (and the upper limit falls with age). June 2025 Q1(c): why infrasound is not heard — either \"the <b>frequency is too low</b>\" or \"the <b>eardrum</b> (named part) does not vibrate / respond at that frequency\" — scored; describing ultrasound by mistake did not.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Uses of ultrasound and infrasound",
+          "html": "<table class='tbl'><tr><th>Use</th><th>How it works</th></tr><tr><td><b>Sonar</b> (ships, fishing boats)</td><td>a pulse of ultrasound is sent down; it <b>reflects</b> off the sea bed (or a shoal); the <b>time</b> for the echo is measured; distance = speed × time ÷ 2 (T4)</td></tr><tr><td><b>Foetal (pre-natal) scanning</b></td><td>ultrasound pulses from a probe reflect at the <b>boundaries between tissues</b> (different densities); the times and strengths of the echoes build an image; no ionising radiation, so safe for the baby</td></tr><tr><td><b>Exploring the Earth's core</b> (infrasound / seismic waves)</td><td>earthquakes produce low-frequency P and S waves; detecting where each type arrives shows the core is partly liquid and the Earth's density changes with depth (T5)</td></tr><tr><td>Also: industrial cleaning, detecting cracks in metal (an echo returns early from the crack — 2022 Q10(b))</td><td></td></tr></table>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why we cannot hear infrasound",
+          "question": "Elephants communicate with infrasound. Explain why a person standing nearby cannot hear it. (2 marks)",
+          "steps": [
+            "<b>Frequency:</b> infrasound has a frequency <b>below 20 Hz</b>, which is below the range the human ear detects (20 Hz – 20 kHz).",
+            "<b>The ear:</b> the <b>eardrum does not vibrate</b> enough at such a low frequency to pass the vibration on, so no signal reaches the brain."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Sound and the ear",
+          "questions": [
+            {
+              "id": "wv-n8-q1",
+              "type": "written",
+              "text": "State what is meant by ultrasound, and give the range of frequencies humans can hear. (2)",
+              "model": "<ul><li>Sound with a frequency <b>greater than 20 000 Hz</b>.</li><li>Human hearing: about <b>20 Hz to 20 000 Hz</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-n8-q2",
+              "type": "written",
+              "text": "Describe how a sound wave in the air makes the eardrum vibrate. (2)",
+              "model": "<ul><li>The <b>compressions and rarefactions</b> of the sound wave reach the eardrum and push and pull on it (pressure changes)…</li><li>…so the eardrum <b>vibrates at the same frequency</b> as the sound; the vibration is passed on to the small bones and then the cochlea.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n8-q3",
+              "type": "written",
+              "text": "Explain why the human ear can only detect a limited range of frequencies. (2)",
+              "model": "<ul><li>The eardrum (a solid) can only be made to <b>vibrate efficiently over a limited range of frequencies</b> — its size and stiffness set what it responds to.</li><li>At very low or very high frequencies it <b>does not vibrate enough</b> to pass on a signal, so those sounds are not detected.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n8-q4",
+              "type": "choice",
+              "text": "Which is a use of infrasound?",
+              "options": [
+                "Foetal scanning",
+                "Sonar",
+                "Studying the Earth's core with seismic waves",
+                "Cleaning jewellery"
+              ],
+              "correct": 2,
+              "explain": "Seismic waves are low-frequency; the others use ultrasound."
+            },
+            {
+              "id": "wv-n8-q5",
+              "type": "written",
+              "text": "Explain why ultrasound rather than X-rays is used to scan an unborn baby. (2)",
+              "model": "<ul><li>Ultrasound is <b>not ionising</b>, so it does not damage the baby's cells; X-rays could cause mutations.</li><li>Ultrasound is <b>reflected at the boundaries between different tissues</b>, so the echoes can build an image of the soft tissue of the baby.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-n8-q6",
+              "type": "choice",
+              "text": "A whistle produces a sound of 25 kHz. Why can a dog hear it but a person cannot?",
+              "options": [
+                "It is too quiet for people",
+                "25 kHz is above the human hearing range (ultrasound) but within the dog's",
+                "Dogs have bigger ears",
+                "It is infrasound"
+              ],
+              "correct": 1,
+              "explain": "25 000 Hz > 20 000 Hz: ultrasound to us, audible to a dog."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Recall the range of human hearing and the definitions of ultrasound and infrasound",
+        "Describe how a sound wave is converted to vibrations in a solid (the eardrum) and why it only works over a limited frequency range",
+        "Give the spec uses of ultrasound and infrasound"
+      ],
+      "blurb": "Sound is a vibration passed from the air to a solid — the eardrum — and the ear only works for a limited range of frequencies. Above that range is ultrasound; below it, infrasound.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "keywords-waves",
+      "band": "nn",
+      "title": "Key words: state what is meant by…",
+      "spec": "4",
+      "equations": [
+        "\\text{definition, word for word}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Amplitude</b></td><td>The <b>maximum displacement</b> of a point on the wave from its <b>undisturbed position</b>.</td><td>crest to trough</td></tr><tr><td><b>Wavelength</b></td><td>The distance from a point on one wave to the <b>same point on the next wave</b> (crest to crest).</td><td>\"the length of a wave\"</td></tr><tr><td><b>Frequency</b></td><td>The <b>number of waves passing a point per second</b>; unit hertz (Hz).</td><td>\"how fast the wave is\"</td></tr><tr><td><b>Period</b></td><td>The <b>time for one complete wave</b> (one oscillation) to pass a point; unit s.</td><td>\"how long the wave lasts\"</td></tr><tr><td><b>Wave speed (velocity)</b></td><td>The speed at which the <b>wave (the energy) travels</b> through the medium.</td><td>the speed of the particles</td></tr><tr><td><b>Wavefront</b></td><td>A line joining points on the wave that are at the <b>same stage</b> of oscillation (e.g. all crests).</td><td>\"the front of the wave\"</td></tr><tr><td><b>Transverse wave</b></td><td>Oscillations <b>perpendicular</b> to the direction of energy transfer (light, water surface, S waves).</td><td>\"a wave that goes up and down\" with no direction compared</td></tr><tr><td><b>Longitudinal wave</b></td><td>Oscillations <b>parallel</b> to the direction of energy transfer, with compressions and rarefactions (sound, P waves).</td><td>\"a wave that goes along\"</td></tr><tr><td><b>Compression</b></td><td>A region of a longitudinal wave where the particles are <b>closer together</b> (higher pressure).</td><td>\"the crest\"</td></tr><tr><td><b>Rarefaction</b></td><td>A region of a longitudinal wave where the particles are <b>further apart</b> (lower pressure).</td><td>\"the trough\"</td></tr><tr><td><b>Reflection</b></td><td>A wave <b>bouncing back</b> from a boundary.</td><td>\"the wave stops\"</td></tr><tr><td><b>Refraction</b></td><td>A wave <b>changing direction</b> at a boundary because its <b>speed changes</b>.</td><td>\"the wave bends\" with no cause</td></tr><tr><td><b>Transmission</b></td><td>A wave <b>passing through</b> a material.</td><td>\"sending a signal\"</td></tr><tr><td><b>Absorption</b></td><td>A wave's <b>energy being taken in</b> by a material (transferred to its thermal store).</td><td>\"the wave disappears\"</td></tr><tr><td><b>Ultrasound</b></td><td>Sound with a frequency <b>above 20 000 Hz</b> (above the range of human hearing).</td><td>\"very loud sound\"</td></tr><tr><td><b>Infrasound</b></td><td>Sound with a frequency <b>below 20 Hz</b>.</td><td>\"very quiet sound\"</td></tr><tr><td><b>Echo</b></td><td>A <b>reflected</b> sound wave heard after the original.</td><td>\"a repeated sound\"</td></tr></table>"
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "wv-kw-q1",
+              "type": "written",
+              "text": "State what is meant by the wavelength of a wave. (1)",
+              "model": "<ul><li>The distance from a point on one wave to the <b>same point on the next wave</b> (e.g. crest to crest).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-kw-q2",
+              "type": "written",
+              "text": "State what is meant by a longitudinal wave. (1)",
+              "model": "<ul><li>A wave in which the <b>oscillations are parallel to the direction of energy transfer</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-kw-q3",
+              "type": "written",
+              "text": "State what is meant by infrasound. (1)",
+              "model": "<ul><li>Sound with a frequency <b>below 20 Hz</b>.</li></ul>",
+              "lines": 2,
+              "tags": [
+                "H",
+                "P"
+              ]
+            },
+            {
+              "id": "wv-kw-q4",
+              "type": "choice",
+              "text": "Which is the correct definition of amplitude?",
+              "options": [
+                "The distance from a crest to a trough",
+                "The maximum displacement from the undisturbed position",
+                "The height of the wave",
+                "The distance between two crests"
+              ],
+              "correct": 1,
+              "explain": "Amplitude is rest position to crest (or trough), half of crest-to-trough."
+            },
+            {
+              "id": "wv-kw-q5",
+              "type": "written",
+              "text": "State what is meant by the period of a wave, and give its unit. (2)",
+              "model": "<ul><li>The <b>time for one complete wave</b> to pass a point.</li><li>Unit: <b>seconds, s</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-kw-q6",
+              "type": "written",
+              "text": "State what is meant by refraction. (1)",
+              "model": "<ul><li>A wave <b>changing direction</b> as it crosses a boundary, because its <b>speed changes</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-kw-q7",
+              "type": "choice",
+              "text": "\"The frequency is how fast the wave moves.\" What is wrong with this?",
+              "options": [
+                "Nothing",
+                "Frequency is the number of waves per second; how fast the wave moves is the wave speed",
+                "Frequency is measured in metres",
+                "Frequency is the same as wavelength"
+              ],
+              "correct": 1,
+              "explain": "Frequency (Hz) counts waves per second; speed (m/s) is how far the wave travels per second."
+            },
+            {
+              "id": "wv-kw-q8",
+              "type": "written",
+              "text": "State what is meant by a compression in a sound wave. (1)",
+              "model": "<ul><li>A region where the air particles are <b>closer together</b> (squashed, higher pressure).</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define amplitude, wavelength, frequency, period and wavefront",
+        "Define transverse and longitudinal, compression and rarefaction",
+        "Define reflection, refraction, transmission, absorption, ultrasound and infrasound"
+      ],
+      "blurb": "One-mark definitions in the form of words the mark schemes credit. The bold words are the ones the marks are attached to."
+    },
+    {
+      "id": "wave-graphs-hard",
+      "band": "tricky",
+      "title": "Reading wave graphs: distance axis or time axis?",
+      "spec": "4.3, 4.4",
+      "equations": [
+        "\\text{displacement–distance: read } \\lambda",
+        "\\text{displacement–time: read } T \\text{, then } f = 1/T"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Which graph is which",
+          "html": "<table class='tbl'><tr><th>Graph</th><th>It shows</th><th>Crest-to-crest gap is…</th><th>Height of a crest is…</th></tr><tr><td>displacement against <b>distance</b></td><td>a snapshot of the whole wave at one instant</td><td>the <b>wavelength</b> λ</td><td>the amplitude</td></tr><tr><td>displacement against <b>time</b></td><td>one point on the wave, oscillating as time passes</td><td>the <b>period</b> T (then $f = 1/T$)</td><td>the amplitude</td></tr></table><p>Traps: reading crest-to-trough as the amplitude (it is twice the amplitude); reading crest-to-trough as the wavelength (it is half); forgetting to convert cm, mm and ms; and reading a wavelength off a time graph. Using <b>several</b> wavelengths and dividing is more accurate than one.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Speed from two graphs",
+          "question": "The graph shows displacement against distance for a wave (crests 20 cm apart). A displacement–time graph for the same wave (in the practice below) shows a period of 8 ms. Find the wavelength, the frequency and the speed.",
+          "steps": [
+            "<b>From the distance graph:</b> $\\lambda = 20$ cm $= 0.20$ m; amplitude 3 mm.",
+            "<b>From the time graph (given):</b> $T = 8$ ms $= 0.008$ s, so $f = \\dfrac{1}{T} = \\dfrac{1}{0.008} = 125$ Hz.",
+            "<b>Speed:</b> $v = f \\lambda = 125 \\times 0.20 = 25$ m/s."
+          ],
+          "graph": {
+            "x": {
+              "label": "distance in cm",
+              "min": 0,
+              "max": 60,
+              "step": 10
+            },
+            "y": {
+              "label": "displacement in mm",
+              "min": -4,
+              "max": 4,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.9271
+                  ],
+                  [
+                    2.0,
+                    1.7634
+                  ],
+                  [
+                    3.0,
+                    2.4271
+                  ],
+                  [
+                    4.0,
+                    2.8532
+                  ],
+                  [
+                    5.0,
+                    3.0
+                  ],
+                  [
+                    6.0,
+                    2.8532
+                  ],
+                  [
+                    7.0,
+                    2.4271
+                  ],
+                  [
+                    8.0,
+                    1.7634
+                  ],
+                  [
+                    9.0,
+                    0.9271
+                  ],
+                  [
+                    10.0,
+                    0.0
+                  ],
+                  [
+                    11.0,
+                    -0.9271
+                  ],
+                  [
+                    12.0,
+                    -1.7634
+                  ],
+                  [
+                    13.0,
+                    -2.4271
+                  ],
+                  [
+                    14.0,
+                    -2.8532
+                  ],
+                  [
+                    15.0,
+                    -3.0
+                  ],
+                  [
+                    16.0,
+                    -2.8532
+                  ],
+                  [
+                    17.0,
+                    -2.4271
+                  ],
+                  [
+                    18.0,
+                    -1.7634
+                  ],
+                  [
+                    19.0,
+                    -0.9271
+                  ],
+                  [
+                    20.0,
+                    -0.0
+                  ],
+                  [
+                    21.0,
+                    0.9271
+                  ],
+                  [
+                    22.0,
+                    1.7634
+                  ],
+                  [
+                    23.0,
+                    2.4271
+                  ],
+                  [
+                    24.0,
+                    2.8532
+                  ],
+                  [
+                    25.0,
+                    3.0
+                  ],
+                  [
+                    26.0,
+                    2.8532
+                  ],
+                  [
+                    27.0,
+                    2.4271
+                  ],
+                  [
+                    28.0,
+                    1.7634
+                  ],
+                  [
+                    29.0,
+                    0.9271
+                  ],
+                  [
+                    30.0,
+                    0.0
+                  ],
+                  [
+                    31.0,
+                    -0.9271
+                  ],
+                  [
+                    32.0,
+                    -1.7634
+                  ],
+                  [
+                    33.0,
+                    -2.4271
+                  ],
+                  [
+                    34.0,
+                    -2.8532
+                  ],
+                  [
+                    35.0,
+                    -3.0
+                  ],
+                  [
+                    36.0,
+                    -2.8532
+                  ],
+                  [
+                    37.0,
+                    -2.4271
+                  ],
+                  [
+                    38.0,
+                    -1.7634
+                  ],
+                  [
+                    39.0,
+                    -0.9271
+                  ],
+                  [
+                    40.0,
+                    -0.0
+                  ],
+                  [
+                    41.0,
+                    0.9271
+                  ],
+                  [
+                    42.0,
+                    1.7634
+                  ],
+                  [
+                    43.0,
+                    2.4271
+                  ],
+                  [
+                    44.0,
+                    2.8532
+                  ],
+                  [
+                    45.0,
+                    3.0
+                  ],
+                  [
+                    46.0,
+                    2.8532
+                  ],
+                  [
+                    47.0,
+                    2.4271
+                  ],
+                  [
+                    48.0,
+                    1.7634
+                  ],
+                  [
+                    49.0,
+                    0.9271
+                  ],
+                  [
+                    50.0,
+                    0.0
+                  ],
+                  [
+                    51.0,
+                    -0.9271
+                  ],
+                  [
+                    52.0,
+                    -1.7634
+                  ],
+                  [
+                    53.0,
+                    -2.4271
+                  ],
+                  [
+                    54.0,
+                    -2.8532
+                  ],
+                  [
+                    55.0,
+                    -3.0
+                  ],
+                  [
+                    56.0,
+                    -2.8532
+                  ],
+                  [
+                    57.0,
+                    -2.4271
+                  ],
+                  [
+                    58.0,
+                    -1.7634
+                  ],
+                  [
+                    59.0,
+                    -0.9271
+                  ],
+                  [
+                    60.0,
+                    -0.0
+                  ]
+                ]
+              }
+            ],
+            "alt": "Displacement against distance: a wave with crests 20 cm apart and amplitude 3 mm."
+          }
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "wave-graph"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Wave graphs",
+          "questions": [
+            {
+              "id": "wv-t1-q1",
+              "type": "group",
+              "text": "The graph shows displacement against distance for a wave.",
+              "parts": [
+                {
+                  "id": "wv-t1-q1a",
+                  "type": "numeric",
+                  "text": "State the amplitude of the wave in mm.",
+                  "answer": {
+                    "value": 3,
+                    "unit": "mm"
+                  },
+                  "hint": "Rest position to crest.",
+                  "walkthrough": [
+                    "Crest at $+3$ mm, so amplitude $= 3$ mm (not 6 mm)."
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "wv-t1-q1b",
+                  "type": "numeric",
+                  "text": "State the wavelength of the wave in cm.",
+                  "answer": {
+                    "value": 20,
+                    "unit": "cm"
+                  },
+                  "hint": "Crest to next crest.",
+                  "walkthrough": [
+                    "Crests at 5, 25, 45 cm: $\\lambda = 20$ cm."
+                  ],
+                  "label": "b"
+                }
+              ],
+              "graph": {
+                "x": {
+                  "label": "distance in cm",
+                  "min": 0,
+                  "max": 60,
+                  "step": 10
+                },
+                "y": {
+                  "label": "displacement in mm",
+                  "min": -4,
+                  "max": 4,
+                  "step": 2
+                },
+                "series": [
+                  {
+                    "kind": "curve",
+                    "points": [
+                      [
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        1.0,
+                        0.9271
+                      ],
+                      [
+                        2.0,
+                        1.7634
+                      ],
+                      [
+                        3.0,
+                        2.4271
+                      ],
+                      [
+                        4.0,
+                        2.8532
+                      ],
+                      [
+                        5.0,
+                        3.0
+                      ],
+                      [
+                        6.0,
+                        2.8532
+                      ],
+                      [
+                        7.0,
+                        2.4271
+                      ],
+                      [
+                        8.0,
+                        1.7634
+                      ],
+                      [
+                        9.0,
+                        0.9271
+                      ],
+                      [
+                        10.0,
+                        0.0
+                      ],
+                      [
+                        11.0,
+                        -0.9271
+                      ],
+                      [
+                        12.0,
+                        -1.7634
+                      ],
+                      [
+                        13.0,
+                        -2.4271
+                      ],
+                      [
+                        14.0,
+                        -2.8532
+                      ],
+                      [
+                        15.0,
+                        -3.0
+                      ],
+                      [
+                        16.0,
+                        -2.8532
+                      ],
+                      [
+                        17.0,
+                        -2.4271
+                      ],
+                      [
+                        18.0,
+                        -1.7634
+                      ],
+                      [
+                        19.0,
+                        -0.9271
+                      ],
+                      [
+                        20.0,
+                        -0.0
+                      ],
+                      [
+                        21.0,
+                        0.9271
+                      ],
+                      [
+                        22.0,
+                        1.7634
+                      ],
+                      [
+                        23.0,
+                        2.4271
+                      ],
+                      [
+                        24.0,
+                        2.8532
+                      ],
+                      [
+                        25.0,
+                        3.0
+                      ],
+                      [
+                        26.0,
+                        2.8532
+                      ],
+                      [
+                        27.0,
+                        2.4271
+                      ],
+                      [
+                        28.0,
+                        1.7634
+                      ],
+                      [
+                        29.0,
+                        0.9271
+                      ],
+                      [
+                        30.0,
+                        0.0
+                      ],
+                      [
+                        31.0,
+                        -0.9271
+                      ],
+                      [
+                        32.0,
+                        -1.7634
+                      ],
+                      [
+                        33.0,
+                        -2.4271
+                      ],
+                      [
+                        34.0,
+                        -2.8532
+                      ],
+                      [
+                        35.0,
+                        -3.0
+                      ],
+                      [
+                        36.0,
+                        -2.8532
+                      ],
+                      [
+                        37.0,
+                        -2.4271
+                      ],
+                      [
+                        38.0,
+                        -1.7634
+                      ],
+                      [
+                        39.0,
+                        -0.9271
+                      ],
+                      [
+                        40.0,
+                        -0.0
+                      ],
+                      [
+                        41.0,
+                        0.9271
+                      ],
+                      [
+                        42.0,
+                        1.7634
+                      ],
+                      [
+                        43.0,
+                        2.4271
+                      ],
+                      [
+                        44.0,
+                        2.8532
+                      ],
+                      [
+                        45.0,
+                        3.0
+                      ],
+                      [
+                        46.0,
+                        2.8532
+                      ],
+                      [
+                        47.0,
+                        2.4271
+                      ],
+                      [
+                        48.0,
+                        1.7634
+                      ],
+                      [
+                        49.0,
+                        0.9271
+                      ],
+                      [
+                        50.0,
+                        0.0
+                      ],
+                      [
+                        51.0,
+                        -0.9271
+                      ],
+                      [
+                        52.0,
+                        -1.7634
+                      ],
+                      [
+                        53.0,
+                        -2.4271
+                      ],
+                      [
+                        54.0,
+                        -2.8532
+                      ],
+                      [
+                        55.0,
+                        -3.0
+                      ],
+                      [
+                        56.0,
+                        -2.8532
+                      ],
+                      [
+                        57.0,
+                        -2.4271
+                      ],
+                      [
+                        58.0,
+                        -1.7634
+                      ],
+                      [
+                        59.0,
+                        -0.9271
+                      ],
+                      [
+                        60.0,
+                        -0.0
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Displacement against distance: a wave with crests 20 cm apart and amplitude 3 mm."
+              }
+            },
+            {
+              "id": "wv-t1-q2",
+              "type": "group",
+              "text": "The graph shows displacement against time for one point on a wave.",
+              "parts": [
+                {
+                  "id": "wv-t1-q2a",
+                  "type": "numeric",
+                  "text": "State the period of the wave in ms.",
+                  "answer": {
+                    "value": 8,
+                    "unit": "ms"
+                  },
+                  "hint": "Crest to next crest along the time axis.",
+                  "walkthrough": [
+                    "Crests at 2, 10, 18 ms: $T = 8$ ms."
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "wv-t1-q2b",
+                  "type": "numeric",
+                  "text": "Calculate the frequency of the wave.",
+                  "answer": {
+                    "value": 125,
+                    "unit": "Hz"
+                  },
+                  "hint": "f = 1 ÷ T with T in seconds.",
+                  "walkthrough": [
+                    "$T = 0.008$ s; $f = \\dfrac{1}{0.008} = 125$ Hz."
+                  ],
+                  "label": "b"
+                }
+              ],
+              "graph": {
+                "x": {
+                  "label": "time in ms",
+                  "min": 0,
+                  "max": 20,
+                  "step": 5
+                },
+                "y": {
+                  "label": "displacement in mm",
+                  "min": -4,
+                  "max": 4,
+                  "step": 2
+                },
+                "series": [
+                  {
+                    "kind": "curve",
+                    "points": [
+                      [
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.3333,
+                        0.7765
+                      ],
+                      [
+                        0.6667,
+                        1.5
+                      ],
+                      [
+                        1.0,
+                        2.1213
+                      ],
+                      [
+                        1.3333,
+                        2.5981
+                      ],
+                      [
+                        1.6667,
+                        2.8978
+                      ],
+                      [
+                        2.0,
+                        3.0
+                      ],
+                      [
+                        2.3333,
+                        2.8978
+                      ],
+                      [
+                        2.6667,
+                        2.5981
+                      ],
+                      [
+                        3.0,
+                        2.1213
+                      ],
+                      [
+                        3.3333,
+                        1.5
+                      ],
+                      [
+                        3.6667,
+                        0.7765
+                      ],
+                      [
+                        4.0,
+                        0.0
+                      ],
+                      [
+                        4.3333,
+                        -0.7765
+                      ],
+                      [
+                        4.6667,
+                        -1.5
+                      ],
+                      [
+                        5.0,
+                        -2.1213
+                      ],
+                      [
+                        5.3333,
+                        -2.5981
+                      ],
+                      [
+                        5.6667,
+                        -2.8978
+                      ],
+                      [
+                        6.0,
+                        -3.0
+                      ],
+                      [
+                        6.3333,
+                        -2.8978
+                      ],
+                      [
+                        6.6667,
+                        -2.5981
+                      ],
+                      [
+                        7.0,
+                        -2.1213
+                      ],
+                      [
+                        7.3333,
+                        -1.5
+                      ],
+                      [
+                        7.6667,
+                        -0.7765
+                      ],
+                      [
+                        8.0,
+                        -0.0
+                      ],
+                      [
+                        8.3333,
+                        0.7765
+                      ],
+                      [
+                        8.6667,
+                        1.5
+                      ],
+                      [
+                        9.0,
+                        2.1213
+                      ],
+                      [
+                        9.3333,
+                        2.5981
+                      ],
+                      [
+                        9.6667,
+                        2.8978
+                      ],
+                      [
+                        10.0,
+                        3.0
+                      ],
+                      [
+                        10.3333,
+                        2.8978
+                      ],
+                      [
+                        10.6667,
+                        2.5981
+                      ],
+                      [
+                        11.0,
+                        2.1213
+                      ],
+                      [
+                        11.3333,
+                        1.5
+                      ],
+                      [
+                        11.6667,
+                        0.7765
+                      ],
+                      [
+                        12.0,
+                        0.0
+                      ],
+                      [
+                        12.3333,
+                        -0.7765
+                      ],
+                      [
+                        12.6667,
+                        -1.5
+                      ],
+                      [
+                        13.0,
+                        -2.1213
+                      ],
+                      [
+                        13.3333,
+                        -2.5981
+                      ],
+                      [
+                        13.6667,
+                        -2.8978
+                      ],
+                      [
+                        14.0,
+                        -3.0
+                      ],
+                      [
+                        14.3333,
+                        -2.8978
+                      ],
+                      [
+                        14.6667,
+                        -2.5981
+                      ],
+                      [
+                        15.0,
+                        -2.1213
+                      ],
+                      [
+                        15.3333,
+                        -1.5
+                      ],
+                      [
+                        15.6667,
+                        -0.7765
+                      ],
+                      [
+                        16.0,
+                        -0.0
+                      ],
+                      [
+                        16.3333,
+                        0.7765
+                      ],
+                      [
+                        16.6667,
+                        1.5
+                      ],
+                      [
+                        17.0,
+                        2.1213
+                      ],
+                      [
+                        17.3333,
+                        2.5981
+                      ],
+                      [
+                        17.6667,
+                        2.8978
+                      ],
+                      [
+                        18.0,
+                        3.0
+                      ],
+                      [
+                        18.3333,
+                        2.8978
+                      ],
+                      [
+                        18.6667,
+                        2.5981
+                      ],
+                      [
+                        19.0,
+                        2.1213
+                      ],
+                      [
+                        19.3333,
+                        1.5
+                      ],
+                      [
+                        19.6667,
+                        0.7765
+                      ],
+                      [
+                        20.0,
+                        0.0
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Displacement against time: the same point oscillating with a period of 8 ms and amplitude 3 mm."
+              }
+            },
+            {
+              "id": "wv-t1-q3",
+              "type": "numeric",
+              "text": "Using the two graphs above (wavelength 20 cm, period 8 ms), calculate the speed of the wave.",
+              "answer": {
+                "value": 25,
+                "unit": "m/s"
+              },
+              "hint": "v = f λ with λ in metres.",
+              "walkthrough": [
+                "$v = f \\lambda = 125 \\times 0.20 = 25$ m/s."
+              ]
+            },
+            {
+              "id": "wv-t1-q4",
+              "type": "choice",
+              "text": "A displacement–time graph shows crests 0.5 s apart. What is the frequency?",
+              "options": [
+                "0.5 Hz",
+                "2 Hz",
+                "5 Hz",
+                "It cannot be found from a time graph"
+              ],
+              "correct": 1,
+              "explain": "T = 0.5 s, so f = 1/0.5 = 2 Hz."
+            },
+            {
+              "id": "wv-t1-q5",
+              "type": "choice",
+              "text": "On a displacement–distance graph the distance from a crest to the next trough is 15 cm. The wavelength is…",
+              "options": [
+                "15 cm",
+                "7.5 cm",
+                "30 cm",
+                "60 cm"
+              ],
+              "correct": 2,
+              "explain": "Crest to trough is half a wavelength."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Read amplitude and wavelength from a displacement–distance graph",
+        "Read the period from a displacement–time graph and turn it into a frequency",
+        "Combine the two to find the wave speed"
+      ],
+      "blurb": "Two graphs look identical — a wave shape — but one has distance along the bottom and the other has time. One gives the wavelength, the other the period. Read the axis before you read anything else."
+    },
+    {
+      "id": "explain-wave-types",
+      "band": "tricky",
+      "title": "Explaining wave types and the evidence",
+      "spec": "4.2, 4.5",
+      "equations": [
+        "\\text{say: oscillations, and which direction compared with travel}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The phrases that score",
+          "html": "<p><b>Transverse:</b> \"the oscillations are <b>perpendicular (at right angles) to the direction of energy transfer</b>\". <b>Longitudinal:</b> \"the oscillations are <b>parallel to the direction of energy transfer</b>, producing compressions and rarefactions\".</p><p>\"Up and down\" only works if you also say the wave travels along — the comparison is the mark. The June 2025 scheme for rock in an S wave wanted \"oscillations or vibrations perpendicular to the direction of travel of the wave\".</p><p><b>Demonstrations:</b> on a slinky, push the end back and forth along its length for a longitudinal wave (compressions travel along; each coil moves to and fro along the slinky); flick the end sideways for a transverse wave (the hump travels along; each coil moves across). A marked coil shows the medium <b>oscillates about a fixed point and does not travel</b> — the evidence for 4.2.</p><p><b>Sound is longitudinal</b> because the loudspeaker cone moves <b>forward and back</b>, pushing the air into a compression and then leaving a rarefaction, and these travel outwards in the <b>same direction</b> as the cone's movement.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why sound is longitudinal",
+          "question": "Explain why sound is described as a longitudinal wave. (2 marks)",
+          "steps": [
+            "<b>What oscillates:</b> the air particles <b>oscillate back and forth</b> about fixed positions, making <b>compressions and rarefactions</b>.",
+            "<b>Direction:</b> these oscillations are <b>parallel to the direction in which the sound travels</b> (the direction of energy transfer) — which is the definition of longitudinal."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Explaining wave types",
+          "questions": [
+            {
+              "id": "wv-t2-q1",
+              "type": "written",
+              "text": "Light is a transverse wave. Explain what this means. (1)",
+              "model": "<ul><li>The <b>oscillations are at right angles (perpendicular) to the direction the wave travels</b> (direction of energy transfer).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-t2-q2",
+              "type": "written",
+              "text": "A student says \"a transverse wave goes up and down and a longitudinal wave goes side to side\". Explain why this would not score full marks. (2)",
+              "model": "<ul><li>Both must be compared with the <b>direction of energy transfer</b>: transverse oscillations are <b>perpendicular</b> to it, longitudinal oscillations are <b>parallel</b> to it.</li><li>\"Up and down\" and \"side to side\" are both perpendicular to a wave travelling along — the answer does not say what the oscillation is compared with, and it does not use the word oscillation.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t2-q3",
+              "type": "written",
+              "text": "Describe how a slinky can be used to show a longitudinal wave, and how it shows that the coils do not travel with the wave. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Make it</td><td>Push and pull one end of the slinky <b>back and forth along its length</b>.</td></tr><tr><td><b>2</b></td><td>See it</td><td><b>Compressions</b> (bunched coils) and rarefactions travel along the slinky.</td></tr><tr><td><b>3</b></td><td>Evidence</td><td>A marked coil <b>oscillates back and forth about the same place</b> and does not move along with the compression — the wave travels, the coils do not.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "wv-t2-q4",
+              "type": "choice",
+              "text": "A loudspeaker cone moves forward and back. Why does this produce a longitudinal wave in the air?",
+              "options": [
+                "Because the cone is round",
+                "Because the air is pushed into compressions and rarefactions that travel in the same direction as the cone moves",
+                "Because sound is fast",
+                "Because the air moves across the room"
+              ],
+              "correct": 1,
+              "explain": "Oscillation direction = travel direction → longitudinal."
+            },
+            {
+              "id": "wv-t2-q5",
+              "type": "written",
+              "text": "Explain how a floating object on a water wave shows that the wave is transverse and that the water does not travel with it. (2)",
+              "model": "<ul><li>The object <b>oscillates up and down</b> — at right angles to the direction the wave travels across the surface — so the wave is <b>transverse</b>.</li><li>It <b>stays in the same place</b> rather than moving along with the wave, so the water (the medium) does not travel; only the energy does.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain, with the correct phrase, why sound is longitudinal and light is transverse",
+        "Explain the evidence that it is the wave that travels, not the medium",
+        "Describe a slinky or rope demonstration of each wave type"
+      ],
+      "blurb": "The explain marks need the word <b>oscillations</b> (or vibrations) and a comparison with the <b>direction of energy transfer</b>. \"Up and down\" and \"side to side\" score nothing on their own."
+    },
+    {
+      "id": "wave-refraction",
+      "band": "tricky",
+      "title": "Refraction of waves: direction, speed, wavelength, frequency",
+      "spec": "4.10, 4.16P",
+      "equations": [
+        "f \\text{ unchanged}",
+        "\\lambda \\propto v \\text{ (at fixed } f)",
+        "\\text{slows} \\Rightarrow \\text{towards the normal}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Wavefronts turning",
+          "html": "<p>Think in <b>wavefronts</b> (the lines of crests). When a wavefront meets a boundary <b>at an angle</b>, one end reaches the new medium before the other. If the wave is <b>slower</b> there, that end lags, the wavefront <b>swings round</b>, and the wave now travels <b>closer to the normal</b>. If the new medium is faster, the opposite: away from the normal. If the wavefront meets the boundary square on (along the normal) every part changes speed together and the direction does not change — only the speed and wavelength.</p><p><b>Frequency is fixed by the source</b>: the number of wavefronts arriving at the boundary each second equals the number leaving. So with $v = f\\lambda$, the <b>wavelength changes in proportion to the speed</b>: slower → shorter wavelength (the wavefronts bunch up), faster → longer.</p><table class='tbl'><tr><th>Wave crossing into…</th><th>Speed</th><th>Wavelength</th><th>Frequency</th><th>Direction</th></tr><tr><td>ripples into <b>shallow</b> water</td><td>slower</td><td>shorter</td><td>same</td><td>towards the normal</td></tr><tr><td>sound from air into <b>water</b></td><td>faster (≈1500 m/s from 340)</td><td>longer</td><td>same</td><td>away from the normal</td></tr><tr><td>light from air into <b>glass</b></td><td>slower</td><td>shorter</td><td>same</td><td>towards the normal</td></tr></table><p>June 2023 Q6(b) (3 marks): \"refraction is caused by a change in speed\"; \"sound speeds up entering water\"; \"light slows down entering water\". Mentioning only that the wavelength changes was worth one mark at most.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Ripples into shallow water",
+          "question": "Water waves in a ripple tank pass from deep water into shallow water, where they travel more slowly. Explain what happens to their wavelength and frequency, and to their direction if they meet the boundary at an angle. (3 marks)",
+          "steps": [
+            "<b>Frequency:</b> <b>unchanged</b> — it is set by the dipper; the same number of waves arrive at the boundary each second as leave it.",
+            "<b>Wavelength:</b> <b>shorter</b> — $v = f\\lambda$ with $f$ constant and $v$ smaller, so the wavefronts bunch closer together.",
+            "<b>Direction:</b> the end of each wavefront that reaches the shallow water first slows first, so the wavefronts turn and the wave bends <b>towards the normal</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Refraction of waves",
+          "questions": [
+            {
+              "id": "wv-t3-q1",
+              "type": "written",
+              "text": "Sound passes from air into a brick wall, where it travels faster. State what happens to its speed, wavelength and frequency. (3)",
+              "model": "<ul><li>Speed <b>increases</b>.</li><li>Wavelength <b>increases</b> (in proportion).</li><li>Frequency <b>stays the same</b>.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t3-q2",
+              "type": "written",
+              "text": "Explain why the frequency of a wave does not change when it is refracted. (1)",
+              "model": "<ul><li>The frequency is set by the <b>source</b>: waves arrive at the boundary and leave it at the <b>same rate</b> (they cannot pile up or vanish).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "wv-t3-q3",
+              "type": "written",
+              "text": "Explain, in terms of wavefronts, why water waves change direction when they cross at an angle into shallower water. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Speed</td><td>The waves travel <b>more slowly</b> in the shallow water.</td></tr><tr><td><b>2</b></td><td>One end first</td><td>The end of each wavefront that reaches the shallow water <b>first slows down first</b>, while the rest is still moving fast.</td></tr><tr><td><b>3</b></td><td>Turn</td><td>So the wavefront <b>turns</b> (pivots) and the wave travels in a new direction — <b>towards the normal</b>.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "wv-t3-q4",
+              "type": "choice",
+              "text": "Sound travels at 340 m/s in air and 1500 m/s in water. A 1000 Hz sound passes into water. Its wavelength in the water is…",
+              "options": [
+                "0.34 m",
+                "1.5 m",
+                "0.23 m",
+                "unchanged"
+              ],
+              "correct": 1,
+              "explain": "f unchanged: λ = v/f = 1500/1000 = 1.5 m (0.34 m in air)."
+            },
+            {
+              "id": "wv-t3-q5",
+              "type": "numeric",
+              "text": "Ripples of wavelength 2.0 cm travel at 10 cm/s in deep water. In shallow water they slow to 6 cm/s. Calculate the wavelength in the shallow water.",
+              "answer": {
+                "value": 1.2,
+                "unit": "cm"
+              },
+              "hint": "f is the same in both: f = v/λ = 10/2 = 5 Hz; then λ = v/f.",
+              "walkthrough": [
+                "$f = \\dfrac{v}{\\lambda} = \\dfrac{10}{2.0} = 5$ Hz (unchanged across the boundary).",
+                "In shallow water $\\lambda = \\dfrac{v}{f} = \\dfrac{6}{5} = 1.2$ cm."
+              ]
+            },
+            {
+              "id": "wv-t3-q6",
+              "type": "written",
+              "text": "Explain why a wave that crosses a boundary along the normal changes speed but not direction. (2)",
+              "model": "<ul><li>The whole wavefront reaches the boundary <b>at the same time</b>, so every part changes speed <b>together</b>.</li><li>No part lags behind another, so the wavefront does not turn — the wave keeps its direction (its wavelength still changes).</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain refraction of a wave at a boundary in terms of the change of speed turning the wavefronts",
+        "State what happens to speed, wavelength and frequency when sound passes into another medium",
+        "Use the ripple-tank example: shallow water slows the waves and shortens the wavelength"
+      ],
+      "blurb": "Every refraction answer comes down to one fact: the <b>speed changes</b> at the boundary and the <b>frequency does not</b>. From that follow the direction change and the wavelength change."
+    },
+    {
+      "id": "echo-distances",
+      "band": "tricky",
+      "title": "Echoes and ultrasound: the distance is half",
+      "spec": "4.8P, 4.15P",
+      "equations": [
+        "\\text{distance there and back} = v \\times t",
+        "\\text{distance to the surface} = \\dfrac{v \\times t}{2}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Halve it, and watch the units",
+          "html": "<p>The pulse travels <b>to the surface and back</b>, so $v \\times t$ is the <b>round-trip</b> distance. Either halve the time first or halve the distance at the end — the June 2023 scheme (Q1(b), 4 marks) credited both routes and gave 3 of 4 for 5.94 m (forgot to halve) and the June 2025 report notes a candidate who \"rearranged correctly but did not double the distance in the diagram\". Write the halving as its own line.</p><p>Units: echo times come in <b>ms</b> ($\\times 10^{-3}$ s) and ultrasound times in <b>μs</b> ($\\times 10^{-6}$ s). Speeds: sound in air 330–340 m/s, in water about 1500 m/s, in body tissue about 1500 m/s, in steel about 6000 m/s.</p><p>Embedded calculation practice (the <i>Echoes and ultrasound</i> type) sits below the worked example.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "The 6-mark sonar answer",
+          "html": "<p>June 2024 Q10(d) asked how ultrasound is used to measure the depth of the sea. Level 3 (5–6) needed, in a logical order: a pulse of <b>ultrasound</b> (above 20 kHz; \"sonar\" accepted) is <b>emitted</b> from a device on the boat; it travels through the water and is <b>reflected</b> by the sea bed; it returns to a <b>detector</b> on the boat; the <b>time</b> between emission and return is measured; the <b>speed of sound in water is known</b>; <b>distance = speed × time</b>; and the distance (or the time) is <b>halved</b> because the pulse went down and back. \"Two or more of ultrasound, pulse, halving and the calculation step\" separated Level 3 from Level 2.</p><p><b>Crack detection</b> (2022 Q10(b)): a pulse into a metal bar reflects from the far end; if there is a crack, part of the pulse reflects from the crack <b>earlier</b> (shorter distance), and the pulse from the far end is <b>smaller</b> because some of the energy has already been reflected — the amplitude of a wave shows the energy it carries. <b>Foetal scan:</b> pulses reflect at the <b>boundaries between tissues</b>; the times give the depths and the echoes build an image; no ionising radiation.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Bat and prey",
+          "question": "A bat's call travels at 330 m/s. It hears the echo from an insect 18 ms after calling. Calculate the distance from the bat to the insect.",
+          "steps": [
+            "<b>Convert:</b> $t = 18\\ \\text{ms} = 0.018$ s.",
+            "<b>Round trip:</b> $x = v \\times t = 330 \\times 0.018 = 5.94$ m (there and back).",
+            "<b>Halve:</b> distance to the insect $= \\dfrac{5.94}{2} = 2.97 \\approx 3.0$ m."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "echoes"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Echo distances",
+          "questions": [
+            {
+              "id": "wv-t4-q1",
+              "type": "numeric",
+              "text": "A bat hears the echo of its call 18 ms after making it. Sound travels at 330 m/s. Calculate the distance to the object.",
+              "answer": {
+                "value": 3,
+                "unit": "m"
+              },
+              "hint": "Round trip = v × t; then halve.",
+              "walkthrough": [
+                "$x = 330 \\times 0.018 = 5.94$ m round trip; distance $= 5.94 \\div 2 = 2.97 \\approx 3.0$ m."
+              ]
+            },
+            {
+              "id": "wv-t4-q2",
+              "type": "numeric",
+              "text": "A ship's sonar pulse returns from the sea bed after 0.40 s. Sound travels at 1500 m/s in sea water. Calculate the depth of the sea.",
+              "answer": {
+                "value": 300,
+                "unit": "m"
+              },
+              "hint": "Halve the time first: 0.20 s each way.",
+              "walkthrough": [
+                "Time to the sea bed $= 0.40 \\div 2 = 0.20$ s.",
+                "Depth $= v \\times t = 1500 \\times 0.20 = 300$ m."
+              ]
+            },
+            {
+              "id": "wv-t4-q3",
+              "type": "numeric",
+              "text": "A student claps 85 m from a wall and hears the echo. Sound travels at 340 m/s. Calculate the time between the clap and the echo.",
+              "answer": {
+                "value": 0.5,
+                "unit": "s"
+              },
+              "hint": "The sound travels 2 × 85 m.",
+              "walkthrough": [
+                "Round-trip distance $= 2 \\times 85 = 170$ m.",
+                "$t = \\dfrac{x}{v} = \\dfrac{170}{340} = 0.5$ s."
+              ]
+            },
+            {
+              "id": "wv-t4-q4",
+              "type": "numeric",
+              "text": "An ultrasound pulse sent into a steel bar 3.0 cm thick returns from the far end after 10 μs. Calculate the speed of ultrasound in the steel. Type the answer as 6000.",
+              "answer": {
+                "value": 6000,
+                "unit": "m/s"
+              },
+              "hint": "Round-trip distance 0.060 m; t = 10 × 10⁻⁶ s.",
+              "walkthrough": [
+                "Round trip $= 2 \\times 0.030 = 0.060$ m; $t = 10 \\times 10^{-6}$ s.",
+                "$v = \\dfrac{0.060}{10 \\times 10^{-6}} = 6000$ m/s."
+              ]
+            },
+            {
+              "id": "wv-t4-q5",
+              "type": "written",
+              "text": "Explain how a ship uses ultrasound to measure the depth of the water beneath it. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Emit</td><td>A device on the ship <b>emits a pulse of ultrasound</b> (frequency above 20 kHz) downwards.</td></tr><tr><td><b>2</b></td><td>Travel</td><td>The pulse travels through the water…</td></tr><tr><td><b>3</b></td><td>Reflect</td><td>…and is <b>reflected by the sea bed</b> back up to the ship.</td></tr><tr><td><b>4</b></td><td>Time</td><td>A detector on the ship records the <b>time between emitting the pulse and receiving the echo</b>.</td></tr><tr><td><b>5</b></td><td>Speed</td><td>The <b>speed of sound in water is known</b> (about 1500 m/s).</td></tr><tr><td><b>6</b></td><td>Calculate</td><td><b>Distance = speed × time</b>, and the distance (or time) is <b>halved</b> because the pulse went down and back.</td></tr></table><ul><li>June 2024 Q10(d): Level 3 needs the detailed, ordered description including ultrasound/pulse, the reflection, the timing, the calculation and the halving.</li></ul>",
+              "lines": 8
+            },
+            {
+              "id": "wv-t4-q6",
+              "type": "written",
+              "text": "An ultrasound pulse is sent into a metal bar. When the bar has a crack, an extra reflected pulse appears earlier than the pulse from the far end, and the far-end pulse is smaller. Explain both observations. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Earlier</td><td>Part of the pulse is <b>reflected at the crack</b>, which is <b>closer</b> than the far end, so that echo travels a shorter distance and <b>returns sooner</b>.</td></tr><tr><td><b>2</b></td><td>Smaller</td><td>Some of the pulse's energy has <b>already been reflected</b> at the crack, so less reaches the far end and less is reflected back from it.</td></tr><tr><td><b>3</b></td><td>Amplitude</td><td>The <b>amplitude</b> of a wave shows the <b>energy</b> it carries, so the far-end echo has a smaller amplitude.</td></tr></table>",
+              "lines": 4
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Calculate a depth or distance from an echo time, halving correctly",
+        "Convert ms and μs before calculating",
+        "Describe how sonar / a scanner / crack detection uses reflected pulses, in the 6-mark form"
+      ],
+      "blurb": "A pulse goes out, reflects, and comes back: the time measured is for <b>twice</b> the distance. Halve the time (or halve the distance) — forgetting to is the standard lost mark, and so is leaving the time in milliseconds.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "seismic",
+      "band": "tricky",
+      "title": "Seismic waves and what they tell us about the Earth",
+      "spec": "4.5, 4.15P",
+      "equations": [
+        "\\text{P: longitudinal, through solids and liquids}",
+        "\\text{S: transverse, solids only}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "P, S and the shadow zones",
+          "html": "<table class='tbl'><tr><th></th><th>P waves (primary)</th><th>S waves (secondary)</th></tr><tr><td>Type</td><td><b>longitudinal</b></td><td><b>transverse</b></td></tr><tr><td>Speed</td><td>faster — arrive first</td><td>slower — arrive second</td></tr><tr><td>Travel through</td><td><b>solids and liquids</b></td><td><b>solids only</b> (a liquid cannot be sheared sideways)</td></tr><tr><td>Detected</td><td>almost everywhere, but with a <b>shadow zone</b> where they are refracted by the core</td><td>only within about 103° of the earthquake — <b>not on the far side</b> of the Earth</td></tr></table><p><b>Conclusions</b> (what the examiners mark): S waves are not detected on the far side of the Earth → S waves cannot pass through the core → the <b>outer core is liquid</b>. P waves are <b>refracted</b> (their paths curve, and they bend sharply at the core boundary, leaving a P-wave shadow zone) → their <b>speed changes</b> with depth → the <b>density of the Earth changes</b> with depth, and the core is denser. Both wave types curve gradually through the mantle because the density, and so the speed, increases with depth.</p><p>The 2022 report on the 6-mark version: stating observations (\"no S waves are detected on the other side\") without conclusions \"scores only Level 1\"; Level 3 \"combined both observations and conclusions\" — \"remember to draw conclusions from your analysis of information\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Observation → conclusion",
+          "question": "Seismometers on the opposite side of the Earth from an earthquake detect P waves but no S waves. Explain what this shows about the Earth's core. (3 marks)",
+          "steps": [
+            "<b>Observation:</b> S waves are <b>not detected</b> on the far side; P waves are.",
+            "<b>Physics:</b> S waves are <b>transverse</b> and can only travel through <b>solids</b>; P waves are longitudinal and travel through solids and liquids.",
+            "<b>Conclusion:</b> the S waves must have been <b>stopped by a liquid</b> on the way — the <b>outer core is liquid</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Seismic waves",
+          "questions": [
+            {
+              "id": "wv-t5-q1",
+              "type": "choice",
+              "text": "Why are S waves not detected on the opposite side of the Earth from an earthquake?",
+              "options": [
+                "They are too slow",
+                "They are transverse and cannot travel through the liquid outer core",
+                "They are absorbed by the crust",
+                "They are infrasound"
+              ],
+              "correct": 1,
+              "explain": "Transverse waves need a solid; the liquid outer core stops them."
+            },
+            {
+              "id": "wv-t5-q2",
+              "type": "written",
+              "text": "Explain how the curved paths of P waves through the Earth show that the Earth's density changes with depth. (2)",
+              "model": "<ul><li>The paths curve because the waves are <b>refracted</b> — their <b>speed changes</b> as they go deeper.</li><li>The speed of a seismic wave depends on the <b>density</b> of the rock, so the density must change (increase) with depth.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t5-q3",
+              "type": "written",
+              "text": "Describe two differences between P waves and S waves. (2)",
+              "model": "<ul><li>P waves are <b>longitudinal</b>, S waves are <b>transverse</b>.</li><li>P waves travel <b>faster</b> (arrive first) and can pass through <b>liquids</b>; S waves cannot.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t5-q4",
+              "type": "written",
+              "text": "A student writes: \"P waves have a shadow zone.\" Add the conclusion that would turn this observation into a full answer. (2)",
+              "model": "<ul><li>The P-wave shadow zone exists because the P waves are <b>sharply refracted</b> at the boundary with the core…</li><li>…which shows there is a <b>sudden change in density / speed</b> at the core boundary — the core is a different material (denser) from the mantle.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t5-q5",
+              "type": "choice",
+              "text": "Which statement is a conclusion, not an observation?",
+              "options": [
+                "No S waves arrive on the far side of the Earth",
+                "P waves arrive before S waves",
+                "The outer core must be liquid",
+                "P waves have a shadow zone"
+              ],
+              "correct": 2,
+              "explain": "The others are what the seismometers record; the liquid core is what we deduce from them."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe P and S waves: wave type, speed, and which materials they pass through",
+        "Explain the shadow zones and what they show about the core",
+        "Explain how the curved paths show the density (and speed) changes with depth"
+      ],
+      "blurb": "Earthquakes send P and S waves through the Earth. Where each kind is detected — and where it is not — tells us the outer core is liquid and the Earth's density changes with depth. The 6-mark version is marked on the <b>conclusions</b>, not the observations.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "core-practical-waves",
+      "band": "tricky",
+      "title": "Core practical: speed, frequency and wavelength in a fluid and a solid",
+      "spec": "4.17",
+      "equations": [
+        "v = f \\lambda",
+        "v = \\dfrac{x}{t}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Fluid: the ripple tank",
+          "html": "<ol><li>Set up the ripple tank with a <b>dipper</b> driven by a <b>signal generator</b>; a <b>lamp</b> above projects the pattern onto a screen below.</li><li><b>Frequency:</b> read it from the signal generator, or count the waves passing a point in 10 s and divide by 10.</li><li><b>Wavelength:</b> freeze the pattern with a <b>stroboscope</b> (or photograph it with a ruler in shot); measure across <b>10 wavelengths</b> with a ruler and divide by 10.</li><li><b>Speed:</b> $v = f \\lambda$. Check by timing a crest over a measured distance ($v = x/t$).</li></ol><p><b>Suitability:</b> the ruler on the screen is fine for a wavelength of a few cm but the image may be magnified — measure the tank itself, or calibrate the screen; a stopwatch is too slow for one wave, which is why you count ten or use the generator's frequency.</p>"
+        },
+        {
+          "kind": "explain",
+          "title": "Solid: waves on a string",
+          "html": "<ol><li>Attach a <b>string</b> to a <b>vibration generator</b> driven by a signal generator; pass the string over a <b>pulley</b> with a <b>mass hanging</b> on the end to keep the tension constant.</li><li>Adjust the frequency until a clear <b>standing wave</b> forms — a fixed pattern of loops.</li><li><b>Wavelength:</b> each loop is <b>half a wavelength</b>; measure the length of several loops with a metre rule and work out $\\lambda$.</li><li><b>Frequency:</b> from the signal generator.</li><li><b>Speed:</b> $v = f \\lambda$. Repeat at other frequencies; the speed should be the same (it depends on the tension and the string, not on $f$).</li></ol><p><b>Suitability:</b> the loops are static so a metre rule works; the string's vibration is far too fast to time directly, which is why $v = f\\lambda$ is used instead of $x/t$.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Speed on a string",
+          "question": "A string vibrates at 40 Hz and shows a standing wave of three loops over a length of 0.90 m. Calculate the speed of the waves on the string.",
+          "steps": [
+            "<b>Wavelength:</b> three loops $= 1.5$ wavelengths, so $\\lambda = \\dfrac{0.90}{1.5} = 0.60$ m (one loop is half a wavelength).",
+            "<b>Equation:</b> $v = f \\times \\lambda$",
+            "<b>Working:</b> $v = 40 \\times 0.60$",
+            "<b>Answer:</b> $= 24$",
+            "<b>Units:</b> m/s"
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The core practical",
+          "questions": [
+            {
+              "id": "wv-t6-q1",
+              "type": "numeric",
+              "text": "A string vibrating at 40 Hz shows three loops over 0.90 m. Calculate the wave speed.",
+              "answer": {
+                "value": 24,
+                "unit": "m/s"
+              },
+              "hint": "Three loops = 1.5 λ.",
+              "walkthrough": [
+                "$\\lambda = 0.90 \\div 1.5 = 0.60$ m; $v = 40 \\times 0.60 = 24$ m/s."
+              ]
+            },
+            {
+              "id": "wv-t6-q2",
+              "type": "numeric",
+              "text": "In a ripple tank, 10 wavelengths measure 25 cm and the generator is set to 8 Hz. Calculate the wave speed.",
+              "answer": {
+                "value": 0.2,
+                "unit": "m/s"
+              },
+              "hint": "λ = 2.5 cm = 0.025 m.",
+              "walkthrough": [
+                "$\\lambda = 25 \\div 10 = 2.5$ cm $= 0.025$ m; $v = 8 \\times 0.025 = 0.2$ m/s."
+              ]
+            },
+            {
+              "id": "wv-t6-q3",
+              "type": "written",
+              "text": "Explain why measuring across ten wavelengths and dividing by ten gives a more accurate wavelength than measuring one. (2)",
+              "model": "<ul><li>The <b>uncertainty</b> in reading the ruler (about ± 1 mm) is the same whether one or ten wavelengths are measured…</li><li>…so it is a <b>smaller fraction</b> of a longer measurement; dividing by ten also divides the error by ten.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t6-q4",
+              "type": "written",
+              "text": "Explain why the speed of waves on a string is found using v = fλ rather than by timing the wave over a distance. (2)",
+              "model": "<ul><li>The waves on the string travel far too <b>fast</b> (and the pattern repeats too quickly) to <b>time with a stopwatch</b>.</li><li>The standing-wave loops are <b>stationary</b>, so the wavelength can be measured with a rule, and the frequency is read from the generator — so $v = f\\lambda$ works.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t6-q5",
+              "type": "written",
+              "text": "Describe how a student could use a stroboscope to measure the wavelength of ripples in a tank. (2)",
+              "model": "<ul><li>Adjust the stroboscope's flash rate until it <b>matches the wave frequency</b>, so the pattern appears to <b>stand still</b> (frozen).</li><li>Then <b>measure the distance across several wavelengths</b> with a ruler and divide by the number.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "wv-t6-q6",
+              "type": "choice",
+              "text": "Why is a mass hung over a pulley in the string experiment?",
+              "options": [
+                "To make the string vibrate",
+                "To keep the tension in the string constant",
+                "To measure the frequency",
+                "To stop the string breaking"
+              ],
+              "correct": 1,
+              "explain": "The wave speed depends on the tension, so it must stay fixed."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the ripple-tank method: frequency from the generator or counting, wavelength from several wavelengths, speed from v = fλ or timing a crest",
+        "Describe the string method: vibration generator, standing wave, wavelength from the loops, speed from v = fλ",
+        "Say why each piece of equipment is suitable and what limits the accuracy"
+      ],
+      "blurb": "The core practical measures the speed, frequency and wavelength of waves in a <b>fluid</b> (ripples in a tank) and in a <b>solid</b> (a stretched string driven by a vibration generator), and asks which equipment is suitable for each."
+    },
+    {
+      "id": "planning-waves",
+      "band": "tricky",
+      "title": "Apply the seven steps: the wave practicals",
+      "spec": "4.7, 4.17",
+      "equations": [
+        "\\text{7 steps: variables, equation, change, measure, use, accuracy, repeat + mean}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The seven steps, applied here",
+          "html": "<p>From <a href='#key-concepts/planning-practical'>Topic 1, T6</a>: (1) the two variables; (2) the equation; (3) what you change and how, what you keep the same; (4) what you measure, how, with what; (5) what you do with the results; (6) one accuracy detail; (7) repeat <b>and calculate a mean</b>.</p><table class='tbl'><tr><th>Step</th><th>Ripple tank</th><th>String</th></tr><tr><td>1 Variables</td><td>frequency (change); wavelength (measure); speed (calculate)</td><td>frequency (change); wavelength from the loops (measure)</td></tr><tr><td>2 Equation</td><td>$v = f\\lambda$ (check with $v = x/t$)</td><td>$v = f\\lambda$</td></tr><tr><td>3 Change</td><td>frequency on the signal generator; same water depth</td><td>frequency on the signal generator; same tension (same hanging mass) and same string</td></tr><tr><td>4 Measure</td><td>f from the generator (or count in 10 s); λ across 10 wavelengths with a ruler, pattern frozen by a stroboscope</td><td>f from the generator; length of several loops with a metre rule (each loop = ½λ)</td></tr><tr><td>5 Use</td><td>calculate v for each f; plot v against f (should be constant) or λ against 1/f (straight line)</td><td>calculate v for each f; compare — it should be the same</td></tr><tr><td>6 Accuracy</td><td>measure 10 wavelengths not one; darken the room</td><td>adjust f until the loops are sharp; measure from node to node</td></tr><tr><td>7 Repeat</td><td>repeat each f and average λ</td><td>repeat each f and average</td></tr></table>"
+        },
+        {
+          "kind": "worked",
+          "title": "Speed of sound in air, in full",
+          "question": "Describe how a student could measure the speed of sound in air. (6 marks)",
+          "steps": [
+            "<b>Step 1 — variables.</b> I will measure the <b>distance</b> the sound travels and the <b>time</b> it takes; the speed is calculated from them.",
+            "<b>Step 2 — equation.</b> $v = \\dfrac{x}{t}$.",
+            "<b>Step 3 — set-up.</b> Two microphones a measured distance apart (e.g. 2.0 m with a tape measure), both connected to a data logger / oscilloscope, in a line with the sound source.",
+            "<b>Step 4 — measure.</b> Make a sharp sound (clap) in line with the microphones; the logger records the <b>time delay</b> between the sound reaching the first and the second microphone.",
+            "<b>Step 5 — use the results.</b> Speed = separation ÷ time delay. (Or: repeat for several separations and plot distance against time delay; the gradient is the speed.)",
+            "<b>Step 6 — accuracy.</b> Use the data logger rather than a stopwatch so there is no reaction time; use a large separation so the delay is long compared with the logger's resolution.",
+            "<b>Step 7 — repeat.</b> Repeat several times <b>and calculate a mean</b> time delay."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Planning",
+          "questions": [
+            {
+              "id": "wv-t7-q1",
+              "type": "written",
+              "text": "Describe how a student could investigate how the speed of water waves in a ripple tank depends on the depth of the water. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Change the <b>depth of water</b>; measure the <b>wave speed</b> (from f and λ, or by timing a crest).</td></tr><tr><td><b>2</b></td><td>Equation</td><td>$v = f\\lambda$ (or $v = x/t$).</td></tr><tr><td><b>3</b></td><td>Change</td><td>Set the depth with a ruler (e.g. 0.5 cm to 2.5 cm); keep the <b>frequency</b> of the dipper the same.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Frequency from the signal generator; <b>wavelength</b> across 10 wavelengths on the screen with a ruler (stroboscope to freeze the pattern), ÷ 10.</td></tr><tr><td><b>5</b></td><td>Use</td><td>Calculate $v = f\\lambda$ for each depth and <b>plot speed against depth</b>.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Measure several wavelengths not one; keep the tank level so the depth is uniform.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td><b>Repeat and calculate a mean</b> wavelength at each depth.</td></tr></table>",
+              "lines": 8,
+              "hint": "Seven steps; any six score."
+            },
+            {
+              "id": "wv-t7-q2",
+              "type": "written",
+              "text": "Describe how a student could find the speed of waves on a stretched string using a vibration generator. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Change the <b>frequency</b>; measure the <b>wavelength</b> of the standing wave; calculate the speed.</td></tr><tr><td><b>2</b></td><td>Equation</td><td>$v = f\\lambda$; each loop of the standing wave is half a wavelength.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Frequency on the signal generator; keep the <b>tension</b> constant with the same mass hanging over the pulley, and the same string length.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Adjust f until a clear standing wave forms; measure the <b>length of several loops</b> with a metre rule and work out λ; read f from the generator.</td></tr><tr><td><b>5</b></td><td>Use</td><td>Calculate $v = f\\lambda$ for each frequency; the values should agree — take the mean, or plot λ against 1/f.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Measure from node to node across several loops; make sure the loops are sharply defined before measuring.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td><b>Repeat and calculate a mean</b> for each frequency.</td></tr></table>",
+              "lines": 8
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write a full method for measuring the speed of sound in air",
+        "Write a full method for finding the speed of ripples in a tank",
+        "Write a full method for finding the speed of waves on a string"
+      ],
+      "blurb": "The seven-step recipe from Topic 1 applied to the wave practicals: the speed of sound in air, the ripple tank, and waves on a string."
+    }
+  ],
+  "facts": [
+    {
+      "q": "What do waves transfer, and not transfer?",
+      "a": "Energy and information — without transferring matter.",
+      "section": "what-is-a-wave"
+    },
+    {
+      "q": "Evidence that it is the wave, not the water, that travels?",
+      "a": "A floating cork bobs up and down as ripples pass but stays in the same place.",
+      "section": "what-is-a-wave"
+    },
+    {
+      "q": "Evidence that it is the wave, not the air, that travels (sound)?",
+      "a": "Dust or a candle flame in front of a speaker vibrates in place; the air does not rush across the room, but the sound arrives.",
+      "section": "what-is-a-wave"
+    },
+    {
+      "q": "Amplitude?",
+      "a": "Maximum displacement from the undisturbed position (rest to crest, not crest to trough).",
+      "section": "wave-words"
+    },
+    {
+      "q": "Wavelength?",
+      "a": "Distance from a point on one wave to the same point on the next (crest to crest). Unit m.",
+      "section": "wave-words"
+    },
+    {
+      "q": "Frequency?",
+      "a": "Number of waves passing a point per second. Unit Hz.",
+      "section": "wave-words"
+    },
+    {
+      "q": "Period?",
+      "a": "Time for one complete wave to pass a point. Unit s.",
+      "section": "wave-words"
+    },
+    {
+      "q": "Wavefront?",
+      "a": "A line joining points at the same stage of the wave (all the crests); the wave travels at right angles to it.",
+      "section": "wave-words"
+    },
+    {
+      "q": "Loudness and pitch of a sound depend on…",
+      "a": "Loudness: amplitude. Pitch: frequency.",
+      "section": "wave-words"
+    },
+    {
+      "q": "Transverse wave?",
+      "a": "Oscillations perpendicular to the direction of energy transfer: light and all EM waves, water surface waves, S waves.",
+      "section": "transverse-longitudinal"
+    },
+    {
+      "q": "Longitudinal wave?",
+      "a": "Oscillations parallel to the direction of energy transfer, with compressions and rarefactions: sound, P waves.",
+      "section": "transverse-longitudinal"
+    },
+    {
+      "q": "Which waves need a medium?",
+      "a": "All mechanical waves (sound, water, seismic, string) need particles; electromagnetic waves do not and cross a vacuum.",
+      "section": "transverse-longitudinal"
+    },
+    {
+      "q": "The two wave equations?",
+      "a": "v = f × λ and v = x ÷ t, for every kind of wave.",
+      "section": "wave-equations"
+    },
+    {
+      "q": "Speed of sound in air, in water; speed of light?",
+      "a": "About 340 m/s (330 also used); about 1500 m/s; 3 × 10⁸ m/s.",
+      "section": "wave-equations"
+    },
+    {
+      "q": "Why does v = fλ work?",
+      "a": "f waves pass each second, each λ long, so the wave advances f × λ metres per second.",
+      "section": "wave-equations"
+    },
+    {
+      "q": "11 mm, 1.5 MHz, 20 kHz in base units?",
+      "a": "0.011 m; 1.5 × 10⁶ Hz; 20 000 Hz.",
+      "section": "wave-equations"
+    },
+    {
+      "q": "T and f?",
+      "a": "T = 1/f and f = 1/T. 50 Hz → 0.02 s.",
+      "section": "period-nn"
+    },
+    {
+      "q": "Frequency by counting?",
+      "a": "f = number of waves ÷ time taken. Count for longer for more accuracy.",
+      "section": "period-nn"
+    },
+    {
+      "q": "Speed of sound with a stopwatch: the method?",
+      "a": "Large measured distance; see the bang, start; hear it, stop; speed = distance ÷ time; repeat and average.",
+      "section": "measuring-wave-speed"
+    },
+    {
+      "q": "Why stand further apart in the stopwatch method?",
+      "a": "The travel time is longer, so the reaction time is a smaller fraction of it.",
+      "section": "measuring-wave-speed"
+    },
+    {
+      "q": "Speed of sound with two microphones?",
+      "a": "Measured separation; data logger records the delay between the sound reaching each; v = separation ÷ delay. No reaction time.",
+      "section": "measuring-wave-speed"
+    },
+    {
+      "q": "Speed of ripples, two ways?",
+      "a": "Time a crest over a measured distance (v = x/t); or frequency from the generator and wavelength from 10 wavelengths ÷ 10, then v = fλ.",
+      "section": "measuring-wave-speed"
+    },
+    {
+      "q": "Four things that can happen at a boundary?",
+      "a": "Reflection, refraction, transmission, absorption.",
+      "section": "boundaries"
+    },
+    {
+      "q": "Which way does a wave refract when it slows down?",
+      "a": "Towards the normal. Speeding up: away from the normal.",
+      "section": "boundaries"
+    },
+    {
+      "q": "Why do carpets make a room less echoey?",
+      "a": "They absorb more of the sound, so less is reflected back into the room.",
+      "section": "boundaries"
+    },
+    {
+      "q": "Range of human hearing? Ultrasound? Infrasound?",
+      "a": "20 Hz to 20 000 Hz. Above 20 000 Hz. Below 20 Hz.",
+      "section": "sound-ear"
+    },
+    {
+      "q": "How does the ear detect sound?",
+      "a": "Sound makes the eardrum vibrate at the same frequency; the vibration passes through the small bones to the cochlea, which sends nerve signals.",
+      "section": "sound-ear"
+    },
+    {
+      "q": "Why does the ear detect only a limited range of frequencies?",
+      "a": "The eardrum (a solid) only vibrates efficiently over a limited range of frequencies — too low or too high and it does not respond enough.",
+      "section": "sound-ear"
+    },
+    {
+      "q": "Uses of ultrasound on the spec?",
+      "a": "Sonar (depth), foetal scanning (echoes from tissue boundaries). Infrasound/seismic waves: exploring the Earth's core.",
+      "section": "sound-ear"
+    },
+    {
+      "q": "Displacement–distance vs displacement–time graph?",
+      "a": "Distance axis: the gap between crests is the wavelength. Time axis: the gap is the period (f = 1/T).",
+      "section": "wave-graphs-hard"
+    },
+    {
+      "q": "Crest-to-trough on a graph is…",
+      "a": "Twice the amplitude (vertically) or half a wavelength (horizontally). Not the amplitude; not the wavelength.",
+      "section": "wave-graphs-hard"
+    },
+    {
+      "q": "The phrase for transverse?",
+      "a": "\"Oscillations perpendicular to the direction of energy transfer.\" Say oscillations, and say what they are compared with.",
+      "section": "explain-wave-types"
+    },
+    {
+      "q": "On refraction, what happens to f, v and λ?",
+      "a": "Frequency unchanged (set by the source); speed changes; wavelength changes in proportion to the speed.",
+      "section": "wave-refraction"
+    },
+    {
+      "q": "Ripples into shallow water?",
+      "a": "Slower, shorter wavelength, same frequency, bend towards the normal.",
+      "section": "wave-refraction"
+    },
+    {
+      "q": "Sound into water?",
+      "a": "Faster (≈1500 m/s), longer wavelength, same frequency, bends away from the normal.",
+      "section": "wave-refraction"
+    },
+    {
+      "q": "Echo distance?",
+      "a": "Distance to the surface = v × t ÷ 2 — the pulse goes there and back. Halve it, as its own line.",
+      "section": "echo-distances"
+    },
+    {
+      "q": "ms and μs?",
+      "a": "× 10⁻³ s and × 10⁻⁶ s.",
+      "section": "echo-distances"
+    },
+    {
+      "q": "Sonar in six points?",
+      "a": "Ultrasound pulse emitted; travels through water; reflected by the sea bed; time to return measured; speed in water known; distance = v × t, halved.",
+      "section": "echo-distances"
+    },
+    {
+      "q": "Crack in a bar: why is the echo earlier and the far-end echo smaller?",
+      "a": "Part of the pulse reflects at the crack (closer, so sooner); less energy reaches the far end, so its echo has a smaller amplitude.",
+      "section": "echo-distances"
+    },
+    {
+      "q": "P waves vs S waves?",
+      "a": "P: longitudinal, faster, through solids and liquids. S: transverse, slower, solids only.",
+      "section": "seismic"
+    },
+    {
+      "q": "What do the S-wave shadow and the P-wave shadow show?",
+      "a": "No S waves on the far side → the outer core is liquid. P waves refracted sharply at the core → a sudden change in density; curved paths → density changes with depth.",
+      "section": "seismic"
+    },
+    {
+      "q": "Observation vs conclusion in the seismic 6-marker?",
+      "a": "Observations alone are Level 1; the marks are for the conclusions drawn from them.",
+      "section": "seismic"
+    },
+    {
+      "q": "Core practical: fluid?",
+      "a": "Ripple tank: f from the generator or counting; λ from 10 wavelengths ÷ 10 (stroboscope to freeze); v = fλ or time a crest.",
+      "section": "core-practical-waves"
+    },
+    {
+      "q": "Core practical: solid?",
+      "a": "String with a vibration generator and a hanging mass; standing wave; each loop = ½λ; f from the generator; v = fλ.",
+      "section": "core-practical-waves"
+    },
+    {
+      "q": "Why measure 10 wavelengths?",
+      "a": "The ruler's uncertainty is the same, so it is a smaller fraction of a longer length; dividing by 10 divides the error by 10.",
+      "section": "core-practical-waves"
+    },
+    {
+      "q": "State what is meant by: amplitude.",
+      "a": "The <b>maximum displacement</b> of a point on the wave from its <b>undisturbed position</b>.",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: wavelength.",
+      "a": "The distance from a point on one wave to the <b>same point on the next wave</b> (crest to crest).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: frequency.",
+      "a": "The <b>number of waves passing a point per second</b>; unit hertz (Hz).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: period.",
+      "a": "The <b>time for one complete wave</b> (one oscillation) to pass a point; unit s.",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: wave speed (velocity).",
+      "a": "The speed at which the <b>wave (the energy) travels</b> through the medium.",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: wavefront.",
+      "a": "A line joining points on the wave that are at the <b>same stage</b> of oscillation (e.g. all crests).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: transverse wave.",
+      "a": "Oscillations <b>perpendicular</b> to the direction of energy transfer (light, water surface, S waves).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: longitudinal wave.",
+      "a": "Oscillations <b>parallel</b> to the direction of energy transfer, with compressions and rarefactions (sound, P waves).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: compression.",
+      "a": "A region of a longitudinal wave where the particles are <b>closer together</b> (higher pressure).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: rarefaction.",
+      "a": "A region of a longitudinal wave where the particles are <b>further apart</b> (lower pressure).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: reflection.",
+      "a": "A wave <b>bouncing back</b> from a boundary.",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: refraction.",
+      "a": "A wave <b>changing direction</b> at a boundary because its <b>speed changes</b>.",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: transmission.",
+      "a": "A wave <b>passing through</b> a material.",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: absorption.",
+      "a": "A wave's <b>energy being taken in</b> by a material (transferred to its thermal store).",
+      "section": "keywords-waves"
+    },
+    {
+      "q": "State what is meant by: ultrasound.",
+      "a": "Sound with a frequency <b>above 20 000 Hz</b> (above the range of human hearing).",
+      "section": "sound-ear"
+    },
+    {
+      "q": "State what is meant by: infrasound.",
+      "a": "Sound with a frequency <b>below 20 Hz</b>.",
+      "section": "sound-ear"
+    },
+    {
+      "q": "State what is meant by: echo.",
+      "a": "A <b>reflected</b> sound wave heard after the original.",
+      "section": "keywords-waves"
+    }
+  ],
   "types": [
     {
       "id": "wave-speed-frequency",
