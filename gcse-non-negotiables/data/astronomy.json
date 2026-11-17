@@ -5,6 +5,2209 @@
   "spec": "Topic 7",
   "order": 70,
   "figure": "astrophysics",
-  "placeholder": "The notes, tricky bits and flashcards for this topic are being written. Check back soon.",
-  "types": []
+  "lede": "Everything in Topic 7, split into two bands. <b>The non-negotiables</b> are the Solar System, weight and g, the kinds of orbit, red-shift, the two theories of the Universe, the life cycles of stars and how we observe them. <b>The tricky bits</b> are where the marks go missing: the explanations that are marked on particular words — circular orbits, the red-shift chain, why the CMB decided it, how a star stays stable — and the telescope and weight questions. The whole of Topic 7 is Physics only (not Combined Science), so every section carries <b>P</b>; there is no Higher-only content, so it all applies at both tiers.",
+  "howto": [
+    "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
+    "Draw the orbit diagram yourself — velocity along the orbit, gravity towards the centre — and say the life cycles of stars out loud in order, before you look at the ones on the page.",
+    "Read each explanation, then cover it and say it back. For a definition, the bold words are the ones the mark is for.",
+    "Do the practice questions <b>before</b> opening the hint or walkthrough. Calculations in EWAU layout on paper first, then type the answer to check it.",
+    "For \"explain\" and \"describe how\" questions, write your answer in full sentences, then compare it with the model answer line by line.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "The Solar System, weight on other bodies, orbits, red-shift, Big Bang versus Steady State, the life cycles of stars, and how observing has changed. If any of these is not yet green, it comes before anything in the second band."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "The explanations marked on particular words: how the model of the Solar System changed, circular orbits, the red-shift chain, why the CMB decided it, the balance inside a star, telescopes in space, and weight the hard way. Each one is built on something from the first band."
+    }
+  ],
+  "factsBlurb": "Topic 7 on flip cards: the planets in order, the g values, the kinds of orbit, the red-shift chain, the two theories and their evidence, every stage of both life cycles, and the telescope arguments. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "solar-system",
+      "band": "nn",
+      "title": "The Solar System",
+      "spec": "7.2P, 7.3P",
+      "equations": [
+        "\\text{Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "What is in it",
+          "html": "<table class='tbl'><tr><th>Object</th><th>What it is</th><th>Examples</th></tr><tr><td><b>The Sun</b></td><td>the star at the centre; almost all the mass of the Solar System; everything else orbits it</td><td></td></tr><tr><td><b>Planets</b> (eight)</td><td>large bodies in near-circular orbits round the Sun, massive enough to have cleared their orbits</td><td><b>M</b>ercury, <b>V</b>enus, <b>E</b>arth, <b>M</b>ars, <b>J</b>upiter, <b>S</b>aturn, <b>U</b>ranus, <b>N</b>eptune — <i>My Very Easy Method Just Speeds Up Naming</i></td></tr><tr><td><b>Natural satellites</b> (moons)</td><td>bodies that orbit a planet</td><td>the Moon; Jupiter's Io, Europa, Ganymede, Callisto</td></tr><tr><td><b>Dwarf planets</b></td><td>orbit the Sun and are round, but have not cleared their orbits of other objects</td><td>Pluto, Ceres, Eris</td></tr><tr><td><b>Asteroids</b></td><td>rocky lumps, mostly in the asteroid belt between Mars and Jupiter</td><td>Vesta</td></tr><tr><td><b>Comets</b></td><td>icy bodies in long, highly elliptical orbits; grow a tail of gas and dust near the Sun</td><td>Halley's comet</td></tr><tr><td><b>Artificial satellites</b></td><td>spacecraft put into orbit round the Earth (or another body)</td><td>ISS, weather and communications satellites</td></tr></table><p>The four inner planets are small and rocky; the four outer planets are gas giants, much larger and further apart.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Planet or not?",
+          "question": "Pluto was called a planet until 2006 and is now a dwarf planet. State what Pluto has in common with the planets and what makes it a dwarf planet. (2 marks)",
+          "steps": [
+            "<b>In common:</b> it <b>orbits the Sun</b> and is massive enough to be <b>round</b>.",
+            "<b>Dwarf:</b> it has <b>not cleared its orbit</b> of other objects — it shares its region with many similar icy bodies — so it does not meet the definition of a planet."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The Solar System",
+          "questions": [
+            {
+              "id": "as-n1-q1",
+              "type": "written",
+              "text": "List the eight planets in order of increasing distance from the Sun. (2)",
+              "model": "<ul><li>Mercury, Venus, Earth, Mars…</li><li>…Jupiter, Saturn, Uranus, Neptune. (All eight in order for 2; one slip for 1.)</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n1-q2",
+              "type": "choice",
+              "text": "Which of these is a natural satellite?",
+              "options": [
+                "Mars",
+                "The Moon",
+                "Ceres",
+                "Halley's comet"
+              ],
+              "correct": 1,
+              "explain": "A natural satellite (moon) orbits a planet."
+            },
+            {
+              "id": "as-n1-q3",
+              "type": "written",
+              "text": "State the difference between a planet and a dwarf planet. (1)",
+              "model": "<ul><li>A planet has <b>cleared its orbit</b> of other objects; a dwarf planet orbits the Sun and is round but has <b>not</b> cleared its orbit.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n1-q4",
+              "type": "choice",
+              "text": "Where are most asteroids found?",
+              "options": [
+                "Between Earth and Mars",
+                "Between Mars and Jupiter",
+                "Beyond Neptune",
+                "Inside Mercury's orbit"
+              ],
+              "correct": 1,
+              "explain": "The asteroid belt lies between the inner rocky planets and the gas giants."
+            },
+            {
+              "id": "as-n1-q5",
+              "type": "written",
+              "text": "State what the Solar System consists of. (2)",
+              "model": "<ul><li>The <b>Sun</b> and the <b>eight planets</b> with their <b>natural satellites</b> (moons)…</li><li>…plus <b>dwarf planets</b>, <b>asteroids</b> and <b>comets</b> (and artificial satellites).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n1-q6",
+              "type": "choice",
+              "text": "Which planet is furthest from the Sun?",
+              "options": [
+                "Uranus",
+                "Saturn",
+                "Neptune",
+                "Pluto"
+              ],
+              "correct": 2,
+              "explain": "Neptune is the eighth planet; Pluto is a dwarf planet."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Recall what the Solar System consists of",
+        "Recall the eight planets in order from the Sun",
+        "Distinguish a planet, a dwarf planet, a natural satellite, an asteroid and a comet"
+      ],
+      "blurb": "One star, eight planets in a fixed order, and everything else that orbits the Sun: moons round the planets, dwarf planets, asteroids and comets.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "weight-elsewhere-nn",
+      "band": "nn",
+      "title": "Weight and g on other bodies",
+      "spec": "7.1P",
+      "equations": [
+        "W = m \\times g",
+        "g_{\\text{Moon}} \\approx 1.6\\ \\text{N/kg}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Why g is different",
+          "html": "<p><b>Weight</b> is the force of gravity on an object: $W = m \\times g$. The <b>mass</b> $m$ is the amount of matter and is the <b>same everywhere</b>. The <b>gravitational field strength</b> $g$ is the force per kilogram at that place, and it is different on each body.</p><p>$g$ at the surface of a body depends on <b>the body's mass</b> (more mass → stronger pull) and <b>its radius</b> (further from the centre → weaker pull). The Moon has about 1/80 of the Earth's mass but only about 1/4 of its radius, which works out at $g \\approx 1.6$ N/kg — about a sixth. Jupiter is far more massive, so even with its large radius $g$ is about 25 N/kg.</p><table class='tbl data'><tr><th>Body</th><th>g in N/kg</th><th>Weight of 60 kg</th></tr><tr><td>Earth</td><td>10 (9.8)</td><td>600 N</td></tr><tr><td>Moon</td><td>1.6</td><td>96 N</td></tr><tr><td>Mars</td><td>3.7</td><td>222 N</td></tr><tr><td>Jupiter</td><td>25</td><td>1500 N</td></tr></table><p>A <b>newton meter</b> (spring balance) reads the weight, so it reads less on the Moon; a <b>beam balance</b> compares masses, so it reads the same. Gravity does not stop in orbit: $g$ is a little smaller at the height of the ISS (about 8.7 N/kg), and that gravity is what keeps it in orbit (N4).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Weight on Mars",
+          "question": "A lander has a mass of 1200 kg. On Mars g = 3.7 N/kg. Calculate the lander's weight on Mars and compare it with its weight on Earth.",
+          "steps": [
+            "<b>Equation:</b> $W = m \\times g$",
+            "<b>Working:</b> $W = 1200 \\times 3.7$",
+            "<b>Answer:</b> $= 4440$",
+            "<b>Units:</b> N on Mars — on Earth it is 1200 × 10 = 12 000 N; the mass is 1200 kg in both places"
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "weight-elsewhere"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Weight and g",
+          "questions": [
+            {
+              "id": "as-n2-q1",
+              "type": "written",
+              "text": "Explain why an astronaut weighs less on the Moon than on Earth, even though her mass is the same. (2)",
+              "model": "<ul><li>Weight = mass × gravitational field strength, and the Moon's <b>g is smaller</b> (about 1.6 N/kg against 10 N/kg)…</li><li>…because the Moon has much <b>less mass</b> than the Earth (and a smaller radius), so its gravitational pull on each kilogram is weaker.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-n2-q2",
+              "type": "numeric",
+              "text": "A 75 kg astronaut stands on the Moon (g = 1.6 N/kg). Calculate her weight.",
+              "answer": {
+                "value": 120,
+                "unit": "N"
+              },
+              "hint": "W = m × g with the Moon's g.",
+              "walkthrough": [
+                "<b>Equation:</b> $W = m \\times g$",
+                "<b>Working:</b> $W = 75 \\times 1.6$",
+                "<b>Answer:</b> $= 120$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "as-n2-q3",
+              "type": "choice",
+              "text": "A 10 kg box is taken from Earth to Mars. Which is correct?",
+              "options": [
+                "Its mass and weight both fall",
+                "Its mass stays 10 kg; its weight falls from 100 N to 37 N",
+                "Its mass falls; its weight stays the same",
+                "Nothing changes"
+              ],
+              "correct": 1,
+              "explain": "Mass is the same everywhere; weight follows g."
+            },
+            {
+              "id": "as-n2-q4",
+              "type": "numeric",
+              "text": "An object weighs 180 N on a planet where g = 9.0 N/kg. Calculate its weight on Earth (g = 10 N/kg).",
+              "answer": {
+                "value": 200,
+                "unit": "N"
+              },
+              "hint": "Mass first: m = W ÷ g.",
+              "walkthrough": [
+                "$m = \\dfrac{180}{9.0} = 20$ kg.",
+                "On Earth $W = 20 \\times 10 = 200$ N."
+              ]
+            },
+            {
+              "id": "as-n2-q5",
+              "type": "written",
+              "text": "State two things that the value of g at the surface of a planet depends on. (2)",
+              "model": "<ul><li>The <b>mass</b> of the planet.</li><li>The <b>radius</b> of the planet (distance from its centre to the surface).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n2-q6",
+              "type": "choice",
+              "text": "An astronaut takes a beam balance and a newton meter to the Moon. Which reading changes?",
+              "options": [
+                "Both",
+                "Neither",
+                "The newton meter (it measures weight)",
+                "The beam balance (it measures mass)"
+              ],
+              "correct": 2,
+              "explain": "A newton meter measures force; a beam balance compares masses, which do not change."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain why weight and g differ from one body to another (mass and radius of the body)",
+        "State that mass does not change from place to place",
+        "Calculate weights and g values for other bodies"
+      ],
+      "blurb": "Your mass is the same on the Moon; your weight is a sixth of what it is here, because the Moon's gravitational field strength is a sixth of the Earth's. g depends on the mass and the radius of the body you are standing on.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "orbits",
+      "band": "nn",
+      "title": "Orbits: moons, planets, comets and artificial satellites",
+      "spec": "7.5P",
+      "equations": [
+        "\\text{planets, moons: near-circular}",
+        "\\text{comets: highly elliptical}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The four kinds",
+          "html": "<table class='tbl'><tr><th>Body</th><th>Orbits</th><th>Shape and speed</th></tr><tr><td><b>Planets</b> (and dwarf planets, asteroids)</td><td>the Sun</td><td><b>near-circular</b> (slightly elliptical) orbits, all in roughly the same plane and the same direction; speed almost constant; the further out, the slower and the longer the year</td></tr><tr><td><b>Moons</b> (natural satellites)</td><td>a planet</td><td>near-circular; the Moon takes about 27 days</td></tr><tr><td><b>Comets</b></td><td>the Sun</td><td><b>highly elliptical</b>: far out for most of the orbit, then a fast swing round the Sun; <b>fastest when closest</b> to the Sun, slowest when furthest; grow a tail near the Sun</td></tr><tr><td><b>Artificial satellites</b></td><td>the Earth (or a planet being studied)</td><td><b>geostationary</b>: high (36 000 km), above the equator, period <b>24 hours</b> so it stays over the same point — TV and communications; <b>polar / low orbit</b>: a few hundred km up, period about 90 minutes, passes over the whole surface as the Earth turns — weather, imaging, mapping</td></tr></table><p>Why a comet speeds up: as it falls towards the Sun, gravity does work on it — energy is transferred from its gravitational potential store to its kinetic store — and the gravitational force is stronger closer in; on the way out the reverse happens.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Choosing a satellite orbit",
+          "question": "Explain why a satellite used to relay television signals is put in a geostationary orbit, while a weather satellite is put in a low polar orbit. (3 marks)",
+          "steps": [
+            "<b>Geostationary:</b> its period is <b>24 hours</b>, the same as the Earth's rotation, so it <b>stays above the same point</b> on the equator — a fixed dish on a roof can point at it permanently.",
+            "<b>Polar, low:</b> it circles every ~90 minutes while the <b>Earth turns beneath it</b>, so over a day it <b>passes over the whole surface</b> and can photograph everywhere.",
+            "<b>Height:</b> a low orbit is also <b>closer</b>, so the images are more detailed."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Orbits",
+          "questions": [
+            {
+              "id": "as-n3-q1",
+              "type": "written",
+              "text": "Describe the orbit of a comet and how its speed changes. (2)",
+              "model": "<ul><li>A <b>highly elliptical</b> (very elongated) orbit around the Sun.</li><li>It is <b>fastest when closest to the Sun</b> and slowest when furthest away.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n3-q2",
+              "type": "choice",
+              "text": "A geostationary satellite…",
+              "options": [
+                "orbits over the poles every 90 minutes",
+                "stays above the same point on the equator with a 24-hour period",
+                "does not move",
+                "orbits the Moon"
+              ],
+              "correct": 1,
+              "explain": "Same period as the Earth's rotation, above the equator."
+            },
+            {
+              "id": "as-n3-q3",
+              "type": "written",
+              "text": "Explain why a comet speeds up as it approaches the Sun. (2)",
+              "model": "<ul><li>The Sun's <b>gravitational force</b> on it increases as it gets closer, pulling it faster…</li><li>…energy is transferred from its <b>gravitational potential store to its kinetic store</b> (gravity does work on it).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n3-q4",
+              "type": "choice",
+              "text": "Which best describes the orbit of a planet?",
+              "options": [
+                "A perfect circle",
+                "Near-circular (slightly elliptical) around the Sun",
+                "Highly elliptical",
+                "A straight line"
+              ],
+              "correct": 1,
+              "explain": "Planets' orbits are ellipses very close to circles."
+            },
+            {
+              "id": "as-n3-q5",
+              "type": "written",
+              "text": "State what keeps a satellite in orbit around the Earth. (1)",
+              "model": "<ul><li>The <b>force of gravity</b> (the Earth's gravitational pull on the satellite), acting towards the centre of the Earth.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n3-q6",
+              "type": "written",
+              "text": "Give one use of a satellite in a low polar orbit and explain why that orbit suits the use. (2)",
+              "model": "<ul><li>Use: <b>weather forecasting / Earth imaging / mapping</b>.</li><li>The satellite passes over the poles every ~90 min while the Earth rotates underneath, so it <b>scans the whole surface</b> each day, and being low it sees detail.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the orbits of planets, moons, comets and artificial satellites",
+        "Describe geostationary and polar (low) orbits and what each is used for",
+        "Explain why a comet speeds up as it approaches the Sun"
+      ],
+      "blurb": "Everything in orbit is held there by gravity. Planets and moons go round in near-circles at nearly steady speed; comets follow long ellipses and speed up near the Sun; artificial satellites are put where their job needs them.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "circular-orbits",
+      "band": "nn",
+      "title": "Circular orbits: changing velocity at constant speed",
+      "spec": "7.6P, 7.7P",
+      "equations": [
+        "\\text{gravity} \\perp \\text{velocity} \\Rightarrow \\text{direction changes, speed does not}",
+        "\\text{smaller radius} \\Rightarrow \\text{higher speed}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Velocity changes, speed does not",
+          "html": "<figure class='diagram'><svg viewBox='0 0 600 260' role='img'><circle cx='180' cy='140' r='18' style='fill:var(--accent);opacity:0.5'/><text x='180.0' y='144.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>Sun</text><circle cx='180' cy='140' r='95' style='fill:none;stroke:var(--line);stroke-width:1.2;stroke-dasharray:4 4'/><circle cx='227.5' cy='57.7' r='6' style='fill:var(--ink)'/><line x1='227.5' y1='57.7' x2='266.5' y2='80.2' style='stroke:var(--accent);stroke-width:2'/><polygon points='247.0,69.0 240.0,68.8 243.3,63.0' style='fill:var(--accent)'/><line x1='227.5' y1='57.7' x2='207.5' y2='92.4' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='217.5,75.0 217.7,68.1 223.5,71.4' style='fill:var(--ink-2)'/><circle cx='262.3' cy='187.5' r='6' style='fill:var(--ink)'/><line x1='262.3' y1='187.5' x2='239.8' y2='226.5' style='stroke:var(--accent);stroke-width:2'/><polygon points='251.0,207.0 251.2,200.0 257.0,203.3' style='fill:var(--accent)'/><line x1='262.3' y1='187.5' x2='227.6' y2='167.5' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='245.0,177.5 251.9,177.7 248.6,183.5' style='fill:var(--ink-2)'/><circle cx='132.5' cy='222.3' r='6' style='fill:var(--ink)'/><line x1='132.5' y1='222.3' x2='93.5' y2='199.8' style='stroke:var(--accent);stroke-width:2'/><polygon points='113.0,211.0 120.0,211.2 116.7,217.0' style='fill:var(--accent)'/><line x1='132.5' y1='222.3' x2='152.5' y2='187.6' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='142.5,205.0 142.3,211.9 136.5,208.6' style='fill:var(--ink-2)'/><circle cx='97.7' cy='92.5' r='6' style='fill:var(--ink)'/><line x1='97.7' y1='92.5' x2='120.2' y2='53.5' style='stroke:var(--accent);stroke-width:2'/><polygon points='109.0,73.0 108.8,80.0 103.0,76.7' style='fill:var(--accent)'/><line x1='97.7' y1='92.5' x2='132.4' y2='112.5' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='115.0,102.5 108.1,102.3 111.4,96.5' style='fill:var(--ink-2)'/><text x='330.0' y='60.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>velocity: along the orbit (tangent)</text><line x1='310.0' y1='56.0' x2='326.0' y2='56.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='318.0,56.0 311.9,59.4 311.9,52.6' style='fill:var(--accent)'/><text x='330.0' y='84.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force of gravity: towards the centre</text><line x1='310.0' y1='80.0' x2='326.0' y2='80.0' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='318.0,80.0 311.9,83.4 311.9,76.6' style='fill:var(--ink-2)'/><text x='330.0' y='120.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>speed the same at every point;</text><text x='330.0' y='136.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>direction changes all the time,</text><text x='330.0' y='152.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>so the velocity changes —</text><text x='330.0' y='168.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>the planet is accelerating towards the Sun.</text><text x='330.0' y='200.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>The force is always at right angles</text><text x='330.0' y='216.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>to the velocity, so it turns the planet</text><text x='330.0' y='232.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>without speeding it up or slowing it down.</text></svg><figcaption>A planet in a circular orbit: the velocity is along the orbit, the force of gravity is towards the Sun — always at right angles to the velocity.</figcaption></figure><p><b>Velocity is a vector</b>: speed <i>and</i> direction. In a circular orbit the <b>speed is constant</b> but the <b>direction is changing continuously</b>, so the <b>velocity is changing</b>, so the planet is <b>accelerating</b> — towards the centre. An acceleration needs a resultant force, and that force is <b>gravity</b>, acting <b>towards the Sun</b>, <b>at right angles to the velocity</b>. Because it is at right angles it does no work: it <b>changes the direction</b> of the motion but <b>not the speed</b>.</p><p>The June 2024 marks (Q9(a)): the resultant force on a body in circular motion points <b>towards the centre</b> (not along the motion, no vertical component for a horizontal circle); it is accelerating because \"its <b>direction is continuously changing</b>\" or \"there is a <b>resultant force</b>\" or \"<b>velocity is a vector</b>\". \"Centripetal force\" on its own was ignored.</p><p><b>Speed and radius</b> (7.7P, qualitative): for a stable orbit the gravitational force must be exactly enough to keep bending the path into a circle. Closer to the Sun gravity is stronger, so the orbit must be <b>faster</b>; further out it is weaker, so the orbit is <b>slower</b>. Put the other way: <b>if the speed of an orbiting body increases, it must move to a smaller radius to stay in a stable orbit</b>; if it slows, to a larger one. That is why Mercury races round in 88 days and Neptune takes 165 years.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark explanation",
+          "question": "A satellite moves in a circular orbit at constant speed. Explain why its velocity is changing and what causes the change. (3 marks)",
+          "steps": [
+            "<b>Velocity is a vector</b>, with direction as well as size; in a circle the <b>direction is continuously changing</b>, so the velocity changes even though the speed does not.",
+            "<b>A changing velocity is an acceleration</b>, which needs a <b>resultant force</b>.",
+            "That force is <b>gravity</b>, acting <b>towards the centre</b> of the Earth, at <b>right angles to the velocity</b> — so it changes the direction but not the speed."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Circular orbits",
+          "questions": [
+            {
+              "id": "as-n4-q1",
+              "type": "written",
+              "text": "A planet orbits the Sun at constant speed. Explain why it is accelerating. (2)",
+              "model": "<ul><li>Its <b>direction is continuously changing</b>, and velocity is a vector, so its <b>velocity is changing</b>.</li><li>A change in velocity is an acceleration (there is a resultant force — gravity — towards the Sun).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n4-q2",
+              "type": "choice",
+              "text": "In which direction does the force of gravity act on a planet in a circular orbit?",
+              "options": [
+                "Along the direction of motion",
+                "Towards the centre (the Sun)",
+                "Away from the Sun",
+                "There is no force"
+              ],
+              "correct": 1,
+              "explain": "Towards the centre, at right angles to the velocity."
+            },
+            {
+              "id": "as-n4-q3",
+              "type": "written",
+              "text": "Explain why the force of gravity changes a planet's velocity but not its speed. (2)",
+              "model": "<ul><li>Gravity acts <b>towards the centre</b>, <b>at right angles to the velocity</b>.</li><li>A force at right angles to the motion <b>changes the direction</b> (bends the path) but does no work along the motion, so the <b>speed stays the same</b>.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-n4-q4",
+              "type": "choice",
+              "text": "Two satellites are in stable circular orbits. Satellite X moves faster than satellite Y. Which is correct?",
+              "options": [
+                "X has the smaller orbital radius",
+                "X has the larger orbital radius",
+                "Both have the same radius",
+                "Speed and radius are not linked"
+              ],
+              "correct": 0,
+              "explain": "A higher speed needs a stronger gravitational pull to hold the circle, which means being closer in."
+            },
+            {
+              "id": "as-n4-q5",
+              "type": "written",
+              "text": "Mercury orbits the Sun faster than Neptune. Explain why, in terms of gravity. (2)",
+              "model": "<ul><li>Mercury is <b>much closer</b> to the Sun, so the <b>gravitational force</b> on it is much <b>stronger</b>.</li><li>A stronger force bends the path more sharply, so a <b>higher speed</b> is needed for a stable circular orbit at the smaller radius.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-n4-q6",
+              "type": "choice",
+              "text": "Which statement about a body in a circular orbit is true?",
+              "options": [
+                "Its speed and velocity are both constant",
+                "Its speed is constant but its velocity changes",
+                "Its velocity is constant but its speed changes",
+                "Neither is constant"
+              ],
+              "correct": 1,
+              "explain": "Constant speed, changing direction → changing velocity."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain how gravity changes a planet's velocity while its speed stays constant",
+        "Explain why a body in a circular orbit is accelerating",
+        "State how orbital speed and orbital radius are linked for a stable orbit"
+      ],
+      "blurb": "A planet in a circular orbit moves at a steady speed but its velocity is changing all the time, because its direction is. The force of gravity, always towards the centre, is what changes it. Closer orbits need higher speeds.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "redshift",
+      "band": "nn",
+      "title": "Moving sources and red-shift",
+      "spec": "7.11P, 7.12P",
+      "equations": [
+        "\\text{source moving away} \\Rightarrow \\lambda \\uparrow,\\ f \\downarrow",
+        "\\text{further galaxy} \\Rightarrow \\text{bigger red-shift}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The Doppler effect and red-shift",
+          "html": "<p>When a <b>wave source moves relative to an observer</b>, the observed wavelength and frequency change. Moving <b>away</b>: each wave is emitted a little further off than the last, so the waves arrive <b>stretched out</b> — <b>longer wavelength, lower frequency</b>. Moving <b>towards</b>: squashed — <b>shorter wavelength, higher frequency</b>. You hear it in the drop in pitch of a siren as it passes.</p><p><b>Red-shift:</b> light from distant galaxies has <b>longer wavelengths</b> than light from the same elements in a laboratory on Earth — the dark lines in its spectrum are <b>shifted towards the red end</b>. So the galaxies are <b>moving away</b> from us. And the <b>more distant</b> the galaxy, the <b>bigger its red-shift</b>, so the <b>faster it is moving away</b>.</p><p>The June 2024 scheme (Q1(c)(ii), 3 marks): red-shift means the galaxies are <b>moving away</b>; <b>more distant</b> galaxies have a <b>bigger</b> red-shift; more distant galaxies are <b>moving faster</b>. A question may give the equation $z = \\dfrac{\\Delta\\lambda}{\\lambda}$ (change in wavelength ÷ original wavelength); it is not on the equation list, so it will be supplied. When calculating with it, keep both wavelengths in the same form — both in nm, or both in metres in standard form — the 2022 report's advice (the arithmetic is in T3).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Reading a red-shifted spectrum",
+          "question": "A hydrogen line is at 656 nm in the laboratory and at 668 nm in the light from a galaxy. State what this tells you about the galaxy, and what you would expect for a galaxy twice as far away. (3 marks)",
+          "steps": [
+            "<b>Observation:</b> the line has a <b>longer wavelength</b> than on Earth — it is <b>red-shifted</b>.",
+            "<b>Meaning:</b> the galaxy is <b>moving away</b> from us.",
+            "<b>Further galaxy:</b> a <b>larger</b> red-shift (the line at a longer wavelength still), because more distant galaxies are moving away <b>faster</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Red-shift",
+          "questions": [
+            {
+              "id": "as-n5-q1",
+              "type": "written",
+              "text": "A source of waves moves away from an observer. State what happens to the observed wavelength and frequency. (2)",
+              "model": "<ul><li>Wavelength <b>increases</b> (longer).</li><li>Frequency <b>decreases</b> (lower).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n5-q2",
+              "type": "written",
+              "text": "State what is meant by red-shift. (1)",
+              "model": "<ul><li>The <b>increase in wavelength</b> of light from a source (galaxy) that is <b>moving away</b> — its spectral lines are shifted towards the red end of the spectrum.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n5-q3",
+              "type": "choice",
+              "text": "Galaxy A is further from Earth than galaxy B. Which is correct?",
+              "options": [
+                "A has a smaller red-shift than B",
+                "A has a larger red-shift than B and is moving away faster",
+                "Both have the same red-shift",
+                "A is moving towards us"
+              ],
+              "correct": 1,
+              "explain": "Red-shift increases with distance."
+            },
+            {
+              "id": "as-n5-q4",
+              "type": "written",
+              "text": "Describe how the red-shift of light from galaxies depends on their distance from Earth. (2)",
+              "model": "<ul><li>Light from (almost) all galaxies is red-shifted — they are <b>moving away</b>.</li><li>The <b>further</b> the galaxy, the <b>greater</b> the red-shift (the faster it recedes).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n5-q5",
+              "type": "numeric",
+              "text": "A spectral line at 500 nm on Earth appears at 520 nm in light from a galaxy. The red-shift z = (change in wavelength) ÷ (original wavelength). Calculate z.",
+              "answer": {
+                "value": 0.04,
+                "unit": ""
+              },
+              "hint": "Δλ = 20 nm; keep both in nm.",
+              "walkthrough": [
+                "$z = \\dfrac{520 - 500}{500} = \\dfrac{20}{500} = 0.04$."
+              ]
+            },
+            {
+              "id": "as-n5-q6",
+              "type": "choice",
+              "text": "A star's light is blue-shifted. What does this show?",
+              "options": [
+                "It is moving away",
+                "It is moving towards us",
+                "It is very hot",
+                "It is very far away"
+              ],
+              "correct": 1,
+              "explain": "Towards → shorter wavelength → blue-shift (a few nearby galaxies, e.g. Andromeda, do this)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe how the observed wavelength and frequency change when a source moves away or towards an observer",
+        "Describe red-shift in the light from galaxies and how it depends on distance",
+        "Describe what is seen in the spectrum (lines shifted towards the red)"
+      ],
+      "blurb": "A wave source moving away from you stretches its waves: longer wavelength, lower frequency. Light from almost every distant galaxy is stretched towards the red end of the spectrum — and the further the galaxy, the more it is stretched.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "big-bang",
+      "band": "nn",
+      "title": "Big Bang, Steady State, and the evidence",
+      "spec": "7.8P, 7.9P, 7.10P, 7.13P, 7.14P, 7.15P",
+      "equations": [
+        "\\text{evidence: red-shift + CMB}",
+        "\\text{Big Bang accepted: more supporting evidence}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The two theories and the two pieces of evidence",
+          "html": "<table class='tbl'><tr><th></th><th>Big Bang</th><th>Steady State</th></tr><tr><td>The Universe</td><td>began about 13.8 billion years ago from a <b>very small, very hot, very dense</b> point and has been <b>expanding</b> (and cooling) ever since</td><td>has <b>always existed</b> and always will; it is expanding, but <b>new matter is continually created</b> so it looks the same at all times</td></tr><tr><td>Explains red-shift?</td><td><b>yes</b> — space is expanding, so galaxies move apart</td><td><b>yes</b> — space is expanding, so galaxies move apart</td></tr><tr><td>Explains the CMB?</td><td><b>yes</b> — predicted it: the leftover radiation from the hot early Universe, stretched to microwaves by the expansion</td><td><b>no</b> — gives no reason for it</td></tr><tr><td>Status</td><td><b>accepted</b> model</td><td>abandoned</td></tr></table><p><b>Red-shift → expansion</b> (7.13P): the light from distant galaxies is red-shifted, so they are <b>moving away</b>; the <b>further away</b> a galaxy, the <b>faster</b> it recedes. That is what you see from any point in a space that is <b>expanding everywhere</b> — like dots on an inflating balloon. Running it backwards, everything was once together: a beginning.</p><p><b>The CMB</b> (cosmic microwave background, 7.15P): faint <b>microwave radiation coming from every direction in the sky</b>, at the same temperature everywhere (about 2.7 K). The Big Bang theory <b>predicted</b> it: the early Universe was hot and full of radiation, and the expansion has stretched that radiation to microwave wavelengths. When it was <b>discovered (1964)</b> it matched the prediction; Steady State had no explanation, so the Big Bang became the <b>accepted model</b> — it is the theory with <b>more supporting evidence</b> (7.10P).</p><p>The June 2025 6-marker (Q10(c)): Level 3 needs <b>at least one piece of evidence described and linked to the aspect of the Big Bang it supports</b>, and the other identified — red-shift linked to <b>expansion</b>, the CMB (microwaves \"across the sky\") linked to a <b>definite beginning</b> (a hot early Universe). Isolated statements were Level 1.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 6-mark answer",
+          "question": "Describe the evidence that supports the Big Bang theory. (6 marks)",
+          "steps": [
+            "<b>Red-shift — observation:</b> light from distant galaxies has <b>longer wavelengths</b> than the same light on Earth; the further the galaxy, the <b>bigger the red-shift</b>.",
+            "<b>Red-shift — what it shows:</b> the galaxies are <b>moving away</b>, and the more distant ones faster, so the <b>Universe is expanding</b>; traced back, everything was once in one place — a beginning.",
+            "<b>CMB — observation:</b> faint <b>microwave radiation</b> is detected coming from <b>all directions</b> in the sky, at almost the same intensity everywhere.",
+            "<b>CMB — what it shows:</b> the Big Bang predicted it as the <b>radiation left over from the hot, dense early Universe</b>, stretched to microwaves by the expansion; the Steady State theory could not explain it.",
+            "<b>Conclusion:</b> red-shift fits both theories, the CMB fits only the Big Bang, so the Big Bang has <b>more supporting evidence</b> and is the accepted model."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Big Bang",
+          "questions": [
+            {
+              "id": "as-n6-q1",
+              "type": "written",
+              "text": "Describe the Big Bang theory. (2)",
+              "model": "<ul><li>The Universe began from a <b>very small, hot, dense</b> point (about 13.8 billion years ago)…</li><li>…and has been <b>expanding</b> (and cooling) ever since.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n6-q2",
+              "type": "written",
+              "text": "State two differences between the Big Bang theory and the Steady State theory. (2)",
+              "model": "<ul><li>Big Bang: the Universe had a <b>beginning</b>; Steady State: it has <b>always existed</b>.</li><li>Steady State: <b>new matter is continually created</b> as it expands so it always looks the same; Big Bang: no new matter — the Universe cools and spreads out.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-n6-q3",
+              "type": "written",
+              "text": "Explain how red-shift provides evidence that the Universe is expanding. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Observation</td><td>Light from distant galaxies is <b>red-shifted</b> (longer wavelength), so they are <b>moving away</b> from us.</td></tr><tr><td><b>2</b></td><td>Pattern</td><td>The <b>further</b> away the galaxy, the <b>bigger</b> the red-shift, so the <b>faster</b> it is moving away.</td></tr><tr><td><b>3</b></td><td>Conclusion</td><td>That is exactly what is seen if <b>space itself is expanding</b> everywhere, carrying the galaxies apart.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-n6-q4",
+              "type": "written",
+              "text": "Explain why the discovery of the cosmic microwave background radiation led to the Big Bang theory becoming the accepted model. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>What</td><td>Microwave radiation is detected <b>from all directions</b> in space.</td></tr><tr><td><b>2</b></td><td>Predicted</td><td>The Big Bang theory had <b>predicted</b> it: radiation from the <b>hot early Universe</b>, stretched to microwave wavelengths by the expansion.</td></tr><tr><td><b>3</b></td><td>Decides</td><td>The Steady State theory <b>could not explain</b> it, so the Big Bang had <b>more supporting evidence</b> and was accepted.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-n6-q5",
+              "type": "choice",
+              "text": "Which piece of evidence is explained by the Big Bang theory but NOT by the Steady State theory?",
+              "options": [
+                "Red-shift of galaxies",
+                "The cosmic microwave background",
+                "The existence of stars",
+                "The orbits of planets"
+              ],
+              "correct": 1,
+              "explain": "Both theories include expansion (so both explain red-shift); only the Big Bang predicts the CMB."
+            },
+            {
+              "id": "as-n6-q6",
+              "type": "written",
+              "text": "Explain how the Steady State theory accounts for the red-shift of galaxies. (2)",
+              "model": "<ul><li>It also says the Universe is <b>expanding</b>, so galaxies move apart and their light is red-shifted.</li><li>It adds that <b>new matter is continually created</b> in the gaps, so the Universe keeps the same average density and appearance for ever.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Compare the Big Bang and Steady State theories",
+        "Describe the two pieces of evidence: red-shift and the CMB",
+        "Explain why red-shift is evidence for expansion and how both theories account for it",
+        "Explain why the discovery of the CMB led to the Big Bang being accepted"
+      ],
+      "blurb": "Two theories once competed to explain an expanding Universe. Red-shift fits both; the cosmic microwave background fits only the Big Bang. That is why the Big Bang is the accepted model.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "star-cycles",
+      "band": "nn",
+      "title": "The life cycles of stars",
+      "spec": "7.16P, 7.18P",
+      "equations": [
+        "\\text{nebula} \\rightarrow \\text{protostar} \\rightarrow \\text{main sequence} \\rightarrow \\ldots"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The two paths",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 275' role='img'><rect x='10' y='110' width='70' height='34' rx='6' style='fill:var(--accent);opacity:0.18;stroke:var(--accent);stroke-width:1.5'/><text x='45.0' y='131.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>nebula</text><line x1='80.0' y1='127.0' x2='100.0' y2='127.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='90.0,127.0 83.9,130.4 83.9,123.6' style='fill:var(--ink-2)'/><rect x='100' y='110' width='80' height='34' rx='6' style='fill:var(--accent);opacity:0.18;stroke:var(--accent);stroke-width:1.5'/><text x='140.0' y='131.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>protostar</text><line x1='180.0' y1='127.0' x2='200.0' y2='127.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='190.0,127.0 183.9,130.4 183.9,123.6' style='fill:var(--ink-2)'/><rect x='200' y='110' width='100' height='34' rx='6' style='fill:var(--accent);opacity:0.18;stroke:var(--accent);stroke-width:1.5'/><text x='250.0' y='125.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>main sequence</text><text x='250.0' y='138.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>star</text><line x1='300.0' y1='118.0' x2='330.0' y2='60.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='315.0,89.0 315.2,96.0 309.2,92.9' style='fill:var(--ink-2)'/><line x1='300.0' y1='136.0' x2='330.0' y2='194.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='315.0,165.0 309.2,161.1 315.2,158.0' style='fill:var(--ink-2)'/><text x='305.0' y='45.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>mass like the Sun</text><text x='305.0' y='222.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>mass much larger than the Sun</text><rect x='330' y='40' width='80' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='370.0' y='61.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>red giant</text><line x1='410.0' y1='57.0' x2='430.0' y2='57.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='420.0,57.0 413.9,60.4 413.9,53.6' style='fill:var(--ink-2)'/><rect x='430' y='40' width='90' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='475.0' y='61.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>white dwarf</text><line x1='520.0' y1='57.0' x2='540.0' y2='57.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='530.0,57.0 523.9,60.4 523.9,53.6' style='fill:var(--ink-2)'/><rect x='540' y='40' width='90' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='585.0' y='61.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>black dwarf</text><rect x='330' y='174' width='100' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='380.0' y='189.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>red</text><text x='380.0' y='202.0' text-anchor='middle' style='fill:var(--ink);font-size:10px;font-weight:normal;'>supergiant</text><line x1='430.0' y1='191.0' x2='450.0' y2='191.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='440.0,191.0 433.9,194.4 433.9,187.6' style='fill:var(--ink-2)'/><rect x='450' y='174' width='80' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='490.0' y='195.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>supernova</text><line x1='530.0' y1='185.0' x2='555.0' y2='160.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='542.5,172.5 540.5,179.2 535.8,174.5' style='fill:var(--ink-2)'/><line x1='530.0' y1='197.0' x2='555.0' y2='222.0' style='stroke:var(--ink-2);stroke-width:1.5'/><polygon points='542.5,209.5 535.8,207.5 540.5,202.8' style='fill:var(--ink-2)'/><rect x='555' y='135' width='90' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='600.0' y='156.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>neutron star</text><rect x='555' y='212' width='90' height='34' rx='6' style='fill:var(--line);opacity:0.18;stroke:var(--line);stroke-width:1.2'/><text x='600.0' y='233.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>black hole</text><text x='600.0' y='128.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>(very massive)</text><text x='600.0' y='262.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>(most massive)</text><text x='320.0' y='262.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>the heavier the star, the shorter its life and the more violent its end</text></svg><figcaption>The life cycles of stars. Every star passes through nebula, protostar and main sequence; its mass decides what happens next.</figcaption></figure><table class='tbl'><tr><th>Stage</th><th>What is happening</th></tr><tr><td><b>Nebula</b></td><td>a huge <b>cloud of dust and gas</b> (mostly hydrogen); <b>gravity</b> pulls it together</td></tr><tr><td><b>Protostar</b></td><td>the collapsing cloud gets <b>denser and hotter</b> as gravitational potential energy is transferred to thermal energy</td></tr><tr><td><b>Main sequence star</b></td><td>the core is hot enough for <b>hydrogen nuclei to fuse into helium</b>, releasing energy; the star is <b>stable</b> because the outward pressure from the hot gas balances gravity; the Sun is here, for about 10 billion years</td></tr><tr><td colspan='2'><b>Star of similar mass to the Sun</b></td></tr><tr><td><b>Red giant</b></td><td>the hydrogen in the core runs out; the core contracts and heats, helium fuses into heavier elements, and the outer layers <b>expand and cool</b> (red)</td></tr><tr><td><b>White dwarf</b></td><td>the outer layers drift away; the small, very hot, dense core is left with <b>no fusion</b>, slowly cooling…</td></tr><tr><td><b>Black dwarf</b></td><td>…until it no longer glows</td></tr><tr><td colspan='2'><b>Star with a mass much larger than the Sun</b></td></tr><tr><td><b>Red supergiant</b></td><td>as the red giant, but far bigger; fusion makes heavier and heavier elements, up to iron</td></tr><tr><td><b>Supernova</b></td><td>the core collapses suddenly and the star <b>explodes</b>, scattering the elements (and making the ones heavier than iron)</td></tr><tr><td><b>Neutron star</b> or <b>black hole</b></td><td>the core left behind is a tiny, incredibly dense <b>neutron star</b> — or, for the <b>most massive</b> stars, a <b>black hole</b>, whose gravity is so strong that not even light escapes</td></tr></table><p>The June 2025 report (Q10(a)): the key variable deciding the end of a star is its <b>mass</b> — not its age. \"Older stars are more likely to become black holes\" was the common wrong answer; the heaviest stars have the <i>shortest</i> lives.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A Sun-like star",
+          "question": "Describe the life cycle of a star of similar mass to the Sun. (4 marks)",
+          "steps": [
+            "<b>Nebula → protostar:</b> <b>gravity</b> pulls a cloud of dust and gas together; it gets denser and hotter, forming a protostar.",
+            "<b>Main sequence:</b> when the core is hot enough, <b>hydrogen fuses into helium</b>; the star is stable for billions of years, the outward pressure balancing gravity.",
+            "<b>Red giant:</b> when the hydrogen runs out, the core contracts and the outer layers <b>expand and cool</b>; helium fuses into heavier elements.",
+            "<b>White dwarf → black dwarf:</b> the outer layers are shed, leaving a hot dense core with no fusion that <b>cools</b> into a white dwarf and eventually a black dwarf."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Life cycles",
+          "questions": [
+            {
+              "id": "as-n7-q1",
+              "type": "written",
+              "text": "Put these stages in order for a star like the Sun: white dwarf, nebula, red giant, main sequence, protostar. (1)",
+              "model": "<ul><li>Nebula → protostar → main sequence → red giant → white dwarf (→ black dwarf).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n7-q2",
+              "type": "choice",
+              "text": "What decides whether a star ends as a white dwarf or as a neutron star / black hole?",
+              "options": [
+                "Its age",
+                "Its mass",
+                "Its distance from Earth",
+                "Its colour when it formed"
+              ],
+              "correct": 1,
+              "explain": "Mass. The most massive stars have the shortest lives and the most violent ends."
+            },
+            {
+              "id": "as-n7-q3",
+              "type": "written",
+              "text": "Describe what happens in a main sequence star, and why it is stable. (2)",
+              "model": "<ul><li><b>Hydrogen nuclei fuse into helium</b> in the core, releasing energy.</li><li>It is stable because the <b>outward pressure</b> of the hot gas (thermal expansion) <b>balances the inward pull of gravity</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n7-q4",
+              "type": "written",
+              "text": "Describe the final stages of a star with a mass much greater than the Sun. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Supergiant</td><td>It expands into a <b>red supergiant</b>, fusing heavier elements.</td></tr><tr><td><b>2</b></td><td>Supernova</td><td>It then <b>explodes as a supernova</b>, scattering elements into space.</td></tr><tr><td><b>3</b></td><td>Remnant</td><td>The core left behind is a <b>neutron star</b>, or a <b>black hole</b> if the star was massive enough.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-n7-q5",
+              "type": "choice",
+              "text": "What is a protostar?",
+              "options": [
+                "A star that has run out of hydrogen",
+                "A collapsing cloud of gas that is heating up but has not yet started fusion",
+                "The remains of a supernova",
+                "A small cool star"
+              ],
+              "correct": 1,
+              "explain": "Gravity compresses and heats the cloud until fusion can begin."
+            },
+            {
+              "id": "as-n7-q6",
+              "type": "written",
+              "text": "State what a white dwarf is and what eventually happens to it. (2)",
+              "model": "<ul><li>The small, very hot, dense <b>core</b> left when a Sun-like star sheds its outer layers; <b>no fusion</b> takes place in it.</li><li>It slowly <b>cools and fades</b>, eventually becoming a <b>black dwarf</b>.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the life cycle of a star of similar mass to the Sun, stage by stage",
+        "Describe the life cycle of a star with a mass much larger than the Sun",
+        "State what decides which path a star takes"
+      ],
+      "blurb": "All stars start the same way, from a collapsing cloud of gas and dust. What happens at the end depends on mass: a Sun-like star swells into a red giant and fades as a white dwarf; a much heavier one explodes as a supernova and leaves a neutron star or a black hole.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "observing",
+      "band": "nn",
+      "title": "How we observe the Universe, and why some telescopes are in space",
+      "spec": "7.19P",
+      "equations": [
+        "\\text{naked eye} \\rightarrow \\text{optical telescopes} \\rightarrow \\text{photography} \\rightarrow \\text{all wavelengths} \\rightarrow \\text{space}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The timeline, and the atmosphere problem",
+          "html": "<ol><li><b>Naked eye:</b> for most of history — positions of stars and planets, no detail.</li><li><b>Optical telescopes</b> (Galileo, 1609–10): magnified images — moons of Jupiter, phases of Venus, craters on the Moon. Bigger lenses and <b>mirrors</b> (Newton's reflecting telescope) collect more light, so fainter and more distant objects can be seen.</li><li><b>Photography</b> (1800s): long exposures record far fainter objects than the eye and give a permanent record to measure and compare.</li><li><b>Telescopes for other wavelengths</b> (1930s on): <b>radio</b>, <b>infrared</b>, <b>ultraviolet</b>, <b>X-ray</b> and gamma telescopes reveal objects and processes invisible in light — cool dust clouds in infrared, black holes' surroundings in X-rays, the CMB in microwaves.</li><li><b>Telescopes in space</b> (Hubble 1990, James Webb 2021): above the atmosphere.</li><li><b>Computers and digital detectors</b>: far more sensitive than film, and able to process huge amounts of data.</li></ol><p><b>Why go above the atmosphere:</b> the atmosphere <b>absorbs</b> most infrared, ultraviolet, X-rays and gamma rays, so those can only be observed from space; moving air <b>distorts</b> the light (stars twinkle), blurring images; <b>clouds</b>, dust and <b>light pollution</b> get in the way. In space there is a clear view of every wavelength, day and night. The 2022 report: say <b>that</b> the telescope is in space <b>and why</b> — \"candidates stated the location without explaining why it matters\".</p><p><b>Disadvantages:</b> very <b>expensive</b> to build and launch; <b>hard or impossible to repair</b> or upgrade; size limited by the rocket.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why in space",
+          "question": "Explain why some telescopes are placed on satellites rather than on the Earth's surface. (2 marks)",
+          "steps": [
+            "<b>Where:</b> a satellite telescope is <b>above the Earth's atmosphere</b>.",
+            "<b>Why:</b> so the light it collects is not <b>absorbed</b> (the atmosphere blocks most infrared, UV and X-rays) or <b>distorted</b> by the air, clouds, dust and light pollution — giving sharper images and access to wavelengths that never reach the ground."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Observing",
+          "questions": [
+            {
+              "id": "as-n8-q1",
+              "type": "written",
+              "text": "Describe two ways in which methods of observing the Universe have changed over time. (2)",
+              "model": "<ul><li>From the naked eye to <b>telescopes</b> (larger lenses and mirrors collecting more light), and to <b>photography / digital detectors</b> recording fainter objects.</li><li>From visible light only to telescopes for <b>other wavelengths</b> (radio, infrared, X-ray), and from the ground to <b>telescopes in space</b>.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-n8-q2",
+              "type": "written",
+              "text": "Explain why an infrared telescope must be placed in space. (2)",
+              "model": "<ul><li>The Earth's <b>atmosphere absorbs</b> most infrared radiation…</li><li>…so very little reaches the ground; above the atmosphere the telescope receives it all.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n8-q3",
+              "type": "choice",
+              "text": "Which is a disadvantage of a space telescope compared with one on the ground?",
+              "options": [
+                "Images are distorted by the atmosphere",
+                "It cannot observe infrared",
+                "It is very expensive and difficult to repair",
+                "It can only be used at night"
+              ],
+              "correct": 2,
+              "explain": "The others are disadvantages of ground telescopes."
+            },
+            {
+              "id": "as-n8-q4",
+              "type": "written",
+              "text": "Give two advantages of a telescope in orbit over one on a mountain top. (2)",
+              "model": "<ul><li>No <b>absorption</b> of wavelengths (infrared, UV, X-ray) by the atmosphere.</li><li>No <b>distortion</b> / twinkling from moving air, no clouds or light pollution — sharper images, usable all the time.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-n8-q5",
+              "type": "choice",
+              "text": "What did Galileo's telescope reveal that supported the Sun-centred model?",
+              "options": [
+                "The red-shift of galaxies",
+                "Moons orbiting Jupiter and the phases of Venus",
+                "The CMB",
+                "Neptune"
+              ],
+              "correct": 1,
+              "explain": "Things that clearly did not orbit the Earth (T1)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe how methods of observing the Universe have changed over time",
+        "Explain why some telescopes are placed outside the Earth's atmosphere",
+        "Give a disadvantage of space telescopes"
+      ],
+      "blurb": "From eyes to Galileo's telescope to orbiting observatories that see in radio, infrared and X-rays. Each step let us see fainter, further and in more of the spectrum — and the atmosphere is the reason the biggest step was leaving the ground.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "keywords-astronomy",
+      "band": "nn",
+      "title": "Key words: state what is meant by…",
+      "spec": "7",
+      "equations": [
+        "\\text{definition, word for word}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Natural satellite</b></td><td>A body that <b>orbits a planet</b> (a moon).</td><td>\"a planet\"</td></tr><tr><td><b>Artificial satellite</b></td><td>A <b>man-made object</b> placed in orbit around the Earth (or another body).</td><td>\"a star\"</td></tr><tr><td><b>Dwarf planet</b></td><td>A body that <b>orbits the Sun</b> and is round but has <b>not cleared its orbit</b> of other objects.</td><td>\"a small planet\"</td></tr><tr><td><b>Comet</b></td><td>An <b>icy</b> body in a <b>highly elliptical</b> orbit around the Sun, fastest when nearest the Sun.</td><td>\"a shooting star\"</td></tr><tr><td><b>Orbit</b></td><td>The <b>path</b> of one body around another, held by <b>gravity</b>.</td><td>\"going round\" with no force</td></tr><tr><td><b>Geostationary orbit</b></td><td>An orbit above the equator with a <b>period of 24 hours</b>, so the satellite stays over the same point.</td><td>\"a satellite that does not move\"</td></tr><tr><td><b>Gravitational field strength g</b></td><td>The <b>force of gravity per kilogram</b> at a place, in N/kg; it depends on the body's mass and radius.</td><td>\"gravity\"</td></tr><tr><td><b>Red-shift</b></td><td>The <b>increase in wavelength</b> of light from a source moving <b>away</b> — spectral lines shifted towards the red end.</td><td>\"the light turns red\"</td></tr><tr><td><b>Cosmic microwave background (CMB)</b></td><td><b>Microwave radiation</b> coming from <b>all directions</b> in space — left over from the hot early Universe.</td><td>\"radiation from the Sun\"</td></tr><tr><td><b>Big Bang theory</b></td><td>The Universe began from a <b>very small, hot, dense</b> point and has been <b>expanding</b> ever since.</td><td>\"an explosion in space\"</td></tr><tr><td><b>Steady State theory</b></td><td>The Universe has <b>always existed</b>, expanding while <b>new matter is created</b> so it always looks the same.</td><td>\"the Universe does not change\"</td></tr><tr><td><b>Nebula</b></td><td>A <b>cloud of dust and gas</b> in space from which stars form.</td><td>\"a galaxy\"</td></tr><tr><td><b>Protostar</b></td><td>A collapsing cloud that is <b>heating up</b> under gravity but has <b>not yet started fusion</b>.</td><td>\"a young star that shines\"</td></tr><tr><td><b>Main sequence star</b></td><td>A star in the stable stage, <b>fusing hydrogen into helium</b>, with outward pressure balancing gravity.</td><td>\"a normal star\"</td></tr><tr><td><b>Red giant</b></td><td>A star whose core hydrogen has run out: the <b>outer layers expand and cool</b>.</td><td>\"a big red star\"</td></tr><tr><td><b>White dwarf</b></td><td>The small, hot, dense <b>core</b> left by a Sun-like star, with <b>no fusion</b>, slowly cooling.</td><td>\"a dead star\"</td></tr><tr><td><b>Supernova</b></td><td>The <b>explosion</b> of a massive star at the end of its life.</td><td>\"a new star\"</td></tr><tr><td><b>Neutron star</b></td><td>The tiny, <b>extremely dense</b> core left after a supernova.</td><td>\"a star made of neutrons\" alone</td></tr><tr><td><b>Black hole</b></td><td>The remnant of the most massive stars: gravity so strong that <b>not even light can escape</b>.</td><td>\"a hole in space\"</td></tr></table>"
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "as-kw-q1",
+              "type": "written",
+              "text": "State what is meant by red-shift. (1)",
+              "model": "<ul><li>The <b>increase in the wavelength</b> of light from a source that is <b>moving away</b> from the observer.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-kw-q2",
+              "type": "written",
+              "text": "State what is meant by a main sequence star. (1)",
+              "model": "<ul><li>A stable star <b>fusing hydrogen into helium</b> in its core, with the outward pressure balancing gravity.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-kw-q3",
+              "type": "written",
+              "text": "State what is meant by the cosmic microwave background radiation. (1)",
+              "model": "<ul><li><b>Microwave radiation</b> detected coming from <b>every direction</b> in space, left over from the early Universe.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-kw-q4",
+              "type": "choice",
+              "text": "Which is the correct definition of a geostationary orbit?",
+              "options": [
+                "Any orbit over the equator",
+                "An orbit with a 24-hour period above the equator, so the satellite stays over one point",
+                "An orbit over the poles",
+                "An orbit that never moves"
+              ],
+              "correct": 1,
+              "explain": "Period = the Earth's rotation period."
+            },
+            {
+              "id": "as-kw-q5",
+              "type": "written",
+              "text": "State what is meant by a nebula. (1)",
+              "model": "<ul><li>A <b>cloud of dust and gas</b> in space (from which stars form).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-kw-q6",
+              "type": "written",
+              "text": "State what is meant by a supernova. (1)",
+              "model": "<ul><li>The <b>explosion</b> of a star much more massive than the Sun at the end of its life.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-kw-q7",
+              "type": "choice",
+              "text": "A student writes \"the Big Bang was an explosion in space\". What is wrong with this?",
+              "options": [
+                "Nothing",
+                "Space itself began expanding from a tiny, hot, dense point — it was not an explosion into existing space",
+                "It was a quiet event",
+                "It happened on Earth"
+              ],
+              "correct": 1,
+              "explain": "The expansion is of space, not of matter through space."
+            },
+            {
+              "id": "as-kw-q8",
+              "type": "written",
+              "text": "State what is meant by a black hole. (1)",
+              "model": "<ul><li>The remnant of a very massive star whose <b>gravity is so strong that not even light can escape</b> from it.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define natural and artificial satellite, dwarf planet, comet, orbit and geostationary",
+        "Define red-shift, the CMB, and the two theories",
+        "Define each stage of the life cycle of stars"
+      ],
+      "blurb": "One-mark definitions in the form of words the mark schemes credit. The bold words are the ones the marks are attached to.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "solar-system-models",
+      "band": "tricky",
+      "title": "From an Earth-centred to a Sun-centred Solar System",
+      "spec": "7.4P",
+      "equations": [
+        "\\text{geocentric: Earth at the centre}",
+        "\\text{heliocentric: Sun at the centre}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Two models and what changed them",
+          "html": "<table class='tbl'><tr><th></th><th>Geocentric (Ptolemy, ancient Greece)</th><th>Heliocentric (Copernicus 1543, Galileo, Kepler)</th></tr><tr><td>Centre</td><td>the <b>Earth</b>, not moving</td><td>the <b>Sun</b></td></tr><tr><td>What orbits what</td><td>the Sun, Moon, planets and stars all circle the Earth</td><td>the planets, including the Earth, orbit the Sun; the Moon orbits the Earth; the Earth spins once a day</td></tr><tr><td>Orbits</td><td>circles, with extra circles (epicycles) added to fit the planets' wandering paths</td><td>first circles, then <b>ellipses</b> (Kepler) once accurate measurements showed circles did not fit</td></tr><tr><td>Why believed</td><td>it matches what you see: the sky turns, the Earth feels still</td><td>it is simpler, and it <b>predicts observations</b> the geocentric model cannot</td></tr></table><p><b>The observations that changed the model</b> — the point the spec wants (7.4P):</p><ol><li>Planets sometimes appear to <b>move backwards</b> (retrograde motion). Geocentric models needed epicycles to fake this; in a heliocentric model it happens naturally when the faster-moving Earth overtakes an outer planet.</li><li><b>Galileo's telescope (1609–10)</b> showed <b>four moons orbiting Jupiter</b> — bodies that plainly did <b>not</b> orbit the Earth, so not everything does.</li><li>The telescope also showed <b>Venus has phases</b> like the Moon, including gibbous (nearly full) ones — impossible if Venus always lay between the Earth and the Sun, as the geocentric model had it, but expected if Venus goes <b>round the Sun</b>.</li><li>Better measurements (Tycho Brahe, Kepler) showed planets move in <b>ellipses</b>, at speeds that change along the orbit; later Newton's gravity explained why.</li></ol><p><b>The general lesson:</b> a model is accepted while it explains the observations; when new, better evidence (here from a new instrument) <b>cannot be explained</b> by the old model but <b>can</b> by a new one, the model changes. The same test decides between the Big Bang and Steady State (T4).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark 'explain how observations changed the model'",
+          "question": "Explain how the invention of the telescope led to the geocentric model being replaced by the heliocentric model. (3 marks)",
+          "steps": [
+            "The telescope let Galileo see <b>four moons orbiting Jupiter</b>…",
+            "…which showed that <b>not everything orbits the Earth</b>, as the geocentric model claimed; he also saw Venus go through <b>phases</b>, which needs Venus to orbit the Sun.",
+            "These observations <b>could not be explained</b> by the Earth-centred model but <b>were predicted</b> by the Sun-centred model, so the evidence supported the heliocentric model and it replaced the old one."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Models of the Solar System",
+          "questions": [
+            {
+              "id": "as-t1-q1",
+              "type": "written",
+              "text": "Describe the geocentric model of the Solar System. (2)",
+              "model": "<ul><li>The <b>Earth is at the centre</b> and does not move.</li><li>The Sun, Moon, planets (and stars) all <b>orbit the Earth</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t1-q2",
+              "type": "written",
+              "text": "Describe the heliocentric model of the Solar System. (2)",
+              "model": "<ul><li>The <b>Sun is at the centre</b>.</li><li>The planets, including the Earth, <b>orbit the Sun</b> (in ellipses); the Moon orbits the Earth.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t1-q3",
+              "type": "choice",
+              "text": "Which observation showed that not everything orbits the Earth?",
+              "options": [
+                "The Sun rising in the east",
+                "Moons seen orbiting Jupiter",
+                "The Moon's phases",
+                "The seasons"
+              ],
+              "correct": 1,
+              "explain": "Galileo's four moons of Jupiter plainly circled Jupiter, not the Earth."
+            },
+            {
+              "id": "as-t1-q4",
+              "type": "written",
+              "text": "Explain why the phases of Venus supported the heliocentric model. (2)",
+              "model": "<ul><li>Venus was seen to show a <b>full set of phases</b>, including nearly full…</li><li>…which is only possible if Venus <b>orbits the Sun</b> and is sometimes on the far side of it from the Earth — the geocentric model could not produce this.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t1-q5",
+              "type": "written",
+              "text": "Explain why scientists replace one model with another. (2)",
+              "model": "<ul><li>New observations (often from new instruments) are made that the old model <b>cannot explain</b>…</li><li>…while the new model <b>explains or predicts</b> them, so it has more supporting evidence.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t1-q6",
+              "type": "choice",
+              "text": "In the heliocentric model, the shape of a planet's orbit is…",
+              "options": [
+                "a perfect circle",
+                "an ellipse (slightly flattened circle)",
+                "a square",
+                "a straight line"
+              ],
+              "correct": 1,
+              "explain": "Kepler showed the orbits are ellipses; for the planets they are very close to circles."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the geocentric and heliocentric models",
+        "Explain how observations, especially with the telescope, led to the Sun-centred model",
+        "Explain why a scientific model is changed"
+      ],
+      "blurb": "For two thousand years the Earth was at the centre of everything. The model changed when better observations — Galileo's telescope above all — showed things that could not be orbiting the Earth.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "orbit-explain",
+      "band": "tricky",
+      "title": "Explaining orbits: the words the marks are on",
+      "spec": "7.5P, 7.6P, 7.7P",
+      "equations": [
+        "\\text{velocity} \\ne \\text{speed}",
+        "\\text{closer} \\Rightarrow \\text{stronger gravity} \\Rightarrow \\text{faster}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Three chains",
+          "html": "<figure class='diagram'><svg viewBox='0 0 600 260' role='img'><circle cx='180' cy='140' r='18' style='fill:var(--accent);opacity:0.5'/><text x='180.0' y='144.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>Sun</text><circle cx='180' cy='140' r='95' style='fill:none;stroke:var(--line);stroke-width:1.2;stroke-dasharray:4 4'/><circle cx='227.5' cy='57.7' r='6' style='fill:var(--ink)'/><line x1='227.5' y1='57.7' x2='266.5' y2='80.2' style='stroke:var(--accent);stroke-width:2'/><polygon points='247.0,69.0 240.0,68.8 243.3,63.0' style='fill:var(--accent)'/><line x1='227.5' y1='57.7' x2='207.5' y2='92.4' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='217.5,75.0 217.7,68.1 223.5,71.4' style='fill:var(--ink-2)'/><circle cx='262.3' cy='187.5' r='6' style='fill:var(--ink)'/><line x1='262.3' y1='187.5' x2='239.8' y2='226.5' style='stroke:var(--accent);stroke-width:2'/><polygon points='251.0,207.0 251.2,200.0 257.0,203.3' style='fill:var(--accent)'/><line x1='262.3' y1='187.5' x2='227.6' y2='167.5' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='245.0,177.5 251.9,177.7 248.6,183.5' style='fill:var(--ink-2)'/><circle cx='132.5' cy='222.3' r='6' style='fill:var(--ink)'/><line x1='132.5' y1='222.3' x2='93.5' y2='199.8' style='stroke:var(--accent);stroke-width:2'/><polygon points='113.0,211.0 120.0,211.2 116.7,217.0' style='fill:var(--accent)'/><line x1='132.5' y1='222.3' x2='152.5' y2='187.6' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='142.5,205.0 142.3,211.9 136.5,208.6' style='fill:var(--ink-2)'/><circle cx='97.7' cy='92.5' r='6' style='fill:var(--ink)'/><line x1='97.7' y1='92.5' x2='120.2' y2='53.5' style='stroke:var(--accent);stroke-width:2'/><polygon points='109.0,73.0 108.8,80.0 103.0,76.7' style='fill:var(--accent)'/><line x1='97.7' y1='92.5' x2='132.4' y2='112.5' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='115.0,102.5 108.1,102.3 111.4,96.5' style='fill:var(--ink-2)'/><text x='330.0' y='60.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>velocity: along the orbit (tangent)</text><line x1='310.0' y1='56.0' x2='326.0' y2='56.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='318.0,56.0 311.9,59.4 311.9,52.6' style='fill:var(--accent)'/><text x='330.0' y='84.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force of gravity: towards the centre</text><line x1='310.0' y1='80.0' x2='326.0' y2='80.0' style='stroke:var(--ink-2);stroke-width:2'/><polygon points='318.0,80.0 311.9,83.4 311.9,76.6' style='fill:var(--ink-2)'/><text x='330.0' y='120.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>speed the same at every point;</text><text x='330.0' y='136.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>direction changes all the time,</text><text x='330.0' y='152.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>so the velocity changes —</text><text x='330.0' y='168.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>the planet is accelerating towards the Sun.</text><text x='330.0' y='200.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>The force is always at right angles</text><text x='330.0' y='216.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>to the velocity, so it turns the planet</text><text x='330.0' y='232.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>without speeding it up or slowing it down.</text></svg><figcaption>Velocity along the orbit, gravity towards the centre, always at right angles.</figcaption></figure><p><b>Chain 1 — constant speed but accelerating:</b> velocity is a <b>vector</b> → the <b>direction</b> of motion is <b>continuously changing</b> → so the <b>velocity is changing</b> → a changing velocity is an <b>acceleration</b> → it needs a <b>resultant force</b> → that force is <b>gravity</b>, acting <b>towards the centre</b>. Trap: \"it is accelerating because it is speeding up\" — it is not; and \"centripetal force\" on its own was ignored in June 2024 — name the force (gravity) and its direction.</p><p><b>Chain 2 — radius and speed:</b> closer to the central body → <b>stronger gravitational force</b> → a tighter turn is needed → <b>higher speed</b> for a stable orbit. The spec's wording (7.7P): <i>if the speed of an orbiting body changes, the radius of its orbit must change too</i> — faster → smaller orbit; slower → larger orbit. Trap: students write \"closer orbits are slower because they have less distance to travel\". Less distance per orbit is why the <i>period</i> is shorter, but the <i>speed</i> is higher.</p><p><b>Chain 3 — comets:</b> highly elliptical orbit → gravitational force from the Sun is <b>stronger when closer</b> → the comet <b>speeds up as it falls towards the Sun</b> (gravitational potential store → kinetic store) and <b>slows as it climbs away</b> → fastest at the closest point, slowest at the furthest. Trap: a comet's orbit is not a circle, so its speed is <b>not</b> constant, unlike a planet's.</p><p><b>Geostationary explained:</b> there is only one height (about 36 000 km) at which the orbital period is exactly 24 hours; placed there above the equator, moving the same way the Earth turns, a satellite stays over one point. Lower → period shorter → it drifts ahead of the ground.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Radius and speed, both ways",
+          "question": "Satellite A orbits the Earth at a height of 400 km; satellite B at 20 000 km. (a) State which satellite moves faster. (b) Explain your answer. (c) A third satellite, C, is in a stable orbit at a higher speed than A. State how the radius of C's orbit compares with A's. (4 marks)",
+          "steps": [
+            "<b>(a)</b> Satellite <b>A</b> (the lower one).",
+            "<b>(b)</b> A is <b>closer</b> to the Earth, so the <b>gravitational force</b> on each kilogram is <b>stronger</b>; a stronger force bends the path more sharply, which needs a <b>higher speed</b> for a stable circular orbit.",
+            "<b>(c)</b> C's orbit has a <b>smaller radius</b> than A's: a stable orbit at a higher speed needs the stronger gravity found closer in. (If a body's speed changes, the radius of its stable orbit must change too.)"
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Explaining orbits",
+          "questions": [
+            {
+              "id": "as-t2-q1",
+              "type": "written",
+              "text": "A satellite moves in a circular orbit at constant speed. Explain why there must be a resultant force on it, and state what provides the force. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Vector</td><td>Velocity is a vector; the satellite's <b>direction is continuously changing</b>, so its <b>velocity is changing</b>.</td></tr><tr><td><b>2</b></td><td>Acceleration</td><td>A change in velocity is an <b>acceleration</b>, and an acceleration needs a <b>resultant force</b>.</td></tr><tr><td><b>3</b></td><td>Force</td><td>The force is <b>gravity</b>, acting <b>towards the centre</b> of the Earth.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-t2-q2",
+              "type": "choice",
+              "text": "A student says: \"The Moon's velocity is constant because its speed is constant.\" Why is this wrong?",
+              "options": [
+                "Its speed is not constant",
+                "Velocity includes direction, and the Moon's direction keeps changing",
+                "The Moon does not move",
+                "Velocity and speed are the same"
+              ],
+              "correct": 1,
+              "explain": "Steady speed round a circle is a changing velocity."
+            },
+            {
+              "id": "as-t2-q3",
+              "type": "written",
+              "text": "Explain why a planet closer to the Sun must move faster than one further away to stay in a stable orbit. (2)",
+              "model": "<ul><li>Closer to the Sun the <b>gravitational force</b> is <b>stronger</b>.</li><li>A stronger force makes the path curve more tightly, so a <b>higher speed</b> is needed to keep a stable (circular) orbit of that smaller radius.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t2-q4",
+              "type": "written",
+              "text": "A comet's orbit is highly elliptical. Describe how its speed changes during one orbit and explain why. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Pattern</td><td>It is <b>fastest when nearest the Sun</b> and slowest when furthest away.</td></tr><tr><td><b>2</b></td><td>Falling in</td><td>As it approaches the Sun the <b>gravitational force increases</b> and does work on it: energy is transferred from the <b>gravitational potential store to the kinetic store</b>.</td></tr><tr><td><b>3</b></td><td>Climbing out</td><td>Moving away, gravity slows it: kinetic → gravitational potential.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-t2-q5",
+              "type": "choice",
+              "text": "A satellite is moved from a high orbit to a lower one. Its speed…",
+              "options": [
+                "decreases",
+                "increases",
+                "stays the same",
+                "becomes zero"
+              ],
+              "correct": 1,
+              "explain": "Smaller radius → stronger gravity → faster."
+            },
+            {
+              "id": "as-t2-q6",
+              "type": "written",
+              "text": "Explain why a geostationary satellite must be placed at one particular height. (2)",
+              "model": "<ul><li>Its <b>period must be 24 hours</b> to match the Earth's rotation, so that it stays above the same point.</li><li>The orbital speed (and so the period) depends on the <b>radius</b>, so only one height gives a 24-hour period (lower → faster → shorter period).</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain circular motion using 'velocity is a vector' and 'force towards the centre'",
+        "Link orbital radius to orbital speed, both ways round",
+        "Describe how a comet's speed changes around its orbit, and why"
+      ],
+      "blurb": "Three questions come up again and again: why a satellite at steady speed is accelerating, why a closer orbit is faster, and why a comet speeds up and slows down. Each has a particular chain of words.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "redshift-argument",
+      "band": "tricky",
+      "title": "The red-shift argument, step by step",
+      "spec": "7.11P, 7.12P, 7.13P",
+      "equations": [
+        "\\text{longer } \\lambda \\Rightarrow \\text{moving away} \\Rightarrow \\text{further} = \\text{faster} \\Rightarrow \\text{expanding}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain, and the exam traps",
+          "html": "<p>The June 2022 Paper 1H question (Q6) gave the spectra of two galaxies and asked students to explain how they showed the Universe is expanding. The scheme:</p><table class='tbl'><tr><th>Mark</th><th>What to write</th></tr><tr><td>1</td><td>The lines in the <b>more distant</b> galaxy's spectrum are at <b>longer wavelengths</b> — it has the <b>greater red-shift</b>.</td></tr><tr><td>2</td><td>Greater red-shift means it is <b>moving away faster</b>; so <b>more distant galaxies move away faster</b>, which is what an <b>expanding</b> Universe looks like.</td></tr></table><p>Spell out each arrow. Common losses: saying \"the galaxy is red-shifted\" without saying what that shows; saying \"moving away\" without the distance–speed link; saying \"expanding\" with no evidence. Writing \"the light gets redder\" is not the same as \"the wavelength is longer\".</p><p><b>Why expansion:</b> if <b>every</b> galaxy is moving away from us, and the further ones faster, either we are at the centre of a huge explosion (we are not — every galaxy sees the same thing) or <b>space itself is stretching</b>, carrying all the galaxies apart. Dots on a balloon being inflated: every dot sees every other move away, the more distant ones faster.</p><p><b>Why red-shift does not settle the argument:</b> both the Big Bang and the Steady State theory describe an <b>expanding</b> Universe, so both predict red-shift. Red-shift is evidence <b>for expansion</b>, not for the Big Bang alone. What decided it was the CMB (T4).</p><p><b>The calculations</b> (if a question supplies the equations): $z = \\dfrac{\\Delta\\lambda}{\\lambda}$, and recession velocity $v = z \\times c$ with $c = 3 \\times 10^8$ m/s. The 2022 report: candidates mixed standard form with ordinary numbers (656 nm with 6.56 × 10⁻⁷ m) and lost the arithmetic; keep every wavelength in the same form, and use the \"show that\" value in the next part if there is one.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Two spectra",
+          "question": "The spectrum of light from galaxy X shows a hydrogen line at 660 nm; from galaxy Y the same line is at 700 nm. In the laboratory the line is at 656 nm. Explain which galaxy is further from Earth and how these observations support the idea of an expanding Universe. (4 marks)",
+          "steps": [
+            "<b>Both</b> lines are at <b>longer wavelengths</b> than 656 nm, so both galaxies are <b>red-shifted</b> and <b>moving away</b> from us.",
+            "Y's line is shifted <b>more</b> (44 nm against 4 nm), so Y has the <b>greater red-shift</b> and is moving away <b>faster</b>.",
+            "The <b>more distant</b> a galaxy, the <b>greater</b> its red-shift — so <b>Y is further away</b>.",
+            "More distant galaxies receding faster is what is seen when <b>space itself is expanding</b>, carrying the galaxies apart."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The red-shift argument",
+          "questions": [
+            {
+              "id": "as-t3-q1",
+              "type": "group",
+              "text": "A spectral line is at 486 nm in the laboratory. In the light from galaxy P it is at 490 nm; from galaxy Q it is at 510 nm.",
+              "parts": [
+                {
+                  "id": "as-t3-q1a",
+                  "type": "written",
+                  "text": "State which galaxy is further from Earth. (1)",
+                  "model": "<ul><li><b>Q</b>.</li></ul>",
+                  "lines": 1
+                },
+                {
+                  "id": "as-t3-q1b",
+                  "type": "written",
+                  "text": "Explain your answer. (2)",
+                  "model": "<ul><li>Q's line has the <b>longer wavelength</b> / <b>bigger red-shift</b> (24 nm against 4 nm), so Q is moving away faster…</li><li>…and <b>more distant galaxies have the bigger red-shift</b> (move away faster).</li></ul>",
+                  "lines": 3
+                },
+                {
+                  "id": "as-t3-q1c",
+                  "type": "numeric",
+                  "text": "The red-shift z = (change in wavelength) ÷ (original wavelength). Calculate z for galaxy Q.",
+                  "answer": {
+                    "value": 0.049,
+                    "unit": ""
+                  },
+                  "hint": "Δλ = 510 − 486 nm.",
+                  "walkthrough": [
+                    "$z = \\dfrac{510 - 486}{486} = \\dfrac{24}{486} = 0.049$ (2 s.f.)."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "as-t3-q2",
+              "type": "written",
+              "text": "Explain how the red-shift of light from distant galaxies provides evidence that the Universe is expanding. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Observation</td><td>The light from distant galaxies is <b>red-shifted</b>: its wavelength is <b>longer</b> than from the same source on Earth.</td></tr><tr><td><b>2</b></td><td>Meaning</td><td>So the galaxies are <b>moving away</b> from us.</td></tr><tr><td><b>3</b></td><td>Pattern</td><td>The <b>more distant</b> the galaxy the <b>greater</b> the red-shift, so the faster it recedes — every galaxy moving apart from every other is an <b>expanding</b> Universe.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-t3-q3",
+              "type": "choice",
+              "text": "Why does red-shift NOT prove the Big Bang theory on its own?",
+              "options": [
+                "It is not real",
+                "The Steady State theory also describes an expanding Universe and so also predicts red-shift",
+                "Only nearby galaxies show it",
+                "It only applies to stars"
+              ],
+              "correct": 1,
+              "explain": "Red-shift is evidence for expansion, which both theories include."
+            },
+            {
+              "id": "as-t3-q4",
+              "type": "numeric",
+              "text": "A galaxy has a red-shift z = 0.02. Its recession velocity is given by v = z × c, where c = 3 × 10⁸ m/s. Calculate v.",
+              "answer": {
+                "value": 6000000,
+                "unit": "m/s"
+              },
+              "hint": "Multiply; 0.02 × 3 × 10⁸.",
+              "walkthrough": [
+                "$v = 0.02 \\times 3 \\times 10^8 = 6 \\times 10^6$ m/s (6000 km/s)."
+              ]
+            },
+            {
+              "id": "as-t3-q5",
+              "type": "written",
+              "text": "A student writes: \"Red-shift means the galaxies are moving away from the Earth, so the Earth is at the centre of the Universe.\" Explain why the conclusion is wrong. (2)",
+              "model": "<ul><li>If <b>space itself is expanding</b>, every galaxy moves away from every other — an observer in <b>any</b> galaxy sees the same red-shift pattern.</li><li>So the observation does not put the Earth at a centre; there is no centre (the balloon analogy).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t3-q6",
+              "type": "choice",
+              "text": "The light from a distant galaxy shows a hydrogen line at a longer wavelength than in the laboratory. What is the correct phrase for the mark?",
+              "options": [
+                "\"The light has turned red\"",
+                "\"The wavelength has increased — the light is red-shifted — so the galaxy is moving away\"",
+                "\"The galaxy is red\"",
+                "\"The frequency has increased\""
+              ],
+              "correct": 1,
+              "explain": "Name the change in wavelength and what it shows."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Compare two spectra and say which galaxy is further away and why",
+        "Write the full chain from observation to 'the Universe is expanding'",
+        "Explain why red-shift alone does not decide between Big Bang and Steady State"
+      ],
+      "blurb": "Red-shift questions give you two spectra, or a table of galaxies, and ask what they show. The marks are on a fixed chain: longer wavelength → moving away → more distant means faster → expanding. Miss a link and the mark goes.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "cmb-decides",
+      "band": "tricky",
+      "title": "Why the CMB decided between the two theories",
+      "spec": "7.9P, 7.10P, 7.14P, 7.15P",
+      "equations": [
+        "\\text{predicted} + \\text{observed} + \\text{rival cannot explain} \\Rightarrow \\text{accepted}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The argument, in the order the marks want it",
+          "html": "<ol><li><b>Two theories, both with expansion.</b> Big Bang: the Universe began from a tiny, hot, dense point and has expanded and cooled since. Steady State: it has always existed, expanding, with new matter continually created to fill the gaps, so it looks the same for ever.</li><li><b>Red-shift fits both.</b> Both say space is expanding, so both predict galaxies receding, faster when further. Red-shift cannot choose between them.</li><li><b>The Big Bang made a prediction.</b> If the early Universe was hot and dense, it was full of high-energy radiation. As space expanded, that radiation was <b>stretched to longer wavelengths</b> (red-shifted enormously) — it should now be faint <b>microwaves</b>, coming equally from <b>every direction</b>, with a temperature a few degrees above absolute zero.</li><li><b>The prediction was found.</b> In 1964 Penzias and Wilson detected microwave radiation from all directions in the sky — the <b>cosmic microwave background</b> — at about 2.7 K, just as predicted.</li><li><b>Steady State had no explanation.</b> A Universe that has always looked the same has no hot early phase to leave radiation behind. The theory could not account for the CMB.</li><li><b>So the Big Bang became the accepted model</b> (7.10P): it is the theory with <b>more supporting evidence</b> — both red-shift and the CMB — and it made a <b>prediction that was confirmed</b>. That is how a scientific model is judged.</li></ol><p>The June 2025 levels (Q10(c), 6 marks): <b>Level 3</b> — at least one piece of evidence <b>described and linked</b> to the aspect of the theory it supports (the CMB \"across the sky\" → a hot early Universe, a definite beginning; red-shift → expansion), with the other identified; <b>Level 1</b> — isolated statements (\"there is red-shift\", \"there is CMB\"). The report: students knew the names of the evidence but did not say <i>what each showed</i>.</p><p>Word traps: the CMB is <b>microwave</b> radiation, not light and not \"radio waves from the Big Bang\"; it comes from <b>all directions</b>, not from one place; and the Big Bang was not an explosion <i>in</i> space — it was the start of the expansion <i>of</i> space.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Comparing the theories (6 marks)",
+          "question": "Scientists once supported two theories of the Universe, the Big Bang and the Steady State. Explain how evidence led to the Big Bang theory becoming the accepted theory. (6 marks)",
+          "steps": [
+            "<b>Both theories</b> say the Universe is <b>expanding</b>; the Big Bang says it began from a tiny, hot, dense point, the Steady State says it has always existed with new matter continually created.",
+            "<b>Red-shift</b>: light from distant galaxies has longer wavelengths, more so the more distant the galaxy, showing galaxies are moving apart — the Universe is expanding. This <b>supports both</b> theories.",
+            "The Big Bang theory <b>predicted</b> that radiation left over from the hot early Universe should still be detectable, stretched by the expansion to <b>microwave</b> wavelengths and coming from <b>all directions</b>.",
+            "The <b>cosmic microwave background</b> was then <b>discovered</b>, matching that prediction — evidence for a hot, dense beginning.",
+            "The Steady State theory <b>could not explain</b> the CMB, because it has no hot early Universe.",
+            "So the Big Bang theory has <b>more supporting evidence</b> (red-shift and the CMB) and a confirmed prediction, and it became the accepted model."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Why the CMB decided it",
+          "questions": [
+            {
+              "id": "as-t4-q1",
+              "type": "written",
+              "text": "Describe what the cosmic microwave background radiation is. (2)",
+              "model": "<ul><li><b>Microwave</b> radiation detected coming from <b>all directions</b> in space (at the same temperature, about 2.7 K).</li><li>It is the radiation <b>left over from the hot early Universe</b>, stretched to microwave wavelengths by the expansion.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t4-q2",
+              "type": "written",
+              "text": "Explain why the CMB supports the Big Bang theory. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Prediction</td><td>The Big Bang theory says the early Universe was <b>hot and dense</b> and full of radiation.</td></tr><tr><td><b>2</b></td><td>Stretching</td><td>As the Universe <b>expanded</b>, that radiation was stretched to <b>longer (microwave) wavelengths</b> and should be seen coming from everywhere.</td></tr><tr><td><b>3</b></td><td>Match</td><td>Microwave radiation <b>is</b> detected from all directions, as <b>predicted</b> — so it is evidence for a hot beginning.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-t4-q3",
+              "type": "written",
+              "text": "Explain why the discovery of the CMB led scientists to reject the Steady State theory. (2)",
+              "model": "<ul><li>The Steady State theory says the Universe has <b>always existed</b> and looked the same, with <b>no hot early phase</b>…</li><li>…so it <b>cannot explain</b> where the CMB comes from, while the Big Bang theory predicted it.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t4-q4",
+              "type": "choice",
+              "text": "Which statement about the Big Bang is correct?",
+              "options": [
+                "It was an explosion of matter into empty space",
+                "It was the start of the expansion of space itself, from a tiny, hot, dense state",
+                "It happened at the centre of the Universe",
+                "It created the Steady State"
+              ],
+              "correct": 1,
+              "explain": "Space itself expanded; there is no centre."
+            },
+            {
+              "id": "as-t4-q5",
+              "type": "written",
+              "text": "A theory makes a prediction that is later observed. Explain why this makes scientists more confident in the theory. (2)",
+              "model": "<ul><li>The observation was <b>not known</b> when the theory was made, so the theory was not simply built to fit it.</li><li>The theory <b>explains</b> something a rival theory cannot — it has <b>more supporting evidence</b>, so it becomes the accepted model.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t4-q6",
+              "type": "choice",
+              "text": "A student's 6-mark answer says: \"There is red-shift. There is CMB. So the Big Bang is right.\" Which level would this reach?",
+              "options": [
+                "Level 3 — full marks",
+                "Level 1 — isolated statements with no links",
+                "Level 2",
+                "It would score zero"
+              ],
+              "correct": 1,
+              "explain": "Each piece of evidence must be described and linked to what it shows."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe what the CMB is and where it comes from in the Big Bang picture",
+        "Explain why the CMB supports the Big Bang but not the Steady State theory",
+        "Describe how a theory becomes the accepted one"
+      ],
+      "blurb": "The 6-mark Big Bang question is lost by students who list facts without linking them. The structure is: what each theory says, what was predicted, what was found, which theory is left standing.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "star-balance",
+      "band": "tricky",
+      "title": "How a star forms, stays stable, and stops",
+      "spec": "7.16P, 7.17P",
+      "equations": [
+        "\\text{gravity (in)} = \\text{pressure from fusion (out)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Gravity versus pressure",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Gravity</th><th>Outward pressure</th><th>Result</th></tr><tr><td>Nebula → protostar</td><td>pulls the gas and dust together</td><td>small</td><td>the cloud <b>collapses</b>; compressing it makes it <b>denser and hotter</b> (gravitational potential → thermal)</td></tr><tr><td>Fusion starts</td><td>still pulling in</td><td>core hot enough (millions of °C) for <b>hydrogen nuclei to fuse into helium</b>, releasing energy</td><td>the energy heats the gas, whose <b>pressure pushes outwards</b></td></tr><tr><td>Main sequence</td><td>inward</td><td>outward, from the hot gas</td><td><b>balanced</b> — the star is <b>stable</b> and the same size for billions of years</td></tr><tr><td>Hydrogen runs out</td><td>wins in the core</td><td>falls</td><td>the <b>core contracts and heats</b> until <b>helium</b> fuses; the extra energy pushes the <b>outer layers out</b> — a <b>red giant</b> (or supergiant)</td></tr><tr><td>Fuel gone (Sun-like)</td><td>wins</td><td>none — no fusion</td><td>the core shrinks to a <b>white dwarf</b>, which slowly cools</td></tr><tr><td>Fuel gone (massive)</td><td>wins suddenly</td><td>none</td><td>the core collapses in seconds — <b>supernova</b>; the remnant is a <b>neutron star</b> or, if gravity is strong enough to beat everything, a <b>black hole</b></td></tr></table><p>The June 2023 scheme (Q4(d), explaining how a protostar becomes a main sequence star): <b>gravity</b> causes the cloud to <b>collapse</b>; the collapse <b>raises the temperature</b> until <b>fusion</b> starts; the star is stable because <b>gravity and the outward pressure from fusion balance</b>. \"Fission\" instead of fusion scored nothing — fusion <i>joins</i> small nuclei, fission <i>splits</i> large ones. Say <b>nuclei</b> (hydrogen nuclei fuse), not \"atoms\" or \"particles\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark stability explanation",
+          "question": "Explain how a protostar becomes a main sequence star, and why a main sequence star remains the same size for billions of years. (3 marks)",
+          "steps": [
+            "<b>Gravity</b> pulls the gas and dust of the protostar inwards, <b>compressing</b> it and making the core <b>hotter and denser</b>.",
+            "When the core is hot enough, <b>hydrogen nuclei fuse</b> to form helium, <b>releasing energy</b> — the star is now a main sequence star.",
+            "It stays the same size because the <b>outward pressure</b> of the hot gas, kept up by fusion, <b>balances the inward force of gravity</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "How a star stays stable",
+          "questions": [
+            {
+              "id": "as-t5-q1",
+              "type": "written",
+              "text": "Explain how a nebula becomes a protostar. (2)",
+              "model": "<ul><li><b>Gravity</b> pulls the particles of gas and dust together, so the cloud <b>collapses</b> and becomes denser.</li><li>Compressing the gas transfers energy to its thermal store: it gets <b>hotter</b> (but fusion has not yet started).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t5-q2",
+              "type": "written",
+              "text": "Explain why a main sequence star is stable. (2)",
+              "model": "<ul><li><b>Fusion</b> of hydrogen into helium releases energy, so the hot gas exerts an <b>outward pressure</b>.</li><li>This outward pressure <b>balances the inward pull of gravity</b>, so the star neither expands nor collapses.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t5-q3",
+              "type": "choice",
+              "text": "What process releases the energy in a main sequence star?",
+              "options": [
+                "Nuclear fission of uranium",
+                "Nuclear fusion of hydrogen nuclei into helium",
+                "Burning hydrogen gas",
+                "Gravity alone"
+              ],
+              "correct": 1,
+              "explain": "Fusion: small nuclei join. Fission is splitting, and it is not what powers stars."
+            },
+            {
+              "id": "as-t5-q4",
+              "type": "written",
+              "text": "Explain what happens to a star like the Sun when the hydrogen in its core runs out. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Balance lost</td><td>Fusion in the core slows, so the outward pressure falls and <b>gravity wins</b>: the <b>core contracts</b> and gets hotter.</td></tr><tr><td><b>2</b></td><td>New fusion</td><td>The core becomes hot enough for <b>helium</b> to fuse into heavier elements.</td></tr><tr><td><b>3</b></td><td>Expansion</td><td>The extra energy pushes the <b>outer layers outwards</b>; they expand and cool — the star becomes a <b>red giant</b>.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "as-t5-q5",
+              "type": "written",
+              "text": "Explain why a star much more massive than the Sun ends in a supernova while the Sun will not. (2)",
+              "model": "<ul><li>A more massive star has <b>much stronger gravity</b>, so when fusion stops its core <b>collapses</b> suddenly and violently…</li><li>…and the collapse blows the outer layers away in a <b>supernova</b>; the Sun's gravity is too weak for this, so its core just shrinks to a white dwarf.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t5-q6",
+              "type": "choice",
+              "text": "A student writes: \"The star is stable because gravity is balanced by nuclear fission.\" What is wrong?",
+              "options": [
+                "Nothing",
+                "Stars are powered by fusion, not fission",
+                "Gravity is not involved",
+                "Stars are never stable"
+              ],
+              "correct": 1,
+              "explain": "Fusion joins hydrogen nuclei; fission splits heavy nuclei and does not happen in stars."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain how gravity forms a protostar and starts fusion",
+        "Explain the balance that keeps a main sequence star stable",
+        "Explain what changes when the hydrogen runs out, for both masses of star"
+      ],
+      "blurb": "The questions are 'explain how a star forms', 'explain why a main sequence star is stable' and 'explain what happens when the fuel runs out'. All three are the same two forces: gravity pulling in, the pressure of hot gas pushing out.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "space-telescopes",
+      "band": "tricky",
+      "title": "Telescopes in space and telescopes for other wavelengths",
+      "spec": "7.19P",
+      "equations": [
+        "\\text{above the atmosphere: no absorption, no distortion}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The arguments and their reasons",
+          "html": "<table class='tbl'><tr><th>Advantage of a space telescope</th><th>Because…</th></tr><tr><td>can observe <b>infrared, ultraviolet, X-rays, gamma rays</b></td><td>the <b>atmosphere absorbs</b> most of these, so they never reach the ground</td></tr><tr><td><b>sharper</b> images</td><td>no <b>distortion</b> (twinkling) from moving air of varying density refracting the light</td></tr><tr><td>sees <b>fainter</b> objects</td><td>no <b>light pollution</b> from towns, no scattered daylight, no clouds or dust — observations possible all the time</td></tr></table><table class='tbl'><tr><th>Disadvantage</th><th>Because…</th></tr><tr><td>very <b>expensive</b></td><td>launching a telescope into orbit costs far more than building one on a mountain</td></tr><tr><td>hard to <b>repair or upgrade</b></td><td>astronauts or robots have to reach it (Hubble was serviced; Webb, 1.5 million km away, cannot be)</td></tr><tr><td><b>size</b> limited</td><td>it must fit in a rocket, so the mirror is smaller than the biggest ground telescopes (Webb's unfolds)</td></tr></table><p>The 2022 report (Q6(c)): the question asked why some telescopes are on satellites; many \"stated the location without explaining why it matters\". Write <b>where</b> (above the atmosphere) <b>and the consequence</b> (no absorption / distortion / pollution).</p><p><b>Other wavelengths</b> (and why bother): objects emit at wavelengths set by their temperature and processes — <b>cool dust and gas</b> clouds where stars form glow in <b>infrared</b>; very <b>hot</b> gas round black holes and in supernova remnants gives <b>X-rays</b>; <b>radio</b> telescopes see through dust and detect the CMB (microwaves) and pulsars; radio and some infrared pass through the atmosphere, so those telescopes can be on the ground (radio dishes are huge for that reason). Each wavelength reveals something the others cannot, so a complete picture needs them all.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "State and explain",
+          "question": "The James Webb Space Telescope observes infrared radiation from an orbit far from the Earth. (a) Explain why it had to be placed in space. (b) Give two disadvantages of placing a telescope in space. (4 marks)",
+          "steps": [
+            "<b>(a)</b> The Earth's <b>atmosphere absorbs</b> most infrared radiation, so a ground telescope would receive very little…",
+            "…above the atmosphere all the infrared reaches the telescope, undistorted by the air and unaffected by clouds and light pollution.",
+            "<b>(b)</b> It is very <b>expensive</b> to build and launch…",
+            "…and it <b>cannot be repaired or upgraded</b> if something goes wrong (and its size is limited by the rocket)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Space telescopes",
+          "questions": [
+            {
+              "id": "as-t6-q1",
+              "type": "written",
+              "text": "Explain one advantage of placing an optical telescope in orbit around the Earth. (2)",
+              "model": "<ul><li>It is <b>above the atmosphere</b>…</li><li>…so the light is not <b>distorted</b> by moving air (or dimmed by clouds / light pollution), giving sharper, clearer images.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t6-q2",
+              "type": "written",
+              "text": "Explain why an X-ray telescope cannot be used on the ground. (2)",
+              "model": "<ul><li>X-rays from space are <b>absorbed by the atmosphere</b>…</li><li>…so they do <b>not reach the ground</b> — the telescope must be above the atmosphere to detect them.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t6-q3",
+              "type": "choice",
+              "text": "Which type of telescope works well on the ground because its waves pass through the atmosphere?",
+              "options": [
+                "X-ray",
+                "Gamma ray",
+                "Radio",
+                "Ultraviolet"
+              ],
+              "correct": 2,
+              "explain": "Radio waves (and visible light) pass through the atmosphere; most IR, UV, X and gamma do not."
+            },
+            {
+              "id": "as-t6-q4",
+              "type": "written",
+              "text": "Give two disadvantages of space telescopes compared with ground-based telescopes. (2)",
+              "model": "<ul><li>Much more <b>expensive</b> (launch costs).</li><li><b>Difficult or impossible to repair</b>, maintain or upgrade; size limited by the rocket.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "as-t6-q5",
+              "type": "written",
+              "text": "Explain why astronomers use telescopes that detect infrared as well as telescopes that detect visible light. (2)",
+              "model": "<ul><li>Some objects — <b>cool</b> clouds of dust and gas where stars form — emit mostly <b>infrared</b> and little visible light, and infrared passes through dust that blocks light.</li><li>So the infrared telescope reveals objects and detail that a visible-light telescope <b>cannot see</b>.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "as-t6-q6",
+              "type": "choice",
+              "text": "A student answers \"telescopes are put on satellites because they are in space\". Why does this score nothing?",
+              "options": [
+                "Telescopes are never on satellites",
+                "It gives the location but not the reason — the atmosphere's absorption or distortion must be mentioned",
+                "Satellites cannot carry telescopes",
+                "The answer is too long"
+              ],
+              "correct": 1,
+              "explain": "The 2022 report's exact complaint."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Give the advantages of a telescope above the atmosphere, each with its reason",
+        "Give the disadvantages of a space telescope",
+        "Explain why telescopes for radio, infrared, X-ray and other wavelengths are used"
+      ],
+      "blurb": "'State and explain' questions on telescopes are marked on the reason, not the location. 'It is in space' earns nothing; 'it is above the atmosphere, which absorbs infrared' earns the marks.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "weight-hard",
+      "band": "tricky",
+      "title": "Weight and g the hard way: ratios, rearranging and the balance trap",
+      "spec": "7.1P",
+      "equations": [
+        "g = \\dfrac{W}{m}",
+        "m = \\dfrac{W}{g}",
+        "\\dfrac{W_{\\text{Moon}}}{W_{\\text{Earth}}} = \\dfrac{g_{\\text{Moon}}}{g_{\\text{Earth}}}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Three routes and a trap",
+          "html": "<p><b>Route 1 — via the mass.</b> Weight on Earth → mass ($m = W \\div 10$) → weight elsewhere ($W = m \\times g$). The mass is the bridge: it never changes.</p><p><b>Route 2 — ratios.</b> Weight is proportional to $g$ for a fixed mass, so if $g_{\\text{Moon}}$ is 1/6 of Earth's, every weight on the Moon is 1/6 of its Earth value: 600 N → 100 N, no mass needed. \"g on Mars is 0.38 times g on Earth\" → multiply Earth weights by 0.38.</p><p><b>Route 3 — finding g.</b> Drop or weigh a known mass: $g = W \\div m$. From a newton meter reading of 7.4 N for a 2 kg mass on Mars, $g = 3.7$ N/kg. Unit <b>N/kg</b> (the same as m/s², the acceleration of free fall there).</p><p><b>The balance trap.</b> A <b>newton meter / spring balance</b> measures the <b>force</b> pulling the spring — the weight — so it reads <b>less on the Moon</b>. A <b>beam balance</b> (scales with standard masses on the other side) compares the pull of gravity on two masses <b>at the same place</b>; both are reduced by the same factor, so it balances at the <b>same mass</b> as on Earth. Bathroom scales are spring balances marked in kg assuming Earth's $g$: on the Moon they would read a sixth of your mass — wrongly.</p><p><b>Why g differs</b> (the explain mark): $g$ at a surface depends on the body's <b>mass</b> and its <b>radius</b>; a more massive body pulls harder, a larger radius puts the surface further from the centre and weakens the pull. In orbit $g$ is smaller but not zero — astronauts float because they and their spacecraft are <b>falling together</b>, not because there is no gravity.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Via the mass, then ratios",
+          "question": "An astronaut weighs 720 N on Earth (g = 10 N/kg). (a) Calculate his weight on the Moon (g = 1.6 N/kg). (b) On Mars g is 0.38 times its value on Earth. Calculate his weight on Mars without finding his mass again.",
+          "steps": [
+            "<b>(a)</b> Mass: $m = \\dfrac{W}{g} = \\dfrac{720}{10} = 72$ kg.",
+            "On the Moon: $W = m \\times g = 72 \\times 1.6 = 115$ N (3 s.f.).",
+            "<b>(b)</b> Weight is proportional to $g$ for the same mass: $W_{\\text{Mars}} = 0.38 \\times 720 = 274$ N (3 s.f.)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Weight the hard way",
+          "questions": [
+            {
+              "id": "as-t7-q1",
+              "type": "numeric",
+              "text": "A rock weighs 24 N on the Moon (g = 1.6 N/kg). Calculate its weight on Earth (g = 10 N/kg).",
+              "answer": {
+                "value": 150,
+                "unit": "N"
+              },
+              "hint": "Mass first.",
+              "walkthrough": [
+                "$m = \\dfrac{24}{1.6} = 15$ kg.",
+                "On Earth $W = 15 \\times 10 = 150$ N."
+              ]
+            },
+            {
+              "id": "as-t7-q2",
+              "type": "numeric",
+              "text": "A newton meter reads 11.1 N when a 3 kg mass hangs from it on Mars. Calculate g on Mars.",
+              "answer": {
+                "value": 3.7,
+                "unit": "N/kg"
+              },
+              "hint": "g = W ÷ m.",
+              "walkthrough": [
+                "$g = \\dfrac{W}{m} = \\dfrac{11.1}{3} = 3.7$ N/kg."
+              ]
+            },
+            {
+              "id": "as-t7-q3",
+              "type": "numeric",
+              "text": "On Jupiter g is 2.5 times its value on Earth. A probe weighs 400 N on Earth. Calculate its weight on Jupiter.",
+              "answer": {
+                "value": 1000,
+                "unit": "N"
+              },
+              "hint": "Weight scales with g.",
+              "walkthrough": [
+                "$W_{\\text{Jupiter}} = 2.5 \\times 400 = 1000$ N (or: m = 40 kg, W = 40 × 25 = 1000 N)."
+              ]
+            },
+            {
+              "id": "as-t7-q4",
+              "type": "group",
+              "text": "An astronaut takes a 1 kg mass, a beam balance with standard masses, and a newton meter to the Moon (g = 1.6 N/kg).",
+              "parts": [
+                {
+                  "id": "as-t7-q4a",
+                  "type": "numeric",
+                  "text": "Calculate the newton meter reading when the 1 kg mass hangs from it on the Moon.",
+                  "answer": {
+                    "value": 1.6,
+                    "unit": "N"
+                  },
+                  "hint": "W = m × g.",
+                  "walkthrough": [
+                    "$W = 1 \\times 1.6 = 1.6$ N (it read 10 N on Earth)."
+                  ]
+                },
+                {
+                  "id": "as-t7-q4b",
+                  "type": "written",
+                  "text": "Explain what the beam balance shows when the 1 kg mass is placed on one side and a 1 kg standard mass on the other. (2)",
+                  "model": "<ul><li>It <b>balances</b> — it still shows 1 kg.</li><li>Both masses are pulled by the <b>same (reduced) g</b>, so their weights are reduced equally and the balance compares <b>masses</b>, which have not changed.</li></ul>",
+                  "lines": 3
+                }
+              ]
+            },
+            {
+              "id": "as-t7-q5",
+              "type": "numeric",
+              "text": "A planet has g = 15 N/kg. A person weighs 900 N there. Calculate the person's mass.",
+              "answer": {
+                "value": 60,
+                "unit": "kg"
+              },
+              "hint": "m = W ÷ g.",
+              "walkthrough": [
+                "$m = \\dfrac{900}{15} = 60$ kg — the same mass anywhere."
+              ]
+            },
+            {
+              "id": "as-t7-q6",
+              "type": "written",
+              "text": "Explain why astronauts in the International Space Station appear weightless even though g there is about 8.7 N/kg. (2)",
+              "model": "<ul><li>Gravity still acts on them (their weight is about 87% of its value on the ground) — that is what keeps the station in orbit.</li><li>They float because they and the station are <b>falling (accelerating) towards the Earth together</b>, so nothing pushes up on them — there is no reaction force to feel.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find g from a weight and a mass, and a mass from a weight and g",
+        "Convert a weight on one body to the weight on another via the mass",
+        "Use ratios: g a fraction of Earth's, so weight the same fraction",
+        "Explain what a beam balance and a newton meter would read on the Moon"
+      ],
+      "blurb": "The easy question gives m and g. The harder ones give a weight on one body and ask about another, give g as a fraction of Earth's, or ask what two different balances would read. The mass is the fixed point in all of them.",
+      "tags": [
+        "P"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "q": "What does the Solar System consist of?",
+      "a": "The Sun, eight planets with their natural satellites (moons), dwarf planets, asteroids and comets (plus artificial satellites).",
+      "section": "solar-system"
+    },
+    {
+      "q": "Name the eight planets in order from the Sun.",
+      "a": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+      "section": "solar-system"
+    },
+    {
+      "q": "What is a dwarf planet? Give an example.",
+      "a": "A body that orbits the Sun and is round but has not cleared its orbit of other objects — Pluto, Ceres, Eris.",
+      "section": "solar-system"
+    },
+    {
+      "q": "Where is the asteroid belt?",
+      "a": "Between Mars and Jupiter.",
+      "section": "solar-system"
+    },
+    {
+      "q": "Which four planets are small and rocky, and which four are gas giants?",
+      "a": "Rocky: Mercury, Venus, Earth, Mars. Gas giants: Jupiter, Saturn, Uranus, Neptune.",
+      "section": "solar-system"
+    },
+    {
+      "q": "What is the equation for weight?",
+      "a": "W = m × g (weight = mass × gravitational field strength).",
+      "section": "weight-elsewhere-nn"
+    },
+    {
+      "q": "Does your mass change on the Moon? Does your weight?",
+      "a": "Mass: no, it is the same everywhere. Weight: yes, it is about a sixth, because g on the Moon is about 1.6 N/kg.",
+      "section": "weight-elsewhere-nn"
+    },
+    {
+      "q": "What does g at the surface of a body depend on?",
+      "a": "The body's mass (more mass → larger g) and its radius (larger radius → smaller g).",
+      "section": "weight-elsewhere-nn"
+    },
+    {
+      "q": "g on the Earth, Moon, Mars and Jupiter?",
+      "a": "Earth 10 N/kg; Moon 1.6 N/kg; Mars 3.7 N/kg; Jupiter 25 N/kg.",
+      "section": "weight-elsewhere-nn"
+    },
+    {
+      "q": "Which reads differently on the Moon: a newton meter or a beam balance?",
+      "a": "The newton meter (it measures weight). The beam balance compares masses and reads the same.",
+      "section": "weight-elsewhere-nn"
+    },
+    {
+      "q": "Describe the orbits of the planets.",
+      "a": "Near-circular (slightly elliptical) orbits around the Sun, roughly in one plane, at almost constant speed.",
+      "section": "orbits"
+    },
+    {
+      "q": "Describe the orbit of a comet.",
+      "a": "Highly elliptical around the Sun; fastest when closest to the Sun, slowest when furthest.",
+      "section": "orbits"
+    },
+    {
+      "q": "What does a moon (natural satellite) orbit?",
+      "a": "A planet.",
+      "section": "orbits"
+    },
+    {
+      "q": "What is a geostationary orbit, and what is it used for?",
+      "a": "An orbit above the equator with a 24-hour period, so the satellite stays over one point — TV and communications.",
+      "section": "orbits"
+    },
+    {
+      "q": "What is a low polar orbit used for, and why?",
+      "a": "Weather, imaging and mapping: the satellite passes over the poles every ~90 min while the Earth turns beneath it, so it covers the whole surface.",
+      "section": "orbits"
+    },
+    {
+      "q": "Why does a comet speed up near the Sun?",
+      "a": "The Sun's gravitational force increases as it gets closer; energy is transferred from the gravitational potential store to the kinetic store.",
+      "section": "orbits"
+    },
+    {
+      "q": "What force keeps a satellite in orbit?",
+      "a": "Gravity (the Earth's gravitational pull), acting towards the centre of the Earth.",
+      "section": "orbits"
+    },
+    {
+      "q": "A planet in a circular orbit has constant speed. Is its velocity constant?",
+      "a": "No — its direction is continuously changing, so its velocity is changing (velocity is a vector).",
+      "section": "circular-orbits"
+    },
+    {
+      "q": "Why is a body in a circular orbit accelerating?",
+      "a": "Its velocity is changing (direction changes continuously); the acceleration is towards the centre, caused by gravity.",
+      "section": "circular-orbits"
+    },
+    {
+      "q": "In which direction does gravity act on an orbiting body, relative to its velocity?",
+      "a": "Towards the centre — at right angles to the velocity — so it changes the direction but not the speed.",
+      "section": "circular-orbits"
+    },
+    {
+      "q": "How are orbital radius and orbital speed linked for a stable orbit?",
+      "a": "Smaller radius → stronger gravity → higher speed needed. So if an orbiting body's speed changes, its orbital radius must change too (spec 7.7P).",
+      "section": "circular-orbits"
+    },
+    {
+      "q": "Why does Mercury orbit faster than Neptune?",
+      "a": "It is much closer to the Sun, so the gravitational force on it is stronger and a higher speed is needed for a stable orbit.",
+      "section": "circular-orbits"
+    },
+    {
+      "q": "A wave source moves away from you. What happens to the observed wavelength and frequency?",
+      "a": "Wavelength increases; frequency decreases.",
+      "section": "redshift"
+    },
+    {
+      "q": "A wave source moves towards you. What happens to the observed wavelength and frequency?",
+      "a": "Wavelength decreases; frequency increases (blue-shift for light).",
+      "section": "redshift"
+    },
+    {
+      "q": "What is red-shift?",
+      "a": "The increase in wavelength of light from a source moving away — spectral lines shifted towards the red end.",
+      "section": "redshift"
+    },
+    {
+      "q": "How does a galaxy's red-shift depend on its distance?",
+      "a": "The more distant the galaxy, the greater its red-shift — so the faster it is moving away.",
+      "section": "redshift"
+    },
+    {
+      "q": "What does the red-shift of galaxies tell us about them?",
+      "a": "They are moving away from us; more distant ones faster.",
+      "section": "redshift"
+    },
+    {
+      "q": "Describe the Big Bang theory.",
+      "a": "The Universe began about 13.8 billion years ago from a very small, hot, dense point and has been expanding and cooling ever since.",
+      "section": "big-bang"
+    },
+    {
+      "q": "Describe the Steady State theory.",
+      "a": "The Universe has always existed and always will; it expands, but new matter is continually created so it always looks the same.",
+      "section": "big-bang"
+    },
+    {
+      "q": "What two pieces of evidence support the Big Bang?",
+      "a": "Red-shift of galaxies (expansion) and the cosmic microwave background (a hot beginning).",
+      "section": "big-bang"
+    },
+    {
+      "q": "Which evidence fits both theories, and which fits only the Big Bang?",
+      "a": "Red-shift fits both (both have expansion); the CMB fits only the Big Bang.",
+      "section": "big-bang"
+    },
+    {
+      "q": "What is the CMB?",
+      "a": "Cosmic microwave background: microwave radiation from all directions in space, left over from the hot early Universe and stretched by the expansion.",
+      "section": "big-bang"
+    },
+    {
+      "q": "Why did the Big Bang become the accepted theory?",
+      "a": "It predicted the CMB, which was then discovered; the Steady State theory could not explain it — so the Big Bang has more supporting evidence.",
+      "section": "big-bang"
+    },
+    {
+      "q": "How does red-shift show the Universe is expanding?",
+      "a": "All distant galaxies are moving away, and the further they are the faster — exactly what is seen if space itself is expanding everywhere.",
+      "section": "big-bang"
+    },
+    {
+      "q": "Life cycle of a star like the Sun?",
+      "a": "Nebula → protostar → main sequence star → red giant → white dwarf → black dwarf.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "Life cycle of a star much more massive than the Sun?",
+      "a": "Nebula → protostar → main sequence star → red supergiant → supernova → neutron star or black hole.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What decides how a star ends its life?",
+      "a": "Its mass (not its age).",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What is a nebula?",
+      "a": "A cloud of dust and gas in space from which stars form.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What happens in a protostar?",
+      "a": "Gravity pulls the cloud together; it becomes denser and hotter, but fusion has not yet started.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What happens in a main sequence star?",
+      "a": "Hydrogen nuclei fuse into helium, releasing energy; the star is stable.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What is a red giant?",
+      "a": "A star whose core hydrogen has run out: the core contracts and heats, helium fuses, and the outer layers expand and cool.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What is a white dwarf?",
+      "a": "The small, very hot, dense core left after a Sun-like star sheds its outer layers; no fusion; slowly cooling.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What is a supernova?",
+      "a": "The explosion of a massive star when its core collapses at the end of its life.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What is left after a supernova?",
+      "a": "A neutron star — or a black hole if the star was massive enough.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "What is a black hole?",
+      "a": "The remnant of the most massive stars; gravity so strong that not even light can escape.",
+      "section": "star-cycles"
+    },
+    {
+      "q": "Why is a main sequence star stable?",
+      "a": "The outward pressure of the hot gas (from fusion) balances the inward pull of gravity.",
+      "section": "star-balance"
+    },
+    {
+      "q": "How does a protostar become a main sequence star?",
+      "a": "Gravity collapses the cloud, raising the temperature until hydrogen nuclei fuse; then gravity and the outward pressure balance.",
+      "section": "star-balance"
+    },
+    {
+      "q": "Fusion or fission in stars?",
+      "a": "Fusion — small nuclei (hydrogen) join to make helium. Fission (splitting large nuclei) does not power stars.",
+      "section": "star-balance"
+    },
+    {
+      "q": "Why does a star become a red giant when its hydrogen runs out?",
+      "a": "The core contracts and heats until helium fuses; the extra energy pushes the outer layers out, which expand and cool.",
+      "section": "star-balance"
+    },
+    {
+      "q": "How have methods of observing the Universe changed?",
+      "a": "Naked eye → optical telescopes (bigger lenses and mirrors) → photography → telescopes for other wavelengths (radio, IR, X-ray) → telescopes in space → digital detectors and computers.",
+      "section": "observing"
+    },
+    {
+      "q": "Why are some telescopes placed in space?",
+      "a": "Above the atmosphere there is no absorption of IR, UV and X-rays, no distortion by moving air, and no clouds or light pollution — sharper images, all wavelengths.",
+      "section": "observing"
+    },
+    {
+      "q": "Give two disadvantages of a space telescope.",
+      "a": "Very expensive to build and launch; hard or impossible to repair or upgrade (and size limited by the rocket).",
+      "section": "space-telescopes"
+    },
+    {
+      "q": "Which wavelengths does the atmosphere block?",
+      "a": "Most infrared, ultraviolet, X-rays and gamma rays. Visible light and radio waves get through.",
+      "section": "space-telescopes"
+    },
+    {
+      "q": "Why use telescopes for wavelengths other than light?",
+      "a": "Different objects emit at different wavelengths: cool dust in infrared, very hot gas in X-rays; radio sees through dust. Each reveals what the others cannot.",
+      "section": "space-telescopes"
+    },
+    {
+      "q": "What did Galileo's telescope show, and why did it matter?",
+      "a": "Four moons orbiting Jupiter and the phases of Venus — things that could not be explained by an Earth-centred model.",
+      "section": "solar-system-models"
+    },
+    {
+      "q": "What is the geocentric model?",
+      "a": "The Earth at the centre, not moving; the Sun, Moon, planets and stars orbit the Earth.",
+      "section": "solar-system-models"
+    },
+    {
+      "q": "What is the heliocentric model?",
+      "a": "The Sun at the centre; the planets, including the Earth, orbit the Sun in ellipses; the Moon orbits the Earth.",
+      "section": "solar-system-models"
+    },
+    {
+      "q": "Why do scientists replace one model with another?",
+      "a": "New observations that the old model cannot explain but the new model can — the new model has more supporting evidence.",
+      "section": "solar-system-models"
+    },
+    {
+      "q": "The red-shift chain for the marks?",
+      "a": "Lines at longer wavelength → red-shifted → moving away → more distant galaxies have bigger red-shift so move faster → the Universe is expanding.",
+      "section": "redshift-argument"
+    },
+    {
+      "q": "Why does red-shift alone not prove the Big Bang?",
+      "a": "Both the Big Bang and the Steady State theory describe an expanding Universe, so both predict red-shift.",
+      "section": "redshift-argument"
+    },
+    {
+      "q": "What does Level 3 need in the 6-mark Big Bang evidence question?",
+      "a": "At least one piece of evidence described AND linked to what it shows (CMB → hot beginning; red-shift → expansion), the other identified. Isolated statements are Level 1.",
+      "section": "cmb-decides"
+    },
+    {
+      "q": "Three word traps about the Big Bang and CMB?",
+      "a": "CMB is microwaves (not light or radio); it comes from all directions (not one place); the Big Bang was the expansion of space, not an explosion in space.",
+      "section": "cmb-decides"
+    },
+    {
+      "q": "'Telescopes are on satellites because they are in space' — why no marks?",
+      "a": "It gives the location but not the reason: say the atmosphere absorbs or distorts the radiation.",
+      "section": "space-telescopes"
+    },
+    {
+      "q": "Convert a weight on Earth to a weight on the Moon.",
+      "a": "Mass first (m = W ÷ 10), then W = m × 1.6. Or use the ratio: Moon weight = Earth weight × 1.6/10.",
+      "section": "weight-hard"
+    },
+    {
+      "q": "Why do astronauts in the ISS float, when g there is about 8.7 N/kg?",
+      "a": "They and the station are falling towards the Earth together, so nothing pushes up on them — gravity is still acting and keeps them in orbit.",
+      "section": "weight-hard"
+    },
+    {
+      "q": "State what is meant by: natural satellite.",
+      "a": "A body that <b>orbits a planet</b> (a moon).",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: artificial satellite.",
+      "a": "A <b>man-made object</b> placed in orbit around the Earth (or another body).",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: dwarf planet.",
+      "a": "A body that <b>orbits the Sun</b> and is round but has <b>not cleared its orbit</b> of other objects.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: comet.",
+      "a": "An <b>icy</b> body in a <b>highly elliptical</b> orbit around the Sun, fastest when nearest the Sun.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: orbit.",
+      "a": "The <b>path</b> of one body around another, held by <b>gravity</b>.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: geostationary orbit.",
+      "a": "An orbit above the equator with a <b>period of 24 hours</b>, so the satellite stays over the same point.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: gravitational field strength g.",
+      "a": "The <b>force of gravity per kilogram</b> at a place, in N/kg; it depends on the body's mass and radius.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: red-shift.",
+      "a": "The <b>increase in wavelength</b> of light from a source moving <b>away</b> — spectral lines shifted towards the red end.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: cosmic microwave background (cmb).",
+      "a": "<b>Microwave radiation</b> coming from <b>all directions</b> in space — left over from the hot early Universe.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: big bang theory.",
+      "a": "The Universe began from a <b>very small, hot, dense</b> point and has been <b>expanding</b> ever since.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: steady state theory.",
+      "a": "The Universe has <b>always existed</b>, expanding while <b>new matter is created</b> so it always looks the same.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: nebula.",
+      "a": "A <b>cloud of dust and gas</b> in space from which stars form.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: protostar.",
+      "a": "A collapsing cloud that is <b>heating up</b> under gravity but has <b>not yet started fusion</b>.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: main sequence star.",
+      "a": "A star in the stable stage, <b>fusing hydrogen into helium</b>, with outward pressure balancing gravity.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: red giant.",
+      "a": "A star whose core hydrogen has run out: the <b>outer layers expand and cool</b>.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: white dwarf.",
+      "a": "The small, hot, dense <b>core</b> left by a Sun-like star, with <b>no fusion</b>, slowly cooling.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: supernova.",
+      "a": "The <b>explosion</b> of a massive star at the end of its life.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: neutron star.",
+      "a": "The tiny, <b>extremely dense</b> core left after a supernova.",
+      "section": "keywords-astronomy"
+    },
+    {
+      "q": "State what is meant by: black hole.",
+      "a": "The remnant of the most massive stars: gravity so strong that <b>not even light can escape</b>.",
+      "section": "keywords-astronomy"
+    }
+  ],
+  "types": [
+    {
+      "id": "weight-elsewhere",
+      "name": "Weight on other bodies: W = m × g",
+      "equations": [
+        "W = m × g",
+        "g: Earth 10 N/kg, Moon 1.6 N/kg, Mars 3.7 N/kg, Jupiter 25 N/kg"
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
+      ],
+      "method": "Weight is the force of gravity on a mass: W = m × g. The mass of an object is the same everywhere; its weight changes because g — the gravitational field strength — is different on each body (it depends on the body's mass and radius). Use the g the question gives for that body. To find g from a weight, g = W ÷ m; to find the mass from a weight on another body, m = W ÷ g for that body, and that mass is the same back on Earth.",
+      "commonErrors": [
+        "Using Earth's g for a weight on the Moon or Mars",
+        "Saying the mass changes on the Moon — only the weight changes",
+        "Giving the unit of g as N (it is N/kg) or of weight as kg (it is N)",
+        "Dividing by the wrong g when converting a Moon weight back to an Earth weight"
+      ],
+      "worked": {
+        "id": "weight-elsewhere-w",
+        "question": "An astronaut has a mass of 80 kg. Calculate her weight on the Moon, where g = 1.6 N/kg.",
+        "steps": [
+          "Known: m = 80 kg, g (Moon) = 1.6 N/kg. Unknown: W.",
+          "W = m × g",
+          "W = 80 × 1.6",
+          "W = 128 N (on Earth it would be 800 N; her mass is 80 kg in both places)"
+        ],
+        "answer": {
+          "value": 128,
+          "unit": "N"
+        }
+      },
+      "practice": [
+        {
+          "id": "weight-elsewhere-p1",
+          "question": "A rover has a mass of 900 kg. Calculate its weight on Mars, where g = 3.7 N/kg.",
+          "hint": "W = m × g with the Martian g.",
+          "walkthrough": [
+            "m = 900 kg, g = 3.7 N/kg, find W.",
+            "W = m × g = 900 × 3.7",
+            "W = 3330 N"
+          ],
+          "answer": {
+            "value": 3330,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-elsewhere-p2",
+          "question": "A 2 kg rock weighs 3.2 N on the Moon. Calculate the gravitational field strength on the Moon.",
+          "hint": "g = W ÷ m.",
+          "walkthrough": [
+            "W = 3.2 N, m = 2 kg, find g.",
+            "g = W ÷ m = 3.2 ÷ 2",
+            "g = 1.6 N/kg"
+          ],
+          "answer": {
+            "value": 1.6,
+            "unit": "N/kg"
+          }
+        },
+        {
+          "id": "weight-elsewhere-p3",
+          "question": "A probe weighs 1500 N on Jupiter, where g = 25 N/kg. Calculate its mass.",
+          "hint": "m = W ÷ g.",
+          "walkthrough": [
+            "W = 1500 N, g = 25 N/kg, find m.",
+            "m = W ÷ g = 1500 ÷ 25",
+            "m = 60 kg (the same mass anywhere)"
+          ],
+          "answer": {
+            "value": 60,
+            "unit": "kg"
+          }
+        },
+        {
+          "id": "weight-elsewhere-p4",
+          "question": "An object weighs 600 N on Earth (g = 10 N/kg). Calculate its weight on the Moon (g = 1.6 N/kg).",
+          "hint": "Find the mass first, then multiply by the Moon's g.",
+          "walkthrough": [
+            "Mass: m = W ÷ g = 600 ÷ 10 = 60 kg.",
+            "On the Moon: W = m × g = 60 × 1.6",
+            "W = 96 N"
+          ],
+          "answer": {
+            "value": 96,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-elsewhere-p5",
+          "question": "A 0.5 kg hammer is dropped on the Moon (g = 1.6 N/kg). Calculate the force of gravity on it.",
+          "hint": "The force of gravity is the weight: W = m × g.",
+          "walkthrough": [
+            "m = 0.5 kg, g = 1.6 N/kg.",
+            "W = 0.5 × 1.6",
+            "W = 0.8 N"
+          ],
+          "answer": {
+            "value": 0.8,
+            "unit": "N"
+          }
+        },
+        {
+          "id": "weight-elsewhere-p6",
+          "question": "A satellite of mass 400 kg is in orbit where g = 8.7 N/kg. Calculate the gravitational force on it.",
+          "hint": "Gravity still acts in orbit — that is what keeps it there. W = m × g.",
+          "walkthrough": [
+            "m = 400 kg, g = 8.7 N/kg.",
+            "W = 400 × 8.7",
+            "W = 3480 N (towards the Earth's centre)"
+          ],
+          "answer": {
+            "value": 3480,
+            "unit": "N"
+          }
+        }
+      ]
+    }
+  ]
 }

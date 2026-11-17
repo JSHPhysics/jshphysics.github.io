@@ -258,6 +258,8 @@ renders exactly as before, which is what the A-level site does.
 - `facts` — the flashcards shown as the last band, "Key facts". `section`
   is the id of the section the card belongs to (used when a section is
   hidden by the tier filter, and for later tooling).
+- `factsBlurb` — optional one-paragraph intro under the "Key facts" heading;
+  a default is used when it is absent.
 
 ### Section
 

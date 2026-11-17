@@ -53,8 +53,8 @@
       "file": "astronomy.json",
       "title": "Astronomy",
       "order": 70,
-      "types": 0,
-      "sections": 0
+      "types": 1,
+      "sections": 16
     },
     {
       "id": "forces-and-their-effects",
