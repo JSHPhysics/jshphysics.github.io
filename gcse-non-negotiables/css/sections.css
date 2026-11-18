@@ -203,6 +203,13 @@ details.howto .lede {
   white-space: nowrap;
 }
 
+@media (max-width: 640px) {
+  /* a long list of spec numbers must not set the width of the column */
+  .skill-head .lessons {
+    white-space: normal;
+  }
+}
+
 .prose {
   max-width: var(--measure);
   display: grid;

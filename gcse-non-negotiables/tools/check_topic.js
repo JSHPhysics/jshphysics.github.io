@@ -191,16 +191,22 @@ async function answerChecks(page, label) {
     const bad = [];
     document.querySelectorAll("body *").forEach(function (e) {
       // the topic pills, equation strips and display maths scroll inside their own boxes
-      if (e.closest(".pills, .topic-pills, .formulas, .katex-display")) { return; }
+      // (.katex-mathml is the hidden MathML copy KaTeX keeps for screen readers)
+      if (e.closest(".pills, .topic-pills, .formulas, .katex-display, table.tbl, .katex-mathml")) { return; }
       const r = e.getBoundingClientRect();
-      if (r.right > width + 1 && r.width > 0) {
+      if (r.right > width + 2 && r.width > 0) {
         bad.push(e.tagName + "." + e.className.toString().slice(0, 40));
       }
     });
-    return { scrollW: document.documentElement.scrollWidth, width: width, bad: bad.slice(0, 8) };
+    let widestCard = 0;
+    document.querySelectorAll("article.skill").forEach(function (card) {
+      widestCard = Math.max(widestCard, Math.round(card.getBoundingClientRect().width));
+    });
+    return { scrollW: document.documentElement.scrollWidth, width: width, widestCard: widestCard, bad: bad.slice(0, 8) };
   });
   console.log("phone " + JSON.stringify(over));
   if (over.scrollW > over.width) { fail("page scrolls sideways at 390 px"); }
+  if (over.widestCard > over.width) { fail("a card is wider than the phone screen (" + over.widestCard + " px) — content is being clipped"); }
   if (phoneErrors.length) { fail("phone page errors: " + JSON.stringify(phoneErrors)); }
   await phone.close();
 
