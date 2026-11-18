@@ -7,6 +7,13 @@ type, `weight-elsewhere`, added because the topic had none), `as_nn.py`
 (N1–N9, N9 = key words), `as_tricky.py` (T1–T7 and the flashcards). The
 type is embedded in N2 (`EMBEDS`).
 
+## Rules for this page (author-approved; keep in every edit)
+
+- The whole topic is Physics-only and has no Higher-only content: every section carries P, nothing carries H.
+- The speed–radius link stays in the spec's qualitative form (for a stable orbit, smaller radius ↔ higher speed; if the speed changes the radius must change). Questions compare two stable orbits; never describe a thruster burn, which in real orbital mechanics would contradict it.
+- z = Δλ/λ and v = zc are not on the equation list: say they will be supplied, never that they must be known.
+- Galileo saw gibbous phases of Venus (a full Venus is unobservable); the geocentric/heliocentric story is told that way.
+
 ## Step 1 — lists approved
 
 Author approved the N1–N9 / T1–T7 lists (2026-11-17) as drafted

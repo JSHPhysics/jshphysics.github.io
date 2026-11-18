@@ -6,6 +6,14 @@ calculation types the topic did not have: `em-wave-speed`, `lens-power`),
 `le_nn_a.py` (N1–N6), `le_nn_b.py` (N7–N11, N11 = key words), `le_tricky.py`
 (T1–T10 and the flashcards).
 
+## Rules for this page (author-approved; keep in every edit)
+
+- No critical-angle formula anywhere. The critical angle is taught as a definition (the angle of incidence for which the angle of refraction is 90°), found by the semicircular-block method, and read off an i–r graph where r reaches 90°.
+- The glass-block i–r practical and the semicircular-block critical-angle method are both described as methods students must be able to write out.
+- The thermal-radiation core practical can use a Leslie cube or painted cans of hot water; both appear.
+- Tags: P on the 5.1P–5.6P and 5.15P–5.19P sections (and the lens-power questions in T9, the radiation plan in T10); H on T5, T6 and the two 5.23 questions.
+- Phone signals are microwaves, not radio waves.
+
 ## Step 1 — lists approved
 
 Author approved the N1–N11 / T1–T10 lists (2026-11-17) with three notes,

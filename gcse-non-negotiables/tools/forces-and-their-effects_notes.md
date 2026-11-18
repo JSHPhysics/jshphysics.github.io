@@ -7,6 +7,14 @@ meshing gears, hand winch), `fe_nn.py` (N1–N10, N10 = key words),
 `fe_tricky.py` (T1–T8 and the flashcards). The two existing calculation
 types (`moment`, `balance`) are embedded in N6 and N7 (`EMBEDS`).
 
+## Rules for this page (author-approved; keep in every edit)
+
+- 9.3 (scale drawings, resolving, equilibrium by drawing) and 9.5 (resultant on an isolated object or system) are Higher-only: T1–T4 carry H, and the one 9.5 question in N5 (the car-and-trailer system) carries a question-level H. 9.6P–9.9P are Physics-only: N6–N8 and T5–T7 carry P; the two Physics-only key-word questions carry P.
+- The winch section (T7) is built on the author's point about June 2025 2H Q9(b): an equation in general form ("moment = force × distance") reached Level 2; the same equation written in the parts of the machine ("moment of the handle = effort × length of handle"), or said in words, reached Level 3 — any of the listed equations would do. Keep the two-column table and the Level 3 model answer in that shape.
+- Gears: the force between the teeth is the same on both wheels; the moment is proportional to radius; "turns × teeth is the same for both gears" (never "turns ratio = teeth ratio").
+- On a picture of a situation a contact force is drawn at the point of contact; on a free body diagram every force is drawn from the centre. Both rules stay, each labelled with its diagram type.
+- The 2025 winch question paper itself was not seen; the winch is modelled as handle on small gear Y, Y driving large gear X, X on the drum.
+
 ## Step 1 — lists approved
 
 Author approved the N1–N10 / T1–T8 lists (2026-11-18) with one addition:

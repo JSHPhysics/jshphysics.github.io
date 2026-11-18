@@ -5,6 +5,11 @@ Modules: `wv_diagrams.py` (transverse and longitudinal drawings), `wv_nn.py`
 (N1–N9, N9 = key words), `wv_tricky.py` (T1–T7 and the flashcards). The
 five calculation types already in the file are embedded (`EMBEDS`).
 
+## Rules for this page (author-approved; keep in every edit)
+
+- Infrasound and the ear are H and P (4.17P/4.18P); the sonar/echo 6-mark scheme and seismic waves are H and P. Their flashcards live in the `sound-ear` section so they hide with it.
+- All mechanical waves need a medium; the wavefront definition and the clap-echo method follow the blind-check wording in the notes below.
+
 ## Step 1 — lists approved
 
 Author approved the lists (2026-11-17) as drafted (Topic 5 was done first

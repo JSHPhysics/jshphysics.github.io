@@ -13,6 +13,12 @@ Topic 3 only: N10 insulation, N11 resources, T9 trends. Topic 8 only: N6
 work, N7 power, T4 work the hard way, T5 power the hard way. Everything
 else is shared.
 
+## Rules for this page (author-approved; keep in every edit)
+
+- T9 is trends only: comparing energy sources is not on the spec, so no "which source is best" questions.
+- The page has a sub-topic picker (Both · Topic 3 · Topic 8): every section must declare `subtopic` (`["3"]`, `["8"]` or both); a type embedded in a hidden section hides with it.
+- Energy is described in stores and pathways; "burning fuel" wording follows the blind-check fix in the notes below.
+
 ## Step 1 — lists approved
 
 Author approved the N1–N12 / T1–T11 lists (2026-11-17) with one change:

@@ -5,6 +5,14 @@ Modules: `mf_nn_a.py`, `mf_nn_b.py`, `mf_tricky_a.py`, `mf_tricky_b.py` (from th
 LEH U4 page), `mf_keywords.py` (key words, N3L momentum chain, extra cards),
 `mf_exam.py` (everything added at SOP steps 2–6, listed below).
 
+## Rules for this page (author-approved; keep in every edit)
+
+- Content was ported from the LEH U4 page (`LEH-U4-Forces-and-motion-revision/`); the two are now separate and need not be kept in step.
+- Tags: momentum sections, `circular-motion` and `inertial-mass` carry H (2.20–2.26, 2.31); braking ∝ v² carries P (2.32P/2.33P).
+- T12 applies the seven-step practical recipe to the trolley practical and links to Topic 1 T6 for the recipe itself; do not duplicate the recipe.
+- x = ½gt² is not on the equation list and is not presented as expected in the exam.
+- Conservation of momentum is explained through Newton's third law (T8), as the author asked.
+
 ## Step 1 — lists approved
 
 Author approved the N1–N15 / T1–T13 lists (2026-11-16) with two additions:

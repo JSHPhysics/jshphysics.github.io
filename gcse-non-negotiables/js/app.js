@@ -1156,7 +1156,7 @@
     const questions = visiblePractice(type);
 
     let html = "";
-    html += "<article class=\"skill type-card" + (embedded ? " embedded" : "") + (isCollapsed ? " collapsed" : "") + "\" id=\"skill-" + type.id + "\" data-type=\"" + type.id + "\" data-card=\"" + type.id + "\">";
+    html += "<article class=\"skill type-card" + (embedded ? " embedded" : "") + (isCollapsed ? " collapsed" : "") + "\" id=\"skill-" + type.id + "\" data-type=\"" + type.id + "\" data-card=\"" + type.id + "\" data-topic=\"" + escapeHtml(topic.id) + "\">";
 
     // Header row (click to collapse)
     html += "<button class=\"skill-head\" type=\"button\" aria-expanded=\"" + (isCollapsed ? "false" : "true") + "\" aria-controls=\"body-" + type.id + "\">";
@@ -1262,7 +1262,7 @@
     const isCollapsed = collapsed.has(section.id);
 
     let html = "";
-    html += "<article class=\"skill section-card" + (isCollapsed ? " collapsed" : "") + "\" id=\"section-" + section.id + "\" data-section=\"" + section.id + "\" data-card=\"" + section.id + "\">";
+    html += "<article class=\"skill section-card" + (isCollapsed ? " collapsed" : "") + "\" id=\"section-" + section.id + "\" data-section=\"" + section.id + "\" data-card=\"" + section.id + "\" data-topic=\"" + escapeHtml(topic.id) + "\">";
 
     // Header row (click to collapse)
     html += "<button class=\"skill-head\" type=\"button\" aria-expanded=\"" + (isCollapsed ? "false" : "true") + "\" aria-controls=\"body-" + section.id + "\">";
@@ -1869,7 +1869,105 @@
         });
       });
     });
+
+    addReferenceButtons(root);
   }
+
+  /* ===================================================================
+     Reference buttons
+
+     Every card, question and figure gets a small "ref" button. Clicking
+     it copies a reference string ("topic / section / question id") and
+     shows it in a toast, so a student can quote exactly which part of a
+     page a comment is about. The buttons are added after rendering so
+     the render functions stay unchanged; the pass is idempotent.
+     =================================================================== */
+
+  function referenceButtonHtml(reference) {
+    const safe = escapeHtml(reference);
+    return "<button class=\"ref-btn\" type=\"button\" data-ref=\"" + safe + "\" title=\"Copy the reference " + safe + "\" aria-label=\"Copy the reference " + safe + "\"><span aria-hidden=\"true\">#</span>ref</button>";
+  }
+
+  function addReferenceButtons(root) {
+    // Type cards first, so the questions and figures inside an embedded
+    // type card are tagged with the type's reference, not the section's.
+    const cards = Array.from(root.querySelectorAll(".type-card")).concat(Array.from(root.querySelectorAll(".section-card")));
+    cards.forEach(function (card) {
+      const topicId = card.getAttribute("data-topic") || "";
+      const cardId = card.getAttribute("data-section") || card.getAttribute("data-type") || "";
+      const base = topicId + " / " + cardId;
+
+      const content = card.querySelector(":scope > .skill-body > .inner > .skill-content");
+      if (content && !content.querySelector(":scope > .ref-row")) {
+        content.insertAdjacentHTML("afterbegin", "<div class=\"ref-row\">" + referenceButtonHtml(base) + "</div>");
+      }
+
+      let figureCount = 0;
+      card.querySelectorAll("figure.diagram, figure.graph").forEach(function (figure) {
+        if (figure.querySelector(":scope > .ref-btn")) {
+          return;
+        }
+        figureCount += 1;
+        figure.insertAdjacentHTML("beforeend", referenceButtonHtml(base + " / figure " + figureCount));
+      });
+
+      card.querySelectorAll(".question[data-qid]").forEach(function (question) {
+        const top = question.querySelector(":scope > .q-top");
+        if (!top || top.querySelector(".ref-btn")) {
+          return;
+        }
+        top.insertAdjacentHTML("beforeend", referenceButtonHtml(base + " / " + question.getAttribute("data-qid")));
+      });
+    });
+  }
+
+  let referenceToastTimer = null;
+
+  function showReferenceToast(message, reference) {
+    let toast = document.querySelector(".ref-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "ref-toast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      toast.addEventListener("click", function () {
+        toast.classList.remove("show");
+      });
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = "<span class=\"ref-toast-msg\">" + escapeHtml(message) + "</span><code>" + escapeHtml(reference) + "</code>";
+    toast.classList.add("show");
+    if (referenceToastTimer) {
+      clearTimeout(referenceToastTimer);
+    }
+    referenceToastTimer = setTimeout(function () {
+      toast.classList.remove("show");
+    }, 6000);
+  }
+
+  function copyReference(reference) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(reference).then(function () {
+        return true;
+      }, function () {
+        return false;
+      });
+    }
+    return Promise.resolve(false);
+  }
+
+  document.addEventListener("click", function (event) {
+    const button = event.target.closest(".ref-btn");
+    if (!button) {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    const reference = button.getAttribute("data-ref") || "";
+    copyReference(reference).then(function (copied) {
+      showReferenceToast(copied ? "Reference copied — paste it into your feedback:" : "Reference (select and copy):", reference);
+    });
+  });
 
   function wireWorked(section) {
     const steps = Array.from(section.querySelectorAll(":scope > .steps > li"));

@@ -680,6 +680,109 @@ figure.diagram .d-readout {
 
 }
 
+
+/* ---------------------------------------------------------------------
+   Reference buttons and toast ("ref" on every card, question and figure)
+   --------------------------------------------------------------------- */
+
+.ref-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: -4px 0 6px;
+}
+
+.ref-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--rule-soft);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-3);
+  font: 600 11px/1 var(--font-ui);
+  letter-spacing: 0.02em;
+  padding: 0 9px;
+  min-height: 24px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex: 0 0 auto;
+}
+
+.ref-btn span {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.ref-btn:hover,
+.ref-btn:focus-visible {
+  color: var(--line);
+  border-color: var(--rule);
+  outline: none;
+}
+
+.q-top .ref-btn {
+  margin-left: auto;
+}
+
+figure.diagram,
+figure.graph {
+  position: relative;
+}
+
+figure.diagram > .ref-btn,
+figure.graph > .ref-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--bg);
+}
+
+.ref-toast {
+  position: fixed;
+  left: 50%;
+  bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 20px);
+  max-width: min(92vw, 640px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--line);
+  color: var(--bg);
+  box-shadow: var(--shadow);
+  font: 500 13px/1.4 var(--font-ui);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+  z-index: 60;
+}
+
+.ref-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.ref-toast code {
+  font: 500 13px/1.4 var(--font-mono);
+  user-select: all;
+  -webkit-user-select: all;
+  word-break: break-all;
+}
+
+@media print {
+  .ref-btn,
+  .ref-row,
+  .ref-toast {
+    display: none !important;
+  }
+}
+
 @media print {
   .p-cover .p-stage {
     margin-top: 30mm;

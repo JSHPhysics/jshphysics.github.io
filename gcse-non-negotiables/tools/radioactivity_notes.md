@@ -6,6 +6,12 @@ reaction), `ra_nn_a.py` (N1–N5), `ra_nn_b.py` (N6–N10, N10 = key words),
 `ra_tricky.py` (T1–T9 and the flashcards). The six calculation types
 already in the file are embedded (`EMBEDS`).
 
+## Rules for this page (author-approved; keep in every edit)
+
+- No Higher-only content. The spec copy's P on 6.28/6.30 is overruled by the school checklist the author approved: N9 and T2 are untagged; P starts at 6.33P (T5–T9).
+- Internal sources for tumours can be sealed gamma as well as beta/alpha (June 2024 scheme) — keep that in the table, checklist, question and flashcard.
+- The nucleus is "tens of thousands of times smaller" than the atom (10⁻¹⁵ m against 10⁻¹⁰ m); the chain-reaction drawing is uncontrolled and its footer says so.
+
 ## Step 1 — lists approved
 
 Author approved the N1–N10 / T1–T9 lists (2026-11-17) as drafted.
