@@ -558,6 +558,43 @@
       return drawings["electricity"]({ cellLabel: "" });
     },
 
+    // GCSE static electricity: a positive point charge with its radial
+    // field, and a pair of parallel plates with a uniform field. No equation.
+    "static-field": function () {
+      let lines = "";
+      // radial lines from the point charge at (90, 100)
+      for (let k = 0; k < 8; k += 1) {
+        const angle = k * Math.PI / 4;
+        const x1 = 90 + 18 * Math.cos(angle);
+        const y1 = 100 + 18 * Math.sin(angle);
+        const x2 = 90 + 62 * Math.cos(angle);
+        const y2 = 100 + 62 * Math.sin(angle);
+        const hx = 90 + 46 * Math.cos(angle);
+        const hy = 100 + 46 * Math.sin(angle);
+        lines += "<path class=\"draw\" d=\"M" + x1.toFixed(1) + "," + y1.toFixed(1) + "L" + x2.toFixed(1) + "," + y2.toFixed(1) + "\"/>";
+        // arrowhead at 46 px along the line, pointing outwards
+        const left = (angle + 2.6);
+        const right = (angle - 2.6);
+        lines += "<polyline points=\"" + (hx + 5 * Math.cos(left)).toFixed(1) + "," + (hy + 5 * Math.sin(left)).toFixed(1) + " " + hx.toFixed(1) + "," + hy.toFixed(1) + " " + (hx + 5 * Math.cos(right)).toFixed(1) + "," + (hy + 5 * Math.sin(right)).toFixed(1) + "\"/>";
+      }
+      // parallel plates on the right: + plate at y = 40, − plate at y = 160
+      let plates = "<rect class=\"fill\" x=\"190\" y=\"36\" width=\"110\" height=\"6\"/>";
+      plates += "<rect class=\"fill\" x=\"190\" y=\"158\" width=\"110\" height=\"6\"/>";
+      for (let i = 0; i < 5; i += 1) {
+        const x = 200 + i * 22.5;
+        plates += "<path class=\"draw\" d=\"M" + x + ",44L" + x + ",156\"/>";
+        plates += "<polyline points=\"" + (x - 4) + ",96 " + x + ",102 " + (x + 4) + ",96\"/>";
+      }
+      return wrap(
+        lines + plates +
+        "<circle class=\"acc fill\" cx=\"90\" cy=\"100\" r=\"12\"/>" +
+        "<g class=\"on-fill\"><line x1=\"84\" y1=\"100\" x2=\"96\" y2=\"100\"/><line x1=\"90\" y1=\"94\" x2=\"90\" y2=\"106\"/></g>" +
+        "<g class=\"halo\">" +
+        text(245, 28, "+ + + + +", "middle") + text(245, 180, "− − − − −", "middle") +
+        "</g>"
+      );
+    },
+
     "particle-model": function () {
       return drawings["thermal-gases"]({ caption: "P₁ × V₁ = P₂ × V₂" });
     },

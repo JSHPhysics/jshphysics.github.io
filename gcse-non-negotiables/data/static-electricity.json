@@ -4,7 +4,1706 @@
   "subtitle": "Charging by friction, electric fields, sparks and earthing",
   "spec": "Topic 11",
   "order": 110,
-  "figure": "electric-fields-capacitors",
-  "placeholder": "The notes, tricky bits and flashcards for this topic are being written. Check back soon.",
+  "figure": "static-field",
+  "lede": "Everything in Topic 11, split into two bands. <b>The non-negotiables</b> are charging by friction, the force rule, the three phenomena, earthing, sprayers, the fuelling danger and electric fields. <b>The tricky bits</b> are the chains the marks are on: electrons and force → acceleration, induction, sparks, the fuelling 6-marker, sprayer advantages with reasons, drawing fields and explaining with them. The whole of Topic 11 is Physics only (not Combined Science), so every section carries <b>P</b>; there is no Higher-only content, so it all applies at both tiers.",
+  "howto": [
+    "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
+    "Say every explanation out loud as a chain — friction, electrons, which way, what charge; or like charges, repel, force, direction, accelerates — before you read the one on the page.",
+    "Read each explanation, then cover it and say it back. For a definition, the bold words are the ones the mark is for.",
+    "Do the practice questions <b>before</b> opening the hint or walkthrough. Write the explanation chains out in full on paper before opening the model answer — the marks are on the links, not the conclusion.",
+    "For \"explain\" and \"describe how\" questions, write your answer in full sentences, then compare it with the model answer line by line.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "Charging by friction, the force rule, shocks and lightning and induction, earthing, sprayers, the fuelling danger, and electric fields. If any of these is not yet green, it comes before anything in the second band."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "The explanations marked on particular words: the electron chain and the force → acceleration chain, induction, sparks, the fuelling question, sprayers with reasons, drawing fields and explaining with them. Each one is built on something from the first band."
+    }
+  ],
+  "factsBlurb": "Topic 11 on flip cards: the charging chain, the force chain, induction in four steps, the spark chain, both halves of the fuelling question, the sprayer pairs and the field rules. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "charging-friction",
+      "band": "nn",
+      "title": "Charging by friction: electrons move, nothing else",
+      "spec": "11.1P, 11.2P",
+      "equations": [
+        "\\text{gains electrons} \\Rightarrow \\text{negative}",
+        "\\text{loses electrons} \\Rightarrow \\text{positive, equal size}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "What happens when you rub",
+          "html": "<figure class='diagram'><svg viewBox='0 0 700 250' role='img'><text x='150.0' y='28.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>before rubbing</text><rect x='50' y='60' width='200' height='26' style='fill:var(--line);opacity:0.2;stroke:var(--ink-2);stroke-width:1.4'/><text x='150.0' y='50.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>polythene rod: equal + and −</text><line x1='66.5' y1='70.0' x2='73.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='70.0' y1='66.5' x2='70.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='106.5' y1='70.0' x2='113.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='110.0' y1='66.5' x2='110.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='146.5' y1='70.0' x2='153.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='150.0' y1='66.5' x2='150.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='186.5' y1='70.0' x2='193.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='190.0' y1='66.5' x2='190.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='226.5' y1='70.0' x2='233.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='230.0' y1='66.5' x2='230.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='86.5' y1='78.0' x2='93.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='126.5' y1='78.0' x2='133.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='166.5' y1='78.0' x2='173.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='206.5' y1='78.0' x2='213.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='236.5' y1='78.0' x2='243.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><path d='M 60 140 Q 150 115 240 140 L 240 170 Q 150 145 60 170 Z' style='fill:var(--accent);opacity:0.18;stroke:var(--ink-2);stroke-width:1.2'/><text x='150.0' y='195.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>cloth: equal + and −</text><line x1='86.5' y1='150.0' x2='93.5' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='90.0' y1='146.5' x2='90.0' y2='153.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='146.5' y1='142.0' x2='153.5' y2='142.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='150.0' y1='138.5' x2='150.0' y2='145.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='206.5' y1='150.0' x2='213.5' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='210.0' y1='146.5' x2='210.0' y2='153.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='116.5' y1='152.0' x2='123.5' y2='152.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='176.5' y1='148.0' x2='183.5' y2='148.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='146.5' y1='158.0' x2='153.5' y2='158.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='290.0' y1='120.0' x2='350.0' y2='120.0' style='stroke:var(--ink-2);stroke-width:2.5'/><polygon points='350.0,120.0 341.9,123.9 341.9,116.1' style='fill:var(--ink-2)'/><text x='320.0' y='108.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>rub</text><text x='500.0' y='28.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>after rubbing</text><rect x='400' y='60' width='200' height='26' style='fill:var(--line);opacity:0.2;stroke:var(--ink-2);stroke-width:1.4'/><text x='500.0' y='50.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>rod gained electrons: negative</text><line x1='416.5' y1='70.0' x2='423.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='420.0' y1='66.5' x2='420.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='456.5' y1='70.0' x2='463.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='460.0' y1='66.5' x2='460.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='496.5' y1='70.0' x2='503.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='500.0' y1='66.5' x2='500.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='536.5' y1='70.0' x2='543.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='540.0' y1='66.5' x2='540.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='576.5' y1='70.0' x2='583.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='580.0' y1='66.5' x2='580.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='436.5' y1='78.0' x2='443.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='476.5' y1='78.0' x2='483.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='516.5' y1='78.0' x2='523.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='556.5' y1='78.0' x2='563.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='586.5' y1='78.0' x2='593.5' y2='78.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='426.5' y1='68.0' x2='433.5' y2='68.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='506.5' y1='66.0' x2='513.5' y2='66.0' style='stroke:var(--ink);stroke-width:1.8'/><path d='M 410 140 Q 500 115 590 140 L 590 170 Q 500 145 410 170 Z' style='fill:var(--accent);opacity:0.18;stroke:var(--ink-2);stroke-width:1.2'/><text x='500.0' y='195.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>cloth lost electrons: positive (same size)</text><line x1='436.5' y1='150.0' x2='443.5' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='440.0' y1='146.5' x2='440.0' y2='153.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='496.5' y1='142.0' x2='503.5' y2='142.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='500.0' y1='138.5' x2='500.0' y2='145.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='556.5' y1='150.0' x2='563.5' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='560.0' y1='146.5' x2='560.0' y2='153.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='496.5' y1='158.0' x2='503.5' y2='158.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='470.0' y1='135.0' x2='470.0' y2='92.0' style='stroke:var(--accent);stroke-width:2.2'/><polygon points='470.0,92.0 473.9,100.1 466.1,100.1' style='fill:var(--accent)'/><line x1='530.0' y1='135.0' x2='530.0' y2='92.0' style='stroke:var(--accent);stroke-width:2.2'/><polygon points='530.0,92.0 533.9,100.1 526.1,100.1' style='fill:var(--accent)'/><text x='620.0' y='115.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>electrons</text><text x='620.0' y='129.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>move from</text><text x='620.0' y='143.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>cloth to rod</text><text x='350.0' y='230.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>Only electrons move. Protons stay in their nuclei. Charge is not made: what the rod gains, the cloth loses.</text></svg><figcaption>A polythene rod rubbed with a cloth: electrons move from the cloth to the rod.</figcaption></figure><p>Every atom has positive protons in its nucleus and negative electrons around it. When two <b>insulators</b> are rubbed together, <b>friction</b> transfers <b>electrons</b> from one surface to the other. The material that <b>gains electrons</b> has more negative than positive charge: it is <b>negatively charged</b>. The material that <b>loses electrons</b> is left with more positive than negative: it is <b>positively charged</b>, by an <b>equal amount</b>, because every electron that left it arrived on the other.</p><p>Three things the marks depend on: it is <b>electrons</b> that move (never protons, which are locked in the nucleus); charge is <b>transferred, not created</b>; and the cause is <b>friction</b> (rubbing). The June 2023 report (Q1(a)(ii)): \"many omitted friction\" — the two marks were electrons transferred from the base to the cloth, <i>and</i> friction as the cause.</p><p><b>Why insulators:</b> the transferred electrons <b>stay where they land</b> because an insulator has no free electrons to carry charge away. Rub a metal rod held in your hand and the electrons flow straight through you to earth. The 2023 report (Q1(b)): a metal star charged by touching the cloth is charged by <b>conduction</b> — electrons move from the cloth into the metal and spread through it — \"friction charges insulators, not conductors\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 2-mark explanation",
+          "question": "A student rubs a balloon on her jumper. The balloon becomes negatively charged. Explain how. (2 marks)",
+          "steps": [
+            "<b>Friction</b> between the balloon and the jumper transfers <b>electrons from the jumper to the balloon</b>.",
+            "The balloon has <b>gained electrons</b>, so it has an excess of negative charge; the jumper has <b>lost</b> the same number and is left <b>positively charged</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Charging by friction",
+          "questions": [
+            {
+              "id": "se-n1-q1",
+              "type": "written",
+              "text": "A polythene rod is rubbed with a cloth and becomes negatively charged. Explain what has happened. (2)",
+              "model": "<ul><li><b>Friction</b> has transferred <b>electrons from the cloth to the rod</b>.</li><li>The rod has <b>gained electrons</b> (negative); the cloth has <b>lost</b> the same number and is <b>positive</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n1-q2",
+              "type": "choice",
+              "text": "An acetate rod is rubbed and becomes positively charged. Which is correct?",
+              "options": [
+                "It gained protons",
+                "It lost electrons to the cloth",
+                "It gained electrons",
+                "It lost protons"
+              ],
+              "correct": 1,
+              "explain": "Only electrons move; positive means electrons have been lost."
+            },
+            {
+              "id": "se-n1-q3",
+              "type": "written",
+              "text": "Explain why a metal rod held in the hand cannot be charged by rubbing. (2)",
+              "model": "<ul><li>A metal is a <b>conductor</b> with free electrons…</li><li>…so any electrons transferred <b>flow through the metal and the hand to earth</b> at once instead of staying on the rod.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n1-q4",
+              "type": "choice",
+              "text": "A cloth loses 10¹⁰ electrons to a rod. The charge on the cloth is…",
+              "options": [
+                "negative, 10¹⁰ electrons' worth",
+                "positive, equal in size to the rod's negative charge",
+                "zero",
+                "positive, but smaller than the rod's charge"
+              ],
+              "correct": 1,
+              "explain": "Transferred, not created: equal and opposite."
+            },
+            {
+              "id": "se-n1-q5",
+              "type": "written",
+              "text": "State what is transferred when an insulator is charged by friction, and what is never transferred. (2)",
+              "model": "<ul><li><b>Electrons</b> are transferred (from one material to the other).</li><li><b>Protons</b> are never transferred — they are fixed in the nuclei.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n1-q6",
+              "type": "written",
+              "text": "A metal ball on an insulating stand is touched with a negatively charged rod. Explain how the ball becomes charged. (2)",
+              "model": "<ul><li>Electrons move <b>from the rod into the ball</b> on contact (charging by conduction, not friction).</li><li>The metal is a <b>conductor</b>, so the electrons spread over the whole ball, which is left negatively charged.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain how an insulator is charged by friction through the transfer of electrons",
+        "State which object becomes negative and which positive, and that the charges are equal",
+        "Explain why only insulators can be charged this way"
+      ],
+      "blurb": "Rub two insulators together and electrons are transferred from one to the other. The one that gains electrons is negative; the one that loses them is left positive by exactly the same amount. Protons never move and charge is never created.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "charge-forces",
+      "band": "nn",
+      "title": "Like charges repel, unlike charges attract",
+      "spec": "11.3P",
+      "equations": [
+        "+\\,+ \\text{ or } -\\,- \\text{: repel}",
+        "+\\,- \\text{: attract}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The rule and the test",
+          "html": "<figure class='diagram'><svg viewBox='0 0 650 250' role='img'><text x='160.0' y='28.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>like charges repel</text><line x1='70.0' y1='45.0' x2='250.0' y2='45.0' style='stroke:var(--ink-2);stroke-width:3'/><line x1='120.0' y1='45.0' x2='92.0' y2='134.0' style='stroke:var(--ink-2);stroke-width:1.2'/><circle cx='92' cy='150' r='16' style='fill:var(--bg);stroke:var(--ink);stroke-width:1.6'/><line x1='87.0' y1='150.0' x2='97.0' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='72.0' y1='150.0' x2='30.0' y2='150.0' style='stroke:var(--accent);stroke-width:2.5'/><polygon points='30.0,150.0 38.1,146.1 38.1,153.9' style='fill:var(--accent)'/><line x1='200.0' y1='45.0' x2='228.0' y2='134.0' style='stroke:var(--ink-2);stroke-width:1.2'/><circle cx='228' cy='150' r='16' style='fill:var(--bg);stroke:var(--ink);stroke-width:1.6'/><line x1='223.0' y1='150.0' x2='233.0' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='248.0' y1='150.0' x2='290.0' y2='150.0' style='stroke:var(--accent);stroke-width:2.5'/><polygon points='290.0,150.0 281.9,153.9 281.9,146.1' style='fill:var(--accent)'/><text x='160.0' y='200.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force on each ball shown; equal and opposite</text><text x='490.0' y='28.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>unlike charges attract</text><line x1='400.0' y1='45.0' x2='580.0' y2='45.0' style='stroke:var(--ink-2);stroke-width:3'/><line x1='430.0' y1='45.0' x2='442.0' y2='134.0' style='stroke:var(--ink-2);stroke-width:1.2'/><circle cx='442' cy='150' r='16' style='fill:var(--bg);stroke:var(--ink);stroke-width:1.6'/><line x1='437.0' y1='150.0' x2='447.0' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='462.0' y1='150.0' x2='484.0' y2='150.0' style='stroke:var(--accent);stroke-width:2.5'/><polygon points='484.0,150.0 475.9,153.9 475.9,146.1' style='fill:var(--accent)'/><line x1='550.0' y1='45.0' x2='538.0' y2='134.0' style='stroke:var(--ink-2);stroke-width:1.2'/><circle cx='538' cy='150' r='16' style='fill:var(--bg);stroke:var(--ink);stroke-width:1.6'/><line x1='533.0' y1='150.0' x2='543.0' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='538.0' y1='145.0' x2='538.0' y2='155.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='518.0' y1='150.0' x2='496.0' y2='150.0' style='stroke:var(--accent);stroke-width:2.5'/><polygon points='496.0,150.0 504.1,146.1 504.1,153.9' style='fill:var(--accent)'/><text x='490.0' y='200.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force on each ball shown; equal and opposite</text><text x='325.0' y='230.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>Each ball feels a force — so each accelerates in the direction of the force. The forces are an interaction pair.</text></svg><figcaption>Two hanging charged balls: like charges push apart, unlike charges pull together. Both balls feel the force.</figcaption></figure><p><b>Like charges repel; unlike charges attract.</b> The force is a <b>non-contact</b> force acting through the <b>electric field</b> around each charge (N7). It gets <b>stronger as the charges get closer</b> and as the charges get larger. Both objects feel it — equal in size, opposite in direction, an interaction pair (Topic 9) — so a light object accelerates more than a heavy one ($a = F/m$), but both are pushed.</p><p><b>Testing a charge:</b> bring a rod of <b>known</b> charge near the suspended object. <b>Repulsion</b> proves the object has the <b>same</b> charge as the rod. Attraction does not prove the opposite charge — an <b>uncharged</b> object is also attracted (by induction, N3). The June 2024 scheme (Q1(a)) used exactly this: three objects <b>all stated to be charged</b>, with X attracted to Y and Z repelled from Y — the repulsion fixes Z's sign, and because X is known to be charged its attraction fixes X's.</p><p>A force on an object makes it <b>accelerate</b> (Topic 2). The sentence the examiners want is the full chain: \"the charges are alike, so they <b>repel</b>: there is a <b>force</b> on the ball <b>away from</b> the rod, so the ball <b>accelerates away</b>\" (T1).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Identify the charge",
+          "question": "A rod known to be negative is brought near a light ball hanging on a thread. The ball moves away. State the charge on the ball and explain your answer. (2 marks)",
+          "steps": [
+            "The ball is <b>negatively charged</b>.",
+            "It is <b>repelled</b>, and only <b>like</b> charges repel — if it had been positive or uncharged it would have been attracted."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Forces between charges",
+          "questions": [
+            {
+              "id": "se-n2-q1",
+              "type": "choice",
+              "text": "Two positively charged balloons are brought together. They…",
+              "options": [
+                "attract",
+                "repel",
+                "neither — they are not touching",
+                "become neutral"
+              ],
+              "correct": 1,
+              "explain": "Like charges repel."
+            },
+            {
+              "id": "se-n2-q2",
+              "type": "written",
+              "text": "A charged rod attracts a hanging ball. A student says this proves the ball has the opposite charge. Explain why the student may be wrong. (2)",
+              "model": "<ul><li>An <b>uncharged</b> object is also attracted to a charged rod (by induction).</li><li>Only <b>repulsion</b> proves a charge, because only like charges repel.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n2-q3",
+              "type": "choice",
+              "text": "As two charged objects are moved closer together, the force between them…",
+              "options": [
+                "decreases",
+                "increases",
+                "stays the same",
+                "becomes zero"
+              ],
+              "correct": 1,
+              "explain": "Closer → stronger field → larger force."
+            },
+            {
+              "id": "se-n2-q4",
+              "type": "written",
+              "text": "Two hanging balls, each negatively charged, hang apart from each other. Explain why. (2)",
+              "model": "<ul><li>Like charges <b>repel</b>, so there is a <b>force on each ball</b> directed away from the other.</li><li>Each ball <b>accelerates away</b> from the other until the pull of its thread balances the repulsion, so they hang at an angle.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n2-q5",
+              "type": "choice",
+              "text": "Ball A has a large positive charge and ball B a small negative charge. Which is true about the forces?",
+              "options": [
+                "A pushes B harder than B pushes A",
+                "The forces on A and B are equal in size and opposite (attractive)",
+                "Only B feels a force",
+                "They repel"
+              ],
+              "correct": 1,
+              "explain": "An interaction pair: equal and opposite."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State the rule for forces between like and unlike charges",
+        "Describe how to test the charge on an object with a known charged rod",
+        "Say that both objects feel an equal and opposite force (an interaction pair)"
+      ],
+      "blurb": "Two charged objects exert a force on each other without touching. Same sign: they push apart. Opposite signs: they pull together. Each object feels the force, and a force is what makes it accelerate.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "static-phenomena",
+      "band": "nn",
+      "title": "Explaining shocks, lightning and attraction by induction",
+      "spec": "11.4P",
+      "equations": [
+        "\\text{every explanation: where the electrons move, and why}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Three phenomena, one method",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 240' role='img'><rect x='120' y='30' width='220' height='22' style='fill:var(--line);opacity:0.25;stroke:var(--ink-2);stroke-width:1.4'/><line x1='130.0' y1='52.0' x2='130.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='148.0' y1='52.0' x2='148.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='166.0' y1='52.0' x2='166.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='184.0' y1='52.0' x2='184.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='202.0' y1='52.0' x2='202.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='220.0' y1='52.0' x2='220.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='238.0' y1='52.0' x2='238.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='256.0' y1='52.0' x2='256.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='274.0' y1='52.0' x2='274.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='292.0' y1='52.0' x2='292.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='310.0' y1='52.0' x2='310.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='328.0' y1='52.0' x2='328.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:2'/><line x1='146.5' y1='41.0' x2='153.5' y2='41.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='186.5' y1='41.0' x2='193.5' y2='41.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='226.5' y1='41.0' x2='233.5' y2='41.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='266.5' y1='41.0' x2='273.5' y2='41.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='306.5' y1='41.0' x2='313.5' y2='41.0' style='stroke:var(--ink);stroke-width:1.8'/><text x='360.0' y='45.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>negatively charged comb</text><rect x='170' y='120' width='120' height='50' style='fill:var(--bg);opacity:1;stroke:var(--ink-2);stroke-width:1.4'/><text x='230.0' y='190.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>scrap of paper: neutral overall</text><line x1='186.5' y1='130.0' x2='193.5' y2='130.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='190.0' y1='126.5' x2='190.0' y2='133.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='226.5' y1='130.0' x2='233.5' y2='130.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='230.0' y1='126.5' x2='230.0' y2='133.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='266.5' y1='130.0' x2='273.5' y2='130.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='270.0' y1='126.5' x2='270.0' y2='133.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='186.5' y1='160.0' x2='193.5' y2='160.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='226.5' y1='160.0' x2='233.5' y2='160.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='266.5' y1='160.0' x2='273.5' y2='160.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='230.0' y1='148.0' x2='230.0' y2='157.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='230.0,157.0 226.1,148.9 233.9,148.9' style='fill:var(--ink-2)'/><text x='300.0' y='134.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>near side: electrons pushed away, left positive</text><text x='300.0' y='164.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>far side: electrons gather, negative</text><line x1='150.0' y1='120.0' x2='150.0' y2='92.0' style='stroke:var(--accent);stroke-width:2.5'/><polygon points='150.0,92.0 153.9,100.1 146.1,100.1' style='fill:var(--accent)'/><text x='140.0' y='100.0' text-anchor='end' style='fill:var(--accent);font-size:11px;font-weight:normal;'>attraction (near, +)</text><line x1='150.0' y1='172.0' x2='150.0' y2='186.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='150.0,186.0 146.1,177.9 153.9,177.9' style='fill:var(--ink-2)'/><text x='140.0' y='184.0' text-anchor='end' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>repulsion (far, −): weaker</text><text x='330.0' y='225.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10.5px;font-weight:normal;'>The attraction is on the nearer charges, so it is the larger force: the paper is pulled up. A neutral object is always attracted, never repelled.</text></svg><figcaption>A negatively charged comb held over a scrap of paper: electrons in the paper are pushed to the far side, the near side is left positive, and the paper is attracted.</figcaption></figure><p><b>Shocks:</b> walking on a carpet (or sliding off a car seat) rubs insulators together: <b>friction transfers electrons</b> and your body builds up a charge. When you touch a door handle (a <b>conductor connected to earth</b>) the excess <b>electrons flow</b> between you and the metal in a sudden rush — a small <b>spark</b> that you feel as a shock. Which way they flow depends on the sign of your charge; either way the charge is <b>discharged</b>.</p><p><b>Lightning:</b> inside a storm cloud, ice and water droplets rub against each other and <b>friction separates charge</b>; the bottom of the cloud usually becomes <b>negative</b>. The charge builds until the <b>pd between the cloud and the ground</b> (or another cloud) is so large that the <b>air conducts</b>: a huge flow of electrons — lightning — discharges it (T3).</p><p><b>Attraction by induction</b> (the comb and the paper, the balloon on the wall): the paper is <b>neutral</b>, but the negative comb <b>repels the electrons</b> in the paper to the <b>far side</b>, leaving the <b>near side positive</b>. The near, positive side is <b>attracted</b> to the comb and the far, negative side is <b>repelled</b> — but the attraction is on the <b>nearer</b> charges, so it is the <b>larger</b> force, and the paper is pulled towards the comb. The paper stays neutral overall: the charges have moved, not changed. The 2023 report (Q1(c)): the fully correct diagram shows <b>both</b> the induced negative near a positive object <b>and</b> the induced positive on the far side — \"the total numbers of positive and negative charges still balance\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Balloon on a wall",
+          "question": "A balloon is rubbed on a jumper and then sticks to a wall. Explain why. (3 marks)",
+          "steps": [
+            "Rubbing transfers <b>electrons</b> from the jumper to the balloon, so the balloon is <b>negatively charged</b>.",
+            "Near the wall, the balloon's charge <b>repels electrons</b> in the wall's surface away, leaving the surface nearest the balloon <b>positively charged</b> (induced charge).",
+            "Unlike charges <b>attract</b>: there is a force <b>on the balloon</b> towards the induced positive surface, which holds it on the wall."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Explaining the phenomena",
+          "questions": [
+            {
+              "id": "se-n3-q1",
+              "type": "written",
+              "text": "Explain why a person sometimes gets a shock when touching a metal door handle after walking across a carpet. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Charging</td><td><b>Friction</b> between shoes and carpet transfers <b>electrons</b>, so the person builds up a charge.</td></tr><tr><td><b>2</b></td><td>Discharge</td><td>The handle is a <b>conductor</b> (connected to earth); when touched, <b>electrons flow</b> suddenly between the person and the handle.</td></tr><tr><td><b>3</b></td><td>Shock</td><td>The sudden flow of charge — a small <b>spark</b> — is felt as the shock, and the person is left neutral.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-n3-q2",
+              "type": "written",
+              "text": "Explain how lightning occurs. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Charging</td><td>Ice and water particles in the cloud rub together: <b>friction</b> separates charge (electrons transferred), and the base of the cloud becomes (usually) <b>negative</b>.</td></tr><tr><td><b>2</b></td><td>Build-up</td><td>The charge builds until there is a very large <b>pd between the cloud and the ground</b>.</td></tr><tr><td><b>3</b></td><td>Discharge</td><td>The electric field becomes strong enough for the <b>air to conduct</b>: a huge flow of <b>electrons</b> — the lightning — discharges the cloud.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-n3-q3",
+              "type": "choice",
+              "text": "A negatively charged comb is held above small pieces of paper. Which is correct about the paper?",
+              "options": [
+                "It is negatively charged, so it is repelled",
+                "Electrons in it are pushed to the far side, so the near side is positive and it is attracted",
+                "It becomes positively charged overall",
+                "Protons move to the near side"
+              ],
+              "correct": 1,
+              "explain": "Induction: electrons move within the neutral paper; protons never move."
+            },
+            {
+              "id": "se-n3-q4",
+              "type": "written",
+              "text": "A positively charged rod is held near a neutral metal sphere on an insulating stand. Describe the charge distribution on the sphere and explain why the sphere is attracted to the rod. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Electrons move</td><td><b>Electrons</b> in the sphere are <b>attracted towards the rod</b>, so the <b>near side becomes negative</b>.</td></tr><tr><td><b>2</b></td><td>Far side</td><td>The <b>far side is left positive</b>; the sphere is still neutral overall.</td></tr><tr><td><b>3</b></td><td>Force</td><td>The attraction on the near (negative) side is <b>larger</b> than the repulsion on the far side, because it is <b>closer</b> — so there is a resultant force towards the rod.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-n3-q5",
+              "type": "choice",
+              "text": "Why is a neutral object attracted to a charged object but never repelled?",
+              "options": [
+                "Neutral objects have no electrons",
+                "The charges in it separate so the opposite charge is always on the nearer side, and the nearer force is the larger",
+                "Only positive objects can be repelled",
+                "Neutral objects are always lighter"
+              ],
+              "correct": 1,
+              "explain": "Induction always puts the opposite charge nearest."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain a shock from a car door or a jumper in terms of electron movement",
+        "Explain lightning as charge build-up and a huge discharge",
+        "Explain attraction by induction: the near side of a neutral object gets the opposite charge"
+      ],
+      "blurb": "Three things the spec names — shocks from everyday objects, lightning, and a charged comb picking up paper or a balloon sticking to a wall. Each is explained the same way: say where electrons move and what charge that leaves.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "earthing",
+      "band": "nn",
+      "title": "Earthing: removing the excess charge",
+      "spec": "11.5P",
+      "equations": [
+        "\\text{negative object: electrons flow to earth}",
+        "\\text{positive object: electrons flow from earth}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Which way the electrons go",
+          "html": "<figure class='diagram'><svg viewBox='0 0 670 255' role='img'><text x='170.0' y='28.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>negatively charged object</text><rect x='110' y='50' width='120' height='60' rx='8' style='fill:var(--line);opacity:0.2;stroke:var(--ink);stroke-width:1.6'/><line x1='131.5' y1='70.0' x2='138.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='166.5' y1='70.0' x2='173.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='201.5' y1='70.0' x2='208.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='148.5' y1='92.0' x2='155.5' y2='92.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='184.5' y1='92.0' x2='191.5' y2='92.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='170.0' y1='110.0' x2='170.0' y2='170.0' style='stroke:var(--ink);stroke-width:2'/><line x1='146.0' y1='170.0' x2='194.0' y2='170.0' style='stroke:var(--ink);stroke-width:2'/><line x1='155.0' y1='178.0' x2='185.0' y2='178.0' style='stroke:var(--ink);stroke-width:2'/><line x1='164.0' y1='186.0' x2='176.0' y2='186.0' style='stroke:var(--ink);stroke-width:2'/><text x='204.0' y='180.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>earth</text><line x1='182.0' y1='118.0' x2='182.0' y2='165.0' style='stroke:var(--accent);stroke-width:2.2'/><polygon points='182.0,165.0 178.1,156.9 185.9,156.9' style='fill:var(--accent)'/><text x='190.0' y='145.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>electrons flow down to earth</text><text x='170.0' y='215.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>object left neutral</text><text x='500.0' y='28.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>positively charged object</text><rect x='440' y='50' width='120' height='60' rx='8' style='fill:var(--line);opacity:0.2;stroke:var(--ink);stroke-width:1.6'/><line x1='461.5' y1='70.0' x2='468.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='465.0' y1='66.5' x2='465.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='496.5' y1='70.0' x2='503.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='500.0' y1='66.5' x2='500.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='531.5' y1='70.0' x2='538.5' y2='70.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='535.0' y1='66.5' x2='535.0' y2='73.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='478.5' y1='92.0' x2='485.5' y2='92.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='482.0' y1='88.5' x2='482.0' y2='95.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='514.5' y1='92.0' x2='521.5' y2='92.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='518.0' y1='88.5' x2='518.0' y2='95.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='500.0' y1='110.0' x2='500.0' y2='170.0' style='stroke:var(--ink);stroke-width:2'/><line x1='476.0' y1='170.0' x2='524.0' y2='170.0' style='stroke:var(--ink);stroke-width:2'/><line x1='485.0' y1='178.0' x2='515.0' y2='178.0' style='stroke:var(--ink);stroke-width:2'/><line x1='494.0' y1='186.0' x2='506.0' y2='186.0' style='stroke:var(--ink);stroke-width:2'/><text x='534.0' y='180.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>earth</text><line x1='512.0' y1='165.0' x2='512.0' y2='118.0' style='stroke:var(--accent);stroke-width:2.2'/><polygon points='512.0,118.0 515.9,126.1 508.1,126.1' style='fill:var(--accent)'/><text x='520.0' y='145.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>electrons flow up from earth</text><text x='500.0' y='215.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>object left neutral</text><text x='335.0' y='240.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10.5px;font-weight:normal;'>Earthing: a conducting path lets electrons move until the excess charge is gone. It is always electrons that move, either way.</text></svg><figcaption>Earthing a negative object and a positive object: the electrons move in opposite directions, and both objects end up neutral.</figcaption></figure><p>The Earth is so large that it can take or give <b>any number of electrons</b> without being noticeably charged. Connect a charged object to it with a <b>conductor</b> (a wire, a metal pipe, a damp hand) and:</p><ul><li>a <b>negatively</b> charged object has excess electrons; they <b>repel each other</b> and flow <b>down the conductor to earth</b> until none are in excess;</li><li>a <b>positively</b> charged object is short of electrons; electrons are <b>attracted up from earth</b> through the conductor until the shortage is made up.</li></ul><p>Either way the object is left <b>neutral</b>: it has been <b>discharged</b>. Say which way the <b>electrons</b> move — never \"the positive charge flows to earth\". The path must be a conductor: through an insulator the electrons cannot move, which is why charge stays on a plastic rod. The June 2025 scheme (Q4(b)(iv)): the earthed metal tube loses its charge because \"the tube is a <b>conductor</b>, so charge flows through the metal and the connecting wire <b>to earth</b>\" — leaving out \"conductor\" lost a mark, and charge moves only \"if it has somewhere to go\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Earthing a positive object",
+          "question": "A metal sphere is positively charged. A wire is connected from the sphere to earth. Explain what happens. (2 marks)",
+          "steps": [
+            "The sphere is short of electrons, so <b>electrons flow up the wire from the earth</b> into the sphere (attracted by the positive charge).",
+            "They flow until the sphere has <b>equal numbers of positive and negative charges</b>: it is discharged / neutral."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Earthing",
+          "questions": [
+            {
+              "id": "se-n4-q1",
+              "type": "written",
+              "text": "A negatively charged metal plate is connected to earth. Explain what happens to its charge. (2)",
+              "model": "<ul><li>The excess <b>electrons flow through the conductor to earth</b> (they repel each other and the earth can accept them).</li><li>The plate is left with no excess charge — it is <b>neutral / discharged</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n4-q2",
+              "type": "choice",
+              "text": "A positively charged object is earthed. Which is correct?",
+              "options": [
+                "Positive charge flows to earth",
+                "Protons flow to earth",
+                "Electrons flow from earth to the object",
+                "Nothing happens"
+              ],
+              "correct": 2,
+              "explain": "Only electrons move; they come up from earth to cancel the positive charge."
+            },
+            {
+              "id": "se-n4-q3",
+              "type": "written",
+              "text": "Explain why a charged plastic ruler cannot be discharged by touching it with a plastic wire. (1)",
+              "model": "<ul><li>Plastic is an <b>insulator</b>: electrons cannot flow through it, so there is no path for the charge to reach earth.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-n4-q4",
+              "type": "written",
+              "text": "Explain why charge flows from an earthed metal tube to the ground, but not from an identical tube on an insulating stand. (2)",
+              "model": "<ul><li>The earthed tube is a <b>conductor connected to earth</b>, so electrons have a path and <b>flow along the wire</b> — to earth if the tube is negative, up from earth if it is positive.</li><li>On an insulating stand there is <b>nowhere for the charge to go</b>, so it stays on the tube.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n4-q5",
+              "type": "choice",
+              "text": "Why does charge flow to earth rather than building up on the wire?",
+              "options": [
+                "The wire is an insulator",
+                "The Earth is so large it can take or give electrons without becoming noticeably charged",
+                "Earth is positively charged",
+                "Wires repel electrons"
+              ],
+              "correct": 1,
+              "explain": "Earth acts as an unlimited reservoir of charge."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain how earthing removes excess charge by the movement of electrons",
+        "State the direction electrons flow for a negatively and a positively charged object",
+        "Explain why the path must be a conductor"
+      ],
+      "blurb": "Earthing connects a charged object to the ground by a conductor. Electrons flow until the excess charge is gone — down to earth from a negative object, up from earth to a positive one. It is always the electrons that move.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "static-uses",
+      "band": "nn",
+      "title": "Uses: insecticide and paint sprayers",
+      "spec": "11.6P",
+      "equations": [
+        "\\text{droplets repel one another} \\Rightarrow \\text{fine, even spray}",
+        "\\text{droplets attracted to the target} \\Rightarrow \\text{even coat, less waste}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "How a sprayer works",
+          "html": "<figure class='diagram'><svg viewBox='0 0 760 260' role='img'><rect x='40' y='110' width='70' height='30' style='fill:var(--line);opacity:0.3;stroke:var(--ink-2);stroke-width:1.4'/><text x='75.0' y='160.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>nozzle at a high</text><text x='75.0' y='174.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>negative pd</text><circle cx='160.0' cy='120.2' r='3' style='fill:var(--accent)'/><line x1='158.0' y1='120.2' x2='162.0' y2='120.2' style='stroke:var(--bg);stroke-width:1'/><circle cx='169.8' cy='116.3' r='3' style='fill:var(--accent)'/><line x1='167.8' y1='116.3' x2='171.8' y2='116.3' style='stroke:var(--bg);stroke-width:1'/><circle cx='179.6' cy='122.3' r='3' style='fill:var(--accent)'/><line x1='177.6' y1='122.3' x2='181.6' y2='122.3' style='stroke:var(--bg);stroke-width:1'/><circle cx='189.4' cy='114.7' r='3' style='fill:var(--accent)'/><line x1='187.4' y1='114.7' x2='191.4' y2='114.7' style='stroke:var(--bg);stroke-width:1'/><circle cx='199.2' cy='110.4' r='3' style='fill:var(--accent)'/><line x1='197.2' y1='110.4' x2='201.2' y2='110.4' style='stroke:var(--bg);stroke-width:1'/><circle cx='209.0' cy='121.3' r='3' style='fill:var(--accent)'/><line x1='207.0' y1='121.3' x2='211.0' y2='121.3' style='stroke:var(--bg);stroke-width:1'/><circle cx='218.8' cy='142.4' r='3' style='fill:var(--accent)'/><line x1='216.8' y1='142.4' x2='220.8' y2='142.4' style='stroke:var(--bg);stroke-width:1'/><circle cx='228.7' cy='138.7' r='3' style='fill:var(--accent)'/><line x1='226.7' y1='138.7' x2='230.7' y2='138.7' style='stroke:var(--bg);stroke-width:1'/><circle cx='238.5' cy='138.1' r='3' style='fill:var(--accent)'/><line x1='236.5' y1='138.1' x2='240.5' y2='138.1' style='stroke:var(--bg);stroke-width:1'/><circle cx='248.3' cy='110.2' r='3' style='fill:var(--accent)'/><line x1='246.3' y1='110.2' x2='250.3' y2='110.2' style='stroke:var(--bg);stroke-width:1'/><circle cx='258.1' cy='127.1' r='3' style='fill:var(--accent)'/><line x1='256.1' y1='127.1' x2='260.1' y2='127.1' style='stroke:var(--bg);stroke-width:1'/><circle cx='267.9' cy='111.3' r='3' style='fill:var(--accent)'/><line x1='265.9' y1='111.3' x2='269.9' y2='111.3' style='stroke:var(--bg);stroke-width:1'/><circle cx='277.7' cy='103.7' r='3' style='fill:var(--accent)'/><line x1='275.7' y1='103.7' x2='279.7' y2='103.7' style='stroke:var(--bg);stroke-width:1'/><circle cx='287.5' cy='97.8' r='3' style='fill:var(--accent)'/><line x1='285.5' y1='97.8' x2='289.5' y2='97.8' style='stroke:var(--bg);stroke-width:1'/><circle cx='297.3' cy='104.2' r='3' style='fill:var(--accent)'/><line x1='295.3' y1='104.2' x2='299.3' y2='104.2' style='stroke:var(--bg);stroke-width:1'/><circle cx='307.1' cy='157.8' r='3' style='fill:var(--accent)'/><line x1='305.1' y1='157.8' x2='309.1' y2='157.8' style='stroke:var(--bg);stroke-width:1'/><circle cx='316.9' cy='151.6' r='3' style='fill:var(--accent)'/><line x1='314.9' y1='151.6' x2='318.9' y2='151.6' style='stroke:var(--bg);stroke-width:1'/><circle cx='326.7' cy='151.0' r='3' style='fill:var(--accent)'/><line x1='324.7' y1='151.0' x2='328.7' y2='151.0' style='stroke:var(--bg);stroke-width:1'/><circle cx='336.5' cy='151.6' r='3' style='fill:var(--accent)'/><line x1='334.5' y1='151.6' x2='338.5' y2='151.6' style='stroke:var(--bg);stroke-width:1'/><circle cx='346.3' cy='96.6' r='3' style='fill:var(--accent)'/><line x1='344.3' y1='96.6' x2='348.3' y2='96.6' style='stroke:var(--bg);stroke-width:1'/><circle cx='356.2' cy='106.7' r='3' style='fill:var(--accent)'/><line x1='354.2' y1='106.7' x2='358.2' y2='106.7' style='stroke:var(--bg);stroke-width:1'/><circle cx='366.0' cy='137.7' r='3' style='fill:var(--accent)'/><line x1='364.0' y1='137.7' x2='368.0' y2='137.7' style='stroke:var(--bg);stroke-width:1'/><circle cx='375.8' cy='149.2' r='3' style='fill:var(--accent)'/><line x1='373.8' y1='149.2' x2='377.8' y2='149.2' style='stroke:var(--bg);stroke-width:1'/><circle cx='385.6' cy='163.4' r='3' style='fill:var(--accent)'/><line x1='383.6' y1='163.4' x2='387.6' y2='163.4' style='stroke:var(--bg);stroke-width:1'/><circle cx='395.4' cy='167.6' r='3' style='fill:var(--accent)'/><line x1='393.4' y1='167.6' x2='397.4' y2='167.6' style='stroke:var(--bg);stroke-width:1'/><circle cx='405.2' cy='77.0' r='3' style='fill:var(--accent)'/><line x1='403.2' y1='77.0' x2='407.2' y2='77.0' style='stroke:var(--bg);stroke-width:1'/><text x='260.0' y='50.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>charged droplets repel one another → spread into a fine, even mist</text><path d='M 440 60 Q 480 40 520 60 L 540 190 L 430 190 Z' style='fill:var(--line);opacity:0.25;stroke:var(--ink);stroke-width:1.6'/><text x='485.0' y='215.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>car body, earthed</text><line x1='466.5' y1='100.0' x2='473.5' y2='100.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='470.0' y1='96.5' x2='470.0' y2='103.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='496.5' y1='90.0' x2='503.5' y2='90.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='500.0' y1='86.5' x2='500.0' y2='93.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='476.5' y1='140.0' x2='483.5' y2='140.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='480.0' y1='136.5' x2='480.0' y2='143.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='506.5' y1='150.0' x2='513.5' y2='150.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='510.0' y1='146.5' x2='510.0' y2='153.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='456.5' y1='170.0' x2='463.5' y2='170.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='460.0' y1='166.5' x2='460.0' y2='173.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='485.0' y1='190.0' x2='485.0' y2='235.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='465.0' y1='235.0' x2='505.0' y2='235.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='473.0' y1='242.0' x2='497.0' y2='242.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='400.0' y1='125.0' x2='435.0' y2='115.0' style='stroke:var(--accent);stroke-width:2.2'/><polygon points='435.0,115.0 428.3,121.0 426.1,113.5' style='fill:var(--accent)'/><text x='580.0' y='100.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>the droplets are attracted</text><text x='580.0' y='116.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>to the oppositely charged</text><text x='580.0' y='132.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>(induced) surface, even round</text><text x='580.0' y='148.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>the back: an even coat,</text><text x='580.0' y='164.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>less paint wasted</text></svg><figcaption>An electrostatic paint sprayer: the charged droplets spread out and are drawn onto the earthed car body.</figcaption></figure><ol><li>The nozzle is connected to a high pd, so every droplet leaving it carries the <b>same charge</b>.</li><li><b>Like charges repel</b>: the droplets push one another apart and <b>spread out into a fine, even mist</b> — no clumps, no drips.</li><li>The target (car body, plant) is <b>earthed</b>, or given the <b>opposite charge</b>. The charged mist <b>induces the opposite charge</b> on the target's surface, so the droplets are <b>attracted</b> to it — including the <b>sides and back</b>, where the spray would not otherwise reach.</li></ol><table class='tbl'><tr><th>Advantage</th><th>Because</th></tr><tr><td><b>even coat</b></td><td>the droplets repel each other into a fine, evenly spread mist</td></tr><tr><td><b>reaches all round</b> (the back of the leaf, the underside of the car)</td><td>the droplets are attracted to the oppositely charged surface, not just carried by the air</td></tr><tr><td><b>less paint / insecticide wasted</b></td><td>the droplets are pulled to the target instead of drifting past it (less chemical in the air, cheaper)</td></tr></table><p>Say both halves — the repulsion <i>between droplets</i> and the attraction <i>to the target</i>. \"The paint is charged so it sticks\" is not an explanation.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark explanation",
+          "question": "Explain how giving the droplets a charge improves a crop sprayer. (3 marks)",
+          "steps": [
+            "All the droplets have the <b>same charge</b>, so they <b>repel one another</b> and spread into a <b>fine, even mist</b>.",
+            "The droplets are <b>attracted</b> to the plants, which are earthed and gain an <b>induced opposite charge</b>, so the insecticide reaches <b>all sides</b> of the leaves.",
+            "Because the droplets are drawn to the plants rather than drifting away, <b>less insecticide is wasted</b> and less blows into the air."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Uses",
+          "questions": [
+            {
+              "id": "se-n5-q1",
+              "type": "written",
+              "text": "Explain why the droplets from an electrostatic paint sprayer spread out into a fine mist. (2)",
+              "model": "<ul><li>All the droplets carry the <b>same charge</b>.</li><li><b>Like charges repel</b>, so the droplets push one another apart and spread evenly.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n5-q2",
+              "type": "choice",
+              "text": "Why is the car body earthed when it is spray-painted with charged paint?",
+              "options": [
+                "To make the paint dry faster",
+                "So the charged droplets induce the opposite charge on it and are attracted to it, giving an even coat",
+                "To stop the car moving",
+                "So the paint loses its charge in the air"
+              ],
+              "correct": 1,
+              "explain": "Attraction to the target, including its back."
+            },
+            {
+              "id": "se-n5-q3",
+              "type": "written",
+              "text": "Give two advantages of using charged droplets in an insecticide sprayer, with a reason for each. (4)",
+              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Advantage 1</td><td>An <b>even</b> spray / fine mist…</td></tr><tr><td><b>2</b></td><td>Reason 1</td><td>…because the droplets all have the same charge and <b>repel each other</b>.</td></tr><tr><td><b>3</b></td><td>Advantage 2</td><td>Reaches <b>all sides</b> of the plant, and <b>less is wasted</b>…</td></tr><tr><td><b>4</b></td><td>Reason 2</td><td>…because the droplets are <b>attracted</b> to the earthed (oppositely charged) plant rather than drifting past.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-n5-q4",
+              "type": "choice",
+              "text": "Charged paint droplets reach the back of a metal panel. Why?",
+              "options": [
+                "The air carries them round",
+                "They are attracted to the induced opposite charge on the whole surface, including the back",
+                "Paint is magnetic",
+                "They are heavier when charged"
+              ],
+              "correct": 1,
+              "explain": "Attraction works all round the earthed object."
+            },
+            {
+              "id": "se-n5-q5",
+              "type": "written",
+              "text": "A gardener uses a sprayer without charging the droplets. State two disadvantages compared with an electrostatic sprayer. (2)",
+              "model": "<ul><li>Uneven coverage — the droplets do not spread out evenly and the <b>undersides of leaves are missed</b>.</li><li>More insecticide <b>wasted</b> (drifts away in the air) — more chemical needed and more pollution.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain how an electrostatic sprayer works",
+        "Give the advantages of charging the droplets, each with the reason",
+        "Say why the target is earthed or given the opposite charge"
+      ],
+      "blurb": "Give the spray a charge and two things happen: the droplets repel each other into a fine, even mist, and they are attracted to the (earthed or oppositely charged) target — even its back. Three advantages, each with its reason.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "static-dangers",
+      "band": "nn",
+      "title": "Dangers of static, and how earthing removes them",
+      "spec": "11.7P, 11.8P",
+      "equations": [
+        "\\text{charge builds} \\rightarrow \\text{pd grows} \\rightarrow \\text{spark} \\rightarrow \\text{fire}",
+        "\\text{bonding + earthing: no pd, no spark}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The danger and the cure",
+          "html": "<figure class='diagram'><svg viewBox='0 0 680 240' role='img'><rect x='40' y='80' width='200' height='70' rx='20' style='fill:var(--line);opacity:0.25;stroke:var(--ink);stroke-width:1.6'/><text x='140.0' y='120.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>fuel tanker</text><path d='M 420 70 L 640 90 L 640 150 L 420 160 Z' style='fill:var(--line);opacity:0.25;stroke:var(--ink);stroke-width:1.6'/><text x='530.0' y='120.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>aircraft fuel tank</text><path d='M 240 115 Q 330 60 420 110' style='fill:none;stroke:var(--accent);stroke-width:7'/><text x='330.0' y='50.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>fuel rushing through the hose: friction → charge builds up</text><line x1='240.0' y1='140.0' x2='420.0' y2='145.0' style='stroke:var(--ink);stroke-width:1.2;stroke-dasharray:5 4'/><text x='330.0' y='165.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>bonding line: a conductor joining tanker and aircraft</text><text x='330.0' y='179.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>so they stay at the same potential — no spark between them</text><line x1='140.0' y1='150.0' x2='140.0' y2='215.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='120.0' y1='215.0' x2='160.0' y2='215.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='128.0' y1='222.0' x2='152.0' y2='222.0' style='stroke:var(--ink);stroke-width:1.6'/><text x='170.0' y='212.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>earth wire: charge flows away to the ground</text></svg><figcaption>Refuelling an aircraft: the bonding line keeps tanker and aircraft at the same potential; the earth wire lets the charge drain away.</figcaption></figure><p><b>The danger:</b> as fuel <b>flows through the hose</b> there is <b>friction</b> between the fuel and the pipe, which <b>transfers electrons</b> — the fuel (and the aircraft) becomes charged. The charge <b>builds up</b> because the aircraft stands on insulating tyres. A large charge means a large <b>pd</b> between the aircraft and the tanker (or the ground). If the pd gets high enough, the air breaks down and a <b>spark</b> jumps across the gap. Fuel <b>vapour</b> is explosive, so a spark can cause a <b>fire or explosion</b>.</p><p><b>The cure (11.8P):</b> before the hose is connected, a <b>bonding line</b> — a conducting cable — is clipped between the tanker and the aircraft, and both are connected to <b>earth</b>. Now any charge that builds up <b>flows through the conductor</b> instead of building up: the two vehicles stay at the <b>same potential</b>, so there is <b>no pd</b> between them and <b>no spark</b>; and the earth connection drains the charge away. The same idea protects fuel tankers at petrol stations (the pump nozzle is earthed through the hose) and operating theatres (conducting floors).</p><p><b>Lightning conductors:</b> a thick copper strip from a spike above the building down to a metal plate in the ground. If lightning strikes it provides a <b>low-resistance path to earth</b>, so the huge current goes through the conductor rather than through the building; the field is strongest at the sharp point, so the air breaks down there first and the strike is led to the conductor rather than the roof.</p><p>The marks are on <b>why</b> each step matters: \"it is earthed\" alone scores nothing; \"it is earthed <b>so the charge flows away and cannot build up to produce a spark</b>\" scores.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 4-mark fuelling question",
+          "question": "Explain why static electricity can be dangerous when an aircraft is refuelled, and how the danger is reduced. (4 marks)",
+          "steps": [
+            "<b>Friction</b> between the fuel and the hose <b>transfers electrons</b>, so charge <b>builds up</b> on the aircraft (which is insulated from the ground by its tyres).",
+            "The charge produces a large <b>pd</b> between the aircraft and the tanker; a <b>spark</b> can jump across, which could <b>ignite the fuel vapour</b>.",
+            "A <b>bonding line</b> (conductor) connects the aircraft to the tanker, so charge flows between them and they stay at the <b>same potential</b> — no pd, no spark.",
+            "Both are also <b>earthed</b>, so the charge <b>flows away to the ground</b> as fast as it is made and cannot build up."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Dangers and earthing",
+          "questions": [
+            {
+              "id": "se-n6-q1",
+              "type": "written",
+              "text": "Explain why fuel flowing through a hose can cause a spark. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Friction</td><td><b>Friction</b> between the moving fuel and the hose <b>transfers electrons</b>.</td></tr><tr><td><b>2</b></td><td>Build-up</td><td>Charge <b>builds up</b> (the vehicle is insulated from the ground), creating a large <b>pd</b> between the vehicle and nearby objects.</td></tr><tr><td><b>3</b></td><td>Spark</td><td>When the pd is large enough the air conducts and a <b>spark</b> jumps across — which can ignite fuel vapour.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-n6-q2",
+              "type": "written",
+              "text": "Explain how connecting a tanker to the aircraft with a conducting cable before refuelling reduces the danger. (2)",
+              "model": "<ul><li>Charge can <b>flow between them through the conductor</b> instead of building up, so they stay at the <b>same potential</b>.</li><li>With <b>no pd</b> between them there is <b>no spark</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n6-q3",
+              "type": "choice",
+              "text": "Why does charge build up on an aircraft during refuelling rather than flowing away?",
+              "options": [
+                "Aircraft are made of plastic",
+                "Its rubber tyres insulate it from the ground, so the charge has nowhere to go",
+                "Fuel is an excellent conductor",
+                "The air is a conductor"
+              ],
+              "correct": 1,
+              "explain": "No conducting path to earth until one is provided."
+            },
+            {
+              "id": "se-n6-q4",
+              "type": "written",
+              "text": "Describe how a lightning conductor protects a tall building. (2)",
+              "model": "<ul><li>A thick copper conductor runs from a <b>point above the building to a plate in the ground</b>.</li><li>It provides a <b>low-resistance path to earth</b>, so a strike's current flows through it rather than through the building (the point is where the field is strongest, so the strike is led there).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n6-q5",
+              "type": "written",
+              "text": "A student writes: \"The tanker is earthed, so it is safe.\" Explain what is missing from this answer. (2)",
+              "model": "<ul><li>It does not say <b>what earthing does</b>: the earth wire lets the <b>charge flow away to the ground</b>…</li><li>…so charge <b>cannot build up</b> to give a pd large enough for a <b>spark</b> that could ignite the fuel vapour.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain why refuelling an aircraft or tanker is dangerous because of static",
+        "Explain how bonding and earthing remove the danger",
+        "Describe how a lightning conductor protects a building"
+      ],
+      "blurb": "Fuel rushing through a hose charges it by friction. Let the charge build and a spark can jump — into fuel vapour. The cure is a conducting path: bond the two vehicles together so they stay at the same potential, and earth them so the charge drains away.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "electric-fields",
+      "band": "nn",
+      "title": "Electric fields: the definition and the two diagrams",
+      "spec": "11.9P, 11.10P",
+      "equations": [
+        "\\text{field: a region where a charge experiences a force}",
+        "\\text{lines from + to −; closer lines = stronger field}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Definition, diagrams and rules",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 270' role='img'><text x='150.0' y='25.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>field around a point charge</text><line x1='168.0' y1='130.0' x2='235.0' y2='130.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='235.0,130.0 226.9,133.9 226.9,126.1' style='fill:var(--ink)'/><line x1='162.7' y1='142.7' x2='210.1' y2='190.1' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='210.1,190.1 201.6,187.1 207.1,181.6' style='fill:var(--ink)'/><line x1='150.0' y1='148.0' x2='150.0' y2='215.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='150.0,215.0 146.1,206.9 153.9,206.9' style='fill:var(--ink)'/><line x1='137.3' y1='142.7' x2='89.9' y2='190.1' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='89.9,190.1 92.9,181.6 98.4,187.1' style='fill:var(--ink)'/><line x1='132.0' y1='130.0' x2='65.0' y2='130.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='65.0,130.0 73.1,126.1 73.1,133.9' style='fill:var(--ink)'/><line x1='137.3' y1='117.3' x2='89.9' y2='69.9' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='89.9,69.9 98.4,72.9 92.9,78.4' style='fill:var(--ink)'/><line x1='150.0' y1='112.0' x2='150.0' y2='45.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='150.0,45.0 153.9,53.1 146.1,53.1' style='fill:var(--ink)'/><line x1='162.7' y1='117.3' x2='210.1' y2='69.9' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='210.1,69.9 207.1,78.4 201.6,72.9' style='fill:var(--ink)'/><circle cx='150' cy='130' r='14' style='fill:var(--bg);stroke:var(--ink);stroke-width:1.6'/><line x1='145.0' y1='130.0' x2='155.0' y2='130.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='150.0' y1='125.0' x2='150.0' y2='135.0' style='stroke:var(--ink);stroke-width:1.8'/><text x='150.0' y='240.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>radial; arrows away from +, towards −;</text><text x='150.0' y='254.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>lines spread out: the field weakens with distance</text><text x='510.0' y='25.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>field between parallel plates</text><rect x='420' y='50' width='180' height='10' style='fill:var(--ink);opacity:0.9;stroke:var(--ink-2);stroke-width:1.4'/><rect x='420' y='200' width='180' height='10' style='fill:var(--ink);opacity:0.9;stroke:var(--ink-2);stroke-width:1.4'/><line x1='436.5' y1='44.0' x2='443.5' y2='44.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='440.0' y1='40.5' x2='440.0' y2='47.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='471.5' y1='44.0' x2='478.5' y2='44.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='475.0' y1='40.5' x2='475.0' y2='47.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='506.5' y1='44.0' x2='513.5' y2='44.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='510.0' y1='40.5' x2='510.0' y2='47.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='541.5' y1='44.0' x2='548.5' y2='44.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='545.0' y1='40.5' x2='545.0' y2='47.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='576.5' y1='44.0' x2='583.5' y2='44.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='580.0' y1='40.5' x2='580.0' y2='47.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='436.5' y1='222.0' x2='443.5' y2='222.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='471.5' y1='222.0' x2='478.5' y2='222.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='506.5' y1='222.0' x2='513.5' y2='222.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='541.5' y1='222.0' x2='548.5' y2='222.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='576.5' y1='222.0' x2='583.5' y2='222.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='435.0' y1='62.0' x2='435.0' y2='196.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='435.0,196.0 431.1,187.9 438.9,187.9' style='fill:var(--ink)'/><line x1='465.0' y1='62.0' x2='465.0' y2='196.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='465.0,196.0 461.1,187.9 468.9,187.9' style='fill:var(--ink)'/><line x1='495.0' y1='62.0' x2='495.0' y2='196.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='495.0,196.0 491.1,187.9 498.9,187.9' style='fill:var(--ink)'/><line x1='525.0' y1='62.0' x2='525.0' y2='196.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='525.0,196.0 521.1,187.9 528.9,187.9' style='fill:var(--ink)'/><line x1='555.0' y1='62.0' x2='555.0' y2='196.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='555.0,196.0 551.1,187.9 558.9,187.9' style='fill:var(--ink)'/><line x1='585.0' y1='62.0' x2='585.0' y2='196.0' style='stroke:var(--ink);stroke-width:1.6'/><polygon points='585.0,196.0 581.1,187.9 588.9,187.9' style='fill:var(--ink)'/><text x='510.0' y='240.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>uniform: parallel, equally spaced, straight,</text><text x='510.0' y='254.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>from + plate to − plate; the same strength everywhere</text></svg><figcaption>The two field patterns the spec asks for.</figcaption></figure><p><b>Definition</b> (11.9P): an electric field is <b>a region in which an electric charge experiences a force</b>. The June 2024 scheme (Q1(b), 2 marks): \"a region where (electric) charge experiences a force\" (1), \"attraction or repulsion\" or the direction of the force on a positive charge (1); \"electricity\" ignored.</p><p><b>Field lines</b> show the <b>direction of the force on a positive charge</b>: they point <b>away from positive</b> and <b>towards negative</b> (the 2024 scheme's mark for Q1(c)(i)). Where the lines are <b>closer together</b> the field is <b>stronger</b> — near a point charge; where they <b>spread out</b> (diverge) the field is weaker (Q1(c)(ii): \"field lines get further apart as x increases\"). Lines <b>never cross</b> or touch.</p><table class='tbl'><tr><th>Point charge</th><th>Parallel plates</th></tr><tr><td><b>radial</b>: straight lines out from (or in to) the charge, evenly spaced round it; arrows outwards for +, inwards for −; the field gets <b>weaker with distance</b> as the lines spread</td><td><b>uniform</b>: straight, <b>parallel</b>, <b>equally spaced</b> lines from the + plate to the − plate, at right angles to the plates; the <b>same strength</b> everywhere between them (the lines bulge only at the edges)</td></tr></table><p>The June 2025 scheme (Q4(a)): straight lines with arrows <b>from the positive plate to the negative plate</b> — 2 marks; correct lines with the arrows the wrong way — 1. Draw at least four or five lines, equally spaced, with an arrowhead on each.</p><p><b>Why fields explain static</b> (11.10P): a charged object has a field around it; any other charge in that region feels a force — attraction or repulsion — without contact. The field of a charged comb acts on the electrons in a piece of paper and moves them (induction); if a field becomes strong enough it pulls electrons off air molecules, the air conducts, and a spark jumps (T7).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Describe the field",
+          "question": "Describe the electric field around a negatively charged sphere. (3 marks)",
+          "steps": [
+            "The field lines are <b>radial</b>: straight lines pointing <b>towards the centre</b> of the sphere (the direction of the force on a positive charge).",
+            "They are <b>evenly spaced</b> round the sphere, so the field has the same strength at the same distance in every direction.",
+            "The lines get <b>further apart</b> with distance, so the field is <b>strongest near the surface</b> and weakens further away."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Electric fields",
+          "questions": [
+            {
+              "id": "se-n7-q1",
+              "type": "written",
+              "text": "State what is meant by an electric field, and what the direction of a field line shows. (2)",
+              "model": "<ul><li>A <b>region</b> in which an <b>electric charge experiences a force</b>.</li><li>The line shows the <b>direction of the force on a positive charge</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-n7-q2",
+              "type": "choice",
+              "text": "In which direction do electric field lines point?",
+              "options": [
+                "From negative to positive",
+                "From positive to negative (the direction of the force on a positive charge)",
+                "Clockwise",
+                "It depends on the current"
+              ],
+              "correct": 1,
+              "explain": "Away from +, towards −."
+            },
+            {
+              "id": "se-n7-q3",
+              "type": "written",
+              "text": "Describe the electric field between two oppositely charged parallel plates. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Shape</td><td>Straight, <b>parallel</b> lines at right angles to the plates.</td></tr><tr><td><b>2</b></td><td>Direction</td><td>From the <b>positive plate to the negative plate</b>.</td></tr><tr><td><b>3</b></td><td>Strength</td><td><b>Equally spaced</b>, so the field is <b>uniform</b> — the same strength everywhere between the plates.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-n7-q4",
+              "type": "choice",
+              "text": "Field lines around a point charge get further apart with distance. This shows that…",
+              "options": [
+                "the field gets stronger",
+                "the field gets weaker",
+                "the charge is negative",
+                "the field is uniform"
+              ],
+              "correct": 1,
+              "explain": "Line spacing shows strength: spread out = weaker."
+            },
+            {
+              "id": "se-n7-q5",
+              "type": "written",
+              "text": "A student draws field lines between parallel plates that cross each other. Explain why this is wrong. (1)",
+              "model": "<ul><li>A field line shows the direction of the force on a charge at that point; it can only have <b>one direction</b>, so lines <b>never cross</b>.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-n7-q6",
+              "type": "written",
+              "text": "Use the idea of an electric field to explain why a charged balloon can attract a piece of paper without touching it. (2)",
+              "model": "<ul><li>The balloon's charge produces an <b>electric field</b> in the region around it.</li><li>The paper is in that region, so the charges in it <b>experience a force</b>: the electrons in it are moved (pushed away by a negative balloon, pulled nearer by a positive one), so the near side has the opposite charge and is attracted.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define an electric field",
+        "Draw the field around a point charge and between parallel plates, with directions",
+        "Use the spacing of field lines to compare field strength",
+        "Explain static phenomena in terms of fields"
+      ],
+      "blurb": "An electric field is a region where an electric charge experiences a force. Draw it with field lines: radial around a point charge, parallel and evenly spaced between two plates, arrows from positive to negative. The field is the reason charged objects affect each other without touching.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "keywords-static",
+      "band": "nn",
+      "title": "Key words: state what is meant by…",
+      "spec": "11.1P–11.10P",
+      "equations": [
+        "\\text{definition, word for word}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Static electricity</b></td><td>Charge that <b>stays on an insulator</b> (or an insulated conductor) rather than flowing.</td><td>\"electricity that does not move\"</td></tr><tr><td><b>Charging by friction</b></td><td>Rubbing two <b>insulators</b> together <b>transfers electrons</b> from one to the other; one is left negative, the other equally positive.</td><td>\"rubbing makes charge\"</td></tr><tr><td><b>Negatively charged</b></td><td>Has <b>gained electrons</b> (more electrons than protons).</td><td>\"has negative protons\"</td></tr><tr><td><b>Positively charged</b></td><td>Has <b>lost electrons</b> (fewer electrons than protons).</td><td>\"has gained protons\"</td></tr><tr><td><b>Induction</b></td><td>A charged object <b>moves the electrons</b> within a nearby neutral object, so the <b>near side gets the opposite charge</b> and is attracted.</td><td>\"the charge jumps across\"</td></tr><tr><td><b>Earthing</b></td><td>Connecting a charged object to the ground with a <b>conductor</b> so <b>electrons flow</b> to or from earth and the excess charge is removed.</td><td>\"touching the ground\"</td></tr><tr><td><b>Discharge</b></td><td>The <b>removal</b> of excess charge — by earthing or by a spark.</td><td>\"losing electricity\"</td></tr><tr><td><b>Spark</b></td><td>A sudden <b>flow of electrons through the air</b> when the pd across a gap is large enough for the air to conduct.</td><td>\"a bit of lightning\"</td></tr><tr><td><b>Bonding (bonding line)</b></td><td>A <b>conductor connecting</b> two objects so that they stay at the <b>same potential</b> and no spark can jump between them.</td><td>\"a safety wire\"</td></tr><tr><td><b>Electric field</b></td><td>A <b>region</b> in which an <b>electric charge experiences a force</b>.</td><td>\"where the electricity is\"</td></tr><tr><td><b>Field line</b></td><td>A line showing the <b>direction of the force on a positive charge</b>; from + to −; closer lines mean a stronger field; lines never cross.</td><td>\"the path the charge takes\"</td></tr><tr><td><b>Uniform field</b></td><td>A field with the <b>same strength and direction everywhere</b>: parallel, equally spaced lines (between parallel plates).</td><td>\"a straight field\"</td></tr><tr><td><b>Radial field</b></td><td>The field of a <b>point charge</b>: lines straight out from (or in to) the charge, weakening with distance.</td><td>\"a round field\"</td></tr></table>"
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "se-kw-q1",
+              "type": "written",
+              "text": "State what is meant by an electric field. (1)",
+              "model": "<ul><li>A <b>region</b> in which an <b>electric charge experiences a force</b>.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-kw-q2",
+              "type": "written",
+              "text": "State what is meant by earthing a charged object. (1)",
+              "model": "<ul><li>Connecting it to the ground by a <b>conductor</b> so that <b>electrons flow</b> to or from earth and the excess charge is removed.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-kw-q3",
+              "type": "choice",
+              "text": "Which statement defines a negatively charged object?",
+              "options": [
+                "It has gained protons",
+                "It has gained electrons",
+                "It has lost electrons",
+                "It has no electrons"
+              ],
+              "correct": 1,
+              "explain": "Negative = extra electrons."
+            },
+            {
+              "id": "se-kw-q4",
+              "type": "written",
+              "text": "State what is meant by attraction by induction. (1)",
+              "model": "<ul><li>A charged object <b>moves the electrons within a nearby neutral object</b> (without touching), so the near side gets the <b>opposite charge</b>.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-kw-q5",
+              "type": "written",
+              "text": "State what a field line shows. (1)",
+              "model": "<ul><li>The <b>direction of the force on a positive charge</b> at that point (and, by its spacing, the strength of the field).</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-kw-q6",
+              "type": "choice",
+              "text": "What is a bonding line used for during refuelling?",
+              "options": [
+                "To hold the hose in place",
+                "To connect the two vehicles with a conductor so they stay at the same potential and no spark can jump",
+                "To charge the fuel",
+                "To measure the fuel"
+              ],
+              "correct": 1,
+              "explain": "Same potential, no pd, no spark."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define charging by friction, negative and positive charge, induction",
+        "Define earthing, discharge, spark and bonding",
+        "Define electric field, field line, uniform and radial fields"
+      ],
+      "blurb": "One-mark definitions in the form of words the mark schemes credit. The bold words are the ones the marks are attached to.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "electron-force-chains",
+      "band": "tricky",
+      "title": "Two chains the marks are on: electrons, and force → acceleration",
+      "spec": "11.1P, 11.2P, 11.3P",
+      "equations": [
+        "\\text{friction} \\rightarrow \\text{electrons move} \\rightarrow \\text{charge}",
+        "\\text{like charges repel} \\rightarrow \\text{force on X away from Y} \\rightarrow \\text{X accelerates away}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The two chains",
+          "html": "<table class='tbl'><tr><th>Question</th><th>The chain (one mark a link)</th></tr><tr><td>Explain how the rod becomes charged</td><td><b>friction</b> (rubbing) → <b>electrons are transferred</b> from the cloth to the rod → the rod has <b>gained electrons</b> so it is <b>negative</b> → the cloth has <b>lost</b> them so it is <b>positive</b>, by the same amount</td></tr><tr><td>Explain why the two balloons move apart</td><td>both balloons are charged the <b>same sign</b> → <b>like charges repel</b> → so there is a <b>force on each balloon</b>, directed <b>away from the other</b> → a resultant force causes an <b>acceleration</b>, so each balloon <b>accelerates away</b> from the other</td></tr><tr><td>Explain why the ball moves towards the rod</td><td>the charges are <b>unlike</b> (or the ball is neutral and is <b>induced</b>, T2) → <b>attract</b> → a <b>force on the ball towards the rod</b> → the ball <b>accelerates towards</b> the rod</td></tr></table><p><b>The force → acceleration link.</b> Examiners are strict here, because it is Topic 2's rule in a new setting: a <b>resultant force</b> changes an object's motion — it makes it <b>accelerate</b>. So \"they repel, so the ball moves away\" skips a link. The full sentence is: \"<i>the charges are alike, so they repel: a force acts on the ball, directed away from the rod, so the ball accelerates away from the rod</i>\". Name the force, give its direction, say it causes an acceleration. If the question says the ball ends up hanging at an angle, add that it moves until the <b>thread's pull balances</b> the repulsion.</p><p><b>Losses:</b> \"the <b>charge</b> pushes it\" (a charge is not a force — say the force <i>between</i> the charges); \"<b>positive charge moves</b> to the cloth\" (only electrons move); \"the rod <b>makes</b> charge\" (charge is transferred); \"it <b>repels</b>\" with no force or direction; \"the force makes it <b>move</b>\" where the question wants <b>accelerate</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Both chains in one question",
+          "question": "Two identical balloons are rubbed on the same jumper and hung side by side on threads. They hang apart from each other. (a) Explain how the balloons became charged. (b) Explain why they hang apart. (5 marks)",
+          "steps": [
+            "<b>(a)</b> <b>Friction</b> between each balloon and the jumper <b>transferred electrons</b> from the jumper to the balloon…",
+            "…so each balloon <b>gained electrons</b> and is <b>negatively charged</b> (the jumper is left positive).",
+            "<b>(b)</b> Both balloons have the <b>same (negative) charge</b>, and <b>like charges repel</b>.",
+            "So there is a <b>force on each balloon directed away from the other</b> — an equal and opposite pair.",
+            "A force causes an <b>acceleration</b>: each balloon <b>accelerates away</b> from the other, until the pull of its thread balances the repulsion and it hangs at an angle."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The two chains",
+          "questions": [
+            {
+              "id": "se-t1-q1",
+              "type": "written",
+              "text": "A negatively charged rod is brought near a small negatively charged ball hanging on a thread. Explain why the ball moves. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Rule</td><td>The rod and the ball have the <b>same charge</b>, and <b>like charges repel</b>.</td></tr><tr><td><b>2</b></td><td>Force</td><td>So a <b>force acts on the ball</b>, directed <b>away from the rod</b>.</td></tr><tr><td><b>3</b></td><td>Motion</td><td>A (resultant) force causes an <b>acceleration</b>: the ball <b>accelerates away</b> from the rod.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-t1-q2",
+              "type": "choice",
+              "text": "Which answer gains all the marks for \"explain why the two charged balls move apart\"?",
+              "options": [
+                "\"They have the same charge so they repel.\"",
+                "\"Like charges repel, so each ball has a force on it directed away from the other, so each ball accelerates away.\"",
+                "\"The charge pushes them apart.\"",
+                "\"They are both negative so they move.\""
+              ],
+              "correct": 1,
+              "explain": "Rule, force with direction, acceleration."
+            },
+            {
+              "id": "se-t1-q3",
+              "type": "written",
+              "text": "A positively charged rod is held near a negatively charged ball. Explain the motion of the ball. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Rule</td><td>The charges are <b>unlike</b>, and unlike charges <b>attract</b>.</td></tr><tr><td><b>2</b></td><td>Force</td><td>A <b>force acts on the ball towards the rod</b>.</td></tr><tr><td><b>3</b></td><td>Motion</td><td>The force causes the ball to <b>accelerate towards</b> the rod.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-t1-q4",
+              "type": "written",
+              "text": "A student writes: \"When the rod is rubbed, positive charge moves from the rod to the cloth, so the rod becomes negative.\" Correct the student's explanation. (2)",
+              "model": "<ul><li>Positive charge (protons) <b>cannot move</b>; it is <b>electrons</b> that are transferred.</li><li>Electrons move <b>from the cloth to the rod</b>: the rod gains electrons and becomes negative, the cloth loses them and becomes positive.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t1-q5",
+              "type": "choice",
+              "text": "Why is \"the force makes the ball move\" marked down when the question asks to explain the ball's motion?",
+              "options": [
+                "Forces do not cause motion",
+                "The mark is for linking the resultant force to the ball's acceleration (a change in its motion), not just to movement",
+                "Balls cannot accelerate",
+                "The word 'force' should not be used"
+              ],
+              "correct": 1,
+              "explain": "Resultant force → acceleration is the link they want."
+            },
+            {
+              "id": "se-t1-q6",
+              "type": "written",
+              "text": "Two charged objects attract each other. One is much heavier than the other. Compare the forces on them and their accelerations. (2)",
+              "model": "<ul><li>The forces are <b>equal in size and opposite</b> in direction (an interaction pair).</li><li>The <b>lighter</b> object has the <b>larger acceleration</b> ($a = F/m$), so it is the one seen to move.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the charging chain: friction → electrons transferred from A to B → B negative, A positive",
+        "Write the force chain: like charges → repel → force on X away from Y → X accelerates away",
+        "Avoid the traps: protons moving, charge being made, 'it moves' without a force, 'the charge pushes it'"
+      ],
+      "blurb": "Every 'explain' in this topic is one of two chains. The charging chain is about electrons moving. The moving-apart chain is about a force: 'they repel' on its own is not an explanation — the examiners want the force named, its direction given, and the acceleration that follows.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "induction-explain",
+      "band": "tricky",
+      "title": "Induction: why a neutral object is attracted",
+      "spec": "11.4P",
+      "equations": [
+        "\\text{electrons in the neutral object move} \\rightarrow \\text{near side opposite} \\rightarrow \\text{nearer force wins}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The four steps",
+          "html": "<ol><li>The neutral object has <b>equal numbers of positive and negative charges</b>, spread evenly.</li><li>The charged object's field acts on them. A <b>negative</b> rod <b>repels the electrons</b> to the far side; a <b>positive</b> rod <b>attracts them</b> to the near side. Either way the <b>electrons move</b> — the positive charges (nuclei) do not.</li><li>So the <b>near side has the opposite charge</b> to the rod and the <b>far side the same charge</b>. The object is <b>still neutral overall</b>: the charges have been <b>separated</b>, not changed.</li><li>The near side is <b>attracted</b> and the far side is <b>repelled</b>, but the near side is <b>closer</b>, and the force is larger at a smaller distance — so the <b>attraction is the larger force</b> and there is a <b>resultant force towards the rod</b>.</li></ol><p>That is why a neutral object is <b>always attracted</b>, whatever the sign of the rod, and never repelled. In a <b>metal</b> the free electrons move through the whole object; in <b>water</b> the charged particles in it (ions) and the water molecules themselves shift; in an <b>insulator</b> (paper) the electrons shift slightly within each molecule — the effect is the same, just weaker.</p><p>The June 2023 report (Q1(c), a dust particle near a positive base): a diagram with the induced <b>negative</b> charge on the near side scored, but the fully correct one also showed the induced <b>positive</b> charge on the far side — \"the total numbers of positive and negative charges still balance\". Draw both sides. The 2025 scheme (Q4(b)(ii)) gave full marks for \"a positive charge would be <b>induced</b> on the surface of the metal tube\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Water bends towards a comb",
+          "question": "A charged plastic comb held near a thin stream of water from a tap makes the stream bend towards the comb. Explain why. (3 marks)",
+          "steps": [
+            "The water is <b>neutral</b>, but the comb's charge <b>moves the electrons</b> in the water: with a negative comb they are pushed to the far side of the stream, leaving the <b>near side positive</b>.",
+            "The near (positive) side is <b>attracted</b> to the comb and the far (negative) side is <b>repelled</b>.",
+            "The attraction acts at a <b>shorter distance</b>, so it is the <b>larger</b> force: there is a resultant force on the water <b>towards the comb</b>, so the water <b>accelerates towards the comb</b> and the stream bends."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Induction",
+          "questions": [
+            {
+              "id": "se-t2-q1",
+              "type": "written",
+              "text": "A negatively charged balloon is held near a wall. Draw (describe) the charges on the wall's surface and explain why the balloon sticks. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Electrons move</td><td>The balloon's charge <b>repels electrons</b> in the wall's surface <b>away</b> from the balloon.</td></tr><tr><td><b>2</b></td><td>Induced charges</td><td>The surface <b>nearest the balloon is left positive</b>; further in, the surface is negative (the wall stays neutral overall).</td></tr><tr><td><b>3</b></td><td>Force</td><td>The near positive surface <b>attracts</b> the balloon more strongly than the further negative charge repels it, so there is a resultant attractive force holding it on.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-t2-q2",
+              "type": "choice",
+              "text": "A positively charged rod is held near a neutral metal can. Which is correct?",
+              "options": [
+                "Electrons move to the far side of the can",
+                "Electrons move to the near side, so the near side is negative and the far side positive",
+                "Protons move to the near side",
+                "The can becomes positively charged overall"
+              ],
+              "correct": 1,
+              "explain": "Electrons are attracted towards the positive rod; the can stays neutral."
+            },
+            {
+              "id": "se-t2-q3",
+              "type": "written",
+              "text": "Explain why a neutral piece of paper is attracted to a charged comb but is never repelled by it. (2)",
+              "model": "<ul><li>Induction always puts the <b>opposite charge on the near side</b> (electrons move towards a positive comb, away from a negative one).</li><li>The attraction on the <b>nearer</b> side is always <b>larger</b> than the repulsion on the far side, so the resultant force is towards the comb.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "se-t2-q4",
+              "type": "written",
+              "text": "A student's diagram shows induced negative charge on the near side of a neutral sphere and nothing on the far side. Explain what is missing. (2)",
+              "model": "<ul><li>The sphere is <b>neutral overall</b>, so the electrons that moved to the near side have left an <b>equal positive charge on the far side</b>.</li><li>The diagram must show both: negative near, positive far, with the total charges balancing.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t2-q5",
+              "type": "choice",
+              "text": "Why does the attraction on the near side of an induced object beat the repulsion on the far side?",
+              "options": [
+                "There are more charges on the near side",
+                "The near side is closer to the charged object, and the force is larger at a smaller distance",
+                "The far side is positive",
+                "Repulsion is always weaker than attraction"
+              ],
+              "correct": 1,
+              "explain": "Same size charges; different distances."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain attraction of a neutral object by induction, step by step",
+        "Draw the induced charges on both sides of the object",
+        "Explain why the net force is attractive, and why the object stays neutral overall"
+      ],
+      "blurb": "The comb and the paper, the balloon and the wall, the charged rod and the tap water: the thing being attracted is neutral. The explanation is that its electrons move, the near side gets the opposite charge, and the attraction on the nearer side beats the repulsion on the far side.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "sparks",
+      "band": "tricky",
+      "title": "Sparks and shocks: from a build-up of charge to a flow through the air",
+      "spec": "11.4P, 11.5P",
+      "equations": [
+        "\\text{charge builds} \\rightarrow \\text{pd grows} \\rightarrow \\text{air conducts} \\rightarrow \\text{electrons jump}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain, and where it comes up",
+          "html": "<p><b>1 Charge builds up.</b> Friction (walking on a carpet, sliding off a car seat, fuel in a hose, ice in a cloud) transfers electrons, and because the object is <b>insulated</b> from the ground the charge cannot leak away.</p><p><b>2 The pd grows.</b> More charge means a larger <b>potential difference</b> between the object and the earth (or an earthed conductor nearby) — thousands of volts from a carpet, hundreds of millions in a storm.</p><p><b>3 The air breaks down.</b> Air is an insulator, but a strong enough <b>electric field</b> pulls electrons off air molecules; the air becomes a conductor for an instant.</p><p><b>4 Electrons flow.</b> The excess electrons rush across the gap (or electrons rush in to a positive object) — a <b>spark</b>: you see light, hear a crack, and feel the current if it passes through you. The object is left <b>discharged</b>.</p><table class='tbl'><tr><th>Situation</th><th>How it fits the chain</th></tr><tr><td>shock from a car door</td><td>you charge up sliding across the seat; the door is a conductor at a different potential from you; the spark jumps as your finger approaches, before you touch</td></tr><tr><td>lightning</td><td>the cloud base charges by friction between ice and water; the pd between cloud and ground becomes enormous; the air along a path breaks down and a vast current flows</td></tr><tr><td>crackles taking off a jumper</td><td>friction between the layers charges them; many tiny sparks as they separate</td></tr></table><p><b>Dry days are worse</b> because moist air lets charge leak away slowly (water conducts a little), so it never builds up; dry air lets it accumulate. <b>Touching the earthed metal first with a key</b> moves the spark to the key, not your fingertip.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The car-door shock",
+          "question": "A passenger slides across a car seat, steps out and gets a shock as she touches the metal door. Explain why. (4 marks)",
+          "steps": [
+            "<b>Friction</b> between her clothes and the seat <b>transfers electrons</b>, so she becomes <b>charged</b>; her shoes insulate her from the ground, so the charge <b>builds up</b>.",
+            "This gives a large <b>pd between her and the car body</b>, which is a large conductor at a different potential from her.",
+            "As her hand nears the door the electric field across the small gap is strong enough for the <b>air to conduct</b>…",
+            "…and <b>electrons flow</b> across the gap in a sudden <b>spark</b>: the current through her hand is the shock, and she is left discharged."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Sparks and shocks",
+          "questions": [
+            {
+              "id": "se-t3-q1",
+              "type": "written",
+              "text": "Explain what a spark is, in terms of electrons. (2)",
+              "model": "<ul><li>A large pd across a gap makes the electric field strong enough for the <b>air to conduct</b>…</li><li>…so <b>electrons flow suddenly across the gap</b> (through the air), discharging the object.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t3-q2",
+              "type": "choice",
+              "text": "Why can static charge build up on a person walking on a carpet, but not on one walking barefoot on wet grass?",
+              "options": [
+                "Grass makes no friction",
+                "Wet grass and skin conduct, so the charge leaks away to earth as fast as it forms",
+                "Carpets are positively charged",
+                "Shoes are conductors"
+              ],
+              "correct": 1,
+              "explain": "A conducting path to earth stops the build-up."
+            },
+            {
+              "id": "se-t3-q3",
+              "type": "written",
+              "text": "Explain why static shocks are more common in dry weather. (2)",
+              "model": "<ul><li>In humid air, moisture lets charge <b>leak away slowly</b>, so a large charge never builds up.</li><li>Dry air is a better <b>insulator</b>, so charge <b>accumulates</b> until the pd is large enough for a spark.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t3-q4",
+              "type": "written",
+              "text": "Explain why lightning is far more powerful than a shock from a door handle, using the same chain of ideas. (2)",
+              "model": "<ul><li>The <b>amount of charge</b> separated in a storm cloud is vastly greater, so the <b>pd</b> between cloud and ground is enormous.</li><li>When the air breaks down, a correspondingly <b>huge flow of electrons</b> passes along the path — a much larger current, over a much larger gap.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t3-q5",
+              "type": "choice",
+              "text": "A person about to touch a metal railing holds a key out and touches the railing with the key first. Why?",
+              "options": [
+                "Keys stop the charge forming",
+                "The spark jumps between the key and the railing instead of from the fingertip, so it is not felt",
+                "Metal keys are insulators",
+                "It increases the charge"
+              ],
+              "correct": 1,
+              "explain": "The discharge still happens, but through the key."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain a spark as the chain: charge build-up → large pd → air breaks down → electrons flow",
+        "Apply it to a shock from a car door and to lightning",
+        "Explain why touching an earthed conductor discharges you, and why dry conditions make static worse"
+      ],
+      "blurb": "A spark is electrons crossing a gap that normally insulates. The chain is always: charge builds up, the pd between the object and something earthed grows, the field becomes strong enough to make the air conduct, and the electrons jump across all at once.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "fuelling-question",
+      "band": "tricky",
+      "title": "Fuelling: the 6-mark danger-and-precaution question",
+      "spec": "11.7P, 11.8P",
+      "equations": [
+        "\\text{danger chain (3)} + \\text{precautions with reasons (3)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The structure that reaches Level 3",
+          "html": "<table class='tbl'><tr><th>Part</th><th>Points</th></tr><tr><td><b>Danger</b></td><td>fuel moving through the hose rubs against it: <b>friction transfers electrons</b> → the fuel / aircraft becomes <b>charged</b> → the aircraft is <b>insulated</b> by its tyres, so the charge <b>builds up</b> → a large <b>pd</b> between the aircraft and the tanker or ground → the air can break down and a <b>spark</b> jumps → fuel <b>vapour</b> is flammable, so the spark can cause a <b>fire or explosion</b></td></tr><tr><td><b>Precaution 1: bonding</b></td><td>a <b>conducting cable</b> is clipped between the aircraft and the tanker <b>before</b> the hose is connected → charge can <b>flow between them</b> → they stay at the <b>same potential</b> → <b>no pd</b>, so <b>no spark</b> between them</td></tr><tr><td><b>Precaution 2: earthing</b></td><td>both are connected to <b>earth</b> by a conductor → any charge <b>flows away to the ground</b> as it is produced → it <b>cannot build up</b> to a dangerous pd</td></tr><tr><td>Also accepted</td><td>pumping the fuel <b>slowly</b> (less friction, less charge per second); <b>conducting hoses</b>; no other sources of sparks nearby</td></tr></table><p>The usual losses: naming earthing without saying <b>what it does</b>; saying the fuel \"is static\" or \"has electricity\" instead of \"becomes charged by friction\"; forgetting the <b>vapour</b> — it is the vapour that ignites; and writing \"the spark causes a shock\" when the danger here is <b>fire</b>. Say <b>electrons</b> are transferred, say <b>pd</b>, say <b>conductor</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 6-mark answer",
+          "question": "An aircraft is refuelled from a tanker. Explain why static electricity is a danger during refuelling and how the danger is reduced. (6 marks)",
+          "steps": [
+            "As the fuel flows through the hose, <b>friction</b> between the fuel and the hose <b>transfers electrons</b>, so the fuel and the aircraft become <b>charged</b>.",
+            "The aircraft stands on <b>insulating</b> tyres, so the charge <b>cannot flow away</b> and <b>builds up</b>, producing a large <b>pd</b> between the aircraft and the tanker.",
+            "If the pd becomes large enough a <b>spark</b> can jump across the gap; fuel <b>vapour</b> is flammable, so the spark could cause a <b>fire or explosion</b>.",
+            "Before refuelling, a <b>bonding cable</b> (a conductor) is connected between the aircraft and the tanker, so charge <b>flows between them</b> and they stay at the <b>same potential</b> — no pd, so no spark between them.",
+            "The aircraft and tanker are also <b>earthed</b>: a conductor to the ground lets the charge <b>flow away to earth</b> as fast as it is made, so it cannot build up.",
+            "Pumping the fuel more slowly reduces the friction and the rate at which charge is produced."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The fuelling question",
+          "questions": [
+            {
+              "id": "se-t4-q1",
+              "type": "written",
+              "text": "Explain why a bonding cable is connected between a tanker and an aircraft before the fuel hose is attached. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Conductor</td><td>The cable is a <b>conductor</b> joining the two vehicles.</td></tr><tr><td><b>2</b></td><td>Same potential</td><td>Charge can <b>flow between them</b>, so they are at the <b>same potential</b> — there is no pd between them.</td></tr><tr><td><b>3</b></td><td>No spark</td><td>With no pd there can be <b>no spark</b> when the hose is connected, so fuel vapour cannot be ignited.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-t4-q2",
+              "type": "choice",
+              "text": "What ignites in a refuelling fire caused by a spark?",
+              "options": [
+                "The metal of the aircraft",
+                "The fuel vapour in the air",
+                "The tyres",
+                "The bonding cable"
+              ],
+              "correct": 1,
+              "explain": "Vapour is what a spark can ignite."
+            },
+            {
+              "id": "se-t4-q3",
+              "type": "written",
+              "text": "A student answers: \"The tanker is earthed, which makes it safe.\" Rewrite the point so it scores. (2)",
+              "model": "<ul><li>The tanker is connected to earth by a <b>conductor</b>, so any charge produced <b>flows away to the ground</b>…</li><li>…and <b>cannot build up</b> to a pd large enough for a spark that could ignite the fuel vapour.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t4-q4",
+              "type": "written",
+              "text": "Explain why the danger is reduced if the fuel is pumped more slowly. (1)",
+              "model": "<ul><li>Less <b>friction</b> per second between fuel and hose, so charge is produced <b>more slowly</b> and has time to flow away — less build-up.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "se-t4-q5",
+              "type": "choice",
+              "text": "Why does charge build up on an aircraft but not on an earthed metal tank?",
+              "options": [
+                "Aircraft fuel is special",
+                "The aircraft is insulated from the ground by its tyres, so the charge has no path to earth; the earthed tank lets it flow away",
+                "Metal tanks cannot be charged",
+                "The aircraft is positively charged"
+              ],
+              "correct": 1,
+              "explain": "Build-up needs insulation; a conductor to earth prevents it."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the danger chain: friction → electrons transferred → charge builds up → pd → spark → ignites vapour",
+        "Write each precaution with what it does: bonding keeps the same potential; earthing lets charge flow away",
+        "Avoid naming a precaution without its reason"
+      ],
+      "blurb": "The long question on this topic: explain why refuelling is dangerous and how the danger is reduced. Half the marks are the danger chain, half are the precautions — and each precaution scores only with its reason.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "sprayers-explain",
+      "band": "tricky",
+      "title": "Sprayers: each advantage with its reason",
+      "spec": "11.6P",
+      "equations": [
+        "\\text{same charge} \\rightarrow \\text{repel} \\rightarrow \\text{spread}",
+        "\\text{earthed target} \\rightarrow \\text{induced opposite charge} \\rightarrow \\text{attract}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Advantage, reason; advantage, reason",
+          "html": "<table class='tbl'><tr><th>Advantage</th><th>Reason (the physics the mark is on)</th></tr><tr><td>the spray is a <b>fine, even mist</b></td><td>every droplet leaves the nozzle with the <b>same charge</b>; <b>like charges repel</b>, so the droplets push apart and spread out instead of clumping</td></tr><tr><td>the paint / insecticide <b>reaches all sides</b> of the target, including the back</td><td>the target is <b>earthed</b> (or oppositely charged); the charged mist <b>induces the opposite charge</b> on its surface, so the droplets are <b>attracted</b> to the whole surface — a non-contact force, not just the air carrying them</td></tr><tr><td><b>less is wasted</b>; less drifts into the air</td><td>the droplets are <b>pulled to the target</b> by the attraction rather than passing it; so less chemical is needed and less pollution</td></tr><tr><td>an <b>even thickness</b> of coat</td><td>once a patch is coated it carries the droplets' charge, so further droplets are <b>repelled from it</b> towards bare patches</td></tr></table><p>Which charge: the nozzle is held at a high potential (a large pd relative to earth), so the droplets all carry <b>one sign</b> (either will do — what matters is that they are all the same). The target is <b>earthed</b>, so it is at 0 V: the approaching charged mist induces the <b>opposite</b> charge on its surface, and electrons flow to or from earth to supply it. Some systems give the target the opposite charge directly instead; the explanation is the same.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Four marks",
+          "question": "Explain how an electrostatic sprayer gives a car an even coat of paint using less paint than an ordinary sprayer. (4 marks)",
+          "steps": [
+            "The nozzle gives every paint droplet the <b>same charge</b>.",
+            "<b>Like charges repel</b>, so the droplets spread out into a <b>fine, even mist</b> rather than large drops.",
+            "The car body is <b>earthed</b>, so the charged mist <b>induces the opposite charge</b> on its surface and the droplets are <b>attracted</b> to it — onto every part of the surface, including the sides and underneath.",
+            "Because the droplets are drawn onto the car rather than drifting past, <b>less paint is wasted</b>; and droplets are repelled from already-coated patches towards bare ones, evening the thickness."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Sprayers",
+          "questions": [
+            {
+              "id": "se-t5-q1",
+              "type": "written",
+              "text": "State one advantage of charging the droplets in an insecticide sprayer and explain the physics behind it. (2)",
+              "model": "<ul><li>Advantage: an <b>even spray</b> / reaches the <b>undersides of leaves</b> / <b>less wasted</b>.</li><li>Reason: like-charged droplets <b>repel each other</b> (even spread); or the droplets are <b>attracted to the earthed plant</b> by induced opposite charge (coverage, less waste).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t5-q2",
+              "type": "choice",
+              "text": "In an electrostatic sprayer, why must all the droplets have the same charge?",
+              "options": [
+                "So they attract each other into big drops",
+                "So they repel each other and spread into a fine mist",
+                "So they fall faster",
+                "So they stay in the nozzle"
+              ],
+              "correct": 1,
+              "explain": "Repulsion between droplets is the spreading mechanism."
+            },
+            {
+              "id": "se-t5-q3",
+              "type": "written",
+              "text": "Explain why the paint droplets are attracted to an earthed car body. (2)",
+              "model": "<ul><li>The charged droplets <b>induce the opposite charge</b> on the car's surface (electrons flow to or from earth to supply it).</li><li><b>Unlike charges attract</b>, so there is a force on the droplets towards the surface — on every side of the car.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t5-q4",
+              "type": "written",
+              "text": "A student writes: \"The paint is charged so it sticks to the car.\" Explain why this answer is incomplete. (2)",
+              "model": "<ul><li>It does not say <b>what</b> the paint is attracted to or <b>why</b>: the car must be <b>earthed / oppositely charged</b> so that the droplets' charge induces the opposite charge and unlike charges attract.</li><li>It also misses the other advantage: the droplets <b>repel one another</b>, giving an even mist.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "se-t5-q5",
+              "type": "choice",
+              "text": "Why does an electrostatic sprayer give an even thickness of coat?",
+              "options": [
+                "Paint is thicker when charged",
+                "Once a patch is coated it carries the droplets' charge and repels further droplets towards bare patches",
+                "The air blows it evenly",
+                "The car is spinning"
+              ],
+              "correct": 1,
+              "explain": "Self-levelling by repulsion."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Give each advantage of an electrostatic sprayer with its reason",
+        "Explain which charge is where: the droplets, the nozzle, the target",
+        "Explain why the target is earthed"
+      ],
+      "blurb": "The sprayer question is marked advantage-plus-reason. Students lose marks by giving the advantage ('even coat') without the physics ('the droplets repel each other'), or by saying the paint is attracted without saying what it is attracted to and why.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "field-diagrams",
+      "band": "tricky",
+      "title": "Drawing and reading electric field diagrams",
+      "spec": "11.10P",
+      "equations": [
+        "\\text{arrows + to −; evenly spaced; never cross; closer = stronger}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The rules for drawing, and the errors that lose marks",
+          "html": "<table class='tbl'><tr><th>Rule</th><th>Why</th><th>The error</th></tr><tr><td>arrows <b>from + to −</b> (away from a positive charge, towards a negative one)</td><td>a line shows the direction of the force on a <b>positive</b> charge</td><td>arrows the wrong way — the 2025 scheme (Q4(a)) gave 1 of 2 marks for correct lines with reversed arrows; no arrows at all scores the same</td></tr><tr><td>lines <b>never cross</b> or touch</td><td>at any point the force has one direction</td><td>crossing lines near a charge</td></tr><tr><td>a point charge: lines <b>radial</b>, <b>evenly spaced</b> round it, starting (or ending) on the charge</td><td>the field is the same in every direction at the same distance</td><td>lines that curve, or stop in empty space</td></tr><tr><td>parallel plates: lines <b>straight, parallel, equally spaced</b>, at right angles to the plates, from the + plate to the − plate</td><td>the field is <b>uniform</b></td><td>lines fanning out, unequal gaps, lines not reaching the plates</td></tr><tr><td>spacing shows <b>strength</b></td><td>closer lines = stronger field</td><td>drawing a point charge's lines evenly spaced all the way out (they must spread)</td></tr></table><p><b>Reading a diagram:</b> the direction of the force on a positive charge is <b>along the arrow</b>; on a negative charge it is <b>against the arrow</b>. The field is strongest where the lines are <b>closest</b> — next to a point charge, or between the plates rather than at their edges. Two like charges side by side: the lines curve away from each other and there is one point midway between them where the field is zero; a positive and a negative: the lines run from one to the other.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Mark the drawing",
+          "question": "A student draws the field between two parallel plates (+ on the left, − on the right) as five straight lines from left to right, bunched towards the middle, with arrows pointing left. Mark the drawing out of 2 and say what would gain full marks.",
+          "steps": [
+            "<b>Shape:</b> straight, parallel lines from plate to plate — correct in kind, but they must be <b>equally spaced</b> (a uniform field), not bunched. Bunching says the field is stronger in the middle, which it is not.",
+            "<b>Direction:</b> the arrows should point from the <b>+ plate to the − plate</b>, i.e. left to right here. Pointing left loses the direction mark.",
+            "<b>Verdict: 1 of 2.</b> The lines are straight and reach both plates, so the line mark scores; the arrows are reversed, so the direction mark is lost. Bunched lines would cost the line mark with a strict examiner — for 2: four or five equally spaced straight lines, arrows left → right."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Field diagrams",
+          "questions": [
+            {
+              "id": "se-t6-q1",
+              "type": "written",
+              "text": "Describe how to draw the electric field around a single negative point charge. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Shape</td><td>Straight <b>radial</b> lines ending on the charge, <b>evenly spaced</b> around it.</td></tr><tr><td><b>2</b></td><td>Direction</td><td>Arrows pointing <b>inwards, towards</b> the charge (the direction of the force on a positive charge).</td></tr><tr><td><b>3</b></td><td>Spacing</td><td>The lines get <b>further apart</b> away from the charge, showing the field weakening with distance; no lines cross.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-t6-q2",
+              "type": "choice",
+              "text": "Where is the electric field strongest in a diagram?",
+              "options": [
+                "Where the lines are furthest apart",
+                "Where the lines are closest together",
+                "Where there are no lines",
+                "At the arrowheads"
+              ],
+              "correct": 1,
+              "explain": "Spacing shows strength."
+            },
+            {
+              "id": "se-t6-q3",
+              "type": "choice",
+              "text": "A diagram shows the field between parallel plates with arrows pointing from the lower plate to the upper plate. Which plate is positive?",
+              "options": [
+                "The upper plate",
+                "The lower plate",
+                "Neither",
+                "Both"
+              ],
+              "correct": 1,
+              "explain": "Arrows leave the positive plate."
+            },
+            {
+              "id": "se-t6-q4",
+              "type": "written",
+              "text": "A negative charge is placed in a uniform field whose lines point to the right. State the direction of the force on it and explain. (2)",
+              "model": "<ul><li>To the <b>left</b>.</li><li>Field lines show the force on a <b>positive</b> charge; a negative charge is pushed the <b>opposite way</b> to the arrows.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t6-q5",
+              "type": "written",
+              "text": "Give two features of a drawing of the field between parallel plates that show the field is uniform. (2)",
+              "model": "<ul><li>The lines are <b>parallel</b> (same direction everywhere).</li><li>The lines are <b>equally spaced</b> (same strength everywhere).</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Draw the field of a positive and of a negative point charge",
+        "Draw the field between two oppositely charged parallel plates",
+        "Read direction and relative strength from a field diagram, and spot drawing errors"
+      ],
+      "blurb": "Field diagrams are drawn for marks: the right shape, arrows the right way, even spacing, and no lines crossing. Reading one is the reverse: direction from the arrows, strength from the spacing.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "fields-explain",
+      "band": "tricky",
+      "title": "Explaining static with the field idea",
+      "spec": "11.10P",
+      "equations": [
+        "\\text{a charge has a field} \\rightarrow \\text{any charge in it feels a force} \\rightarrow \\text{attraction, induction, sparks}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The same phenomena, in field language",
+          "html": "<table class='tbl'><tr><th>Phenomenon</th><th>Field explanation</th></tr><tr><td>two charged balloons push apart without touching</td><td>each balloon has an <b>electric field</b> around it; the other balloon's charge is <b>in that field</b>, so it <b>experiences a force</b> — along the field lines for a positive charge, against them for a negative one</td></tr><tr><td>a charged comb lifts paper</td><td>the comb's field reaches into the paper and <b>acts on the electrons</b> there, moving them (induction); the near side, now oppositely charged, is in the <b>stronger</b> part of the field (closer lines), so the attraction on it is larger than the repulsion on the far side</td></tr><tr><td>a spark jumps</td><td>as charge builds up, the field between the object and earth gets <b>stronger</b> (lines closer); when it is strong enough it pulls <b>electrons off air molecules</b>, the air <b>conducts</b> and electrons flow across — a spark</td></tr><tr><td>a lightning conductor's point</td><td>the field is <b>strongest at a sharp point</b> (lines bunched), so the air breaks down there first and the strike is led to the conductor rather than the building</td></tr><tr><td>the force weakens with distance</td><td>the lines of a point charge's field <b>spread out</b>, so the field — and the force on a charge in it — is weaker further away</td></tr></table><p>The shape of a field answer: (1) the charged object has a field; (2) the other charge is in the field so it feels a force; (3) the direction and strength follow from the lines. The 2024 scheme's definition marks (Q1(b)) and direction mark (Q1(c)(i)) are the same ideas: a region where a charge experiences a force; lines showing the direction of the force on a positive charge.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Field explanation of repulsion",
+          "question": "Use the idea of an electric field to explain why a negatively charged ball moves away from a negatively charged rod that is brought near it. (3 marks)",
+          "steps": [
+            "The rod has an <b>electric field</b> around it — a region in which a charge experiences a force.",
+            "The ball's (negative) charge is <b>in that field</b>, so a force acts on it; the field lines point towards the negative rod, and a negative charge feels a force <b>against</b> the lines — <b>away from the rod</b>.",
+            "The force causes the ball to <b>accelerate away</b> from the rod (it is larger when the rod is closer, where the lines are closer together)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Explaining with fields",
+          "questions": [
+            {
+              "id": "se-t7-q1",
+              "type": "written",
+              "text": "Use the idea of an electric field to explain why two positively charged objects repel without touching. (2)",
+              "model": "<ul><li>Each object has an <b>electric field</b> around it.</li><li>The other object's charge is <b>in that field</b> and so <b>experiences a force</b>, directed along the lines — away from the positive charge — so they repel.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t7-q2",
+              "type": "written",
+              "text": "Explain, in terms of electric fields, how a spark occurs between a charged object and an earthed conductor. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Field</td><td>The charged object has an electric field; as more charge builds up the field between it and the conductor gets <b>stronger</b>.</td></tr><tr><td><b>2</b></td><td>Breakdown</td><td>When the field is strong enough it <b>pulls electrons off the air molecules</b>, so the air becomes a <b>conductor</b>.</td></tr><tr><td><b>3</b></td><td>Flow</td><td>Electrons then <b>flow across the gap</b> — the spark — and the object discharges.</td></tr></table>",
+              "lines": 4
+            },
+            {
+              "id": "se-t7-q3",
+              "type": "choice",
+              "text": "Why does the force between two charged objects get smaller as they are moved apart?",
+              "options": [
+                "The charges leak away",
+                "The field lines spread out with distance, so the field — and the force on a charge in it — is weaker",
+                "Fields only exist close to a charge",
+                "Air absorbs the force"
+              ],
+              "correct": 1,
+              "explain": "Line spacing = strength."
+            },
+            {
+              "id": "se-t7-q4",
+              "type": "written",
+              "text": "Explain, using a field, why the near side of a neutral object becomes oppositely charged when a charged rod approaches. (2)",
+              "model": "<ul><li>The rod's <b>field reaches into the object</b> and exerts a force on the <b>electrons</b> in it.</li><li>The electrons move (towards a positive rod, away from a negative one) until the near side carries the <b>opposite charge</b> to the rod.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "se-t7-q5",
+              "type": "choice",
+              "text": "Why does a lightning conductor have a sharp point at the top?",
+              "options": [
+                "To look tall",
+                "The field is strongest at a sharp point, so the air breaks down there first and the strike is led to the conductor",
+                "Points repel lightning",
+                "It is cheaper to make"
+              ],
+              "correct": 1,
+              "explain": "Field lines bunch at a point."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain non-contact attraction and repulsion in terms of a field",
+        "Explain induction as the field acting on the electrons in a neutral object",
+        "Explain a spark as the field becoming strong enough to make air conduct"
+      ],
+      "blurb": "The spec's last statement asks you to explain static phenomena with the idea of a field: a charged object has a field around it, a charge placed in that field experiences a force, and a field that becomes strong enough makes the air itself conduct.",
+      "tags": [
+        "P"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "q": "How does an insulator become charged by friction?",
+      "a": "Rubbing transfers electrons from one material to the other; the one that gains electrons is negative, the one that loses them is positive by the same amount.",
+      "section": "charging-friction"
+    },
+    {
+      "q": "Which particle moves when something is charged?",
+      "a": "Electrons only. Protons are fixed in the nucleus.",
+      "section": "charging-friction"
+    },
+    {
+      "q": "Why can't a metal rod held in the hand be charged by rubbing?",
+      "a": "It is a conductor: the electrons flow through the metal and the hand to earth.",
+      "section": "charging-friction"
+    },
+    {
+      "q": "Is charge created when a rod is rubbed?",
+      "a": "No — transferred. The rod's negative charge equals the cloth's positive charge.",
+      "section": "charging-friction"
+    },
+    {
+      "q": "Two marks for 'explain how the cloth becomes charged'?",
+      "a": "Electrons transferred (from the other object to the cloth) and friction as the cause (June 2023, a plastic base rubbed with a cloth: many omitted friction).",
+      "section": "charging-friction"
+    },
+    {
+      "q": "Rule for forces between charges?",
+      "a": "Like charges repel; unlike charges attract. Both objects feel an equal and opposite force.",
+      "section": "charge-forces"
+    },
+    {
+      "q": "How do you prove an object is charged with a known rod?",
+      "a": "Repulsion proves the same charge. Attraction proves nothing, because a neutral object is also attracted (induction).",
+      "section": "charge-forces"
+    },
+    {
+      "q": "What happens to the force as two charges get closer?",
+      "a": "It increases.",
+      "section": "charge-forces"
+    },
+    {
+      "q": "Why do you get a shock from a car door?",
+      "a": "Friction with the seat charges you; the door is a conductor at a different potential; as you touch it electrons flow suddenly between you and the metal — a spark.",
+      "section": "static-phenomena"
+    },
+    {
+      "q": "How does lightning happen?",
+      "a": "Friction between ice and water in the cloud separates charge; the pd between cloud and ground grows until the air conducts and a huge flow of electrons discharges it.",
+      "section": "static-phenomena"
+    },
+    {
+      "q": "Why does a charged comb pick up paper?",
+      "a": "The comb's charge moves the paper's electrons: the near side gets the opposite charge and is attracted; the far side is repelled, but more weakly because it is further away.",
+      "section": "static-phenomena"
+    },
+    {
+      "q": "Is the paper charged overall after induction?",
+      "a": "No — neutral. Its charges have been separated, not changed.",
+      "section": "static-phenomena"
+    },
+    {
+      "q": "What is earthing?",
+      "a": "Connecting a charged object to the ground with a conductor so that electrons flow to or from earth and the excess charge is removed.",
+      "section": "earthing"
+    },
+    {
+      "q": "Earthing a negative object: which way do the electrons go?",
+      "a": "Down the conductor to earth.",
+      "section": "earthing"
+    },
+    {
+      "q": "Earthing a positive object: which way do the electrons go?",
+      "a": "Up from earth into the object.",
+      "section": "earthing"
+    },
+    {
+      "q": "Why must the earth path be a conductor?",
+      "a": "Electrons cannot move through an insulator; without a conducting path the charge has nowhere to go.",
+      "section": "earthing"
+    },
+    {
+      "q": "Why do charged spray droplets spread into a fine mist?",
+      "a": "They all have the same charge, and like charges repel.",
+      "section": "static-uses"
+    },
+    {
+      "q": "Why are charged droplets attracted to the car or plant?",
+      "a": "The target is earthed (or oppositely charged); the droplets induce the opposite charge on its surface, and unlike charges attract — even round the back.",
+      "section": "static-uses"
+    },
+    {
+      "q": "Advantages of an electrostatic sprayer?",
+      "a": "Even coat (droplets repel each other), reaches all sides (attracted to the target), less wasted (drawn to the target rather than drifting), even thickness (repelled from patches already coated).",
+      "section": "static-uses"
+    },
+    {
+      "q": "Why is refuelling dangerous?",
+      "a": "Friction between fuel and hose transfers electrons; charge builds up on the insulated aircraft; a large pd forms; a spark could ignite the fuel vapour.",
+      "section": "static-dangers"
+    },
+    {
+      "q": "What does the bonding line do?",
+      "a": "A conductor joining tanker and aircraft so charge flows between them: same potential, no pd, no spark.",
+      "section": "static-dangers"
+    },
+    {
+      "q": "What does earthing do during refuelling?",
+      "a": "Lets the charge flow away to the ground as it is produced, so it cannot build up.",
+      "section": "static-dangers"
+    },
+    {
+      "q": "How does a lightning conductor work?",
+      "a": "A thick conductor from a point above the building to a plate in the ground: a low-resistance path to earth, so the current bypasses the building.",
+      "section": "static-dangers"
+    },
+    {
+      "q": "Define an electric field.",
+      "a": "A region in which an electric charge experiences a force.",
+      "section": "electric-fields"
+    },
+    {
+      "q": "Which way do field lines point?",
+      "a": "From positive to negative — the direction of the force on a positive charge.",
+      "section": "electric-fields"
+    },
+    {
+      "q": "Field of a point charge?",
+      "a": "Radial straight lines, evenly spaced round the charge, outwards for +, inwards for −; spreading out, so weaker with distance.",
+      "section": "electric-fields"
+    },
+    {
+      "q": "Field between parallel plates?",
+      "a": "Uniform: straight, parallel, equally spaced lines from the + plate to the − plate; the same strength everywhere between them.",
+      "section": "electric-fields"
+    },
+    {
+      "q": "What does the spacing of field lines show?",
+      "a": "Strength: closer lines, stronger field.",
+      "section": "electric-fields"
+    },
+    {
+      "q": "Can field lines cross?",
+      "a": "Never — the force at a point has only one direction.",
+      "section": "electric-fields"
+    },
+    {
+      "q": "The charging chain (word for word)?",
+      "a": "Friction → electrons transferred from A to B → B has gained electrons so is negative → A has lost electrons so is positive (equal amount).",
+      "section": "electron-force-chains"
+    },
+    {
+      "q": "The moving-apart chain (word for word)?",
+      "a": "Same charge → like charges repel → a force on X directed away from Y → the force causes X to accelerate away from Y.",
+      "section": "electron-force-chains"
+    },
+    {
+      "q": "Why is 'they repel so it moves away' not enough?",
+      "a": "It skips the force: name the force on the object, give its direction, and say the force causes an acceleration.",
+      "section": "electron-force-chains"
+    },
+    {
+      "q": "Two charged objects attract; one is much lighter. What is the same and what differs?",
+      "a": "The forces are equal and opposite; the lighter one has the larger acceleration (a = F/m).",
+      "section": "electron-force-chains"
+    },
+    {
+      "q": "Four steps of induction?",
+      "a": "Neutral object, equal charges → the rod's field moves its electrons → near side opposite, far side same, still neutral overall → attraction on the nearer side wins.",
+      "section": "induction-explain"
+    },
+    {
+      "q": "What must an induction diagram show?",
+      "a": "Both the induced charge on the near side AND the equal opposite charge on the far side.",
+      "section": "induction-explain"
+    },
+    {
+      "q": "Why is a neutral object never repelled?",
+      "a": "Induction always puts the opposite charge on the near side, and the nearer force is the larger.",
+      "section": "induction-explain"
+    },
+    {
+      "q": "The spark chain?",
+      "a": "Charge builds up (object insulated) → pd grows → field strong enough for the air to conduct → electrons flow across the gap.",
+      "section": "sparks"
+    },
+    {
+      "q": "Why is static worse on dry days?",
+      "a": "Moist air lets charge leak away; dry air is a better insulator so charge accumulates.",
+      "section": "sparks"
+    },
+    {
+      "q": "Why touch a railing with a key first?",
+      "a": "The spark jumps between the key and the railing, not from your fingertip.",
+      "section": "sparks"
+    },
+    {
+      "q": "The fuelling 6-marker: the danger half?",
+      "a": "Friction transfers electrons → charge builds up on the insulated aircraft → large pd → spark → ignites fuel vapour → fire/explosion.",
+      "section": "fuelling-question"
+    },
+    {
+      "q": "The fuelling 6-marker: the precaution half?",
+      "a": "Bonding cable (conductor): same potential, no pd, no spark. Earthing: charge flows to the ground, cannot build up. (Pump slowly: less charge per second.)",
+      "section": "fuelling-question"
+    },
+    {
+      "q": "What is wrong with 'it is earthed so it is safe'?",
+      "a": "It gives the precaution without what it does: the charge flows away to earth and cannot build up to a pd that sparks.",
+      "section": "fuelling-question"
+    },
+    {
+      "q": "Sprayer: advantage + reason, pair 1?",
+      "a": "Fine even mist — the droplets all have the same charge and repel each other.",
+      "section": "sprayers-explain"
+    },
+    {
+      "q": "Sprayer: advantage + reason, pair 2?",
+      "a": "Reaches all sides and less is wasted — the droplets are attracted to the earthed target, which has an induced opposite charge.",
+      "section": "sprayers-explain"
+    },
+    {
+      "q": "Why is the target earthed?",
+      "a": "So it is at 0 V and the charged mist induces the opposite charge on its surface; electrons flow to or from earth to supply it.",
+      "section": "sprayers-explain"
+    },
+    {
+      "q": "Rules for drawing a field diagram?",
+      "a": "Arrows from + to −; lines never cross; point charge: radial and evenly spaced; plates: straight, parallel, equally spaced; closer lines = stronger.",
+      "section": "field-diagrams"
+    },
+    {
+      "q": "What did the 2025 scheme give for plate field lines with the arrows reversed?",
+      "a": "1 of 2 marks: lines right, direction wrong.",
+      "section": "field-diagrams"
+    },
+    {
+      "q": "Force on a negative charge in a field?",
+      "a": "Against the arrows (the lines show the force on a positive charge).",
+      "section": "field-diagrams"
+    },
+    {
+      "q": "Field explanation of repulsion?",
+      "a": "The rod has a field; the ball's charge is in it and experiences a force (away, for like charges); the force makes the ball accelerate away.",
+      "section": "fields-explain"
+    },
+    {
+      "q": "Field explanation of a spark?",
+      "a": "As charge builds, the field gets stronger until it pulls electrons off air molecules; the air conducts and electrons flow across the gap.",
+      "section": "fields-explain"
+    },
+    {
+      "q": "Why is the field strongest at a sharp point?",
+      "a": "The field lines bunch together at a point, so the air breaks down there first — the lightning conductor's tip.",
+      "section": "fields-explain"
+    },
+    {
+      "q": "State what is meant by: static electricity.",
+      "a": "Charge that <b>stays on an insulator</b> (or an insulated conductor) rather than flowing.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: charging by friction.",
+      "a": "Rubbing two <b>insulators</b> together <b>transfers electrons</b> from one to the other; one is left negative, the other equally positive.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: negatively charged.",
+      "a": "Has <b>gained electrons</b> (more electrons than protons).",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: positively charged.",
+      "a": "Has <b>lost electrons</b> (fewer electrons than protons).",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: induction.",
+      "a": "A charged object <b>moves the electrons</b> within a nearby neutral object, so the <b>near side gets the opposite charge</b> and is attracted.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: earthing.",
+      "a": "Connecting a charged object to the ground with a <b>conductor</b> so <b>electrons flow</b> to or from earth and the excess charge is removed.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: discharge.",
+      "a": "The <b>removal</b> of excess charge — by earthing or by a spark.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: spark.",
+      "a": "A sudden <b>flow of electrons through the air</b> when the pd across a gap is large enough for the air to conduct.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: bonding (bonding line).",
+      "a": "A <b>conductor connecting</b> two objects so that they stay at the <b>same potential</b> and no spark can jump between them.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: electric field.",
+      "a": "A <b>region</b> in which an <b>electric charge experiences a force</b>.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: field line.",
+      "a": "A line showing the <b>direction of the force on a positive charge</b>; from + to −; closer lines mean a stronger field; lines never cross.",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: uniform field.",
+      "a": "A field with the <b>same strength and direction everywhere</b>: parallel, equally spaced lines (between parallel plates).",
+      "section": "keywords-static"
+    },
+    {
+      "q": "State what is meant by: radial field.",
+      "a": "The field of a <b>point charge</b>: lines straight out from (or in to) the charge, weakening with distance.",
+      "section": "keywords-static"
+    }
+  ],
   "types": []
 }

@@ -824,11 +824,16 @@
       }
       html += "<h3>" + escapeHtml(topic.title) + "</h3>";
       html += "<p class=\"sub\">" + escapeHtml(topic.subtitle) + "</p>";
-      let statsText = "";
+      // "15 sections · 7 calculations"; a topic with no calculations (an
+      // explain topic such as static electricity) shows its sections alone
+      const parts = [];
       if (sectionCount > 0) {
-        statsText += sectionCount + " section" + (sectionCount === 1 ? "" : "s") + " · ";
+        parts.push(sectionCount + " section" + (sectionCount === 1 ? "" : "s"));
       }
-      statsText += types.length + " calculation" + (types.length === 1 ? "" : "s");
+      if (types.length > 0 || sectionCount === 0) {
+        parts.push(types.length + " calculation" + (types.length === 1 ? "" : "s"));
+      }
+      let statsText = parts.join(" · ");
       if (sectionCount === 0 && types.length === 0 && topic.placeholder) {
         statsText = "notes on the way";
       }

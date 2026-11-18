@@ -28,7 +28,7 @@ beyond two steps, no extended "explain" parts, no data analysis.
   kinematics, forces, momentum-energy, materials, waves, quantum, electricity,
   circular-shm, thermal-gases, gravitational-fields, electric-fields-capacitors,
   magnetic-fields-induction, magnetism, nuclear-particles, astrophysics, and the
-  GCSE variants circuit, particle-model, half-life and motion-graph.
+  GCSE variants circuit, static-field, particle-model, half-life and motion-graph.
 
 ## Calculation type
 
