@@ -348,6 +348,11 @@ figure.diagram {
   color: var(--line);
 }
 
+figure.diagram {
+  /* The diagram modules paint with var(--ink); the app's ink colour is --line. */
+  --ink: var(--line);
+}
+
 figure.diagram svg {
   display: block;
   width: 100%;
