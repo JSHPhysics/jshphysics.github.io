@@ -65,6 +65,20 @@ async function expandAll(page) {
   await page.waitForTimeout(600);
 }
 
+async function readFeedback(block) {
+  // the feedback renders a moment after the click; wait for it rather than
+  // reading an empty string and calling the answer wrong
+  const feedback = block.locator("[data-feedback]");
+  for (let attempt = 0; attempt < 60; attempt += 1) {
+    const text = ((await feedback.textContent()) || "").trim();
+    if (text) {
+      return text;
+    }
+    await block.page().waitForTimeout(50);
+  }
+  return "";
+}
+
 async function answerChecks(page, label) {
   // numeric: section questions and type practice questions alike
   const ids = await page.evaluate(function () {
@@ -82,7 +96,12 @@ async function answerChecks(page, label) {
     const block = page.locator('[data-qid="' + id + '"]');
     await block.locator("input").first().fill(String(question.answer.value));
     await block.locator("[data-check]").click();
-    const feedback = (await block.locator("[data-feedback]").textContent()).trim();
+    let feedback = await readFeedback(block);
+    if (!feedback) {
+      // very occasionally the click lands while the page is still laying out; try once more
+      await block.locator("[data-check]").click();
+      feedback = await readFeedback(block);
+    }
     if (feedback === "Correct") {
       ok += 1;
     } else {
@@ -103,7 +122,7 @@ async function answerChecks(page, label) {
     const question = await page.evaluate(function (i) { return window.nn.findQuestion(i); }, id);
     const block = page.locator('[data-qid="' + id + '"]');
     await block.locator("[data-choice]").nth(question.correct).click();
-    const feedback = (await block.locator("[data-feedback]").textContent()).trim();
+    const feedback = await readFeedback(block);
     if (feedback === "Correct") {
       choiceOk += 1;
     } else {
@@ -192,7 +211,8 @@ async function answerChecks(page, label) {
     document.querySelectorAll("body *").forEach(function (e) {
       // the topic pills, equation strips and display maths scroll inside their own boxes
       // (.katex-mathml is the hidden MathML copy KaTeX keeps for screen readers)
-      if (e.closest(".pills, .topic-pills, .formulas, .katex-display, table.tbl, .katex-mathml")) { return; }
+      // (.katex inline maths scrolls in its own box under 640 px; svg contents are clipped by the svg)
+      if (e.closest(".pills, .topic-pills, .formulas, .katex-display, table.tbl, .katex-mathml, .katex, svg")) { return; }
       const r = e.getBoundingClientRect();
       if (r.right > width + 2 && r.width > 0) {
         bad.push(e.tagName + "." + e.className.toString().slice(0, 40));
@@ -207,6 +227,7 @@ async function answerChecks(page, label) {
   console.log("phone " + JSON.stringify(over));
   if (over.scrollW > over.width) { fail("page scrolls sideways at 390 px"); }
   if (over.widestCard > over.width) { fail("a card is wider than the phone screen (" + over.widestCard + " px) — content is being clipped"); }
+  if (over.bad.length) { fail("content sticks out of the phone screen: " + JSON.stringify(over.bad)); }
   if (phoneErrors.length) { fail("phone page errors: " + JSON.stringify(phoneErrors)); }
   await phone.close();
 

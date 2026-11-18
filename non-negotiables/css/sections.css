@@ -208,6 +208,28 @@ details.howto .lede {
   .skill-head .lessons {
     white-space: normal;
   }
+
+  /* The single-column grids inside a card must not take their width from
+     their widest child (a long run of inline maths), or the whole card
+     grows past the screen and is clipped: size the column to the card. */
+  .skill-content,
+  .skill-content > section,
+  .skill-content .prose,
+  .skill-content details.errors > ul,
+  .skill-content .question,
+  .skill-content ol.steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* a long run of inline maths cannot wrap; let it scroll inside its own box
+     instead of widening the card and being clipped */
+  .skill-content .katex {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    vertical-align: middle;
+  }
 }
 
 .prose {
