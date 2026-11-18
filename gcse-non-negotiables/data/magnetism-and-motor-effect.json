@@ -5,6 +5,2185 @@
   "spec": "Topic 12",
   "order": 120,
   "figure": "magnetism",
+  "lede": "Everything in Topic 12, split into two bands. <b>The non-negotiables</b> are poles and the test for a magnet, permanent and induced magnets, field lines, compasses and the Earth, the field around a wire and a solenoid, the motor effect, Fleming's left-hand rule and $F = BIl$. <b>The tricky bits</b> are the chains the marks are on: fields interact → force → accelerates, the magnet test with its expected result, drawing and marking field diagrams, the Earth's field, the left-hand rule on diagrams, $F = BIl$ the hard way, the d.c. motor and the electromagnet investigation. The motor effect (12.10 onwards) is <b>Higher only</b>, badged <b>H</b>; the motor itself (12.14P) is also Physics only, badged <b>P</b>.",
+  "howto": [
+    "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
+    "Say every explanation out loud as a chain — current, field around the wire, interacts with the permanent field, resultant force, accelerates, left-hand rule — before you read the one on the page.",
+    "Read each explanation, then cover it and say it back. For a definition, the bold words are the ones the mark is for.",
+    "Do the practice questions <b>before</b> opening the hint or walkthrough. Calculations in EWAU layout on paper first, then type the answer to check it; write the explanation chains out in full before opening the model answer — the marks are on the links, not the conclusion.",
+    "For \"explain\" and \"describe how\" questions, write your answer in full sentences, then compare it with the model answer line by line.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "Poles, permanent and induced magnets, field lines, compasses and the Earth, the wire and the solenoid, then the Higher-only motor effect, Fleming's left-hand rule and $F = BIl$. If any of these is not yet green, it comes before anything in the second band."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "The explanations marked on particular words: fields interact → force → accelerates, the magnet test, field diagrams, the Earth, the left-hand rule on diagrams, $F = BIl$ with a twist, the motor and its commutator, the electromagnet investigation. Each one is built on something from the first band."
+    }
+  ],
+  "factsBlurb": "Topic 12 on flip cards: the poles rule and the magnet test, the field shapes and their marks, the Earth, the wire and solenoid rules, the five-step and six-step motor-effect chains, Fleming's rule and the $F = BIl$ traps. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "poles",
+      "band": "nn",
+      "title": "Poles: like repel, unlike attract — and repulsion is the only test",
+      "spec": "12.1",
+      "equations": [
+        "\\text{N–N or S–S: repel}",
+        "\\text{N–S: attract}",
+        "\\text{magnet–iron: attract either way}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The rule and the test",
+          "html": "<p>Every magnet has a <b>north-seeking (N) pole</b> and a <b>south-seeking (S) pole</b>; you cannot have one without the other. <b>Like poles repel</b> (N–N, S–S); <b>unlike poles attract</b> (N–S). Magnets also attract <b>magnetic materials</b> — iron, steel, cobalt, nickel — and they attract them <b>whichever pole</b> is nearer, because the magnet induces the opposite pole in the material (N2).</p><p>So <b>attraction is not a test</b>: a magnet and a piece of unmagnetised iron attract, and so do two magnets with unlike poles facing. <b>Repulsion is</b>: only two magnets can repel. The June 2025 report (Q7(b)(iv), nails that may or may not be permanently magnetised): one mark for a <b>suitable test</b>, one for a <b>clear statement of the expected result</b>. \"Try to pick up a paper clip\" scored 1 of 2 — it did not say what the result would mean. The full-mark answer brought one end of a nail up to one end of another, then <b>turned one nail round</b>: if they are not magnets there is <b>attraction in both orientations</b> (or none at all), and never repulsion; if they are magnets, one orientation <b>repels</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Is the nail a magnet?",
+          "question": "A student thinks an iron nail has become a permanent magnet. Describe how she could test this, and state the result she would expect if she is right. (2 marks)",
+          "steps": [
+            "Bring one end of the nail close to one pole of a <b>known magnet</b> (or a compass needle), then <b>reverse the nail</b> and bring the other end to the same pole.",
+            "If the nail is a magnet, one end is <b>attracted</b> and the other is <b>repelled</b>. If it is not, <b>both ends are attracted</b> — attraction alone proves nothing, because the magnet would attract any iron."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Poles",
+          "questions": [
+            {
+              "id": "mg-n1-q1",
+              "type": "choice",
+              "text": "Two bar magnets are placed end to end and they push apart. Which is true?",
+              "options": [
+                "N is facing S",
+                "Like poles are facing each other",
+                "One of them is not a magnet",
+                "They are both unmagnetised iron"
+              ],
+              "correct": 1,
+              "explain": "Only like poles repel, and only magnets can repel."
+            },
+            {
+              "id": "mg-n1-q2",
+              "type": "written",
+              "text": "A steel bar is attracted to the N pole of a magnet. Explain why this does not show that the bar is a magnet. (2)",
+              "model": "<ul><li>A magnet attracts any <b>magnetic material</b> (steel), because it <b>induces</b> the opposite pole in it — so an unmagnetised bar would also be attracted.</li><li>Only <b>repulsion</b> shows the bar is a magnet, because only two magnets (like poles) can repel.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-n1-q3",
+              "type": "choice",
+              "text": "Which observation proves that an object is a permanent magnet?",
+              "options": [
+                "It is attracted to a magnet",
+                "It picks up a paper clip",
+                "It is repelled by one pole of a magnet",
+                "It is heavier than a non-magnet"
+              ],
+              "correct": 2,
+              "explain": "Repulsion is the only test."
+            },
+            {
+              "id": "mg-n1-q4",
+              "type": "written",
+              "text": "Describe a test to show that a bar is not a permanent magnet, and state the expected result. (2)",
+              "model": "<ul><li>Bring each end of the bar in turn to the <b>same pole</b> of a magnet (or a compass needle) — i.e. test both orientations.</li><li>Expected result if it is not a magnet: <b>attraction in both orientations</b> (no repulsion either way).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-n1-q5",
+              "type": "choice",
+              "text": "Which of these is NOT a magnetic material?",
+              "options": [
+                "Iron",
+                "Nickel",
+                "Copper",
+                "Cobalt"
+              ],
+              "correct": 2,
+              "explain": "Iron, steel, cobalt and nickel are magnetic; copper, aluminium and brass are not."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State that like poles repel and unlike poles attract",
+        "Explain why repulsion is the only test for a magnet",
+        "Describe a test to show whether an object is a permanent magnet, with the expected result"
+      ],
+      "blurb": "Unlike poles attract and like poles repel. A magnet attracts a piece of iron whichever way round it is, so attraction proves nothing — only repulsion shows that an object is itself a magnet."
+    },
+    {
+      "id": "permanent-induced",
+      "band": "nn",
+      "title": "Permanent and induced magnets, and what each is used for",
+      "spec": "12.2, 12.3",
+      "equations": [
+        "\\text{permanent: its own field, always}",
+        "\\text{induced: a magnet only while in a field}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Permanent versus induced",
+          "html": "<p>A <b>permanent magnet</b> produces its <b>own magnetic field</b> and keeps it. An <b>induced magnet</b> is a magnetic material that <b>becomes a magnet when it is placed in a magnetic field</b>: the pole nearest the permanent magnet is the <b>opposite</b> pole, so induced magnetism always causes <b>attraction</b>. Take the field away and an induced magnet <b>loses most or all</b> of its magnetism — that is why it is also called a <b>temporary</b> magnet.</p><table class='tbl'><tr><th>Material</th><th>Behaviour</th><th>Used for</th></tr><tr><td><b>Steel</b> (and alloys with cobalt or nickel)</td><td><b>hard</b> magnetic material: hard to magnetise, but <b>keeps</b> its magnetism</td><td><b>permanent magnets</b>: compass needles, fridge magnets, the magnets in motors, loudspeakers and generators</td></tr><tr><td><b>Iron</b> (soft iron)</td><td><b>soft</b> magnetic material: easy to magnetise, <b>loses</b> its magnetism as soon as the field is removed</td><td><b>temporary magnets</b>: the core of an electromagnet, transformer cores, relays and electric bells — anything that must switch off</td></tr><tr><td>Cobalt, nickel</td><td>magnetic materials; used mainly in alloys for strong permanent magnets</td><td>permanent magnets in headphones, small motors</td></tr></table><p>The exam phrasing: \"<b>explain why a steel core would not be suitable</b> for an electromagnet\" — because steel <b>keeps its magnetism</b> when the current is switched off, so the electromagnet could not be switched off; iron loses its magnetism, so it can.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 2-mark difference",
+          "question": "Explain the difference between a permanent magnet and an induced magnet. (2 marks)",
+          "steps": [
+            "A <b>permanent magnet</b> produces its <b>own magnetic field</b> all the time (it does not need another field to be a magnet).",
+            "An <b>induced magnet</b> only becomes a magnet <b>while it is in a magnetic field</b> (of a permanent magnet or an electromagnet), and <b>loses its magnetism</b> when that field is removed."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Permanent and induced magnets",
+          "questions": [
+            {
+              "id": "mg-n2-q1",
+              "type": "written",
+              "text": "An iron nail is held close to a bar magnet and picks up some paper clips. When the magnet is taken away the clips fall off. Explain these observations. (3)",
+              "model": "<ul><li>In the magnet's field the nail becomes an <b>induced magnet</b>…</li><li>…so it has poles of its own and <b>attracts</b> the clips (which are themselves induced magnets).</li><li>Iron is a <b>soft</b> magnetic material, so when the field is removed the nail <b>loses its magnetism</b> and no longer attracts the clips.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-n2-q2",
+              "type": "choice",
+              "text": "Why is iron, not steel, used for the core of an electromagnet?",
+              "options": [
+                "Iron is a stronger magnet",
+                "Iron loses its magnetism when the current is switched off, so the electromagnet can be switched off",
+                "Steel is not magnetic",
+                "Iron is cheaper"
+              ],
+              "correct": 1,
+              "explain": "Steel would stay magnetised: the electromagnet could not be switched off."
+            },
+            {
+              "id": "mg-n2-q3",
+              "type": "choice",
+              "text": "Which pole is induced in the end of an iron bar nearest the N pole of a magnet?",
+              "options": [
+                "N",
+                "S",
+                "Both",
+                "Neither — iron has no poles"
+              ],
+              "correct": 1,
+              "explain": "The opposite pole is induced, which is why induced magnetism always attracts."
+            },
+            {
+              "id": "mg-n2-q4",
+              "type": "written",
+              "text": "Give one use of a permanent magnet and one use of a temporary magnet. (2)",
+              "model": "<ul><li>Permanent: e.g. a <b>compass needle</b>, the magnets in a <b>motor</b>, <b>loudspeaker</b> or generator, a fridge magnet.</li><li>Temporary: the <b>core of an electromagnet</b> (scrapyard crane, electric bell, relay, circuit breaker), a transformer core.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n2-q5",
+              "type": "choice",
+              "text": "A magnetic material that is easy to magnetise and easy to demagnetise is described as…",
+              "options": [
+                "hard",
+                "soft",
+                "permanent",
+                "induced-proof"
+              ],
+              "correct": 1,
+              "explain": "Soft iron: easy both ways. Steel is 'hard': difficult to magnetise and keeps it."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain the difference between a permanent and an induced magnet",
+        "Name the four magnetic materials and say which make permanent and which temporary magnets",
+        "Give a use of each kind of material"
+      ],
+      "blurb": "A permanent magnet produces its own magnetic field all the time. An induced (temporary) magnet becomes a magnet only when it is in another magnetic field, and loses most of its magnetism when the field is removed. Steel keeps its magnetism; iron does not."
+    },
+    {
+      "id": "field-lines",
+      "band": "nn",
+      "title": "Magnetic field lines: N to S, never crossing, closer means stronger",
+      "spec": "12.4",
+      "equations": [
+        "\\text{direction: N} \\rightarrow \\text{S outside the magnet}",
+        "\\text{closer lines} = \\text{stronger field}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Reading and drawing field lines",
+          "html": "<figure class='diagram'><svg viewBox='0 0 720 270' role='img'><text x='200.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>a bar magnet</text><path d='M 282 127 C 328 79 74 79 118 127' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='200.0,91.0 206.1,87.6 206.1,94.4' style='fill:var(--ink-2)'/><path d='M 282 133 C 328 181 74 181 118 133' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='200.0,169.0 206.1,165.6 206.1,172.4' style='fill:var(--ink-2)'/><path d='M 282 127 C 380 40 22 40 118 127' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='200.0,61.8 206.1,58.4 206.1,65.1' style='fill:var(--ink-2)'/><path d='M 282 133 C 380 220 22 220 118 133' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='200.0,198.2 206.1,194.9 206.1,201.6' style='fill:var(--ink-2)'/><path d='M 282 127 C 440 -5 -38 -5 118 127' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='200.0,28.0 206.1,24.6 206.1,31.4' style='fill:var(--ink-2)'/><path d='M 282 133 C 440 265 -38 265 118 133' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='200.0,232.0 206.1,228.6 206.1,235.4' style='fill:var(--ink-2)'/><line x1='282.0' y1='130.0' x2='350.0' y2='130.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='350.0,130.0 343.9,133.4 343.9,126.6' style='fill:var(--ink-2)'/><line x1='50.0' y1='130.0' x2='118.0' y2='130.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='118.0,130.0 111.9,133.4 111.9,126.6' style='fill:var(--ink-2)'/><rect x='120' y='115' width='80.0' height='30' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='200.0' y='115' width='80.0' height='30' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='160.0' y='135.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><text x='240.0' y='135.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><text x='200.0' y='258.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>lines leave N, enter S, never cross; closest at the poles</text><text x='560.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>a uniform field between two poles</text><rect x='420' y='70' width='35.0' height='120' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='455.0' y='70' width='35.0' height='120' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='455.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>N</text><rect x='630' y='70' width='35.0' height='120' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='665.0' y='70' width='35.0' height='120' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='665.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>S</text><line x1='492.0' y1='86.0' x2='628.0' y2='86.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='566.0,86.0 559.9,89.4 559.9,82.6' style='fill:var(--ink-2)'/><line x1='492.0' y1='108.0' x2='628.0' y2='108.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='566.0,108.0 559.9,111.4 559.9,104.6' style='fill:var(--ink-2)'/><line x1='492.0' y1='130.0' x2='628.0' y2='130.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='566.0,130.0 559.9,133.4 559.9,126.6' style='fill:var(--ink-2)'/><line x1='492.0' y1='152.0' x2='628.0' y2='152.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='566.0,152.0 559.9,155.4 559.9,148.6' style='fill:var(--ink-2)'/><line x1='492.0' y1='174.0' x2='628.0' y2='174.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='566.0,174.0 559.9,177.4 559.9,170.6' style='fill:var(--ink-2)'/><text x='560.0' y='215.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>parallel, equally spaced, N → S:</text><text x='560.0' y='231.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>same strength and direction everywhere</text></svg><figcaption>The field of a bar magnet, and the uniform field between an N and an S pole.</figcaption></figure><p>A <b>magnetic field</b> is the region around a magnet in which a <b>magnetic material</b> (or another magnet, or a current) <b>experiences a force</b>. The field is drawn as <b>field lines</b> with arrows showing the direction of the force on a <b>N pole</b> placed there: lines <b>leave the N pole</b>, curve round and <b>enter the S pole</b>. The <b>strength</b> of the field is shown by how close the lines are: they are <b>closest at the poles</b>, where the field is strongest, and further apart as you move away.</p><p>Between two <b>unlike poles facing each other</b> the lines are <b>straight, parallel and equally spaced</b> from N to S: a <b>uniform field</b>, the same strength and direction everywhere — the field a wire sits in for the motor effect (the motor-effect section, Higher).</p><p>The June 2023 report (Q5(a), two magnets): lines drawn <b>overlapping or crossing</b>, or several from the same point on a pole, scored 1 of 2 — \"the lines never touch each other and never overlap or cross\". Both marks: arrows <b>away from N</b>, lines <b>clean and separate</b>, more of them near the poles.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Marking a field diagram",
+          "question": "A student draws the field around a bar magnet. Her lines leave the N pole, curve round to the S pole, do not cross, and carry arrows — but the arrows point into the N pole. How many of the 2 marks does she get? (2 marks)",
+          "steps": [
+            "<b>Shape</b>: lines from pole to pole, separate, not crossing — the shape mark is earned.",
+            "<b>Direction</b>: the arrows must point <b>out of N and into S</b>; hers point the wrong way, so the direction mark is lost. <b>1 of 2.</b>"
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Field lines",
+          "questions": [
+            {
+              "id": "mg-n3-q1",
+              "type": "choice",
+              "text": "Field lines around a bar magnet point…",
+              "options": [
+                "from S to N outside the magnet",
+                "from N to S outside the magnet",
+                "towards the middle of the magnet",
+                "in no particular direction"
+              ],
+              "correct": 1,
+              "explain": "Out of N, into S (outside the magnet)."
+            },
+            {
+              "id": "mg-n3-q2",
+              "type": "written",
+              "text": "State two things the field-line diagram of a magnet tells you, and how. (2)",
+              "model": "<ul><li>The <b>direction</b> of the field: the arrows (the direction a N pole would be pushed, N → S).</li><li>The <b>strength</b> of the field: how <b>close together</b> the lines are — closer means stronger.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n3-q3",
+              "type": "choice",
+              "text": "Where is the field of a bar magnet strongest?",
+              "options": [
+                "In the middle of the magnet's side",
+                "At the poles, where the lines are closest",
+                "Far from the magnet",
+                "Between the two poles on the outside"
+              ],
+              "correct": 1,
+              "explain": "Lines are closest at the poles."
+            },
+            {
+              "id": "mg-n3-q4",
+              "type": "written",
+              "text": "Describe the magnetic field between the N pole of one magnet and the S pole of another, placed facing each other a few centimetres apart. (2)",
+              "model": "<ul><li>A <b>uniform</b> field: the lines are <b>straight, parallel and equally spaced</b>…</li><li>…pointing <b>from the N pole to the S pole</b>; the strength and direction are the same everywhere between them.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n3-q5",
+              "type": "choice",
+              "text": "A student's field diagram has two lines that cross. Why is this wrong?",
+              "options": [
+                "Field lines must be straight",
+                "At a crossing point the field would have two directions at once, which is impossible",
+                "There should only be one line",
+                "Crossing lines mean the magnet is broken"
+              ],
+              "correct": 1,
+              "explain": "One direction per point: lines never cross or touch."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Draw the field around a bar magnet with arrows from N to S",
+        "Draw the uniform field between two facing unlike poles",
+        "Relate the strength of the field to how close the lines are"
+      ],
+      "blurb": "A magnetic field is the region around a magnet where a magnetic material or another magnet experiences a force. Field lines show its direction (the way a free N pole would move: from N to S outside the magnet) and its strength (the closer the lines, the stronger the field). Between two facing unlike poles the field is uniform: parallel, equally spaced lines."
+    },
+    {
+      "id": "compass-earth",
+      "band": "nn",
+      "title": "Plotting compasses and the Earth's magnetic field",
+      "spec": "12.5, 12.6",
+      "equations": [
+        "\\text{compass N pole} \\rightarrow \\text{points along the field}",
+        "\\text{geographic north} = \\text{a magnetic S pole}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The compass and the Earth",
+          "html": "<figure class='diagram'><svg viewBox='0 0 720 280' role='img'><circle cx='190' cy='140' r='95' style='fill:var(--accent);opacity:0.12;stroke:var(--ink-2);stroke-width:1.6'/><g transform='rotate(-11 190 140)'><rect x='179' y='85' width='22' height='55' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='179' y='140' width='22' height='55' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='190.0' y='110.0' text-anchor='middle' style='fill:var(--ink);font-size:13px;font-weight:bold;'>S</text><text x='190.0' y='176.0' text-anchor='middle' style='fill:var(--ink);font-size:13px;font-weight:bold;'>N</text><path d='M 198 197 C 305 250 305 30 198 83' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='282.0,140.0 285.4,146.1 278.6,146.1' style='fill:var(--ink-2)'/><path d='M 182 197 C 75 250 75 30 182 83' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='98.0,140.0 101.4,146.1 94.6,146.1' style='fill:var(--ink-2)'/><path d='M 198 197 C 350 280 350 0 198 83' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='315.0,140.0 318.4,146.1 311.6,146.1' style='fill:var(--ink-2)'/><path d='M 182 197 C 30 280 30 0 182 83' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='65.0,140.0 68.4,146.1 61.6,146.1' style='fill:var(--ink-2)'/></g><text x='190.0' y='22.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>geographic north: a magnetic S pole</text><text x='190.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>geographic south: a magnetic N pole</text><circle cx='430' cy='140' r='46' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='430,102 423,140 437,140' style='fill:var(--accent)'/><polygon points='430,178 423,140 437,140' style='fill:var(--ink-2);opacity:0.5'/><text x='430.0' y='86.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:bold;'>N</text><text x='430.0' y='206.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:bold;'>S</text><text x='490.0' y='120.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>the compass needle is a</text><text x='490.0' y='135.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>small magnet: its N pole</text><text x='490.0' y='150.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>is pulled towards the</text><text x='490.0' y='165.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>Earth's magnetic S pole,</text><text x='490.0' y='180.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>which is near geographic north</text></svg><figcaption>The Earth's field is like that of a bar magnet inside it, with its S pole near geographic north. A compass needle's N pole is attracted towards it.</figcaption></figure><p><b>Plotting a field</b>: put the magnet on paper, place a plotting compass near one pole and mark a dot at each end of the needle; move the compass so its tail sits on the dot its head made; repeat until you reach the other pole, then join the dots and add an arrow in the direction the <b>N end</b> pointed. Repeat from other starting points for more lines. The compass needle is itself a <b>small magnet</b>, so its N pole points along the field, <b>towards the S pole</b> of the magnet.</p><p><b>The Earth</b>: away from any magnet a compass still points <b>north</b>. A compass only points when there is a magnetic field, so the <b>Earth has a magnetic field</b>; its shape (traced by compasses, with the field running parallel to the ground at the equator and dipping into the ground near the poles) is the shape of a <b>bar magnet's</b> field, so <b>the core of the Earth must be magnetic</b>. Because a compass's <b>N pole</b> is attracted to it, the pole near <b>geographic north is a magnetic S pole</b>. The June 2024 scheme (Q5(a)(ii), 3 marks): \"the Earth has a magnetic field\"; \"the compass needle points in the direction of the field\"; \"the core is magnetic / as if there were a magnet inside the Earth\"; or a point read from the diagram such as \"the field goes into the Earth at the north pole\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why a compass points north",
+          "question": "Explain why a magnetic compass points north, and what this tells us about the Earth. (3 marks)",
+          "steps": [
+            "The compass needle is a <b>small permanent magnet</b> free to turn, so it lines up with any magnetic field it is in, its N pole pointing along the field.",
+            "It points north everywhere on Earth, so the <b>Earth has a magnetic field</b> — the Earth's <b>core must be magnetic</b>, acting like a bar magnet inside the Earth.",
+            "The needle's N pole is attracted to an <b>unlike pole</b>, so the magnetic pole near geographic north is a <b>magnetic S pole</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Compasses and the Earth",
+          "questions": [
+            {
+              "id": "mg-n4-q1",
+              "type": "written",
+              "text": "Describe how to use a plotting compass to show the shape and direction of the field around a bar magnet. (3)",
+              "model": "<ul><li>Place the compass near one <b>pole</b>; mark a <b>dot at each end</b> of the needle.</li><li><b>Move the compass</b> so the tail of the needle is on the dot the head made; mark again; repeat to the other pole and <b>join the dots</b>.</li><li>Add an <b>arrow</b> in the direction the N end pointed; repeat from other starting points to get more lines.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-n4-q2",
+              "type": "choice",
+              "text": "The magnetic pole of the Earth near geographic north is…",
+              "options": [
+                "a magnetic N pole",
+                "a magnetic S pole",
+                "not a pole",
+                "both poles"
+              ],
+              "correct": 1,
+              "explain": "The compass N pole is attracted to it, and unlike poles attract."
+            },
+            {
+              "id": "mg-n4-q3",
+              "type": "written",
+              "text": "A compass needle points north wherever it is taken on the Earth's surface. Explain what this is evidence for. (2)",
+              "model": "<ul><li>A compass only points when it is in a <b>magnetic field</b>, so the <b>Earth has a magnetic field</b>.</li><li>The field is like a bar magnet's, so the <b>core of the Earth must be magnetic</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n4-q4",
+              "type": "choice",
+              "text": "A plotting compass is placed near the N pole of a bar magnet. Its needle's N end points…",
+              "options": [
+                "towards the magnet's N pole",
+                "away from the magnet's N pole, along the field line",
+                "at right angles to the field",
+                "always north"
+              ],
+              "correct": 1,
+              "explain": "Like poles repel: the needle's N end points away from the magnet's N pole, along the field line towards S."
+            },
+            {
+              "id": "mg-n4-q5",
+              "type": "choice",
+              "text": "At the equator the Earth's field is parallel to the ground; near the poles it dips steeply into the ground. This matches the field of…",
+              "options": [
+                "a solenoid with no core",
+                "a bar magnet inside the Earth",
+                "a straight wire",
+                "a flat sheet"
+              ],
+              "correct": 1,
+              "explain": "The 2024 scheme: 'as if there were a magnet inside the Earth'."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe how to plot a field line with a plotting compass",
+        "Explain how a compass shows that the Earth has a magnetic field and that its core must be magnetic",
+        "State which magnetic pole is near geographic north, and why a compass points north"
+      ],
+      "blurb": "A plotting compass is a small magnet on a pivot: its N pole points along the field at that spot, so moving it step by step traces a field line. Away from any magnet it points north, because the Earth has a magnetic field — evidence that the Earth's core is magnetic, with a magnetic S pole near geographic north."
+    },
+    {
+      "id": "wire-field",
+      "band": "nn",
+      "title": "A current makes a magnetic field: the straight wire",
+      "spec": "12.7, 12.8",
+      "equations": [
+        "\\text{circles centred on the wire}",
+        "\\text{stronger: more current, closer to the wire}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Showing it, and its shape",
+          "html": "<figure class='diagram'><svg viewBox='0 0 670 295' role='img'><text x='150.0' y='16.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>current out of the page (dot)</text><circle cx='150' cy='150' r='26' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='150.0,124.0 156.1,120.6 156.1,127.4' style='fill:var(--ink-2)'/><circle cx='150' cy='150' r='50' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='150.0,100.0 156.1,96.6 156.1,103.4' style='fill:var(--ink-2)'/><circle cx='150' cy='150' r='80' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='150.0,70.0 156.1,66.6 156.1,73.4' style='fill:var(--ink-2)'/><circle cx='150' cy='150' r='116' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='150.0,34.0 156.1,30.6 156.1,37.4' style='fill:var(--ink-2)'/><circle cx='150' cy='150' r='10' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='150.0' cy='150.0' r='2.8' style='fill:var(--ink)'/><text x='150.0' y='284.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>anticlockwise · circles further apart: field weaker</text><text x='520.0' y='16.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>current into the page (cross)</text><circle cx='520' cy='150' r='26' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='520.0,124.0 513.9,127.4 513.9,120.6' style='fill:var(--ink-2)'/><circle cx='520' cy='150' r='50' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='520.0,100.0 513.9,103.4 513.9,96.6' style='fill:var(--ink-2)'/><circle cx='520' cy='150' r='80' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='520.0,70.0 513.9,73.4 513.9,66.6' style='fill:var(--ink-2)'/><circle cx='520' cy='150' r='116' style='fill:none;stroke:var(--ink-2);stroke-width:1.5'/><polygon points='520.0,34.0 513.9,37.4 513.9,30.6' style='fill:var(--ink-2)'/><circle cx='520' cy='150' r='10' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='514.5' y1='144.5' x2='525.5' y2='155.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='514.5' y1='155.5' x2='525.5' y2='144.5' style='stroke:var(--ink);stroke-width:1.8'/><text x='520.0' y='284.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>clockwise · circles further apart: field weaker</text><text x='335.0' y='140.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>right-hand grip:</text><text x='335.0' y='155.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>thumb = current,</text><text x='335.0' y='170.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>fingers = field</text></svg><figcaption>The field around a straight wire seen end on: circles, anticlockwise for current out of the page, clockwise for current into it.</figcaption></figure><p><b>Showing that a current has a magnetic effect</b>: pass a straight wire vertically through a horizontal card, place plotting compasses (or sprinkle iron filings) on the card around it, and switch on a large current. The compasses line up in <b>circles</b> round the wire; switch off and they return to pointing north; <b>reverse the current</b> and every compass <b>turns round</b>. The field is a set of <b>concentric circles</b> centred on the wire, in a plane at right angles to it.</p><p><b>Direction — the right-hand grip rule</b>: grip the wire with your <b>right</b> hand, <b>thumb along the current</b> (conventional, + to −); your <b>fingers curl the way the field goes</b>. Seen end on, current <b>out of the page</b> (dot) gives an <b>anticlockwise</b> field; current <b>into the page</b> (cross) gives <b>clockwise</b>.</p><p><b>Strength</b>: the field is stronger with a <b>larger current</b>, and <b>weaker further from the wire</b> — the circles are drawn further apart as the distance increases. The June 2025 paper (Q7(c)) gave an unfamiliar equation for B against distance d and expected it to be used like any other; only a few noticed it was an <b>inverse square</b>. You will not be asked to recall any equation for this — just that <b>more current and less distance mean a stronger field</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Describing the field",
+          "question": "A long straight wire carries a current. Describe the magnetic field around it, including how its direction and strength can be changed. (4 marks)",
+          "steps": [
+            "The field lines are <b>concentric circles</b> centred on the wire, in planes at right angles to it.",
+            "Their direction is given by the <b>right-hand grip rule</b>: thumb along the current, fingers show the field.",
+            "<b>Reversing the current reverses</b> the direction of the field.",
+            "The field is <b>stronger for a larger current</b> and <b>weaker further from the wire</b> (the circles are further apart)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The field around a wire",
+          "questions": [
+            {
+              "id": "mg-n5-q1",
+              "type": "choice",
+              "text": "Seen end on, a wire carries current into the page (cross). Its magnetic field is…",
+              "options": [
+                "straight lines pointing away from the wire",
+                "clockwise circles",
+                "anticlockwise circles",
+                "parallel lines"
+              ],
+              "correct": 1,
+              "explain": "Right-hand grip: thumb into the page, fingers curl clockwise."
+            },
+            {
+              "id": "mg-n5-q2",
+              "type": "written",
+              "text": "Describe how you could show that a current in a wire produces a magnetic field. (3)",
+              "model": "<ul><li>Pass the wire <b>vertically through a card</b> with <b>plotting compasses</b> (or iron filings) on it.</li><li>With the current on, the compasses line up in <b>circles</b> around the wire; with it off, they point north.</li><li><b>Reversing the current reverses</b> the compasses, showing the field direction depends on the current direction.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-n5-q3",
+              "type": "choice",
+              "text": "Which change makes the field around a straight wire weaker at a given point?",
+              "options": [
+                "Increasing the current",
+                "Moving the point closer to the wire",
+                "Moving the point further from the wire",
+                "Reversing the current"
+              ],
+              "correct": 2,
+              "explain": "Strength falls with distance; reversing only changes direction."
+            },
+            {
+              "id": "mg-n5-q4",
+              "type": "written",
+              "text": "State two factors that affect the strength of the magnetic field around a long straight wire. (2)",
+              "model": "<ul><li>The <b>size of the current</b> (larger current, stronger field).</li><li>The <b>distance from the wire</b> (further away, weaker field).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n5-q5",
+              "type": "choice",
+              "text": "A plotting compass next to a wire turns round when the current is reversed. This shows that…",
+              "options": [
+                "the current has stopped",
+                "the direction of the field depends on the direction of the current",
+                "the compass is broken",
+                "the wire has become a permanent magnet"
+              ],
+              "correct": 1,
+              "explain": "Field direction follows the current direction."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe how to show that a current produces a magnetic field",
+        "Draw the field around a straight wire and give its direction from the current direction",
+        "State the two things the strength of the field depends on"
+      ],
+      "blurb": "A wire carrying a current has a magnetic field around it: concentric circles centred on the wire. The direction comes from the right-hand grip rule (thumb along the current, fingers curl with the field) and reverses when the current reverses. The field is stronger with a larger current and closer to the wire."
+    },
+    {
+      "id": "solenoid",
+      "band": "nn",
+      "title": "The solenoid: fields add inside, cancel outside",
+      "spec": "12.9",
+      "equations": [
+        "\\text{inside: strong, almost uniform}",
+        "\\text{outside: weak, bar-magnet shape}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Why a coil beats a wire",
+          "html": "<figure class='diagram'><svg viewBox='0 0 640 305' role='img'><path d='M 446 105 C 532 49 108 49 194 105' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,71.8 326.1,68.4 326.1,75.2' style='fill:var(--ink-2)'/><path d='M 446 165 C 532 220 108 220 194 165' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,198.2 326.1,194.8 326.1,201.6' style='fill:var(--ink-2)'/><path d='M 446 105 C 572 17 68 17 194 105' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,47.8 326.1,44.4 326.1,51.2' style='fill:var(--ink-2)'/><path d='M 446 165 C 572 252 68 252 194 165' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,222.2 326.1,218.8 326.1,225.6' style='fill:var(--ink-2)'/><path d='M 446 105 C 620 -21 20 -21 194 105' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,19.0 326.1,15.6 326.1,22.4' style='fill:var(--ink-2)'/><path d='M 446 165 C 620 291 20 291 194 165' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,251.0 326.1,247.6 326.1,254.4' style='fill:var(--ink-2)'/><line x1='140.0' y1='117.0' x2='500.0' y2='117.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,117.0 313.9,120.4 313.9,113.6' style='fill:var(--ink-2)'/><polygon points='500.0,117.0 493.9,120.4 493.9,113.6' style='fill:var(--ink-2)'/><line x1='140.0' y1='135.0' x2='500.0' y2='135.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,135.0 313.9,138.4 313.9,131.6' style='fill:var(--ink-2)'/><polygon points='500.0,135.0 493.9,138.4 493.9,131.6' style='fill:var(--ink-2)'/><line x1='140.0' y1='153.0' x2='500.0' y2='153.0' style='stroke:var(--ink-2);stroke-width:1.6'/><polygon points='320.0,153.0 313.9,156.4 313.9,149.6' style='fill:var(--ink-2)'/><polygon points='500.0,153.0 493.9,156.4 493.9,149.6' style='fill:var(--ink-2)'/><ellipse cx='200.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='230.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='260.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='290.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='320.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='350.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='380.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='410.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='440.0' cy='135' rx='9' ry='38' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><text x='105.0' y='85.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>S</text><text x='535.0' y='85.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>N</text><text x='320.0' y='282.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>inside: the fields of the turns add — strong and almost uniform</text><text x='320.0' y='298.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>outside: they largely cancel — weaker, the shape of a bar magnet's field</text></svg><figcaption>The field of a solenoid: straight and close together inside, a bar magnet's shape outside.</figcaption></figure><p>A <b>solenoid</b> is a wire wound into a long coil. Each turn has the circular field of N5. <b>Inside</b> the coil the fields of all the turns point <b>the same way along the axis</b>, so they <b>add together</b> to give a <b>very strong, almost uniform</b> field (straight, parallel, equally spaced lines along the centre). <b>Outside</b> the coil the fields of neighbouring turns point in <b>opposite directions</b> and largely <b>cancel</b>, so the field there is <b>weaker</b>; what is left has the <b>same shape as a bar magnet's field</b>, with a N pole at one end and a S pole at the other. The spec's own words (12.9): the fields from individual coils \"<b>add together</b> to form a very strong almost uniform field along the centre\" and \"<b>cancel</b> to give a weaker field outside\".</p><p>An <b>electromagnet</b> is a solenoid with a <b>soft iron core</b>, which becomes an induced magnet and makes the field far stronger — and switches off with the current (N2). <b>Stronger electromagnet</b>: more <b>current</b>, more <b>turns</b> (per unit length), an <b>iron core</b>. <b>Reverse the current</b> and the poles swap.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark explanation",
+          "question": "Explain why the magnetic field inside a solenoid is much stronger than the field around a single straight wire carrying the same current. (3 marks)",
+          "steps": [
+            "Each turn of the solenoid produces its own magnetic field (circles around the wire).",
+            "Inside the coil the fields of <b>all the turns point the same way</b>, so they <b>add together</b>…",
+            "…giving a strong, almost <b>uniform</b> field along the centre — many turns' worth of field in the same place."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The solenoid",
+          "questions": [
+            {
+              "id": "mg-n6-q1",
+              "type": "choice",
+              "text": "The field outside a solenoid is weak because…",
+              "options": [
+                "the wire is too thin",
+                "the fields of neighbouring turns point in opposite directions there and cancel",
+                "there is no current outside",
+                "field lines cannot leave a coil"
+              ],
+              "correct": 1,
+              "explain": "Cancel outside, add inside."
+            },
+            {
+              "id": "mg-n6-q2",
+              "type": "written",
+              "text": "Describe the magnetic field inside and outside a solenoid. (3)",
+              "model": "<ul><li>Inside: <b>strong</b> and <b>almost uniform</b> — straight, parallel, equally spaced lines along the axis.</li><li>Outside: <b>weaker</b>…</li><li>…with the <b>shape of a bar magnet's field</b>: a N pole at one end, a S pole at the other.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-n6-q3",
+              "type": "choice",
+              "text": "Which does NOT increase the strength of an electromagnet?",
+              "options": [
+                "More turns on the coil",
+                "A larger current",
+                "An iron core",
+                "Using thinner card for the coil to sit on"
+              ],
+              "correct": 3,
+              "explain": "Turns, current and core are the three."
+            },
+            {
+              "id": "mg-n6-q4",
+              "type": "written",
+              "text": "An electromagnet is used in a scrapyard crane to lift and drop cars. Explain why it has a soft iron core and not a steel one. (2)",
+              "model": "<ul><li>Soft iron becomes an induced magnet in the coil's field, making the electromagnet <b>much stronger</b>, and <b>loses its magnetism</b> as soon as the current is switched off — so the car can be dropped.</li><li>Steel would <b>keep its magnetism</b> when the current is off, so the car could not be released.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-n6-q5",
+              "type": "choice",
+              "text": "Reversing the current in a solenoid…",
+              "options": [
+                "switches the field off",
+                "swaps its N and S poles",
+                "makes the field stronger",
+                "has no effect on the field"
+              ],
+              "correct": 1,
+              "explain": "Field direction follows current direction, so the poles swap."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain why the field inside a solenoid is strong and almost uniform",
+        "Explain why the field outside is weaker, and describe its shape",
+        "State three ways to make an electromagnet stronger"
+      ],
+      "blurb": "A solenoid is a long coil of wire. Inside it, the fields of all the turns point the same way and add up to a strong, almost uniform field along the axis; outside, they largely cancel, leaving a weaker field with the shape of a bar magnet's. An iron core makes it an electromagnet."
+    },
+    {
+      "id": "motor-effect",
+      "band": "nn",
+      "title": "The motor effect: two fields interact, so there is a force on the wire",
+      "spec": "12.10, 12.11",
+      "equations": [
+        "\\text{current} \\rightarrow \\text{field} \\rightarrow \\text{fields interact} \\rightarrow \\text{force} \\rightarrow \\text{accelerates}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain to write every time",
+          "html": "<figure class='diagram'><svg viewBox='0 0 720 255' role='img'><text x='170.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>the wire between the poles (end on)</text><rect x='30' y='70' width='25.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='55.0' y='70' width='25.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='55.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>N</text><rect x='260' y='70' width='25.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='285.0' y='70' width='25.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='285.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>S</text><line x1='82.0' y1='86.0' x2='258.0' y2='86.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='120.0,86.0 113.9,89.4 113.9,82.6' style='fill:var(--ink-2)'/><polygon points='230.0,86.0 223.9,89.4 223.9,82.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='110.0' x2='258.0' y2='110.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='120.0,110.0 113.9,113.4 113.9,106.6' style='fill:var(--ink-2)'/><polygon points='230.0,110.0 223.9,113.4 223.9,106.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='134.0' x2='258.0' y2='134.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='120.0,134.0 113.9,137.4 113.9,130.6' style='fill:var(--ink-2)'/><polygon points='230.0,134.0 223.9,137.4 223.9,130.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='158.0' x2='258.0' y2='158.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='120.0,158.0 113.9,161.4 113.9,154.6' style='fill:var(--ink-2)'/><polygon points='230.0,158.0 223.9,161.4 223.9,154.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='182.0' x2='258.0' y2='182.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='120.0,182.0 113.9,185.4 113.9,178.6' style='fill:var(--ink-2)'/><polygon points='230.0,182.0 223.9,185.4 223.9,178.6' style='fill:var(--ink-2)'/><circle cx='170' cy='134' r='11' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='170.0' cy='134.0' r='2.8' style='fill:var(--ink)'/><line x1='170.0' y1='118.0' x2='170.0' y2='60.0' style='stroke:var(--accent);stroke-width:2.6'/><polygon points='170.0,60.0 173.9,68.1 166.1,68.1' style='fill:var(--accent)'/><text x='195.0' y='58.0' text-anchor='start' style='fill:var(--accent);font-size:12px;font-weight:normal;'>force</text><text x='170.0' y='228.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>current out of the page, field N → S</text><text x='170.0' y='244.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force on the wire: up (left-hand rule)</text><text x='530.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>why: the two fields interact</text><path d='M 400 62 C 490 34 570 34 660 62' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,62.0 653.9,65.4 653.9,58.6' style='fill:var(--ink-2)'/><path d='M 400 84 C 490 56 570 56 660 84' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,84.0 653.9,87.4 653.9,80.6' style='fill:var(--ink-2)'/><path d='M 400 106 C 490 78 570 78 660 106' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,106.0 653.9,109.4 653.9,102.6' style='fill:var(--ink-2)'/><path d='M 400 152 C 490 146 570 146 660 152' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,152.0 653.9,155.4 653.9,148.6' style='fill:var(--ink-2)'/><path d='M 400 164 C 490 158 570 158 660 164' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,164.0 653.9,167.4 653.9,160.6' style='fill:var(--ink-2)'/><path d='M 400 176 C 490 170 570 170 660 176' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,176.0 653.9,179.4 653.9,172.6' style='fill:var(--ink-2)'/><path d='M 400 190 C 490 184 570 184 660 190' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,190.0 653.9,193.4 653.9,186.6' style='fill:var(--ink-2)'/><path d='M 400 208 C 490 202 570 202 660 208' style='fill:none;stroke:var(--ink-2);stroke-width:1.6'/><polygon points='660.0,208.0 653.9,211.4 653.9,204.6' style='fill:var(--ink-2)'/><circle cx='530' cy='134' r='11' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='530.0' cy='134.0' r='2.8' style='fill:var(--ink)'/><line x1='530.0' y1='118.0' x2='530.0' y2='76.0' style='stroke:var(--accent);stroke-width:2.6'/><polygon points='530.0,76.0 533.9,84.1 526.1,84.1' style='fill:var(--accent)'/><text x='530.0' y='228.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>the wire's own field (anticlockwise) adds to the magnet's field below</text><text x='530.0' y='244.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>and cancels it above: strong below, weak above, so the force is up</text></svg><figcaption>A wire between the poles of a magnet: the wire's own circular field adds to the magnet's field on one side and cancels it on the other, so there is a resultant force on the wire.</figcaption></figure><p>A current-carrying wire placed in a magnetic field <b>experiences a force</b> — the <b>motor effect</b>. Why: the current creates a <b>magnetic field around the wire</b>; this <b>interacts with the permanent magnet's field</b>; where the two point the same way the field is stronger, where they oppose it is weaker, and the result is a <b>resultant force on the wire</b> from the strong side towards the weak side. By Newton's third law an <b>equal and opposite force acts on the magnet</b>. The standard explanation, in the steps the marks are on:</p><ol class='steps'><li>There is a current in the wire.</li><li>This creates a magnetic field around the wire.</li><li>This interacts with the permanent magnetic field.</li><li>This causes a resultant force on the wire, so the wire accelerates.</li><li>You can find the direction of the force using Fleming's left-hand rule.</li></ol><p>Two things the examiners want and students leave out: the force is <b>due to the interaction between the two magnetic fields</b> (12.11) — not \"the magnet pushes the wire\"; and the chain ends with <b>what happens</b>: a resultant force, so the wire <b>accelerates</b> (or, if it is held, is pushed against what holds it). The June 2023 report (Q5(b), one magnet floating above another): \"repulsion\" alone scored one mark; the second mark needed \"<b>the interaction between the two magnetic fields</b>\" — the same idea.</p><p>The force is <b>at right angles</b> to both the current and the field (direction from Fleming's left-hand rule, N8). It is <b>largest when the wire is at right angles to the field</b> and <b>zero when the wire is parallel</b> to it. It reverses if <b>either</b> the current or the field is reversed, and grows with more current, a stronger field or more wire in the field (N9).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why the wire jumps",
+          "question": "A straight wire is placed between the poles of a horseshoe magnet. When the current is switched on the wire jumps out of the magnet. Explain why. (4 marks)",
+          "steps": [
+            "There is a <b>current in the wire</b>. This <b>creates a magnetic field around the wire</b>.",
+            "This <b>interacts with the permanent magnetic field</b>.",
+            "This causes a <b>resultant force on the wire</b>, so the wire <b>accelerates</b> — out of the magnet.",
+            "You can find the direction of the force using <b>Fleming's left-hand rule</b> (it is at right angles to both the current and the field)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The motor effect",
+          "questions": [
+            {
+              "id": "mg-n7-q1",
+              "type": "written",
+              "text": "A wire carrying a current is placed at right angles to the field between two magnets. Explain why there is a force on the wire. (3)",
+              "model": "<ul><li>The current in the wire <b>creates a magnetic field</b> around the wire.</li><li>This field <b>interacts with the permanent magnetic field</b> of the magnets.</li><li>The interaction causes a <b>resultant force on the wire</b>, so the wire accelerates.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-n7-q2",
+              "type": "choice",
+              "text": "A wire carrying a current experiences a force from a magnet. What force acts on the magnet?",
+              "options": [
+                "None — magnets do not feel forces",
+                "An equal and opposite force",
+                "A force in the same direction as the force on the wire",
+                "A smaller force"
+              ],
+              "correct": 1,
+              "explain": "Newton's third law: the magnet feels an equal and opposite force."
+            },
+            {
+              "id": "mg-n7-q3",
+              "type": "choice",
+              "text": "When is the force on a current-carrying wire in a magnetic field zero?",
+              "options": [
+                "When the wire is at right angles to the field",
+                "When the wire is parallel to the field",
+                "When the current is large",
+                "It is never zero"
+              ],
+              "correct": 1,
+              "explain": "Parallel: no force. At right angles: maximum."
+            },
+            {
+              "id": "mg-n7-q4",
+              "type": "written",
+              "text": "A student writes: \"The magnet pushes the wire.\" Rewrite the explanation so that it earns the 'interaction' mark. (2)",
+              "model": "<ul><li>The current in the wire produces its own <b>magnetic field</b>…</li><li>…which <b>interacts with the magnet's field</b>; the force on the wire is due to this <b>interaction between the two magnetic fields</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n7-q5",
+              "type": "choice",
+              "text": "Which change makes the force on the wire larger without changing its direction?",
+              "options": [
+                "Reversing the current",
+                "Reversing the magnetic field (turning the magnet round)",
+                "Doubling the current",
+                "Turning the wire so it lies along the field"
+              ],
+              "correct": 2,
+              "explain": "Doubling the current doubles the force and keeps its direction. Reversing either reverses it; a wire along the field feels no force at all."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the five-step chain for the motor effect on a wire",
+        "State that an equal and opposite force acts on the magnet",
+        "Explain that the force is due to the interaction between two magnetic fields"
+      ],
+      "blurb": "A wire carrying a current in a magnetic field experiences a force, and an equal and opposite force acts on the magnet. The force is the interaction between the wire's own magnetic field and the magnet's field. The standard five-step chain below is the one to write every time.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "flhr",
+      "band": "nn",
+      "title": "Fleming's left-hand rule: thumb force, first finger field, second finger current",
+      "spec": "12.12",
+      "equations": [
+        "\\text{thuMb: Motion (force)}",
+        "\\text{First finger: Field (N} \\rightarrow \\text{S)}",
+        "\\text{seCond finger: Current (+} \\rightarrow \\text{−)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The rule",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 285' role='img'><text x='330.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>Fleming's left-hand rule: three directions at right angles</text><rect x='115' y='120' width='70' height='80' rx='14' style='fill:var(--line);opacity:0.3;stroke:var(--ink-2);stroke-width:1.4'/><line x1='130.0' y1='122.0' x2='130.0' y2='55.0' style='stroke:var(--accent);stroke-width:3'/><polygon points='130.0,55.0 133.9,63.1 126.1,63.1' style='fill:var(--accent)'/><text x='130.0' y='47.0' text-anchor='middle' style='fill:var(--accent);font-size:11px;font-weight:normal;'>thuMb · Motion (force)</text><line x1='185.0' y1='140.0' x2='265.0' y2='140.0' style='stroke:var(--ink);stroke-width:3'/><polygon points='265.0,140.0 256.9,143.9 256.9,136.1' style='fill:var(--ink)'/><text x='225.0' y='130.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>First finger · Field (N → S)</text><line x1='160.0' y1='170.0' x2='110.0' y2='240.0' style='stroke:var(--ink-2);stroke-width:3'/><polygon points='110.0,240.0 111.5,231.1 117.9,235.7' style='fill:var(--ink-2)'/><text x='130.0' y='258.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>seCond finger · Current (+ → −)</text><line x1='470.0' y1='160.0' x2='470.0' y2='80.0' style='stroke:var(--accent);stroke-width:2.4'/><polygon points='470.0,80.0 473.9,88.1 466.1,88.1' style='fill:var(--accent)'/><text x='470.0' y='72.0' text-anchor='middle' style='fill:var(--accent);font-size:11px;font-weight:normal;'>force</text><line x1='470.0' y1='160.0' x2='570.0' y2='160.0' style='stroke:var(--ink);stroke-width:2.4'/><polygon points='570.0,160.0 561.9,163.9 561.9,156.1' style='fill:var(--ink)'/><text x='578.0' y='164.0' text-anchor='start' style='fill:var(--ink);font-size:11px;font-weight:normal;'>field</text><line x1='470.0' y1='160.0' x2='415.0' y2='215.0' style='stroke:var(--ink-2);stroke-width:2.4'/><polygon points='415.0,215.0 418.0,206.5 423.5,212.0' style='fill:var(--ink-2)'/><text x='410.0' y='230.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>current (out of the page)</text><text x='330.0' y='276.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>each at right angles to the other two; parallel current and field: no force</text></svg><figcaption>Fleming's left-hand rule: three directions at right angles to each other.</figcaption></figure><p>Use the <b>left</b> hand. Hold the <b>thumb</b>, <b>first finger</b> and <b>second finger</b> so that each is at right angles to the other two. Then: <b>First finger = Field</b>, pointing the way the field lines go (<b>N to S</b>); <b>seCond finger = Current</b>, pointing the way the <b>conventional current</b> goes (<b>+ to −</b>, not the electron flow); <b>thuMb = Motion</b>, the direction of the <b>force</b> on the wire (and so the way it moves). The three are <b>mutually perpendicular</b>: the rule represents \"the relative directions of the force, the current and the magnetic field for cases where they are mutually perpendicular\" (12.12). If the current is <b>parallel</b> to the field there is <b>no force</b> and the rule does not apply.</p><p>In the exam the picture is usually <b>end on</b>: a dot is current <b>out of the page</b>, a cross is current <b>into the page</b>. Point the second finger at yourself for a dot, away for a cross, line the first finger up with the field arrows, and read the thumb. Reversing the current <b>or</b> the field reverses the force; reversing <b>both</b> leaves it unchanged. The June 2024 scheme (Q5(b)(ii)): to reverse the force on a coil, \"any clear action that will reverse the current\" (swap the battery connections) <b>or</b> \"any clear action that will reverse the poles\" (turn the magnet round).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Reading a diagram",
+          "question": "A wire between the poles of a magnet carries a current out of the page. The magnetic field points from left to right. Find the direction of the force on the wire. (2 marks)",
+          "steps": [
+            "First finger along the <b>field</b>: pointing to the <b>right</b>. Second finger along the <b>current</b>: pointing <b>out of the page</b>, towards you.",
+            "With both in place the thumb points <b>upwards</b> — the force on the wire is <b>up the page</b>."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Fleming's left-hand rule",
+          "questions": [
+            {
+              "id": "mg-n8-q1",
+              "type": "choice",
+              "text": "In Fleming's left-hand rule the first finger represents…",
+              "options": [
+                "the force",
+                "the current",
+                "the magnetic field",
+                "the motion of the magnet"
+              ],
+              "correct": 2,
+              "explain": "First finger: Field. Second: Current. Thumb: Motion (force)."
+            },
+            {
+              "id": "mg-n8-q2",
+              "type": "choice",
+              "text": "A wire carries current into the page; the field points from left to right. The force on the wire is…",
+              "options": [
+                "up the page",
+                "down the page",
+                "to the left",
+                "zero"
+              ],
+              "correct": 1,
+              "explain": "Second finger away from you, first finger right: thumb points down."
+            },
+            {
+              "id": "mg-n8-q3",
+              "type": "written",
+              "text": "State two ways of reversing the direction of the force on a current-carrying wire in a magnetic field. (2)",
+              "model": "<ul><li><b>Reverse the current</b> (e.g. swap the connections to the battery).</li><li><b>Reverse the magnetic field</b> (e.g. turn the magnet round so the poles swap).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-n8-q4",
+              "type": "choice",
+              "text": "A wire lies parallel to the field lines between two magnets and carries a current. The force on it is…",
+              "options": [
+                "maximum",
+                "zero",
+                "upwards",
+                "towards the N pole"
+              ],
+              "correct": 1,
+              "explain": "The rule needs the current and field at right angles; parallel means no force."
+            },
+            {
+              "id": "mg-n8-q5",
+              "type": "choice",
+              "text": "The second finger must point in the direction of…",
+              "options": [
+                "electron flow, − to +",
+                "conventional current, + to −",
+                "the field, N to S",
+                "the force"
+              ],
+              "correct": 1,
+              "explain": "Conventional current. Using electron flow gives the opposite answer."
+            },
+            {
+              "id": "mg-n8-q6",
+              "type": "choice",
+              "text": "The field points up the page and the force on a wire is out of the page (towards you). The current in the wire is…",
+              "options": [
+                "to the right",
+                "to the left",
+                "up the page",
+                "into the page"
+              ],
+              "correct": 0,
+              "explain": "Set first finger up, thumb towards you: the second finger points right. (Check: field up, current right, force out of the page.)"
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "State what each of the three digits represents",
+        "Use the rule to find the missing one of force, field and current on a diagram",
+        "State that the rule applies when the three directions are mutually perpendicular"
+      ],
+      "blurb": "Hold the left hand with thumb, first finger and second finger at right angles to each other. First finger along the field (N to S), second finger along the conventional current (+ to −), and the thumb gives the direction of the force (the motion). It only applies when the current and field are at right angles.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "motor-force-nn",
+      "band": "nn",
+      "title": "The size of the force: F = B I l",
+      "spec": "12.13",
+      "equations": [
+        "F = B\\,I\\,l",
+        "B \\text{ in tesla (T)} = \\text{N/A m}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The equation and its units",
+          "html": "<p>For a conductor <b>at right angles</b> to a magnetic field: <b>force (N) = magnetic flux density (T) × current (A) × length (m)</b>, $F = B I l$. <b>Magnetic flux density</b> $B$ is the strength of the field, in <b>tesla</b> (T); 1 T = 1 N/A m, i.e. the field in which 1 m of wire carrying 1 A feels 1 N — a large unit, so exam fields are usually tenths of a tesla or millitesla. $l$ is the length of wire <b>in the field</b>, in metres. The equation is on the equation list, so the marks are for choosing it, <b>converting cm to m</b> and mA to A, substituting and rearranging. The June 2023 report (Q5(c)(ii)): almost every candidate selected and used it correctly; the June 2024 scheme (Q5(b)(iii)) gave one mark for \"rearrangement and substitution\" and one for the evaluation, 0.58 T, with full marks for a correct answer without working.</p><p>Three traps: leaving the length in centimetres (force 100 times too big); using the <b>whole</b> length of a wire when only part of it is in the field; and forgetting the force is <b>zero</b> for a wire parallel to the field, whatever $B$, $I$ and $l$ are.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Finding B",
+          "question": "A wire of length 5.0 cm carries a current of 2.5 A at right angles to a magnetic field. The force on it is 0.030 N. Calculate the magnetic flux density. (3 marks)",
+          "steps": [
+            "$l = 5.0$ cm $= 0.050$ m. Known: $F = 0.030$ N, $I = 2.5$ A.",
+            "Rearrange $F = B I l$: $B = F \\div (I \\times l) = 0.030 \\div (2.5 \\times 0.050)$.",
+            "$B = 0.030 \\div 0.125 = 0.24$ T."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "motor-force"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "F = BIl",
+          "questions": [
+            {
+              "id": "mg-n9-q1",
+              "type": "numeric",
+              "text": "A wire 0.20 m long carries 4.0 A at right angles to a field of flux density 0.15 T. Calculate the force on it.",
+              "answer": {
+                "value": 0.12,
+                "unit": "N"
+              },
+              "hint": "F = B × I × l — all three already in base units.",
+              "walkthrough": [
+                "<b>Equation:</b> $F = B I l$",
+                "<b>Working:</b> $F = 0.15 \\times 4.0 \\times 0.20$",
+                "<b>Answer:</b> $= 0.12$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "mg-n9-q2",
+              "type": "numeric",
+              "text": "A 12 cm length of wire carries a current of 0.50 A across a field of 0.80 T. Calculate the force.",
+              "answer": {
+                "value": 0.048,
+                "unit": "N"
+              },
+              "hint": "Convert 12 cm to metres first.",
+              "walkthrough": [
+                "$l = 12$ cm $= 0.12$ m",
+                "<b>Equation:</b> $F = B I l$",
+                "<b>Working:</b> $F = 0.80 \\times 0.50 \\times 0.12$",
+                "<b>Answer:</b> $= 0.048$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "mg-n9-q3",
+              "type": "numeric",
+              "text": "The force on a 0.40 m wire in a field of 0.25 T is 0.30 N. Calculate the current.",
+              "answer": {
+                "value": 3,
+                "unit": "A"
+              },
+              "hint": "I = F ÷ (B × l).",
+              "walkthrough": [
+                "<b>Equation:</b> $I = F \\div (B l)$",
+                "<b>Working:</b> $I = 0.30 \\div (0.25 \\times 0.40) = 0.30 \\div 0.10$",
+                "<b>Answer:</b> $= 3.0$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "mg-n9-q4",
+              "type": "numeric",
+              "text": "A wire carries 1.5 A. A 25 cm length of it lies in a field of 0.040 T at right angles. Calculate the force in millinewtons.",
+              "answer": {
+                "value": 15,
+                "unit": "mN"
+              },
+              "hint": "Work in N, then × 1000.",
+              "walkthrough": [
+                "<b>Equation:</b> $F = B I l$",
+                "<b>Working:</b> $F = 0.040 \\times 1.5 \\times 0.25 = 0.015 \\text{ N}$",
+                "<b>Answer:</b> $= 15$",
+                "<b>Units:</b> mN (× 1000)"
+              ]
+            },
+            {
+              "id": "mg-n9-q5",
+              "type": "choice",
+              "text": "Which is a correct unit for magnetic flux density?",
+              "options": [
+                "N/A",
+                "N/A m",
+                "T/m",
+                "A m/N"
+              ],
+              "correct": 1,
+              "explain": "1 T = 1 N/A m, from B = F ÷ (I l)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Use F = BIl for a wire at right angles to the field",
+        "Give the unit of magnetic flux density and convert cm and mA before substituting",
+        "Rearrange for B, I or l"
+      ],
+      "blurb": "For a wire at right angles to the field, the force is magnetic flux density × current × length of wire in the field: $F = BIl$, with $B$ in tesla; the equation is on the list, so the skill is choosing it, converting cm to m, and rearranging for B, I or l.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "keywords-magnetism",
+      "band": "nn",
+      "title": "Key words: state what is meant by…",
+      "spec": "12.1–12.14P",
+      "equations": [
+        "\\text{definition, word for word}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Magnetic material</b></td><td>A material that is <b>attracted by a magnet</b> and can be magnetised: <b>iron, steel, cobalt, nickel</b>.</td><td>\"metal\" — copper and aluminium are not magnetic</td></tr><tr><td><b>Permanent magnet</b></td><td>A magnet that produces its <b>own magnetic field</b> all the time (steel, or alloys of cobalt and nickel).</td><td>\"a strong magnet\"</td></tr><tr><td><b>Induced (temporary) magnet</b></td><td>A magnetic material that becomes a magnet <b>only while it is in a magnetic field</b>, and loses its magnetism when the field is removed (soft iron).</td><td>\"a weak magnet\"</td></tr><tr><td><b>Magnetic field</b></td><td>The <b>region around a magnet</b> (or a current) in which a <b>magnetic material</b> or another magnet <b>experiences a force</b>.</td><td>\"the magnetism\"</td></tr><tr><td><b>Field line</b></td><td>A line showing the <b>direction of the field</b> (the direction of the force on a N pole: <b>N to S</b>); closer lines mean a <b>stronger</b> field; lines never cross.</td><td>\"the path of the magnet\"</td></tr><tr><td><b>Uniform field</b></td><td>A field with the <b>same strength and direction everywhere</b>: parallel, equally spaced lines (between unlike poles; inside a solenoid).</td><td>\"a straight field\"</td></tr><tr><td><b>Solenoid</b></td><td>A <b>long coil of wire</b>; with a current it has a field like a bar magnet's, strong and uniform inside.</td><td>\"an electromagnet\" (only with a core)</td></tr><tr><td><b>Electromagnet</b></td><td>A <b>solenoid with a soft iron core</b>: a magnet that can be <b>switched on and off</b> with the current.</td><td>\"a magnet with wire\"</td></tr><tr><td><b>Right-hand grip rule</b></td><td>Grip the wire with the right hand, <b>thumb along the current</b>: the <b>fingers curl the way the field goes</b>.</td><td>mixing it up with the left-hand rule</td></tr><tr><td><b>Motor effect</b></td><td>A <b>current-carrying conductor in a magnetic field experiences a force</b>, due to the interaction between the two magnetic fields.</td><td>\"a motor spins\"</td></tr><tr><td><b>Fleming's left-hand rule</b></td><td>First finger <b>Field</b> (N → S), second finger <b>Current</b> (+ → −), thumb <b>Motion</b> (force), all at right angles.</td><td>right hand; electron flow</td></tr><tr><td><b>Magnetic flux density, B</b></td><td>The <b>strength of a magnetic field</b>: the force per unit current per unit length on a wire at right angles to it; unit <b>tesla</b>, T (= N/A m).</td><td>\"the amount of magnetism\"</td></tr><tr><td><b>Split-ring commutator</b></td><td>The two half-rings on a d.c. motor's axle that <b>reverse the current in the coil every half turn</b>, so the coil keeps turning the same way.</td><td>\"the thing that connects the wires\"</td></tr></table>"
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "mg-kw-q1",
+              "type": "written",
+              "text": "State what is meant by a magnetic field. (1)",
+              "model": "<ul><li>The <b>region around a magnet</b> (or current) in which a <b>magnetic material</b> (or another magnet) <b>experiences a force</b>.</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "mg-kw-q2",
+              "type": "written",
+              "text": "State what is meant by an induced magnet. (1)",
+              "model": "<ul><li>A magnetic material that becomes a magnet <b>only while it is in a magnetic field</b> (and loses its magnetism when the field is removed).</li></ul>",
+              "lines": 1
+            },
+            {
+              "id": "mg-kw-q3",
+              "type": "choice",
+              "text": "Which is the best definition of a permanent magnet?",
+              "options": [
+                "A magnet that is very strong",
+                "A magnet that produces its own magnetic field all the time",
+                "A magnet made of iron",
+                "A magnet that never moves"
+              ],
+              "correct": 1,
+              "explain": "Its own field, always."
+            },
+            {
+              "id": "mg-kw-q4",
+              "type": "written",
+              "text": "State what is meant by a uniform magnetic field, and where one is found. (2)",
+              "model": "<ul><li>A field with the <b>same strength and direction at every point</b> (parallel, equally spaced lines).</li><li>Between two <b>unlike poles facing each other</b>, or inside a <b>solenoid</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-kw-q5",
+              "type": "written",
+              "text": "State what is meant by the motor effect. (1)",
+              "model": "<ul><li>A <b>current-carrying conductor in a magnetic field experiences a force</b> (due to the interaction of the two fields).</li></ul>",
+              "lines": 1,
+              "tags": [
+                "H"
+              ]
+            },
+            {
+              "id": "mg-kw-q6",
+              "type": "choice",
+              "text": "Magnetic flux density is measured in…",
+              "options": [
+                "newtons",
+                "amperes",
+                "tesla",
+                "webers per second"
+              ],
+              "correct": 2,
+              "explain": "Tesla, T (= N/A m).",
+              "tags": [
+                "H"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define magnetic material, permanent and induced magnet",
+        "Define magnetic field, field line, uniform field, solenoid and electromagnet",
+        "Define the motor effect, magnetic flux density and the commutator"
+      ],
+      "blurb": "One-mark definitions in the form of words the mark schemes credit. The bold words are the ones the marks are attached to. The last four terms (motor effect onwards) are Higher only, and the commutator is Physics only as well."
+    },
+    {
+      "id": "magnet-force-chains",
+      "band": "tricky",
+      "title": "Explaining why magnets move: fields interact → force on X → X accelerates",
+      "spec": "12.1, 12.11",
+      "equations": [
+        "\\text{fields interact} \\rightarrow \\text{force on X} \\rightarrow \\text{X accelerates (or is held)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain, and where the marks are",
+          "html": "<table class='tbl'><tr><th>Situation</th><th>Chain (each link a mark)</th></tr><tr><td>Magnet X placed near magnet Y, like poles facing, X free to move</td><td>the magnetic field of X <b>interacts with</b> the field of Y → like poles repel, so there is a <b>force on X directed away from Y</b> → the force is unbalanced, so <b>X accelerates away</b> from Y</td></tr><tr><td>Unlike poles facing</td><td>fields interact → unlike poles attract, so a <b>force on X towards Y</b> → X <b>accelerates towards</b> Y</td></tr><tr><td>A magnet floating above another (like poles facing) — June 2023 Q5(b)</td><td>the fields <b>interact</b> → like poles repel, so there is an <b>upward (repulsive) force on the upper magnet</b> → this force is <b>equal to its weight</b> (the downward force of gravity), so the forces are <b>balanced</b> and the magnet stays still (equilibrium)</td></tr><tr><td>A piece of iron near a magnet</td><td>the magnet's field <b>induces</b> the opposite pole in the near end of the iron → unlike poles attract, so a <b>force on the iron towards the magnet</b> → the iron <b>accelerates towards</b> the magnet (so iron is always attracted, never repelled)</td></tr></table><p>The June 2023 report on the floating magnet: answers that mentioned fields only to say \"repulsion\" \"can score one mark for repulsion but not another mark for the <b>interaction between fields</b>\". Full marks: the interaction of the two magnetic fields, an upward repulsive force, and that it <b>balances gravity</b>. One answer with interaction and repulsion but no gravity and no equilibrium lost marks. The link between the force and what happens — <b>accelerates</b>, or <b>balanced</b> so it stays — is the same link the examiners look for with charges (Topic 11 T1) and with forces generally (Topic 2).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The floating magnet",
+          "question": "Two ring magnets are threaded on a wooden rod with like poles facing. The upper magnet floats above the lower one. Explain why it floats. (3 marks)",
+          "steps": [
+            "The magnetic field of the upper magnet <b>interacts with</b> the magnetic field of the lower magnet.",
+            "Like poles are facing, so they <b>repel</b>: there is an <b>upward force on the upper magnet</b>.",
+            "This upward force is <b>equal to the weight</b> of the upper magnet, so the forces on it are <b>balanced</b> and it stays still."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Force chains",
+          "questions": [
+            {
+              "id": "mg-t1-q1",
+              "type": "written",
+              "text": "A bar magnet is placed on a smooth table with its N pole facing the N pole of a fixed magnet. It moves away. Explain why. (2)",
+              "model": "<ul><li>Like poles repel, so there is a <b>force on the free magnet directed away from</b> the fixed one.</li><li>The force is unbalanced, so the magnet <b>accelerates away</b>. (Higher: add that the force arises because the two magnets' <b>fields interact</b>.)</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-t1-q2",
+              "type": "written",
+              "text": "A student explains the floating magnet by writing \"like poles repel so it floats\". State two things the answer is missing. (2)",
+              "model": "<ul><li>That the force comes from the <b>interaction between the two magnetic fields</b>.</li><li>That the upward repulsive force <b>balances the weight</b> (gravity) of the upper magnet, so it is in equilibrium.</li></ul>",
+              "lines": 2,
+              "tags": [
+                "H"
+              ]
+            },
+            {
+              "id": "mg-t1-q3",
+              "type": "choice",
+              "text": "A magnet X is released near a fixed magnet Y with unlike poles facing. Which is the best description of what happens?",
+              "options": [
+                "X and Y repel",
+                "There is a force on X towards Y, so X accelerates towards Y",
+                "X moves at a steady speed towards Y",
+                "Y moves towards X"
+              ],
+              "correct": 1,
+              "explain": "Force on X, towards Y, so X accelerates — name the object, the direction and the acceleration."
+            },
+            {
+              "id": "mg-t1-q4",
+              "type": "written",
+              "text": "An unmagnetised iron nail is placed near a magnet and moves towards it. Explain why the nail is attracted whichever pole of the magnet faces it. (3)",
+              "model": "<ul><li>The magnet's field <b>induces</b> magnetism in the nail, with the <b>opposite pole</b> at the end nearest the magnet.</li><li>Unlike poles attract, so there is a <b>force on the nail towards the magnet</b>…</li><li>…so the nail <b>accelerates towards</b> the magnet. Either pole of the magnet induces the opposite pole, so it is attraction every time.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-t1-q5",
+              "type": "choice",
+              "text": "Why does a floating magnet stay at a fixed height rather than keep rising?",
+              "options": [
+                "The repulsive force switches off",
+                "The upward magnetic force equals its weight, so the resultant force is zero",
+                "Gravity is stronger than magnetism",
+                "The rod stops it"
+              ],
+              "correct": 1,
+              "explain": "Balanced forces: it stays at the height where repulsion equals weight."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the chain for a magnet moving away from (or towards) another",
+        "Write the chain for a magnet held still: the magnetic force balances the weight",
+        "Say which object the force acts on, and which way"
+      ],
+      "blurb": "\"Explain why the magnet moves away\" is not answered by \"like poles repel\". The marks are on the chain: the two magnetic fields interact (the Higher-only link, 12.11), so there is a force on the magnet (say which one, and which way), so it accelerates — or, if it floats or is held, the force balances another force. Same shape as the Topic 11 chain for charges."
+    },
+    {
+      "id": "magnet-test",
+      "band": "tricky",
+      "title": "Is it a magnet? Designing the test and stating the result",
+      "spec": "12.1, 12.3",
+      "equations": [
+        "\\text{attracted both ways round} \\Rightarrow \\text{magnetic material}",
+        "\\text{repelled one way} \\Rightarrow \\text{magnet}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The three possibilities",
+          "html": "<table class='tbl'><tr><th>Object</th><th>Bring one pole of a known magnet to each end in turn</th><th>Why</th></tr><tr><td><b>Permanent magnet</b></td><td>one end is <b>attracted</b>, the other is <b>repelled</b></td><td>it has its own poles; like poles repel</td></tr><tr><td><b>Magnetic material</b> (unmagnetised iron, steel)</td><td><b>attracted at both ends</b>, never repelled</td><td>the known magnet induces the opposite pole whichever end is nearer</td></tr><tr><td><b>Non-magnetic material</b> (copper, plastic)</td><td><b>no force</b> either way</td><td>it cannot be magnetised</td></tr></table><p>So the test is: approach <b>both ends</b> with the <b>same pole</b> of a known magnet (or a compass needle — its N end is a known pole), and look for <b>repulsion</b>. The June 2025 report (Q7(b)(iv)): \"one mark for a suitable test and one for a clear statement of the expected result\"; \"trying to pick up a paper clip … earned 1 of 2, since it did not show what the result would mean\" — an induced magnet also picks up paper clips while the field is there. The full-mark answer <b>reversed one nail</b> and looked for <b>no repulsion in either orientation</b> (any force was attraction both ways, or there was none). Why a paper-clip test fails for a nail that has just been in a field: it may be a weak <b>induced</b> magnet for a while; only <b>repulsion</b> is proof of a <b>permanent</b> magnet.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Nails after the electromagnet",
+          "question": "Nails were picked up by an electromagnet. A student claims the nails have become permanent magnets. Describe a test to check this and state the result expected if she is wrong. (2 marks)",
+          "steps": [
+            "Hold one nail by its middle and bring one end of a second nail (or one pole of a known magnet) to <b>each end</b> of it in turn, i.e. test both orientations.",
+            "If the nails are <b>not</b> permanent magnets there is <b>no repulsion in either orientation</b> (any attraction is the same at both ends, or there is none); a permanent magnet would be repelled at one end."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Is it a magnet?",
+          "questions": [
+            {
+              "id": "mg-t2-q1",
+              "type": "choice",
+              "text": "A bar is attracted to both poles of a magnet. It is…",
+              "options": [
+                "a permanent magnet",
+                "an unmagnetised magnetic material",
+                "a non-magnetic material",
+                "a solenoid"
+              ],
+              "correct": 1,
+              "explain": "Attraction at both ends, no repulsion: magnetic material, not a magnet."
+            },
+            {
+              "id": "mg-t2-q2",
+              "type": "written",
+              "text": "Explain why a bar that picks up a paper clip is not necessarily a permanent magnet. (2)",
+              "model": "<ul><li>The bar might be an <b>induced (temporary) magnet</b> — a magnetic material still in, or just out of, a magnetic field.</li><li>Only <b>repulsion</b> by a known magnet proves it is a permanent magnet, because only two magnets can repel.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-t2-q3",
+              "type": "written",
+              "text": "Describe how a compass could be used to find out whether a steel rod is a permanent magnet. State the expected results. (3)",
+              "model": "<ul><li>Bring the <b>N end</b> of the compass needle to <b>one end</b> of the rod, then to the <b>other end</b>.</li><li>If the rod is a permanent magnet the needle's N end is <b>attracted to one end and repelled by the other</b>.</li><li>If it is not, the needle's N end is <b>attracted to both ends</b> (induced magnetism) — no repulsion.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-t2-q4",
+              "type": "choice",
+              "text": "A student's answer to 'test whether the nail is a magnet' is: \"Hold it near some iron filings and see if they stick.\" What is wrong?",
+              "options": [
+                "Iron filings are not magnetic",
+                "Filings would also stick to an induced magnet, so sticking does not show it is permanent — and no expected result is stated",
+                "Filings are too heavy",
+                "Nothing — it scores full marks"
+              ],
+              "correct": 1,
+              "explain": "Test needs repulsion, and the expected result must be stated."
+            },
+            {
+              "id": "mg-t2-q5",
+              "type": "choice",
+              "text": "Two bars look identical. One is a magnet, one is unmagnetised iron. Bringing the END of bar A to the MIDDLE of bar B gives strong attraction; bringing the end of B to the middle of A gives almost none. Which is the magnet?",
+              "options": [
+                "A",
+                "B",
+                "Both",
+                "Cannot tell"
+              ],
+              "correct": 0,
+              "explain": "A magnet's poles are at its ends, and its middle is weak: A's end attracts B's middle strongly, so A is the magnet (B's end at A's weak middle does little)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Design a test that distinguishes a magnet from a magnetic material",
+        "State the expected result for each possibility",
+        "Explain why picking up a paper clip is not enough"
+      ],
+      "blurb": "Three kinds of object look the same: a permanent magnet, an unmagnetised magnetic material, and a non-magnetic material. One compass or one known magnet tells them apart — if you test both ends and say what each result means. The 2025 examiners gave one mark for the test and one for the expected result."
+    },
+    {
+      "id": "field-diagrams-mag",
+      "band": "tricky",
+      "title": "Drawing and marking field diagrams",
+      "spec": "12.4, 12.7, 12.9",
+      "equations": [
+        "\\text{shape mark} + \\text{direction mark}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The five patterns and the marking",
+          "html": "<table class='tbl'><tr><th>Field</th><th>Shape</th><th>Direction</th><th>See</th></tr><tr><td><b>Bar magnet</b></td><td>loops from one pole round to the other; straight line out of each end; closest at the poles</td><td>out of N, into S</td><td>N3</td></tr><tr><td><b>N facing S</b></td><td>nearly straight, parallel lines across the gap (uniform between the poles), curving outward at the edges</td><td>N → S across the gap</td><td>N3</td></tr><tr><td><b>N facing N</b> (or S facing S)</td><td>lines <b>curve away</b> from each other; a <b>neutral point</b> midway where the field is zero (no lines)</td><td>out of both N poles</td><td>—</td></tr><tr><td><b>Straight wire</b></td><td>concentric circles centred on the wire, further apart with distance</td><td>right-hand grip rule</td><td>N5</td></tr><tr><td><b>Solenoid</b></td><td>straight, parallel, equally spaced inside; bar-magnet loops outside</td><td>through the inside and out of the N end</td><td>N6</td></tr></table><p><b>Marking</b> (June 2023 Q5(a) and the general schemes): the <b>shape mark</b> needs lines that <b>do not cross, touch or overlap</b>, that start and end on poles (or form closed circles round a wire), and that are <b>closer near the poles</b>; several lines from the same point on a pole lost it. The <b>direction mark</b> needs <b>arrows</b> on the lines, <b>out of N and into S</b> — at least one arrow on each line, all consistent. No arrows at all: no direction mark. Arrows the wrong way: no direction mark, even with a perfect shape. Field lines inside the magnet are not needed at GCSE and are ignored if drawn.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Two N poles",
+          "question": "Two bar magnets are placed in a line with their N poles 3 cm apart. Draw the magnetic field between them, and describe it. (3 marks)",
+          "steps": [
+            "Lines leave <b>each N pole</b> and <b>curve away</b> from the other magnet — none joins the two N poles, because like poles repel.",
+            "Midway between the poles there is a <b>neutral point</b> where the two fields cancel: the field is zero there, so no line passes through it.",
+            "<b>Arrows out of both N poles</b> (and, if the S poles are shown, round to them). Description: the field is weak between the poles and zero at the neutral point; the lines are furthest apart there."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Field diagrams",
+          "questions": [
+            {
+              "id": "mg-t3-q1",
+              "type": "choice",
+              "text": "A diagram of the field around a bar magnet has no arrows on any line. The shape is perfect. Marks out of 2?",
+              "options": [
+                "2",
+                "1 — shape only",
+                "0",
+                "Depends on the examiner"
+              ],
+              "correct": 1,
+              "explain": "No arrows, no direction mark."
+            },
+            {
+              "id": "mg-t3-q2",
+              "type": "written",
+              "text": "Describe the magnetic field pattern between the S pole of one magnet and the S pole of another placed facing it. (2)",
+              "model": "<ul><li>The lines <b>curve away</b> from each other: they <b>enter each S pole</b> from the sides and do not run straight across the gap.</li><li>There is a <b>neutral point</b> midway between the poles where the field is <b>zero</b>.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-t3-q3",
+              "type": "choice",
+              "text": "Which is NOT a reason for losing the shape mark on a bar-magnet field diagram?",
+              "options": [
+                "Two lines cross",
+                "Lines are closer together near the poles",
+                "Several lines leave the same point on the pole",
+                "A line stops in mid-air"
+              ],
+              "correct": 1,
+              "explain": "Closer near the poles is correct — it shows the stronger field."
+            },
+            {
+              "id": "mg-t3-q4",
+              "type": "written",
+              "text": "A student draws the field around a straight wire as straight lines pointing away from the wire. Explain what is wrong and what she should draw. (2)",
+              "model": "<ul><li>The field of a straight wire is <b>circles centred on the wire</b>, not radial lines — the radial pattern is an <b>electric</b> field (Topic 11).</li><li>Draw <b>concentric circles</b>, further apart with distance, with arrows given by the <b>right-hand grip rule</b> (clockwise for current into the page).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-t3-q5",
+              "type": "choice",
+              "text": "Inside a solenoid the field lines should be drawn…",
+              "options": [
+                "as circles",
+                "straight, parallel and equally spaced",
+                "curving outwards",
+                "there is no field inside"
+              ],
+              "correct": 1,
+              "explain": "Uniform inside: straight, parallel, equally spaced."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Draw the five standard field patterns",
+        "Mark a field diagram: say what scores and what loses the mark",
+        "Describe the field between two like poles"
+      ],
+      "blurb": "A field-diagram question is usually two marks: one for the shape, one for the direction. The shapes to know are the bar magnet, two magnets facing (N–S and N–N), the straight wire, and the solenoid. What loses the mark: lines that cross or touch, no arrows, arrows into N, lines that stop in mid-air."
+    },
+    {
+      "id": "earth-magnet",
+      "band": "tricky",
+      "title": "The Earth as a magnet: reading the field and the evidence",
+      "spec": "12.5, 12.6",
+      "equations": [
+        "\\text{compass points north} \\Rightarrow \\text{Earth has a field} \\Rightarrow \\text{core is magnetic}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Reading the Earth's field",
+          "html": "<p>Treat the Earth as a bar magnet with its <b>S pole near geographic north</b> and its N pole near geographic south (N4 figure). Then at any point: lines <b>come out</b> of the Earth near geographic <b>south</b>, run <b>parallel to the surface, pointing north</b>, at the <b>equator</b>, and <b>go into</b> the Earth near geographic <b>north</b>. A compass at any point lines up with the field there: on the surface its N end points north; a compass free to tilt dips downwards in the northern hemisphere.</p><p>The June 2024 scheme (Q5(a)): at the point on the surface near the equator the arrow pointed <b>up the page</b> (along the surface towards north); at the other marked point the arrow pointed the other way, <b>down the page</b> — read each one from the loop it lies on: outside the Earth the lines run from the magnetic N pole (geographic south) round to the magnetic S pole (geographic north), and inside the Earth they run back the other way. Judged by eye, within 10°. For the evidence (3 marks, any three): the <b>Earth has a magnetic field</b>; a <b>compass needle points along the field</b>; the field <b>goes into the Earth</b> at the north pole / <b>comes out</b> at the south; it <b>runs parallel to the surface at the equator</b>; the <b>core is magnetic</b> — \"as if there were a magnet inside the Earth\".</p><p>The naming twist: the end of a compass needle that points north is its <b>north-seeking pole</b>, a magnetic N pole. It is attracted north, and unlike poles attract, so the thing attracting it — the Earth's pole near geographic north — is a <b>magnetic S pole</b>. Students lose this mark by writing \"the Earth's north pole is a north pole\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark evidence",
+          "question": "Explain how the behaviour of a magnetic compass provides evidence that the core of the Earth is magnetic. (3 marks)",
+          "steps": [
+            "A compass needle is a small magnet that <b>lines up with a magnetic field</b>; it points north everywhere, so the <b>Earth has a magnetic field</b>.",
+            "The shape of that field — parallel to the ground at the equator, dipping into the ground near the poles — is the shape of a <b>bar magnet's field</b>.",
+            "So the field must come from <b>inside the Earth</b>: the <b>core must be magnetic</b>, as if there were a bar magnet in it."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The Earth as a magnet",
+          "questions": [
+            {
+              "id": "mg-t4-q1",
+              "type": "choice",
+              "text": "At a point just above the equator, the Earth's magnetic field points…",
+              "options": [
+                "straight down into the ground",
+                "parallel to the surface, towards geographic north",
+                "parallel to the surface, towards geographic south",
+                "straight up"
+              ],
+              "correct": 1,
+              "explain": "Along the surface, from the magnetic N pole (south) to the magnetic S pole (north)."
+            },
+            {
+              "id": "mg-t4-q2",
+              "type": "written",
+              "text": "Explain why the magnetic pole of the Earth near the geographic north pole is a magnetic south pole. (2)",
+              "model": "<ul><li>The N (north-seeking) pole of a compass needle <b>points towards</b> geographic north — it is <b>attracted</b> there.</li><li><b>Unlike poles attract</b>, so the pole it is attracted to must be a magnetic <b>S</b> pole.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-t4-q3",
+              "type": "choice",
+              "text": "Near the geographic north pole, the Earth's field lines…",
+              "options": [
+                "come out of the Earth",
+                "go into the Earth",
+                "run parallel to the surface",
+                "stop"
+              ],
+              "correct": 1,
+              "explain": "Into the magnetic S pole, which is near geographic north."
+            },
+            {
+              "id": "mg-t4-q4",
+              "type": "written",
+              "text": "Give three pieces of evidence, from the behaviour of compasses, that the Earth has a magnetic field like that of a bar magnet. (3)",
+              "model": "<ul><li>A compass <b>points north</b> everywhere (it only points when in a field).</li><li>The field is <b>parallel to the surface at the equator</b> and <b>dips into the ground</b> near the poles (goes in at one pole, out at the other).</li><li>The naming: a compass's N end is attracted towards geographic north, consistent with a <b>magnetic S pole</b> there — the pattern of a bar magnet inside the Earth.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-t4-q5",
+              "type": "choice",
+              "text": "Why is a compass used in navigation?",
+              "options": [
+                "It points towards the Sun",
+                "Its needle lines up with the Earth's magnetic field, so it always shows the direction of north",
+                "It measures distance",
+                "It detects metal"
+              ],
+              "correct": 1,
+              "explain": "Lines up with the Earth's field: a fixed reference direction."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Give the field direction at points around the Earth from the bar-magnet picture",
+        "List the evidence that the Earth has a magnetic field and a magnetic core",
+        "Explain why the pole near geographic north is a magnetic S pole"
+      ],
+      "blurb": "The 2024 paper drew the Earth with its field and asked for the field direction at marked points, then for the evidence that the Earth has a magnetic field. The direction at any point follows the bar-magnet picture: out of the magnetic N pole (near geographic south), round, into the magnetic S pole (near geographic north); parallel to the surface at the equator."
+    },
+    {
+      "id": "flhr-diagrams",
+      "band": "tricky",
+      "title": "Using Fleming's left-hand rule on diagrams: dots, crosses and the missing direction",
+      "spec": "12.12",
+      "equations": [
+        "\\text{dot: out of the page}",
+        "\\text{cross: into the page}",
+        "\\text{parallel: no force}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The three cases",
+          "html": "<figure class='diagram'><svg viewBox='0 0 720 245' role='img'><text x='120.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>current out, field →</text><rect x='10' y='70' width='18.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='28.0' y='70' width='18.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='28.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><rect x='194' y='70' width='18.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='212.0' y='70' width='18.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='212.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><line x1='48.0' y1='92.0' x2='192.0' y2='92.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='150.0,92.0 143.9,95.4 143.9,88.6' style='fill:var(--ink-2)'/><line x1='48.0' y1='122.0' x2='192.0' y2='122.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='150.0,122.0 143.9,125.4 143.9,118.6' style='fill:var(--ink-2)'/><line x1='48.0' y1='152.0' x2='192.0' y2='152.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='150.0,152.0 143.9,155.4 143.9,148.6' style='fill:var(--ink-2)'/><line x1='48.0' y1='182.0' x2='192.0' y2='182.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='150.0,182.0 143.9,185.4 143.9,178.6' style='fill:var(--ink-2)'/><circle cx='120' cy='140' r='10' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='120.0' cy='140.0' r='2.8' style='fill:var(--ink)'/><line x1='120.0' y1='124.0' x2='120.0' y2='80.0' style='stroke:var(--accent);stroke-width:2.6'/><polygon points='120.0,80.0 123.9,88.1 116.1,88.1' style='fill:var(--accent)'/><text x='120.0' y='232.0' text-anchor='middle' style='fill:var(--accent);font-size:12px;font-weight:bold;'>force up</text><text x='360.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>current in, field →</text><rect x='250' y='70' width='18.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='268.0' y='70' width='18.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='268.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><rect x='434' y='70' width='18.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='452.0' y='70' width='18.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='452.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><line x1='288.0' y1='92.0' x2='432.0' y2='92.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='390.0,92.0 383.9,95.4 383.9,88.6' style='fill:var(--ink-2)'/><line x1='288.0' y1='122.0' x2='432.0' y2='122.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='390.0,122.0 383.9,125.4 383.9,118.6' style='fill:var(--ink-2)'/><line x1='288.0' y1='152.0' x2='432.0' y2='152.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='390.0,152.0 383.9,155.4 383.9,148.6' style='fill:var(--ink-2)'/><line x1='288.0' y1='182.0' x2='432.0' y2='182.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='390.0,182.0 383.9,185.4 383.9,178.6' style='fill:var(--ink-2)'/><circle cx='360' cy='140' r='10' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='354.5' y1='134.5' x2='365.5' y2='145.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='354.5' y1='145.5' x2='365.5' y2='134.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='360.0' y1='156.0' x2='360.0' y2='200.0' style='stroke:var(--accent);stroke-width:2.6'/><polygon points='360.0,200.0 356.1,191.9 363.9,191.9' style='fill:var(--accent)'/><text x='360.0' y='232.0' text-anchor='middle' style='fill:var(--accent);font-size:12px;font-weight:bold;'>force down</text><text x='600.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>current along the field</text><rect x='490' y='70' width='18.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='508.0' y='70' width='18.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='508.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><rect x='674' y='70' width='18.0' height='130' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='692.0' y='70' width='18.0' height='130' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='692.0' y='142.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><line x1='528.0' y1='92.0' x2='672.0' y2='92.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='630.0,92.0 623.9,95.4 623.9,88.6' style='fill:var(--ink-2)'/><line x1='528.0' y1='122.0' x2='672.0' y2='122.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='630.0,122.0 623.9,125.4 623.9,118.6' style='fill:var(--ink-2)'/><line x1='528.0' y1='152.0' x2='672.0' y2='152.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='630.0,152.0 623.9,155.4 623.9,148.6' style='fill:var(--ink-2)'/><line x1='528.0' y1='182.0' x2='672.0' y2='182.0' style='stroke:var(--ink-2);stroke-width:1.4'/><polygon points='630.0,182.0 623.9,185.4 623.9,178.6' style='fill:var(--ink-2)'/><rect x='540' y='135' width='120' height='10' style='fill:var(--ink-2);opacity:0.5;stroke:var(--ink-2);stroke-width:1.4'/><line x1='560.0' y1='124.0' x2='640.0' y2='124.0' style='stroke:var(--ink);stroke-width:2'/><polygon points='640.0,124.0 631.9,127.9 631.9,120.1' style='fill:var(--ink)'/><text x='600.0' y='116.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;font-style:italic;'>I</text><text x='600.0' y='232.0' text-anchor='middle' style='fill:var(--ink-2);font-size:12px;font-weight:bold;'>no force</text></svg><figcaption>A wire end on between the poles: current out of the page is pushed up, current into the page is pushed down, and a wire along the field feels no force.</figcaption></figure><p><b>Method</b>: (1) check the current and field are at <b>right angles</b> — if the wire runs along the field, the answer is <b>no force</b> and you stop; (2) point the <b>first finger</b> along the field, <b>N to S</b>; (3) point the <b>second finger</b> along the current — <b>towards you</b> for a dot, <b>away from you</b> for a cross; (4) the <b>thumb</b> gives the force. To find the <b>current</b> instead, set the first finger (field) and thumb (force) and read the second finger. To find the <b>field</b>, set thumb and second finger and read the first.</p><p><b>Reversing</b>: reversing the current reverses the force; reversing the field reverses the force; reversing both leaves it as it was. The June 2024 scheme (Q5(b)(ii)): \"swap the battery connections around\" <b>or</b> \"turn the magnet around\". A common slip is to use the <b>right</b> hand (which gives the opposite answer) or to point the second finger along the <b>electron</b> flow — the rule uses <b>conventional current</b>, + to −.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Finding the current",
+          "question": "A wire between the poles of a magnet experiences a force up the page. The field points from right to left. Find the direction of the current. (2 marks)",
+          "steps": [
+            "First finger along the field: pointing <b>left</b>. Thumb along the force: pointing <b>up</b>.",
+            "The second finger then points <b>into the page</b>, away from you — the current is <b>into the page</b> (a cross). Check against the reference case: field right with current out gives force up; reversing the field alone would give force down, so to keep the force up the current must be reversed too — into the page."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Diagrams",
+          "questions": [
+            {
+              "id": "mg-t5-q1",
+              "type": "choice",
+              "text": "Field from left to right; current out of the page (dot). Force on the wire?",
+              "options": [
+                "Up the page",
+                "Down the page",
+                "Left",
+                "Right"
+              ],
+              "correct": 0,
+              "explain": "First finger right, second finger towards you, thumb up."
+            },
+            {
+              "id": "mg-t5-q2",
+              "type": "choice",
+              "text": "Field from left to right; current into the page (cross). Force?",
+              "options": [
+                "Up the page",
+                "Down the page",
+                "Left",
+                "Right"
+              ],
+              "correct": 1,
+              "explain": "Reversing the current reverses the force: down."
+            },
+            {
+              "id": "mg-t5-q3",
+              "type": "choice",
+              "text": "Field from right to left; current into the page (cross). Force?",
+              "options": [
+                "Up the page",
+                "Down the page",
+                "Left",
+                "Right"
+              ],
+              "correct": 0,
+              "explain": "Reversing both the field and the current (compared with q1) leaves the force as it was: up."
+            },
+            {
+              "id": "mg-t5-q4",
+              "type": "choice",
+              "text": "Field down the page; force on the wire to the right. The current is…",
+              "options": [
+                "out of the page",
+                "into the page",
+                "up the page",
+                "to the left"
+              ],
+              "correct": 0,
+              "explain": "First finger down, thumb right: the second finger points towards you — out of the page. (Check: field down, current out, force right.)"
+            },
+            {
+              "id": "mg-t5-q5",
+              "type": "choice",
+              "text": "Field from left to right; the wire runs from left to right too, carrying a current. Force?",
+              "options": [
+                "Up",
+                "Down",
+                "Zero",
+                "Into the page"
+              ],
+              "correct": 2,
+              "explain": "Current parallel to the field: no force."
+            },
+            {
+              "id": "mg-t5-q6",
+              "type": "written",
+              "text": "A wire between two magnets is pushed upwards when the current is switched on. State and explain two separate changes that would each make it move downwards instead. (4)",
+              "model": "<ul><li><b>Reverse the current</b> (swap the connections to the supply)…</li><li>…because the force reverses when the current reverses (the second finger reverses, so the thumb reverses).</li><li><b>Reverse the field</b> (turn the magnet round / swap the poles)…</li><li>…because the force reverses when the field reverses (the first finger reverses, so the thumb reverses). Doing both would leave it moving up.</li></ul>",
+              "lines": 4
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find the force direction from a dot-or-cross diagram",
+        "Find the current direction given the field and the force",
+        "Recognise the no-force case and the two ways of reversing the force"
+      ],
+      "blurb": "The exam gives two of the three directions and asks for the third, usually with the wire end on. The method is the same every time: set the first finger along the field, the second along the current, read the thumb; and check first that the current and field are at right angles.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "motor-force-hard",
+      "band": "tricky",
+      "title": "F = BIl the hard way: rearranging, the length in the field, and unfamiliar equations",
+      "spec": "12.13",
+      "equations": [
+        "B = \\dfrac{F}{I\\,l}",
+        "I = \\dfrac{F}{B\\,l}",
+        "l = \\dfrac{F}{B\\,I}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Where the extra marks hide",
+          "html": "<table class='tbl'><tr><th>Twist</th><th>What to do</th></tr><tr><td>Length given in <b>cm</b>, current in <b>mA</b>, force in <b>mN</b></td><td>convert to m, A and N <b>before</b> substituting; write the conversion as a line of working</td></tr><tr><td>A long wire, only part of it <b>between the poles</b></td><td>$l$ is the length <b>inside the field</b> — usually the width of the magnet or the pole pieces, not the whole wire</td></tr><tr><td>A coil of <b>N turns</b> with one side in the field</td><td>the force on that side is $N$ times the force on one wire: $F = B I l N$ — the question will say so, or ask for the force on one wire</td></tr><tr><td>Current <b>not given</b>, but pd and resistance are</td><td>find $I = V / R$ first (Topic 10), then $F = B I l$</td></tr><tr><td>An <b>unfamiliar equation</b> is given</td><td>June 2025 Q7(c): an equation linking $B$ and distance $d$ — substitute and rearrange exactly as you would for $F = B I l$; finding the constant and stopping scored 1 of 3</td></tr><tr><td>Wire <b>parallel</b> to the field</td><td>$F = 0$ — the equation only applies at right angles</td></tr></table><p>The June 2024 scheme (Q5(b)(iii), 2 marks): \"rearrangement and substitution\" (1), \"evaluation\" (1) — 0.58 T, or anything rounding to 0.6 T; full marks for the correct answer alone. Show the rearranged equation with numbers in it: that line is a mark on its own if the arithmetic goes wrong.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 2024-style flux density",
+          "question": "A wire carries a current of 1.2 A. A 5.0 cm length of it lies at right angles to a magnetic field, and the force on the wire is 0.035 N. Calculate the magnetic flux density. (2 marks)",
+          "steps": [
+            "Convert: $l = 5.0$ cm $= 0.050$ m. Rearrange and substitute: $B = F \\div (I l) = 0.035 \\div (1.2 \\times 0.050)$.",
+            "$B = 0.035 \\div 0.060 = 0.58$ T (anything rounding to 0.6 T)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The hard way",
+          "questions": [
+            {
+              "id": "mg-t6-q1",
+              "type": "numeric",
+              "text": "A wire 60 cm long is held across a magnet whose poles are 4.0 cm wide. The current is 3.0 A and the flux density 0.20 T. Calculate the force on the wire.",
+              "answer": {
+                "value": 0.024,
+                "unit": "N"
+              },
+              "hint": "Only the length between the poles is in the field.",
+              "walkthrough": [
+                "$l = 4.0$ cm $= 0.040$ m — the length <b>in the field</b>, not the 0.60 m of wire.",
+                "<b>Equation:</b> $F = B I l$",
+                "<b>Working:</b> $F = 0.20 \\times 3.0 \\times 0.040$",
+                "<b>Answer:</b> $= 0.024$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "mg-t6-q2",
+              "type": "numeric",
+              "text": "A 0.10 m length of wire in a 0.30 T field feels a force of 45 mN. Calculate the current.",
+              "answer": {
+                "value": 1.5,
+                "unit": "A"
+              },
+              "hint": "45 mN = 0.045 N; I = F ÷ (B l).",
+              "walkthrough": [
+                "$F = 45$ mN $= 0.045$ N",
+                "<b>Equation:</b> $I = F \\div (B l)$",
+                "<b>Working:</b> $I = 0.045 \\div (0.30 \\times 0.10) = 0.045 \\div 0.030$",
+                "<b>Answer:</b> $= 1.5$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "mg-t6-q3",
+              "type": "numeric",
+              "text": "A wire of resistance 4.0 Ω is connected to a 6.0 V supply. 0.25 m of it is at right angles to a field of 0.080 T. Calculate the force on that length.",
+              "answer": {
+                "value": 0.03,
+                "unit": "N"
+              },
+              "hint": "Find I from V = IR first.",
+              "walkthrough": [
+                "$I = V \\div R = 6.0 \\div 4.0 = 1.5$ A",
+                "<b>Equation:</b> $F = B I l$",
+                "<b>Working:</b> $F = 0.080 \\times 1.5 \\times 0.25$",
+                "<b>Answer:</b> $= 0.030$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "mg-t6-q4",
+              "type": "numeric",
+              "text": "One side of a coil of 50 turns lies in a field of 0.12 T; the side is 8.0 cm long and carries 2.0 A. Calculate the force on that side of the coil (all 50 wires).",
+              "answer": {
+                "value": 0.96,
+                "unit": "N"
+              },
+              "hint": "Force on one wire × 50.",
+              "walkthrough": [
+                "<b>Equation:</b> $F = B I l N$",
+                "<b>Working:</b> $F = 0.12 \\times 2.0 \\times 0.080 \\times 50$",
+                "<b>Answer:</b> $= 0.96$",
+                "<b>Units:</b> N",
+                "(one wire: $0.0192$ N; fifty of them: $0.96$ N)"
+              ]
+            },
+            {
+              "id": "mg-t6-q5",
+              "type": "numeric",
+              "text": "The magnetic flux density at a distance d from a small magnet is given by B = K ÷ d², where K is a constant. At d = 0.10 m, B = 640 μT. Calculate B at d = 0.20 m, in μT.",
+              "answer": {
+                "value": 160,
+                "unit": "μT"
+              },
+              "hint": "Find K first, then use it again — or notice doubling d divides B by 4.",
+              "walkthrough": [
+                "<b>Find K:</b> $K = B d^2 = 640 \\times 0.10^2 = 6.4$ (μT m²)",
+                "<b>Use it:</b> $B = K \\div d^2 = 6.4 \\div 0.20^2 = 6.4 \\div 0.040$",
+                "<b>Answer:</b> $= 160$ μT — inverse square: twice the distance, a quarter of the field"
+              ]
+            },
+            {
+              "id": "mg-t6-q6",
+              "type": "choice",
+              "text": "A student finds the constant K in the 2025-style question and stops. Out of 3 marks she scores…",
+              "options": [
+                "3",
+                "2",
+                "1",
+                "0"
+              ],
+              "correct": 2,
+              "explain": "The report: finding K 'earning 1 of 3, but made no further progress'."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Rearrange F = BIl for any quantity and convert units first",
+        "Use only the length of wire inside the field",
+        "Use an unfamiliar given equation with the same care as a familiar one"
+      ],
+      "blurb": "The harder $F = BIl$ questions hide one of three things: the length is only the part of the wire inside the field; the current comes from another equation first ($V = IR$); or the equation is an unfamiliar one you are given and simply have to use. In 2024 the answer was 0.58 T; in 2025 an inverse-square equation gave 160 μT.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "dc-motor",
+      "band": "tricky",
+      "title": "The d.c. motor: why the coil turns, and why it keeps turning",
+      "spec": "12.14P",
+      "equations": [
+        "\\text{opposite forces on the two sides} \\Rightarrow \\text{rotation}",
+        "\\text{commutator: reverse every half turn}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain, then the commutator",
+          "html": "<figure class='diagram'><svg viewBox='0 0 700 280' role='img'><text x='200.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>the coil end on: one side pushed up, the other down</text><rect x='30' y='70' width='25.0' height='150' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='55.0' y='70' width='25.0' height='150' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='55.0' y='152.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>N</text><rect x='320' y='70' width='25.0' height='150' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='345.0' y='70' width='25.0' height='150' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='345.0' y='152.0' text-anchor='middle' style='fill:var(--ink);font-size:16px;font-weight:bold;'>S</text><line x1='82.0' y1='92.0' x2='318.0' y2='92.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='200.0,92.0 193.9,95.4 193.9,88.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='120.0' x2='318.0' y2='120.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='200.0,120.0 193.9,123.4 193.9,116.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='148.0' x2='318.0' y2='148.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='200.0,148.0 193.9,151.4 193.9,144.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='176.0' x2='318.0' y2='176.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='200.0,176.0 193.9,179.4 193.9,172.6' style='fill:var(--ink-2)'/><line x1='82.0' y1='204.0' x2='318.0' y2='204.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='200.0,204.0 193.9,207.4 193.9,200.6' style='fill:var(--ink-2)'/><line x1='130.0' y1='145.0' x2='270.0' y2='145.0' style='stroke:var(--ink);stroke-width:3'/><circle cx='200.0' cy='145.0' r='4' style='fill:var(--ink-2)'/><circle cx='130' cy='145' r='10' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='130.0' cy='145.0' r='2.8' style='fill:var(--ink)'/><circle cx='270' cy='145' r='10' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='264.5' y1='139.5' x2='275.5' y2='150.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='264.5' y1='150.5' x2='275.5' y2='139.5' style='stroke:var(--ink);stroke-width:1.8'/><line x1='130.0' y1='128.0' x2='130.0' y2='78.0' style='stroke:var(--accent);stroke-width:2.6'/><polygon points='130.0,78.0 133.9,86.1 126.1,86.1' style='fill:var(--accent)'/><line x1='270.0' y1='162.0' x2='270.0' y2='212.0' style='stroke:var(--accent);stroke-width:2.6'/><polygon points='270.0,212.0 266.1,203.9 273.9,203.9' style='fill:var(--accent)'/><text x='110.0' y='70.0' text-anchor='middle' style='fill:var(--accent);font-size:12px;font-weight:normal;font-style:italic;'>F</text><text x='290.0' y='224.0' text-anchor='middle' style='fill:var(--accent);font-size:12px;font-weight:normal;font-style:italic;'>F</text><text x='200.0' y='170.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>axle</text><text x='200.0' y='252.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>current out on the left, in on the right: the forces are</text><text x='200.0' y='267.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>opposite on either side, so the coil turns (here, clockwise)</text><text x='560.0' y='24.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>the split-ring commutator</text><path d='M 557 110 A 40 40 0 0 1 557 190' style='fill:none;stroke:var(--ink);stroke-width:9'/><path d='M 563 110 A 40 40 0 0 0 563 190' style='fill:none;stroke:var(--ink-2);stroke-width:9'/><rect x='488' y='143' width='24' height='14' style='fill:var(--accent);opacity:0.6;stroke:var(--ink-2);stroke-width:1.4'/><rect x='608' y='143' width='24' height='14' style='fill:var(--accent);opacity:0.6;stroke:var(--ink-2);stroke-width:1.4'/><text x='500.0' y='136.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>brush</text><text x='620.0' y='136.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>brush</text><line x1='460.0' y1='150.0' x2='488.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='632.0' y1='150.0' x2='660.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.6'/><text x='452.0' y='154.0' text-anchor='end' style='fill:var(--ink);font-size:13px;font-weight:bold;'>+</text><text x='668.0' y='154.0' text-anchor='start' style='fill:var(--ink);font-size:13px;font-weight:bold;'>−</text><text x='560.0' y='154.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>gap</text><text x='560.0' y='225.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>each half is joined to one side of the coil and turns with it;</text><text x='560.0' y='240.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>every half turn the halves swap brushes, so the current in the coil</text><text x='560.0' y='255.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>reverses and the coil keeps turning the same way</text></svg><figcaption>The coil end on, with opposite forces on its two sides; and the split-ring commutator, whose halves swap brushes every half turn.</figcaption></figure><p>The standard explanation of the motor effect in a motor, in the steps the marks are on (the <a href='../simple-motor/'>Simple Motor</a> page animates it):</p><ol class='steps'><li>There is a current in the coil.</li><li>This creates a magnetic field around the coil.</li><li>This interacts with the permanent magnetic field.</li><li>This causes a resultant force on the coil.</li><li>The direction of the force is opposite on either side of the coil.</li><li>So the coil rotates.</li></ol><p>Why the forces are opposite: the current goes <b>one way along one side of the coil and the opposite way along the other</b>, and Fleming's left-hand rule gives opposite forces for opposite currents in the same field. The two forces make a <b>turning effect</b> about the axle.</p><p><b>The split-ring commutator</b>: two half-rings on the axle, each joined to one end of the coil, turning with it; two fixed <b>brushes</b> press on them and connect to the supply. Every <b>half turn</b> the halves swap brushes, so the <b>current in the coil reverses</b>. Without it, once the coil passed the vertical the force on each side would be the same way as before but that side is now on the other side of the axle, so it would be turned <b>back</b> — the coil would rock to the vertical and stop. With it, the side that is now on the left always carries the current the left side needs, so the force on it is always the same way and the coil <b>keeps turning in the same direction</b>. The June 2025 report (Q6(c)): credit was given for \"<b>reversing the current every half turn</b>\" and for explaining that this \"lets the motor <b>spin continuously</b>\" (keeps rotating in the same direction); many gave the first without the second, some said it stops the wires tangling, and \"a surprisingly large number\" described a <b>dynamo</b> — one scored 1 of 3 because \"the motor does not produce a current\".</p><p><b>Faster</b> (larger force): more <b>current</b>, a <b>stronger magnet</b>, <b>more turns</b> on the coil, an iron core in the coil. <b>Reverse</b>: reverse the current (swap the supply connections) or reverse the field (swap the magnets). The force on each side is the <b>same size at every angle</b> (the long sides are always at right angles to the field), but its <b>turning effect</b> is largest when the coil is <b>flat</b> and falls to zero as the coil reaches the vertical — real motors use several coils at different angles so there is never a dead spot.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 6-mark motor",
+          "question": "Explain how a simple d.c. motor produces continuous rotation. (6 marks)",
+          "steps": [
+            "There is a <b>current in the coil</b>. This <b>creates a magnetic field around the coil</b>.",
+            "This <b>interacts with the permanent magnetic field</b>. This causes a <b>resultant force on the coil</b>.",
+            "<b>The direction of the force is opposite on either side of the coil</b> (the current goes opposite ways along the two sides — Fleming's left-hand rule). <b>So the coil rotates.</b>",
+            "The <b>split-ring commutator</b> turns with the coil; its two halves are connected to the ends of the coil and press against fixed brushes.",
+            "Every <b>half turn</b> the halves swap brushes, so the <b>current in the coil reverses</b>…",
+            "…so the force on whichever side is on the left is always in the same direction, and the coil <b>keeps rotating in the same direction</b> instead of rocking back."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The d.c. motor",
+          "questions": [
+            {
+              "id": "mg-t7-q1",
+              "type": "written",
+              "text": "Explain why the coil of a d.c. motor starts to turn when the current is switched on. (4)",
+              "model": "<ul><li>There is a <b>current in the coil</b>. This <b>creates a magnetic field around the coil</b>.</li><li>This <b>interacts with the permanent magnetic field</b>. This causes a <b>resultant force on the coil</b>.</li><li><b>The direction of the force is opposite on either side of the coil</b> (the current goes opposite ways along the two sides).</li><li><b>So the coil rotates</b> (the two forces give a turning effect about the axle).</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mg-t7-q2",
+              "type": "written",
+              "text": "Explain the purpose of the split-ring commutator in a d.c. motor. (3)",
+              "model": "<ul><li>It <b>reverses the current in the coil every half turn</b> (the halves of the ring swap brushes as the coil turns).</li><li>So the force on each side of the coil is always in the direction needed on that side of the axle…</li><li>…and the coil <b>keeps rotating in the same direction</b> (continuously) instead of turning back and stopping.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mg-t7-q3",
+              "type": "choice",
+              "text": "Which statement about a d.c. motor is WRONG?",
+              "options": [
+                "The forces on the two sides of the coil are in opposite directions",
+                "The commutator reverses the current every half turn",
+                "The motor produces a current",
+                "Reversing the supply reverses the rotation"
+              ],
+              "correct": 2,
+              "explain": "2025 report: 'the motor does not produce a current' — that is a generator (Topic 13)."
+            },
+            {
+              "id": "mg-t7-q4",
+              "type": "written",
+              "text": "State two changes that would make the coil of a d.c. motor turn faster. (2)",
+              "model": "<ul><li><b>Increase the current</b> (higher pd) — or use <b>stronger magnets</b>.</li><li><b>More turns</b> on the coil (or an iron core) — each gives a larger force and so a larger turning effect.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-t7-q5",
+              "type": "choice",
+              "text": "What would happen to a motor's coil if the split ring were replaced by a complete ring (the same connection all the time)?",
+              "options": [
+                "It would turn faster",
+                "It would turn to the vertical, then be pushed back — rocking about the vertical and stopping",
+                "It would turn the other way",
+                "Nothing would change"
+              ],
+              "correct": 1,
+              "explain": "Without reversal the force turns the coil back once it passes vertical."
+            },
+            {
+              "id": "mg-t7-q6",
+              "type": "written",
+              "text": "A student describes a d.c. motor by writing: \"As the coil turns in the field, a current is induced in it, which makes it spin.\" Explain the error. (2)",
+              "model": "<ul><li>That describes a <b>generator/dynamo</b> (electromagnetic induction): a motor does <b>not produce</b> a current.</li><li>In a motor the current comes from the <b>supply</b>; the force on the current-carrying coil in the field (the <b>motor effect</b>) makes it turn.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the six-step chain for the motor effect in a motor",
+        "Explain what the split-ring commutator does and why the motor needs it",
+        "State what makes the motor turn faster, and what reverses it"
+      ],
+      "blurb": "A motor is the motor effect applied to a coil: the current goes one way along one side and the other way along the opposite side, so the forces are opposite and the coil turns. The split-ring commutator reverses the current in the coil every half turn so that it keeps turning the same way. In 2025 the commutator was 'poorly explained' and many students described a generator instead.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "electromagnet-practical",
+      "band": "tricky",
+      "title": "Investigating an electromagnet: the seven steps, and describing the trend",
+      "spec": "12.8, 12.9",
+      "equations": [
+        "\\text{variables} \\rightarrow \\text{relationship} \\rightarrow \\text{change} \\rightarrow \\text{measure} \\rightarrow \\text{use} \\rightarrow \\text{accuracy} \\rightarrow \\text{repeat}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The recipe applied",
+          "html": "<table class='tbl'><tr><th>Step</th><th>Strength against number of turns</th><th>Strength against current</th></tr><tr><td><b>1 Variables</b></td><td>independent: number of turns on the core; dependent: strength, measured as the number of nails (or paper clips) picked up, or the mass held; control: current, the core, the nails</td><td>independent: current (set with a variable resistor, read on an ammeter); dependent: number of nails held; control: turns, core, nails</td></tr><tr><td><b>2 Equation / relationship</b></td><td>no equation; state the relationship you expect — the strength (nails held) should rise with the number of turns</td><td>no equation; expected to rise with the current</td></tr><tr><td><b>3 Change</b></td><td>wind 10, 20, 30 … turns on the same core, keeping the current the same</td><td>change the current in equal steps with the variable resistor</td></tr><tr><td><b>4 Measure</b></td><td>dip the core into a tray of nails, lift, count the nails held</td><td>same</td></tr><tr><td><b>5 Use the result</b></td><td>plot nails against turns; describe the trend</td><td>plot nails against current</td></tr><tr><td><b>6 Accuracy detail</b></td><td>use the same nails each time; switch off between readings so the coil does not heat up (its resistance would rise and change the current) and the nails do not become magnetised; lift from the same depth</td><td>switch off between readings; wait for the ammeter to settle</td></tr><tr><td><b>7 Repeat</b></td><td>repeat each number of turns three times and take a mean</td><td>same</td></tr></table><p><b>Describing the trend</b> (June 2025 Q7(b)(iii)): \"as the number of turns increases the number of nails held increases\" scores; better answers added that the increase is <b>not linear</b> (not proportional — the graph is not a straight line through the origin). The examiners: candidates \"should be discouraged from using the term '<b>inversely proportional</b>'\" as a synonym for \"one goes down as the other goes up\" — it only means that one variable is proportional to the reciprocal of the other. Say <b>what happens to the dependent variable as the independent variable increases</b>, and whether the change is steady, speeding up or levelling off.</p><p>Afterwards the nails may have become weak permanent magnets (steel), which would change later counts — hence the 2025 test for permanent magnetism (T2).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 6-mark plan",
+          "question": "Plan an investigation to find how the strength of an electromagnet depends on the number of turns of wire on its core. (6 marks)",
+          "steps": [
+            "<b>Variables:</b> change the number of turns (independent); measure the strength as the number of nails the electromagnet can hold (dependent); keep the current, the core and the nails the same (control).",
+            "<b>Relationship expected:</b> more turns, a stronger electromagnet, so more nails held (no equation needed). Circuit: the coil in series with a cell, a switch, an ammeter and a variable resistor, set so the current is the same for every number of turns.",
+            "<b>Change:</b> wind 10 turns on the iron core; then 20, 30, 40, 50 — five values at least.",
+            "<b>Measure:</b> switch on, lower the core into a tray of nails, lift it out and count the nails held; switch off between readings.",
+            "<b>Use:</b> plot number of nails against number of turns and describe the trend.",
+            "<b>Accuracy and repeats:</b> use the same tray of nails and lift from the same depth each time; repeat each number of turns three times and take a mean."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The investigation",
+          "questions": [
+            {
+              "id": "mg-t8-q1",
+              "type": "written",
+              "text": "Plan an investigation into how the strength of an electromagnet depends on the current in its coil. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Independent: current; dependent: strength (number of nails or paper clips held, or mass lifted); control: number of turns, the core, the nails.</td></tr><tr><td><b>2</b></td><td>Relationship</td><td>No equation; expect the strength (nails held) to rise with the current.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Coil in series with a supply, a <b>variable resistor</b> and an <b>ammeter</b>; set the current to at least five values in equal steps.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Count the nails held (or mass lifted) at each current; switch off between readings.</td></tr><tr><td><b>5</b></td><td>Use</td><td>Plot nails against current and describe the trend.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Same nails and same depth each time; switch off between readings so the coil does not heat up.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td>Repeat each current three times and take a mean.</td></tr></table><ul><li>Any six of the seven points.</li></ul>",
+              "lines": 7
+            },
+            {
+              "id": "mg-t8-q2",
+              "type": "choice",
+              "text": "In the turns investigation, which is the control variable?",
+              "options": [
+                "The number of turns",
+                "The number of nails held",
+                "The current",
+                "The trend"
+              ],
+              "correct": 2,
+              "explain": "Keep the current (and core and nails) the same."
+            },
+            {
+              "id": "mg-t8-q3",
+              "type": "written",
+              "text": "A bar chart shows 4, 7, 9, 10 and 10 nails held for 10, 20, 30, 40 and 50 turns. Describe the relationship. (2)",
+              "model": "<ul><li>As the number of turns <b>increases</b>, the number of nails held <b>increases</b>…</li><li>…but <b>not in proportion</b>: the increase gets smaller and <b>levels off</b> (no change from 40 to 50 turns).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mg-t8-q4",
+              "type": "choice",
+              "text": "Fewer nails are held as a variable is increased. The examiners said NOT to describe this as…",
+              "options": [
+                "a negative correlation",
+                "a decrease",
+                "inversely proportional",
+                "a downward trend"
+              ],
+              "correct": 2,
+              "explain": "2025 report: 'inversely proportional' only when one variable is proportional to the reciprocal of the other."
+            },
+            {
+              "id": "mg-t8-q5",
+              "type": "written",
+              "text": "Explain why the student switches the electromagnet off between readings. (2)",
+              "model": "<ul><li>So the coil does not <b>heat up</b> (its resistance would rise and change the current)…</li><li>…and so the steel nails are not left in the field long enough to become <b>permanent magnets</b>, which would change later counts.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Plan an investigation into how the strength of an electromagnet depends on the current or the number of turns",
+        "Describe a trend from a bar chart or graph in the words that score",
+        "Explain why the nails must be tested for permanent magnetism afterwards"
+      ],
+      "blurb": "The 2025 paper used nails picked up by an electromagnet as the measure of its strength, against the number of turns. The seven-step recipe from Topic 1 (T6 there) plans it; the data question wants a trend described in plain words — not 'inversely proportional', which the examiners said to avoid unless it is true."
+    }
+  ],
+  "facts": [
+    {
+      "q": "Rule for poles?",
+      "a": "Like poles repel; unlike poles attract.",
+      "section": "poles"
+    },
+    {
+      "q": "Why is attraction not a test for a magnet?",
+      "a": "A magnet attracts any magnetic material (it induces the opposite pole), whichever way round. Only repulsion proves an object is a magnet.",
+      "section": "poles"
+    },
+    {
+      "q": "The 2-mark 'is it a magnet' test?",
+      "a": "Bring the same pole of a known magnet to each end in turn (test both orientations) AND state the result: a magnet is repelled at one end; a magnetic material is attracted at both.",
+      "section": "poles"
+    },
+    {
+      "q": "The four magnetic materials?",
+      "a": "Iron, steel, cobalt, nickel.",
+      "section": "poles"
+    },
+    {
+      "q": "Permanent magnet?",
+      "a": "Produces its own magnetic field all the time (steel).",
+      "section": "permanent-induced"
+    },
+    {
+      "q": "Induced (temporary) magnet?",
+      "a": "A magnetic material that is a magnet only while in a field; loses it when the field is removed (soft iron).",
+      "section": "permanent-induced"
+    },
+    {
+      "q": "Which pole is induced nearest a magnet's N pole?",
+      "a": "A S pole — so induced magnetism always attracts.",
+      "section": "permanent-induced"
+    },
+    {
+      "q": "Why iron, not steel, for an electromagnet core?",
+      "a": "Iron loses its magnetism when the current is off, so the electromagnet can be switched off; steel would stay magnetised.",
+      "section": "permanent-induced"
+    },
+    {
+      "q": "Use of a permanent magnet? Of a temporary one?",
+      "a": "Permanent: compass needle, motor, loudspeaker, fridge magnet. Temporary: electromagnet core, relay, electric bell, transformer core.",
+      "section": "permanent-induced"
+    },
+    {
+      "q": "What is a magnetic field?",
+      "a": "The region around a magnet (or current) where a magnetic material or another magnet experiences a force.",
+      "section": "field-lines"
+    },
+    {
+      "q": "Which way do field lines point?",
+      "a": "Out of N, into S (outside the magnet).",
+      "section": "field-lines"
+    },
+    {
+      "q": "How does a diagram show field strength?",
+      "a": "Closer lines = stronger field; closest at the poles.",
+      "section": "field-lines"
+    },
+    {
+      "q": "Field between N and S poles facing each other?",
+      "a": "Uniform: straight, parallel, equally spaced lines from N to S.",
+      "section": "field-lines"
+    },
+    {
+      "q": "Three ways to lose the field-diagram marks?",
+      "a": "Lines that cross or touch; no arrows; arrows into N.",
+      "section": "field-lines"
+    },
+    {
+      "q": "How to plot a field line with a compass?",
+      "a": "Mark dots at each end of the needle; move the compass so its tail is on the head's dot; repeat; join the dots; arrow the way the N end pointed.",
+      "section": "compass-earth"
+    },
+    {
+      "q": "What does a compass pointing north show?",
+      "a": "The Earth has a magnetic field, so its core must be magnetic (like a bar magnet inside the Earth).",
+      "section": "compass-earth"
+    },
+    {
+      "q": "Which magnetic pole is near geographic north?",
+      "a": "A magnetic S pole — the compass's N pole is attracted to it.",
+      "section": "compass-earth"
+    },
+    {
+      "q": "Shape of the field around a straight wire?",
+      "a": "Concentric circles centred on the wire, further apart with distance.",
+      "section": "wire-field"
+    },
+    {
+      "q": "Right-hand grip rule?",
+      "a": "Thumb along the (conventional) current; fingers curl the way the field goes.",
+      "section": "wire-field"
+    },
+    {
+      "q": "Current out of the page: field direction?",
+      "a": "Anticlockwise (into the page: clockwise).",
+      "section": "wire-field"
+    },
+    {
+      "q": "What does the strength of a wire's field depend on?",
+      "a": "The size of the current (more = stronger) and the distance from the wire (further = weaker).",
+      "section": "wire-field"
+    },
+    {
+      "q": "How to show a current has a magnetic effect?",
+      "a": "Wire through a card with plotting compasses: they line up in circles when the current is on and reverse when it is reversed.",
+      "section": "wire-field"
+    },
+    {
+      "q": "Field inside a solenoid?",
+      "a": "Strong and almost uniform: the fields of the turns add together along the centre.",
+      "section": "solenoid"
+    },
+    {
+      "q": "Field outside a solenoid?",
+      "a": "Weaker: the fields of the turns largely cancel; the shape is a bar magnet's.",
+      "section": "solenoid"
+    },
+    {
+      "q": "Three ways to make an electromagnet stronger?",
+      "a": "More current, more turns, an iron core.",
+      "section": "solenoid"
+    },
+    {
+      "q": "What does reversing the current in a solenoid do?",
+      "a": "Swaps its N and S poles.",
+      "section": "solenoid"
+    },
+    {
+      "q": "The motor effect?",
+      "a": "A current-carrying conductor in a magnetic field experiences a force, due to the interaction between the two magnetic fields.",
+      "section": "motor-effect"
+    },
+    {
+      "q": "The five-step chain for a wire?",
+      "a": "Current in the wire → magnetic field around the wire → interacts with the permanent field → resultant force, so the wire accelerates → direction from Fleming's left-hand rule.",
+      "section": "motor-effect"
+    },
+    {
+      "q": "What force acts on the magnet?",
+      "a": "An equal and opposite force (Newton's third law).",
+      "section": "motor-effect"
+    },
+    {
+      "q": "When is the motor-effect force zero? Largest?",
+      "a": "Zero when the wire is parallel to the field; largest at right angles.",
+      "section": "motor-effect"
+    },
+    {
+      "q": "The 'interaction' mark (2023 Q5(b))?",
+      "a": "'Repulsion' alone scored 1; the second mark was 'the interaction between the two magnetic fields'.",
+      "section": "motor-effect"
+    },
+    {
+      "q": "Fleming's left-hand rule: the three digits?",
+      "a": "First finger: Field (N → S). Second finger: Current (+ → −). Thumb: Motion (force).",
+      "section": "flhr"
+    },
+    {
+      "q": "Dot and cross?",
+      "a": "Dot: current out of the page (towards you). Cross: into the page.",
+      "section": "flhr"
+    },
+    {
+      "q": "Two ways to reverse the force on a wire?",
+      "a": "Reverse the current, or reverse the field (turn the magnet round). Both together: no change.",
+      "section": "flhr"
+    },
+    {
+      "q": "Which current direction does the second finger use?",
+      "a": "Conventional current, + to − (not electron flow).",
+      "section": "flhr"
+    },
+    {
+      "q": "Equation for the force on a wire at right angles to a field?",
+      "a": "F = B I l: force (N) = flux density (T) × current (A) × length in the field (m).",
+      "section": "motor-force-nn"
+    },
+    {
+      "q": "Unit of magnetic flux density?",
+      "a": "Tesla, T (= N/A m).",
+      "section": "motor-force-nn"
+    },
+    {
+      "q": "Three F = BIl traps?",
+      "a": "cm not converted to m; using the whole wire instead of the length in the field; forgetting F = 0 for a wire parallel to the field.",
+      "section": "motor-force-nn"
+    },
+    {
+      "q": "Chain for a magnet moving away from another?",
+      "a": "The two fields interact → like poles repel, so a force on X away from Y → X accelerates away.",
+      "section": "magnet-force-chains"
+    },
+    {
+      "q": "Chain for a floating magnet?",
+      "a": "Fields interact → repulsive (upward) force on the upper magnet → equal to its weight, so the forces are balanced and it stays still.",
+      "section": "magnet-force-chains"
+    },
+    {
+      "q": "Why is iron always attracted, never repelled?",
+      "a": "The magnet induces the opposite pole in the near end of the iron, whichever pole faces it.",
+      "section": "magnet-force-chains"
+    },
+    {
+      "q": "What does 'picks up a paper clip' prove?",
+      "a": "Only that it is magnetised now — possibly induced. Repulsion by a known magnet is the proof of a permanent magnet.",
+      "section": "magnet-test"
+    },
+    {
+      "q": "Result that shows a nail is NOT a permanent magnet?",
+      "a": "No repulsion in either orientation (attraction the same at both ends, or none).",
+      "section": "magnet-test"
+    },
+    {
+      "q": "Field between two like poles facing?",
+      "a": "Lines curve away from each other; a neutral point midway where the field is zero.",
+      "section": "field-diagrams-mag"
+    },
+    {
+      "q": "What earns the two marks on a field diagram?",
+      "a": "Shape: separate, non-crossing lines, pole to pole, closer at the poles. Direction: arrows out of N into S.",
+      "section": "field-diagrams-mag"
+    },
+    {
+      "q": "Direction of the Earth's field at the equator?",
+      "a": "Parallel to the surface, pointing (geographic) north.",
+      "section": "earth-magnet"
+    },
+    {
+      "q": "Where do the Earth's field lines go into the Earth?",
+      "a": "Near the geographic north pole (the magnetic S pole); out near geographic south.",
+      "section": "earth-magnet"
+    },
+    {
+      "q": "The 2024 three marks of evidence?",
+      "a": "Earth has a magnetic field; the compass points along the field; the core is magnetic / as if a magnet were inside the Earth (or a point read from the diagram).",
+      "section": "earth-magnet"
+    },
+    {
+      "q": "Field left → right, current out of the page: force?",
+      "a": "Up the page.",
+      "section": "flhr-diagrams"
+    },
+    {
+      "q": "Field left → right, current into the page: force?",
+      "a": "Down the page.",
+      "section": "flhr-diagrams"
+    },
+    {
+      "q": "Wire along the field lines: force?",
+      "a": "Zero.",
+      "section": "flhr-diagrams"
+    },
+    {
+      "q": "How much of a long wire counts in F = BIl?",
+      "a": "Only the length inside the field (e.g. the width of the poles).",
+      "section": "motor-force-hard"
+    },
+    {
+      "q": "Force on a coil side with N turns?",
+      "a": "N × the force on one wire: F = B I l N.",
+      "section": "motor-force-hard"
+    },
+    {
+      "q": "The 2025 unfamiliar equation?",
+      "a": "B against distance, inverse square (B ∝ 1/d²); use it like any other — finding the constant alone was 1 of 3.",
+      "section": "motor-force-hard"
+    },
+    {
+      "q": "The six-step chain for a motor?",
+      "a": "Current in the coil → field around the coil → interacts with the permanent field → resultant force on the coil → force opposite on either side → so the coil rotates.",
+      "section": "dc-motor"
+    },
+    {
+      "q": "What does the split-ring commutator do?",
+      "a": "Reverses the current in the coil every half turn, so the coil keeps rotating in the same direction.",
+      "section": "dc-motor"
+    },
+    {
+      "q": "What happens with no commutator?",
+      "a": "The coil turns to the vertical, is pushed back, and rocks to a stop.",
+      "section": "dc-motor"
+    },
+    {
+      "q": "Three ways to make a motor turn faster?",
+      "a": "More current, stronger magnets, more turns (or an iron core).",
+      "section": "dc-motor"
+    },
+    {
+      "q": "The 2025 motor trap?",
+      "a": "Describing a dynamo: 'the motor does not produce a current' — the current comes from the supply.",
+      "section": "dc-motor"
+    },
+    {
+      "q": "Dependent variable in the electromagnet investigation?",
+      "a": "Its strength, measured as the number of nails (or clips) held, or the mass lifted.",
+      "section": "electromagnet-practical"
+    },
+    {
+      "q": "Why not say 'inversely proportional' for a falling trend?",
+      "a": "It only means proportional to the reciprocal; say 'as X increases, Y decreases' and whether it is linear.",
+      "section": "electromagnet-practical"
+    },
+    {
+      "q": "Why switch the electromagnet off between readings?",
+      "a": "So the coil does not heat up (changing the current) and the nails do not become permanent magnets.",
+      "section": "electromagnet-practical"
+    },
+    {
+      "q": "State what is meant by: magnetic material.",
+      "a": "A material that is <b>attracted by a magnet</b> and can be magnetised: <b>iron, steel, cobalt, nickel</b>.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: permanent magnet.",
+      "a": "A magnet that produces its <b>own magnetic field</b> all the time (steel, or alloys of cobalt and nickel).",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: induced (temporary) magnet.",
+      "a": "A magnetic material that becomes a magnet <b>only while it is in a magnetic field</b>, and loses its magnetism when the field is removed (soft iron).",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: magnetic field.",
+      "a": "The <b>region around a magnet</b> (or a current) in which a <b>magnetic material</b> or another magnet <b>experiences a force</b>.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: field line.",
+      "a": "A line showing the <b>direction of the field</b> (the direction of the force on a N pole: <b>N to S</b>); closer lines mean a <b>stronger</b> field; lines never cross.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: uniform field.",
+      "a": "A field with the <b>same strength and direction everywhere</b>: parallel, equally spaced lines (between unlike poles; inside a solenoid).",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: solenoid.",
+      "a": "A <b>long coil of wire</b>; with a current it has a field like a bar magnet's, strong and uniform inside.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: electromagnet.",
+      "a": "A <b>solenoid with a soft iron core</b>: a magnet that can be <b>switched on and off</b> with the current.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: right-hand grip rule.",
+      "a": "Grip the wire with the right hand, <b>thumb along the current</b>: the <b>fingers curl the way the field goes</b>.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: motor effect.",
+      "a": "A <b>current-carrying conductor in a magnetic field experiences a force</b>, due to the interaction between the two magnetic fields.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: Fleming's left-hand rule.",
+      "a": "First finger <b>Field</b> (N → S), second finger <b>Current</b> (+ → −), thumb <b>Motion</b> (force), all at right angles.",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: magnetic flux density, B.",
+      "a": "The <b>strength of a magnetic field</b>: the force per unit current per unit length on a wire at right angles to it; unit <b>tesla</b>, T (= N/A m).",
+      "section": "keywords-magnetism"
+    },
+    {
+      "q": "State what is meant by: split-ring commutator.",
+      "a": "The two half-rings on a d.c. motor's axle that <b>reverse the current in the coil every half turn</b>, so the coil keeps turning the same way.",
+      "section": "keywords-magnetism"
+    }
+  ],
   "types": [
     {
       "id": "motor-force",
