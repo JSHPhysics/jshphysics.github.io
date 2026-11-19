@@ -5,6 +5,2126 @@
   "spec": "Topic 13",
   "order": 130,
   "figure": "magnetic-fields-induction",
+  "lede": "Everything in Topic 13, split into two bands. <b>The non-negotiables</b> are inducing a pd, what sets its size and direction, the alternator and dynamo, the loudspeaker and microphone, the transformer and its two equations, and the national grid with the reason for high voltage. <b>The tricky bits</b> are the chains the marks are on: the induction chain for a falling magnet, why a dynamo gets harder to turn, generator output graphs, the microphone-versus-loudspeaker and transformer 6-markers, transformer calculations with both equations, the grid as a chain, and the falling-magnet practical. Most of the topic is <b>Higher only</b>, badged <b>H</b>; the loudspeaker and microphone, the national grid and the pd–current equation are both tiers; the P statements are Physics only.",
+  "howto": [
+    "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
+    "Say every explanation out loud as a chain — moves through the field, changing field, pd induced, current if the circuit is closed — before you read the one on the page.",
+    "Read each explanation, then cover it and say it back. For a definition, the bold words are the ones the mark is for.",
+    "Do the practice questions <b>before</b> opening the hint or walkthrough. Calculations in EWAU layout on paper first, then type the answer to check it; write the explanation chains out in full before opening the model answer — the marks are on the links, not the conclusion.",
+    "For \"explain\" and \"describe how\" questions, write your answer in full sentences, then compare it with the model answer line by line.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "nn",
+      "prefix": "N",
+      "title": "The non-negotiables",
+      "blurb": "Inducing a pd and its size and direction, the alternator and dynamo, the loudspeaker and microphone, the transformer with its two equations, and the national grid. If any of these is not yet green, it comes before anything in the second band."
+    },
+    {
+      "id": "tricky",
+      "prefix": "T",
+      "title": "The tricky bits",
+      "blurb": "The explanations marked on particular words: the falling magnet, the dynamo that gets harder to turn, output graphs, the two 6-markers, transformer calculations with both equations, the grid chain, the practical. Each one is built on something from the first band."
+    }
+  ],
+  "factsBlurb": "Topic 13 on flip cards: the induction chain and its lead line, the size and direction rules, slip rings versus the split ring, the speaker and microphone chains, the transformer in three marks, the two transformer equations and the grid chain. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "inducing-pd",
+      "band": "nn",
+      "title": "Inducing a pd: a conductor and a magnetic field moving relative to each other",
+      "spec": "13.1P",
+      "equations": [
+        "\\text{relative movement} \\rightarrow \\text{changing field} \\rightarrow \\text{pd induced} \\rightarrow \\text{current if closed}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain to write every time",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 280' role='img'><text x='330.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>push a magnet into a coil: the meter kicks</text><ellipse cx='290.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='304.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='318.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='332.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='346.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='360.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='374.0' cy='140' rx='9' ry='34' style='fill:none;stroke:var(--ink);stroke-width:2'/><rect x='80' y='125' width='75.0' height='30' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='155.0' y='125' width='75.0' height='30' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='117.5' y='145.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><text x='192.5' y='145.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><line x1='235.0' y1='110.0' x2='285.0' y2='110.0' style='stroke:var(--accent);stroke-width:2.4'/><polygon points='285.0,110.0 276.9,113.9 276.9,106.1' style='fill:var(--accent)'/><text x='260.0' y='100.0' text-anchor='middle' style='fill:var(--accent);font-size:11px;font-weight:normal;'>moving in</text><line x1='290.0' y1='174.0' x2='290.0' y2='225.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='290.0' y1='225.0' x2='520.0' y2='225.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='520.0' y1='225.0' x2='520.0' y2='172.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='374.0' y1='174.0' x2='374.0' y2='205.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='374.0' y1='205.0' x2='470.0' y2='205.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='470.0' y1='205.0' x2='470.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='470.0' y1='140.0' x2='490.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1.6'/><circle cx='520' cy='140' r='30' style='fill:none;stroke:var(--ink);stroke-width:1.6'/><line x1='502.0' y1='123.5' x2='538.0' y2='123.5' style='stroke:var(--line);stroke-width:1'/><text x='520.0' y='158.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>V</text><line x1='520.0' y1='146.0' x2='532.9' y2='127.6' style='stroke:var(--accent);stroke-width:2.2'/><circle cx='520.0' cy='146.0' r='3' style='fill:var(--ink)'/><text x='520.0' y='119.6' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>0</text><text x='560.0' y='196.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>centre-zero</text><text x='330.0' y='250.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>pull it out: the needle kicks the other way · hold it still: nothing</text><text x='330.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>faster, a stronger magnet or more turns: a bigger kick</text></svg><figcaption>A magnet pushed into a coil: the meter kicks one way going in, the other way coming out, and not at all while the magnet is still.</figcaption></figure><p>A potential difference is <b>induced</b> across a conductor whenever it and a magnetic field <b>move relative to each other</b> — the wire moving through the field, or the magnet moving past the wire; what matters is that the conductor experiences a <b>changing magnetic field</b>. The standard explanation, in the steps the marks are on (the <a href='../induction/'>Electromagnetic Induction</a> page animates it):</p><ol class='steps'><li>The wire or coil moves through the magnetic field of the permanent magnet.</li><li>So the wire or coil experiences a changing magnetic field.</li><li>This induces a potential difference across the wire or coil.</li><li>If the wire or coil is in a closed circuit, a current flows.</li></ol><p>When it is the <b>magnet</b> that moves (dropped through a coil, pushed into one), put one line in front: <b>The magnet moves relative to the coil (either may move).</b> — and then steps 2 to 4 follow exactly as written. The June 2024 scheme (Q10(a)(i), a magnet falling through a coil) credited: the coil <b>cuts the field lines</b> / experiences a <b>changing field</b>; this <b>induces a pd</b> (or current) in the coil; the voltmeter reads it; and the induced pd <b>changes direction</b> as the magnet passes through (the far end of the magnet is the opposite pole, so the change is reversed).</p><p>The word is <b>induces</b>. The June 2025 report (Q6(a)(i)): \"examiners would not accept 'produces' an alternating current. The correct word is 'induces'.\" A pd is induced; a current then flows <b>if the circuit is closed</b> — an open coil has an induced pd across it but no current.</p><p><b>In the laboratory</b>: push a bar magnet into a coil connected to a centre-zero meter — the needle kicks; pull it out — it kicks the other way; hold it still inside — nothing. Or swing a straight wire between the poles of a magnet with a sensitive meter across its ends. <b>On a large scale</b>: a power-station generator turns a coil (or turns magnets past coils) continuously, driven by a turbine, so the coil experiences a continuously changing field and a pd is induced continuously — the same physics as the meter kick, just never stopping.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The meter kick",
+          "question": "A student pushes a bar magnet into a coil connected to a centre-zero ammeter. The needle moves to the right and then returns to zero while the magnet is held still inside the coil. Explain these observations. (4 marks)",
+          "steps": [
+            "The magnet moves relative to the coil (either may move). As the magnet moves into the coil, <b>the coil experiences a changing magnetic field</b> (it cuts the field lines).",
+            "This <b>induces a potential difference</b> across the coil.",
+            "The coil is in a <b>closed circuit</b> (through the ammeter), so a <b>current flows</b> and the needle moves.",
+            "When the magnet is <b>held still</b> the field through the coil is <b>no longer changing</b>, so no pd is induced and the needle returns to zero."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Inducing a pd",
+          "questions": [
+            {
+              "id": "ei-n1-q1",
+              "type": "written",
+              "text": "A magnet is dropped through a coil connected to a voltmeter. Explain why the voltmeter shows a reading as the magnet passes through. (3)",
+              "model": "<ul><li>The magnet moves relative to the coil, so the coil <b>cuts the field lines</b> / experiences a <b>changing magnetic field</b>.</li><li>This <b>induces a potential difference</b> across the coil…</li><li>…which the voltmeter measures (the reading changes direction as the magnet passes through, because the trailing pole is the opposite pole).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-n1-q2",
+              "type": "choice",
+              "text": "A magnet is held stationary inside a coil connected to a meter. The meter reads…",
+              "options": [
+                "a steady value",
+                "zero",
+                "a value that slowly falls",
+                "a.c."
+              ],
+              "correct": 1,
+              "explain": "No relative movement, no changing field, nothing induced."
+            },
+            {
+              "id": "ei-n1-q3",
+              "type": "choice",
+              "text": "Which word do the examiners require for what happens to the pd?",
+              "options": [
+                "produced",
+                "made",
+                "induced",
+                "generated"
+              ],
+              "correct": 2,
+              "explain": "2025 report: 'produces' was not accepted; the correct word is 'induces'."
+            },
+            {
+              "id": "ei-n1-q4",
+              "type": "written",
+              "text": "Describe how to show in the laboratory that moving a magnet near a coil induces a potential difference. (3)",
+              "model": "<ul><li>Connect a coil to a <b>sensitive centre-zero meter</b> (voltmeter or galvanometer).</li><li><b>Push a magnet into the coil</b>: the needle kicks; pull it out: it kicks the <b>other way</b>.</li><li>Hold the magnet <b>still</b> in the coil: the needle reads zero — only movement induces a pd.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-n1-q5",
+              "type": "written",
+              "text": "State the difference between what happens in an open coil and a closed coil when a magnet is moved into each. (2)",
+              "model": "<ul><li>In both a <b>potential difference is induced</b> across the coil.</li><li>Only in the <b>closed</b> circuit does a <b>current flow</b>; an open coil has the pd but no current.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n1-q6",
+              "type": "choice",
+              "text": "A power-station generator induces a pd continuously because…",
+              "options": [
+                "the coil is very large",
+                "a turbine keeps the coil turning in the field, so the coil experiences a continuously changing field",
+                "the magnets are electromagnets",
+                "the wires are made of copper"
+              ],
+              "correct": 1,
+              "explain": "Continuous relative movement, continuous change, continuous induction."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the induction chain for a wire or coil moving in a field, and for a magnet moving into a coil",
+        "Describe how to show induction in the laboratory",
+        "Describe how electricity is generated on a large scale"
+      ],
+      "blurb": "Move a wire or coil through a magnetic field, or move a magnet into a coil, and a potential difference is induced across the conductor; if the conductor is part of a closed circuit, a current flows. Nothing is induced while nothing moves. This is how every generator works, from a bicycle dynamo to a power station.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "induced-size-direction",
+      "band": "nn",
+      "title": "Size and direction of the induced pd — and the field that opposes the change",
+      "spec": "13.2",
+      "equations": [
+        "\\text{bigger: faster, stronger magnet, more turns}",
+        "\\text{reversed: reverse the movement or the magnet}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Size, direction, and the field that opposes",
+          "html": "<table class='tbl'><tr><th>To induce a larger pd</th><th>Why</th></tr><tr><td>move <b>faster</b> (turn the generator faster)</td><td>the field changes more quickly</td></tr><tr><td>a <b>stronger magnet</b></td><td>more field lines to cut in the same time</td></tr><tr><td><b>more turns</b> on the coil</td><td>each turn has a pd induced; they add</td></tr><tr><td>(a larger coil area, an iron core)</td><td>more of the field passes through the coil</td></tr></table><p><b>Direction</b>: the induced pd <b>reverses</b> if the <b>direction of movement</b> reverses (magnet in, then out) or if the <b>magnet is turned round</b> (N first instead of S first). Reverse both and it is unchanged.</p><p><b>The field opposes the change</b> (13.2): when the induced current flows, it has its own magnetic field, and that field <b>opposes the change that caused it</b> — push a N pole into a coil and the coil's near end becomes a N pole, pushing back; pull it out and the near end becomes a S pole, pulling back. So <b>work has to be done</b> to keep moving the magnet (or turning the generator), and that work is where the electrical energy comes from. The June 2023 report (Q10(a)(ii), a dynamo lighting a lamp): the handle is harder to turn because the lamp needs energy, which comes from the extra work of turning; and \"an induced current in the rotating coil produces a magnetic field\" that opposes the motion — \"very few\" gave this (T2).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Bigger reading",
+          "question": "A student moves a magnet into a coil and records the maximum reading on a voltmeter. State three changes that would give a larger maximum reading. (3 marks)",
+          "steps": [
+            "Move the magnet <b>faster</b> into the coil.",
+            "Use a <b>stronger magnet</b>.",
+            "Use a coil with <b>more turns</b> (or a larger coil / an iron core)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Size and direction",
+          "questions": [
+            {
+              "id": "ei-n2-q1",
+              "type": "choice",
+              "text": "Which change does NOT increase the induced pd?",
+              "options": [
+                "Moving the magnet faster",
+                "Using a coil with more turns",
+                "Using a stronger magnet",
+                "Using thicker wire for the leads"
+              ],
+              "correct": 3,
+              "explain": "Speed, strength and turns; the leads make no difference."
+            },
+            {
+              "id": "ei-n2-q2",
+              "type": "written",
+              "text": "A magnet is pushed into a coil and the meter needle moves to the left. State two separate changes that would each make the needle move to the right instead. (2)",
+              "model": "<ul><li><b>Pull the magnet out</b> (reverse the direction of movement).</li><li><b>Turn the magnet round</b> and push the other pole in.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n2-q3",
+              "type": "written",
+              "text": "Explain why a magnet being pushed into a coil connected in a closed circuit is harder to push than the same magnet pushed into an open coil. (3)",
+              "model": "<ul><li>In the closed circuit the induced pd drives a <b>current</b> in the coil.</li><li>The current produces a <b>magnetic field</b> around the coil that <b>opposes the change</b> causing it — the near end of the coil becomes the same pole as the approaching pole, repelling it.</li><li>So a larger force (more work) is needed to push the magnet in; in the open coil there is no current, so no opposing field.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "ei-n2-q4",
+              "type": "choice",
+              "text": "The induced current's magnetic field always…",
+              "options": [
+                "helps the magnet move",
+                "opposes the change that caused it",
+                "points north",
+                "is zero"
+              ],
+              "correct": 1,
+              "explain": "13.2: the induced current's field opposes the original change — energy has to come from the work done."
+            },
+            {
+              "id": "ei-n2-q5",
+              "type": "choice",
+              "text": "A magnet is pushed in N pole first and the needle kicks right. It is then pulled out N pole first. The needle…",
+              "options": [
+                "kicks right again",
+                "kicks left",
+                "does not move",
+                "stays right"
+              ],
+              "correct": 1,
+              "explain": "Reversing the movement reverses the induced pd."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "List the factors that make the induced pd larger",
+        "State what reverses the direction of the induced pd",
+        "State that the induced current's field opposes the original change"
+      ],
+      "blurb": "The induced pd is larger when the movement is faster, the magnet stronger or the coil has more turns; it reverses when the direction of movement reverses or the magnet is turned round. The induced current has its own magnetic field, and that field opposes the change that caused it — which is why a generator is harder to turn when it is supplying a current.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "alternator-dynamo",
+      "band": "nn",
+      "title": "Alternator and dynamo: slip rings give a.c., a split ring gives d.c.",
+      "spec": "13.3P",
+      "equations": [
+        "\\text{slip rings} \\rightarrow \\text{a.c.}",
+        "\\text{split ring} \\rightarrow \\text{d.c.}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Same coil, different rings",
+          "html": "<figure class='diagram'><svg viewBox='0 0 670 260' role='img'><text x='170.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>alternator: slip rings → a.c.</text><rect x='40' y='70' width='18.0' height='120' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='58.0' y='70' width='18.0' height='120' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='58.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><rect x='264' y='70' width='18.0' height='120' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='282.0' y='70' width='18.0' height='120' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='282.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><line x1='78.0' y1='88.0' x2='262.0' y2='88.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='210.0,88.0 203.9,91.4 203.9,84.6' style='fill:var(--ink-2)'/><line x1='78.0' y1='116.0' x2='262.0' y2='116.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='210.0,116.0 203.9,119.4 203.9,112.6' style='fill:var(--ink-2)'/><line x1='78.0' y1='144.0' x2='262.0' y2='144.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='210.0,144.0 203.9,147.4 203.9,140.6' style='fill:var(--ink-2)'/><line x1='78.0' y1='172.0' x2='262.0' y2='172.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='210.0,172.0 203.9,175.4 203.9,168.6' style='fill:var(--ink-2)'/><polygon points='115,90 225,102 225,170 115,158' style='fill:none;stroke:var(--ink);stroke-width:3'/><line x1='100.0' y1='70.0' x2='140.0' y2='55.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='140.0,55.0 133.8,61.5 131.0,54.2' style='fill:var(--accent)'/><text x='118.0' y='48.0' text-anchor='middle' style='fill:var(--accent);font-size:10px;font-weight:normal;'>turned</text><circle cx='148' cy='210' r='18' style='fill:none;stroke:var(--ink);stroke-width:6'/><circle cx='192' cy='210' r='18' style='fill:none;stroke:var(--ink-2);stroke-width:6'/><text x='170.0' y='246.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>two complete rings, one per end of the coil</text><rect x='110' y='205' width='18' height='10' style='fill:var(--accent);opacity:0.6;stroke:var(--ink-2);stroke-width:1.4'/><rect x='212' y='205' width='18' height='10' style='fill:var(--accent);opacity:0.6;stroke:var(--ink-2);stroke-width:1.4'/><text x='119.0' y='198.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>brush</text><text x='221.0' y='198.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>brush</text><text x='500.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>dynamo: split ring → d.c.</text><rect x='370' y='70' width='18.0' height='120' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='388.0' y='70' width='18.0' height='120' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='388.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text><rect x='594' y='70' width='18.0' height='120' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='612.0' y='70' width='18.0' height='120' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='612.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><line x1='408.0' y1='88.0' x2='592.0' y2='88.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='540.0,88.0 533.9,91.4 533.9,84.6' style='fill:var(--ink-2)'/><line x1='408.0' y1='116.0' x2='592.0' y2='116.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='540.0,116.0 533.9,119.4 533.9,112.6' style='fill:var(--ink-2)'/><line x1='408.0' y1='144.0' x2='592.0' y2='144.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='540.0,144.0 533.9,147.4 533.9,140.6' style='fill:var(--ink-2)'/><line x1='408.0' y1='172.0' x2='592.0' y2='172.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='540.0,172.0 533.9,175.4 533.9,168.6' style='fill:var(--ink-2)'/><polygon points='445,90 555,102 555,170 445,158' style='fill:none;stroke:var(--ink);stroke-width:3'/><line x1='430.0' y1='70.0' x2='470.0' y2='55.0' style='stroke:var(--accent);stroke-width:2'/><polygon points='470.0,55.0 463.8,61.5 461.0,54.2' style='fill:var(--accent)'/><text x='448.0' y='48.0' text-anchor='middle' style='fill:var(--accent);font-size:10px;font-weight:normal;'>turned</text><path d='M 498 192 A 18 18 0 0 1 498 228' style='fill:none;stroke:var(--ink);stroke-width:6'/><path d='M 502 192 A 18 18 0 0 0 502 228' style='fill:none;stroke:var(--ink-2);stroke-width:6'/><text x='500.0' y='246.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>two halves, turn with the coil</text><rect x='461' y='205' width='18' height='10' style='fill:var(--accent);opacity:0.6;stroke:var(--ink-2);stroke-width:1.4'/><rect x='521' y='205' width='18' height='10' style='fill:var(--accent);opacity:0.6;stroke:var(--ink-2);stroke-width:1.4'/><text x='470.0' y='198.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>brush</text><text x='530.0' y='198.0' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>brush</text></svg><figcaption>An alternator and a dynamo: the same coil turning between the same poles, with different rings.</figcaption></figure><p>As the coil turns, each side moves <b>up</b> through the field for half a turn and <b>down</b> for the next half, so the pd induced across the coil <b>reverses every half turn</b> — and it is largest when the sides are cutting across the field fastest (coil flat), zero when they are moving along the field (coil vertical). The induced pd itself is therefore <b>alternating</b> whatever rings are used; the rings decide what the external circuit sees.</p><table class='tbl'><tr><th></th><th>Alternator</th><th>Dynamo</th></tr><tr><td>Connection</td><td>two <b>slip rings</b>: complete rings, one on each end of the coil, each pressed by its own brush</td><td>a <b>split-ring commutator</b>: one ring cut into two halves, one on each end of the coil, two brushes</td></tr><tr><td>What it does</td><td>each brush stays connected to the <b>same end</b> of the coil all the time</td><td>the halves <b>swap brushes every half turn</b>, exactly when the induced pd reverses</td></tr><tr><td>Output</td><td><b>a.c.</b>: reverses direction every half turn</td><td><b>d.c.</b>: always the same direction, but rising and falling (not steady)</td></tr><tr><td>Graph</td><td>a sine wave through zero</td><td>the same wave with the negative halves flipped up (humps)</td></tr></table><figure class='diagram'><svg viewBox='0 0 720 265' role='img'><text x='125.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>alternator: a.c.</text><line x1='30.0' y1='150.0' x2='230.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.2'/><line x1='30.0' y1='80.0' x2='30.0' y2='220.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='230.0,150.0 223.9,153.4 223.9,146.6' style='fill:var(--ink-2)'/><polygon points='30.0,80.0 33.4,86.1 26.6,86.1' style='fill:var(--ink-2)'/><text x='226.0' y='164.0' text-anchor='end' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>time</text><text x='34.0' y='90.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>pd</text><path d='M 30.0 150.0 L 31.6 145.0 L 33.2 140.0 L 34.8 135.2 L 36.3 130.5 L 37.9 126.0 L 39.5 121.8 L 41.1 117.9 L 42.7 114.3 L 44.2 111.2 L 45.8 108.4 L 47.4 106.1 L 49.0 104.3 L 50.6 103.0 L 52.2 102.3 L 53.8 102.0 L 55.3 102.3 L 56.9 103.0 L 58.5 104.3 L 60.1 106.1 L 61.7 108.4 L 63.2 111.2 L 64.8 114.3 L 66.4 117.9 L 68.0 121.8 L 69.6 126.0 L 71.2 130.5 L 72.8 135.2 L 74.3 140.0 L 75.9 145.0 L 77.5 150.0 L 79.1 155.0 L 80.7 160.0 L 82.2 164.8 L 83.8 169.5 L 85.4 174.0 L 87.0 178.2 L 88.6 182.1 L 90.2 185.7 L 91.8 188.8 L 93.3 191.6 L 94.9 193.9 L 96.5 195.7 L 98.1 197.0 L 99.7 197.7 L 101.2 198.0 L 102.8 197.7 L 104.4 197.0 L 106.0 195.7 L 107.6 193.9 L 109.2 191.6 L 110.8 188.8 L 112.3 185.7 L 113.9 182.1 L 115.5 178.2 L 117.1 174.0 L 118.7 169.5 L 120.2 164.8 L 121.8 160.0 L 123.4 155.0 L 125.0 150.0 L 126.6 145.0 L 128.2 140.0 L 129.8 135.2 L 131.3 130.5 L 132.9 126.0 L 134.5 121.8 L 136.1 117.9 L 137.7 114.3 L 139.2 111.2 L 140.8 108.4 L 142.4 106.1 L 144.0 104.3 L 145.6 103.0 L 147.2 102.3 L 148.8 102.0 L 150.3 102.3 L 151.9 103.0 L 153.5 104.3 L 155.1 106.1 L 156.7 108.4 L 158.2 111.2 L 159.8 114.3 L 161.4 117.9 L 163.0 121.8 L 164.6 126.0 L 166.2 130.5 L 167.8 135.2 L 169.3 140.0 L 170.9 145.0 L 172.5 150.0 L 174.1 155.0 L 175.7 160.0 L 177.2 164.8 L 178.8 169.5 L 180.4 174.0 L 182.0 178.2 L 183.6 182.1 L 185.2 185.7 L 186.8 188.8 L 188.3 191.6 L 189.9 193.9 L 191.5 195.7 L 193.1 197.0 L 194.7 197.7 L 196.2 198.0 L 197.8 197.7 L 199.4 197.0 L 201.0 195.7 L 202.6 193.9 L 204.2 191.6 L 205.8 188.8 L 207.3 185.7 L 208.9 182.1 L 210.5 178.2 L 212.1 174.0 L 213.7 169.5 L 215.2 164.8 L 216.8 160.0 L 218.4 155.0 L 220.0 150.0' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><line x1='30.0' y1='102.0' x2='230.0' y2='102.0' style='stroke:var(--line);stroke-width:1.2;stroke-dasharray:5 4'/><text x='226.0' y='98.0' text-anchor='end' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>peak</text><text x='365.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>dynamo: d.c. (one direction, not steady)</text><line x1='270.0' y1='150.0' x2='470.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.2'/><line x1='270.0' y1='80.0' x2='270.0' y2='220.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='470.0,150.0 463.9,153.4 463.9,146.6' style='fill:var(--ink-2)'/><polygon points='270.0,80.0 273.4,86.1 266.6,86.1' style='fill:var(--ink-2)'/><text x='466.0' y='164.0' text-anchor='end' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>time</text><text x='274.0' y='90.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>pd</text><path d='M 270.0 150.0 L 271.6 145.0 L 273.2 140.0 L 274.8 135.2 L 276.3 130.5 L 277.9 126.0 L 279.5 121.8 L 281.1 117.9 L 282.7 114.3 L 284.2 111.2 L 285.8 108.4 L 287.4 106.1 L 289.0 104.3 L 290.6 103.0 L 292.2 102.3 L 293.8 102.0 L 295.3 102.3 L 296.9 103.0 L 298.5 104.3 L 300.1 106.1 L 301.7 108.4 L 303.2 111.2 L 304.8 114.3 L 306.4 117.9 L 308.0 121.8 L 309.6 126.0 L 311.2 130.5 L 312.8 135.2 L 314.3 140.0 L 315.9 145.0 L 317.5 150.0 L 319.1 145.0 L 320.7 140.0 L 322.2 135.2 L 323.8 130.5 L 325.4 126.0 L 327.0 121.8 L 328.6 117.9 L 330.2 114.3 L 331.8 111.2 L 333.3 108.4 L 334.9 106.1 L 336.5 104.3 L 338.1 103.0 L 339.7 102.3 L 341.2 102.0 L 342.8 102.3 L 344.4 103.0 L 346.0 104.3 L 347.6 106.1 L 349.2 108.4 L 350.8 111.2 L 352.3 114.3 L 353.9 117.9 L 355.5 121.8 L 357.1 126.0 L 358.7 130.5 L 360.2 135.2 L 361.8 140.0 L 363.4 145.0 L 365.0 150.0 L 366.6 145.0 L 368.2 140.0 L 369.8 135.2 L 371.3 130.5 L 372.9 126.0 L 374.5 121.8 L 376.1 117.9 L 377.7 114.3 L 379.2 111.2 L 380.8 108.4 L 382.4 106.1 L 384.0 104.3 L 385.6 103.0 L 387.2 102.3 L 388.8 102.0 L 390.3 102.3 L 391.9 103.0 L 393.5 104.3 L 395.1 106.1 L 396.7 108.4 L 398.2 111.2 L 399.8 114.3 L 401.4 117.9 L 403.0 121.8 L 404.6 126.0 L 406.2 130.5 L 407.8 135.2 L 409.3 140.0 L 410.9 145.0 L 412.5 150.0 L 414.1 145.0 L 415.7 140.0 L 417.2 135.2 L 418.8 130.5 L 420.4 126.0 L 422.0 121.8 L 423.6 117.9 L 425.2 114.3 L 426.8 111.2 L 428.3 108.4 L 429.9 106.1 L 431.5 104.3 L 433.1 103.0 L 434.7 102.3 L 436.2 102.0 L 437.8 102.3 L 439.4 103.0 L 441.0 104.3 L 442.6 106.1 L 444.2 108.4 L 445.8 111.2 L 447.3 114.3 L 448.9 117.9 L 450.5 121.8 L 452.1 126.0 L 453.7 130.5 L 455.2 135.2 L 456.8 140.0 L 458.4 145.0 L 460.0 150.0' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><text x='605.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>a.c., coil turned twice as fast</text><line x1='510.0' y1='150.0' x2='710.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.2'/><line x1='510.0' y1='80.0' x2='510.0' y2='220.0' style='stroke:var(--ink-2);stroke-width:1.2'/><polygon points='710.0,150.0 703.9,153.4 703.9,146.6' style='fill:var(--ink-2)'/><polygon points='510.0,80.0 513.4,86.1 506.6,86.1' style='fill:var(--ink-2)'/><text x='706.0' y='164.0' text-anchor='end' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>time</text><text x='514.0' y='90.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>pd</text><path d='M 510.0 150.0 L 511.6 136.0 L 513.2 122.7 L 514.8 110.5 L 516.3 100.1 L 517.9 91.8 L 519.5 86.1 L 521.1 83.2 L 522.7 83.2 L 524.2 86.1 L 525.8 91.8 L 527.4 100.1 L 529.0 110.5 L 530.6 122.7 L 532.2 136.0 L 533.8 150.0 L 535.3 164.0 L 536.9 177.3 L 538.5 189.5 L 540.1 199.9 L 541.7 208.2 L 543.2 213.9 L 544.8 216.8 L 546.4 216.8 L 548.0 213.9 L 549.6 208.2 L 551.2 199.9 L 552.8 189.5 L 554.3 177.3 L 555.9 164.0 L 557.5 150.0 L 559.1 136.0 L 560.7 122.7 L 562.2 110.5 L 563.8 100.1 L 565.4 91.8 L 567.0 86.1 L 568.6 83.2 L 570.2 83.2 L 571.8 86.1 L 573.3 91.8 L 574.9 100.1 L 576.5 110.5 L 578.1 122.7 L 579.7 136.0 L 581.2 150.0 L 582.8 164.0 L 584.4 177.3 L 586.0 189.5 L 587.6 199.9 L 589.2 208.2 L 590.8 213.9 L 592.3 216.8 L 593.9 216.8 L 595.5 213.9 L 597.1 208.2 L 598.7 199.9 L 600.2 189.5 L 601.8 177.3 L 603.4 164.0 L 605.0 150.0 L 606.6 136.0 L 608.2 122.7 L 609.8 110.5 L 611.3 100.1 L 612.9 91.8 L 614.5 86.1 L 616.1 83.2 L 617.7 83.2 L 619.2 86.1 L 620.8 91.8 L 622.4 100.1 L 624.0 110.5 L 625.6 122.7 L 627.2 136.0 L 628.8 150.0 L 630.3 164.0 L 631.9 177.3 L 633.5 189.5 L 635.1 199.9 L 636.7 208.2 L 638.2 213.9 L 639.8 216.8 L 641.4 216.8 L 643.0 213.9 L 644.6 208.2 L 646.2 199.9 L 647.8 189.5 L 649.3 177.3 L 650.9 164.0 L 652.5 150.0 L 654.1 136.0 L 655.7 122.7 L 657.2 110.5 L 658.8 100.1 L 660.4 91.8 L 662.0 86.1 L 663.6 83.2 L 665.2 83.2 L 666.8 86.1 L 668.3 91.8 L 669.9 100.1 L 671.5 110.5 L 673.1 122.7 L 674.7 136.0 L 676.2 150.0 L 677.8 164.0 L 679.4 177.3 L 681.0 189.5 L 682.6 199.9 L 684.2 208.2 L 685.8 213.9 L 687.3 216.8 L 688.9 216.8 L 690.5 213.9 L 692.1 208.2 L 693.7 199.9 L 695.2 189.5 L 696.8 177.3 L 698.4 164.0 L 700.0 150.0' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><line x1='510.0' y1='82.8' x2='710.0' y2='82.8' style='stroke:var(--line);stroke-width:1.2;stroke-dasharray:5 4'/><text x='706.0' y='78.8' text-anchor='end' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>peak</text><text x='360.0' y='256.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>faster turning: the peak pd is larger AND the frequency is higher (more cycles in the same time)</text></svg><figcaption>The outputs: an alternator's a.c., a dynamo's d.c., and the a.c. when the coil is turned twice as fast.</figcaption></figure><p>The split ring is the same part as in the d.c. motor (Topic 12 T7) doing the opposite job: in the motor it reverses the <b>supply</b> current into the coil every half turn; in the dynamo it reverses the <b>connection</b> so the induced pd always leaves the same way. The June 2023 report (Q8(a)(iii)) warned against describing \"split ring commutators without mentioning an electric current\" — the commutator is a detail; the point is that a current is induced and sent to the circuit.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why the dynamo gives d.c.",
+          "question": "Explain why the output of a dynamo is a direct current even though the pd induced in its coil alternates. (3 marks)",
+          "steps": [
+            "As the coil turns, each side moves up through the field for half a turn then down, so the pd induced in the coil <b>reverses every half turn</b>.",
+            "The coil is connected through a <b>split-ring commutator</b>: the two halves of the ring <b>swap brushes every half turn</b>…",
+            "…at the moment the induced pd reverses, so the external circuit is always connected the same way round and the current in it is always in the <b>same direction</b> (though it rises and falls)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Alternator and dynamo",
+          "questions": [
+            {
+              "id": "ei-n3-q1",
+              "type": "choice",
+              "text": "An alternator's coil is connected to the circuit through…",
+              "options": [
+                "a split ring",
+                "two slip rings",
+                "a diode",
+                "a transformer"
+              ],
+              "correct": 1,
+              "explain": "Slip rings: each brush stays on its own end of the coil, so the output alternates."
+            },
+            {
+              "id": "ei-n3-q2",
+              "type": "written",
+              "text": "Explain why the pd induced in a coil turning in a magnetic field alternates. (2)",
+              "model": "<ul><li>Each side of the coil moves <b>up</b> through the field for half a turn and <b>down</b> for the next half.</li><li>Reversing the direction of movement <b>reverses the induced pd</b>, so it reverses every half turn.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n3-q3",
+              "type": "choice",
+              "text": "The output of a dynamo is best described as…",
+              "options": [
+                "steady d.c.",
+                "d.c. that rises and falls but never reverses",
+                "a.c.",
+                "zero"
+              ],
+              "correct": 1,
+              "explain": "Humps above the axis: one direction, not constant."
+            },
+            {
+              "id": "ei-n3-q4",
+              "type": "written",
+              "text": "A generator's coil is turned twice as fast. State two changes to its output. (2)",
+              "model": "<ul><li>The <b>peak pd is larger</b> (the field changes more quickly).</li><li>The <b>frequency is doubled</b> (two cycles in the time of one).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n3-q5",
+              "type": "choice",
+              "text": "In a dynamo, the split ring swaps the connections…",
+              "options": [
+                "every quarter turn",
+                "every half turn, when the induced pd reverses",
+                "once per second",
+                "only when the coil is vertical and the pd is largest"
+              ],
+              "correct": 1,
+              "explain": "Every half turn — at the vertical position, where the induced pd is zero and about to reverse."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain why the pd induced in a turning coil alternates",
+        "Describe the difference between slip rings and a split ring, and the output each gives",
+        "Sketch the output of each against time"
+      ],
+      "blurb": "Both turn a coil in a magnetic field, so a pd is induced that reverses every half turn. An alternator connects the coil to the circuit through two slip rings, so the circuit gets that alternating pd (a.c.). A dynamo uses a split-ring commutator, which swaps the connections every half turn, so the circuit always gets the same sign: a d.c. output that rises and falls but never reverses.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "speaker-microphone",
+      "band": "nn",
+      "title": "Loudspeaker and microphone: the motor effect one way, induction the other",
+      "spec": "13.4P",
+      "equations": [
+        "\\text{speaker: current} \\rightarrow \\text{force} \\rightarrow \\text{movement} \\rightarrow \\text{sound}",
+        "\\text{microphone: sound} \\rightarrow \\text{movement} \\rightarrow \\text{changing field} \\rightarrow \\text{pd induced}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The two chains",
+          "html": "<figure class='diagram'><svg viewBox='0 0 690 275' role='img'><text x='170.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>loudspeaker: current → movement</text><rect x='60' y='110' width='80' height='40' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='100.0' y='135.0' text-anchor='middle' style='fill:var(--ink);font-size:13px;font-weight:bold;'>N</text><rect x='60' y='60' width='80' height='24' style='fill:var(--line);opacity:0.4;stroke:var(--ink-2);stroke-width:1.4'/><rect x='60' y='176' width='80' height='24' style='fill:var(--line);opacity:0.4;stroke:var(--ink-2);stroke-width:1.4'/><text x='100.0' y='77.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:bold;'>S</text><text x='100.0' y='193.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:bold;'>S</text><circle cx='150' cy='92' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='148.3' y1='90.3' x2='151.7' y2='93.7' style='stroke:var(--ink);stroke-width:1.8'/><line x1='148.3' y1='93.7' x2='151.7' y2='90.3' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='150' cy='156' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='150.0' cy='156.0' r='2.8' style='fill:var(--ink)'/><circle cx='150' cy='98' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='148.3' y1='96.3' x2='151.7' y2='99.7' style='stroke:var(--ink);stroke-width:1.8'/><line x1='148.3' y1='99.7' x2='151.7' y2='96.3' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='150' cy='162' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='150.0' cy='162.0' r='2.8' style='fill:var(--ink)'/><circle cx='150' cy='104' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='148.3' y1='102.3' x2='151.7' y2='105.7' style='stroke:var(--ink);stroke-width:1.8'/><line x1='148.3' y1='105.7' x2='151.7' y2='102.3' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='150' cy='168' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='150.0' cy='168.0' r='2.8' style='fill:var(--ink)'/><line x1='158.0' y1='86.0' x2='158.0' y2='174.0' style='stroke:var(--ink);stroke-width:2'/><line x1='158.0' y1='86.0' x2='250.0' y2='40.0' style='stroke:var(--ink);stroke-width:2.2'/><line x1='158.0' y1='174.0' x2='250.0' y2='220.0' style='stroke:var(--ink);stroke-width:2.2'/><text x='200.0' y='98.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>cone</text><line x1='175.0' y1='130.0' x2='215.0' y2='130.0' style='stroke:var(--accent);stroke-width:2.4'/><polygon points='215.0,130.0 206.9,133.9 206.9,126.1' style='fill:var(--accent)'/><line x1='195.0' y1='150.0' x2='160.0' y2='150.0' style='stroke:var(--accent);stroke-width:1.6'/><polygon points='160.0,150.0 168.1,146.1 168.1,153.9' style='fill:var(--accent)'/><text x='310.0' y='100.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>sound</text><path d='M 262 116 A 14 14 0 0 1 262 144' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><path d='M 262 106 A 24 24 0 0 1 262 154' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><path d='M 262 96 A 34 34 0 0 1 262 164' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><text x='170.0' y='248.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>a.c. in the coil → force on the coil (motor effect)</text><text x='170.0' y='264.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>→ the cone moves in and out at the same frequency</text><text x='520.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>microphone: movement → pd induced</text><rect x='560' y='110' width='80' height='40' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='600.0' y='135.0' text-anchor='middle' style='fill:var(--ink);font-size:13px;font-weight:bold;'>N</text><rect x='560' y='60' width='80' height='24' style='fill:var(--line);opacity:0.4;stroke:var(--ink-2);stroke-width:1.4'/><rect x='560' y='176' width='80' height='24' style='fill:var(--line);opacity:0.4;stroke:var(--ink-2);stroke-width:1.4'/><text x='600.0' y='77.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:bold;'>S</text><text x='600.0' y='193.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:bold;'>S</text><circle cx='550' cy='92' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='548.4' y1='90.3' x2='551.6' y2='93.7' style='stroke:var(--ink);stroke-width:1.8'/><line x1='548.4' y1='93.7' x2='551.6' y2='90.3' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='550' cy='156' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='550.0' cy='156.0' r='2.8' style='fill:var(--ink)'/><circle cx='550' cy='98' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='548.4' y1='96.3' x2='551.6' y2='99.7' style='stroke:var(--ink);stroke-width:1.8'/><line x1='548.4' y1='99.7' x2='551.6' y2='96.3' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='550' cy='162' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='550.0' cy='162.0' r='2.8' style='fill:var(--ink)'/><circle cx='550' cy='104' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><line x1='548.4' y1='102.3' x2='551.6' y2='105.7' style='stroke:var(--ink);stroke-width:1.8'/><line x1='548.4' y1='105.7' x2='551.6' y2='102.3' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='550' cy='168' r='3' style='fill:var(--bg,transparent);stroke:var(--ink);stroke-width:1.8'/><circle cx='550.0' cy='168.0' r='2.8' style='fill:var(--ink)'/><line x1='542.0' y1='86.0' x2='542.0' y2='174.0' style='stroke:var(--ink);stroke-width:2'/><line x1='536.0' y1='60.0' x2='536.0' y2='200.0' style='stroke:var(--ink);stroke-width:3'/><text x='520.0' y='56.0' text-anchor='end' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>diaphragm</text><path d='M 470 116 A 14 14 0 0 1 470 144' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><path d='M 470 106 A 24 24 0 0 1 470 154' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><path d='M 470 96 A 34 34 0 0 1 470 164' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><text x='430.0' y='95.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>sound</text><line x1='500.0' y1='130.0' x2='532.0' y2='130.0' style='stroke:var(--accent);stroke-width:2.4'/><polygon points='532.0,130.0 523.9,133.9 523.9,126.1' style='fill:var(--accent)'/><text x='520.0' y='248.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>sound makes the diaphragm and coil vibrate in the field</text><text x='520.0' y='264.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>→ a changing field for the coil → an alternating pd is induced</text></svg><figcaption>A moving-coil loudspeaker and a moving-coil microphone: the same magnet, coil and cone or diaphragm, working in opposite directions.</figcaption></figure><p><b>The loudspeaker</b> — the standard explanation, in the steps the marks are on (the <a href='../simple-motor/'>Simple Motor and Loudspeaker</a> page animates it):</p><ol class='steps'><li>There is a current in the coil.</li><li>This creates a magnetic field around the coil.</li><li>This interacts with the permanent magnetic field.</li><li>This causes a resultant force on the coil.</li><li>The direction of the force is the same on either side of the coil.</li><li>So the coil moves forwards or backwards. You can find the direction using Fleming's left-hand rule.</li><li>With an alternating current, the force alternates back and forth at the same frequency as the current.</li></ol><p>The coil is fixed to a <b>cone</b> (or diaphragm), so the cone moves with it, pushing the air in and out and making a <b>sound wave of the same frequency</b> as the current; a larger current gives a larger force, a larger movement and a louder sound. The <b>same force on both sides</b> of the coil is what makes it a loudspeaker and not a motor: the coil sits in a <b>radial</b> field (a centre pole inside the coil, a ring pole outside), so every part of the coil is pushed the same way — along the axis.</p><p><b>The microphone</b> is the reverse, and the chain is the induction chain: the <b>sound wave</b> (pressure variations in the air) makes the <b>diaphragm vibrate</b>; the <b>coil attached to it moves</b> back and forth through the magnetic field of the permanent magnet; so the coil <b>experiences a changing magnetic field</b>; this <b>induces a pd</b> across the coil; in a closed circuit a current flows — an <b>alternating</b> current with the <b>same frequency</b> as the sound, and larger for a louder sound. The June 2023 6-marker (Q10(c), compare the two) reached Level 3 only with the <b>interaction of the coil's field and the magnet's field</b> for the speaker <b>and</b> \"electromagnetic induction as a result of a coil moving in a magnetic field\" for the microphone (the microphone-versus-loudspeaker section).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The microphone in four marks",
+          "question": "Explain how a moving-coil microphone converts sound into an electrical signal. (4 marks)",
+          "steps": [
+            "The <b>sound wave</b> (pressure variations in the air) makes the <b>diaphragm vibrate</b>, and the coil fixed to it <b>moves with it</b>.",
+            "The coil <b>moves through the magnetic field</b> of the permanent magnet, so it <b>experiences a changing magnetic field</b>.",
+            "This <b>induces a potential difference</b> across the coil; in a closed circuit, a current flows.",
+            "The movement is back and forth, so the induced pd is <b>alternating</b>, with the <b>same frequency</b> as the sound (and larger for a louder sound)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Loudspeaker and microphone",
+          "questions": [
+            {
+              "id": "ei-n4-q1",
+              "type": "written",
+              "text": "Explain how a loudspeaker produces sound from an alternating current. (4)",
+              "model": "<ul><li>There is a <b>current in the coil</b>, which <b>creates a magnetic field</b> around the coil; this <b>interacts with the permanent magnetic field</b>.</li><li>This causes a <b>resultant force on the coil</b>, the same on either side, so the coil (and the cone fixed to it) <b>moves forwards or backwards</b>.</li><li>With an <b>alternating current the force alternates</b> back and forth at the same frequency as the current.</li><li>So the cone vibrates and produces a <b>sound wave of that frequency</b>.</li></ul>",
+              "lines": 5
+            },
+            {
+              "id": "ei-n4-q2",
+              "type": "choice",
+              "text": "Which physics does a microphone use?",
+              "options": [
+                "The motor effect",
+                "Electromagnetic induction",
+                "Static electricity",
+                "Refraction"
+              ],
+              "correct": 1,
+              "explain": "Coil moved by sound in a field: a pd is induced."
+            },
+            {
+              "id": "ei-n4-q3",
+              "type": "choice",
+              "text": "A louder sound reaches a microphone. The induced pd…",
+              "options": [
+                "has a higher frequency",
+                "is larger",
+                "is d.c.",
+                "is unchanged"
+              ],
+              "correct": 1,
+              "explain": "Louder: the diaphragm moves further and faster, so a larger pd; pitch sets the frequency."
+            },
+            {
+              "id": "ei-n4-q4",
+              "type": "written",
+              "text": "State one similarity and one difference between a moving-coil loudspeaker and a moving-coil microphone. (2)",
+              "model": "<ul><li>Similarity: both have a <b>coil in the field of a permanent magnet</b>, attached to a cone/diaphragm.</li><li>Difference: in the speaker a <b>current causes movement</b> (motor effect); in the microphone <b>movement induces a pd</b> (electromagnetic induction).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n4-q5",
+              "type": "choice",
+              "text": "Why does the loudspeaker's coil move along its axis rather than rotate like a motor coil?",
+              "options": [
+                "It carries d.c.",
+                "The force is the same on every part of the coil (radial field), not opposite on the two sides",
+                "It has no commutator",
+                "The cone is heavy"
+              ],
+              "correct": 1,
+              "explain": "Same direction of force all round the coil: it moves forwards or backwards."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the seven-step chain for the loudspeaker",
+        "Write the induction chain for the microphone",
+        "State what the two devices have in common and what is reversed"
+      ],
+      "blurb": "A loudspeaker is a coil on a cone in the field of a permanent magnet: an alternating current gives an alternating force, the cone moves in and out at the same frequency and makes sound. A microphone is the same parts run backwards: sound moves a diaphragm with a coil on it through the field, the coil experiences a changing field, and an alternating pd is induced that copies the sound.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "transformer",
+      "band": "nn",
+      "title": "The transformer: a.c. in the primary induces a.c. in the secondary",
+      "spec": "13.5, 13.6",
+      "equations": [
+        "\\text{a.c. in primary} \\rightarrow \\text{changing field in core} \\rightarrow \\text{pd induced in secondary}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The three marks",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 280' role='img'><text x='330.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>a transformer: two coils on one iron core</text><rect x='220' y='60' width='220' height='150' style='fill:none;stroke:var(--line);stroke-width:22;opacity:0.55'/><text x='330.0' y='140.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>soft iron core</text><ellipse cx='220' cy='85' rx='22' ry='8' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='220' cy='105' rx='22' ry='8' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='220' cy='125' rx='22' ry='8' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='220' cy='145' rx='22' ry='8' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='220' cy='165' rx='22' ry='8' style='fill:none;stroke:var(--ink);stroke-width:2.2'/><ellipse cx='440' cy='75' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='87' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='99' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='111' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='123' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='135' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='147' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='159' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='171' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><ellipse cx='440' cy='183' rx='22' ry='5' style='fill:none;stroke:var(--accent);stroke-width:2.2'/><line x1='150.0' y1='85.0' x2='198.0' y2='85.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='150.0' y1='165.0' x2='198.0' y2='165.0' style='stroke:var(--ink);stroke-width:1.8'/><circle cx='140' cy='125' r='14' style='fill:none;stroke:var(--ink);stroke-width:1.6'/><path d='M 131 125 q 4.5 -8 9 0 q 4.5 8 9 0' style='fill:none;stroke:var(--ink);stroke-width:1.6'/><line x1='140.0' y1='111.0' x2='140.0' y2='85.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='140.0' y1='139.0' x2='140.0' y2='165.0' style='stroke:var(--ink);stroke-width:1.8'/><line x1='462.0' y1='75.0' x2='520.0' y2='75.0' style='stroke:var(--accent);stroke-width:1.8'/><line x1='462.0' y1='183.0' x2='520.0' y2='183.0' style='stroke:var(--accent);stroke-width:1.8'/><text x='140.0' y='190.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>a.c. supply</text><text x='140.0' y='205.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>primary coil, Nₚ turns</text><text x='520.0' y='205.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>secondary coil, Nₛ turns</text><text x='520.0' y='220.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>to the load</text><text x='330.0' y='250.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>alternating current in the primary → changing magnetic field in the core →</text><text x='330.0' y='266.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>an alternating pd is induced in the secondary (here Nₛ > Nₚ: step-up)</text></svg><figcaption>A transformer: primary and secondary coils on a soft-iron core, which carries the changing field from one to the other.</figcaption></figure><p>The June 2025 scheme (Q6(a)(i), 3 marks): (1) there is an <b>alternating current in the primary coil</b>; (2) this produces a <b>changing magnetic field in the iron core</b>; (3) the secondary coil is in that changing field, so an <b>alternating pd is induced</b> across it. \"Marks were usually lost by not stating the magnetic field in the core was <b>changing</b>\" — and by writing <b>produces</b> instead of <b>induces</b>. The core is <b>soft iron</b>: it is easily magnetised and demagnetised, so it carries the changing field efficiently from one coil to the other without keeping any.</p><p><b>Why a.c. only</b>: a steady d.c. in the primary gives a steady field in the core, and a steady field induces <b>nothing</b> in the secondary (no change, no induction). Only at the instants of switching on and off is there a brief induced pd.</p><p><b>What it does</b> (13.6): changes the <b>size of an alternating pd</b>. A <b>step-up</b> transformer has <b>more turns on the secondary</b> than the primary and gives a larger pd out; a <b>step-down</b> has <b>fewer</b> turns on the secondary and gives a smaller pd out. The pd changes in the same ratio as the turns (N6), and because the power is (nearly) the same on both sides, the <b>current changes the other way</b> (N8): step up the pd and the current goes down.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 2025 three-marker",
+          "question": "A phone charger contains a transformer. Explain how an alternating current in the primary coil causes an alternating pd across the secondary coil. (3 marks)",
+          "steps": [
+            "The <b>alternating current in the primary coil</b> produces a magnetic field in the iron core that is <b>changing</b> (continuously reversing).",
+            "The core carries this changing field through the <b>secondary coil</b>, so the secondary coil experiences a <b>changing magnetic field</b>.",
+            "This <b>induces an alternating pd</b> across the secondary coil (and, with the charger connected, an alternating current flows)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The transformer",
+          "questions": [
+            {
+              "id": "ei-n5-q1",
+              "type": "written",
+              "text": "Explain why a transformer does not work with a steady direct current in its primary coil. (2)",
+              "model": "<ul><li>A steady current produces a <b>steady (unchanging) magnetic field</b> in the core.</li><li>A pd is only induced by a <b>changing</b> field, so nothing is induced in the secondary coil.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n5-q2",
+              "type": "choice",
+              "text": "The mark most often lost on 'how a transformer works' (2025) was for not saying…",
+              "options": [
+                "the core is made of iron",
+                "the magnetic field in the core is changing",
+                "the coils are made of copper",
+                "the transformer is efficient"
+              ],
+              "correct": 1,
+              "explain": "'Changing' is the word; a steady field induces nothing."
+            },
+            {
+              "id": "ei-n5-q3",
+              "type": "choice",
+              "text": "A step-up transformer has…",
+              "options": [
+                "more turns on the primary than the secondary",
+                "more turns on the secondary than the primary",
+                "equal turns",
+                "no core"
+              ],
+              "correct": 1,
+              "explain": "More secondary turns: larger pd out."
+            },
+            {
+              "id": "ei-n5-q4",
+              "type": "written",
+              "text": "State what a transformer does, and give one reason the core is made of soft iron. (2)",
+              "model": "<ul><li>It <b>changes the size of an alternating pd</b> (steps it up or down).</li><li>Soft iron is <b>easily magnetised and demagnetised</b>, so it carries the changing field from the primary to the secondary (without staying magnetised).</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n5-q5",
+              "type": "choice",
+              "text": "Which word is wrong in: 'the changing field in the core produces an alternating pd in the secondary'?",
+              "options": [
+                "changing",
+                "core",
+                "produces",
+                "alternating"
+              ],
+              "correct": 2,
+              "explain": "The pd is induced. 2025: 'produces' was not accepted."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain how an alternating current in one circuit induces a current in another",
+        "State what a transformer can and cannot do (a.c. only; changes the size of the pd)",
+        "Say which coil has more turns in a step-up and in a step-down transformer"
+      ],
+      "blurb": "Two coils on one soft-iron core. An alternating current in the primary coil produces a changing magnetic field in the core; the secondary coil is in that changing field, so an alternating pd is induced across it. A transformer changes the size of an alternating pd — more turns on the secondary steps it up, fewer steps it down — and does nothing with steady d.c., because a steady current gives a steady field and no induction.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "turns-ratio",
+      "band": "nn",
+      "title": "The turns ratio: pd in proportion to turns",
+      "spec": "13.7P",
+      "equations": [
+        "\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Using it",
+          "html": "<p>$\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}$: pd across the primary over pd across the secondary equals turns on the primary over turns on the secondary. Both fractions are <b>primary on top</b>. It is quicker as a ratio: the pd changes by the <b>same factor</b> as the turns — ten times the turns, ten times the pd. The June 2024 6-marker (Q10(b)) wanted the ratio idea for a 11 000 V → 230 V step-down: $11\\,000 : 230 \\approx 48 : 1$, so the primary needs about 48 times as many turns as the secondary. The June 2025 report (Q6(a)(ii)): \"many examples of confident substitution into and rearrangement of the appropriate transformer equation\"; a few used the pd–current equation by mistake (that one needs currents — N8).</p><p>Check every answer against the direction: a <b>step-down</b> (fewer secondary turns) must give a <b>smaller</b> secondary pd. If your answer comes out bigger, the fraction is upside down.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A missing number of turns",
+          "question": "A transformer steps 230 V down to 12 V for a doorbell. The primary coil has 4600 turns. Calculate the number of turns on the secondary coil. (3 marks)",
+          "steps": [
+            "$\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}$, so $N_s = N_p \\times \\dfrac{V_s}{V_p}$.",
+            "$N_s = 4600 \\times \\dfrac{12}{230}$.",
+            "$N_s = 240$ turns — fewer than the primary, as a step-down must have."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "turns"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "The turns ratio",
+          "questions": [
+            {
+              "id": "ei-n6-q1",
+              "type": "numeric",
+              "text": "A transformer has 500 turns on the primary and 2500 turns on the secondary. The primary pd is 24 V. Calculate the secondary pd.",
+              "answer": {
+                "value": 120,
+                "unit": "V"
+              },
+              "hint": "Five times the turns, five times the pd.",
+              "walkthrough": [
+                "<b>Equation:</b> $V_s = V_p \\times N_s \\div N_p$",
+                "<b>Working:</b> $V_s = 24 \\times 2500 \\div 500$",
+                "<b>Answer:</b> $= 120$",
+                "<b>Units:</b> V"
+              ]
+            },
+            {
+              "id": "ei-n6-q2",
+              "type": "numeric",
+              "text": "The 230 V mains is stepped down to 5.0 V for a charger. The secondary coil has 50 turns. Calculate the number of turns on the primary.",
+              "answer": {
+                "value": 2300,
+                "unit": "turns"
+              },
+              "hint": "$N_p = N_s \\times V_p \\div V_s$.",
+              "walkthrough": [
+                "<b>Equation:</b> $N_p = N_s \\times V_p \\div V_s$",
+                "<b>Working:</b> $N_p = 50 \\times 230 \\div 5.0$",
+                "<b>Answer:</b> $= 2300$",
+                "<b>Units:</b> turns"
+              ]
+            },
+            {
+              "id": "ei-n6-q3",
+              "type": "numeric",
+              "text": "A step-up transformer with 400 primary turns and 6400 secondary turns has a primary pd of 25 kV. Calculate the secondary pd in kV.",
+              "answer": {
+                "value": 400,
+                "unit": "kV"
+              },
+              "hint": "Ratio 16: multiply the pd by 16.",
+              "walkthrough": [
+                "<b>Equation:</b> $V_s = V_p \\times N_s \\div N_p$",
+                "<b>Working:</b> $V_s = 25 \\times 6400 \\div 400$",
+                "<b>Answer:</b> $= 400$",
+                "<b>Units:</b> kV"
+              ]
+            },
+            {
+              "id": "ei-n6-q4",
+              "type": "choice",
+              "text": "A student's answer gives a secondary pd of 920 V for a transformer stepping down from 230 V. What has gone wrong?",
+              "options": [
+                "Nothing",
+                "The fraction is upside down — a step-down must give a smaller pd",
+                "The units are wrong",
+                "The transformer is broken"
+              ],
+              "correct": 1,
+              "explain": "Check the direction every time."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Use the turns-ratio equation to find a missing pd or number of turns",
+        "Keep primary quantities together on one side of the fraction",
+        "Check the direction: step-up gives more pd out, step-down less"
+      ],
+      "blurb": "The pd across each coil is in proportion to its number of turns: primary over secondary on both sides. The equation is on the list; the marks are for keeping primary with primary, rearranging, and checking the answer makes sense (step-down means a smaller pd out).",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "national-grid",
+      "band": "nn",
+      "title": "The national grid: step up to transmit, step down to use",
+      "spec": "13.8, 13.9",
+      "equations": [
+        "\\text{high pd} \\rightarrow \\text{low current} \\rightarrow \\text{less heating of the cables}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Where and why",
+          "html": "<figure class='diagram'><svg viewBox='0 0 720 265' role='img'><text x='360.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>the national grid</text><rect x='20' y='120' width='80' height='50' style='fill:var(--line);opacity:0.4;stroke:var(--ink-2);stroke-width:1.4'/><rect x='40' y='80' width='14' height='40' style='fill:var(--ink-2);opacity:0.5'/><text x='60.0' y='190.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>power station</text><text x='60.0' y='206.0' text-anchor='middle' style='fill:var(--accent);font-size:11px;font-weight:bold;'>25 kV</text><rect x='165' y='110' width='70' height='60' style='fill:var(--accent);opacity:0.25;stroke:var(--ink);stroke-width:1.6'/><text x='200.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>step-up</text><text x='200.0' y='152.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>transformer</text><text x='200.0' y='190.0' text-anchor='middle' style='fill:var(--accent);font-size:11px;font-weight:bold;'>400 kV</text><line x1='320.0' y1='170.0' x2='320.0' y2='90.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='304.0' y1='110.0' x2='336.0' y2='110.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='308.0' y1='130.0' x2='332.0' y2='130.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='400.0' y1='170.0' x2='400.0' y2='90.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='384.0' y1='110.0' x2='416.0' y2='110.0' style='stroke:var(--ink);stroke-width:1.6'/><line x1='388.0' y1='130.0' x2='412.0' y2='130.0' style='stroke:var(--ink);stroke-width:1.6'/><text x='360.0' y='190.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>pylons: long cables</text><rect x='485' y='110' width='70' height='60' style='fill:var(--accent);opacity:0.25;stroke:var(--ink);stroke-width:1.6'/><text x='520.0' y='136.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>step-down</text><text x='520.0' y='152.0' text-anchor='middle' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>transformer</text><text x='520.0' y='190.0' text-anchor='middle' style='fill:var(--accent);font-size:11px;font-weight:bold;'>230 V</text><polygon points='630,130 660,102 690,130' style='fill:none;stroke:var(--ink);stroke-width:1.8'/><rect x='636' y='130' width='48' height='40' style='fill:var(--line);opacity:0.4;stroke:var(--ink-2);stroke-width:1.4'/><text x='660.0' y='190.0' text-anchor='middle' style='fill:var(--ink);font-size:11px;font-weight:normal;'>homes</text><line x1='100.0' y1='140.0' x2='160.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='240.0' y1='140.0' x2='320.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='400.0' y1='140.0' x2='480.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='560.0' y1='140.0' x2='620.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1.6'/><text x='360.0' y='236.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>step up to a very high pd so the current is small: little energy is wasted heating the cables;</text><text x='360.0' y='252.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>step down near homes to a safe 230 V</text></svg><figcaption>The national grid: a step-up transformer at the power station, long cables at a very high pd, and step-down transformers near the homes.</figcaption></figure><p><b>Where</b> (13.9): a <b>step-up</b> transformer <b>at the power station</b> raises the pd from the generator's ~25 kV to 132 kV, 275 kV or 400 kV for the <b>transmission lines</b>; <b>step-down</b> transformers at substations <b>near the towns and homes</b> reduce it in stages to 230 V for domestic use.</p><p><b>Why</b> (13.8), as a chain: for a given power, a <b>higher pd means a smaller current</b> (power = pd × current); the cables waste energy by <b>heating</b>, and the heating rises steeply with the current; so a <b>smaller current wastes much less energy</b> in the cables; so transmitting at a high pd is <b>more efficient</b> — more of the power generated reaches the user. It is stepped down again because 400 kV would be far too <b>dangerous</b> for homes and would break down insulation; 230 V is what appliances are designed for. The marks are on <b>reducing the current</b> and <b>reducing the energy wasted as heat in the cables</b> — \"it is more efficient\" alone is a conclusion, not a reason.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 3-mark why",
+          "question": "Explain why electrical energy is transmitted through the national grid at a very high potential difference. (3 marks)",
+          "steps": [
+            "For the same power, a higher pd means a <b>smaller current</b> in the cables.",
+            "A smaller current means <b>less energy is wasted as heat</b> in the cables (heating rises steeply with current).",
+            "So the transmission is <b>more efficient</b>: more of the energy generated reaches the users."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The national grid",
+          "questions": [
+            {
+              "id": "ei-n7-q1",
+              "type": "choice",
+              "text": "A step-up transformer is used…",
+              "options": [
+                "at the power station, before the transmission cables",
+                "at the house",
+                "in the middle of the cables",
+                "nowhere in the grid"
+              ],
+              "correct": 0,
+              "explain": "Step up at the station, step down near the user."
+            },
+            {
+              "id": "ei-n7-q2",
+              "type": "written",
+              "text": "Explain why step-down transformers are needed before electricity reaches homes. (2)",
+              "model": "<ul><li>The transmission pd (up to 400 kV) is far too <b>high to be safe</b> in homes and for appliances.</li><li>Step-down transformers reduce it to <b>230 V</b>, which appliances are designed for.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n7-q3",
+              "type": "choice",
+              "text": "Transmitting at a higher pd reduces energy losses because…",
+              "options": [
+                "the cables are shorter",
+                "the current is smaller, so less energy is wasted heating the cables",
+                "the electrons move faster",
+                "transformers store energy"
+              ],
+              "correct": 1,
+              "explain": "Higher pd → smaller current → less heating."
+            },
+            {
+              "id": "ei-n7-q4",
+              "type": "written",
+              "text": "A student writes: 'Electricity is sent at high voltage because it is more efficient.' Explain why this would not get full marks and add what is missing. (2)",
+              "model": "<ul><li>'More efficient' is the <b>conclusion</b>; the reason is missing.</li><li>Add: a high pd means a <b>small current</b>, and a small current means <b>less energy wasted as heat</b> in the cables.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-n7-q5",
+              "type": "choice",
+              "text": "Roughly what pd do the main transmission lines of the grid operate at?",
+              "options": [
+                "230 V",
+                "25 kV",
+                "400 kV",
+                "4 V"
+              ],
+              "correct": 2,
+              "explain": "Up to 400 kV on the main lines; 25 kV at the generator; 230 V at home."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe where step-up and step-down transformers are used in the grid",
+        "Explain why electricity is transmitted at a high pd",
+        "State why it is stepped down again near homes"
+      ],
+      "blurb": "Power stations generate at about 25 kV; step-up transformers raise this to as much as 400 kV for the transmission cables; step-down transformers near towns bring it down in stages to 230 V for homes. Transmitting at a high pd means a small current, and a small current wastes much less energy heating the cables, so the transfer is more efficient."
+    },
+    {
+      "id": "transformer-power",
+      "band": "nn",
+      "title": "Power in and out of a transformer: the pd–current equation",
+      "spec": "13.10",
+      "equations": [
+        "V_p\\,I_p = V_s\\,I_s"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Using it",
+          "html": "<p>Power = pd × current (Topic 10). If none is wasted, the power into the primary equals the power out of the secondary: $V_p I_p = V_s I_s$ — the spec words it \"for transformers with 100% efficiency\". So a transformer that <b>steps the pd up by a factor</b> steps the <b>current down by the same factor</b>; it cannot give more power out than in. Choose this equation when the question gives or asks for a <b>current</b>; choose the turns equation (the turns-ratio section, Higher) when it gives or asks for <b>turns</b>. The two can be chained: turns give the secondary pd, then this gives the secondary current (\"Transformer calculations the hard way\", Higher).</p><p>Units: convert <b>mA to A</b> and <b>kV to V</b> before substituting, or keep both sides in the same units consistently. Real transformers are a little less than 100 % efficient (the core and coils warm up), so the real secondary power is slightly lower than the equation gives.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Current in the secondary",
+          "question": "A transformer steps the 230 V mains down to 11.5 V. The current in the primary coil is 0.20 A. Assuming the transformer is 100 % efficient, calculate the current in the secondary coil. (3 marks)",
+          "steps": [
+            "$V_p I_p = V_s I_s$, so $I_s = V_p I_p \\div V_s$.",
+            "$I_s = 230 \\times 0.20 \\div 11.5$.",
+            "$I_s = 4.0$ A — twenty times the primary current, because the pd is stepped down by twenty."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "tx-power"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Power in a transformer",
+          "questions": [
+            {
+              "id": "ei-n8-q1",
+              "type": "numeric",
+              "text": "A 100 % efficient transformer has a primary pd of 230 V and a primary current of 50 mA. The secondary pd is 5.0 V. Calculate the secondary current.",
+              "answer": {
+                "value": 2.3,
+                "unit": "A"
+              },
+              "hint": "50 mA = 0.050 A; $I_s = V_p I_p \\div V_s$.",
+              "walkthrough": [
+                "$I_p = 50$ mA $= 0.050$ A",
+                "<b>Equation:</b> $I_s = V_p I_p \\div V_s$",
+                "<b>Working:</b> $I_s = 230 \\times 0.050 \\div 5.0$",
+                "<b>Answer:</b> $= 2.3$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "ei-n8-q2",
+              "type": "numeric",
+              "text": "A step-up transformer at a power station has an input of 25 kV at 8000 A. The output pd is 400 kV. Calculate the output current, assuming 100 % efficiency.",
+              "answer": {
+                "value": 500,
+                "unit": "A"
+              },
+              "hint": "Keep both pds in kV; the ratio is what matters.",
+              "walkthrough": [
+                "<b>Equation:</b> $I_s = V_p I_p \\div V_s$",
+                "<b>Working:</b> $I_s = 25 \\times 8000 \\div 400$",
+                "<b>Answer:</b> $= 500$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "ei-n8-q3",
+              "type": "numeric",
+              "text": "The secondary coil of a transformer supplies 12 V at 2.5 A. Calculate the primary current when the primary pd is 230 V, assuming 100 % efficiency. Give your answer in mA.",
+              "answer": {
+                "value": 130,
+                "unit": "mA"
+              },
+              "hint": "Find $I_p$ in A, then × 1000; two significant figures.",
+              "walkthrough": [
+                "<b>Equation:</b> $I_p = V_s I_s \\div V_p$",
+                "<b>Working:</b> $I_p = 12 \\times 2.5 \\div 230 = 0.1304 \\text{ A}$",
+                "<b>Answer:</b> $= 130$",
+                "<b>Units:</b> mA (2 s.f.)"
+              ]
+            },
+            {
+              "id": "ei-n8-q4",
+              "type": "choice",
+              "text": "A transformer steps the pd up by a factor of 10. If it is 100 % efficient, the current…",
+              "options": [
+                "goes up by 10",
+                "goes down by 10",
+                "stays the same",
+                "goes up by 100"
+              ],
+              "correct": 1,
+              "explain": "Same power: pd × 10 means current ÷ 10."
+            },
+            {
+              "id": "ei-n8-q5",
+              "type": "numeric",
+              "text": "A charger's transformer takes 230 V at 40 mA and delivers 9.2 V. Calculate the output current, assuming 100 % efficiency.",
+              "answer": {
+                "value": 1,
+                "unit": "A"
+              },
+              "hint": "40 mA = 0.040 A.",
+              "walkthrough": [
+                "$I_p = 40$ mA $= 0.040$ A",
+                "<b>Equation:</b> $I_s = V_p I_p \\div V_s$",
+                "<b>Working:</b> $I_s = 230 \\times 0.040 \\div 9.2$",
+                "<b>Answer:</b> $= 1.0$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "ei-n8-q6",
+              "type": "numeric",
+              "text": "A transformer supplies a 48 W lamp at 12 V from the 230 V mains. Calculate the current in the primary coil, assuming 100 % efficiency. Give your answer to 2 significant figures.",
+              "answer": {
+                "value": 0.21,
+                "unit": "A"
+              },
+              "hint": "Power in = power out = 48 W, so $I_p = P \\div V_p$.",
+              "walkthrough": [
+                "<b>Equation:</b> $I_p = P \\div V_p$",
+                "<b>Working:</b> $I_p = 48 \\div 230 = 0.2087$",
+                "<b>Answer:</b> $= 0.21$",
+                "<b>Units:</b> A (2 s.f.)"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Use $V_p I_p = V_s I_s$ to find a missing pd or current",
+        "Explain why stepping the pd up steps the current down",
+        "State the assumption (100 % efficiency) the equation relies on"
+      ],
+      "blurb": "For a transformer that is 100 % efficient, the power delivered to the primary equals the power taken from the secondary: pd × current on one side equals pd × current on the other. Step the pd up and the current comes down in the same ratio. The equation is on the list; the marks are for choosing it (not the turns equation), converting mA, and rearranging."
+    },
+    {
+      "id": "transmission-loss",
+      "band": "nn",
+      "title": "Why high voltage, with the power equations",
+      "spec": "13.11P",
+      "equations": [
+        "P = I\\,V",
+        "P = I^2 R"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The argument with numbers",
+          "html": "<p>Take 100 MW to be transmitted along cables of total resistance 5 Ω. At 25 kV the current is $I = \\dfrac{P}{V} = \\dfrac{100\\,000\\,000}{25\\,000} = 4000$ A and the loss is $I^2 R = 4000^2 \\times 5 = 80$ MW — most of the power. At 400 kV the current is $250$ A and the loss is $250^2 \\times 5 = 0.31$ MW. Sixteen times the pd, a sixteenth of the current, a <b>256th</b> of the loss. That is 13.11P: the advantage of high-voltage transmission, <b>using the equations</b> — $P = IV$ for the current, then $P = I^2R$ for the loss. The transformer equations (N6, N8) supply the pd and current on each side.</p><p>Write the chain with the equations named: (1) $P = IV$: for the same power, a higher $V$ means a smaller $I$; (2) $P = I^2R$: the power wasted in the cables is proportional to $I^2$, so a smaller current wastes <b>much</b> less; (3) so the transmission is more efficient. The common slip is to put the <b>transmission pd</b> into $P = IV$ to find the loss — that gives the power carried, not the power wasted; the loss needs the <b>current and the cable's resistance</b>.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Loss at two pds",
+          "question": "A power station delivers 50 MW through cables of total resistance 4.0 Ω. Calculate the power wasted in the cables (a) at 50 kV and (b) at 250 kV. (4 marks)",
+          "steps": [
+            "(a) $I = \\dfrac{P}{V} = \\dfrac{50 \\times 10^6}{50 \\times 10^3} = 1000$ A.",
+            "Loss $= I^2 R = 1000^2 \\times 4.0 = 4.0 \\times 10^6$ W $= 4.0$ MW.",
+            "(b) $I = \\dfrac{50 \\times 10^6}{250 \\times 10^3} = 200$ A.",
+            "Loss $= 200^2 \\times 4.0 = 160\\,000$ W $= 0.16$ MW — five times the pd, a fifth of the current, a twenty-fifth of the loss."
+          ]
+        },
+        {
+          "kind": "types",
+          "ids": [
+            "loss"
+          ],
+          "title": "Calculation practice"
+        },
+        {
+          "kind": "practice",
+          "title": "Transmission loss",
+          "questions": [
+            {
+              "id": "ei-n9-q1",
+              "type": "numeric",
+              "text": "A cable of resistance 2.0 Ω carries 300 A. Calculate the power wasted as heat in the cable.",
+              "answer": {
+                "value": 180000,
+                "unit": "W"
+              },
+              "hint": "$P = I^2 R$ — square the current first.",
+              "walkthrough": [
+                "<b>Equation:</b> $P = I^2 R$",
+                "<b>Working:</b> $P = 300^2 \\times 2.0$",
+                "<b>Answer:</b> $= 180\\,000$",
+                "<b>Units:</b> W"
+              ]
+            },
+            {
+              "id": "ei-n9-q2",
+              "type": "numeric",
+              "text": "20 MW is transmitted at 100 kV. Calculate the current in the cables.",
+              "answer": {
+                "value": 200,
+                "unit": "A"
+              },
+              "hint": "$I = P \\div V$, both in base units (or MW ÷ kV × 1000).",
+              "walkthrough": [
+                "<b>Equation:</b> $I = P \\div V$",
+                "<b>Working:</b> $I = \\dfrac{20 \\times 10^6}{100 \\times 10^3}$",
+                "<b>Answer:</b> $= 200$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "ei-n9-q3",
+              "type": "numeric",
+              "text": "The same 20 MW is instead transmitted at 400 kV through cables of resistance 10 Ω. Calculate the power wasted in the cables, in kW.",
+              "answer": {
+                "value": 25,
+                "unit": "kW"
+              },
+              "hint": "Current first ($P = IV$), then loss ($P = I^2R$), then ÷ 1000.",
+              "walkthrough": [
+                "$I = \\dfrac{20 \\times 10^6}{400 \\times 10^3} = 50$ A",
+                "<b>Equation:</b> $P = I^2 R$",
+                "<b>Working:</b> $P = 50^2 \\times 10 = 25\\,000 \\text{ W}$",
+                "<b>Answer:</b> $= 25$",
+                "<b>Units:</b> kW"
+              ]
+            },
+            {
+              "id": "ei-n9-q4",
+              "type": "written",
+              "text": "Using equations, explain why transmitting at a higher pd reduces the energy wasted in the cables. (3)",
+              "model": "<ul><li>$P = IV$: for the same power transmitted, a <b>higher pd means a smaller current</b>.</li><li>$P = I^2R$: the power wasted heating the cables is proportional to the <b>square of the current</b>…</li><li>…so a smaller current wastes <b>much less</b> power (halve the current, quarter the loss), making the transmission more efficient.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-n9-q5",
+              "type": "choice",
+              "text": "A student finds the cable loss by putting the transmission pd into P = IV. What is wrong?",
+              "options": [
+                "Nothing",
+                "That gives the power carried by the cables, not the power wasted — the loss needs I²R with the cable's resistance",
+                "P = IV is not on the equation list",
+                "The current should be squared in P = IV"
+              ],
+              "correct": 1,
+              "explain": "Loss = I²R (or I × the pd dropped across the cable, which is not the transmission pd)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Use $P = IV$ to show that a higher transmission pd means a smaller current",
+        "Use $P = I^2R$ to show the loss in the cables falls with the current squared",
+        "Calculate the power wasted in a cable of given resistance"
+      ],
+      "blurb": "The national-grid argument made quantitative: for a fixed power, P = IV says a higher pd means a smaller current; P = I²R says the power wasted heating the cables falls with the square of the current — ten times the pd, a tenth of the current, a hundredth of the loss. The marks are for using both equations, in that order.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "keywords-induction",
+      "band": "nn",
+      "title": "Key words: state what is meant by…",
+      "spec": "13.1P–13.11P",
+      "equations": [
+        "\\text{definition, word for word}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The definitions",
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Electromagnetic induction</b></td><td>A <b>potential difference is induced</b> across a conductor when it experiences a <b>changing magnetic field</b> (relative movement of the conductor and a magnet, or a changing current nearby).</td><td>\"a current is made\"</td></tr><tr><td><b>Induced pd</b></td><td>The pd across a conductor <b>caused by a changing magnetic field</b>; a current flows only if the circuit is closed.</td><td>\"produced\" pd</td></tr><tr><td><b>Generator</b></td><td>A device that <b>induces a pd by turning a coil in a magnetic field</b> (or magnets past a coil), driven by a turbine, engine or hand.</td><td>\"makes electricity from nothing\"</td></tr><tr><td><b>Alternator</b></td><td>A generator with <b>slip rings</b>, whose output is <b>a.c.</b></td><td>confusing with dynamo</td></tr><tr><td><b>Dynamo</b></td><td>A generator with a <b>split-ring commutator</b>, whose output is <b>d.c.</b> (one direction, rising and falling).</td><td>\"steady d.c.\"</td></tr><tr><td><b>Slip rings</b></td><td>Two <b>complete rings</b>, one on each end of the coil, each with its own brush, so the output alternates.</td><td>\"split rings\"</td></tr><tr><td><b>Split-ring commutator</b></td><td>One ring cut in two, the halves joined to the ends of the coil, <b>swapping brushes every half turn</b>: in a dynamo it makes the output d.c.; in a motor it reverses the current in the coil.</td><td>\"the slip ring\"</td></tr><tr><td><b>Transformer</b></td><td>A device of two coils on a soft-iron core which <b>changes the size of an alternating pd</b>: a.c. in the primary induces a.c. in the secondary.</td><td>\"changes a.c. to d.c.\"</td></tr><tr><td><b>Primary / secondary coil</b></td><td>The <b>primary</b> is connected to the supply; the pd is <b>induced in the secondary</b>, which is connected to the load.</td><td>swapping them in the ratio</td></tr><tr><td><b>Step-up / step-down transformer</b></td><td>Step-up: <b>more turns on the secondary</b>, larger pd out, smaller current. Step-down: <b>fewer</b> turns on the secondary, smaller pd out, larger current.</td><td>\"step-up increases the power\"</td></tr><tr><td><b>Turns ratio</b></td><td>$V_p / V_s = N_p / N_s$: the pds are in the <b>same ratio as the numbers of turns</b>.</td><td>primary and secondary mixed</td></tr><tr><td><b>National grid</b></td><td>The network of <b>cables and transformers</b> that carries electrical power from power stations to users, at a very high pd to reduce losses.</td><td>\"the power station\"</td></tr></table>"
+        },
+        {
+          "kind": "practice",
+          "title": "Key words",
+          "questions": [
+            {
+              "id": "ei-kw-q1",
+              "type": "written",
+              "text": "State what is meant by electromagnetic induction. (1)",
+              "model": "<ul><li>A <b>potential difference is induced</b> across a conductor when it experiences a <b>changing magnetic field</b> (e.g. by moving relative to a magnet).</li></ul>",
+              "lines": 1,
+              "tags": [
+                "H"
+              ]
+            },
+            {
+              "id": "ei-kw-q2",
+              "type": "choice",
+              "text": "Which device has slip rings and an a.c. output?",
+              "options": [
+                "Dynamo",
+                "Alternator",
+                "Transformer",
+                "Motor"
+              ],
+              "correct": 1,
+              "explain": "Slip rings: alternator, a.c. Split ring: dynamo, d.c.",
+              "tags": [
+                "H"
+              ]
+            },
+            {
+              "id": "ei-kw-q3",
+              "type": "written",
+              "text": "State what a transformer does. (1)",
+              "model": "<ul><li>It <b>changes the size of an alternating pd</b> (steps it up or down).</li></ul>",
+              "lines": 1,
+              "tags": [
+                "H"
+              ]
+            },
+            {
+              "id": "ei-kw-q4",
+              "type": "choice",
+              "text": "In a step-down transformer…",
+              "options": [
+                "the secondary has fewer turns and a smaller pd than the primary",
+                "the secondary has more turns than the primary",
+                "the pd is unchanged",
+                "d.c. is produced"
+              ],
+              "correct": 0,
+              "explain": "Fewer secondary turns: smaller pd out (and larger current).",
+              "tags": [
+                "H"
+              ]
+            },
+            {
+              "id": "ei-kw-q5",
+              "type": "written",
+              "text": "State what is meant by the national grid. (1)",
+              "model": "<ul><li>The network of <b>cables and transformers</b> connecting power stations to users across the country.</li></ul>",
+              "lines": 1
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Define electromagnetic induction and induced pd",
+        "Define generator, alternator, dynamo, slip rings and the split ring",
+        "Define transformer, primary and secondary, step-up and step-down, turns ratio, national grid"
+      ],
+      "blurb": "One-mark definitions in the form of words the mark schemes credit. The generator, alternator, dynamo, slip-ring and transformer terms are Higher only (and the alternator/dynamo ones Physics only); the national grid is both tiers."
+    },
+    {
+      "id": "induction-chain-exam",
+      "band": "tricky",
+      "title": "The induction chain in the exam: the falling magnet, and \"induces\"",
+      "spec": "13.1P, 13.2",
+      "equations": [
+        "\\text{relative movement} \\rightarrow \\text{changing field} \\rightarrow \\text{pd induced} \\rightarrow \\text{current if closed}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The 2024 falling magnet",
+          "html": "<p>The June 2024 scheme (Q10(a)(i), 3 marks, any three): the coil <b>cuts the field lines</b> (or experiences a <b>changing field</b>); this <b>induces a voltage or current</b> in the coil; the <b>voltmeter measures</b> the induced pd (the scheme lets that statement count for two of the three); <b>electrons in the wire experience a force</b> / move in response to the changing field; the induced pd <b>changes in size and direction</b> as the magnet passes through. The chain, with the lead line for a moving magnet:</p><ol class='steps'><li>The magnet moves relative to the coil (either may move).</li><li>So the wire or coil experiences a changing magnetic field.</li><li>This induces a potential difference across the wire or coil.</li><li>If the wire or coil is in a closed circuit, a current flows.</li></ol><p><b>Why the reading reverses</b>: as the magnet's leading pole enters, the field through the coil <b>increases</b>; as its trailing pole (the opposite pole) leaves, the field through the coil <b>decreases</b> — the change is the opposite way, so the induced pd is the opposite way. A magnet dropped through a coil gives one kick in each direction, the second one sharper because the magnet is moving faster by then.</p><p><b>The vocabulary</b>: a pd is <b>induced</b>; a current <b>flows</b> if the circuit is closed; a generator <b>induces</b> a pd. The June 2025 report: \"There still seems to be a confusion between a p.d. being induced and a p.d. being produced\" — and \"produces\" was not accepted. The June 2023 report (Q8(a)(iii), regenerative braking) wanted the dynamo \"to cause an electric current\" that recharges the battery, not a description of split rings.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Dropped through a coil",
+          "question": "A bar magnet is dropped through a vertical coil connected to a voltmeter. Explain why the voltmeter reading rises, falls to zero, reverses and returns to zero as the magnet falls through. (4 marks)",
+          "steps": [
+            "The magnet moves relative to the coil (either may move). As the magnet enters the coil, the coil <b>cuts the field lines</b> — it experiences a <b>changing magnetic field</b>.",
+            "This <b>induces a pd</b> across the coil, which the voltmeter reads; it rises as the magnet speeds up and the field through the coil grows.",
+            "When the magnet is centred in the coil the field through it is momentarily <b>not changing</b>, so the pd falls to <b>zero</b>.",
+            "As the magnet leaves, the field through the coil <b>decreases</b> — the opposite change — so the induced pd is <b>reversed</b>; once the magnet is clear, no change, so zero again."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The chain in the exam",
+          "questions": [
+            {
+              "id": "ei-t1-q1",
+              "type": "written",
+              "text": "A student waves a magnet near a coil connected to a sensitive voltmeter. Explain why the voltmeter reading keeps changing. (3)",
+              "model": "<ul><li>The magnet moves relative to the coil, so the coil experiences a <b>changing magnetic field</b> (cuts field lines).</li><li>This <b>induces a pd</b> across the coil, which the voltmeter reads.</li><li>As the magnet moves <b>towards and away</b>, the change reverses, so the induced pd <b>changes size and direction</b>.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-t1-q2",
+              "type": "choice",
+              "text": "A magnet falls through a coil. The second kick on the meter is larger than the first because…",
+              "options": [
+                "the magnet is heavier",
+                "the magnet is moving faster when it leaves, so the field changes more quickly",
+                "the coil has heated up",
+                "the second pole is stronger"
+              ],
+              "correct": 1,
+              "explain": "Faster movement, faster change, larger induced pd."
+            },
+            {
+              "id": "ei-t1-q3",
+              "type": "choice",
+              "text": "Which sentence would NOT be credited?",
+              "options": [
+                "The coil cuts the field lines",
+                "A pd is induced across the coil",
+                "The magnet produces a current in the coil",
+                "A current flows because the circuit is closed"
+              ],
+              "correct": 2,
+              "explain": "'Produces' is the rejected word, and the magnet does not make the current — the changing field induces a pd."
+            },
+            {
+              "id": "ei-t1-q4",
+              "type": "written",
+              "text": "An electric car charges its battery when it slows down. Explain how. (3)",
+              "model": "<ul><li>As the car slows, the wheels turn the motor, which acts as a <b>generator (dynamo)</b>: a coil turns in a magnetic field.</li><li>The coil experiences a changing magnetic field, so a <b>pd is induced</b> and a <b>current flows</b> to the battery…</li><li>…transferring energy from the car's <b>kinetic</b> store to the battery's <b>chemical</b> store (which is also what slows the car).</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-t1-q5",
+              "type": "choice",
+              "text": "The voltmeter reads zero at the instant the magnet is exactly centred in the coil because…",
+              "options": [
+                "the magnet has stopped",
+                "the field through the coil is momentarily not changing",
+                "the coil is too short",
+                "the voltmeter is on the wrong setting"
+              ],
+              "correct": 1,
+              "explain": "Maximum field through the coil, but zero rate of change at that instant."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the chain for a magnet moving past a coil, with the lead line",
+        "Explain why the reading reverses as a magnet passes through a coil",
+        "Use 'induces' and never 'produces' for the pd"
+      ],
+      "blurb": "The exam's favourite induction question drops a magnet through a coil or waves one near it and asks why the meter reads. The marks are on the chain — changing field, induced pd, current if the circuit is closed — plus one detail students miss: the reading reverses as the magnet passes through. And the word is induces.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "dynamo-harder",
+      "band": "tricky",
+      "title": "Why the dynamo gets harder to turn when it lights a lamp",
+      "spec": "13.2",
+      "equations": [
+        "\\text{induced current} \\rightarrow \\text{its own field} \\rightarrow \\text{opposes the motion} \\rightarrow \\text{more work}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Two explanations, both wanted",
+          "html": "<p>The June 2023 report (Q10(a)(ii)): many said the lamp \"would increase resistance in the circuit\" — wrong, a lamp has <b>far less</b> resistance than a voltmeter, which is exactly why a current now flows. Examiners wanted that \"the lamp required an energy transfer to produce light\", supplied by extra work turning the dynamo; credit was also available for \"an induced current in the rotating coil in the dynamo produces a magnetic field\" that opposes the coil's motion — \"very few examples of this\". \"The handle needs to be turned more\" was \"too vague\".</p><table class='tbl'><tr><th>Idea</th><th>What to write</th></tr><tr><td><b>Energy</b></td><td>with the lamp connected a <b>current flows</b> and the lamp transfers energy (to light and heat); by conservation of energy this must come from the <b>work done turning the handle</b>, so more force (more work per turn) is needed</td></tr><tr><td><b>Field</b></td><td>the induced current in the coil produces its own <b>magnetic field</b>, which <b>interacts with the magnet's field</b> and gives a force on the coil that <b>opposes its rotation</b> (the induced current's field opposes the change causing it, 13.2) — the turning has to overcome this force</td></tr><tr><td><b>Voltmeter only</b></td><td>a voltmeter has a <b>very high resistance</b>, so almost <b>no current</b> flows: a pd is induced but there is no induced current's field to oppose the motion and almost no energy transferred, so the handle turns freely</td></tr></table><p>The same idea is why a motor draws a large current when it starts and less once it is turning (its turning coil induces a pd that opposes the supply), and why an electric car's regenerative braking slows the car: the opposing force on the generator's coil is the braking force.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 2023 question",
+          "question": "A hand-turned dynamo is connected to a voltmeter and turns easily. When a lamp is connected instead, the handle becomes harder to turn. Explain why. (3 marks)",
+          "steps": [
+            "With the lamp connected, the circuit has a low resistance, so the induced pd drives a <b>current</b>; the lamp <b>transfers energy</b> (lights up). By conservation of energy this energy must come from the <b>work done turning the handle</b>, so more effort is needed.",
+            "Also, the induced current in the coil produces its own <b>magnetic field</b>, which interacts with the magnet's field to give a force on the coil that <b>opposes its rotation</b>.",
+            "With only the voltmeter (very high resistance) almost <b>no current</b> flows, so there is no opposing force and no energy to supply — the handle turns freely."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Harder to turn",
+          "questions": [
+            {
+              "id": "ei-t2-q1",
+              "type": "choice",
+              "text": "Why does connecting a lamp to a hand-turned generator make it harder to turn?",
+              "options": [
+                "The lamp increases the resistance of the circuit",
+                "A current now flows: the lamp needs energy, which comes from extra work turning the handle, and the current's field opposes the motion",
+                "The lamp heats the coil",
+                "The magnet gets weaker"
+              ],
+              "correct": 1,
+              "explain": "Not resistance — a lamp has less resistance than a voltmeter, which is why current flows."
+            },
+            {
+              "id": "ei-t2-q2",
+              "type": "written",
+              "text": "Explain, in terms of magnetic fields, why a generator supplying a current needs more force to turn it than the same generator on open circuit. (3)",
+              "model": "<ul><li>When a current flows in the coil it produces its own <b>magnetic field</b>.</li><li>This <b>interacts with the permanent magnet's field</b>, giving a force on the coil that <b>opposes its motion</b> (the induced field opposes the change causing it).</li><li>On open circuit no current flows, so there is no induced field and no opposing force.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-t2-q3",
+              "type": "choice",
+              "text": "A student writes: 'the handle has to be turned more'. The examiners judged this…",
+              "options": [
+                "full marks",
+                "too vague — it does not say why",
+                "wrong physics",
+                "a Level 3 answer"
+              ],
+              "correct": 1,
+              "explain": "Say where the energy goes or what opposes the motion."
+            },
+            {
+              "id": "ei-t2-q4",
+              "type": "written",
+              "text": "Explain how a generator's behaviour when it supplies a current illustrates conservation of energy. (2)",
+              "model": "<ul><li>The energy transferred by the current (to the lamp) does not appear from nowhere: it equals the <b>extra work done turning</b> the handle against the opposing force.</li><li>More current drawn → more energy transferred → <b>more work needed</b>; the opposing force is what makes the work necessary.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain the extra effort by conservation of energy",
+        "Explain it by the induced current's field opposing the motion",
+        "Explain why there is no extra effort with a voltmeter alone"
+      ],
+      "blurb": "A bicycle dynamo turning a voltmeter turns freely; connect a lamp and the handle stiffens. Two ideas earn the marks: the lamp needs energy, which has to come from extra work turning the handle; and the induced current's own magnetic field opposes the motion of the coil. In 2023 very few students gave the second.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "output-graphs",
+      "band": "tricky",
+      "title": "Reading and sketching generator output graphs",
+      "spec": "13.3P",
+      "equations": [
+        "\\text{a.c.: through zero}",
+        "\\text{dynamo: humps above zero}",
+        "\\text{faster: taller and more frequent}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "What each change does to the graph",
+          "html": "<table class='tbl'><tr><th>Change</th><th>Peak pd</th><th>Frequency / period</th><th>Shape</th></tr><tr><td>turn the coil <b>faster</b></td><td><b>larger</b> (field cut more quickly)</td><td>frequency <b>higher</b>, period <b>shorter</b></td><td>taller and squashed sideways</td></tr><tr><td><b>stronger magnet</b> or <b>more turns</b></td><td><b>larger</b></td><td>unchanged</td><td>taller only</td></tr><tr><td>turn the coil the <b>other way</b></td><td>same</td><td>same</td><td><b>inverted</b> (starts negative where it started positive)</td></tr><tr><td>swap slip rings for a <b>split ring</b></td><td>same</td><td>twice as many humps per second (each half-cycle flipped up)</td><td>all above the axis — d.c.</td></tr></table><p>Reading: the <b>peak pd</b> is the height of the crest above zero; the <b>period</b> is the time for one full cycle (crest to crest for a.c.; for a dynamo, two humps make one turn of the coil); <b>frequency = 1 / period</b> (Topic 4). Mains a.c. has a frequency of 50 Hz, period 0.02 s. Note the a.c. pd is <b>zero twice per cycle</b> — when the coil is vertical and its sides are moving along the field, not cutting it — and <b>largest when the coil is flat</b>, cutting across the field fastest.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Sketching the change",
+          "question": "The graph shows the a.c. output of an alternator: peak 6 V, period 0.04 s. The coil is now turned twice as fast. Describe the new graph. (3 marks)",
+          "steps": [
+            "The <b>peak pd doubles</b> to about 12 V, because the coil cuts the field twice as quickly.",
+            "The <b>period halves</b> to 0.02 s (frequency doubles from 25 Hz to 50 Hz): twice as many cycles in the same time.",
+            "It is still a.c. — the same shape through zero — just taller and squashed along the time axis."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Output graphs",
+          "questions": [
+            {
+              "id": "ei-t3-q1",
+              "type": "choice",
+              "text": "A graph of pd against time shows humps that are all above the axis. The generator is…",
+              "options": [
+                "an alternator",
+                "a dynamo",
+                "a transformer",
+                "a motor"
+              ],
+              "correct": 1,
+              "explain": "Never reverses: d.c., so a split-ring dynamo."
+            },
+            {
+              "id": "ei-t3-q2",
+              "type": "numeric",
+              "text": "An alternator's output has a period of 0.025 s. Calculate its frequency.",
+              "answer": {
+                "value": 40,
+                "unit": "Hz"
+              },
+              "hint": "$f = 1 \\div T$.",
+              "walkthrough": [
+                "<b>Equation:</b> $f = 1 \\div T$",
+                "<b>Working:</b> $f = 1 \\div 0.025$",
+                "<b>Answer:</b> $= 40$",
+                "<b>Units:</b> Hz"
+              ]
+            },
+            {
+              "id": "ei-t3-q3",
+              "type": "written",
+              "text": "Describe two changes to an alternator's output graph when a stronger magnet is used, the coil turning at the same rate. (2)",
+              "model": "<ul><li>The <b>peak pd is larger</b>.</li><li>The <b>frequency (period) is unchanged</b> — the coil still turns at the same rate.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "ei-t3-q4",
+              "type": "choice",
+              "text": "At the instants when an alternator's output pd is zero, the coil is…",
+              "options": [
+                "flat, with its sides cutting across the field fastest",
+                "vertical, with its sides moving along the field lines",
+                "stationary",
+                "at 45° to the field"
+              ],
+              "correct": 1,
+              "explain": "Moving along the field: no lines cut, no pd."
+            },
+            {
+              "id": "ei-t3-q5",
+              "type": "written",
+              "text": "A dynamo's output graph has 100 humps per second. State the rate at which the coil turns, and explain your answer. (2)",
+              "model": "<ul><li><b>50 turns per second</b>.</li><li>Each turn of the coil gives <b>two humps</b> (the induced pd reverses every half turn and the split ring flips the second half up).</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Tell an alternator's output from a dynamo's on a graph",
+        "Sketch the change when the coil is turned faster, or with a stronger magnet",
+        "Read the peak pd, the period and the frequency from a graph"
+      ],
+      "blurb": "The output of a generator against time is a graph question: recognise a.c. from d.c., read the peak pd and the period, and sketch what changes when the coil turns faster (both the peak and the frequency), when the magnet is stronger (the peak only) or when the coil is turned the other way (the graph is inverted).",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "mic-vs-speaker",
+      "band": "tricky",
+      "title": "Microphone versus loudspeaker: the 6-mark comparison",
+      "spec": "13.4P",
+      "equations": [
+        "\\text{speaker: fields interact} \\rightarrow \\text{force} \\rightarrow \\text{moves}",
+        "\\text{microphone: moves} \\rightarrow \\text{changing field} \\rightarrow \\text{pd induced}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The levels, and the two chains side by side",
+          "html": "<p>The June 2023 report (Q10(c)): Level 1 gave basic facts; Level 2 described how the cone's motion relates to the electrical signal; Level 3 discussed \"the interaction between the coil's magnetic field and the magnet's field\" for the speaker and, for the microphone, \"how electromagnetic induction is a result of a coil moving in a magnetic field\". \"It was acceptable for the details of one device to be less complete than the other provided they were both referenced\" — but Level 2 answers \"tended to describe the principles of operation of the loudspeaker more fully\". The microphone is the one to practise.</p><table class='tbl'><tr><th>Loudspeaker (motor effect)</th><th>Microphone (induction)</th></tr><tr><td>an <b>alternating current</b> from the amplifier flows in the coil</td><td>a <b>sound wave</b> (pressure variations) makes the diaphragm, and the coil fixed to it, <b>vibrate</b></td></tr><tr><td>the current creates a <b>magnetic field around the coil</b>, which <b>interacts with the permanent magnet's field</b></td><td>the coil <b>moves through the permanent magnet's field</b>, so it experiences a <b>changing magnetic field</b></td></tr><tr><td>this causes a <b>resultant force on the coil</b>, the same on either side, so the coil and cone <b>move forwards or backwards</b></td><td>this <b>induces a pd</b> across the coil; in the closed circuit a <b>current flows</b></td></tr><tr><td>with a.c. the force <b>alternates</b> at the frequency of the current, so the cone vibrates and makes a <b>sound wave of that frequency</b></td><td>the vibration is back and forth, so the induced current is <b>alternating</b>, with the <b>frequency of the sound</b>; louder sound, larger current</td></tr><tr><td colspan='2'><b>Shared</b>: a coil in the field of a permanent magnet, fixed to a cone or diaphragm. <b>Reversed</b>: current → movement in the speaker; movement → current in the microphone. A loudspeaker can be used as a microphone and vice versa.</td></tr></table>"
+        },
+        {
+          "kind": "worked",
+          "title": "The Level 3 answer",
+          "question": "Compare the way a moving-coil loudspeaker and a moving-coil microphone work. (6 marks)",
+          "steps": [
+            "<b>Both</b> have a coil in the magnetic field of a permanent magnet, attached to a cone (speaker) or diaphragm (microphone); the speaker turns a current into sound, the microphone turns sound into a current.",
+            "<b>Speaker:</b> there is an alternating current in the coil; this creates a magnetic field around the coil, which interacts with the permanent magnetic field.",
+            "This causes a resultant force on the coil, the same on either side, so the coil and cone move forwards or backwards; with a.c. the force alternates at the same frequency as the current, so the cone vibrates and produces a sound wave of that frequency.",
+            "<b>Microphone:</b> the sound wave makes the diaphragm and the coil fixed to it vibrate, so the coil moves through the magnetic field of the permanent magnet.",
+            "The coil therefore experiences a changing magnetic field, which induces a pd across the coil; in the closed circuit a current flows.",
+            "Because the coil moves back and forth, the induced current is alternating, with the same frequency as the sound and a size that depends on its loudness — the reverse of the speaker."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Microphone versus loudspeaker",
+          "questions": [
+            {
+              "id": "ei-t4-q1",
+              "type": "written",
+              "text": "Explain how a moving-coil microphone produces an electrical signal from a sound wave, and how this differs from what happens in a moving-coil loudspeaker. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Shared</td><td>Both: a coil in a permanent magnet's field, fixed to a cone/diaphragm; speaker converts current to sound, microphone sound to current.</td></tr><tr><td><b>2</b></td><td>Speaker 1</td><td>Current in the coil creates a magnetic field around the coil, which <b>interacts with the permanent magnetic field</b>.</td></tr><tr><td><b>3</b></td><td>Speaker 2</td><td>Resultant force on the coil, the same on either side, so the cone moves; with a.c. the force alternates at the current's frequency and the cone vibrates, producing sound of that frequency.</td></tr><tr><td><b>4</b></td><td>Microphone 1</td><td>Sound makes the diaphragm and coil vibrate, so the coil <b>moves through the magnetic field</b>.</td></tr><tr><td><b>5</b></td><td>Microphone 2</td><td>The coil experiences a changing magnetic field, so a <b>pd is induced</b> (electromagnetic induction); a current flows in the closed circuit.</td></tr><tr><td><b>6</b></td><td>Microphone 3</td><td>The current alternates at the frequency of the sound, larger for a louder sound.</td></tr></table><ul><li>Level 3 (5–6) needs the field interaction for the speaker AND induction from a coil moving in a field for the microphone; one device may be thinner than the other if both are there.</li></ul>",
+              "lines": 8
+            },
+            {
+              "id": "ei-t4-q2",
+              "type": "choice",
+              "text": "Which statement about the microphone would lift an answer to Level 3?",
+              "options": [
+                "The microphone has a diaphragm",
+                "Sound makes the coil move",
+                "The coil moving through the magnetic field experiences a changing field, so a pd is induced",
+                "The microphone is connected to an amplifier"
+              ],
+              "correct": 2,
+              "explain": "Induction as the result of a coil moving in a field."
+            },
+            {
+              "id": "ei-t4-q3",
+              "type": "choice",
+              "text": "A loudspeaker is connected to a sensitive voltmeter and someone speaks into it. The voltmeter…",
+              "options": [
+                "reads nothing — speakers cannot do that",
+                "shows a changing reading: the speaker is working as a microphone",
+                "reads a steady pd",
+                "reads 230 V"
+              ],
+              "correct": 1,
+              "explain": "Same parts: sound moves the coil in the field, so a pd is induced."
+            },
+            {
+              "id": "ei-t4-q4",
+              "type": "written",
+              "text": "State what is reversed between a loudspeaker and a microphone, and what is the same. (2)",
+              "model": "<ul><li>Reversed: speaker — <b>current causes movement</b> (motor effect); microphone — <b>movement induces a pd/current</b> (induction).</li><li>Same: a <b>coil in a permanent magnet's field</b> fixed to a cone or diaphragm.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write both chains side by side",
+        "Say what the devices share and what is reversed",
+        "Know what Level 3 needs for each device"
+      ],
+      "blurb": "The 2023 6-marker asked for a comparison of the two devices. Level 2 answers described the loudspeaker well and the microphone thinly; Level 3 needed the interaction of the coil's field and the magnet's field for the speaker, and electromagnetic induction from a coil moving in a magnetic field for the microphone — both chains, both devices.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "transformer-six",
+      "band": "tricky",
+      "title": "The transformer 6-marker: construction, operation, ratio",
+      "spec": "13.5, 13.6, 13.7P",
+      "equations": [
+        "\\text{construction} + \\text{operation} + \\text{ratio}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The three parts and the levels",
+          "html": "<p>The June 2024 scheme (Q10(b), indicative content): <b>construction</b> — a closed iron core with a primary and a secondary coil, the primary having considerably more turns than the secondary; <b>operation</b> — a.c. in the primary causes a changing magnetic field in the core, which induces an a.c. pd in the secondary; <b>step-down</b> — more turns on the primary than the secondary; <b>ratio</b> — $V_p / V_s = N_p / N_s$, giving 11 000 : 230, i.e. about 48 : 1. Level 1 (1–2): basic ideas about construction or operation, or use of the ratio. Level 2 (3–4): more developed ideas about construction and operation, or the ratio. <b>Level 3 (5–6)</b>: detail on construction, how it works, and the ratio idea — \"one of the three aspects may be treated weakly and still be tolerated\". Within a level, coherence decides top or bottom.</p><p>The 2025 three-marker (N5) is the operation part on its own, and the mark lost there — <b>the field in the core is changing</b> — is the one to check in the 6-marker too. Also \"<b>induces</b>\", not \"produces\".</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 2024 answer",
+          "question": "A transformer at a substation reduces the pd from 11 000 V to 230 V. Explain how the transformer is constructed and how it does this. (6 marks)",
+          "steps": [
+            "<b>Construction:</b> two coils of insulated wire wound on a closed <b>soft-iron core</b> — the <b>primary</b> coil connected to the 11 000 V supply and the <b>secondary</b> coil to the 230 V output.",
+            "It is a <b>step-down</b> transformer, so the primary has <b>many more turns</b> than the secondary.",
+            "<b>Operation:</b> the <b>alternating current</b> in the primary coil produces a <b>changing magnetic field</b> in the iron core.",
+            "The core carries this changing field through the secondary coil, so a <b>pd is induced</b> across the secondary — an alternating pd, because the field keeps reversing.",
+            "<b>Ratio:</b> $V_p / V_s = N_p / N_s$, so $N_p / N_s = 11\\,000 / 230 \\approx 48$: the primary needs about 48 times as many turns as the secondary.",
+            "For example 4800 turns on the primary and 100 on the secondary would give 230 V from 11 000 V."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The transformer 6-marker",
+          "questions": [
+            {
+              "id": "ei-t5-q1",
+              "type": "written",
+              "text": "A transformer in a laptop charger reduces the 230 V mains to 20 V. Explain how the transformer is constructed and how it works. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Construction 1</td><td>Two coils (primary, secondary) on a closed <b>soft-iron core</b>.</td></tr><tr><td><b>2</b></td><td>Construction 2</td><td>Step-down: the <b>primary has more turns</b> than the secondary.</td></tr><tr><td><b>3</b></td><td>Operation 1</td><td><b>Alternating current</b> in the primary produces a <b>changing magnetic field</b> in the core.</td></tr><tr><td><b>4</b></td><td>Operation 2</td><td>The secondary is in this changing field, so an alternating <b>pd is induced</b> across it.</td></tr><tr><td><b>5</b></td><td>Ratio 1</td><td>$V_p / V_s = N_p / N_s$ = 230 / 20 = 11.5 : 1.</td></tr><tr><td><b>6</b></td><td>Ratio 2</td><td>e.g. 2300 primary turns to 200 secondary turns.</td></tr></table><ul><li>Level 3 needs construction, operation and the ratio idea; one may be thin.</li></ul>",
+              "lines": 8
+            },
+            {
+              "id": "ei-t5-q2",
+              "type": "choice",
+              "text": "An answer describes the construction and operation fully but says nothing about turns or ratio. Its best level is…",
+              "options": [
+                "Level 3, 6 marks",
+                "Level 3, 5 marks — one aspect may be missing",
+                "Level 2",
+                "Level 1"
+              ],
+              "correct": 2,
+              "explain": "All three aspects must be present for Level 3; one of them may be thin."
+            },
+            {
+              "id": "ei-t5-q3",
+              "type": "choice",
+              "text": "Why does a transformer have a closed iron core rather than two separate coils in air?",
+              "options": [
+                "To make it heavier",
+                "To carry almost all of the changing magnetic field from the primary through the secondary",
+                "To conduct the current between the coils",
+                "To store charge"
+              ],
+              "correct": 1,
+              "explain": "The core links the coils magnetically; the coils are not connected electrically."
+            },
+            {
+              "id": "ei-t5-q4",
+              "type": "written",
+              "text": "A step-up transformer raises 25 kV to 400 kV. State the turns ratio and which coil has more turns. (2)",
+              "model": "<ul><li>$N_s / N_p = V_s / V_p = 400 / 25 = 16$: ratio 1 : 16 (primary : secondary).</li><li>The <b>secondary</b> has 16 times as many turns (step-up).</li></ul>",
+              "lines": 2,
+              "tags": [
+                "P"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Describe the construction of a transformer",
+        "Explain its operation with 'changing' and 'induces'",
+        "Give the turns ratio for a stated pair of pds"
+      ],
+      "blurb": "The 2024 6-marker asked how a transformer steps 11 000 V down to 230 V. Level 3 needed all three parts: the construction (two coils on a closed iron core, many more turns on the primary), the operation (a.c. in the primary → changing field in the core → a.c. induced in the secondary) and the ratio (11 000 : 230, about 48 : 1). One part may be thin, but all three must be there.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "transformer-hard",
+      "band": "tricky",
+      "title": "Transformer calculations the hard way: which equation, and both together",
+      "spec": "13.7P, 13.10",
+      "equations": [
+        "\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s}",
+        "V_p I_p = V_s I_s"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "Choosing, chaining, checking",
+          "html": "<table class='tbl'><tr><th>Question gives / asks</th><th>Equation</th></tr><tr><td>turns and pds (any three of $N_p, N_s, V_p, V_s$)</td><td>$V_p / V_s = N_p / N_s$</td></tr><tr><td>pds and currents (any three of $V_p, I_p, V_s, I_s$)</td><td>$V_p I_p = V_s I_s$ (100 % efficient)</td></tr><tr><td>turns, the primary pd and a current — asks for the other current</td><td><b>both</b>: ratio first for $V_s$, then power for $I_s$</td></tr><tr><td>power out, pd out, and asks for the current in</td><td>$P = IV$ for $I_s$ (or straight to $V_p I_p = P$)</td></tr></table><p>The June 2025 report (Q6(a)(ii)): most substituted and rearranged confidently; the few who lost marks used the pd–current equation where turns were given. <b>Checks</b>: a step-down must give a smaller $V_s$ and a <b>larger</b> $I_s$; the power out can never exceed the power in; convert mA → A and kV → V (or keep the same prefix on both sides of the same equation).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Both equations",
+          "question": "A transformer has 2000 turns on the primary and 100 turns on the secondary. The primary is connected to the 230 V mains and the secondary supplies a 5.0 A current to a heater. Assuming 100 % efficiency, calculate the current in the primary coil. (4 marks)",
+          "steps": [
+            "Secondary pd from the turns: $V_s = V_p \\times N_s / N_p = 230 \\times 100 / 2000 = 11.5$ V.",
+            "Power equation: $V_p I_p = V_s I_s$, so $I_p = V_s I_s / V_p$.",
+            "$I_p = 11.5 \\times 5.0 / 230$.",
+            "$I_p = 0.25$ A — twenty times smaller than the secondary current, because the pd is twenty times larger."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The hard way",
+          "questions": [
+            {
+              "id": "ei-t6-q1",
+              "type": "numeric",
+              "text": "A transformer has 1200 primary turns and 60 secondary turns, with 240 V across the primary. The secondary supplies 3.0 A. Calculate the primary current, assuming 100 % efficiency.",
+              "answer": {
+                "value": 0.15,
+                "unit": "A"
+              },
+              "hint": "$V_s$ from the turns first, then $V_p I_p = V_s I_s$.",
+              "walkthrough": [
+                "$V_s = 240 \\times 60 \\div 1200 = 12$ V",
+                "<b>Equation:</b> $I_p = V_s I_s \\div V_p$",
+                "<b>Working:</b> $I_p = 12 \\times 3.0 \\div 240$",
+                "<b>Answer:</b> $= 0.15$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "ei-t6-q2",
+              "type": "numeric",
+              "text": "A step-up transformer at a power station has 500 primary turns and 8000 secondary turns. The generator supplies 25 kV at 6000 A. Calculate the current in the transmission lines, assuming 100 % efficiency.",
+              "answer": {
+                "value": 375,
+                "unit": "A"
+              },
+              "hint": "Ratio 16: $V_s = 400$ kV; then the power equation (keep kV on both sides).",
+              "walkthrough": [
+                "$V_s = 25 \\times 8000 \\div 500 = 400$ kV",
+                "<b>Equation:</b> $I_s = V_p I_p \\div V_s$",
+                "<b>Working:</b> $I_s = 25 \\times 6000 \\div 400$",
+                "<b>Answer:</b> $= 375$",
+                "<b>Units:</b> A"
+              ]
+            },
+            {
+              "id": "ei-t6-q3",
+              "type": "choice",
+              "text": "A question gives the number of turns on both coils and the primary pd, and asks for the secondary pd. A student uses $V_p I_p = V_s I_s$. What happens?",
+              "options": [
+                "It works",
+                "It cannot work — no currents are given; the turns-ratio equation is needed",
+                "It gives half the answer",
+                "It gives the current instead"
+              ],
+              "correct": 1,
+              "explain": "Turns → ratio equation; currents → power equation."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Choose the right transformer equation from what the question gives",
+        "Chain the two equations when a question needs both",
+        "Convert mA and kV and state the efficiency assumption"
+      ],
+      "blurb": "Two transformer equations are on the list. Turns in the question means the ratio equation; a current means the power equation; and some questions need both — turns to get the secondary pd, then the power equation for the current. Watch for mA, kV and the 100 % efficiency assumption.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    },
+    {
+      "id": "grid-chain",
+      "band": "tricky",
+      "title": "The national grid explained as a chain, with and without the equations",
+      "spec": "13.8, 13.9, 13.11P",
+      "equations": [
+        "\\text{high pd} \\rightarrow \\text{low } I \\rightarrow \\text{low } I^2 R \\rightarrow \\text{efficient}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "One chain, several questions",
+          "html": "<table class='tbl'><tr><th>Question</th><th>Answer (the same chain each time)</th></tr><tr><td>why is the pd <b>stepped up</b> at the power station?</td><td>a higher pd means a <b>smaller current</b> for the same power → less energy <b>wasted as heat</b> in the cables → <b>more efficient</b> transmission</td></tr><tr><td>why not transmit at <b>230 V</b>?</td><td>at 230 V the current would be <b>enormous</b> → huge heating losses in the cables (and far thicker cables needed) → most of the energy wasted</td></tr><tr><td>why is it <b>stepped down</b> again?</td><td>400 kV is far too <b>dangerous</b> for homes and appliances → stepped down in stages to <b>230 V</b>, which appliances are designed for</td></tr><tr><td>why use <b>a.c.</b> in the grid?</td><td>transformers only work with a.c. (a changing field is needed to induce a pd) → a.c. lets the pd be stepped up and down</td></tr></table><p><b>With the equations</b> (13.11P, Higher Physics): $P = IV$ — for a fixed power, $I = P/V$, so ten times the pd gives a tenth of the current; $P = I^2 R$ — the power wasted in cables of resistance $R$ falls to a <b>hundredth</b>. The equations are named in the answer and, if numbers are given, used (the transmission-loss section, Higher Physics).</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Why not 230 V?",
+          "question": "Explain why the national grid does not transmit electricity from power stations at 230 V. (3 marks)",
+          "steps": [
+            "At 230 V, delivering the same power would need an <b>enormous current</b> in the cables (power = pd × current).",
+            "A large current wastes a great deal of energy <b>heating the cables</b> (the heating rises steeply with current).",
+            "So the transmission would be very <b>inefficient</b>; stepping up to a high pd keeps the current, and the losses, small."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The grid chain",
+          "questions": [
+            {
+              "id": "ei-t7-q1",
+              "type": "written",
+              "text": "Explain why transformers are used at both ends of the national grid's transmission lines. (4)",
+              "model": "<ul><li>At the power station a <b>step-up</b> transformer raises the pd (to e.g. 400 kV)…</li><li>…so that the <b>current is small</b> and <b>little energy is wasted heating</b> the cables (efficient).</li><li>Near the users a <b>step-down</b> transformer reduces the pd to 230 V…</li><li>…because the transmission pd is far too <b>dangerous</b> for homes and appliances are designed for 230 V.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "ei-t7-q2",
+              "type": "choice",
+              "text": "Why must the grid use a.c. rather than d.c.?",
+              "options": [
+                "a.c. travels faster",
+                "transformers only work with a.c., so only a.c. can be stepped up and down",
+                "d.c. cannot flow in long cables",
+                "a.c. is safer"
+              ],
+              "correct": 1,
+              "explain": "No changing field, no induction, no transformer."
+            },
+            {
+              "id": "ei-t7-q3",
+              "type": "written",
+              "text": "Using the equations $P = IV$ and $P = I^2R$, explain the advantage of transmitting at 400 kV rather than 40 kV for the same power. (3)",
+              "model": "<ul><li>$P = IV$: ten times the pd means <b>one tenth of the current</b> for the same power.</li><li>$P = I^2R$: the power wasted in the cables depends on the <b>square of the current</b>…</li><li>…so the loss falls to <b>one hundredth</b>: far more of the power reaches the users.</li></ul>",
+              "lines": 3,
+              "tags": [
+                "H",
+                "P"
+              ]
+            },
+            {
+              "id": "ei-t7-q4",
+              "type": "numeric",
+              "text": "A 10 MW supply is sent through cables of resistance 8.0 Ω. Calculate the power wasted when it is transmitted at 20 kV.",
+              "answer": {
+                "value": 2000000,
+                "unit": "W"
+              },
+              "hint": "$I = P \\div V = 500$ A, then $I^2R$.",
+              "walkthrough": [
+                "$I = \\dfrac{10 \\times 10^6}{20 \\times 10^3} = 500$ A",
+                "<b>Equation:</b> $P = I^2 R$",
+                "<b>Working:</b> $P = 500^2 \\times 8.0$",
+                "<b>Answer:</b> $= 2\\,000\\,000$",
+                "<b>Units:</b> W"
+              ],
+              "tags": [
+                "H",
+                "P"
+              ]
+            },
+            {
+              "id": "ei-t7-q5",
+              "type": "choice",
+              "text": "Which is the reason, not just the conclusion, in 'why transmit at high pd'?",
+              "options": [
+                "It is more efficient",
+                "It is cheaper",
+                "The current is smaller, so less energy is wasted as heat in the cables",
+                "The cables are longer"
+              ],
+              "correct": 2,
+              "explain": "'More efficient' is where the chain ends; the smaller current and less heating is why."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Write the chain in words for any grid question",
+        "Answer 'why not transmit at 230 V' and 'why step down' with the same chain",
+        "Add the equations for the Higher Physics version"
+      ],
+      "blurb": "Every grid question — why step up, why step down, why not transmit at 230 V — is the same chain: for a given power, a higher pd means a lower current; a lower current wastes less energy heating the cables; so the transfer is more efficient. The Foundation version says it in words; the Higher Physics version (13.11P) names P = IV and P = I²R and can put numbers in."
+    },
+    {
+      "id": "induction-practical",
+      "band": "tricky",
+      "title": "Investigating induction: the falling-magnet practical and the seven steps",
+      "spec": "13.1P, 13.2",
+      "equations": [
+        "\\text{variables} \\rightarrow \\text{relationship} \\rightarrow \\text{change} \\rightarrow \\text{measure} \\rightarrow \\text{use} \\rightarrow \\text{accuracy} \\rightarrow \\text{repeat}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The 2024 marks, step by step",
+          "html": "<figure class='diagram'><svg viewBox='0 0 660 280' role='img'><text x='330.0' y='22.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>the falling-magnet investigation</text><rect x='300' y='40' width='40' height='200' rx='4' style='fill:none;stroke:var(--ink-2);stroke-width:1.6;stroke-dasharray:4 3'/><ellipse cx='320' cy='170' rx='28' ry='6' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='320' cy='178' rx='28' ry='6' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='320' cy='186' rx='28' ry='6' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='320' cy='194' rx='28' ry='6' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='320' cy='202' rx='28' ry='6' style='fill:none;stroke:var(--ink);stroke-width:2'/><ellipse cx='320' cy='210' rx='28' ry='6' style='fill:none;stroke:var(--ink);stroke-width:2'/><g transform='rotate(90 320 90)'><rect x='290' y='80' width='30.0' height='20' style='fill:var(--line);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><rect x='320.0' y='80' width='30.0' height='20' style='fill:var(--accent);opacity:0.35;stroke:var(--ink-2);stroke-width:1.4'/><text x='305.0' y='95.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>S</text><text x='335.0' y='95.0' text-anchor='middle' style='fill:var(--ink);font-size:14px;font-weight:bold;'>N</text></g><line x1='360.0' y1='70.0' x2='360.0' y2='130.0' style='stroke:var(--accent);stroke-width:2.2'/><polygon points='360.0,130.0 356.1,121.9 363.9,121.9' style='fill:var(--accent)'/><text x='372.0' y='100.0' text-anchor='start' style='fill:var(--accent);font-size:11px;font-weight:normal;'>falls</text><line x1='250.0' y1='50.0' x2='250.0' y2='170.0' style='stroke:var(--ink-2);stroke-width:1.2'/><line x1='240.0' y1='50.0' x2='250.0' y2='50.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='60.0' x2='250.0' y2='60.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='70.0' x2='250.0' y2='70.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='80.0' x2='250.0' y2='80.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='90.0' x2='250.0' y2='90.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='240.0' y1='100.0' x2='250.0' y2='100.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='110.0' x2='250.0' y2='110.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='120.0' x2='250.0' y2='120.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='130.0' x2='250.0' y2='130.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='140.0' x2='250.0' y2='140.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='240.0' y1='150.0' x2='250.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='160.0' x2='250.0' y2='160.0' style='stroke:var(--ink-2);stroke-width:1'/><line x1='244.0' y1='170.0' x2='250.0' y2='170.0' style='stroke:var(--ink-2);stroke-width:1'/><text x='232.0' y='112.0' text-anchor='end' style='fill:var(--ink);font-size:12px;font-weight:normal;font-style:italic;'>h</text><text x='220.0' y='128.0' text-anchor='end' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>metre rule</text><line x1='255.0' y1='50.0' x2='300.0' y2='50.0' style='stroke:var(--line);stroke-width:1.2;stroke-dasharray:5 4'/><line x1='255.0' y1='170.0' x2='300.0' y2='170.0' style='stroke:var(--line);stroke-width:1.2;stroke-dasharray:5 4'/><line x1='348.0' y1='190.0' x2='440.0' y2='190.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='348.0' y1='214.0' x2='440.0' y2='214.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='440.0' y1='190.0' x2='440.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='440.0' y1='214.0' x2='440.0' y2='230.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='440.0' y1='230.0' x2='470.0' y2='230.0' style='stroke:var(--ink-2);stroke-width:1.6'/><line x1='470.0' y1='230.0' x2='470.0' y2='150.0' style='stroke:var(--ink-2);stroke-width:1.6'/><circle cx='455' cy='125' r='26' style='fill:none;stroke:var(--ink);stroke-width:1.6'/><line x1='439.4' y1='110.7' x2='470.6' y2='110.7' style='stroke:var(--line);stroke-width:1'/><text x='455.0' y='140.6' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>V</text><line x1='455.0' y1='130.2' x2='464.2' y2='113.0' style='stroke:var(--accent);stroke-width:2.2'/><circle cx='455.0' cy='130.2' r='3' style='fill:var(--ink)'/><text x='455.0' y='107.3' text-anchor='middle' style='fill:var(--ink-2);font-size:9px;font-weight:normal;'>0</text><text x='500.0' y='120.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>set to a.c.;</text><text x='500.0' y='132.0' text-anchor='start' style='fill:var(--ink-2);font-size:10px;font-weight:normal;'>read the maximum</text><text x='330.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>change h in equal steps, record the maximum reading, repeat and average, plot reading against h</text></svg><figcaption>The falling-magnet investigation: a magnet dropped down a tube through a coil, the height measured with a metre rule, the maximum voltmeter reading recorded.</figcaption></figure><p>The June 2024 scheme (Q10(a)(ii), 4 marks, any four): drop the magnet from <b>different heights</b>; use a <b>metre rule</b> (ruler, tape measure allowed); change the height <b>in steps</b> (e.g. 5 cm); record the <b>maximum</b> meter reading; <b>repeat</b> for each drop and average; set the digital voltmeter on <b>a.c.</b>; plot a <b>graph</b> of reading against height; or move the coil / use tubes of different lengths.</p><table class='tbl'><tr><th>Step</th><th>Induced pd against drop height</th></tr><tr><td><b>1 Variables</b></td><td>independent: height of the magnet above the coil (which sets its speed through the coil); dependent: the maximum voltmeter reading; control: the same magnet, the same coil, the same tube, the voltmeter setting</td></tr><tr><td><b>2 Relationship</b></td><td>no equation; expect a greater height → faster magnet → a larger maximum pd</td></tr><tr><td><b>3 Change</b></td><td>drop from heights of 10, 20, 30, 40, 50 cm, measured with a metre rule from the top of the coil</td></tr><tr><td><b>4 Measure</b></td><td>record the <b>maximum</b> reading on the voltmeter (set to a.c., or use a data logger — the pd lasts a fraction of a second and reverses)</td></tr><tr><td><b>5 Use</b></td><td>plot maximum pd against height; describe the trend</td></tr><tr><td><b>6 Accuracy</b></td><td>drop the magnet the same way up each time, down a tube so it falls straight through the centre of the coil; measure height from the same point</td></tr><tr><td><b>7 Repeat</b></td><td>three drops at each height, take a mean</td></tr></table><p>Why <b>a.c.</b> and why the <b>maximum</b>: the induced pd rises, falls, reverses and falls again in well under a second; a d.c. meter averages it to nearly zero, and only the peak is a fair measure of \"how much pd\". Other versions of the practical change the <b>number of turns</b> or the <b>magnet</b> (strength) with the drop height fixed.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The 6-mark plan",
+          "question": "Plan an investigation to find how the pd induced in a coil depends on the speed at which a magnet falls through it. (6 marks)",
+          "steps": [
+            "<b>Variables:</b> change the drop height (independent — a greater height gives a faster magnet); measure the maximum induced pd (dependent); keep the same magnet, coil, tube and voltmeter setting (control).",
+            "<b>Relationship expected:</b> a faster-moving magnet gives a larger induced pd (no equation needed).",
+            "<b>Change:</b> drop the magnet down the tube from 10, 20, 30, 40 and 50 cm above the coil, measured with a metre rule from the top of the coil.",
+            "<b>Measure:</b> record the maximum reading on a voltmeter set to a.c. (or a data logger) for each drop.",
+            "<b>Use:</b> plot maximum pd against drop height and describe the trend.",
+            "<b>Accuracy and repeats:</b> drop the magnet the same way up through the centre of the coil each time; repeat each height three times and take a mean."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The practical",
+          "questions": [
+            {
+              "id": "ei-t8-q1",
+              "type": "written",
+              "text": "Plan an investigation into how the pd induced in a coil depends on the number of turns on the coil, using a magnet dropped through the coil. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Independent: number of turns; dependent: maximum induced pd; control: drop height, the magnet, the tube, the voltmeter setting.</td></tr><tr><td><b>2</b></td><td>Relationship</td><td>No equation; expect more turns → larger maximum pd.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Use coils of 10, 20, 30, 40, 50 turns (or add turns to one coil), same wire.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Drop the magnet from the same height each time; record the maximum reading on a voltmeter set to a.c. (or a data logger).</td></tr><tr><td><b>5</b></td><td>Use</td><td>Plot maximum pd against number of turns; describe the trend.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Same height, measured with a metre rule; same way up; down a tube through the centre of the coil.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td>Three drops per coil; take a mean.</td></tr></table><ul><li>Any six of the seven points.</li></ul>",
+              "lines": 7
+            },
+            {
+              "id": "ei-t8-q2",
+              "type": "choice",
+              "text": "Why is the voltmeter set to a.c. in the falling-magnet investigation?",
+              "options": [
+                "The magnet is an a.c. source",
+                "The induced pd reverses as the magnet passes through, so a d.c. meter would average it to nearly zero",
+                "a.c. meters are more sensitive",
+                "The coil is connected to the mains"
+              ],
+              "correct": 1,
+              "explain": "Reversing pd: a.c. setting (or a data logger) to catch it."
+            },
+            {
+              "id": "ei-t8-q3",
+              "type": "choice",
+              "text": "Which reading is recorded for each drop?",
+              "options": [
+                "The reading after the magnet has landed",
+                "The maximum reading",
+                "The reading at the start",
+                "The average of the readings over a minute"
+              ],
+              "correct": 1,
+              "explain": "The pd lasts a fraction of a second: the maximum is the measure."
+            },
+            {
+              "id": "ei-t8-q4",
+              "type": "written",
+              "text": "State the independent, dependent and one control variable when investigating how the induced pd depends on drop height. (3)",
+              "model": "<ul><li>Independent: the <b>height</b> the magnet is dropped from.</li><li>Dependent: the <b>maximum pd</b> induced (voltmeter reading).</li><li>Control: the same <b>magnet</b> / <b>coil</b> (number of turns) / tube / meter setting.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "ei-t8-q5",
+              "type": "written",
+              "text": "In the drop-height investigation, describe the result you would expect, and explain it. (2)",
+              "model": "<ul><li>The maximum pd <b>increases</b> with drop height (not in proportion — the speed goes as the square root of the height).</li><li>A greater height means the magnet is moving <b>faster</b> through the coil, so the field through the coil <b>changes more quickly</b> and a larger pd is induced.</li></ul>",
+              "lines": 2
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Plan an investigation of induced pd against drop height (or speed, turns, magnet strength)",
+        "Say why the voltmeter is set to a.c. and why the maximum is recorded",
+        "Describe the expected result in words"
+      ],
+      "blurb": "The 2024 paper dropped a magnet through a coil and asked for the practical steps to investigate the induced pd: drop from different heights, measured with a metre rule, in equal steps; record the maximum reading; set the voltmeter to a.c.; repeat and average; plot reading against height. The seven-step recipe from Topic 1 covers it.",
+      "tags": [
+        "H",
+        "P"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "q": "The induction chain?",
+      "a": "The wire or coil moves through the magnetic field of the permanent magnet → so it experiences a changing magnetic field → this induces a pd across it → if it is in a closed circuit, a current flows.",
+      "section": "inducing-pd"
+    },
+    {
+      "q": "The lead line when the magnet moves?",
+      "a": "The magnet moves relative to the coil (either may move) — then the chain follows.",
+      "section": "inducing-pd"
+    },
+    {
+      "q": "Which word for the pd: 'induced' or 'produced'?",
+      "a": "Induced — 'produces' was not accepted (2025).",
+      "section": "inducing-pd"
+    },
+    {
+      "q": "Magnet held still in a coil: reading?",
+      "a": "Zero — no relative movement, no changing field, nothing induced.",
+      "section": "inducing-pd"
+    },
+    {
+      "q": "Open coil vs closed coil?",
+      "a": "Both have a pd induced; only the closed circuit has a current.",
+      "section": "inducing-pd"
+    },
+    {
+      "q": "How does a power station generate continuously?",
+      "a": "A turbine keeps turning the coil (or magnets) so the coil experiences a continuously changing field.",
+      "section": "inducing-pd"
+    },
+    {
+      "q": "Three ways to induce a larger pd?",
+      "a": "Move faster; stronger magnet; more turns on the coil.",
+      "section": "induced-size-direction"
+    },
+    {
+      "q": "Two ways to reverse the induced pd?",
+      "a": "Reverse the direction of movement; turn the magnet round.",
+      "section": "induced-size-direction"
+    },
+    {
+      "q": "What does the induced current's field do?",
+      "a": "It opposes the change that produced it — so work has to be done to keep moving the magnet or turning the generator.",
+      "section": "induced-size-direction"
+    },
+    {
+      "q": "Why does the pd in a turning coil alternate?",
+      "a": "Each side moves up through the field for half a turn, then down: reversing the movement reverses the pd every half turn.",
+      "section": "alternator-dynamo"
+    },
+    {
+      "q": "Slip rings vs split ring?",
+      "a": "Slip rings (two complete rings): alternator, a.c. Split ring (one ring in two halves, swapping brushes every half turn): dynamo, d.c.",
+      "section": "alternator-dynamo"
+    },
+    {
+      "q": "Shape of a dynamo's output graph?",
+      "a": "Humps all above the axis: one direction, rising and falling, not steady.",
+      "section": "alternator-dynamo"
+    },
+    {
+      "q": "Turn the coil twice as fast: output?",
+      "a": "Peak pd doubles AND frequency doubles.",
+      "section": "alternator-dynamo"
+    },
+    {
+      "q": "The loudspeaker chain?",
+      "a": "Current in the coil → field around the coil → interacts with the permanent field → resultant force on the coil → same direction on either side → coil moves forwards or backwards (left-hand rule) → with a.c. the force alternates at the current's frequency.",
+      "section": "speaker-microphone"
+    },
+    {
+      "q": "The microphone chain?",
+      "a": "Sound makes the diaphragm and coil vibrate → the coil moves through the magnet's field → changing field → pd induced → alternating current at the sound's frequency.",
+      "section": "speaker-microphone"
+    },
+    {
+      "q": "Why does a speaker coil move along its axis, not rotate?",
+      "a": "The force is the same on every part of the coil (radial field), not opposite on the two sides.",
+      "section": "speaker-microphone"
+    },
+    {
+      "q": "How a transformer works, in three marks?",
+      "a": "Alternating current in the primary → changing magnetic field in the iron core → alternating pd induced in the secondary.",
+      "section": "transformer"
+    },
+    {
+      "q": "The mark most often lost on the transformer (2025)?",
+      "a": "That the field in the core is CHANGING.",
+      "section": "transformer"
+    },
+    {
+      "q": "Why no transformer with d.c.?",
+      "a": "A steady current gives a steady field; only a changing field induces a pd.",
+      "section": "transformer"
+    },
+    {
+      "q": "Step-up vs step-down: turns?",
+      "a": "Step-up: more turns on the secondary (larger pd, smaller current). Step-down: fewer on the secondary.",
+      "section": "transformer"
+    },
+    {
+      "q": "Why a soft-iron core?",
+      "a": "Easily magnetised and demagnetised, so it carries the changing field from one coil to the other.",
+      "section": "transformer"
+    },
+    {
+      "q": "The turns-ratio equation?",
+      "a": "$V_p / V_s = N_p / N_s$ — primary on top on both sides; the pd changes by the same factor as the turns.",
+      "section": "turns-ratio"
+    },
+    {
+      "q": "The 2024 ratio for 11 000 V → 230 V?",
+      "a": "11 000 : 230 ≈ 48 : 1 — the primary has about 48 times as many turns.",
+      "section": "turns-ratio"
+    },
+    {
+      "q": "Check on a turns-ratio answer?",
+      "a": "Step-down must give a smaller secondary pd; if not, the fraction is upside down.",
+      "section": "turns-ratio"
+    },
+    {
+      "q": "Where are step-up and step-down transformers?",
+      "a": "Step-up at the power station (to ~400 kV); step-down at substations near towns and homes (to 230 V).",
+      "section": "national-grid"
+    },
+    {
+      "q": "Why transmit at a high pd?",
+      "a": "Higher pd → smaller current for the same power → less energy wasted heating the cables → more efficient.",
+      "section": "national-grid"
+    },
+    {
+      "q": "Why step down near homes?",
+      "a": "400 kV is far too dangerous; appliances are designed for 230 V.",
+      "section": "national-grid"
+    },
+    {
+      "q": "The transformer power equation?",
+      "a": "$V_p I_p = V_s I_s$ (100 % efficient): step the pd up by a factor and the current comes down by the same factor.",
+      "section": "transformer-power"
+    },
+    {
+      "q": "Which transformer equation when?",
+      "a": "Turns given or asked → ratio equation; currents → power equation; both → ratio first, then power.",
+      "section": "transformer-power"
+    },
+    {
+      "q": "The two equations for high-voltage transmission?",
+      "a": "$P = IV$: higher $V$, smaller $I$ for the same $P$. $P = I^2R$: loss in the cables falls with $I^2$.",
+      "section": "transmission-loss"
+    },
+    {
+      "q": "Ten times the pd: what happens to the cable loss?",
+      "a": "A tenth of the current, a hundredth of the loss.",
+      "section": "transmission-loss"
+    },
+    {
+      "q": "Common slip finding the cable loss?",
+      "a": "Putting the transmission pd into $P = IV$ — that is the power carried; the loss is $I^2R$ with the cable's resistance.",
+      "section": "transmission-loss"
+    },
+    {
+      "q": "The 2024 falling-magnet marks?",
+      "a": "Coil cuts the field lines / changing field; pd (or current) induced; voltmeter reads it; electrons in the wire experience a force; the pd changes size and direction as the magnet passes.",
+      "section": "induction-chain-exam"
+    },
+    {
+      "q": "Why does the reading reverse as the magnet passes through?",
+      "a": "Entering: field through the coil increases. Leaving: it decreases — the opposite change, so the opposite pd.",
+      "section": "induction-chain-exam"
+    },
+    {
+      "q": "Why is the second kick larger?",
+      "a": "The magnet is moving faster when it leaves, so the field changes more quickly.",
+      "section": "induction-chain-exam"
+    },
+    {
+      "q": "Why is a dynamo harder to turn with a lamp connected?",
+      "a": "A current flows: the lamp needs energy, which comes from extra work turning the handle; and the induced current's field opposes the coil's motion.",
+      "section": "dynamo-harder"
+    },
+    {
+      "q": "Why does a voltmeter alone not make it harder?",
+      "a": "Very high resistance, so almost no current — no opposing field, almost no energy transferred.",
+      "section": "dynamo-harder"
+    },
+    {
+      "q": "The wrong answer in 2023?",
+      "a": "'The lamp increases the resistance' — a lamp has far LESS resistance than a voltmeter, which is why current flows.",
+      "section": "dynamo-harder"
+    },
+    {
+      "q": "Stronger magnet, same speed: graph change?",
+      "a": "Taller peak; same frequency.",
+      "section": "output-graphs"
+    },
+    {
+      "q": "When is an alternator's pd zero?",
+      "a": "When the coil is vertical: its sides move along the field lines and cut none.",
+      "section": "output-graphs"
+    },
+    {
+      "q": "Humps per turn on a dynamo graph?",
+      "a": "Two — one per half turn.",
+      "section": "output-graphs"
+    },
+    {
+      "q": "Level 3 in the microphone/speaker comparison (2023)?",
+      "a": "Speaker: the coil's field interacts with the magnet's field. Microphone: induction as a result of a coil moving in a magnetic field. Both devices referenced.",
+      "section": "mic-vs-speaker"
+    },
+    {
+      "q": "What do speaker and microphone share? What is reversed?",
+      "a": "Share: coil in a permanent magnet's field, fixed to a cone/diaphragm. Reversed: current → movement vs movement → current.",
+      "section": "mic-vs-speaker"
+    },
+    {
+      "q": "The three parts of the transformer 6-marker (2024)?",
+      "a": "Construction (two coils on a closed iron core, more turns on the primary for step-down); operation (a.c. → changing field in the core → pd induced in the secondary); ratio (11 000 : 230 ≈ 48 : 1).",
+      "section": "transformer-six"
+    },
+    {
+      "q": "Why a closed iron core?",
+      "a": "It carries almost all the changing field from the primary through the secondary; the coils are not connected electrically.",
+      "section": "transformer-six"
+    },
+    {
+      "q": "Turns, primary pd and secondary current given, primary current asked?",
+      "a": "Ratio equation for $V_s$, then $V_p I_p = V_s I_s$ for $I_p$.",
+      "section": "transformer-hard"
+    },
+    {
+      "q": "Checks on a transformer calculation?",
+      "a": "Step-down: smaller $V_s$, LARGER $I_s$; power out never exceeds power in; mA → A, kV → V.",
+      "section": "transformer-hard"
+    },
+    {
+      "q": "Why not transmit at 230 V?",
+      "a": "The current would be enormous → huge heating losses in the cables → most energy wasted.",
+      "section": "grid-chain"
+    },
+    {
+      "q": "Why must the grid use a.c.?",
+      "a": "Transformers need a changing field, so only a.c. can be stepped up and down.",
+      "section": "grid-chain"
+    },
+    {
+      "q": "Reason vs conclusion in a grid answer?",
+      "a": "'Smaller current, less heating in the cables' is the reason; 'more efficient' is the conclusion.",
+      "section": "grid-chain"
+    },
+    {
+      "q": "The 2024 practical marks?",
+      "a": "Different heights; metre rule; equal steps; record the maximum reading; repeat and average; voltmeter on a.c.; plot reading against height.",
+      "section": "induction-practical"
+    },
+    {
+      "q": "Why record the maximum, on a.c.?",
+      "a": "The induced pd lasts a fraction of a second and reverses; a d.c. meter would average it to nearly zero.",
+      "section": "induction-practical"
+    },
+    {
+      "q": "Expected result for pd against drop height?",
+      "a": "Larger pd from a greater height (faster magnet, quicker change) — increasing, not in proportion.",
+      "section": "induction-practical"
+    },
+    {
+      "q": "State what is meant by: electromagnetic induction.",
+      "a": "A <b>potential difference is induced</b> across a conductor when it experiences a <b>changing magnetic field</b> (relative movement of the conductor and a magnet, or a changing current nearby).",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: induced pd.",
+      "a": "The pd across a conductor <b>caused by a changing magnetic field</b>; a current flows only if the circuit is closed.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: generator.",
+      "a": "A device that <b>induces a pd by turning a coil in a magnetic field</b> (or magnets past a coil), driven by a turbine, engine or hand.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: alternator.",
+      "a": "A generator with <b>slip rings</b>, whose output is <b>a.c.</b>",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: dynamo.",
+      "a": "A generator with a <b>split-ring commutator</b>, whose output is <b>d.c.</b> (one direction, rising and falling).",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: slip rings.",
+      "a": "Two <b>complete rings</b>, one on each end of the coil, each with its own brush, so the output alternates.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: split-ring commutator.",
+      "a": "One ring cut in two, the halves joined to the ends of the coil, <b>swapping brushes every half turn</b>: in a dynamo it makes the output d.c.; in a motor it reverses the current in the coil.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: transformer.",
+      "a": "A device of two coils on a soft-iron core which <b>changes the size of an alternating pd</b>: a.c. in the primary induces a.c. in the secondary.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: primary / secondary coil.",
+      "a": "The <b>primary</b> is connected to the supply; the pd is <b>induced in the secondary</b>, which is connected to the load.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: step-up / step-down transformer.",
+      "a": "Step-up: <b>more turns on the secondary</b>, larger pd out, smaller current. Step-down: <b>fewer</b> turns on the secondary, smaller pd out, larger current.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: turns ratio.",
+      "a": "$V_p / V_s = N_p / N_s$: the pds are in the <b>same ratio as the numbers of turns</b>.",
+      "section": "keywords-induction"
+    },
+    {
+      "q": "State what is meant by: national grid.",
+      "a": "The network of <b>cables and transformers</b> that carries electrical power from power stations to users, at a very high pd to reduce losses.",
+      "section": "keywords-induction"
+    }
+  ],
   "types": [
     {
       "id": "turns",
@@ -132,9 +2252,6 @@
       "equations": [
         "V_p × I_p = V_s × I_s"
       ],
-      "boards": [
-        "Higher"
-      ],
       "method": "For a transformer that is 100% efficient the power into the primary equals the power out of the secondary, so V_p × I_p = V_s × I_s. Put in the three values you know and divide to find the fourth. If a p.d. is missing, find it from the turns ratio first. Stepping the p.d. up steps the current down by the same factor.",
       "commonErrors": [
         "Expecting the current to go up when the p.d. goes up",
@@ -242,6 +2359,10 @@
             "unit": "A"
           }
         }
+      ],
+      "boards": [
+        "Foundation",
+        "Higher"
       ]
     },
     {

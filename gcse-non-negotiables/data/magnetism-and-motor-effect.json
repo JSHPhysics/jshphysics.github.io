@@ -834,7 +834,7 @@
                 "value": 0.12,
                 "unit": "N"
               },
-              "hint": "F = B × I × l — all three already in base units.",
+              "hint": "$F = B \\times I \\times l$ — all three already in base units.",
               "walkthrough": [
                 "<b>Equation:</b> $F = B I l$",
                 "<b>Working:</b> $F = 0.15 \\times 4.0 \\times 0.20$",
@@ -867,7 +867,7 @@
                 "value": 3,
                 "unit": "A"
               },
-              "hint": "I = F ÷ (B × l).",
+              "hint": "$I = F \\div (B \\times l)$.",
               "walkthrough": [
                 "<b>Equation:</b> $I = F \\div (B l)$",
                 "<b>Working:</b> $I = 0.30 \\div (0.25 \\times 0.40) = 0.30 \\div 0.10$",
@@ -908,7 +908,7 @@
         }
       ],
       "checklist": [
-        "Use F = BIl for a wire at right angles to the field",
+        "Use $F = BIl$ for a wire at right angles to the field",
         "Give the unit of magnetic flux density and convert cm and mA before substituting",
         "Rearrange for B, I or l"
       ],
@@ -1534,7 +1534,7 @@
                 "value": 1.5,
                 "unit": "A"
               },
-              "hint": "45 mN = 0.045 N; I = F ÷ (B l).",
+              "hint": "45 mN = 0.045 N; $I = F \\div (B l)$.",
               "walkthrough": [
                 "$F = 45$ mN $= 0.045$ N",
                 "<b>Equation:</b> $I = F \\div (B l)$",
@@ -1551,7 +1551,7 @@
                 "value": 0.03,
                 "unit": "N"
               },
-              "hint": "Find I from V = IR first.",
+              "hint": "Find $I$ from $V = IR$ first.",
               "walkthrough": [
                 "$I = V \\div R = 6.0 \\div 4.0 = 1.5$ A",
                 "<b>Equation:</b> $F = B I l$",
@@ -1609,7 +1609,7 @@
         }
       ],
       "checklist": [
-        "Rearrange F = BIl for any quantity and convert units first",
+        "Rearrange $F = BIl$ for any quantity and convert units first",
         "Use only the length of wire inside the field",
         "Use an unfamiliar given equation with the same care as a familiar one"
       ],
@@ -1985,7 +1985,7 @@
     },
     {
       "q": "Equation for the force on a wire at right angles to a field?",
-      "a": "F = B I l: force (N) = flux density (T) × current (A) × length in the field (m).",
+      "a": "$F = B I l$: force (N) = flux density (T) × current (A) × length in the field (m).",
       "section": "motor-force-nn"
     },
     {
@@ -2070,7 +2070,7 @@
     },
     {
       "q": "Force on a coil side with N turns?",
-      "a": "N × the force on one wire: F = B I l N.",
+      "a": "$N$ × the force on one wire: $F = B I l N$.",
       "section": "motor-force-hard"
     },
     {

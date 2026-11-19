@@ -282,7 +282,7 @@ section_t6 = section(
     blurb="The harder $F = BIl$ questions hide one of three things: the length is only the part of the wire inside the field; the current comes from another equation first ($V = IR$); or the equation is an unfamiliar one you are given and simply have to use. In 2024 the answer was 0.58 T; in 2025 an inverse-square equation gave 160 μT.",
     tags=["H"],
     checklist=[
-        "Rearrange F = BIl for any quantity and convert units first",
+        "Rearrange $F = BIl$ for any quantity and convert units first",
         "Use only the length of wire inside the field",
         "Use an unfamiliar given equation with the same care as a familiar one",
     ],
@@ -311,10 +311,10 @@ section_t6 = section(
                     "Only the length between the poles is in the field.",
                     [r"$l = 4.0$ cm $= 0.040$ m — the length <b>in the field</b>, not the 0.60 m of wire."] + ewau(r"F = B I l", r"F = 0.20 \times 3.0 \times 0.040", "0.024", "N")),
             numeric("mg-t6-q2", "A 0.10 m length of wire in a 0.30 T field feels a force of 45 mN. Calculate the current.", 1.5, "A",
-                    "45 mN = 0.045 N; I = F ÷ (B l).",
+                    "45 mN = 0.045 N; $I = F \\div (B l)$.",
                     [r"$F = 45$ mN $= 0.045$ N"] + ewau(r"I = F \div (B l)", r"I = 0.045 \div (0.30 \times 0.10) = 0.045 \div 0.030", "1.5", "A")),
             numeric("mg-t6-q3", "A wire of resistance 4.0 Ω is connected to a 6.0 V supply. 0.25 m of it is at right angles to a field of 0.080 T. Calculate the force on that length.", 0.03, "N",
-                    "Find I from V = IR first.",
+                    "Find $I$ from $V = IR$ first.",
                     [r"$I = V \div R = 6.0 \div 4.0 = 1.5$ A"] + ewau(r"F = B I l", r"F = 0.080 \times 1.5 \times 0.25", "0.030", "N")),
             numeric("mg-t6-q4", "One side of a coil of 50 turns lies in a field of 0.12 T; the side is 8.0 cm long and carries 2.0 A. Calculate the force on that side of the coil (all 50 wires).", 0.96, "N",
                     "Force on one wire × 50.",
@@ -499,7 +499,7 @@ FACTS = [
     fact("Two ways to reverse the force on a wire?", "Reverse the current, or reverse the field (turn the magnet round). Both together: no change.", "flhr"),
     fact("Which current direction does the second finger use?", "Conventional current, + to − (not electron flow).", "flhr"),
     # N9
-    fact("Equation for the force on a wire at right angles to a field?", "F = B I l: force (N) = flux density (T) × current (A) × length in the field (m).", "motor-force-nn"),
+    fact("Equation for the force on a wire at right angles to a field?", "$F = B I l$: force (N) = flux density (T) × current (A) × length in the field (m).", "motor-force-nn"),
     fact("Unit of magnetic flux density?", "Tesla, T (= N/A m).", "motor-force-nn"),
     fact("Three F = BIl traps?", "cm not converted to m; using the whole wire instead of the length in the field; forgetting F = 0 for a wire parallel to the field.", "motor-force-nn"),
     # T1
@@ -522,7 +522,7 @@ FACTS = [
     fact("Wire along the field lines: force?", "Zero.", "flhr-diagrams"),
     # T6
     fact("How much of a long wire counts in F = BIl?", "Only the length inside the field (e.g. the width of the poles).", "motor-force-hard"),
-    fact("Force on a coil side with N turns?", "N × the force on one wire: F = B I l N.", "motor-force-hard"),
+    fact("Force on a coil side with N turns?", "$N$ × the force on one wire: $F = B I l N$.", "motor-force-hard"),
     fact("The 2025 unfamiliar equation?", "B against distance, inverse square (B ∝ 1/d²); use it like any other — finding the constant alone was 1 of 3.", "motor-force-hard"),
     # T7
     fact("The six-step chain for a motor?", "Current in the coil → field around the coil → interacts with the permanent field → resultant force on the coil → force opposite on either side → so the coil rotates.", "dc-motor"),
