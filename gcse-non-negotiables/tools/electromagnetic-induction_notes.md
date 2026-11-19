@@ -23,7 +23,9 @@ N9 (`transmission-loss`).
   line was added in front of the induction chain, with the author's
   approval (2026-11-19), for the case where the magnet moves and the
   coil is still: *"The magnet moves relative to the coil (either may
-  move)."* (`INDUCTION_LEAD`). The motor chains live in Topic 12.
+  move)."* (`INDUCTION_LEAD`) — it stands **in place of step 1** (which
+  says the wire or coil moves), and steps 2–4 follow unchanged. The
+  motor chains live in Topic 12.
 - **Induces, never produces.** A pd is *induced*; a current *flows* if
   the circuit is closed. "Produces" was rejected by the June 2025
   examiners and is not used for an induced pd anywhere on the page.
@@ -98,13 +100,61 @@ the seven steps for the practical; the key words.
 
 ## Step 7 — blind check
 
-(Recorded below when the separate agent reports.)
+A separate agent, given only the JSON and `SCHEMA.md`, recomputed every
+numeric answer (all agree, including the three embedded types), checked
+every choice index, mark count and worked-example step count, the ids,
+`facts[].section`, the embedded types' consistency, both chains word for
+word, "produces" against the rule, and the SVG arrowheads and labels.
+No physics or number errors. Findings, all fixed before the push:
+
+- Tiering: T1 and T8 are 13.1P content but carried H without P — now
+  H, P; ei-t5-q4 (the turns ratio, 13.7P) now P; ei-kw-q4 (step-down,
+  13.6) now H. T6 mixed the Higher-Physics turns equation with two
+  pure-13.10 questions (both tiers), so those two moved into N8 as
+  ei-n8-q5 and ei-n8-q6 (before the first push, so no id was broken)
+  and T6 stays H, P with its three remaining questions renumbered.
+- Cross-references from both-tier sections to Higher ones (N4 → "T4",
+  N8 → "N6"/"T6", T7 → "N9") renumber under the Foundation filter — now
+  named by section.
+- The chain: N1 said the lead line is followed by steps 2–4, while T1's
+  list carried all four steps after it (step 1 — "the wire or coil moves"
+  — is false when the magnet moves). T1 now matches N1: lead line, then
+  steps 2–4. Recorded in the rules block above.
+- "Produces": the dynamo worked-example stem said "produces a direct
+  current" and six places said the induced field "opposes the change
+  that produced it" — now "the output … is a direct current" and
+  "caused it".
+- Figures: the first figure's coil was wired with one lead to the meter
+  (an open circuit while the text says closed) — now two leads; the
+  generator brushes floated clear of the rings — now touching; the
+  microphone panel said "→ current" — now "→ pd induced"; the practical
+  figure said 5 cm steps while the text used 10 cm — now "equal steps".
+- The 6-mark practice question in T4 duplicated its own worked example —
+  now asks for the microphone with the difference from the speaker.
+- Numbers and TeX: ei-n6-q3 stepped up to an unrealistic 1250 kV — now
+  6400 turns and 400 kV; `$a \times 10^6 / b \times 10^3$` in five
+  walkthroughs read as 10⁹ left to right — now `\dfrac`; plain-text
+  equations in hints, checklists and flashcards (section hints and facts
+  are rendered through the TeX pass) — now `$…$`, and the same fix
+  applied to Topic 12's six hints and two flashcards.
+- Wording: ei-t5-q2's distractor stated the correct rule; the "voltmeter
+  … worth two of the marks" sentence; N2's "three for size" title with a
+  fourth row; a "core that changes" definition; ei-t8-q5 with no
+  context; N7 (both tiers) mentioned "current squared" (13.11P) — now
+  "rises steeply".
+
+Left as they were: the key-word table and its flashcards show under the
+Foundation filter although most terms are Higher (the questions are
+tagged; the definitions do no harm); the T3 "twice as fast" trace is
+drawn 1.4× taller rather than 2× (a sketch); paraphrases of the chains
+in worked examples and model answers, where the `<ol>` lists are
+verbatim.
 
 ## Step 8 — headless test
 
 `check_topic.js` with `--filter Foundation`: 33 of 33 numerics and 39
-of 39 choices marked correct on the Higher view; 9 of 9 numerics and 12
-of 12 choices under Foundation (N4, N7, N8 + `tx-power`, N10, T4, T7
+of 39 choices marked correct on the Higher view; 11 of 11 numerics and 11
+of 11 choices under Foundation (N4, N7, N8 + `tx-power`, N10, T4, T7
 shown); no KaTeX errors; 7 diagrams; 65 flashcards; 132 ref buttons;
 booklet offers the notes mode; at 390 px nothing scrolls sideways, no
 card wider than the screen, nothing sticks out.
