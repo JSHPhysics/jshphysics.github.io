@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Your physics plan — JSHPhysics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f1ea;
+    --paper-warm: #ede7db;
+    --ink: #1a1d22;
+    --ink-soft: #4a4d54;
+    --ink-faint: #6f727a;
+    --rule: #d8d2c4;
+    --accent: #c4502b;
+  }
+  [data-theme="dark"] {
+    --paper: #16181d;
+    --paper-warm: #1d2027;
+    --ink: #ede7db;
+    --ink-soft: #b8b3a8;
+    --ink-faint: #9a988f;
+    --rule: #2c2f37;
+    --accent: #e8a382;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  main {
+    width: 100%;
+    max-width: 460px;
+  }
+  .kicker {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.05;
+    margin: 10px 0 12px;
+  }
+  p {
+    color: var(--ink-soft);
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin: 22px 0 8px;
+  }
+  input[type="text"] {
+    width: 100%;
+    min-height: 54px;
+    padding: 10px 14px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+  }
+  input[type="text"]:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .remember {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+  .remember input {
+    width: 22px;
+    height: 22px;
+  }
+  button {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 14px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--paper);
+    background: var(--ink);
+    border: 0;
+    border-radius: 8px;
+    touch-action: manipulation;
+  }
+  button[disabled] { opacity: 0.6; }
+  #message {
+    min-height: 24px;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  #message.error { color: var(--accent); }
+  a { color: var(--accent); }
+  .small { font-size: 14px; color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">JSHPhysics · Your plan</div>
+  <h1>Enter your code</h1>
+  <p>Type the code your teacher gave you. It opens your own physics plan.</p>
+
+  <form id="codeForm" autocomplete="off">
+    <label for="codeInput">Intervention code</label>
+    <input type="text" id="codeInput" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX" maxlength="20" aria-describedby="message" />
+    <label class="remember"><input type="checkbox" id="rememberBox" checked /> Remember my code on this device</label>
+    <button type="submit" id="openButton">Open my plan</button>
+  </form>
+
+  <p id="message" role="status" aria-live="polite"></p>
+  <p class="small">Keep your code to yourself. On a shared device, untick the box. <a href="../">Back to JSHPhysics</a></p>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  // These four values must match intervention/tools/intervention.py exactly.
+  var SALT_TEXT = "jshphysics-intervention-v1";
+  var ITERATIONS = 600000;
+  var CODE_LENGTH = 12;
+  var STORED_CODE_KEY = "jsh-intervention-code";
+
+  var form = document.getElementById("codeForm");
+  var input = document.getElementById("codeInput");
+  var rememberBox = document.getElementById("rememberBox");
+  var button = document.getElementById("openButton");
+  var message = document.getElementById("message");
+
+  // Follow the gallery's light / dark choice.
+  try {
+    var theme = localStorage.getItem("jsh-theme");
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (error) {
+    // storage unavailable: stay on the light theme
+  }
+
+  function showMessage(text, isError) {
+    message.textContent = text;
+    if (isError) {
+      message.className = "error";
+    } else {
+      message.className = "";
+    }
+  }
+
+  // Codes are typed with or without dashes and in any case.
+  function normalise(raw) {
+    var upper = raw.toUpperCase();
+    var cleaned = upper.replace(/[^A-Z0-9]/g, "");
+    return cleaned;
+  }
+
+  function toHex(bytes) {
+    var out = "";
+    for (var i = 0; i < bytes.length; i += 1) {
+      var pair = bytes[i].toString(16);
+      if (pair.length < 2) {
+        pair = "0" + pair;
+      }
+      out += pair;
+    }
+    return out;
+  }
+
+  function readStored(storage) {
+    try {
+      return storage.getItem(STORED_CODE_KEY);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeStored(storage, value) {
+    try {
+      storage.setItem(STORED_CODE_KEY, value);
+    } catch (error) {
+      // storage unavailable: the code simply is not remembered
+    }
+  }
+
+  function clearStored() {
+    try {
+      localStorage.removeItem(STORED_CODE_KEY);
+    } catch (error) {
+      // nothing to clear
+    }
+    try {
+      sessionStorage.removeItem(STORED_CODE_KEY);
+    } catch (error) {
+      // nothing to clear
+    }
+  }
+
+  // Turn the code into (a) the name of the file to fetch and (b) the key that unlocks it.
+  // The file name cannot be turned back into the code, and the file is unreadable without the key.
+  async function deriveFromCode(code) {
+    var encoder = new TextEncoder();
+    var material = await crypto.subtle.importKey("raw", encoder.encode(code), "PBKDF2", false, ["deriveBits"]);
+    var parameters = { name: "PBKDF2", salt: encoder.encode(SALT_TEXT), iterations: ITERATIONS, hash: "SHA-256" };
+    var bits = await crypto.subtle.deriveBits(parameters, material, 384);
+    var bytes = new Uint8Array(bits);
+    var fileId = toHex(bytes.slice(0, 16));
+    var keyBytes = bytes.slice(16, 48);
+    var key = await crypto.subtle.importKey("raw", keyBytes, "AES-GCM", false, ["decrypt"]);
+    return { fileId: fileId, key: key };
+  }
+
+  // Returns the plan's HTML, or null when the code does not match a plan.
+  async function fetchPlan(code) {
+    var derived = await deriveFromCode(code);
+    var response = await fetch("data/" + derived.fileId + ".enc", { cache: "no-store" });
+    if (!response.ok) {
+      return null;
+    }
+    var buffer = await response.arrayBuffer();
+    var all = new Uint8Array(buffer);
+    var iv = all.slice(0, 12);
+    var ciphertext = all.slice(12);
+    var plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, derived.key, ciphertext);
+    return new TextDecoder("utf-8").decode(plain);
+  }
+
+  // Replace this page with the student's plan.
+  function showPlan(html) {
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  async function openWithCode(rawCode, remember, quiet) {
+    var code = normalise(rawCode);
+    if (code.length !== CODE_LENGTH) {
+      if (!quiet) {
+        showMessage("A code has 12 letters and numbers. Check it and try again.", true);
+      }
+      return false;
+    }
+    if (!window.crypto || !window.crypto.subtle) {
+      showMessage("This browser cannot open the plan. Try Safari or Chrome.", true);
+      return false;
+    }
+    button.disabled = true;
+    showMessage("Opening your plan…", false);
+    var html = null;
+    try {
+      html = await fetchPlan(code);
+    } catch (error) {
+      html = null;
+    }
+    button.disabled = false;
+    if (html === null) {
+      clearStored();
+      showMessage("That code was not recognised. Check it and try again, or ask your teacher.", true);
+      return false;
+    }
+    writeStored(sessionStorage, code);
+    if (remember) {
+      writeStored(localStorage, code);
+    }
+    showPlan(html);
+    return true;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    openWithCode(input.value, rememberBox.checked, false);
+  });
+
+  // "?forget" clears a remembered code, for a shared device.
+  if (window.location.search.indexOf("forget") !== -1) {
+    clearStored();
+    showMessage("Your code has been forgotten on this device.", false);
+    return;
+  }
+
+  // A code typed on the home page arrives through sessionStorage; a remembered one through localStorage.
+  var waiting = readStored(sessionStorage);
+  var remembered = false;
+  if (!waiting) {
+    waiting = readStored(localStorage);
+    if (waiting) {
+      remembered = true;
+    }
+  }
+  if (waiting) {
+    input.value = waiting;
+    openWithCode(waiting, remembered, false);
+  }
+})();
+</script>
+</body>
+</html>

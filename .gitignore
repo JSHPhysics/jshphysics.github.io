@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+# intervention: codes and readable student plans never go in the repository
+intervention_codes*.csv
+intervention/*.csv
+intervention/plain/
