@@ -217,6 +217,7 @@ details.howto .lede {
   .skill-content .prose,
   .skill-content details.errors > ul,
   .skill-content .question,
+  .skill-content .choices,
   .skill-content ol.steps {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -459,14 +460,22 @@ figure.diagram .d-readout {
 
 .choices {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 6px;
   max-width: 520px;
+}
+
+.choice .choice-text {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .choice {
   display: flex;
   align-items: center;
   gap: 12px;
+  /* the option text is one flex item (inline maths inside it must not become items of its own) */
+  min-width: 0;
   padding: 9px 12px;
   border: 1px solid var(--rule-soft);
   border-radius: 3px;

@@ -15,6 +15,15 @@
  *     --filter <label>      also run the answer checks under this tier filter
  *
  * What it does, and what counts as a pass:
+ *   0. Reads the topic's JSON and looks for plain-text maths in the fields
+ *      the app renders through KaTeX (blurbs, checklists, explain html,
+ *      worked steps, question text, hints, walkthroughs, options, models,
+ *      flashcards): a variable equated to a symbol or number, a variable
+ *      multiplied or divided, a superscript on a variable, a subscript, a
+ *      proportionality, a half. Units (m/s, N/kg, m²) and word equations
+ *      ("moment on A = tooth force × radius") are allowed; symbols go in
+ *      $…$ (the standing rule: maths is never plain text). SVG contents
+ *      and the calculation types are not checked. Any hit fails the run.
  *   1. Loads the page at 1180 px, expands every card and reports: the card
  *      numbers, KaTeX errors (must be 0), fallback maths (0), flashcards,
  *      graphs, diagrams, the progress line and the H/P badges.
@@ -29,6 +38,8 @@
  */
 
 const { chromium } = require("playwright");
+const fs = require("fs");
+const path = require("path");
 
 const args = process.argv.slice(2);
 const topic = args.find(function (a) { return !a.startsWith("--"); });
@@ -51,6 +62,92 @@ let failed = false;
 function fail(message) {
   failed = true;
   console.log("FAIL: " + message);
+}
+
+// 0: plain-text maths in the prose fields of the topic file
+const UNIT_SUP = "(?:m|cm|mm|km|dm|s)[²³]";
+const MATH_PATTERNS = [
+  ["subscript", /[A-Za-z]_[A-Za-z0-9]/g],
+  // a single-letter variable (not a unit after a number) equated to a symbol or number; word equations are allowed
+  ["equation", /(?<![A-Za-z'’.\-/])(?<!\d )(?<!\d)(?:[A-Za-zλθρ]|Δ[A-Za-z]|KE|GPE|EPE)[²³]? ?= ?(?:[A-Za-zλθρ](?![A-Za-z])|\d|\( ?[A-Za-z\d](?![A-Za-z])|½|√|−|-\d)/g],
+  // a variable (not a unit after a number) multiplied or divided by a symbol or number
+  ["operator", /(?<![A-Za-z\d])(?<!\d )[A-Za-z][²³]? ?[×÷] ?(?:[A-Za-z](?![A-Za-z])|\(|\d)/g],
+  ["operator", /(?<![A-Za-z])\d+ ?[×÷] ?[A-Za-z](?![A-Za-z])/g],
+  // a variable with a superscript that is not a unit
+  ["superscript", new RegExp("(?<![A-Za-z/\\d ])(?!" + UNIT_SUP + ")[A-Za-z][²³]", "g")],
+  ["proportion", /∝ ?(?:[A-Za-z](?![A-Za-z])|\d|1\/)/g],
+  ["half", /½ ?[A-Za-z](?![A-Za-z])/g],
+  // a variable fraction such as V/R or x/t (not a unit fraction)
+  ["fraction", /(?<![A-Za-z\d ])(?!(?:m|km|cm|mm|N|J|W|kg|g|h|s|C|A|V|Pa|K|Hz|T|rev|mA|kV|MW|kW|MJ|kJ)\/)[A-Za-z]\/(?!(?:s|kg|h|m|C|A|s²|m²|m³|min|km|cm|mm|rev|K|°C)\b)[A-Za-z0-9]/g],
+];
+
+function stripRendered(text) {
+  return String(text)
+    .replace(/<svg[\s\S]*?<\/svg>/g, " ")
+    .replace(/\$\$[^$]*\$\$|\$[^$]*\$/g, " ")
+    .replace(/<[^>]+>/g, " ");
+}
+
+function plainMathsIn(text) {
+  const stripped = stripRendered(text);
+  const found = [];
+  MATH_PATTERNS.forEach(function (entry) {
+    let match;
+    const rx = new RegExp(entry[1].source, "g");
+    while ((match = rx.exec(stripped)) !== null) {
+      found.push(entry[0] + " \u2026" + stripped.slice(Math.max(0, match.index - 25), match.index + match[0].length + 25).replace(/\s+/g, " ") + "\u2026");
+    }
+  });
+  return found;
+}
+
+function proseFields(section) {
+  const out = [["blurb", section.blurb || ""]];
+  (section.checklist || []).forEach(function (c) { out.push(["checklist", c]); });
+  (section.parts || []).forEach(function (part) {
+    if (part.kind === "explain") { out.push(["explain", part.html || ""]); }
+    if (part.kind === "worked") {
+      out.push(["worked", part.question || ""]);
+      (part.steps || []).forEach(function (step) { out.push(["worked step", step]); });
+    }
+    if (part.kind === "practice") {
+      (part.questions || []).forEach(function (question) {
+        [question].concat(question.parts || []).forEach(function (q) {
+          const id = q.id || "?";
+          out.push([id, q.text || ""]);
+          out.push([id + " hint", q.hint || ""]);
+          (q.walkthrough || []).forEach(function (w) { out.push([id + " walkthrough", w]); });
+          (q.options || []).forEach(function (o) { out.push([id + " option", o]); });
+          out.push([id + " explain", q.explain || ""]);
+          if (q.model) { out.push([id + " model", typeof q.model === "string" ? q.model : JSON.stringify(q.model)]); }
+        });
+      });
+    }
+  });
+  return out;
+}
+
+function checkPlainMaths() {
+  const file = path.join(__dirname, "..", "..", site, "data", topic + ".json");
+  if (!fs.existsSync(file)) {
+    console.log("no topic file to check for plain-text maths: " + file);
+    return;
+  }
+  const data = JSON.parse(fs.readFileSync(file, "utf8"));
+  const problems = [];
+  (data.sections || []).forEach(function (section) {
+    proseFields(section).forEach(function (pair) {
+      plainMathsIn(pair[1]).forEach(function (hit) { problems.push(section.id + " / " + pair[0] + ": " + hit); });
+    });
+  });
+  (data.facts || []).forEach(function (fact) {
+    ["q", "a"].forEach(function (key) {
+      plainMathsIn(fact[key] || "").forEach(function (hit) { problems.push("flashcard " + key + ": " + hit); });
+    });
+  });
+  console.log("plain-text maths in prose fields: " + problems.length);
+  problems.slice(0, 40).forEach(function (p) { console.log("  " + p); });
+  if (problems.length) { fail("plain-text maths in the prose fields — wrap it in $…$ (see the header of this script)"); }
 }
 
 async function expandAll(page) {
@@ -136,6 +233,7 @@ async function answerChecks(page, label) {
 }
 
 (async function () {
+  checkPlainMaths();
   const browser = await chromium.launch();
 
   // 1 + 2: desktop

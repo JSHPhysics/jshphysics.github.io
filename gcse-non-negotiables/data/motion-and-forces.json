@@ -209,7 +209,7 @@
         {
           "kind": "explain",
           "title": "The equation and its rearrangements",
-          "html": "$$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}\\qquad v = \\dfrac{x}{t}$$<p>Edexcel writes distance as $x$. Learn all three forms:</p><table class='tbl'><tr><th>To find…</th><th>Use…</th></tr><tr><td>speed</td><td>$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$</td></tr><tr><td>distance</td><td>$\\text{distance} = \\text{speed} \\times \\text{time}$</td></tr><tr><td>time</td><td>$\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}}$</td></tr></table><p><b>Units must match.</b> In physics, work in metres and seconds so the speed comes out in m/s. Convert <i>before</i> you substitute: 1 minute = 60 s, 1 hour = 3600 s, 1 km = 1000 m.</p><p><b>km/h → m/s:</b> multiply by 1000 (km → m) and divide by 3600 (h → s). That is the same as dividing by 3.6. So 36 km/h = 10 m/s, and 72 km/h = 20 m/s.</p><p><b>Average speed</b> over a journey is total distance ÷ total time — and the total time includes any time spent stopped.</p>"
+          "html": "$$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}\\qquad v = \\dfrac{x}{t}$$<p>Edexcel writes distance as $x$. Learn all three forms:</p><table class='tbl'><tr><th>To find…</th><th>Use…</th></tr><tr><td>speed</td><td>$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$</td></tr><tr><td>distance</td><td>$\\text{distance} = \\text{speed} \\times \\text{time}$</td></tr><tr><td>time</td><td>$\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}}$</td></tr></table><p><b>Units must match.</b> In physics, work in metres and seconds so the speed comes out in m/s. Convert <i>before</i> you substitute: 1 minute = 60 s, 1 hour = 3600 s, 1 km = 1000 m.</p><p><b>km/h → m/s:</b> multiply by 1000 (km → m) and divide by 3600 (h → s). That is the same as dividing by 3.6. So 36 km/$h = 10$ m/s, and 72 km/$h = 20$ m/s.</p><p><b>Average speed</b> over a journey is total distance ÷ total time — and the total time includes any time spent stopped.</p>"
         },
         {
           "kind": "worked",
@@ -366,7 +366,7 @@
         "a = \\dfrac{v - u}{t}"
       ],
       "checklist": [
-        "Use a = (v − u) ÷ t, with u the initial and v the final velocity",
+        "Use $a = (v - u) \\div t$, with u the initial and v the final velocity",
         "Give a deceleration as a negative acceleration",
         "Rearrange to find a final velocity or a time"
       ],
@@ -407,7 +407,7 @@
                 "value": 3,
                 "unit": "m/s²"
               },
-              "hint": "\"From rest\" means u = 0.",
+              "hint": "\"From rest\" means $u = 0$.",
               "walkthrough": [
                 "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
                 "<b>Working:</b> $a = \\dfrac{12 - 0}{4}$",
@@ -440,7 +440,7 @@
                 "value": 14,
                 "unit": "m/s"
               },
-              "hint": "Rearrange for v: the velocity gained is a × t, added on to u.",
+              "hint": "Rearrange for $v$: the velocity gained is $a \\times t$, added on to $u$.",
               "walkthrough": [
                 "<b>Equation:</b> $v = u + a \\times t$",
                 "<b>Working:</b> $v = 4 + 2 \\times 5$",
@@ -488,7 +488,7 @@
                 "value": 1.5,
                 "unit": "m/s²"
               },
-              "hint": "u = 0 because it starts from rest.",
+              "hint": "$u = 0$ because it starts from rest.",
               "walkthrough": [
                 "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
                 "<b>Working:</b> $a = \\dfrac{1.2 - 0}{0.8}$",
@@ -510,7 +510,7 @@
         "v^2 - u^2 = 2 \\times a \\times x"
       ],
       "checklist": [
-        "Recognise when to use v² − u² = 2ax (no time given, or no time wanted)",
+        "Recognise when to use $v^2 - u^2 = 2ax$ (no time given, or no time wanted)",
         "Substitute into it and solve for v, u, a or x",
         "Remember to square-root when the unknown is a velocity"
       ],
@@ -551,7 +551,7 @@
                 "value": 8,
                 "unit": "m/s"
               },
-              "hint": "u = 0. Work out v² first, then square-root.",
+              "hint": "$u = 0$. Work out v² first, then square-root.",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $v^2 = 0 + 2 \\times 2 \\times 16 = 64 \\quad\\Rightarrow\\quad v = \\sqrt{64}$",
@@ -583,7 +583,7 @@
                 "value": -4,
                 "unit": "m/s²"
               },
-              "hint": "Stopping means v = 0. The answer is negative.",
+              "hint": "Stopping means $v = 0$. The answer is negative.",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $0^2 - 20^2 = 2 \\times a \\times 50 \\quad\\Rightarrow\\quad a = \\dfrac{-400}{100}$",
@@ -599,7 +599,7 @@
                 "value": 75,
                 "unit": "m"
               },
-              "hint": "v = 0 and a = −6 m/s². Two negatives on the fraction give a positive distance.",
+              "hint": "$v = 0$ and $a = -6$ m/s². Two negatives on the fraction give a positive distance.",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $0^2 - 30^2 = 2 \\times (-6) \\times x \\quad\\Rightarrow\\quad x = \\dfrac{-900}{-12}$",
@@ -610,12 +610,12 @@
             {
               "id": "t2-n4-q5",
               "type": "numeric",
-              "text": "A stone is dropped from a bridge 20 m above a river. Calculate its speed as it hits the water. (Ignore air resistance; g = 10 m/s².)",
+              "text": "A stone is dropped from a bridge 20 m above a river. Calculate its speed as it hits the water. (Ignore air resistance; $g = 10$ m/s².)",
               "answer": {
                 "value": 20,
                 "unit": "m/s"
               },
-              "hint": "Dropped means u = 0, and the acceleration is g = 10 m/s².",
+              "hint": "Dropped means $u = 0$, and the acceleration is $g = 10$ m/s².",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $v^2 = 0 + 2 \\times 10 \\times 20 = 400 \\quad\\Rightarrow\\quad v = \\sqrt{400}$",
@@ -631,7 +631,7 @@
                 "value": 15,
                 "unit": "m/s"
               },
-              "hint": "This time v is known and u is the unknown: u² = v² − 2ax.",
+              "hint": "This time v is known and u is the unknown: $u^2 = v^2 - 2ax$.",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $25^2 - u^2 = 2 \\times 2 \\times 100 \\quad\\Rightarrow\\quad u^2 = 625 - 400 = 225 \\quad\\Rightarrow\\quad u = \\sqrt{225}$",
@@ -1206,7 +1206,7 @@
                     "value": 2.5,
                     "unit": "m/s²"
                   },
-                  "hint": "It does not start from rest: u = 5 m/s.",
+                  "hint": "It does not start from rest: $u = 5$ m/s.",
                   "walkthrough": [
                     "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
                     "<b>Working:</b> $a = \\dfrac{25 - 5}{8} = \\dfrac{20}{8}$",
@@ -1291,7 +1291,7 @@
       ],
       "checklist": [
         "Recall typical speeds for walking, running, cycling, cars, trains, wind and sound",
-        "Recall that g = 10 m/s² in free fall",
+        "Recall that $g = 10$ m/s² in free fall",
         "Estimate the size of everyday accelerations"
       ],
       "parts": [
@@ -1380,7 +1380,7 @@
                 "value": 15,
                 "unit": "m/s"
               },
-              "hint": "v = u + at with u = 0 and a = 10 m/s².",
+              "hint": "$v = u$ + at with $u = 0$ and $a = 10$ m/s².",
               "walkthrough": [
                 "<b>Equation:</b> $v = u + a \\times t$",
                 "<b>Working:</b> $v = 0 + 10 \\times 1.5$",
@@ -1677,7 +1677,7 @@
         "F = m \\times a"
       ],
       "checklist": [
-        "Use F = ma and rearrange it for m or a",
+        "Use $F = ma$ and rearrange it for m or a",
         "Convert grams to kilograms and kN to N before substituting",
         "Remember that F is the resultant force"
       ],
@@ -1718,7 +1718,7 @@
                 "value": 5,
                 "unit": "m/s²"
               },
-              "hint": "a = F ÷ m.",
+              "hint": "$a = F \\div m$.",
               "walkthrough": [
                 "<b>Equation:</b> $a = \\dfrac{F}{m}$",
                 "<b>Working:</b> $a = \\dfrac{10}{2}$",
@@ -1750,7 +1750,7 @@
                 "value": 15,
                 "unit": "kg"
               },
-              "hint": "m = F ÷ a.",
+              "hint": "$m = F \\div a$.",
               "walkthrough": [
                 "<b>Equation:</b> $m = \\dfrac{F}{a}$",
                 "<b>Working:</b> $m = \\dfrac{60}{4}$",
@@ -1822,7 +1822,7 @@
                     "value": 280,
                     "unit": "N"
                   },
-                  "hint": "Use the acceleration you just found in F = ma.",
+                  "hint": "Use the acceleration you just found in $F = ma$.",
                   "walkthrough": [
                     "<b>Equation:</b> $F = m \\times a$",
                     "<b>Working:</b> $F = 70 \\times 4$",
@@ -1841,7 +1841,7 @@
                 "value": 6,
                 "unit": "m/s²"
               },
-              "hint": "F in F = ma is the resultant force: 30 − 6, not 30, and definitely not the weight (40 N), which is balanced by the floor and does nothing to the horizontal motion.",
+              "hint": "F in $F = ma$ is the resultant force: 30 − 6, not 30, and definitely not the weight (40 N), which is balanced by the floor and does nothing to the horizontal motion.",
               "walkthrough": [
                 "Resultant force $= 30 - 6 = 24$ N (horizontal forces only; the weight and the floor's push cancel).",
                 "$F = m \\times a$ so $a = \\dfrac{F}{m} = \\dfrac{24}{4.0}$.",
@@ -1857,12 +1857,12 @@
       "id": "weight",
       "band": "nn",
       "title": "Weight, mass and g",
-      "blurb": "Weight is a force; mass is not. W = mg links them through the gravitational field strength, which is different on different planets.",
+      "blurb": "Weight is a force; mass is not. $W = mg$ links them through the gravitational field strength, which is different on different planets.",
       "equations": [
         "W = m \\times g"
       ],
       "checklist": [
-        "Define weight and use W = mg",
+        "Define weight and use $W = mg$",
         "Explain the difference between mass and weight",
         "Describe how weight is measured",
         "Describe how weight depends on gravitational field strength"
@@ -1876,7 +1876,7 @@
         {
           "kind": "worked",
           "title": "Weight on Earth and on the Moon",
-          "question": "An astronaut has a mass of 60 kg. Calculate her weight (a) on Earth (g = 10 N/kg) and (b) on the Moon (g = 1.6 N/kg).",
+          "question": "An astronaut has a mass of 60 kg. Calculate her weight (a) on Earth ($g = 10$ N/kg) and (b) on the Moon ($g = 1.6$ N/kg).",
           "steps": [
             "<b>(a)</b> $W = m \\times g = 60 \\times 10 = 600$ N.",
             "<b>(b)</b> Her mass is still 60 kg on the Moon. $W = 60 \\times 1.6 = 96$ N.",
@@ -1902,7 +1902,7 @@
                 "value": 120,
                 "unit": "N"
               },
-              "hint": "W = mg with g = 10 N/kg.",
+              "hint": "$W = mg$ with $g = 10$ N/kg.",
               "walkthrough": [
                 "<b>Equation:</b> $W = m \\times g$",
                 "<b>Working:</b> $W = 12 \\times 10$",
@@ -1918,7 +1918,7 @@
                 "value": 35,
                 "unit": "kg"
               },
-              "hint": "Rearrange: m = W ÷ g.",
+              "hint": "Rearrange: $m = W \\div g$.",
               "walkthrough": [
                 "<b>Equation:</b> $m = \\dfrac{W}{g}$",
                 "<b>Working:</b> $m = \\dfrac{350}{10}$",
@@ -1929,7 +1929,7 @@
             {
               "id": "t2-n11-q3",
               "type": "numeric",
-              "text": "A 50 kg rover lands on Mars, where g = 3.7 N/kg. Calculate its weight on Mars.",
+              "text": "A 50 kg rover lands on Mars, where $g = 3.7$ N/kg. Calculate its weight on Mars.",
               "answer": {
                 "value": 185,
                 "unit": "N"
@@ -1950,7 +1950,7 @@
                 "value": 25,
                 "unit": "N/kg"
               },
-              "hint": "g = W ÷ m.",
+              "hint": "$g = W \\div m$.",
               "walkthrough": [
                 "<b>Equation:</b> $g = \\dfrac{W}{m}$",
                 "<b>Working:</b> $g = \\dfrac{125}{5}$",
@@ -1976,7 +1976,7 @@
               "id": "t2-n11-q6",
               "type": "written",
               "text": "Describe how the weight of an object can be measured.",
-              "model": "<ul><li>Hang the object from a newtonmeter (a calibrated spring balance) and read the force in newtons directly.</li><li>Or: measure the mass on a balance, then calculate W = m × g.</li></ul>",
+              "model": "<ul><li>Hang the object from a newtonmeter (a calibrated spring balance) and read the force in newtons directly.</li><li>Or: measure the mass on a balance, then calculate $W = m \\times g$.</li></ul>",
               "lines": 2
             }
           ]
@@ -2042,7 +2042,7 @@
                 "value": 2.5,
                 "unit": "m/s²"
               },
-              "hint": "a = F ÷ (total mass).",
+              "hint": "$a = F \\div$ (total mass).",
               "walkthrough": [
                 "<b>Equation:</b> $a = \\dfrac{F}{m}$",
                 "<b>Working:</b> $a = \\dfrac{2}{0.8}$",
@@ -2080,7 +2080,7 @@
               "id": "t2-n12-q5",
               "type": "written",
               "text": "Describe how you would investigate the effect of force on the acceleration of a trolley.",
-              "model": "<ul><li>Trolley on a bench, string over a pulley to a mass hanger; card on the trolley; two light gates and a data logger.</li><li>The hanging weight provides the force (F = mg); the data logger measures the speed at each gate and the time between them, giving the acceleration.</li><li>Change the force by moving a slotted mass from the trolley to the hanger, so the total mass stays constant.</li><li>Repeat each force three times, take a mean, and plot acceleration against force.</li></ul>",
+              "model": "<ul><li>Trolley on a bench, string over a pulley to a mass hanger; card on the trolley; two light gates and a data logger.</li><li>The hanging weight provides the force ($F = mg$); the data logger measures the speed at each gate and the time between them, giving the acceleration.</li><li>Change the force by moving a slotted mass from the trolley to the hanger, so the total mass stays constant.</li><li>Repeat each force three times, take a mean, and plot acceleration against force.</li></ul>",
               "lines": 5
             },
             {
@@ -2094,7 +2094,7 @@
                 "A straight line with a negative gradient"
               ],
               "correct": 0,
-              "explain": "F = ma means a is directly proportional to F: doubling the force doubles the acceleration, so the graph is a straight line through the origin. Its gradient is 1/m."
+              "explain": "$F = ma$ means a is directly proportional to F: doubling the force doubles the acceleration, so the graph is a straight line through the origin. Its gradient is $1/m$."
             }
           ]
         }
@@ -2219,7 +2219,7 @@
         "p = m \\times v"
       ],
       "checklist": [
-        "Define momentum and use p = mv",
+        "Define momentum and use $p = mv$",
         "Give the unit of momentum, kg m/s",
         "Rearrange to find a mass or a velocity"
       ],
@@ -2275,7 +2275,7 @@
                 "value": 400,
                 "unit": "kg m/s"
               },
-              "hint": "p = mv.",
+              "hint": "$p = mv$.",
               "walkthrough": [
                 "<b>Equation:</b> $p = m \\times v$",
                 "<b>Working:</b> $p = 80 \\times 5$",
@@ -2291,7 +2291,7 @@
                 "value": 5,
                 "unit": "m/s"
               },
-              "hint": "v = p ÷ m.",
+              "hint": "$v = p \\div m$.",
               "walkthrough": [
                 "<b>Equation:</b> $v = \\dfrac{p}{m}$",
                 "<b>Working:</b> $v = \\dfrac{4500}{900}$",
@@ -2307,7 +2307,7 @@
                 "value": 15,
                 "unit": "kg"
               },
-              "hint": "m = p ÷ v.",
+              "hint": "$m = p \\div v$.",
               "walkthrough": [
                 "<b>Equation:</b> $m = \\dfrac{p}{v}$",
                 "<b>Working:</b> $m = \\dfrac{60}{4}$",
@@ -2710,7 +2710,7 @@
         {
           "kind": "explain",
           "title": "Three things that catch people out",
-          "html": "<p><b>1. When the section isn't a simple triangle or rectangle.</b> If a sloping line starts above the time axis — say the velocity goes from 10 m/s up to 20 m/s — the area under it is a <b>trapezium</b>. Either use $\\tfrac{1}{2}(a + b) \\times h$ with $a$ and $b$ the two parallel sides (the velocity at the start and at the end of the section) and $h$ the time it lasts, or split it into a rectangle (the lower velocity × time) with a triangle sitting on top.</p><p><b>2. Velocity below the axis.</b> A negative velocity means the object is moving <b>in the opposite direction</b> — not slowing down. The line passing through zero is the moment it changes direction. Area <i>below</i> the axis is distance travelled backwards: add it for total <b>distance</b>, subtract it for <b>displacement</b>.</p><p><b>3. Converting between the two graphs.</b></p><table class='tbl'><tr><th>Motion</th><th>Distance–time graph</th><th>Velocity–time graph</th></tr><tr><td>Stationary</td><td>Horizontal line</td><td>Line along the time axis (v = 0)</td></tr><tr><td>Constant velocity</td><td>Straight line, sloping</td><td>Horizontal line above the axis</td></tr><tr><td>Constant acceleration from rest</td><td>Curve getting steeper</td><td>Straight line sloping up from the origin</td></tr><tr><td>Constant deceleration to rest</td><td>Curve flattening out</td><td>Straight line sloping down to the axis</td></tr><tr><td>Returning to the start</td><td>Line sloping back down to zero</td><td>Line below the axis</td></tr></table><p>To <b>describe</b> motion from a graph, go section by section: name the motion, give the numbers (how fast, how long, how far), and say when it changes.</p>"
+          "html": "<p><b>1. When the section isn't a simple triangle or rectangle.</b> If a sloping line starts above the time axis — say the velocity goes from 10 m/s up to 20 m/s — the area under it is a <b>trapezium</b>. Either use $\\tfrac{1}{2}(a + b) \\times h$ with $a$ and $b$ the two parallel sides (the velocity at the start and at the end of the section) and $h$ the time it lasts, or split it into a rectangle (the lower velocity × time) with a triangle sitting on top.</p><p><b>2. Velocity below the axis.</b> A negative velocity means the object is moving <b>in the opposite direction</b> — not slowing down. The line passing through zero is the moment it changes direction. Area <i>below</i> the axis is distance travelled backwards: add it for total <b>distance</b>, subtract it for <b>displacement</b>.</p><p><b>3. Converting between the two graphs.</b></p><table class='tbl'><tr><th>Motion</th><th>Distance–time graph</th><th>Velocity–time graph</th></tr><tr><td>Stationary</td><td>Horizontal line</td><td>Line along the time axis ($v = 0$)</td></tr><tr><td>Constant velocity</td><td>Straight line, sloping</td><td>Horizontal line above the axis</td></tr><tr><td>Constant acceleration from rest</td><td>Curve getting steeper</td><td>Straight line sloping up from the origin</td></tr><tr><td>Constant deceleration to rest</td><td>Curve flattening out</td><td>Straight line sloping down to the axis</td></tr><tr><td>Returning to the start</td><td>Line sloping back down to zero</td><td>Line below the axis</td></tr></table><p>To <b>describe</b> motion from a graph, go section by section: name the motion, give the numbers (how fast, how long, how far), and say when it changes.</p>"
         },
         {
           "kind": "worked",
@@ -3133,7 +3133,7 @@
         {
           "kind": "worked",
           "title": "Instantaneous speed from a tangent",
-          "question": "The graph shows the distance travelled by a sprinter leaving the blocks. The tangent at P (t = 6 s) is drawn. Calculate the sprinter's speed at 6 s.",
+          "question": "The graph shows the distance travelled by a sprinter leaving the blocks. The tangent at P ($t = 6 s$) is drawn. Calculate the sprinter's speed at 6 s.",
           "graph": {
             "x": {
               "label": "t / s",
@@ -3248,7 +3248,7 @@
             {
               "id": "t2-t2-q1",
               "type": "group",
-              "text": "The graph shows the distance travelled by a car as it slows down for a junction. The tangent at Q (t = 4 s) is drawn.",
+              "text": "The graph shows the distance travelled by a car as it slows down for a junction. The tangent at Q ($t = 4 s$) is drawn.",
               "parts": [
                 {
                   "id": "t2-t2-q1a",
@@ -3395,7 +3395,7 @@
             {
               "id": "t2-t2-q2",
               "type": "group",
-              "text": "The graph shows the velocity of a skydiver after jumping from a plane. The tangent at t = 0 is drawn.",
+              "text": "The graph shows the velocity of a skydiver after jumping from a plane. The tangent at $t = 0$ is drawn.",
               "parts": [
                 {
                   "id": "t2-t2-q2a",
@@ -3599,7 +3599,7 @@
       ],
       "checklist": [
         "List u, v, a, t and x, and pick the equation that contains the three you know and the one you want",
-        "Use a negative acceleration for an object slowing down, and v = 0 for an object stopping",
+        "Use a negative acceleration for an object slowing down, and $v = 0$ for an object stopping",
         "Chain two equations: find one quantity, then use it in the next step"
       ],
       "parts": [
@@ -3631,7 +3631,7 @@
                 "value": -6,
                 "unit": "m/s²"
               },
-              "hint": "You have u, v (= 0) and x, so there is no time: use v² − u² = 2ax.",
+              "hint": "You have u, v (= 0) and x, so there is no time: use $v^2 - u^2 = 2ax$.",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $0 - 18^2 = 2 \\times a \\times 27 \\quad\\Rightarrow\\quad a = \\dfrac{-324}{54}$",
@@ -3652,7 +3652,7 @@
                     "value": 12,
                     "unit": "m/s"
                   },
-                  "hint": "No time is given: v² = u² + 2ax with u = 0.",
+                  "hint": "No time is given: $v^2 = u^2 + 2ax$ with $u = 0$.",
                   "walkthrough": [
                     "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                     "<b>Working:</b> $v^2 = 0 + 2 \\times 1.2 \\times 60 = 144 \\quad\\Rightarrow\\quad v = \\sqrt{144}$",
@@ -3669,7 +3669,7 @@
                     "value": 10,
                     "unit": "s"
                   },
-                  "hint": "Now you know v, use a = (v − u)/t rearranged for t.",
+                  "hint": "Now you know v, use $a = (v - u)/t$ rearranged for t.",
                   "walkthrough": [
                     "<b>Equation:</b> $t = \\dfrac{v - u}{a}$",
                     "<b>Working:</b> $t = \\dfrac{12 - 0}{1.2}$",
@@ -3685,23 +3685,23 @@
               "type": "choice",
               "text": "A question gives the initial velocity, the acceleration and the distance, and asks for the final velocity. Which equation should you use?",
               "options": [
-                "a = (v − u) ÷ t",
-                "v² − u² = 2ax",
+                "$a = (v - u) \\div t$",
+                "$v^2 - u^2 = 2ax$",
                 "speed = distance ÷ time",
-                "F = ma"
+                "$F = ma$"
               ],
               "correct": 1,
-              "explain": "No time is given or wanted, so the equation without t is the one: v² − u² = 2ax."
+              "explain": "No time is given or wanted, so the equation without t is the one: $v^2 - u^2 = 2ax$."
             },
             {
               "id": "t2-t3-q4",
               "type": "numeric",
-              "text": "A ball is thrown straight up at 15 m/s. Calculate the maximum height it reaches. (g = 10 m/s²; ignore air resistance.)",
+              "text": "A ball is thrown straight up at 15 m/s. Calculate the maximum height it reaches. ($g = 10$ m/s²; ignore air resistance.)",
               "answer": {
                 "value": 11.25,
                 "unit": "m"
               },
-              "hint": "At the top the ball is momentarily at rest, v = 0. Taking up as positive, a = −10 m/s².",
+              "hint": "At the top the ball is momentarily at rest, $v = 0$. Taking up as positive, $a = -10$ m/s².",
               "walkthrough": [
                 "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                 "<b>Working:</b> $0 - 15^2 = 2 \\times (-10) \\times x \\quad\\Rightarrow\\quad x = \\dfrac{-225}{-20}$",
@@ -3730,7 +3730,7 @@
                     "value": 26,
                     "unit": "m/s"
                   },
-                  "hint": "You have u, a and t: v = u + at.",
+                  "hint": "You have u, a and t: $v = u$ + at.",
                   "walkthrough": [
                     "<b>Equation:</b> $v = u + a \\times t$",
                     "<b>Working:</b> $v = 10 + 2 \\times 8$",
@@ -3747,7 +3747,7 @@
                     "value": 144,
                     "unit": "m"
                   },
-                  "hint": "Now you know u, v and a; use v² − u² = 2ax (or the area under a v–t graph: a trapezium with sides 10 and 26 and width 8).",
+                  "hint": "Now you know u, v and a; use $v^2 - u^2 = 2ax$ (or the area under a v–t graph: a trapezium with sides 10 and 26 and width 8).",
                   "walkthrough": [
                     "<b>Equation:</b> $v^2 - u^2 = 2 \\times a \\times x$",
                     "<b>Working:</b> $26^2 - 10^2 = 2 \\times 2 \\times x \\quad\\Rightarrow\\quad x = \\dfrac{676 - 100}{4}$",
@@ -3775,7 +3775,7 @@
                     "$W = m \\times g$"
                   ],
                   "correct": 0,
-                  "explain": "You know u (0, dropped from rest), a (= g = 10 m/s², because the only force is gravity) and x (20 m), and you want v. No time is given, so the equation without t is the one. Many candidates left this blank or used speed = distance ÷ time, which only works for constant speed.",
+                  "explain": "You know u (0, dropped from rest), a (= $g = 10$ m/s², because the only force is gravity) and x (20 m), and you want v. No time is given, so the equation without t is the one. Many candidates left this blank or used speed = distance ÷ time, which only works for constant speed.",
                   "label": "a"
                 },
                 {
@@ -3786,7 +3786,7 @@
                     "value": 20,
                     "unit": "m/s"
                   },
-                  "hint": "Write down what you know first: u = 0, a = 10 m/s², x = 20 m. The acceleration of anything in free fall is g.",
+                  "hint": "Write down what you know first: $u = 0$, $a = 10$ m/s², $x = 20$ m. The acceleration of anything in free fall is g.",
                   "walkthrough": [
                     "$u = 0$ (dropped from rest), $a = g = 10$ m/s², $x = 20$ m.",
                     "$v^2 - u^2 = 2 a x$ so $v^2 = 0 + 2 \\times 10 \\times 20 = 400$.",
@@ -3805,13 +3805,13 @@
       "id": "resultant-acceleration",
       "band": "tricky",
       "title": "Resultant force → acceleration, and terminal velocity",
-      "blurb": "Two forces, one resultant, then F = ma. And the story of a falling object: the acceleration shrinks while the speed keeps growing.",
+      "blurb": "Two forces, one resultant, then $F = ma$. And the story of a falling object: the acceleration shrinks while the speed keeps growing.",
       "equations": [
         "\\text{resultant} = F_1 - F_2",
         "a = \\dfrac{F}{m}"
       ],
       "checklist": [
-        "Find the resultant of two opposing forces, then use it in F = ma (not one of the forces on its own)",
+        "Find the resultant of two opposing forces, then use it in $F = ma$ (not one of the forces on its own)",
         "Work out the weight first when one of the forces is gravity",
         "Describe and explain the motion of a falling object up to terminal velocity",
         "Say which way the acceleration points at the top of a throw"
@@ -3825,7 +3825,7 @@
         {
           "kind": "worked",
           "title": "A skydiver part-way down",
-          "question": "A skydiver has a mass of 70 kg. At one moment the air resistance on him is 300 N. Calculate his acceleration at that moment. (g = 10 N/kg.)",
+          "question": "A skydiver has a mass of 70 kg. At one moment the air resistance on him is 300 N. Calculate his acceleration at that moment. ($g = 10$ N/kg.)",
           "steps": [
             "Weight first: $W = m \\times g = 70 \\times 10 = 700$ N, downwards.",
             "Resultant force $= 700 - 300 = 400$ N, downwards (weight is bigger, so he is still speeding up).",
@@ -3868,7 +3868,7 @@
                 "She is moving upwards"
               ],
               "correct": 2,
-              "explain": "Her weight is 80 × 10 = 800 N, equal to the air resistance. Resultant force zero → constant velocity. This is terminal velocity."
+              "explain": "Her weight is $80 \\times 10 = 800$ N, equal to the air resistance. Resultant force zero → constant velocity. This is terminal velocity."
             },
             {
               "id": "t2-t4-q3",
@@ -3880,7 +3880,7 @@
             {
               "id": "t2-t4-q4",
               "type": "numeric",
-              "text": "A model rocket of mass 100 kg produces a thrust of 1.5 kN upwards. Calculate its acceleration at launch. (g = 10 N/kg.)",
+              "text": "A model rocket of mass 100 kg produces a thrust of 1.5 kN upwards. Calculate its acceleration at launch. ($g = 10$ N/kg.)",
               "answer": {
                 "value": 5,
                 "unit": "m/s²"
@@ -3903,7 +3903,7 @@
                 "value": 2,
                 "unit": "m/s²"
               },
-              "hint": "Weight = 600 × 10 = 6000 N.",
+              "hint": "Weight = $600 \\times 10 = 6000$ N.",
               "walkthrough": [
                 "Resultant $= 7200 - 6000 = 1200$ N upwards.",
                 "<b>Equation:</b> $a = \\dfrac{F}{m}$",
@@ -3994,7 +3994,7 @@
                 "The cannon exerts no force because it is heavy"
               ],
               "correct": 1,
-              "explain": "Third-law forces are always equal. The ball's acceleration is large because a = F/m with a small m; the cannon's recoil acceleration is small for the same F and a large m."
+              "explain": "Third-law forces are always equal. The ball's acceleration is large because $a = F/m$ with a small m; the cannon's recoil acceleration is small for the same F and a large m."
             },
             {
               "id": "t2-t5-q4",
@@ -4207,7 +4207,7 @@
                 "value": 2.5,
                 "unit": "kg"
               },
-              "hint": "m = F ÷ a.",
+              "hint": "$m = F \\div a$.",
               "walkthrough": [
                 "<b>Equation:</b> $\\text{inertial mass} = \\dfrac{F}{a}$",
                 "<b>Working:</b> $m = \\dfrac{20}{8}$",
@@ -4219,7 +4219,7 @@
               "id": "t2-t7-q3",
               "type": "written",
               "text": "Explain what is meant by the inertial mass of an object.",
-              "model": "<ul><li>A measure of how difficult it is to change the velocity of the object (including starting it from rest).</li><li>It is defined as the ratio of the force applied to the acceleration produced: m = F ÷ a.</li></ul>",
+              "model": "<ul><li>A measure of how difficult it is to change the velocity of the object (including starting it from rest).</li><li>It is defined as the ratio of the force applied to the acceleration produced: $m = F \\div a$.</li></ul>",
               "lines": 2
             },
             {
@@ -4233,7 +4233,7 @@
                 "The tennis ball accelerates less because it is lighter"
               ],
               "correct": 1,
-              "explain": "a = F ÷ m: with the same F, the larger mass gets the smaller acceleration. The bowling ball's velocity is harder to change."
+              "explain": "$a = F \\div m$: with the same F, the larger mass gets the smaller acceleration. The bowling ball's velocity is harder to change."
             },
             {
               "id": "t2-t7-q5",
@@ -4434,7 +4434,7 @@
                 "Because momentum is measured in seconds"
               ],
               "correct": 1,
-              "explain": "Equal forces alone are not enough: the change in momentum each body receives is F × t, so the times must be equal too for the changes to cancel."
+              "explain": "Equal forces alone are not enough: the change in momentum each body receives is $F \\times t$, so the times must be equal too for the changes to cancel."
             }
           ]
         }
@@ -4453,7 +4453,7 @@
         "F = \\dfrac{mv - mu}{t}"
       ],
       "checklist": [
-        "Use F = (mv − mu) ÷ t to find a force, a time or a change in momentum",
+        "Use $F = (mv$ − mu) ÷ t to find a force, a time or a change in momentum",
         "Explain how a safety feature reduces injury, using momentum, time and force in the right order",
         "Explain why large decelerations are dangerous"
       ],
@@ -4569,13 +4569,13 @@
                 "It makes the car stop more quickly"
               ],
               "correct": 1,
-              "explain": "The momentum change is fixed by the car's speed. A crumple zone makes the stop take longer, and F = Δp ÷ t gets smaller."
+              "explain": "The momentum change is fixed by the car's speed. A crumple zone makes the stop take longer, and $F = \\Delta p \\div t$ gets smaller."
             },
             {
               "id": "t2-t9-q7",
               "type": "written",
               "text": "Explain why a large deceleration is dangerous for a person in a vehicle.",
-              "model": "<ul><li>A large deceleration means a large resultant force on the person (F = ma).</li><li>The force on the body can be many times the person's weight.</li><li>Such forces can break bones, damage internal organs, or injure the brain as it strikes the inside of the skull.</li></ul>",
+              "model": "<ul><li>A large deceleration means a large resultant force on the person ($F = ma$).</li><li>The force on the body can be many times the person's weight.</li><li>Such forces can break bones, damage internal organs, or injure the brain as it strikes the inside of the skull.</li></ul>",
               "lines": 3
             },
             {
@@ -4591,7 +4591,7 @@
                     "value": 7.2,
                     "unit": "kg m/s"
                   },
-                  "hint": "Velocity is a vector. Take the direction towards the racket as positive: u = +20 m/s, v = −25 m/s. The change is v − u, not the difference of the two sizes.",
+                  "hint": "Velocity is a vector. Take the direction towards the racket as positive: $u = +20$ m/s, $v = -25$ m/s. The change is $v - u$, not the difference of the two sizes.",
                   "walkthrough": [
                     "Take towards the racket as positive: $u = +20$ m/s, $v = -25$ m/s.",
                     "$\\Delta p = m v - m u = 0.16 \\times (-25) - 0.16 \\times 20 = -4 - 3.2 = -7.2$ kg m/s.",
@@ -4642,7 +4642,7 @@
       "checklist": [
         "Use work done = kinetic energy to calculate a braking distance or a braking force",
         "Explain why braking distance is proportional to speed squared",
-        "Estimate how stopping distance changes across typical speeds (thinking ∝ v, braking ∝ v²)"
+        "Estimate how stopping distance changes across typical speeds (thinking $\\propto v$, braking $\\propto v^2$)"
       ],
       "parts": [
         {
@@ -4672,7 +4672,7 @@
                 "value": 90,
                 "unit": "m"
               },
-              "hint": "KE = ½ × 1200 × 30². Then divide by 6000 N.",
+              "hint": "$\\text{KE} = \\tfrac{1}{2} \\times 1200 \\times 30^2$. Then divide by 6000 N.",
               "walkthrough": [
                 "$KE = \\tfrac{1}{2} \\times 1200 \\times 30^2 = 540\\,000$ J.",
                 "$d = \\dfrac{540\\,000}{6000} = 90$ m.",
@@ -4687,7 +4687,7 @@
                 "value": 4500,
                 "unit": "N"
               },
-              "hint": "Find the KE, then F = KE ÷ d.",
+              "hint": "Find the KE, then $F = \\text{KE} \\div d$.",
               "walkthrough": [
                 "$KE = \\tfrac{1}{2} \\times 1000 \\times 15^2 = 112\\,500$ J.",
                 "$F = \\dfrac{112\\,500}{25} = 4500$ N."
@@ -4704,7 +4704,7 @@
                 "It halves"
               ],
               "correct": 2,
-              "explain": "Braking distance ∝ v². Doubling v multiplies v² by 4, so the braking distance is four times as long. (Thinking distance only doubles.)"
+              "explain": "Braking distance $\\propto v^2$. Doubling $v$ multiplies $v^2$ by 4, so the braking distance is four times as long. (Thinking distance only doubles.)"
             },
             {
               "id": "t2-t10-q4",
@@ -4726,7 +4726,7 @@
               "id": "t2-t10-q5",
               "type": "written",
               "text": "Explain why the braking distance of a car is proportional to the square of its speed.",
-              "model": "<ul><li>The brakes must do work equal to the car's kinetic energy to stop it: F × d = ½mv².</li><li>The braking force F is roughly constant (it depends on the brakes, tyres and road, not on speed).</li><li>So d = ½mv² ÷ F, and d is proportional to v²: doubling the speed quadruples the braking distance.</li></ul>",
+              "model": "<ul><li>The brakes must do work equal to the car's kinetic energy to stop it: $F \\times d = \\tfrac{1}{2}mv^2$.</li><li>The braking force F is roughly constant (it depends on the brakes, tyres and road, not on speed).</li><li>So $d = \\tfrac{1}{2}mv^2 \\div F$, and d is proportional to v²: doubling the speed quadruples the braking distance.</li></ul>",
               "lines": 3
             },
             {
@@ -4961,12 +4961,12 @@
               "text": "A student plots acceleration against mass with the force kept constant. What shape of graph should she expect?",
               "options": [
                 "A straight line through the origin",
-                "A curve, because a = F ÷ m",
+                "A curve, because $a = F \\div m$",
                 "A horizontal line",
                 "A straight line with a positive intercept"
               ],
               "correct": 1,
-              "explain": "With F constant, a is inversely proportional to m — a curve that falls as m increases. Plotting a against 1/m gives a straight line through the origin."
+              "explain": "With F constant, a is inversely proportional to m — a curve that falls as m increases. Plotting a against $1/m$ gives a straight line through the origin."
             }
           ]
         }
@@ -5053,7 +5053,7 @@
       ],
       "checklist": [
         "Describe the ruler-drop and computer-click methods of measuring reaction time",
-        "Convert a ruler-drop distance into a reaction time using x = ½gt²",
+        "Convert a ruler-drop distance into a reaction time using $x = \\tfrac{1}{2}gt^2$",
         "Evaluate the methods: repeats, anticipation, and the difference from a real driving situation"
       ],
       "parts": [
@@ -5065,7 +5065,7 @@
         {
           "kind": "worked",
           "title": "Reaction time from a ruler drop",
-          "question": "A student catches a dropped ruler after it has fallen 20 cm. Calculate her reaction time. (g = 10 m/s².)",
+          "question": "A student catches a dropped ruler after it has fallen 20 cm. Calculate her reaction time. ($g = 10$ m/s².)",
           "steps": [
             "Convert: $20 \\text{ cm} = 0.20$ m.",
             "$x = \\tfrac{1}{2} g t^2$, so $t^2 = \\dfrac{2x}{g} = \\dfrac{2 \\times 0.20}{10} = 0.04$.",
@@ -5084,7 +5084,7 @@
                 "value": 0.3,
                 "unit": "s"
               },
-              "hint": "45 cm = 0.45 m; t = √(2x ÷ g).",
+              "hint": "45 cm = 0.45 m; $t = \\sqrt{2x \\div g}$.",
               "walkthrough": [
                 "$t^2 = \\dfrac{2 \\times 0.45}{10} = 0.09$.",
                 "$t = \\sqrt{0.09} = 0.3$ s."
@@ -5098,7 +5098,7 @@
                 "value": 31.25,
                 "unit": "cm"
               },
-              "hint": "x = ½gt², then convert metres to centimetres.",
+              "hint": "$x = \\tfrac{1}{2}gt^2$, then convert metres to centimetres.",
               "walkthrough": [
                 "$x = \\tfrac{1}{2} \\times 10 \\times 0.25^2 = 5 \\times 0.0625 = 0.3125$ m.",
                 "$0.3125 \\text{ m} = 31$ cm (to 2 s.f.)."
@@ -5135,7 +5135,7 @@
                 "B's reaction time is exactly twice A's"
               ],
               "correct": 1,
-              "explain": "A longer drop means the ruler fell for longer before it was caught — a slower reaction. Because x ∝ t², doubling the distance makes the time √2 ≈ 1.4 times longer, not twice."
+              "explain": "A longer drop means the ruler fell for longer before it was caught — a slower reaction. Because $x \\propto t^2$, doubling the distance makes the time √2 ≈ 1.4 times longer, not twice."
             },
             {
               "id": "t2-t12-q6",
@@ -5209,7 +5209,7 @@
                 "unit": "N",
                 "tolerance": 0.2
               },
-              "hint": "Deceleration first, then F = ma.",
+              "hint": "Deceleration first, then $F = ma$.",
               "walkthrough": [
                 "$a = \\dfrac{10}{0.5} = 20$ m/s².",
                 "$F = 60 \\times 20 = 1200$ N — about twice her weight, which is why standing passengers get thrown forwards."
@@ -5226,13 +5226,13 @@
                 "30 000 000 N"
               ],
               "correct": 2,
-              "explain": "a ≈ 30 ÷ 0.1 = 300 m/s², so F ≈ 1000 × 300 = 300 000 N. Thirty times the weight of the car."
+              "explain": "a ≈ $30 \\div 0.1 = 300$ m/s², so $F \\approx 1000 \\times 300 = 300\\,000$ N. Thirty times the weight of the car."
             },
             {
               "id": "t2-t13-q4",
               "type": "written",
               "text": "Describe how you would estimate the force on a cyclist who rides into a wall.",
-              "model": "<ul><li>Assume sensible values: the cyclist's mass (about 70 kg) and a typical cycling speed (about 6 m/s).</li><li>Assume a stopping time (around 0.1 s) or a stopping distance.</li><li>Calculate the deceleration from a = (v − u) ÷ t (or v² = 2ax), then the force from F = ma.</li><li>State the answer to 1 or 2 significant figures and compare it with the cyclist's weight.</li></ul>",
+              "model": "<ul><li>Assume sensible values: the cyclist's mass (about 70 kg) and a typical cycling speed (about 6 m/s).</li><li>Assume a stopping time (around 0.1 s) or a stopping distance.</li><li>Calculate the deceleration from $a = (v - u) \\div t$ (or $v^2 = 2ax$), then the force from $F = ma$.</li><li>State the answer to 1 or 2 significant figures and compare it with the cyclist's weight.</li></ul>",
               "lines": 4
             },
             {
@@ -5421,7 +5421,7 @@
       "section": "braking-v-squared"
     },
     {
-      "q": "Why is braking distance ∝ v²?",
+      "q": "Why is braking distance $\\propto v^2$?",
       "a": "Work done by brakes $F d$ = KE $\\tfrac{1}{2}mv^2$",
       "section": "braking-v-squared"
     },
@@ -5467,7 +5467,7 @@
     },
     {
       "q": "Define weight",
-      "a": "The force of gravity on an object (W = m × g)",
+      "a": "The force of gravity on an object ($W = m \\times g$)",
       "section": "keywords"
     },
     {
@@ -5477,7 +5477,7 @@
     },
     {
       "q": "Define inertial mass",
-      "a": "How difficult it is to change an object's velocity; F ÷ a",
+      "a": "How difficult it is to change an object's velocity; $F \\div a$",
       "section": "keywords"
     },
     {
@@ -5512,7 +5512,7 @@
     },
     {
       "q": "Why is momentum conserved (4 steps)?",
-      "a": "N3: equal and opposite forces → same time → equal and opposite Δp → total Δp = 0",
+      "a": "N3: equal and opposite forces → same time → equal and opposite Δp → total $\\Delta p = 0$",
       "section": "conservation-momentum"
     },
     {
@@ -5527,7 +5527,7 @@
     },
     {
       "q": "Doubling speed does what to KE and braking distance?",
-      "a": "Both ×4 (∝ v²)",
+      "a": "Both ×4 ($\\propto v^2$)",
       "section": "braking-v-squared"
     },
     {
@@ -5552,17 +5552,17 @@
     },
     {
       "q": "What is the acceleration of anything in free fall (ignoring air resistance)?",
-      "a": "g = 10 m/s² downwards, whatever its mass. Use it as a in the equations of motion.",
+      "a": "$g = 10$ m/s² downwards, whatever its mass. Use it as a in the equations of motion.",
       "section": "kinematics-route"
     },
     {
-      "q": "Which force goes into F = ma?",
+      "q": "Which force goes into $F = ma$?",
       "a": "The resultant force — all the forces on the object added with their directions. Not the weight, unless the object is falling freely.",
       "section": "f-ma"
     },
     {
       "q": "Convert 15 m/s to km/h.",
-      "a": "15 × 3600 = 54 000 m per hour = 54 km/h. (m/s × 3.6 = km/h.)",
+      "a": "$15 \\times 3600 = 54\\,000$ m per hour = 54 km/h. ($m/s \\times 3.6$ = km/h.)",
       "section": "speed-nn"
     },
     {
@@ -5572,7 +5572,7 @@
     },
     {
       "q": "Convert 50 ms to seconds.",
-      "a": "0.050 s. ms is milliseconds — divide by 1000 before using F = Δp ÷ t.",
+      "a": "0.050 s. ms is milliseconds — divide by 1000 before using $F = \\Delta p \\div t$.",
       "section": "force-momentum"
     },
     {

@@ -121,7 +121,7 @@ section_t2 = section(
         ),
         worked(
             "Speed at the bottom of a drop",
-            "A trolley of mass 1.6 kg is released from rest at the top of a runway 26 cm above the bench. Calculate the speed you would expect it to have at the bottom. (g = 10 N/kg)",
+            "A trolley of mass 1.6 kg is released from rest at the top of a runway 26 cm above the bench. Calculate the speed you would expect it to have at the bottom. ($g = 10$ N/kg)",
             [
                 r"<b>Convert:</b> $\Delta h = 26\ \text{cm} = 0.26$ m. (The June 2025 report: not converting this was the most common error.)",
                 r"<b>Energy:</b> $\Delta GPE = m g \Delta h = 1.6 \times 10 \times 0.26 = 4.16$ J, so $KE = 4.16$ J.",
@@ -130,22 +130,22 @@ section_t2 = section(
             ],
         ),
         practice("GPE and KE", [
-            numeric("en-t2-q1", "A stone is dropped from a height of 5.0 m. Calculate its speed just before it hits the ground, ignoring air resistance. (g = 10 N/kg)",
-                    sf(q2_1, 2), "m/s", "v² = 2 g Δh.",
+            numeric("en-t2-q1", "A stone is dropped from a height of 5.0 m. Calculate its speed just before it hits the ground, ignoring air resistance. ($g = 10$ N/kg)",
+                    sf(q2_1, 2), "m/s", "$v^2 = 2$ g Δh.",
                     [r"$m g \Delta h = \tfrac{1}{2} m v^{2}$, so $v^{2} = 2 g \Delta h = 2 \times 10 \times 5.0 = 100$.", r"$v = \sqrt{100} = 10$ m/s."]),
-            numeric("en-t2-q2", "A ball hits the ground at 17.2 m/s. Calculate the height it was dropped from, ignoring air resistance. (g = 10 N/kg)",
-                    sf(q2_2, 3), "m", "Δh = v² ÷ (2g).",
+            numeric("en-t2-q2", "A ball hits the ground at 17.2 m/s. Calculate the height it was dropped from, ignoring air resistance. ($g = 10$ N/kg)",
+                    sf(q2_2, 3), "m", "$\\Delta h = v^2 \\div (2g)$.",
                     [r"$v^{2} = 2 g \Delta h \Rightarrow \Delta h = \dfrac{v^{2}}{2 g} = \dfrac{17.2^{2}}{2 \times 10} = \dfrac{296}{20}$.", r"$\Delta h = 14.8$ m."]),
-            group("en-t2-q3", "A 0.50 kg ball rolls down a frictionless ramp of vertical height 1.2 m, starting from rest. (g = 10 N/kg)", [
+            group("en-t2-q3", "A 0.50 kg ball rolls down a frictionless ramp of vertical height 1.2 m, starting from rest. ($g = 10$ N/kg)", [
                 numeric("en-t2-q3a", "Calculate the GPE it loses.", q2_3_gpe, "J", "m g Δh.",
                         ewau(r"\Delta GPE = m g \Delta h", r"\Delta GPE = 0.50 \times 10 \times 1.2", "6.0", "J"), label="a"),
-                numeric("en-t2-q3b", "Calculate its speed at the bottom.", sf(q2_3_v, 2), "m/s", "KE = 6.0 J; v² = 2KE ÷ m.",
+                numeric("en-t2-q3b", "Calculate its speed at the bottom.", sf(q2_3_v, 2), "m/s", "$\\text{KE} = 6.0$ J; $v^2 = 2\\text{KE} \\div m$.",
                         [r"$KE = 6.0$ J, so $v^{2} = \dfrac{2 \times 6.0}{0.50} = 24$.", r"$v = \sqrt{24} = 4.9$ m/s."], label="b"),
             ]),
-            group("en-t2-q4", "A 60 kg skateboarder rolls at 8.0 m/s towards a ramp. Ignore friction. (g = 10 N/kg)", [
-                numeric("en-t2-q4a", "Calculate his kinetic energy.", q2_4_ke, "J", "½ m v².",
+            group("en-t2-q4", "A 60 kg skateboarder rolls at 8.0 m/s towards a ramp. Ignore friction. ($g = 10$ N/kg)", [
+                numeric("en-t2-q4a", "Calculate his kinetic energy.", q2_4_ke, "J", "½ $m v^2$.",
                         ewau(r"KE = \tfrac{1}{2} m v^{2}", r"KE = \tfrac{1}{2} \times 60 \times 8.0^{2}", "1920", "J"), label="a"),
-                numeric("en-t2-q4b", "Calculate the maximum height he reaches on the ramp.", sf(q2_4_h, 2), "m", "All the KE becomes GPE: Δh = KE ÷ (m g).",
+                numeric("en-t2-q4b", "Calculate the maximum height he reaches on the ramp.", sf(q2_4_h, 2), "m", "All the KE becomes GPE: $\\Delta h = \\text{KE} \\div (m g)$.",
                         [r"$m g \Delta h = 1920 \Rightarrow \Delta h = \dfrac{1920}{60 \times 10}$.", r"$\Delta h = 3.2$ m."], label="b"),
                 written("en-t2-q4c", "The real height is less than this. Explain why. (2)",
                         marks(["Friction and air resistance <b>do work</b> on the skateboarder…",
@@ -153,7 +153,7 @@ section_t2 = section(
             ]),
             choice("en-t2-q5", "Two balls of mass 1 kg and 3 kg are dropped from the same height. Ignoring air resistance, which hits the ground faster?",
                    ["The 3 kg ball, three times as fast", "The 1 kg ball", "Both at the same speed — the mass cancels", "The 3 kg ball, slightly faster"], 2,
-                   "m g Δh = ½ m v²: m is on both sides, so v = √(2gΔh) for any mass."),
+                   "$m g \\Delta h = \\tfrac{1}{2} m v^2$: m is on both sides, so $v = \\sqrt{2 g \\Delta h}$ for any mass."),
             written("en-t2-q6", "A student measures the speed of a trolley at the bottom of a runway and finds it is less than the value calculated from the GPE lost. Suggest one way to reduce the difference. (1)",
                     marks(["A <b>method</b>: <b>lubricate</b> (oil) the wheel axles / make the runway <b>steeper</b> / use a more <b>streamlined</b> trolley / use smoother wheels. (\"Reduce friction\" on its own is a reason, not a method, and scored nothing in June 2025.)"]), lines=2),
         ]),
@@ -188,7 +188,7 @@ section_t3 = section(
             "<table class='tbl'><tr><th>Trap</th><th>What happens</th><th>Fix</th></tr>"
             "<tr><td>Not squaring $v$</td><td>answer far too small (the 2023 scheme: 2.52 J instead of 30 J, one mark of two)</td><td>write the equation out with the ² before substituting; square first on the calculator</td></tr>"
             "<tr><td>Forgetting the ½</td><td>answer twice too big (60.5 J instead of 30 J)</td><td>the ½ is the last thing you do: ÷ 2</td></tr>"
-            "<tr><td>Wrong units</td><td>grams, km/h or kJ give wrong powers of ten</td><td>convert <i>before</i> you substitute: g ÷ 1000, km/h ÷ 3.6; give the answer in J then convert if asked</td></tr>"
+            "<tr><td>Wrong units</td><td>grams, km/h or kJ give wrong powers of ten</td><td>convert <i>before</i> you substitute: $g \\div 1000$, km/$h \\div 3.6$; give the answer in J then convert if asked</td></tr>"
             "<tr><td>Stopping at $v^{2}$</td><td>54 m/s instead of 7.4 m/s — loses the last mark</td><td>the last line is always $v = \\sqrt{\\ldots}$; sense-check the size</td></tr></table>"
             "<p><b>Speed squared.</b> Because $v$ is squared, doubling the speed makes the KE four times bigger; trebling it, nine times. That is why braking distance goes up with $v^{2}$ (the brakes have four times the energy to remove), and why a small increase in speed makes a crash much worse.</p>"
             "<p><b>Standard form.</b> Answers like 153 600 J are easy to get wrong by a zero. The examiners' advice: \"it often helps to put answers in standard form rather than risk writing too many or too few 000s\" — $1.5 \\times 10^{5}$ J.</p>",
@@ -211,7 +211,7 @@ section_t3 = section(
                     q3_2, "J", "45 g = 0.045 kg.",
                     ewau(r"KE = \tfrac{1}{2} m v^{2}", r"KE = \tfrac{1}{2} \times 0.045 \times 60^{2}", "81", "J")),
             numeric("en-t3-q3", "A 50 kg cyclist has 3600 J of kinetic energy. Calculate her speed.",
-                    sf(q3_3, 2), "m/s", "v² = 2 × 3600 ÷ 50, then square root.",
+                    sf(q3_3, 2), "m/s", "$v^2 = 2 \\times 3600 \\div 50$, then square root.",
                     [r"$v^{2} = \dfrac{2 \times 3600}{50} = 144$.", r"$v = \sqrt{144} = 12$ m/s."]),
             group("en-t3-q4", "A 1500 kg van travels at 10 m/s, then speeds up to 30 m/s.", [
                 numeric("en-t3-q4a", "Calculate its kinetic energy at 10 m/s.", q3_4_a, "J", "½ × 1500 × 100.",
@@ -225,9 +225,9 @@ section_t3 = section(
             numeric("en-t3-q5", "An aircraft of mass 2.5 × 10⁵ kg lands at 80 m/s. Calculate its kinetic energy. Give your answer in standard form.",
                     q3_5, "J", "Enter 2.5 ×10ˣ 5 on the calculator. Type the answer as 8e8.",
                     ewau(r"KE = \tfrac{1}{2} m v^{2}", r"KE = \tfrac{1}{2} \times 2.5 \times 10^{5} \times 80^{2}", "8.0 \\times 10^{8}", "J")),
-            choice("en-t3-q6", "A student calculates the KE of a 2 kg ball moving at 3 m/s as ½ × 2² × 3 = 6 J. What has gone wrong?",
-                   ["Nothing, 6 J is right", "The mass has been squared instead of the speed; it should be ½ × 2 × 3² = 9 J", "The ½ should not be there", "The units are wrong"], 1,
-                   "Only the speed is squared. ½ × 2 × 9 = 9 J."),
+            choice("en-t3-q6", "A student calculates the KE of a 2 kg ball moving at 3 m/s as $\\tfrac{1}{2} \\times 2^2 \\times 3 = 6$ J. What has gone wrong?",
+                   ["Nothing, 6 J is right", "The mass has been squared instead of the speed; it should be $\\tfrac{1}{2} \\times 2 \\times 3^2 = 9$ J", "The ½ should not be there", "The units are wrong"], 1,
+                   "Only the speed is squared. $\\tfrac{1}{2} \\times 2 \\times 9 = 9$ J."),
         ]),
     ],
 )
@@ -280,15 +280,15 @@ section_t4 = section(
                     q4_1, "J", "Work done by the brakes = KE.",
                     ewau(r"E = F \times d", r"E = 1200 \times 15", "18\\,000", "J")),
             numeric("en-t4-q2", "A 1000 kg car travelling at 20 m/s stops in 50 m. Calculate the average braking force.",
-                    q4_2, "N", "KE = ½ m v², then F = E ÷ d.",
+                    q4_2, "N", "$\\text{KE} = \\tfrac{1}{2} m v^2$, then $F = E \\div d$.",
                     [r"$KE = \tfrac{1}{2} \times 1000 \times 20^{2} = 200\,000$ J.", r"$F = \dfrac{E}{d} = \dfrac{200\,000}{50} = 4000$ N."]),
             numeric("en-t4-q3", "An 800 kg car travelling at 12 m/s brakes with a force of 4000 N. Calculate its braking distance.",
-                    q4_3, "m", "d = KE ÷ F.",
+                    q4_3, "m", "$d = \\text{KE} \\div F$.",
                     [r"$KE = \tfrac{1}{2} \times 800 \times 12^{2} = 57\,600$ J.", r"$d = \dfrac{57\,600}{4000} = 14.4$ m."]),
             numeric("en-t4-q4", "A box weighing 150 N is lifted 2.0 m onto a shelf. Calculate the minimum work done.",
                     q4_4, "J", "The lifting force equals the weight.",
                     ewau(r"E = F \times d", r"E = 150 \times 2.0", "300", "J")),
-            group("en-t4-q5", "A student pushes a 12 kg box 3.0 m up a ramp with a force of 50 N along the ramp. The top of the ramp is 1.0 m above the bottom. (g = 10 N/kg)", [
+            group("en-t4-q5", "A student pushes a 12 kg box 3.0 m up a ramp with a force of 50 N along the ramp. The top of the ramp is 1.0 m above the bottom. ($g = 10$ N/kg)", [
                 numeric("en-t4-q5a", "Calculate the work done by the student.", q4_5_work, "J", "Force × distance along the ramp.",
                         ewau(r"E = F \times d", r"E = 50 \times 3.0", "150", "J"), label="a"),
                 numeric("en-t4-q5b", "Calculate the GPE gained by the box.", q4_5_gpe, "J", "m g × vertical height.",
@@ -320,7 +320,7 @@ q5_5 = 500 * 8
 section_t5 = section(
     "power-hard", "tricky", "Power the hard way", "8.12, 8.13",
     equations=[r"P = \dfrac{E}{t}", r"E = P \times t", r"t = \dfrac{E}{P}"],
-    blurb="The power equation is easy; the questions are not, because the energy usually has to be found first (from m g Δh, ½ m v² or F × d) and the time is rarely given in seconds.",
+    blurb="The power equation is easy; the questions are not, because the energy usually has to be found first (from m g Δh, ½ $m v^2$ or $F \\times d$) and the time is rarely given in seconds.",
     checklist=[
         "Find the energy first (GPE, KE or work done), then divide by the time",
         "Convert minutes and hours to seconds, kW to W, MJ to J",
@@ -341,7 +341,7 @@ section_t5 = section(
         ),
         worked(
             "Power of a student doing step-ups",
-            "A student of mass 75 kg steps up onto a 20 cm high box 25 times in 60 s. Calculate her average power. (g = 10 N/kg)",
+            "A student of mass 75 kg steps up onto a 20 cm high box 25 times in 60 s. Calculate her average power. ($g = 10$ N/kg)",
             [
                 r"<b>Height climbed in total:</b> $25 \times 0.20 = 5.0$ m (centimetres to metres).",
                 r"<b>Energy:</b> $E = m g \Delta h = 75 \times 10 \times 5.0 = 3750$ J.",
@@ -349,20 +349,20 @@ section_t5 = section(
             ],
         ),
         practice("Power", [
-            numeric("en-t5-q1", "A 75 kg student steps onto a 20 cm box 25 times in 60 s. Calculate her average power. (g = 10 N/kg)",
+            numeric("en-t5-q1", "A 75 kg student steps onto a 20 cm box 25 times in 60 s. Calculate her average power. ($g = 10$ N/kg)",
                     sf(q5_1, 3), "W", "Total height = 25 × 0.20 m.",
                     [r"$\Delta h = 25 \times 0.20 = 5.0$ m; $E = 75 \times 10 \times 5.0 = 3750$ J.", r"$P = \dfrac{3750}{60} = 62.5$ W."]),
             numeric("en-t5-q2", "A 2 kW kettle runs for 1.5 minutes. Calculate the energy transferred.",
                     q5_2, "J", "2000 W × 90 s.",
                     ewau(r"E = P \times t", r"E = 2000 \times 90", "180\\,000", "J")),
             numeric("en-t5-q3", "A crane motor rated at 2.5 kW lifts a load, giving it 150 kJ of GPE. Calculate the minimum time this takes.",
-                    q5_3, "s", "t = E ÷ P, both in base units.",
+                    q5_3, "s", "$t = E \\div P$, both in base units.",
                     ewau(r"t = \dfrac{E}{P}", r"t = \dfrac{150 \times 10^{3}}{2.5 \times 10^{3}}", "60", "s")),
             numeric("en-t5-q4", "A 3.0 kW heater transfers 1.2 MJ to a room. Calculate how long it was on, in minutes.",
                     sf(q5_4, 3), "min", "Find the seconds, then ÷ 60.",
                     [r"$t = \dfrac{E}{P} = \dfrac{1.2 \times 10^{6}}{3.0 \times 10^{3}} = 400$ s.", r"$400 \div 60 = 6.67$ min."]),
             numeric("en-t5-q5", "A cyclist pushes with a force of 500 N while travelling at a steady 8 m/s. Calculate her power output.",
-                    q5_5, "W", "In 1 s she moves 8 m, so work done per second = F × 8.",
+                    q5_5, "W", "In 1 s she moves 8 m, so work done per second = $F \\times 8$.",
                     [r"Work done each second $= F \times d = 500 \times 8 = 4000$ J.", r"So $P = 4000$ W (power = force × speed)."]),
             written("en-t5-q6", "Describe how a student could measure their own power by running up a flight of stairs. (4)",
                     mark_scheme([
@@ -409,7 +409,7 @@ section_t6 = section(
         ),
         worked(
             "Efficiency of a motor from a lift",
-            "A motor is supplied with 25 000 J of energy and lifts a 500 kg load through 4.0 m. Calculate its efficiency. (g = 10 N/kg)",
+            "A motor is supplied with 25 000 J of energy and lifts a 500 kg load through 4.0 m. Calculate its efficiency. ($g = 10$ N/kg)",
             [
                 r"<b>Useful energy:</b> $\Delta GPE = m g \Delta h = 500 \times 10 \times 4.0 = 20\,000$ J.",
                 r"<b>Efficiency:</b> $\dfrac{\text{useful}}{\text{total}} = \dfrac{20\,000}{25\,000} = 0.80$, or 80%.",
@@ -423,7 +423,7 @@ section_t6 = section(
             numeric("en-t6-q2", "A 60 W filament lamp is 40% efficient. Calculate the wasted power.",
                     60 - q6_2, "W", "Useful = 0.4 × 60; wasted = total − useful.",
                     [r"Useful $= 0.40 \times 60 = 24$ W.", r"Wasted $= 60 - 24 = 36$ W, transferred by heating to the surroundings."]),
-            group("en-t6-q3", "A lift motor is supplied with 25 000 J and raises a 500 kg lift car through 4.0 m. (g = 10 N/kg)", [
+            group("en-t6-q3", "A lift motor is supplied with 25 000 J and raises a 500 kg lift car through 4.0 m. ($g = 10$ N/kg)", [
                 numeric("en-t6-q3a", "Calculate the useful energy transferred to the lift car.", q6_3_in, "J", "m g Δh.",
                         ewau(r"\Delta GPE = m g \Delta h", r"\Delta GPE = 500 \times 10 \times 4.0", "20\\,000", "J"), label="a"),
                 numeric("en-t6-q3b", "Calculate the efficiency of the motor as a decimal.", q6_3_eff, "", "useful ÷ total.",

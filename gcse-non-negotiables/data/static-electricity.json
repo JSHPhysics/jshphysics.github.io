@@ -1546,7 +1546,7 @@
     },
     {
       "q": "Two charged objects attract; one is much lighter. What is the same and what differs?",
-      "a": "The forces are equal and opposite; the lighter one has the larger acceleration (a = F/m).",
+      "a": "The forces are equal and opposite; the lighter one has the larger acceleration ($a = F/m$).",
       "section": "electron-force-chains"
     },
     {

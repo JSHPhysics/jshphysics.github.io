@@ -177,7 +177,7 @@ section_t3 = section(
                         marks(["Q's line has the <b>longer wavelength</b> / <b>bigger red-shift</b> (24 nm against 4 nm), so Q is moving away faster…",
                                "…and <b>more distant galaxies have the bigger red-shift</b> (move away faster)."]), lines=3),
                 numeric("as-t3-q1c", "The red-shift z = (change in wavelength) ÷ (original wavelength). Calculate z for galaxy Q.", 0.049, "",
-                        "Δλ = 510 − 486 nm.", [r"$z = \dfrac{510 - 486}{486} = \dfrac{24}{486} = 0.049$ (2 s.f.)."]),
+                        "$\\Delta \\lambda = 510 - 486$ nm.", [r"$z = \dfrac{510 - 486}{486} = \dfrac{24}{486} = 0.049$ (2 s.f.)."]),
             ]),
             written("as-t3-q2", "Explain how the red-shift of light from distant galaxies provides evidence that the Universe is expanding. (3)",
                     mark_scheme([
@@ -188,7 +188,7 @@ section_t3 = section(
             choice("as-t3-q3", "Why does red-shift NOT prove the Big Bang theory on its own?",
                    ["It is not real", "The Steady State theory also describes an expanding Universe and so also predicts red-shift", "Only nearby galaxies show it", "It only applies to stars"], 1,
                    "Red-shift is evidence for expansion, which both theories include."),
-            numeric("as-t3-q4", "A galaxy has a red-shift z = 0.02. Its recession velocity is given by v = z × c, where c = 3 × 10⁸ m/s. Calculate v.", 6000000, "m/s",
+            numeric("as-t3-q4", "A galaxy has a red-shift $z = 0.02$. Its recession velocity is given by $v = z \\times c$, where $c = 3 \\times 10^8$ m/s. Calculate v.", 6000000, "m/s",
                     "Multiply; 0.02 × 3 × 10⁸.", [r"$v = 0.02 \times 3 \times 10^8 = 6 \times 10^6$ m/s (6000 km/s)."]),
             written("as-t3-q5", "A student writes: \"Red-shift means the galaxies are moving away from the Earth, so the Earth is at the centre of the Universe.\" Explain why the conclusion is wrong. (2)",
                     marks(["If <b>space itself is expanding</b>, every galaxy moves away from every other — an observer in <b>any</b> galaxy sees the same red-shift pattern.",
@@ -409,7 +409,7 @@ section_t7 = section(
         ),
         worked(
             "Via the mass, then ratios",
-            "An astronaut weighs 720 N on Earth (g = 10 N/kg). (a) Calculate his weight on the Moon (g = 1.6 N/kg). (b) On Mars g is 0.38 times its value on Earth. Calculate his weight on Mars without finding his mass again.",
+            "An astronaut weighs 720 N on Earth ($g = 10$ N/kg). (a) Calculate his weight on the Moon ($g = 1.6$ N/kg). (b) On Mars g is 0.38 times its value on Earth. Calculate his weight on Mars without finding his mass again.",
             [
                 r"<b>(a)</b> Mass: $m = \dfrac{W}{g} = \dfrac{720}{10} = 72$ kg.",
                 r"On the Moon: $W = m \times g = 72 \times 1.6 = 115$ N (3 s.f.).",
@@ -417,20 +417,20 @@ section_t7 = section(
             ],
         ),
         practice("Weight the hard way", [
-            numeric("as-t7-q1", "A rock weighs 24 N on the Moon (g = 1.6 N/kg). Calculate its weight on Earth (g = 10 N/kg).", 150, "N", "Mass first.",
+            numeric("as-t7-q1", "A rock weighs 24 N on the Moon ($g = 1.6$ N/kg). Calculate its weight on Earth ($g = 10$ N/kg).", 150, "N", "Mass first.",
                     [r"$m = \dfrac{24}{1.6} = 15$ kg.", r"On Earth $W = 15 \times 10 = 150$ N."]),
-            numeric("as-t7-q2", "A newton meter reads 11.1 N when a 3 kg mass hangs from it on Mars. Calculate g on Mars.", 3.7, "N/kg", "g = W ÷ m.",
+            numeric("as-t7-q2", "A newton meter reads 11.1 N when a 3 kg mass hangs from it on Mars. Calculate g on Mars.", 3.7, "N/kg", "$g = W \\div m$.",
                     [r"$g = \dfrac{W}{m} = \dfrac{11.1}{3} = 3.7$ N/kg."]),
             numeric("as-t7-q3", "On Jupiter g is 2.5 times its value on Earth. A probe weighs 400 N on Earth. Calculate its weight on Jupiter.", 1000, "N", "Weight scales with g.",
-                    [r"$W_{\text{Jupiter}} = 2.5 \times 400 = 1000$ N (or: m = 40 kg, W = 40 × 25 = 1000 N)."]),
-            group("as-t7-q4", "An astronaut takes a 1 kg mass, a beam balance with standard masses, and a newton meter to the Moon (g = 1.6 N/kg).", [
-                numeric("as-t7-q4a", "Calculate the newton meter reading when the 1 kg mass hangs from it on the Moon.", 1.6, "N", "W = m × g.",
+                    [r"$W_{\text{Jupiter}} = 2.5 \times 400 = 1000$ N (or: $m = 40$ kg, $W = 40 \times 25 = 1000$ N)."]),
+            group("as-t7-q4", "An astronaut takes a 1 kg mass, a beam balance with standard masses, and a newton meter to the Moon ($g = 1.6$ N/kg).", [
+                numeric("as-t7-q4a", "Calculate the newton meter reading when the 1 kg mass hangs from it on the Moon.", 1.6, "N", "$W = m \\times g$.",
                         [r"$W = 1 \times 1.6 = 1.6$ N (it read 10 N on Earth)."]),
                 written("as-t7-q4b", "Explain what the beam balance shows when the 1 kg mass is placed on one side and a 1 kg standard mass on the other. (2)",
                         marks(["It <b>balances</b> — it still shows 1 kg.",
                                "Both masses are pulled by the <b>same (reduced) g</b>, so their weights are reduced equally and the balance compares <b>masses</b>, which have not changed."]), lines=3),
             ]),
-            numeric("as-t7-q5", "A planet has g = 15 N/kg. A person weighs 900 N there. Calculate the person's mass.", 60, "kg", "m = W ÷ g.",
+            numeric("as-t7-q5", "A planet has $g = 15$ N/kg. A person weighs 900 N there. Calculate the person's mass.", 60, "kg", "$m = W \\div g$.",
                     [r"$m = \dfrac{900}{15} = 60$ kg — the same mass anywhere."]),
             written("as-t7-q6", "Explain why astronauts in the International Space Station appear weightless even though g there is about 8.7 N/kg. (2)",
                     marks(["Gravity still acts on them (their weight is about 87% of its value on the ground) — that is what keeps the station in orbit.",
@@ -453,7 +453,7 @@ FACTS = [
     fact("Where is the asteroid belt?", "Between Mars and Jupiter.", "solar-system"),
     fact("Which four planets are small and rocky, and which four are gas giants?", "Rocky: Mercury, Venus, Earth, Mars. Gas giants: Jupiter, Saturn, Uranus, Neptune.", "solar-system"),
     # Weight
-    fact("What is the equation for weight?", "W = m × g (weight = mass × gravitational field strength).", "weight-elsewhere-nn"),
+    fact("What is the equation for weight?", "$W = m \\times g$ (weight = mass × gravitational field strength).", "weight-elsewhere-nn"),
     fact("Does your mass change on the Moon? Does your weight?", "Mass: no, it is the same everywhere. Weight: yes, it is about a sixth, because g on the Moon is about 1.6 N/kg.", "weight-elsewhere-nn"),
     fact("What does g at the surface of a body depend on?", "The body's mass (more mass → larger g) and its radius (larger radius → smaller g).", "weight-elsewhere-nn"),
     fact("g on the Earth, Moon, Mars and Jupiter?", "Earth 10 N/kg; Moon 1.6 N/kg; Mars 3.7 N/kg; Jupiter 25 N/kg.", "weight-elsewhere-nn"),
@@ -519,6 +519,6 @@ FACTS = [
     fact("What does Level 3 need in the 6-mark Big Bang evidence question?", "At least one piece of evidence described AND linked to what it shows (CMB → hot beginning; red-shift → expansion), the other identified. Isolated statements are Level 1.", "cmb-decides"),
     fact("Three word traps about the Big Bang and CMB?", "CMB is microwaves (not light or radio); it comes from all directions (not one place); the Big Bang was the expansion of space, not an explosion in space.", "cmb-decides"),
     fact("'Telescopes are on satellites because they are in space' — why no marks?", "It gives the location but not the reason: say the atmosphere absorbs or distorts the radiation.", "space-telescopes"),
-    fact("Convert a weight on Earth to a weight on the Moon.", "Mass first (m = W ÷ 10), then W = m × 1.6. Or use the ratio: Moon weight = Earth weight × 1.6/10.", "weight-hard"),
+    fact("Convert a weight on Earth to a weight on the Moon.", "Mass first ($m = W \\div 10$), then $W = m \\times 1.6$. Or use the ratio: Moon weight = Earth weight × 1.6/10.", "weight-hard"),
     fact("Why do astronauts in the ISS float, when g there is about 8.7 N/kg?", "They and the station are falling towards the Earth together, so nothing pushes up on them — gravity is still acting and keeps them in orbit.", "weight-hard"),
 ]

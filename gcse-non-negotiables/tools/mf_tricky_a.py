@@ -81,7 +81,7 @@ section_t1 = {
                 "add it for total <b>distance</b>, subtract it for <b>displacement</b>.</p>"
                 "<p><b>3. Converting between the two graphs.</b></p>"
                 "<table class='tbl'><tr><th>Motion</th><th>Distance–time graph</th><th>Velocity–time graph</th></tr>"
-                "<tr><td>Stationary</td><td>Horizontal line</td><td>Line along the time axis (v = 0)</td></tr>"
+                "<tr><td>Stationary</td><td>Horizontal line</td><td>Line along the time axis ($v = 0$)</td></tr>"
                 "<tr><td>Constant velocity</td><td>Straight line, sloping</td><td>Horizontal line above the axis</td></tr>"
                 "<tr><td>Constant acceleration from rest</td><td>Curve getting steeper</td><td>Straight line sloping up from the origin</td></tr>"
                 "<tr><td>Constant deceleration to rest</td><td>Curve flattening out</td><td>Straight line sloping down to the axis</td></tr>"
@@ -223,7 +223,7 @@ section_t2 = {
         {
             "kind": "worked",
             "title": "Instantaneous speed from a tangent",
-            "question": "The graph shows the distance travelled by a sprinter leaving the blocks. The tangent at P (t = 6 s) is drawn. Calculate the sprinter's speed at 6 s.",
+            "question": "The graph shows the distance travelled by a sprinter leaving the blocks. The tangent at P ($t = 6 s$) is drawn. Calculate the sprinter's speed at 6 s.",
             "graph": graph_t2_w,
             "steps": [
                 r"The tangent at P passes through $(3,\ 0)$ and $(8,\ 30)$ — read where it crosses gridline intersections.",
@@ -235,7 +235,7 @@ section_t2 = {
             "kind": "practice",
             "title": "Tangents and curves",
             "questions": [
-                group("t2-t2-q1", "The graph shows the distance travelled by a car as it slows down for a junction. The tangent at Q (t = 4 s) is drawn.", [
+                group("t2-t2-q1", "The graph shows the distance travelled by a car as it slows down for a junction. The tangent at Q ($t = 4 s$) is drawn.", [
                     choice("t2-t2-q1a", "How can you tell from the shape of the graph that the car is slowing down?",
                            ["The line is going up", "The curve gets flatter (less steep) as time goes on", "The curve gets steeper", "The graph is a curve"], 1,
                            "The gradient of a distance–time graph is the speed. The curve flattens out, so the gradient — and the speed — is decreasing.", label="a"),
@@ -247,7 +247,7 @@ section_t2 = {
                            ["4 s", "7 s", "10 s", "It never stops"], 2,
                            "The car is stationary when the distance stops changing — where the curve becomes horizontal, at 10 s.", label="c"),
                 ], graph=graph_t2_1),
-                group("t2-t2-q2", "The graph shows the velocity of a skydiver after jumping from a plane. The tangent at t = 0 is drawn.", [
+                group("t2-t2-q2", "The graph shows the velocity of a skydiver after jumping from a plane. The tangent at $t = 0$ is drawn.", [
                     numeric("t2-t2-q2a", "Use the tangent to calculate the skydiver's acceleration at the moment of jumping.", sf(t2_2), "m/s²",
                             "The tangent goes from (0, 0) to (5, 50).",
                             [r"Gradient of tangent $= \dfrac{50 - 0}{5 - 0} = 10$ m/s²."]
@@ -292,7 +292,7 @@ section_t3 = {
     "equations": [ACC_EQ, SUVAT_EQ],
     "checklist": [
         "List u, v, a, t and x, and pick the equation that contains the three you know and the one you want",
-        "Use a negative acceleration for an object slowing down, and v = 0 for an object stopping",
+        "Use a negative acceleration for an object slowing down, and $v = 0$ for an object stopping",
         "Chain two equations: find one quantity, then use it in the next step",
     ],
     "parts": [
@@ -331,21 +331,21 @@ section_t3 = {
             "title": "Choosing the route",
             "questions": [
                 numeric("t2-t3-q1", "A lorry travelling at 18 m/s brakes and stops in a distance of 27 m. Calculate its acceleration. Include the sign.", sf(t3_1), "m/s²",
-                        "You have u, v (= 0) and x, so there is no time: use v² − u² = 2ax.",
+                        "You have u, v (= 0) and x, so there is no time: use $v^2 - u^2 = 2ax$.",
                         ewau(SUVAT_EQ, r"0 - 18^2 = 2 \times a \times 27 \quad\Rightarrow\quad a = \dfrac{-324}{54}", "-6", "m/s²")),
                 group("t2-t3-q2", "A cyclist starts from rest and accelerates at 1.2 m/s² along 60 m of straight road.", [
                     numeric("t2-t3-q2a", "Calculate her velocity at the end of the 60 m.", sf(t3_2v), "m/s",
-                            "No time is given: v² = u² + 2ax with u = 0.",
+                            "No time is given: $v^2 = u^2 + 2ax$ with $u = 0$.",
                             ewau(SUVAT_EQ, r"v^2 = 0 + 2 \times 1.2 \times 60 = 144 \quad\Rightarrow\quad v = \sqrt{144}", "12", "m/s"), label="a"),
                     numeric("t2-t3-q2b", "Calculate how long the 60 m takes.", sf(t3_2t), "s",
-                            "Now you know v, use a = (v − u)/t rearranged for t.",
+                            "Now you know v, use $a = (v - u)/t$ rearranged for t.",
                             ewau(T_EQ, r"t = \dfrac{12 - 0}{1.2}", "10", "s"), label="b"),
                 ]),
                 choice("t2-t3-q3", "A question gives the initial velocity, the acceleration and the distance, and asks for the final velocity. Which equation should you use?",
-                       ["a = (v − u) ÷ t", "v² − u² = 2ax", "speed = distance ÷ time", "F = ma"], 1,
-                       "No time is given or wanted, so the equation without t is the one: v² − u² = 2ax."),
-                numeric("t2-t3-q4", "A ball is thrown straight up at 15 m/s. Calculate the maximum height it reaches. (g = 10 m/s²; ignore air resistance.)", 11.25, "m",
-                        "At the top the ball is momentarily at rest, v = 0. Taking up as positive, a = −10 m/s².",
+                       ["$a = (v - u) \\div t$", "$v^2 - u^2 = 2ax$", "speed = distance ÷ time", "$F = ma$"], 1,
+                       "No time is given or wanted, so the equation without t is the one: $v^2 - u^2 = 2ax$."),
+                numeric("t2-t3-q4", "A ball is thrown straight up at 15 m/s. Calculate the maximum height it reaches. ($g = 10$ m/s²; ignore air resistance.)", 11.25, "m",
+                        "At the top the ball is momentarily at rest, $v = 0$. Taking up as positive, $a = -10$ m/s².",
                         ewau(SUVAT_EQ, r"0 - 15^2 = 2 \times (-10) \times x \quad\Rightarrow\quad x = \dfrac{-225}{-20}", "11.25", "m")
                         + ["Both minus signs matter: get one wrong and the height comes out negative."]),
                 written("t2-t3-q5", "A student calculates the acceleration of a braking car and gets −3 m/s². Explain what the minus sign means.",
@@ -353,10 +353,10 @@ section_t3 = {
                                "So the car is slowing down: it is a deceleration of 3 m/s² — its velocity decreases by 3 m/s every second."]), lines=2),
                 group("t2-t3-q6", "A car travelling at 10 m/s accelerates at 2 m/s² for 8 s.", [
                     numeric("t2-t3-q6a", "Calculate its final velocity.", sf(t3_6v), "m/s",
-                            "You have u, a and t: v = u + at.",
+                            "You have u, a and t: $v = u$ + at.",
                             ewau(V_EQ, r"v = 10 + 2 \times 8", "26", "m/s"), label="a"),
                     numeric("t2-t3-q6b", "Calculate the distance it travels in the 8 s.", sf(t3_6x), "m",
-                            "Now you know u, v and a; use v² − u² = 2ax (or the area under a v–t graph: a trapezium with sides 10 and 26 and width 8).",
+                            "Now you know u, v and a; use $v^2 - u^2 = 2ax$ (or the area under a v–t graph: a trapezium with sides 10 and 26 and width 8).",
                             ewau(SUVAT_EQ, r"26^2 - 10^2 = 2 \times 2 \times x \quad\Rightarrow\quad x = \dfrac{676 - 100}{4}", "144", "m")
                             + [r"Check: trapezium area $\tfrac{1}{2}(10 + 26) \times 8 = 144$ m. ✓"], label="b"),
                 ]),
@@ -382,10 +382,10 @@ section_t4 = {
     "band": "tricky",
     "lessons": "2.14–2.15",
     "title": "Resultant force → acceleration, and terminal velocity",
-    "blurb": "Two forces, one resultant, then F = ma. And the story of a falling object: the acceleration shrinks while the speed keeps growing.",
+    "blurb": "Two forces, one resultant, then $F = ma$. And the story of a falling object: the acceleration shrinks while the speed keeps growing.",
     "equations": [r"\text{resultant} = F_1 - F_2", A_EQ],
     "checklist": [
-        "Find the resultant of two opposing forces, then use it in F = ma (not one of the forces on its own)",
+        "Find the resultant of two opposing forces, then use it in $F = ma$ (not one of the forces on its own)",
         "Work out the weight first when one of the forces is gravity",
         "Describe and explain the motion of a falling object up to terminal velocity",
         "Say which way the acceleration points at the top of a throw",
@@ -411,7 +411,7 @@ section_t4 = {
         {
             "kind": "worked",
             "title": "A skydiver part-way down",
-            "question": "A skydiver has a mass of 70 kg. At one moment the air resistance on him is 300 N. Calculate his acceleration at that moment. (g = 10 N/kg.)",
+            "question": "A skydiver has a mass of 70 kg. At one moment the air resistance on him is 300 N. Calculate his acceleration at that moment. ($g = 10$ N/kg.)",
             "steps": [
                 r"Weight first: $W = m \times g = 70 \times 10 = 700$ N, downwards.",
                 r"Resultant force $= 700 - 300 = 400$ N, downwards (weight is bigger, so he is still speeding up).",
@@ -427,18 +427,18 @@ section_t4 = {
                         [r"Resultant $= 4500 - 1500 = 3000$ N."] + ewau(A_EQ, r"a = \dfrac{3000}{1500}", "2", "m/s²")),
                 choice("t2-t4-q2", "An 80 kg skydiver experiences 800 N of air resistance. Which statement is correct?",
                        ["She is accelerating downwards at 10 m/s²", "She is slowing down", "She is falling at a constant velocity", "She is moving upwards"], 2,
-                       "Her weight is 80 × 10 = 800 N, equal to the air resistance. Resultant force zero → constant velocity. This is terminal velocity."),
+                       "Her weight is $80 \\times 10 = 800$ N, equal to the air resistance. Resultant force zero → constant velocity. This is terminal velocity."),
                 written("t2-t4-q3", "A skydiver jumps from a plane. Describe and explain how her velocity changes from the moment she jumps until she reaches terminal velocity. (Do not consider the parachute.)",
                         marks(["At first only her weight acts (air resistance is zero because she is not yet moving), so the resultant force is large and she accelerates at 10 m/s².",
                                "As her velocity increases, air resistance increases, so the resultant force (weight − air resistance) decreases.",
                                "Her acceleration therefore decreases — but she is still speeding up, because the resultant still acts downwards.",
                                "Eventually air resistance equals her weight. The resultant force is zero, so her velocity stops changing: she falls at a constant (terminal) velocity."]), lines=5),
-                numeric("t2-t4-q4", "A model rocket of mass 100 kg produces a thrust of 1.5 kN upwards. Calculate its acceleration at launch. (g = 10 N/kg.)", sf(t4_4), "m/s²",
+                numeric("t2-t4-q4", "A model rocket of mass 100 kg produces a thrust of 1.5 kN upwards. Calculate its acceleration at launch. ($g = 10$ N/kg.)", sf(t4_4), "m/s²",
                         "Thrust up, weight down. Find the weight, then the resultant.",
                         [r"Weight $= 100 \times 10 = 1000$ N. Thrust $= 1500$ N.", r"Resultant $= 1500 - 1000 = 500$ N upwards."]
                         + ewau(A_EQ, r"a = \dfrac{500}{100}", "5", "m/s² upwards")),
                 numeric("t2-t4-q5", "A lift of mass 600 kg is pulled upwards by a cable with a tension of 7200 N. Calculate the lift's acceleration.", sf(t4_5), "m/s²",
-                        "Weight = 600 × 10 = 6000 N.",
+                        "Weight = $600 \\times 10 = 6000$ N.",
                         [r"Resultant $= 7200 - 6000 = 1200$ N upwards."] + ewau(A_EQ, r"a = \dfrac{1200}{600}", "2", "m/s² upwards")),
                 choice("t2-t4-q6", "A ball is thrown straight up. At the very top of its flight, what is its acceleration? (Ignore air resistance.)",
                        ["Zero, because it is momentarily at rest", "10 m/s² downwards", "10 m/s² upwards", "It depends on how hard it was thrown"], 1,
@@ -512,7 +512,7 @@ section_t5 = {
                        ["The cannon exerts a bigger force on the ball than the ball exerts on the cannon, because the ball moves faster",
                         "The forces are equal; the ball accelerates more because its mass is much smaller",
                         "Only the ball experiences a force", "The cannon exerts no force because it is heavy"], 1,
-                       "Third-law forces are always equal. The ball's acceleration is large because a = F/m with a small m; the cannon's recoil acceleration is small for the same F and a large m."),
+                       "Third-law forces are always equal. The ball's acceleration is large because $a = F/m$ with a small m; the cannon's recoil acceleration is small for the same F and a large m."),
                 written("t2-t5-q4", "Use Newton's third law to explain why momentum is conserved when two trolleys collide.",
                         marks(["During the collision trolley A exerts a force on trolley B, and B exerts an equal and opposite force on A (Newton's third law).",
                                "The two forces act for the same time (the time they are in contact).",
@@ -671,15 +671,15 @@ section_t7 = {
                         "Force divided by acceleration.",
                         ewau(INERTIAL_EQ, r"m = \dfrac{50}{2.5}", "20", "kg")),
                 numeric("t2-t7-q2", "A 20 N push gives a loaded trolley an acceleration of 8 m/s². Calculate its inertial mass.", sf(t7_2), "kg",
-                        "m = F ÷ a.",
+                        "$m = F \\div a$.",
                         ewau(INERTIAL_EQ, r"m = \dfrac{20}{8}", "2.5", "kg")),
                 written("t2-t7-q3", "Explain what is meant by the inertial mass of an object.",
                         marks(["A measure of how difficult it is to change the velocity of the object (including starting it from rest).",
-                               "It is defined as the ratio of the force applied to the acceleration produced: m = F ÷ a."]), lines=2),
+                               "It is defined as the ratio of the force applied to the acceleration produced: $m = F \\div a$."]), lines=2),
                 choice("t2-t7-q4", "The same resultant force is applied to a tennis ball and to a bowling ball. Which statement is correct?",
                        ["They have the same acceleration", "The bowling ball accelerates less because it has more inertial mass",
                         "The bowling ball accelerates more because it is heavier", "The tennis ball accelerates less because it is lighter"], 1,
-                       "a = F ÷ m: with the same F, the larger mass gets the smaller acceleration. The bowling ball's velocity is harder to change."),
+                       "$a = F \\div m$: with the same F, the larger mass gets the smaller acceleration. The bowling ball's velocity is harder to change."),
                 numeric("t2-t7-q5", "On Earth a shopping trolley needs a resultant force of 50 N to accelerate at 2 m/s². On the Moon, what resultant force would give the same trolley the same acceleration?", 50, "N",
                         "Inertial mass does not depend on gravity.",
                         [r"Inertial mass $= \dfrac{50}{2} = 25$ kg — the same on the Moon.", r"$F = m \times a = 25 \times 2 = 50$ N, exactly as on Earth.",

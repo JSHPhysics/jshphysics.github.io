@@ -458,13 +458,13 @@
                 "Focal length 1 m"
               ],
               "correct": 2,
-              "explain": "P = 1/f: the shortest focal length (0.1 m, 10 D) is the most powerful."
+              "explain": "$P = 1/f$: the shortest focal length (0.1 m, 10 D) is the most powerful."
             },
             {
               "id": "le-n5-q3",
               "type": "written",
               "text": "Describe how the power of a lens depends on its focal length and its shape. (2)",
-              "model": "<ul><li>The <b>shorter the focal length</b>, the <b>higher the power</b> (P = 1/f).</li><li>A <b>more curved</b> (fatter, thicker-in-the-middle) lens has a shorter focal length and so a higher power.</li></ul>",
+              "model": "<ul><li>The <b>shorter the focal length</b>, the <b>higher the power</b> ($P = 1/f$).</li><li>A <b>more curved</b> (fatter, thicker-in-the-middle) lens has a shorter focal length and so a higher power.</li></ul>",
               "lines": 3
             },
             {
@@ -502,7 +502,7 @@
       "checklist": [
         "Describe what converging and diverging lenses do to parallel rays, and define focal length",
         "Relate the power of a lens to its focal length and its shape",
-        "Use P = 1/f with f in metres and the unit D"
+        "Use $P = 1/f$ with f in metres and the unit D"
       ],
       "blurb": "A converging (convex) lens brings parallel rays to a focus; a diverging (concave) lens spreads them out. The <b>focal length</b> is the distance from the lens to the focus, and the <b>power</b> is 1 ÷ focal length: a fatter, more curved lens has a shorter focal length and a higher power.",
       "tags": [
@@ -571,12 +571,12 @@
             {
               "id": "le-n6-q3",
               "type": "numeric",
-              "text": "A microwave oven uses a frequency of 2.4 GHz. Calculate the wavelength of the microwaves. (v = 3 × 10⁸ m/s)",
+              "text": "A microwave oven uses a frequency of 2.4 GHz. Calculate the wavelength of the microwaves. ($v = 3 \\times 10^8$ m/s)",
               "answer": {
                 "value": 0.125,
                 "unit": "m"
               },
-              "hint": "2.4 GHz = 2.4 × 10⁹ Hz; λ = v ÷ f.",
+              "hint": "2.4 GHz = 2.4 × 10⁹ Hz; $\\lambda = v \\div f$.",
               "walkthrough": [
                 "<b>Equation:</b> $\\lambda = \\dfrac{v}{f}$",
                 "<b>Working:</b> $\\lambda = \\dfrac{3 \\times 10^{8}}{2.4 \\times 10^{9}}$",
@@ -587,7 +587,7 @@
             {
               "id": "le-n6-q4",
               "type": "numeric",
-              "text": "Orange light has a wavelength of 600 nm. Calculate its frequency. (v = 3 × 10⁸ m/s)",
+              "text": "Orange light has a wavelength of 600 nm. Calculate its frequency. ($v = 3 \\times 10^8$ m/s)",
               "answer": {
                 "value": 500000000000000,
                 "unit": "Hz"
@@ -618,7 +618,7 @@
                 "Its speed increases"
               ],
               "correct": 1,
-              "explain": "Frequency is fixed by the source; v = fλ, so wavelength falls with speed."
+              "explain": "Frequency is fixed by the source; $v = f\\lambda$, so wavelength falls with speed."
             }
           ]
         }
@@ -626,7 +626,7 @@
       "checklist": [
         "State the three facts: transverse, same speed in a vacuum (3 × 10⁸ m/s), transfer energy from source to observer",
         "Give an example of an EM wave transferring energy",
-        "Use v = f × λ with c = 3 × 10⁸ m/s and the right prefixes"
+        "Use $v = f \\times \\lambda$ with $c = 3 \\times 10^8$ m/s and the right prefixes"
       ],
       "blurb": "Radio waves, light and gamma rays are all the same kind of wave: <b>transverse</b> electromagnetic waves that all travel at the <b>same speed in a vacuum</b> and <b>transfer energy</b> from the source to whatever absorbs them."
     },
@@ -1087,7 +1087,7 @@
                 "Critical angle only applies to lenses"
               ],
               "correct": 1,
-              "explain": "The critical angle is where r = 90°; TIR needs i greater than the critical angle."
+              "explain": "The critical angle is where $r = 90$°; TIR needs i greater than the critical angle."
             },
             {
               "id": "le-kw-q8",
@@ -1123,7 +1123,7 @@
         {
           "kind": "explain",
           "title": "The core practical: i against r in a glass block",
-          "html": "<p><b>Method</b> (what a 4-mark \"describe how\" answer needs — June 2025 Q5(a) was marked on whether \"a well-structured procedure that, if followed, would result in the correct ray being drawn\"):</p><ol><li>Place the <b>rectangular glass block</b> on a sheet of paper and <b>draw round it</b>.</li><li>Use a <b>ray box</b> (with a single-slit) to shine a <b>narrow ray</b> into one face at an angle.</li><li>Mark the <b>incident ray</b> with two crosses (or a line) and the <b>emergent ray</b> where it leaves the block with two more.</li><li><b>Remove the block</b>, join the crosses to draw the rays, and join the entry and exit points to draw the <b>refracted ray inside</b> the block.</li><li>Draw the <b>normal</b> at the entry point with a protractor (90° to the face); <b>measure the angle of incidence and the angle of refraction</b> from the normal.</li><li><b>Repeat</b> for several angles of incidence (e.g. 10° to 70°), and repeat each reading; <b>plot</b> angle of refraction against angle of incidence.</li></ol><p>Draw a <b>labelled diagram</b> as part of the answer — the examiners say so every year.</p><p><b>Results:</b> r is always <b>smaller</b> than i (the ray bends towards the normal); the graph is a <b>curve</b> through the origin that gets less steep — r is <i>not</i> proportional to i. A ray along the normal (i = 0) does not bend. The emergent ray is parallel to the incident ray.</p>",
+          "html": "<p><b>Method</b> (what a 4-mark \"describe how\" answer needs — June 2025 Q5(a) was marked on whether \"a well-structured procedure that, if followed, would result in the correct ray being drawn\"):</p><ol><li>Place the <b>rectangular glass block</b> on a sheet of paper and <b>draw round it</b>.</li><li>Use a <b>ray box</b> (with a single-slit) to shine a <b>narrow ray</b> into one face at an angle.</li><li>Mark the <b>incident ray</b> with two crosses (or a line) and the <b>emergent ray</b> where it leaves the block with two more.</li><li><b>Remove the block</b>, join the crosses to draw the rays, and join the entry and exit points to draw the <b>refracted ray inside</b> the block.</li><li>Draw the <b>normal</b> at the entry point with a protractor (90° to the face); <b>measure the angle of incidence and the angle of refraction</b> from the normal.</li><li><b>Repeat</b> for several angles of incidence (e.g. 10° to 70°), and repeat each reading; <b>plot</b> angle of refraction against angle of incidence.</li></ol><p>Draw a <b>labelled diagram</b> as part of the answer — the examiners say so every year.</p><p><b>Results:</b> r is always <b>smaller</b> than i (the ray bends towards the normal); the graph is a <b>curve</b> through the origin that gets less steep — r is <i>not</i> proportional to i. A ray along the normal ($i = 0$) does not bend. The emergent ray is parallel to the incident ray.</p>",
           "graph": {
             "x": {
               "label": "angle of incidence i in °",
@@ -1245,7 +1245,7 @@
               "id": "le-t1-q6",
               "type": "written",
               "text": "Describe how a student could show that the angle of incidence and the angle of refraction are not proportional. (2)",
-              "model": "<ul><li>Measure r for several values of i and <b>plot a graph</b> of r against i.</li><li>Proportional would give a <b>straight line through the origin</b>; the points lie on a <b>curve</b> (or i ÷ r is not constant), so they are not proportional.</li></ul>",
+              "model": "<ul><li>Measure r for several values of i and <b>plot a graph</b> of r against i.</li><li>Proportional would give a <b>straight line through the origin</b>; the points lie on a <b>curve</b> (or $i \\div r$ is not constant), so they are not proportional.</li></ul>",
               "lines": 3
             }
           ]
@@ -1357,7 +1357,7 @@
         {
           "kind": "explain",
           "title": "From a graph",
-          "html": "<p>A question may give angles of refraction (in air) for a ray <b>leaving</b> glass at several angles of incidence (in glass) and ask for the critical angle. The refracted angle is bigger than the incident angle and the curve steepens; it reaches <b>r = 90°</b> at the critical angle.</p><p>The method the June 2023 scheme gave three marks for: <b>(1) extend (extrapolate) the curve</b> smoothly, <b>(2) until r = 90°</b>, <b>(3) read off the corresponding value of i</b> — drop a line to the i-axis and label it. For the data below the curve reaches 90° at about 42°.</p>",
+          "html": "<p>A question may give angles of refraction (in air) for a ray <b>leaving</b> glass at several angles of incidence (in glass) and ask for the critical angle. The refracted angle is bigger than the incident angle and the curve steepens; it reaches <b>$r = 90$°</b> at the critical angle.</p><p>The method the June 2023 scheme gave three marks for: <b>(1) extend (extrapolate) the curve</b> smoothly, <b>(2) until $r = 90$°</b>, <b>(3) read off the corresponding value of i</b> — drop a line to the i-axis and label it. For the data below the curve reaches 90° at about 42°.</p>",
           "graph": {
             "x": {
               "label": "angle of incidence in the glass i in °",
@@ -1415,7 +1415,7 @@
           "question": "Use the graph above to find the critical angle of the glass. (3 marks)",
           "steps": [
             "<b>Extend the curve</b> smoothly beyond the last point, following its steepening shape.",
-            "<b>Find where it reaches r = 90°</b> — the top of the graph.",
+            "<b>Find where it reaches $r = 90$°</b> — the top of the graph.",
             "<b>Read down to the i-axis:</b> about <b>42°</b>. Mark it on the graph: the examiner credits the construction lines."
           ]
         },
@@ -1426,7 +1426,7 @@
             {
               "id": "le-t3-q1",
               "type": "numeric",
-              "text": "Use the graph to estimate the critical angle of the glass. (Extend the curve to r = 90° and read i.)",
+              "text": "Use the graph to estimate the critical angle of the glass. (Extend the curve to $r = 90$° and read i.)",
               "answer": {
                 "value": 42,
                 "unit": "°",
@@ -1491,7 +1491,7 @@
               "id": "le-t3-q2",
               "type": "written",
               "text": "Describe how a student could find the critical angle of a semicircular glass block using a ray box. (3)",
-              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Aim</td><td>Shine a ray through the curved face <b>towards the centre of the flat face</b> (so it does not bend on entry).</td></tr><tr><td><b>2</b></td><td>Increase</td><td><b>Increase the angle of incidence</b> (in the glass) until the refracted ray <b>runs along the flat surface</b> (r = 90°) / TIR just starts.</td></tr><tr><td><b>3</b></td><td>Measure</td><td><b>Measure that angle of incidence</b> from the normal with a protractor — the critical angle; <b>repeat and average</b>.</td></tr></table>",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Aim</td><td>Shine a ray through the curved face <b>towards the centre of the flat face</b> (so it does not bend on entry).</td></tr><tr><td><b>2</b></td><td>Increase</td><td><b>Increase the angle of incidence</b> (in the glass) until the refracted ray <b>runs along the flat surface</b> ($r = 90$°) / TIR just starts.</td></tr><tr><td><b>3</b></td><td>Measure</td><td><b>Measure that angle of incidence</b> from the normal with a protractor — the critical angle; <b>repeat and average</b>.</td></tr></table>",
               "lines": 4
             },
             {
@@ -1542,7 +1542,7 @@
         "Find the critical angle from a graph of angle of refraction against angle of incidence",
         "Explain how optical fibres (and endoscopes) use total internal reflection"
       ],
-      "blurb": "Two ways the exam asks for the critical angle: describe the experiment that finds it, or read it off an i–r graph by extending the curve to r = 90°. No formula needed.",
+      "blurb": "Two ways the exam asks for the critical angle: describe the experiment that finds it, or read it off an i–r graph by extending the curve to $r = 90$°. No formula needed.",
       "tags": [
         "P"
       ]
@@ -2039,7 +2039,7 @@
         {
           "kind": "worked",
           "title": "A frequency range",
-          "question": "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies of visible light. (v = 3 × 10⁸ m/s) (3 marks)",
+          "question": "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies of visible light. ($v = 3 \\times 10^8$ m/s) (3 marks)",
           "steps": [
             "<b>Convert:</b> $400\\ \\text{nm} = 4.0 \\times 10^{-7}$ m; $700\\ \\text{nm} = 7.0 \\times 10^{-7}$ m.",
             "<b>Two frequencies:</b> $f = \\dfrac{v}{\\lambda}$: $\\dfrac{3 \\times 10^{8}}{4.0 \\times 10^{-7}} = 7.5 \\times 10^{14}$ Hz and $\\dfrac{3 \\times 10^{8}}{7.0 \\times 10^{-7}} = 4.3 \\times 10^{14}$ Hz.",
@@ -2053,12 +2053,12 @@
             {
               "id": "le-t9-q1",
               "type": "numeric",
-              "text": "The Sun is 1.5 × 10¹¹ m from the Earth. Calculate the time for light to reach the Earth. (v = 3 × 10⁸ m/s)",
+              "text": "The Sun is 1.5 × 10¹¹ m from the Earth. Calculate the time for light to reach the Earth. ($v = 3 \\times 10^8$ m/s)",
               "answer": {
                 "value": 500,
                 "unit": "s"
               },
-              "hint": "t = d ÷ v.",
+              "hint": "$t = d \\div v$.",
               "walkthrough": [
                 "<b>Equation:</b> $t = \\dfrac{d}{v}$",
                 "<b>Working:</b> $t = \\dfrac{1.5 \\times 10^{11}}{3 \\times 10^{8}}$",
@@ -2069,7 +2069,7 @@
             {
               "id": "le-t9-q2",
               "type": "numeric",
-              "text": "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies. Type the answer as 3.2e14. (v = 3 × 10⁸ m/s)",
+              "text": "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies. Type the answer as 3.2e14. ($v = 3 \\times 10^8$ m/s)",
               "answer": {
                 "value": 320000000000000,
                 "unit": "Hz"
@@ -2083,12 +2083,12 @@
             {
               "id": "le-t9-q3",
               "type": "numeric",
-              "text": "A microwave link uses waves of wavelength 1.2 cm. Calculate their frequency in GHz. (v = 3 × 10⁸ m/s)",
+              "text": "A microwave link uses waves of wavelength 1.2 cm. Calculate their frequency in GHz. ($v = 3 \\times 10^8$ m/s)",
               "answer": {
                 "value": 25,
                 "unit": "GHz"
               },
-              "hint": "1.2 cm = 0.012 m; f = v ÷ λ in Hz, then ÷ 10⁹.",
+              "hint": "1.2 cm = 0.012 m; $f = v \\div \\lambda$ in Hz, then ÷ 10⁹.",
               "walkthrough": [
                 "$f = \\dfrac{3 \\times 10^{8}}{0.012} = 2.5 \\times 10^{10}$ Hz.",
                 "$2.5 \\times 10^{10} \\div 10^{9} = 25$ GHz."
@@ -2102,7 +2102,7 @@
                 "value": 300000000,
                 "unit": "m/s"
               },
-              "hint": "v = f × λ with both in base units.",
+              "hint": "$v = f \\times \\lambda$ with both in base units.",
               "walkthrough": [
                 "<b>Equation:</b> $v = f \\times \\lambda$",
                 "<b>Working:</b> $v = 2.4 \\times 10^{9} \\times 0.125$",
@@ -2168,7 +2168,7 @@
                 "value": 8,
                 "unit": "cm"
               },
-              "hint": "f = 1 ÷ P in metres, then × 100. Finish the calculation.",
+              "hint": "$f = 1 \\div P$ in metres, then × 100. Finish the calculation.",
               "walkthrough": [
                 "$f = \\dfrac{1}{P} = \\dfrac{1}{12.5} = 0.08$ m.",
                 "$0.08 \\times 100 = 8$ cm."
@@ -2181,10 +2181,10 @@
         }
       ],
       "checklist": [
-        "Handle nm, GHz, MHz and standard form in v = fλ",
+        "Handle nm, GHz, MHz and standard form in $v = f\\lambda$",
         "Find a range of frequencies by subtracting two standard-form values",
-        "Find the time for light to travel a distance (t = d ÷ v) in standard form",
-        "Convert cm to m before P = 1/f, and give lens power with a sign"
+        "Find the time for light to travel a distance ($t = d \\div v$) in standard form",
+        "Convert cm to m before $P = 1/f$, and give lens power with a sign"
       ],
       "blurb": "The same equation, with the units and the standard form turned up: nanometres, gigahertz, a range of frequencies, a time for light to travel, and powers of lenses from focal lengths in centimetres."
     },
@@ -2235,7 +2235,7 @@
               "id": "le-t10-q2",
               "type": "written",
               "text": "Describe how a student could find the critical angle of a semicircular glass block. (6)",
-              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Change the <b>angle of incidence</b> in the glass; observe the <b>refracted ray</b> at the flat face; find the angle where it just disappears.</td></tr><tr><td><b>2</b></td><td>Relationship</td><td>The critical angle is the angle of incidence at which the angle of refraction is 90°; above it, total internal reflection.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Aim the ray through the curved face at the <b>centre of the flat face</b>; increase the angle of incidence by rotating the block on the paper.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Mark the rays; draw the normal at the centre of the flat face; <b>measure the angle of incidence with a protractor</b> when the refracted ray <b>runs along the surface</b>.</td></tr><tr><td><b>5</b></td><td>Use</td><td>That angle is the critical angle; (optionally) plot r against i and read i where r = 90°.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Narrow ray; mark crosses far apart; make sure the ray really passes through the centre of the flat face so it is not refracted on entry.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td><b>Repeat and calculate a mean</b> critical angle.</td></tr></table>",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Change the <b>angle of incidence</b> in the glass; observe the <b>refracted ray</b> at the flat face; find the angle where it just disappears.</td></tr><tr><td><b>2</b></td><td>Relationship</td><td>The critical angle is the angle of incidence at which the angle of refraction is 90°; above it, total internal reflection.</td></tr><tr><td><b>3</b></td><td>Change</td><td>Aim the ray through the curved face at the <b>centre of the flat face</b>; increase the angle of incidence by rotating the block on the paper.</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Mark the rays; draw the normal at the centre of the flat face; <b>measure the angle of incidence with a protractor</b> when the refracted ray <b>runs along the surface</b>.</td></tr><tr><td><b>5</b></td><td>Use</td><td>That angle is the critical angle; (optionally) plot r against i and read i where $r = 90$°.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Narrow ray; mark crosses far apart; make sure the ray really passes through the centre of the flat face so it is not refracted on entry.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td><b>Repeat and calculate a mean</b> critical angle.</td></tr></table>",
               "lines": 8
             }
           ]
@@ -2312,7 +2312,7 @@
     },
     {
       "q": "What happens at i = critical angle, and above it?",
-      "a": "At it: refracted ray along the surface (r = 90°). Above it: total internal reflection — all the light reflects inside.",
+      "a": "At it: refracted ray along the surface ($r = 90$°). Above it: total internal reflection — all the light reflects inside.",
       "section": "tir"
     },
     {
@@ -2342,7 +2342,7 @@
     },
     {
       "q": "Power of a lens equation and unit?",
-      "a": "P = 1/f, f in metres, P in dioptres (D). Converging positive, diverging negative.",
+      "a": "$P = 1/f$, f in metres, P in dioptres (D). Converging positive, diverging negative.",
       "section": "lenses"
     },
     {
@@ -2357,7 +2357,7 @@
     },
     {
       "q": "Speed of EM waves in a vacuum?",
-      "a": "3 × 10⁸ m/s. Use it as v in v = fλ.",
+      "a": "3 × 10⁸ m/s. Use it as v in $v = f\\lambda$.",
       "section": "em-waves"
     },
     {
@@ -2492,7 +2492,7 @@
     },
     {
       "q": "Time for light from the Sun?",
-      "a": "t = d/v = 1.5 × 10¹¹ ÷ 3 × 10⁸ = 500 s, about 8 minutes.",
+      "a": "$t = d/v = 1.5 \\times 10^{11} \\div 3 \\times 10^8 = 500$ s, about 8 minutes.",
       "section": "em-calc-hard"
     },
     {
@@ -2512,7 +2512,7 @@
     },
     {
       "q": "Critical angle from an i–r graph?",
-      "a": "Extend the curve to r = 90° and read off i.",
+      "a": "Extend the curve to $r = 90$° and read off i.",
       "section": "tir-hard"
     },
     {

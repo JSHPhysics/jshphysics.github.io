@@ -220,7 +220,7 @@ section_n4 = section(
                     ]), lines=3),
             choice("fe-n4-q4", "A free body diagram of a car shows a 2000 N driving force forwards and 1500 N of drag backwards. What is the resultant force?",
                    ["3500 N forwards", "500 N forwards", "500 N backwards", "0 N"], 1,
-                   "2000 − 1500 = 500 N in the direction of the larger force."),
+                   "$2000 - 1500 = 500$ N in the direction of the larger force."),
             written("fe-n4-q5", "Explain what the free body diagram of a ball thrown upwards looks like at the top of its flight (ignore air resistance). (2)",
                     marks(["<b>One arrow only</b>: the <b>weight</b>, straight down from the centre.",
                            "There is no upward force — the hand stopped pushing when the ball left it; the weight gives a downward resultant, so the ball accelerates downwards even while momentarily at rest."]), lines=2),
@@ -301,7 +301,7 @@ section_n6 = section(
             "Moments",
             diagram(dg.moment_svg(), 640, 290, "The same 20 N on the same spanner: at right angles the distance is the full 0.30 m; at an angle the perpendicular distance — and the moment — is smaller.") +
             "<p><b>Situations with rotation</b> (9.6P): a door on its hinges, a spanner on a nut, a see-saw, a wheelbarrow, a crowbar, a bicycle pedal, a steering wheel, scissors, a tap. In each there is a <b>pivot</b> (hinge, nut, fulcrum, axle) and a force applied some distance from it.</p>"
-            "<p><b>Moment of a force</b> (9.7P) $= $ force $\\times$ <b>distance normal to the direction of the force</b> (the perpendicular distance from the pivot to the force's line of action). Unit: <b>newton metre, N m</b> (the June 2024 scheme's one-mark question). It is not a joule even though both are N × m: in a moment the distance is <i>across</i> the force, in work it is <i>along</i> it.</p>"
+            "<p><b>Moment of a force</b> (9.7P) $= $ force $\\times$ <b>distance normal to the direction of the force</b> (the perpendicular distance from the pivot to the force's line of action). Unit: <b>newton metre, N m</b> (the June 2024 scheme's one-mark question). It is not a joule even though both are $\\text{N} \\times \\text{m}$: in a moment the distance is <i>across</i> the force, in work it is <i>along</i> it.</p>"
             "<p>Why perpendicular: only the part of the force at right angles to the lever turns it. Pushing straight along a spanner towards the nut does nothing; pushing at right angles at the far end does the most. So: <b>bigger force</b> or <b>longer perpendicular distance</b> → bigger moment. That is why door handles are far from the hinges and why a long spanner loosens a stiff nut.</p>"
             "<p>Units trap (June 2022 report, Q6): \"the most common detracting mistake was not converting cm to m\" — a 30 cm spanner is 0.30 m, or the moment comes out 100 times too big.</p>",
         ),
@@ -317,8 +317,8 @@ section_n6 = section(
                     ewau(r"M = F \times d", r"M = 60 \times 0.25", "15", "N m")),
             choice("fe-n6-q2", "What is the unit of the moment of a force?",
                    ["N", "J", "N m", "N/m"], 2,
-                   "Newton metre. Not the joule, even though J = N m dimensionally, because the distance is perpendicular to the force, not along it."),
-            numeric("fe-n6-q3", "A moment of 24 N m is needed to turn a stiff tap. The tap handle is 0.08 m long. Calculate the force needed at its end.", 300, "N", "F = M ÷ d.",
+                   "Newton metre. Not the joule, even though $J = N m$ dimensionally, because the distance is perpendicular to the force, not along it."),
+            numeric("fe-n6-q3", "A moment of 24 N m is needed to turn a stiff tap. The tap handle is 0.08 m long. Calculate the force needed at its end.", 300, "N", "$F = M \\div d$.",
                     [r"$F = \dfrac{M}{d} = \dfrac{24}{0.08} = 300$ N."]),
             written("fe-n6-q4", "Explain why it is easier to loosen a wheel nut with a long wheel brace than with a short one. (2)",
                     marks(["Moment = force × perpendicular distance; the long brace puts the hand at a <b>greater distance</b> from the nut.",
@@ -370,7 +370,7 @@ section_n7 = section(
                     [r"$450 \times 1.2 = F \times 1.8$", r"$540 = 1.8F$, so $F = 300$ N."]),
             numeric("fe-n7-q3", "A metre rule balances on a pivot at its centre. A 4 N weight hangs 20 cm left of the pivot. Calculate how far right of the pivot a 5 N weight must hang.", 16, "cm", "Work in cm throughout.",
                     [r"$4 \times 20 = 5 \times d$", r"$80 = 5d$, so $d = 16$ cm."]),
-            choice("fe-n7-q4", "A student answers a principle-of-moments question by writing \"300 ÷ 200 = 1.5, so the distance is 1.5 × 1 = 1.5 m\" and gets the right number. Why might this lose marks?",
+            choice("fe-n7-q4", "A student answers a principle-of-moments question by writing \"$300 \\div 200 = 1.5$, so the distance is $1.5 \\times 1 = 1.5$ m\" and gets the right number. Why might this lose marks?",
                    ["The answer is wrong", "No moment was calculated as force × distance, which is what the question asks to be shown", "Units should be cm", "Ratios are not allowed in physics"], 1,
                    "The 2023 report's exact point: show the moments."),
             group("fe-n7-q5", "A uniform plank is pivoted at its centre. A 60 N weight hangs 0.5 m to the left and a 20 N weight hangs 1.0 m to the left. A single weight W hangs 1.6 m to the right.", [
@@ -426,7 +426,7 @@ section_n8 = section(
             ],
         ),
         practice("Levers and gears", [
-            numeric("fe-n8-q1", "A crowbar has its pivot 0.1 m from a rock and the effort is applied 0.9 m from the pivot. The rock needs a force of 450 N to move. Calculate the effort needed.", 50, "N", "Effort × 0.9 = 450 × 0.1.",
+            numeric("fe-n8-q1", "A crowbar has its pivot 0.1 m from a rock and the effort is applied 0.9 m from the pivot. The rock needs a force of 450 N to move. Calculate the effort needed.", 50, "N", "Effort × $0.9 = 450 \\times 0.1$.",
                     [r"$E \times 0.9 = 450 \times 0.1 = 45$", r"$E = 50$ N."]),
             choice("fe-n8-q2", "A 12-tooth gear drives a 36-tooth gear. For one turn of the 36-tooth gear, the 12-tooth gear turns…",
                    ["once", "three times", "a third of a turn", "twelve times"], 1,

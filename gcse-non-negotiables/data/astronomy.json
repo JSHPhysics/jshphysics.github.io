@@ -148,12 +148,12 @@
         {
           "kind": "worked",
           "title": "Weight on Mars",
-          "question": "A lander has a mass of 1200 kg. On Mars g = 3.7 N/kg. Calculate the lander's weight on Mars and compare it with its weight on Earth.",
+          "question": "A lander has a mass of 1200 kg. On Mars $g = 3.7$ N/kg. Calculate the lander's weight on Mars and compare it with its weight on Earth.",
           "steps": [
             "<b>Equation:</b> $W = m \\times g$",
             "<b>Working:</b> $W = 1200 \\times 3.7$",
             "<b>Answer:</b> $= 4440$",
-            "<b>Units:</b> N on Mars — on Earth it is 1200 × 10 = 12 000 N; the mass is 1200 kg in both places"
+            "<b>Units:</b> N on Mars — on Earth it is $1200 \\times 10 = 12\\,000$ N; the mass is 1200 kg in both places"
           ]
         },
         {
@@ -177,12 +177,12 @@
             {
               "id": "as-n2-q2",
               "type": "numeric",
-              "text": "A 75 kg astronaut stands on the Moon (g = 1.6 N/kg). Calculate her weight.",
+              "text": "A 75 kg astronaut stands on the Moon ($g = 1.6$ N/kg). Calculate her weight.",
               "answer": {
                 "value": 120,
                 "unit": "N"
               },
-              "hint": "W = m × g with the Moon's g.",
+              "hint": "$W = m \\times g$ with the Moon's g.",
               "walkthrough": [
                 "<b>Equation:</b> $W = m \\times g$",
                 "<b>Working:</b> $W = 75 \\times 1.6$",
@@ -206,12 +206,12 @@
             {
               "id": "as-n2-q4",
               "type": "numeric",
-              "text": "An object weighs 180 N on a planet where g = 9.0 N/kg. Calculate its weight on Earth (g = 10 N/kg).",
+              "text": "An object weighs 180 N on a planet where $g = 9.0$ N/kg. Calculate its weight on Earth ($g = 10$ N/kg).",
               "answer": {
                 "value": 200,
                 "unit": "N"
               },
-              "hint": "Mass first: m = W ÷ g.",
+              "hint": "Mass first: $m = W \\div g$.",
               "walkthrough": [
                 "$m = \\dfrac{180}{9.0} = 20$ kg.",
                 "On Earth $W = 20 \\times 10 = 200$ N."
@@ -519,7 +519,7 @@
                 "value": 0.04,
                 "unit": ""
               },
-              "hint": "Δλ = 20 nm; keep both in nm.",
+              "hint": "$\\Delta \\lambda = 20$ nm; keep both in nm.",
               "walkthrough": [
                 "$z = \\dfrac{520 - 500}{500} = \\dfrac{20}{500} = 0.04$."
               ]
@@ -1173,7 +1173,7 @@
                     "value": 0.049,
                     "unit": ""
                   },
-                  "hint": "Δλ = 510 − 486 nm.",
+                  "hint": "$\\Delta \\lambda = 510 - 486$ nm.",
                   "walkthrough": [
                     "$z = \\dfrac{510 - 486}{486} = \\dfrac{24}{486} = 0.049$ (2 s.f.)."
                   ]
@@ -1203,7 +1203,7 @@
             {
               "id": "as-t3-q4",
               "type": "numeric",
-              "text": "A galaxy has a red-shift z = 0.02. Its recession velocity is given by v = z × c, where c = 3 × 10⁸ m/s. Calculate v.",
+              "text": "A galaxy has a red-shift $z = 0.02$. Its recession velocity is given by $v = z \\times c$, where $c = 3 \\times 10^8$ m/s. Calculate v.",
               "answer": {
                 "value": 6000000,
                 "unit": "m/s"
@@ -1554,7 +1554,7 @@
         {
           "kind": "worked",
           "title": "Via the mass, then ratios",
-          "question": "An astronaut weighs 720 N on Earth (g = 10 N/kg). (a) Calculate his weight on the Moon (g = 1.6 N/kg). (b) On Mars g is 0.38 times its value on Earth. Calculate his weight on Mars without finding his mass again.",
+          "question": "An astronaut weighs 720 N on Earth ($g = 10$ N/kg). (a) Calculate his weight on the Moon ($g = 1.6$ N/kg). (b) On Mars g is 0.38 times its value on Earth. Calculate his weight on Mars without finding his mass again.",
           "steps": [
             "<b>(a)</b> Mass: $m = \\dfrac{W}{g} = \\dfrac{720}{10} = 72$ kg.",
             "On the Moon: $W = m \\times g = 72 \\times 1.6 = 115$ N (3 s.f.).",
@@ -1568,7 +1568,7 @@
             {
               "id": "as-t7-q1",
               "type": "numeric",
-              "text": "A rock weighs 24 N on the Moon (g = 1.6 N/kg). Calculate its weight on Earth (g = 10 N/kg).",
+              "text": "A rock weighs 24 N on the Moon ($g = 1.6$ N/kg). Calculate its weight on Earth ($g = 10$ N/kg).",
               "answer": {
                 "value": 150,
                 "unit": "N"
@@ -1587,7 +1587,7 @@
                 "value": 3.7,
                 "unit": "N/kg"
               },
-              "hint": "g = W ÷ m.",
+              "hint": "$g = W \\div m$.",
               "walkthrough": [
                 "$g = \\dfrac{W}{m} = \\dfrac{11.1}{3} = 3.7$ N/kg."
               ]
@@ -1602,13 +1602,13 @@
               },
               "hint": "Weight scales with g.",
               "walkthrough": [
-                "$W_{\\text{Jupiter}} = 2.5 \\times 400 = 1000$ N (or: m = 40 kg, W = 40 × 25 = 1000 N)."
+                "$W_{\\text{Jupiter}} = 2.5 \\times 400 = 1000$ N (or: $m = 40$ kg, $W = 40 \\times 25 = 1000$ N)."
               ]
             },
             {
               "id": "as-t7-q4",
               "type": "group",
-              "text": "An astronaut takes a 1 kg mass, a beam balance with standard masses, and a newton meter to the Moon (g = 1.6 N/kg).",
+              "text": "An astronaut takes a 1 kg mass, a beam balance with standard masses, and a newton meter to the Moon ($g = 1.6$ N/kg).",
               "parts": [
                 {
                   "id": "as-t7-q4a",
@@ -1618,7 +1618,7 @@
                     "value": 1.6,
                     "unit": "N"
                   },
-                  "hint": "W = m × g.",
+                  "hint": "$W = m \\times g$.",
                   "walkthrough": [
                     "$W = 1 \\times 1.6 = 1.6$ N (it read 10 N on Earth)."
                   ]
@@ -1635,12 +1635,12 @@
             {
               "id": "as-t7-q5",
               "type": "numeric",
-              "text": "A planet has g = 15 N/kg. A person weighs 900 N there. Calculate the person's mass.",
+              "text": "A planet has $g = 15$ N/kg. A person weighs 900 N there. Calculate the person's mass.",
               "answer": {
                 "value": 60,
                 "unit": "kg"
               },
-              "hint": "m = W ÷ g.",
+              "hint": "$m = W \\div g$.",
               "walkthrough": [
                 "$m = \\dfrac{900}{15} = 60$ kg — the same mass anywhere."
               ]
@@ -1695,7 +1695,7 @@
     },
     {
       "q": "What is the equation for weight?",
-      "a": "W = m × g (weight = mass × gravitational field strength).",
+      "a": "$W = m \\times g$ (weight = mass × gravitational field strength).",
       "section": "weight-elsewhere-nn"
     },
     {
@@ -1985,7 +1985,7 @@
     },
     {
       "q": "Convert a weight on Earth to a weight on the Moon.",
-      "a": "Mass first (m = W ÷ 10), then W = m × 1.6. Or use the ratio: Moon weight = Earth weight × 1.6/10.",
+      "a": "Mass first ($m = W \\div 10$), then $W = m \\times 1.6$. Or use the ratio: Moon weight = Earth weight × 1.6/10.",
       "section": "weight-hard"
     },
     {

@@ -330,7 +330,7 @@
                 "value": 30000,
                 "unit": "Hz"
               },
-              "hint": "11 mm = 0.011 m; f = v ÷ λ.",
+              "hint": "11 mm = 0.011 m; $f = v \\div \\lambda$.",
               "walkthrough": [
                 "<b>Equation:</b> $f = \\dfrac{v}{\\lambda}$",
                 "<b>Working:</b> $f = \\dfrac{330}{0.011}$",
@@ -346,7 +346,7 @@
                 "value": 0.001,
                 "unit": "m"
               },
-              "hint": "1.5 MHz = 1.5 × 10⁶ Hz; λ = v ÷ f. Type 0.001.",
+              "hint": "1.5 MHz = 1.5 × 10⁶ Hz; $\\lambda = v \\div f$. Type 0.001.",
               "walkthrough": [
                 "<b>Equation:</b> $\\lambda = \\dfrac{v}{f}$",
                 "<b>Working:</b> $\\lambda = \\dfrac{1500}{1.5 \\times 10^{6}}$",
@@ -362,7 +362,7 @@
                 "value": 1360,
                 "unit": "m"
               },
-              "hint": "x = v × t.",
+              "hint": "$x = v \\times t$.",
               "walkthrough": [
                 "<b>Equation:</b> $v = \\dfrac{x}{t} \\;\\Rightarrow\\; x = v \\times t$",
                 "<b>Working:</b> $x = 340 \\times 4.0$",
@@ -394,7 +394,7 @@
                 "value": 340,
                 "unit": "m/s"
               },
-              "hint": "v = x ÷ t.",
+              "hint": "$v = x \\div t$.",
               "walkthrough": [
                 "<b>Equation:</b> $v = \\dfrac{x}{t}$",
                 "<b>Working:</b> $v = \\dfrac{1700}{5.0}$",
@@ -405,7 +405,7 @@
             {
               "id": "wv-n4-q6",
               "type": "numeric",
-              "text": "A radio wave has a frequency of 200 kHz. Calculate its wavelength. (v = 3 × 10⁸ m/s)",
+              "text": "A radio wave has a frequency of 200 kHz. Calculate its wavelength. ($v = 3 \\times 10^8$ m/s)",
               "answer": {
                 "value": 1500,
                 "unit": "m"
@@ -422,7 +422,7 @@
         }
       ],
       "checklist": [
-        "Select v = fλ and v = x/t and say what each symbol is, with units",
+        "Select $v = f\\lambda$ and $v = x/t$ and say what each symbol is, with units",
         "Convert kHz, MHz, mm and cm before substituting",
         "Rearrange both equations"
       ],
@@ -474,7 +474,7 @@
                 "value": 0.004,
                 "unit": "s"
               },
-              "hint": "T = 1 ÷ f.",
+              "hint": "$T = 1 \\div f$.",
               "walkthrough": [
                 "<b>Equation:</b> $T = \\dfrac{1}{f}$",
                 "<b>Working:</b> $T = \\dfrac{1}{250}$",
@@ -490,7 +490,7 @@
                 "value": 1.25,
                 "unit": "Hz"
               },
-              "hint": "f = 1 ÷ T.",
+              "hint": "$f = 1 \\div T$.",
               "walkthrough": [
                 "<b>Equation:</b> $f = \\dfrac{1}{T}$",
                 "<b>Working:</b> $f = \\dfrac{1}{0.8}$",
@@ -522,7 +522,7 @@
                 "value": 20,
                 "unit": "ms"
               },
-              "hint": "T = 1/50 s, then × 1000.",
+              "hint": "$T = 1/50$ s, then × 1000.",
               "walkthrough": [
                 "$T = \\dfrac{1}{50} = 0.02$ s $= 20$ ms."
               ]
@@ -538,13 +538,13 @@
                 "It quadruples"
               ],
               "correct": 1,
-              "explain": "f = 1/T: doubling T halves f."
+              "explain": "$f = 1/T$: doubling T halves f."
             }
           ]
         }
       ],
       "checklist": [
-        "Use T = 1/f and f = 1/T",
+        "Use $T = 1/f$ and $f = 1/T$",
         "Find a frequency by counting waves in a measured time",
         "Read the period from a displacement–time graph"
       ],
@@ -568,7 +568,7 @@
         {
           "kind": "explain",
           "title": "Ripples in a tank",
-          "html": "<p>A <b>ripple tank</b>: a shallow tray of water, a <b>vibrating bar (dipper)</b> driven by a motor or signal generator makes straight ripples, and a <b>lamp above</b> casts the wave pattern as light and dark lines on a screen or paper below (the crests focus the light into bright lines).</p><p><b>Way 1 — time a crest:</b> mark two points a measured distance apart on the screen and <b>time a crest</b> travelling between them (or time it crossing the whole tank); $v = x/t$. Better: time it over a longer distance, or film it and use the frame rate.</p><p><b>Way 2 — f and λ:</b> read the <b>frequency</b> off the signal generator (or count waves passing a point in 10 s and divide); measure the <b>wavelength</b> by photographing the pattern with a ruler beside it, or by measuring the distance across <b>ten</b> wavelengths and dividing by ten (one gap is too small to measure accurately); then $v = f \\lambda$. A <b>stroboscope</b> flashing at the wave's frequency \"freezes\" the pattern so the wavelength can be measured.</p><p>June 2025 Q3(a)(iii) gave two marks for either way: \"time a wave crest over a known distance, then speed = distance ÷ time\" or \"count the number of waves in a specified time (to calculate frequency) then use v = f × λ\".</p>"
+          "html": "<p>A <b>ripple tank</b>: a shallow tray of water, a <b>vibrating bar (dipper)</b> driven by a motor or signal generator makes straight ripples, and a <b>lamp above</b> casts the wave pattern as light and dark lines on a screen or paper below (the crests focus the light into bright lines).</p><p><b>Way 1 — time a crest:</b> mark two points a measured distance apart on the screen and <b>time a crest</b> travelling between them (or time it crossing the whole tank); $v = x/t$. Better: time it over a longer distance, or film it and use the frame rate.</p><p><b>Way 2 — f and λ:</b> read the <b>frequency</b> off the signal generator (or count waves passing a point in 10 s and divide); measure the <b>wavelength</b> by photographing the pattern with a ruler beside it, or by measuring the distance across <b>ten</b> wavelengths and dividing by ten (one gap is too small to measure accurately); then $v = f \\lambda$. A <b>stroboscope</b> flashing at the wave's frequency \"freezes\" the pattern so the wavelength can be measured.</p><p>June 2025 Q3(a)(iii) gave two marks for either way: \"time a wave crest over a known distance, then speed = distance ÷ time\" or \"count the number of waves in a specified time (to calculate frequency) then use $v = f \\times \\lambda$\".</p>"
         },
         {
           "kind": "worked",
@@ -617,7 +617,7 @@
               "id": "wv-n6-q4",
               "type": "written",
               "text": "Describe two different methods of finding the speed of water waves in a ripple tank. (4)",
-              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Method 1</td><td><b>Time a crest</b> travelling a <b>measured distance</b> (two marks on the screen / across the tank)…</td></tr><tr><td><b>2</b></td><td>…</td><td>…and use <b>speed = distance ÷ time</b>.</td></tr><tr><td><b>3</b></td><td>Method 2</td><td>Find the <b>frequency</b> (from the signal generator, or count waves passing a point in a measured time) and the <b>wavelength</b> (several wavelengths ÷ number)…</td></tr><tr><td><b>4</b></td><td>…</td><td>…and use <b>v = f × λ</b>.</td></tr></table>",
+              "model": "<p><b>4 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Method 1</td><td><b>Time a crest</b> travelling a <b>measured distance</b> (two marks on the screen / across the tank)…</td></tr><tr><td><b>2</b></td><td>…</td><td>…and use <b>speed = distance ÷ time</b>.</td></tr><tr><td><b>3</b></td><td>Method 2</td><td>Find the <b>frequency</b> (from the signal generator, or count waves passing a point in a measured time) and the <b>wavelength</b> (several wavelengths ÷ number)…</td></tr><tr><td><b>4</b></td><td>…</td><td>…and use <b>$v = f \\times \\lambda$</b>.</td></tr></table>",
               "lines": 5
             },
             {
@@ -628,7 +628,7 @@
                 "value": 340,
                 "unit": "m/s"
               },
-              "hint": "5.0 ms = 0.005 s; v = x ÷ t.",
+              "hint": "5.0 ms = 0.005 s; $v = x \\div t$.",
               "walkthrough": [
                 "<b>Equation:</b> $v = \\dfrac{x}{t}$",
                 "<b>Working:</b> $v = \\dfrac{1.7}{0.0050}$",
@@ -1570,7 +1570,7 @@
                     "value": 125,
                     "unit": "Hz"
                   },
-                  "hint": "f = 1 ÷ T with T in seconds.",
+                  "hint": "$f = 1 \\div T$ with T in seconds.",
                   "walkthrough": [
                     "$T = 0.008$ s; $f = \\dfrac{1}{0.008} = 125$ Hz."
                   ],
@@ -1852,7 +1852,7 @@
                 "value": 25,
                 "unit": "m/s"
               },
-              "hint": "v = f λ with λ in metres.",
+              "hint": "$v = f \\lambda$ with λ in metres.",
               "walkthrough": [
                 "$v = f \\lambda = 125 \\times 0.20 = 25$ m/s."
               ]
@@ -1868,7 +1868,7 @@
                 "It cannot be found from a time graph"
               ],
               "correct": 1,
-              "explain": "T = 0.5 s, so f = 1/0.5 = 2 Hz."
+              "explain": "$T = 0.5$ s, so $f = 1/0.5 = 2$ Hz."
             },
             {
               "id": "wv-t1-q5",
@@ -2033,7 +2033,7 @@
                 "unchanged"
               ],
               "correct": 1,
-              "explain": "f unchanged: λ = v/f = 1500/1000 = 1.5 m (0.34 m in air)."
+              "explain": "f unchanged: $\\lambda = v/f = 1500/1000 = 1.5$ m (0.34 m in air)."
             },
             {
               "id": "wv-t3-q5",
@@ -2043,7 +2043,7 @@
                 "value": 1.2,
                 "unit": "cm"
               },
-              "hint": "f is the same in both: f = v/λ = 10/2 = 5 Hz; then λ = v/f.",
+              "hint": "f is the same in both: $f = v/\\lambda = 10/2 = 5$ Hz; then $\\lambda = v/f$.",
               "walkthrough": [
                 "$f = \\dfrac{v}{\\lambda} = \\dfrac{10}{2.0} = 5$ Hz (unchanged across the boundary).",
                 "In shallow water $\\lambda = \\dfrac{v}{f} = \\dfrac{6}{5} = 1.2$ cm."
@@ -2115,7 +2115,7 @@
                 "value": 3,
                 "unit": "m"
               },
-              "hint": "Round trip = v × t; then halve.",
+              "hint": "Round trip = $v \\times t$; then halve.",
               "walkthrough": [
                 "$x = 330 \\times 0.018 = 5.94$ m round trip; distance $= 5.94 \\div 2 = 2.97 \\approx 3.0$ m."
               ]
@@ -2156,7 +2156,7 @@
                 "value": 6000,
                 "unit": "m/s"
               },
-              "hint": "Round-trip distance 0.060 m; t = 10 × 10⁻⁶ s.",
+              "hint": "Round-trip distance 0.060 m; $t = 10 \\times 10^{-6}$ s.",
               "walkthrough": [
                 "Round trip $= 2 \\times 0.030 = 0.060$ m; $t = 10 \\times 10^{-6}$ s.",
                 "$v = \\dfrac{0.060}{10 \\times 10^{-6}} = 6000$ m/s."
@@ -2337,7 +2337,7 @@
                 "value": 0.2,
                 "unit": "m/s"
               },
-              "hint": "λ = 2.5 cm = 0.025 m.",
+              "hint": "$\\lambda = 2.5$ cm = 0.025 m.",
               "walkthrough": [
                 "$\\lambda = 25 \\div 10 = 2.5$ cm $= 0.025$ m; $v = 8 \\times 0.025 = 0.2$ m/s."
               ]
@@ -2352,7 +2352,7 @@
             {
               "id": "wv-t6-q4",
               "type": "written",
-              "text": "Explain why the speed of waves on a string is found using v = fλ rather than by timing the wave over a distance. (2)",
+              "text": "Explain why the speed of waves on a string is found using $v = f\\lambda$ rather than by timing the wave over a distance. (2)",
               "model": "<ul><li>The waves on the string travel far too <b>fast</b> (and the pattern repeats too quickly) to <b>time with a stopwatch</b>.</li><li>The standing-wave loops are <b>stationary</b>, so the wavelength can be measured with a rule, and the frequency is read from the generator — so $v = f\\lambda$ works.</li></ul>",
               "lines": 3
             },
@@ -2380,8 +2380,8 @@
         }
       ],
       "checklist": [
-        "Describe the ripple-tank method: frequency from the generator or counting, wavelength from several wavelengths, speed from v = fλ or timing a crest",
-        "Describe the string method: vibration generator, standing wave, wavelength from the loops, speed from v = fλ",
+        "Describe the ripple-tank method: frequency from the generator or counting, wavelength from several wavelengths, speed from $v = f\\lambda$ or timing a crest",
+        "Describe the string method: vibration generator, standing wave, wavelength from the loops, speed from $v = f\\lambda$",
         "Say why each piece of equipment is suitable and what limits the accuracy"
       ],
       "blurb": "The core practical measures the speed, frequency and wavelength of waves in a <b>fluid</b> (ripples in a tank) and in a <b>solid</b> (a stretched string driven by a vibration generator), and asks which equipment is suitable for each."
@@ -2398,7 +2398,7 @@
         {
           "kind": "explain",
           "title": "The seven steps, applied here",
-          "html": "<p>From <a href='#key-concepts/planning-practical'>Topic 1, T6</a>: (1) the two variables; (2) the equation; (3) what you change and how, what you keep the same; (4) what you measure, how, with what; (5) what you do with the results; (6) one accuracy detail; (7) repeat <b>and calculate a mean</b>.</p><table class='tbl'><tr><th>Step</th><th>Ripple tank</th><th>String</th></tr><tr><td>1 Variables</td><td>frequency (change); wavelength (measure); speed (calculate)</td><td>frequency (change); wavelength from the loops (measure)</td></tr><tr><td>2 Equation</td><td>$v = f\\lambda$ (check with $v = x/t$)</td><td>$v = f\\lambda$</td></tr><tr><td>3 Change</td><td>frequency on the signal generator; same water depth</td><td>frequency on the signal generator; same tension (same hanging mass) and same string</td></tr><tr><td>4 Measure</td><td>f from the generator (or count in 10 s); λ across 10 wavelengths with a ruler, pattern frozen by a stroboscope</td><td>f from the generator; length of several loops with a metre rule (each loop = ½λ)</td></tr><tr><td>5 Use</td><td>calculate v for each f; plot v against f (should be constant) or λ against 1/f (straight line)</td><td>calculate v for each f; compare — it should be the same</td></tr><tr><td>6 Accuracy</td><td>measure 10 wavelengths not one; darken the room</td><td>adjust f until the loops are sharp; measure from node to node</td></tr><tr><td>7 Repeat</td><td>repeat each f and average λ</td><td>repeat each f and average</td></tr></table>"
+          "html": "<p>From <a href='#key-concepts/planning-practical'>Topic 1, T6</a>: (1) the two variables; (2) the equation; (3) what you change and how, what you keep the same; (4) what you measure, how, with what; (5) what you do with the results; (6) one accuracy detail; (7) repeat <b>and calculate a mean</b>.</p><table class='tbl'><tr><th>Step</th><th>Ripple tank</th><th>String</th></tr><tr><td>1 Variables</td><td>frequency (change); wavelength (measure); speed (calculate)</td><td>frequency (change); wavelength from the loops (measure)</td></tr><tr><td>2 Equation</td><td>$v = f\\lambda$ (check with $v = x/t$)</td><td>$v = f\\lambda$</td></tr><tr><td>3 Change</td><td>frequency on the signal generator; same water depth</td><td>frequency on the signal generator; same tension (same hanging mass) and same string</td></tr><tr><td>4 Measure</td><td>f from the generator (or count in 10 s); λ across 10 wavelengths with a ruler, pattern frozen by a stroboscope</td><td>f from the generator; length of several loops with a metre rule (each loop = ½λ)</td></tr><tr><td>5 Use</td><td>calculate v for each f; plot v against f (should be constant) or λ against $1/f$ (straight line)</td><td>calculate v for each f; compare — it should be the same</td></tr><tr><td>6 Accuracy</td><td>measure 10 wavelengths not one; darken the room</td><td>adjust f until the loops are sharp; measure from node to node</td></tr><tr><td>7 Repeat</td><td>repeat each f and average λ</td><td>repeat each f and average</td></tr></table>"
         },
         {
           "kind": "worked",
@@ -2507,7 +2507,7 @@
     },
     {
       "q": "The two wave equations?",
-      "a": "v = f × λ and v = x ÷ t, for every kind of wave.",
+      "a": "$v = f \\times \\lambda$ and $v = x \\div t$, for every kind of wave.",
       "section": "wave-equations"
     },
     {
@@ -2516,8 +2516,8 @@
       "section": "wave-equations"
     },
     {
-      "q": "Why does v = fλ work?",
-      "a": "f waves pass each second, each λ long, so the wave advances f × λ metres per second.",
+      "q": "Why does $v = f\\lambda$ work?",
+      "a": "f waves pass each second, each λ long, so the wave advances $f \\times \\lambda$ metres per second.",
       "section": "wave-equations"
     },
     {
@@ -2527,7 +2527,7 @@
     },
     {
       "q": "T and f?",
-      "a": "T = 1/f and f = 1/T. 50 Hz → 0.02 s.",
+      "a": "$T = 1/f$ and $f = 1/T$. 50 Hz → 0.02 s.",
       "section": "period-nn"
     },
     {
@@ -2552,7 +2552,7 @@
     },
     {
       "q": "Speed of ripples, two ways?",
-      "a": "Time a crest over a measured distance (v = x/t); or frequency from the generator and wavelength from 10 wavelengths ÷ 10, then v = fλ.",
+      "a": "Time a crest over a measured distance ($v = x/t$); or frequency from the generator and wavelength from 10 wavelengths ÷ 10, then $v = f\\lambda$.",
       "section": "measuring-wave-speed"
     },
     {
@@ -2592,7 +2592,7 @@
     },
     {
       "q": "Displacement–distance vs displacement–time graph?",
-      "a": "Distance axis: the gap between crests is the wavelength. Time axis: the gap is the period (f = 1/T).",
+      "a": "Distance axis: the gap between crests is the wavelength. Time axis: the gap is the period ($f = 1/T$).",
       "section": "wave-graphs-hard"
     },
     {
@@ -2622,7 +2622,7 @@
     },
     {
       "q": "Echo distance?",
-      "a": "Distance to the surface = v × t ÷ 2 — the pulse goes there and back. Halve it, as its own line.",
+      "a": "Distance to the surface = $v \\times t \\div 2$ — the pulse goes there and back. Halve it, as its own line.",
       "section": "echo-distances"
     },
     {
@@ -2632,7 +2632,7 @@
     },
     {
       "q": "Sonar in six points?",
-      "a": "Ultrasound pulse emitted; travels through water; reflected by the sea bed; time to return measured; speed in water known; distance = v × t, halved.",
+      "a": "Ultrasound pulse emitted; travels through water; reflected by the sea bed; time to return measured; speed in water known; distance = $v \\times t$, halved.",
       "section": "echo-distances"
     },
     {
@@ -2657,12 +2657,12 @@
     },
     {
       "q": "Core practical: fluid?",
-      "a": "Ripple tank: f from the generator or counting; λ from 10 wavelengths ÷ 10 (stroboscope to freeze); v = fλ or time a crest.",
+      "a": "Ripple tank: f from the generator or counting; λ from 10 wavelengths ÷ 10 (stroboscope to freeze); $v = f\\lambda$ or time a crest.",
       "section": "core-practical-waves"
     },
     {
       "q": "Core practical: solid?",
-      "a": "String with a vibration generator and a hanging mass; standing wave; each loop = ½λ; f from the generator; v = fλ.",
+      "a": "String with a vibration generator and a hanging mass; standing wave; each loop = ½λ; f from the generator; $v = f\\lambda$.",
       "section": "core-practical-waves"
     },
     {

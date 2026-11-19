@@ -60,7 +60,7 @@ section_t1 = section(
             "<li>Draw the <b>normal</b> at the entry point with a protractor (90° to the face); <b>measure the angle of incidence and the angle of refraction</b> from the normal.</li>"
             "<li><b>Repeat</b> for several angles of incidence (e.g. 10° to 70°), and repeat each reading; <b>plot</b> angle of refraction against angle of incidence.</li></ol>"
             "<p>Draw a <b>labelled diagram</b> as part of the answer — the examiners say so every year.</p>"
-            "<p><b>Results:</b> r is always <b>smaller</b> than i (the ray bends towards the normal); the graph is a <b>curve</b> through the origin that gets less steep — r is <i>not</i> proportional to i. A ray along the normal (i = 0) does not bend. The emergent ray is parallel to the incident ray.</p>",
+            "<p><b>Results:</b> r is always <b>smaller</b> than i (the ray bends towards the normal); the graph is a <b>curve</b> through the origin that gets less steep — r is <i>not</i> proportional to i. A ray along the normal ($i = 0$) does not bend. The emergent ray is parallel to the incident ray.</p>",
             graph=graph_ir_in,
         ),
         worked(
@@ -90,7 +90,7 @@ section_t1 = section(
                    "Angles are measured with a protractor, from the normal."),
             written("le-t1-q6", "Describe how a student could show that the angle of incidence and the angle of refraction are not proportional. (2)",
                     marks(["Measure r for several values of i and <b>plot a graph</b> of r against i.",
-                           "Proportional would give a <b>straight line through the origin</b>; the points lie on a <b>curve</b> (or i ÷ r is not constant), so they are not proportional."]), lines=3),
+                           "Proportional would give a <b>straight line through the origin</b>; the points lie on a <b>curve</b> (or $i \\div r$ is not constant), so they are not proportional."]), lines=3),
         ]),
     ],
 )
@@ -166,7 +166,7 @@ graph_ir_out = graph(
 section_t3 = section(
     "tir-hard", "tricky", "Finding the critical angle: method and graph", "5.1P, 5.9",
     equations=[r"\text{increase } i \text{ until } r = 90^{\circ}", r"\text{from a graph: read } i \text{ where } r = 90^{\circ}"],
-    blurb="Two ways the exam asks for the critical angle: describe the experiment that finds it, or read it off an i–r graph by extending the curve to r = 90°. No formula needed.",
+    blurb="Two ways the exam asks for the critical angle: describe the experiment that finds it, or read it off an i–r graph by extending the curve to $r = 90$°. No formula needed.",
     tags=["P"],
     checklist=[
         "Describe how to find the critical angle with a semicircular glass block",
@@ -186,8 +186,8 @@ section_t3 = section(
         ),
         explain(
             "From a graph",
-            "<p>A question may give angles of refraction (in air) for a ray <b>leaving</b> glass at several angles of incidence (in glass) and ask for the critical angle. The refracted angle is bigger than the incident angle and the curve steepens; it reaches <b>r = 90°</b> at the critical angle.</p>"
-            "<p>The method the June 2023 scheme gave three marks for: <b>(1) extend (extrapolate) the curve</b> smoothly, <b>(2) until r = 90°</b>, <b>(3) read off the corresponding value of i</b> — drop a line to the i-axis and label it. For the data below the curve reaches 90° at about 42°.</p>",
+            "<p>A question may give angles of refraction (in air) for a ray <b>leaving</b> glass at several angles of incidence (in glass) and ask for the critical angle. The refracted angle is bigger than the incident angle and the curve steepens; it reaches <b>$r = 90$°</b> at the critical angle.</p>"
+            "<p>The method the June 2023 scheme gave three marks for: <b>(1) extend (extrapolate) the curve</b> smoothly, <b>(2) until $r = 90$°</b>, <b>(3) read off the corresponding value of i</b> — drop a line to the i-axis and label it. For the data below the curve reaches 90° at about 42°.</p>",
             graph=graph_ir_out,
         ),
         worked(
@@ -195,18 +195,18 @@ section_t3 = section(
             "Use the graph above to find the critical angle of the glass. (3 marks)",
             [
                 "<b>Extend the curve</b> smoothly beyond the last point, following its steepening shape.",
-                "<b>Find where it reaches r = 90°</b> — the top of the graph.",
+                "<b>Find where it reaches $r = 90$°</b> — the top of the graph.",
                 "<b>Read down to the i-axis:</b> about <b>42°</b>. Mark it on the graph: the examiner credits the construction lines.",
             ],
         ),
         practice("Critical angle", [
-            numeric("le-t3-q1", "Use the graph to estimate the critical angle of the glass. (Extend the curve to r = 90° and read i.)", round(critical), "°",
+            numeric("le-t3-q1", "Use the graph to estimate the critical angle of the glass. (Extend the curve to $r = 90$° and read i.)", round(critical), "°",
                     "The curve climbs steeply after 38°; it reaches 90° just above 41°.",
                     [r"Extrapolating the curve to $r = 90^{\circ}$ gives $i \approx 42^{\circ}$ (anything from 40° to 44° is a reasonable reading)."], graph=graph_ir_out, tolerance=0.06),
             written("le-t3-q2", "Describe how a student could find the critical angle of a semicircular glass block using a ray box. (3)",
                     mark_scheme([
                         ("Aim", "Shine a ray through the curved face <b>towards the centre of the flat face</b> (so it does not bend on entry)."),
-                        ("Increase", "<b>Increase the angle of incidence</b> (in the glass) until the refracted ray <b>runs along the flat surface</b> (r = 90°) / TIR just starts."),
+                        ("Increase", "<b>Increase the angle of incidence</b> (in the glass) until the refracted ray <b>runs along the flat surface</b> ($r = 90$°) / TIR just starts."),
                         ("Measure", "<b>Measure that angle of incidence</b> from the normal with a protractor — the critical angle; <b>repeat and average</b>."),
                     ]), lines=4),
             choice("le-t3-q3", "Why is a semicircular block used to find the critical angle rather than a rectangular one?",
@@ -557,10 +557,10 @@ section_t9 = section(
     equations=[r"v = f \lambda", r"t = \dfrac{d}{v}", r"P = \dfrac{1}{f}"],
     blurb="The same equation, with the units and the standard form turned up: nanometres, gigahertz, a range of frequencies, a time for light to travel, and powers of lenses from focal lengths in centimetres.",
     checklist=[
-        "Handle nm, GHz, MHz and standard form in v = fλ",
+        "Handle nm, GHz, MHz and standard form in $v = f\\lambda$",
         "Find a range of frequencies by subtracting two standard-form values",
-        "Find the time for light to travel a distance (t = d ÷ v) in standard form",
-        "Convert cm to m before P = 1/f, and give lens power with a sign",
+        "Find the time for light to travel a distance ($t = d \\div v$) in standard form",
+        "Convert cm to m before $P = 1/f$, and give lens power with a sign",
     ],
     parts=[
         explain(
@@ -572,7 +572,7 @@ section_t9 = section(
         ),
         worked(
             "A frequency range",
-            "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies of visible light. (v = 3 × 10⁸ m/s) (3 marks)",
+            "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies of visible light. ($v = 3 \\times 10^8$ m/s) (3 marks)",
             [
                 r"<b>Convert:</b> $400\ \text{nm} = 4.0 \times 10^{-7}$ m; $700\ \text{nm} = 7.0 \times 10^{-7}$ m.",
                 r"<b>Two frequencies:</b> $f = \dfrac{v}{\lambda}$: $\dfrac{3 \times 10^{8}}{4.0 \times 10^{-7}} = 7.5 \times 10^{14}$ Hz and $\dfrac{3 \times 10^{8}}{7.0 \times 10^{-7}} = 4.3 \times 10^{14}$ Hz.",
@@ -580,17 +580,17 @@ section_t9 = section(
             ],
         ),
         practice("Hard calculations", [
-            numeric("le-t9-q1", "The Sun is 1.5 × 10¹¹ m from the Earth. Calculate the time for light to reach the Earth. (v = 3 × 10⁸ m/s)", q9_1, "s",
-                    "t = d ÷ v.",
+            numeric("le-t9-q1", "The Sun is 1.5 × 10¹¹ m from the Earth. Calculate the time for light to reach the Earth. ($v = 3 \\times 10^8$ m/s)", q9_1, "s",
+                    "$t = d \\div v$.",
                     ewau(r"t = \dfrac{d}{v}", r"t = \dfrac{1.5 \times 10^{11}}{3 \times 10^{8}}", "500", "s (about 8 minutes)")),
-            numeric("le-t9-q2", "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies. Type the answer as 3.2e14. (v = 3 × 10⁸ m/s)", sf(q9_2, 2), "Hz",
+            numeric("le-t9-q2", "Visible light has wavelengths from 400 nm to 700 nm. Calculate the range of frequencies. Type the answer as 3.2e14. ($v = 3 \\times 10^8$ m/s)", sf(q9_2, 2), "Hz",
                     "Two frequencies, same power of ten, subtract.",
                     [r"$f_{400} = \dfrac{3 \times 10^{8}}{4.0 \times 10^{-7}} = 7.5 \times 10^{14}$ Hz; $f_{700} = \dfrac{3 \times 10^{8}}{7.0 \times 10^{-7}} = 4.3 \times 10^{14}$ Hz.", r"Range $= 7.5 \times 10^{14} - 4.3 \times 10^{14} = 3.2 \times 10^{14}$ Hz."]),
-            numeric("le-t9-q3", "A microwave link uses waves of wavelength 1.2 cm. Calculate their frequency in GHz. (v = 3 × 10⁸ m/s)", sf(q9_3 / 1e9, 2), "GHz",
-                    "1.2 cm = 0.012 m; f = v ÷ λ in Hz, then ÷ 10⁹.",
+            numeric("le-t9-q3", "A microwave link uses waves of wavelength 1.2 cm. Calculate their frequency in GHz. ($v = 3 \\times 10^8$ m/s)", sf(q9_3 / 1e9, 2), "GHz",
+                    "1.2 cm = 0.012 m; $f = v \\div \\lambda$ in Hz, then ÷ 10⁹.",
                     [r"$f = \dfrac{3 \times 10^{8}}{0.012} = 2.5 \times 10^{10}$ Hz.", r"$2.5 \times 10^{10} \div 10^{9} = 25$ GHz."]),
             numeric("le-t9-q4", "Show that microwaves of frequency 2.4 GHz and wavelength 12.5 cm travel at about 3 × 10⁸ m/s: calculate v. Type the answer as 3e8.", q9_4, "m/s",
-                    "v = f × λ with both in base units.",
+                    "$v = f \\times \\lambda$ with both in base units.",
                     ewau(r"v = f \times \lambda", r"v = 2.4 \times 10^{9} \times 0.125", "3.0 \\times 10^{8}", "m/s")),
             group("le-t9-q5", "A pair of spectacles has one converging lens of focal length 50 cm and one diverging lens of focal length −25 cm.", [
                 numeric("le-t9-q5a", "Calculate the power of the converging lens.", 1 / 0.5, "D", "0.50 m.",
@@ -599,7 +599,7 @@ section_t9 = section(
                         ewau(r"P = \dfrac{1}{f}", r"P = \dfrac{1}{-0.25}", "-4", "D"), label="b", tags=["P"]),
             ], tags=["P"]),
             numeric("le-t9-q6", "A lens has a power of 12.5 D. Calculate its focal length in centimetres.", 100 / 12.5, "cm",
-                    "f = 1 ÷ P in metres, then × 100. Finish the calculation.",
+                    "$f = 1 \\div P$ in metres, then × 100. Finish the calculation.",
                     [r"$f = \dfrac{1}{P} = \dfrac{1}{12.5} = 0.08$ m.", r"$0.08 \times 100 = 8$ cm."], tags=["P"]),
         ]),
     ],
@@ -661,7 +661,7 @@ section_t10 = section(
                         ("Relationship", "The critical angle is the angle of incidence at which the angle of refraction is 90°; above it, total internal reflection."),
                         ("Change", "Aim the ray through the curved face at the <b>centre of the flat face</b>; increase the angle of incidence by rotating the block on the paper."),
                         ("Measure", "Mark the rays; draw the normal at the centre of the flat face; <b>measure the angle of incidence with a protractor</b> when the refracted ray <b>runs along the surface</b>."),
-                        ("Use", "That angle is the critical angle; (optionally) plot r against i and read i where r = 90°."),
+                        ("Use", "That angle is the critical angle; (optionally) plot r against i and read i where $r = 90$°."),
                         ("Accuracy", "Narrow ray; mark crosses far apart; make sure the ray really passes through the centre of the flat face so it is not refracted on entry."),
                         ("Repeat", "<b>Repeat and calculate a mean</b> critical angle."),
                     ], total=6), lines=8),
@@ -688,16 +688,16 @@ FACTS = [
     fact("Define the critical angle.", "The angle of incidence (in the denser medium) at which the angle of refraction is 90° — the refracted ray runs along the surface.", "tir"),
     fact("Two conditions for total internal reflection?", "Light going from a denser to a less dense material, and angle of incidence greater than the critical angle.", "tir"),
     fact("Critical angle of glass, roughly?", "About 42°. Water about 49°.", "tir"),
-    fact("What happens at i = critical angle, and above it?", "At it: refracted ray along the surface (r = 90°). Above it: total internal reflection — all the light reflects inside.", "tir"),
+    fact("What happens at i = critical angle, and above it?", "At it: refracted ray along the surface ($r = 90$°). Above it: total internal reflection — all the light reflects inside.", "tir"),
     fact("Why does a red object look red?", "It reflects red light and absorbs all the other colours.", "colour"),
     fact("What does a blue filter do?", "Transmits blue light and absorbs the other colours.", "colour"),
     fact("A red object in blue light looks…", "Black: there is no red to reflect, so it absorbs the blue.", "colour"),
     fact("Converging lens: what does it do?", "Brings parallel rays together to a focus (principal focus F). Convex, fatter in the middle.", "lenses"),
     fact("Diverging lens: what does it do?", "Spreads parallel rays out as if from a focus on the near side. Concave, thinner in the middle. Negative focal length.", "lenses"),
-    fact("Power of a lens equation and unit?", "P = 1/f, f in metres, P in dioptres (D). Converging positive, diverging negative.", "lenses"),
+    fact("Power of a lens equation and unit?", "$P = 1/f$, f in metres, P in dioptres (D). Converging positive, diverging negative.", "lenses"),
     fact("Power and shape?", "More curved (fatter, thicker in the middle) → shorter focal length → higher power.", "lenses"),
     fact("Three properties shared by all EM waves?", "Transverse; same speed in a vacuum (3 × 10⁸ m/s); transfer energy from source to observer.", "em-waves"),
-    fact("Speed of EM waves in a vacuum?", "3 × 10⁸ m/s. Use it as v in v = fλ.", "em-waves"),
+    fact("Speed of EM waves in a vacuum?", "3 × 10⁸ m/s. Use it as v in $v = f\\lambda$.", "em-waves"),
     fact("Prefixes: GHz, MHz, nm?", "× 10⁹, × 10⁶, × 10⁻⁹.", "em-waves"),
     fact("EM spectrum in order of increasing frequency?", "Radio, microwaves, infrared, visible, ultraviolet, X-rays, gamma. (Raging Martians Invaded Venus Using X-ray Guns.)", "spectrum"),
     fact("Which end has the longest wavelength? the highest frequency?", "Radio: longest wavelength, lowest frequency. Gamma: shortest wavelength, highest frequency.", "spectrum"),
@@ -724,11 +724,11 @@ FACTS = [
     fact("How are radio waves produced?", "By an alternating current (oscillating electrons) in an aerial; when absorbed they induce an alternating current of the same frequency in a receiving aerial.", "radio-atoms"),
     fact("Where do visible, UV and X-rays come from in an atom?", "Electrons dropping from a higher to a lower energy level. Gamma rays come from the nucleus.", "radio-atoms"),
     fact("Fluorescence in four steps?", "UV absorbed by electrons → raised to a higher level → fall back → emit visible light (lower frequency).", "radio-atoms"),
-    fact("Time for light from the Sun?", "t = d/v = 1.5 × 10¹¹ ÷ 3 × 10⁸ = 500 s, about 8 minutes.", "em-calc-hard"),
+    fact("Time for light from the Sun?", "$t = d/v = 1.5 \\times 10^{11} \\div 3 \\times 10^8 = 500$ s, about 8 minutes.", "em-calc-hard"),
     fact("Subtracting in standard form?", "Write both with the same power of ten first, then subtract the front numbers.", "em-calc-hard"),
     fact("Refraction practical: the six steps?", "Draw round the block; narrow ray in; crosses on incident and emergent rays; remove block and join; normal + protractor for i and r; repeat angles and plot r against i.", "ray-practical"),
     fact("Why a semicircular block for the critical angle?", "A ray aimed at the centre of the flat face enters along a normal to the curved face, so it does not bend on entry.", "tir-hard"),
-    fact("Critical angle from an i–r graph?", "Extend the curve to r = 90° and read off i.", "tir-hard"),
+    fact("Critical angle from an i–r graph?", "Extend the curve to $r = 90$° and read off i.", "tir-hard"),
     fact("Converging lens, object beyond 2F?", "Real, inverted, smaller, between F and 2F on the far side (camera).", "lens-diagrams"),
     fact("Converging lens, object between F and 2F?", "Real, inverted, magnified, beyond 2F on the far side (projector).", "lens-diagrams"),
     fact("Converging lens, object inside F?", "Virtual, upright, magnified, same side as the object (magnifying glass).", "lens-diagrams"),

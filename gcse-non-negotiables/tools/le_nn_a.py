@@ -244,7 +244,7 @@ section_n5 = section(
     checklist=[
         "Describe what converging and diverging lenses do to parallel rays, and define focal length",
         "Relate the power of a lens to its focal length and its shape",
-        "Use P = 1/f with f in metres and the unit D",
+        "Use $P = 1/f$ with f in metres and the unit D",
     ],
     parts=[
         explain(
@@ -267,9 +267,9 @@ section_n5 = section(
                     marks(["The distance from the (centre of the) lens to the <b>principal focus</b> — the point where rays parallel to the axis are brought together."]), lines=2),
             choice("le-n5-q2", "Which lens has the highest power?",
                    ["Focal length 0.5 m", "Focal length 0.25 m", "Focal length 0.1 m", "Focal length 1 m"], 2,
-                   "P = 1/f: the shortest focal length (0.1 m, 10 D) is the most powerful."),
+                   "$P = 1/f$: the shortest focal length (0.1 m, 10 D) is the most powerful."),
             written("le-n5-q3", "Describe how the power of a lens depends on its focal length and its shape. (2)",
-                    marks(["The <b>shorter the focal length</b>, the <b>higher the power</b> (P = 1/f).",
+                    marks(["The <b>shorter the focal length</b>, the <b>higher the power</b> ($P = 1/f$).",
                            "A <b>more curved</b> (fatter, thicker-in-the-middle) lens has a shorter focal length and so a higher power."]), lines=3),
             choice("le-n5-q4", "What does a diverging lens do to a beam of parallel rays?",
                    ["Brings them to a focus on the far side", "Spreads them out as if they came from a focus on the near side", "Leaves them parallel", "Reflects them"], 1,
@@ -295,7 +295,7 @@ section_n6 = section(
     checklist=[
         "State the three facts: transverse, same speed in a vacuum (3 × 10⁸ m/s), transfer energy from source to observer",
         "Give an example of an EM wave transferring energy",
-        "Use v = f × λ with c = 3 × 10⁸ m/s and the right prefixes",
+        "Use $v = f \\times \\lambda$ with $c = 3 \\times 10^8$ m/s and the right prefixes",
     ],
     parts=[
         explain(
@@ -318,10 +318,10 @@ section_n6 = section(
             choice("le-n6-q2", "Which of these is NOT an electromagnetic wave?",
                    ["Microwaves", "Ultrasound", "Ultraviolet", "Gamma rays"], 1,
                    "Ultrasound is a high-frequency sound wave — longitudinal, needs a medium, about 340 m/s in air."),
-            numeric("le-n6-q3", "A microwave oven uses a frequency of 2.4 GHz. Calculate the wavelength of the microwaves. (v = 3 × 10⁸ m/s)",
-                    sf(q6_3, 3), "m", "2.4 GHz = 2.4 × 10⁹ Hz; λ = v ÷ f.",
+            numeric("le-n6-q3", "A microwave oven uses a frequency of 2.4 GHz. Calculate the wavelength of the microwaves. ($v = 3 \\times 10^8$ m/s)",
+                    sf(q6_3, 3), "m", "2.4 GHz = 2.4 × 10⁹ Hz; $\\lambda = v \\div f$.",
                     ewau(r"\lambda = \dfrac{v}{f}", r"\lambda = \dfrac{3 \times 10^{8}}{2.4 \times 10^{9}}", "0.125", "m")),
-            numeric("le-n6-q4", "Orange light has a wavelength of 600 nm. Calculate its frequency. (v = 3 × 10⁸ m/s)",
+            numeric("le-n6-q4", "Orange light has a wavelength of 600 nm. Calculate its frequency. ($v = 3 \\times 10^8$ m/s)",
                     sf(q6_4, 2), "Hz", "600 nm = 6.0 × 10⁻⁷ m; type the answer as 5e14.",
                     ewau(r"f = \dfrac{v}{\lambda}", r"f = \dfrac{3 \times 10^{8}}{6.0 \times 10^{-7}}", "5.0 \\times 10^{14}", "Hz")),
             written("le-n6-q5", "Give an example that shows an electromagnetic wave transfers energy from a source to an observer. (2)",
@@ -329,7 +329,7 @@ section_n6 = section(
                            "…is absorbed by your skin (observer), which <b>warms up</b> (energy transferred to its thermal store). Other examples: microwaves heating water in food; light making a solar cell produce a current; radio waves inducing a current in an aerial."]), lines=3),
             choice("le-n6-q6", "Light passes from air into glass. Which statement is correct?",
                    ["Its speed and frequency both decrease", "Its speed decreases, its wavelength decreases, its frequency stays the same", "Nothing changes", "Its speed increases"], 1,
-                   "Frequency is fixed by the source; v = fλ, so wavelength falls with speed."),
+                   "Frequency is fixed by the source; $v = f\\lambda$, so wavelength falls with speed."),
         ]),
     ],
 )

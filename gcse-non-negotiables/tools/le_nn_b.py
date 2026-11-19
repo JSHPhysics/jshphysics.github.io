@@ -294,7 +294,7 @@ section_keywords = section(
                     marks(["A wave in which the <b>oscillations are at right angles</b> to the direction the wave travels (direction of energy transfer)."]), lines=2),
             choice("le-kw-q7", "A student writes \"the critical angle is the angle at which total internal reflection happens\". What is wrong with this?",
                    ["Nothing", "At the critical angle the refracted ray runs along the surface (angle of refraction 90°); TIR happens above it", "It should say reflection, not refraction", "Critical angle only applies to lenses"], 1,
-                   "The critical angle is where r = 90°; TIR needs i greater than the critical angle."),
+                   "The critical angle is where $r = 90$°; TIR needs i greater than the critical angle."),
             written("le-kw-q8", "State what is meant by the power of a lens. (1)",
                     marks(["<b>1 ÷ the focal length</b> (in metres), measured in dioptres; a measure of how strongly the lens refracts light."]), lines=2),
         ]),

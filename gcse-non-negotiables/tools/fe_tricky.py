@@ -237,10 +237,10 @@ section_t4 = section(
             written("fe-t4-q3", "A car pulls a trailer. Explain why the tension in the tow bar is less than the driving force on the car. (2)",
                     marks(["The <b>driving force</b> has to overcome the resistive forces on the car <b>and</b> the trailer and accelerate <b>both</b>.",
                            "The <b>tension</b> only has to overcome the trailer's resistive forces and accelerate the <b>trailer</b> — a smaller job, so a smaller force."]), lines=3),
-            group("fe-t4-q4", "A lift of mass 500 kg hangs from a cable. (g = 10 N/kg)", [
+            group("fe-t4-q4", "A lift of mass 500 kg hangs from a cable. ($g = 10$ N/kg)", [
                 numeric("fe-t4-q4a", "Calculate the tension in the cable when the lift moves upwards at constant velocity.", 5000, "N", "Constant velocity: tension = weight.",
                         [r"$W = 500 \times 10 = 5000$ N; resultant zero, so $T = 5000$ N."]),
-                numeric("fe-t4-q4b", "Calculate the tension when the lift accelerates upwards at 2 m/s².", 6000, "N", "Resultant = m × a upwards.",
+                numeric("fe-t4-q4b", "Calculate the tension when the lift accelerates upwards at 2 m/s².", 6000, "N", "Resultant = $m \\times a$ upwards.",
                         [r"Resultant $= 500 \times 2 = 1000$ N upwards.", r"$T - 5000 = 1000$, so $T = 6000$ N."]),
             ]),
             written("fe-t4-q5", "A cyclist stops pedalling on a flat road. Explain why she slows down and eventually stops. (2)",
@@ -293,11 +293,11 @@ section_t5 = section(
             group("fe-t5-q2", "A metre rule is pivoted at its 50 cm mark. A 2 N weight hangs at 10 cm and a 3 N weight at 30 cm. A single weight W hangs at 80 cm.", [
                 numeric("fe-t5-q2a", "Calculate the total anticlockwise moment about the pivot, in N cm.", 140, "N cm", "Distances from the pivot: 40 cm and 20 cm.",
                         [r"$2 \times 40 + 3 \times 20 = 80 + 60 = 140$ N cm."]),
-                numeric("fe-t5-q2b", "Calculate W.", 4.67, "N", "W × 30 = 140.",
+                numeric("fe-t5-q2b", "Calculate W.", 4.67, "N", "$W \\times 30 = 140$.",
                         [r"$W = \dfrac{140}{30} = 4.67$ N (4.7 N)."], tolerance=0.02),
             ]),
             choice("fe-t5-q3", "A force of 40 N is applied to the end of a 0.5 m lever at 60° to the lever. The moment is…",
-                   ["40 × 0.5 = 20 N m", "less than 20 N m, because the perpendicular distance is less than 0.5 m", "more than 20 N m", "zero"], 1,
+                   ["$40 \\times 0.5 = 20$ N m", "less than 20 N m, because the perpendicular distance is less than 0.5 m", "more than 20 N m", "zero"], 1,
                    "Perpendicular distance = 0.5 × sin 60° = 0.43 m, moment 17 N m."),
             written("fe-t5-q4", "A plank rests on two supports, A at its left end and B 1.0 m from its right end. A person walks towards the right end. Explain why the plank tips when the person passes a certain point, and what is true about support A at that moment. (3)",
                     mark_scheme([
@@ -348,7 +348,7 @@ section_t6 = section(
             ],
         ),
         practice("Levers", [
-            numeric("fe-t6-q1", "A bottle opener's pivot is 1.5 cm from the cap and the hand pushes 12 cm from the pivot with 20 N. Calculate the force on the cap.", 160, "N", "20 × 12 = L × 1.5.",
+            numeric("fe-t6-q1", "A bottle opener's pivot is 1.5 cm from the cap and the hand pushes 12 cm from the pivot with 20 N. Calculate the force on the cap.", 160, "N", "$20 \\times 12 = L \\times 1.5$.",
                     [r"$L = \dfrac{20 \times 12}{1.5} = 160$ N."]),
             choice("fe-t6-q2", "In a pair of tweezers the effort is applied closer to the pivot than the load. Which is true?",
                    ["The force on the object is bigger than the effort", "The force on the object is smaller than the effort but it moves further", "The force and distance are both multiplied", "Tweezers are not levers"], 1,
@@ -360,7 +360,7 @@ section_t6 = section(
                 numeric("fe-t6-q4a", "Calculate the effort needed.", 100, "N", "Moments.", [r"$E \times 2.0 = 400 \times 0.5 = 200$, so $E = 100$ N."]),
                 numeric("fe-t6-q4b", "The effort end moves down 0.8 m. Calculate how far the load rises.", 0.2, "m", "Ratio of distances from the pivot: 0.5 : 2.0.",
                         [r"$0.8 \times \dfrac{0.5}{2.0} = 0.2$ m."]),
-                numeric("fe-t6-q4c", "Calculate the work done on the load.", 80, "J", "W = F × s.", [r"$400 \times 0.2 = 80$ J (the same as $100 \times 0.8$ by the effort)."]),
+                numeric("fe-t6-q4c", "Calculate the work done on the load.", 80, "J", "$W = F \\times s$.", [r"$400 \times 0.2 = 80$ J (the same as $100 \times 0.8$ by the effort)."]),
             ]),
             written("fe-t6-q5", "The biceps muscle attaches to the forearm 4 cm from the elbow; a weight is held in the hand 36 cm from the elbow. Explain why the muscle force is much larger than the weight held. (2)",
                     marks(["Taking moments about the elbow, muscle force × 4 cm = weight × 36 cm, so the muscle force is <b>nine times</b> the weight.",
@@ -439,9 +439,9 @@ section_t7 = section(
                 numeric("fe-t7-q3b", "Calculate the force between the gear teeth.", 400, "N", "Moment on the 40-tooth gear = tooth force × 0.16.", [r"$F \times 0.16 = 64$, so $F = 400$ N."]),
                 numeric("fe-t7-q3c", "Calculate the effort on the handle.", 40, "N", "Moment on the 10-tooth gear = 400 × 0.04; handle moment = effort × 0.40.",
                         [r"Moment on the small gear $= 400 \times 0.04 = 16$ N m.", r"$E \times 0.40 = 16$, so $E = 40$ N."]),
-                numeric("fe-t7-q3d", "Calculate how far the load rises for one turn of the handle.", 0.126, "m", "The drum turns 10/40 of a turn; one turn lifts 2π × 0.08.",
+                numeric("fe-t7-q3d", "Calculate how far the load rises for one turn of the handle.", 0.126, "m", "The drum turns 10/40 of a turn; one turn lifts $2\\pi \\times 0.08$.",
                         [r"$\tfrac{10}{40} \times 2\pi \times 0.08 = 0.126$ m (0.13 m to 2 s.f.)."], tolerance=0.05),
-                numeric("fe-t7-q3e", "Show that the work done by the effort in one turn equals the work done on the load. Give the work done by the effort.", 100.5, "J", "Effort × 2π × 0.40.",
+                numeric("fe-t7-q3e", "Show that the work done by the effort in one turn equals the work done on the load. Give the work done by the effort.", 100.5, "J", "Effort × $2\\pi \\times 0.40$.",
                         [r"Effort: $40 \times 2\pi \times 0.40 = 100.5$ J.", r"Load: $800 \times 0.126 = 100.5$ J. ✓"], tolerance=0.03),
             ]),
             written("fe-t7-q4", "Explain, using work done, why the effort on a winch handle is much smaller than the load it lifts. (3)",
@@ -551,7 +551,7 @@ FACTS = [
     fact("What is a resultant force?", "The single force that has the same effect as all the forces acting together.", "resultant-line"),
     fact("How do forces along a line combine?", "Same direction: add. Opposite directions: subtract; the resultant is in the direction of the larger.", "resultant-line"),
     fact("What does a zero resultant force mean for the motion?", "The velocity does not change: the object is at rest or moves at constant velocity (steady speed in a straight line).", "resultant-line"),
-    fact("What does a non-zero resultant force do?", "Accelerates the object in the direction of the resultant: speeds up, slows down or changes direction (F = m a).", "resultant-line"),
+    fact("What does a non-zero resultant force do?", "Accelerates the object in the direction of the resultant: speeds up, slows down or changes direction ($F = m a$).", "resultant-line"),
     fact("Does 'balanced forces' mean 'stationary'?", "No. A skydiver at terminal velocity has balanced forces and is falling fast.", "resultant-line"),
     # N6
     fact("Equation for the moment of a force, with unit?", "Moment = force × distance normal (perpendicular) to the direction of the force, from the pivot. Unit N m.", "moment-nn"),
@@ -579,7 +579,7 @@ FACTS = [
     fact("Where should friction not be reduced?", "Brakes, tyres, shoes, matches — anywhere grip is the point.", "lubrication"),
     # T1
     fact("Steps to find a resultant by scale drawing?", "State a scale; draw the first force; draw the second from its tip (tip to tail); draw the resultant from the start of the first to the tip of the second; measure length and angle.", "scale-resultant"),
-    fact("Resultant of 3 N and 4 N at right angles?", "5 N (Pythagoras: 9 + 16 = 25), at 53° to the 3 N.", "scale-resultant"),
+    fact("Resultant of 3 N and 4 N at right angles?", "5 N (Pythagoras: $9 + 16 = 25$), at 53° to the 3 N.", "scale-resultant"),
     fact("Resultant of 6 N and 8 N at right angles? And 5 N and 12 N?", "10 N; 13 N.", "scale-resultant"),
     fact("What did the 2025 scheme mark in a resultant-by-drawing question?", "The direction (judged by eye) and the size (within a tolerance) — the arrow must be drawn and labelled.", "scale-resultant"),
     # T2

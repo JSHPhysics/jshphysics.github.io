@@ -449,7 +449,7 @@ FACTS = [
     fact("The charging chain (word for word)?", "Friction → electrons transferred from A to B → B has gained electrons so is negative → A has lost electrons so is positive (equal amount).", "electron-force-chains"),
     fact("The moving-apart chain (word for word)?", "Same charge → like charges repel → a force on X directed away from Y → the force causes X to accelerate away from Y.", "electron-force-chains"),
     fact("Why is 'they repel so it moves away' not enough?", "It skips the force: name the force on the object, give its direction, and say the force causes an acceleration.", "electron-force-chains"),
-    fact("Two charged objects attract; one is much lighter. What is the same and what differs?", "The forces are equal and opposite; the lighter one has the larger acceleration (a = F/m).", "electron-force-chains"),
+    fact("Two charged objects attract; one is much lighter. What is the same and what differs?", "The forces are equal and opposite; the lighter one has the larger acceleration ($a = F/m$).", "electron-force-chains"),
     # T2
     fact("Four steps of induction?", "Neutral object, equal charges → the rod's field moves its electrons → near side opposite, far side same, still neutral overall → attraction on the nearer side wins.", "induction-explain"),
     fact("What must an induction diagram show?", "Both the induced charge on the near side AND the equal opposite charge on the far side.", "induction-explain"),

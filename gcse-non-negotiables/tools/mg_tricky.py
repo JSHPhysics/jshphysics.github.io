@@ -309,17 +309,17 @@ section_t6 = section(
         practice("The hard way", [
             numeric("mg-t6-q1", "A wire 60 cm long is held across a magnet whose poles are 4.0 cm wide. The current is 3.0 A and the flux density 0.20 T. Calculate the force on the wire.", 0.024, "N",
                     "Only the length between the poles is in the field.",
-                    [r"$l = 4.0$ cm $= 0.040$ m — the length <b>in the field</b>, not the 0.60 m of wire."] + ewau(r"F = B I l", r"F = 0.20 \times 3.0 \times 0.040", "0.024", "N")),
+                    [r"$l = 4.0$ cm $= 0.040$ m — the length <b>in the field</b>, not the 0.60 m of wire."] + ewau(r"$F = B I l$", r"F = 0.20 \times 3.0 \times 0.040", "0.024", "N")),
             numeric("mg-t6-q2", "A 0.10 m length of wire in a 0.30 T field feels a force of 45 mN. Calculate the current.", 1.5, "A",
                     "45 mN = 0.045 N; $I = F \\div (B l)$.",
                     [r"$F = 45$ mN $= 0.045$ N"] + ewau(r"I = F \div (B l)", r"I = 0.045 \div (0.30 \times 0.10) = 0.045 \div 0.030", "1.5", "A")),
             numeric("mg-t6-q3", "A wire of resistance 4.0 Ω is connected to a 6.0 V supply. 0.25 m of it is at right angles to a field of 0.080 T. Calculate the force on that length.", 0.03, "N",
                     "Find $I$ from $V = IR$ first.",
-                    [r"$I = V \div R = 6.0 \div 4.0 = 1.5$ A"] + ewau(r"F = B I l", r"F = 0.080 \times 1.5 \times 0.25", "0.030", "N")),
+                    [r"$I = V \div R = 6.0 \div 4.0 = 1.5$ A"] + ewau(r"$F = B I l$", r"F = 0.080 \times 1.5 \times 0.25", "0.030", "N")),
             numeric("mg-t6-q4", "One side of a coil of 50 turns lies in a field of 0.12 T; the side is 8.0 cm long and carries 2.0 A. Calculate the force on that side of the coil (all 50 wires).", 0.96, "N",
                     "Force on one wire × 50.",
-                    ewau(r"F = B I l N", r"F = 0.12 \times 2.0 \times 0.080 \times 50", "0.96", "N") + [r"(one wire: $0.0192$ N; fifty of them: $0.96$ N)"]),
-            numeric("mg-t6-q5", "The magnetic flux density at a distance d from a small magnet is given by B = K ÷ d², where K is a constant. At d = 0.10 m, B = 640 μT. Calculate B at d = 0.20 m, in μT.", 160, "μT",
+                    ewau(r"$F = B I l N$", r"F = 0.12 \times 2.0 \times 0.080 \times 50", "0.96", "N") + [r"(one wire: $0.0192$ N; fifty of them: $0.96$ N)"]),
+            numeric("mg-t6-q5", "The magnetic flux density at a distance d from a small magnet is given by $B = K \\div d^2$, where K is a constant. At $d = 0.10$ m, $B = 640 \\muT$. Calculate B at $d = 0.20$ m, in μT.", 160, "μT",
                     "Find K first, then use it again — or notice doubling d divides B by 4.",
                     [r"<b>Find K:</b> $K = B d^2 = 640 \times 0.10^2 = 6.4$ (μT m²)", r"<b>Use it:</b> $B = K \div d^2 = 6.4 \div 0.20^2 = 6.4 \div 0.040$", r"<b>Answer:</b> $= 160$ μT — inverse square: twice the distance, a quarter of the field"]),
             choice("mg-t6-q6", "A student finds the constant K in the 2025-style question and stops. Out of 3 marks she scores…",
@@ -501,7 +501,7 @@ FACTS = [
     # N9
     fact("Equation for the force on a wire at right angles to a field?", "$F = B I l$: force (N) = flux density (T) × current (A) × length in the field (m).", "motor-force-nn"),
     fact("Unit of magnetic flux density?", "Tesla, T (= N/A m).", "motor-force-nn"),
-    fact("Three F = BIl traps?", "cm not converted to m; using the whole wire instead of the length in the field; forgetting F = 0 for a wire parallel to the field.", "motor-force-nn"),
+    fact("Three $F = BIl$ traps?", "cm not converted to m; using the whole wire instead of the length in the field; forgetting $F = 0$ for a wire parallel to the field.", "motor-force-nn"),
     # T1
     fact("Chain for a magnet moving away from another?", "The two fields interact → like poles repel, so a force on X away from Y → X accelerates away.", "magnet-force-chains"),
     fact("Chain for a floating magnet?", "Fields interact → repulsive (upward) force on the upper magnet → equal to its weight, so the forces are balanced and it stays still.", "magnet-force-chains"),
@@ -521,9 +521,9 @@ FACTS = [
     fact("Field left → right, current into the page: force?", "Down the page.", "flhr-diagrams"),
     fact("Wire along the field lines: force?", "Zero.", "flhr-diagrams"),
     # T6
-    fact("How much of a long wire counts in F = BIl?", "Only the length inside the field (e.g. the width of the poles).", "motor-force-hard"),
+    fact("How much of a long wire counts in $F = BIl$?", "Only the length inside the field (e.g. the width of the poles).", "motor-force-hard"),
     fact("Force on a coil side with N turns?", "$N$ × the force on one wire: $F = B I l N$.", "motor-force-hard"),
-    fact("The 2025 unfamiliar equation?", "B against distance, inverse square (B ∝ 1/d²); use it like any other — finding the constant alone was 1 of 3.", "motor-force-hard"),
+    fact("The 2025 unfamiliar equation?", "B against distance, inverse square ($B \\propto 1/d^2$); use it like any other — finding the constant alone was 1 of 3.", "motor-force-hard"),
     # T7
     fact("The six-step chain for a motor?", "Current in the coil → field around the coil → interacts with the permanent field → resultant force on the coil → force opposite on either side → so the coil rotates.", "dc-motor"),
     fact("What does the split-ring commutator do?", "Reverses the current in the coil every half turn, so the coil keeps rotating in the same direction.", "dc-motor"),

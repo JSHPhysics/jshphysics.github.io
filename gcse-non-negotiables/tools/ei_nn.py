@@ -450,7 +450,7 @@ section_n8 = section(
 section_n9 = section(
     "transmission-loss", "nn", "Why high voltage, with the power equations", "13.11P",
     equations=[r"P = I\,V", r"P = I^2 R"],
-    blurb="The national-grid argument made quantitative: for a fixed power, P = IV says a higher pd means a smaller current; P = I²R says the power wasted heating the cables falls with the square of the current — ten times the pd, a tenth of the current, a hundredth of the loss. The marks are for using both equations, in that order.",
+    blurb="The national-grid argument made quantitative: for a fixed power, $P = IV$ says a higher pd means a smaller current; $P = I^2R$ says the power wasted heating the cables falls with the square of the current — ten times the pd, a tenth of the current, a hundredth of the loss. The marks are for using both equations, in that order.",
     tags=["H", "P"],
     checklist=[
         "Use $P = IV$ to show that a higher transmission pd means a smaller current",
@@ -485,9 +485,9 @@ section_n9 = section(
                     [r"$I = \dfrac{20 \times 10^6}{400 \times 10^3} = 50$ A"] + ewau(r"P = I^2 R", r"P = 50^2 \times 10 = 25\,000 \text{ W}", "25", "kW")),
             written("ei-n9-q4", "Using equations, explain why transmitting at a higher pd reduces the energy wasted in the cables. (3)",
                     marks(["$P = IV$: for the same power transmitted, a <b>higher pd means a smaller current</b>.", "$P = I^2R$: the power wasted heating the cables is proportional to the <b>square of the current</b>…", "…so a smaller current wastes <b>much less</b> power (halve the current, quarter the loss), making the transmission more efficient."]), lines=3),
-            choice("ei-n9-q5", "A student finds the cable loss by putting the transmission pd into P = IV. What is wrong?",
-                   ["Nothing", "That gives the power carried by the cables, not the power wasted — the loss needs I²R with the cable's resistance", "P = IV is not on the equation list", "The current should be squared in P = IV"], 1,
-                   "Loss = I²R (or I × the pd dropped across the cable, which is not the transmission pd)."),
+            choice("ei-n9-q5", "A student finds the cable loss by putting the transmission pd into $P = IV$. What is wrong?",
+                   ["Nothing", "That gives the power carried by the cables, not the power wasted — the loss needs $I^2R$ with the cable's resistance", "$P = IV$ is not on the equation list", "The current should be squared in $P = IV$"], 1,
+                   "Loss = $I^2R$ (or I × the pd dropped across the cable, which is not the transmission pd)."),
         ]),
     ],
 )

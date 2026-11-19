@@ -836,7 +836,7 @@
               },
               "hint": "$F = B \\times I \\times l$ — all three already in base units.",
               "walkthrough": [
-                "<b>Equation:</b> $F = B I l$",
+                "<b>Equation:</b> $$F = B I l$$",
                 "<b>Working:</b> $F = 0.15 \\times 4.0 \\times 0.20$",
                 "<b>Answer:</b> $= 0.12$",
                 "<b>Units:</b> N"
@@ -853,7 +853,7 @@
               "hint": "Convert 12 cm to metres first.",
               "walkthrough": [
                 "$l = 12$ cm $= 0.12$ m",
-                "<b>Equation:</b> $F = B I l$",
+                "<b>Equation:</b> $$F = B I l$$",
                 "<b>Working:</b> $F = 0.80 \\times 0.50 \\times 0.12$",
                 "<b>Answer:</b> $= 0.048$",
                 "<b>Units:</b> N"
@@ -885,7 +885,7 @@
               },
               "hint": "Work in N, then × 1000.",
               "walkthrough": [
-                "<b>Equation:</b> $F = B I l$",
+                "<b>Equation:</b> $$F = B I l$$",
                 "<b>Working:</b> $F = 0.040 \\times 1.5 \\times 0.25 = 0.015 \\text{ N}$",
                 "<b>Answer:</b> $= 15$",
                 "<b>Units:</b> mN (× 1000)"
@@ -902,7 +902,7 @@
                 "A m/N"
               ],
               "correct": 1,
-              "explain": "1 T = 1 N/A m, from B = F ÷ (I l)."
+              "explain": "1 T = 1 N/A m, from $B = F \\div (I l)$."
             }
           ]
         }
@@ -1520,7 +1520,7 @@
               "hint": "Only the length between the poles is in the field.",
               "walkthrough": [
                 "$l = 4.0$ cm $= 0.040$ m — the length <b>in the field</b>, not the 0.60 m of wire.",
-                "<b>Equation:</b> $F = B I l$",
+                "<b>Equation:</b> $$F = B I l$$",
                 "<b>Working:</b> $F = 0.20 \\times 3.0 \\times 0.040$",
                 "<b>Answer:</b> $= 0.024$",
                 "<b>Units:</b> N"
@@ -1554,7 +1554,7 @@
               "hint": "Find $I$ from $V = IR$ first.",
               "walkthrough": [
                 "$I = V \\div R = 6.0 \\div 4.0 = 1.5$ A",
-                "<b>Equation:</b> $F = B I l$",
+                "<b>Equation:</b> $$F = B I l$$",
                 "<b>Working:</b> $F = 0.080 \\times 1.5 \\times 0.25$",
                 "<b>Answer:</b> $= 0.030$",
                 "<b>Units:</b> N"
@@ -1570,7 +1570,7 @@
               },
               "hint": "Force on one wire × 50.",
               "walkthrough": [
-                "<b>Equation:</b> $F = B I l N$",
+                "<b>Equation:</b> $$F = B I l N$$",
                 "<b>Working:</b> $F = 0.12 \\times 2.0 \\times 0.080 \\times 50$",
                 "<b>Answer:</b> $= 0.96$",
                 "<b>Units:</b> N",
@@ -1580,7 +1580,7 @@
             {
               "id": "mg-t6-q5",
               "type": "numeric",
-              "text": "The magnetic flux density at a distance d from a small magnet is given by B = K ÷ d², where K is a constant. At d = 0.10 m, B = 640 μT. Calculate B at d = 0.20 m, in μT.",
+              "text": "The magnetic flux density at a distance d from a small magnet is given by $B = K \\div d^2$, where K is a constant. At $d = 0.10$ m, $B = 640 \\muT$. Calculate B at $d = 0.20$ m, in μT.",
               "answer": {
                 "value": 160,
                 "unit": "μT"
@@ -1994,8 +1994,8 @@
       "section": "motor-force-nn"
     },
     {
-      "q": "Three F = BIl traps?",
-      "a": "cm not converted to m; using the whole wire instead of the length in the field; forgetting F = 0 for a wire parallel to the field.",
+      "q": "Three $F = BIl$ traps?",
+      "a": "cm not converted to m; using the whole wire instead of the length in the field; forgetting $F = 0$ for a wire parallel to the field.",
       "section": "motor-force-nn"
     },
     {
@@ -2064,7 +2064,7 @@
       "section": "flhr-diagrams"
     },
     {
-      "q": "How much of a long wire counts in F = BIl?",
+      "q": "How much of a long wire counts in $F = BIl$?",
       "a": "Only the length inside the field (e.g. the width of the poles).",
       "section": "motor-force-hard"
     },
@@ -2075,7 +2075,7 @@
     },
     {
       "q": "The 2025 unfamiliar equation?",
-      "a": "B against distance, inverse square (B ∝ 1/d²); use it like any other — finding the constant alone was 1 of 3.",
+      "a": "B against distance, inverse square ($B \\propto 1/d^2$); use it like any other — finding the constant alone was 1 of 3.",
       "section": "motor-force-hard"
     },
     {

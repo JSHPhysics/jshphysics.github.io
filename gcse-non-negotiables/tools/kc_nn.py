@@ -149,7 +149,7 @@ section_n2 = section(
                     "Mega = × 1 000 000.",
                     [r"$2.5 \times 1\,000\,000 = 2\,500\,000$ W, or $2.5 \times 10^{6}$ W."]),
             choice("kc-n2-q3", "Which is the largest current?", ["250 μA", "25 mA", "0.02 A", "2500 nA"], 1,
-                   "Convert all to amps: 250 μA = 0.000 25 A; 25 mA = 0.025 A; 0.02 A; 2500 nA = 0.000 0025 A. 25 mA is largest."),
+                   "Convert all to amps: $250 \\muA = 0.000 25$ A; 25 mA = 0.025 A; 0.02 A; 2500 nA = 0.000 0025 A. 25 mA is largest."),
             numeric("kc-n2-q4", "Write 500 nm in metres.", q2_4, "m",
                     "Nano = × 10⁻⁹.",
                     [r"$500 \times 10^{-9} = 5 \times 10^{-7}$ m. Type it as 5e-7."]),
@@ -190,16 +190,16 @@ section_n3 = section(
             "<table class='tbl'><tr><th>From</th><th>To</th><th>Do this</th><th>Example</th></tr>"
             "<tr><td>minutes</td><td>seconds</td><td>× 60</td><td>4 min = 240 s</td></tr>"
             "<tr><td>hours</td><td>seconds</td><td>× 3600</td><td>2 h = 7200 s</td></tr>"
-            "<tr><td>days</td><td>seconds</td><td>× 24 × 3600 = × 86 400</td><td>1 day = 86 400 s</td></tr>"
+            "<tr><td>days</td><td>seconds</td><td>× $24 \\times 3600 = \\times 86\\,400$</td><td>1 day = 86 400 s</td></tr>"
             "<tr><td>km</td><td>m</td><td>× 1000</td><td>1.2 km = 1200 m</td></tr>"
             "<tr><td>cm</td><td>m</td><td>÷ 100</td><td>35 cm = 0.35 m</td></tr>"
             "<tr><td>g</td><td>kg</td><td>÷ 1000</td><td>250 g = 0.25 kg</td></tr>"
-            "<tr><td>km/h</td><td>m/s</td><td>÷ 3.6 (× 1000 ÷ 3600)</td><td>72 km/h = 20 m/s</td></tr>"
+            "<tr><td>km/h</td><td>m/s</td><td>÷ 3.6 (× 1000 ÷ 3600)</td><td>72 km/$h = 20$ m/s</td></tr>"
             "<tr><td>cm²</td><td>m²</td><td>÷ 10 000</td><td>50 cm² = 0.005 m²</td></tr>"
             "<tr><td>cm³</td><td>m³</td><td>÷ 1 000 000</td><td>250 cm³ = 0.000 25 m³</td></tr>"
             "<tr><td>g/cm³</td><td>kg/m³</td><td>× 1000</td><td>2.7 g/cm³ = 2700 kg/m³</td></tr>"
             "<tr><td>kWh</td><td>J</td><td>× 3 600 000</td><td>2 kWh = 7.2 × 10⁶ J</td></tr></table>"
-            "<p><b>Areas and volumes:</b> if 1 m = 100 cm, then 1 m² = 100 × 100 = 10 000 cm² and 1 m³ = 100 × 100 × 100 = 1 000 000 cm³. Square or cube the length factor — the most common slip in Topic 14 density questions.</p>"
+            "<p><b>Areas and volumes:</b> if 1 m = 100 cm, then 1 $m^2 = 100 \\times 100 = 10\\,000$ cm² and 1 $m^3 = 100 \\times 100 \\times 100 = 1\\,000\\,000$ cm³. Square or cube the length factor — the most common slip in Topic 14 density questions.</p>"
             "<p><b>Sense check:</b> converting to a <i>bigger</i> unit gives a <i>smaller</i> number (3500 m = 3.5 km). If the number gets bigger when the unit gets bigger, the conversion went the wrong way.</p>",
         ),
         worked(
@@ -217,7 +217,7 @@ section_n3 = section(
             numeric("kc-n3-q1", "A film lasts 90 minutes. How many seconds is that?", q3_1, "s",
                     "× 60.", [r"$90 \times 60 = 5400$ s."]),
             numeric("kc-n3-q2", "A tank holds 0.5 m³ of water. Give the volume in cm³.", q3_2, "cm³",
-                    "1 m³ = 1 000 000 cm³ (100 cubed).",
+                    "1 $m^3 = 1\\,000\\,000$ cm³ (100 cubed).",
                     [r"$0.5 \times 1\,000\,000 = 500\,000$ cm³."]),
             numeric("kc-n3-q3", "A satellite takes 2.5 days to complete an orbit. Give this time in seconds.", q3_3, "s",
                     "Days → hours → seconds: × 24 × 3600.",
@@ -230,7 +230,7 @@ section_n3 = section(
                     [r"$1.5 \times 3\,600\,000 = 5\,400\,000$ J, or $5.4 \times 10^{6}$ J."]),
             choice("kc-n3-q6", "A student converts 20 cm² to m² and gets 0.2 m². What has gone wrong?",
                    ["Nothing, it is correct", "They divided by 100 instead of 10 000", "They should have multiplied by 100", "cm² cannot be converted to m²"], 1,
-                   "1 m² = 100 cm × 100 cm = 10 000 cm², so 20 cm² = 20 ÷ 10 000 = 0.002 m². Dividing by 100 only converts a length."),
+                   "1 $m^2 = 100$ cm × 100 cm = 10 000 cm², so 20 cm² = $20 \\div 10\\,000 = 0.002$ m². Dividing by 100 only converts a length."),
         ]),
     ],
 )
@@ -439,21 +439,21 @@ section_n6 = section(
         practice("Choosing the equation", [
             choice("kc-n6-q1", "A question gives a force and a distance moved in the direction of the force, and asks for the energy transferred. Which equation from the list?",
                    ["$F = m \\times a$", "$E = F \\times d$", "$P = \\dfrac{E}{t}$", "$\\text{moment} = F \\times d$"], 1,
-                   "Force, distance and an energy: work done, E = F × d. Moment = F × d has the same symbols but gives a turning effect in N m, not an energy — read what the question asks for."),
+                   "Force, distance and an energy: work done, $E = F \\times d$. Moment = $F \\times d$ has the same symbols but gives a turning effect in N m, not an energy — read what the question asks for."),
             choice("kc-n6-q2", "In $W = m \\times g$, what does $W$ stand for?", ["Work done", "Weight", "Watts", "Wavelength"], 1,
-                   "With mass and gravitational field strength, W is weight in newtons. Work done is E = F × d."),
+                   "With mass and gravitational field strength, W is weight in newtons. Work done is $E = F \\times d$."),
             choice("kc-n6-q3", "A question gives a current, a resistance and a time, and asks for the energy transferred. Which pair of equations do you need?",
                    ["$V = I R$ then $E = Q V$", "$P = I^2 R$ then $E = P t$", "$Q = I t$ then $V = I R$", "$P = I V$ then $Q = I t$"], 1,
-                   "Current and resistance give power through P = I²R; power and time give energy through E = P × t. (V = IR then P = IV then E = Pt also works — one step longer.)"),
+                   "Current and resistance give power through $P = I^2R$; power and time give energy through $E = P \\times t$. ($V = IR$ then $P = IV$ then $E = Pt$ also works — one step longer.)"),
             choice("kc-n6-q4", "In $\\Delta Q = m \\times c \\times \\Delta\\theta$, what is $Q$?", ["Charge in coulombs", "Thermal energy in joules", "Heat capacity", "Temperature"], 1,
-                   "Here Q is thermal energy (J): mass × specific heat capacity × temperature change. The same letter means charge in Q = I × t."),
+                   "Here Q is thermal energy (J): mass × specific heat capacity × temperature change. The same letter means charge in $Q = I \\times t$."),
             written("kc-n6-q5", "A student is asked for the pressure at the bottom of a swimming pool and writes down $P = I \\times V$. Explain the mistake and state the correct equation.",
                     marks(["$P = I \\times V$ is electrical power; the symbol P means pressure in a different equation.",
                            "Pressure in a liquid: $P = h \\times \\rho \\times g$ (depth × density × gravitational field strength).",
                            "The quantities given (depth, density) point to the right equation — match the symbols you have to the equation."]), lines=3),
             choice("kc-n6-q6", "A question gives an initial velocity, a final velocity and a distance, and asks for the acceleration. Which equation from the list?",
                    ["$a = \\dfrac{v - u}{t}$", "$v^2 - u^2 = 2 \\times a \\times x$", "$F = m \\times a$", "$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$"], 1,
-                   "No time is given, so the equation with u, v, a and x (and no t) is the one: v² − u² = 2ax. The first option needs a time you do not have."),
+                   "No time is given, so the equation with u, v, a and x (and no t) is the one: $v^2 - u^2 = 2ax$. The first option needs a time you do not have."),
             written("kc-n6-q7", "Describe how you would use the equation list to choose an equation for a calculation question.",
                     marks(["Write down the symbols for each quantity given in the question, and the symbol for the quantity asked for.",
                            "Scan the list for the equation that contains exactly those symbols (known constants such as g count as given).",
@@ -475,9 +475,9 @@ TRIANGLE_SVG = (
     "<text x='150' y='88' text-anchor='middle' font-size='26' style='fill:var(--accent);font-weight:700'>F</text>"
     "<text x='112' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>m</text>"
     "<text x='188' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>a</text>"
-    "<text x='300' y='70' font-size='14' style='fill:var(--ink-2)'>cover F:  F = m × a</text>"
-    "<text x='300' y='100' font-size='14' style='fill:var(--ink-2)'>cover m:  m = F ÷ a</text>"
-    "<text x='300' y='130' font-size='14' style='fill:var(--ink-2)'>cover a:  a = F ÷ m</text>"
+    "<text x='300' y='70' font-size='14' style='fill:var(--ink-2)'>cover F:  $F = m \\times a$</text>"
+    "<text x='300' y='100' font-size='14' style='fill:var(--ink-2)'>cover m:  $m = F \\div a$</text>"
+    "<text x='300' y='130' font-size='14' style='fill:var(--ink-2)'>cover a:  $a = F \\div m$</text>"
 )
 
 q7_1 = 1200 / 400
@@ -494,7 +494,7 @@ section_n7 = section(
     checklist=[
         "Make any quantity the subject of a three-term equation (triangle or algebra)",
         "Rearrange an equation with a square (KE, spring energy) including the square root",
-        "Rearrange an equation with a fraction (a = (v − u) ÷ t) for the quantity on the top or the bottom",
+        "Rearrange an equation with a fraction ($a = (v - u) \\div t$) for the quantity on the top or the bottom",
         "Substitute first, then rearrange, when the algebra looks hard",
     ],
     parts=[
@@ -502,7 +502,7 @@ section_n7 = section(
             "Two methods",
             "<p><b>Method 1 — the formula triangle</b> works for any equation of the form <i>one thing = two things multiplied</i>, such as $F = m \\times a$, $V = I \\times R$, $v = f \\times \\lambda$, $\\rho = m \\div V$ (that is $m = \\rho \\times V$). "
             "Put the single quantity at the top; cover the one you want; what you can see is the answer.</p>"
-            + diagram(TRIANGLE_SVG, 480, 170, "The F = m × a triangle. Cover the quantity you want; the other two tell you whether to multiply (side by side) or divide (one above the other).") +
+            + diagram(TRIANGLE_SVG, 480, 170, "The $F = m \\times a$ triangle. Cover the quantity you want; the other two tell you whether to multiply (side by side) or divide (one above the other).") +
             "<p><b>Method 2 — do the same to both sides</b> works for every equation, including the ones with squares and fractions that triangles cannot handle:</p>"
             "<ol class='list'>"
             "<li>Write the equation. Circle the quantity you want.</li>"
@@ -534,22 +534,22 @@ section_n7 = section(
         types(["rearranging"], "Calculation: rearranging"),
         practice("Rearranging", [
             numeric("kc-n7-q1", "A resultant force of 1200 N acts on a car of mass 400 kg. Calculate the acceleration.", q7_1, "m/s²",
-                    "Cover a in the triangle: a = F ÷ m.",
+                    "Cover a in the triangle: $a = F \\div m$.",
                     ewau(r"a = \dfrac{F}{m}", r"a = \dfrac{1200}{400}", "3", "m/s²")),
             numeric("kc-n7-q2", "A wave has speed 36 m/s and frequency 4 Hz. Calculate its wavelength using $v = f \\times \\lambda$.", 9, "m",
-                    "λ = v ÷ f.",
+                    "$\\lambda = v \\div f$.",
                     ewau(r"\lambda = \dfrac{v}{f}", r"\lambda = \dfrac{36}{4}", "9", "m")),
-            numeric("kc-n7-q3", "An object gains 1500 J of gravitational potential energy when lifted 25 m. Calculate its mass. (g = 10 N/kg.)", q7_3, "kg",
-                    "GPE = m g h, so m = GPE ÷ (g × h).",
+            numeric("kc-n7-q3", "An object gains 1500 J of gravitational potential energy when lifted 25 m. Calculate its mass. ($g = 10$ N/kg.)", q7_3, "kg",
+                    "$\\text{GPE} = m g h$, so $m = \\text{GPE} \\div (g \\times h)$.",
                     ewau(r"m = \dfrac{GPE}{g \times h}", r"m = \dfrac{1500}{10 \times 25}", "6", "kg")),
             numeric("kc-n7-q4", "A 1600 kg car has 800 J of kinetic energy. Calculate its speed.", q7_4, "m/s",
-                    "v² = 2 × KE ÷ m, then square-root.",
+                    "$v^2 = 2 \\times \\text{KE} \\div m$, then square-root.",
                     [r"$v^2 = \dfrac{2 \times 800}{1600} = 1$.", r"$v = \sqrt{1} = 1$ m/s."]),
             numeric("kc-n7-q5", "A car accelerates from 10 m/s to 22.5 m/s in 5 s. Calculate its acceleration.", q7_5, "m/s²",
-                    "a = (v − u) ÷ t.",
+                    "$a = (v - u) \\div t$.",
                     ewau(r"a = \dfrac{v - u}{t}", r"a = \dfrac{22.5 - 10}{5} = \dfrac{12.5}{5}", "2.5", "m/s²")),
             numeric("kc-n7-q6", "A motor transfers 450 J of energy in 5 s. Calculate its power.", q7_6, "W",
-                    "P = E ÷ t.",
+                    "$P = E \\div t$.",
                     ewau(r"P = \dfrac{E}{t}", r"P = \dfrac{450}{5}", "90", "W")),
         ]),
     ],

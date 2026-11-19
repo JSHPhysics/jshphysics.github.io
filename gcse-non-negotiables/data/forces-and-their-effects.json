@@ -379,7 +379,7 @@
                 "0 N"
               ],
               "correct": 1,
-              "explain": "2000 − 1500 = 500 N in the direction of the larger force."
+              "explain": "$2000 - 1500 = 500$ N in the direction of the larger force."
             },
             {
               "id": "fe-n4-q5",
@@ -527,7 +527,7 @@
         {
           "kind": "explain",
           "title": "Moments",
-          "html": "<figure class='diagram'><svg viewBox='0 0 640 290' role='img'><circle cx='110' cy='110' r='14' style='fill:var(--line);opacity:0.5;stroke:var(--ink-2);stroke-width:1.4'/><circle cx='110.0' cy='110.0' r='3' style='fill:var(--ink)'/><rect x='110' y='102' width='170' height='16' style='fill:var(--line);opacity:0.25;stroke:var(--ink-2);stroke-width:1.4'/><line x1='270.0' y1='110.0' x2='270.0' y2='180.0' style='stroke:var(--accent);stroke-width:3'/><polygon points='270.0,180.0 266.1,171.9 273.9,171.9' style='fill:var(--accent)'/><text x='278.0' y='172.0' text-anchor='start' style='fill:var(--accent);font-size:12px;font-weight:normal;'>F = 20 N</text><line x1='110.0' y1='205.0' x2='270.0' y2='205.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><text x='190.0' y='222.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>d = 0.30 m (perpendicular distance)</text><text x='195.0' y='245.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>moment = 20 × 0.30 = 6 N m</text><text x='195.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force at right angles to the spanner</text><circle cx='420' cy='110' r='14' style='fill:var(--line);opacity:0.5;stroke:var(--ink-2);stroke-width:1.4'/><circle cx='420.0' cy='110.0' r='3' style='fill:var(--ink)'/><rect x='420' y='102' width='170' height='16' style='fill:var(--line);opacity:0.25;stroke:var(--ink-2);stroke-width:1.4'/><line x1='580.0' y1='110.0' x2='625.0' y2='163.6' style='stroke:var(--accent);stroke-width:3'/><polygon points='625.0,163.6 616.8,159.9 622.8,154.9' style='fill:var(--accent)'/><text x='631.0' y='163.6' text-anchor='start' style='fill:var(--accent);font-size:12px;font-weight:normal;'>F = 20 N</text><line x1='580.0' y1='110.0' x2='620.0' y2='110.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><path d='M 606.0 110.0 A 26 26 0 0 1 596.7 129.9' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><text x='612.0' y='134.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>50°</text><line x1='513.9' y1='31.2' x2='580.0' y2='110.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><line x1='420.0' y1='110.0' x2='513.9' y2='31.2' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><text x='400.0' y='10.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>perpendicular distance from the pivot</text><text x='400.0' y='24.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>to the line of action: 0.30 × sin 50° = 0.23 m</text><text x='505.0' y='245.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>moment = 20 × 0.23 = 4.6 N m — smaller</text><text x='505.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>the same force at an angle</text></svg><figcaption>The same 20 N on the same spanner: at right angles the distance is the full 0.30 m; at an angle the perpendicular distance — and the moment — is smaller.</figcaption></figure><p><b>Situations with rotation</b> (9.6P): a door on its hinges, a spanner on a nut, a see-saw, a wheelbarrow, a crowbar, a bicycle pedal, a steering wheel, scissors, a tap. In each there is a <b>pivot</b> (hinge, nut, fulcrum, axle) and a force applied some distance from it.</p><p><b>Moment of a force</b> (9.7P) $= $ force $\\times$ <b>distance normal to the direction of the force</b> (the perpendicular distance from the pivot to the force's line of action). Unit: <b>newton metre, N m</b> (the June 2024 scheme's one-mark question). It is not a joule even though both are N × m: in a moment the distance is <i>across</i> the force, in work it is <i>along</i> it.</p><p>Why perpendicular: only the part of the force at right angles to the lever turns it. Pushing straight along a spanner towards the nut does nothing; pushing at right angles at the far end does the most. So: <b>bigger force</b> or <b>longer perpendicular distance</b> → bigger moment. That is why door handles are far from the hinges and why a long spanner loosens a stiff nut.</p><p>Units trap (June 2022 report, Q6): \"the most common detracting mistake was not converting cm to m\" — a 30 cm spanner is 0.30 m, or the moment comes out 100 times too big.</p>"
+          "html": "<figure class='diagram'><svg viewBox='0 0 640 290' role='img'><circle cx='110' cy='110' r='14' style='fill:var(--line);opacity:0.5;stroke:var(--ink-2);stroke-width:1.4'/><circle cx='110.0' cy='110.0' r='3' style='fill:var(--ink)'/><rect x='110' y='102' width='170' height='16' style='fill:var(--line);opacity:0.25;stroke:var(--ink-2);stroke-width:1.4'/><line x1='270.0' y1='110.0' x2='270.0' y2='180.0' style='stroke:var(--accent);stroke-width:3'/><polygon points='270.0,180.0 266.1,171.9 273.9,171.9' style='fill:var(--accent)'/><text x='278.0' y='172.0' text-anchor='start' style='fill:var(--accent);font-size:12px;font-weight:normal;'>F = 20 N</text><line x1='110.0' y1='205.0' x2='270.0' y2='205.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><text x='190.0' y='222.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>d = 0.30 m (perpendicular distance)</text><text x='195.0' y='245.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>moment = 20 × 0.30 = 6 N m</text><text x='195.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>force at right angles to the spanner</text><circle cx='420' cy='110' r='14' style='fill:var(--line);opacity:0.5;stroke:var(--ink-2);stroke-width:1.4'/><circle cx='420.0' cy='110.0' r='3' style='fill:var(--ink)'/><rect x='420' y='102' width='170' height='16' style='fill:var(--line);opacity:0.25;stroke:var(--ink-2);stroke-width:1.4'/><line x1='580.0' y1='110.0' x2='625.0' y2='163.6' style='stroke:var(--accent);stroke-width:3'/><polygon points='625.0,163.6 616.8,159.9 622.8,154.9' style='fill:var(--accent)'/><text x='631.0' y='163.6' text-anchor='start' style='fill:var(--accent);font-size:12px;font-weight:normal;'>F = 20 N</text><line x1='580.0' y1='110.0' x2='620.0' y2='110.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><path d='M 606.0 110.0 A 26 26 0 0 1 596.7 129.9' style='fill:none;stroke:var(--ink-2);stroke-width:1.2'/><text x='612.0' y='134.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>50°</text><line x1='513.9' y1='31.2' x2='580.0' y2='110.0' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><line x1='420.0' y1='110.0' x2='513.9' y2='31.2' style='stroke:var(--ink-2);stroke-width:1.2;stroke-dasharray:5 4'/><text x='400.0' y='10.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>perpendicular distance from the pivot</text><text x='400.0' y='24.0' text-anchor='start' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>to the line of action: 0.30 × sin 50° = 0.23 m</text><text x='505.0' y='245.0' text-anchor='middle' style='fill:var(--ink);font-size:12px;font-weight:normal;'>moment = 20 × 0.23 = 4.6 N m — smaller</text><text x='505.0' y='268.0' text-anchor='middle' style='fill:var(--ink-2);font-size:11px;font-weight:normal;'>the same force at an angle</text></svg><figcaption>The same 20 N on the same spanner: at right angles the distance is the full 0.30 m; at an angle the perpendicular distance — and the moment — is smaller.</figcaption></figure><p><b>Situations with rotation</b> (9.6P): a door on its hinges, a spanner on a nut, a see-saw, a wheelbarrow, a crowbar, a bicycle pedal, a steering wheel, scissors, a tap. In each there is a <b>pivot</b> (hinge, nut, fulcrum, axle) and a force applied some distance from it.</p><p><b>Moment of a force</b> (9.7P) $= $ force $\\times$ <b>distance normal to the direction of the force</b> (the perpendicular distance from the pivot to the force's line of action). Unit: <b>newton metre, N m</b> (the June 2024 scheme's one-mark question). It is not a joule even though both are $\\text{N} \\times \\text{m}$: in a moment the distance is <i>across</i> the force, in work it is <i>along</i> it.</p><p>Why perpendicular: only the part of the force at right angles to the lever turns it. Pushing straight along a spanner towards the nut does nothing; pushing at right angles at the far end does the most. So: <b>bigger force</b> or <b>longer perpendicular distance</b> → bigger moment. That is why door handles are far from the hinges and why a long spanner loosens a stiff nut.</p><p>Units trap (June 2022 report, Q6): \"the most common detracting mistake was not converting cm to m\" — a 30 cm spanner is 0.30 m, or the moment comes out 100 times too big.</p>"
         },
         {
           "kind": "worked",
@@ -579,7 +579,7 @@
                 "N/m"
               ],
               "correct": 2,
-              "explain": "Newton metre. Not the joule, even though J = N m dimensionally, because the distance is perpendicular to the force, not along it."
+              "explain": "Newton metre. Not the joule, even though $J = N m$ dimensionally, because the distance is perpendicular to the force, not along it."
             },
             {
               "id": "fe-n6-q3",
@@ -589,7 +589,7 @@
                 "value": 300,
                 "unit": "N"
               },
-              "hint": "F = M ÷ d.",
+              "hint": "$F = M \\div d$.",
               "walkthrough": [
                 "$F = \\dfrac{M}{d} = \\dfrac{24}{0.08} = 300$ N."
               ]
@@ -708,7 +708,7 @@
             {
               "id": "fe-n7-q4",
               "type": "choice",
-              "text": "A student answers a principle-of-moments question by writing \"300 ÷ 200 = 1.5, so the distance is 1.5 × 1 = 1.5 m\" and gets the right number. Why might this lose marks?",
+              "text": "A student answers a principle-of-moments question by writing \"$300 \\div 200 = 1.5$, so the distance is $1.5 \\times 1 = 1.5$ m\" and gets the right number. Why might this lose marks?",
               "options": [
                 "The answer is wrong",
                 "No moment was calculated as force × distance, which is what the question asks to be shown",
@@ -814,7 +814,7 @@
                 "value": 50,
                 "unit": "N"
               },
-              "hint": "Effort × 0.9 = 450 × 0.1.",
+              "hint": "Effort × $0.9 = 450 \\times 0.1$.",
               "walkthrough": [
                 "$E \\times 0.9 = 450 \\times 0.1 = 45$",
                 "$E = 50$ N."
@@ -1445,7 +1445,7 @@
             {
               "id": "fe-t4-q4",
               "type": "group",
-              "text": "A lift of mass 500 kg hangs from a cable. (g = 10 N/kg)",
+              "text": "A lift of mass 500 kg hangs from a cable. ($g = 10$ N/kg)",
               "parts": [
                 {
                   "id": "fe-t4-q4a",
@@ -1468,7 +1468,7 @@
                     "value": 6000,
                     "unit": "N"
                   },
-                  "hint": "Resultant = m × a upwards.",
+                  "hint": "Resultant = $m \\times a$ upwards.",
                   "walkthrough": [
                     "Resultant $= 500 \\times 2 = 1000$ N upwards.",
                     "$T - 5000 = 1000$, so $T = 6000$ N."
@@ -1580,7 +1580,7 @@
                     "unit": "N",
                     "tolerance": 0.02
                   },
-                  "hint": "W × 30 = 140.",
+                  "hint": "$W \\times 30 = 140$.",
                   "walkthrough": [
                     "$W = \\dfrac{140}{30} = 4.67$ N (4.7 N)."
                   ]
@@ -1592,7 +1592,7 @@
               "type": "choice",
               "text": "A force of 40 N is applied to the end of a 0.5 m lever at 60° to the lever. The moment is…",
               "options": [
-                "40 × 0.5 = 20 N m",
+                "$40 \\times 0.5 = 20$ N m",
                 "less than 20 N m, because the perpendicular distance is less than 0.5 m",
                 "more than 20 N m",
                 "zero"
@@ -1686,7 +1686,7 @@
                 "value": 160,
                 "unit": "N"
               },
-              "hint": "20 × 12 = L × 1.5.",
+              "hint": "$20 \\times 12 = L \\times 1.5$.",
               "walkthrough": [
                 "$L = \\dfrac{20 \\times 12}{1.5} = 160$ N."
               ]
@@ -1750,7 +1750,7 @@
                     "value": 80,
                     "unit": "J"
                   },
-                  "hint": "W = F × s.",
+                  "hint": "$W = F \\times s$.",
                   "walkthrough": [
                     "$400 \\times 0.2 = 80$ J (the same as $100 \\times 0.8$ by the effort)."
                   ]
@@ -1895,7 +1895,7 @@
                     "unit": "m",
                     "tolerance": 0.05
                   },
-                  "hint": "The drum turns 10/40 of a turn; one turn lifts 2π × 0.08.",
+                  "hint": "The drum turns 10/40 of a turn; one turn lifts $2\\pi \\times 0.08$.",
                   "walkthrough": [
                     "$\\tfrac{10}{40} \\times 2\\pi \\times 0.08 = 0.126$ m (0.13 m to 2 s.f.)."
                   ]
@@ -1909,7 +1909,7 @@
                     "unit": "J",
                     "tolerance": 0.03
                   },
-                  "hint": "Effort × 2π × 0.40.",
+                  "hint": "Effort × $2\\pi \\times 0.40$.",
                   "walkthrough": [
                     "Effort: $40 \\times 2\\pi \\times 0.40 = 100.5$ J.",
                     "Load: $800 \\times 0.126 = 100.5$ J. ✓"
@@ -2145,7 +2145,7 @@
     },
     {
       "q": "What does a non-zero resultant force do?",
-      "a": "Accelerates the object in the direction of the resultant: speeds up, slows down or changes direction (F = m a).",
+      "a": "Accelerates the object in the direction of the resultant: speeds up, slows down or changes direction ($F = m a$).",
       "section": "resultant-line"
     },
     {
@@ -2260,7 +2260,7 @@
     },
     {
       "q": "Resultant of 3 N and 4 N at right angles?",
-      "a": "5 N (Pythagoras: 9 + 16 = 25), at 53° to the 3 N.",
+      "a": "5 N (Pythagoras: $9 + 16 = 25$), at 53° to the 3 N.",
       "section": "scale-resultant"
     },
     {

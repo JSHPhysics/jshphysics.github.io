@@ -52,9 +52,9 @@ FACTS = [
     fact("Standard form: the rule for the front number?", "Between 1 and 10: $a \\times 10^{n}$ with $1 \\le a < 10$", "standard-form-nn"),
     fact("Calculator shows 2.5E-5. Write it.", "$2.5 \\times 10^{-5}$", "standard-form-nn"),
     # Equation sheet and symbols
-    fact("$W$ can mean…", "weight (W = m × g) or work done (W = F × d)", "equation-sheet"),
-    fact("$Q$ can mean…", "charge (Q = I × t) or thermal energy (ΔQ = m c Δθ)", "equation-sheet"),
-    fact("$P$ can mean…", "power (P = E ÷ t) or pressure (P = F ÷ A)", "equation-sheet"),
+    fact("$W$ can mean…", "weight ($W = m \\times g$) or work done ($W = F \\times d$)", "equation-sheet"),
+    fact("$Q$ can mean…", "charge ($Q = I \\times t$) or thermal energy ($\\Delta Q = m c \\Delta \\theta$)", "equation-sheet"),
+    fact("$P$ can mean…", "power ($P = E \\div t$) or pressure ($P = F \\div A$)", "equation-sheet"),
     fact("Value of $g$ at GCSE?", "10 N/kg (= 10 m/s²)", "equation-sheet"),
     fact("Speed of light?", "$3 \\times 10^{8}$ m/s", "equation-sheet"),
     # Rearranging and proportion
@@ -64,7 +64,7 @@ FACTS = [
     fact("Percentage change =", "(change ÷ original) × 100", "proportion"),
     fact("Efficiency =", "useful energy output ÷ total energy input (× 100 for %)", "proportion"),
     fact("Directly proportional means…", "double one, double the other; straight line through the origin", "proportion"),
-    fact("Inversely proportional means…", "double one, halve the other; x × y is constant", "proportion"),
+    fact("Inversely proportional means…", "double one, halve the other; $x \\times y$ is constant", "proportion"),
     fact("$y \\propto x^2$: double $x$ and $y$ becomes…", "4 times bigger", "proportion"),
     fact("EWAU stands for…", "Equation, Working, Answer, Units", "ewau"),
     # Command words

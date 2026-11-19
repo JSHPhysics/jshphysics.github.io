@@ -240,7 +240,7 @@
                 "2500 nA"
               ],
               "correct": 1,
-              "explain": "Convert all to amps: 250 μA = 0.000 25 A; 25 mA = 0.025 A; 0.02 A; 2500 nA = 0.000 0025 A. 25 mA is largest."
+              "explain": "Convert all to amps: $250 \\muA = 0.000 25$ A; 25 mA = 0.025 A; 0.02 A; 2500 nA = 0.000 0025 A. 25 mA is largest."
             },
             {
               "id": "kc-n2-q4",
@@ -299,7 +299,7 @@
         {
           "kind": "explain",
           "title": "The conversions that come up",
-          "html": "<table class='tbl'><tr><th>From</th><th>To</th><th>Do this</th><th>Example</th></tr><tr><td>minutes</td><td>seconds</td><td>× 60</td><td>4 min = 240 s</td></tr><tr><td>hours</td><td>seconds</td><td>× 3600</td><td>2 h = 7200 s</td></tr><tr><td>days</td><td>seconds</td><td>× 24 × 3600 = × 86 400</td><td>1 day = 86 400 s</td></tr><tr><td>km</td><td>m</td><td>× 1000</td><td>1.2 km = 1200 m</td></tr><tr><td>cm</td><td>m</td><td>÷ 100</td><td>35 cm = 0.35 m</td></tr><tr><td>g</td><td>kg</td><td>÷ 1000</td><td>250 g = 0.25 kg</td></tr><tr><td>km/h</td><td>m/s</td><td>÷ 3.6 (× 1000 ÷ 3600)</td><td>72 km/h = 20 m/s</td></tr><tr><td>cm²</td><td>m²</td><td>÷ 10 000</td><td>50 cm² = 0.005 m²</td></tr><tr><td>cm³</td><td>m³</td><td>÷ 1 000 000</td><td>250 cm³ = 0.000 25 m³</td></tr><tr><td>g/cm³</td><td>kg/m³</td><td>× 1000</td><td>2.7 g/cm³ = 2700 kg/m³</td></tr><tr><td>kWh</td><td>J</td><td>× 3 600 000</td><td>2 kWh = 7.2 × 10⁶ J</td></tr></table><p><b>Areas and volumes:</b> if 1 m = 100 cm, then 1 m² = 100 × 100 = 10 000 cm² and 1 m³ = 100 × 100 × 100 = 1 000 000 cm³. Square or cube the length factor — the most common slip in Topic 14 density questions.</p><p><b>Sense check:</b> converting to a <i>bigger</i> unit gives a <i>smaller</i> number (3500 m = 3.5 km). If the number gets bigger when the unit gets bigger, the conversion went the wrong way.</p>"
+          "html": "<table class='tbl'><tr><th>From</th><th>To</th><th>Do this</th><th>Example</th></tr><tr><td>minutes</td><td>seconds</td><td>× 60</td><td>4 min = 240 s</td></tr><tr><td>hours</td><td>seconds</td><td>× 3600</td><td>2 h = 7200 s</td></tr><tr><td>days</td><td>seconds</td><td>× $24 \\times 3600 = \\times 86\\,400$</td><td>1 day = 86 400 s</td></tr><tr><td>km</td><td>m</td><td>× 1000</td><td>1.2 km = 1200 m</td></tr><tr><td>cm</td><td>m</td><td>÷ 100</td><td>35 cm = 0.35 m</td></tr><tr><td>g</td><td>kg</td><td>÷ 1000</td><td>250 g = 0.25 kg</td></tr><tr><td>km/h</td><td>m/s</td><td>÷ 3.6 (× 1000 ÷ 3600)</td><td>72 km/$h = 20$ m/s</td></tr><tr><td>cm²</td><td>m²</td><td>÷ 10 000</td><td>50 cm² = 0.005 m²</td></tr><tr><td>cm³</td><td>m³</td><td>÷ 1 000 000</td><td>250 cm³ = 0.000 25 m³</td></tr><tr><td>g/cm³</td><td>kg/m³</td><td>× 1000</td><td>2.7 g/cm³ = 2700 kg/m³</td></tr><tr><td>kWh</td><td>J</td><td>× 3 600 000</td><td>2 kWh = 7.2 × 10⁶ J</td></tr></table><p><b>Areas and volumes:</b> if 1 m = 100 cm, then 1 $m^2 = 100 \\times 100 = 10\\,000$ cm² and 1 $m^3 = 100 \\times 100 \\times 100 = 1\\,000\\,000$ cm³. Square or cube the length factor — the most common slip in Topic 14 density questions.</p><p><b>Sense check:</b> converting to a <i>bigger</i> unit gives a <i>smaller</i> number (3500 m = 3.5 km). If the number gets bigger when the unit gets bigger, the conversion went the wrong way.</p>"
         },
         {
           "kind": "worked",
@@ -344,7 +344,7 @@
                 "value": 500000,
                 "unit": "cm³"
               },
-              "hint": "1 m³ = 1 000 000 cm³ (100 cubed).",
+              "hint": "1 $m^3 = 1\\,000\\,000$ cm³ (100 cubed).",
               "walkthrough": [
                 "$0.5 \\times 1\\,000\\,000 = 500\\,000$ cm³."
               ]
@@ -400,7 +400,7 @@
                 "cm² cannot be converted to m²"
               ],
               "correct": 1,
-              "explain": "1 m² = 100 cm × 100 cm = 10 000 cm², so 20 cm² = 20 ÷ 10 000 = 0.002 m². Dividing by 100 only converts a length."
+              "explain": "1 $m^2 = 100$ cm × 100 cm = 10 000 cm², so 20 cm² = $20 \\div 10\\,000 = 0.002$ m². Dividing by 100 only converts a length."
             }
           ]
         }
@@ -706,7 +706,7 @@
                 "$\\text{moment} = F \\times d$"
               ],
               "correct": 1,
-              "explain": "Force, distance and an energy: work done, E = F × d. Moment = F × d has the same symbols but gives a turning effect in N m, not an energy — read what the question asks for."
+              "explain": "Force, distance and an energy: work done, $E = F \\times d$. Moment = $F \\times d$ has the same symbols but gives a turning effect in N m, not an energy — read what the question asks for."
             },
             {
               "id": "kc-n6-q2",
@@ -719,7 +719,7 @@
                 "Wavelength"
               ],
               "correct": 1,
-              "explain": "With mass and gravitational field strength, W is weight in newtons. Work done is E = F × d."
+              "explain": "With mass and gravitational field strength, W is weight in newtons. Work done is $E = F \\times d$."
             },
             {
               "id": "kc-n6-q3",
@@ -732,7 +732,7 @@
                 "$P = I V$ then $Q = I t$"
               ],
               "correct": 1,
-              "explain": "Current and resistance give power through P = I²R; power and time give energy through E = P × t. (V = IR then P = IV then E = Pt also works — one step longer.)"
+              "explain": "Current and resistance give power through $P = I^2R$; power and time give energy through $E = P \\times t$. ($V = IR$ then $P = IV$ then $E = Pt$ also works — one step longer.)"
             },
             {
               "id": "kc-n6-q4",
@@ -745,7 +745,7 @@
                 "Temperature"
               ],
               "correct": 1,
-              "explain": "Here Q is thermal energy (J): mass × specific heat capacity × temperature change. The same letter means charge in Q = I × t."
+              "explain": "Here Q is thermal energy (J): mass × specific heat capacity × temperature change. The same letter means charge in $Q = I \\times t$."
             },
             {
               "id": "kc-n6-q5",
@@ -765,7 +765,7 @@
                 "$\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}$"
               ],
               "correct": 1,
-              "explain": "No time is given, so the equation with u, v, a and x (and no t) is the one: v² − u² = 2ax. The first option needs a time you do not have."
+              "explain": "No time is given, so the equation with u, v, a and x (and no t) is the one: $v^2 - u^2 = 2ax$. The first option needs a time you do not have."
             },
             {
               "id": "kc-n6-q7",
@@ -797,7 +797,7 @@
         {
           "kind": "explain",
           "title": "Two methods",
-          "html": "<p><b>Method 1 — the formula triangle</b> works for any equation of the form <i>one thing = two things multiplied</i>, such as $F = m \\times a$, $V = I \\times R$, $v = f \\times \\lambda$, $\\rho = m \\div V$ (that is $m = \\rho \\times V$). Put the single quantity at the top; cover the one you want; what you can see is the answer.</p><figure class='diagram'><svg viewBox='0 0 480 170' role='img'><polygon points='150,20 40,150 260,150' fill='none' class='d-ink' style='fill:none;stroke:var(--line);stroke-width:2'/><line x1='75' y1='108' x2='225' y2='108' style='stroke:var(--line);stroke-width:2'/><line x1='150' y1='108' x2='150' y2='150' style='stroke:var(--line);stroke-width:2'/><text x='150' y='88' text-anchor='middle' font-size='26' style='fill:var(--accent);font-weight:700'>F</text><text x='112' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>m</text><text x='188' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>a</text><text x='300' y='70' font-size='14' style='fill:var(--ink-2)'>cover F:  F = m × a</text><text x='300' y='100' font-size='14' style='fill:var(--ink-2)'>cover m:  m = F ÷ a</text><text x='300' y='130' font-size='14' style='fill:var(--ink-2)'>cover a:  a = F ÷ m</text></svg><figcaption>The F = m × a triangle. Cover the quantity you want; the other two tell you whether to multiply (side by side) or divide (one above the other).</figcaption></figure><p><b>Method 2 — do the same to both sides</b> works for every equation, including the ones with squares and fractions that triangles cannot handle:</p><ol class='list'><li>Write the equation. Circle the quantity you want.</li><li>Ask what is being done to it: multiplied by something? divided? squared? having something subtracted?</li><li>Undo it, on both sides: divide to undo a multiply, multiply to undo a divide, square-root to undo a square, add to undo a subtract.</li><li>Repeat until the quantity is on its own.</li></ol><table class='tbl'><tr><th>Equation</th><th>Make … the subject</th><th>Result</th><th>Because</th></tr><tr><td>$KE = \\tfrac{1}{2} m v^2$</td><td>$v$</td><td>$v = \\sqrt{\\dfrac{2 \\times KE}{m}}$</td><td>× 2, ÷ m, then square-root both sides</td></tr><tr><td>$a = \\dfrac{v - u}{t}$</td><td>$v$</td><td>$v = u + a t$</td><td>× t to clear the fraction, then + u</td></tr><tr><td>$a = \\dfrac{v - u}{t}$</td><td>$t$</td><td>$t = \\dfrac{v - u}{a}$</td><td>× t, then ÷ a (t and a swap places)</td></tr><tr><td>$GPE = m g h$</td><td>$h$</td><td>$h = \\dfrac{GPE}{m g}$</td><td>÷ m and ÷ g</td></tr><tr><td>$P = \\dfrac{E}{t}$</td><td>$t$</td><td>$t = \\dfrac{E}{P}$</td><td>× t, ÷ P</td></tr></table>"
+          "html": "<p><b>Method 1 — the formula triangle</b> works for any equation of the form <i>one thing = two things multiplied</i>, such as $F = m \\times a$, $V = I \\times R$, $v = f \\times \\lambda$, $\\rho = m \\div V$ (that is $m = \\rho \\times V$). Put the single quantity at the top; cover the one you want; what you can see is the answer.</p><figure class='diagram'><svg viewBox='0 0 480 170' role='img'><polygon points='150,20 40,150 260,150' fill='none' class='d-ink' style='fill:none;stroke:var(--line);stroke-width:2'/><line x1='75' y1='108' x2='225' y2='108' style='stroke:var(--line);stroke-width:2'/><line x1='150' y1='108' x2='150' y2='150' style='stroke:var(--line);stroke-width:2'/><text x='150' y='88' text-anchor='middle' font-size='26' style='fill:var(--accent);font-weight:700'>F</text><text x='112' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>m</text><text x='188' y='138' text-anchor='middle' font-size='26' style='fill:var(--line)'>a</text><text x='300' y='70' font-size='14' style='fill:var(--ink-2)'>cover F:  $F = m \\times a$</text><text x='300' y='100' font-size='14' style='fill:var(--ink-2)'>cover m:  $m = F \\div a$</text><text x='300' y='130' font-size='14' style='fill:var(--ink-2)'>cover a:  $a = F \\div m$</text></svg><figcaption>The $F = m \\times a$ triangle. Cover the quantity you want; the other two tell you whether to multiply (side by side) or divide (one above the other).</figcaption></figure><p><b>Method 2 — do the same to both sides</b> works for every equation, including the ones with squares and fractions that triangles cannot handle:</p><ol class='list'><li>Write the equation. Circle the quantity you want.</li><li>Ask what is being done to it: multiplied by something? divided? squared? having something subtracted?</li><li>Undo it, on both sides: divide to undo a multiply, multiply to undo a divide, square-root to undo a square, add to undo a subtract.</li><li>Repeat until the quantity is on its own.</li></ol><table class='tbl'><tr><th>Equation</th><th>Make … the subject</th><th>Result</th><th>Because</th></tr><tr><td>$KE = \\tfrac{1}{2} m v^2$</td><td>$v$</td><td>$v = \\sqrt{\\dfrac{2 \\times KE}{m}}$</td><td>× 2, ÷ m, then square-root both sides</td></tr><tr><td>$a = \\dfrac{v - u}{t}$</td><td>$v$</td><td>$v = u + a t$</td><td>× t to clear the fraction, then + u</td></tr><tr><td>$a = \\dfrac{v - u}{t}$</td><td>$t$</td><td>$t = \\dfrac{v - u}{a}$</td><td>× t, then ÷ a (t and a swap places)</td></tr><tr><td>$GPE = m g h$</td><td>$h$</td><td>$h = \\dfrac{GPE}{m g}$</td><td>÷ m and ÷ g</td></tr><tr><td>$P = \\dfrac{E}{t}$</td><td>$t$</td><td>$t = \\dfrac{E}{P}$</td><td>× t, ÷ P</td></tr></table>"
         },
         {
           "kind": "explain",
@@ -835,7 +835,7 @@
                 "value": 3,
                 "unit": "m/s²"
               },
-              "hint": "Cover a in the triangle: a = F ÷ m.",
+              "hint": "Cover a in the triangle: $a = F \\div m$.",
               "walkthrough": [
                 "<b>Equation:</b> $a = \\dfrac{F}{m}$",
                 "<b>Working:</b> $a = \\dfrac{1200}{400}$",
@@ -851,7 +851,7 @@
                 "value": 9,
                 "unit": "m"
               },
-              "hint": "λ = v ÷ f.",
+              "hint": "$\\lambda = v \\div f$.",
               "walkthrough": [
                 "<b>Equation:</b> $\\lambda = \\dfrac{v}{f}$",
                 "<b>Working:</b> $\\lambda = \\dfrac{36}{4}$",
@@ -862,12 +862,12 @@
             {
               "id": "kc-n7-q3",
               "type": "numeric",
-              "text": "An object gains 1500 J of gravitational potential energy when lifted 25 m. Calculate its mass. (g = 10 N/kg.)",
+              "text": "An object gains 1500 J of gravitational potential energy when lifted 25 m. Calculate its mass. ($g = 10$ N/kg.)",
               "answer": {
                 "value": 6,
                 "unit": "kg"
               },
-              "hint": "GPE = m g h, so m = GPE ÷ (g × h).",
+              "hint": "$\\text{GPE} = m g h$, so $m = \\text{GPE} \\div (g \\times h)$.",
               "walkthrough": [
                 "<b>Equation:</b> $m = \\dfrac{GPE}{g \\times h}$",
                 "<b>Working:</b> $m = \\dfrac{1500}{10 \\times 25}$",
@@ -883,7 +883,7 @@
                 "value": 1,
                 "unit": "m/s"
               },
-              "hint": "v² = 2 × KE ÷ m, then square-root.",
+              "hint": "$v^2 = 2 \\times \\text{KE} \\div m$, then square-root.",
               "walkthrough": [
                 "$v^2 = \\dfrac{2 \\times 800}{1600} = 1$.",
                 "$v = \\sqrt{1} = 1$ m/s."
@@ -897,7 +897,7 @@
                 "value": 2.5,
                 "unit": "m/s²"
               },
-              "hint": "a = (v − u) ÷ t.",
+              "hint": "$a = (v - u) \\div t$.",
               "walkthrough": [
                 "<b>Equation:</b> $a = \\dfrac{v - u}{t}$",
                 "<b>Working:</b> $a = \\dfrac{22.5 - 10}{5} = \\dfrac{12.5}{5}$",
@@ -913,7 +913,7 @@
                 "value": 90,
                 "unit": "W"
               },
-              "hint": "P = E ÷ t.",
+              "hint": "$P = E \\div t$.",
               "walkthrough": [
                 "<b>Equation:</b> $P = \\dfrac{E}{t}$",
                 "<b>Working:</b> $P = \\dfrac{450}{5}$",
@@ -927,7 +927,7 @@
       "checklist": [
         "Make any quantity the subject of a three-term equation (triangle or algebra)",
         "Rearrange an equation with a square (KE, spring energy) including the square root",
-        "Rearrange an equation with a fraction (a = (v − u) ÷ t) for the quantity on the top or the bottom",
+        "Rearrange an equation with a fraction ($a = (v - u) \\div t$) for the quantity on the top or the bottom",
         "Substitute first, then rearrange, when the algebra looks hard"
       ],
       "blurb": "The subject of an equation is the thing on its own. To make a different quantity the subject, undo what is being done to it, on both sides."
@@ -1263,7 +1263,7 @@
         {
           "kind": "explain",
           "title": "The command words, and what scores",
-          "html": "<table class='tbl'><tr><th>Command word</th><th>It wants</th><th>Model one-liner</th></tr><tr><td><b>State</b> / <b>Give</b> / <b>Name</b> / <b>Write down</b></td><td>A short answer, no reasoning. One word or one line.</td><td>\"State the unit of power.\" — <i>watt.</i></td></tr><tr><td><b>Describe</b></td><td>Say <i>what</i> happens or what something is like, in order. No <i>why</i>.</td><td>\"Describe the motion shown.\" — <i>It accelerates for 5 s, then moves at a constant 10 m/s.</i></td></tr><tr><td><b>Explain</b></td><td>Say <i>why</i>, with a reason or a mechanism. Use <i>because</i>, <i>so</i>, <i>therefore</i>.</td><td>\"Explain why the car slows.\" — <i>Friction acts backwards, so there is a resultant force opposite to the motion, so it decelerates.</i></td></tr><tr><td><b>Calculate</b></td><td>A number, from an equation, with working and a unit (EWAU).</td><td>\"Calculate the speed.\" — <i>v = x ÷ t = 100 ÷ 8 = 12.5 m/s.</i></td></tr><tr><td><b>Determine</b></td><td>A number, but you must get some of the data yourself — usually from a graph (a gradient, an area, a read-off).</td><td>\"Determine the acceleration from the graph.\" — <i>draw the triangle, show the two values, divide.</i></td></tr><tr><td><b>Show that</b></td><td>The answer is given; you must produce it with full working, to one more figure than quoted.</td><td>\"Show that the force is about 50 N.\" — <i>F = ma = 2.5 × 20.4 = 51 N ≈ 50 N.</i></td></tr><tr><td><b>Estimate</b></td><td>A rough value from sensible assumed numbers that you state.</td><td>\"Estimate the mass of a car.\" — <i>about 1000 kg.</i></td></tr><tr><td><b>Compare</b></td><td>Similarities <i>and</i> differences between both things named — mention both every time.</td><td>\"Compare alpha and beta.\" — <i>Both are ionising; alpha is more ionising but less penetrating.</i></td></tr><tr><td><b>Evaluate</b></td><td>Points for and against, using the information given, then a conclusion that follows from them.</td><td>\"Evaluate the use of nuclear power.\" — <i>for … against … so overall …</i></td></tr><tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the choice of a 5 A fuse.\" — <i>I = P ÷ V = 920 ÷ 230 = 4 A, so 5 A is the next size up.</i></td></tr><tr><td><b>Suggest</b></td><td>Apply your knowledge to an unfamiliar situation; a sensible, physics-based idea scores even if it is not the one in the mark scheme.</td><td>\"Suggest why the reading was lower.\" — <i>some energy was transferred to the surroundings.</i></td></tr><tr><td><b>Predict</b></td><td>Say what will happen, from the physics.</td><td>\"Predict the current if the p.d. doubles.\" — <i>it doubles (Ohm's law).</i></td></tr><tr><td><b>Draw</b> / <b>Sketch</b> / <b>Plot</b></td><td>Draw: accurate with a ruler. Sketch: the shape and key features, labelled. Plot: points on given axes.</td><td></td></tr><tr><td><b>Complete</b></td><td>Fill in the missing parts of a diagram, table or sentence.</td><td></td></tr></table><p>The marks are in the word. A 2-mark \"describe\" is two things that happen; a 2-mark \"explain\" is one thing that happens and the reason for it.</p>"
+          "html": "<table class='tbl'><tr><th>Command word</th><th>It wants</th><th>Model one-liner</th></tr><tr><td><b>State</b> / <b>Give</b> / <b>Name</b> / <b>Write down</b></td><td>A short answer, no reasoning. One word or one line.</td><td>\"State the unit of power.\" — <i>watt.</i></td></tr><tr><td><b>Describe</b></td><td>Say <i>what</i> happens or what something is like, in order. No <i>why</i>.</td><td>\"Describe the motion shown.\" — <i>It accelerates for 5 s, then moves at a constant 10 m/s.</i></td></tr><tr><td><b>Explain</b></td><td>Say <i>why</i>, with a reason or a mechanism. Use <i>because</i>, <i>so</i>, <i>therefore</i>.</td><td>\"Explain why the car slows.\" — <i>Friction acts backwards, so there is a resultant force opposite to the motion, so it decelerates.</i></td></tr><tr><td><b>Calculate</b></td><td>A number, from an equation, with working and a unit (EWAU).</td><td>\"Calculate the speed.\" — <i>$v = x \\div t = 100 \\div 8 = 12.5$ m/s.</i></td></tr><tr><td><b>Determine</b></td><td>A number, but you must get some of the data yourself — usually from a graph (a gradient, an area, a read-off).</td><td>\"Determine the acceleration from the graph.\" — <i>draw the triangle, show the two values, divide.</i></td></tr><tr><td><b>Show that</b></td><td>The answer is given; you must produce it with full working, to one more figure than quoted.</td><td>\"Show that the force is about 50 N.\" — <i>F = ma = $2.5 \\times 20.4 = 51$ N ≈ 50 N.</i></td></tr><tr><td><b>Estimate</b></td><td>A rough value from sensible assumed numbers that you state.</td><td>\"Estimate the mass of a car.\" — <i>about 1000 kg.</i></td></tr><tr><td><b>Compare</b></td><td>Similarities <i>and</i> differences between both things named — mention both every time.</td><td>\"Compare alpha and beta.\" — <i>Both are ionising; alpha is more ionising but less penetrating.</i></td></tr><tr><td><b>Evaluate</b></td><td>Points for and against, using the information given, then a conclusion that follows from them.</td><td>\"Evaluate the use of nuclear power.\" — <i>for … against … so overall …</i></td></tr><tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the choice of a 5 A fuse.\" — <i>$I = P \\div V = 920 \\div 230 = 4$ A, so 5 A is the next size up.</i></td></tr><tr><td><b>Suggest</b></td><td>Apply your knowledge to an unfamiliar situation; a sensible, physics-based idea scores even if it is not the one in the mark scheme.</td><td>\"Suggest why the reading was lower.\" — <i>some energy was transferred to the surroundings.</i></td></tr><tr><td><b>Predict</b></td><td>Say what will happen, from the physics.</td><td>\"Predict the current if the p.d. doubles.\" — <i>it doubles (Ohm's law).</i></td></tr><tr><td><b>Draw</b> / <b>Sketch</b> / <b>Plot</b></td><td>Draw: accurate with a ruler. Sketch: the shape and key features, labelled. Plot: points on given axes.</td><td></td></tr><tr><td><b>Complete</b></td><td>Fill in the missing parts of a diagram, table or sentence.</td><td></td></tr></table><p>The marks are in the word. A 2-mark \"describe\" is two things that happen; a 2-mark \"explain\" is one thing that happens and the reason for it.</p>"
         },
         {
           "kind": "explain",
@@ -1293,7 +1293,7 @@
               "options": [
                 "The current increases because the electrons are pushed harder",
                 "The current increases",
-                "V = I × R",
+                "$V = I \\times R$",
                 "The resistance stays the same"
               ],
               "correct": 1,
@@ -1399,7 +1399,7 @@
             {
               "id": "kc-t2-q1",
               "type": "numeric",
-              "text": "A bag of sugar has a mass of 250 g. Calculate its weight. (g = 10 N/kg.)",
+              "text": "A bag of sugar has a mass of 250 g. Calculate its weight. ($g = 10$ N/kg.)",
               "answer": {
                 "value": 2.5,
                 "unit": "N"
@@ -1463,12 +1463,12 @@
               "text": "A question says: \"A stone is dropped from a bridge. Calculate its speed after falling for 1.5 s.\" Which value is given without being written down?",
               "options": [
                 "The height of the bridge",
-                "The initial speed, u = 0, because it is dropped",
+                "The initial speed, $u = 0$, because it is dropped",
                 "The mass of the stone",
                 "The time"
               ],
               "correct": 1,
-              "explain": "\"Dropped\" means it starts from rest: u = 0. With a = g = 10 m/s², v = 0 + 10 × 1.5 = 15 m/s. No height or mass is needed."
+              "explain": "\"Dropped\" means it starts from rest: $u = 0$. With $a = g = 10$ m/s², $v = 0 + 10 \\times 1.5 = 15$ m/s. No height or mass is needed."
             },
             {
               "id": "kc-t2-q6",
@@ -1534,7 +1534,7 @@
                     "value": 20,
                     "unit": "m/s"
                   },
-                  "hint": "x ÷ t.",
+                  "hint": "$x \\div t$.",
                   "walkthrough": [
                     "<b>Equation:</b> $v = \\dfrac{x}{t}$",
                     "<b>Working:</b> $v = \\dfrac{60}{3}$",
@@ -1551,7 +1551,7 @@
                     "value": 24000,
                     "unit": "kg m/s"
                   },
-                  "hint": "p = m × v with the speed from (a).",
+                  "hint": "$p = m \\times v$ with the speed from (a).",
                   "walkthrough": [
                     "<b>Equation:</b> $p = m \\times v$",
                     "<b>Working:</b> $p = 1200 \\times 20$",
@@ -1570,7 +1570,7 @@
                 "value": 103500,
                 "unit": "J"
               },
-              "hint": "Power first (P = IV), then energy (E = P t) with the time in seconds.",
+              "hint": "Power first ($P = IV$), then energy ($E = P t$) with the time in seconds.",
               "walkthrough": [
                 "$P = I \\times V = 2.5 \\times 230 = 575$ W.",
                 "$t = 3 \\times 60 = 180$ s.",
@@ -1580,7 +1580,7 @@
             {
               "id": "kc-t3-q3",
               "type": "numeric",
-              "text": "A crane lifts a 50 kg load through 12 m. Calculate the work done. (g = 10 N/kg.)",
+              "text": "A crane lifts a 50 kg load through 12 m. Calculate the work done. ($g = 10$ N/kg.)",
               "answer": {
                 "value": 6000,
                 "unit": "J"
@@ -1599,7 +1599,7 @@
                 "value": 0.8,
                 "unit": "kg"
               },
-              "hint": "Volume in m³ first (convert each length to metres), then m = ρ × V.",
+              "hint": "Volume in m³ first (convert each length to metres), then $m = \\rho \\times V$.",
               "walkthrough": [
                 "$V = 0.02 \\times 0.10 \\times 0.05 = 0.0001$ m³ ($= 1 \\times 10^{-4}$ m³).",
                 "$m = \\rho \\times V = 8000 \\times 0.0001 = 0.8$ kg."
@@ -1608,7 +1608,7 @@
             {
               "id": "kc-t3-q5",
               "type": "group",
-              "text": "A 0.5 kg ball is dropped from a height of 1.8 m. Ignore air resistance. (g = 10 N/kg.)",
+              "text": "A 0.5 kg ball is dropped from a height of 1.8 m. Ignore air resistance. ($g = 10$ N/kg.)",
               "parts": [
                 {
                   "id": "kc-t3-q5a",
@@ -1618,7 +1618,7 @@
                     "value": 9,
                     "unit": "J"
                   },
-                  "hint": "GPE = m g h.",
+                  "hint": "$\\text{GPE} = m g h$.",
                   "walkthrough": [
                     "<b>Equation:</b> $GPE = m \\times g \\times h$",
                     "<b>Working:</b> $GPE = 0.5 \\times 10 \\times 1.8$",
@@ -1635,7 +1635,7 @@
                     "value": 6,
                     "unit": "m/s"
                   },
-                  "hint": "All the GPE becomes KE: ½ m v² = 9 J, then square-root.",
+                  "hint": "All the GPE becomes KE: ½ $m v^2 = 9$ J, then square-root.",
                   "walkthrough": [
                     "$KE = GPE = 9$ J.",
                     "$v^2 = \\dfrac{2 \\times 9}{0.5} = 36$.",
@@ -1649,7 +1649,7 @@
               "id": "kc-t3-q6",
               "type": "written",
               "text": "A student calculates a force in two steps. In step one she gets an acceleration of 1.333… m/s² and writes it down as 1.3 m/s². In step two she multiplies by 900 kg and gets 1170 N; the mark scheme says 1200 N. Explain why she lost the final mark and what she should have done.",
-              "model": "<ul><li>She rounded the intermediate value (1.333… to 1.3) and the rounding error was multiplied up in step two.</li><li>1.333… × 900 = 1200 N; 1.3 × 900 = 1170 N, which is outside the accepted range.</li><li>Carry the full value (or at least one extra significant figure) between steps; round only the final answer.</li></ul>",
+              "model": "<ul><li>She rounded the intermediate value (1.333… to 1.3) and the rounding error was multiplied up in step two.</li><li>1.333… × 900 = 1200 N; $1.3 \\times 900 = 1170$ N, which is outside the accepted range.</li><li>Carry the full value (or at least one extra significant figure) between steps; round only the final answer.</li></ul>",
               "lines": 3
             }
           ]
@@ -1815,7 +1815,7 @@
                     "The distance travelled"
                   ],
                   "correct": 1,
-                  "explain": "At t = 0 the velocity is 4 m/s: the car was already moving when timing started. The gradient (2 m/s²) is the acceleration.",
+                  "explain": "At $t = 0$ the velocity is 4 m/s: the car was already moving when timing started. The gradient (2 m/s²) is the acceleration.",
                   "label": "c"
                 }
               ],
@@ -1869,7 +1869,7 @@
                   "text": "Determine the gradient of the line of best fit.",
                   "answer": {
                     "value": 5,
-                    "unit": "Ω/m"
+                    "unit": "$\\Omega/m$"
                   },
                   "hint": "Use the line, not the points: it runs from the origin to (1.0, 5.0).",
                   "walkthrough": [
@@ -2223,7 +2223,7 @@
                 "value": 16,
                 "unit": "J"
               },
-              "hint": "KE ∝ v²: double v, multiply KE by 2² = 4.",
+              "hint": "$\\text{KE} \\propto v^2$: double v, multiply KE by 2² = 4.",
               "walkthrough": [
                 "$KE \\propto v^2$, so $KE = 4 \\times 2^2 = 16$ J."
               ]
@@ -2236,7 +2236,7 @@
                 "value": 4,
                 "unit": "kPa"
               },
-              "hint": "Inversely proportional: P × V is constant.",
+              "hint": "Inversely proportional: $P \\times V$ is constant.",
               "walkthrough": [
                 "$P_1 V_1 = P_2 V_2$: $12 \\times 2 = P_2 \\times 6$.",
                 "$P_2 = \\dfrac{24}{6} = 4$ kPa."
@@ -2245,7 +2245,7 @@
             {
               "id": "kc-t5-q4",
               "type": "choice",
-              "text": "A set of results: x = 2, y = 7; x = 4, y = 11; x = 6, y = 15. Which description is correct?",
+              "text": "A set of results: $x = 2$, $y = 7$; $x = 4$, $y = 11$; $x = 6$, $y = 15$. Which description is correct?",
               "options": [
                 "y is directly proportional to x",
                 "y increases linearly with x but is not proportional to it",
@@ -2253,20 +2253,20 @@
                 "y is proportional to x²"
               ],
               "correct": 1,
-              "explain": "Equal steps (x up by 2, y up by 4) make it linear, but y ÷ x is 3.5, 2.75, 2.5 — not constant — so it is not proportional. The line would have an intercept of 3."
+              "explain": "Equal steps (x up by 2, y up by 4) make it linear, but $y \\div x$ is 3.5, 2.75, 2.5 — not constant — so it is not proportional. The line would have an intercept of 3."
             },
             {
               "id": "kc-t5-q5",
               "type": "written",
               "text": "Describe the graph you would expect if you plotted the current through a fixed resistor against the potential difference across it, and state what the graph shows about the relationship.",
-              "model": "<ul><li>A straight line through the origin.</li><li>This shows the current is directly proportional to the potential difference (Ohm's law), because doubling V doubles I.</li><li>The gradient is 1 ÷ R (or: the resistance is constant).</li></ul>",
+              "model": "<ul><li>A straight line through the origin.</li><li>This shows the current is directly proportional to the potential difference (Ohm's law), because doubling V doubles I.</li><li>The gradient is $1 \\div R$ (or: the resistance is constant).</li></ul>",
               "lines": 3
             },
             {
               "id": "kc-t5-q6",
               "type": "written",
               "text": "A student plots pressure against volume for a gas and gets a curve. Explain how she could plot the data to get a straight line, and what the line would show.",
-              "model": "<ul><li>Plot pressure against 1 ÷ volume (or volume against 1 ÷ pressure).</li><li>If pressure is inversely proportional to volume this gives a straight line through the origin.</li><li>Because P ∝ 1/V means P × V is constant: the gradient of the line is that constant.</li></ul>",
+              "model": "<ul><li>Plot pressure against 1 ÷ volume (or volume against 1 ÷ pressure).</li><li>If pressure is inversely proportional to volume this gives a straight line through the origin.</li><li>Because $P \\propto 1/V$ means $P \\times V$ is constant: the gradient of the line is that constant.</li></ul>",
               "lines": 3
             }
           ]
@@ -2274,7 +2274,7 @@
       ],
       "checklist": [
         "State what a graph must show for two quantities to be directly proportional",
-        "Test a data table for direct proportion (constant y ÷ x) and inverse proportion (constant x × y)",
+        "Test a data table for direct proportion (constant $y \\div x$) and inverse proportion (constant $x \\times y$)",
         "Describe a straight-line graph with an intercept correctly (linear, not proportional)",
         "Use a proportionality to predict a value"
       ],
@@ -2488,7 +2488,7 @@
                 "unit": "N",
                 "tolerance": 0.6
               },
-              "hint": "Mass of a car ≈ 1000 kg; W = m × g.",
+              "hint": "Mass of a car ≈ 1000 kg; $W = m \\times g$.",
               "walkthrough": [
                 "Assume $m \\approx 1000$ kg. $W = 1000 \\times 10 = 10\\,000$ N (about 10 kN)."
               ]
@@ -2761,17 +2761,17 @@
     },
     {
       "q": "$W$ can mean…",
-      "a": "weight (W = m × g) or work done (W = F × d)",
+      "a": "weight ($W = m \\times g$) or work done ($W = F \\times d$)",
       "section": "equation-sheet"
     },
     {
       "q": "$Q$ can mean…",
-      "a": "charge (Q = I × t) or thermal energy (ΔQ = m c Δθ)",
+      "a": "charge ($Q = I \\times t$) or thermal energy ($\\Delta Q = m c \\Delta \\theta$)",
       "section": "equation-sheet"
     },
     {
       "q": "$P$ can mean…",
-      "a": "power (P = E ÷ t) or pressure (P = F ÷ A)",
+      "a": "power ($P = E \\div t$) or pressure ($P = F \\div A$)",
       "section": "equation-sheet"
     },
     {
@@ -2816,7 +2816,7 @@
     },
     {
       "q": "Inversely proportional means…",
-      "a": "double one, halve the other; x × y is constant",
+      "a": "double one, halve the other; $x \\times y$ is constant",
       "section": "proportion"
     },
     {

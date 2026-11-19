@@ -34,13 +34,13 @@ section_t1 = section(
             "<tr><td><b>State</b> / <b>Give</b> / <b>Name</b> / <b>Write down</b></td><td>A short answer, no reasoning. One word or one line.</td><td>\"State the unit of power.\" — <i>watt.</i></td></tr>"
             "<tr><td><b>Describe</b></td><td>Say <i>what</i> happens or what something is like, in order. No <i>why</i>.</td><td>\"Describe the motion shown.\" — <i>It accelerates for 5 s, then moves at a constant 10 m/s.</i></td></tr>"
             "<tr><td><b>Explain</b></td><td>Say <i>why</i>, with a reason or a mechanism. Use <i>because</i>, <i>so</i>, <i>therefore</i>.</td><td>\"Explain why the car slows.\" — <i>Friction acts backwards, so there is a resultant force opposite to the motion, so it decelerates.</i></td></tr>"
-            "<tr><td><b>Calculate</b></td><td>A number, from an equation, with working and a unit (EWAU).</td><td>\"Calculate the speed.\" — <i>v = x ÷ t = 100 ÷ 8 = 12.5 m/s.</i></td></tr>"
+            "<tr><td><b>Calculate</b></td><td>A number, from an equation, with working and a unit (EWAU).</td><td>\"Calculate the speed.\" — <i>$v = x \\div t = 100 \\div 8 = 12.5$ m/s.</i></td></tr>"
             "<tr><td><b>Determine</b></td><td>A number, but you must get some of the data yourself — usually from a graph (a gradient, an area, a read-off).</td><td>\"Determine the acceleration from the graph.\" — <i>draw the triangle, show the two values, divide.</i></td></tr>"
-            "<tr><td><b>Show that</b></td><td>The answer is given; you must produce it with full working, to one more figure than quoted.</td><td>\"Show that the force is about 50 N.\" — <i>F = ma = 2.5 × 20.4 = 51 N ≈ 50 N.</i></td></tr>"
+            "<tr><td><b>Show that</b></td><td>The answer is given; you must produce it with full working, to one more figure than quoted.</td><td>\"Show that the force is about 50 N.\" — <i>F = ma = $2.5 \\times 20.4 = 51$ N ≈ 50 N.</i></td></tr>"
             "<tr><td><b>Estimate</b></td><td>A rough value from sensible assumed numbers that you state.</td><td>\"Estimate the mass of a car.\" — <i>about 1000 kg.</i></td></tr>"
             "<tr><td><b>Compare</b></td><td>Similarities <i>and</i> differences between both things named — mention both every time.</td><td>\"Compare alpha and beta.\" — <i>Both are ionising; alpha is more ionising but less penetrating.</i></td></tr>"
             "<tr><td><b>Evaluate</b></td><td>Points for and against, using the information given, then a conclusion that follows from them.</td><td>\"Evaluate the use of nuclear power.\" — <i>for … against … so overall …</i></td></tr>"
-            "<tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the choice of a 5 A fuse.\" — <i>I = P ÷ V = 920 ÷ 230 = 4 A, so 5 A is the next size up.</i></td></tr>"
+            "<tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the choice of a 5 A fuse.\" — <i>$I = P \\div V = 920 \\div 230 = 4$ A, so 5 A is the next size up.</i></td></tr>"
             "<tr><td><b>Suggest</b></td><td>Apply your knowledge to an unfamiliar situation; a sensible, physics-based idea scores even if it is not the one in the mark scheme.</td><td>\"Suggest why the reading was lower.\" — <i>some energy was transferred to the surroundings.</i></td></tr>"
             "<tr><td><b>Predict</b></td><td>Say what will happen, from the physics.</td><td>\"Predict the current if the p.d. doubles.\" — <i>it doubles (Ohm's law).</i></td></tr>"
             "<tr><td><b>Draw</b> / <b>Sketch</b> / <b>Plot</b></td><td>Draw: accurate with a ruler. Sketch: the shape and key features, labelled. Plot: points on given axes.</td><td></td></tr>"
@@ -66,7 +66,7 @@ section_t1 = section(
         ),
         practice("Command words", [
             choice("kc-t1-q1", "\"Describe how the current changes as the potential difference is increased.\" Which answer scores?",
-                   ["The current increases because the electrons are pushed harder", "The current increases", "V = I × R", "The resistance stays the same"], 1,
+                   ["The current increases because the electrons are pushed harder", "The current increases", "$V = I \\times R$", "The resistance stays the same"], 1,
                    "Describe wants what happens, not why. The first option is an explanation — correct physics, wrong command word."),
             choice("kc-t1-q2", "\"Explain why a parachutist reaches a terminal velocity.\" Which answer scores full marks?",
                    ["The parachutist stops accelerating", "Air resistance increases with speed until it equals the weight, so the resultant force is zero, so the velocity stays constant", "Terminal velocity is the maximum velocity", "Because of air resistance"], 1,
@@ -145,7 +145,7 @@ section_t2 = section(
             ],
         ),
         practice("Reading the question", [
-            numeric("kc-t2-q1", "A bag of sugar has a mass of 250 g. Calculate its weight. (g = 10 N/kg.)", t2_1, "N",
+            numeric("kc-t2-q1", "A bag of sugar has a mass of 250 g. Calculate its weight. ($g = 10$ N/kg.)", t2_1, "N",
                     "Grams to kilograms first.",
                     [r"$250\ \text{g} = 0.25$ kg."] + ewau(r"W = m \times g", r"W = 0.25 \times 10", "2.5", "N")),
             numeric("kc-t2-q2", "A lift raises a 300 kg load through 2.5 km of mine shaft in 5 minutes. Calculate the average speed of the lift in m/s.", sf(t2_2), "m/s",
@@ -159,8 +159,8 @@ section_t2 = section(
                     "400 J every second is a power of 400 W. Then take 75% of it.",
                     [r"Input power $= 400$ W.", r"Useful output $= 0.75 \times 400 = 300$ W."]),
             choice("kc-t2-q5", "A question says: \"A stone is dropped from a bridge. Calculate its speed after falling for 1.5 s.\" Which value is given without being written down?",
-                   ["The height of the bridge", "The initial speed, u = 0, because it is dropped", "The mass of the stone", "The time"], 1,
-                   "\"Dropped\" means it starts from rest: u = 0. With a = g = 10 m/s², v = 0 + 10 × 1.5 = 15 m/s. No height or mass is needed."),
+                   ["The height of the bridge", "The initial speed, $u = 0$, because it is dropped", "The mass of the stone", "The time"], 1,
+                   "\"Dropped\" means it starts from rest: $u = 0$. With $a = g = 10$ m/s², $v = 0 + 10 \\times 1.5 = 15$ m/s. No height or mass is needed."),
             written("kc-t2-q6", "A student is asked for the acceleration of a car that slows from 30 m/s to 10 m/s in 4 s, \"including the sign\". She writes 5 m/s² and loses a mark. Explain the mistake.",
                     marks(["The car is slowing, so $v$ is smaller than $u$: $a = \\dfrac{10 - 30}{4} = -5$ m/s².",
                            "The question said to include the sign, so the negative sign is part of the answer.",
@@ -231,29 +231,29 @@ section_t3 = section(
         ),
         practice("Multi-step", [
             group("kc-t3-q1", "A 1200 kg car travels 60 m in 3 s at constant speed.", [
-                numeric("kc-t3-q1a", "Calculate its speed.", t3_1_v, "m/s", "x ÷ t.",
+                numeric("kc-t3-q1a", "Calculate its speed.", t3_1_v, "m/s", "$x \\div t$.",
                         ewau(r"v = \dfrac{x}{t}", r"v = \dfrac{60}{3}", "20", "m/s"), label="a"),
-                numeric("kc-t3-q1b", "Calculate its momentum.", t3_1_p, "kg m/s", "p = m × v with the speed from (a).",
+                numeric("kc-t3-q1b", "Calculate its momentum.", t3_1_p, "kg m/s", "$p = m \\times v$ with the speed from (a).",
                         ewau(r"p = m \times v", r"p = 1200 \times 20", "24\\,000", "kg m/s"), label="b"),
             ]),
             numeric("kc-t3-q2", "A 230 V hairdryer draws a current of 2.5 A for 3 minutes. Calculate the energy transferred.", t3_2_E, "J",
-                    "Power first (P = IV), then energy (E = P t) with the time in seconds.",
+                    "Power first ($P = IV$), then energy ($E = P t$) with the time in seconds.",
                     [r"$P = I \times V = 2.5 \times 230 = 575$ W.", r"$t = 3 \times 60 = 180$ s.", r"$E = P \times t = 575 \times 180 = 103\,500$ J."]),
-            numeric("kc-t3-q3", "A crane lifts a 50 kg load through 12 m. Calculate the work done. (g = 10 N/kg.)", t3_3_E, "J",
+            numeric("kc-t3-q3", "A crane lifts a 50 kg load through 12 m. Calculate the work done. ($g = 10$ N/kg.)", t3_3_E, "J",
                     "Weight first, then work = force × distance.",
                     [r"$W = m \times g = 50 \times 10 = 500$ N.", r"$E = F \times d = 500 \times 12 = 6000$ J."]),
             numeric("kc-t3-q4", "A steel block measures 2 cm × 10 cm × 5 cm. The density of steel is 8000 kg/m³. Calculate the mass of the block.", t3_4_m, "kg",
-                    "Volume in m³ first (convert each length to metres), then m = ρ × V.",
+                    "Volume in m³ first (convert each length to metres), then $m = \\rho \\times V$.",
                     [r"$V = 0.02 \times 0.10 \times 0.05 = 0.0001$ m³ ($= 1 \times 10^{-4}$ m³).", r"$m = \rho \times V = 8000 \times 0.0001 = 0.8$ kg."]),
-            group("kc-t3-q5", "A 0.5 kg ball is dropped from a height of 1.8 m. Ignore air resistance. (g = 10 N/kg.)", [
-                numeric("kc-t3-q5a", "Calculate the gravitational potential energy lost by the ball as it falls.", t3_5_GPE, "J", "GPE = m g h.",
+            group("kc-t3-q5", "A 0.5 kg ball is dropped from a height of 1.8 m. Ignore air resistance. ($g = 10$ N/kg.)", [
+                numeric("kc-t3-q5a", "Calculate the gravitational potential energy lost by the ball as it falls.", t3_5_GPE, "J", "$\\text{GPE} = m g h$.",
                         ewau(r"GPE = m \times g \times h", r"GPE = 0.5 \times 10 \times 1.8", "9", "J"), label="a"),
-                numeric("kc-t3-q5b", "Calculate the speed of the ball just before it hits the ground.", t3_5_v, "m/s", "All the GPE becomes KE: ½ m v² = 9 J, then square-root.",
+                numeric("kc-t3-q5b", "Calculate the speed of the ball just before it hits the ground.", t3_5_v, "m/s", "All the GPE becomes KE: ½ $m v^2 = 9$ J, then square-root.",
                         [r"$KE = GPE = 9$ J.", r"$v^2 = \dfrac{2 \times 9}{0.5} = 36$.", r"$v = \sqrt{36} = 6$ m/s."], label="b"),
             ]),
             written("kc-t3-q6", "A student calculates a force in two steps. In step one she gets an acceleration of 1.333… m/s² and writes it down as 1.3 m/s². In step two she multiplies by 900 kg and gets 1170 N; the mark scheme says 1200 N. Explain why she lost the final mark and what she should have done.",
                     marks(["She rounded the intermediate value (1.333… to 1.3) and the rounding error was multiplied up in step two.",
-                           "1.333… × 900 = 1200 N; 1.3 × 900 = 1170 N, which is outside the accepted range.",
+                           "1.333… × 900 = 1200 N; $1.3 \\times 900 = 1170$ N, which is outside the accepted range.",
                            "Carry the full value (or at least one extra significant figure) between steps; round only the final answer."]), lines=3),
         ]),
     ],
@@ -355,10 +355,10 @@ section_t4 = section(
                         [r"The line crosses the velocity axis at 4 m/s."], label="b"),
                 choice("kc-t4-q1c", "What does the intercept represent?",
                        ["The maximum velocity", "The velocity at time zero — the car was already moving at 4 m/s", "The acceleration", "The distance travelled"], 1,
-                       "At t = 0 the velocity is 4 m/s: the car was already moving when timing started. The gradient (2 m/s²) is the acceleration.", label="c"),
+                       "At $t = 0$ the velocity is 4 m/s: the car was already moving when timing started. The gradient (2 m/s²) is the acceleration.", label="c"),
             ], graph=graph_t4_1),
             group("kc-t4-q2", "A student measures the resistance of different lengths of the same wire and plots the results.", [
-                numeric("kc-t4-q2a", "Determine the gradient of the line of best fit.", t4_2, "Ω/m",
+                numeric("kc-t4-q2a", "Determine the gradient of the line of best fit.", t4_2, "$\\Omega/m$",
                         "Use the line, not the points: it runs from the origin to (1.0, 5.0).",
                         [r"$\text{gradient} = \dfrac{5.0 - 0}{1.0 - 0} = 5$ Ω/m."], label="a"),
                 choice("kc-t4-q2b", "Why is a large triangle used to find the gradient?",
@@ -408,7 +408,7 @@ section_t5 = section(
     blurb="\"Directly proportional\" is a precise claim: a straight line through the origin, or a constant ratio. A straight line on its own is not enough.",
     checklist=[
         "State what a graph must show for two quantities to be directly proportional",
-        "Test a data table for direct proportion (constant y ÷ x) and inverse proportion (constant x × y)",
+        "Test a data table for direct proportion (constant $y \\div x$) and inverse proportion (constant $x \\times y$)",
         "Describe a straight-line graph with an intercept correctly (linear, not proportional)",
         "Use a proportionality to predict a value",
     ],
@@ -444,22 +444,22 @@ section_t5 = section(
                    ["Extension is proportional to force for all forces shown", "Extension is proportional to force up to 8 N only", "Extension is never proportional to force", "Extension is inversely proportional to force"], 1,
                    "Through the origin and straight = proportional. Where the line curves, equal increases in force no longer give equal increases in extension — the limit of proportionality has been passed."),
             numeric("kc-t5-q2", "The kinetic energy of an object is 4 J at a certain speed. Calculate the kinetic energy when the speed is doubled.", t5_q2, "J",
-                    "KE ∝ v²: double v, multiply KE by 2² = 4.",
+                    "$\\text{KE} \\propto v^2$: double v, multiply KE by 2² = 4.",
                     [r"$KE \propto v^2$, so $KE = 4 \times 2^2 = 16$ J."]),
             numeric("kc-t5-q3", "A gas has a pressure of 12 kPa at a volume of 2 m³. The temperature stays the same and the volume is increased to 6 m³. Calculate the new pressure.", t5_q3, "kPa",
-                    "Inversely proportional: P × V is constant.",
+                    "Inversely proportional: $P \\times V$ is constant.",
                     [r"$P_1 V_1 = P_2 V_2$: $12 \times 2 = P_2 \times 6$.", r"$P_2 = \dfrac{24}{6} = 4$ kPa."]),
-            choice("kc-t5-q4", "A set of results: x = 2, y = 7; x = 4, y = 11; x = 6, y = 15. Which description is correct?",
+            choice("kc-t5-q4", "A set of results: $x = 2$, $y = 7$; $x = 4$, $y = 11$; $x = 6$, $y = 15$. Which description is correct?",
                    ["y is directly proportional to x", "y increases linearly with x but is not proportional to it", "y is inversely proportional to x", "y is proportional to x²"], 1,
-                   "Equal steps (x up by 2, y up by 4) make it linear, but y ÷ x is 3.5, 2.75, 2.5 — not constant — so it is not proportional. The line would have an intercept of 3."),
+                   "Equal steps (x up by 2, y up by 4) make it linear, but $y \\div x$ is 3.5, 2.75, 2.5 — not constant — so it is not proportional. The line would have an intercept of 3."),
             written("kc-t5-q5", "Describe the graph you would expect if you plotted the current through a fixed resistor against the potential difference across it, and state what the graph shows about the relationship.",
                     marks(["A straight line through the origin.",
                            "This shows the current is directly proportional to the potential difference (Ohm's law), because doubling V doubles I.",
-                           "The gradient is 1 ÷ R (or: the resistance is constant)."]), lines=3),
+                           "The gradient is $1 \\div R$ (or: the resistance is constant)."]), lines=3),
             written("kc-t5-q6", "A student plots pressure against volume for a gas and gets a curve. Explain how she could plot the data to get a straight line, and what the line would show.",
                     marks(["Plot pressure against 1 ÷ volume (or volume against 1 ÷ pressure).",
                            "If pressure is inversely proportional to volume this gives a straight line through the origin.",
-                           "Because P ∝ 1/V means P × V is constant: the gradient of the line is that constant."]), lines=3),
+                           "Because $P \\propto 1/V$ means $P \\times V$ is constant: the gradient of the line is that constant."]), lines=3),
         ]),
     ],
 )
@@ -681,7 +681,7 @@ section_t8 = section(
         ),
         practice("Estimation", [
             numeric("kc-t8-q1", "Estimate the weight of a family car.", t8_1, "N",
-                    "Mass of a car ≈ 1000 kg; W = m × g.",
+                    "Mass of a car ≈ 1000 kg; $W = m \\times g$.",
                     [r"Assume $m \approx 1000$ kg. $W = 1000 \times 10 = 10\,000$ N (about 10 kN)."], tolerance=0.6),
             numeric("kc-t8-q2", "Estimate the energy transferred by an electric heater left on for two hours.", t8_2, "J",
                     "A heater is about 2 kW; two hours in seconds.",

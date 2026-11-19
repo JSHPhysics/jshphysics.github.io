@@ -46,7 +46,7 @@ section_n7 = section(
     checklist=[
         "Sketch the I–V graphs for a fixed resistor, a filament lamp and a diode",
         "State what each shape says about the resistance",
-        "Find the resistance at a point on an I–V graph from R = V ÷ I",
+        "Find the resistance at a point on an I–V graph from $R = V \\div I$",
     ],
     parts=[
         explain(
@@ -70,7 +70,7 @@ section_n7 = section(
             [
                 r"At 1.5 V: $R = \dfrac{V}{I} = \dfrac{1.5}{0.30} = 5.0$ Ω.",
                 r"At 6.0 V: $R = \dfrac{6.0}{0.60} = 10$ Ω.",
-                "The resistance has <b>doubled</b> as the pd rose — the filament is <b>hotter</b> at the higher pd and its resistance increases with temperature. (Do not use the gradient of the curve: resistance is V/I at the point, not the slope.)",
+                "The resistance has <b>doubled</b> as the pd rose — the filament is <b>hotter</b> at the higher pd and its resistance increases with temperature. (Do not use the gradient of the curve: resistance is $V/I$ at the point, not the slope.)",
             ],
         ),
         practice("I–V graphs", [
@@ -83,15 +83,15 @@ section_n7 = section(
                         ("Shape", "…but <b>not in proportion</b>: the graph is a <b>curve</b> whose gradient decreases (it flattens) at higher pd, the same shape in both directions."),
                         ("Resistance", "So the lamp's <b>resistance increases</b> as the pd (and the filament's temperature) increases."),
                     ]), lines=4),
-            numeric("el-n7-q3", "From a resistor's I–V graph: at 4.0 V the current is 0.16 A. Calculate the resistance.", 25, "Ω", "R = V ÷ I at the point.", [r"$R = \dfrac{4.0}{0.16} = 25$ Ω."]),
+            numeric("el-n7-q3", "From a resistor's I–V graph: at 4.0 V the current is 0.16 A. Calculate the resistance.", 25, "Ω", "$R = V \\div I$ at the point.", [r"$R = \dfrac{4.0}{0.16} = 25$ Ω."]),
             choice("el-n7-q4", "Which describes a diode's I–V graph?",
                    ["A straight line through the origin", "Zero current for one direction of pd, then a steep rise above about 0.7 V in the other", "A curve that flattens in both directions", "A horizontal line"], 1,
                    "One-way conduction with a threshold."),
             written("el-n7-q5", "Explain why a diode is connected between a transformer and a battery being charged. (2)",
                     marks(["A battery must be charged with <b>d.c.</b> — current in one direction only.", "A diode <b>allows current in one direction only</b>, so it stops the reverse half of the a.c. (it is not there to limit the current)."]), lines=2),
             group("el-n7-q6", "A filament lamp's I–V graph gives 0.20 A at 1.0 V and 0.50 A at 5.0 V.", [
-                numeric("el-n7-q6a", "Calculate the resistance at 1.0 V.", 5, "Ω", "V ÷ I.", [r"$1.0 \div 0.20 = 5$ Ω."]),
-                numeric("el-n7-q6b", "Calculate the resistance at 5.0 V.", 10, "Ω", "V ÷ I.", [r"$5.0 \div 0.50 = 10$ Ω — larger: the hotter filament has more resistance."]),
+                numeric("el-n7-q6a", "Calculate the resistance at 1.0 V.", 5, "Ω", "$V \\div I$.", [r"$1.0 \div 0.20 = 5$ Ω."]),
+                numeric("el-n7-q6b", "Calculate the resistance at 5.0 V.", 10, "Ω", "$V \\div I$.", [r"$5.0 \div 0.50 = 10$ Ω — larger: the hotter filament has more resistance."]),
             ]),
         ]),
     ],
@@ -195,7 +195,7 @@ section_n9 = section(
                     marks(["The moving <b>electrons collide with the ions</b> of the metal lattice.", "The collisions make the ions <b>vibrate more</b>, which is a rise in temperature (energy transferred to the thermal store)."]), lines=2),
             choice("el-n9-q2", "Which change to a cable reduces the energy wasted as heat for the same current?",
                    ["Thicker insulation", "A thicker copper wire", "A longer wire", "A thinner wire"], 1,
-                   "Lower resistance → less I²R heating. Insulation does nothing to the resistance of the wire."),
+                   "Lower resistance → less $I^2R$ heating. Insulation does nothing to the resistance of the wire."),
             written("el-n9-q3", "Give one device that uses the heating effect of a current, and one situation where the heating effect is a disadvantage. (2)",
                     marks(["Use: a kettle / heater / toaster / filament lamp / fuse.", "Disadvantage: cables and components warming up wastes energy (lower efficiency) or risks fire / damage."]), lines=2),
             written("el-n9-q4", "Explain why thick copper wires are used to carry large currents. (3)",
@@ -221,7 +221,7 @@ section_n10 = section(
     blurb="Power is energy transferred per second, in watts. For an electrical device it is current × pd; for a resistor also current² × resistance. Energy is power × time — and a device's power rating tells you how fast its stored energy changes.",
     checklist=[
         "Define power as energy transferred per second, in watts",
-        "Use P = E ÷ t, P = I × V, P = I² × R and E = I × V × t, choosing by what is given",
+        "Use $P = E \\div t$, $P = I \\times V$, $P = I^2 \\times R$ and $E = I \\times V \\times t$, choosing by what is given",
         "Relate a power rating to the energy transferred in a given time",
     ],
     parts=[
@@ -246,14 +246,14 @@ section_n10 = section(
             ],
         ),
         practice("Power and energy", [
-            numeric("el-n10-q1", "A lamp carries 0.25 A at 12 V. Calculate its power.", 3, "W", "P = I × V.", ewau(r"P = I \times V", r"P = 0.25 \times 12", "3", "W")),
-            numeric("el-n10-q2", "A heater transfers 36 000 J in 2 minutes. Calculate its power.", 300, "W", "P = E ÷ t, t in seconds.", [r"$P = \dfrac{36\,000}{120} = 300$ W."]),
-            numeric("el-n10-q3", "A current of 2 A flows in a 15 Ω resistor. Calculate the power dissipated.", 60, "W", "P = I² × R.", ewau(r"P = I^2 \times R", r"P = 2^2 \times 15", "60", "W")),
-            numeric("el-n10-q4", "A 230 V motor draws 2 A for 5 minutes. Calculate the energy transferred.", 138000, "J", "E = I × V × t, t = 300 s.", ewau(r"E = I \times V \times t", r"E = 2 \times 230 \times 300", "138\\,000", "J")),
+            numeric("el-n10-q1", "A lamp carries 0.25 A at 12 V. Calculate its power.", 3, "W", "$P = I \\times V$.", ewau(r"P = I \times V", r"P = 0.25 \times 12", "3", "W")),
+            numeric("el-n10-q2", "A heater transfers 36 000 J in 2 minutes. Calculate its power.", 300, "W", "$P = E \\div t$, t in seconds.", [r"$P = \dfrac{36\,000}{120} = 300$ W."]),
+            numeric("el-n10-q3", "A current of 2 A flows in a 15 Ω resistor. Calculate the power dissipated.", 60, "W", "$P = I^2 \\times R$.", ewau(r"P = I^2 \times R", r"P = 2^2 \times 15", "60", "W")),
+            numeric("el-n10-q4", "A 230 V motor draws 2 A for 5 minutes. Calculate the energy transferred.", 138000, "J", "$E = I \\times V \\times t$, $t = 300$ s.", ewau(r"E = I \times V \times t", r"E = 2 \times 230 \times 300", "138\\,000", "J")),
             written("el-n10-q5", "State what is meant by the power of an electrical device, and its unit. (2)",
                     marks(["The <b>energy transferred per second</b> (rate of energy transfer).", "Measured in <b>watts</b> (1 W = 1 J/s)."]), lines=2),
             numeric("el-n10-q6", "A 1.2 kW hair dryer is used for 5 minutes. Calculate the energy transferred.", 360000, "J", "P in W, t in s.", [r"$E = P \times t = 1200 \times 300 = 360\,000$ J (360 kJ)."]),
-            numeric("el-n10-q7", "A 60 W lamp runs from 230 V. Calculate the current.", 0.26, "A", "I = P ÷ V.", [r"$I = \dfrac{60}{230} = 0.26$ A (2 s.f.)."], tolerance=0.03),
+            numeric("el-n10-q7", "A 60 W lamp runs from 230 V. Calculate the current.", 0.26, "A", "$I = P \\div V$.", [r"$I = \dfrac{60}{230} = 0.26$ A (2 s.f.)."], tolerance=0.03),
         ]),
     ],
 )
@@ -340,16 +340,16 @@ section_n11 = section(
 
 DEFINITIONS = [
     ("Electric current", "The <b>rate of flow of charge</b>; in metals a flow of <b>electrons</b>. Unit ampere (A) = coulomb per second.", "\"the flow of electricity\""),
-    ("Charge", "Carried by electrons (−) and protons (+); measured in <b>coulombs</b> (C); Q = I × t.", "\"the amount of current\""),
+    ("Charge", "Carried by electrons (−) and protons (+); measured in <b>coulombs</b> (C); $Q = I \\times t$.", "\"the amount of current\""),
     ("Potential difference", "The <b>energy transferred per unit charge</b> passing through a component; the volt is a <b>joule per coulomb</b>.", "\"the push\" / \"the amount of electricity\""),
-    ("Resistance", "The <b>ratio of pd to current</b> for a component, R = V ÷ I, in ohms (Ω); how hard it is to drive current through it.", "\"something that slows the current down\""),
+    ("Resistance", "The <b>ratio of pd to current</b> for a component, $R = V \\div I$, in ohms (Ω); how hard it is to drive current through it.", "\"something that slows the current down\""),
     ("Series circuit", "Components connected <b>one after another in a single loop</b>: same current through each, pd shared.", "\"in a line\""),
     ("Parallel circuit", "Components connected in <b>separate branches</b> across the same two points: same pd across each, current shared.", "\"side by side\""),
     ("Ohmic conductor", "A component whose current is <b>proportional to the pd</b> across it (constant resistance): a straight I–V line through the origin.", "\"a resistor\""),
     ("Diode", "A component that allows current in <b>one direction only</b>.", "\"a one-way valve\" alone"),
     ("Thermistor", "A resistor whose resistance <b>decreases as its temperature increases</b>.", "\"a temperature sensor\""),
     ("LDR", "A light-dependent resistor: resistance <b>decreases as the light intensity increases</b>.", "\"a light sensor\""),
-    ("Power", "The <b>energy transferred per second</b>; watt (W) = joule per second. P = E ÷ t = I × V.", "\"how strong it is\""),
+    ("Power", "The <b>energy transferred per second</b>; watt (W) = joule per second. $P = E \\div t = I \\times V$.", "\"how strong it is\""),
     ("Direct current", "Movement of charge in <b>one direction only</b>; supplied by cells and batteries.", "\"a constant current\""),
     ("Alternating current", "Movement of charge that <b>changes direction</b> repeatedly; UK mains 50 Hz, about 230 V.", "\"current that goes up and down\""),
     ("Live wire", "The brown wire at <b>230 V</b> (alternating) that carries the current to the appliance; the switch and fuse are in it.", "\"the main wire\""),
@@ -390,7 +390,7 @@ section_keywords = section(
             written("el-kw-q4", "State what is meant by direct current. (1)",
                     marks(["Movement of charge in <b>one direction only</b>."]), lines=1),
             written("el-kw-q5", "State what is meant by the resistance of a component. (1)",
-                    marks(["The <b>ratio of the pd across it to the current</b> through it (R = V ÷ I), in ohms."]), lines=1),
+                    marks(["The <b>ratio of the pd across it to the current</b> through it ($R = V \\div I$), in ohms."]), lines=1),
             choice("el-kw-q6", "Which describes a parallel circuit?",
                    ["Components in one loop with the same current", "Components in separate branches with the same pd across each", "A circuit with two cells", "A circuit with no switch"], 1,
                    "Branches across the same two points."),

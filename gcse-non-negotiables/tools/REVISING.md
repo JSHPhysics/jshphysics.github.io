@@ -60,8 +60,12 @@ Serve the repo root and run the check script on the topic:
     python3 -m http.server 8791 &
     node gcse-non-negotiables/tools/check_topic.js <topic-id> [--filter Foundation]
 
-It enters every stored answer through the UI, counts KaTeX errors,
-checks the phone width and the booklet, and exits 1 on any failure.
+It first reads the topic file and fails on any plain-text maths in the
+prose fields (hints, question text, checklists, flashcards, models…
+— a variable equated, multiplied, divided, squared or subscripted
+outside `$…$`; units and word equations are allowed), then enters every
+stored answer through the UI, counts KaTeX errors, checks the phone
+width and the booklet, and exits 1 on any failure.
 `--shots <dir> --sections a,b` saves screenshots of named sections to
 look at. Playwright with Chromium must be installed (`require('playwright')`
 from the directory you run in).

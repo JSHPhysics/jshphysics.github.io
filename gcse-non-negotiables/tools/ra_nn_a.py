@@ -59,7 +59,7 @@ section_n1 = section(
             written("ra-n1-q5", "Compare a positron with an electron. (2)",
                     marks(["<b>Same mass</b> (about 1/1836 of a proton).", "<b>Opposite charge</b>: the positron is <b>+1</b>, the electron −1."]), lines=2),
             written("ra-n1-q6", "Explain why an atom has no overall electric charge. (2)",
-                    marks(["It has <b>equal numbers of protons and electrons</b>.", "Each proton's +1 charge is cancelled by an electron's −1 charge, so the <b>total is zero</b>."]), lines=2),
+                    marks(["It has <b>equal numbers of protons and electrons</b>.", "Each proton'$s +1$ charge is cancelled by an electron'$s -1$ charge, so the <b>total is zero</b>."]), lines=2),
         ]),
     ],
 )
@@ -90,7 +90,7 @@ section_n2 = section(
             "Uranium-235 is written ²³⁵₉₂U. State the number of protons, neutrons and electrons in a neutral atom. (2 marks)",
             [
                 "<b>Protons:</b> Z = <b>92</b>. <b>Electrons:</b> also 92 (neutral atom).",
-                "<b>Neutrons:</b> A − Z = 235 − 92 = <b>143</b>.",
+                "<b>Neutrons:</b> A − $Z = 235 - 92$ = <b>143</b>.",
             ],
         ),
         practice("Isotopes", [

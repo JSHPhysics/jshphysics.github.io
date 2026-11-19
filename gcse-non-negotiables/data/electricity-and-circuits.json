@@ -294,7 +294,7 @@
                 "value": 3,
                 "unit": "A"
               },
-              "hint": "I = Q ÷ t.",
+              "hint": "$I = Q \\div t$.",
               "walkthrough": [
                 "$I = \\dfrac{Q}{t} = \\dfrac{90}{30} = 3$ A."
               ]
@@ -326,7 +326,7 @@
                 "1.1 A"
               ],
               "correct": 2,
-              "explain": "Current in = current out: 0.8 − 0.3 = 0.5 A."
+              "explain": "Current in = current out: $0.8 - 0.3 = 0.5$ A."
             },
             {
               "id": "el-n3-q5",
@@ -343,7 +343,7 @@
                 "value": 1200,
                 "unit": "s"
               },
-              "hint": "t = Q ÷ I.",
+              "hint": "$t = Q \\div I$.",
               "walkthrough": [
                 "$t = \\dfrac{Q}{I} = \\dfrac{600}{0.5} = 1200$ s (20 minutes)."
               ]
@@ -352,7 +352,7 @@
         }
       ],
       "checklist": [
-        "Use Q = I × t, with time in seconds and current in amps (convert mA)",
+        "Use $Q = I \\times t$, with time in seconds and current in amps (convert mA)",
         "State that a closed circuit with a source of pd has a current",
         "Use conservation of current at a junction"
       ],
@@ -411,7 +411,7 @@
                 "value": 4600,
                 "unit": "J"
               },
-              "hint": "E = Q × V.",
+              "hint": "$E = Q \\times V$.",
               "walkthrough": [
                 "<b>Equation:</b> $E = Q \\times V$",
                 "<b>Working:</b> $E = 20 \\times 230$",
@@ -427,7 +427,7 @@
                 "value": 6,
                 "unit": "V"
               },
-              "hint": "V = E ÷ Q.",
+              "hint": "$V = E \\div Q$.",
               "walkthrough": [
                 "$V = \\dfrac{E}{Q} = \\dfrac{90}{15} = 6$ V."
               ]
@@ -440,7 +440,7 @@
                 "value": 90,
                 "unit": "J"
               },
-              "hint": "Q = I t first, then E = Q V.",
+              "hint": "$Q = I t$ first, then $E = Q V$.",
               "walkthrough": [
                 "$Q = I \\times t = 0.2 \\times 300 = 60$ C.",
                 "$E = Q \\times V = 60 \\times 1.5 = 90$ J."
@@ -457,7 +457,7 @@
                 "The cell, because it lasts longer"
               ],
               "correct": 1,
-              "explain": "E = QV: 90 J against 15 J."
+              "explain": "$E = QV$: 90 J against 15 J."
             },
             {
               "id": "el-n4-q6",
@@ -471,10 +471,10 @@
       ],
       "checklist": [
         "Define potential difference as energy transferred per unit charge, and the volt as a joule per coulomb",
-        "Use E = Q × V, and combine it with Q = I × t",
+        "Use $E = Q \\times V$, and combine it with $Q = I \\times t$",
         "Explain what the pd across a component tells you"
       ],
-      "blurb": "A volt is a joule per coulomb. The potential difference across a component is the energy transferred by each coulomb of charge that passes through it — which is why E = Q × V, and why a 12 V battery does more with the same charge than a 1.5 V cell."
+      "blurb": "A volt is a joule per coulomb. The potential difference across a component is the energy transferred by each coulomb of charge that passes through it — which is why $E = Q \\times V$, and why a 12 V battery does more with the same charge than a 1.5 V cell."
     },
     {
       "id": "ohm-nn",
@@ -519,7 +519,7 @@
                 "value": 12,
                 "unit": "V"
               },
-              "hint": "V = I × R.",
+              "hint": "$V = I \\times R$.",
               "walkthrough": [
                 "<b>Equation:</b> $V = I \\times R$",
                 "<b>Working:</b> $V = 0.4 \\times 30$",
@@ -535,7 +535,7 @@
                 "value": 0.05,
                 "unit": "A"
               },
-              "hint": "I = V ÷ R.",
+              "hint": "$I = V \\div R$.",
               "walkthrough": [
                 "$I = \\dfrac{V}{R} = \\dfrac{12}{240} = 0.05$ A (50 mA)."
               ]
@@ -571,7 +571,7 @@
                 "becomes zero"
               ],
               "correct": 1,
-              "explain": "I = V/R: inverse proportion."
+              "explain": "$I = V/R$: inverse proportion."
             },
             {
               "id": "el-n5-q6",
@@ -590,7 +590,7 @@
         }
       ],
       "checklist": [
-        "Use V = I × R in all three forms, with the ohm as the unit",
+        "Use $V = I \\times R$ in all three forms, with the ohm as the unit",
         "Explain how changing the resistance changes the current, and how a variable resistor does it",
         "Convert mA and kΩ before substituting"
       ],
@@ -667,7 +667,7 @@
                 "value": 8,
                 "unit": "V"
               },
-              "hint": "V = I × R for that resistor.",
+              "hint": "$V = I \\times R$ for that resistor.",
               "walkthrough": [
                 "$V = 0.2 \\times 40 = 8$ V (and $0.2 \\times 20 = 4$ V across the other: $8 + 4 = 12$ V)."
               ]
@@ -940,7 +940,7 @@
           "steps": [
             "At 1.5 V: $R = \\dfrac{V}{I} = \\dfrac{1.5}{0.30} = 5.0$ Ω.",
             "At 6.0 V: $R = \\dfrac{6.0}{0.60} = 10$ Ω.",
-            "The resistance has <b>doubled</b> as the pd rose — the filament is <b>hotter</b> at the higher pd and its resistance increases with temperature. (Do not use the gradient of the curve: resistance is V/I at the point, not the slope.)"
+            "The resistance has <b>doubled</b> as the pd rose — the filament is <b>hotter</b> at the higher pd and its resistance increases with temperature. (Do not use the gradient of the curve: resistance is $V/I$ at the point, not the slope.)"
           ]
         },
         {
@@ -982,7 +982,7 @@
                 "value": 25,
                 "unit": "Ω"
               },
-              "hint": "R = V ÷ I at the point.",
+              "hint": "$R = V \\div I$ at the point.",
               "walkthrough": [
                 "$R = \\dfrac{4.0}{0.16} = 25$ Ω."
               ]
@@ -1020,7 +1020,7 @@
                     "value": 5,
                     "unit": "Ω"
                   },
-                  "hint": "V ÷ I.",
+                  "hint": "$V \\div I$.",
                   "walkthrough": [
                     "$1.0 \\div 0.20 = 5$ Ω."
                   ]
@@ -1033,7 +1033,7 @@
                     "value": 10,
                     "unit": "Ω"
                   },
-                  "hint": "V ÷ I.",
+                  "hint": "$V \\div I$.",
                   "walkthrough": [
                     "$5.0 \\div 0.50 = 10$ Ω — larger: the hotter filament has more resistance."
                   ]
@@ -1046,7 +1046,7 @@
       "checklist": [
         "Sketch the I–V graphs for a fixed resistor, a filament lamp and a diode",
         "State what each shape says about the resistance",
-        "Find the resistance at a point on an I–V graph from R = V ÷ I"
+        "Find the resistance at a point on an I–V graph from $R = V \\div I$"
       ],
       "blurb": "Three graphs of current against pd to draw and to read. A straight line through the origin means constant resistance; a curve that flattens means the resistance is rising; a flat line at zero on one side means a diode."
     },
@@ -1343,7 +1343,7 @@
                 "A thinner wire"
               ],
               "correct": 1,
-              "explain": "Lower resistance → less I²R heating. Insulation does nothing to the resistance of the wire."
+              "explain": "Lower resistance → less $I^2R$ heating. Insulation does nothing to the resistance of the wire."
             },
             {
               "id": "el-n9-q3",
@@ -1429,7 +1429,7 @@
                 "value": 3,
                 "unit": "W"
               },
-              "hint": "P = I × V.",
+              "hint": "$P = I \\times V$.",
               "walkthrough": [
                 "<b>Equation:</b> $P = I \\times V$",
                 "<b>Working:</b> $P = 0.25 \\times 12$",
@@ -1445,7 +1445,7 @@
                 "value": 300,
                 "unit": "W"
               },
-              "hint": "P = E ÷ t, t in seconds.",
+              "hint": "$P = E \\div t$, t in seconds.",
               "walkthrough": [
                 "$P = \\dfrac{36\\,000}{120} = 300$ W."
               ]
@@ -1458,7 +1458,7 @@
                 "value": 60,
                 "unit": "W"
               },
-              "hint": "P = I² × R.",
+              "hint": "$P = I^2 \\times R$.",
               "walkthrough": [
                 "<b>Equation:</b> $P = I^2 \\times R$",
                 "<b>Working:</b> $P = 2^2 \\times 15$",
@@ -1474,7 +1474,7 @@
                 "value": 138000,
                 "unit": "J"
               },
-              "hint": "E = I × V × t, t = 300 s.",
+              "hint": "$E = I \\times V \\times t$, $t = 300$ s.",
               "walkthrough": [
                 "<b>Equation:</b> $E = I \\times V \\times t$",
                 "<b>Working:</b> $E = 2 \\times 230 \\times 300$",
@@ -1511,7 +1511,7 @@
                 "unit": "A",
                 "tolerance": 0.03
               },
-              "hint": "I = P ÷ V.",
+              "hint": "$I = P \\div V$.",
               "walkthrough": [
                 "$I = \\dfrac{60}{230} = 0.26$ A (2 s.f.)."
               ]
@@ -1521,7 +1521,7 @@
       ],
       "checklist": [
         "Define power as energy transferred per second, in watts",
-        "Use P = E ÷ t, P = I × V, P = I² × R and E = I × V × t, choosing by what is given",
+        "Use $P = E \\div t$, $P = I \\times V$, $P = I^2 \\times R$ and $E = I \\times V \\times t$, choosing by what is given",
         "Relate a power rating to the energy transferred in a given time"
       ],
       "blurb": "Power is energy transferred per second, in watts. For an electrical device it is current × pd; for a resistor also current² × resistance. Energy is power × time — and a device's power rating tells you how fast its stored energy changes."
@@ -1658,7 +1658,7 @@
         {
           "kind": "explain",
           "title": "The definitions",
-          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Electric current</b></td><td>The <b>rate of flow of charge</b>; in metals a flow of <b>electrons</b>. Unit ampere (A) = coulomb per second.</td><td>\"the flow of electricity\"</td></tr><tr><td><b>Charge</b></td><td>Carried by electrons (−) and protons (+); measured in <b>coulombs</b> (C); Q = I × t.</td><td>\"the amount of current\"</td></tr><tr><td><b>Potential difference</b></td><td>The <b>energy transferred per unit charge</b> passing through a component; the volt is a <b>joule per coulomb</b>.</td><td>\"the push\" / \"the amount of electricity\"</td></tr><tr><td><b>Resistance</b></td><td>The <b>ratio of pd to current</b> for a component, R = V ÷ I, in ohms (Ω); how hard it is to drive current through it.</td><td>\"something that slows the current down\"</td></tr><tr><td><b>Series circuit</b></td><td>Components connected <b>one after another in a single loop</b>: same current through each, pd shared.</td><td>\"in a line\"</td></tr><tr><td><b>Parallel circuit</b></td><td>Components connected in <b>separate branches</b> across the same two points: same pd across each, current shared.</td><td>\"side by side\"</td></tr><tr><td><b>Ohmic conductor</b></td><td>A component whose current is <b>proportional to the pd</b> across it (constant resistance): a straight I–V line through the origin.</td><td>\"a resistor\"</td></tr><tr><td><b>Diode</b></td><td>A component that allows current in <b>one direction only</b>.</td><td>\"a one-way valve\" alone</td></tr><tr><td><b>Thermistor</b></td><td>A resistor whose resistance <b>decreases as its temperature increases</b>.</td><td>\"a temperature sensor\"</td></tr><tr><td><b>LDR</b></td><td>A light-dependent resistor: resistance <b>decreases as the light intensity increases</b>.</td><td>\"a light sensor\"</td></tr><tr><td><b>Power</b></td><td>The <b>energy transferred per second</b>; watt (W) = joule per second. P = E ÷ t = I × V.</td><td>\"how strong it is\"</td></tr><tr><td><b>Direct current</b></td><td>Movement of charge in <b>one direction only</b>; supplied by cells and batteries.</td><td>\"a constant current\"</td></tr><tr><td><b>Alternating current</b></td><td>Movement of charge that <b>changes direction</b> repeatedly; UK mains 50 Hz, about 230 V.</td><td>\"current that goes up and down\"</td></tr><tr><td><b>Live wire</b></td><td>The brown wire at <b>230 V</b> (alternating) that carries the current to the appliance; the switch and fuse are in it.</td><td>\"the main wire\"</td></tr><tr><td><b>Neutral wire</b></td><td>The blue wire at <b>0 V</b> that completes the circuit back to the supply.</td><td>\"the safe wire\"</td></tr><tr><td><b>Earth wire</b></td><td>The green-and-yellow wire at <b>0 V</b> connected to the <b>metal case</b>; a low-resistance path for a fault current so the fuse melts.</td><td>\"the wire that stops shocks\" alone</td></tr><tr><td><b>Fuse</b></td><td>A thin wire in the live wire that <b>melts</b> when the current exceeds its rating, <b>breaking the circuit</b>.</td><td>\"blows\" / \"explodes\"</td></tr><tr><td><b>Circuit breaker</b></td><td>An automatic switch that <b>trips</b> (opens) when the current is too large; can be <b>reset</b>.</td><td>\"a fuse\"</td></tr></table>"
+          "html": "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p><table class='tbl'><tr><th>Term</th><th>What to write (mark-scheme form)</th><th>Not this</th></tr><tr><td><b>Electric current</b></td><td>The <b>rate of flow of charge</b>; in metals a flow of <b>electrons</b>. Unit ampere (A) = coulomb per second.</td><td>\"the flow of electricity\"</td></tr><tr><td><b>Charge</b></td><td>Carried by electrons (−) and protons (+); measured in <b>coulombs</b> (C); $Q = I \\times t$.</td><td>\"the amount of current\"</td></tr><tr><td><b>Potential difference</b></td><td>The <b>energy transferred per unit charge</b> passing through a component; the volt is a <b>joule per coulomb</b>.</td><td>\"the push\" / \"the amount of electricity\"</td></tr><tr><td><b>Resistance</b></td><td>The <b>ratio of pd to current</b> for a component, $R = V \\div I$, in ohms (Ω); how hard it is to drive current through it.</td><td>\"something that slows the current down\"</td></tr><tr><td><b>Series circuit</b></td><td>Components connected <b>one after another in a single loop</b>: same current through each, pd shared.</td><td>\"in a line\"</td></tr><tr><td><b>Parallel circuit</b></td><td>Components connected in <b>separate branches</b> across the same two points: same pd across each, current shared.</td><td>\"side by side\"</td></tr><tr><td><b>Ohmic conductor</b></td><td>A component whose current is <b>proportional to the pd</b> across it (constant resistance): a straight I–V line through the origin.</td><td>\"a resistor\"</td></tr><tr><td><b>Diode</b></td><td>A component that allows current in <b>one direction only</b>.</td><td>\"a one-way valve\" alone</td></tr><tr><td><b>Thermistor</b></td><td>A resistor whose resistance <b>decreases as its temperature increases</b>.</td><td>\"a temperature sensor\"</td></tr><tr><td><b>LDR</b></td><td>A light-dependent resistor: resistance <b>decreases as the light intensity increases</b>.</td><td>\"a light sensor\"</td></tr><tr><td><b>Power</b></td><td>The <b>energy transferred per second</b>; watt (W) = joule per second. $P = E \\div t = I \\times V$.</td><td>\"how strong it is\"</td></tr><tr><td><b>Direct current</b></td><td>Movement of charge in <b>one direction only</b>; supplied by cells and batteries.</td><td>\"a constant current\"</td></tr><tr><td><b>Alternating current</b></td><td>Movement of charge that <b>changes direction</b> repeatedly; UK mains 50 Hz, about 230 V.</td><td>\"current that goes up and down\"</td></tr><tr><td><b>Live wire</b></td><td>The brown wire at <b>230 V</b> (alternating) that carries the current to the appliance; the switch and fuse are in it.</td><td>\"the main wire\"</td></tr><tr><td><b>Neutral wire</b></td><td>The blue wire at <b>0 V</b> that completes the circuit back to the supply.</td><td>\"the safe wire\"</td></tr><tr><td><b>Earth wire</b></td><td>The green-and-yellow wire at <b>0 V</b> connected to the <b>metal case</b>; a low-resistance path for a fault current so the fuse melts.</td><td>\"the wire that stops shocks\" alone</td></tr><tr><td><b>Fuse</b></td><td>A thin wire in the live wire that <b>melts</b> when the current exceeds its rating, <b>breaking the circuit</b>.</td><td>\"blows\" / \"explodes\"</td></tr><tr><td><b>Circuit breaker</b></td><td>An automatic switch that <b>trips</b> (opens) when the current is too large; can be <b>reset</b>.</td><td>\"a fuse\"</td></tr></table>"
         },
         {
           "kind": "practice",
@@ -1702,7 +1702,7 @@
               "id": "el-kw-q5",
               "type": "written",
               "text": "State what is meant by the resistance of a component. (1)",
-              "model": "<ul><li>The <b>ratio of the pd across it to the current</b> through it (R = V ÷ I), in ohms.</li></ul>",
+              "model": "<ul><li>The <b>ratio of the pd across it to the current</b> through it ($R = V \\div I$), in ohms.</li></ul>",
               "lines": 1
             },
             {
@@ -1974,7 +1974,7 @@
               "text": "A student finds the gradient of a filament lamp's I–V curve at a point and calls it the resistance. Why is this wrong?",
               "options": [
                 "Gradients are never used in physics",
-                "Resistance at a point is V ÷ I from the point's coordinates; the gradient of I against V is 1/R for a straight line and not R at all for a curve",
+                "Resistance at a point is $V \\div I$ from the point's coordinates; the gradient of I against V is $1/R$ for a straight line and not R at all for a curve",
                 "The lamp has no resistance",
                 "The gradient should be in ohms"
               ],
@@ -2001,7 +2001,7 @@
                     "value": 5,
                     "unit": "Ω"
                   },
-                  "hint": "V ÷ I.",
+                  "hint": "$V \\div I$.",
                   "walkthrough": [
                     "$0.5 \\div 0.10 = 5$ Ω."
                   ]
@@ -2014,7 +2014,7 @@
                     "value": 10,
                     "unit": "Ω"
                   },
-                  "hint": "V ÷ I.",
+                  "hint": "$V \\div I$.",
                   "walkthrough": [
                     "$4.0 \\div 0.40 = 10$ Ω."
                   ]
@@ -2049,7 +2049,7 @@
         "Explain why a fixed resistor's graph is a straight line and a diode's is one-sided",
         "Find resistance from an I–V graph correctly, and explain why the gradient is not the resistance"
       ],
-      "blurb": "Describing the curve is two marks; explaining it is the hard part. The lamp's curve comes from temperature → ion vibration → collisions; the diode's from one-way conduction. And resistance is V ÷ I at a point — the gradient of the curve is not the resistance."
+      "blurb": "Describing the curve is two marks; explaining it is the hard part. The lamp's curve comes from temperature → ion vibration → collisions; the diode's from one-way conduction. And resistance is $V \\div I$ at a point — the gradient of the curve is not the resistance."
     },
     {
       "id": "circuits-hard",
@@ -2106,7 +2106,7 @@
                     "value": 7,
                     "unit": "V"
                   },
-                  "hint": "V = I × R.",
+                  "hint": "$V = I \\times R$.",
                   "walkthrough": [
                     "$V = 0.5 \\times 14 = 7$ V."
                   ]
@@ -2152,7 +2152,7 @@
                     "value": 12,
                     "unit": "Ω"
                   },
-                  "hint": "R = V ÷ I for the whole thing.",
+                  "hint": "$R = V \\div I$ for the whole thing.",
                   "walkthrough": [
                     "$R = 6 \\div 0.5 = 12$ Ω — smaller than 20 Ω."
                   ]
@@ -2322,7 +2322,7 @@
         {
           "kind": "explain",
           "title": "Chains and traps",
-          "html": "<table class='tbl'><tr><th>Question</th><th>Chain</th></tr><tr><td>which fuse for a 2.3 kW heater on 230 V?</td><td>$I = P/V = 2300/230 = 10$ A → the next standard rating above: <b>13 A</b> (standard fuses 3 A, 5 A, 13 A)</td></tr><tr><td>how long will a 12 V, 50 A h car battery run a 60 W lamp?</td><td>stored energy $= Q \\times V$ with $Q = 50 \\times 3600 = 180\\,000$ C → $E = 2.16$ MJ → $t = E/P = 36\\,000$ s = 10 h</td></tr><tr><td>energy in a day from a 100 W bulb left on</td><td>$E = P \\times t = 100 \\times 86\\,400 = 8.64$ MJ</td></tr><tr><td>does the battery charge in 6 hours at 10 A, 400 V, 126 MJ?</td><td>$t = E/(IV) = 126 \\times 10^6 / 4000 = 31\\,500$ s = 8.75 h → no (or: energy in 6 h $= IVt = 86.4$ MJ &lt; 126 MJ)</td></tr></table><p>Traps: <b>kW to W</b>, <b>MJ to J</b>, <b>hours and minutes to seconds</b> — the June 2023 report's main complaint on the charging question (Q8(b)(i)); and a comparison only scored when the <b>unit</b> of the calculated time was stated. Fuse choice: the <b>lowest standard rating above</b> the normal current — too low and it melts in normal use; too high and it does not protect.</p><p><b>Power ratings and stored energy</b> (10.42): a 3 kW kettle changes the supply's energy store three times as fast as a 1 kW heater; over the same time it transfers three times the energy. $E = P \\times t$ is the whole of it.</p>"
+          "html": "<table class='tbl'><tr><th>Question</th><th>Chain</th></tr><tr><td>which fuse for a 2.3 kW heater on 230 V?</td><td>$I = P/V = 2300/230 = 10$ A → the next standard rating above: <b>13 A</b> (standard fuses 3 A, 5 A, 13 A)</td></tr><tr><td>how long will a 12 V, 50 A h car battery run a 60 W lamp?</td><td>stored energy $= Q \\times V$ with $Q = 50 \\times 3600 = 180\\,000$ C → $E = 2.16$ MJ → $t = E/P = 36\\,000 \\text{ s} = 10 \\text{ h}$</td></tr><tr><td>energy in a day from a 100 W bulb left on</td><td>$E = P \\times t = 100 \\times 86\\,400 = 8.64$ MJ</td></tr><tr><td>does the battery charge in 6 hours at 10 A, 400 V, 126 MJ?</td><td>$t = E/(IV) = 126 \\times 10^6 / 4000 = 31\\,500 \\text{ s} = 8.75 \\text{ h}$ → no (or: energy in 6 h $= IVt = 86.4$ MJ &lt; 126 MJ)</td></tr></table><p>Traps: <b>kW to W</b>, <b>MJ to J</b>, <b>hours and minutes to seconds</b> — the June 2023 report's main complaint on the charging question (Q8(b)(i)); and a comparison only scored when the <b>unit</b> of the calculated time was stated. Fuse choice: the <b>lowest standard rating above</b> the normal current — too low and it melts in normal use; too high and it does not protect.</p><p><b>Power ratings and stored energy</b> (10.42): a 3 kW kettle changes the supply's energy store three times as fast as a 1 kW heater; over the same time it transfers three times the energy. $E = P \\times t$ is the whole of it.</p>"
         },
         {
           "kind": "worked",
@@ -2351,7 +2351,7 @@
                     "value": 4,
                     "unit": "A"
                   },
-                  "hint": "I = P ÷ V.",
+                  "hint": "$I = P \\div V$.",
                   "walkthrough": [
                     "$I = 920 \\div 230 = 4$ A."
                   ]
@@ -2392,7 +2392,7 @@
                 "value": 60,
                 "unit": "min"
               },
-              "hint": "t = E ÷ P in seconds, then ÷ 60.",
+              "hint": "$t = E \\div P$ in seconds, then ÷ 60.",
               "walkthrough": [
                 "$t = 54\\,000 \\div 15 = 3600$ s $= 60$ minutes."
               ]
@@ -2405,7 +2405,7 @@
                 "value": 108000,
                 "unit": "J"
               },
-              "hint": "E = I V t with t in seconds.",
+              "hint": "$E = I V t$ with t in seconds.",
               "walkthrough": [
                 "$E = 2 \\times 5 \\times 10\\,800 = 108\\,000$ J (108 kJ)."
               ]
@@ -2425,7 +2425,7 @@
                 "value": 36,
                 "unit": "MJ"
               },
-              "hint": "P = IV, then E = Pt.",
+              "hint": "$P = IV$, then $E = Pt$.",
               "walkthrough": [
                 "$P = 150 \\times 400 = 60\\,000$ W; $E = 60\\,000 \\times 600 = 36\\,000\\,000$ J $= 36$ MJ."
               ]
@@ -2632,7 +2632,7 @@
         {
           "kind": "explain",
           "title": "The recipe applied twice",
-          "html": "<table class='tbl'><tr><th>Step</th><th>Current against pd (resistor / lamp)</th><th>Thermistor resistance against temperature</th></tr><tr><td><b>1 Variables</b></td><td>independent: pd across the component; dependent: current; control: the component, its temperature (switch off between readings)</td><td>independent: temperature; dependent: resistance; control: the thermistor, the supply pd</td></tr><tr><td><b>2 Equation</b></td><td>$R = V \\div I$</td><td>$R = V \\div I$</td></tr><tr><td><b>3 Change</b></td><td>adjust the variable resistor to set the pd in 0.5 V steps; reverse the supply for negative values</td><td>heat the water bath in 10 °C steps (or add ice), stirring and letting it settle</td></tr><tr><td><b>4 Measure</b></td><td>pd with the voltmeter across the component, current with the ammeter in series</td><td>temperature with a thermometer beside the thermistor; pd across it and current in it at that moment</td></tr><tr><td><b>5 Use the result</b></td><td>plot I against V; find R = V/I at points; straight line = constant R, curve = changing R</td><td>calculate R = V/I at each temperature; plot R against temperature</td></tr><tr><td><b>6 Accuracy detail</b></td><td>switch off between readings so the component does not warm up; read the meters at the same instant</td><td>keep the thermistor fully submerged and stirred so it is at the measured temperature</td></tr><tr><td><b>7 Repeat</b></td><td>repeat each pd and average the current</td><td>repeat each temperature and average the resistance</td></tr></table>"
+          "html": "<table class='tbl'><tr><th>Step</th><th>Current against pd (resistor / lamp)</th><th>Thermistor resistance against temperature</th></tr><tr><td><b>1 Variables</b></td><td>independent: pd across the component; dependent: current; control: the component, its temperature (switch off between readings)</td><td>independent: temperature; dependent: resistance; control: the thermistor, the supply pd</td></tr><tr><td><b>2 Equation</b></td><td>$R = V \\div I$</td><td>$R = V \\div I$</td></tr><tr><td><b>3 Change</b></td><td>adjust the variable resistor to set the pd in 0.5 V steps; reverse the supply for negative values</td><td>heat the water bath in 10 °C steps (or add ice), stirring and letting it settle</td></tr><tr><td><b>4 Measure</b></td><td>pd with the voltmeter across the component, current with the ammeter in series</td><td>temperature with a thermometer beside the thermistor; pd across it and current in it at that moment</td></tr><tr><td><b>5 Use the result</b></td><td>plot I against V; find $R = V/I$ at points; straight line = constant R, curve = changing R</td><td>calculate $R = V/I$ at each temperature; plot R against temperature</td></tr><tr><td><b>6 Accuracy detail</b></td><td>switch off between readings so the component does not warm up; read the meters at the same instant</td><td>keep the thermistor fully submerged and stirred so it is at the measured temperature</td></tr><tr><td><b>7 Repeat</b></td><td>repeat each pd and average the current</td><td>repeat each temperature and average the resistance</td></tr></table>"
         },
         {
           "kind": "worked",
@@ -2737,7 +2737,7 @@
     },
     {
       "q": "Equation linking charge, current and time?",
-      "a": "Q = I × t (C = A × s). Convert mA to A and minutes to seconds first.",
+      "a": "$Q = I \\times t$ ($C = A \\times s$). Convert mA to A and minutes to seconds first.",
       "section": "charge-nn"
     },
     {
@@ -2757,7 +2757,7 @@
     },
     {
       "q": "Equation linking energy, charge and pd?",
-      "a": "E = Q × V (J = C × V).",
+      "a": "$E = Q \\times V$ ($J = C \\times V$).",
       "section": "pd-energy"
     },
     {
@@ -2767,12 +2767,12 @@
     },
     {
       "q": "Equation linking pd, current and resistance?",
-      "a": "V = I × R; R = V ÷ I in ohms (Ω).",
+      "a": "$V = I \\times R$; $R = V \\div I$ in ohms (Ω).",
       "section": "ohm-nn"
     },
     {
       "q": "What happens to the current if the resistance in a circuit increases (same pd)?",
-      "a": "It decreases (I = V/R).",
+      "a": "It decreases ($I = V/R$).",
       "section": "ohm-nn"
     },
     {
@@ -2782,7 +2782,7 @@
     },
     {
       "q": "kΩ and mA — what do you do before substituting?",
-      "a": "kΩ × 1000 → Ω; mA ÷ 1000 → A.",
+      "a": "$k\\Omega \\times 1000$ → Ω; mA ÷ 1000 → A.",
       "section": "ohm-nn"
     },
     {
@@ -2802,7 +2802,7 @@
     },
     {
       "q": "Why does adding a resistor in parallel decrease the total resistance?",
-      "a": "It gives the current another path; the pd is unchanged but the total current increases, so R = V/I is smaller.",
+      "a": "It gives the current another path; the pd is unchanged but the total current increases, so $R = V/I$ is smaller.",
       "section": "circuits-nn"
     },
     {
@@ -2827,7 +2827,7 @@
     },
     {
       "q": "How do you find the resistance at a point on an I–V graph?",
-      "a": "R = V ÷ I using the point's coordinates — not the gradient.",
+      "a": "$R = V \\div I$ using the point's coordinates — not the gradient.",
       "section": "iv-characteristics"
     },
     {
@@ -2867,22 +2867,22 @@
     },
     {
       "q": "What is power, and its unit?",
-      "a": "Energy transferred per second; watts (1 W = 1 J/s). P = E ÷ t.",
+      "a": "Energy transferred per second; watts (1 W = 1 J/s). $P = E \\div t$.",
       "section": "power-nn"
     },
     {
       "q": "The electrical power equations?",
-      "a": "P = I × V and P = I² × R.",
+      "a": "$P = I \\times V$ and $P = I^2 \\times R$.",
       "section": "power-nn"
     },
     {
       "q": "Energy transferred by a device?",
-      "a": "E = I × V × t, or E = P × t (t in seconds).",
+      "a": "$E = I \\times V \\times t$, or $E = P \\times t$ (t in seconds).",
       "section": "power-nn"
     },
     {
-      "q": "Why is P = I × V?",
-      "a": "Each coulomb transfers V joules and I coulombs pass each second, so I × V joules per second.",
+      "q": "Why is $P = I \\times V$?",
+      "a": "Each coulomb transfers $V$ joules and $I$ coulombs pass each second, so $I \\times V$ joules per second.",
       "section": "power-nn"
     },
     {
@@ -2977,7 +2977,7 @@
     },
     {
       "q": "Why is a lamp brighter in parallel than in series with another?",
-      "a": "It has the full pd across it (not a share), so a larger current and a larger power P = IV.",
+      "a": "It has the full pd across it (not a share), so a larger current and a larger power $P = IV$.",
       "section": "series-parallel-practical"
     },
     {
@@ -2992,17 +2992,17 @@
     },
     {
       "q": "Is the gradient of an I–V graph the resistance?",
-      "a": "No. With I on the y-axis the gradient of a straight line is 1/R; for a curve use R = V/I at the point.",
+      "a": "No. With I on the y-axis the gradient of a straight line is $1/R$; for a curve use $R = V/I$ at the point.",
       "section": "iv-explain"
     },
     {
       "q": "Series method?",
-      "a": "Add the resistances → I = V/R → each pd = I × R → check they add up to the supply.",
+      "a": "Add the resistances → $I = V/R$ → each $\\text{pd} = I \\times R$ → check they add up to the supply.",
       "section": "circuits-hard"
     },
     {
       "q": "Parallel method?",
-      "a": "Supply pd across each branch → I = V/R per branch → add for the supply current → total R = V/I (less than the smallest branch).",
+      "a": "Supply pd across each branch → $I = V/R$ per branch → add for the supply current → total $R = V/I$ (less than the smallest branch).",
       "section": "circuits-hard"
     },
     {
@@ -3022,21 +3022,21 @@
     },
     {
       "q": "How do you investigate a thermistor's resistance against temperature?",
-      "a": "Thermistor in a stirred water bath with a thermometer; ammeter in series, voltmeter across; R = V/I at each temperature.",
+      "a": "Thermistor in a stirred water bath with a thermometer; ammeter in series, voltmeter across; $R = V/I$ at each temperature.",
       "section": "sensing-circuits"
     },
     {
       "q": "How do you choose a fuse for an appliance?",
-      "a": "I = P/V, then the lowest standard rating (3 A, 5 A, 13 A) above that current.",
+      "a": "$I = P/V$, then the lowest standard rating (3 A, 5 A, 13 A) above that current.",
       "section": "power-hard"
     },
     {
       "q": "Energy from a power rating?",
-      "a": "E = P × t with P in watts and t in seconds (kW × 1000; hours × 3600).",
+      "a": "$E = P \\times t$ with P in watts and t in seconds (kW × 1000; hours × 3600).",
       "section": "power-hard"
     },
     {
-      "q": "The commonest error in E = IVt questions?",
+      "q": "The commonest error in $E = IVt$ questions?",
       "a": "Not converting kW/MJ and minutes/hours to W, J and seconds; and not stating the unit of a calculated time.",
       "section": "power-hard"
     },
@@ -3087,7 +3087,7 @@
     },
     {
       "q": "Variables in the thermistor investigation?",
-      "a": "Independent: temperature; dependent: resistance (from V/I); control: the thermistor and the supply pd.",
+      "a": "Independent: temperature; dependent: resistance (from $V/I$); control: the thermistor and the supply pd.",
       "section": "planning-electricity"
     },
     {
@@ -3102,7 +3102,7 @@
     },
     {
       "q": "State what is meant by: charge.",
-      "a": "Carried by electrons (−) and protons (+); measured in <b>coulombs</b> (C); Q = I × t.",
+      "a": "Carried by electrons (−) and protons (+); measured in <b>coulombs</b> (C); $Q = I \\times t$.",
       "section": "keywords-electricity"
     },
     {
@@ -3112,7 +3112,7 @@
     },
     {
       "q": "State what is meant by: resistance.",
-      "a": "The <b>ratio of pd to current</b> for a component, R = V ÷ I, in ohms (Ω); how hard it is to drive current through it.",
+      "a": "The <b>ratio of pd to current</b> for a component, $R = V \\div I$, in ohms (Ω); how hard it is to drive current through it.",
       "section": "keywords-electricity"
     },
     {
@@ -3147,7 +3147,7 @@
     },
     {
       "q": "State what is meant by: power.",
-      "a": "The <b>energy transferred per second</b>; watt (W) = joule per second. P = E ÷ t = I × V.",
+      "a": "The <b>energy transferred per second</b>; watt (W) = joule per second. $P = E \\div t = I \\times V$.",
       "section": "keywords-electricity"
     },
     {

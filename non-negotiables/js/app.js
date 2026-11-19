@@ -1530,7 +1530,7 @@
       const isAnswer = optionIndex === question.correct;
       const marked = correct && isAnswer ? " chosen right" : "";
       html += "<button type=\"button\" class=\"choice" + marked + "\" data-choice=\"" + optionIndex + "\" aria-pressed=\"" + (correct && isAnswer ? "true" : "false") + "\">" +
-        "<span class=\"letter\">" + String.fromCharCode(65 + optionIndex) + "</span>" + prose(option) + "</button>";
+        "<span class=\"letter\">" + String.fromCharCode(65 + optionIndex) + "</span><span class=\"choice-text\">" + prose(option) + "</span></button>";
     });
     html += "</div>";
 

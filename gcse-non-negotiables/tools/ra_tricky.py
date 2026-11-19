@@ -155,7 +155,7 @@ section_t3 = section(
     parts=[
         explain(
             "The extra steps",
-            "<p><b>Background in a graph.</b> A measured count rate never falls to zero — it levels off at the background. Find the background from the flat tail, <b>subtract it</b> from the starting count to get the corrected count, halve <i>that</i>, add the background back, and read the time at which the measured curve reaches it. For the graph below: measured 180, background 20, corrected 160 → half is 80 → measured 100 → at t = 20 min. Halving 180 to 90 gives the wrong half-life (about 24 min).</p>"
+            "<p><b>Background in a graph.</b> A measured count rate never falls to zero — it levels off at the background. Find the background from the flat tail, <b>subtract it</b> from the starting count to get the corrected count, halve <i>that</i>, add the background back, and read the time at which the measured curve reaches it. For the graph below: measured 180, background 20, corrected 160 → half is 80 → measured 100 → at $t = 20$ min. Halving 180 to 90 gives the wrong half-life (about 24 min).</p>"
             "<p><b>Working backwards.</b> If the activity is 50 Bq after 3 half-lives, the original was $50 \\times 2^{3} = 400$ Bq. The June 2025 report (fluorine-18 curve): the common error was \"using the original mass as 60.0 mg\" — read the actual starting value off the graph.</p>"
             "<p><b>Fractions and percentages.</b> After $n$ half-lives the fraction left is $\\dfrac{1}{2^{n}}$: 1/2, 1/4, 1/8, 1/16 → 50%, 25%, 12.5%, 6.25%. The fraction that has <b>decayed</b> is 1 minus that. \"After how many half-lives is the activity below 10%?\" → 4 (6.25%). A ratio question (\"activity of A to B\") is $2^{n}$ to 1.</p>"
             "<p><b>Reading the graph in the exam:</b> draw the horizontal line at half the (corrected) value, drop a vertical to the axis, label it. The June 2024 scheme gave a mark for the horizontal line and a mark for the time — show both.</p>",
@@ -166,9 +166,9 @@ section_t3 = section(
             "The graph shows the count rate measured near a source. The background count rate is 20 counts per minute. Find the half-life of the source.",
             [
                 r"<b>Corrected start:</b> measured 180 − background 20 = <b>160</b> counts/min from the source.",
-                r"<b>Half of that:</b> 80 counts/min from the source, which is a <b>measured</b> count of 80 + 20 = 100 counts/min.",
-                r"<b>Read the time:</b> the curve reaches 100 counts/min at <b>t = 20 minutes</b>. Half-life = 20 min.",
-                r"<b>Check:</b> next halving: source 40 → measured 60 at t = 40 min ✓",
+                r"<b>Half of that:</b> 80 counts/min from the source, which is a <b>measured</b> count of $80 + 20 = 100$ counts/min.",
+                r"<b>Read the time:</b> the curve reaches 100 counts/min at <b>$t = 20$ minutes</b>. Half-life = 20 min.",
+                r"<b>Check:</b> next halving: source 40 → measured 60 at $t = 40$ min ✓",
             ],
             graph=graph_decay_bg,
         ),
@@ -180,9 +180,9 @@ section_t3 = section(
             numeric("ra-t3-q3", "What percentage of the original undecayed nuclei remain after 4 half-lives?", 6.25, "%",
                     "1/2⁴.", [r"$\dfrac{1}{2^{4}} = \dfrac{1}{16} = 6.25\%$."]),
             numeric("ra-t3-q4", "Fluorine-18 has a half-life of 110 minutes. A sample has a mass of 48 mg at the start. Calculate the percentage remaining after 220 minutes.", 25, "%",
-                    "220 ÷ 110 = 2 half-lives → ¼.", [r"$48 \rightarrow 24 \rightarrow 12$ mg; $\dfrac{12}{48} = 25\%$."]),
+                    "$220 \\div 110 = 2$ half-lives → ¼.", [r"$48 \rightarrow 24 \rightarrow 12$ mg; $\dfrac{12}{48} = 25\%$."]),
             group("ra-t3-q5", "Two sources, A and B, start with the same activity. A has a half-life of 2 days, B a half-life of 8 days.", [
-                numeric("ra-t3-q5a", "After 8 days, what fraction of A's original activity remains? Give it as a decimal.", 0.0625, "", "8 ÷ 2 = 4 half-lives.", [r"$\dfrac{1}{2^{4}} = \dfrac{1}{16} = 0.0625$."], label="a", tolerance=0.02),
+                numeric("ra-t3-q5a", "After 8 days, what fraction of A's original activity remains? Give it as a decimal.", 0.0625, "", "$8 \\div 2 = 4$ half-lives.", [r"$\dfrac{1}{2^{4}} = \dfrac{1}{16} = 0.0625$."], label="a", tolerance=0.02),
                 numeric("ra-t3-q5b", "After 8 days, how many times greater is B's activity than A's?", 8, "", "B has had one half-life (½ left); A has 1/16 left.", [r"$\dfrac{1/2}{1/16} = 8$ times."], label="b"),
             ]),
             written("ra-t3-q6", "A student finds the half-life from a graph of measured count rate against time by halving the first reading. The graph levels off at 30 counts per minute. Explain the mistake. (2)",
@@ -190,7 +190,7 @@ section_t3 = section(
                            "The student should <b>subtract 30</b> from the readings (or halve the <b>corrected</b> count) first; halving the raw count gives a half-life that is too long."]), lines=3),
             choice("ra-t3-q7", "A source's activity falls to 1/8 of its original value in 36 hours. Its half-life is…",
                    ["4.5 hours", "12 hours", "18 hours", "36 hours"], 1,
-                   "1/8 = three halvings; 36 ÷ 3 = 12 h."),
+                   "1/8 = three halvings; $36 \\div 3 = 12$ h."),
         ]),
     ],
 )
@@ -584,9 +584,9 @@ FACTS = [
     fact("Sources of background radiation?", "Radon gas from rocks (largest), rocks and buildings, food and drink, cosmic rays, medical X-rays, nuclear industry (tiny).", "background"),
     fact("Two detectors of radiation?", "Geiger–Müller tube with a counter (count rate); photographic film, which darkens (film badges).", "background"),
     fact("Corrected count rate?", "Measured count rate − background count rate. Measure background with no source, over several minutes, repeat and average.", "background"),
-    fact("Alpha decay: effect on A and Z?", "A − 4, Z − 2.", "decays"),
-    fact("Beta-minus decay: what happens, effect on A and Z?", "Neutron → proton + electron (emitted). A same, Z + 1.", "decays"),
-    fact("Beta-plus decay: what happens, effect on A and Z?", "Proton → neutron + positron (emitted). A same, Z − 1.", "decays"),
+    fact("Alpha decay: effect on A and Z?", "A − 4, $Z - 2$.", "decays"),
+    fact("Beta-minus decay: what happens, effect on A and Z?", "Neutron → proton + electron (emitted). A same, $Z + 1$.", "decays"),
+    fact("Beta-plus decay: what happens, effect on A and Z?", "Proton → neutron + positron (emitted). A same, $Z - 1$.", "decays"),
     fact("Gamma emission: effect on A and Z?", "None. The nucleus rearranges and loses energy, often just after an alpha or beta decay.", "decays"),
     fact("Neutron emission: effect on A and Z?", "A − 1, Z same.", "decays"),
     fact("How do you check a nuclear equation?", "Top numbers (mass) add up on both sides; bottom numbers (charge) add up on both sides.", "decays"),

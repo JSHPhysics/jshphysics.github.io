@@ -263,7 +263,7 @@ section_t5 = section(
                         ("Construction 2", "Step-down: the <b>primary has more turns</b> than the secondary."),
                         ("Operation 1", "<b>Alternating current</b> in the primary produces a <b>changing magnetic field</b> in the core."),
                         ("Operation 2", "The secondary is in this changing field, so an alternating <b>pd is induced</b> across it."),
-                        ("Ratio 1", "$V_p / V_s = N_p / N_s$ = 230 / 20 = 11.5 : 1."),
+                        ("Ratio 1", "$V_p / V_s = N_p / N_s$ = $230 / 20 = 11.5$ : 1."),
                         ("Ratio 2", "e.g. 2300 primary turns to 200 secondary turns."),
                     ], total=6, extra=["Level 3 needs construction, operation and the ratio idea; one may be thin."]), lines=8),
             choice("ei-t5-q2", "An answer describes the construction and operation fully but says nothing about turns or ratio. Its best level is…",
@@ -333,7 +333,7 @@ section_t6 = section(
 section_t7 = section(
     "grid-chain", "tricky", "The national grid explained as a chain, with and without the equations", "13.8, 13.9, 13.11P",
     equations=[r"\text{high pd} \rightarrow \text{low } I \rightarrow \text{low } I^2 R \rightarrow \text{efficient}"],
-    blurb="Every grid question — why step up, why step down, why not transmit at 230 V — is the same chain: for a given power, a higher pd means a lower current; a lower current wastes less energy heating the cables; so the transfer is more efficient. The Foundation version says it in words; the Higher Physics version (13.11P) names P = IV and P = I²R and can put numbers in.",
+    blurb="Every grid question — why step up, why step down, why not transmit at 230 V — is the same chain: for a given power, a higher pd means a lower current; a lower current wastes less energy heating the cables; so the transfer is more efficient. The Foundation version says it in words; the Higher Physics version (13.11P) names $P = IV$ and $P = I^2R$ and can put numbers in.",
     checklist=[
         "Write the chain in words for any grid question",
         "Answer 'why not transmit at 230 V' and 'why step down' with the same chain",

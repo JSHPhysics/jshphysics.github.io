@@ -116,7 +116,7 @@
               "id": "ra-n1-q6",
               "type": "written",
               "text": "Explain why an atom has no overall electric charge. (2)",
-              "model": "<ul><li>It has <b>equal numbers of protons and electrons</b>.</li><li>Each proton's +1 charge is cancelled by an electron's −1 charge, so the <b>total is zero</b>.</li></ul>",
+              "model": "<ul><li>It has <b>equal numbers of protons and electrons</b>.</li><li>Each proton'$s +1$ charge is cancelled by an electron'$s -1$ charge, so the <b>total is zero</b>.</li></ul>",
               "lines": 2
             }
           ]
@@ -151,7 +151,7 @@
           "question": "Uranium-235 is written ²³⁵₉₂U. State the number of protons, neutrons and electrons in a neutral atom. (2 marks)",
           "steps": [
             "<b>Protons:</b> Z = <b>92</b>. <b>Electrons:</b> also 92 (neutral atom).",
-            "<b>Neutrons:</b> A − Z = 235 − 92 = <b>143</b>."
+            "<b>Neutrons:</b> A − $Z = 235 - 92$ = <b>143</b>."
           ]
         },
         {
@@ -583,7 +583,7 @@
                 "²²²₈₈Ra"
               ],
               "correct": 0,
-              "explain": "Alpha: A − 4 = 222, Z − 2 = 86."
+              "explain": "Alpha: A − 4 = 222, $Z - 2 = 86$."
             },
             {
               "id": "ra-n6-q4",
@@ -596,7 +596,7 @@
                 "¹⁴₇N"
               ],
               "correct": 1,
-              "explain": "β⁺: A unchanged, Z − 1 = 8 (oxygen)."
+              "explain": "β⁺: A unchanged, $Z - 1 = 8$ (oxygen)."
             },
             {
               "id": "ra-n6-q5",
@@ -609,7 +609,7 @@
               "id": "ra-n6-q6",
               "type": "written",
               "text": "Complete and check this equation for the alpha decay of polonium-210: ²¹⁰₈₄Po → ? + ⁴₂He. (2)",
-              "model": "<ul><li>Product: ${}^{206}_{82}\\mathrm{Pb}$ (lead) — mass number $210 - 4 = 206$, atomic number $84 - 2 = 82$.</li><li>Check both lines balance: 210 = 206 + 4 and 84 = 82 + 2.</li></ul>",
+              "model": "<ul><li>Product: ${}^{206}_{82}\\mathrm{Pb}$ (lead) — mass number $210 - 4 = 206$, atomic number $84 - 2 = 82$.</li><li>Check both lines balance: $210 = 206 + 4$ and $84 = 82 + 2$.</li></ul>",
               "lines": 2
             },
             {
@@ -618,9 +618,9 @@
               "text": "A nucleus emits a neutron. What happens to its mass number and atomic number?",
               "options": [
                 "A − 1, Z unchanged",
-                "A − 1, Z − 1",
-                "A unchanged, Z − 1",
-                "A − 4, Z − 2"
+                "A − 1, $Z - 1$",
+                "A unchanged, $Z - 1$",
+                "A − 4, $Z - 2$"
               ],
               "correct": 0,
               "explain": "A neutron has mass 1 and no charge."
@@ -709,7 +709,7 @@
                 "value": 750,
                 "unit": "Bq"
               },
-              "hint": "24 ÷ 8 = 3 half-lives.",
+              "hint": "$24 \\div 8 = 3$ half-lives.",
               "walkthrough": [
                 "$6000 \\rightarrow 3000 \\rightarrow 1500 \\rightarrow 750$ Bq."
               ]
@@ -1217,7 +1217,7 @@
         {
           "kind": "explain",
           "title": "The extra steps",
-          "html": "<p><b>Background in a graph.</b> A measured count rate never falls to zero — it levels off at the background. Find the background from the flat tail, <b>subtract it</b> from the starting count to get the corrected count, halve <i>that</i>, add the background back, and read the time at which the measured curve reaches it. For the graph below: measured 180, background 20, corrected 160 → half is 80 → measured 100 → at t = 20 min. Halving 180 to 90 gives the wrong half-life (about 24 min).</p><p><b>Working backwards.</b> If the activity is 50 Bq after 3 half-lives, the original was $50 \\times 2^{3} = 400$ Bq. The June 2025 report (fluorine-18 curve): the common error was \"using the original mass as 60.0 mg\" — read the actual starting value off the graph.</p><p><b>Fractions and percentages.</b> After $n$ half-lives the fraction left is $\\dfrac{1}{2^{n}}$: 1/2, 1/4, 1/8, 1/16 → 50%, 25%, 12.5%, 6.25%. The fraction that has <b>decayed</b> is 1 minus that. \"After how many half-lives is the activity below 10%?\" → 4 (6.25%). A ratio question (\"activity of A to B\") is $2^{n}$ to 1.</p><p><b>Reading the graph in the exam:</b> draw the horizontal line at half the (corrected) value, drop a vertical to the axis, label it. The June 2024 scheme gave a mark for the horizontal line and a mark for the time — show both.</p>",
+          "html": "<p><b>Background in a graph.</b> A measured count rate never falls to zero — it levels off at the background. Find the background from the flat tail, <b>subtract it</b> from the starting count to get the corrected count, halve <i>that</i>, add the background back, and read the time at which the measured curve reaches it. For the graph below: measured 180, background 20, corrected 160 → half is 80 → measured 100 → at $t = 20$ min. Halving 180 to 90 gives the wrong half-life (about 24 min).</p><p><b>Working backwards.</b> If the activity is 50 Bq after 3 half-lives, the original was $50 \\times 2^{3} = 400$ Bq. The June 2025 report (fluorine-18 curve): the common error was \"using the original mass as 60.0 mg\" — read the actual starting value off the graph.</p><p><b>Fractions and percentages.</b> After $n$ half-lives the fraction left is $\\dfrac{1}{2^{n}}$: 1/2, 1/4, 1/8, 1/16 → 50%, 25%, 12.5%, 6.25%. The fraction that has <b>decayed</b> is 1 minus that. \"After how many half-lives is the activity below 10%?\" → 4 (6.25%). A ratio question (\"activity of A to B\") is $2^{n}$ to 1.</p><p><b>Reading the graph in the exam:</b> draw the horizontal line at half the (corrected) value, drop a vertical to the axis, label it. The June 2024 scheme gave a mark for the horizontal line and a mark for the time — show both.</p>",
           "graph": {
             "x": {
               "label": "time in minutes",
@@ -1411,9 +1411,9 @@
           "question": "The graph shows the count rate measured near a source. The background count rate is 20 counts per minute. Find the half-life of the source.",
           "steps": [
             "<b>Corrected start:</b> measured 180 − background 20 = <b>160</b> counts/min from the source.",
-            "<b>Half of that:</b> 80 counts/min from the source, which is a <b>measured</b> count of 80 + 20 = 100 counts/min.",
-            "<b>Read the time:</b> the curve reaches 100 counts/min at <b>t = 20 minutes</b>. Half-life = 20 min.",
-            "<b>Check:</b> next halving: source 40 → measured 60 at t = 40 min ✓"
+            "<b>Half of that:</b> 80 counts/min from the source, which is a <b>measured</b> count of $80 + 20 = 100$ counts/min.",
+            "<b>Read the time:</b> the curve reaches 100 counts/min at <b>$t = 20$ minutes</b>. Half-life = 20 min.",
+            "<b>Check:</b> next halving: source 40 → measured 60 at $t = 40$ min ✓"
           ],
           "graph": {
             "x": {
@@ -1840,7 +1840,7 @@
                 "value": 25,
                 "unit": "%"
               },
-              "hint": "220 ÷ 110 = 2 half-lives → ¼.",
+              "hint": "$220 \\div 110 = 2$ half-lives → ¼.",
               "walkthrough": [
                 "$48 \\rightarrow 24 \\rightarrow 12$ mg; $\\dfrac{12}{48} = 25\\%$."
               ]
@@ -1859,7 +1859,7 @@
                     "unit": "",
                     "tolerance": 0.02
                   },
-                  "hint": "8 ÷ 2 = 4 half-lives.",
+                  "hint": "$8 \\div 2 = 4$ half-lives.",
                   "walkthrough": [
                     "$\\dfrac{1}{2^{4}} = \\dfrac{1}{16} = 0.0625$."
                   ],
@@ -1899,7 +1899,7 @@
                 "36 hours"
               ],
               "correct": 1,
-              "explain": "1/8 = three halvings; 36 ÷ 3 = 12 h."
+              "explain": "1/8 = three halvings; $36 \\div 3 = 12$ h."
             }
           ]
         }
@@ -2509,17 +2509,17 @@
     },
     {
       "q": "Alpha decay: effect on A and Z?",
-      "a": "A − 4, Z − 2.",
+      "a": "A − 4, $Z - 2$.",
       "section": "decays"
     },
     {
       "q": "Beta-minus decay: what happens, effect on A and Z?",
-      "a": "Neutron → proton + electron (emitted). A same, Z + 1.",
+      "a": "Neutron → proton + electron (emitted). A same, $Z + 1$.",
       "section": "decays"
     },
     {
       "q": "Beta-plus decay: what happens, effect on A and Z?",
-      "a": "Proton → neutron + positron (emitted). A same, Z − 1.",
+      "a": "Proton → neutron + positron (emitted). A same, $Z - 1$.",
       "section": "decays"
     },
     {

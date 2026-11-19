@@ -162,7 +162,7 @@ section_n2 = {
                 "<p><b>Units must match.</b> In physics, work in metres and seconds so the speed comes out in m/s. "
                 "Convert <i>before</i> you substitute: 1 minute = 60 s, 1 hour = 3600 s, 1 km = 1000 m.</p>"
                 "<p><b>km/h → m/s:</b> multiply by 1000 (km → m) and divide by 3600 (h → s). That is the same as dividing by 3.6. "
-                "So 36 km/h = 10 m/s, and 72 km/h = 20 m/s.</p>"
+                "So 36 km/$h = 10$ m/s, and 72 km/$h = 20$ m/s.</p>"
                 "<p><b>Average speed</b> over a journey is total distance ÷ total time — and the total time includes any time spent stopped.</p>"
             ),
         },
@@ -229,7 +229,7 @@ section_n3 = {
     "blurb": "Acceleration is how quickly velocity changes. The sign matters: slowing down is a negative acceleration.",
     "equations": [ACC_EQ],
     "checklist": [
-        "Use a = (v − u) ÷ t, with u the initial and v the final velocity",
+        "Use $a = (v - u) \\div t$, with u the initial and v the final velocity",
         "Give a deceleration as a negative acceleration",
         "Rearrange to find a final velocity or a time",
     ],
@@ -262,14 +262,14 @@ section_n3 = {
             "title": "Acceleration",
             "questions": [
                 numeric("t2-n3-q1", "A motorbike accelerates from rest to 12 m/s in 4 s. Calculate its acceleration.", sf(q3_1), "m/s²",
-                        "\"From rest\" means u = 0.",
+                        "\"From rest\" means $u = 0$.",
                         ewau(ACC_EQ, r"a = \dfrac{12 - 0}{4}", "3", "m/s²")),
                 numeric("t2-n3-q2", "A lorry slows from 30 m/s to 10 m/s in 5 s. Calculate its acceleration. Include the sign.", sf(q3_2), "m/s²",
                         "v is smaller than u, so the top of the fraction is negative.",
                         ewau(ACC_EQ, r"a = \dfrac{10 - 30}{5} = \dfrac{-20}{5}", "-4", "m/s²")
                         + ["A deceleration of 4 m/s²."]),
                 numeric("t2-n3-q3", "A boat moving at 4 m/s accelerates at 2 m/s² for 5 s. Calculate its final velocity.", sf(q3_3), "m/s",
-                        "Rearrange for v: the velocity gained is a × t, added on to u.",
+                        "Rearrange for $v$: the velocity gained is $a \\times t$, added on to $u$.",
                         ewau(V_EQ, r"v = 4 + 2 \times 5", "14", "m/s")),
                 numeric("t2-n3-q4", "A train accelerates at 1.5 m/s² from 10 m/s to 25 m/s. How long does this take?", sf(q3_4), "s",
                         "Find the change in velocity first, then divide by the acceleration.",
@@ -278,7 +278,7 @@ section_n3 = {
                         "A deceleration of 6 m/s² is an acceleration of −6 m/s².",
                         ewau(V_EQ, r"v = 24 + (-6) \times 3 = 24 - 18", "6", "m/s")),
                 numeric("t2-n3-q6", "A trolley released from rest on a ramp reaches 1.2 m/s after 0.8 s. Calculate its acceleration.", sf(q3_6), "m/s²",
-                        "u = 0 because it starts from rest.",
+                        "$u = 0$ because it starts from rest.",
                         ewau(ACC_EQ, r"a = \dfrac{1.2 - 0}{0.8}", "1.5", "m/s²")),
             ],
         },
@@ -306,7 +306,7 @@ section_n4 = {
     "blurb": "The equation for when you know a distance but not a time. Substitute, then rearrange — and remember the square root at the end.",
     "equations": [SUVAT_EQ],
     "checklist": [
-        "Recognise when to use v² − u² = 2ax (no time given, or no time wanted)",
+        "Recognise when to use $v^2 - u^2 = 2ax$ (no time given, or no time wanted)",
         "Substitute into it and solve for v, u, a or x",
         "Remember to square-root when the unknown is a velocity",
     ],
@@ -338,22 +338,22 @@ section_n4 = {
             "title": "Using v² − u² = 2ax",
             "questions": [
                 numeric("t2-n4-q1", "A car starts from rest and accelerates at 2 m/s² for 16 m. Calculate its final velocity.", sf(q4_1), "m/s",
-                        "u = 0. Work out v² first, then square-root.",
+                        "$u = 0$. Work out v² first, then square-root.",
                         ewau(SUVAT_EQ, r"v^2 = 0 + 2 \times 2 \times 16 = 64 \quad\Rightarrow\quad v = \sqrt{64}", "8", "m/s")),
                 numeric("t2-n4-q2", "A runner moving at 5 m/s accelerates at 1.5 m/s² for 20 m. Calculate her final velocity.", sf(q4_2), "m/s",
                         "Square u (5² = 25) before adding 2ax.",
                         ewau(SUVAT_EQ, r"v^2 = 5^2 + 2 \times 1.5 \times 20 = 25 + 60 = 85 \quad\Rightarrow\quad v = \sqrt{85}", "9.2", "m/s")),
                 numeric("t2-n4-q3", "A car travelling at 20 m/s brakes and stops in 50 m. Calculate its acceleration. Include the sign.", sf(q4_3), "m/s²",
-                        "Stopping means v = 0. The answer is negative.",
+                        "Stopping means $v = 0$. The answer is negative.",
                         ewau(SUVAT_EQ, r"0^2 - 20^2 = 2 \times a \times 50 \quad\Rightarrow\quad a = \dfrac{-400}{100}", "-4", "m/s²")),
                 numeric("t2-n4-q4", "A lorry travelling at 30 m/s decelerates at 6 m/s² until it stops. Calculate the distance it travels while stopping.", sf(q4_4), "m",
-                        "v = 0 and a = −6 m/s². Two negatives on the fraction give a positive distance.",
+                        "$v = 0$ and $a = -6$ m/s². Two negatives on the fraction give a positive distance.",
                         ewau(SUVAT_EQ, r"0^2 - 30^2 = 2 \times (-6) \times x \quad\Rightarrow\quad x = \dfrac{-900}{-12}", "75", "m")),
-                numeric("t2-n4-q5", "A stone is dropped from a bridge 20 m above a river. Calculate its speed as it hits the water. (Ignore air resistance; g = 10 m/s².)", sf(q4_5), "m/s",
-                        "Dropped means u = 0, and the acceleration is g = 10 m/s².",
+                numeric("t2-n4-q5", "A stone is dropped from a bridge 20 m above a river. Calculate its speed as it hits the water. (Ignore air resistance; $g = 10$ m/s².)", sf(q4_5), "m/s",
+                        "Dropped means $u = 0$, and the acceleration is $g = 10$ m/s².",
                         ewau(SUVAT_EQ, r"v^2 = 0 + 2 \times 10 \times 20 = 400 \quad\Rightarrow\quad v = \sqrt{400}", "20", "m/s")),
                 numeric("t2-n4-q6", "A car accelerates at 2 m/s² over 100 m and reaches 25 m/s. Calculate its initial velocity.", sf(q4_6), "m/s",
-                        "This time v is known and u is the unknown: u² = v² − 2ax.",
+                        "This time v is known and u is the unknown: $u^2 = v^2 - 2ax$.",
                         ewau(SUVAT_EQ, r"25^2 - u^2 = 2 \times 2 \times 100 \quad\Rightarrow\quad u^2 = 625 - 400 = 225 \quad\Rightarrow\quad u = \sqrt{225}", "15", "m/s")),
             ],
         },
@@ -553,7 +553,7 @@ section_n6 = {
                 ], graph=graph_vt_1),
                 group("t2-n6-q2", "The graph shows a car joining a dual carriageway.", [
                     numeric("t2-n6-q2a", "Calculate the car's acceleration in the first 8 s.", sf(q6_2a), "m/s²",
-                            "It does not start from rest: u = 5 m/s.",
+                            "It does not start from rest: $u = 5$ m/s.",
                             ewau(ACC_EQ, r"a = \dfrac{25 - 5}{8} = \dfrac{20}{8}", "2.5", "m/s²"), label="a"),
                     numeric("t2-n6-q2b", "Calculate the distance travelled between 8 s and 12 s.", sf(q6_2b), "m",
                             "A rectangle 4 s wide and 25 m/s tall.",
@@ -581,7 +581,7 @@ section_n7 = {
     "equations": [r"g = 10\ \text{m/s}^2"],
     "checklist": [
         "Recall typical speeds for walking, running, cycling, cars, trains, wind and sound",
-        "Recall that g = 10 m/s² in free fall",
+        "Recall that $g = 10$ m/s² in free fall",
         "Estimate the size of everyday accelerations",
     ],
     "parts": [
@@ -633,7 +633,7 @@ section_n7 = {
                         "It gains 10 m/s every second.",
                         ewau(V_EQ, r"v = 0 + 10 \times 3", "30", "m/s")),
                 numeric("t2-n7-q5", "A stone is dropped from a cliff. Calculate its speed after 1.5 s.", sf(q7_5), "m/s",
-                        "v = u + at with u = 0 and a = 10 m/s².",
+                        "$v = u$ + at with $u = 0$ and $a = 10$ m/s².",
                         ewau(V_EQ, r"v = 0 + 10 \times 1.5", "15", "m/s")),
                 choice("t2-n7-q6", "Which is the best estimate of the acceleration of a family car pulling away from traffic lights?",
                        ["0.02 m/s²", "2 m/s²", "20 m/s²", "200 m/s²"], 1,

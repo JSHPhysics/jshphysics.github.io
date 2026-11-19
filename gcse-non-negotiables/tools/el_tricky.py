@@ -136,7 +136,7 @@ section_t2 = section(
 section_t3 = section(
     "iv-explain", "tricky", "Explaining the I–V curves, and the gradient trap", "10.18, 10.24",
     equations=[r"R = \dfrac{V}{I}\ \text{at the point — not the gradient}"],
-    blurb="Describing the curve is two marks; explaining it is the hard part. The lamp's curve comes from temperature → ion vibration → collisions; the diode's from one-way conduction. And resistance is V ÷ I at a point — the gradient of the curve is not the resistance.",
+    blurb="Describing the curve is two marks; explaining it is the hard part. The lamp's curve comes from temperature → ion vibration → collisions; the diode's from one-way conduction. And resistance is $V \\div I$ at a point — the gradient of the curve is not the resistance.",
     checklist=[
         "Explain why a filament lamp's resistance rises with pd in terms of electrons and ions",
         "Explain why a fixed resistor's graph is a straight line and a diode's is one-sided",
@@ -163,13 +163,13 @@ section_t3 = section(
             written("el-t3-q1", "Explain why the I–V graph for a fixed resistor at constant temperature is a straight line through the origin. (2)",
                     marks(["The current is <b>directly proportional</b> to the pd (doubling V doubles I).", "So $V/I$ — the <b>resistance</b> — is <b>constant</b> at every point (the ions vibrate the same amount throughout, so collisions do not change)."]), lines=2),
             choice("el-t3-q2", "A student finds the gradient of a filament lamp's I–V curve at a point and calls it the resistance. Why is this wrong?",
-                   ["Gradients are never used in physics", "Resistance at a point is V ÷ I from the point's coordinates; the gradient of I against V is 1/R for a straight line and not R at all for a curve", "The lamp has no resistance", "The gradient should be in ohms"], 1,
+                   ["Gradients are never used in physics", "Resistance at a point is $V \\div I$ from the point's coordinates; the gradient of I against V is $1/R$ for a straight line and not R at all for a curve", "The lamp has no resistance", "The gradient should be in ohms"], 1,
                    "Read the two coordinates and divide."),
             written("el-t3-q3", "Explain why a diode's I–V graph shows zero current for negative values of pd. (2)",
                     marks(["A diode conducts in <b>one direction only</b>.", "For pd in the reverse direction its <b>resistance is very high</b>, so the current is (almost) zero."]), lines=2),
             group("el-t3-q4", "A filament lamp's I–V graph gives 0.10 A at 0.5 V and 0.40 A at 4.0 V.", [
-                numeric("el-t3-q4a", "Calculate the resistance at 0.5 V.", 5, "Ω", "V ÷ I.", [r"$0.5 \div 0.10 = 5$ Ω."]),
-                numeric("el-t3-q4b", "Calculate the resistance at 4.0 V.", 10, "Ω", "V ÷ I.", [r"$4.0 \div 0.40 = 10$ Ω."]),
+                numeric("el-t3-q4a", "Calculate the resistance at 0.5 V.", 5, "Ω", "$V \\div I$.", [r"$0.5 \div 0.10 = 5$ Ω."]),
+                numeric("el-t3-q4b", "Calculate the resistance at 4.0 V.", 10, "Ω", "$V \\div I$.", [r"$4.0 \div 0.40 = 10$ Ω."]),
                 written("el-t3-q4c", "Explain the difference between the two values. (2)",
                         marks(["At 4.0 V the current is larger, so the filament is <b>hotter</b>…", "…the ions vibrate more and the electrons <b>collide with them more often</b>, so the resistance is <b>higher</b>."]), lines=2),
             ]),
@@ -213,12 +213,12 @@ section_t4 = section(
         practice("Circuits the hard way", [
             group("el-t4-q1", "A 12 V supply is connected to a 4 Ω, a 6 Ω and a 14 Ω resistor in series.", [
                 numeric("el-t4-q1a", "Calculate the current in the circuit.", 0.5, "A", "Total R first.", [r"$R = 4 + 6 + 14 = 24$ Ω; $I = 12 \div 24 = 0.5$ A."]),
-                numeric("el-t4-q1b", "Calculate the pd across the 14 Ω resistor.", 7, "V", "V = I × R.", [r"$V = 0.5 \times 14 = 7$ V."]),
+                numeric("el-t4-q1b", "Calculate the pd across the 14 Ω resistor.", 7, "V", "$V = I \\times R$.", [r"$V = 0.5 \times 14 = 7$ V."]),
             ]),
             group("el-t4-q2", "A 6 V battery is connected across a 20 Ω resistor and a 30 Ω resistor in parallel.", [
                 numeric("el-t4-q2a", "Calculate the current in the 20 Ω resistor.", 0.3, "A", "Full 6 V across it.", [r"$I = 6 \div 20 = 0.3$ A."]),
                 numeric("el-t4-q2b", "Calculate the current from the battery.", 0.5, "A", "Add the branch currents.", [r"$I_{30} = 6 \div 30 = 0.2$ A; total $= 0.3 + 0.2 = 0.5$ A."]),
-                numeric("el-t4-q2c", "Calculate the total resistance of the parallel pair.", 12, "Ω", "R = V ÷ I for the whole thing.", [r"$R = 6 \div 0.5 = 12$ Ω — smaller than 20 Ω."]),
+                numeric("el-t4-q2c", "Calculate the total resistance of the parallel pair.", 12, "Ω", "$R = V \\div I$ for the whole thing.", [r"$R = 6 \div 0.5 = 12$ Ω — smaller than 20 Ω."]),
             ]),
             numeric("el-t4-q3", "Two resistors, 5 Ω and 15 Ω, are in series. The pd across the 5 Ω resistor is 1.5 V. Calculate the pd of the supply.", 6, "V", "Find the current from the 5 Ω first; it is the same in the 15 Ω.",
                     [r"$I = 1.5 \div 5 = 0.3$ A.", r"$V_{15} = 0.3 \times 15 = 4.5$ V; supply $= 1.5 + 4.5 = 6$ V."]),
@@ -316,9 +316,9 @@ section_t6 = section(
             "Chains and traps",
             "<table class='tbl'><tr><th>Question</th><th>Chain</th></tr>"
             "<tr><td>which fuse for a 2.3 kW heater on 230 V?</td><td>$I = P/V = 2300/230 = 10$ A → the next standard rating above: <b>13 A</b> (standard fuses 3 A, 5 A, 13 A)</td></tr>"
-            "<tr><td>how long will a 12 V, 50 A h car battery run a 60 W lamp?</td><td>stored energy $= Q \\times V$ with $Q = 50 \\times 3600 = 180\\,000$ C → $E = 2.16$ MJ → $t = E/P = 36\\,000$ s = 10 h</td></tr>"
+            "<tr><td>how long will a 12 V, 50 A h car battery run a 60 W lamp?</td><td>stored energy $= Q \\times V$ with $Q = 50 \\times 3600 = 180\\,000$ C → $E = 2.16$ MJ → $t = E/P = 36\\,000 \\text{ s} = 10 \\text{ h}$</td></tr>"
             "<tr><td>energy in a day from a 100 W bulb left on</td><td>$E = P \\times t = 100 \\times 86\\,400 = 8.64$ MJ</td></tr>"
-            "<tr><td>does the battery charge in 6 hours at 10 A, 400 V, 126 MJ?</td><td>$t = E/(IV) = 126 \\times 10^6 / 4000 = 31\\,500$ s = 8.75 h → no (or: energy in 6 h $= IVt = 86.4$ MJ &lt; 126 MJ)</td></tr></table>"
+            "<tr><td>does the battery charge in 6 hours at 10 A, 400 V, 126 MJ?</td><td>$t = E/(IV) = 126 \\times 10^6 / 4000 = 31\\,500 \\text{ s} = 8.75 \\text{ h}$ → no (or: energy in 6 h $= IVt = 86.4$ MJ &lt; 126 MJ)</td></tr></table>"
             "<p>Traps: <b>kW to W</b>, <b>MJ to J</b>, <b>hours and minutes to seconds</b> — the June 2023 report's main complaint on the charging question (Q8(b)(i)); and a comparison only scored when the <b>unit</b> of the calculated time was stated. Fuse choice: the <b>lowest standard rating above</b> the normal current — too low and it melts in normal use; too high and it does not protect.</p>"
             "<p><b>Power ratings and stored energy</b> (10.42): a 3 kW kettle changes the supply's energy store three times as fast as a 1 kW heater; over the same time it transfers three times the energy. $E = P \\times t$ is the whole of it.</p>",
         ),
@@ -333,17 +333,17 @@ section_t6 = section(
         ),
         practice("Energy and power the hard way", [
             group("el-t6-q1", "A toaster is rated 920 W at 230 V.", [
-                numeric("el-t6-q1a", "Calculate the current in the toaster.", 4, "A", "I = P ÷ V.", [r"$I = 920 \div 230 = 4$ A."]),
+                numeric("el-t6-q1a", "Calculate the current in the toaster.", 4, "A", "$I = P \\div V$.", [r"$I = 920 \div 230 = 4$ A."]),
                 choice("el-t6-q1b", "Which fuse should its plug have?",
                        ["3 A", "5 A", "13 A", "4 A"], 1,
                        "Lowest standard rating above 4 A is 5 A."),
             ]),
             numeric("el-t6-q2", "A 2.5 kW heater is used for 1.5 hours. Calculate the energy transferred, in MJ.", 13.5, "MJ", "W and seconds, then convert.", [r"$E = 2500 \times 5400 = 13\,500\,000$ J $= 13.5$ MJ."]),
-            numeric("el-t6-q3", "A battery stores 54 000 J. How long can it run a 15 W lamp? Give your answer in minutes.", 60, "min", "t = E ÷ P in seconds, then ÷ 60.", [r"$t = 54\,000 \div 15 = 3600$ s $= 60$ minutes."]),
-            numeric("el-t6-q4", "A charger supplies 2 A at 5 V to a phone for 3 hours. Calculate the energy transferred.", 108000, "J", "E = I V t with t in seconds.", [r"$E = 2 \times 5 \times 10\,800 = 108\,000$ J (108 kJ)."]),
+            numeric("el-t6-q3", "A battery stores 54 000 J. How long can it run a 15 W lamp? Give your answer in minutes.", 60, "min", "$t = E \\div P$ in seconds, then ÷ 60.", [r"$t = 54\,000 \div 15 = 3600$ s $= 60$ minutes."]),
+            numeric("el-t6-q4", "A charger supplies 2 A at 5 V to a phone for 3 hours. Calculate the energy transferred.", 108000, "J", "$E = I V t$ with t in seconds.", [r"$E = 2 \times 5 \times 10\,800 = 108\,000$ J (108 kJ)."]),
             written("el-t6-q5", "Explain why a 13 A fuse should not be used in the plug of a lamp that draws 0.3 A. (2)",
                     marks(["The fuse only melts when the current <b>exceeds 13 A</b>…", "…so a fault that raised the lamp's current to, say, 5 A would <b>not melt it</b>: the lamp could overheat or catch fire without the supply being cut. A 3 A fuse is needed."]), lines=2),
-            numeric("el-t6-q6", "An electric car motor draws 150 A at 400 V. Calculate the energy transferred in 10 minutes, in MJ.", 36, "MJ", "P = IV, then E = Pt.", [r"$P = 150 \times 400 = 60\,000$ W; $E = 60\,000 \times 600 = 36\,000\,000$ J $= 36$ MJ."]),
+            numeric("el-t6-q6", "An electric car motor draws 150 A at 400 V. Calculate the energy transferred in 10 minutes, in MJ.", 36, "MJ", "$P = IV$, then $E = Pt$.", [r"$P = 150 \times 400 = 60\,000$ W; $E = 60\,000 \times 600 = 36\,000\,000$ J $= 36$ MJ."]),
         ]),
     ],
 )
@@ -480,7 +480,7 @@ section_t9 = section(
             "<tr><td><b>2 Equation</b></td><td>$R = V \\div I$</td><td>$R = V \\div I$</td></tr>"
             "<tr><td><b>3 Change</b></td><td>adjust the variable resistor to set the pd in 0.5 V steps; reverse the supply for negative values</td><td>heat the water bath in 10 °C steps (or add ice), stirring and letting it settle</td></tr>"
             "<tr><td><b>4 Measure</b></td><td>pd with the voltmeter across the component, current with the ammeter in series</td><td>temperature with a thermometer beside the thermistor; pd across it and current in it at that moment</td></tr>"
-            "<tr><td><b>5 Use the result</b></td><td>plot I against V; find R = V/I at points; straight line = constant R, curve = changing R</td><td>calculate R = V/I at each temperature; plot R against temperature</td></tr>"
+            "<tr><td><b>5 Use the result</b></td><td>plot I against V; find $R = V/I$ at points; straight line = constant R, curve = changing R</td><td>calculate $R = V/I$ at each temperature; plot R against temperature</td></tr>"
             "<tr><td><b>6 Accuracy detail</b></td><td>switch off between readings so the component does not warm up; read the meters at the same instant</td><td>keep the thermistor fully submerged and stirred so it is at the measured temperature</td></tr>"
             "<tr><td><b>7 Repeat</b></td><td>repeat each pd and average the current</td><td>repeat each temperature and average the resistance</td></tr></table>",
         ),
@@ -534,29 +534,29 @@ FACTS = [
     fact("Why must a voltmeter never be in series?", "Its resistance is very high, so it would almost stop the current.", "circuit-symbols"),
     fact("How are a thermistor and an LDR drawn?", "Both a resistor rectangle: the thermistor with a bent line through it, the LDR with two arrows pointing in.", "circuit-symbols"),
     # N3
-    fact("Equation linking charge, current and time?", "Q = I × t (C = A × s). Convert mA to A and minutes to seconds first.", "charge-nn"),
+    fact("Equation linking charge, current and time?", "$Q = I \\times t$ ($C = A \\times s$). Convert mA to A and minutes to seconds first.", "charge-nn"),
     fact("What is needed for a current to flow?", "A closed (complete) circuit and a source of potential difference.", "charge-nn"),
     fact("What happens to current at a junction?", "It is conserved: total current in = total current out.", "charge-nn"),
     # N4
     fact("What is potential difference?", "The energy transferred per unit charge (per coulomb) passing through a component. 1 V = 1 J/C.", "pd-energy"),
-    fact("Equation linking energy, charge and pd?", "E = Q × V (J = C × V).", "pd-energy"),
+    fact("Equation linking energy, charge and pd?", "$E = Q \\times V$ ($J = C \\times V$).", "pd-energy"),
     fact("What does the pd across a component tell you?", "How many joules each coulomb transfers in that component.", "pd-energy"),
     # N5
-    fact("Equation linking pd, current and resistance?", "V = I × R; R = V ÷ I in ohms (Ω).", "ohm-nn"),
-    fact("What happens to the current if the resistance in a circuit increases (same pd)?", "It decreases (I = V/R).", "ohm-nn"),
+    fact("Equation linking pd, current and resistance?", "$V = I \\times R$; $R = V \\div I$ in ohms (Ω).", "ohm-nn"),
+    fact("What happens to the current if the resistance in a circuit increases (same pd)?", "It decreases ($I = V/R$).", "ohm-nn"),
     fact("How does a variable resistor change the current?", "Moving the slider changes the length of resistance wire in the circuit, changing the resistance and so the current.", "ohm-nn"),
-    fact("kΩ and mA — what do you do before substituting?", "kΩ × 1000 → Ω; mA ÷ 1000 → A.", "ohm-nn"),
+    fact("kΩ and mA — what do you do before substituting?", "$k\\Omega \\times 1000$ → Ω; mA ÷ 1000 → A.", "ohm-nn"),
     # N6
     fact("Series circuit: current, pd, resistance?", "Same current everywhere; pd shared (adds up to the supply, bigger R takes more); resistances add.", "circuits-nn"),
     fact("Parallel circuit: current, pd, resistance?", "Current splits at junctions (branch currents add up); same pd across every branch; total resistance less than the smallest branch.", "circuits-nn"),
     fact("Why does adding a resistor in series increase the total resistance?", "The current must pass through both, one after the other — more to push through, so less current for the same pd.", "circuits-nn"),
-    fact("Why does adding a resistor in parallel decrease the total resistance?", "It gives the current another path; the pd is unchanged but the total current increases, so R = V/I is smaller.", "circuits-nn"),
+    fact("Why does adding a resistor in parallel decrease the total resistance?", "It gives the current another path; the pd is unchanged but the total current increases, so $R = V/I$ is smaller.", "circuits-nn"),
     fact("Why are house lights wired in parallel?", "Each gets the full mains pd and can be switched independently; one failing leaves the rest on.", "circuits-nn"),
     # N7
     fact("I–V graph of a fixed resistor?", "A straight line through the origin: current proportional to pd, constant resistance.", "iv-characteristics"),
     fact("I–V graph of a filament lamp?", "A curve that flattens as pd increases (both directions): the resistance increases as the filament gets hotter.", "iv-characteristics"),
     fact("I–V graph of a diode?", "Zero current for reverse pd; for forward pd, nothing until about 0.7 V then a steep rise. Current in one direction only.", "iv-characteristics"),
-    fact("How do you find the resistance at a point on an I–V graph?", "R = V ÷ I using the point's coordinates — not the gradient.", "iv-characteristics"),
+    fact("How do you find the resistance at a point on an I–V graph?", "$R = V \\div I$ using the point's coordinates — not the gradient.", "iv-characteristics"),
     # N8
     fact("How does an LDR's resistance depend on light?", "It decreases as the light intensity increases (high in the dark).", "ldr-thermistor"),
     fact("How does a thermistor's resistance depend on temperature?", "It decreases as the temperature increases (NTC).", "ldr-thermistor"),
@@ -567,10 +567,10 @@ FACTS = [
     fact("How do you reduce unwanted heating in wires?", "Use low-resistance wires: thick (large cross-section), short, good conductor (copper). Insulation does not reduce it.", "heating-effect"),
     fact("Devices that use the heating effect?", "Heaters, kettles, toasters, filament lamps, fuses.", "heating-effect"),
     # N10
-    fact("What is power, and its unit?", "Energy transferred per second; watts (1 W = 1 J/s). P = E ÷ t.", "power-nn"),
-    fact("The electrical power equations?", "P = I × V and P = I² × R.", "power-nn"),
-    fact("Energy transferred by a device?", "E = I × V × t, or E = P × t (t in seconds).", "power-nn"),
-    fact("Why is P = I × V?", "Each coulomb transfers V joules and I coulombs pass each second, so I × V joules per second.", "power-nn"),
+    fact("What is power, and its unit?", "Energy transferred per second; watts (1 W = 1 J/s). $P = E \\div t$.", "power-nn"),
+    fact("The electrical power equations?", "$P = I \\times V$ and $P = I^2 \\times R$.", "power-nn"),
+    fact("Energy transferred by a device?", "$E = I \\times V \\times t$, or $E = P \\times t$ (t in seconds).", "power-nn"),
+    fact("Why is $P = I \\times V$?", "Each coulomb transfers $V$ joules and $I$ coulombs pass each second, so $I \\times V$ joules per second.", "power-nn"),
     fact("What does a power rating tell you?", "How fast the device transfers energy from the supply: energy = power × time.", "power-nn"),
     # N11
     fact("d.c. vs a.c.?", "d.c.: charge moves in one direction only (cells, batteries). a.c.: the movement of charge changes direction repeatedly (the mains).", "mains"),
@@ -592,23 +592,23 @@ FACTS = [
     fact("Series test: where do the meters go and what do they show?", "Ammeter anywhere in the loop (same current everywhere); voltmeter across each resistor — the pds add up to the cell's.", "series-parallel-practical"),
     fact("Parallel test: where do the meters go and what do they show?", "Ammeter in each branch (currents add up to the cell current); voltmeter across a branch reads the cell pd.", "series-parallel-practical"),
     fact("Two lamps in series, one removed?", "The other goes out: one path, the circuit is broken.", "series-parallel-practical"),
-    fact("Why is a lamp brighter in parallel than in series with another?", "It has the full pd across it (not a share), so a larger current and a larger power P = IV.", "series-parallel-practical"),
+    fact("Why is a lamp brighter in parallel than in series with another?", "It has the full pd across it (not a share), so a larger current and a larger power $P = IV$.", "series-parallel-practical"),
     # T3
     fact("Why does a lamp's resistance rise with pd?", "More current → hotter filament → ions vibrate more → electrons collide with them more often → higher resistance.", "iv-explain"),
     fact("Why is a resistor's I–V graph straight?", "At constant temperature the collisions do not change, so current is proportional to pd and R is constant.", "iv-explain"),
-    fact("Is the gradient of an I–V graph the resistance?", "No. With I on the y-axis the gradient of a straight line is 1/R; for a curve use R = V/I at the point.", "iv-explain"),
+    fact("Is the gradient of an I–V graph the resistance?", "No. With I on the y-axis the gradient of a straight line is $1/R$; for a curve use $R = V/I$ at the point.", "iv-explain"),
     # T4
-    fact("Series method?", "Add the resistances → I = V/R → each pd = I × R → check they add up to the supply.", "circuits-hard"),
-    fact("Parallel method?", "Supply pd across each branch → I = V/R per branch → add for the supply current → total R = V/I (less than the smallest branch).", "circuits-hard"),
+    fact("Series method?", "Add the resistances → $I = V/R$ → each $\\text{pd} = I \\times R$ → check they add up to the supply.", "circuits-hard"),
+    fact("Parallel method?", "Supply pd across each branch → $I = V/R$ per branch → add for the supply current → total $R = V/I$ (less than the smallest branch).", "circuits-hard"),
     fact("Two resistors in series share the pd how?", "In proportion to their resistances: 10 Ω and 30 Ω across 8 V take 2 V and 6 V.", "circuits-hard"),
     # T5
     fact("LDR in series with a fixed resistor: what happens to the pds as it gets dark?", "The LDR's resistance rises, so it takes a bigger share of the pd; the pd across the fixed resistor falls.", "sensing-circuits"),
     fact("How does a thermistor thermostat work?", "Warmer → thermistor resistance falls → its share of pd falls, the fixed resistor's rises → past a set value the heater is switched off.", "sensing-circuits"),
-    fact("How do you investigate a thermistor's resistance against temperature?", "Thermistor in a stirred water bath with a thermometer; ammeter in series, voltmeter across; R = V/I at each temperature.", "sensing-circuits"),
+    fact("How do you investigate a thermistor's resistance against temperature?", "Thermistor in a stirred water bath with a thermometer; ammeter in series, voltmeter across; $R = V/I$ at each temperature.", "sensing-circuits"),
     # T6
-    fact("How do you choose a fuse for an appliance?", "I = P/V, then the lowest standard rating (3 A, 5 A, 13 A) above that current.", "power-hard"),
-    fact("Energy from a power rating?", "E = P × t with P in watts and t in seconds (kW × 1000; hours × 3600).", "power-hard"),
-    fact("The commonest error in E = IVt questions?", "Not converting kW/MJ and minutes/hours to W, J and seconds; and not stating the unit of a calculated time.", "power-hard"),
+    fact("How do you choose a fuse for an appliance?", "$I = P/V$, then the lowest standard rating (3 A, 5 A, 13 A) above that current.", "power-hard"),
+    fact("Energy from a power rating?", "$E = P \\times t$ with P in watts and t in seconds (kW × 1000; hours × 3600).", "power-hard"),
+    fact("The commonest error in $E = IVt$ questions?", "Not converting kW/MJ and minutes/hours to W, J and seconds; and not stating the unit of a calculated time.", "power-hard"),
     # T7
     fact("The fuse chain?", "Current exceeds the rating → fuse wire heats and melts → circuit broken → appliance disconnected from the live supply.", "mains-safety"),
     fact("The earth-wire chain?", "Live touches the case → earth wire is a low-resistance path → large current to earth → fuse melts → circuit broken → case cannot stay live.", "mains-safety"),
@@ -621,6 +621,6 @@ FACTS = [
     fact("Why does a smaller current heat a wire less?", "Fewer electrons per second → fewer collisions with the ions per second → less energy to the ions' vibration.", "electron-model"),
     # T9
     fact("Variables in the I–V investigation?", "Independent: pd; dependent: current; control: the component and its temperature.", "planning-electricity"),
-    fact("Variables in the thermistor investigation?", "Independent: temperature; dependent: resistance (from V/I); control: the thermistor and the supply pd.", "planning-electricity"),
+    fact("Variables in the thermistor investigation?", "Independent: temperature; dependent: resistance (from $V/I$); control: the thermistor and the supply pd.", "planning-electricity"),
     fact("The accuracy detail for the thermistor investigation?", "Thermistor fully submerged beside the thermometer, water stirred, meters read at the moment the temperature is read.", "planning-electricity"),
 ]

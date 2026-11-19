@@ -951,15 +951,15 @@
             {
               "id": "ei-n9-q5",
               "type": "choice",
-              "text": "A student finds the cable loss by putting the transmission pd into P = IV. What is wrong?",
+              "text": "A student finds the cable loss by putting the transmission pd into $P = IV$. What is wrong?",
               "options": [
                 "Nothing",
-                "That gives the power carried by the cables, not the power wasted — the loss needs I²R with the cable's resistance",
-                "P = IV is not on the equation list",
-                "The current should be squared in P = IV"
+                "That gives the power carried by the cables, not the power wasted — the loss needs $I^2R$ with the cable's resistance",
+                "$P = IV$ is not on the equation list",
+                "The current should be squared in $P = IV$"
               ],
               "correct": 1,
-              "explain": "Loss = I²R (or I × the pd dropped across the cable, which is not the transmission pd)."
+              "explain": "Loss = $I^2R$ (or I × the pd dropped across the cable, which is not the transmission pd)."
             }
           ]
         }
@@ -969,7 +969,7 @@
         "Use $P = I^2R$ to show the loss in the cables falls with the current squared",
         "Calculate the power wasted in a cable of given resistance"
       ],
-      "blurb": "The national-grid argument made quantitative: for a fixed power, P = IV says a higher pd means a smaller current; P = I²R says the power wasted heating the cables falls with the square of the current — ten times the pd, a tenth of the current, a hundredth of the loss. The marks are for using both equations, in that order.",
+      "blurb": "The national-grid argument made quantitative: for a fixed power, $P = IV$ says a higher pd means a smaller current; $P = I^2R$ says the power wasted heating the cables falls with the square of the current — ten times the pd, a tenth of the current, a hundredth of the loss. The marks are for using both equations, in that order.",
       "tags": [
         "H",
         "P"
@@ -1459,7 +1459,7 @@
               "id": "ei-t5-q1",
               "type": "written",
               "text": "A transformer in a laptop charger reduces the 230 V mains to 20 V. Explain how the transformer is constructed and how it works. (6)",
-              "model": "<p><b>6 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Construction 1</td><td>Two coils (primary, secondary) on a closed <b>soft-iron core</b>.</td></tr><tr><td><b>2</b></td><td>Construction 2</td><td>Step-down: the <b>primary has more turns</b> than the secondary.</td></tr><tr><td><b>3</b></td><td>Operation 1</td><td><b>Alternating current</b> in the primary produces a <b>changing magnetic field</b> in the core.</td></tr><tr><td><b>4</b></td><td>Operation 2</td><td>The secondary is in this changing field, so an alternating <b>pd is induced</b> across it.</td></tr><tr><td><b>5</b></td><td>Ratio 1</td><td>$V_p / V_s = N_p / N_s$ = 230 / 20 = 11.5 : 1.</td></tr><tr><td><b>6</b></td><td>Ratio 2</td><td>e.g. 2300 primary turns to 200 secondary turns.</td></tr></table><ul><li>Level 3 needs construction, operation and the ratio idea; one may be thin.</li></ul>",
+              "model": "<p><b>6 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Construction 1</td><td>Two coils (primary, secondary) on a closed <b>soft-iron core</b>.</td></tr><tr><td><b>2</b></td><td>Construction 2</td><td>Step-down: the <b>primary has more turns</b> than the secondary.</td></tr><tr><td><b>3</b></td><td>Operation 1</td><td><b>Alternating current</b> in the primary produces a <b>changing magnetic field</b> in the core.</td></tr><tr><td><b>4</b></td><td>Operation 2</td><td>The secondary is in this changing field, so an alternating <b>pd is induced</b> across it.</td></tr><tr><td><b>5</b></td><td>Ratio 1</td><td>$V_p / V_s = N_p / N_s$ = $230 / 20 = 11.5$ : 1.</td></tr><tr><td><b>6</b></td><td>Ratio 2</td><td>e.g. 2300 primary turns to 200 secondary turns.</td></tr></table><ul><li>Level 3 needs construction, operation and the ratio idea; one may be thin.</li></ul>",
               "lines": 8
             },
             {
@@ -1703,7 +1703,7 @@
         "Answer 'why not transmit at 230 V' and 'why step down' with the same chain",
         "Add the equations for the Higher Physics version"
       ],
-      "blurb": "Every grid question — why step up, why step down, why not transmit at 230 V — is the same chain: for a given power, a higher pd means a lower current; a lower current wastes less energy heating the cables; so the transfer is more efficient. The Foundation version says it in words; the Higher Physics version (13.11P) names P = IV and P = I²R and can put numbers in."
+      "blurb": "Every grid question — why step up, why step down, why not transmit at 230 V — is the same chain: for a given power, a higher pd means a lower current; a lower current wastes less energy heating the cables; so the transfer is more efficient. The Foundation version says it in words; the Higher Physics version (13.11P) names $P = IV$ and $P = I^2R$ and can put numbers in."
     },
     {
       "id": "induction-practical",

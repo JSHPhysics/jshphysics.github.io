@@ -30,7 +30,7 @@ section_n7 = section(
     checklist=[
         "Define power as the rate at which energy is transferred (or work is done)",
         "State that 1 watt = 1 joule per second",
-        "Select P = E ÷ t and use the time in seconds",
+        "Select $P = E \\div t$ and use the time in seconds",
     ],
     parts=[
         explain(
@@ -42,25 +42,25 @@ section_n7 = section(
         ),
         worked(
             "Power of a motor",
-            "A motor lifts a 20 kg load through 3.0 m in 12 s. Calculate the power of the motor. (g = 10 N/kg)",
+            "A motor lifts a 20 kg load through 3.0 m in 12 s. Calculate the power of the motor. ($g = 10$ N/kg)",
             [r"<b>Energy transferred:</b> $\Delta GPE = m g \Delta h = 20 \times 10 \times 3.0 = 600$ J."]
             + ewau(r"P = \dfrac{E}{t}", r"P = \dfrac{600}{12}", "50", "W"),
         ),
         practice("Power", [
             numeric("en-n7-q1", "A kettle transfers 3000 J in 20 s. Calculate its power.",
-                    q7_1, "W", "P = E ÷ t.",
+                    q7_1, "W", "$P = E \\div t$.",
                     ewau(r"P = \dfrac{E}{t}", r"P = \dfrac{3000}{20}", "150", "W")),
             numeric("en-n7-q2", "A 2 kW heater runs for 1 minute. Calculate the energy transferred.",
                     q7_2, "J", "2 kW = 2000 W; 1 minute = 60 s.",
                     ewau(r"E = P \times t", r"E = 2000 \times 60", "120\\,000", "J")),
-            numeric("en-n7-q3", "A 60 kg student runs up a flight of stairs 4 m high in 8 s. Calculate her power. (g = 10 N/kg)",
+            numeric("en-n7-q3", "A 60 kg student runs up a flight of stairs 4 m high in 8 s. Calculate her power. ($g = 10$ N/kg)",
                     q7_3, "W", "Energy = m g Δh = weight × height, then divide by the time.",
                     [r"$E = m g \Delta h = 60 \times 10 \times 4 = 2400$ J."] + ewau(r"P = \dfrac{E}{t}", r"P = \dfrac{2400}{8}", "300", "W")),
             numeric("en-n7-q4", "A car battery stores 126 MJ. The charger supplies 17.5 kW. Calculate the time to charge it fully, in hours.",
-                    q7_4 / 3600, "h", "t = E ÷ P gives seconds; divide by 3600 for hours.",
+                    q7_4 / 3600, "h", "$t = E \\div P$ gives seconds; divide by 3600 for hours.",
                     [r"$t = \dfrac{E}{P} = \dfrac{126 \times 10^{6}}{17.5 \times 10^{3}} = 7200$ s.", r"$7200 \div 3600 = 2.0$ h. (The 2023 scheme gave 7.2 — a time-conversion error — one mark of two.)"]),
-            numeric("en-n7-q5", "A student of mass 48 kg climbs a flight of stairs 3.0 m high in 3.5 s. Calculate her power. Give your answer to 2 significant figures. (g = 10 N/kg)",
-                    sf(q7_5, 2), "W", "Use her weight (48 × 10 = 480 N), not her mass, in the energy calculation.",
+            numeric("en-n7-q5", "A student of mass 48 kg climbs a flight of stairs 3.0 m high in 3.5 s. Calculate her power. Give your answer to 2 significant figures. ($g = 10$ N/kg)",
+                    sf(q7_5, 2), "W", "Use her weight ($48 \\times 10 = 480$ N), not her mass, in the energy calculation.",
                     [r"$E = m g \Delta h = 48 \times 10 \times 3.0 = 1440$ J."] + ewau(r"P = \dfrac{E}{t}", r"P = \dfrac{1440}{3.5}", "411.4 = 410", "W (2 s.f.)")),
             choice("en-n7-q6", "What is meant by a power of 500 W?",
                    ["500 J of energy is stored", "500 J of energy is transferred every second", "500 N of force is applied", "The motor runs for 500 s"], 1,
