@@ -204,3 +204,7 @@ Big session — built out the entire pedagogy hotspot system end-to-end.
 - Fifth plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
 - Sixth plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
 - All six plans re-encrypted with two additions made in the plan page itself (not in this repository's code): a **Send my progress** button in the Export menu, which opens an email to the teacher with a summary of sessions done and overdue (and shows the same text with a Copy button in case no mail app opens), and **handwriting boxes** on written and calculated answers (Apple Pencil writes, a finger still scrolls; strokes are saved with the rest of the plan's answers). Tested in desktop Chromium with a mouse and with synthetic stylus and finger touches; not tested with a real Pencil on an iPad.
+
+### 2026-11-20 (Fable 5.2)
+
+- Intervention plans: calculations now open with the handwriting box for the working (the typed working lines are put away; only the final number is typed, so it can still be checked). All six plans were then moved to start on Monday 23 November and run for six weeks in place of seven, at the author's request, and re-encrypted under the same codes; the in-class check is now in the week of 7 December, the last week of term.
