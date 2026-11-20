@@ -1,0 +1,2524 @@
+{
+  "id": "mixed-questions",
+  "title": "Mixed-topic questions",
+  "subtitle": "The blends the examiners set: two or three topics in one question, and the join between them",
+  "spec": "All topics",
+  "order": 160,
+  "figure": "measurements",
+  "lede": "The long questions on both papers hand a quantity from one topic to the next — an energy, a force, a volume, a potential difference — and the marks sit at the hand-over. This page collects the blends that the June 2023, 2024 and 2025 papers set: <b>Paper 1</b> joins motion to energy, light to the wave equation, and radioactivity to energy and stars; <b>Paper 2</b> joins density to latent heat, pressure to forces and particles, springs to force diagrams, upthrust to moments, work to efficiency, electricity to energy and heat, and induction to the devices around it. Each section names the join, lays the chain out as a table, works one example modelled on the real question with new numbers, and practises the hand-over. The physics of every stage is on its topic page — this page is about carrying the number across. Parts that are Higher or Physics only carry their tag; the page itself is for everyone.",
+  "howto": [
+    "Start with M1 and learn the four habits: find the join, match the units there, carry forward and label, check the number makes sense.",
+    "Before each chain, say which quantity each stage hands to the next and what unit it must be in. Then do the arithmetic.",
+    "Do every multi-part question in one go on paper, EWAU for each stage, before checking any part — in the exam the parts come together.",
+    "For the written parts, write the chain in full sentences with the physics object as the subject, then compare with the model answer line by line.",
+    "If a stage is red, go back to its topic page (the section is named in the chain table) before moving on.",
+    "Fill in the traffic-light self-check at the end of each section. Anything red or amber is what to revise next."
+  ],
+  "bands": [
+    {
+      "id": "start",
+      "prefix": "M",
+      "title": "Start here",
+      "blurb": "How a blended question is built and marked, and the four habits that collect the marks at the joins."
+    },
+    {
+      "id": "p1",
+      "prefix": "P1-",
+      "title": "Paper 1 blends",
+      "blurb": "Motion into energy (GPE → KE → speed, momentum beside kinetic energy, stopping distances as work), waves into light, and radioactivity into energy and stars."
+    },
+    {
+      "id": "p2",
+      "prefix": "P2-",
+      "title": "Paper 2 blends",
+      "blurb": "Density into latent heat, pressure into forces and particles, springs into force diagrams, upthrust into moments, work into efficiency and power, electricity into energy, induction into its neighbouring devices, and electricity into heat."
+    }
+  ],
+  "factsBlurb": "The joins on flip cards: which quantity each chain hands over, the unit it must be in, and the one-line version of each blend. Cover, say the answer out loud, then flip to check.",
+  "sections": [
+    {
+      "id": "join",
+      "band": "start",
+      "title": "Finding the join: how a blended question hands over from one topic to the next",
+      "spec": "all topics",
+      "equations": [
+        "\\text{stage 1} \\xrightarrow{\\ \\text{one quantity}\\ } \\text{stage 2} \\xrightarrow{\\ \\text{one quantity}\\ } \\text{stage 3}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The four habits",
+          "html": "<table class='tbl'><tr><th>Habit</th><th>Why it scores</th><th>Example</th></tr><tr><td><b>Find the join</b></td><td>each stage of a chain has its own equation; the output of one is the input of the next</td><td>GPE from a height → the <i>same number</i> as KE → a speed from $\\tfrac{1}{2}mv^2$</td></tr><tr><td><b>Match units at the join</b></td><td>the examiners' reports name the same slips every year: kJ left as kJ, cm in a squared term, minutes into $E = Pt$, mm² into $P = F/A$</td><td>$E = Pt$ needs seconds: 5.0 minutes is 300 s</td></tr><tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets stages 2 and 3 score if they use it correctly and are shown</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr><tr><td><b>Check the join makes sense</b></td><td>a speed of 300 m/s for a trolley, a pool 35 m deep, a spring constant of 2.5 N/m for a stiff spring — the number itself tells you a join went wrong</td><td>\"look at the result of a calculation to see if the value makes sense\" (June 2025 report)</td></tr></table><p>The chains on this page are the ones that have come up in the June 2023, 2024 and 2025 papers. Each section names the join, lays the chain out as a table, and works one example modelled on the real question with new numbers. The physics of each stage is on its topic page — this page practises the hand-over.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A trolley, a runway and a staircase",
+          "question": "A trolley is lifted onto a runway 0.30 m high and gains 4.8 J of gravitational potential energy. (a) Show that the mass of the trolley is about 1.6 kg. (b) Calculate the speed the trolley would have at the bottom of the runway if all the GPE became kinetic energy. (c) The measured speed is 2.1 m/s. Suggest why. (d) A student of mass 52 kg runs up a 3.0 m staircase in 4.0 s; calculate her power. ($g = 10$ N/kg; 9 marks)",
+          "steps": [
+            "(a) Stage 1, Topic 3: $\\Delta GPE = m g \\Delta h$, so $m = \\Delta GPE \\div (g \\Delta h) = 4.8 \\div (10 \\times 0.30) = 1.6$ kg.",
+            "(b) <b>The join</b>: the GPE <i>is</i> the KE at the bottom — 4.8 J hands over. $KE = \\tfrac{1}{2} m v^2$, so $v^2 = 2 KE \\div m = 2 \\times 4.8 \\div 1.6 = 6.0$.",
+            "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed.",
+            "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store — not \"energy is lost\".",
+            "(d) Stage 3, Topic 8: work done against gravity $= m g h = 52 \\times 10 \\times 3.0 = 1560$ J; power $= E \\div t = 1560 \\div 4.0 = 390$ W (2 s.f.)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Finding the join",
+          "questions": [
+            {
+              "id": "mx-m1-q1",
+              "type": "group",
+              "text": "A 0.50 kg ball is dropped from a height of 1.8 m. $g = 10$ N/kg.",
+              "parts": [
+                {
+                  "id": "mx-m1-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the gravitational potential energy it loses as it falls.",
+                  "answer": {
+                    "value": 9,
+                    "unit": "J"
+                  },
+                  "hint": "$\\Delta \\text{GPE} = m g \\Delta h$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $\\Delta GPE = m g \\Delta h$",
+                    "<b>Working:</b> $\\Delta GPE = 0.50 \\times 10 \\times 1.8$",
+                    "<b>Answer:</b> $= 9.0$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-m1-q1b",
+                  "type": "numeric",
+                  "text": "Calculate its speed just before it lands, assuming no air resistance.",
+                  "answer": {
+                    "value": 6,
+                    "unit": "m/s"
+                  },
+                  "hint": "The 9.0 J hands over to KE: $v^2 = 2\\text{KE} \\div m$.",
+                  "walkthrough": [
+                    "$KE = 9.0$ J (the join)",
+                    "$v^2 = 2 KE \\div m = 2 \\times 9.0 \\div 0.50 = 36$",
+                    "$v = 6.0$ m/s"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-m1-q1c",
+                  "type": "written",
+                  "text": "The measured landing speed is 5.6 m/s. Explain the difference. (2)",
+                  "model": "<ul><li>Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.</li><li>A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (do not say the energy is \"lost\": say where it went).</li></ul>",
+                  "lines": 2,
+                  "label": "c"
+                }
+              ]
+            },
+            {
+              "id": "mx-m1-q2",
+              "type": "choice",
+              "text": "In a chain calculation, stage 1 gives a wrong energy. What should you do in stage 2?",
+              "options": [
+                "Stop — no more marks are available",
+                "Use the wrong value, show the working, and label the stage: error carried forward lets stage 2 score",
+                "Guess a better value",
+                "Leave stage 2 blank"
+              ],
+              "correct": 1,
+              "explain": "Mark schemes give a mark per stage."
+            },
+            {
+              "id": "mx-m1-q3",
+              "type": "choice",
+              "text": "A heater of power 60 W runs for 5.0 minutes before its energy goes into $\\Delta Q = mc\\Delta\\theta$. The join needs…",
+              "options": [
+                "$E = 60 \\times 5.0 = 300$ J",
+                "$E = 60 \\times 300 = 18\\,000$ J, because t must be in seconds",
+                "$E = 60 \\div 5.0$ J",
+                "no conversion"
+              ],
+              "correct": 1,
+              "explain": "Minutes to seconds at the join."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Name the quantity that each stage hands to the next before starting the arithmetic",
+        "Convert units at the join (kJ to J, cm to m, g to kg, minutes to seconds) before the next equation",
+        "Carry a stage's answer forward and label every stage, so error carried forward can score"
+      ],
+      "blurb": "A long exam question rarely stays in one topic. It hands a quantity from one topic to the next — an energy, a force, a volume, a potential difference — and the marks sit at those hand-overs: the right equation picked for each stage, the units matched at the join, the number carried forward (even a wrong one), and each stage labelled so the examiner can give the stage its mark."
+    },
+    {
+      "id": "gpe-ke-speed",
+      "band": "p1",
+      "title": "GPE to KE to speed, then acceleration or dissipation",
+      "spec": "2.9, 2.10, 3.2–3.5",
+      "equations": [
+        "\\Delta GPE = m g \\Delta h \\ \\rightarrow\\ KE = \\tfrac{1}{2} m v^2 \\ \\rightarrow\\ v",
+        "\\text{dissipated} = \\Delta GPE - KE_{\\text{measured}}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>height → energy</td><td>$\\Delta GPE = m g \\Delta h$ (Topic 3)</td><td>an energy in J</td><td>$\\Delta h$ is the vertical height, not the slope length</td></tr><tr><td>energy → speed</td><td>$KE = \\tfrac{1}{2} m v^2$, so $v = \\sqrt{2 KE \\div m}$</td><td>a speed in m/s</td><td>square-root at the end; a kJ must become J first</td></tr><tr><td>speed → acceleration</td><td>$v^2 - u^2 = 2 a x$ (Topic 2) [H]</td><td>$a$ in m/s²</td><td>$x$ is the distance along the slope; $u = 0$ from rest</td></tr><tr><td>measured speed → dissipation</td><td>energy dissipated $= \\Delta GPE - \\tfrac{1}{2} m v_{\\text{measured}}^2$</td><td>an energy in J</td><td>say where it went: work against friction / air resistance, transferred to the surroundings by heating</td></tr></table><p>June 2025 1H Q6: a skier's height from $\\Delta GPE$ (2), then the acceleration from rest to 27 m/s over a 200 m slope (3), then \"explain how to determine the energy dissipated\" (2) — measure the speed at the bottom, find the KE, subtract from the GPE. June 2025 2H Q2 did the same with a trolley (mass from the GPE, expected velocity, one way to reduce the gap). The \"suggest one way to reduce the gap\" mark is a practical one: reduce friction (lubricate the wheels, a smoother runway) or air resistance.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The skier",
+          "question": "A skier of mass 64 kg starts from rest at the top of a slope and loses 32 000 J of gravitational potential energy on the way down. (a) Calculate the height of the slope. (b) Calculate the speed at the bottom if no energy were dissipated. (c) Her actual speed at the bottom is 25 m/s; calculate the energy dissipated and say where it went. ($g = 10$ N/kg; 6 marks)",
+          "steps": [
+            "(a) $\\Delta h = \\Delta GPE \\div (m g) = 32\\,000 \\div (64 \\times 10) = 50$ m.",
+            "(b) Join: $KE = 32\\,000$ J. $v^2 = 2 KE \\div m = 2 \\times 32\\,000 \\div 64 = 1000$, so $v = 32$ m/s (31.6).",
+            "(c) Actual $KE = \\tfrac{1}{2} \\times 64 \\times 25^2 = 20\\,000$ J; dissipated $= 32\\,000 - 20\\,000 = 12\\,000$ J, transferred to the surroundings by work done against friction and air resistance."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "GPE to KE to speed",
+          "questions": [
+            {
+              "id": "mx-a1-q1",
+              "type": "group",
+              "text": "A roller-coaster car of mass 500 kg is released from rest at the top of a 40 m drop. $g = 10$ N/kg.",
+              "parts": [
+                {
+                  "id": "mx-a1-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the gravitational potential energy lost in the drop.",
+                  "answer": {
+                    "value": 200000,
+                    "unit": "J"
+                  },
+                  "hint": "$m g \\Delta h$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $\\Delta GPE = m g \\Delta h$",
+                    "<b>Working:</b> $\\Delta GPE = 500 \\times 10 \\times 40$",
+                    "<b>Answer:</b> $= 200\\,000$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-a1-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the speed at the bottom if all of this becomes kinetic energy.",
+                  "answer": {
+                    "value": 28.3,
+                    "unit": "m/s"
+                  },
+                  "hint": "$v = \\sqrt{2\\,KE \\div m}$.",
+                  "walkthrough": [
+                    "$v^2 = 2 \\times 200\\,000 \\div 500 = 800$",
+                    "$v = \\sqrt{800} = 28$ m/s (28.3)"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-a1-q1c",
+                  "type": "numeric",
+                  "text": "The measured speed at the bottom is 26 m/s. Calculate the energy dissipated during the drop.",
+                  "answer": {
+                    "value": 31000,
+                    "unit": "J"
+                  },
+                  "hint": "GPE − actual KE.",
+                  "walkthrough": [
+                    "$KE = \\tfrac{1}{2} \\times 500 \\times 26^2 = 169\\,000$ J",
+                    "dissipated $= 200\\,000 - 169\\,000 = 31\\,000$ J"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-a1-q1d",
+                  "type": "numeric",
+                  "text": "The track from the top to the bottom is 120 m long. Use the measured speed to calculate the average acceleration along the track.",
+                  "answer": {
+                    "value": 2.82,
+                    "unit": "m/s²"
+                  },
+                  "hint": "$v^2 - u^2 = 2ax$ with $u = 0$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $v^2 - u^2 = 2 a x$",
+                    "<b>Working:</b> $26^2 - 0 = 2 \\times a \\times 120$",
+                    "<b>Answer:</b> $= 2.8$",
+                    "<b>Units:</b> m/s² (2.82)"
+                  ],
+                  "label": "d",
+                  "tags": [
+                    "H"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mx-a1-q2",
+              "type": "written",
+              "text": "Describe how a student could determine the energy dissipated as a trolley runs down a ramp. (3)",
+              "model": "<ul><li>Measure the <b>vertical height</b> of the start above the bottom and the trolley's <b>mass</b>; calculate $\\Delta GPE = m g \\Delta h$.</li><li>Measure the trolley's <b>speed at the bottom</b> (light gate and interrupt card, or distance and time) and calculate $KE = \\tfrac{1}{2} m v^2$.</li><li>Energy dissipated $= \\Delta GPE - KE$ — the difference transferred to the surroundings by friction and air resistance.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mx-a1-q3",
+              "type": "choice",
+              "text": "A student uses the slope length (200 m) as $\\Delta h$ in $m g \\Delta h$. The GPE comes out…",
+              "options": [
+                "correct",
+                "too large — Δh is the vertical height (50 m), not the distance along the slope",
+                "too small",
+                "in the wrong unit"
+              ],
+              "correct": 1,
+              "explain": "Height is vertical; the slope length belongs in $v^2 - u^2 = 2ax$."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Hand the GPE over as KE and get the speed from $\\tfrac{1}{2}mv^2$",
+        "Hand the measured speed on to the next stage — an acceleration (Higher) or a comparison with the expected speed",
+        "Find the energy dissipated as GPE − KE and say where it went"
+      ],
+      "blurb": "The skier, the trolley, the roller coaster, the falling ball: a height becomes an energy, the energy becomes a speed, and then the question turns a corner — into an acceleration over the slope (Topic 2) or into the energy dissipated (Topic 3). The joins are the energy ($GPE = KE$) and the speed (into the equation of motion)."
+    },
+    {
+      "id": "momentum-force-ke",
+      "band": "p1",
+      "title": "Momentum, force and time, then kinetic energy",
+      "spec": "2.20–2.26, 3.3",
+      "equations": [
+        "p = m v \\ \\rightarrow\\ F = \\dfrac{\\Delta(mv)}{t}",
+        "KE = \\tfrac{1}{2} m v^2"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and speed → momentum</td><td>$p = m v$ (Topic 2) [H]</td><td>$p$ in kg m/s</td><td>the unit mark is often separate: kg m/s</td></tr><tr><td>momentum → force or time</td><td>$F = \\Delta(mv) \\div t$ [H]</td><td>$F$ in N, or $t$ in s</td><td>$\\Delta(mv)$ is the <i>change</i>: from rest it equals $mv$</td></tr><tr><td>collision → shared speed</td><td>total momentum before = total momentum after [H]</td><td>$v$ after</td><td>the combined mass is larger, so the speed is smaller than the moving trolley's</td></tr><tr><td>same mass and speed → energy</td><td>$KE = \\tfrac{1}{2} m v^2$ (Topic 3)</td><td>$KE$ in J</td><td>square the speed; for a beta particle keep the powers of ten: $9.1 \\times 10^{-31}$ kg</td></tr></table><p>June 2025 1H Q8: momentum of a kicked ball with its unit (3), the contact time from the force (2), Newton's third law on foot and ball (3), and why two trolleys that stick together move more slowly than the moving one did (3). Q9(a)(iii) on the same paper: the kinetic energy of a beta particle from $m = 9.1 \\times 10^{-31}$ kg and $v = 3.8 \\times 10^{6}$ m/s. The third-law explanation needs the <b>pair</b> named (the force of the foot on the ball and the force of the ball on the foot), <b>equal in size</b>, <b>opposite in direction</b>, on <b>different objects</b> — Topic 2 N15.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The kick",
+          "question": "A football of mass 0.45 kg is kicked from rest and leaves the boot at 30 m/s. (a) Calculate its momentum. (b) The boot is in contact with the ball for 0.0060 s; calculate the average force on the ball. (c) Calculate the ball's kinetic energy. (d) The ball then hits a stationary 0.45 kg ball and they move off together; calculate their speed. (9 marks)",
+          "steps": [
+            "(a) $p = m v = 0.45 \\times 30 = 13.5$ kg m/s [H].",
+            "(b) $F = \\Delta(mv) \\div t = 13.5 \\div 0.0060 = 2250$ N (the change is the full 13.5 kg m/s because it started from rest) [H].",
+            "(c) Same mass and speed, different equation: $KE = \\tfrac{1}{2} m v^2 = \\tfrac{1}{2} \\times 0.45 \\times 30^2 = 203$ J (202.5).",
+            "(d) Momentum is conserved: $13.5 = (0.45 + 0.45) \\times v$, so $v = 15$ m/s — half, because the mass doubled [H]. (The KE after is $\\tfrac{1}{2} \\times 0.90 \\times 15^2 = 101$ J: half the KE has gone to heating and sound.)"
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Momentum and energy",
+          "questions": [
+            {
+              "id": "mx-a2-q1",
+              "type": "group",
+              "text": "A tennis ball of mass 0.058 kg is served from rest and leaves the racket at 50 m/s.",
+              "parts": [
+                {
+                  "id": "mx-a2-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the momentum of the ball as it leaves the racket.",
+                  "answer": {
+                    "value": 2.9,
+                    "unit": "kg m/s"
+                  },
+                  "hint": "$p = m v$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $p = m v$",
+                    "<b>Working:</b> $p = 0.058 \\times 50$",
+                    "<b>Answer:</b> $= 2.9$",
+                    "<b>Units:</b> kg m/s"
+                  ],
+                  "label": "a",
+                  "tags": [
+                    "H"
+                  ]
+                },
+                {
+                  "id": "mx-a2-q1b",
+                  "type": "numeric",
+                  "text": "The racket is in contact with the ball for 0.0050 s. Calculate the average force on the ball.",
+                  "answer": {
+                    "value": 580,
+                    "unit": "N"
+                  },
+                  "hint": "$F = \\Delta(mv) \\div t$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $F = \\Delta(mv) \\div t$",
+                    "<b>Working:</b> $F = 2.9 \\div 0.0050$",
+                    "<b>Answer:</b> $= 580$",
+                    "<b>Units:</b> N"
+                  ],
+                  "label": "b",
+                  "tags": [
+                    "H"
+                  ]
+                },
+                {
+                  "id": "mx-a2-q1c",
+                  "type": "numeric",
+                  "text": "Calculate the kinetic energy of the ball.",
+                  "answer": {
+                    "value": 72.5,
+                    "unit": "J"
+                  },
+                  "hint": "$\\tfrac{1}{2} m v^2$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $KE = \\tfrac{1}{2} m v^2$",
+                    "<b>Working:</b> $KE = \\tfrac{1}{2} \\times 0.058 \\times 50^2$",
+                    "<b>Answer:</b> $= 73$",
+                    "<b>Units:</b> J (72.5)"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-a2-q1d",
+                  "type": "written",
+                  "text": "Explain, using Newton's third law, why the racket strings are pushed back as the ball is hit. (3)",
+                  "model": "<ul><li>The racket exerts a <b>force on the ball</b> (forwards); by Newton's third law the ball exerts a force <b>on the racket</b>.</li><li>The two forces are <b>equal in size</b> and <b>opposite in direction</b>, and act on <b>different objects</b> (one on the ball, one on the racket).</li><li>The force of the ball on the strings pushes them backwards (distorts them) while the ball accelerates forwards.</li></ul>",
+                  "lines": 3,
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-a2-q2",
+              "type": "numeric",
+              "text": "A 1500 kg car moving at 20 m/s is brought to rest in 2.5 s by a barrier. Calculate the average force on the car.",
+              "answer": {
+                "value": 12000,
+                "unit": "N"
+              },
+              "hint": "Change in momentum ÷ time.",
+              "walkthrough": [
+                "$\\Delta(mv) = 1500 \\times 20 - 0 = 30\\,000$ kg m/s",
+                "<b>Equation:</b> $F = \\Delta(mv) \\div t$",
+                "<b>Working:</b> $F = 30\\,000 \\div 2.5$",
+                "<b>Answer:</b> $= 12\\,000$",
+                "<b>Units:</b> N"
+              ]
+            },
+            {
+              "id": "mx-a2-q3",
+              "type": "written",
+              "text": "Trolley S, moving at 0.60 m/s, collides with an identical stationary trolley T and they stick together. Explain, using momentum, why their combined velocity is less than 0.60 m/s. (3)",
+              "model": "<ul><li>Momentum is <b>conserved</b> in the collision: the total momentum after equals S's momentum before.</li><li>After the collision the <b>same momentum is shared by twice the mass</b> (S and T together).</li><li>Since $p = mv$, a larger mass with the same momentum has a <b>smaller velocity</b> — 0.30 m/s here.</li></ul>",
+              "lines": 3,
+              "tags": [
+                "H"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find momentum, then the force from the change in momentum and the contact time",
+        "Explain a collision with conservation of momentum and Newton's third law",
+        "Find the kinetic energy of the same object, including a beta particle from its mass and speed"
+      ],
+      "blurb": "A kick, a collision, a beta particle leaving a nucleus: the same mass and speed feed three different equations. Momentum ($mv$) goes into the force–time equation and into conservation; kinetic energy ($\\tfrac{1}{2}mv^2$) answers the energy part. The join is the speed, and the trap is giving $\\tfrac{1}{2}mv^2$ when momentum was asked for.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "stopping-energy",
+      "band": "p1",
+      "title": "Stopping distances as work and energy",
+      "spec": "2.27–2.33P, 3.3, 8.1",
+      "equations": [
+        "\\text{braking force} \\times \\text{braking distance} = \\tfrac{1}{2} m v^2",
+        "\\text{thinking distance} = v \\times \\text{reaction time}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>speed → kinetic energy</td><td>$KE = \\tfrac{1}{2} m v^2$ (Topic 3)</td><td>an energy in J</td><td>square the speed: double the speed, four times the energy</td></tr><tr><td>energy → braking distance</td><td>work done $= F \\times d$ (Topic 8), and $F d = KE$</td><td>$d$ in m, or $F$ in N</td><td>the braking force is roughly constant, so $d \\propto v^2$</td></tr><tr><td>speed → thinking distance</td><td>distance $=$ speed $\\times$ reaction time (Topic 2)</td><td>$d$ in m</td><td>$\\propto v$, not $v^2$</td></tr><tr><td>both → stopping distance</td><td>stopping $=$ thinking $+$ braking</td><td>—</td><td>the KE is transferred to the thermal store of the brakes (and surroundings) by the work done</td></tr></table><p>Topic 2's stopping-distance questions ask for the <i>factors</i>; the blended version asks for the <i>numbers</i>, and the only route is through energy. June 2025 1H Q6(a)(iii) (\"explain how to determine the energy dissipated\") is the same idea in reverse. The $v^2$ explanation (2.32P–2.33P, Physics only): braking distance is proportional to the KE, and KE is proportional to $v^2$, so doubling the speed <b>quadruples</b> the braking distance while only doubling the thinking distance.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A car braking",
+          "question": "A car of mass 1200 kg travels at 20 m/s. The driver's reaction time is 0.70 s and the brakes exert a constant force of 6000 N. (a) Calculate the thinking distance. (b) Calculate the car's kinetic energy. (c) Calculate the braking distance. (d) State the stopping distance. (e) Explain what would happen to the braking distance at 40 m/s. (8 marks)",
+          "steps": [
+            "(a) Thinking distance $= v t = 20 \\times 0.70 = 14$ m.",
+            "(b) $KE = \\tfrac{1}{2} m v^2 = \\tfrac{1}{2} \\times 1200 \\times 20^2 = 240\\,000$ J.",
+            "(c) Join: the brakes must do 240 000 J of work. $F d = KE$, so $d = 240\\,000 \\div 6000 = 40$ m.",
+            "(d) Stopping distance $= 14 + 40 = 54$ m.",
+            "(e) At 40 m/s the KE is four times as large ($v^2$), so with the same braking force the braking distance is four times as large: 160 m [P]. The thinking distance only doubles, to 28 m."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Stopping as energy",
+          "questions": [
+            {
+              "id": "mx-a3-q1",
+              "type": "group",
+              "text": "A van of mass 2500 kg is travelling at 15 m/s when the driver brakes with a constant braking force of 7500 N.",
+              "parts": [
+                {
+                  "id": "mx-a3-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the kinetic energy of the van.",
+                  "answer": {
+                    "value": 281250,
+                    "unit": "J"
+                  },
+                  "hint": "$\\tfrac{1}{2} m v^2$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $KE = \\tfrac{1}{2} m v^2$",
+                    "<b>Working:</b> $KE = \\tfrac{1}{2} \\times 2500 \\times 15^2$",
+                    "<b>Answer:</b> $= 281\\,000$",
+                    "<b>Units:</b> J (281 250)"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-a3-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the braking distance.",
+                  "answer": {
+                    "value": 37.5,
+                    "unit": "m"
+                  },
+                  "hint": "Work done by the brakes = KE: $d = \\text{KE} \\div F$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $F d = \\text{KE}$",
+                    "<b>Working:</b> $d = 281\\,250 \\div 7500$",
+                    "<b>Answer:</b> $= 37.5$",
+                    "<b>Units:</b> m"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-a3-q1c",
+                  "type": "numeric",
+                  "text": "The driver's reaction time is 0.80 s. Calculate the stopping distance.",
+                  "answer": {
+                    "value": 49.5,
+                    "unit": "m"
+                  },
+                  "hint": "Thinking distance + braking distance.",
+                  "walkthrough": [
+                    "thinking $= 15 \\times 0.80 = 12$ m",
+                    "stopping $= 12 + 37.5 = 49.5$ m"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-a3-q1d",
+                  "type": "written",
+                  "text": "State where the van's kinetic energy has been transferred to by the time it stops. (2)",
+                  "model": "<ul><li>The brakes do <b>work</b> on the van (friction between the pads and discs): the kinetic energy is transferred to the <b>thermal store</b> of the brakes.</li><li>It is then dissipated to the <b>surroundings</b> by heating (and a little as sound).</li></ul>",
+                  "lines": 2,
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-a3-q2",
+              "type": "written",
+              "text": "Explain why doubling the speed of a car quadruples its braking distance but only doubles its thinking distance. (3)",
+              "model": "<ul><li>The brakes must do work equal to the car's <b>kinetic energy</b>, and $KE = \\tfrac{1}{2} m v^2$ is proportional to $v^2$: double the speed, four times the energy.</li><li>With a roughly <b>constant braking force</b>, work $= F d$, so the braking distance is proportional to the KE — four times as far.</li><li>The thinking distance is speed × reaction time, so it is proportional to $v$ and only doubles.</li></ul>",
+              "lines": 3,
+              "tags": [
+                "P"
+              ]
+            },
+            {
+              "id": "mx-a3-q3",
+              "type": "numeric",
+              "text": "A car of mass 900 kg stops in a braking distance of 25 m from a speed of 18 m/s. Calculate the average braking force.",
+              "answer": {
+                "value": 5832,
+                "unit": "N"
+              },
+              "hint": "$F = \\text{KE} \\div d$.",
+              "walkthrough": [
+                "$KE = \\tfrac{1}{2} \\times 900 \\times 18^2 = 145\\,800$ J",
+                "<b>Equation:</b> $F = KE \\div d$",
+                "<b>Working:</b> $F = 145\\,800 \\div 25$",
+                "<b>Answer:</b> $= 5800$",
+                "<b>Units:</b> N (5832)"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find a braking distance from the kinetic energy and the braking force (or the force from the distance)",
+        "Explain why braking distance is proportional to $v^2$ and thinking distance to $v$",
+        "Add thinking and braking distances, and say where the kinetic energy goes"
+      ],
+      "blurb": "A braking car is an energy question wearing a motion costume: the work done by the brakes equals the kinetic energy taken away, so braking force × braking distance $= \\tfrac{1}{2}mv^2$. That is why braking distance grows with the square of the speed, why a larger mass needs a longer distance, and why the brakes get hot. The join is the KE.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "wave-equation-light",
+      "band": "p1",
+      "title": "The wave equation applied to light: what changes at a boundary",
+      "spec": "4.6, 5.9",
+      "equations": [
+        "v = f \\lambda",
+        "\\text{frequency fixed; speed and wavelength change together}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>speed and wavelength in air → frequency</td><td>$f = v \\div \\lambda$ (Topic 4)</td><td>$f$ in Hz</td><td>$\\lambda$ in metres: 470 nm $= 470 \\times 10^{-9}$ m</td></tr><tr><td>frequency → speed in glass</td><td>$v = f \\lambda$ with the wavelength in glass</td><td>$v$ in m/s</td><td>the <b>frequency is unchanged</b> at the boundary — it is set by the source</td></tr><tr><td>two speeds → the change</td><td>$\\Delta v = v_{\\text{air}} - v_{\\text{glass}}$</td><td>—</td><td>light <b>slows</b> entering glass (Topic 5: that is why it refracts); wavelength <b>shortens</b> in the same ratio</td></tr></table><p>June 2025 1H Q5(b): leaving glass for air the wavelength <b>increases</b> (1) and the frequency <b>stays the same</b> (1); then the change in speed of blue light entering glass from $f = 6.4 \\times 10^{14}$ Hz, 470 nm in air and 350 nm in glass (3). The frequency does not change because the number of wave crests arriving each second at the boundary must equal the number leaving it — waves are not created or destroyed there. Speed and wavelength change together, $v \\propto \\lambda$ at fixed $f$: 350/470 of the speed.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Red light into water",
+          "question": "Red light has a frequency of $4.6 \\times 10^{14}$ Hz and travels at $3.0 \\times 10^{8}$ m/s in air. In water its wavelength is 490 nm. (a) Calculate its wavelength in air. (b) Calculate its speed in water. (c) State what happens to its frequency as it enters the water. (6 marks)",
+          "steps": [
+            "(a) $\\lambda = v \\div f = 3.0 \\times 10^{8} \\div (4.6 \\times 10^{14}) = 6.5 \\times 10^{-7}$ m $= 650$ nm.",
+            "(b) Join: the frequency is the same in water. $v = f \\lambda = 4.6 \\times 10^{14} \\times 490 \\times 10^{-9}$.",
+            "$v = 2.3 \\times 10^{8}$ m/s (2.25) — slower than in air, as refraction towards the normal requires.",
+            "(c) The frequency is <b>unchanged</b>: it is fixed by the source, and the number of crests crossing the boundary each second is the same on both sides."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "The wave equation on light",
+          "questions": [
+            {
+              "id": "mx-a4-q1",
+              "type": "group",
+              "text": "Green light of frequency $5.5 \\times 10^{14}$ Hz travels at $3.0 \\times 10^{8}$ m/s in air and at $2.0 \\times 10^{8}$ m/s in glass.",
+              "parts": [
+                {
+                  "id": "mx-a4-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the wavelength of the green light in air, in nm.",
+                  "answer": {
+                    "value": 545,
+                    "unit": "nm"
+                  },
+                  "hint": "$\\lambda = v \\div f$, then $\\times 10^{9}$ for nm.",
+                  "walkthrough": [
+                    "$\\lambda = v \\div f = 3.0 \\times 10^{8} \\div (5.5 \\times 10^{14}) = 5.45 \\times 10^{-7}$ m",
+                    "<b>Equation:</b> $\\lambda = v \\div f$",
+                    "<b>Working:</b> $\\lambda = 5.45 \\times 10^{-7} \\text{ m} \\times 10^{9}$",
+                    "<b>Answer:</b> $= 545$",
+                    "<b>Units:</b> nm"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-a4-q1b",
+                  "type": "numeric",
+                  "text": "Calculate its wavelength in glass, in nm.",
+                  "answer": {
+                    "value": 364,
+                    "unit": "nm"
+                  },
+                  "hint": "Same frequency; $\\lambda = v \\div f$ with the glass speed.",
+                  "walkthrough": [
+                    "$\\lambda = v \\div f = 2.0 \\times 10^{8} \\div (5.5 \\times 10^{14}) = 3.64 \\times 10^{-7}$ m",
+                    "<b>Equation:</b> $\\lambda = v \\div f$",
+                    "<b>Working:</b> $\\lambda = 3.64 \\times 10^{-7} \\text{ m} \\times 10^{9}$",
+                    "<b>Answer:</b> $= 364$",
+                    "<b>Units:</b> nm"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-a4-q1c",
+                  "type": "choice",
+                  "text": "As the light enters the glass…",
+                  "options": [
+                    "speed, wavelength and frequency all decrease",
+                    "speed and wavelength decrease; frequency stays the same",
+                    "frequency decreases; speed and wavelength stay the same",
+                    "wavelength increases"
+                  ],
+                  "correct": 1,
+                  "explain": "Frequency is set by the source; v and λ change together.",
+                  "label": "c"
+                }
+              ]
+            },
+            {
+              "id": "mx-a4-q2",
+              "type": "written",
+              "text": "Explain why the frequency of light does not change when it passes from air into glass, but its wavelength does. (2)",
+              "model": "<ul><li>The frequency is fixed by the <b>source</b>: the number of waves arriving at the boundary each second equals the number leaving it, so $f$ is the same on both sides.</li><li>The light <b>slows down</b> in glass, and with $v = f\\lambda$ at constant $f$ the <b>wavelength shortens</b> in the same proportion as the speed.</li></ul>",
+              "lines": 2
+            },
+            {
+              "id": "mx-a4-q3",
+              "type": "numeric",
+              "text": "Light of wavelength 600 nm in air (speed $3.0 \\times 10^{8}$ m/s) enters a plastic in which its wavelength is 400 nm. Calculate its speed in the plastic.",
+              "answer": {
+                "value": 200000000,
+                "unit": "m/s"
+              },
+              "hint": "$v \\propto \\lambda$ at constant f: $v = 3.0 \\times 10^8 \\times 400 \\div 600$.",
+              "walkthrough": [
+                "$f = v \\div \\lambda = 3.0 \\times 10^{8} \\div (600 \\times 10^{-9}) = 5.0 \\times 10^{14}$ Hz",
+                "<b>Equation:</b> $v = f \\lambda$",
+                "<b>Working:</b> $v = 5.0 \\times 10^{14} \\times 400 \\times 10^{-9}$",
+                "<b>Answer:</b> $= 2.0 \\times 10^{8}$",
+                "<b>Units:</b> m/s"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Use $v = f\\lambda$ for light with wavelengths in nm converted to m",
+        "State which of speed, wavelength and frequency change when light enters a medium, and why",
+        "Find the change in speed from the change in wavelength at constant frequency"
+      ],
+      "blurb": "Topic 4's equation with Topic 5's numbers: light slows down entering glass, its wavelength shortens in the same proportion, and its frequency does not change at all. The question gives speeds and wavelengths in two media and asks for the one you have not got — the join is the frequency, which is the same on both sides of the boundary."
+    },
+    {
+      "id": "nuclear-energy",
+      "band": "p1",
+      "title": "Radioactivity meets energy: half-life curves, fusion, and nuclear power",
+      "spec": "6.14–6.16, 6.25P–6.28, 7.3P, 3.11",
+      "equations": [
+        "\\text{half-life from the curve} \\rightarrow \\text{fraction left}",
+        "E = m c^2 \\text{ (supplied when needed)}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or reading</th><th>Hands over</th><th>Watch</th></tr><tr><td>curve → half-life</td><td>the time for the activity (or amount) to halve (Topic 6)</td><td>$t_{1/2}$</td><td>read two points, not one; the curve never reaches zero</td></tr><tr><td>time → fraction left</td><td>count half-lives: $100\\% \\to 50\\% \\to 25\\% \\to 12.5\\%$</td><td>a percentage</td><td>at a time that is not a whole number of half-lives, <b>read the graph</b></td></tr><tr><td>fusion → energy from mass</td><td>$E = m c^2$, supplied; $m = E \\div c^2$</td><td>$m$ in kg</td><td>$c^2 = 9.0 \\times 10^{16}$; the unit mark is for kg; the mass of the products is <b>less</b> than the reactants</td></tr><tr><td>power stations → comparison</td><td>ratio $= P_1 \\div P_2$ (Topic 3 resources)</td><td>a number</td><td>to the significant figures asked; GW stays GW on both sides</td></tr></table><p>June 2025 1H Q4: the percentage of fluorine-18 remaining after 150 min from a decay curve (2), what happens when a positron meets an electron (2, Topic 6 PET), one neutron and one uranium nucleus (3), and the ratio of Finland's to the UK's nuclear power to 2 s.f. (2). Q10(b): describe fusion (2) and the mass decrease equivalent to $3.9 \\times 10^{26}$ J with its unit (2), $c = 3.0 \\times 10^{8}$ m/s — $E = mc^2$ is <b>not on the equation list</b>; it was supplied in the question. Fusion's energy comes from the mass lost when light nuclei join; \"two hydrogen nuclei join to form helium, and energy is released\" — Topic 6 N9 / Topic 7 N7.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "Fluorine-18 and the Sun",
+          "question": "(a) The graph shows the decay of fluorine-18. Use it to find the half-life, and the percentage remaining after 275 min. (b) The Sun transfers $3.9 \\times 10^{26}$ J of energy every second by fusion. Use $E = mc^2$ with $c = 3.0 \\times 10^8$ m/s to calculate the mass lost each second, with its unit. (6 marks)",
+          "steps": [
+            "(a) 100 % → 50 % takes 110 min: half-life = <b>110 min</b> (check: 50 % → 25 % at 220 min).",
+            "275 min is 2.5 half-lives; reading the curve at 275 min gives about <b>18 %</b> (two half-lives would be 25 %, three 12.5 %).",
+            "(b) $m = E \\div c^2 = 3.9 \\times 10^{26} \\div (3.0 \\times 10^{8})^2 = 3.9 \\times 10^{26} \\div 9.0 \\times 10^{16}$.",
+            "$m = 4.3 \\times 10^{9}$ <b>kg</b> every second — the mass of the helium formed is less than that of the hydrogen that fused by this amount."
+          ],
+          "graph": {
+            "x": {
+              "label": "time in min",
+              "min": 0,
+              "max": 440,
+              "step": 55
+            },
+            "y": {
+              "label": "percentage of fluorine-18 remaining",
+              "min": 0,
+              "max": 100,
+              "step": 20
+            },
+            "series": [
+              {
+                "kind": "curve",
+                "points": [
+                  [
+                    0.0,
+                    100.0
+                  ],
+                  [
+                    20.0,
+                    88.1591
+                  ],
+                  [
+                    40.0,
+                    77.7203
+                  ],
+                  [
+                    60.0,
+                    68.5175
+                  ],
+                  [
+                    80.0,
+                    60.4045
+                  ],
+                  [
+                    100.0,
+                    53.2521
+                  ],
+                  [
+                    120.0,
+                    46.9465
+                  ],
+                  [
+                    140.0,
+                    41.3877
+                  ],
+                  [
+                    160.0,
+                    36.487
+                  ],
+                  [
+                    180.0,
+                    32.1666
+                  ],
+                  [
+                    200.0,
+                    28.3578
+                  ],
+                  [
+                    220.0,
+                    25.0
+                  ],
+                  [
+                    240.0,
+                    22.0398
+                  ],
+                  [
+                    260.0,
+                    19.4301
+                  ],
+                  [
+                    280.0,
+                    17.1294
+                  ],
+                  [
+                    300.0,
+                    15.1011
+                  ],
+                  [
+                    320.0,
+                    13.313
+                  ],
+                  [
+                    340.0,
+                    11.7366
+                  ],
+                  [
+                    360.0,
+                    10.3469
+                  ],
+                  [
+                    380.0,
+                    9.1218
+                  ],
+                  [
+                    400.0,
+                    8.0417
+                  ],
+                  [
+                    420.0,
+                    7.0895
+                  ],
+                  [
+                    440.0,
+                    6.25
+                  ]
+                ]
+              }
+            ],
+            "alt": "Decay curve for fluorine-18: 100 percent at time zero falling to 50 percent at 110 minutes, 25 percent at 220 minutes and 12.5 percent at 330 minutes."
+          }
+        },
+        {
+          "kind": "practice",
+          "title": "Radioactivity and energy",
+          "questions": [
+            {
+              "id": "mx-a5-q1",
+              "type": "group",
+              "text": "Use the decay curve for fluorine-18.",
+              "parts": [
+                {
+                  "id": "mx-a5-q1a",
+                  "type": "numeric",
+                  "text": "State the percentage remaining after 220 min.",
+                  "answer": {
+                    "value": 25,
+                    "unit": "%",
+                    "tolerance": 0.04
+                  },
+                  "hint": "Two half-lives.",
+                  "walkthrough": [
+                    "220 min is two half-lives: 100 → 50 → 25 %."
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-a5-q1b",
+                  "type": "numeric",
+                  "text": "A hospital receives a sample at 10:00 and uses it at 15:30. Calculate the percentage of the fluorine-18 that is left by then.",
+                  "answer": {
+                    "value": 12.5,
+                    "unit": "%",
+                    "tolerance": 0.04
+                  },
+                  "hint": "5.5 hours = 330 min = three half-lives.",
+                  "walkthrough": [
+                    "$330 \\div 110 = 3$ half-lives: $100 \\to 50 \\to 25 \\to 12.5$ %"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-a5-q1c",
+                  "type": "written",
+                  "text": "Fluorine-18 is a positron emitter used in PET scans. Describe what happens when a positron meets an electron. (2)",
+                  "model": "<ul><li>The positron and electron <b>annihilate</b> each other — both particles are destroyed (their mass becomes energy).</li><li><b>Two gamma rays</b> are emitted in opposite directions, which the scanner detects to locate the source.</li></ul>",
+                  "lines": 2,
+                  "label": "c",
+                  "tags": [
+                    "P"
+                  ]
+                }
+              ],
+              "graph": {
+                "x": {
+                  "label": "time in min",
+                  "min": 0,
+                  "max": 440,
+                  "step": 55
+                },
+                "y": {
+                  "label": "percentage of fluorine-18 remaining",
+                  "min": 0,
+                  "max": 100,
+                  "step": 20
+                },
+                "series": [
+                  {
+                    "kind": "curve",
+                    "points": [
+                      [
+                        0.0,
+                        100.0
+                      ],
+                      [
+                        20.0,
+                        88.1591
+                      ],
+                      [
+                        40.0,
+                        77.7203
+                      ],
+                      [
+                        60.0,
+                        68.5175
+                      ],
+                      [
+                        80.0,
+                        60.4045
+                      ],
+                      [
+                        100.0,
+                        53.2521
+                      ],
+                      [
+                        120.0,
+                        46.9465
+                      ],
+                      [
+                        140.0,
+                        41.3877
+                      ],
+                      [
+                        160.0,
+                        36.487
+                      ],
+                      [
+                        180.0,
+                        32.1666
+                      ],
+                      [
+                        200.0,
+                        28.3578
+                      ],
+                      [
+                        220.0,
+                        25.0
+                      ],
+                      [
+                        240.0,
+                        22.0398
+                      ],
+                      [
+                        260.0,
+                        19.4301
+                      ],
+                      [
+                        280.0,
+                        17.1294
+                      ],
+                      [
+                        300.0,
+                        15.1011
+                      ],
+                      [
+                        320.0,
+                        13.313
+                      ],
+                      [
+                        340.0,
+                        11.7366
+                      ],
+                      [
+                        360.0,
+                        10.3469
+                      ],
+                      [
+                        380.0,
+                        9.1218
+                      ],
+                      [
+                        400.0,
+                        8.0417
+                      ],
+                      [
+                        420.0,
+                        7.0895
+                      ],
+                      [
+                        440.0,
+                        6.25
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Decay curve for fluorine-18: 100 percent at time zero falling to 50 percent at 110 minutes, 25 percent at 220 minutes and 12.5 percent at 330 minutes."
+              }
+            },
+            {
+              "id": "mx-a5-q2",
+              "type": "numeric",
+              "text": "In a fusion reaction $1.2 \\times 10^{-29}$ kg of mass is converted to energy. Use $E = mc^2$ with $c = 3.0 \\times 10^8$ m/s to calculate the energy released.",
+              "answer": {
+                "value": 1.08e-12,
+                "unit": "J",
+                "tolerance": 0.03
+              },
+              "hint": "$E = m c^2$ (supplied).",
+              "walkthrough": [
+                "<b>Equation:</b> $E = m c^2$",
+                "<b>Working:</b> $E = 1.2 \\times 10^{-29} \\times (3.0 \\times 10^{8})^2$",
+                "<b>Answer:</b> $= 1.1 \\times 10^{-12}$",
+                "<b>Units:</b> J (1.08)"
+              ]
+            },
+            {
+              "id": "mx-a5-q3",
+              "type": "numeric",
+              "text": "France generates about 61 GW from nuclear power and the UK about 5.9 GW. Calculate the ratio of France's nuclear power to the UK's, to 2 significant figures.",
+              "answer": {
+                "value": 10,
+                "unit": "",
+                "tolerance": 0.05
+              },
+              "hint": "$61 \\div 5.9$.",
+              "walkthrough": [
+                "ratio $= 61 \\div 5.9 = 10.3 = 10$ (2 s.f.)"
+              ]
+            },
+            {
+              "id": "mx-a5-q5",
+              "type": "numeric",
+              "text": "A beta particle (mass $9.1 \\times 10^{-31}$ kg) leaves a nucleus at $4.0 \\times 10^{6}$ m/s. Calculate its kinetic energy.",
+              "answer": {
+                "value": 7.3e-18,
+                "unit": "J"
+              },
+              "hint": "$\\tfrac{1}{2} m v^2$ with the powers of ten kept.",
+              "walkthrough": [
+                "<b>Equation:</b> $KE = \\tfrac{1}{2} m v^2$",
+                "<b>Working:</b> $KE = \\tfrac{1}{2} \\times 9.1 \\times 10^{-31} \\times (4.0 \\times 10^{6})^2$",
+                "<b>Answer:</b> $= 7.3 \\times 10^{-18}$",
+                "<b>Units:</b> J (7.28)"
+              ]
+            },
+            {
+              "id": "mx-a5-q4",
+              "type": "written",
+              "text": "Describe the process of nuclear fusion and state where the energy released comes from. (3)",
+              "model": "<ul><li>Two <b>light nuclei</b> (e.g. hydrogen) <b>join</b> to form a heavier nucleus (helium).</li><li>It needs very <b>high temperature and pressure</b> so the nuclei can get close enough despite their repulsion.</li><li>Energy is released because the <b>mass of the product is less</b> than the mass of the nuclei that fused — the lost mass becomes energy ($E = mc^2$, supplied).</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Read a half-life from a decay curve and the fraction remaining after a given time",
+        "Use a supplied $E = mc^2$ to find the mass lost in fusion, with the unit",
+        "Compare nuclear power outputs with a ratio to the significant figures asked"
+      ],
+      "blurb": "Topic 6 questions keep reaching into Topic 3 and Topic 7: a decay curve gives a fraction remaining, a fusion question asks for the mass turned into energy with an equation it supplies, and nuclear power is compared as an energy resource with a ratio. The joins are a percentage read off a graph, an energy in joules, and a power in gigawatts."
+    },
+    {
+      "id": "thermal-balance",
+      "band": "p1",
+      "title": "Thermal balance: radiation in equals radiation out",
+      "spec": "5.20P–5.23, 7.7P–7.9P",
+      "equations": [
+        "\\text{power absorbed} = \\text{power emitted} \\Rightarrow \\text{constant temperature}",
+        "\\text{hotter} \\rightarrow \\text{emits more}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Idea</th><th>Hands over</th><th>Watch</th></tr><tr><td>Sun → planet</td><td>the planet <b>absorbs</b> radiation (mostly visible) at a steady rate</td><td>power in, W</td><td>absorbed, not just \"receives\"</td></tr><tr><td>planet → space</td><td>every object <b>emits</b> infrared; the <b>hotter</b> it is, the <b>more it emits</b> per second (and at shorter wavelengths)</td><td>power out, W</td><td>the rate depends on the temperature — this is the lever</td></tr><tr><td>balance</td><td>power in = power out → <b>constant temperature</b>; in > out → warms until out rises to match; in < out → cools until out falls to match</td><td>—</td><td>a change in the <i>balance</i>, not in the Sun, is what greenhouse gases do: they reduce the infrared escaping</td></tr><tr><td>a star (Topic 7)</td><td>stable phase: the <b>inward force of gravity</b> balances the <b>outward pressure</b> from fusion</td><td>—</td><td>a different balance, same shape of answer: name both, say they are equal</td></tr></table><p>June 2025 1H Q7(d) (4 marks): explain why Ceres' average temperature stays constant. The marks: it <b>absorbs</b> radiation from the Sun; it <b>emits</b> radiation (infrared); the rate of emission <b>equals</b> the rate of absorption; if it were hotter it would emit more than it absorbs and cool (or the reverse), so the temperature settles where they balance. Four ideas, four marks — Topic 5 T6.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A planet at constant temperature",
+          "question": "Explain why the average temperature of a planet with no atmosphere stays constant. (4 marks)",
+          "steps": [
+            "The planet <b>absorbs</b> radiation from the Sun at a steady rate.",
+            "It also <b>emits</b> radiation (infrared) to space, and the rate at which it emits depends on its temperature — a hotter surface emits more.",
+            "Its temperature is constant because the <b>rate of emission equals the rate of absorption</b>: energy in per second = energy out per second.",
+            "If the temperature rose it would emit more than it absorbs and cool back down; if it fell it would emit less and warm up — so it settles at the temperature where the two rates balance."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Thermal balance",
+          "questions": [
+            {
+              "id": "mx-a6-q1",
+              "type": "written",
+              "text": "A planet moves into an orbit closer to its star. Explain what happens to its average temperature. (3)",
+              "model": "<ul><li>Closer to the star it <b>absorbs</b> radiation at a <b>greater rate</b>.</li><li>Absorption is now greater than emission, so its temperature <b>rises</b>.</li><li>As it warms it <b>emits more</b> radiation, until the rate of emission again <b>equals</b> the rate of absorption — it settles at a new, higher constant temperature.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mx-a6-q2",
+              "type": "choice",
+              "text": "A planet's temperature is constant. Which statement is correct?",
+              "options": [
+                "It absorbs no radiation",
+                "It emits no radiation",
+                "It absorbs and emits radiation at the same rate",
+                "It absorbs more than it emits"
+              ],
+              "correct": 2,
+              "explain": "Balance of rates."
+            },
+            {
+              "id": "mx-a6-q3",
+              "type": "written",
+              "text": "Explain why a star in its main (stable) phase does not collapse or expand. (2)",
+              "model": "<ul><li>The <b>inward force of gravity</b> (the star's own weight pulling inwards) is balanced by…</li><li>…the <b>outward pressure</b> produced by the fusion reactions in the core (thermal and radiation pressure), so the forces are in equilibrium.</li></ul>",
+              "lines": 2,
+              "tags": [
+                "P"
+              ]
+            },
+            {
+              "id": "mx-a6-q4",
+              "type": "written",
+              "text": "The Earth's atmosphere contains gases that absorb some of the infrared the surface emits. Explain how this affects the balance of radiation and the Earth's average temperature. (3)",
+              "model": "<ul><li>The planet still absorbs radiation from its star at the same rate.</li><li>Greenhouse gases <b>absorb some of the infrared</b> the surface emits and re-emit part of it back down, so <b>less escapes to space</b>: emission to space is less than absorption.</li><li>The planet <b>warms</b> until the surface emits enough extra infrared for the rate escaping to space to equal the rate absorbed again — a higher constant temperature.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain a constant temperature as a balance between radiation absorbed and radiation emitted",
+        "Explain what happens to the temperature when the balance is disturbed, and how a new balance is reached",
+        "Apply the same balance idea to a star's stable phase"
+      ],
+      "blurb": "Why is a planet's average temperature steady? Because it absorbs radiation from the Sun at the same rate as it emits infrared to space. Warm it and it emits more until the two balance again; cool it and it emits less. The same balance holds a star in its stable phase between gravity and the pressure from fusion. The join is the rate of energy transfer.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "one-object",
+      "band": "p2",
+      "title": "One object, four stages: density, change of state, latent heat and specific heat capacity in the same question",
+      "spec": "14.2–14.9",
+      "equations": [
+        "V = \\dfrac{m}{\\rho} \\ \\rightarrow\\ Q = mL \\ \\rightarrow\\ \\Delta Q = mc\\Delta\\theta",
+        "\\text{one mass, carried through}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and density → volume</td><td>$V = m \\div \\rho$ (Topic 14 / 15)</td><td>$V$ in m³ or cm³</td><td>keep the units the data use (kg and kg/m³, or g and g/cm³); do not round 0.0047 m³ to 0.005</td></tr><tr><td>solid vs liquid density</td><td>particle spacing</td><td>—</td><td>the solid is usually denser: particles closer, more per unit volume; the same mass has a smaller volume</td></tr><tr><td>cooling curve → change of state</td><td>flat section = freezing at constant temperature</td><td>the melting point</td><td>on a cooling curve the flat part is <b>freezing</b>, not melting; energy is transferred <b>from</b> the wax</td></tr><tr><td>mass → energies</td><td>$Q = mL$ for the flat part; $\\Delta Q = mc\\Delta\\theta$ for the slopes</td><td>energies in J</td><td>same mass in both; $L$ in J/kg (190 kJ/kg = 190 000 J/kg); $\\Delta\\theta$ is the temperature change</td></tr></table><p>June 2025 2H Q5: all the wax liquid between which points (1), the particles' motion as it freezes (2), the volume of 3.9 kg of liquid wax at 830 kg/m³ (2), how the volume changes on solidifying at 930 kg/m³ (1), and why the flat section R–S is much longer than the cooling Q–R with $L = 190$ kJ/kg and $c = 2.1$ kJ/kg °C given (3). June 2024 2H Q3: the volume of 14.1 g of copper at 8.96 g/cm³ (3), why the solid is denser (2), the energy to vaporise 60.0 g of water with $L = 2.26 \\times 10^{6}$ J/kg (2), and a volume read off a jug (2). Every stage is on the Topic 14 page; the exam asks them in one go.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A block of wax",
+          "question": "3.0 kg of liquid wax (density 800 kg/m³) is left to cool; the graph shows its temperature. Specific latent heat of fusion of wax = 180 000 J/kg; specific heat capacity of solid wax = 2100 J/kg °C. (a) Calculate the volume of the liquid wax. (b) State how the volume changes as the wax solidifies (solid density 920 kg/m³). (c) Calculate the energy transferred to the surroundings while the wax freezes. (d) Calculate the energy transferred as the solid cools from 70 °C to 40 °C, and use the two values to explain the shape of the graph. (9 marks)",
+          "steps": [
+            "(a) $V = m \\div \\rho = 3.0 \\div 800 = 3.75 \\times 10^{-3}$ m³ (0.00375 m³ — keep the figures).",
+            "(b) The solid is denser, so the same 3.0 kg occupies a <b>smaller volume</b> ($3.0 \\div 920 = 3.26 \\times 10^{-3}$ m³): the particles pack closer in the solid.",
+            "(c) Join: the same 3.0 kg. Freezing at 70 °C (the flat section): $Q = mL = 3.0 \\times 180\\,000 = 540\\,000$ J, transferred <b>from the wax to the surroundings</b>.",
+            "(d) Cooling the solid: $\\Delta Q = mc\\Delta\\theta = 3.0 \\times 2100 \\times 30 = 189\\,000$ J.",
+            "The freezing section (6 min) is about three times as long as the cooling to 40 °C (2 min) because <b>far more energy</b> (540 kJ against 189 kJ, the same ratio) must leave the wax during the change of state than during 30 °C of cooling, and energy leaves at roughly the same rate throughout — so it takes longer."
+          ],
+          "graph": {
+            "x": {
+              "label": "time in min",
+              "min": 0,
+              "max": 10,
+              "step": 1
+            },
+            "y": {
+              "label": "temperature in °C",
+              "min": 0,
+              "max": 100,
+              "step": 10
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    90
+                  ],
+                  [
+                    2,
+                    70
+                  ],
+                  [
+                    8,
+                    70
+                  ],
+                  [
+                    10,
+                    40
+                  ]
+                ]
+              }
+            ],
+            "alt": "Cooling curve for wax: 90 degrees at the start, falling to 70 degrees at 2 minutes, flat at 70 degrees until 8 minutes, then falling to 40 degrees at 10 minutes."
+          }
+        },
+        {
+          "kind": "practice",
+          "title": "One object, four stages",
+          "questions": [
+            {
+              "id": "mx-b1-q1",
+              "type": "group",
+              "text": "A 0.250 kg block of ice at 0 °C is heated until it is water at 20 °C. Density of ice = 920 kg/m³; $L = 334\\,000$ J/kg; $c$ (water) $= 4200$ J/kg °C.",
+              "parts": [
+                {
+                  "id": "mx-b1-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the volume of the ice.",
+                  "answer": {
+                    "value": 0.000272,
+                    "unit": "m³"
+                  },
+                  "hint": "$V = m \\div \\rho$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $V = m \\div \\rho$",
+                    "<b>Working:</b> $V = 0.250 \\div 920$",
+                    "<b>Answer:</b> $= 2.7 \\times 10^{-4}$",
+                    "<b>Units:</b> m³ (2.72)"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b1-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the energy needed to melt the ice.",
+                  "answer": {
+                    "value": 83500,
+                    "unit": "J"
+                  },
+                  "hint": "$Q = m L$ with the same mass.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $Q = m L$",
+                    "<b>Working:</b> $Q = 0.250 \\times 334\\,000$",
+                    "<b>Answer:</b> $= 83\\,500$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b1-q1c",
+                  "type": "numeric",
+                  "text": "Calculate the energy needed to warm the water to 20 °C.",
+                  "answer": {
+                    "value": 21000,
+                    "unit": "J"
+                  },
+                  "hint": "$\\Delta Q = m c \\Delta \\theta$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $\\Delta Q = m c \\Delta\\theta$",
+                    "<b>Working:</b> $\\Delta Q = 0.250 \\times 4200 \\times 20$",
+                    "<b>Answer:</b> $= 21\\,000$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-b1-q1d",
+                  "type": "written",
+                  "text": "Ice is less dense than water. Explain what this means for the volume of the water compared with the ice. (2)",
+                  "model": "<ul><li>Density = mass ÷ volume and the <b>mass is the same</b> (conserved in the change of state).</li><li>A <b>larger density</b> (water, 1000 kg/m³) means the same mass has a <b>smaller volume</b>: the water occupies less space than the ice did ($0.250 \\div 1000 = 2.5 \\times 10^{-4}$ m³).</li></ul>",
+                  "lines": 2,
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-b1-q2",
+              "type": "numeric",
+              "text": "A copper wire has a mass of 22.4 g. Copper has a density of 8.96 g/cm³. Calculate the volume of the wire.",
+              "answer": {
+                "value": 2.5,
+                "unit": "cm³"
+              },
+              "hint": "Keep g and g/cm³ together.",
+              "walkthrough": [
+                "<b>Equation:</b> $V = m \\div \\rho$",
+                "<b>Working:</b> $V = 22.4 \\div 8.96$",
+                "<b>Answer:</b> $= 2.5$",
+                "<b>Units:</b> cm³"
+              ]
+            },
+            {
+              "id": "mx-b1-q3",
+              "type": "written",
+              "text": "On a cooling curve the flat section is much longer than the sloping section before it. Explain why, using the words latent heat and specific heat capacity. (3)",
+              "model": "<ul><li>The flat section is the <b>change of state</b> (freezing), where the energy transferred per kilogram is the <b>specific latent heat</b>, which is <b>much larger</b> than the specific heat capacity × the temperature fall in the sloping section (quote the values if given).</li><li>Energy is transferred <b>from the substance to the surroundings</b> at about the <b>same rate</b> throughout…</li><li>…so transferring the larger amount of energy takes a <b>longer time</b>.</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Carry one mass through $\\rho = m/V$, $Q = mL$ and $\\Delta Q = mc\\Delta\\theta$ with the units matched",
+        "Explain the solid/liquid density difference and the cooling curve's flat section with the particle model",
+        "Compare the energies in a cooling curve using the latent heat and specific heat capacity values"
+      ],
+      "blurb": "A lump of wax, a coil of copper, a block of aluminium: the question gives its mass once and then walks through density (a volume), a change of state (the particle picture and the cooling curve) and the thermal equations (latent heat, specific heat capacity). The join is the mass — the same number in every stage — and the trap is a unit that changes between stages (g/cm³ in one line, kg in the next)."
+    },
+    {
+      "id": "pressure-force-particles",
+      "band": "p2",
+      "title": "Pressure, force and particles: one pressure question across three topics",
+      "spec": "15.7P–15.11P, 9.x, 14.4",
+      "equations": [
+        "P = \\dfrac{F}{A} \\ \\rightarrow\\ F = PA \\text{ (normal to the surface)}",
+        "\\text{height graph} \\rightarrow \\text{less air above} \\rightarrow \\text{particles further apart}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or idea</th><th>Hands over</th><th>Watch</th></tr><tr><td>force direction</td><td>fluid pressure acts <b>normal</b> to the surface, towards it (Topic 15 / 9)</td><td>an arrow</td><td>from the point, at right angles</td></tr><tr><td>pressure and area → force</td><td>$F = PA$ (Topic 15)</td><td>$F$ in N</td><td>area in m²; a <b>difference</b> in pressure if fluid is on both sides; round as asked</td></tr><tr><td>graph → description</td><td>pressure <b>decreases</b> as height increases; <b>non-linear</b>; quote numbers</td><td>a reading, a % change</td><td>(new − old) ÷ old × 100</td></tr><tr><td>description → particles</td><td>less air above → smaller weight of air → lower pressure; the air is <b>less dense</b>: particles <b>further apart</b> (Topic 14)</td><td>—</td><td>do not say gravity is weaker higher up; density is about spacing, not particle size</td></tr></table><p>June 2024 2H Q4: the direction of the water's force at X (1), the force from a skate on ice from $4.8 \\times 10^{7}$ Pa and $1.2 \\times 10^{-5}$ m² to 2 s.f. (3), describe the pressure–height graph (2), read 8850 m (1), the % change from 104 to 74 kPa (2), and explain the density change with height using the particle model (2). June 2023 2H Q4 did the aeroplane window: pressure difference, $F = PA$, the larger window, the arrow, the graph and the reason.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The skate and the mountain",
+          "question": "(a) An ice skater of weight 600 N stands on one blade with an area of $2.0 \\times 10^{-5}$ m². Calculate the pressure on the ice. (b) Atmospheric pressure is 101 kPa at sea level and 70 kPa at 3000 m. Calculate the percentage decrease. (c) Explain, using the particle model, why the air at 3000 m is less dense than at sea level. (7 marks)",
+          "steps": [
+            "(a) $P = F \\div A = 600 \\div (2.0 \\times 10^{-5}) = 3.0 \\times 10^{7}$ Pa — a huge pressure from a small area, which is why the blade bites into the ice.",
+            "(b) Change $= 70 - 101 = -31$ kPa; percentage $= -31 \\div 101 \\times 100 = -31$ % (a 31 % decrease; divide by the <i>original</i> value).",
+            "(c) At 3000 m there is <b>less air above</b>, so a smaller weight of air presses down on the air there…",
+            "…so it is <b>less compressed</b>: its particles are <b>further apart</b> — fewer particles in each cubic metre — which is a lower density (Topic 14: density depends on spacing)."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Pressure, force and particles",
+          "questions": [
+            {
+              "id": "mx-b2-q1",
+              "type": "group",
+              "text": "A submarine hatch has an area of 0.60 m². The water outside is at a total pressure of 400 kPa and the air inside the submarine is at 100 kPa.",
+              "parts": [
+                {
+                  "id": "mx-b2-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the net pressure on the hatch.",
+                  "answer": {
+                    "value": 300000,
+                    "unit": "Pa"
+                  },
+                  "hint": "Outside − inside.",
+                  "walkthrough": [
+                    "net $P = 400\\,000 - 100\\,000 = 300\\,000$ Pa"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b2-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the net force on the hatch.",
+                  "answer": {
+                    "value": 180000,
+                    "unit": "N"
+                  },
+                  "hint": "$F = P A$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $F = P A$",
+                    "<b>Working:</b> $F = 300\\,000 \\times 0.60$",
+                    "<b>Answer:</b> $= 180\\,000$",
+                    "<b>Units:</b> N inward"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b2-q1c",
+                  "type": "choice",
+                  "text": "The force of the water on the hatch acts…",
+                  "options": [
+                    "downwards, whatever the hatch's angle",
+                    "at right angles to the hatch, towards the inside",
+                    "along the hatch",
+                    "upwards"
+                  ],
+                  "correct": 1,
+                  "explain": "Normal to the surface, towards it.",
+                  "label": "c"
+                },
+                {
+                  "id": "mx-b2-q1d",
+                  "type": "written",
+                  "text": "Explain why the total pressure outside is greater at a greater depth. (2)",
+                  "model": "<ul><li>Deeper down there is a <b>taller column of water above</b> the hatch, which has more weight.</li><li>That weight acts over the same area, so the pressure due to the water is greater (plus the same atmospheric pressure on the surface).</li></ul>",
+                  "lines": 2,
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-b2-q2",
+              "type": "written",
+              "text": "A graph shows atmospheric pressure falling from 100 kPa at sea level to 50 kPa at 5.5 km and 26 kPa at 10 km. Describe the relationship and explain it. (4)",
+              "model": "<ul><li>As height increases the pressure <b>decreases</b>.</li><li>The relationship is <b>non-linear</b>: the pressure halves in the first 5.5 km but falls by only 24 kPa in the next 4.5 km — the fall per km gets smaller.</li><li>Higher up there is <b>less air above</b>, so a <b>smaller weight of air</b> presses down.</li><li>The air higher up is also <b>less dense</b> — its particles are further apart because less air presses on it — so each extra kilometre of height removes less weight.</li></ul>",
+              "lines": 4
+            },
+            {
+              "id": "mx-b2-q3",
+              "type": "numeric",
+              "text": "A pressure of $1.5 \\times 10^{5}$ Pa acts on a window of area 0.35 m². Calculate the force on the window, to 2 significant figures.",
+              "answer": {
+                "value": 53000,
+                "unit": "N"
+              },
+              "hint": "$F = PA$, then round.",
+              "walkthrough": [
+                "<b>Equation:</b> $F = P A$",
+                "<b>Working:</b> $F = 1.5 \\times 10^{5} \\times 0.35$",
+                "<b>Answer:</b> $= 52\\,500 = 53\\,000$",
+                "<b>Units:</b> N (2 s.f.)"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Turn a pressure into a force on a surface with $F = PA$, drawn normal to the surface",
+        "Describe a pressure–height graph with numbers and explain it with less air above and lower density",
+        "Explain the lower density with the particle model: particles further apart"
+      ],
+      "blurb": "The 2023 and 2024 pressure questions each ran through three topics: an arrow for a force (Topic 9), a calculation with $P = F/A$ (Topic 15), a graph of pressure against height, and then 'explain with the particle model' (Topic 14). The joins are a pressure handed into $F = PA$ and a graph handed into an explanation.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "springs-forces-energy",
+      "band": "p2",
+      "title": "Springs with forces and energy: graph, spring constant, free-body diagram, resultant",
+      "spec": "15.3–15.5, 9.3–9.7, 8.x",
+      "equations": [
+        "E = \\text{area} \\ \\rightarrow\\ k = \\dfrac{F}{x}",
+        "\\text{free-body diagram: weight} = \\text{spring force}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or method</th><th>Hands over</th><th>Watch</th></tr><tr><td>graph → energy</td><td>area under the weight–extension line: $\\tfrac{1}{2} F x$ (Topic 15)</td><td>$E$ in J</td><td>$x$ in metres (2025: cm left in, 100 times too large)</td></tr><tr><td>graph → spring constant</td><td>gradient, or $k = F \\div x$ from a point on the line</td><td>$k$ in N/m</td><td>$x$ in metres (2025: 100 times too small); the unit is often a separate mark</td></tr><tr><td>block in equilibrium → free-body diagram</td><td>weight down, tension (spring force) up, <b>equal length</b>, through the <b>centre</b> (Topic 9)</td><td>a diagram</td><td>2025: vectors \"must have a size as well as a direction\"; arrows near the edge of the box would make it spin</td></tr><tr><td>two forces at an angle → resultant</td><td>scale drawing, tip to tail, measure the closing side (Topic 9) [H]</td><td>$R$ in N</td><td>state the scale; measure the length and convert</td></tr></table><p>June 2025 2H Q8: why the vertical spring is longer than the horizontal one (its own weight stretches it) (1), what the extension equals (the added weight ÷ $k$) (1), energy from 0 to 8 cm from the area (3), the spring constant with its unit (2), two vectors on the 5 N block (2), the resultant of 4 N and 5 N at X by scale drawing (2). June 2023 2H Q7: the pen spring's force, the change in length, the accuracy point, the hook's force (6 N up) and the resultant of 30 N and 40 N.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The spring and the block",
+          "question": "The graph shows the weight hung on a spring against its extension. (a) Calculate the energy stored at an extension of 20 cm. (b) Calculate the spring constant and give its unit. (c) A 4.0 N block hangs at rest from the spring; describe the free-body diagram. (7 marks)",
+          "steps": [
+            "(a) Area of the triangle to 20 cm: $E = \\tfrac{1}{2} F x = \\tfrac{1}{2} \\times 8.0 \\times 0.20 = 0.80$ J (extension in metres).",
+            "(b) $k = F \\div x = 8.0 \\div 0.20 = 40$ N/m (or $E = \\tfrac{1}{2} k x^2$: $0.80 = \\tfrac{1}{2} \\times k \\times 0.20^2$ gives the same).",
+            "(c) Two vectors through the <b>centre</b> of the block: <b>weight 4.0 N downwards</b> and the <b>force of the spring 4.0 N upwards</b> — the same length, because the block is in equilibrium (resultant zero)."
+          ],
+          "graph": {
+            "x": {
+              "label": "extension in cm",
+              "min": 0,
+              "max": 25,
+              "step": 5
+            },
+            "y": {
+              "label": "weight in N",
+              "min": 0,
+              "max": 10,
+              "step": 2
+            },
+            "series": [
+              {
+                "kind": "line",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    2
+                  ],
+                  [
+                    10,
+                    4
+                  ],
+                  [
+                    15,
+                    6
+                  ],
+                  [
+                    20,
+                    8
+                  ]
+                ]
+              }
+            ],
+            "alt": "Weight against extension for a spring: a straight line from the origin through 20 cm and 8 N."
+          }
+        },
+        {
+          "kind": "practice",
+          "title": "Springs with forces",
+          "questions": [
+            {
+              "id": "mx-b3-q1",
+              "type": "group",
+              "text": "Use the weight–extension graph for the spring.",
+              "parts": [
+                {
+                  "id": "mx-b3-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the energy stored when the extension is 10 cm.",
+                  "answer": {
+                    "value": 0.2,
+                    "unit": "J"
+                  },
+                  "hint": "Area of the triangle to 10 cm (weight 4 N), x in metres.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $E = \\tfrac{1}{2} F x$",
+                    "<b>Working:</b> $E = \\tfrac{1}{2} \\times 4.0 \\times 0.10$",
+                    "<b>Answer:</b> $= 0.20$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b3-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the extension when a 6.0 N block hangs from the spring, in cm.",
+                  "answer": {
+                    "value": 15,
+                    "unit": "cm"
+                  },
+                  "hint": "$k = 40$ N/m; $x = F \\div k$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $x = F \\div k$",
+                    "<b>Working:</b> $x = 6.0 \\div 40 = 0.15 \\text{ m}$",
+                    "<b>Answer:</b> $= 15$",
+                    "<b>Units:</b> cm"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b3-q1c",
+                  "type": "written",
+                  "text": "The 6.0 N block hangs at rest. Describe the two force vectors that a free-body diagram of the block must show. (2)",
+                  "model": "<ul><li>The <b>weight</b>, 6.0 N, drawn <b>vertically downwards</b> from the centre of the block.</li><li>The <b>force of the spring</b> on the block (tension), 6.0 N <b>upwards</b> from the centre — the <b>same length</b> as the weight, because the block is in equilibrium.</li></ul>",
+                  "lines": 2,
+                  "label": "c"
+                },
+                {
+                  "id": "mx-b3-q1d",
+                  "type": "numeric",
+                  "text": "The block is now pulled along a table by one string with 6.0 N and a second string at right angles with 8.0 N. Find the resultant of the two pulls (by scale drawing or otherwise).",
+                  "answer": {
+                    "value": 10,
+                    "unit": "N"
+                  },
+                  "hint": "Scale drawing, or the 6-8-10 triangle.",
+                  "walkthrough": [
+                    "tip to tail at right angles: $R = \\sqrt{6.0^2 + 8.0^2} = 10$ N (a scale drawing gives the same)"
+                  ],
+                  "label": "d",
+                  "tags": [
+                    "H"
+                  ]
+                }
+              ],
+              "graph": {
+                "x": {
+                  "label": "extension in cm",
+                  "min": 0,
+                  "max": 25,
+                  "step": 5
+                },
+                "y": {
+                  "label": "weight in N",
+                  "min": 0,
+                  "max": 10,
+                  "step": 2
+                },
+                "series": [
+                  {
+                    "kind": "line",
+                    "points": [
+                      [
+                        0,
+                        0
+                      ],
+                      [
+                        5,
+                        2
+                      ],
+                      [
+                        10,
+                        4
+                      ],
+                      [
+                        15,
+                        6
+                      ],
+                      [
+                        20,
+                        8
+                      ]
+                    ]
+                  }
+                ],
+                "alt": "Weight against extension for a spring: a straight line from the origin through 20 cm and 8 N."
+              }
+            },
+            {
+              "id": "mx-b3-q2",
+              "type": "choice",
+              "text": "A 2025 free-body diagram of a block on a spring scored one mark of two because…",
+              "options": [
+                "the arrows were the wrong colour",
+                "the arrows had no size shown — force vectors must have a size as well as a direction",
+                "it showed only the weight",
+                "the block was too small"
+              ],
+              "correct": 1,
+              "explain": "Two vectors, equal length, through the centre."
+            },
+            {
+              "id": "mx-b3-q3",
+              "type": "choice",
+              "text": "A vertical spring is longer than an identical horizontal one with nothing hanging on either. Why?",
+              "options": [
+                "Gravity is stronger vertically",
+                "The vertical spring is stretched by its own weight",
+                "The horizontal spring is compressed",
+                "They are not really identical"
+              ],
+              "correct": 1,
+              "explain": "2025 Q8(a)(i)."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find the energy stored from the area under a weight–extension graph and the spring constant from its gradient",
+        "Draw the free-body diagram of a block hanging in equilibrium: two vectors, equal, through the centre",
+        "Carry the block's weight from the spring equation into the force diagram"
+      ],
+      "blurb": "The 2023 and 2025 spring questions moved from Topic 15 into Topic 9 half-way through: the energy from the area under the graph and the spring constant, then a free-body diagram of the hanging block, then the resultant of two forces by scale drawing. The joins are an extension in metres and a weight that appears in both the spring equation and the force diagram."
+    },
+    {
+      "id": "upthrust-density-moments",
+      "band": "p2",
+      "title": "Upthrust into density into moments: two chains in one question",
+      "spec": "15.15P–15.17P, 14.2, 9.8P–9.13P",
+      "equations": [
+        "\\text{loss in weight} \\rightarrow V \\rightarrow \\rho",
+        "\\text{then: moments, levers, gears}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chains",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>two weights → upthrust</td><td>upthrust $= W_{\\text{air}} - W_{\\text{liquid}}$ (Topic 15)</td><td>a force in N</td><td>the <b>loss</b> in weight, not the reading in the liquid</td></tr><tr><td>upthrust → volume</td><td>upthrust = weight of liquid displaced; $V = \\text{upthrust} \\div (\\rho_{\\text{liquid}} g)$</td><td>$V$ in m³</td><td>the liquid's density, not the block's</td></tr><tr><td>weight in air → mass; mass and volume → density</td><td>$m = W \\div g$; $\\rho = m \\div V$ (Topic 14)</td><td>$\\rho$ in kg/m³</td><td>sense check: metals 2000–20 000 kg/m³</td></tr><tr><td>the weight → a load on a lever</td><td>moment $= F d$; sum of clockwise = sum of anticlockwise in equilibrium (Topic 9)</td><td>an effort in N</td><td>distances from the pivot, in the same unit</td></tr></table><p>June 2025 2H Q9: why the newton-meter reading differs in liquid and air (2: upthrust, equal to the weight of liquid displaced, the liquid denser than air); the block's density from a liquid of $1.4 \\times 10^{3}$ kg/m³ (4, one mark per stage, error carried forward); then the winch 6-marker (Topic 9 T7). June 2023 2H Q6: a push-up pivot, moments on an arm holding a ball (equilibrium shown, then the muscle force with 15 N added), and the same ball floating in fresh and sea water.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "A block, a liquid and a lever",
+          "question": "A metal block weighs 8.0 N in air and 6.0 N when fully submerged in a liquid of density 1250 kg/m³ ($g = 10$ N/kg). (a) Calculate the density of the block. (b) The block is then hung 0.10 m from the pivot of a lever; calculate the effort needed 0.40 m from the pivot on the other side to balance it. (6 marks)",
+          "steps": [
+            "(a) Upthrust $= 8.0 - 6.0 = 2.0$ N = weight of liquid displaced; mass of liquid displaced $= 0.20$ kg; $V = 0.20 \\div 1250 = 1.6 \\times 10^{-4}$ m³ — the block's volume.",
+            "Mass of the block $= 8.0 \\div 10 = 0.80$ kg; $\\rho = m \\div V = 0.80 \\div (1.6 \\times 10^{-4}) = 5000$ kg/m³.",
+            "(b) Join: the block's weight in air, 8.0 N, is the load. Moment of the load $= 8.0 \\times 0.10 = 0.80$ N m.",
+            "In equilibrium the effort's moment equals it: effort $\\times 0.40 = 0.80$, so effort $= 2.0$ N — a lever that quarters the force."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Upthrust, density, moments",
+          "questions": [
+            {
+              "id": "mx-b4-q1",
+              "type": "group",
+              "text": "A stone weighs 12.0 N in air and 9.0 N when fully under water (density 1000 kg/m³). $g = 10$ N/kg.",
+              "parts": [
+                {
+                  "id": "mx-b4-q1a",
+                  "type": "numeric",
+                  "text": "State the upthrust on the stone.",
+                  "answer": {
+                    "value": 3,
+                    "unit": "N"
+                  },
+                  "hint": "Loss in weight.",
+                  "walkthrough": [
+                    "upthrust $= 12.0 - 9.0 = 3.0$ N"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b4-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the volume of the stone.",
+                  "answer": {
+                    "value": 0.0003,
+                    "unit": "m³"
+                  },
+                  "hint": "Weight of water displaced = 3.0 N → mass 0.30 kg → volume.",
+                  "walkthrough": [
+                    "mass of water displaced $= 3.0 \\div 10 = 0.30$ kg",
+                    "$V = 0.30 \\div 1000 = 3.0 \\times 10^{-4}$ m³"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b4-q1c",
+                  "type": "numeric",
+                  "text": "Calculate the density of the stone.",
+                  "answer": {
+                    "value": 4000,
+                    "unit": "kg/m³"
+                  },
+                  "hint": "$m = 12.0 \\div 10$; $\\rho = m \\div V$.",
+                  "walkthrough": [
+                    "$m = 12.0 \\div 10 = 1.2$ kg",
+                    "<b>Equation:</b> $\\rho = m \\div V$",
+                    "<b>Working:</b> $\\rho = 1.2 \\div (3.0 \\times 10^{-4})$",
+                    "<b>Answer:</b> $= 4000$",
+                    "<b>Units:</b> kg/m³"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-b4-q1d",
+                  "type": "numeric",
+                  "text": "The stone is hung 0.25 m from the pivot of a uniform beam balanced at its centre. Calculate the force needed 0.75 m from the pivot on the other side to keep the beam level.",
+                  "answer": {
+                    "value": 4,
+                    "unit": "N"
+                  },
+                  "hint": "Clockwise moment = anticlockwise moment with the stone's weight in air.",
+                  "walkthrough": [
+                    "moment of the stone $= 12.0 \\times 0.25 = 3.0$ N m",
+                    "$F \\times 0.75 = 3.0$, so $F = 4.0$ N"
+                  ],
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-b4-q2",
+              "type": "written",
+              "text": "Explain why the newton-meter reading is smaller when the stone is in water than in air. (3)",
+              "model": "<ul><li>In the water there is an <b>upthrust</b> on the stone, supporting part of its weight.</li><li>The upthrust equals the <b>weight of water displaced</b> by the stone.</li><li>Water is <b>much more dense than air</b>, so the water displaced weighs far more than the air displaced did — the upthrust in air is negligible.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mx-b4-q3",
+              "type": "choice",
+              "text": "In the worked example's chain a student uses the reading in the liquid (6.0 N) as the upthrust instead of the loss in weight (2.0 N). On the 2025 marking, this…",
+              "options": [
+                "gave zero",
+                "took one mark off and carried the error forward through the other three stages",
+                "gave full marks",
+                "took two marks off"
+              ],
+              "correct": 1,
+              "explain": "Each stage is marked; errors carry forward."
+            },
+            {
+              "id": "mx-b4-q4",
+              "type": "written",
+              "text": "A ball floats in fresh water and then in sea water. Compare the upthrust on the ball in the two liquids, and explain why less of the ball is under the surface in the sea water. (3)",
+              "model": "<ul><li>The upthrust is the <b>same</b> in both: the ball floats, so in each liquid the upthrust <b>equals the ball's weight</b> (= the weight of liquid displaced).</li><li>Sea water is <b>more dense</b> than fresh water…</li><li>…so a <b>smaller volume</b> of sea water has the same weight as the ball: less needs to be displaced, so less of the ball is below the surface (June 2023 Q6(c)).</li></ul>",
+              "lines": 3
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Run the four-stage chain from loss in weight to density, carrying each stage forward",
+        "Use the object's weight as the load in a moments calculation",
+        "Explain why the upthrust on a floating object is the same in two liquids and what changes"
+      ],
+      "blurb": "The 2025 paper's last question was two chains back to back: a block weighed in air and in a liquid became a density (Topic 15 into 14), then a lifting machine became a 6-mark moments-and-gears explanation (Topic 9). The 2023 paper paired moments on an arm with a ball floating in two liquids. The joins are a volume, and a weight that reappears as the load.",
+      "tags": [
+        "P"
+      ]
+    },
+    {
+      "id": "work-efficiency-power",
+      "band": "p2",
+      "title": "Work, efficiency, GPE and power: the lifting questions",
+      "spec": "8.1–8.5, 3.1–3.10",
+      "equations": [
+        "W = F d \\ \\rightarrow\\ \\text{efficiency} = \\dfrac{\\text{useful}}{\\text{total}}",
+        "\\Delta GPE = m g \\Delta h,\\quad P = \\dfrac{E}{t}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>force and distance → work</td><td>$W = F d$ (Topic 8): the load's weight × the height lifted = useful work</td><td>an energy in J</td><td>distance in the direction of the force</td></tr><tr><td>useful → total</td><td>efficiency $=$ useful ÷ total, so total $=$ useful ÷ efficiency (Topic 3)</td><td>an energy in J</td><td>divide by the efficiency, do not multiply; as a decimal</td></tr><tr><td>wasted</td><td>total − useful</td><td>—</td><td>say where: friction in the pulley bearings, lifting the pulley's own moving parts, the rope stretching</td></tr><tr><td>energy → height, or → power</td><td>$\\Delta h = \\Delta GPE \\div (mg)$; $P = E \\div t$</td><td>$h$ in m, $P$ in W</td><td>mass in kg (320 g = 0.32 kg); time in s</td></tr></table><p>June 2023 2H Q9: the barrel's weight from 3000 J of work over 2.0 m (2), the total work at 64 % efficiency (2), another reason for wasted energy (1), and the 6-mark plan \"investigate how the efficiency of the pulley system varies with the weight being lifted\" with a spring balance, metre rule, pulley and metal cubes — \"include how you will use your measurements\". June 2024 2H Q7: distance from $W = Fd$, an experiment to find the GPE gained by a lifted mass naming the measuring devices (4), the height from 5.8 J and 320 g, and one reason a motor is under 100 % efficient. June 2025 2H Q2(b): a student's power climbing stairs to 2 s.f.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The pulley",
+          "question": "A pulley system lifts a crate 2.5 m. The useful work done on the crate is 4000 J. The system is 60 % efficient. (a) Calculate the weight of the crate. (b) Calculate the total work done by the person pulling the rope. (c) The person pulls 10 m of rope; calculate the force they pull with. (d) The lift takes 16 s; calculate the useful power. (7 marks)",
+          "steps": [
+            "(a) $W = F d$, so $F = W \\div d = 4000 \\div 2.5 = 1600$ N.",
+            "(b) Join: 4000 J is the useful energy. Total $=$ useful ÷ efficiency $= 4000 \\div 0.60 = 6700$ J (6667; about 2700 J wasted against friction in the pulleys and lifting the lower pulley block).",
+            "(c) The person's work is the total: $6667 = F \\times 10$, so $F = 670$ N — less than the crate's weight, over four times the distance.",
+            "(d) Useful power $= E \\div t = 4000 \\div 16 = 250$ W."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Work, efficiency and power",
+          "questions": [
+            {
+              "id": "mx-b5-q1",
+              "type": "group",
+              "text": "An electric motor lifts a 0.450 kg mass through 1.6 m in 2.5 s. The motor transfers 9.0 J of electrical energy during the lift. $g = 10$ N/kg.",
+              "parts": [
+                {
+                  "id": "mx-b5-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the gravitational potential energy gained by the mass.",
+                  "answer": {
+                    "value": 7.2,
+                    "unit": "J"
+                  },
+                  "hint": "$m g \\Delta h$ with the mass in kg.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $\\Delta GPE = m g \\Delta h$",
+                    "<b>Working:</b> $\\Delta GPE = 0.450 \\times 10 \\times 1.6$",
+                    "<b>Answer:</b> $= 7.2$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b5-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the efficiency of the motor as a percentage.",
+                  "answer": {
+                    "value": 80,
+                    "unit": "%"
+                  },
+                  "hint": "Useful ÷ total × 100.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $\\text{efficiency} = \\text{useful} \\div \\text{total}$",
+                    "<b>Working:</b> $\\text{efficiency} = 7.2 \\div 9.0$",
+                    "<b>Answer:</b> $= 0.80 = 80$",
+                    "<b>Units:</b> %"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b5-q1c",
+                  "type": "numeric",
+                  "text": "Calculate the useful power output of the motor.",
+                  "answer": {
+                    "value": 2.88,
+                    "unit": "W"
+                  },
+                  "hint": "$P = E \\div t$ with the useful energy.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $P = E \\div t$",
+                    "<b>Working:</b> $P = 7.2 \\div 2.5$",
+                    "<b>Answer:</b> $= 2.9$",
+                    "<b>Units:</b> W (2.88)"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-b5-q1d",
+                  "type": "written",
+                  "text": "Give two reasons why the motor is less than 100 % efficient. (2)",
+                  "model": "<ul><li>Energy is transferred to the <b>thermal store</b> of the motor's wires and bearings by <b>friction</b> and by the current's heating effect.</li><li>Some energy is transferred by <b>sound</b>, and some lifts the string or hook as well as the mass (not useful).</li></ul>",
+                  "lines": 2,
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-b5-q2",
+              "type": "written",
+              "text": "Devise an experiment to investigate how the efficiency of a pulley system depends on the weight being lifted. You have a spring balance, a metre rule, the pulley system and metal cubes. Include how you will use your measurements. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row below, any 6 of the 7.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Variables</td><td>Independent: the weight lifted (number of cubes); dependent: the efficiency; control: the same pulley, the same height lifted, pulling steadily.</td></tr><tr><td><b>2</b></td><td>Relationship</td><td>Efficiency = useful work ÷ total work = (weight × height) ÷ (pulling force × rope pulled).</td></tr><tr><td><b>3</b></td><td>Change</td><td>Lift one cube, then two, three … (weigh each load with the spring balance).</td></tr><tr><td><b>4</b></td><td>Measure</td><td>Height the load rises and length of rope pulled, with the metre rule; the pulling force, with the spring balance in the rope; the load's weight.</td></tr><tr><td><b>5</b></td><td>Use</td><td>Calculate useful work = weight × height and total work = force × rope length for each load; efficiency = useful ÷ total; plot efficiency against weight.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Pull slowly and steadily (constant speed, so the balance reads the force); read the balance at eye level; measure heights from the same reference point.</td></tr><tr><td><b>7</b></td><td>Repeat</td><td>Repeat each load three times and take a mean efficiency.</td></tr></table><ul><li>Any six of the seven points; the 2023 question asked for how the measurements are used, so the Use row is essential.</li></ul>",
+              "lines": 7
+            },
+            {
+              "id": "mx-b5-q3",
+              "type": "numeric",
+              "text": "A student of mass 55 kg climbs a flight of stairs 4.2 m high in 6.0 s. Calculate her power, to 2 significant figures. ($g = 10$ N/kg)",
+              "answer": {
+                "value": 390,
+                "unit": "W",
+                "tolerance": 0.03
+              },
+              "hint": "Work $= m g h$; power = work ÷ time.",
+              "walkthrough": [
+                "$W = m g h = 55 \\times 10 \\times 4.2 = 2310$ J",
+                "<b>Equation:</b> $P = E \\div t$",
+                "<b>Working:</b> $P = 2310 \\div 6.0$",
+                "<b>Answer:</b> $= 385 = 390$",
+                "<b>Units:</b> W (2 s.f.)"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find the useful work from a force and distance, then the total energy from the efficiency",
+        "Plan the pulley-efficiency investigation with the seven steps, including how the measurements are used",
+        "Find a height from a GPE and a power from an energy and a time, to the figures asked"
+      ],
+      "blurb": "A pulley lifting a barrel, a motor lifting a mass, a student running upstairs: work done becomes useful energy, efficiency divides it by the total, and power divides it by time. Three joins — an energy, a fraction, a time — and a 6-mark plan to investigate efficiency that the seven steps answer."
+    },
+    {
+      "id": "electrical-energy-store",
+      "band": "p2",
+      "title": "Electrical energy as a store: the electric car",
+      "spec": "10.16–10.19, 3.3, 2.x",
+      "equations": [
+        "E = IVt,\\quad Q = It",
+        "KE = \\tfrac{1}{2}mv^2,\\quad t = \\dfrac{E}{P}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and speed → KE</td><td>$KE = \\tfrac{1}{2} m v^2$ (Topic 3)</td><td>$E$ in J</td><td>a car's KE is $10^5$ J; a battery stores $10^8$ J</td></tr><tr><td>battery energy and motor power → time</td><td>$t = E \\div P$ (Topic 8)</td><td>$t$ in s → hours</td><td>1 kWh $= 3.6 \\times 10^{6}$ J; convert before dividing</td></tr><tr><td>charging → energy</td><td>$E = I V t$, or $P = IV$ then $E = Pt$ (Topic 10)</td><td>$E$ in J, $t$ in s</td><td>\"evaluate the claim\": calculate the time and compare it with the claim in a sentence</td></tr><tr><td>current and time → charge</td><td>$Q = I t$ (Topic 10)</td><td>$Q$ in C</td><td>hours into seconds first</td></tr><tr><td>regenerative braking</td><td>KE → electrical (the motor runs as a generator, Topic 13) → chemical store of the battery</td><td>—</td><td>instead of the thermal store of the brakes: less energy wasted, longer range</td></tr></table><p>June 2023 2H Q8: the car's KE (2), how long the battery lasts (2), how regenerative braking extends the range (2), whether a charging-time claim is right using $t = E \\div (IV)$ (3), and the charge moved (2). The evaluate mark is for the <b>comparison</b> and a <b>conclusion</b>, not just the number.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The electric car",
+          "question": "An electric car of mass 1200 kg travels at 16 m/s. Its battery stores 36 kWh ($1.3 \\times 10^{8}$ J) and its motor has an average power of 18 kW. The charger supplies 32 A at 230 V and the maker claims a full charge takes 'under 5 hours'. (a) Calculate the car's kinetic energy. (b) Calculate how long the battery can run the motor, in hours. (c) Evaluate the charging claim. (d) Calculate the charge that flows during the charge. (9 marks)",
+          "steps": [
+            "(a) $KE = \\tfrac{1}{2} m v^2 = \\tfrac{1}{2} \\times 1200 \\times 16^2 = 153\\,600$ J (about 0.1 % of the battery).",
+            "(b) $t = E \\div P = 1.3 \\times 10^{8} \\div 18\\,000 = 7200$ s $= 2.0$ hours.",
+            "(c) Charging power $P = IV = 32 \\times 230 = 7360$ W; $t = E \\div P = 1.3 \\times 10^{8} \\div 7360 = 17\\,700$ s $= 4.9$ hours — so the claim of under 5 hours is <b>just</b> right, but only if nothing is wasted in the charger and battery; in practice it would take a little longer.",
+            "(d) $Q = I t = 32 \\times 17\\,700 = 5.7 \\times 10^{5}$ C."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Electrical energy as a store",
+          "questions": [
+            {
+              "id": "mx-b6-q1",
+              "type": "group",
+              "text": "An electric scooter of mass 90 kg (with rider) travels at 8.0 m/s. Its battery stores $1.8 \\times 10^{6}$ J and its motor's average power is 250 W. It is charged at 2.0 A from a 230 V supply.",
+              "parts": [
+                {
+                  "id": "mx-b6-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the kinetic energy of the scooter and rider.",
+                  "answer": {
+                    "value": 2880,
+                    "unit": "J"
+                  },
+                  "hint": "$\\tfrac{1}{2} m v^2$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $KE = \\tfrac{1}{2} m v^2$",
+                    "<b>Working:</b> $KE = \\tfrac{1}{2} \\times 90 \\times 8.0^2$",
+                    "<b>Answer:</b> $= 2880$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b6-q1b",
+                  "type": "numeric",
+                  "text": "Calculate how long the battery can run the motor, in minutes.",
+                  "answer": {
+                    "value": 120,
+                    "unit": "min"
+                  },
+                  "hint": "$t = E \\div P$ in seconds, then ÷ 60.",
+                  "walkthrough": [
+                    "$t = E \\div P = 1.8 \\times 10^{6} \\div 250 = 7200$ s $= 120$ min"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b6-q1c",
+                  "type": "numeric",
+                  "text": "Calculate the time to recharge the battery fully, in hours.",
+                  "answer": {
+                    "value": 1.09,
+                    "unit": "h"
+                  },
+                  "hint": "$E = IVt$ → $t = E \\div (IV)$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $t = E \\div (I V)$",
+                    "<b>Working:</b> $t = 1.8 \\times 10^{6} \\div (2.0 \\times 230)$",
+                    "<b>Answer:</b> $= 3900 \\text{ s} = 1.1$",
+                    "<b>Units:</b> h (1.09)"
+                  ],
+                  "label": "c"
+                },
+                {
+                  "id": "mx-b6-q1d",
+                  "type": "numeric",
+                  "text": "Calculate the charge that flows during the recharge.",
+                  "answer": {
+                    "value": 7800,
+                    "unit": "C"
+                  },
+                  "hint": "$Q = I t$ with t in seconds.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $Q = I t$",
+                    "<b>Working:</b> $Q = 2.0 \\times 3900$",
+                    "<b>Answer:</b> $= 7800$",
+                    "<b>Units:</b> C"
+                  ],
+                  "label": "d"
+                }
+              ]
+            },
+            {
+              "id": "mx-b6-q2",
+              "type": "written",
+              "text": "Explain how regenerative braking increases the distance an electric car can travel on one charge. (3)",
+              "model": "<ul><li>When the car brakes, its <b>kinetic energy</b> is transferred to the motor, which runs as a <b>generator</b> (induction)…</li><li>…so the energy is transferred <b>electrically to the chemical store of the battery</b> instead of to the thermal store of the brakes.</li><li>The battery therefore has <b>more energy</b> after braking than it would with friction brakes, so the car can travel further before it needs charging.</li></ul>",
+              "lines": 3
+            },
+            {
+              "id": "mx-b6-q3",
+              "type": "choice",
+              "text": "A charging calculation gives $t = 3.6 \\times 10^4$ s. The claim says '8 hours'. The evaluation should say…",
+              "options": [
+                "the claim is wrong",
+                "$3.6 \\times 10^{4}$ s is 10 hours, so the claim is too optimistic — and real charging wastes some energy, making it longer still",
+                "the claim is right",
+                "the units are wrong"
+              ],
+              "correct": 1,
+              "explain": "Convert, compare, conclude."
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find a kinetic energy and compare it with a battery's energy to get a time",
+        "Use $E = IVt$ (or $P = IV$ and $E = Pt$) to check a charging-time claim",
+        "Find the charge moved with $Q = It$, in coulombs"
+      ],
+      "blurb": "An electric car's question joins Topic 10 to Topic 3 through energy: the kinetic energy comes from the battery, the battery's energy divided by the motor's power gives a running time, and charging it back is $E = IVt$ with a charge $Q = It$. Watch the units at every join — kWh to J, hours to seconds."
+    },
+    {
+      "id": "induction-neighbours",
+      "band": "p2",
+      "title": "Induction with its neighbours: dynamo, transformer, diode, motor, grid, loudspeaker",
+      "spec": "13.1P–13.11P, 12.10–12.14P, 10.x",
+      "equations": [
+        "\\dfrac{V_p}{V_s} = \\dfrac{N_p}{N_s},\\quad V_p I_p = V_s I_s",
+        "\\text{induced pd} \\leftrightarrow \\text{motor effect}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Idea or equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>turning → induced pd</td><td>the coil cuts field lines, a pd is <b>induced</b>; with a lamp connected a current flows and the induced current's field <b>opposes</b> the motion, so it is harder to turn (Topic 13) [H]</td><td>a pd, then a current</td><td>\"induced\", never \"produced\"</td></tr><tr><td>primary → secondary</td><td>alternating current → changing field in the core → changing field through the secondary → pd induced (Topic 13) [H]</td><td>$V_s$</td><td>d.c. would give no changing field</td></tr><tr><td>turns → pd; pd → current</td><td>$V_p \\div V_s = N_p \\div N_s$ [H, P]; $V_p I_p = V_s I_s$</td><td>$V_s$, $I_s$</td><td>step-down: fewer turns on the secondary, larger current</td></tr><tr><td>a.c. → charging a battery</td><td>a <b>diode</b> lets current flow one way only, so the battery is charged, not discharged on the reverse half-cycles (Topic 10)</td><td>d.c.</td><td>a battery needs d.c.</td></tr><tr><td>motor beside generator</td><td>the <b>commutator</b> reverses the current every half turn so the force on each side of the coil keeps it turning the same way (Topic 12) [H, P]</td><td>—</td><td>the loudspeaker is the motor effect; the microphone is induction — the same parts, opposite direction of transfer (Topic 13 T4) [P]</td></tr></table><p>June 2025 2H Q6: how a current is produced in the secondary (3), the secondary turns from 230 V, 1.5 V and 1840 turns (2), why a diode is needed in series with the battery (2), the commutator (3). June 2023 2H Q10: how the dynamo was turned between readings, why it gets harder to turn with a lamp (2), the secondary pd (3), loudspeaker versus microphone (6). June 2024 2H Q10: the falling magnet and its investigation, then the grid transformer 11 000 V → 230 V (6). The standard chains are on the Topic 13 page word for word; this is where they are asked side by side.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The toothbrush charger",
+          "question": "An electric toothbrush is charged through a transformer with 1150 turns on its primary, connected to 230 V a.c.; its secondary gives 12 V. A diode connects the secondary to the rechargeable battery. (a) Explain how a pd is induced in the secondary coil. (b) Calculate the number of turns on the secondary. (c) Explain why the diode is needed. (d) The primary current is 0.050 A; calculate the secondary current, assuming no energy is wasted. (9 marks)",
+          "steps": [
+            "(a) The <b>alternating</b> current in the primary produces a <b>changing magnetic field</b> in the iron core; the changing field passes through the secondary coil; a <b>changing field through a coil induces a pd</b> across it [H].",
+            "(b) $V_p \\div V_s = N_p \\div N_s$: $230 \\div 12 = 1150 \\div N_s$, so $N_s = 1150 \\times 12 \\div 230 = 60$ turns [H, P].",
+            "(c) The secondary pd is <b>alternating</b>, but a battery must be charged with current in <b>one direction</b> (d.c.); the diode conducts only one way, so it blocks the half-cycles that would drive current the wrong way through the battery.",
+            "(d) Join: the transformer's output. $V_p I_p = V_s I_s$: $230 \\times 0.050 = 12 \\times I_s$, so $I_s = 0.96$ A — stepping the pd down steps the current up."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Induction and its neighbours",
+          "questions": [
+            {
+              "id": "mx-b7-q1",
+              "type": "group",
+              "text": "A bicycle dynamo is turned by the wheel and lights a lamp.",
+              "parts": [
+                {
+                  "id": "mx-b7-q1a",
+                  "type": "written",
+                  "text": "Explain why a pd is induced in the dynamo. (3)",
+                  "model": "<ul><li>The coil (or magnet) <b>moves relative to</b> the magnetic field, so the coil <b>cuts magnetic field lines</b>.</li><li>A <b>pd is induced</b> across the coil (the field through the coil is changing).</li><li>Because the coil is in a complete circuit with the lamp, the induced pd drives a <b>current</b>.</li></ul>",
+                  "lines": 3,
+                  "label": "a",
+                  "tags": [
+                    "H"
+                  ]
+                },
+                {
+                  "id": "mx-b7-q1b",
+                  "type": "written",
+                  "text": "Explain why the wheel is harder to turn when the lamp is switched on. (2)",
+                  "model": "<ul><li>With the lamp connected a <b>current flows</b> in the coil, and the current has its own <b>magnetic field</b>.</li><li>That field <b>opposes the motion</b> that induced it (a force against the turning), so more work must be done to keep the dynamo turning — the extra work is the energy transferred to the lamp.</li></ul>",
+                  "lines": 2,
+                  "label": "b",
+                  "tags": [
+                    "H"
+                  ]
+                },
+                {
+                  "id": "mx-b7-q1c",
+                  "type": "numeric",
+                  "text": "The dynamo supplies the lamp with 6.0 V at 0.50 A. Calculate the power transferred to the lamp.",
+                  "answer": {
+                    "value": 3,
+                    "unit": "W"
+                  },
+                  "hint": "$P = IV$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $P = I V$",
+                    "<b>Working:</b> $P = 0.50 \\times 6.0$",
+                    "<b>Answer:</b> $= 3.0$",
+                    "<b>Units:</b> W"
+                  ],
+                  "label": "c"
+                }
+              ]
+            },
+            {
+              "id": "mx-b7-q2",
+              "type": "group",
+              "text": "A step-down transformer in the grid takes 11 000 V and gives 230 V. It supplies a street with 150 A at 230 V.",
+              "parts": [
+                {
+                  "id": "mx-b7-q2a",
+                  "type": "numeric",
+                  "text": "The primary has 9600 turns. Calculate the number of turns on the secondary.",
+                  "answer": {
+                    "value": 200,
+                    "unit": "turns"
+                  },
+                  "hint": "$N_p \\div N_s = V_p \\div V_s$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $N_s = N_p V_s \\div V_p$",
+                    "<b>Working:</b> $N_s = 9600 \\times 230 \\div 11\\,000$",
+                    "<b>Answer:</b> $= 200$",
+                    "<b>Units:</b> turns"
+                  ],
+                  "label": "a",
+                  "tags": [
+                    "H",
+                    "P"
+                  ]
+                },
+                {
+                  "id": "mx-b7-q2b",
+                  "type": "numeric",
+                  "text": "Calculate the current in the primary, assuming the transformer is 100 % efficient.",
+                  "answer": {
+                    "value": 3.14,
+                    "unit": "A"
+                  },
+                  "hint": "$V_p I_p = V_s I_s$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $I_p = V_s I_s \\div V_p$",
+                    "<b>Working:</b> $I_p = 230 \\times 150 \\div 11\\,000$",
+                    "<b>Answer:</b> $= 3.1$",
+                    "<b>Units:</b> A (3.14)"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b7-q2c",
+                  "type": "written",
+                  "text": "Explain why electricity is transmitted at 11 000 V rather than at 230 V. (3)",
+                  "model": "<ul><li>For the same power, a higher pd means a <b>smaller current</b> ($P = IV$).</li><li>The energy wasted by heating in the cables depends on the current ($P = I^2 R$), so a smaller current wastes <b>much less</b> energy.</li><li>Transformers step the pd up for transmission and down again to 230 V for homes, so the saving comes at no cost in usable energy.</li></ul>",
+                  "lines": 3,
+                  "label": "c",
+                  "tags": [
+                    "H",
+                    "P"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mx-b7-q3",
+              "type": "written",
+              "text": "A coil of wire attached to a cone sits in a magnetic field. Compare how it works as a loudspeaker with how it works as a microphone. (4)",
+              "model": "<ul><li><b>Loudspeaker</b>: an alternating <b>current</b> in the coil → a <b>force</b> on the coil in the magnetic field (motor effect) → the coil and cone <b>move</b> back and forth → the cone pushes the air: <b>sound</b>.</li><li><b>Microphone</b>: <b>sound</b> makes the cone and coil <b>move</b> in the field → the coil cuts field lines → a <b>pd is induced</b> → an alternating <b>current</b> with the same frequency as the sound.</li><li>Both use the same parts — a coil, a magnet, a cone — and in both the current and the movement have the frequency of the sound.</li><li>The direction of transfer is opposite: electrical → sound in the loudspeaker (motor effect), sound → electrical in the microphone (induction).</li></ul>",
+              "lines": 4,
+              "tags": [
+                "P"
+              ]
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Explain the dynamo (harder to turn with a lamp) and the transformer (why a current flows in the secondary) in the standard chains",
+        "Use the turns-ratio and pd–current equations and carry the output into the circuit that follows",
+        "Compare the loudspeaker with the microphone, and explain the diode and the commutator in the same question"
+      ],
+      "blurb": "The induction questions never stay in Topic 13: a dynamo's output goes to a lamp (Topic 10), the transformer's output through a diode to a battery, a motor's commutator sits next to the transformer, and the loudspeaker is compared with the microphone (Topic 12 beside 13). The join is a pd — induced in one place, used in the next.",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "id": "electricity-into-heat",
+      "band": "p2",
+      "title": "Electricity into heat: a heater's energy into a temperature rise",
+      "spec": "10.16–10.19, 14.8, 14.11",
+      "equations": [
+        "E = IVt \\ \\rightarrow\\ \\Delta Q = mc\\Delta\\theta",
+        "\\Delta\\theta = \\dfrac{IVt}{mc}"
+      ],
+      "parts": [
+        {
+          "kind": "explain",
+          "title": "The chain",
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>current, pd, time → energy</td><td>$E = IVt$, or $P = IV$ then $E = Pt$ (Topic 10)</td><td>$E$ in J</td><td>$t$ in <b>seconds</b>; a joulemeter reads $E$ directly</td></tr><tr><td>energy → temperature rise</td><td>$\\Delta\\theta = \\Delta Q \\div (mc)$ (Topic 14)</td><td>$\\Delta\\theta$ in °C</td><td>mass in kg; this assumes all the energy went into the substance</td></tr><tr><td>measured rise → c</td><td>$c = \\Delta Q \\div (m \\Delta\\theta)$</td><td>$c$ in J/kg °C</td><td>comes out too high if energy went elsewhere</td></tr><tr><td>why smaller</td><td>energy transferred to the <b>surroundings</b> and to the <b>container / heater parts</b></td><td>—</td><td>2024: ignore \"energy is lost\" and \"not 100 % efficient\"</td></tr></table><p>June 2024 2H Q9: the temperature rise of a 5.8 kg storage-heater brick given 210 kJ with $c = 860$ J/kg °C (2 — the kJ must become J), why the actual rise is smaller (2), and the 6-mark SHC-of-water practical (Topic 14 T6: immersion heater, joulemeter or ammeter and voltmeter with a stopwatch, balance, thermometer; Level 3 needs $\\Delta\\theta$, the energy and how $c$ is found). The Topic 10 heating-effect explanation sits underneath: the current's electrons collide with the ions of the heater wire and transfer energy to them.</p>"
+        },
+        {
+          "kind": "worked",
+          "title": "The heater in the water",
+          "question": "A 12 V immersion heater draws 4.0 A for 5.0 minutes in 0.40 kg of water ($c = 4200$ J/kg °C). (a) Calculate the energy supplied. (b) Calculate the expected temperature rise. (c) The measured rise is 7.5 °C; calculate the value of c this gives and explain why it differs from 4200. (7 marks)",
+          "steps": [
+            "(a) $t = 5.0 \\times 60 = 300$ s; $E = IVt = 4.0 \\times 12 \\times 300 = 14\\,400$ J.",
+            "(b) Join: 14 400 J into the water. $\\Delta\\theta = \\Delta Q \\div (mc) = 14\\,400 \\div (0.40 \\times 4200) = 8.6$ °C (8.57).",
+            "(c) $c = \\Delta Q \\div (m\\Delta\\theta) = 14\\,400 \\div (0.40 \\times 7.5) = 4800$ J/kg °C.",
+            "It is too high because some of the heater's energy was transferred to the <b>surroundings</b> and to the <b>beaker, heater and thermometer</b>, so the water received less than 14 400 J and its rise was smaller than expected; dividing the full energy by the smaller rise overestimates $c$."
+          ]
+        },
+        {
+          "kind": "practice",
+          "title": "Electricity into heat",
+          "questions": [
+            {
+              "id": "mx-b8-q1",
+              "type": "group",
+              "text": "A 230 V kettle element carries 8.0 A and is switched on for 2.0 minutes with 0.80 kg of water in it ($c = 4200$ J/kg °C).",
+              "parts": [
+                {
+                  "id": "mx-b8-q1a",
+                  "type": "numeric",
+                  "text": "Calculate the energy supplied by the element.",
+                  "answer": {
+                    "value": 220800,
+                    "unit": "J"
+                  },
+                  "hint": "$E = IVt$ with t in seconds.",
+                  "walkthrough": [
+                    "$t = 2.0 \\times 60 = 120$ s",
+                    "<b>Equation:</b> $E = I V t$",
+                    "<b>Working:</b> $E = 8.0 \\times 230 \\times 120$",
+                    "<b>Answer:</b> $= 220\\,800$",
+                    "<b>Units:</b> J"
+                  ],
+                  "label": "a"
+                },
+                {
+                  "id": "mx-b8-q1b",
+                  "type": "numeric",
+                  "text": "Calculate the temperature rise of the water if all this energy goes into it.",
+                  "answer": {
+                    "value": 65.7,
+                    "unit": "°C"
+                  },
+                  "hint": "$\\Delta \\theta = E \\div (m c)$.",
+                  "walkthrough": [
+                    "<b>Equation:</b> $\\Delta\\theta = \\Delta Q \\div (m c)$",
+                    "<b>Working:</b> $\\Delta\\theta = 220\\,800 \\div (0.80 \\times 4200)$",
+                    "<b>Answer:</b> $= 66$",
+                    "<b>Units:</b> °C (65.7)"
+                  ],
+                  "label": "b"
+                },
+                {
+                  "id": "mx-b8-q1c",
+                  "type": "written",
+                  "text": "The measured rise is 60 °C. Explain the difference. (2)",
+                  "model": "<ul><li>Some of the energy is transferred to the <b>surroundings</b> (the air, by heating from the kettle's outside).</li><li>Some heats the <b>kettle itself</b> (the element, the body) rather than the water — so the water receives less than 220 800 J. (Name where it went, not \"lost\".)</li></ul>",
+                  "lines": 2,
+                  "label": "c"
+                }
+              ]
+            },
+            {
+              "id": "mx-b8-q2",
+              "type": "numeric",
+              "text": "A storage-heater brick of mass 6.0 kg ($c = 850$ J/kg °C) receives 255 kJ from its heating element overnight. Calculate its temperature rise.",
+              "answer": {
+                "value": 50,
+                "unit": "°C"
+              },
+              "hint": "kJ to J first.",
+              "walkthrough": [
+                "$\\Delta Q = 255\\,000$ J",
+                "<b>Equation:</b> $\\Delta\\theta = \\Delta Q \\div (m c)$",
+                "<b>Working:</b> $\\Delta\\theta = 255\\,000 \\div (6.0 \\times 850)$",
+                "<b>Answer:</b> $= 50$",
+                "<b>Units:</b> °C"
+              ]
+            },
+            {
+              "id": "mx-b8-q3",
+              "type": "written",
+              "text": "Describe how to find the specific heat capacity of a metal block using an electric heater, a joulemeter, a balance, a thermometer and a stopwatch. (6)",
+              "model": "<p><b>6 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Mass</td><td>Measure the mass of the block with the balance.</td></tr><tr><td><b>2</b></td><td>Set-up</td><td>Put the immersion heater in one hole of the block and the thermometer in the other (a drop of oil for contact); lag the block.</td></tr><tr><td><b>3</b></td><td>Energy</td><td>Connect the heater through the joulemeter; record the initial temperature; switch on and time the heating; read the energy supplied from the joulemeter (or $E = IVt$ with an ammeter and voltmeter).</td></tr><tr><td><b>4</b></td><td>Temperature</td><td>Record the final temperature; $\\Delta\\theta$ = final − initial.</td></tr><tr><td><b>5</b></td><td>Calculate</td><td>$c = \\Delta Q \\div (m \\Delta\\theta)$ — or plot temperature against energy and use the gradient.</td></tr><tr><td><b>6</b></td><td>Accuracy</td><td>Lag the block to reduce energy transferred to the surroundings; wait for the highest reading after switching off; repeat.</td></tr></table><ul><li>Marked by levels: Level 3 needs the temperature change, the energy supplied and how $c$ is found from them.</li></ul>",
+              "lines": 8
+            }
+          ]
+        }
+      ],
+      "checklist": [
+        "Find the energy supplied by a heater from I, V and t (or P and t) with t in seconds",
+        "Hand that energy into $\\Delta Q = mc\\Delta\\theta$ to predict a temperature rise, or into $c = \\Delta Q \\div (m\\Delta \\theta)$",
+        "Explain why the measured rise is smaller, naming where the energy went"
+      ],
+      "blurb": "The specific-heat-capacity practical is an electricity question for its first half: the energy supplied is current × pd × time, and only then does it become $mc\\Delta\\theta$. The 2024 storage-heater question handed 210 kJ from the heater into a brick; the 6-marker asked for the whole practical with electrical measurements. The join is the energy in joules, and the trap is minutes."
+    }
+  ],
+  "facts": [
+    {
+      "q": "What is 'the join' in a blended question?",
+      "a": "The quantity one stage hands to the next — an energy, a force, a volume, a pd. Name it before the arithmetic.",
+      "section": "join"
+    },
+    {
+      "q": "Four habits at the join?",
+      "a": "Find it; match units there; carry forward and label each stage; check the number makes sense.",
+      "section": "join"
+    },
+    {
+      "q": "Stage 1 wrong — what about stages 2 and 3?",
+      "a": "Use the wrong value, show the working, label the stage: error carried forward still scores.",
+      "section": "join"
+    },
+    {
+      "q": "GPE → KE → speed: the join?",
+      "a": "The energy: $KE = \\Delta GPE$, then $v = \\sqrt{2KE/m}$.",
+      "section": "gpe-ke-speed"
+    },
+    {
+      "q": "Energy dissipated on a slope?",
+      "a": "$\\Delta GPE - \\tfrac{1}{2}mv_{\\text{measured}}^2$, transferred to the surroundings by friction and air resistance.",
+      "section": "gpe-ke-speed"
+    },
+    {
+      "q": "$\\Delta h$ in $mg\\Delta h$ is…",
+      "a": "The vertical height, not the slope length.",
+      "section": "gpe-ke-speed"
+    },
+    {
+      "q": "Same mass and speed: momentum and KE?",
+      "a": "$p = mv$ (kg m/s); $KE = \\tfrac{1}{2}mv^2$ (J) — different equations, different answers.",
+      "section": "momentum-force-ke"
+    },
+    {
+      "q": "Force from momentum?",
+      "a": "$F = \\Delta(mv) \\div t$; from rest the change is the full $mv$ (Higher).",
+      "section": "momentum-force-ke"
+    },
+    {
+      "q": "Why do stuck-together trolleys move more slowly?",
+      "a": "Momentum is conserved and shared by a larger mass, so $v$ is smaller.",
+      "section": "momentum-force-ke"
+    },
+    {
+      "q": "Braking: the join?",
+      "a": "The KE: braking force × braking distance $= \\tfrac{1}{2}mv^2$.",
+      "section": "stopping-energy"
+    },
+    {
+      "q": "Double the speed: braking and thinking distances?",
+      "a": "Braking ×4 ($\\propto v^2$); thinking ×2 ($\\propto v$).",
+      "section": "stopping-energy"
+    },
+    {
+      "q": "Where does a braking car's KE go?",
+      "a": "Work done by the brakes → thermal store of the brakes → surroundings.",
+      "section": "stopping-energy"
+    },
+    {
+      "q": "Light into glass: what changes?",
+      "a": "Speed and wavelength decrease together; frequency stays the same (set by the source).",
+      "section": "wave-equation-light"
+    },
+    {
+      "q": "The join in a light $v = f\\lambda$ question?",
+      "a": "The frequency — the same on both sides of the boundary.",
+      "section": "wave-equation-light"
+    },
+    {
+      "q": "470 nm in metres?",
+      "a": "$470 \\times 10^{-9}$ m.",
+      "section": "wave-equation-light"
+    },
+    {
+      "q": "Fraction left after n half-lives?",
+      "a": "100 % → 50 → 25 → 12.5 …; between whole half-lives, read the graph.",
+      "section": "nuclear-energy"
+    },
+    {
+      "q": "Mass lost in fusion?",
+      "a": "$m = E \\div c^2$ (the equation is supplied); $c^2 = 9.0 \\times 10^{16}$; unit kg.",
+      "section": "nuclear-energy"
+    },
+    {
+      "q": "Where does fusion's energy come from?",
+      "a": "The products have less mass than the nuclei that fused; the lost mass becomes energy.",
+      "section": "nuclear-energy"
+    },
+    {
+      "q": "Why is a planet's temperature constant?",
+      "a": "It absorbs radiation from its star and emits infrared at the same rate.",
+      "section": "thermal-balance"
+    },
+    {
+      "q": "Planet warms up — then what?",
+      "a": "It emits more, until emission equals absorption again at a higher temperature.",
+      "section": "thermal-balance"
+    },
+    {
+      "q": "A stable star's balance?",
+      "a": "Inward gravity equals the outward pressure from fusion.",
+      "section": "thermal-balance"
+    },
+    {
+      "q": "One object, four stages: the join?",
+      "a": "The mass — the same number in $V = m/\\rho$, $Q = mL$ and $\\Delta Q = mc\\Delta\\theta$.",
+      "section": "one-object"
+    },
+    {
+      "q": "Cooling-curve flat section?",
+      "a": "Freezing at constant temperature; $Q = mL$; energy from the substance to the surroundings.",
+      "section": "one-object"
+    },
+    {
+      "q": "Pressure → force on a surface?",
+      "a": "$F = PA$, normal to the surface; use the pressure difference with fluid on both sides.",
+      "section": "pressure-force-particles"
+    },
+    {
+      "q": "Less dense air higher up, in particles?",
+      "a": "Less air above presses on it, so the particles are further apart: fewer per m³.",
+      "section": "pressure-force-particles"
+    },
+    {
+      "q": "Spring graph → energy and k?",
+      "a": "Area $\\tfrac{1}{2}Fx$ (x in m) and gradient $F \\div x$ (N/m).",
+      "section": "springs-forces-energy"
+    },
+    {
+      "q": "Free-body diagram of a hanging block at rest?",
+      "a": "Weight down and spring force up, equal lengths, through the centre.",
+      "section": "springs-forces-energy"
+    },
+    {
+      "q": "The 2025 upthrust-to-density chain in one line?",
+      "a": "Loss in weight = upthrust = weight of liquid displaced → volume → mass from weight in air → density.",
+      "section": "upthrust-density-moments"
+    },
+    {
+      "q": "The block's weight after the density stage?",
+      "a": "It becomes the load in the moments stage: moment = weight × distance from the pivot.",
+      "section": "upthrust-density-moments"
+    },
+    {
+      "q": "Total energy from useful and efficiency?",
+      "a": "Total = useful ÷ efficiency (divide, as a decimal).",
+      "section": "work-efficiency-power"
+    },
+    {
+      "q": "Pulley efficiency from measurements?",
+      "a": "Useful = weight × height; total = pulling force × rope pulled; efficiency = useful ÷ total.",
+      "section": "work-efficiency-power"
+    },
+    {
+      "q": "Power from a climb?",
+      "a": "$W = mgh$, then $P = W \\div t$, to the figures asked.",
+      "section": "work-efficiency-power"
+    },
+    {
+      "q": "1 kWh in joules?",
+      "a": "$3.6 \\times 10^{6}$ J — convert before dividing by a power in W.",
+      "section": "electrical-energy-store"
+    },
+    {
+      "q": "Charging time from a supply?",
+      "a": "$t = E \\div (IV)$; then compare with the claim and conclude.",
+      "section": "electrical-energy-store"
+    },
+    {
+      "q": "Regenerative braking in one line?",
+      "a": "KE → generator → electrical → battery's chemical store, instead of the brakes' thermal store.",
+      "section": "electrical-energy-store"
+    },
+    {
+      "q": "Why a diode after a transformer charging a battery?",
+      "a": "The secondary pd is a.c.; the diode passes current one way so the battery is charged, not discharged.",
+      "section": "induction-neighbours"
+    },
+    {
+      "q": "Loudspeaker vs microphone?",
+      "a": "Same parts; loudspeaker is current → force → movement → sound (motor effect), microphone is sound → movement → induced pd → current (induction).",
+      "section": "induction-neighbours"
+    },
+    {
+      "q": "Step-down transformer: turns and current?",
+      "a": "Fewer turns on the secondary, smaller pd, larger current ($V_pI_p = V_sI_s$).",
+      "section": "induction-neighbours"
+    },
+    {
+      "q": "Heater energy into water: the join?",
+      "a": "$E = IVt$ (t in seconds) hands the energy to $\\Delta Q = mc\\Delta\\theta$.",
+      "section": "electricity-into-heat"
+    },
+    {
+      "q": "Why is the measured rise smaller?",
+      "a": "Energy transferred to the surroundings and to the container / heater parts — name where, not \"lost\".",
+      "section": "electricity-into-heat"
+    },
+    {
+      "q": "Calculated c too high — why?",
+      "a": "The water got less than the heater's energy, so the rise was smaller; the full energy ÷ the smaller rise overestimates c.",
+      "section": "electricity-into-heat"
+    }
+  ],
+  "types": []
+}

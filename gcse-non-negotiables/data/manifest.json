@@ -111,6 +111,14 @@
       "order": 150,
       "types": 5,
       "sections": 20
+    },
+    {
+      "id": "mixed-questions",
+      "file": "mixed-questions.json",
+      "title": "Mixed-topic questions",
+      "order": 160,
+      "types": 0,
+      "sections": 15
     }
   ]
 }
