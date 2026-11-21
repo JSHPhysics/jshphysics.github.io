@@ -113,12 +113,20 @@
       "sections": 20
     },
     {
-      "id": "mixed-questions",
-      "file": "mixed-questions.json",
-      "title": "Mixed-topic questions",
+      "id": "mixed-paper-1",
+      "file": "mixed-paper-1.json",
+      "title": "Mixed-topic questions: Paper 1",
       "order": 160,
       "types": 0,
-      "sections": 15
+      "sections": 7
+    },
+    {
+      "id": "mixed-paper-2",
+      "file": "mixed-paper-2.json",
+      "title": "Mixed-topic questions: Paper 2",
+      "order": 161,
+      "types": 0,
+      "sections": 9
     }
   ]
 }

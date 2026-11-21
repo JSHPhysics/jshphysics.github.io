@@ -26,56 +26,58 @@ from revlib import (
 # M1 · Finding the join
 # ---------------------------------------------------------------------
 
-section_m1 = section(
-    "join", "start", "Finding the join: how a blended question hands over from one topic to the next", "all topics",
-    equations=[r"\text{stage 1} \xrightarrow{\ \text{one quantity}\ } \text{stage 2} \xrightarrow{\ \text{one quantity}\ } \text{stage 3}"],
-    blurb="A long exam question rarely stays in one topic. It hands a quantity from one topic to the next — an energy, a force, a volume, a potential difference — and the marks sit at those hand-overs: the right equation picked for each stage, the units matched at the join, the number carried forward (even a wrong one), and each stage labelled so the examiner can give the stage its mark.",
-    checklist=[
-        "Name the quantity that each stage hands to the next before starting the arithmetic",
-        "Convert units at the join (kJ to J, cm to m, g to kg, minutes to seconds) before the next equation",
-        "Carry a stage's answer forward and label every stage, so error carried forward can score",
-    ],
-    parts=[
-        explain(
-            "The four habits",
-            "<table class='tbl'><tr><th>Habit</th><th>Why it scores</th><th>Example</th></tr>"
-            "<tr><td><b>Find the join</b></td><td>each stage of a chain has its own equation; the output of one is the input of the next</td><td>GPE from a height → the <i>same number</i> as KE → a speed from $\\tfrac{1}{2}mv^2$</td></tr>"
-            "<tr><td><b>Match units at the join</b></td><td>the examiners' reports name the same slips every year: kJ left as kJ, cm in a squared term, minutes into $E = Pt$, mm² into $P = F/A$</td><td>$E = Pt$ needs seconds: 5.0 minutes is 300 s</td></tr>"
-            "<tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets stages 2 and 3 score if they use it correctly and are shown</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr>"
-            "<tr><td><b>Check the join makes sense</b></td><td>a speed of 300 m/s for a trolley, a pool 35 m deep, a spring constant of 2.5 N/m for a stiff spring — the number itself tells you a join went wrong</td><td>\"look at the result of a calculation to see if the value makes sense\" (June 2025 report)</td></tr></table>"
-            "<p>The chains on this page are the ones that have come up in the June 2023, 2024 and 2025 papers. Each section names the join, lays the chain out as a table, and works one example modelled on the real question with new numbers. The physics of each stage is on its topic page — this page practises the hand-over.</p>",
-        ),
-        worked(
-            "A trolley, a runway and a staircase",
-            "A trolley is lifted onto a runway 0.30 m high and gains 4.8 J of gravitational potential energy. (a) Show that the mass of the trolley is about 1.6 kg. (b) Calculate the speed the trolley would have at the bottom of the runway if all the GPE became kinetic energy. (c) The measured speed is 2.1 m/s. Suggest why. (d) A student of mass 52 kg runs up a 3.0 m staircase in 4.0 s; calculate her power. ($g = 10$ N/kg; 9 marks)",
-            [
-                "(a) Stage 1, Topic 3: $\\Delta GPE = m g \\Delta h$, so $m = \\Delta GPE \\div (g \\Delta h) = 4.8 \\div (10 \\times 0.30) = 1.6$ kg.",
-                "(b) <b>The join</b>: the GPE <i>is</i> the KE at the bottom — 4.8 J hands over. $KE = \\tfrac{1}{2} m v^2$, so $v^2 = 2 KE \\div m = 2 \\times 4.8 \\div 1.6 = 6.0$.",
-                "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed.",
-                "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store — not \"energy is lost\".",
-                "(d) Stage 3, Topic 8: work done against gravity $= m g h = 52 \\times 10 \\times 3.0 = 1560$ J; power $= E \\div t = 1560 \\div 4.0 = 390$ W (2 s.f.).",
-            ],
-        ),
-        practice("Finding the join", [
-            group("mx-m1-q1", "A 0.50 kg ball is dropped from a height of 1.8 m. $g = 10$ N/kg.", [
-                numeric("mx-m1-q1a", "Calculate the gravitational potential energy it loses as it falls.", 9.0, "J",
-                        "$\\Delta \\text{GPE} = m g \\Delta h$.",
-                        ewau(r"\Delta GPE = m g \Delta h", r"\Delta GPE = 0.50 \times 10 \times 1.8", "9.0", "J"), label="a"),
-                numeric("mx-m1-q1b", "Calculate its speed just before it lands, assuming no air resistance.", 6.0, "m/s",
-                        "The 9.0 J hands over to KE: $v^2 = 2\\text{KE} \\div m$.",
-                        [r"$KE = 9.0$ J (the join)", r"$v^2 = 2 KE \div m = 2 \times 9.0 \div 0.50 = 36$", r"$v = 6.0$ m/s"], label="b"),
-                written("mx-m1-q1c", "The measured landing speed is 5.6 m/s. Explain the difference. (2)",
-                        marks(["Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.", "A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (do not say the energy is \"lost\": say where it went)."]), lines=2, label="c"),
+def join_section(stem):
+    """The opening section, built for each page with its own question ids (stem = "mx-m1" or "mx-j2")."""
+    return section(
+        "join", "start", "Finding the join: how a blended question hands over from one topic to the next", "all topics",
+        equations=[r"\text{stage 1} \xrightarrow{\ \text{one quantity}\ } \text{stage 2} \xrightarrow{\ \text{one quantity}\ } \text{stage 3}"],
+        blurb="A long exam question rarely stays in one topic. It hands a quantity from one topic to the next — an energy, a force, a volume, a potential difference — and the marks sit at those hand-overs: the right equation picked for each stage, the units matched at the join, the number carried forward (even a wrong one), and each stage labelled so the examiner can give the stage its mark.",
+        checklist=[
+            "Name the quantity that each stage hands to the next before starting the arithmetic",
+            "Convert units at the join (kJ to J, cm to m, g to kg, minutes to seconds) before the next equation",
+            "Carry a stage's answer forward and label every stage, so error carried forward can score",
+        ],
+        parts=[
+            explain(
+                "The four habits",
+                "<table class='tbl'><tr><th>Habit</th><th>Why it scores</th><th>Example</th></tr>"
+                "<tr><td><b>Find the join</b></td><td>each stage of a chain has its own equation; the output of one is the input of the next</td><td>GPE from a height → the <i>same number</i> as KE → a speed from $\\tfrac{1}{2}mv^2$</td></tr>"
+                "<tr><td><b>Match units at the join</b></td><td>the examiners' reports name the same slips every year: kJ left as kJ, cm in a squared term, minutes into $E = Pt$, mm² into $P = F/A$</td><td>$E = Pt$ needs seconds: 5.0 minutes is 300 s</td></tr>"
+                "<tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets stages 2 and 3 score if they use it correctly and are shown</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr>"
+                "<tr><td><b>Check the join makes sense</b></td><td>a speed of 300 m/s for a trolley, a pool 35 m deep, a spring constant of 2.5 N/m for a stiff spring — the number itself tells you a join went wrong</td><td>\"look at the result of a calculation to see if the value makes sense\" (June 2025 report)</td></tr></table>"
+                "<p>The chains on this page are the ones that have come up in the June 2023, 2024 and 2025 papers for this paper. Each section names the join, lays the chain out as a table, and works one example modelled on the real question with new numbers. The physics of each stage is on its topic page — this page practises the hand-over.</p>",
+            ),
+            worked(
+                "A trolley, a runway and a staircase",
+                "A trolley is lifted onto a runway 0.30 m high and gains 4.8 J of gravitational potential energy. (a) Show that the mass of the trolley is about 1.6 kg. (b) Calculate the speed the trolley would have at the bottom of the runway if all the GPE became kinetic energy. (c) The measured speed is 2.1 m/s. Suggest why. (d) A student of mass 52 kg runs up a 3.0 m staircase in 4.0 s; calculate her power. ($g = 10$ N/kg; 9 marks)",
+                [
+                    "(a) Stage 1, Topic 3: $\\Delta GPE = m g \\Delta h$, so $m = \\Delta GPE \\div (g \\Delta h) = 4.8 \\div (10 \\times 0.30) = 1.6$ kg.",
+                    "(b) <b>The join</b>: the GPE <i>is</i> the KE at the bottom — 4.8 J hands over. $KE = \\tfrac{1}{2} m v^2$, so $v^2 = 2 KE \\div m = 2 \\times 4.8 \\div 1.6 = 6.0$.",
+                    "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed.",
+                    "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store — not \"energy is lost\".",
+                    "(d) Stage 3, Topic 8: work done against gravity $= m g h = 52 \\times 10 \\times 3.0 = 1560$ J; power $= E \\div t = 1560 \\div 4.0 = 390$ W (2 s.f.).",
+                ],
+            ),
+            practice("Finding the join", [
+                group(stem + "-q1", "A 0.50 kg ball is dropped from a height of 1.8 m. $g = 10$ N/kg.", [
+                    numeric(stem + "-q1a", "Calculate the gravitational potential energy it loses as it falls.", 9.0, "J",
+                            "$\\Delta \\text{GPE} = m g \\Delta h$.",
+                            ewau(r"\Delta GPE = m g \Delta h", r"\Delta GPE = 0.50 \times 10 \times 1.8", "9.0", "J"), label="a"),
+                    numeric(stem + "-q1b", "Calculate its speed just before it lands, assuming no air resistance.", 6.0, "m/s",
+                            "The 9.0 J hands over to KE: $v^2 = 2\\text{KE} \\div m$.",
+                            [r"$KE = 9.0$ J (the join)", r"$v^2 = 2 KE \div m = 2 \times 9.0 \div 0.50 = 36$", r"$v = 6.0$ m/s"], label="b"),
+                    written(stem + "-q1c", "The measured landing speed is 5.6 m/s. Explain the difference. (2)",
+                            marks(["Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.", "A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (do not say the energy is \"lost\": say where it went)."]), lines=2, label="c"),
+                ]),
+                choice(stem + "-q2", "In a chain calculation, stage 1 gives a wrong energy. What should you do in stage 2?",
+                       ["Stop — no more marks are available", "Use the wrong value, show the working, and label the stage: error carried forward lets stage 2 score", "Guess a better value", "Leave stage 2 blank"], 1,
+                       "Mark schemes give a mark per stage."),
+                choice(stem + "-q3", "A heater of power 60 W runs for 5.0 minutes before its energy goes into $\\Delta Q = mc\\Delta\\theta$. The join needs…",
+                       ["$E = 60 \\times 5.0 = 300$ J", "$E = 60 \\times 300 = 18\\,000$ J, because t must be in seconds", "$E = 60 \\div 5.0$ J", "no conversion"], 1,
+                       "Minutes to seconds at the join."),
             ]),
-            choice("mx-m1-q2", "In a chain calculation, stage 1 gives a wrong energy. What should you do in stage 2?",
-                   ["Stop — no more marks are available", "Use the wrong value, show the working, and label the stage: error carried forward lets stage 2 score", "Guess a better value", "Leave stage 2 blank"], 1,
-                   "Mark schemes give a mark per stage."),
-            choice("mx-m1-q3", "A heater of power 60 W runs for 5.0 minutes before its energy goes into $\\Delta Q = mc\\Delta\\theta$. The join needs…",
-                   ["$E = 60 \\times 5.0 = 300$ J", "$E = 60 \\times 300 = 18\\,000$ J, because t must be in seconds", "$E = 60 \\div 5.0$ J", "no conversion"], 1,
-                   "Minutes to seconds at the join."),
-        ]),
-    ],
-)
+        ],
+    )
 
 # ---------------------------------------------------------------------
 # P1-1 · GPE → KE → speed, then acceleration or dissipation
@@ -416,5 +418,6 @@ section_a6 = section(
     ],
 )
 
-SECTIONS_START = [section_m1]
+SECTIONS_START = [join_section("mx-m1")]
+SECTIONS_START_P2 = [join_section("mx-j2")]
 SECTIONS_P1 = [section_a1, section_a2, section_a3, section_a4, section_a5, section_a6]

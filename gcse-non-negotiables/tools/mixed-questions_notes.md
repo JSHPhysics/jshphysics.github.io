@@ -1,30 +1,39 @@
-# Mixed-topic questions: SOP notes
+# Mixed-topic questions (Paper 1 and Paper 2): SOP notes
 
-Build: `python3 tools/build_mixed_questions.py && python3 tools/build_manifest.py`.
-Modules: `mx_p1.py` (M1 "Finding the join" and the Paper 1 blends
-P1-1 … P1-6), `mx_p2.py` (the Paper 2 blends P2-1 … P2-8 and the
-flashcards). The page has no calculation types and no diagrams of its
-own; its five graphs (force–extension, decay curve, cooling curve,
-weight–extension, and the atmospheric-height curve is on Topic 15) are
-`graph()` specs in the modules. The build script writes the whole topic
-file from `TOPIC` in `build_mixed_questions.py` — there is no
-pre-existing JSON to preserve. `order` 160 puts it last on the home
-page; the card uses the `measurements` figure.
+Build: `python3 tools/build_mixed_questions.py && python3 tools/build_manifest.py`
+writes **two pages**, `data/mixed-paper-1.json` ("Mixed-topic
+questions: Paper 1", order 160) and `data/mixed-paper-2.json` ("Mixed-
+topic questions: Paper 2", order 161) — the author asked for one page
+per paper on 2026-11-21, after a single `mixed-questions` page had been
+pushed the evening before (that topic id is gone; its section and
+question ids live on unchanged in the two pages). Modules: `mx_p1.py`
+(`join_section(stem)`, the M1 opener built once per page with its own
+question ids — `mx-m1-q…` on Paper 1, `mx-j2-q…` on Paper 2 — and the
+Paper 1 blends P1-1 … P1-6), `mx_p2.py` (the Paper 2 blends P2-1 … P2-8
+and the flashcards for both pages; `facts_for()` in the build script
+gives each page the cards of its own sections, so the M1 cards appear on
+both). Neither page has calculation types or diagrams of its own; the
+graphs (force–extension, decay curve, cooling curve, weight–extension)
+are `graph()` specs in the modules. The build script writes each topic
+file whole from `TOPIC_P1` / `TOPIC_P2` — there is no pre-existing JSON
+to preserve. Both cards use the `measurements` figure.
 
 ## Rules for this page (author-approved; keep in every edit)
 
-- **What the page is.** Not a fifteenth topic: a page of the blends that
-  the June 2023, 2024 and 2025 papers set, one section per recurring
-  blend, each built as *the join* (the quantity one stage hands to the
+- **What the pages are.** Not extra topics: one page per paper of the
+  blends that the June 2023, 2024 and 2025 papers set, one section per
+  recurring blend, each built as *the join* (the quantity one stage hands to the
   next), a chain table (stage → equation → what it hands over → what to
   watch), a worked example modelled on the real question with new
   numbers, and a multi-part practice group. The physics of each stage
   lives on its topic page; this page practises the hand-over. New
   blends from later papers go in as new sections (ids stable).
-- **Bands.** `start` (prefix M: M1 only), `p1` (prefix "P1-"), `p2`
-  (prefix "P2-"). Section ids are the blend's name
-  (`gpe-ke-speed`, `one-object` …); question ids `mx-m1-q…`,
-  `mx-a<n>-q…` for Paper 1, `mx-b<n>-q…` for Paper 2.
+- **Bands.** Each page: `start` (prefix M: M1 only) then `p1` (prefix
+  "P1-") or `p2` (prefix "P2-"). Section ids are the blend's name
+  (`gpe-ke-speed`, `one-object` …; `join` on both pages); question ids
+  `mx-m1-q…` / `mx-j2-q…` for the two openers, `mx-a<n>-q…` for Paper 1
+  blends, `mx-b<n>-q…` for Paper 2 blends — unique across both files,
+  which `build_manifest.py` checks.
 - **Tiers.** Sections are untagged where the blend is both-tier;
   where the whole blend is Higher or Physics only the section is
   tagged: `momentum-force-ke` [H], `induction-neighbours` [H],
@@ -154,6 +163,13 @@ id and flashcard. Twenty-six findings, all acted on before the push:
   the temperature of the Earth"; "Archimedes" → "upthrust-to-density".
 
 ## Step 8 — headless test
+
+After the split (2026-11-21): `check_topic.js mixed-paper-1` — 22 of 22
+numerics, 5 of 5 choices, 21 flashcards, 48 ref buttons; `mixed-paper-2`
+— 30 of 30, 7 of 7, 23 flashcards, 66 ref buttons; both pass with and
+without `--filter Foundation`, no KaTeX errors, nothing sticks out at
+390 px; the home page shows the two cards last ("Paper 1 · Topics 1–7",
+"Paper 2 · Topics 8–15"). The single-page run before the split:
 
 `check_topic.js mixed-questions` with and without `--filter Foundation`
 (re-run after the blind-check fixes): 50 of 50 numerics and 10 of 10
