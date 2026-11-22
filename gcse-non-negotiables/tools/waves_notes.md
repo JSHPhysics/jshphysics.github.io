@@ -80,3 +80,35 @@ method that T4 did not contain — the method is now written out in N6.
 Playwright: 23 section numerics and 20 choices entered through the UI and
 marked correct; no KaTeX errors; no sideways scroll at 390 px; 10 graphs
 and 2 diagrams render; the booklet modal offers the notes mode.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+Every model answer, worked step, checklist, blurb and flashcard was
+checked by a separate agent against the closest parts in the past-paper
+question database (`Question DB/by-topic/topic-04.md`, 31 parts matched;
+report in the session scratchpad). Changes, with the scheme that drove each:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| waves / transverse-longitudinal (explain) | slinky dropped as an exam example; EM wave / ripples / string given for transverse | 1H June 2025 Q3(b)(i): "ignore waves on a spring; ignore earthquake or seismic P or S" |
+| waves / explain-wave-types (blurb, explain), wv-t2-q2, transverse-longitudinal, fact 31 | "up and down / side to side scores nothing" → it earns the oscillation mark; the comparison with the direction of travel is the second mark and the one dropped | 1H Nov 2021 Q2(b)(iii) "1 mark only"; June 2025 Q3(b)(ii) and June 2019 Q2(c)(ii) accept "up and down / forwards and backwards / shake" |
+| waves / wv-t2-q1 | command word Explain → Describe | SAM Q1(a), Nov 2021 Q2(b)(iii), June 2025 Q3(b)(ii) all use Describe |
+| waves / seismic (explain), wv-t5-q4, fact 40 | P-wave shadow: "sudden change in density → core denser" → refracted at a solid/liquid boundary → the core is liquid; solid inner core added (P waves through the centre arrive earlier) | 1H June 2022 Q10(c) indicative content; Nov 2020 Q10(d) |
+| waves / seismic (blurb), fact 41 | "marked on the conclusions, not the observations" → observations credited, conclusions needed for the top level | June 2022 Q10(c) lists the observations as AO1 bullets |
+| waves / measuring-wave-speed wv-n6-q4, core-practical-waves list | frequency step leads with counting waves in a measured time; "measure frequency" alone insufficient; not "one second" | June 2025 Q3(a)(iii) "'measure frequency' is not sufficient"; Nov 2021 Q2(b)(i) "ignore in one second" |
+| waves / measuring-wave-speed checklist and Method B | improvement must carry its effect; "more accurate" alone not accepted | June 2019 Q6(a) "do not accept 'more accurate' without qualification"; Nov 2020 Q6(a)(iii) "with effect" |
+| waves / sound-ear (explain) | "below 20 Hz" alone = 2 marks; named-part route needs the effect | June 2025 Q1(c) guidance |
+| waves / echo-distances (explain) | scheme marks added beside the report quotes: 0.023 s = 2 of 3 (2025), 72 m = 1 of 2 (Nov 2020); halving is its own indicative bullet (2024 Q10(d)) | June 2025 Q1(b); Nov 2020 Q10(c); June 2024 Q10(d) |
+| waves / wv-t4-q6 | crack: "reflected (or absorbed)" | June 2022 Q10(b)(ii) |
+
+No stored numeric answer changed; `check_topic.js waves` passes on both
+tiers (53 numerics, 20 choices, no KaTeX errors, phone width clean).
+Not acted on (recorded for the author): the H list in the report — a
+"describe how a vibrating fork makes a sound wave travel" question
+(2018 Q5(a), 2019 Q6(b): "neighbouring particles vibrate"), the
+ripple-frequency 3-marker, the scaled-diagram wavelength, the aerial
+half-wavelength, reflection keeps its speed (Nov 2020 Q5(c)), the energy
+budget at a boundary (2024 Q10(b)), "why the times vary" (Nov 2020
+Q6(a)(ii)), the echo method as a 3-mark describe (Nov 2021 Q1(b)(ii)).

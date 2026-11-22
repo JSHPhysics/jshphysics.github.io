@@ -130,8 +130,8 @@ section_n3 = section(
             "The two kinds",
             diagram(dg.longitudinal_svg(), 480, 250, "A longitudinal wave on a slinky: the coils oscillate back and forth along the direction of travel, making compressions (bunched) and rarefactions (spread out). The wavelength is compression to compression.") +
             "<p><b>Transverse:</b> the oscillations (vibrations) are <b>at right angles (perpendicular) to the direction of energy transfer</b>. Examples: <b>all electromagnetic waves</b> (light, radio…), <b>water surface waves</b> (ripples), waves on a string, seismic <b>S</b> waves.</p>"
-            "<p><b>Longitudinal:</b> the oscillations are <b>parallel to the direction of energy transfer</b>. The medium is squashed into <b>compressions</b> and stretched into <b>rarefactions</b>. Examples: <b>sound</b> (and ultrasound and infrasound), seismic <b>P</b> waves, a pushed slinky.</p>"
-            "<p>The mark-scheme phrase (June 2025 Q3(b)(ii)): \"oscillations or vibrations <b>perpendicular to the direction of travel</b> of the wave\" for transverse. Say <i>oscillations</i>, and say which direction they are compared with.</p>"
+            "<p><b>Longitudinal:</b> the oscillations are <b>parallel to the direction of energy transfer</b>. The medium is squashed into <b>compressions</b> and stretched into <b>rarefactions</b>. Examples: <b>sound</b> (and ultrasound and infrasound), seismic <b>P</b> waves. A slinky is a demonstration, not an exam example — June 2025 Q3(b)(i) ignored \"waves on a spring\", and ignored \"seismic\" when the question was already about an earthquake wave; for a transverse example give an <b>electromagnetic wave</b>, <b>water ripples</b> or <b>waves on a string</b>.</p>"
+            "<p>The mark-scheme words (June 2025 Q3(b)(ii)): \"vibrate/oscillate (1) <b>perpendicular / at right angles to (the direction of travel of) the wave</b> (1)\". Say <i>oscillates</i> or <i>vibrates</i> (\"up and down\" or \"back and forth\" is accepted for that mark), and always say which direction that is compared with — the <b>second mark is the comparison</b>, and it is the one students drop.</p>"
             "<p>All <b>mechanical</b> waves — sound, water, seismic, waves on a string, whichever kind — need a <b>medium</b> to travel through; sound cannot cross a vacuum. Electromagnetic waves are the exception: they need no medium.</p>",
         ),
         worked(
@@ -273,14 +273,14 @@ section_n6 = section(
     checklist=[
         "Describe a method for measuring the speed of sound in air",
         "Describe how to find the speed of ripples in a tank (two ways)",
-        "Say how to make each measurement more accurate",
+        "Give an improvement <b>and its effect</b> — \"more accurate\" alone is not accepted",
     ],
     parts=[
         explain(
             "Sound in air",
             "<p><b>Method A — a long distance and a stopwatch.</b> Two people stand a measured distance apart (100 m or more, by trundle wheel). One bangs cymbals (or fires a starting pistol); the other starts the stopwatch when they <b>see</b> the bang and stops it when they <b>hear</b> it. Speed = distance ÷ time. Light arrives almost instantly, so the time measured is the sound's travel time.</p>"
             "<p>The problem is <b>reaction time</b> (about 0.2 s) compared with a travel time of about 0.3 s over 100 m. The June 2023 scheme (Q6(a)) had candidates work out that 0.23 s of reaction time was 63% of the 0.364 s travel time over 120 m, and the improvement asked for was <b>increase the distance</b> — a longer time makes the reaction time a smaller fraction. Repeating and averaging helps too.</p>"
-            "<p><b>Method B — two microphones.</b> Connect two microphones, a measured distance apart, to a data logger or oscilloscope; make a sharp sound in line with them; the logger records the <b>time between</b> the sound reaching the first and the second microphone. Speed = separation ÷ time delay. No reaction time, so much more accurate.</p>"
+            "<p><b>Method B — two microphones.</b> Connect two microphones, a measured distance apart, to a data logger or oscilloscope; make a sharp sound in line with them; the logger records the <b>time between</b> the sound reaching the first and the second microphone. Speed = separation ÷ time delay. No reaction time, so the timing is far better — but in an exam always write the improvement <b>with its effect</b>: \"use microphones and a data logger <b>to remove reaction time</b>\" or \"use a longer distance <b>so the time is longer and reaction time is a smaller fraction of it</b>\". June 2019 Q6(a): \"do not accept 'more accurate' without qualification\"; Nov 2020 Q6(a)(iii) gave the second mark only \"with effect\".</p>"
             "<p><b>Method C — echoes:</b> stand a measured distance from a large wall and clap in time with the echoes; time 20 claps, divide for the time of one round trip, and speed = 2 × distance ÷ time.</p>",
         ),
         explain(
@@ -313,7 +313,7 @@ section_n6 = section(
                     mark_scheme([
                         ("Method 1", "<b>Time a crest</b> travelling a <b>measured distance</b> (two marks on the screen / across the tank)…"),
                         ("…", "…and use <b>speed = distance ÷ time</b>."),
-                        ("Method 2", "Find the <b>frequency</b> (from the signal generator, or count waves passing a point in a measured time) and the <b>wavelength</b> (several wavelengths ÷ number)…"),
+                        ("Method 2", "Find the <b>frequency</b> by <b>counting the waves passing a point in a measured time</b> (say 10 s — not \"one second\") and dividing; find the <b>wavelength</b> (several wavelengths ÷ number)… \"Measure the frequency\" on its own scores nothing (June 2025 Q3(a)(iii)); read it from the signal generator only if the question gives you one."),
                         ("…", "…and use <b>$v = f \\times \\lambda$</b>."),
                     ]), lines=5),
             numeric("wv-n6-q5", "Two microphones 1.7 m apart are connected to a data logger. A clap reaches the second microphone 5.0 ms after the first. Calculate the speed of sound.", 1.7 / 0.005, "m/s",
@@ -393,7 +393,7 @@ section_n8 = section(
             "Numbers and the ear",
             "<p><b>Human hearing:</b> about <b>20 Hz to 20 000 Hz</b> (20 kHz). <b>Ultrasound</b> is sound with a frequency <b>above 20 000 Hz</b>; <b>infrasound</b> is sound with a frequency <b>below 20 Hz</b>. Both are longitudinal, like all sound; we just cannot hear them.</p>"
             "<p><b>Sound → vibrations in a solid:</b> the compressions and rarefactions of a sound wave push and pull on a solid surface, making it <b>vibrate at the same frequency</b>. In the ear: the sound makes the <b>eardrum</b> vibrate; the eardrum passes the vibration to the <b>small bones</b> (ossicles), which pass it to the fluid in the <b>cochlea</b>, where hair cells turn it into nerve signals. A microphone's diaphragm works the same way; a loudspeaker does it in reverse.</p>"
-            "<p><b>Why only a limited range:</b> a solid (the eardrum, a diaphragm) can only be made to vibrate efficiently over a <b>limited range of frequencies</b> — its size, mass and stiffness set what it responds to. Very low frequencies do not make the eardrum move enough to be detected; very high frequencies it cannot follow. So we hear nothing below 20 Hz or above 20 kHz (and the upper limit falls with age). June 2025 Q1(c): why infrasound is not heard — either \"the <b>frequency is too low</b>\" or \"the <b>eardrum</b> (named part) does not vibrate / respond at that frequency\" — scored; describing ultrasound by mistake did not.</p>",
+            "<p><b>Why only a limited range:</b> a solid (the eardrum, a diaphragm) can only be made to vibrate efficiently over a <b>limited range of frequencies</b> — its size, mass and stiffness set what it responds to. Very low frequencies do not make the eardrum move enough to be detected; very high frequencies it cannot follow. So we hear nothing below 20 Hz or above 20 kHz (and the upper limit falls with age). June 2025 Q1(c): why infrasound is not heard — either \"the <b>frequency is too low</b>\" or \"the <b>eardrum</b> (named part) does not vibrate / respond at that frequency\" — scored; describing ultrasound by mistake did not. \"<b>Below 20 Hz</b>\" on its own was worth both marks, and the named-part route needs the <b>effect</b> (\"the eardrum cannot vibrate / is too stiff at that frequency\").</p>",
         ),
         explain(
             "Uses of ultrasound and infrasound",

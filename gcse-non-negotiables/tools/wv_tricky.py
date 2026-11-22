@@ -86,7 +86,7 @@ section_t1 = section(
 section_t2 = section(
     "explain-wave-types", "tricky", "Explaining wave types and the evidence", "4.2, 4.5",
     equations=[r"\text{say: oscillations, and which direction compared with travel}"],
-    blurb="The explain marks need the word <b>oscillations</b> (or vibrations) and a comparison with the <b>direction of energy transfer</b>. \"Up and down\" and \"side to side\" score nothing on their own.",
+    blurb="Two marks: one for the <b>oscillation</b> (\"vibrates\", \"up and down\" or \"back and forth\" is accepted for this), one for comparing it with the <b>direction of travel</b> of the wave. \"A transverse wave goes up and down and a longitudinal wave goes side to side\" gets the first mark only (Nov 2021 Q2(b)(iii): \"1 mark only\") — the comparison is the mark students drop.",
     checklist=[
         "Explain, with the correct phrase, why sound is longitudinal and light is transverse",
         "Explain the evidence that it is the wave that travels, not the medium",
@@ -96,7 +96,7 @@ section_t2 = section(
         explain(
             "The phrases that score",
             "<p><b>Transverse:</b> \"the oscillations are <b>perpendicular (at right angles) to the direction of energy transfer</b>\". <b>Longitudinal:</b> \"the oscillations are <b>parallel to the direction of energy transfer</b>, producing compressions and rarefactions\".</p>"
-            "<p>\"Up and down\" only works if you also say the wave travels along — the comparison is the mark. The June 2025 scheme for rock in an S wave wanted \"oscillations or vibrations perpendicular to the direction of travel of the wave\".</p>"
+            "<p>\"Up and down\" earns the oscillation mark on its own (June 2025 Q3(b)(ii) and June 2019 Q2(c)(ii) accept \"up and down\", \"forwards and backwards\" and \"shake\" for it) — but the second mark is the <b>comparison</b> with the direction the wave travels, and only the comparison earns it. The June 2025 scheme for rock in an S wave: \"vibrate/oscillate (1) perpendicular / at right angles to (the direction of travel of) the wave (1)\".</p>"
             "<p><b>Demonstrations:</b> on a slinky, push the end back and forth along its length for a longitudinal wave (compressions travel along; each coil moves to and fro along the slinky); flick the end sideways for a transverse wave (the hump travels along; each coil moves across). A marked coil shows the medium <b>oscillates about a fixed point and does not travel</b> — the evidence for 4.2.</p>"
             "<p><b>Sound is longitudinal</b> because the loudspeaker cone moves <b>forward and back</b>, pushing the air into a compression and then leaving a rarefaction, and these travel outwards in the <b>same direction</b> as the cone's movement.</p>",
         ),
@@ -109,11 +109,11 @@ section_t2 = section(
             ],
         ),
         practice("Explaining wave types", [
-            written("wv-t2-q1", "Light is a transverse wave. Explain what this means. (1)",
+            written("wv-t2-q1", "Light is a transverse wave. Describe what this means. (1)",
                     marks(["The <b>oscillations are at right angles (perpendicular) to the direction the wave travels</b> (direction of energy transfer)."]), lines=2),
             written("wv-t2-q2", "A student says \"a transverse wave goes up and down and a longitudinal wave goes side to side\". Explain why this would not score full marks. (2)",
                     marks(["Both must be compared with the <b>direction of energy transfer</b>: transverse oscillations are <b>perpendicular</b> to it, longitudinal oscillations are <b>parallel</b> to it.",
-                           "\"Up and down\" and \"side to side\" are both perpendicular to a wave travelling along — the answer does not say what the oscillation is compared with, and it does not use the word oscillation."]), lines=3),
+                           "\"Up and down\" counts as the oscillation (the scheme accepts it for that mark), so this answer scores <b>1 mark only</b> — it never says what the oscillation is compared with. The missing mark is \"<b>perpendicular to the direction the wave travels</b>\" / \"<b>parallel to the direction the wave travels</b>\"."]), lines=3),
             written("wv-t2-q3", "Describe how a slinky can be used to show a longitudinal wave, and how it shows that the coils do not travel with the wave. (3)",
                     mark_scheme([
                         ("Make it", "Push and pull one end of the slinky <b>back and forth along its length</b>."),
@@ -209,13 +209,13 @@ section_t4 = section(
     parts=[
         explain(
             "Halve it, and watch the units",
-            "<p>The pulse travels <b>to the surface and back</b>, so $v \\times t$ is the <b>round-trip</b> distance. Either halve the time first or halve the distance at the end — the June 2023 scheme (Q1(b), 4 marks) credited both routes and gave 3 of 4 for 5.94 m (forgot to halve) and the June 2025 report notes a candidate who \"rearranged correctly but did not double the distance in the diagram\". Write the halving as its own line.</p>"
+            "<p>The pulse travels <b>to the surface and back</b>, so $v \\times t$ is the <b>round-trip</b> distance. Either halve the time first or halve the distance at the end — the June 2023 scheme (Q1(b), 4 marks) credited both routes and gave 3 of 4 for 5.94 m (forgot to halve) and June 2025 Q1(b) gave 2 of 3 for 0.023 s (7.6 m used once, not doubled — the report notes a candidate who \"rearranged correctly but did not double the distance in the diagram\"); Nov 2020 Q10(c) gave 1 of 2 for 72 m. Forgetting the half costs exactly one mark every time it is set. Write the halving as its own line.</p>"
             "<p>Units: echo times come in <b>ms</b> ($\\times 10^{-3}$ s) and ultrasound times in <b>μs</b> ($\\times 10^{-6}$ s). Speeds: sound in air 330–340 m/s, in water about 1500 m/s, in body tissue about 1500 m/s, in steel about 6000 m/s.</p>"
             "<p>Embedded calculation practice (the <i>Echoes and ultrasound</i> type) sits below the worked example.</p>",
         ),
         explain(
             "The 6-mark sonar answer",
-            "<p>June 2024 Q10(d) asked how ultrasound is used to measure the depth of the sea. Level 3 (5–6) needed, in a logical order: a pulse of <b>ultrasound</b> (above 20 kHz; \"sonar\" accepted) is <b>emitted</b> from a device on the boat; it travels through the water and is <b>reflected</b> by the sea bed; it returns to a <b>detector</b> on the boat; the <b>time</b> between emission and return is measured; the <b>speed of sound in water is known</b>; <b>distance = speed × time</b>; and the distance (or the time) is <b>halved</b> because the pulse went down and back. \"Two or more of ultrasound, pulse, halving and the calculation step\" separated Level 3 from Level 2.</p>"
+            "<p>June 2024 Q10(d) asked how ultrasound is used to measure the depth of the sea. Level 3 (5–6) needed, in a logical order: a pulse of <b>ultrasound</b> (above 20 kHz; \"sonar\" accepted) is <b>emitted</b> from a device on the boat; it travels through the water and is <b>reflected</b> by the sea bed; it returns to a <b>detector</b> on the boat; the <b>time</b> between emission and return is measured; the <b>speed of sound in water is known</b>; <b>distance = speed × time</b>; and the distance (or the time) is <b>halved</b> because the pulse went down and back. \"Two or more of ultrasound, pulse, halving and the calculation step\" separated Level 3 from Level 2 in the report; in the scheme's indicative content the halving (\"either distance halved or time halved prior to calculation\") is a bullet in its own right — leave it out and the chain is incomplete.</p>"
             "<p><b>Crack detection</b> (2022 Q10(b)): a pulse into a metal bar reflects from the far end; if there is a crack, part of the pulse reflects from the crack <b>earlier</b> (shorter distance), and the pulse from the far end is <b>smaller</b> because some of the energy has already been reflected — the amplitude of a wave shows the energy it carries. <b>Foetal scan:</b> pulses reflect at the <b>boundaries between tissues</b>; the times give the depths and the echoes build an image; no ionising radiation.</p>",
         ),
         worked(
@@ -252,7 +252,7 @@ section_t4 = section(
             written("wv-t4-q6", "An ultrasound pulse is sent into a metal bar. When the bar has a crack, an extra reflected pulse appears earlier than the pulse from the far end, and the far-end pulse is smaller. Explain both observations. (3)",
                     mark_scheme([
                         ("Earlier", "Part of the pulse is <b>reflected at the crack</b>, which is <b>closer</b> than the far end, so that echo travels a shorter distance and <b>returns sooner</b>."),
-                        ("Smaller", "Some of the pulse's energy has <b>already been reflected</b> at the crack, so less reaches the far end and less is reflected back from it."),
+                        ("Smaller", "Some of the pulse's energy has <b>already been reflected</b> (or <b>absorbed</b>) at the crack, so <b>less of the pulse reaches the far end</b> and less is reflected back from it."),
                         ("Amplitude", "The <b>amplitude</b> of a wave shows the <b>energy</b> it carries, so the far-end echo has a smaller amplitude."),
                     ]), lines=4),
         ]),
@@ -266,7 +266,7 @@ section_t4 = section(
 section_t5 = section(
     "seismic", "tricky", "Seismic waves and what they tell us about the Earth", "4.5, 4.15P",
     equations=[r"\text{P: longitudinal, through solids and liquids}", r"\text{S: transverse, solids only}"],
-    blurb="Earthquakes send P and S waves through the Earth. Where each kind is detected — and where it is not — tells us the outer core is liquid and the Earth's density changes with depth. The 6-mark version is marked on the <b>conclusions</b>, not the observations.",
+    blurb="Earthquakes send P and S waves through the Earth. Where each kind is detected — and where it is not — tells us the outer core is liquid and the Earth's density changes with depth. The 6-mark version credits the observations (what arrives where) but needs the <b>conclusion drawn from each one</b> to reach the top level — observations alone stay at Level 1.",
     tags=["H", "P"],
     checklist=[
         "Describe P and S waves: wave type, speed, and which materials they pass through",
@@ -281,7 +281,7 @@ section_t5 = section(
             "<tr><td>Speed</td><td>faster — arrive first</td><td>slower — arrive second</td></tr>"
             "<tr><td>Travel through</td><td><b>solids and liquids</b></td><td><b>solids only</b> (a liquid cannot be sheared sideways)</td></tr>"
             "<tr><td>Detected</td><td>almost everywhere, but with a <b>shadow zone</b> where they are refracted by the core</td><td>only within about 103° of the earthquake — <b>not on the far side</b> of the Earth</td></tr></table>"
-            "<p><b>Conclusions</b> (what the examiners mark): S waves are not detected on the far side of the Earth → S waves cannot pass through the core → the <b>outer core is liquid</b>. P waves are <b>refracted</b> (their paths curve, and they bend sharply at the core boundary, leaving a P-wave shadow zone) → their <b>speed changes</b> with depth → the <b>density of the Earth changes</b> with depth, and the core is denser. Both wave types curve gradually through the mantle because the density, and so the speed, increases with depth.</p>"
+            "<p><b>Conclusions</b> (what the examiners mark): S waves are not detected on the far side of the Earth → S waves cannot pass through the core → the <b>outer core is liquid</b>. P waves are <b>refracted</b> (their paths curve, and they bend sharply at the core boundary, leaving a P-wave shadow zone) → their <b>speed changes</b> with depth → the <b>density of the Earth changes</b> with depth. The sharp bend is at a <b>solid/liquid boundary</b> — the P waves pass through the liquid core but are refracted where the solid mantle meets it, so none arrive in the shadow zone → the <b>core must be liquid</b> (June 2022 Q10(c), Nov 2020 Q10(d)). P waves that pass straight through the centre arrive <b>earlier</b> than those through the liquid alone → they travelled <b>faster</b> through the centre → the <b>inner core is solid</b> (the third conclusion in the 2022 indicative content). Both wave types curve gradually through the mantle because the density, and so the speed, increases with depth.</p>"
             "<p>The 2022 report on the 6-mark version: stating observations (\"no S waves are detected on the other side\") without conclusions \"scores only Level 1\"; Level 3 \"combined both observations and conclusions\" — \"remember to draw conclusions from your analysis of information\".</p>",
         ),
         worked(
@@ -304,7 +304,7 @@ section_t5 = section(
                     marks(["P waves are <b>longitudinal</b>, S waves are <b>transverse</b>.", "P waves travel <b>faster</b> (arrive first) and can pass through <b>liquids</b>; S waves cannot."]), lines=3),
             written("wv-t5-q4", "A student writes: \"P waves have a shadow zone.\" Add the conclusion that would turn this observation into a full answer. (2)",
                     marks(["The P-wave shadow zone exists because the P waves are <b>sharply refracted</b> at the boundary with the core…",
-                           "…which shows there is a <b>sudden change in density / speed</b> at the core boundary — the core is a different material (denser) from the mantle."]), lines=3),
+                           "…at a <b>solid/liquid boundary</b>: the P waves pass through the liquid core but are refracted sharply where the solid mantle meets it, so none arrive in the shadow zone — the <b>core must be liquid</b> (and of a different density from the mantle). Both shadow zones point to the same conclusion."]), lines=3),
             choice("wv-t5-q5", "Which statement is a conclusion, not an observation?",
                    ["No S waves arrive on the far side of the Earth", "P waves arrive before S waves", "The outer core must be liquid", "P waves have a shadow zone"], 2,
                    "The others are what the seismometers record; the liquid core is what we deduce from them."),
@@ -329,7 +329,7 @@ section_t6 = section(
         explain(
             "Fluid: the ripple tank",
             "<ol><li>Set up the ripple tank with a <b>dipper</b> driven by a <b>signal generator</b>; a <b>lamp</b> above projects the pattern onto a screen below.</li>"
-            "<li><b>Frequency:</b> read it from the signal generator, or count the waves passing a point in 10 s and divide by 10.</li>"
+            "<li><b>Frequency:</b> <b>count the waves passing a point in a measured time</b> (10 s) and divide by the time — in an exam \"measure the frequency\" alone scores nothing; read it from the signal generator only when the question gives you one.</li>"
             "<li><b>Wavelength:</b> freeze the pattern with a <b>stroboscope</b> (or photograph it with a ruler in shot); measure across <b>10 wavelengths</b> with a ruler and divide by 10.</li>"
             "<li><b>Speed:</b> $v = f \\lambda$. Check by timing a crest over a measured distance ($v = x/t$).</li></ol>"
             "<p><b>Suitability:</b> the ruler on the screen is fine for a wavelength of a few cm but the image may be magnified — measure the tank itself, or calibrate the screen; a stopwatch is too slow for one wave, which is why you count ten or use the generator's frequency.</p>",
@@ -473,7 +473,7 @@ FACTS = [
     fact("Uses of ultrasound on the spec?", "Sonar (depth), foetal scanning (echoes from tissue boundaries). Infrasound/seismic waves: exploring the Earth's core.", "sound-ear"),
     fact("Displacement–distance vs displacement–time graph?", "Distance axis: the gap between crests is the wavelength. Time axis: the gap is the period ($f = 1/T$).", "wave-graphs-hard"),
     fact("Crest-to-trough on a graph is…", "Twice the amplitude (vertically) or half a wavelength (horizontally). Not the amplitude; not the wavelength.", "wave-graphs-hard"),
-    fact("The phrase for transverse?", "\"Oscillations perpendicular to the direction of energy transfer.\" Say oscillations, and say what they are compared with.", "explain-wave-types"),
+    fact("The phrase for transverse?", "\"Oscillations perpendicular to the direction of energy transfer.\" The comparison with the direction of travel is the mark; \"up and down\" alone scores only the oscillation mark.", "explain-wave-types"),
     fact("On refraction, what happens to f, v and λ?", "Frequency unchanged (set by the source); speed changes; wavelength changes in proportion to the speed.", "wave-refraction"),
     fact("Ripples into shallow water?", "Slower, shorter wavelength, same frequency, bend towards the normal.", "wave-refraction"),
     fact("Sound into water?", "Faster (≈1500 m/s), longer wavelength, same frequency, bends away from the normal.", "wave-refraction"),
@@ -482,8 +482,8 @@ FACTS = [
     fact("Sonar in six points?", "Ultrasound pulse emitted; travels through water; reflected by the sea bed; time to return measured; speed in water known; distance = $v \\times t$, halved.", "echo-distances"),
     fact("Crack in a bar: why is the echo earlier and the far-end echo smaller?", "Part of the pulse reflects at the crack (closer, so sooner); less energy reaches the far end, so its echo has a smaller amplitude.", "echo-distances"),
     fact("P waves vs S waves?", "P: longitudinal, faster, through solids and liquids. S: transverse, slower, solids only.", "seismic"),
-    fact("What do the S-wave shadow and the P-wave shadow show?", "No S waves on the far side → the outer core is liquid. P waves refracted sharply at the core → a sudden change in density; curved paths → density changes with depth.", "seismic"),
-    fact("Observation vs conclusion in the seismic 6-marker?", "Observations alone are Level 1; the marks are for the conclusions drawn from them.", "seismic"),
+    fact("What do the S-wave shadow and the P-wave shadow show?", "No S waves on the far side → the outer core is liquid. P waves refracted sharply at the solid/liquid boundary of the core → the core is liquid (and denser); curved paths → density changes with depth; P waves through the centre arrive earlier → the inner core is solid.", "seismic"),
+    fact("Observation vs conclusion in the seismic 6-marker?", "Observations score, but pair every observation with its conclusion (\"no S waves at B → the core is liquid\"); observations alone stay at Level 1.", "seismic"),
     fact("Core practical: fluid?", "Ripple tank: f from the generator or counting; λ from 10 wavelengths ÷ 10 (stroboscope to freeze); $v = f\\lambda$ or time a crest.", "core-practical-waves"),
     fact("Core practical: solid?", "String with a vibration generator and a hanging mass; standing wave; each loop = ½λ; f from the generator; $v = f\\lambda$.", "core-practical-waves"),
     fact("Why measure 10 wavelengths?", "The ruler's uncertainty is the same, so it is a smaller fraction of a longer length; dividing by 10 divides the error by 10.", "core-practical-waves"),
