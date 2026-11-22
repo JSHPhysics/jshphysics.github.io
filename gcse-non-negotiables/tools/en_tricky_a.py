@@ -29,7 +29,7 @@ SITUATIONS_TABLE = (
 section_t1 = section(
     "store-changes", "tricky", "Describing energy changes: the five situations", "3.5, 8.1, 8.7",
     equations=[r"\text{from the } \_\_\_ \text{ store of } \_\_\_ \text{ to the } \_\_\_ \text{ store of } \_\_\_ \text{, by } \_\_\_"],
-    blurb="The spec names five situations you must be able to analyse. Each is the same sentence with different words in the gaps. The marks go to the stores and the pathway, so name them; the marks never go to \"energy is lost\".",
+    blurb="The spec names five situations you must be able to analyse. Each is the same sentence with different words in the gaps. The marks go to the stores, so name them; \"energy is lost\" only scores when you say where to — the surroundings, as thermal energy.",
     checklist=[
         "Describe the store changes for each of the five spec situations",
         "Always name the starting store, the finishing store(s) and the pathway",
@@ -39,7 +39,7 @@ section_t1 = section(
         explain(
             "The sentence and the five situations",
             "<p>Every energy-change answer is this sentence: <b>energy is transferred from the [store] of [object] to the [store] of [object], [pathway].</b> If some is wasted, add: <b>some energy is dissipated to the thermal store of the surroundings by [friction / air resistance / heating].</b></p>" + SITUATIONS_TABLE +
-            "<p>Two warnings from the June 2022 Paper 2 report: candidates wrote \"as GPE decreases KE increases\" for a rover slowing on a hill, forgetting the air resistance that was the point of the question; and \"hardly any candidates talked about work being done against gravity\" — say <i>the engine does work against gravity</i> when something is driven uphill, <i>air resistance does work on the vehicle</i> when it is slowed by the air.</p>",
+            "<p>The June 2022 Paper 2 question (Q7(a)(iii), a rover <i>descending</i> to Mars on thrusters and a parachute) asked for the energy changes <i>in terms of the work done by forces</i>. The scheme's eight points: <b>work is done by gravity</b>; <b>work is done by the thrusters</b>; <b>air resistance does work on the parachute</b>; this <b>reduces the kinetic store</b>; the <b>gravitational potential store decreases</b>; chemical energy is transferred from the thrusters; energy is transferred to the <b>thermal store</b>; mechanically. The report: \"hardly any candidates talked about work being done against gravity\" — the store changes were the marks most students got; the three <b>work done by [named force]</b> lines were the ones they missed. Name the force, then the store.</p>",
         ),
         worked(
             "A ball hitting a wall",
@@ -66,16 +66,17 @@ section_t1 = section(
                         ("By heating", "…and from the element to the <b>thermal store of the water</b> by <b>heating</b>."),
                         ("Wasted", "Some energy is transferred to the thermal store of the <b>kettle body and the surroundings</b> (dissipated), so not all of it heats the water."),
                     ]), lines=4),
-            written("en-t1-q4", "A rover drives up a hill at constant speed against air resistance. Explain how work done by forces changes the energy stores. (3)",
+            written("en-t1-q4", "A rover descends towards the surface of Mars, slowed by its thrusters and a parachute. Describe the energy changes in terms of the work done by forces. (3)",
                     mark_scheme([
-                        ("Against gravity", "The engine (motor) does <b>work against gravity</b>, so energy is transferred to the <b>gravitational potential store</b> of the rover."),
-                        ("Against air resistance", "<b>Air resistance does work</b> on the rover, transferring energy to the <b>thermal store of the air</b> (dissipated)."),
-                        ("Source / KE", "Both come from the <b>chemical store</b> of the fuel (or the battery); because the speed is constant the <b>kinetic store does not change</b>."),
-                    ], extra=["\"As GPE increases KE decreases\" is wrong here: the speed is constant. That answer comes from free-fall examples and scored nothing in 2022."]), lines=5,
-                    hint="Two forces do work: name each and the store it moves energy into."),
+                        ("Gravity", "<b>Work is done by gravity</b> on the rover as it falls."),
+                        ("Thrusters", "<b>Work is done by the thrusters</b> on the rover (chemical energy is transferred from the thrusters)."),
+                        ("Air resistance", "<b>Air resistance does work on the parachute</b> (and the rover)."),
+                        ("Stores", "This <b>reduces the kinetic store</b> of the rover; its <b>gravitational potential store decreases</b>; energy is transferred to the <b>thermal store</b> (mechanically)."),
+                    ], total=3, extra=["Any three of the eight points in the June 2022 2H scheme (Q7(a)(iii)). The store changes alone reached 2 or 3 marks; the <b>work done by [named force]</b> lines were the ones most candidates missed — name the force, then the store. If nothing else scores, \"work = force × distance\" earns one."]), lines=5,
+                    hint="Three forces do work on the way down: name each, then say what happens to the stores."),
             choice("en-t1-q5", "A pendulum swings from its highest point to its lowest. Which is the correct description?",
                    ["GPE turns into KE", "Energy is transferred from the gravitational potential store of the bob to its kinetic store, mechanically (gravity does work)", "Energy is lost as the bob speeds up", "Energy is transferred by heating from the string"], 1,
-                   "Store, store, pathway. \"GPE turns into KE\" names the stores but not the pathway and uses no store language — it is a weaker answer."),
+                   "Store, store, pathway. \"GPE to KE\" scores both marks on its own (Nov 2020 1H Q2(a) guidance: \"chemical to (G)PE\", \"KE to GPE in lifting\"); the full sentence with the pathway is the safer habit, because it also answers the questions that ask <i>how</i> the energy was transferred."),
             written("en-t1-q6", "A ball is thrown straight up and comes back down to the thrower's hand, but more slowly than it left. Describe the energy transfers for the whole flight. (3)",
                     mark_scheme([
                         ("Up", "Going up: from the <b>kinetic store</b> of the ball to its <b>gravitational potential store</b>, mechanically."),
@@ -155,7 +156,7 @@ section_t2 = section(
                    ["The 3 kg ball, three times as fast", "The 1 kg ball", "Both at the same speed — the mass cancels", "The 3 kg ball, slightly faster"], 2,
                    "$m g \\Delta h = \\tfrac{1}{2} m v^2$: m is on both sides, so $v = \\sqrt{2 g \\Delta h}$ for any mass."),
             written("en-t2-q6", "A student measures the speed of a trolley at the bottom of a runway and finds it is less than the value calculated from the GPE lost. Suggest one way to reduce the difference. (1)",
-                    marks(["A <b>method</b>: <b>lubricate</b> (oil) the wheel axles / make the runway <b>steeper</b> / use a more <b>streamlined</b> trolley / use smoother wheels. (\"Reduce friction\" on its own is a reason, not a method, and scored nothing in June 2025.)"]), lines=2),
+                    marks(["A <b>method</b>: <b>lubricate</b> (oil) the wheel axles / make the runway <b>steeper</b> / use a more <b>streamlined</b> trolley / use an <b>air track</b> instead of the runway (the June 2025 2H guidance, Q2(a)(iii)). (\"Reduce friction\" on its own is a reason, not a method, and scored nothing in June 2025.)"]), lines=2),
         ]),
     ],
 )

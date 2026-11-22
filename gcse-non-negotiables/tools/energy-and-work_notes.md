@@ -122,3 +122,36 @@ embedded types, flashcards and the progress count, and the choice
 survives a reload; no KaTeX errors; no sideways scroll at 390 px; the
 booklet modal offers the notes mode; the A-level site and Topic 2 are
 unchanged.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-03.md`
+(19 questions) and `topic-08.md` (14) plus three index.json records
+(36 questions, 31 with schemes). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| energy-and-work / stores-pathways worked, en-t1-q5 | 2-mark "describe the transfer": both marks are the two stores; the pathway is the answer to "how" questions, not a separate mark; "GPE to KE" scores | 2H June 2018 Q3(b); 1H Nov 2020 Q2(a); 1H June 2022 Q5(b)(ii) |
+| energy-and-work / en-n1-q3, en-kw-q7 | "heat" is allowed for thermal in every scheme; "light energy" still not a store | 1H June 2023 Q3(a)(iii) and four others |
+| energy-and-work / conservation and dissipation explains, store-changes blurb, en-n9-q2, flashcard, explain-dissipation | "'energy is lost' scores nothing" → it is **ignored unqualified** (2024) and has scored when qualified; the site still never writes it — the rule is now "say where it went". The 2024 scheme is quoted as "ignore" with its five points | 2H June 2024 Q9(b)(ii); 2H June 2019 Q2(b)(iv); 2H June 2018 Q7(b)(ii) |
+| energy-and-work / dissipation worked | bouncing ball: first mark is "the ball has less energy", not "energy is conserved" | 2H June 2019 Q2(b)(iv) |
+| energy-and-work / en-n9-q1 | "State what has happened to its KE (2)" → "Describe the energy transfers (2)" | 1H June 2019 Q1(b) (State, 1); 2H June 2018 Q3(b) (2) |
+| energy-and-work / store-changes explain, en-t1-q4 | the 2022 rover question rebuilt as set (a descent; Describe; any three of eight points, the work-done-by-force lines being the ones missed); the claim that GPE/KE answers "scored nothing" removed | 2H June 2022 Q7(a)(iii) |
+| energy-and-work / en-n10-q5, en-n10-q6 | bare "same time" insufficient; thermometer in the air lost one mark of three; "inversely proportional" was allowed for the non-linear mark, "negative correlation" ignored | 1H June 2022 Q2(b)(i), (b)(ii), (c) |
+| energy-and-work / en-t8-q6 | lubrication: second mark "more useful energy for the same input", third mark the efficiency equation | 2H June 2019 Q4(c)(ii) |
+| energy-and-work / efficiency-nn explain, **en-n8-q3** | the 0.91 slip described correctly (power of ten); stored answer 2810 → **2800 J** (2 s.f., as the exam; 2812.5 accepted) | 1H June 2023 Q10(a)(i); 2H June 2023 Q9(a)(ii) |
+| energy-and-work / ke worked | the kJ conversion is the second mark; 153.6 kJ scores | 2H June 2023 Q8(a)(i) |
+| energy-and-work / en-t2-q6 | "use an air track" added | 2H June 2025 Q2(a)(iii) |
+| energy-and-work / resources blurb, en-n11-q5 | the Nov 2020 "discuss for and against nuclear" noted (lives on the Topic 6 page); nuclear points with their consequences | 1H Nov 2020 Q8(c) |
+
+One stored answer changed (en-n8-q3, 2810 → 2800; same working).
+`check_topic.js energy-and-work` passes on both tiers (114 numerics,
+28 choices). H list in the report: "how to determine the energy
+dissipated" (2025 Q6(a)(iii), Nov 2020 Q2(d)), "why efficiency is less than
+1" (2018 Q7(b)(ii)), the energy-diagram question (2024 Q2(c)) with the
+truncation trap (0.96 scores 1), work done = ΔGPE as a one-mark state,
+regenerative braking (2023 Q8(a)(iii)), the trends question's real shape
+(2018 Q7(b): trend + reason), the GPE-experiment detail marks (2024
+Q7(b)(i)), particle-sized KE numbers.

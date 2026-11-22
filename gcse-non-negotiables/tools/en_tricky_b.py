@@ -114,7 +114,7 @@ section_t8 = section(
             "The answer shape, and the banned phrases",
             "<p>Every one of these answers is: <b>(1) what is wasted → (2) which store it goes to → (3) by which pathway → (4) the consequence.</b></p>"
             "<p>Example — <i>why is the water's temperature rise less than calculated from the heater's energy?</i> (1) Not all the energy supplied goes to the water; (2) some is transferred to the thermal store of the container and the surroundings; (3) by heating; (4) so less energy is in the water's thermal store and $\\Delta\\theta = \\dfrac{E}{m c}$ is smaller.</p>"
-            "<p>The June 2024 scheme for that question: \"Do not accept unqualified <b>energy is lost / wasted</b>, <b>not 100% efficient</b>, or arguments about <b>sound</b>.\" Two of those four points, properly linked, scored both marks; \"the brick transfers thermal energy to the surroundings\" scored 2 on its own because it names the store, the direction and the pathway.</p>"
+            "<p>The June 2024 scheme for that question (a storage-heater brick, 2H Q9(b)(ii)) <b>ignores</b> unqualified \"energy is lost / wasted\", \"not 100% efficient\" and arguments about sound. Any two of its five points scored both marks — not all the energy goes to the brick; not all of it stays there; energy transferred to the heater's parts; energy transferred to the surroundings; or the equation argument \"if the energy supplied to the brick is smaller, $\\Delta\\theta = \\Delta Q \\div (m c)$ is smaller\"; \"the brick transfers thermal energy to the surroundings\" scored 2 on its own because it names the store, the direction and the pathway.</p>"
             "<p><b>Insulation answers</b> need the word <b>rate</b>: insulation (low thermal conductivity, trapped air) <b>reduces the rate</b> of energy transfer to the surroundings; it never stops it. If an experiment compares insulators, the one whose water cools <b>least in the same time</b> is the best insulator, because the rate of transfer through it is lowest.</p>"
             "<p><b>Lubrication answers</b> need the word <b>friction</b>: oil reduces friction between the surfaces, so less work is done against friction, so less energy is transferred to the thermal store, so more of the input is useful (higher efficiency).</p>",
         ),
@@ -149,8 +149,8 @@ section_t8 = section(
             written("en-t8-q6", "Explain how adding oil to a bicycle chain increases the efficiency of the bicycle. (3)",
                     mark_scheme([
                         ("Friction", "The oil <b>reduces friction</b> between the chain and the cogs."),
-                        ("Less wasted", "So less work is done against friction and <b>less energy is transferred to the thermal store</b> of the surroundings."),
-                        ("Efficiency", "So a <b>larger fraction</b> of the cyclist's energy is transferred usefully to the kinetic store — the efficiency increases."),
+                        ("Less wasted", "So less energy is transferred to the thermal store of the surroundings, so <b>more useful energy is available</b> for the same input (or <b>less input energy is needed</b> for the same output)."),
+                        ("Efficiency", "Write the equation: <b>efficiency = useful energy transferred ÷ total energy supplied</b> — the useful share is larger, so the efficiency increases (June 2019 2H Q4(c)(ii): stating the equation is the third mark)."),
                     ]), lines=4),
         ]),
     ],
@@ -407,7 +407,7 @@ FACTS = [
     fact("Total input from useful output and efficiency?", "total = useful ÷ efficiency. The input is always bigger than the useful output.", "efficiency-nn"),
     fact("Where does wasted energy end up?", "In the thermal store of the surroundings, spread out so it cannot be used — dissipated.", "dissipation"),
     fact("Why do mechanical processes become wasteful?", "Friction and air resistance do work and raise the temperature, dissipating energy by heating the surroundings.", "dissipation"),
-    fact("Phrases that score nothing for wasted energy?", "\"Energy is lost\", \"used up\", \"not 100% efficient\", \"sound\" on its own. Name the store and the pathway instead.", "dissipation"),
+    fact("Phrases never to leave bare for wasted energy?", "\"Energy is lost\", \"not 100% efficient\", \"sound\" — ignored in 2024 unless qualified; \"used up\" is wrong. Add the store (thermal store of the surroundings) and the pathway (by heating / friction).", "dissipation"),
     fact("How does lubrication reduce unwanted energy transfer?", "Oil reduces friction between moving surfaces, so less work is done against friction and less energy goes to the thermal store.", "insulation"),
     fact("How does thermal insulation reduce unwanted energy transfer?", "An insulator has low thermal conductivity, so it reduces the rate of energy transfer by heating to the surroundings.", "insulation"),
     fact("Two things that affect how fast a building cools?", "Wall thickness (thicker → slower) and thermal conductivity of the walls (lower → slower).", "insulation"),

@@ -98,7 +98,7 @@ section_n8 = section(
             "The equation and the percentage trap",
             "<p>$$\\text{efficiency} = \\dfrac{\\text{useful energy transferred}}{\\text{total energy supplied}}$$</p>"
             "<p>The same equation works with <b>power</b> instead of energy. The answer has <b>no unit</b>: it is a fraction (0.6) or a percentage (60%).</p>"
-            "<p>The trap, straight from the examiners' reports: a 55% efficient oven is <b>0.55</b> in the equation, not 55. The June 2023 scheme gave \"0.91 or 0.9\" (percentage not converted) one mark of two, and the 2022 report says of the wrong answers \"the answer was sometimes smaller than the useful energy, which should have prompted a check.\"</p>"
+            "<p>The trap, straight from the examiners' reports: a 55% efficient oven is <b>0.55</b> in the equation, not 55. The June 2023 scheme gave \"0.91 or 0.9\" (7% turned into 0.07 and then the answer divided by 100 again — a power-of-ten slip) one mark of two, and the 2022 report says of the wrong answers \"the answer was sometimes smaller than the useful energy, which should have prompted a check.\"</p>"
             "<p>Rearrangements you will need:</p><ul>"
             "<li>useful out = efficiency × total in</li>"
             "<li><b>total in = useful out ÷ efficiency</b> — the input is always <i>bigger</i> than the useful output</li>"
@@ -117,8 +117,8 @@ section_n8 = section(
                     q8_2, "J", "7% = 0.07.",
                     ewau(r"\text{useful} = \text{efficiency} \times \text{total}", r"\text{useful} = 0.07 \times 1300", "91", "J")),
             numeric("en-n8-q3", "A pulley system is 64% efficient. It does 1800 J of useful work on a load. Calculate the total work put in.",
-                    sf(q8_3, 3), "J", "total = useful ÷ efficiency; the input must come out bigger than 1800 J.",
-                    ewau(r"\text{efficiency} = \dfrac{\text{useful}}{\text{total}}", r"0.64 = \dfrac{1800}{\text{total}} \;\Rightarrow\; \text{total} = \dfrac{1800}{0.64}", "2812.5 \\approx 2810", "J (3 s.f.)")),
+                    sf(q8_3, 2), "J", "total = useful ÷ efficiency; the input must come out bigger than 1800 J.",
+                    ewau(r"\text{efficiency} = \dfrac{\text{useful}}{\text{total}}", r"0.64 = \dfrac{1800}{\text{total}} \;\Rightarrow\; \text{total} = \dfrac{1800}{0.64}", "2812.5 \\approx 2800", "J (2 s.f., as the data; the June 2023 2H scheme, Q9(a)(ii), accepts 2812.5)")),
             numeric("en-n8-q4", "A 5000 W engine delivers 3000 W of useful power. Calculate its efficiency as a percentage.",
                     q8_4 * 100, "%", "Useful power ÷ total power, × 100.",
                     ewau(r"\text{efficiency} = \dfrac{\text{useful power}}{\text{total power}}", r"\text{efficiency} = \dfrac{3000}{5000} = 0.6", "60", "%")),
@@ -153,24 +153,24 @@ section_n9 = section(
             "What dissipated means",
             "<p>When energy is transferred, some of it always goes somewhere you did not want. A motor gets warm; a sliding box heats the floor; a lamp's wires heat up. In every case the energy is <b>transferred by heating to the thermal store of the surroundings</b>. It spreads out among so many particles that it can never be gathered up and used again. That spreading is <b>dissipation</b>.</p>"
             "<p>The spec wording: <b>mechanical processes become wasteful when they cause a rise in temperature, dissipating energy by heating the surroundings.</b> Friction and air resistance are the usual causes — they do work, and the work done ends up as thermal energy.</p>"
-            "<p>The mark schemes are strict about the wording. \"Energy is lost\" or \"not 100% efficient\" on its own scores nothing (the June 2024 scheme: do not accept unqualified \"energy is lost/wasted\"). Say <b>which store</b> it goes to and <b>how</b>: <i>energy is transferred to the thermal store of the surroundings by friction</i>. \"Sound\" is usually ignored — it is tiny and ends up as thermal energy anyway.</p>",
+            "<p>The mark schemes are strict about the wording. The June 2024 scheme (2H Q9(b)(ii)) <b>ignores</b> unqualified \"energy is lost / wasted\", \"not 100% efficient\" and arguments about sound; earlier schemes let \"lost\" through, so never rely on it. Say <b>which store</b> it goes to and <b>how</b>: <i>energy is transferred to the thermal store of the surroundings by friction</i>. \"Sound\" is usually ignored — it is tiny and ends up as thermal energy anyway.</p>",
         ),
         worked(
             "Explaining a wasteful transfer",
             "A ball is dropped and bounces, but each bounce is lower than the last. Explain, in terms of energy, why the ball does not return to its original height. (3 marks)",
             [
-                "<b>Energy is conserved</b>, so the total has not changed — it has been moved to stores that are no use for bouncing.",
+                "<b>The ball has less energy</b>: after the bounce its kinetic and gravitational stores hold <b>less</b> than before — that is the first mark (June 2019 2H Q2(b)(iv): \"(the ball) has lost energy (1)\"); the total is conserved, but the examiner is asking about the ball's share.",
                 "<b>Where:</b> some of the ball's energy is transferred to the <b>thermal store of the ball and the floor</b> when it squashes and un-squashes, and to the <b>thermal store of the air</b> by air resistance.",
                 "<b>So:</b> less energy is in the <b>kinetic store</b> after each bounce, so less can be transferred to the <b>gravitational store</b>, and the ball rises less. The energy has been <b>dissipated</b>.",
             ],
         ),
         practice("Dissipation", [
-            written("en-n9-q1", "A toy car is given a push and rolls along the carpet until it stops. State what has happened to its kinetic energy. (2)",
+            written("en-n9-q1", "A toy car is given a push and rolls along the carpet until it stops. Describe the energy transfers as it slows and stops. (2)",
                     marks(["It has been transferred to the <b>thermal store</b> of the carpet, the wheels and the surroundings…",
                            "…by <b>friction</b> — work is done against friction and the energy is transferred by heating to the surroundings; it has been <b>dissipated</b>, not destroyed."]), lines=3),
             choice("en-n9-q2", "Which statement about a 40% efficient engine scores the mark?",
-                   ["60% of the energy is lost", "60% of the energy is transferred to the thermal store of the surroundings", "60% of the energy is destroyed", "The engine makes 40% of its energy"], 1,
-                   "Name the store the wasted energy goes to. \"Lost\" and \"destroyed\" are wrong; energy is conserved."),
+                   ["60% of the energy disappears", "60% of the energy is transferred to the thermal store of the surroundings", "60% of the energy is destroyed", "The engine makes 40% of its energy"], 1,
+                   "Name the store the wasted energy goes to. \"Disappears\" and \"destroyed\" are wrong — energy is conserved — and a bare \"lost\" is ignored unless you say where to (the surroundings, as thermal energy)."),
             written("en-n9-q3", "Explain why a mechanical process such as a drill cutting wood is wasteful. (2)",
                     marks(["Friction between the drill and the wood <b>raises the temperature</b> of both.",
                            "Energy is <b>dissipated</b> — transferred by heating to the <b>thermal store of the surroundings</b> — so it is no longer useful."]), lines=3),
@@ -237,12 +237,12 @@ section_n10 = section(
             written("en-n10-q5", "A student investigates which of three materials is the best insulator by wrapping each round a beaker of hot water. State two variables that must be kept the same, and where the thermometer must be. (3)",
                     mark_scheme([
                         ("Control 1", "Same <b>volume (mass) of water</b> in each beaker."),
-                        ("Control 2", "Same <b>starting temperature</b> of the water (or same thickness of insulation, same beaker, same time)."),
-                        ("Thermometer", "<b>In the water</b> — so the temperature of the water, not the air, is measured (the 2022 report: diagrams with the thermometer outside the water scored nothing)."),
+                        ("Control 2", "Same <b>starting temperature</b> of the water (or same <b>thickness</b> of insulation; same <b>time interval</b> between readings or same <b>temperature change</b> — June 2022 1H Q2(b)(ii): \"unqualified 'same time' is insufficient\")."),
+                        ("Thermometer", "<b>In the water</b> — so the temperature of the water, not the air, is measured (the June 2022 scheme, Q2(b)(i), gave a separate mark for \"thermometer in the water\"; a thermometer drawn in the air lost it)."),
                     ]), lines=4),
             choice("en-n10-q6", "A graph of thermal conductivity against density for a foam curves downwards and then levels off. Which is the description the examiner wants?",
                    ["Conductivity goes down", "Conductivity is 0.04 at 20 kg/m³ and 0.03 at 40 kg/m³", "Conductivity decreases as density increases, but the decrease gets smaller and the graph levels off (non-linear)", "Conductivity is inversely proportional to density"], 2,
-                   "Describe the shape of the change: decreasing, non-linear, levelling off. Quoting two points is not a description, and \"inversely proportional\" claims more than the graph shows."),
+                   "Describe the shape of the change: decreasing, non-linear, levelling off. Quoting two points is not a description (\"unqualified quoted values are insufficient\"), and \"negative correlation\" is ignored. \"Inversely proportional\" was allowed for the non-linear mark in 2022, but it does not state the direction of change — write both: <i>decreases as density increases, and non-linear / levels off</i>."),
         ]),
     ],
 )
@@ -266,7 +266,7 @@ RESOURCES_TABLE = (
 section_n11 = section(
     "resources", "nn", "Energy resources", "3.13",
     equations=[r"\text{renewable: will not run out}", r"\text{non-renewable: will run out}"],
-    blurb="The seven energy sources named in the spec, whether each is renewable, and how each is used. You need the facts and the ways each is used; weighing sources against each other on cost or reliability is not required.",
+    blurb="The seven energy sources named in the spec, whether each is renewable, and how each is used. You need the facts and the ways each is used; comparing sources on cost or reliability is not on the spec — the one 6-mark \"discuss the arguments for and against\" set (nuclear power, Nov 2020 1H Q8(c)) is on the Topic 6 page, and its scheme wanted each point with its consequence: <i>no carbon emissions <b>so</b> does not contribute to global warming</i>.",
     checklist=[
         "State what renewable and non-renewable mean",
         "Name the seven sources on the spec and say which are renewable",
@@ -300,8 +300,8 @@ section_n11 = section(
                    ["Wind", "Tides", "Solar", "Gas"], 1,
                    "Tides happen twice a day at times known years in advance. Wind and solar depend on the weather; gas is non-renewable."),
             written("en-n11-q5", "Give one advantage and one disadvantage of using nuclear fuel to generate electricity. (2)",
-                    marks(["Advantage: <b>no carbon dioxide</b> emitted during generation / very large amount of energy from a small mass of fuel / reliable.",
-                           "Disadvantage: produces <b>radioactive waste</b> that must be stored for a very long time / expensive to build and decommission / risk of accident."]), lines=3),
+                    marks(["Advantage: <b>no carbon dioxide</b> emitted during generation (<b>so</b> does not contribute to global warming) / <b>large power output</b> compared with wind or solar / <b>low running costs</b> / reliable.",
+                           "Disadvantage: produces <b>radioactive waste</b> that must be stored for a very long time / expensive to build and decommission / a nuclear accident is possible, <b>so</b> loss of life or contamination of an area (Nov 2020 1H Q8(c): each point with its consequence)."]), lines=3),
             written("en-n11-q6", "Describe how a hydroelectric power station generates electricity. (2)",
                     marks(["Water stored behind a <b>dam</b> (gravitational potential store) <b>falls</b> through pipes…",
                            "…and <b>turns a turbine</b> connected to a <b>generator</b>."]), lines=3),

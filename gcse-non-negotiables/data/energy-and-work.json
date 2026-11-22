@@ -70,7 +70,7 @@
             "<b>Which store does the energy start in?</b> The battery — a <b>chemical</b> store.",
             "<b>Which store does it end up in?</b> The moving car — a <b>kinetic</b> store.",
             "<b>Which pathway?</b> A current flows from the battery to the motor, so the transfer is <b>electrical</b>; the motor then transfers it <b>mechanically</b> to the car.",
-            "<b>Answer:</b> Energy is transferred from the <b>chemical store</b> of the battery to the <b>kinetic store</b> of the car, <b>electrically</b> (via the motor). One mark for the two stores, one for the pathway."
+            "<b>Answer:</b> Energy is transferred from the <b>chemical store</b> of the battery to the <b>kinetic store</b> of the car, <b>electrically</b> (via the motor). One mark for the <b>store it leaves</b>, one for the <b>store it ends in</b> (June 2018 2H Q3(b), Nov 2020 1H Q2(a)). The pathway word is not a separate mark here — it is the answer when the question asks <i>how</i> the energy was transferred (June 2022 1H Q5(b)(ii): \"mechanically / thermally / due to friction\"), so give it, but the two stores carry the marks."
           ]
         },
         {
@@ -114,7 +114,7 @@
                 "Heat energy is made from the wax"
               ],
               "correct": 1,
-              "explain": "Name the starting store, the finishing store and the pathway. \"Light energy\" and \"heat energy\" are not stores, and energy is never \"used up\" or \"made\"."
+              "explain": "Name the starting store, the finishing store and the pathway. \"Light energy\" is not a store (\"heat\" is allowed for \"thermal\" in every scheme, but write thermal store), and energy is never \"used up\" or \"made\"."
             },
             {
               "id": "en-n1-q4",
@@ -171,7 +171,7 @@
         {
           "kind": "explain",
           "title": "The law, in the words that score",
-          "html": "<p><b>Energy cannot be created or destroyed. It can only be transferred from one store to another.</b> That is the whole law; learn it word for word.</p><p>Two things follow from it:</p><ul><li>In a <b>closed system</b> — one where no energy gets in or out — the <b>total energy does not change</b>, however much is moved between stores inside it.</li><li>In any transfer, <b>energy input = useful energy output + wasted energy</b>. If 100 J goes into a lamp and 5 J comes out as light, 95 J has been wasted (dissipated) — it has not disappeared.</li></ul><p>\"Energy is lost\" scores nothing on its own. Say where it went: <i>dissipated to the thermal store of the surroundings</i>.</p>"
+          "html": "<p><b>Energy cannot be created or destroyed. It can only be transferred from one store to another.</b> That is the whole law; learn it word for word.</p><p>Two things follow from it:</p><ul><li>In a <b>closed system</b> — one where no energy gets in or out — the <b>total energy does not change</b>, however much is moved between stores inside it.</li><li>In any transfer, <b>energy input = useful energy output + wasted energy</b>. If 100 J goes into a lamp and 5 J comes out as light, 95 J has been wasted (dissipated) — it has not disappeared.</li></ul><p>Bare \"energy is lost\" is a gamble: the June 2024 scheme ignores it \"unqualified\" (earlier schemes let it through). Never leave it bare — say where it went, and it scores every year: <i>dissipated to the thermal store of the surroundings</i>.</p>"
         },
         {
           "kind": "worked",
@@ -514,8 +514,8 @@
           "steps": [
             "<b>Equation:</b> $KE = \\tfrac{1}{2} \\times m \\times v^{2}$",
             "<b>Working:</b> $KE = \\tfrac{1}{2} \\times 1200 \\times 16^{2} = \\tfrac{1}{2} \\times 1200 \\times 256$",
-            "<b>Answer:</b> $= 153\\,600\\ \\text{J} = 150$",
-            "<b>Units:</b> kJ (to 2 s.f.)"
+            "<b>Answer:</b> $= 153\\,600\\ \\text{J} = 153.6 \\text{ kJ} \\approx 150$",
+            "<b>Units:</b> kJ — the second mark is the conversion to kJ (June 2023 2H Q8(a)(i): 153.6 or 150 both score; 153 600 \"kJ\" scores 1)"
           ]
         },
         {
@@ -953,7 +953,7 @@
         {
           "kind": "explain",
           "title": "The equation and the percentage trap",
-          "html": "<p>$$\\text{efficiency} = \\dfrac{\\text{useful energy transferred}}{\\text{total energy supplied}}$$</p><p>The same equation works with <b>power</b> instead of energy. The answer has <b>no unit</b>: it is a fraction (0.6) or a percentage (60%).</p><p>The trap, straight from the examiners' reports: a 55% efficient oven is <b>0.55</b> in the equation, not 55. The June 2023 scheme gave \"0.91 or 0.9\" (percentage not converted) one mark of two, and the 2022 report says of the wrong answers \"the answer was sometimes smaller than the useful energy, which should have prompted a check.\"</p><p>Rearrangements you will need:</p><ul><li>useful out = efficiency × total in</li><li><b>total in = useful out ÷ efficiency</b> — the input is always <i>bigger</i> than the useful output</li><li>wasted = total in − useful out</li></ul>"
+          "html": "<p>$$\\text{efficiency} = \\dfrac{\\text{useful energy transferred}}{\\text{total energy supplied}}$$</p><p>The same equation works with <b>power</b> instead of energy. The answer has <b>no unit</b>: it is a fraction (0.6) or a percentage (60%).</p><p>The trap, straight from the examiners' reports: a 55% efficient oven is <b>0.55</b> in the equation, not 55. The June 2023 scheme gave \"0.91 or 0.9\" (7% turned into 0.07 and then the answer divided by 100 again — a power-of-ten slip) one mark of two, and the 2022 report says of the wrong answers \"the answer was sometimes smaller than the useful energy, which should have prompted a check.\"</p><p>Rearrangements you will need:</p><ul><li>useful out = efficiency × total in</li><li><b>total in = useful out ÷ efficiency</b> — the input is always <i>bigger</i> than the useful output</li><li>wasted = total in − useful out</li></ul>"
         },
         {
           "kind": "worked",
@@ -1015,15 +1015,15 @@
               "type": "numeric",
               "text": "A pulley system is 64% efficient. It does 1800 J of useful work on a load. Calculate the total work put in.",
               "answer": {
-                "value": 2810,
+                "value": 2800,
                 "unit": "J"
               },
               "hint": "total = useful ÷ efficiency; the input must come out bigger than 1800 J.",
               "walkthrough": [
                 "<b>Equation:</b> $\\text{efficiency} = \\dfrac{\\text{useful}}{\\text{total}}$",
                 "<b>Working:</b> $0.64 = \\dfrac{1800}{\\text{total}} \\;\\Rightarrow\\; \\text{total} = \\dfrac{1800}{0.64}$",
-                "<b>Answer:</b> $= 2812.5 \\approx 2810$",
-                "<b>Units:</b> J (3 s.f.)"
+                "<b>Answer:</b> $= 2812.5 \\approx 2800$",
+                "<b>Units:</b> J (2 s.f., as the data; the June 2023 2H scheme, Q9(a)(ii), accepts 2812.5)"
               ]
             },
             {
@@ -1104,14 +1104,14 @@
         {
           "kind": "explain",
           "title": "What dissipated means",
-          "html": "<p>When energy is transferred, some of it always goes somewhere you did not want. A motor gets warm; a sliding box heats the floor; a lamp's wires heat up. In every case the energy is <b>transferred by heating to the thermal store of the surroundings</b>. It spreads out among so many particles that it can never be gathered up and used again. That spreading is <b>dissipation</b>.</p><p>The spec wording: <b>mechanical processes become wasteful when they cause a rise in temperature, dissipating energy by heating the surroundings.</b> Friction and air resistance are the usual causes — they do work, and the work done ends up as thermal energy.</p><p>The mark schemes are strict about the wording. \"Energy is lost\" or \"not 100% efficient\" on its own scores nothing (the June 2024 scheme: do not accept unqualified \"energy is lost/wasted\"). Say <b>which store</b> it goes to and <b>how</b>: <i>energy is transferred to the thermal store of the surroundings by friction</i>. \"Sound\" is usually ignored — it is tiny and ends up as thermal energy anyway.</p>"
+          "html": "<p>When energy is transferred, some of it always goes somewhere you did not want. A motor gets warm; a sliding box heats the floor; a lamp's wires heat up. In every case the energy is <b>transferred by heating to the thermal store of the surroundings</b>. It spreads out among so many particles that it can never be gathered up and used again. That spreading is <b>dissipation</b>.</p><p>The spec wording: <b>mechanical processes become wasteful when they cause a rise in temperature, dissipating energy by heating the surroundings.</b> Friction and air resistance are the usual causes — they do work, and the work done ends up as thermal energy.</p><p>The mark schemes are strict about the wording. The June 2024 scheme (2H Q9(b)(ii)) <b>ignores</b> unqualified \"energy is lost / wasted\", \"not 100% efficient\" and arguments about sound; earlier schemes let \"lost\" through, so never rely on it. Say <b>which store</b> it goes to and <b>how</b>: <i>energy is transferred to the thermal store of the surroundings by friction</i>. \"Sound\" is usually ignored — it is tiny and ends up as thermal energy anyway.</p>"
         },
         {
           "kind": "worked",
           "title": "Explaining a wasteful transfer",
           "question": "A ball is dropped and bounces, but each bounce is lower than the last. Explain, in terms of energy, why the ball does not return to its original height. (3 marks)",
           "steps": [
-            "<b>Energy is conserved</b>, so the total has not changed — it has been moved to stores that are no use for bouncing.",
+            "<b>The ball has less energy</b>: after the bounce its kinetic and gravitational stores hold <b>less</b> than before — that is the first mark (June 2019 2H Q2(b)(iv): \"(the ball) has lost energy (1)\"); the total is conserved, but the examiner is asking about the ball's share.",
             "<b>Where:</b> some of the ball's energy is transferred to the <b>thermal store of the ball and the floor</b> when it squashes and un-squashes, and to the <b>thermal store of the air</b> by air resistance.",
             "<b>So:</b> less energy is in the <b>kinetic store</b> after each bounce, so less can be transferred to the <b>gravitational store</b>, and the ball rises less. The energy has been <b>dissipated</b>."
           ]
@@ -1123,7 +1123,7 @@
             {
               "id": "en-n9-q1",
               "type": "written",
-              "text": "A toy car is given a push and rolls along the carpet until it stops. State what has happened to its kinetic energy. (2)",
+              "text": "A toy car is given a push and rolls along the carpet until it stops. Describe the energy transfers as it slows and stops. (2)",
               "model": "<ul><li>It has been transferred to the <b>thermal store</b> of the carpet, the wheels and the surroundings…</li><li>…by <b>friction</b> — work is done against friction and the energy is transferred by heating to the surroundings; it has been <b>dissipated</b>, not destroyed.</li></ul>",
               "lines": 3
             },
@@ -1132,13 +1132,13 @@
               "type": "choice",
               "text": "Which statement about a 40% efficient engine scores the mark?",
               "options": [
-                "60% of the energy is lost",
+                "60% of the energy disappears",
                 "60% of the energy is transferred to the thermal store of the surroundings",
                 "60% of the energy is destroyed",
                 "The engine makes 40% of its energy"
               ],
               "correct": 1,
-              "explain": "Name the store the wasted energy goes to. \"Lost\" and \"destroyed\" are wrong; energy is conserved."
+              "explain": "Name the store the wasted energy goes to. \"Disappears\" and \"destroyed\" are wrong — energy is conserved — and a bare \"lost\" is ignored unless you say where to (the surroundings, as thermal energy)."
             },
             {
               "id": "en-n9-q3",
@@ -1253,7 +1253,7 @@
               "id": "en-n10-q5",
               "type": "written",
               "text": "A student investigates which of three materials is the best insulator by wrapping each round a beaker of hot water. State two variables that must be kept the same, and where the thermometer must be. (3)",
-              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Control 1</td><td>Same <b>volume (mass) of water</b> in each beaker.</td></tr><tr><td><b>2</b></td><td>Control 2</td><td>Same <b>starting temperature</b> of the water (or same thickness of insulation, same beaker, same time).</td></tr><tr><td><b>3</b></td><td>Thermometer</td><td><b>In the water</b> — so the temperature of the water, not the air, is measured (the 2022 report: diagrams with the thermometer outside the water scored nothing).</td></tr></table>",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Control 1</td><td>Same <b>volume (mass) of water</b> in each beaker.</td></tr><tr><td><b>2</b></td><td>Control 2</td><td>Same <b>starting temperature</b> of the water (or same <b>thickness</b> of insulation; same <b>time interval</b> between readings or same <b>temperature change</b> — June 2022 1H Q2(b)(ii): \"unqualified 'same time' is insufficient\").</td></tr><tr><td><b>3</b></td><td>Thermometer</td><td><b>In the water</b> — so the temperature of the water, not the air, is measured (the June 2022 scheme, Q2(b)(i), gave a separate mark for \"thermometer in the water\"; a thermometer drawn in the air lost it).</td></tr></table>",
               "lines": 4
             },
             {
@@ -1267,7 +1267,7 @@
                 "Conductivity is inversely proportional to density"
               ],
               "correct": 2,
-              "explain": "Describe the shape of the change: decreasing, non-linear, levelling off. Quoting two points is not a description, and \"inversely proportional\" claims more than the graph shows."
+              "explain": "Describe the shape of the change: decreasing, non-linear, levelling off. Quoting two points is not a description (\"unqualified quoted values are insufficient\"), and \"negative correlation\" is ignored. \"Inversely proportional\" was allowed for the non-linear mark in 2022, but it does not state the direction of change — write both: <i>decreases as density increases, and non-linear / levels off</i>."
             }
           ]
         }
@@ -1355,7 +1355,7 @@
               "id": "en-n11-q5",
               "type": "written",
               "text": "Give one advantage and one disadvantage of using nuclear fuel to generate electricity. (2)",
-              "model": "<ul><li>Advantage: <b>no carbon dioxide</b> emitted during generation / very large amount of energy from a small mass of fuel / reliable.</li><li>Disadvantage: produces <b>radioactive waste</b> that must be stored for a very long time / expensive to build and decommission / risk of accident.</li></ul>",
+              "model": "<ul><li>Advantage: <b>no carbon dioxide</b> emitted during generation (<b>so</b> does not contribute to global warming) / <b>large power output</b> compared with wind or solar / <b>low running costs</b> / reliable.</li><li>Disadvantage: produces <b>radioactive waste</b> that must be stored for a very long time / expensive to build and decommission / a nuclear accident is possible, <b>so</b> loss of life or contamination of an area (Nov 2020 1H Q8(c): each point with its consequence).</li></ul>",
               "lines": 3
             },
             {
@@ -1373,7 +1373,7 @@
         "Name the seven sources on the spec and say which are renewable",
         "Describe how each source is used to generate electricity or for heating / transport"
       ],
-      "blurb": "The seven energy sources named in the spec, whether each is renewable, and how each is used. You need the facts and the ways each is used; weighing sources against each other on cost or reliability is not required.",
+      "blurb": "The seven energy sources named in the spec, whether each is renewable, and how each is used. You need the facts and the ways each is used; comparing sources on cost or reliability is not on the spec — the one 6-mark \"discuss the arguments for and against\" set (nuclear power, Nov 2020 1H Q8(c)) is on the Topic 6 page, and its scheme wanted each point with its consequence: <i>no carbon emissions <b>so</b> does not contribute to global warming</i>.",
       "subtopic": [
         "3"
       ]
@@ -1450,12 +1450,12 @@
               "text": "A student writes: \"The lamp changes electrical energy into light energy and heat energy.\" What is wrong with this?",
               "options": [
                 "Nothing",
-                "Light and electricity are pathways, not stores; the answer should name the stores (e.g. thermal store of the surroundings) and the pathways (electrically, by radiation)",
+                "Light and electricity are pathways, not stores; the answer should name the store the energy ends in (thermal store of the surroundings — \"heat\" is accepted for thermal) rather than \"light energy\", which is not a store",
                 "It should say \"heat\" first",
                 "Lamps do not get hot"
               ],
               "correct": 1,
-              "explain": "Edexcel wants stores and pathways. \"Electrical energy\", \"light energy\" and \"heat energy\" are not stores."
+              "explain": "Edexcel wants stores and pathways. \"Electrical energy\" and \"light energy\" are not stores; every scheme allows \"heat\" for \"thermal\", but write thermal store."
             },
             {
               "id": "en-kw-q8",
@@ -1510,7 +1510,7 @@
         {
           "kind": "explain",
           "title": "The sentence and the five situations",
-          "html": "<p>Every energy-change answer is this sentence: <b>energy is transferred from the [store] of [object] to the [store] of [object], [pathway].</b> If some is wasted, add: <b>some energy is dissipated to the thermal store of the surroundings by [friction / air resistance / heating].</b></p><table class='tbl'><tr><th>Situation (spec 3.5)</th><th>Energy is transferred from…</th><th>…to…</th><th>…by</th></tr><tr><td>An object <b>projected upwards</b> (or up a slope)</td><td>kinetic store of the object</td><td>gravitational potential store (and thermal store of the air)</td><td>mechanically — gravity (and air resistance) do work</td></tr><tr><td>A moving object <b>hitting an obstacle</b></td><td>kinetic store of the object</td><td>thermal store of the object and obstacle; elastic potential store if it deforms; a little by sound (radiation)</td><td>mechanically — the contact force does work</td></tr><tr><td>An object <b>accelerated by a constant force</b></td><td>chemical store of the engine / person (or whatever provides the force)</td><td>kinetic store of the object</td><td>mechanically — the force does work</td></tr><tr><td>A <b>vehicle slowing down</b></td><td>kinetic store of the vehicle</td><td>thermal store of the brakes, tyres, road and surroundings</td><td>mechanically — friction does work, then by heating</td></tr><tr><td>Bringing water to the boil in an <b>electric kettle</b></td><td>(chemical store of the fuel at the power station →) the kettle element</td><td>thermal store of the water (and the kettle and the surroundings)</td><td>electrically to the element, then by heating to the water</td></tr></table><p>Two warnings from the June 2022 Paper 2 report: candidates wrote \"as GPE decreases KE increases\" for a rover slowing on a hill, forgetting the air resistance that was the point of the question; and \"hardly any candidates talked about work being done against gravity\" — say <i>the engine does work against gravity</i> when something is driven uphill, <i>air resistance does work on the vehicle</i> when it is slowed by the air.</p>"
+          "html": "<p>Every energy-change answer is this sentence: <b>energy is transferred from the [store] of [object] to the [store] of [object], [pathway].</b> If some is wasted, add: <b>some energy is dissipated to the thermal store of the surroundings by [friction / air resistance / heating].</b></p><table class='tbl'><tr><th>Situation (spec 3.5)</th><th>Energy is transferred from…</th><th>…to…</th><th>…by</th></tr><tr><td>An object <b>projected upwards</b> (or up a slope)</td><td>kinetic store of the object</td><td>gravitational potential store (and thermal store of the air)</td><td>mechanically — gravity (and air resistance) do work</td></tr><tr><td>A moving object <b>hitting an obstacle</b></td><td>kinetic store of the object</td><td>thermal store of the object and obstacle; elastic potential store if it deforms; a little by sound (radiation)</td><td>mechanically — the contact force does work</td></tr><tr><td>An object <b>accelerated by a constant force</b></td><td>chemical store of the engine / person (or whatever provides the force)</td><td>kinetic store of the object</td><td>mechanically — the force does work</td></tr><tr><td>A <b>vehicle slowing down</b></td><td>kinetic store of the vehicle</td><td>thermal store of the brakes, tyres, road and surroundings</td><td>mechanically — friction does work, then by heating</td></tr><tr><td>Bringing water to the boil in an <b>electric kettle</b></td><td>(chemical store of the fuel at the power station →) the kettle element</td><td>thermal store of the water (and the kettle and the surroundings)</td><td>electrically to the element, then by heating to the water</td></tr></table><p>The June 2022 Paper 2 question (Q7(a)(iii), a rover <i>descending</i> to Mars on thrusters and a parachute) asked for the energy changes <i>in terms of the work done by forces</i>. The scheme's eight points: <b>work is done by gravity</b>; <b>work is done by the thrusters</b>; <b>air resistance does work on the parachute</b>; this <b>reduces the kinetic store</b>; the <b>gravitational potential store decreases</b>; chemical energy is transferred from the thrusters; energy is transferred to the <b>thermal store</b>; mechanically. The report: \"hardly any candidates talked about work being done against gravity\" — the store changes were the marks most students got; the three <b>work done by [named force]</b> lines were the ones they missed. Name the force, then the store.</p>"
         },
         {
           "kind": "worked",
@@ -1550,10 +1550,10 @@
             {
               "id": "en-t1-q4",
               "type": "written",
-              "text": "A rover drives up a hill at constant speed against air resistance. Explain how work done by forces changes the energy stores. (3)",
-              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Against gravity</td><td>The engine (motor) does <b>work against gravity</b>, so energy is transferred to the <b>gravitational potential store</b> of the rover.</td></tr><tr><td><b>2</b></td><td>Against air resistance</td><td><b>Air resistance does work</b> on the rover, transferring energy to the <b>thermal store of the air</b> (dissipated).</td></tr><tr><td><b>3</b></td><td>Source / KE</td><td>Both come from the <b>chemical store</b> of the fuel (or the battery); because the speed is constant the <b>kinetic store does not change</b>.</td></tr></table><ul><li>\"As GPE increases KE decreases\" is wrong here: the speed is constant. That answer comes from free-fall examples and scored nothing in 2022.</li></ul>",
+              "text": "A rover descends towards the surface of Mars, slowed by its thrusters and a parachute. Describe the energy changes in terms of the work done by forces. (3)",
+              "model": "<p><b>3 marks</b> — one mark per row below, any 3 of the 4.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Gravity</td><td><b>Work is done by gravity</b> on the rover as it falls.</td></tr><tr><td><b>2</b></td><td>Thrusters</td><td><b>Work is done by the thrusters</b> on the rover (chemical energy is transferred from the thrusters).</td></tr><tr><td><b>3</b></td><td>Air resistance</td><td><b>Air resistance does work on the parachute</b> (and the rover).</td></tr><tr><td><b>4</b></td><td>Stores</td><td>This <b>reduces the kinetic store</b> of the rover; its <b>gravitational potential store decreases</b>; energy is transferred to the <b>thermal store</b> (mechanically).</td></tr></table><ul><li>Any three of the eight points in the June 2022 2H scheme (Q7(a)(iii)). The store changes alone reached 2 or 3 marks; the <b>work done by [named force]</b> lines were the ones most candidates missed — name the force, then the store. If nothing else scores, \"work = force × distance\" earns one.</li></ul>",
               "lines": 5,
-              "hint": "Two forces do work: name each and the store it moves energy into."
+              "hint": "Three forces do work on the way down: name each, then say what happens to the stores."
             },
             {
               "id": "en-t1-q5",
@@ -1566,7 +1566,7 @@
                 "Energy is transferred by heating from the string"
               ],
               "correct": 1,
-              "explain": "Store, store, pathway. \"GPE turns into KE\" names the stores but not the pathway and uses no store language — it is a weaker answer."
+              "explain": "Store, store, pathway. \"GPE to KE\" scores both marks on its own (Nov 2020 1H Q2(a) guidance: \"chemical to (G)PE\", \"KE to GPE in lifting\"); the full sentence with the pathway is the safer habit, because it also answers the questions that ask <i>how</i> the energy was transferred."
             },
             {
               "id": "en-t1-q6",
@@ -1583,7 +1583,7 @@
         "Always name the starting store, the finishing store(s) and the pathway",
         "Say that dissipated energy ends up in the thermal store of the surroundings — never \"lost\""
       ],
-      "blurb": "The spec names five situations you must be able to analyse. Each is the same sentence with different words in the gaps. The marks go to the stores and the pathway, so name them; the marks never go to \"energy is lost\".",
+      "blurb": "The spec names five situations you must be able to analyse. Each is the same sentence with different words in the gaps. The marks go to the stores, so name them; \"energy is lost\" only scores when you say where to — the surroundings, as thermal energy.",
       "subtopic": [
         "3",
         "8"
@@ -1758,7 +1758,7 @@
               "id": "en-t2-q6",
               "type": "written",
               "text": "A student measures the speed of a trolley at the bottom of a runway and finds it is less than the value calculated from the GPE lost. Suggest one way to reduce the difference. (1)",
-              "model": "<ul><li>A <b>method</b>: <b>lubricate</b> (oil) the wheel axles / make the runway <b>steeper</b> / use a more <b>streamlined</b> trolley / use smoother wheels. (\"Reduce friction\" on its own is a reason, not a method, and scored nothing in June 2025.)</li></ul>",
+              "model": "<ul><li>A <b>method</b>: <b>lubricate</b> (oil) the wheel axles / make the runway <b>steeper</b> / use a more <b>streamlined</b> trolley / use an <b>air track</b> instead of the runway (the June 2025 2H guidance, Q2(a)(iii)). (\"Reduce friction\" on its own is a reason, not a method, and scored nothing in June 2025.)</li></ul>",
               "lines": 2
             }
           ]
@@ -2720,7 +2720,7 @@
         {
           "kind": "explain",
           "title": "The answer shape, and the banned phrases",
-          "html": "<p>Every one of these answers is: <b>(1) what is wasted → (2) which store it goes to → (3) by which pathway → (4) the consequence.</b></p><p>Example — <i>why is the water's temperature rise less than calculated from the heater's energy?</i> (1) Not all the energy supplied goes to the water; (2) some is transferred to the thermal store of the container and the surroundings; (3) by heating; (4) so less energy is in the water's thermal store and $\\Delta\\theta = \\dfrac{E}{m c}$ is smaller.</p><p>The June 2024 scheme for that question: \"Do not accept unqualified <b>energy is lost / wasted</b>, <b>not 100% efficient</b>, or arguments about <b>sound</b>.\" Two of those four points, properly linked, scored both marks; \"the brick transfers thermal energy to the surroundings\" scored 2 on its own because it names the store, the direction and the pathway.</p><p><b>Insulation answers</b> need the word <b>rate</b>: insulation (low thermal conductivity, trapped air) <b>reduces the rate</b> of energy transfer to the surroundings; it never stops it. If an experiment compares insulators, the one whose water cools <b>least in the same time</b> is the best insulator, because the rate of transfer through it is lowest.</p><p><b>Lubrication answers</b> need the word <b>friction</b>: oil reduces friction between the surfaces, so less work is done against friction, so less energy is transferred to the thermal store, so more of the input is useful (higher efficiency).</p>"
+          "html": "<p>Every one of these answers is: <b>(1) what is wasted → (2) which store it goes to → (3) by which pathway → (4) the consequence.</b></p><p>Example — <i>why is the water's temperature rise less than calculated from the heater's energy?</i> (1) Not all the energy supplied goes to the water; (2) some is transferred to the thermal store of the container and the surroundings; (3) by heating; (4) so less energy is in the water's thermal store and $\\Delta\\theta = \\dfrac{E}{m c}$ is smaller.</p><p>The June 2024 scheme for that question (a storage-heater brick, 2H Q9(b)(ii)) <b>ignores</b> unqualified \"energy is lost / wasted\", \"not 100% efficient\" and arguments about sound. Any two of its five points scored both marks — not all the energy goes to the brick; not all of it stays there; energy transferred to the heater's parts; energy transferred to the surroundings; or the equation argument \"if the energy supplied to the brick is smaller, $\\Delta\\theta = \\Delta Q \\div (m c)$ is smaller\"; \"the brick transfers thermal energy to the surroundings\" scored 2 on its own because it names the store, the direction and the pathway.</p><p><b>Insulation answers</b> need the word <b>rate</b>: insulation (low thermal conductivity, trapped air) <b>reduces the rate</b> of energy transfer to the surroundings; it never stops it. If an experiment compares insulators, the one whose water cools <b>least in the same time</b> is the best insulator, because the rate of transfer through it is lowest.</p><p><b>Lubrication answers</b> need the word <b>friction</b>: oil reduces friction between the surfaces, so less work is done against friction, so less energy is transferred to the thermal store, so more of the input is useful (higher efficiency).</p>"
         },
         {
           "kind": "worked",
@@ -2781,7 +2781,7 @@
               "id": "en-t8-q6",
               "type": "written",
               "text": "Explain how adding oil to a bicycle chain increases the efficiency of the bicycle. (3)",
-              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Friction</td><td>The oil <b>reduces friction</b> between the chain and the cogs.</td></tr><tr><td><b>2</b></td><td>Less wasted</td><td>So less work is done against friction and <b>less energy is transferred to the thermal store</b> of the surroundings.</td></tr><tr><td><b>3</b></td><td>Efficiency</td><td>So a <b>larger fraction</b> of the cyclist's energy is transferred usefully to the kinetic store — the efficiency increases.</td></tr></table>",
+              "model": "<p><b>3 marks</b> — one mark per row.</p><table class='tbl'><tr><th>Point</th><th>For</th><th>What you need to write</th></tr><tr><td><b>1</b></td><td>Friction</td><td>The oil <b>reduces friction</b> between the chain and the cogs.</td></tr><tr><td><b>2</b></td><td>Less wasted</td><td>So less energy is transferred to the thermal store of the surroundings, so <b>more useful energy is available</b> for the same input (or <b>less input energy is needed</b> for the same output).</td></tr><tr><td><b>3</b></td><td>Efficiency</td><td>Write the equation: <b>efficiency = useful energy transferred ÷ total energy supplied</b> — the useful share is larger, so the efficiency increases (June 2019 2H Q4(c)(ii): stating the equation is the third mark).</td></tr></table>",
               "lines": 4
             }
           ]
@@ -3342,8 +3342,8 @@
       "section": "dissipation"
     },
     {
-      "q": "Phrases that score nothing for wasted energy?",
-      "a": "\"Energy is lost\", \"used up\", \"not 100% efficient\", \"sound\" on its own. Name the store and the pathway instead.",
+      "q": "Phrases never to leave bare for wasted energy?",
+      "a": "\"Energy is lost\", \"not 100% efficient\", \"sound\" — ignored in 2024 unless qualified; \"used up\" is wrong. Add the store (thermal store of the surroundings) and the pathway (by heating / friction).",
       "section": "dissipation"
     },
     {

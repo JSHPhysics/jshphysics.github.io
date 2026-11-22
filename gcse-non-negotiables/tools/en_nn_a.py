@@ -68,7 +68,7 @@ section_n1 = section(
                 "<b>Which store does the energy start in?</b> The battery — a <b>chemical</b> store.",
                 "<b>Which store does it end up in?</b> The moving car — a <b>kinetic</b> store.",
                 "<b>Which pathway?</b> A current flows from the battery to the motor, so the transfer is <b>electrical</b>; the motor then transfers it <b>mechanically</b> to the car.",
-                "<b>Answer:</b> Energy is transferred from the <b>chemical store</b> of the battery to the <b>kinetic store</b> of the car, <b>electrically</b> (via the motor). One mark for the two stores, one for the pathway.",
+                "<b>Answer:</b> Energy is transferred from the <b>chemical store</b> of the battery to the <b>kinetic store</b> of the car, <b>electrically</b> (via the motor). One mark for the <b>store it leaves</b>, one for the <b>store it ends in</b> (June 2018 2H Q3(b), Nov 2020 1H Q2(a)). The pathway word is not a separate mark here — it is the answer when the question asks <i>how</i> the energy was transferred (June 2022 1H Q5(b)(ii): \"mechanically / thermally / due to friction\"), so give it, but the two stores carry the marks.",
             ],
         ),
         practice("Stores and pathways", [
@@ -80,7 +80,7 @@ section_n1 = section(
                    "\"By heating\" is one of the four pathways. Thermal, nuclear and magnetic are stores."),
             choice("en-n1-q3", "A candle burns and lights a room. Which description is in the form the mark scheme credits?",
                    ["Chemical energy turns into light energy", "Energy is transferred from the chemical store of the wax to the thermal store of the surroundings, by heating and by radiation (light)", "The candle uses up its energy as light and heat", "Heat energy is made from the wax"], 1,
-                   "Name the starting store, the finishing store and the pathway. \"Light energy\" and \"heat energy\" are not stores, and energy is never \"used up\" or \"made\"."),
+                   "Name the starting store, the finishing store and the pathway. \"Light energy\" is not a store (\"heat\" is allowed for \"thermal\" in every scheme, but write thermal store), and energy is never \"used up\" or \"made\"."),
             written("en-n1-q4", "A ball is thrown straight up. Describe the energy transfer as it rises. (2)",
                     marks(["Energy is transferred from the <b>kinetic store</b> of the ball to its <b>gravitational potential store</b>…",
                            "…<b>mechanically</b> (the force of gravity does work on the ball). Some energy is also transferred to the <b>thermal store of the air</b> by air resistance."]),
@@ -116,7 +116,7 @@ section_n2 = section(
             "<p>Two things follow from it:</p><ul>"
             "<li>In a <b>closed system</b> — one where no energy gets in or out — the <b>total energy does not change</b>, however much is moved between stores inside it.</li>"
             "<li>In any transfer, <b>energy input = useful energy output + wasted energy</b>. If 100 J goes into a lamp and 5 J comes out as light, 95 J has been wasted (dissipated) — it has not disappeared.</li></ul>"
-            "<p>\"Energy is lost\" scores nothing on its own. Say where it went: <i>dissipated to the thermal store of the surroundings</i>.</p>",
+            "<p>Bare \"energy is lost\" is a gamble: the June 2024 scheme ignores it \"unqualified\" (earlier schemes let it through). Never leave it bare — say where it went, and it scores every year: <i>dissipated to the thermal store of the surroundings</i>.</p>",
         ),
         worked(
             "Finding the wasted energy",
@@ -312,7 +312,7 @@ section_n5 = section(
         worked(
             "KE of a car",
             "A car of mass 1200 kg travels at 16 m/s. Calculate its kinetic energy. Give your answer in kJ.",
-            ewau(r"KE = \tfrac{1}{2} \times m \times v^{2}", r"KE = \tfrac{1}{2} \times 1200 \times 16^{2} = \tfrac{1}{2} \times 1200 \times 256", "153\\,600\\ \\text{J} = 150", "kJ (to 2 s.f.)"),
+            ewau(r"KE = \tfrac{1}{2} \times m \times v^{2}", r"KE = \tfrac{1}{2} \times 1200 \times 16^{2} = \tfrac{1}{2} \times 1200 \times 256", "153\\,600\\ \\text{J} = 153.6 \\text{ kJ} \\approx 150", "kJ — the second mark is the conversion to kJ (June 2023 2H Q8(a)(i): 153.6 or 150 both score; 153 600 \"kJ\" scores 1)"),
         ),
         practice("Kinetic energy", [
             numeric("en-n5-q1", "A car of mass 1200 kg travels at 16 m/s. Calculate its kinetic energy in joules.",
