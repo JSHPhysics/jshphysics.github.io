@@ -24,7 +24,7 @@ q1_5 = 45 / 1000
 section_n1 = section(
     "si-units", "nn", "SI units and the quantities they measure", "1.1",
     equations=[r"\text{metre, m}", r"\text{kilogram, kg}", r"\text{second, s}", r"\text{ampere, A}", r"\text{kelvin, K}"],
-    blurb="Every quantity in physics has one standard unit. Exam answers need the right one every time: a number without a unit, or with the wrong one, loses the mark.",
+    blurb="Every quantity in physics has one standard unit. Exam answers need the right one every time: a number without a unit, or with the wrong one, loses the mark. A unit that matches your number scores even if it is not the SI one (2.68 g/cm³ earned all three marks in June 2023 2H Q3; 200 mC all three in June 2025 2H Q4) — the mark goes when the number is in one unit and the label says another (2680 g/cm³, 200 C).",
     checklist=[
         "Give the SI unit for every quantity met at GCSE",
         "Tell a base unit (m, kg, s, A, K, mol) from a derived unit (N, J, W …)",
@@ -59,7 +59,7 @@ section_n1 = section(
         explain(
             "Capitals and symbols",
             "<p>A unit named after a person gets a <b>capital symbol</b> but a lower-case name: newton, N; joule, J; watt, W; hertz, Hz; pascal, Pa. Units not named after people are lower case: m, kg, s. "
-            "Writing <i>n</i> for newtons or <i>hz</i> for hertz is marked wrong. The exception is the litre, L, which is capitalised to avoid confusion with 1.</p>"
+            "Use the capital — it is the correct symbol, and examiners have only <i>tolerated</i> hz and c (June 2018 1H Q2: \"accept hz\"; June 2025 2H Q4: \"allow c\"). What loses the unit mark is a <b>wrong</b> unit: W s or W/s for watts (Nov 2021 1H Q8: \"do NOT accept Ws, W/s\"), N/m for a moment, kg/m/s for momentum. The exception to the capitals rule is the litre, L, which is capitalised to avoid confusion with 1.</p>"
             "<p>Write compound units with a slash, as the exam papers do: $\\text{m/s}$, $\\text{kg/m}^3$, $\\text{J/kg °C}$.</p>",
             tone="warn",
         ),
@@ -80,7 +80,7 @@ section_n1 = section(
                    "The second is one of the base units. Newtons, joules and watts are derived from base units (a newton is a kg m/s²)."),
             choice("kc-n1-q3", "A student writes an answer as \"50 hz\". What is wrong with it?",
                    ["Nothing", "Frequency is measured in watts", "The symbol should be Hz, with a capital H", "Frequency has no unit"], 2,
-                   "Hertz is named after Heinrich Hertz, so its symbol takes a capital letter: Hz. The name stays lower case."),
+                   "Hertz is named after Heinrich Hertz, so its symbol is Hz (capital H); the name stays lower case. Schemes have let hz through, but do not rely on it — and never change the unit itself (per second is s⁻¹ or Hz, never W/s)."),
             numeric("kc-n1-q4", "A rope is 2.5 km long. Give its length in the SI unit.", q1_4, "m",
                     "The SI unit of length is the metre; 1 km = 1000 m.",
                     [r"$2.5 \times 1000 = 2500$ m."]),
@@ -106,7 +106,7 @@ q2_4 = 500e-9
 section_n2 = section(
     "prefixes-nn", "nn", "Prefixes: giga to nano", "1.2",
     equations=[r"\text{G} = 10^{9}", r"\text{M} = 10^{6}", r"\text{k} = 10^{3}", r"\text{c} = 10^{-2}", r"\text{m} = 10^{-3}", r"\mu = 10^{-6}", r"\text{n} = 10^{-9}"],
-    blurb="A prefix in front of a unit is a multiplier. Strip it off and apply the multiplier before any equation sees the number.",
+    blurb="A prefix in front of a unit is a multiplier. Strip it off and apply the multiplier before any equation sees the number. Get it wrong and you lose one mark — the evaluation — and keep the rest: 3000 Hz instead of 30 000 Hz still scored 1 of 2 (June 2023 1H Q1(a)); sometimes the conversion is its own mark (June 2022 1H Q7(c)(i): \"conversion of time to s (1)\").",
     checklist=[
         "Recall what G, M, k, c, m, μ and n multiply by",
         "Convert a value with a prefix into the base unit, and back again",
@@ -268,7 +268,7 @@ section_n4 = section(
         explain(
             "How many to give",
             "<p>If the question says \"to 2 significant figures\", give exactly two. If it does not say, give <b>the same number of significant figures as the least precise piece of data</b> in the question — usually 2 or 3. "
-            "An answer of 2.857 142 857 m/s from data given to 2 s.f. is marked as 2.9 m/s (and the extra digits may cost a mark for \"inappropriate precision\").</p>"
+            "If the question does not mention significant figures, the calculator value is accepted (\"allow numbers that round to…\", \"ignore significant figures\"). If it says \"to 2 significant figures\" or \"to an appropriate number of significant figures\", the rounding is a <b>separate, independent mark</b>: in June 2022 1H Q3(a)(iii) an answer of 1.4 (wrong value, right s.f.) scored 2 of 3 and 1.50 (right value, 3 s.f.) also scored 2 of 3. \"Appropriate\" means the same as the least precise data — 2 s.f. for 2 s.f. data.</p>"
             "<p><b>Round only at the end.</b> If you round part-way through a two-step calculation, the error grows. Keep the full calculator value (or at least one more figure than you will give) until the final line.</p>",
             tone="warn",
         ),
@@ -395,7 +395,7 @@ section_n6 = section(
             "reading a question, listing the quantities it gives you and the one it wants, and finding the equation that contains exactly those.</p>"
             "<ol class='list'>"
             "<li>Write down the symbols for what is given: $m = \\ldots$, $h = \\ldots$, and the unknown with a question mark: $E = ?$</li>"
-            "<li>Scan the list for an equation with <b>those symbols and nothing else unknown</b>. Constants you are expected to know ($g = 10$ N/kg) count as given.</li>"
+            "<li>Scan the list for an equation with <b>those symbols and nothing else unknown</b>. $g$ is normally printed in the question; if it is not, use $g = 10$ N/kg (the schemes also accept 9.8).</li>"
             "<li>If no equation has them all, it is a two-step question: find one that gets you a quantity the other needs (see the multi-step section).</li>"
             "<li>Copy the equation down exactly, symbols first — that is the E of EWAU.</li></ol>"
             "<p>Knowing the list well is still worth doing, because scanning thirty equations under time pressure is slow. Here it is, by topic:</p>"
@@ -456,7 +456,7 @@ section_n6 = section(
                    "No time is given, so the equation with u, v, a and x (and no t) is the one: $v^2 - u^2 = 2ax$. The first option needs a time you do not have."),
             written("kc-n6-q7", "Describe how you would use the equation list to choose an equation for a calculation question.",
                     marks(["Write down the symbols for each quantity given in the question, and the symbol for the quantity asked for.",
-                           "Scan the list for the equation that contains exactly those symbols (known constants such as g count as given).",
+                           "Scan the list for the equation that contains exactly those symbols ($g$ is usually printed; if not, use 10 N/kg).",
                            "If no single equation contains them all, find one that gives a quantity the other needs — a two-step calculation.",
                            "Copy the equation down exactly before substituting."]), lines=4),
         ]),
@@ -528,7 +528,7 @@ section_n7 = section(
                 r"Equation: $KE = \tfrac{1}{2} \times m \times v^2$. Wanted: $v$.",
                 r"Undo the × ½ and the × m: $v^2 = \dfrac{2 \times KE}{m} = \dfrac{2 \times 180}{0.4} = 900$.",
                 r"Undo the square with a square root: $v = \sqrt{900} = 30$ m/s.",
-                r"Forgetting the square root (answering 900 m/s) is the most common lost mark on this equation — 900 m/s is nearly three times the speed of sound, which is the clue.",
+                r"Forgetting the square root (answering 900 m/s) is the most common lost mark on this equation — 900 m/s is nearly three times the speed of sound, which is the clue. It costs exactly one mark: in Nov 2020 2H Q6(c) the un-rooted value \"seen gains 2 marks\" of 3. The schemes also allow \"substitution and rearrangement in either order\", and June 2024 2H Q7(a) even credited substitution into a visibly wrong rearrangement — substituting first protects that mark.",
             ],
         ),
         types(["rearranging"], "Calculation: rearranging"),
@@ -583,6 +583,7 @@ section_n8 = section(
             "<tr><td>Part as a percentage of a whole</td><td>$\\dfrac{\\text{part}}{\\text{whole}} \\times 100$</td><td>useful 30 J of 120 J in: $\\dfrac{30}{120} \\times 100 = 25\\%$</td></tr>"
             "<tr><td>A percentage of a quantity</td><td>$\\dfrac{\\%}{100} \\times \\text{quantity}$</td><td>40% of 500 J: $0.4 \\times 500 = 200$ J</td></tr>"
             "<tr><td>Percentage change</td><td>$\\dfrac{\\text{new} - \\text{old}}{\\text{old}} \\times 100$</td><td>20 m/s to 25 m/s: $\\dfrac{5}{20} \\times 100 = 25\\%$ increase</td></tr></table>"
+            "<p>Divide by the <b>original</b> value, not the new one: 104 kPa → 74 kPa is −29%; dividing by 74 gives −41% and scored 1 of 2 (June 2024 2H Q4(c)(iii)). The <b>change</b> is 29%, not the 71% that remains (71% also scored 1 of 2). The sign is optional — the schemes write \"(−) 29\".</p>"
             "<p><b>Efficiency</b> is the percentage job in disguise: $\\text{efficiency} = \\dfrac{\\text{useful energy output}}{\\text{total energy input}}$, as a decimal or × 100 as a percentage. It can never be more than 1 (100%).</p>"
             "<p>A <b>ratio</b> compares two quantities: a transformer with 200 turns on the primary and 50 on the secondary has a turns ratio of 4 : 1, so the voltage is divided by 4.</p>",
         ),
@@ -646,11 +647,11 @@ section_n9 = section(
             "Where the marks are",
             "<p>A 3-mark calculation is usually marked like this:</p>"
             "<table class='tbl'><tr><th>Line</th><th>What you write</th><th>Mark for</th></tr>"
-            "<tr><td><b>E</b>quation</td><td>$a = \\dfrac{v - u}{t}$</td><td>choosing the right equation from the list</td></tr>"
-            "<tr><td><b>W</b>orking</td><td>$a = \\dfrac{20 - 5}{6}$</td><td>substituting the right numbers (after any conversion)</td></tr>"
+            "<tr><td><b>E</b>quation</td><td>$a = \\dfrac{v - u}{t}$</td><td>choosing the right equation — usually marked <b>together with the substitution</b> (\"selection and substitution (1)\"); when the question prints the equation (\"Use the equation …\") there is no mark for copying it</td></tr>"
+            "<tr><td><b>W</b>orking</td><td>$a = \\dfrac{20 - 5}{6}$</td><td>substituting the right numbers (a missed conversion usually keeps this mark and loses the evaluation mark instead)</td></tr>"
             "<tr><td><b>A</b>nswer</td><td>$= 2.5$</td><td>evaluating correctly</td></tr>"
-            "<tr><td><b>U</b>nits</td><td>m/s²</td><td>the unit (sometimes part of the answer mark)</td></tr></table>"
-            "<p><b>Why it matters:</b> if you make a slip on the calculator but have written the equation and the substitution, you still get 2 of the 3 marks. If you write only \"2.6 m/s²\", you get nothing. The working is not for you — it is for the examiner.</p>"
+            "<tr><td><b>U</b>nits</td><td>m/s²</td><td>only marked when the question says <b>State the unit</b>; then it is an independent mark (right unit with a wrong number still scores it). Otherwise the unit is printed for you on the answer line</td></tr></table>"
+            "<p><b>Why it matters:</b> a <b>correct</b> answer on its own gets full marks — \"award full marks for the correct answer without working\" is on almost every scheme (161 of the 177 Calculate parts in the past-paper bank). The working is insurance: with a slip on the calculator, the substitution line still earns 2 of the 3 marks; a wrong number on its own earns nothing. Two cases where working is compulsory: \"<b>Show that</b>\" (the given value alone \"scores 0 marks\", June 2022 1H Q5(a)(i)), and the separate unit or s.f. mark, which a bare number cannot earn.</p>"
             "<p><b>Rearranging</b> goes between E and W: write the equation as given, then the rearranged form, then substitute. Or substitute into the original and rearrange the numbers — both score.</p>"
             "<p><b>Two-step questions</b> get EWAU twice: finish the first quantity with its unit, then start the second equation on a new line.</p>",
         ),
@@ -667,13 +668,13 @@ section_n9 = section(
             ],
         ),
         practice("EWAU", [
-            written("kc-n9-q1", "A student answers \"calculate the weight of a 12 kg box\" by writing only \"120 N\". She gets 1 mark out of 2. Explain why, and write the answer that earns both marks.",
-                    marks(["No equation and no working are shown, so only the answer mark is available.",
+            written("kc-n9-q1", "A student answers \"calculate the weight of a 12 kg box\" (2 marks) by writing only \"12 N\" and gets 0. A second student writes $W = m \\times g = 12 \\times 10 = 12$ N and gets 1. Explain the difference, and write the answer that earns both marks.",
+                    marks(["The first student shows no substitution, so there is nothing to credit once the number is wrong; the second student's substitution line $12 \\times 10$ earns the first mark even though the evaluation is wrong.",
                            "Full answer: $W = m \\times g$; $W = 12 \\times 10$; $= 120$; N.",
-                           "With the working shown, a slip on the calculator would still earn the equation and substitution marks."]), lines=4),
+                           "A correct 120 N on its own would have scored both marks (\"award full marks for the correct answer without working\") — the working is what protects a slip."]), lines=4),
             choice("kc-n9-q2", "In a 3-mark calculation, which line usually earns the first mark?",
-                   ["The final number", "The unit", "The correct equation", "Underlining the answer"], 2,
-                   "The first mark is for choosing the right equation from the list; the second for the substitution; the third for the evaluated answer with its unit."),
+                   ["The final number", "The unit", "The correct equation with the numbers substituted into it", "Underlining the answer"], 2,
+                   "The first mark is \"selection and substitution\" — the equation with the right numbers in it. The equation on its own scores only when the scheme lists \"selection (1)\" separately (June 2023 1H Q1(b), June 2025 1H Q8(a)(i)); the last mark is the evaluation."),
             written("kc-n9-q3", "Write out, in EWAU layout, the calculation of the acceleration of a car that speeds up from 8 m/s to 20 m/s in 4 s.",
                     marks(["E: $a = \\dfrac{v - u}{t}$",
                            "W: $a = \\dfrac{20 - 8}{4} = \\dfrac{12}{4}$",

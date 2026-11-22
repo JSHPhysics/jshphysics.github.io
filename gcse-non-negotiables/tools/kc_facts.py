@@ -48,7 +48,7 @@ FACTS = [
     fact("Converting to a bigger unit makes the number…", "smaller (3500 m = 3.5 km)", "converting"),
     # Significant figures and standard form
     fact("Do leading zeros count as significant figures?", "No: 0.0047 has 2 s.f.", "sig-figs"),
-    fact("How many s.f. should an answer have?", "The same as the least precise data (usually 2 or 3); round only at the end", "sig-figs"),
+    fact("How many s.f. should an answer have?", "The same as the least precise data (usually 2 or 3); round only at the end — when the question asks for it, the rounding is its own mark, awarded for any value written to that many figures", "sig-figs"),
     fact("Standard form: the rule for the front number?", "Between 1 and 10: $a \\times 10^{n}$ with $1 \\le a < 10$", "standard-form-nn"),
     fact("Calculator shows 2.5E-5. Write it.", "$2.5 \\times 10^{-5}$", "standard-form-nn"),
     # Equation sheet and symbols
@@ -75,7 +75,7 @@ FACTS = [
     fact("\"Determine\" wants…", "a value you get from the graph or data yourself", "command-words"),
     fact("\"Show that\" wants…", "full working arriving at the value given", "command-words"),
     fact("\"Compare\" wants…", "similarities and differences, mentioning both things", "command-words"),
-    fact("\"Evaluate\" wants…", "for and against, then a justified conclusion", "command-words"),
+    fact("\"Discuss\" wants… (Edexcel Physics says Discuss, not Evaluate)", "for and against (or the evidence on each side), then a justified conclusion", "command-words"),
     fact("\"Justify\" wants…", "the evidence or reasoning for a given statement", "command-words"),
     fact("\"Suggest\" wants…", "a sensible physics idea applied to a new situation", "command-words"),
     # Graphs and proportionality

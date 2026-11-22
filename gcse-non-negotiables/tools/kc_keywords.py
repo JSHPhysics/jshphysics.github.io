@@ -8,12 +8,12 @@ schemes credit; the scoring words are in bold.
 from revlib import choice, explain, fact, marks, practice, section, worked, written
 
 DEFINITIONS = [
-    ("Independent variable", "The variable you <b>change</b> (deliberately, in steps)", "\"the one on its own\""),
+    ("Independent variable", "The variable you <b>change</b> (deliberately, in steps) — in an exam name the quantity (\"thickness of aluminium\", June 2024 1H Q8(d)(ii)), not \"the one I change\"", "\"the one on its own\""),
     ("Dependent variable", "The variable you <b>measure</b> (that changes as a result)", "\"the one that depends\" — on what?"),
     ("Control variable", "A variable that is <b>kept the same</b> so that it does not affect the result", "\"a variable you control\" — say kept constant"),
     ("Valid", "The experiment tests what it claims to: only the independent variable is changed (a <b>fair test</b>)", "\"correct\""),
     ("Accurate", "<b>Close to the true value</b>", "\"precise\" / \"correct\""),
-    ("Precise", "Repeated readings are <b>close to each other</b> (little spread)", "\"accurate\" / \"to lots of decimal places\""),
+    ("Precise", "Repeated readings are <b>close to each other</b> (little spread) — Edexcel has also marked \"more precise\" as readings to <b>more significant figures / decimal places</b> (June 2022 2H Q8(c)(ii))", "\"accurate\""),
     ("Resolution", "The <b>smallest change</b> in a quantity that an instrument <b>can detect</b> (or show)", "\"how accurate the instrument is\""),
     ("Repeatable", "The <b>same person</b>, with the <b>same method and equipment</b>, gets the <b>same result</b> when the measurement is done again", "\"you can repeat it\""),
     ("Reproducible", "A <b>different person</b>, or different method or equipment, gets the <b>same result</b>", "\"you can do it again\""),

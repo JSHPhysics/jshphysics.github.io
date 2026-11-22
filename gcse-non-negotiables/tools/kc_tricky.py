@@ -37,10 +37,14 @@ section_t1 = section(
             "<tr><td><b>Calculate</b></td><td>A number, from an equation, with working and a unit (EWAU).</td><td>\"Calculate the speed.\" — <i>$v = x \\div t = 100 \\div 8 = 12.5$ m/s.</i></td></tr>"
             "<tr><td><b>Determine</b></td><td>A number, but you must get some of the data yourself — usually from a graph (a gradient, an area, a read-off).</td><td>\"Determine the acceleration from the graph.\" — <i>draw the triangle, show the two values, divide.</i></td></tr>"
             "<tr><td><b>Show that</b></td><td>The answer is given; you must produce it with full working, to one more figure than quoted.</td><td>\"Show that the force is about 50 N.\" — <i>F = ma = $2.5 \\times 20.4 = 51$ N ≈ 50 N.</i></td></tr>"
-            "<tr><td><b>Estimate</b></td><td>A rough value from sensible assumed numbers that you state.</td><td>\"Estimate the mass of a car.\" — <i>about 1000 kg.</i></td></tr>"
-            "<tr><td><b>Compare</b></td><td>Similarities <i>and</i> differences between both things named — mention both every time.</td><td>\"Compare alpha and beta.\" — <i>Both are ionising; alpha is more ionising but less penetrating.</i></td></tr>"
-            "<tr><td><b>Evaluate</b></td><td>Points for and against, using the information given, then a conclusion that follows from them.</td><td>\"Evaluate the use of nuclear power.\" — <i>for … against … so overall …</i></td></tr>"
-            "<tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the choice of a 5 A fuse.\" — <i>$I = P \\div V = 920 \\div 230 = 4$ A, so 5 A is the next size up.</i></td></tr>"
+            "<tr><td><b>Estimate</b></td><td>A calculation with approximate data (the question gives \"about …\" values, or you read them off a graph); the answer is marked against a range. Show the read-off or the substitution: \"reading off scale either 1750 or 1350 seen (1)\" (June 2024 2H Q3(d)).</td><td>\"Estimate how many gold atoms fit across 4.0 × 10⁻⁷ m if one is 0.15 nm.\" — <i>4.0 × 10⁻⁷ ÷ 0.15 × 10⁻⁹ ≈ 2700</i> (June 2022 1H Q8(a): \"any value that rounds to 2700\").</td></tr>"
+            "<tr><td><b>Compare</b></td><td>Similarities <i>and</i> differences between both things named — mention both every time.</td><td>\"Compare alpha and beta.\" — <i>Both are ionising; alpha is more ionising but less penetrating.</i> Similarities score too — \"both straight lines (1)\" in June 2022 2H Q4(c).</td></tr>"
+            "<tr><td><b>Discuss</b></td><td>Points for and against (or the evidence on each side), using the information given, then a conclusion that follows from them. Edexcel Physics says <b>Discuss</b>, not Evaluate — no 1PH0 paper 2018–2026 uses \"Evaluate\".</td><td>\"Discuss the arguments for and against using nuclear power…\" (Nov 2020 1H Q8(c), 6 marks) — <i>for … against … so overall …</i></td></tr>"
+            "<tr><td><b>Comment on</b></td><td>Do the calculation the question points you to, then say whether the claim stands; the conclusion is an independent mark.</td><td>\"Comment on this claim.\" — <i>$t = 5.8$ h, so the claim is justified as the time is less than 6 hours</i> (June 2023 2H Q8(b)(i)).</td></tr>"
+            "<tr><td><b>Use</b> (the graph / data / Figure X)</td><td>The answer must contain a value read from, or worked out from, the figure; quoting a number without doing anything with it does not score (\"ignore simple quoting of data\").</td><td>\"Use information from Figure 5.\" — <i>doubling $V$ from 2 V to 4 V gives $R = 5.0$ Ω then $6.5$ Ω — not double.</i></td></tr>"
+            "<tr><td><b>Devise</b></td><td>A method question (see planning a practical); the stem tells you what must be in it (\"how you will use your measurements\").</td><td>\"Devise an experiment to…\" — <i>the seven steps.</i></td></tr>"
+            "<tr><td><b>Deduce</b></td><td>Calculation → what it shows → conclusion, three marks in that order.</td><td>\"Deduce how the resistors are arranged.\" — <i>$R = 6 \\div 1.2 = 5$ Ω; less than one 10 Ω resistor; so in parallel</i> (June 2018 2H Q8(c)).</td></tr>"
+            "<tr><td><b>Justify</b></td><td>Give the evidence or reasoning for a statement that is given to you.</td><td>\"Justify the teacher's claim that scattered count-rate readings are expected.\" — <i>Radioactive decay is <b>random</b>, so the count rate is not constant and the readings vary.</i> (\"Difficult to predict\" is refused: say random — Nov 2020 1H Q7(e)(ii).)</td></tr>"
             "<tr><td><b>Suggest</b></td><td>Apply your knowledge to an unfamiliar situation; a sensible, physics-based idea scores even if it is not the one in the mark scheme.</td><td>\"Suggest why the reading was lower.\" — <i>some energy was transferred to the surroundings.</i></td></tr>"
             "<tr><td><b>Predict</b></td><td>Say what will happen, from the physics.</td><td>\"Predict the current if the p.d. doubles.\" — <i>it doubles (Ohm's law).</i></td></tr>"
             "<tr><td><b>Draw</b> / <b>Sketch</b> / <b>Plot</b></td><td>Draw: accurate with a ruler. Sketch: the shape and key features, labelled. Plot: points on given axes.</td><td></td></tr>"
@@ -74,17 +78,17 @@ section_t1 = section(
             choice("kc-t1-q3", "What does \"determine\" usually mean in a graph question?",
                    ["Guess a value", "Read or work out a value from the graph, showing how", "Describe the shape", "Draw the graph"], 1,
                    "Determine means find a value, and you must get some of the data from the graph yourself — a gradient triangle, an area or a read-off, shown on the graph."),
-            written("kc-t1-q4", "A question says: \"Show that the kinetic energy of a 1200 kg car moving at 15 m/s is about 135 kJ.\" Write the answer that earns full marks.",
+            written("kc-t1-q4", "A question says: \"Show that the kinetic energy of a 1250 kg car moving at 15 m/s is about 140 kJ.\" Write the answer that earns full marks.",
                     marks(["$KE = \\tfrac{1}{2} \\times m \\times v^2$",
-                           "$= \\tfrac{1}{2} \\times 1200 \\times 15^2 = \\tfrac{1}{2} \\times 1200 \\times 225$",
-                           "$= 135\\,000$ J $= 135$ kJ — the full calculation, ending with the value quoted (give it to at least the precision in the question)."]), lines=3),
+                           "$= \\tfrac{1}{2} \\times 1250 \\times 15^2 = \\tfrac{1}{2} \\times 1250 \\times 225$ — every number must be seen in the substitution (\"all three numbers needed to show that\").",
+                           "$= 140\\,625$ J $= 141$ kJ ≈ 140 kJ. Write the <b>unrounded</b> value: the quoted number on its own \"scores 0 marks\" (June 2022 1H Q5(a)(i)), and in June 2024 1H Q7(a)(ii) \"712 or 713 m\" scored where the quoted \"710 m\" did not."]), lines=3),
             written("kc-t1-q5", "\"Compare the properties of alpha and beta radiation.\" A student writes: \"Alpha is stopped by paper and is very ionising.\" Explain why this answer scores poorly, and improve it.",
                     marks(["A compare answer must mention both things in the question — this answer only talks about alpha.",
                            "It should pair each property: alpha is stopped by paper <b>whereas</b> beta passes through paper and is stopped by a few mm of aluminium.",
                            "Alpha is more ionising <b>than</b> beta. Both are ionising (a similarity) — one similarity and two differences is a safe shape."]), lines=4),
-            choice("kc-t1-q6", "An \"evaluate\" question is worth 6 marks. What must the answer contain to reach the top band?",
+            choice("kc-t1-q6", "A 6-mark \"discuss the arguments for and against…\" question. What must the answer contain to reach the top band?",
                    ["Only the advantages", "A list of facts about the topic", "Points for and against, using the data given, and a conclusion that follows from them", "A calculation"], 2,
-                   "Evaluate = weigh up. Both sides, drawing on the information in the question, then a judgement that is justified by the points made."),
+                   "Discuss = weigh up. Both sides, drawing on the information in the question, then a judgement that is justified by the points made. (Edexcel Physics writes Discuss; no 1PH0 paper has used Evaluate.)"),
         ]),
     ],
 )
@@ -117,7 +121,7 @@ section_t2 = section(
             "<li><b>Underline the command word</b> and read the last sentence first: it says what to find and how to give it (\"to 2 s.f.\", \"in kJ\", \"include the sign\").</li>"
             "<li><b>List every value</b> as symbol = number unit. $m = 250$ g, $t = 3$ min, $v = 15$ m/s. Write the unknown with a question mark: $P = ?$</li>"
             "<li><b>Convert</b> anything not in SI: 250 g → 0.25 kg; 3 min → 180 s; 2 kW → 2000 W. Cross out the old value so you cannot pick it up by mistake.</li>"
-            "<li><b>Add the standard values</b> the question will not give you: $g = 10$ N/kg, speed of light $3 \\times 10^8$ m/s. (Speed of sound, density of water and specific heat capacity of water are usually given.)</li>"
+            "<li><b>Check the stem for the constants</b>: the speed of light is always printed, $g$ usually is ($g = 10$ N/kg, or 9.8 — both accepted). The values that are <i>not</i> given are the hidden ones: $u = 0$ for \"from rest\", the halving of distance or time for an echo. (Speed of sound, density of water and specific heat capacity of water are given.)</li>"
             "<li><b>Cross out distractors</b>: a question that gives a car's mass, speed and colour of paint — or its mass, speed and the length of the road — may include a value you do not need. If a symbol does not appear in your equation, leave it.</li>"
             "<li><b>Look back</b> at the earlier parts: part (c) often needs the answer to part (b). \"Use your answer to (b)\" means exactly that, even if (b) was wrong — the marks follow through.</li></ol>",
         ),
@@ -130,7 +134,7 @@ section_t2 = section(
             "<tr><td>Total vs per second</td><td>\"transfers 3000 J every minute\" in a power question</td><td>Power is per second: ÷ 60</td></tr>"
             "<tr><td>Stated precision</td><td>\"Give your answer to 2 significant figures\"</td><td>Circle it; round at the end</td></tr>"
             "<tr><td>Hidden zero</td><td>\"starts from rest\", \"comes to a stop\", \"dropped\", \"at the top of its flight\"</td><td>$u = 0$ or $v = 0$</td></tr>"
-            "<tr><td>Hidden sign</td><td>\"decelerates\", \"slows\", \"thrown upwards\"</td><td>Negative $a$ (or negative $v$ for the opposite direction)</td></tr></table>",
+            "<tr><td>Opposite directions</td><td>\"in the opposite direction\", \"rebounds\", \"thrown upwards\"</td><td>One velocity (or momentum) is negative: the change is $0.80 - (-0.60) = 1.4$, not $0.2$ (June 2023 1H Q9(b), where 0.2 lost the evaluation mark). The sign on the final answer itself is optional — schemes write \"(−)150 N\"</td></tr></table>",
             tone="warn",
         ),
         worked(
@@ -161,10 +165,10 @@ section_t2 = section(
             choice("kc-t2-q5", "A question says: \"A stone is dropped from a bridge. Calculate its speed after falling for 1.5 s.\" Which value is given without being written down?",
                    ["The height of the bridge", "The initial speed, $u = 0$, because it is dropped", "The mass of the stone", "The time"], 1,
                    "\"Dropped\" means it starts from rest: $u = 0$. With $a = g = 10$ m/s², $v = 0 + 10 \\times 1.5 = 15$ m/s. No height or mass is needed."),
-            written("kc-t2-q6", "A student is asked for the acceleration of a car that slows from 30 m/s to 10 m/s in 4 s, \"including the sign\". She writes 5 m/s² and loses a mark. Explain the mistake.",
-                    marks(["The car is slowing, so $v$ is smaller than $u$: $a = \\dfrac{10 - 30}{4} = -5$ m/s².",
-                           "The question said to include the sign, so the negative sign is part of the answer.",
-                           "Reading the last line of the question first would have caught it."]), lines=3),
+            written("kc-t2-q6", "A ball hits a wall with momentum 0.80 kg m/s and rebounds with momentum 0.60 kg m/s in the opposite direction; the contact lasts 0.070 s. A student writes $\\Delta p = 0.80 - 0.60 = 0.20$ kg m/s and $F = 2.9$ N, and gets 2 marks of 3. Explain the mistake and give the full answer.",
+                    marks(["The ball reverses, so the final momentum is $-0.60$ kg m/s: $\\Delta p = 0.80 - (-0.60) = 1.4$ kg m/s.",
+                           "$F = \\Delta p \\div t = 1.4 \\div 0.070 = 20$ N (June 2023 1H Q9(b): \"answers which round to (±) 2.9 scores 2 marks\" — the direction slip costs the evaluation mark only).",
+                           "Reading \"in the opposite direction\" as a minus sign before writing anything would have caught it."]), lines=3),
         ]),
     ],
 )
@@ -216,7 +220,7 @@ section_t3 = section(
         ),
         explain(
             "Do not round in the middle",
-            "<p>If step one gives $a = 2.666\\,6\\ldots$ m/s², use <b>2.6666</b> (or the calculator's memory) in step two, not 2.7. Rounding to 2.7 then multiplying by 1500 kg gives 4050 N instead of 4000 N — outside the examiner's tolerance, and a lost mark for a correct method.</p>",
+            "<p>If step one gives $a = 2.666\\,6\\ldots$ m/s², use <b>2.6666</b> (or the calculator's memory) in step two, not 2.7. Rounding to 2.7 then multiplying by 1500 kg gives 4050 N instead of 4000 N. The scheme usually forgives this (\"accept 2, 2.2, 2.27, 2.3 for a throughout\", June 2022 1H Q5(a)(ii)) but not always (Nov 2020 1H Q5(a) gave 1 mark, not 2, for a final 1.5 m reached through a rounded wavelength) — carrying the full value is the only way to be sure.</p>",
             tone="warn",
         ),
         worked(
@@ -251,9 +255,9 @@ section_t3 = section(
                 numeric("kc-t3-q5b", "Calculate the speed of the ball just before it hits the ground.", t3_5_v, "m/s", "All the GPE becomes KE: ½ $m v^2 = 9$ J, then square-root.",
                         [r"$KE = GPE = 9$ J.", r"$v^2 = \dfrac{2 \times 9}{0.5} = 36$.", r"$v = \sqrt{36} = 6$ m/s."], label="b"),
             ]),
-            written("kc-t3-q6", "A student calculates a force in two steps. In step one she gets an acceleration of 1.333… m/s² and writes it down as 1.3 m/s². In step two she multiplies by 900 kg and gets 1170 N; the mark scheme says 1200 N. Explain why she lost the final mark and what she should have done.",
-                    marks(["She rounded the intermediate value (1.333… to 1.3) and the rounding error was multiplied up in step two.",
-                           "1.333… × 900 = 1200 N; $1.3 \\times 900 = 1170$ N, which is outside the accepted range.",
+            written("kc-t3-q6", "A student calculates a force in two steps. In step one she gets an acceleration of 1.333… m/s² and writes it down as 1 m/s². In step two she multiplies by 900 kg and gets 900 N; the mark scheme says \"allow numbers that round to 1200\". Explain why she lost the final mark and what she should have done.",
+                    marks(["She rounded the intermediate value (1.333… to 1) and the rounding error was multiplied up in step two.",
+                           "1.333… × 900 = 1200 N; $1 \\times 900 = 900$ N, which does not round to 1200. (A gentler rounding — 1.3 → 1170 N — is usually forgiven, but not always.)",
                            "Carry the full value (or at least one extra significant figure) between steps; round only the final answer."]), lines=3),
         ]),
     ],
@@ -320,14 +324,15 @@ section_t4 = section(
             "Plotting and the line of best fit",
             "<p><b>Axes:</b> the independent variable (the one you changed) goes on the $x$-axis, the dependent (the one you measured) on the $y$-axis. Label each with <i>quantity in unit</i>, as Edexcel does: <i>extension in m</i>. "
             "<b>Scale:</b> pick a scale so the points fill more than half the grid in each direction, going up in 1s, 2s, 5s or 10s (never 3s or 7s). The axes do not have to start at zero — unless you need the origin, for proportionality or an intercept.</p>"
-            "<p><b>Points:</b> small, neat crosses (×), plotted to within half a small square. Big blobs cost the plotting mark.</p>"
-            "<p><b>Line of best fit:</b> a single thin straight line (ruler) or smooth curve that follows the trend with about as many points above it as below. It does <b>not</b> join the dots, does not have to pass through every point, and does not have to go through the origin unless the physics says so. An <b>anomalous</b> point — one clearly off the trend — is circled and ignored.</p>",
+            "<p><b>Points:</b> small, neat crosses (×). Aim for half a small square; the schemes allow ±1 small square (June 2022 2H Q4(b)(i): \"points plotted to within ± 1 small square\"), and a cross whose centre cannot be found is one that cannot be checked.</p>"
+            "<p><b>Line of best fit:</b> a single thin straight line (ruler) or smooth curve that follows the trend with about as many points above it as below. It does <b>not</b> join the dots, does not have to pass through every point, and does not have to go through the origin unless the physics says so. An <b>anomalous</b> point — one clearly off the trend — is circled and ignored. Draw the line <b>once</b>: a second attempt alongside the first (\"tramlining\") loses the mark, while a slightly shaky single line does not (June 2022 2H Q4(b)(ii)); the examiner judges it by eye against a band on the scheme. If asked why a gradient from scattered points is only an estimate: the points are scattered about the line, so many lines of best fit — and gradients — are possible (Nov 2021 1H Q4(d)(iii)).</p>",
         ),
         explain(
             "Gradient and intercept",
             "<p>To find a gradient:</p>"
             "<ol class='list'>"
-            "<li>Draw a right-angled triangle on the line of best fit, as large as possible — at least half the length of the line. Small triangles give inaccurate gradients and lose the mark.</li>"
+            "<li>Draw a right-angled triangle on the line of best fit, as large as possible — at least half the length of the line. The method mark is for \"two points on the line\" or \"attempt at Δy/Δx\"; the value must then land inside the tolerance (3.90 ± 0.10 N/m in June 2025 1H Q2(b)(iii)), which a small triangle often misses.</li>"
+            "<li>For a <b>curve</b>, \"determine the gradient at …\" means <b>draw a tangent</b> at that point first — the tangent is the first mark and the value mark depends on it (June 2025 1H Q6(b)(ii): \"tangent drawn to curve (1) … dependent on MP1\"). Then take the gradient of the tangent with a large triangle.</li>"
             "<li>Use two points <b>on the line</b> where it crosses grid lines, not two of the plotted data points (they are not on the line).</li>"
             "<li>$\\text{gradient} = \\dfrac{\\text{change in } y}{\\text{change in } x}$, with the two values read from the axes and written down.</li>"
             "<li>The gradient has a unit: $y$-unit per $x$-unit. For force against extension it is N/m — the spring constant.</li></ol>"
@@ -418,7 +423,7 @@ section_t5 = section(
             "<table class='tbl'><tr><th>Relationship</th><th>Graph</th><th>Test with numbers</th><th>Say</th></tr>"
             "<tr><td>Directly proportional, $y \\propto x$</td><td>Straight line <b>through the origin</b></td><td>$y \\div x$ is the same for every pair</td><td>\"$y$ is directly proportional to $x$\"</td></tr>"
             "<tr><td>Linear with an intercept</td><td>Straight line <b>not</b> through the origin</td><td>equal steps in $x$ give equal steps in $y$, but $y \\div x$ changes</td><td>\"$y$ increases linearly with $x$\" — not proportional</td></tr>"
-            "<tr><td>Inversely proportional, $y \\propto \\dfrac{1}{x}$</td><td>Curve falling towards the axis, never touching it</td><td>$x \\times y$ is the same for every pair</td><td>\"$y$ is inversely proportional to $x$\"</td></tr>"
+            "<tr><td>Inversely proportional, $y \\propto \\dfrac{1}{x}$</td><td>Curve falling towards the axis, never touching it</td><td>$x \\times y$ is the same for every pair</td><td>\"As $x$ increases, $y$ decreases, and the graph is <b>non-linear</b>\" — claim inverse proportion only after checking that $x \\times y$ is constant; from the shape alone the examiners have both allowed it (June 2022 2H Q8) and ignored it (June 2025 2H Q7)</td></tr>"
             "<tr><td>Proportional to the square, $y \\propto x^2$</td><td>Curve getting steeper through the origin</td><td>$y \\div x^2$ is constant; doubling $x$ gives $4y$</td><td>\"$y$ is proportional to $x$ squared\"</td></tr></table>",
             graph=prop_graph,
             after="<p>Line A passes through the origin: doubling $x$ from 4 to 8 doubles $y$ from 8 to 16 — proportional. Line B has the same gradient but an intercept of 5: doubling $x$ from 4 to 8 takes $y$ from 13 to 21, not double. B is <i>linear</i>, and \"$y$ increases by the same amount for each unit increase in $x$\" is the correct description; \"proportional\" would be marked wrong.</p>",
@@ -436,7 +441,7 @@ section_t5 = section(
                 r"Test: $I \div V$ should be constant. $0.4 \div 2 = 0.2$; $0.8 \div 4 = 0.2$; $1.2 \div 6 = 0.2$; $1.5 \div 8 = 0.1875$.",
                 r"The ratio is constant for the first three pairs and drops for the last, so the current is proportional to the p.d. <b>up to about 6 V</b>, then increases less than proportionally.",
                 r"On a graph this is a straight line through the origin that starts to curve over — the resistance is increasing (a filament lamp getting hot).",
-                r"The sentence: \"Up to 6 V, $I$ is directly proportional to $V$ because $I \div V$ is constant (0.2 A/V); above 6 V it is not, because the ratio falls.\"",
+                r"The sentence: \"Up to 6 V, $I$ is directly proportional to $V$ because $I \div V$ is constant (0.2 A/V) — doubling $V$ from 2 V to 4 V doubles $I$ from 0.4 A to 0.8 A; above 6 V it is not, because the ratio falls.\" Show the division or the doubling: copying the numbers out of the table \"scores nothing for this mark\" (June 2019 2H Q3(b)(ii): \"ignore simple quoting of data\"). To <b>test</b> for proportion by experiment: more values over a bigger range, then $y \div x$ for each pair — \"if the ratio is the same they are proportional\" (Nov 2021 2H Q6(c)) — or a straight line through the origin.",
             ],
         ),
         practice("Proportionality", [
@@ -484,7 +489,7 @@ section_t6 = section(
     parts=[
         explain(
             "Seven steps, every time",
-            "<p>Whenever a question says <i>describe how you would investigate</i>, <i>plan an experiment</i> or <i>design a method</i>, write your answer in these seven steps, in this order. Each step is a mark, and examiners are looking for exactly these things.</p>"
+            "<p>Whenever a question says <i>describe how you would investigate</i>, <i>plan an experiment</i> or <i>design a method</i>, write your answer in these seven steps, in this order. A 6-mark method question is <b>levelled</b>: the examiner has a list of indicative content — the equipment and what each piece measures, what is changed and what is kept the same, how the results are processed — and awards Level 1, 2 or 3 for how much of it your answer covers in a logical order. The seven steps make sure every item on that list is there. (A 3- or 4-mark version is point-marked, \"any four from\" a similar list.)</p>"
             "<ol class='list'>"
             "<li><b>Read the question, and write down the two variables you are being asked to investigate.</b> One is the thing you will change (the independent variable); the other is the thing you will measure (the dependent variable).</li>"
             "<li><b>Figure out which formula links them.</b> Write it down. It tells you what else must be kept the same, and what to do with the results at the end.</li>"
@@ -492,15 +497,15 @@ section_t6 = section(
             "<li><b>Say which one you will measure, and how you will measure it, including the equipment to use</b> — e.g. \"record the speed at each light gate, and measure the distance between them with a ruler\".</li>"
             "<li><b>Say what you will do with the result</b> — e.g. \"use $a = F \\div m$ to calculate the acceleration\" or \"plot a graph of $F$ against $a$ and calculate the gradient\".</li>"
             "<li><b>Add a detail about the practical to make sure you get accurate results</b> — e.g. \"release the trolley from the same point each time\", \"keep the ramp at the same angle\", \"use light gates rather than a stopwatch so there is no reaction time\". One specific, relevant detail is enough.</li>"
-            "<li><b>Say you will repeat the readings and calculate a mean.</b> Both halves are needed: writing \"repeat the experiment\" on its own does <b>not</b> get the mark — you must also say that you will <b>calculate a mean</b> of the repeats.</li>"
+            "<li><b>Say you will repeat the readings and calculate a mean.</b> Write both halves as one phrase: where a scheme credits repeats it usually credits the pair as one point (\"repeat and average time (1)\", June 2023 1H Q2(b)(i)), and has only sometimes credited \"repeat\" alone. In a 6-mark levelled answer it is one line of indicative content among many. And in a question that asks how to make the result <b>more accurate</b> or to <b>improve the procedure</b>, repeating is <b>ignored</b> (six schemes 2018–2023, e.g. June 2019 2H Q7(a): \"ignore reference to repeating and taking average\") — give a change to the method instead.</li>"
             "</ol>"
-            "<p>Write the steps as numbered points, not as one paragraph. A labelled diagram of the equipment is worth adding if you have time, but it does not replace the words.</p>",
+            "<p>Write the steps as numbered points, not as one paragraph. Draw the apparatus and label it — the schemes say \"marks may be scored from the diagram\" and \"credit all elements seen in diagram or stated\" (June 2024 2H Q7(b)(i), Q9(d)). For a circuit it is essential: <b>ammeter in series, voltmeter in parallel across the component, variable resistor in series</b> to change the pd or keep the current small (June 2018 2H Q10(b) indicative content starts \"Circuit diagram including…\").</p>",
         ),
         explain(
             "Where the marks go missing",
             "<p>The two most common ways to lose marks are <b>describing the equipment without saying what you measure with it</b> (\"use a voltmeter\" earns nothing; \"use a voltmeter to measure the potential difference across the wire\" does), "
             "and <b>stopping after you have collected the data</b>. The question asked how you would <i>investigate</i> the link between the two variables, so the calculation or graph that shows the link is a mark in its own right. "
-            "And the easiest mark on the paper is the one most often thrown away: <b>\"repeat\" alone scores nothing — \"repeat and calculate a mean\" scores</b>.</p>",
+            "And write <b>\"repeat and calculate a mean\"</b> as one phrase — \"repeat\" by itself has sometimes scored and sometimes not.</p>",
             tone="warn",
         ),
         worked(
@@ -509,7 +514,7 @@ section_t6 = section(
             [
                 r"<b>Step 1 — the two variables.</b> I am investigating <b>length</b> of wire (independent, the one I change) and <b>resistance</b> (dependent, the one I measure).",
                 r"<b>Step 2 — the formula.</b> Resistance is found from $R = V \div I$, so I need to measure the potential difference across the wire and the current through it. I expect $R$ to be proportional to length.",
-                r"<b>Step 3 — what I change and how.</b> Stretch the wire along a metre rule and connect it into a circuit with crocodile clips. Change the length by moving one clip along the wire: 20 cm, 40 cm, 60 cm, 80 cm, 100 cm. Keep the same wire, the same cell and the current small so the wire does not heat up.",
+                r"<b>Step 3 — what I change and how.</b> Stretch the wire along a metre rule and connect it into a circuit with crocodile clips. Change the length by moving one clip along the wire: 20 cm, 40 cm, 60 cm, 80 cm, 100 cm. Keep the same wire and the same cell, and use a <b>variable resistor in series to keep the current small</b>, because current heats the wire and raises its resistance (June 2023 2H Q2(b)(iv)).",
                 r"<b>Step 4 — what I measure and how.</b> For each length, read the potential difference across the wire with a voltmeter in parallel, and the current with an ammeter in series. Measure the length with the metre rule.",
                 r"<b>Step 5 — what I do with the results.</b> Calculate $R = V \div I$ for each length, then plot a graph of resistance against length. A straight line through the origin shows $R \propto$ length.",
                 r"<b>Step 6 — accuracy.</b> Switch the circuit off between readings so the wire does not warm up (its resistance would rise), and check the ammeter reads zero with the circuit open.",
@@ -524,10 +529,10 @@ section_t6 = section(
                         ("Variables", "Identifies the two variables: the <b>force</b> (weight of the hanging masses) is changed (independent) and the <b>extension</b> is measured (dependent)."),
                         ("Formula", "States that they are linked by $F = k \\times x$ (Hooke's law), with $F = m \\times g$ giving the force from each mass."),
                         ("Change", "Changes the force by adding 100 g masses one at a time (at least five values), using the same spring throughout."),
-                        ("Measure", "Measures the extension with the metre rule: the new length minus the original (unstretched) length, read at eye level against a pointer."),
+                        ("Measure", "Measures the extension with the metre rule: <b>reads the original length, reads the new length and subtracts</b> (both readings named — Nov 2020 2H Q6(a)(ii)), at eye level against a pointer."),
                         ("Use the result", "Plots a graph of force against extension; a straight line through the origin shows $F \\propto x$ and the gradient is the spring constant $k$."),
-                        ("Accuracy", "One specific detail: reads the rule at eye level to avoid parallax, or fixes a pointer to the spring, or does not exceed the limit of proportionality (checks the spring returns to its original length)."),
-                        ("Repeat &amp; mean", "Repeats the readings for each force (e.g. by unloading and reloading) <b>and calculates a mean</b> extension. \"Repeat\" on its own does not score."),
+                        ("Accuracy", "One specific detail: reads the rule at eye level to avoid parallax, or fixes a pointer to the spring, or does not exceed the limit of proportionality (checks the spring returns to its original length); or uses a rule with millimetre divisions held close to the spring, or adds the masses in smaller steps / over a larger range (Nov 2020 2H Q6(a)(iii))."),
+                        ("Repeat &amp; mean", "Repeats the readings for each force (e.g. by unloading and reloading) <b>and calculates a mean</b> extension — write both halves as one phrase."),
                     ], total=6, extra=[
                         "\"Use a ruler\" on its own does not earn the <i>Measure</i> mark — say what is measured and how the extension is found from it.",
                         "The <i>Use the result</i> mark needs the graph (or the calculation of $k$), not just \"record the results in a table\".",
@@ -544,14 +549,14 @@ section_t6 = section(
                         ("Measure", "Measures the current with an ammeter in series with the lamp and the potential difference with a voltmeter in parallel across it."),
                         ("Use the result", "Plots a graph of current against potential difference (an $I$–$V$ graph); a curve that flattens shows the resistance increasing. Or calculates $R = V \\div I$ at each p.d. and shows it rising."),
                         ("Accuracy", "One specific detail: switches off between readings so the lamp cools between measurements, or reverses the connections to take negative values as well, or uses meters with a suitable range."),
-                        ("Repeat &amp; mean", "Repeats each reading <b>and calculates a mean</b> current for each potential difference. \"Repeat\" on its own does not score."),
+                        ("Repeat &amp; mean", "Repeats each reading <b>and calculates a mean</b> current for each potential difference — write both halves as one phrase."),
                     ], total=6, extra=[
-                        "Swapping the ammeter and voltmeter round (ammeter in parallel) loses the <i>Measure</i> mark.",
+                        "Swapping the ammeter and voltmeter round (ammeter in parallel) loses the <i>Measure</i> mark. Draw the circuit: it is credited (\"a correct symbol for a variable resistor added in series with a lamp (1), ammeter in series (1), voltmeter in parallel (1)\", June 2024 2H Q8(a)).",
                     ]),
                     lines=8,
                     hint="What do you put in the circuit to change the p.d.? Where does each meter go?",
                     ),
-        ], intro="Write the full answer on paper, as seven numbered points, before you open the mark scheme. Then mark yourself one mark per row — the question is out of six, so any six of the seven rows score."),
+        ], intro="Write the full answer on paper, as seven numbered points, before you open the mark scheme. Then mark yourself against the rows — the question is levelled out of six, and a linked answer covering most of the seven rows is Level 3 (5–6)."),
     ],
 )
 
@@ -582,14 +587,14 @@ section_t7 = section(
             "<tr><td><b>Random error</b></td><td>Scatter: readings vary unpredictably above and below the true value</td><td>Reaction time on a stopwatch; reading a scale from slightly different angles</td></tr>"
             "<tr><td><b>Systematic error</b></td><td>Every reading is shifted the same way</td><td>A zero error on a balance; a rule with a worn end; a stopwatch that runs slow</td></tr>"
             "<tr><td><b>Zero error</b></td><td>A systematic error where the instrument reads something when it should read zero</td><td>A newtonmeter that reads 0.2 N with nothing on it</td></tr>"
-            "<tr><td><b>Anomalous result</b></td><td>A reading that does not fit the pattern of the others</td><td>19.8, 20.1, 27.3, 20.0 s — the 27.3 s</td></tr></table>",
+            "<tr><td><b>Anomalous result</b></td><td>A reading <b>much further from the mean than the other results</b> — name the value, then give that reason (SAM Q4(b): \"25.5 is anomalous (1) because it is much further away from the mean (1)\")</td><td>19.8, 20.1, 27.3, 20.0 s — the 27.3 s</td></tr></table>",
         ),
         explain(
             "What fixes what",
             "<p><b>Repeating and taking a mean</b> reduces the effect of <b>random</b> error, because the scatter above and below averages out. It does <b>nothing</b> for a <b>systematic</b> error — if the balance always reads 5 g high, the mean reads 5 g high too. Systematic errors are fixed by checking the zero, calibrating against a known value, or changing the method.</p>"
             "<p><b>An anomalous result</b> should be repeated if possible. If it cannot be, it is left out of the mean and circled on the graph — but you must say so.</p>"
-            "<p><b>\"Human error\"</b> is never a creditworthy answer. Say what the error actually is: <i>reaction time when starting the stopwatch</i>, <i>parallax when reading the rule</i>, <i>the thermometer not being at the same depth each time</i>. Then say what reduces it: <i>light gates</i>, <i>reading at eye level</i>, <i>a clamp to hold the thermometer</i>.</p>"
-            "<p><b>Higher resolution</b> means a smaller uncertainty in each reading — a digital stopwatch (0.01 s) over a wall clock (1 s) — but it does not help if the reading is dominated by reaction time (about 0.2 s).</p>",
+            "<p><b>\"Human error\"</b> is never a creditworthy answer. Say what the error actually is: <i>reaction time when starting the stopwatch</i>, <i>parallax when reading the rule</i>, <i>the thermometer not being at the same depth each time</i>. Then the improvement <b>with its reason</b> — that is how \"Explain one improvement\" is marked: \"use light gates (1) to eliminate reaction time (1)\" (June 2018 1H Q6(c)); \"use a longer distance (1) to give a more measurable time (1)\" (June 2019 1H Q6(a)); \"place the thermometer closer to the thermistor (1) so it measures the same temperature as the thermistor (1)\" (June 2022 2H Q8(c)(i)). The reason can never be \"more accurate\" or \"more precise\" on its own — \"do not accept more accurate without qualification\"; \"ignore accuracy, ignore precision\". For a stopwatch the credited diagnosis is \"<b>reaction time is significant compared with the time measured</b>\". And in these questions \"repeat and average\" is ignored.</p>"
+            "<p><b>Higher resolution</b> means a smaller uncertainty in each reading — a digital stopwatch (0.01 s) over a wall clock (1 s) — but it does not help if the reading is dominated by reaction time (about 0.2 s). Where the instrument is the limit — a thermometer in whole degrees, a rule in centimetres — \"a thermometer with better resolution\" and \"a rule with millimetre divisions\" are credited improvements (June 2022 2H Q8(c)(i), Nov 2020 2H Q6(a)(iii)).</p>",
             tone="warn",
         ),
         worked(
@@ -641,7 +646,7 @@ t8_4 = 100 / 60
 section_t8 = section(
     "estimation", "tricky", "Estimation questions", "WS",
     equations=[],
-    blurb="\"Estimate…\" means choose sensible values, say what you chose, calculate, and round. The method earns most of the marks, and the exact number is not what is being checked.",
+    blurb="\"Estimate…\" on an Edexcel paper means a calculation on approximate data the question gives you, or a value read off a graph, marked against a range (350–450 cm³ in June 2024 2H Q3(d); \"any value that rounds to 2700\" in June 2022 1H Q8(a)). Show the read-off or the substitution — it is the first mark. The sensible-values table below is for the rare question that gives you nothing, and for sense-checking every answer.",
     checklist=[
         "Recall sensible everyday values: masses, speeds, times, heights, powers",
         "State assumed values before using them",
@@ -667,7 +672,7 @@ section_t8 = section(
             "<tr><td>Mass of an apple, a bag of sugar, a litre of water</td><td>0.1 kg, 1 kg, 1 kg</td></tr>"
             "<tr><td>Reaction time</td><td>0.2–0.7 s</td></tr>"
             "<tr><td>Speed of sound in air; speed of light</td><td>340 m/s; $3 \\times 10^8$ m/s</td></tr></table>"
-            "<p>Any answer within a factor of two or so of the examiner's will be accepted <i>if your assumptions are stated and sensible</i>. An unexplained number on its own is not.</p>",
+            "<p>The schemes accept a range around the expected value (typically ±10–25%) once the read-off or substitution is shown; an unexplained number on its own is not enough for the method mark. Where you have had to assume a value, state it.</p>",
         ),
         worked(
             "Estimating an energy",
