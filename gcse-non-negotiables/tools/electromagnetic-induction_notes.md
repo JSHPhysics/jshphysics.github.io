@@ -158,3 +158,37 @@ of 11 choices under Foundation (N4, N7, N8 + `tx-power`, N10, T4, T7
 shown); no KaTeX errors; 7 diagrams; 65 flashcards; 132 ref buttons;
 booklet offers the notes mode; at 390 px nothing scrolls sideways, no
 card wider than the screen, nothing sticks out.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-13.md`
+(9 questions) and the induction / transformer parts of topic-12 and
+topic-10 (10 questions matched). No physics error; the induction chain,
+the 2024 falling-magnet marks, the 2025 transformer marks and the 2024
+practical points match the schemes verbatim. Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| electromagnetic-induction / inducing-pd (ei-n1-q3), ei-n5-q5, ei-t1-q3, induction-chain-exam (explain), flashcard | the "produces" rule narrowed to the pd (the house rule): every scheme writes "induces a pd"; a *current* may be "produced" (2022 guidance; the 2025 stem) — ei-t1-q3's rejected option is now "produces a pd" | 2H June 2022 Q10(a); June 2025 Q6(a)(i) |
+| electromagnetic-induction / ei-n1-q4 | the demonstration in the 2019 scheme's shape: each movement paired with its observation; "stronger magnet" ignored for a demonstration | 2H June 2019 Q6(a)(ii) |
+| electromagnetic-induction / induced-size-direction (table, worked) | "a larger coil / an iron core" removed from the credited ways — "do not allow increase size of coil" | 2H Nov 2020 Q7(a)(ii) |
+| electromagnetic-induction / alternator-dynamo, output-graphs (explain), ei-t3-q4 | "coil flat / along the field" → horizontal / perpendicular to the field / parallel to the field / rate of change (the scheme's words) | 2H Nov 2021 Q9(c) |
+| electromagnetic-induction / transformer (explain), transformer-six worked | the cause of the changing field is the alternating **current** in the primary ("ignore voltage / pd") | 2H June 2019 Q6(b)(i) |
+| electromagnetic-induction / ei-kw-q3 | for a shown transformer: steps up the voltage / steps down the current | 2H Nov 2020 Q7(c)(i) |
+| electromagnetic-induction / ei-n6-q4 | the upside-down ratio keeps the substitution mark | 2H June 2023 Q10(b) |
+| electromagnetic-induction / national-grid (explain, worked), transmission-loss (explain) | "the cables have resistance" opens the chain; the V = IR / smaller pd drop route added; the 2018 paper handed students $V_pI_p = V_sI_s$ for the current step | 2H June 2018 Q9(c); June 2022 Q10(c) |
+| electromagnetic-induction / dynamo-harder (title, blurb, explain) | the two explanations are alternatives ("either … OR"), each 2 marks — give both as insurance; "greater resistance" is ignored | 2H June 2023 Q10(a)(ii) |
+| electromagnetic-induction / induction-chain-exam worked, ei-t1-q4 | name the **pole** entering and leaving ("do not accept magnet"); the electric-car question is 2 marks on the two stores | 2H June 2022 Q10(a); June 2023 Q8(a)(iii) |
+| electromagnetic-induction / transformer-hard worked and Checks | the two-equation question is 3 marks; a rounded intermediate was accepted | 2H June 2022 Q10(b) |
+| electromagnetic-induction / induction-practical worked | the real version was a 4-mark Describe (any four practical points) | 2H June 2024 Q10(a)(ii) |
+
+No stored answer changed; `check_topic.js electromagnetic-induction`
+passes on both tiers. H list in the report: a one-mark draw with the 2019
+wording, the 2019 demonstrate-the-factors 4-marker as a worked example, the
+Nov 2021 turning-coil graph 6-marker, the 2023 "basic facts" row for the
+microphone/loudspeaker compare (sound is vibrations; input / output
+device), "consumer wires are shorter" (2018) and "transformers are not
+100% efficient" (2022) as grid points, the June 2026 dynamo + "show the
+current is d.c. with a meter" pairing (no scheme yet).

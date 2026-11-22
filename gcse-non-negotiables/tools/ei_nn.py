@@ -81,9 +81,9 @@ section_n1 = section(
                    "No relative movement, no changing field, nothing induced."),
             choice("ei-n1-q3", "Which word do the examiners require for what happens to the pd?",
                    ["produced", "made", "induced", "generated"], 2,
-                   "2025 report: 'produces' was not accepted; the correct word is 'induces'."),
+                   "Every scheme since 2021 writes 'induces a pd / voltage / emf', and the 2025 report refused 'produces' for the pd. (A current may be said to be produced or induced — 2022 guidance: 'accept current produced / induced' — but never write that anything 'produces a pd'.)"),
             written("ei-n1-q4", "Describe how to show in the laboratory that moving a magnet near a coil induces a potential difference. (3)",
-                    marks(["Connect a coil to a <b>sensitive centre-zero meter</b> (voltmeter or galvanometer).", "<b>Push a magnet into the coil</b>: the needle kicks; pull it out: it kicks the <b>other way</b>.", "Hold the magnet <b>still</b> in the coil: the needle reads zero — only movement induces a pd."]), lines=3),
+                    marks(["Connect a <b>sensitive centre-zero meter</b> (voltmeter or galvanometer) <b>across the ends of the coil</b>.", "<b>Move the magnet towards the coil, then away</b>: the meter deflection <b>changes direction</b>. <b>Move it quickly, then slowly</b>: the reading is <b>larger, then smaller</b>.", "Hold the magnet <b>still</b> in the coil: the needle reads zero — only movement induces a pd. (June 2019 2H Q6(a)(ii) credited each movement paired with its observation; it ignored 'use a stronger magnet', because the demonstration has one magnet.)"]), lines=3),
             written("ei-n1-q5", "State the difference between what happens in an open coil and a closed coil when a magnet is moved into each. (2)",
                     marks(["In both a <b>potential difference is induced</b> across the coil.", "Only in the <b>closed</b> circuit does a <b>current flow</b>; an open coil has the pd but no current."]), lines=2),
             choice("ei-n1-q6", "A power-station generator induces a pd continuously because…",
@@ -114,7 +114,7 @@ section_n2 = section(
             "<tr><td>move <b>faster</b> (turn the generator faster)</td><td>the field changes more quickly</td></tr>"
             "<tr><td>a <b>stronger magnet</b></td><td>more field lines to cut in the same time</td></tr>"
             "<tr><td><b>more turns</b> on the coil</td><td>each turn has a pd induced; they add</td></tr>"
-            "<tr><td>(a larger coil area, an iron core)</td><td>more of the field passes through the coil</td></tr></table>"
+            "<tr><td><i>Not credited:</i> a larger coil, an iron core</td><td>Nov 2020 2H Q7(a)(ii): \"do not allow increase size of coil\"; no scheme has a core — stick to speed, strength and turns</td></tr></table>"
             "<p><b>Direction</b>: the induced pd <b>reverses</b> if the <b>direction of movement</b> reverses (magnet in, then out) or if the <b>magnet is turned round</b> (N first instead of S first). Reverse both and it is unchanged.</p>"
             "<p><b>The field opposes the change</b> (13.2): when the induced current flows, it has its own magnetic field, and that field <b>opposes the change that caused it</b> — push a N pole into a coil and the coil's near end becomes a N pole, pushing back; pull it out and the near end becomes a S pole, pulling back. So <b>work has to be done</b> to keep moving the magnet (or turning the generator), and that work is where the electrical energy comes from. The June 2023 report (Q10(a)(ii), a dynamo lighting a lamp): the handle is harder to turn because the lamp needs energy, which comes from the extra work of turning; and \"an induced current in the rotating coil produces a magnetic field\" that opposes the motion — \"very few\" gave this (T2).</p>",
         ),
@@ -124,7 +124,7 @@ section_n2 = section(
             [
                 "Move the magnet <b>faster</b> into the coil.",
                 "Use a <b>stronger magnet</b>.",
-                "Use a coil with <b>more turns</b> (or a larger coil / an iron core).",
+                "Use a coil with <b>more turns</b>. (Not \"a bigger coil\" — the Nov 2020 scheme says \"do not allow increase size of coil\".)",
             ],
         ),
         practice("Size and direction", [
@@ -163,7 +163,7 @@ section_n3 = section(
         explain(
             "Same coil, different rings",
             diagram(dg.generator_svg(), 670, 260, "An alternator and a dynamo: the same coil turning between the same poles, with different rings.") +
-            "<p>As the coil turns, each side moves <b>up</b> through the field for half a turn and <b>down</b> for the next half, so the pd induced across the coil <b>reverses every half turn</b> — and it is largest when the sides are cutting across the field fastest (coil flat), zero when they are moving along the field (coil vertical). The induced pd itself is therefore <b>alternating</b> whatever rings are used; the rings decide what the external circuit sees.</p>"
+            "<p>As the coil turns, each side moves <b>up</b> through the field for half a turn and <b>down</b> for the next half, so the pd induced across the coil <b>reverses every half turn</b> — and it is largest when the coil is <b>horizontal</b> and its sides are moving <b>perpendicular to the field</b> (the greatest <b>rate of change</b> of the field through it), zero when the coil is <b>vertical</b> and its sides are moving <b>parallel to the field</b> (the Nov 2021 2H Q9(c) words). The induced pd itself is therefore <b>alternating</b> whatever rings are used; the rings decide what the external circuit sees.</p>"
             "<table class='tbl'><tr><th></th><th>Alternator</th><th>Dynamo</th></tr>"
             "<tr><td>Connection</td><td>two <b>slip rings</b>: complete rings, one on each end of the coil, each pressed by its own brush</td><td>a <b>split-ring commutator</b>: one ring cut into two halves, one on each end of the coil, two brushes</td></tr>"
             "<tr><td>What it does</td><td>each brush stays connected to the <b>same end</b> of the coil all the time</td><td>the halves <b>swap brushes every half turn</b>, exactly when the induced pd reverses</td></tr>"
@@ -268,7 +268,7 @@ section_n5 = section(
         explain(
             "The three marks",
             diagram(dg.transformer_svg(), 660, 280, "A transformer: primary and secondary coils on a soft-iron core, which carries the changing field from one to the other.") +
-            "<p>The June 2025 scheme (Q6(a)(i), 3 marks): (1) there is an <b>alternating current in the primary coil</b>; (2) this produces a <b>changing magnetic field in the iron core</b>; (3) the secondary coil is in that changing field, so an <b>alternating pd is induced</b> across it. \"Marks were usually lost by not stating the magnetic field in the core was <b>changing</b>\" — and by writing <b>produces</b> instead of <b>induces</b>. The core is <b>soft iron</b>: it is easily magnetised and demagnetised, so it carries the changing field efficiently from one coil to the other without keeping any.</p>"
+            "<p>The June 2025 scheme (Q6(a)(i), 3 marks): (1) there is an <b>alternating current in the primary coil</b>; (2) this produces a <b>changing magnetic field in the iron core</b>; (3) the secondary coil is in that changing field, so an <b>alternating pd is induced</b> across it. \"Marks were usually lost by not stating the magnetic field in the core was <b>changing</b>\" — and by writing <b>produces</b> instead of <b>induces</b>. Say <b>alternating current in the primary coil</b> as the cause of the changing field: the 2019 scheme (Q6(b)(i)) ignored \"alternating voltage\" for that mark. The core is <b>soft iron</b>: it is easily magnetised and demagnetised, so it carries the changing field efficiently from one coil to the other without keeping any.</p>"
             "<p><b>Why a.c. only</b>: a steady d.c. in the primary gives a steady field in the core, and a steady field induces <b>nothing</b> in the secondary (no change, no induction). Only at the instants of switching on and off is there a brief induced pd.</p>"
             "<p><b>What it does</b> (13.6): changes the <b>size of an alternating pd</b>. A <b>step-up</b> transformer has <b>more turns on the secondary</b> than the primary and gives a larger pd out; a <b>step-down</b> has <b>fewer</b> turns on the secondary and gives a smaller pd out. The pd changes in the same ratio as the turns (N6), and because the power is (nearly) the same on both sides, the <b>current changes the other way</b> (N8): step up the pd and the current goes down.</p>",
         ),
@@ -294,7 +294,7 @@ section_n5 = section(
                     marks(["It <b>changes the size of an alternating pd</b> (steps it up or down).", "Soft iron is <b>easily magnetised and demagnetised</b>, so it carries the changing field from the primary to the secondary (without staying magnetised)."]), lines=2),
             choice("ei-n5-q5", "Which word is wrong in: 'the changing field in the core produces an alternating pd in the secondary'?",
                    ["changing", "core", "produces", "alternating"], 2,
-                   "The pd is induced. 2025: 'produces' was not accepted."),
+                   "The pd is induced — every scheme says 'induces a pd'; 'produces' is only accepted for the current (2022 guidance), never for the pd (2025 report)."),
         ]),
     ],
 )
@@ -340,7 +340,7 @@ section_n6 = section(
                     ewau(r"V_s = V_p \times N_s \div N_p", r"V_s = 25 \times 6400 \div 400", "400", "kV")),
             choice("ei-n6-q4", "A student's answer gives a secondary pd of 920 V for a transformer stepping down from 230 V. What has gone wrong?",
                    ["Nothing", "The fraction is upside down — a step-down must give a smaller pd", "The units are wrong", "The transformer is broken"], 1,
-                   "Check the direction every time."),
+                   "Check the direction every time — the upside-down answer keeps only the substitution mark (June 2023 2H Q10(b): '1 mark for answers that round to 10 000')."),
         ]),
     ],
 )
@@ -363,14 +363,14 @@ section_n7 = section(
             "Where and why",
             diagram(dg.grid_svg(), 720, 265, "The national grid: a step-up transformer at the power station, long cables at a very high pd, and step-down transformers near the homes.") +
             "<p><b>Where</b> (13.9): a <b>step-up</b> transformer <b>at the power station</b> raises the pd from the generator's ~25 kV to 132 kV, 275 kV or 400 kV for the <b>transmission lines</b>; <b>step-down</b> transformers at substations <b>near the towns and homes</b> reduce it in stages to 230 V for domestic use.</p>"
-            "<p><b>Why</b> (13.8), as a chain: for a given power, a <b>higher pd means a smaller current</b> (power = pd × current); the cables waste energy by <b>heating</b>, and the heating rises steeply with the current; so a <b>smaller current wastes much less energy</b> in the cables; so transmitting at a high pd is <b>more efficient</b> — more of the power generated reaches the user. It is stepped down again because 400 kV would be far too <b>dangerous</b> for homes and would break down insulation; 230 V is what appliances are designed for. The marks are on <b>reducing the current</b> and <b>reducing the energy wasted as heat in the cables</b> — \"it is more efficient\" alone is a conclusion, not a reason.</p>",
+            "<p><b>Why</b> (13.8), as a chain: for a given power, a <b>higher pd means a smaller current</b> (power = pd × current); the long cables <b>have resistance</b>, so a current in them <b>dissipates energy by heating</b>, and the heating rises steeply with the current (a smaller current also means a smaller pd dropped across the cables, $V = IR$, so more of the pd reaches the far end — the 2022 scheme's route); so a <b>smaller current wastes much less energy</b> in the cables; so transmitting at a high pd is <b>more efficient</b> — more of the power generated reaches the user. It is stepped down again because 400 kV would be far too <b>dangerous</b> for homes and would break down insulation; 230 V is what appliances are designed for. The marks are on <b>reducing the current</b> and <b>reducing the energy wasted as heat in the cables</b> — \"it is more efficient\" alone is a conclusion, not a reason.</p>",
         ),
         worked(
             "The 3-mark why",
             "Explain why electrical energy is transmitted through the national grid at a very high potential difference. (3 marks)",
             [
                 "For the same power, a higher pd means a <b>smaller current</b> in the cables.",
-                "A smaller current means <b>less energy is wasted as heat</b> in the cables (heating rises steeply with current).",
+                "The long cables <b>have resistance</b>, so a current in them <b>dissipates energy by heating</b>; a smaller current means <b>less energy is dissipated in the cables</b> (and a smaller pd is dropped across them, $V = IR$). Both 6-mark schemes (2018, 2022) open with the wires having resistance.",
                 "So the transmission is <b>more efficient</b>: more of the energy generated reaches the users.",
             ],
         ),
@@ -461,7 +461,7 @@ section_n9 = section(
         explain(
             "The argument with numbers",
             "<p>Take 100 MW to be transmitted along cables of total resistance 5 Ω. At 25 kV the current is $I = \\dfrac{P}{V} = \\dfrac{100\\,000\\,000}{25\\,000} = 4000$ A and the loss is $I^2 R = 4000^2 \\times 5 = 80$ MW — most of the power. At 400 kV the current is $250$ A and the loss is $250^2 \\times 5 = 0.31$ MW. Sixteen times the pd, a sixteenth of the current, a <b>256th</b> of the loss. That is 13.11P: the advantage of high-voltage transmission, <b>using the equations</b> — $P = IV$ for the current, then $P = I^2R$ for the loss. The transformer equations (N6, N8) supply the pd and current on each side.</p>"
-            "<p>Write the chain with the equations named: (1) $P = IV$: for the same power, a higher $V$ means a smaller $I$; (2) $P = I^2R$: the power wasted in the cables is proportional to $I^2$, so a smaller current wastes <b>much</b> less; (3) so the transmission is more efficient. The common slip is to put the <b>transmission pd</b> into $P = IV$ to find the loss — that gives the power carried, not the power wasted; the loss needs the <b>current and the cable's resistance</b>.</p>",
+            "<p>Write the chain with the equations named: (1) $P = IV$ — or, if the paper gives it, $V_p I_p = V_s I_s$ (June 2018 2H Q9(c)): stepping the pd up at the transformer means a smaller current in the cables for the same power; (2) $P = I^2R$: the power wasted in the cables is proportional to $I^2$, so a smaller current wastes <b>much</b> less; (3) so the transmission is more efficient. The common slip is to put the <b>transmission pd</b> into $P = IV$ to find the loss — that gives the power carried, not the power wasted; the loss needs the <b>current and the cable's resistance</b>.</p>",
         ),
         worked(
             "Loss at two pds",
@@ -538,7 +538,7 @@ section_keywords = section(
                    ["Dynamo", "Alternator", "Transformer", "Motor"], 1,
                    "Slip rings: alternator, a.c. Split ring: dynamo, d.c.", tags=["H"]),
             written("ei-kw-q3", "State what a transformer does. (1)",
-                    marks(["It <b>changes the size of an alternating pd</b> (steps it up or down)."]), lines=1, tags=["H"]),
+                    marks(["It <b>changes the size of an alternating pd</b> — when a transformer is shown, say which: it <b>steps up (increases) the voltage</b> or <b>steps down (decreases) the current</b> (Nov 2020 2H Q7(c)(i))."]), lines=1, tags=["H"]),
             choice("ei-kw-q4", "In a step-down transformer…",
                    ["the secondary has fewer turns and a smaller pd than the primary", "the secondary has more turns than the primary", "the pd is unchanged", "d.c. is produced"], 0,
                    "Fewer secondary turns: smaller pd out (and larger current).", tags=["H"]),

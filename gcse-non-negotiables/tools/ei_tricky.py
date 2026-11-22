@@ -36,7 +36,7 @@ section_t1 = section(
             "<p>The June 2024 scheme (Q10(a)(i), 3 marks, any three): the coil <b>cuts the field lines</b> (or experiences a <b>changing field</b>); this <b>induces a voltage or current</b> in the coil; the <b>voltmeter measures</b> the induced pd (the scheme lets that statement count for two of the three); <b>electrons in the wire experience a force</b> / move in response to the changing field; the induced pd <b>changes in size and direction</b> as the magnet passes through. The chain, with the lead line for a moving magnet:</p>"
             "<ol class='steps'><li>" + INDUCTION_LEAD + "</li>" + "".join("<li>" + step + "</li>" for step in INDUCTION_CHAIN[1:]) + "</ol>"
             "<p><b>Why the reading reverses</b>: as the magnet's leading pole enters, the field through the coil <b>increases</b>; as its trailing pole (the opposite pole) leaves, the field through the coil <b>decreases</b> — the change is the opposite way, so the induced pd is the opposite way. A magnet dropped through a coil gives one kick in each direction, the second one sharper because the magnet is moving faster by then.</p>"
-            "<p><b>The vocabulary</b>: a pd is <b>induced</b>; a current <b>flows</b> if the circuit is closed; a generator <b>induces</b> a pd. The June 2025 report: \"There still seems to be a confusion between a p.d. being induced and a p.d. being produced\" — and \"produces\" was not accepted. The June 2023 report (Q8(a)(iii), regenerative braking) wanted the dynamo \"to cause an electric current\" that recharges the battery, not a description of split rings.</p>",
+            "<p><b>The vocabulary</b>: a pd is <b>induced</b>; a current <b>flows</b> if the circuit is closed; a generator <b>induces</b> a pd. The June 2025 report: \"There still seems to be a confusion between a p.d. being induced and a p.d. being produced\" — and \"produces\" was not accepted for the pd. A <b>current</b> may be \"produced\" (2022 guidance: \"accept current produced / induced\"; the 2025 stem itself says \"how the current is produced\"), but a pd is only ever <b>induced</b>. The June 2023 report (Q8(a)(iii), regenerative braking) wanted the dynamo \"to cause an electric current\" that recharges the battery, not a description of split rings.</p>",
         ),
         worked(
             "Dropped through a coil",
@@ -45,7 +45,7 @@ section_t1 = section(
                 INDUCTION_LEAD + " As the magnet enters the coil, the coil <b>cuts the field lines</b> — it experiences a <b>changing magnetic field</b>.",
                 "This <b>induces a pd</b> across the coil, which the voltmeter reads; it rises as the magnet speeds up and the field through the coil grows.",
                 "When the magnet is centred in the coil the field through it is momentarily <b>not changing</b>, so the pd falls to <b>zero</b>.",
-                "As the magnet leaves, the field through the coil <b>decreases</b> — the opposite change — so the induced pd is <b>reversed</b>; once the magnet is clear, no change, so zero again.",
+                "As the <b>trailing pole</b> (the S pole if the N went in first) <b>leaves</b> the coil, the field through the coil <b>decreases</b> — the opposite change — so the induced pd is <b>reversed</b> (name the <b>pole</b> entering and leaving: June 2022 2H Q10(a) says \"do not accept magnet\" for this mark); once the magnet is clear, no change, so zero again.",
             ],
         ),
         practice("The chain in the exam", [
@@ -55,10 +55,10 @@ section_t1 = section(
                    ["the magnet is heavier", "the magnet is moving faster when it leaves, so the field changes more quickly", "the coil has heated up", "the second pole is stronger"], 1,
                    "Faster movement, faster change, larger induced pd."),
             choice("ei-t1-q3", "Which sentence would NOT be credited?",
-                   ["The coil cuts the field lines", "A pd is induced across the coil", "The magnet produces a current in the coil", "A current flows because the circuit is closed"], 2,
-                   "'Produces' is the rejected word, and the magnet does not make the current — the changing field induces a pd."),
-            written("ei-t1-q4", "An electric car charges its battery when it slows down. Explain how. (3)",
-                    marks(["As the car slows, the wheels turn the motor, which acts as a <b>generator (dynamo)</b>: a coil turns in a magnetic field.", "The coil experiences a changing magnetic field, so a <b>pd is induced</b> and a <b>current flows</b> to the battery…", "…transferring energy from the car's <b>kinetic</b> store to the battery's <b>chemical</b> store (which is also what slows the car)."]), lines=3),
+                   ["The coil cuts the field lines", "A pd is induced across the coil", "The magnet produces a pd across the coil", "A current flows because the circuit is closed"], 2,
+                   "The pd is <b>induced</b> (by the changing field), never produced; a current 'produced' is accepted by the schemes, a pd 'produced' is not."),
+            written("ei-t1-q4", "An electric car charges its battery when it slows down. Explain the energy transfers. (2)",
+                    marks(["Energy is transferred <b>from the car's kinetic store</b>…", "…<b>to the battery's chemical store</b> (June 2023 2H Q8(a)(iii): one mark for each store). The route: the wheels turn the motor as a <b>generator (dynamo)</b>; the coil is in a changing magnetic field, so a <b>pd is induced</b> and a current recharges the battery — an electrical pathway for energy that would otherwise be dissipated."]), lines=3),
             choice("ei-t1-q5", "The voltmeter reads zero at the instant the magnet is exactly centred in the coil because…",
                    ["the magnet has stopped", "the field through the coil is momentarily not changing", "the coil is too short", "the voltmeter is on the wrong setting"], 1,
                    "Maximum field through the coil, but zero rate of change at that instant."),
@@ -73,7 +73,7 @@ section_t1 = section(
 section_t2 = section(
     "dynamo-harder", "tricky", "Why the dynamo gets harder to turn when it lights a lamp", "13.2",
     equations=[r"\text{induced current} \rightarrow \text{its own field} \rightarrow \text{opposes the motion} \rightarrow \text{more work}"],
-    blurb="A bicycle dynamo turning a voltmeter turns freely; connect a lamp and the handle stiffens. Two ideas earn the marks: the lamp needs energy, which has to come from extra work turning the handle; and the induced current's own magnetic field opposes the motion of the coil. In 2023 very few students gave the second.",
+    blurb="A bicycle dynamo turning a voltmeter turns freely; connect a lamp and the handle stiffens. Either of two chains earns the marks (2023 scheme: \"either … OR\", 2 marks each): the lamp needs energy, which has to come from extra work turning the handle; or the induced current's own magnetic field opposes the motion of the coil. Give both as insurance — in 2023 very few students gave the second.",
     tags=["H"],
     checklist=[
         "Explain the extra effort by conservation of energy",
@@ -82,8 +82,8 @@ section_t2 = section(
     ],
     parts=[
         explain(
-            "Two explanations, both wanted",
-            "<p>The June 2023 report (Q10(a)(ii)): many said the lamp \"would increase resistance in the circuit\" — wrong, a lamp has <b>far less</b> resistance than a voltmeter, which is exactly why a current now flows. Examiners wanted that \"the lamp required an energy transfer to produce light\", supplied by extra work turning the dynamo; credit was also available for \"an induced current in the rotating coil in the dynamo produces a magnetic field\" that opposes the coil's motion — \"very few examples of this\". \"The handle needs to be turned more\" was \"too vague\".</p>"
+            "Two explanations — either scores, so give both",
+            "<p>The June 2023 report (Q10(a)(ii)): many said the lamp \"would increase resistance in the circuit\" — <b>ignored</b> by the scheme (\"ignore reference to greater (electrical) resistance\"), and wrong: a lamp has <b>far less</b> resistance than a voltmeter, which is exactly why a current now flows. Examiners wanted that \"the lamp required an energy transfer to produce light\", supplied by extra work turning the dynamo; credit was also available for \"an induced current in the rotating coil in the dynamo produces a magnetic field\" that opposes the coil's motion — \"very few examples of this\". \"The handle needs to be turned more\" was \"too vague\".</p>"
             "<table class='tbl'><tr><th>Idea</th><th>What to write</th></tr>"
             "<tr><td><b>Energy</b></td><td>with the lamp connected a <b>current flows</b> and the lamp transfers energy (to light and heat); by conservation of energy this must come from the <b>work done turning the handle</b>, so more force (more work per turn) is needed</td></tr>"
             "<tr><td><b>Field</b></td><td>the induced current in the coil produces its own <b>magnetic field</b>, which <b>interacts with the magnet's field</b> and gives a force on the coil that <b>opposes its rotation</b> (the induced current's field opposes the change causing it, 13.2) — the turning has to overcome this force</td></tr>"
@@ -136,7 +136,7 @@ section_t3 = section(
             "<tr><td><b>stronger magnet</b> or <b>more turns</b></td><td><b>larger</b></td><td>unchanged</td><td>taller only</td></tr>"
             "<tr><td>turn the coil the <b>other way</b></td><td>same</td><td>same</td><td><b>inverted</b> (starts negative where it started positive)</td></tr>"
             "<tr><td>swap slip rings for a <b>split ring</b></td><td>same</td><td>twice as many humps per second (each half-cycle flipped up)</td><td>all above the axis — d.c.</td></tr></table>"
-            "<p>Reading: the <b>peak pd</b> is the height of the crest above zero; the <b>period</b> is the time for one full cycle (crest to crest for a.c.; for a dynamo, two humps make one turn of the coil); <b>frequency = 1 / period</b> (Topic 4). Mains a.c. has a frequency of 50 Hz, period 0.02 s. Note the a.c. pd is <b>zero twice per cycle</b> — when the coil is vertical and its sides are moving along the field, not cutting it — and <b>largest when the coil is flat</b>, cutting across the field fastest.</p>",
+            "<p>Reading: the <b>peak pd</b> is the height of the crest above zero; the <b>period</b> is the time for one full cycle (crest to crest for a.c.; for a dynamo, two humps make one turn of the coil); <b>frequency = 1 / period</b> (Topic 4). Mains a.c. has a frequency of 50 Hz, period 0.02 s. Note the a.c. pd is <b>zero twice per cycle</b> — when the coil is vertical and its sides are moving along the field, not cutting it — and <b>largest when the coil is horizontal</b>, its sides moving <b>perpendicular to the field</b> (greatest rate of change of the field through it) — the Nov 2021 scheme's words.</p>",
         ),
         worked(
             "Sketching the change",
@@ -157,8 +157,8 @@ section_t3 = section(
             written("ei-t3-q3", "Describe two changes to an alternator's output graph when a stronger magnet is used, the coil turning at the same rate. (2)",
                     marks(["The <b>peak pd is larger</b>.", "The <b>frequency (period) is unchanged</b> — the coil still turns at the same rate."]), lines=2),
             choice("ei-t3-q4", "At the instants when an alternator's output pd is zero, the coil is…",
-                   ["flat, with its sides cutting across the field fastest", "vertical, with its sides moving along the field lines", "stationary", "at 45° to the field"], 1,
-                   "Moving along the field: no lines cut, no pd."),
+                   ["horizontal, with its sides moving perpendicular to the field", "vertical, with its sides moving parallel to the field lines", "stationary", "at 45° to the field"], 1,
+                   "Moving parallel to the field: no lines cut, no change of field through the coil, no pd (Nov 2021 2H Q9(c): 'no change when coil moving parallel to field')."),
             written("ei-t3-q5", "A dynamo's output graph has 100 humps per second. State the rate at which the coil turns, and explain your answer. (2)",
                     marks(["<b>50 turns per second</b>.", "Each turn of the coil gives <b>two humps</b> (the induced pd reverses every half turn and the split ring flips the second half up)."]), lines=2),
         ]),
@@ -248,7 +248,7 @@ section_t5 = section(
             "The 2024 answer",
             "A transformer at a substation reduces the pd from 11 000 V to 230 V. Explain how the transformer is constructed and how it does this. (6 marks)",
             [
-                "<b>Construction:</b> two coils of insulated wire wound on a closed <b>soft-iron core</b> — the <b>primary</b> coil connected to the 11 000 V supply and the <b>secondary</b> coil to the 230 V output.",
+                "<b>Construction:</b> two coils of insulated wire wound on a closed <b>soft-iron core</b> — the <b>primary</b> coil connected to the 11 000 V supply, so it carries an <b>alternating current</b> (the cause of the changing field — say current, not voltage), and the <b>secondary</b> coil to the 230 V output.",
                 "It is a <b>step-down</b> transformer, so the primary has <b>many more turns</b> than the secondary.",
                 "<b>Operation:</b> the <b>alternating current</b> in the primary coil produces a <b>changing magnetic field</b> in the iron core.",
                 "The core carries this changing field through the secondary coil, so a <b>pd is induced</b> across the secondary — an alternating pd, because the field keeps reversing.",
@@ -300,11 +300,11 @@ section_t6 = section(
             "<tr><td>pds and currents (any three of $V_p, I_p, V_s, I_s$)</td><td>$V_p I_p = V_s I_s$ (100 % efficient)</td></tr>"
             "<tr><td>turns, the primary pd and a current — asks for the other current</td><td><b>both</b>: ratio first for $V_s$, then power for $I_s$</td></tr>"
             "<tr><td>power out, pd out, and asks for the current in</td><td>$P = IV$ for $I_s$ (or straight to $V_p I_p = P$)</td></tr></table>"
-            "<p>The June 2025 report (Q6(a)(ii)): most substituted and rearranged confidently; the few who lost marks used the pd–current equation where turns were given. <b>Checks</b>: a step-down must give a smaller $V_s$ and a <b>larger</b> $I_s$; the power out can never exceed the power in; convert mA → A and kV → V (or keep the same prefix on both sides of the same equation).</p>",
+            "<p>The June 2025 report (Q6(a)(ii)): most substituted and rearranged confidently; the few who lost marks used the pd–current equation where turns were given. <b>Checks</b>: a step-down must give a smaller $V_s$ and a <b>larger</b> $I_s$; the power out can never exceed the power in; convert mA → A and kV → V (or keep the same prefix on both sides of the same equation). Carrying a rounded $V_s$ into the second equation was accepted in June 2022 (Q10(b): 130 V for 131.4 V still scored full marks).</p>",
         ),
         worked(
             "Both equations",
-            "A transformer has 2000 turns on the primary and 100 turns on the secondary. The primary is connected to the 230 V mains and the secondary supplies a 5.0 A current to a heater. Assuming 100 % efficiency, calculate the current in the primary coil. (4 marks)",
+            "A transformer has 2000 turns on the primary and 100 turns on the secondary. The primary is connected to the 230 V mains and the secondary supplies a 5.0 A current to a heater. Assuming 100 % efficiency, calculate the current in the primary coil. (3 marks)",
             [
                 "Secondary pd from the turns: $V_s = V_p \\times N_s / N_p = 230 \\times 100 / 2000 = 11.5$ V.",
                 "Power equation: $V_p I_p = V_s I_s$, so $I_p = V_s I_s / V_p$.",
@@ -409,7 +409,7 @@ section_t8 = section(
             "The 6-mark plan",
             "Plan an investigation to find how the pd induced in a coil depends on the speed at which a magnet falls through it. (6 marks)",
             [
-                "<b>Variables:</b> change the drop height (independent — a greater height gives a faster magnet); measure the maximum induced pd (dependent); keep the same magnet, coil, tube and voltmeter setting (control).",
+                "<b>Variables:</b> change the drop height (independent — a greater height gives a faster magnet); measure the maximum induced pd (dependent); keep the same magnet, coil, tube and voltmeter setting (control). (In the exam this was \"Describe how the student could use the arrangement … (4)\" — June 2024 2H Q10(a)(ii) — and any four of the practical points in the steps below scored; the variables line is for a Plan question.)",
                 "<b>Relationship expected:</b> a faster-moving magnet gives a larger induced pd (no equation needed).",
                 "<b>Change:</b> drop the magnet down the tube from 10, 20, 30, 40 and 50 cm above the coil, measured with a metre rule from the top of the coil.",
                 "<b>Measure:</b> record the maximum reading on a voltmeter set to a.c. (or a data logger) for each drop.",
@@ -452,7 +452,7 @@ FACTS = [
     # N1
     fact("The induction chain?", "The wire or coil moves through the magnetic field of the permanent magnet → so it experiences a changing magnetic field → this induces a pd across it → if it is in a closed circuit, a current flows.", "inducing-pd"),
     fact("The lead line when the magnet moves?", "The magnet moves relative to the coil (either may move) — then the chain follows.", "inducing-pd"),
-    fact("Which word for the pd: 'induced' or 'produced'?", "Induced — 'produces' was not accepted (2025).", "inducing-pd"),
+    fact("Which word for the pd: 'induced' or 'produced'?", "Induced — every scheme says 'induces a pd' and 'produces' was not accepted for it (2025); a current may be 'produced' (2022 guidance).", "inducing-pd"),
     fact("Magnet held still in a coil: reading?", "Zero — no relative movement, no changing field, nothing induced.", "inducing-pd"),
     fact("Open coil vs closed coil?", "Both have a pd induced; only the closed circuit has a current.", "inducing-pd"),
     fact("How does a power station generate continuously?", "A turbine keeps turning the coil (or magnets) so the coil experiences a continuously changing field.", "inducing-pd"),
