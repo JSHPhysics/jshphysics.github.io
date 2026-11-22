@@ -33,7 +33,7 @@ section_n1 = section(
             "The law and the diagram",
             diagram(dg.reflection_svg(), 480, 270, "Reflection at a plane mirror. The normal is drawn first, at 90° to the mirror where the ray hits it; i and r are measured from the normal and are equal.") +
             "<p><b>Law of reflection:</b> the angle of incidence equals the angle of reflection. The <b>normal</b> is a line at <b>90° to the surface</b> at the point where the ray strikes. The angle of incidence $i$ is between the incident ray and the normal; the angle of reflection $r$ is between the reflected ray and the normal.</p>"
-            "<p>In the exam the mark for a ray diagram is usually for the normal being drawn and the angles being marked from it, not for the rays: the June 2024 scheme for the reflection practical gave marks for \"draw the normal, perpendicular to the mirror at the point of reflection\" and \"label the angles of incidence and reflection measured from the normal\".</p>",
+            "<p>In the exam the marks for a ray diagram or a method are for four things, one each (June 2024 Q6(a)(ii)): <b>mark the position</b> of the mirror and of the rays; <b>draw the normal</b>, perpendicular to the mirror at the point of reflection; <b>label the angle of incidence and the angle of reflection from the normal</b>; <b>use a protractor</b>. Writing \"angle of refraction\" on a reflection diagram loses that mark.</p>",
         ),
         explain(
             "Specular and diffuse reflection",
@@ -155,7 +155,7 @@ section_n3 = section(
             "Describe what happens as the angle grows",
             "A ray of light inside a glass block hits the glass–air surface. Describe what happens to the ray as the angle of incidence is increased from 20° to 60°. The critical angle of the glass is 42°. (3 marks)",
             [
-                "<b>Below 42°:</b> the ray <b>refracts out</b> of the glass into the air, bending <b>away from the normal</b> (angle of refraction bigger than angle of incidence); a weak reflected ray stays inside.",
+                "<b>Below 42°:</b> the ray <b>refracts out</b> of the glass into the air, bending <b>away from the normal</b>; <b>as the angle of incidence increases, the angle of refraction increases</b> (and stays bigger than the angle of incidence) — the first of the June 2025 Q7(c) points. (A weak reflected ray also stays inside; the scheme ignores it, so do not spend a line on it.)",
                 "<b>At 42° (the critical angle):</b> the angle of refraction is <b>90°</b> — the refracted ray travels <b>along the surface</b>.",
                 "<b>Above 42°:</b> no light leaves; the ray is <b>totally internally reflected</b> back into the glass, with angle of reflection = angle of incidence.",
             ],
@@ -252,7 +252,7 @@ section_n5 = section(
             "<p>A <b>converging</b> lens is fatter in the middle (convex). Rays parallel to its axis are refracted so they <b>meet at the principal focus F</b>. The <b>focal length</b> $f$ is the distance from the centre of the lens to F.</p>"
             "<p>A <b>diverging</b> lens is thinner in the middle (concave). Parallel rays <b>spread out</b> as if they had come from a focus on the near side; its focal length is counted as <b>negative</b>.</p>"
             "<p>$$P = \\dfrac{1}{f}$$ with $f$ in <b>metres</b> and $P$ in <b>dioptres (D)</b>. A lens of focal length 0.5 m has power 2 D; one of focal length 0.1 m has power 10 D.</p>"
-            "<p><b>Shape and power:</b> the <b>more curved</b> (fatter, thicker in the middle, smaller radius of curvature) the lens, the <b>more it refracts</b> the light, the <b>shorter the focal length</b> and the <b>higher the power</b>. The June 2025 scheme accepted \"more curved\", \"thicker\" or \"fatter\" for a higher-power lens; the 2022 report warns that \"stronger\" is too vague because it could mean either kind of lens.</p>",
+            "<p><b>Shape and power:</b> the <b>more curved</b> (fatter, thicker in the middle, smaller radius of curvature) the lens, the <b>more it refracts</b> the light, the <b>shorter the focal length</b> and the <b>higher the power</b>. The June 2025 scheme's two marks were \"a more powerful lens has a <b>shorter focal length</b>\" and \"a more powerful lens has a <b>smaller radius of curvature</b>\" — thicker, fatter, more convex or more concave allowed for the second, and \"stronger\" allowed for \"more powerful\". When the question is about increasing <i>magnification</i> (June 2022 Q1(b)(ii)) name the change — <b>higher power / shorter focal length / fatter / more curved</b> — rather than \"a stronger lens\" on its own, which the report called too vague.</p>",
         ),
         worked(
             "Comparing two lenses",
@@ -270,7 +270,7 @@ section_n5 = section(
                    "$P = 1/f$: the shortest focal length (0.1 m, 10 D) is the most powerful."),
             written("le-n5-q3", "Describe how the power of a lens depends on its focal length and its shape. (2)",
                     marks(["The <b>shorter the focal length</b>, the <b>higher the power</b> ($P = 1/f$).",
-                           "A <b>more curved</b> (fatter, thicker-in-the-middle) lens has a shorter focal length and so a higher power."]), lines=3),
+                           "A lens with a <b>smaller radius of curvature</b> (more curved, fatter, thicker in the middle) has a shorter focal length and so a higher power."]), lines=3),
             choice("le-n5-q4", "What does a diverging lens do to a beam of parallel rays?",
                    ["Brings them to a focus on the far side", "Spreads them out as if they came from a focus on the near side", "Leaves them parallel", "Reflects them"], 1,
                    "Diverging lenses spread rays; the focus is virtual, on the same side as the incoming light."),
@@ -304,7 +304,7 @@ section_n6 = section(
             "<li>All EM waves travel at the <b>same speed in a vacuum</b>, $3 \\times 10^{8}$ m/s (and almost the same in air). They slow down in glass and water — which is why they refract.</li>"
             "<li>All EM waves <b>transfer energy from the source to the observer</b> (the absorber). The Sun's infrared warms your skin; a microwave oven's microwaves heat the water in food; a radio wave makes a current flow in an aerial. No particles travel — the wave carries the energy.</li></ul>"
             "<p>$$v = f \\times \\lambda$$ For an EM wave the speed is already known, so the question is always for $f$ or $\\lambda$: $f = \\dfrac{v}{\\lambda}$ or $\\lambda = \\dfrac{v}{f}$. Convert GHz ($\\times 10^{9}$), MHz ($\\times 10^{6}$) and nm ($\\times 10^{-9}$) first — the 2022 report: not converting gigahertz to hertz was the common error.</p>"
-            "<p>Don't confuse EM waves with sound: sound is a <b>longitudinal</b> wave that needs a medium and travels at about 340 m/s in air. \"Name an electromagnetic wave\" answered with \"sound\" scored nothing in June 2025.</p>",
+            "<p>Don't confuse EM waves with sound: sound is a <b>longitudinal</b> wave that needs a medium and travels at about 340 m/s in air. June 2025 Q3(c)(i) asked for \"one other example of a transverse wave\": <b>an electromagnetic wave</b> (or ripples, or a wave on a string) scores; sound is longitudinal and does not.</p>",
         ),
         worked(
             "Wavelength of a radio wave",

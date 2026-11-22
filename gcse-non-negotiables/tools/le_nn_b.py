@@ -90,7 +90,7 @@ section_n8 = section(
         explain(
             "The list",
             USES_TABLE +
-            "<p>June 2023 Q6(c) (4 marks) asked for two EM waves and, for each, a use or effect that showed energy being transferred: one mark for the wave, one for the result. Credited pairs included microwaves — cooking (water molecules gain energy); infrared — thermal imaging; ultraviolet — fluorescent lamps; X-rays — seeing inside the body; gamma — sterilising equipment; radio — communication (oscillations of electrons in wires).</p>",
+            "<p>June 2023 Q6(c) (4 marks) asked for two EM waves and, for each, a use or effect that showed energy being transferred: one mark for the wave, one for the result. Credited pairs included microwaves — cooking (water molecules gain energy); infrared — thermal imaging; ultraviolet — fluorescent lamps; X-rays — seeing inside the body; gamma — sterilising equipment; radio — communication (oscillations of electrons in wires). A <b>harm</b> counts as a result too: infrared — skin burns; microwaves — internal heating of body cells; ultraviolet — damage to surface cells. A second example about <i>visible</i> light (already in the stem) scored 1 mark only.</p>",
         ),
         worked(
             "A use with a reason",
@@ -110,7 +110,7 @@ section_n8 = section(
             choice("le-n8-q3", "Which use goes with microwaves?",
                    ["Thermal imaging", "Satellite communications and cooking", "Sterilising surgical instruments", "Photography"], 1,
                    "Microwaves pass through the atmosphere to satellites and are absorbed by water in food."),
-            written("le-n8-q4", "Name two electromagnetic waves and, for each, give a use that involves energy being transferred to something. (4)",
+            written("le-n8-q4", "Name two electromagnetic waves and, for each, give a use or an effect that shows energy being transferred to something. (4)",
                     mark_scheme([
                         ("Wave 1", "A named wave, e.g. <b>microwaves</b>…"),
                         ("Result 1", "…<b>cooking</b>: absorbed by water molecules in the food, which gain energy (heat up)."),
@@ -252,7 +252,7 @@ DEFINITIONS = [
     ("Power of a lens", "<b>1 ÷ focal length</b> (in metres), in dioptres; higher power = more curved = shorter focal length.", "\"how strong it is\""),
     ("Real image", "An image formed where rays <b>actually meet</b>; it can be <b>projected onto a screen</b>; usually inverted.", "\"an image you can see\""),
     ("Virtual image", "An image formed where rays <b>appear to come from</b>; it <b>cannot be projected</b> onto a screen; upright.", "\"not real\" on its own (ignored by the mark scheme)"),
-    ("Transverse wave", "A wave whose oscillations are at <b>right angles</b> to the direction of energy transfer (all EM waves).", "\"a wave that goes up and down\" with no direction stated"),
+    ("Transverse wave", "A wave whose oscillations are at <b>right angles (perpendicular) to the direction the wave travels</b> (the direction of energy transfer) — all EM waves.", "\"a wave that goes up and down\" with no direction stated"),
     ("Frequency", "The number of <b>waves per second</b>, in hertz (Hz).", "\"how fast the wave is\""),
     ("Wavelength", "The distance from one point on a wave to the <b>same point on the next wave</b> (e.g. crest to crest), in metres.", "\"the length of the wave\""),
     ("Ionising radiation", "Radiation with enough energy to <b>remove electrons from atoms</b> (ionise them): UV, X-rays, gamma.", "\"radioactive\""),

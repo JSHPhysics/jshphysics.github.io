@@ -108,3 +108,36 @@ Playwright: every section numeric (12) and choice (37) and every type
 question (12) entered through the UI and marked correct; no KaTeX errors;
 no sideways scroll at 390 px; nine diagrams and three graphs render; the
 booklet modal offers the notes mode; badges P and H show.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-05.md`
+(22 questions) plus the shared parts of topic-04 and topic-07 (26 questions
+matched). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| light-and-em / reflection (explain) | ray-diagram marks are four separate points (position of mirror and rays, normal, angles from the normal, protractor), not "the normal, not the rays"; "angle of refraction" on a reflection diagram loses a mark | 1H June 2024 Q6(a)(ii) |
+| light-and-em / tir worked | first point: the angle of refraction increases as the angle of incidence increases; partial reflection ignored | 1H June 2025 Q7(c) |
+| light-and-em / lenses (explain), le-n5-q3, le-t4-q5 | the 2025 two marks (shorter focal length; smaller radius of curvature) and their allowed words incl. "stronger"; the "too vague" warning scoped to the 2022 magnification question | 1H June 2025 Q7(a); June 2022 Q1(b)(ii) |
+| light-and-em / lens-diagrams (explain), le-t4-q3 | virtual-image examples: magnifying glass or a diverging lens; "glasses / telescope / microscope" rejected; plane mirror removed; real examples in the scheme's words | 1H June 2025 Q7(b)(i)–(ii) |
+| light-and-em / em-waves (explain) | the 2025 "sound" claim reworded to the question as set (one other transverse wave) | 1H June 2025 Q3(c)(i) |
+| light-and-em / uses (explain), le-n8-q4 | a harm counts as a "result of energy transfer"; visible light (in the stem) scored 1 | 1H June 2023 Q6(c) |
+| light-and-em / keywords Transverse wave | "perpendicular to the direction the wave travels" | SAM Q1(a); June 2019 Q2(c)(ii); Nov 2021 Q2(d) |
+| light-and-em / ray-practical (explain), le-t1-q3 | the 2025 method's five points (any four) replace the report quote; results stated as the Nov 2021 three marks (r increases with i, not in proportion, increase gets less) | 1H June 2025 Q5(a); Nov 2021 Q5(a)(iii) |
+| light-and-em / tir-hard (explain), le-t3-q2 | "through the curved face along a radius"; straight-edge entry capped at 1 mark | 1H June 2019 Q4(b) |
+| light-and-em / le-t5-q3, le-t5-q5 | atmosphere absorbs IR/UV/microwaves too (the 2022 examples), "closer to the stars" rejected; the prism question is 3 marks (different wavelengths → different speeds → different refraction) | 1H June 2022 Q6(c); June 2018 Q5(c) |
+| light-and-em / thermal-balance (blurb, explain, flashcard) | "rate is compulsory" → a fifth point, any four score; "power" accepted; "receives" ignored (stem) — write absorbs; 2018 without rate = 1 of 2 | 1H June 2023 Q8(b)(ii); June 2025 Q7(d); June 2018 Q8(c)(ii); Nov 2021 Q8(d) |
+| light-and-em / radio-atoms worked | production written as the scheme's steps (absorb → higher level → fall back → large drop → high frequency; alternating current → waves at the oscillation frequency); the stem phrases carry no credit; ionising / energy added to the comparison; the "Level 1/2/3" description replaced by the three strands | 1H June 2022 Q9(c) |
+| light-and-em / em-calc-hard (explain) | the 2025 Q5(b)(iii) citation now describes the question as set (change in speed of blue light entering glass) | 1H June 2025 Q5(b)(iii) |
+
+No stored answer changed; `check_topic.js light-and-em` passes on both
+tiers. H list in the report: the 2025 change-in-speed calculation as a
+numeric, the IR remote behind the armchair (2019 Q2(b)), radio waves
+refracting and reflecting at a boundary (Nov 2020 Q5(c)), why the emergent
+ray is dimmer (Nov 2021 Q5(c)), Jupiter 40 light-minutes (2019 Q9(b)),
+radio vs gamma production (2019 Q9(d)), the lens-equation question
+(2022 Q1(c)), "what is meant by visible light" (June 2026 Q8(b), no
+scheme yet).

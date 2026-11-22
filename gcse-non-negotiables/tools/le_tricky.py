@@ -52,7 +52,7 @@ section_t1 = section(
         ),
         explain(
             "The core practical: i against r in a glass block",
-            "<p><b>Method</b> (what a 4-mark \"describe how\" answer needs — June 2025 Q5(a) was marked on whether \"a well-structured procedure that, if followed, would result in the correct ray being drawn\"):</p>"
+            "<p><b>Method</b> (what a 4-mark \"describe how\" answer needs — June 2025 Q5(a) gave one mark each, any four, for: <b>draw around the block</b>; <b>shine a ray</b> at it; <b>mark where the ray enters</b>; <b>mark where it exits</b>; <b>join the entry point to the exit point</b>. \"Draw the light rays\" with no marking of points was worth 1 mark at most):</p>"
             "<ol><li>Place the <b>rectangular glass block</b> on a sheet of paper and <b>draw round it</b>.</li>"
             "<li>Use a <b>ray box</b> (with a single-slit) to shine a <b>narrow ray</b> into one face at an angle.</li>"
             "<li>Mark the <b>incident ray</b> with two crosses (or a line) and the <b>emergent ray</b> where it leaves the block with two more.</li>"
@@ -60,7 +60,7 @@ section_t1 = section(
             "<li>Draw the <b>normal</b> at the entry point with a protractor (90° to the face); <b>measure the angle of incidence and the angle of refraction</b> from the normal.</li>"
             "<li><b>Repeat</b> for several angles of incidence (e.g. 10° to 70°), and repeat each reading; <b>plot</b> angle of refraction against angle of incidence.</li></ol>"
             "<p>Draw a <b>labelled diagram</b> as part of the answer — the examiners say so every year.</p>"
-            "<p><b>Results:</b> r is always <b>smaller</b> than i (the ray bends towards the normal); the graph is a <b>curve</b> through the origin that gets less steep — r is <i>not</i> proportional to i. A ray along the normal ($i = 0$) does not bend. The emergent ray is parallel to the incident ray.</p>",
+            "<p><b>Results:</b> <b>r increases as i increases</b>, but <b>not in proportion</b> — the <b>increase in r gets less</b> for the same increase in i (a <b>curve</b> through the origin that gets less steep), and r is always <b>smaller</b> than i because the ray bends towards the normal. Those three statements were the three marks in Nov 2021 Q5(a)(iii). A ray along the normal ($i = 0$) does not bend. The emergent ray is parallel to the incident ray.</p>",
             graph=graph_ir_in,
         ),
         worked(
@@ -80,7 +80,7 @@ section_t1 = section(
                     marks(["Mark where the ray <b>enters</b> the block and where it <b>leaves</b> (crosses on the incident and emergent rays, and the block's outline).",
                            "<b>Remove the block</b> and join the entry point to the exit point with a ruler — the straight line is the refracted ray."]), lines=3),
             choice("le-t1-q3", "A student plots angle of refraction against angle of incidence for light entering glass. Which describes the graph?",
-                   ["A straight line through the origin: r is proportional to i", "A curve through the origin that gets less steep; r is always less than i", "A horizontal line", "A straight line with r greater than i"], 1,
+                   ["A straight line through the origin: r is proportional to i", "A curve through the origin that gets less steep: r increases with i but not in proportion, and r is always less than i", "A horizontal line", "A straight line with r greater than i"], 1,
                    "The ray bends towards the normal (r < i) and the relationship is not linear — the sine of the angles is."),
             written("le-t1-q4", "State two things the student should do to make the results of the refraction practical more accurate. (2)",
                     marks(["Use a <b>narrow</b> ray (single slit) and mark its position with crosses <b>far apart</b>, so the line through them is accurate; <b>draw the normal carefully</b> with a protractor / set square.",
@@ -182,7 +182,7 @@ section_t3 = section(
             "<li><b>Increase the angle of incidence</b> in the glass (rotate the block or move the ray box) and watch the refracted ray bend further from the normal.</li>"
             "<li>Stop when the refracted ray <b>just runs along the flat surface</b> — the angle of refraction is <b>90°</b> (equivalently: when total internal reflection <b>just begins</b>).</li>"
             "<li><b>Measure the angle of incidence</b> from the normal with a protractor: that is the <b>critical angle</b>. Repeat and average.</li></ol>"
-            "<p>These are exactly the June 2024 Q6(b)(ii) marks: increase the angle of incidence in the glass; until the refracted angle is 90° / the ray grazes the surface / TIR just begins; that angle of incidence is the critical angle; repeat and average.</p>",
+            "<p>These are exactly the June 2024 Q6(b)(ii) marks: increase the angle of incidence in the glass; until the refracted angle is 90° / the ray grazes the surface / TIR just begins; that angle of incidence is the critical angle; repeat and average. In June 2019 (Q4(b)) the same method was 4 marks, and an answer that sent the ray in through the <i>straight</i> edge was capped at 1 mark: say <b>through the curved face, along a radius</b> (towards the centre of the flat face).</p>",
         ),
         explain(
             "From a graph",
@@ -205,7 +205,7 @@ section_t3 = section(
                     [r"Extrapolating the curve to $r = 90^{\circ}$ gives $i \approx 42^{\circ}$ (anything from 40° to 44° is a reasonable reading)."], graph=graph_ir_out, tolerance=0.06),
             written("le-t3-q2", "Describe how a student could find the critical angle of a semicircular glass block using a ray box. (3)",
                     mark_scheme([
-                        ("Aim", "Shine a ray through the curved face <b>towards the centre of the flat face</b> (so it does not bend on entry)."),
+                        ("Aim", "Shine a ray <b>through the curved face along a radius</b> (towards the centre of the flat face), so it does not bend on entry."),
                         ("Increase", "<b>Increase the angle of incidence</b> (in the glass) until the refracted ray <b>runs along the flat surface</b> ($r = 90$°) / TIR just starts."),
                         ("Measure", "<b>Measure that angle of incidence</b> from the normal with a protractor — the critical angle; <b>repeat and average</b>."),
                     ]), lines=4),
@@ -271,7 +271,7 @@ section_t4 = section(
         explain(
             "Real or virtual — how to tell, and how to say it",
             "<p>A <b>real</b> image is where rays <b>actually meet</b>: it can be <b>projected onto a screen</b> and (for a single lens) it is <b>inverted</b> and on the <b>opposite side</b> of the lens from the object. A <b>virtual</b> image is where rays <b>appear to come from</b>: it <b>cannot be projected</b>, it is <b>upright</b>, and it is on the <b>same side</b> as the object.</p>"
-            "<p>June 2024 Q6(c) gave the mark for any one of: cannot be projected onto a screen; the rays do not actually pass through it; formed where imaginary (traced-back) rays meet; same side as the object; upright. \"Not real\" on its own scored nothing. June 2025 Q7(b) asked for an example of each and was \"answered poorly\": real — the image on a camera sensor, on a cinema screen, on the retina; virtual — a magnifying glass, a plane mirror, spectacles.</p>"
+            "<p>June 2024 Q6(c) gave the mark for any one of: cannot be projected onto a screen; the rays do not actually pass through it; formed where imaginary (traced-back) rays meet; same side as the object; upright. \"Not real\" on its own scored nothing. June 2025 Q7(b) asked for an example of each and was \"answered poorly\": real — the image in a camera (a photograph), a projector image on a screen, the image on the retina, the image of a distant object formed by a converging lens; virtual — a magnifying glass, or the image seen through a diverging lens. The scheme said \"do not accept telescope / microscope / glasses\" and ignored \"phone\"; a plane mirror is not a lens.</p>"
             "<p><b>Magnification</b> $= \\dfrac{\\text{image height}}{\\text{object height}}$ (no unit). This one is not on the equation list — a question that needs it gives it. Measure both <b>on the same scale</b>, with your eye directly above the ruler — the 2022 report's two warnings. To <b>increase</b> the magnification of a magnifying glass: use a <b>fatter / more curved / shorter-focal-length</b> lens, or move the object (further from the lens, but still inside F).</p>",
         ),
         worked(
@@ -290,14 +290,14 @@ section_t4 = section(
             written("le-t4-q2", "Explain how you can tell from a ray diagram that an image is virtual. (1)",
                     marks(["The rays <b>do not actually meet</b>: the image is where the rays <b>appear to come from</b> when traced backwards (dashed lines) — it <b>cannot be projected onto a screen</b>."]), lines=2),
             written("le-t4-q3", "Give one example of a real image and one example of a virtual image. (2)",
-                    marks(["Real: the image on a <b>camera sensor</b> / <b>cinema screen</b> / the <b>retina</b> of the eye.",
-                           "Virtual: the image in a <b>magnifying glass</b> / a <b>plane mirror</b> / through <b>spectacles</b>."]), lines=2),
+                    marks(["Real: the image in a <b>camera</b> (a photograph) / a <b>projector</b> image on a screen / the image on the <b>retina</b> / the image of a <b>distant object</b> formed by a converging lens.",
+                           "Virtual: the image in a <b>magnifying glass</b> (converging lens, object inside F) / the image of an object seen through a <b>diverging lens</b>. Not \"glasses\", \"telescope\" or \"microscope\" — the June 2025 scheme (Q7(b)(i)) rejected them; a plane mirror is not a lens."]), lines=3),
             numeric("le-t4-q4", "In a ray diagram the object is 1.5 cm tall and the image is 3.9 cm tall. Calculate the magnification.", sf(3.9 / 1.5, 2), "",
                     "image height ÷ object height, same units.",
                     ewau(r"\text{magnification} = \dfrac{\text{image height}}{\text{object height}}", r"\text{magnification} = \dfrac{3.9}{1.5}", "2.6", "(no unit)")),
             written("le-t4-q5", "Describe two ways to increase the magnification produced by a magnifying glass. (2)",
                     marks(["Use a lens that is <b>more curved / fatter</b> (shorter focal length, higher power).",
-                           "Change the <b>distance between the object and the lens</b> (move the object further from the lens, keeping it inside F). \"Stronger lens\" is too vague — say which way."]), lines=3),
+                           "Change the <b>distance between the object and the lens</b> (move the object further from the lens, keeping it inside F). Say which way: <b>higher power / shorter focal length / fatter / more curved</b> (the 2022 scheme listed these; \"stronger curvature\" was also accepted, \"stronger lens\" alone was not)."]), lines=3),
             choice("le-t4-q6", "A diverging lens always produces an image that is…",
                    ["real and inverted", "virtual, upright and smaller than the object", "virtual and magnified", "real and magnified"], 1,
                    "Diverging lenses spread rays; the traced-back rays give a small upright virtual image."),
@@ -355,12 +355,12 @@ section_t5 = section(
                            "<b>Visible light</b> has a wavelength far smaller than the holes, so it is <b>transmitted</b> and you can see the food."]), lines=3),
             choice("le-t5-q3", "Why are X-ray telescopes placed on satellites?",
                    ["X-rays travel faster in space", "The atmosphere absorbs X-rays, so none reach a telescope on the ground", "Satellites are closer to the stars", "X-rays are reflected by the ground"], 1,
-                   "The atmosphere transmits visible and radio but absorbs X-rays, gamma and UVC."),
+                   "The atmosphere transmits visible and radio but absorbs X-rays and gamma (and much of the ultraviolet and infrared, and some microwaves — the June 2022 Q6(c) scheme's examples). \"Closer to the stars\" is explicitly not accepted."),
             written("le-t5-q4", "A substance absorbs red light but transmits blue light. Describe what you would see looking through it at a white lamp, and explain. (2)",
                     marks(["The lamp would look <b>blue</b>.", "The white light contains all colours; the red is <b>absorbed</b> and the blue is <b>transmitted</b> to your eye (green and the rest depend on the substance — a blue filter absorbs those too)."]), lines=3),
-            written("le-t5-q5", "A prism splits white light into a spectrum. Explain why. (2)",
-                    marks(["The different colours (wavelengths) travel at <b>slightly different speeds</b> in the glass…",
-                           "…so they are <b>refracted by different amounts</b> — violet slows most and bends most, red least — and spread out."]), lines=3),
+            written("le-t5-q5", "A prism splits white light into a spectrum. Explain why. (3)",
+                    marks(["The colours have <b>different wavelengths</b> (frequencies)…", "…so they travel at <b>different speeds</b> in the glass…",
+                           "…so they are <b>refracted by different amounts</b> — violet slows most and bends most, red least — and spread out (June 2018 Q5(c): one mark for each)."]), lines=3),
         ]),
     ],
 )
@@ -372,7 +372,7 @@ section_t5 = section(
 section_t6 = section(
     "thermal-balance", "tricky", "Radiate what you absorb: constant temperature and the Earth", "5.16P, 5.17P, 5.18P",
     equations=[r"\text{rate of emission} = \text{rate of absorption} \Rightarrow \text{constant temperature}"],
-    blurb="A body's temperature is set by the balance between the power it absorbs and the power it radiates. The 4-mark version of this question has appeared twice in three years, and the word <b>rate</b> is compulsory.",
+    blurb="A body's temperature is set by the balance between the power it absorbs and the power it radiates. The 4-mark version of this question has appeared twice in three years (2023, 2025); the word <b>rate</b> (or <b>power</b>) is a mark on its own.",
     tags=["H", "P"],
     checklist=[
         "Explain why a body stays at a constant temperature when it radiates the same average power that it absorbs",
@@ -386,7 +386,7 @@ section_t6 = section(
             "<ul><li>If it absorbs power <b>faster</b> than it emits, its temperature <b>rises</b> — and as it warms it emits more, until…</li>"
             "<li>…the <b>rate of emission equals the rate of absorption</b>: the temperature is then <b>constant</b> (thermal equilibrium).</li>"
             "<li>If it emits <b>faster</b> than it absorbs, its temperature <b>falls</b> until the two rates are equal again.</li></ul>"
-            "<p>The June 2023 scheme (Q8(b)(ii), 4 marks) and the June 2025 report (Q7(d), the dwarf planet Ceres) credit the same four points: <b>(1)</b> the body absorbs radiation; <b>(2)</b> it also emits radiation; <b>(3)</b> the rate of emission increases with temperature; <b>(4)</b> the temperature is constant when the rate of emission equals the rate of absorption. The word <b>rate</b> must appear in (3) or (4); \"heat\" is accepted for radiation.</p>"
+            "<p>The June 2023 scheme (Q8(b)(ii), 4 marks) and the June 2025 report (Q7(d), the dwarf planet Ceres) credit the same four points: <b>(1)</b> the body absorbs radiation; <b>(2)</b> it also emits radiation; <b>(3)</b> the rate of emission increases with temperature; <b>(4)</b> the temperature is constant when the rate of emission equals the rate of absorption. A fifth point, \"mention of <b>rate</b> in (3) or (4)\", is available, so any four of the five score — write <b>rate</b> (or <b>power</b>, accepted in 2025) in both (3) and (4) and the fourth mark is safe. \"Heat\" is accepted for radiation; \"gives out / releases / loses\" for emits; but \"receives\" was ignored in 2025 because it was in the stem — write <b>absorbs</b>. In June 2018 (Q8(c)(ii)) \"at constant temperature the energy supplied = energy radiated\" without <i>rate</i> scored 1 of the 2 marks: the rate is the physics.</p>"
             "<p><b>The Earth</b> absorbs radiation from the Sun (mostly visible) and emits infrared to space; its average temperature is set by that balance. Factors: <b>clouds and ice reflect</b> some incoming radiation back to space (less absorbed → cooler); <b>greenhouse gases</b> (carbon dioxide, methane, water vapour) <b>absorb some of the outgoing infrared and re-emit it</b>, some back towards the surface (less escapes → warmer); more greenhouse gas moves the balance to a <b>higher</b> temperature.</p>",
         ),
         worked(
@@ -511,10 +511,10 @@ section_t8 = section(
             "Compare how X-rays and radio waves are produced",
             "Compare X-rays and radio waves: their position in the spectrum, one use of each, and how each is produced. (6 marks, levelled)",
             [
-                "<b>Position:</b> both are electromagnetic (transverse, same speed in a vacuum); X-rays have a much <b>higher frequency and shorter wavelength</b> than radio waves (the two ends of the spectrum).",
+                "<b>Position:</b> both are electromagnetic (transverse, same speed in a vacuum); X-rays have a much <b>higher frequency and shorter wavelength</b> than radio waves (the two ends of the spectrum), carry <b>more energy</b> and are <b>ionising</b>; radio waves are low frequency, long wavelength, low energy and not ionising.",
                 "<b>Uses:</b> X-rays — medical imaging of bones, airport security; radio — broadcasting and communications.",
-                "<b>Production:</b> X-rays come from <b>electrons changing energy levels</b> in atoms (or being stopped suddenly); radio waves come from <b>electrons oscillating in a circuit</b> (an alternating current in an aerial).",
-                "The 2022 scheme: Level 1 compared uses only; Level 2 added frequency or wavelength; Level 3 also explained the production — the part \"very few candidates knew\".",
+                "<b>Production:</b> X-rays — electrons in an atom <b>absorb energy and move to a higher energy level</b>, then <b>return to a lower level and lose the energy as radiation</b>; the energy drop is <b>large</b>, so the wave emitted has a <b>high frequency</b> (an X-ray). Radio — an <b>alternating current</b> (electrons flowing up and down the aerial, continually changing direction) <b>generates radio waves around the aerial</b>, whose <b>frequency equals the frequency of the oscillation</b>.",
+                "The 2022 indicative content had three strands — the <b>comparison</b> (frequency, wavelength, energy, ionising), the <b>uses</b> of each, and the <b>production</b> step by step — and a top answer covers all three. The stem already said \"electrons go through energy changes\" and \"electrons in circuits\", so repeating those words scored nothing (\"no credit is given for\" them); the production strand was the one \"very few candidates knew\" (2022 report).",
             ],
         ),
         practice("Sources of radiation", [
@@ -566,7 +566,7 @@ section_t9 = section(
         explain(
             "Standard form without losing marks",
             "<p>Use the <b>×10ˣ</b> key, never \"× 10 ^\": $3$ ×10ˣ $8$ ÷ $2.8$ ×10ˣ $(-)7$. Write the answer in standard form with the right number of significant figures ($1.07 \\times 10^{15}$ Hz), not as a string of zeros.</p>"
-            "<p><b>Subtracting in standard form</b> (June 2025 Q5(b)(iii) — \"keeping control of the standard form and mixed units\"): write both numbers with the <b>same power of ten</b> first. $7.5 \\times 10^{14} - 4.3 \\times 10^{14} = 3.2 \\times 10^{14}$. If the powers differ, convert one: $7.5 \\times 10^{14} - 9.0 \\times 10^{13} = 7.5 \\times 10^{14} - 0.9 \\times 10^{14} = 6.6 \\times 10^{14}$.</p>"
+            "<p><b>Subtracting in standard form</b> (June 2025 Q5(b)(iii) asked for the <i>change</i> in the speed of blue light entering glass: speed in glass $= f \\times \\lambda_{\\text{glass}} = 6.4 \\times 10^{14} \\times 350 \\times 10^{-9} = 2.2 \\times 10^{8}$ m/s, then $3.0 \\times 10^{8} - 2.2 \\times 10^{8} = 0.8 \\times 10^{8} = 8 \\times 10^{7}$ m/s — the subtraction was an independent mark, and the report spoke of \"keeping control of the standard form and mixed units\"): write both numbers with the <b>same power of ten</b> first. $7.5 \\times 10^{14} - 4.3 \\times 10^{14} = 3.2 \\times 10^{14}$. If the powers differ, convert one: $7.5 \\times 10^{14} - 9.0 \\times 10^{13} = 7.5 \\times 10^{14} - 0.9 \\times 10^{14} = 6.6 \\times 10^{14}$.</p>"
             "<p><b>Time for light to travel:</b> $t = \\dfrac{d}{v}$ with $v = 3 \\times 10^{8}$ m/s and $d$ in metres (km × 1000). Sun to Earth, $1.5 \\times 10^{11}$ m: $t = 500$ s, about 8 minutes.</p>"
             "<p><b>Lens power:</b> 20 cm is 0.20 m; $P = 1/0.20 = 5$ D. A diverging lens has a negative focal length and so a negative power. Finish the calculation — the 2022 report: candidates stopped at $1/f$ without working out $f$.</p>",
         ),
@@ -714,7 +714,7 @@ FACTS = [
     fact("Harm from ultraviolet? X-rays and gamma?", "UV: damage to surface cells and eyes → skin cancer, eye conditions. X and gamma: mutation or damage to cells → cancer.", "dangers"),
     fact("Does a cold object emit radiation?", "Yes — all bodies emit, mostly infrared at everyday temperatures.", "thermal-radiation"),
     fact("Hotter body: what changes about its radiation?", "Intensity increases; peak wavelength gets shorter (red → yellow → white hot).", "thermal-radiation"),
-    fact("Four marks for \"why is its temperature constant\"?", "Absorbs radiation; also emits radiation; rate of emission rises with temperature; constant when rate of emission = rate of absorption. Say rate.", "thermal-balance"),
+    fact("Four marks for \"why is its temperature constant\"?", "Absorbs radiation; also emits radiation; rate of emission rises with temperature; constant when rate of emission = rate of absorption. Say rate (or power) — it is a mark on its own.", "thermal-balance"),
     fact("Body radiates more than it absorbs?", "Its temperature falls (until the rates balance). Less than it absorbs: temperature rises.", "thermal-balance"),
     fact("How do greenhouse gases warm the Earth?", "They absorb some of the infrared the surface emits and re-emit it, some back down, so less escapes; the balance moves to a higher temperature.", "thermal-balance"),
     fact("How do clouds and ice cool the Earth?", "They reflect incoming radiation back to space, so less is absorbed.", "thermal-balance"),
