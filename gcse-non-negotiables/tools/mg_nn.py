@@ -48,7 +48,7 @@ section_n1 = section(
         explain(
             "The rule and the test",
             "<p>Every magnet has a <b>north-seeking (N) pole</b> and a <b>south-seeking (S) pole</b>; you cannot have one without the other. <b>Like poles repel</b> (N–N, S–S); <b>unlike poles attract</b> (N–S). Magnets also attract <b>magnetic materials</b> — iron, steel, cobalt, nickel — and they attract them <b>whichever pole</b> is nearer, because the magnet induces the opposite pole in the material (N2).</p>"
-            "<p>So <b>attraction is not a test</b>: a magnet and a piece of unmagnetised iron attract, and so do two magnets with unlike poles facing. <b>Repulsion is</b>: only two magnets can repel. The June 2025 report (Q7(b)(iv), nails that may or may not be permanently magnetised): one mark for a <b>suitable test</b>, one for a <b>clear statement of the expected result</b>. \"Try to pick up a paper clip\" scored 1 of 2 — it did not say what the result would mean. The full-mark answer brought one end of a nail up to one end of another, then <b>turned one nail round</b>: if they are not magnets there is <b>attraction in both orientations</b> (or none at all), and never repulsion; if they are magnets, one orientation <b>repels</b>.</p>",
+            "<p>So <b>attraction is not a test</b>: a magnet and a piece of unmagnetised iron attract, and so do two magnets with unlike poles facing. <b>Repulsion is</b>: only two magnets can repel. The June 2025 report (Q7(b)(iv), nails that may or may not be permanently magnetised): one mark for a <b>suitable test</b>, one for a <b>clear statement of the expected result</b>. \"Try to pick up a paper clip\" scored 1 of 2 — it did not say what the result would mean. The scheme accepted three tests — near a magnet or compass needle, near unmagnetised iron filings, or two nails brought together — and gave the second mark for the <b>expected result</b>: \"<b>the same end of the nail is attracted to both poles</b>\", \"<b>does not pick up the filings</b>\", \"<b>the nails are not attracted to each other</b>\". The repulsion test is the one that also tells a magnet from a magnetic material, so it is the one to learn; whichever you use, write the result.</p>",
         ),
         worked(
             "Is the nail a magnet?",
@@ -68,7 +68,7 @@ section_n1 = section(
                    ["It is attracted to a magnet", "It picks up a paper clip", "It is repelled by one pole of a magnet", "It is heavier than a non-magnet"], 2,
                    "Repulsion is the only test."),
             written("mg-n1-q4", "Describe a test to show that a bar is not a permanent magnet, and state the expected result. (2)",
-                    marks(["Bring each end of the bar in turn to the <b>same pole</b> of a magnet (or a compass needle) — i.e. test both orientations.", "Expected result if it is not a magnet: <b>attraction in both orientations</b> (no repulsion either way)."]), lines=3),
+                    marks(["Bring each end of the bar in turn to the <b>same pole</b> of a magnet (or a compass needle) — i.e. test both orientations.", "Expected result if it is not a magnet: <b>the same end is attracted to both poles</b> of the magnet (no repulsion either way); a magnet would be repelled by one pole (June 2025 2H Q7(b)(iv))."]), lines=3),
             choice("mg-n1-q5", "Which of these is NOT a magnetic material?",
                    ["Iron", "Nickel", "Copper", "Cobalt"], 2,
                    "Iron, steel, cobalt and nickel are magnetic; copper, aluminium and brass are not."),
@@ -190,7 +190,7 @@ section_n4 = section(
             "The compass and the Earth",
             diagram(dg.earth_svg(), 720, 280, "The Earth's field is like that of a bar magnet inside it, with its S pole near geographic north. A compass needle's N pole is attracted towards it.") +
             "<p><b>Plotting a field</b>: put the magnet on paper, place a plotting compass near one pole and mark a dot at each end of the needle; move the compass so its tail sits on the dot its head made; repeat until you reach the other pole, then join the dots and add an arrow in the direction the <b>N end</b> pointed. Repeat from other starting points for more lines. The compass needle is itself a <b>small magnet</b>, so its N pole points along the field, <b>towards the S pole</b> of the magnet.</p>"
-            "<p><b>The Earth</b>: away from any magnet a compass still points <b>north</b>. A compass only points when there is a magnetic field, so the <b>Earth has a magnetic field</b>; its shape (traced by compasses, with the field running parallel to the ground at the equator and dipping into the ground near the poles) is the shape of a <b>bar magnet's</b> field, so <b>the core of the Earth must be magnetic</b>. Because a compass's <b>N pole</b> is attracted to it, the pole near <b>geographic north is a magnetic S pole</b>. The June 2024 scheme (Q5(a)(ii), 3 marks): \"the Earth has a magnetic field\"; \"the compass needle points in the direction of the field\"; \"the core is magnetic / as if there were a magnet inside the Earth\"; or a point read from the diagram such as \"the field goes into the Earth at the north pole\".</p>",
+            "<p><b>The Earth</b>: away from any magnet a compass still points <b>north</b>. A compass needle <b>points in the direction of the magnetic field</b> it is in (the June 2024 scheme's words, Q5(a)(ii)); it points north everywhere, so the <b>Earth has a magnetic field</b>; its shape (traced by compasses, with the field running parallel to the ground at the equator and dipping into the ground near the poles) is the shape of a <b>bar magnet's</b> field, so <b>the core of the Earth must be magnetic</b>. Because a compass's <b>N pole</b> is attracted to it, the pole near <b>geographic north is a magnetic S pole</b>. The June 2024 scheme (Q5(a)(ii), 3 marks): \"the Earth has a magnetic field\"; \"the compass needle points in the direction of the field\"; \"the core is magnetic / as if there were a magnet inside the Earth\"; or a point read from the diagram such as \"the field goes into the Earth at the north pole\".</p>",
         ),
         worked(
             "Why a compass points north",
@@ -208,7 +208,7 @@ section_n4 = section(
                    ["a magnetic N pole", "a magnetic S pole", "not a pole", "both poles"], 1,
                    "The compass N pole is attracted to it, and unlike poles attract."),
             written("mg-n4-q3", "A compass needle points north wherever it is taken on the Earth's surface. Explain what this is evidence for. (2)",
-                    marks(["A compass only points when it is in a <b>magnetic field</b>, so the <b>Earth has a magnetic field</b>.", "The field is like a bar magnet's, so the <b>core of the Earth must be magnetic</b>."]), lines=2),
+                    marks(["A compass needle <b>points in the direction of the magnetic field</b> it is in; it points north everywhere, so the <b>Earth has a magnetic field</b>.", "The field is like a bar magnet's, so the <b>core of the Earth must be magnetic</b>."]), lines=2),
             choice("mg-n4-q4", "A plotting compass is placed near the N pole of a bar magnet. Its needle's N end points…",
                    ["towards the magnet's N pole", "away from the magnet's N pole, along the field line", "at right angles to the field", "always north"], 1,
                    "Like poles repel: the needle's N end points away from the magnet's N pole, along the field line towards S."),
@@ -238,7 +238,7 @@ section_n5 = section(
             diagram(dg.wire_field_svg(), 670, 295, "The field around a straight wire seen end on: circles, anticlockwise for current out of the page, clockwise for current into it.") +
             "<p><b>Showing that a current has a magnetic effect</b>: pass a straight wire vertically through a horizontal card, place plotting compasses (or sprinkle iron filings) on the card around it, and switch on a large current. The compasses line up in <b>circles</b> round the wire; switch off and they return to pointing north; <b>reverse the current</b> and every compass <b>turns round</b>. The field is a set of <b>concentric circles</b> centred on the wire, in a plane at right angles to it.</p>"
             "<p><b>Direction — the right-hand grip rule</b>: grip the wire with your <b>right</b> hand, <b>thumb along the current</b> (conventional, + to −); your <b>fingers curl the way the field goes</b>. Seen end on, current <b>out of the page</b> (dot) gives an <b>anticlockwise</b> field; current <b>into the page</b> (cross) gives <b>clockwise</b>.</p>"
-            "<p><b>Strength</b>: the field is stronger with a <b>larger current</b>, and <b>weaker further from the wire</b> — the circles are drawn further apart as the distance increases. The June 2025 paper (Q7(c)) gave an unfamiliar equation for B against distance d and expected it to be used like any other; only a few noticed it was an <b>inverse square</b>. You will not be asked to recall any equation for this — just that <b>more current and less distance mean a stronger field</b>.</p>",
+            "<p><b>Strength</b>: the field is stronger with a <b>larger current</b>, and <b>weaker further from the wire</b> — the circles are drawn further apart as the distance increases. The June 2025 paper (Q7(c)) gave an unfamiliar equation for $B$ against the distance $d$ <b>from the pole of a magnet</b> (not a wire) and expected it to be used like any other; only a few noticed it was an <b>inverse square</b>. You will not be asked to recall any equation for this — just that <b>more current and less distance mean a stronger field</b>.</p>",
         ),
         worked(
             "Describing the field",
@@ -350,7 +350,7 @@ section_n7 = section(
         ),
         practice("The motor effect", [
             written("mg-n7-q1", "A wire carrying a current is placed at right angles to the field between two magnets. Explain why there is a force on the wire. (3)",
-                    marks(["The current in the wire <b>creates a magnetic field</b> around the wire.", "This field <b>interacts with the permanent magnetic field</b> of the magnets.", "The interaction causes a <b>resultant force on the wire</b>, so the wire accelerates."]), lines=3),
+                    marks(["The current in the wire <b>creates a magnetic field</b> around the wire.", "The wire <b>is in the magnetic field of the magnets</b>, and its field <b>interacts with the permanent magnetic field</b> (Nov 2020 2H Q7(b) gives \"the coil is in a magnetic field (of fixed magnets)\" as a separate point).", "The interaction causes a <b>resultant force on the wire</b>, so the wire accelerates."]), lines=3),
             choice("mg-n7-q2", "A wire carrying a current experiences a force from a magnet. What force acts on the magnet?",
                    ["None — magnets do not feel forces", "An equal and opposite force", "A force in the same direction as the force on the wire", "A smaller force"], 1,
                    "Newton's third law: the magnet feels an equal and opposite force."),
@@ -483,7 +483,7 @@ DEFINITIONS = [
     ("Motor effect", "A <b>current-carrying conductor in a magnetic field experiences a force</b>, due to the interaction between the two magnetic fields.", "\"a motor spins\""),
     ("Fleming's left-hand rule", "First finger <b>Field</b> (N → S), second finger <b>Current</b> (+ → −), thumb <b>Motion</b> (force), all at right angles.", "right hand; electron flow"),
     ("Magnetic flux density, B", "The <b>strength of a magnetic field</b>: the force per unit current per unit length on a wire at right angles to it; unit <b>tesla</b>, T (= N/A m).", "\"the amount of magnetism\""),
-    ("Split-ring commutator", "The two half-rings on a d.c. motor's axle that <b>reverse the current in the coil every half turn</b>, so the coil keeps turning the same way.", "\"the thing that connects the wires\""),
+    ("Split-ring commutator", "The two half-rings on a d.c. motor's axle that <b>connect the coil to the supply</b> (through the brushes) and <b>reverse the current in the coil every half turn</b>, so the force stays in the same direction and the coil keeps turning the same way.", "\"the thing that connects the wires\""),
 ]
 
 

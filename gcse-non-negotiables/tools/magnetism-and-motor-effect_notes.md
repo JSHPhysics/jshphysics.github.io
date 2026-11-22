@@ -160,3 +160,39 @@ Foundation (N7–N9, T5–T7 hidden, N1–N6, N10, T1–T4, T8 shown); no KaTeX
 errors; 8 diagrams; 75 flashcards; badges H×7 (incl. the type card) and
 P×1; booklet offers the notes mode; at 390 px nothing scrolls sideways,
 no card wider than the screen, nothing sticks out.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-12.md`
+(13 questions) plus five Topic-12 records the digest omits (pulled from
+index.json; the June 2026 parts have no scheme yet) and the motor parts of
+topic-13 — 17 questions matched; two images opened. Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| magnetism-and-motor-effect / magnet-test (explain), mg-n1-q4, mg-t2-q4 | the 2025 test marks are "suitable test (1) expected result (1)" and the scheme accepts three tests incl. unmagnetised iron filings — the iron-filings answer now scores 1 (test) not 0; the result in the scheme's words ("the same end attracted to both poles"; "does not pick up the filings") | 2H June 2025 Q7(b)(iv) |
+| magnetism-and-motor-effect / compass-earth (explain), mg-n4-q3, mg-t4-q4 | "the needle points in the direction of the field" (the credited point) replaces "only points when in a field" | 2H June 2024 Q5(a)(ii) |
+| magnetism-and-motor-effect / wire-field (explain) | the 2025 inverse-square equation was for the field near a magnet's pole, not a wire | 2H June 2025 Q7(c) |
+| magnetism-and-motor-effect / mg-n7-q1 | "the wire is in the magnetic field of the magnets" added as its own step; the author's WIRE_CHAIN / MOTOR_CHAIN are unchanged (they are copied from `simple-motor/src/build.mjs`) | 2H Nov 2020 Q7(b) |
+| magnetism-and-motor-effect / magnet-force-chains (blurb, explain) | floating magnet is any three of five points (interact / repulsion / force upwards on the upper magnet / weight / equilibrium) — the "lost marks without gravity" claim removed; never write "charge" in a magnet answer | 2H June 2023 Q5(b) |
+| magnetism-and-motor-effect / field-diagrams-mag (explain) | at least two arrows, every one correct; at least four lines | 2H June 2022 Q5(a)(i); June 2023 Q5(a) |
+| magnetism-and-motor-effect / flhr (explain) | the 2024 reverse-the-force part was a wire in a U-magnet | 2H June 2024 Q5(b)(ii) |
+| magnetism-and-motor-effect / dc-motor (explain, worked, mg-t7-q2), keyword row, flashcard | the commutator's first mark — it carries the current from the wires to the coil (connects the coil to the supply) — added everywhere; the 3-mark model now reaches 3 | 2H June 2025 Q6(c) |
+| magnetism-and-motor-effect / electromagnet-practical (explain), mg-t8-q3 | second mark is "non-linear" (or a description of it), not "not in proportion" | 2H June 2025 Q7(b)(iii) |
+
+For the author: the Nov 2020 loudspeaker scheme credits "the coil is in a
+magnetic field (of fixed magnets)" as a separate point; the standard chains
+say "interacts with the permanent magnetic field" but never that the wire
+is *in* it. If the chains are to carry that link, change them in
+`simple-motor/src/build.mjs`, `hairdryer-anatomy/src/build.mjs` and the
+`WIRE_CHAIN` / `MOTOR_CHAIN` lists together. No stored answer changed;
+`check_topic.js magnetism-and-motor-effect` passes on both tiers. H list
+in the report: the June 2026 balance-reading F = BIl question (grams →
+newtons, l = magnet length), the "directly proportional" test for the
+force–current investigation (Nov 2021 Q6(c): constant ratio / straight
+line through the origin), describing Fleming's rule in words (Nov 2020
+Q5(c)(ii)), the induced-magnetism demonstration (2018 Q5(a)), the Earth's
+field drawn inside and out (2022 Q5(c)), uniform-field differences (2022
+Q5(a)(iii)), developing the compass investigation (2019 Q5(a)(ii)).
