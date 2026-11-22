@@ -150,3 +150,36 @@ choices entered through the UI and marked correct; no KaTeX errors; 7
 diagrams render; 15 P badges; 64 flashcards; booklet offers the notes
 mode; at 390 px nothing scrolls sideways, no card is wider than the
 screen and nothing sticks out.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-11.md`
+(9 questions, 31 marked parts, 2H 2018–2026) and grepped the whole bank
+for sparks, lightning, fuelling and shocks (none set). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| static-electricity / charging-friction (explain) | the 2023 star question described as marked: electrons transferred to the metal, metal is a conductor, electrons travel through the person to earth (the cloth loses its charge; the star is earthed, not "charged by conduction") | 2H June 2023 Q1(b) |
+| static-electricity / charge-forces (explain) | testing a charge now has the third mark — handle the object without discharging it — and the positive / negative / uncharged test with two rods | 2H Nov 2020 Q4(a)(iii); June 2026 Q1(c) |
+| static-electricity / charge-forces, electron-force-chains (explain, se-t1-q2, se-t1-q5), flashcards | the author's chain is kept word for word; the claims that examiners *mark* the acceleration link and *mark down* "moves" are replaced by what the schemes credit beyond "they repel": **X is in Y's electric field** (2018, 2025) and the **result the question asks about** (2019 "so the spray is wider"); the field link added to the chain flashcard | 2H June 2018 Q4(c)(i); June 2025 Q4(b)(ii); June 2019 Q1(a)(ii); Nov 2021 Q1(c)(ii) |
+| static-electricity / se-n3-q4, se-t2-q1, induction worked | induction chain in the credited words: a charge is **induced** → on the side **closest** → **opposite charges attract**; the near-force-beats-far-force argument kept as the reason, not a mark | 2H June 2018 Q4(a)(ii); June 2022 Q1(c) |
+| static-electricity / earthing (explain) | the 2025 tube question as marked (does not become charged: conductor + connected to earth) | 2H June 2025 Q4(b)(iv) |
+| static-electricity / se-n5-q2, sprayers-explain flashcard, static-uses worked | the earth wire conducts electrons so charge does not accumulate on the target (2019's two marks); the 2022 leaf points (electrons move between earth and leaf; the back of the leaf) replace "less wasted" in the marked steps | 2H June 2019 Q1(a)(iii); June 2022 Q1(c) |
+| static-electricity / se-t5-q5, flashcard | the "coated patches repel further droplets" mechanism removed (no analogue; contradicts the earthing scheme) | 2H June 2019 Q1(a)(iii) |
+| static-electricity / static-dangers, fuelling-question (blurb, title, table, flashcards), lede | no fuelling / spark / 6-mark question exists on Topic 11 in 2018–2025 — reframed as the 6-marker it could become; "Level 3", "Also accepted", "scores nothing" removed | bank 2018–2026 |
+| static-electricity / electric-fields, fields-explain | the 2024 definition was 1 mark with alternative wordings; the 2025 soot scheme quoted as written; schemes ask for at least three lines; "fields interact / overlap" added, "repel earns nothing extra in a fields question" | 2H June 2024 Q1(b); June 2025 Q4(b)(ii), Q4(a); June 2022 Q1(a); June 2018 Q4(c)(i) |
+| static-electricity / field-diagrams (table, worked) | lines need not touch the plates (2025); one reversed arrow or arrows both ways loses the direction mark | 2H June 2025 Q4(a); June 2019 Q1(b); Nov 2020 Q4(b)(iii) |
+
+For the author: the standing rule (like charges repel → force on X away
+from Y → X accelerates away) is unchanged on the page; what changed is
+the claim about marking, since no 2H scheme 2018–2025 credits
+"accelerates" or penalises "moves". No stored answer changed;
+`check_topic.js static-electricity` passes on both tiers. H list in the
+report: "electrons carry a negative charge" as a separate mark (2018
+Q4(a)(i)), the gold-leaf electroscope (Nov 2021 Q1), the disc tapped to
+earth that ends positive (Nov 2020 Q4(b)), force against distance
+("inverse square law scores 2", 2018 Q4(c)(ii)), the supplied-equation
+field calculation (2024 Q1(c)(iii)), "more lines = larger charge" (Nov 2021
+Q1(c)(i)), "charge becomes zero… ignore becomes positive" (2025 Q4(b)(iii)).

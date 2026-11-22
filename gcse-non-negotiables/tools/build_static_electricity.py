@@ -40,7 +40,7 @@ EMBEDS = {}
 REVISION = {
     "lede": (
         "Everything in Topic 11, split into two bands. <b>The non-negotiables</b> are charging by friction, the force rule, the three phenomena, earthing, sprayers, the fuelling danger and electric fields. "
-        "<b>The tricky bits</b> are the chains the marks are on: electrons and force → acceleration, induction, sparks, the fuelling 6-marker, sprayer advantages with reasons, drawing fields and explaining with them. "
+        "<b>The tricky bits</b> are the chains the marks are on: electrons and force → acceleration, induction, sparks, the fuelling question, sprayer advantages with reasons, drawing fields and explaining with them. "
         "The whole of Topic 11 is Physics only (not Combined Science), so every section carries <b>P</b>; there is no Higher-only content, so it all applies at both tiers."
     ),
     "howto": [

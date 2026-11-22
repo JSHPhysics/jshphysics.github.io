@@ -35,8 +35,8 @@ section_t1 = section(
             "<tr><td>Explain how the rod becomes charged</td><td><b>friction</b> (rubbing) → <b>electrons are transferred</b> from the cloth to the rod → the rod has <b>gained electrons</b> so it is <b>negative</b> → the cloth has <b>lost</b> them so it is <b>positive</b>, by the same amount</td></tr>"
             "<tr><td>Explain why the two balloons move apart</td><td>both balloons are charged the <b>same sign</b> → <b>like charges repel</b> → so there is a <b>force on each balloon</b>, directed <b>away from the other</b> → a resultant force causes an <b>acceleration</b>, so each balloon <b>accelerates away</b> from the other</td></tr>"
             "<tr><td>Explain why the ball moves towards the rod</td><td>the charges are <b>unlike</b> (or the ball is neutral and is <b>induced</b>, T2) → <b>attract</b> → a <b>force on the ball towards the rod</b> → the ball <b>accelerates towards</b> the rod</td></tr></table>"
-            "<p><b>The force → acceleration link.</b> Examiners are strict here, because it is Topic 2's rule in a new setting: a <b>resultant force</b> changes an object's motion — it makes it <b>accelerate</b>. So \"they repel, so the ball moves away\" skips a link. The full sentence is: \"<i>the charges are alike, so they repel: a force acts on the ball, directed away from the rod, so the ball accelerates away from the rod</i>\". Name the force, give its direction, say it causes an acceleration. If the question says the ball ends up hanging at an angle, add that it moves until the <b>thread's pull balances</b> the repulsion.</p>"
-            "<p><b>Losses:</b> \"the <b>charge</b> pushes it\" (a charge is not a force — say the force <i>between</i> the charges); \"<b>positive charge moves</b> to the cloth\" (only electrons move); \"the rod <b>makes</b> charge\" (charge is transferred); \"it <b>repels</b>\" with no force or direction; \"the force makes it <b>move</b>\" where the question wants <b>accelerate</b>.</p>",
+            "<p><b>The force link.</b> \"They repel\" names the rule but not what happens to the object: a <b>resultant force</b> changes an object's motion — it makes it <b>accelerate</b> (Topic 2's rule in a new setting). So \"they repel, so the ball moves away\" leaves out the force. In a question worded <i>in terms of electric fields</i>, the first mark is that <b>X is in Y's electric field</b> (2018 2H Q4(c)(i), 2025 Q4(b)(ii)); and the schemes credit the <b>result the question asks about</b> (2019 Q1(a)(ii): \"so the spray is wider\"). The full sentence is: \"<i>the charges are alike, so they repel: a force acts on the ball, directed away from the rod, so the ball accelerates away from the rod</i>\". Name the force, give its direction, say it causes an acceleration. If the question says the ball ends up hanging at an angle, add that it moves until the <b>thread's pull balances</b> the repulsion.</p>"
+            "<p><b>Losses:</b> \"the <b>charge</b> pushes it\" (a charge is not a force — say the force <i>between</i> the charges); \"<b>positive charge moves</b> to the cloth\" (only electrons move); \"the rod <b>makes</b> charge\" (charge is transferred); \"it <b>repels</b>\" with no force or direction.</p>",
         ),
         worked(
             "Both chains in one question",
@@ -58,7 +58,7 @@ section_t1 = section(
                     ]), lines=4),
             choice("se-t1-q2", "Which answer gains all the marks for \"explain why the two charged balls move apart\"?",
                    ["\"They have the same charge so they repel.\"", "\"Like charges repel, so each ball has a force on it directed away from the other, so each ball accelerates away.\"", "\"The charge pushes them apart.\"", "\"They are both negative so they move.\""], 1,
-                   "Rule, force with direction, acceleration."),
+                   "Rule, force with direction, and what the force does to the object."),
             written("se-t1-q3", "A positively charged rod is held near a negatively charged ball. Explain the motion of the ball. (3)",
                     mark_scheme([
                         ("Rule", "The charges are <b>unlike</b>, and unlike charges <b>attract</b>."),
@@ -67,9 +67,9 @@ section_t1 = section(
                     ]), lines=4),
             written("se-t1-q4", "A student writes: \"When the rod is rubbed, positive charge moves from the rod to the cloth, so the rod becomes negative.\" Correct the student's explanation. (2)",
                     marks(["Positive charge (protons) <b>cannot move</b>; it is <b>electrons</b> that are transferred.", "Electrons move <b>from the cloth to the rod</b>: the rod gains electrons and becomes negative, the cloth loses them and becomes positive."]), lines=2),
-            choice("se-t1-q5", "Why is \"the force makes the ball move\" marked down when the question asks to explain the ball's motion?",
-                   ["Forces do not cause motion", "The mark is for linking the resultant force to the ball's acceleration (a change in its motion), not just to movement", "Balls cannot accelerate", "The word 'force' should not be used"], 1,
-                   "Resultant force → acceleration is the link they want."),
+            choice("se-t1-q5", "Why is \"they repel\" on its own not a full answer to \"explain the ball's motion\"?",
+                   ["Forces do not cause motion", "The marks are for the rule and for what it does to the object: a force on the ball, its direction, and the ball accelerating away — and, in a fields question, that the ball is in the rod's field", "Balls cannot accelerate", "The word 'force' should not be used"], 1,
+                   "Rule → force on the object with its direction → the object accelerates (or the result the question names). No scheme penalises \"moves\", but \"repel\" alone names no force."),
             written("se-t1-q6", "Two charged objects attract each other. One is much heavier than the other. Compare the forces on them and their accelerations. (2)",
                     marks(["The forces are <b>equal in size and opposite</b> in direction (an interaction pair).", "The <b>lighter</b> object has the <b>larger acceleration</b> ($a = F/m$), so it is the one seen to move."]), lines=2),
         ]),
@@ -98,7 +98,7 @@ section_t2 = section(
             "<li>So the <b>near side has the opposite charge</b> to the rod and the <b>far side the same charge</b>. The object is <b>still neutral overall</b>: the charges have been <b>separated</b>, not changed.</li>"
             "<li>The near side is <b>attracted</b> and the far side is <b>repelled</b>, but the near side is <b>closer</b>, and the force is larger at a smaller distance — so the <b>attraction is the larger force</b> and there is a <b>resultant force towards the rod</b>.</li></ol>"
             "<p>That is why a neutral object is <b>always attracted</b>, whatever the sign of the rod, and never repelled. In a <b>metal</b> the free electrons move through the whole object; in <b>water</b> the charged particles in it (ions) and the water molecules themselves shift; in an <b>insulator</b> (paper) the electrons shift slightly within each molecule — the effect is the same, just weaker.</p>"
-            "<p>The June 2023 report (Q1(c), a dust particle near a positive base): a diagram with the induced <b>negative</b> charge on the near side scored, but the fully correct one also showed the induced <b>positive</b> charge on the far side — \"the total numbers of positive and negative charges still balance\". Draw both sides. The 2025 scheme (Q4(b)(ii)) gave full marks for \"a positive charge would be <b>induced</b> on the surface of the metal tube\".</p>",
+            "<p>The June 2023 report (Q1(c), a dust particle near a positive base): a diagram with the induced <b>negative</b> charge on the near side scored, but the fully correct one also showed the induced <b>positive</b> charge on the far side — \"the total numbers of positive and negative charges still balance\". Draw both sides. The June 2025 scheme (Q4(b)(ii), 2 marks, negative soot particles moving to an earthed metal tube), any two from: the particles are <b>in an electric field</b>; <b>attraction</b>; the tube's surface has an <b>induced positive (opposite) charge</b> — or, the other way round, <b>repulsion</b> from the rod, which has the <b>same (negative) charge</b>.</p>",
         ),
         worked(
             "Water bends towards a comb",
@@ -106,7 +106,7 @@ section_t2 = section(
             [
                 "The water is <b>neutral</b>, but the comb's charge <b>moves the electrons</b> in the water: with a negative comb they are pushed to the far side of the stream, leaving the <b>near side positive</b>.",
                 "The near (positive) side is <b>attracted</b> to the comb and the far (negative) side is <b>repelled</b>.",
-                "The attraction acts at a <b>shorter distance</b>, so it is the <b>larger</b> force: there is a resultant force on the water <b>towards the comb</b>, so the water <b>accelerates towards the comb</b> and the stream bends.",
+                "<b>Opposite charges attract</b>: the <b>induced</b> charge on the near side is closer than the far side, so the attraction is the <b>larger</b> force — a resultant force on the water <b>towards the comb</b>, so the water <b>accelerates towards the comb</b> and the stream bends.",
             ],
         ),
         practice("Induction", [
@@ -114,7 +114,7 @@ section_t2 = section(
                     mark_scheme([
                         ("Electrons move", "The balloon's charge <b>repels electrons</b> in the wall's surface <b>away</b> from the balloon."),
                         ("Induced charges", "The surface <b>nearest the balloon is left positive</b>; further in, the surface is negative (the wall stays neutral overall)."),
-                        ("Force", "The near positive surface <b>attracts</b> the balloon more strongly than the further negative charge repels it, so there is a resultant attractive force holding it on."),
+                        ("Force", "<b>Opposite charges attract</b>: a force on the balloon towards the <b>induced</b> positive charge on the wall holds it there (the attraction wins because that charge is the closer)."),
                     ]), lines=4),
             choice("se-t2-q2", "A positively charged rod is held near a neutral metal can. Which is correct?",
                    ["Electrons move to the far side of the can", "Electrons move to the near side, so the near side is negative and the far side positive", "Protons move to the near side", "The can becomes positively charged overall"], 1,
@@ -191,7 +191,7 @@ section_t3 = section(
 section_t4 = section(
     "fuelling-question", "tricky", "Fuelling: the 6-mark danger-and-precaution question", "11.7P, 11.8P",
     equations=[r"\text{danger chain (3)} + \text{precautions with reasons (3)}"],
-    blurb="The long question on this topic: explain why refuelling is dangerous and how the danger is reduced. Half the marks are the danger chain, half are the precautions — and each precaution scores only with its reason.",
+    blurb="The spec's danger-and-precaution statements (11.7P, 11.8P) have not been examined on a 2H paper from 2018 to 2025, so this is written as the 6-marker they could become: why refuelling is dangerous and how the danger is reduced. Half the answer is the danger chain, half the precautions — each precaution with its reason.",
     tags=["P"],
     checklist=[
         "Write the danger chain: friction → electrons transferred → charge builds up → pd → spark → ignites vapour",
@@ -200,12 +200,12 @@ section_t4 = section(
     ],
     parts=[
         explain(
-            "The structure that reaches Level 3",
+            "A structure for a 6-mark answer",
             "<table class='tbl'><tr><th>Part</th><th>Points</th></tr>"
             "<tr><td><b>Danger</b></td><td>fuel moving through the hose rubs against it: <b>friction transfers electrons</b> → the fuel / aircraft becomes <b>charged</b> → the aircraft is <b>insulated</b> by its tyres, so the charge <b>builds up</b> → a large <b>pd</b> between the aircraft and the tanker or ground → the air can break down and a <b>spark</b> jumps → fuel <b>vapour</b> is flammable, so the spark can cause a <b>fire or explosion</b></td></tr>"
             "<tr><td><b>Precaution 1: bonding</b></td><td>a <b>conducting cable</b> is clipped between the aircraft and the tanker <b>before</b> the hose is connected → charge can <b>flow between them</b> → they stay at the <b>same potential</b> → <b>no pd</b>, so <b>no spark</b> between them</td></tr>"
             "<tr><td><b>Precaution 2: earthing</b></td><td>both are connected to <b>earth</b> by a conductor → any charge <b>flows away to the ground</b> as it is produced → it <b>cannot build up</b> to a dangerous pd</td></tr>"
-            "<tr><td>Also accepted</td><td>pumping the fuel <b>slowly</b> (less friction, less charge per second); <b>conducting hoses</b>; no other sources of sparks nearby</td></tr></table>"
+            "<tr><td>Other precautions worth a point</td><td>pumping the fuel <b>slowly</b> (less friction, less charge per second); <b>conducting hoses</b>; no other sources of sparks nearby</td></tr></table>"
             "<p>The usual losses: naming earthing without saying <b>what it does</b>; saying the fuel \"is static\" or \"has electricity\" instead of \"becomes charged by friction\"; forgetting the <b>vapour</b> — it is the vapour that ignites; and writing \"the spark causes a shock\" when the danger here is <b>fire</b>. Say <b>electrons</b> are transferred, say <b>pd</b>, say <b>conductor</b>.</p>",
         ),
         worked(
@@ -285,9 +285,9 @@ section_t5 = section(
                     marks(["The charged droplets <b>induce the opposite charge</b> on the car's surface (electrons flow to or from earth to supply it).", "<b>Unlike charges attract</b>, so there is a force on the droplets towards the surface — on every side of the car."]), lines=2),
             written("se-t5-q4", "A student writes: \"The paint is charged so it sticks to the car.\" Explain why this answer is incomplete. (2)",
                     marks(["It does not say <b>what</b> the paint is attracted to or <b>why</b>: the car must be <b>earthed / oppositely charged</b> so that the droplets' charge induces the opposite charge and unlike charges attract.", "It also misses the other advantage: the droplets <b>repel one another</b>, giving an even mist."]), lines=3),
-            choice("se-t5-q5", "Why does an electrostatic sprayer give an even thickness of coat?",
-                   ["Paint is thicker when charged", "Once a patch is coated it carries the droplets' charge and repels further droplets towards bare patches", "The air blows it evenly", "The car is spinning"], 1,
-                   "Self-levelling by repulsion."),
+            choice("se-t5-q5", "Why does an electrostatic sprayer give an even coat?",
+                   ["Paint is thicker when charged", "The droplets all carry the same charge, so they repel one another and spread into a fine, even mist that is attracted to every side of the earthed target", "The air blows it evenly", "The car is spinning"], 1,
+                   "The credited reasons (June 2019 2H Q1(a)(ii), June 2022 Q1(c)): like-charged droplets repel each other, and the earthed target does not accumulate charge, so every droplet is attracted to it."),
         ]),
     ],
 )
@@ -310,10 +310,10 @@ section_t6 = section(
         explain(
             "The rules for drawing, and the errors that lose marks",
             "<table class='tbl'><tr><th>Rule</th><th>Why</th><th>The error</th></tr>"
-            "<tr><td>arrows <b>from + to −</b> (away from a positive charge, towards a negative one)</td><td>a line shows the direction of the force on a <b>positive</b> charge</td><td>arrows the wrong way — the 2025 scheme (Q4(a)) gave 1 of 2 marks for correct lines with reversed arrows; no arrows at all scores the same</td></tr>"
+            "<tr><td>arrows <b>from + to −</b> (away from a positive charge, towards a negative one)</td><td>a line shows the direction of the force on a <b>positive</b> charge</td><td>arrows the wrong way — the 2025 scheme (Q4(a)) gave 1 of 2 marks for correct lines with reversed arrows; no arrows at all scores the same; and a <b>single arrow the wrong way</b> among correct ones loses it too (2019 Q1(b): \"any arrow in the wrong direction = 1 mark max\"; Nov 2020 Q4(b)(iii): \"do not award mark if there are arrows in both directions\"). One arrow on one line, the right way, is enough for the direction mark</td></tr>"
             "<tr><td>lines <b>never cross</b> or touch</td><td>at any point the force has one direction</td><td>crossing lines near a charge</td></tr>"
             "<tr><td>a point charge: lines <b>radial</b>, <b>evenly spaced</b> round it, starting (or ending) on the charge</td><td>the field is the same in every direction at the same distance</td><td>lines that curve, or stop in empty space</td></tr>"
-            "<tr><td>parallel plates: lines <b>straight, parallel, equally spaced</b>, at right angles to the plates, from the + plate to the − plate</td><td>the field is <b>uniform</b></td><td>lines fanning out, unequal gaps, lines not reaching the plates</td></tr>"
+            "<tr><td>parallel plates: lines <b>straight, parallel, equally spaced</b>, at right angles to the plates, from the + plate to the − plate</td><td>the field is <b>uniform</b></td><td>lines fanning out or curving in the middle, unequal gaps (the 2025 guidance: lines \"do not have to touch plates\", and curved ends at the edges are ignored)</td></tr>"
             "<tr><td>spacing shows <b>strength</b></td><td>closer lines = stronger field</td><td>drawing a point charge's lines evenly spaced all the way out (they must spread)</td></tr></table>"
             "<p><b>Reading a diagram:</b> the direction of the force on a positive charge is <b>along the arrow</b>; on a negative charge it is <b>against the arrow</b>. The field is strongest where the lines are <b>closest</b> — next to a point charge, or between the plates rather than at their edges. Two like charges side by side: the lines curve away from each other and there is one point midway between them where the field is zero; a positive and a negative: the lines run from one to the other.</p>",
         ),
@@ -323,7 +323,7 @@ section_t6 = section(
             [
                 "<b>Shape:</b> straight, parallel lines from plate to plate — correct in kind, but they must be <b>equally spaced</b> (a uniform field), not bunched. Bunching says the field is stronger in the middle, which it is not.",
                 "<b>Direction:</b> the arrows should point from the <b>+ plate to the − plate</b>, i.e. left to right here. Pointing left loses the direction mark.",
-                "<b>Verdict: 1 of 2.</b> The lines are straight and reach both plates, so the line mark scores; the arrows are reversed, so the direction mark is lost. Bunched lines would cost the line mark with a strict examiner — for 2: four or five equally spaced straight lines, arrows left → right.",
+                "<b>Verdict: 1 of 2.</b> The lines are straight and parallel between the plates, so the line mark scores; the arrows are reversed, so the direction mark is lost. Bunched lines would cost the line mark with a strict examiner — for 2: four or five equally spaced straight lines, arrows left → right.",
             ],
         ),
         practice("Field diagrams", [
@@ -370,7 +370,7 @@ section_t7 = section(
             "<tr><td>a spark jumps</td><td>as charge builds up, the field between the object and earth gets <b>stronger</b> (lines closer); when it is strong enough it pulls <b>electrons off air molecules</b>, the air <b>conducts</b> and electrons flow across — a spark</td></tr>"
             "<tr><td>a lightning conductor's point</td><td>the field is <b>strongest at a sharp point</b> (lines bunched), so the air breaks down there first and the strike is led to the conductor rather than the building</td></tr>"
             "<tr><td>the force weakens with distance</td><td>the lines of a point charge's field <b>spread out</b>, so the field — and the force on a charge in it — is weaker further away</td></tr></table>"
-            "<p>The shape of a field answer: (1) the charged object has a field; (2) the other charge is in the field so it feels a force; (3) the direction and strength follow from the lines. The 2024 scheme's definition marks (Q1(b)) and direction mark (Q1(c)(i)) are the same ideas: a region where a charge experiences a force; lines showing the direction of the force on a positive charge.</p>",
+            "<p>The shape of a field answer: (1) the charged object has a field; (2) the other charge is in the field so it feels a force; (3) the direction and strength follow from the lines. The 2024 scheme's definition mark (Q1(b)) and direction mark (Q1(c)(i)) are the same ideas: a region where a charge experiences a force; lines showing the direction of the force on a positive charge.</p>",
         ),
         worked(
             "Field explanation of repulsion",
@@ -383,7 +383,7 @@ section_t7 = section(
         ),
         practice("Explaining with fields", [
             written("se-t7-q1", "Use the idea of an electric field to explain why two positively charged objects repel without touching. (2)",
-                    marks(["Each object has an <b>electric field</b> around it.", "The other object's charge is <b>in that field</b> and so <b>experiences a force</b>, directed along the lines — away from the positive charge — so they repel."]), lines=2),
+                    marks(["Each object has an <b>electric field</b> around it.", "The other object is <b>in that field</b> (the two fields <b>interact / overlap</b>), so it <b>experiences a force</b>, directed along the lines — away from the positive charge — so they repel. (June 2018 2H Q4(c)(i): \"A has an electric field (1) B is in it (1)\"; \"ignore nature of force; e.g. repulsion\" — in a fields question \"repel\" earns nothing extra.)"]), lines=2),
             written("se-t7-q2", "Explain, in terms of electric fields, how a spark occurs between a charged object and an earthed conductor. (3)",
                     mark_scheme([
                         ("Field", "The charged object has an electric field; as more charge builds up the field between it and the conductor gets <b>stronger</b>."),
@@ -432,7 +432,7 @@ FACTS = [
     # N5
     fact("Why do charged spray droplets spread into a fine mist?", "They all have the same charge, and like charges repel.", "static-uses"),
     fact("Why are charged droplets attracted to the car or plant?", "The target is earthed (or oppositely charged); the droplets induce the opposite charge on its surface, and unlike charges attract — even round the back.", "static-uses"),
-    fact("Advantages of an electrostatic sprayer?", "Even coat (droplets repel each other), reaches all sides (attracted to the target), less wasted (drawn to the target rather than drifting), even thickness (repelled from patches already coated).", "static-uses"),
+    fact("Advantages of an electrostatic sprayer?", "Even coat (droplets repel each other), reaches all sides (attracted to the target), less wasted (drawn to the target rather than drifting), even thickness.", "static-uses"),
     # N6
     fact("Why is refuelling dangerous?", "Friction between fuel and hose transfers electrons; charge builds up on the insulated aircraft; a large pd forms; a spark could ignite the fuel vapour.", "static-dangers"),
     fact("What does the bonding line do?", "A conductor joining tanker and aircraft so charge flows between them: same potential, no pd, no spark.", "static-dangers"),
@@ -447,8 +447,8 @@ FACTS = [
     fact("Can field lines cross?", "Never — the force at a point has only one direction.", "electric-fields"),
     # T1
     fact("The charging chain (word for word)?", "Friction → electrons transferred from A to B → B has gained electrons so is negative → A has lost electrons so is positive (equal amount).", "electron-force-chains"),
-    fact("The moving-apart chain (word for word)?", "Same charge → like charges repel → a force on X directed away from Y → the force causes X to accelerate away from Y.", "electron-force-chains"),
-    fact("Why is 'they repel so it moves away' not enough?", "It skips the force: name the force on the object, give its direction, and say the force causes an acceleration.", "electron-force-chains"),
+    fact("The moving-apart chain (word for word)?", "Same charge → like charges repel → (X is in Y's field) a force on X directed away from Y → the force causes X to accelerate away from Y.", "electron-force-chains"),
+    fact("Why is 'they repel so it moves away' not enough?", "It skips the force: name the force on the object, give its direction, and say what it does (the object accelerates away / the spray is wider). In a fields question, say the object is in the other's field first.", "electron-force-chains"),
     fact("Two charged objects attract; one is much lighter. What is the same and what differs?", "The forces are equal and opposite; the lighter one has the larger acceleration ($a = F/m$).", "electron-force-chains"),
     # T2
     fact("Four steps of induction?", "Neutral object, equal charges → the rod's field moves its electrons → near side opposite, far side same, still neutral overall → attraction on the nearer side wins.", "induction-explain"),
@@ -459,13 +459,13 @@ FACTS = [
     fact("Why is static worse on dry days?", "Moist air lets charge leak away; dry air is a better insulator so charge accumulates.", "sparks"),
     fact("Why touch a railing with a key first?", "The spark jumps between the key and the railing, not from your fingertip.", "sparks"),
     # T4
-    fact("The fuelling 6-marker: the danger half?", "Friction transfers electrons → charge builds up on the insulated aircraft → large pd → spark → ignites fuel vapour → fire/explosion.", "fuelling-question"),
-    fact("The fuelling 6-marker: the precaution half?", "Bonding cable (conductor): same potential, no pd, no spark. Earthing: charge flows to the ground, cannot build up. (Pump slowly: less charge per second.)", "fuelling-question"),
+    fact("The fuelling question: the danger half?", "Friction transfers electrons → charge builds up on the insulated aircraft → large pd → spark → ignites fuel vapour → fire/explosion.", "fuelling-question"),
+    fact("The fuelling question: the precaution half?", "Bonding cable (conductor): same potential, no pd, no spark. Earthing: charge flows to the ground, cannot build up. (Pump slowly: less charge per second.)", "fuelling-question"),
     fact("What is wrong with 'it is earthed so it is safe'?", "It gives the precaution without what it does: the charge flows away to earth and cannot build up to a pd that sparks.", "fuelling-question"),
     # T5
     fact("Sprayer: advantage + reason, pair 1?", "Fine even mist — the droplets all have the same charge and repel each other.", "sprayers-explain"),
     fact("Sprayer: advantage + reason, pair 2?", "Reaches all sides and less is wasted — the droplets are attracted to the earthed target, which has an induced opposite charge.", "sprayers-explain"),
-    fact("Why is the target earthed?", "So it is at 0 V and the charged mist induces the opposite charge on its surface; electrons flow to or from earth to supply it.", "sprayers-explain"),
+    fact("Why is the target earthed?", "The metal wire conducts electrons to or from earth, so charge does not build up on the object as the charged droplets land (June 2019: two marks); the object also gains an induced opposite charge that attracts the droplets.", "sprayers-explain"),
     # T6
     fact("Rules for drawing a field diagram?", "Arrows from + to −; lines never cross; point charge: radial and evenly spaced; plates: straight, parallel, equally spaced; closer lines = stronger.", "field-diagrams"),
     fact("What did the 2025 scheme give for plate field lines with the arrows reversed?", "1 of 2 marks: lines right, direction wrong.", "field-diagrams"),
