@@ -32,7 +32,7 @@ INDUCTION_CHAIN = [
 SPEAKER_CHAIN = [
     "There is a current in the coil.",
     "This creates a magnetic field around the coil.",
-    "This interacts with the permanent magnetic field.",
+    "The coil is in the permanent magnetic field of the magnets, and the two fields interact.",
     "This causes a resultant force on the coil.",
     "The direction of the force is the same on either side of the coil.",
     "So the coil moves forwards or backwards. You can find the direction using Fleming's left-hand rule.",
@@ -234,7 +234,7 @@ section_n4 = section(
         ),
         practice("Loudspeaker and microphone", [
             written("ei-n4-q1", "Explain how a loudspeaker produces sound from an alternating current. (4)",
-                    marks(["There is a <b>current in the coil</b>, which <b>creates a magnetic field</b> around the coil; this <b>interacts with the permanent magnetic field</b>.", "This causes a <b>resultant force on the coil</b>, the same on either side, so the coil (and the cone fixed to it) <b>moves forwards or backwards</b>.", "With an <b>alternating current the force alternates</b> back and forth at the same frequency as the current.", "So the cone vibrates and produces a <b>sound wave of that frequency</b>."]), lines=5),
+                    marks(["There is a <b>current in the coil</b>, which <b>creates a magnetic field</b> around the coil; the coil <b>is in the permanent magnetic field</b> of the magnet, and the two fields <b>interact</b>.", "This causes a <b>resultant force on the coil</b>, the same on either side, so the coil (and the cone fixed to it) <b>moves forwards or backwards</b>.", "With an <b>alternating current the force alternates</b> back and forth at the same frequency as the current.", "So the cone vibrates and produces a <b>sound wave of that frequency</b>."]), lines=5),
             choice("ei-n4-q2", "Which physics does a microphone use?",
                    ["The motor effect", "Electromagnetic induction", "Static electricity", "Refraction"], 1,
                    "Coil moved by sound in a field: a pd is induced."),

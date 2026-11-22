@@ -45,7 +45,7 @@ REVISION = {
     ),
     "howto": [
         "Start with the non-negotiables. Do not move on from a section until every practice question is green.",
-        "Say every explanation out loud as a chain — current, field around the wire, interacts with the permanent field, resultant force, accelerates, left-hand rule — before you read the one on the page.",
+        "Say every explanation out loud as a chain — current, field around the wire, the wire is in the magnets' field and the fields interact, resultant force, accelerates, left-hand rule — before you read the one on the page.",
         "Read each explanation, then cover it and say it back. For a definition, the bold words are the ones the mark is for.",
         "Do the practice questions <b>before</b> opening the hint or walkthrough. Calculations in EWAU layout on paper first, then type the answer to check it; write the explanation chains out in full before opening the model answer — the marks are on the links, not the conclusion.",
         "For \"explain\" and \"describe how\" questions, write your answer in full sentences, then compare it with the model answer line by line.",

@@ -20,7 +20,7 @@ from mg_nn import WIRE_CHAIN, chain_list
 MOTOR_CHAIN = [
     "There is a current in the coil.",
     "This creates a magnetic field around the coil.",
-    "This interacts with the permanent magnetic field.",
+    "The coil is in the permanent magnetic field of the magnets, and the two fields interact.",
     "This causes a resultant force on the coil.",
     "The direction of the force is opposite on either side of the coil.",
     "So the coil rotates.",
@@ -358,7 +358,7 @@ section_t7 = section(
             "Explain how a simple d.c. motor produces continuous rotation. (6 marks)",
             [
                 "There is a <b>current in the coil</b>. This <b>creates a magnetic field around the coil</b>.",
-                "This <b>interacts with the permanent magnetic field</b>. This causes a <b>resultant force on the coil</b>.",
+                "The coil <b>is in the permanent magnetic field</b> of the magnets, and the two fields <b>interact</b>. This causes a <b>resultant force on the coil</b>.",
                 "<b>The direction of the force is opposite on either side of the coil</b> (the current goes opposite ways along the two sides — Fleming's left-hand rule). <b>So the coil rotates.</b>",
                 "The <b>split-ring commutator</b> turns with the coil; its two halves are connected to the ends of the coil and press against fixed brushes — it <b>carries the current from the supply wires into the coil</b> (the first of the three 2025 marks).",
                 "Every <b>half turn</b> the halves swap brushes, so the <b>current in the coil reverses</b>…",
@@ -367,7 +367,7 @@ section_t7 = section(
         ),
         practice("The d.c. motor", [
             written("mg-t7-q1", "Explain why the coil of a d.c. motor starts to turn when the current is switched on. (4)",
-                    marks(["There is a <b>current in the coil</b>. This <b>creates a magnetic field around the coil</b>.", "This <b>interacts with the permanent magnetic field</b>. This causes a <b>resultant force on the coil</b>.", "<b>The direction of the force is opposite on either side of the coil</b> (the current goes opposite ways along the two sides).", "<b>So the coil rotates</b> (the two forces give a turning effect about the axle)."]), lines=4),
+                    marks(["There is a <b>current in the coil</b>. This <b>creates a magnetic field around the coil</b>.", "The coil <b>is in the permanent magnetic field</b> of the magnets, and the two fields <b>interact</b>. This causes a <b>resultant force on the coil</b>.", "<b>The direction of the force is opposite on either side of the coil</b> (the current goes opposite ways along the two sides).", "<b>So the coil rotates</b> (the two forces give a turning effect about the axle)."]), lines=4),
             written("mg-t7-q2", "Explain the purpose of the split-ring commutator in a d.c. motor. (3)",
                     marks(["The commutator <b>connects the coil to the supply</b>: it <b>carries the current from the battery wires into the coil</b> through the brushes.", "It <b>reverses the current in the coil every half turn</b> (the halves of the ring swap brushes as the coil turns)…", "…so the <b>force between the coil and the magnet stays in the same direction</b> and the coil <b>keeps rotating in the same direction</b> (continuously) instead of turning back and stopping. (June 2025 2H Q6(c): one mark for each.)"]), lines=4),
             choice("mg-t7-q3", "Which statement about a d.c. motor is WRONG?",
@@ -489,7 +489,7 @@ FACTS = [
     fact("What does reversing the current in a solenoid do?", "Swaps its N and S poles.", "solenoid"),
     # N7
     fact("The motor effect?", "A current-carrying conductor in a magnetic field experiences a force, due to the interaction between the two magnetic fields.", "motor-effect"),
-    fact("The five-step chain for a wire?", "Current in the wire → magnetic field around the wire → interacts with the permanent field → resultant force, so the wire accelerates → direction from Fleming's left-hand rule.", "motor-effect"),
+    fact("The five-step chain for a wire?", "Current in the wire → magnetic field around the wire → the wire is in the magnets' field, the fields interact → the permanent field → resultant force, so the wire accelerates → direction from Fleming's left-hand rule.", "motor-effect"),
     fact("What force acts on the magnet?", "An equal and opposite force (Newton's third law).", "motor-effect"),
     fact("When is the motor-effect force zero? Largest?", "Zero when the wire is parallel to the field; largest at right angles.", "motor-effect"),
     fact("The 'interaction' mark (2023 Q5(b))?", "'Repulsion' alone scored 1; the second mark was 'the interaction between the two magnetic fields'.", "motor-effect"),
@@ -525,7 +525,7 @@ FACTS = [
     fact("Force on a coil side with N turns?", "$N$ × the force on one wire: $F = B I l N$.", "motor-force-hard"),
     fact("The 2025 unfamiliar equation?", "B against distance, inverse square ($B \\propto 1/d^2$); use it like any other — finding the constant alone was 1 of 3.", "motor-force-hard"),
     # T7
-    fact("The six-step chain for a motor?", "Current in the coil → field around the coil → interacts with the permanent field → resultant force on the coil → force opposite on either side → so the coil rotates.", "dc-motor"),
+    fact("The six-step chain for a motor?", "Current in the coil → field around the coil → the coil is in the magnets' field, the fields interact → the permanent field → resultant force on the coil → force opposite on either side → so the coil rotates.", "dc-motor"),
     fact("What does the split-ring commutator do?", "Connects the coil to the supply (carries the current from the wires to the coil through the brushes) and reverses the current in the coil every half turn, so the force stays in the same direction and the coil keeps rotating the same way.", "dc-motor"),
     fact("What happens with no commutator?", "The coil turns to the vertical, is pushed back, and rocks to a stop.", "dc-motor"),
     fact("Three ways to make a motor turn faster?", "More current, stronger magnets, more turns (or an iron core).", "dc-motor"),

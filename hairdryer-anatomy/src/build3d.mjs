@@ -129,14 +129,14 @@ const EXAM = {
   wire: examBox("The motor effect on a single wire", [
     "There is a current in the wire.",
     "This creates a magnetic field around the wire.",
-    "This interacts with the permanent magnetic field.",
+    "The wire is in the permanent magnetic field of the magnets, and the two fields interact.",
     "This causes a resultant force on the wire, so the wire accelerates.",
     "You can find the direction of the force using Fleming's left-hand rule.",
   ]),
   motor: examBox("The motor effect in a motor", [
     "There is a current in the coil.",
     "This creates a magnetic field around the coil.",
-    "This interacts with the permanent magnetic field.",
+    "The coil is in the permanent magnetic field of the magnets, and the two fields interact.",
     "This causes a resultant force on the coil.",
     "The direction of the force is opposite on either side of the coil.",
     "So the coil rotates.",
@@ -144,7 +144,7 @@ const EXAM = {
   speaker: examBox("The motor effect in a loudspeaker", [
     "There is a current in the coil.",
     "This creates a magnetic field around the coil.",
-    "This interacts with the permanent magnetic field.",
+    "The coil is in the permanent magnetic field of the magnets, and the two fields interact.",
     "This causes a resultant force on the coil.",
     "The direction of the force is the same on either side of the coil.",
     "So the coil moves forwards or backwards. You can find the direction using Fleming's left-hand rule.",

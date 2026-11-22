@@ -195,7 +195,7 @@ section_t4 = section(
             "Compare the way a moving-coil loudspeaker and a moving-coil microphone work. (6 marks)",
             [
                 "<b>Both</b> have a coil in the magnetic field of a permanent magnet, attached to a cone (speaker) or diaphragm (microphone); the speaker turns a current into sound, the microphone turns sound into a current.",
-                "<b>Speaker:</b> there is an alternating current in the coil; this creates a magnetic field around the coil, which interacts with the permanent magnetic field.",
+                "<b>Speaker:</b> there is an alternating current in the coil; this creates a magnetic field around the coil; the coil is in the permanent magnetic field of the magnet, and the two fields interact.",
                 "This causes a resultant force on the coil, the same on either side, so the coil and cone move forwards or backwards; with a.c. the force alternates at the same frequency as the current, so the cone vibrates and produces a sound wave of that frequency.",
                 "<b>Microphone:</b> the sound wave makes the diaphragm and the coil fixed to it vibrate, so the coil moves through the magnetic field of the permanent magnet.",
                 "The coil therefore experiences a changing magnetic field, which induces a pd across the coil; in the closed circuit a current flows.",
@@ -206,7 +206,7 @@ section_t4 = section(
             written("ei-t4-q1", "Explain how a moving-coil microphone produces an electrical signal from a sound wave, and how this differs from what happens in a moving-coil loudspeaker. (6)",
                     mark_scheme([
                         ("Shared", "Both: a coil in a permanent magnet's field, fixed to a cone/diaphragm; speaker converts current to sound, microphone sound to current."),
-                        ("Speaker 1", "Current in the coil creates a magnetic field around the coil, which <b>interacts with the permanent magnetic field</b>."),
+                        ("Speaker 1", "Current in the coil creates a magnetic field around the coil; the coil <b>is in the permanent magnetic field</b> of the magnet, and the two fields <b>interact</b>."),
                         ("Speaker 2", "Resultant force on the coil, the same on either side, so the cone moves; with a.c. the force alternates at the current's frequency and the cone vibrates, producing sound of that frequency."),
                         ("Microphone 1", "Sound makes the diaphragm and coil vibrate, so the coil <b>moves through the magnetic field</b>."),
                         ("Microphone 2", "The coil experiences a changing magnetic field, so a <b>pd is induced</b> (electromagnetic induction); a current flows in the closed circuit."),
@@ -466,7 +466,7 @@ FACTS = [
     fact("Shape of a dynamo's output graph?", "Humps all above the axis: one direction, rising and falling, not steady.", "alternator-dynamo"),
     fact("Turn the coil twice as fast: output?", "Peak pd doubles AND frequency doubles.", "alternator-dynamo"),
     # N4
-    fact("The loudspeaker chain?", "Current in the coil → field around the coil → interacts with the permanent field → resultant force on the coil → same direction on either side → coil moves forwards or backwards (left-hand rule) → with a.c. the force alternates at the current's frequency.", "speaker-microphone"),
+    fact("The loudspeaker chain?", "Current in the coil → field around the coil → the coil is in the permanent field, the fields interact → resultant force on the coil → same direction on either side → coil moves forwards or backwards (left-hand rule) → with a.c. the force alternates at the current's frequency.", "speaker-microphone"),
     fact("The microphone chain?", "Sound makes the diaphragm and coil vibrate → the coil moves through the magnet's field → changing field → pd induced → alternating current at the sound's frequency.", "speaker-microphone"),
     fact("Why does a speaker coil move along its axis, not rotate?", "The force is the same on every part of the coil (radial field), not opposite on the two sides.", "speaker-microphone"),
     # N5

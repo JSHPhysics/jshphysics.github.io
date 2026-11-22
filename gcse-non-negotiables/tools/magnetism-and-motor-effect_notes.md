@@ -196,3 +196,16 @@ line through the origin), describing Fleming's rule in words (Nov 2020
 Q5(c)(ii)), the induced-magnetism demonstration (2018 Q5(a)), the Earth's
 field drawn inside and out (2022 Q5(c)), uniform-field differences (2022
 Q5(a)(iii)), developing the compass investigation (2019 Q5(a)(ii)).
+
+### 2026-11-22 — author's ruling on the motor-effect chains
+
+The author chose to add the Nov 2020 point to the standard chains. Step 3
+of every copy — `WIRE_CHAIN` / `MOTOR_CHAIN` here, `SPEAKER_CHAIN` on
+Topic 13, `EXAM.wire` / `motor` / `speaker` in `simple-motor/src/build.mjs`,
+`hairdryer-anatomy/src/build3d.mjs` and `induction/src/build.mjs`, and the
+built pages — now reads "The wire (coil) is in the permanent magnetic field
+of the magnets, and the two fields interact." in place of "This interacts
+with the permanent magnetic field." The worked examples, flashcards and
+lede that paraphrased the chain were changed to match. (The author also
+ruled: keep "accelerates" in the static-electricity chain — examiners have
+credited it; the fuse wording stays as it is.)

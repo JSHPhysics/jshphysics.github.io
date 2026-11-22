@@ -21,7 +21,7 @@ import mg_diagrams as dg
 WIRE_CHAIN = [
     "There is a current in the wire.",
     "This creates a magnetic field around the wire.",
-    "This interacts with the permanent magnetic field.",
+    "The wire is in the permanent magnetic field of the magnets, and the two fields interact.",
     "This causes a resultant force on the wire, so the wire accelerates.",
     "You can find the direction of the force using Fleming's left-hand rule.",
 ]
@@ -333,7 +333,7 @@ section_n7 = section(
         explain(
             "The chain to write every time",
             diagram(dg.motor_effect_svg(), 720, 255, "A wire between the poles of a magnet: the wire's own circular field adds to the magnet's field on one side and cancels it on the other, so there is a resultant force on the wire.") +
-            "<p>A current-carrying wire placed in a magnetic field <b>experiences a force</b> — the <b>motor effect</b>. Why: the current creates a <b>magnetic field around the wire</b>; this <b>interacts with the permanent magnet's field</b>; where the two point the same way the field is stronger, where they oppose it is weaker, and the result is a <b>resultant force on the wire</b> from the strong side towards the weak side. By Newton's third law an <b>equal and opposite force acts on the magnet</b>. The standard explanation, in the steps the marks are on:</p>"
+            "<p>A current-carrying wire placed in a magnetic field <b>experiences a force</b> — the <b>motor effect</b>. Why: the current creates a <b>magnetic field around the wire</b>; the wire is <b>in the permanent magnetic field</b> of the magnets, and the two fields <b>interact</b>; where the two point the same way the field is stronger, where they oppose it is weaker, and the result is a <b>resultant force on the wire</b> from the strong side towards the weak side. By Newton's third law an <b>equal and opposite force acts on the magnet</b>. The standard explanation, in the steps the marks are on:</p>"
             + chain_list(WIRE_CHAIN) +
             "<p>Two things the examiners want and students leave out: the force is <b>due to the interaction between the two magnetic fields</b> (12.11) — not \"the magnet pushes the wire\"; and the chain ends with <b>what happens</b>: a resultant force, so the wire <b>accelerates</b> (or, if it is held, is pushed against what holds it). The June 2023 report (Q5(b), one magnet floating above another): \"repulsion\" alone scored one mark; the second mark needed \"<b>the interaction between the two magnetic fields</b>\" — the same idea.</p>"
             "<p>The force is <b>at right angles</b> to both the current and the field (direction from Fleming's left-hand rule, N8). It is <b>largest when the wire is at right angles to the field</b> and <b>zero when the wire is parallel</b> to it. It reverses if <b>either</b> the current or the field is reversed, and grows with more current, a stronger field or more wire in the field (N9).</p>",
@@ -343,14 +343,14 @@ section_n7 = section(
             "A straight wire is placed between the poles of a horseshoe magnet. When the current is switched on the wire jumps out of the magnet. Explain why. (4 marks)",
             [
                 "There is a <b>current in the wire</b>. This <b>creates a magnetic field around the wire</b>.",
-                "This <b>interacts with the permanent magnetic field</b>.",
+                "The wire <b>is in the permanent magnetic field</b> of the magnets, and the two fields <b>interact</b>.",
                 "This causes a <b>resultant force on the wire</b>, so the wire <b>accelerates</b> — out of the magnet.",
                 "You can find the direction of the force using <b>Fleming's left-hand rule</b> (it is at right angles to both the current and the field).",
             ],
         ),
         practice("The motor effect", [
             written("mg-n7-q1", "A wire carrying a current is placed at right angles to the field between two magnets. Explain why there is a force on the wire. (3)",
-                    marks(["The current in the wire <b>creates a magnetic field</b> around the wire.", "The wire <b>is in the magnetic field of the magnets</b>, and its field <b>interacts with the permanent magnetic field</b> (Nov 2020 2H Q7(b) gives \"the coil is in a magnetic field (of fixed magnets)\" as a separate point).", "The interaction causes a <b>resultant force on the wire</b>, so the wire accelerates."]), lines=3),
+                    marks(["The current in the wire <b>creates a magnetic field</b> around the wire.", "The wire <b>is in the permanent magnetic field</b> of the magnets, and the two fields <b>interact</b> (Nov 2020 2H Q7(b) gives \"the coil is in a magnetic field (of fixed magnets)\" as a separate point).", "The interaction causes a <b>resultant force on the wire</b>, so the wire accelerates."]), lines=3),
             choice("mg-n7-q2", "A wire carrying a current experiences a force from a magnet. What force acts on the magnet?",
                    ["None — magnets do not feel forces", "An equal and opposite force", "A force in the same direction as the force on the wire", "A smaller force"], 1,
                    "Newton's third law: the magnet feels an equal and opposite force."),
