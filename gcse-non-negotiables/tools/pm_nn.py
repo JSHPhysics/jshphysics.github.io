@@ -29,6 +29,7 @@ section_n1 = section(
     checklist=[
         "Describe the arrangement of particles in a solid, a liquid and a gas",
         "Describe the movement of particles in each state in the words that score",
+        "When asked for differences, write each point for both states ('in a solid … but in a liquid …') — a one-sided statement does not score after the first mark (Nov 2021 2H Q3(a))",
         "Explain a bulk property (fixed shape, flows, fills its container) from the particle picture",
     ],
     parts=[
@@ -37,10 +38,10 @@ section_n1 = section(
             diagram(dg.states_svg(), 660, 250, "The three states: arrangement (how they are packed) and movement (what they do).") +
             "<table class='tbl'><tr><th></th><th>Solid</th><th>Liquid</th><th>Gas</th></tr>"
             "<tr><td><b>Arrangement</b></td><td>regular pattern (lattice), <b>touching</b>, <b>fixed positions</b></td><td>irregular, <b>touching</b>, <b>no fixed positions</b></td><td>random, <b>far apart</b> (about ten times the particle size), no pattern</td></tr>"
-            "<tr><td><b>Movement</b></td><td><b>vibrate about fixed positions</b></td><td><b>move around</b> each other, <b>flow over each other</b>, in random directions</td><td>move <b>fast</b>, in <b>straight lines</b>, in <b>random directions</b>, colliding with each other and the walls</td></tr>"
+            "<tr><td><b>Movement</b></td><td><b>vibrate about fixed positions</b></td><td><b>move around</b> / <b>slide past each other</b> in <b>random directions</b>, with a <b>range of speeds</b>, <b>colliding with each other</b></td><td>move <b>fast</b>, in <b>straight lines</b>, in <b>random directions</b>, colliding with each other and the walls</td></tr>"
             "<tr><td><b>Energy</b></td><td>least kinetic energy; strong forces hold them</td><td>more energy: enough to leave fixed positions but not to separate</td><td>most energy; forces between particles negligible</td></tr>"
             "<tr><td><b>Bulk properties</b></td><td>fixed shape and volume</td><td>fixed volume, takes the shape of its container, flows</td><td>fills its container, easily compressed, flows</td></tr></table>"
-            "<p>The June 2023 report (Q3(c)(ii), the motion of particles in a liquid): \"<b>the particles flow over each other</b>\" scored; \"move freely\" earned one mark but \"added nothing further about the motion\"; imprecise phrases such as \"with lots of energy\", bulk properties (\"they take the shape of the container\") and descriptions of <b>melting</b> scored nothing — the question was about the motion, not the change. The June 2025 report (Q5(b), liquid wax freezing): \"<b>now only vibrate in fixed positions</b>\" was full marks; \"no longer move past each other\" and \"<b>slow down</b> / lose energy\" scored; \"<b>become closer together</b>\" is arrangement, not motion, and \"is not enough for a mark\".</p>",
+            "<p>The June 2023 report (Q3(c)(ii), the motion of particles in a liquid): \"<b>the particles flow over each other</b>\" scored; \"move freely\" is the \"random\" mark — one of four credited points (random; a range of speeds; collide with each other; faster than in a solid) — so a second, different point about the motion is needed for the second mark (\"random speeds\" on its own scores 1); imprecise phrases such as \"with lots of energy\", bulk properties (\"they take the shape of the container\") and descriptions of <b>melting</b> scored nothing — the question was about the motion, not the change. The June 2025 report (Q5(b), liquid wax freezing): \"<b>now only vibrate in fixed positions</b>\" was full marks; \"no longer move past each other\" and \"<b>slow down</b> / lose energy\" scored; \"<b>become closer together</b>\" is arrangement, not motion, and \"is not enough for a mark\".</p>",
         ),
         worked(
             "Liquid to solid",
@@ -55,7 +56,7 @@ section_n1 = section(
                     marks(["Arrangement: <b>far apart</b>, in <b>random</b> positions with no pattern.", "Movement: moving <b>fast</b> in <b>straight lines</b> in <b>random directions</b> (colliding with each other and the container)."]), lines=2),
             choice("pm-n1-q2", "Which statement about particles in a liquid would score for 'describe the motion'?",
                    ["They take the shape of the container", "They have lots of energy", "They move around and flow over each other", "They are close together"], 2,
-                   "2023: 'flow over each other' scored; the others are bulk properties, vague energy or arrangement."),
+                   "2023: 'flow over each other' scored — the scheme also credits 'random', 'a range of speeds' and 'collide with each other'; the other options are bulk properties, vague energy or arrangement."),
             written("pm-n1-q3", "Explain, using the particle model, why a solid has a fixed shape but a liquid does not. (2)",
                     marks(["In a solid the particles are held in <b>fixed positions</b> (only vibrating), so the solid keeps its shape.", "In a liquid the particles are still touching but <b>can move around / flow over each other</b>, so the liquid takes the shape of its container."]), lines=2),
             choice("pm-n1-q4", "Why can a gas be compressed easily but a liquid cannot?",
@@ -136,7 +137,7 @@ section_n3 = section(
             "<tr><td><b>Regular solid</b> (block, cylinder)</td><td>balance</td><td>measure length, width and height with a ruler (or vernier callipers); $V = l \\times w \\times h$</td><td>measure each side in several places and average; zero the balance first</td></tr>"
             "<tr><td><b>Irregular solid</b> (stone, key)</td><td>balance</td><td>pour water into a <b>measuring cylinder</b> and <b>read the volume</b>; lower the object in so it is <b>completely under the water</b>; read the new volume; <b>volume = after − before</b></td><td>read the bottom of the meniscus at eye level; lower gently (no splashing); dry the object before weighing it, or weigh it first</td></tr>"
             "<tr><td><b>Liquid</b></td><td>put an empty measuring cylinder on the balance and <b>zero it</b> (or record its mass); pour in the liquid; the reading is the liquid's mass (or subtract)</td><td>read the volume from the cylinder's scale</td><td>use a large volume (a small percentage error); read the meniscus at eye level</td></tr></table>"
-            "<p>Then $\\rho = m \\div V$ for each. The June 2023 report (Q3(d), volume of an irregular piece of metal, 2 marks): any two of <b>measure the water volume before</b> adding the metal, make sure <b>all the metal is immersed</b>, <b>subtract</b> the initial from the final volume — \"many candidates scored full marks\". But \"describing a <b>displacement (Eureka) can</b> … scored nothing\" — the question had given a measuring cylinder, and the can is a different method (collect the overflow and measure that; useful for an object too big for a cylinder, but not the one asked for); and \"suggesting measurements not relevant to volume, such as the metal's mass\" earned nothing either. The June 2024 scheme (Q3(d)) had students <b>read a volume off a scale</b> before and after (1350 and 1750 cm³, each accepted within a range) and subtract: 400 cm³.</p>",
+            "<p>Then $\\rho = m \\div V$ for each. The June 2023 report (Q3(d), volume of an irregular piece of metal, 2 marks): any two of <b>measure the water volume before</b> adding the metal, make sure <b>all the metal is immersed</b>, <b>subtract</b> the initial from the final volume — \"many candidates scored full marks\". But \"describing a <b>displacement (Eureka) can</b> … scored nothing\" — the question had given a measuring cylinder, and the can is a different method (collect the overflow and measure that; useful for an object too big for a cylinder, but not the one asked for); and measurements not relevant to volume, such as the metal's mass, were ignored — as were \"repeat and average\", spillage and the meniscus: in that 2-mark volume question only the before-reading, full immersion and the subtraction scored. The June 2024 scheme (Q3(d)) had students <b>read a volume off a scale</b> before and after (1350 and 1750 cm³, each accepted within a range) and subtract: 400 cm³.</p>",
         ),
         worked(
             "The irregular solid",
@@ -149,18 +150,18 @@ section_n3 = section(
         ),
         practice("The density practical", [
             written("pm-n3-q1", "Describe how to find the density of a small stone. (4)",
-                    marks(["Measure the stone's <b>mass</b> on a balance.", "Pour water into a <b>measuring cylinder</b> and <b>read the volume</b>.", "Lower the stone in so it is <b>fully under the water</b>; read the new volume; <b>volume = new − old</b>.", "Density = mass ÷ volume ($\\rho = m / V$)."]), lines=4),
+                    marks(["Measure the stone's <b>mass</b> on a balance.", "Pour water into a <b>measuring cylinder</b> and <b>read the volume</b>.", "Lower the stone in so it is <b>fully under the water</b>; read the new volume; <b>volume = new − old</b>.", "Density = mass ÷ volume ($\\rho = m / V$). <b>Accuracy</b> (the fourth mark in June 2019 2H Q7(a)): read the level <b>at eye level</b>, and use a measuring cylinder <b>only a little wider than the stone</b> (or several stones together) so the rise is large — \"repeat and average\" is ignored."]), lines=4),
             choice("pm-n3-q2", "Which measurement is NOT needed to find the volume of an irregular solid by the measuring-cylinder method?",
                    ["The water volume before the object goes in", "The water volume after the object goes in", "The mass of the object", "That the object is fully under the water"], 2,
-                   "2023 report: the metal's mass is 'not relevant to volume' — it earned nothing in a volume question."),
+                   "2023 scheme: 'ignore other measurements such as mass' — the mass is not wrong, it is not a volume measurement, so it scores nothing in a volume question."),
             written("pm-n3-q3", "Describe how to find the density of a liquid. (3)",
                     marks(["Put an empty measuring cylinder on a <b>balance</b> and zero it (or record its mass).", "Pour in the liquid: the balance gives the liquid's <b>mass</b> (subtracting the empty cylinder if needed); read the <b>volume</b> from the cylinder scale.", "Density = mass ÷ volume."]), lines=3),
             numeric("pm-n3-q4", "A measuring cylinder reads 45 cm³. A stone of mass 52 g is lowered in and the reading becomes 65 cm³. Calculate the density of the stone.", 2.6, "g/cm³",
                     "Volume = 65 − 45.",
                     [r"$V = 65 - 45 = 20$ cm³"] + ewau(r"\rho = m \div V", r"\rho = 52 \div 20", "2.6", "g/cm³")),
             choice("pm-n3-q5", "Which is an accuracy improvement for the regular-block method?",
-                   ["Use a bigger balance", "Measure each dimension several times and average", "Use less water", "Weigh the block in water"], 1,
-                   "Repeat each length and average; read the meniscus at eye level for the cylinder methods."),
+                   ["Use a bigger balance", "Measure each dimension at several places along it (and use the mean), or use a larger block", "Use less water", "Weigh the block in water"], 1,
+                   "A bare 'repeat the readings' is ignored in the density method schemes (2019, 2023); measuring at several places along a side checks it is uniform, and a larger block makes the percentage error smaller."),
         ]),
     ],
 )
@@ -181,7 +182,7 @@ section_n4 = section(
     parts=[
         explain(
             "The spacing argument",
-            "<p>Density is mass per unit volume, and the particles of one substance all have the same mass, so density depends only on <b>how closely the particles are packed</b> — how many there are in each cubic metre. In a <b>gas</b> the particles are <b>far apart</b> (most of the volume is empty space), so there are far fewer in each m³: a gas is roughly a <b>thousand times less dense</b> than the liquid (steam about 0.6 kg/m³, water 1000 kg/m³). In a <b>liquid</b> and a <b>solid</b> the particles are <b>touching</b>, so the densities are similar; in most substances the solid's regular packing is slightly <b>closer</b> than the liquid's irregular packing, so the solid is a little denser and <b>sinks in its own liquid</b>. The June 2024 scheme (Q3(b), 2 marks): \"density of solid is greater than liquid\"; \"because the <b>particle spacing</b> in a solid is <b>less</b> than in a liquid\" — \"more tightly packed\" and \"<b>more particles per unit volume</b>\" accepted. The June 2025 question (Q5(c)(ii)) did it with data: the same mass of wax had a <b>smaller volume as a solid</b> than as a liquid.</p>"
+            "<p>Density is mass per unit volume, and the particles of one substance all have the same mass, so density depends only on <b>how closely the particles are packed</b> — how many there are in each cubic metre. In a <b>gas</b> the particles are <b>far apart</b> (most of the volume is empty space), so there are far fewer in each m³: a gas is roughly a <b>thousand times less dense</b> than the liquid (steam about 0.6 kg/m³, water 1000 kg/m³). In a <b>liquid</b> and a <b>solid</b> the particles are <b>touching</b>, so the densities are similar; in most substances the solid's regular packing is slightly <b>closer</b> than the liquid's irregular packing, so the solid is a little denser and <b>sinks in its own liquid</b>. The June 2024 scheme (Q3(b), 2 marks): \"density of solid is greater than liquid\"; \"(because) the <b>distance between particles</b> in the solid is <b>less</b>\" — \"particles are closer\", \"more tightly packed\" and \"<b>more particles per unit volume</b>\" all accepted. The June 2025 question (Q5(c)(ii)) did it with data: the same mass of wax had a <b>smaller volume as a solid</b> than as a liquid.</p>"
             "<p>The famous exception: <b>ice is less dense than water</b> (920 against 1000 kg/m³), because water molecules in ice are held in an open lattice with more space between them than in the liquid — which is why ice floats and pipes burst. The spec wants the general rule; the exception is worth knowing because questions use it.</p>",
         ),
         worked(
@@ -330,7 +331,7 @@ section_n7 = section(
         explain(
             "Choosing the equation",
             "<table class='tbl'><tr><th>The question says…</th><th>Equation</th><th>Watch</th></tr>"
-            "<tr><td>temperature rises / falls from … to …</td><td>$\\Delta Q = m c \\Delta\\theta$</td><td>$\\Delta\\theta$ is the <b>change</b> (final − initial); the same number in °C or K</td></tr>"
+            "<tr><td>temperature rises / falls from … to …</td><td>$\\Delta Q = m c \\Delta\\theta$</td><td>$\\Delta\\theta$ is the <b>change</b> (final − initial); the same number in °C or K — and if the question asks for a <b>temperature</b>, finish: 100 − 80 = 20 °C (an answer of 80 scored 2 of 3 in June 2019 2H Q7(b)(i))</td></tr>"
             "<tr><td>melts / freezes / boils / condenses, at a constant temperature</td><td>$Q = m L$</td><td>no $\\Delta\\theta$ at all; use the latent heat for the <b>right change</b> (fusion or vaporisation)</td></tr>"
             "<tr><td>ice at −10 °C becomes water at 20 °C</td><td>three stages: warm the ice to 0 °C ($m c_{ice} \\Delta\\theta$), melt it ($m L_f$), warm the water to 20 °C ($m c_{water} \\Delta\\theta$); <b>add</b></td><td>different $c$ for ice (2100) and water (4200)</td></tr>"
             "<tr><td>energy supplied by a heater for a time</td><td>$E = P t$ first (Topic 10), then one of the above</td><td>the heater energy equals $\\Delta Q$ only if none is wasted</td></tr></table>"
@@ -436,9 +437,9 @@ section_n9 = section(
             "A sealed can in the sun",
             "A sealed can of gas is left in the sun and warms up. Explain why the pressure inside the can increases. (3 marks)",
             [
-                "The gas particles gain energy and move <b>faster</b> (their average speed increases).",
+                "The gas particles move <b>faster</b> — a greater average speed means a greater <b>average kinetic energy</b> ($KE = \\tfrac{1}{2} m v^2$, a link in the June 2022 2H Q9(c) indicative content).",
                 "So they <b>collide with the walls</b> of the can <b>more frequently</b> and with <b>more force</b> each time (harder).",
-                "The volume is fixed, so the total force on each unit of area of the walls increases: the <b>pressure increases</b>.",
+                "The volume is fixed, so the total <b>force</b> on the walls increases and the area is unchanged: the <b>pressure increases</b> ($p = F \\div A$).",
             ],
         ),
         practice("Gas pressure", [
@@ -447,13 +448,13 @@ section_n9 = section(
             choice("pm-n9-q2", "A fixed mass of gas at constant volume is cooled. Its pressure…",
                    ["increases", "decreases, because the particles move more slowly and hit the walls less often and less hard", "stays the same", "becomes zero"], 1,
                    "The chain in reverse."),
-            choice("pm-n9-q3", "Which statement earns nothing in a gas-pressure explanation?",
+            choice("pm-n9-q3", "Which statement is not a link in the gas-pressure chain?",
                    ["The particles collide with the walls", "The particles collide with each other more often", "Each collision exerts a force on the wall", "The particles move faster when heated"], 1,
-                   "Particle–particle collisions do not push on the container."),
+                   "The collisions that matter for pressure are the ones with the walls; 'collide with each other' is not one of the credited points in a pressure explanation (it does score in a 'describe the motion' question, 2023)."),
             written("pm-n9-q4", "A sealed rigid container of gas is heated from 20 °C to 80 °C. Explain the effect on the pressure. (3)",
                     marks(["The particles move <b>faster</b> (greater average speed / kinetic energy).", "So they hit the walls <b>more often</b> and <b>harder</b> (greater force per collision).", "The volume is constant, so the total force per unit area — the <b>pressure</b> — <b>increases</b>."]), lines=3),
-            choice("pm-n9-q5", "In a sealed can heated in the sun (2024 Q9(b)), which quantity does NOT increase?",
-                   ["The average speed of the particles", "The pressure", "The mean distance between the particles", "The energy of the particles"], 2,
+            choice("pm-n9-q5", "A sealed can is taken from a cold room into a warm room; its volume does not change (2024 Q9(b)). Which quantity does NOT increase?",
+                   ["The mean speed of the particles", "The pressure", "The mean distance between the particles", "The mean size of the momentum of the particles"], 2,
                    "Constant volume and the same number of particles: the spacing cannot change."),
         ]),
     ],

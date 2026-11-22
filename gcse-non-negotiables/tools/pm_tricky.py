@@ -41,7 +41,7 @@ section_t1 = section(
             "Boiling, as the particles",
             "Water is heated until it boils. Describe the changes in the arrangement and movement of the particles. (3 marks)",
             [
-                "<b>Before</b>: in the liquid the particles are <b>touching</b>, in no pattern, and <b>move around / flow over each other</b>.",
+                "<b>Before</b>: in the liquid the particles are <b>touching</b>, in no pattern, and <b>move around / flow past each other</b> at a <b>range of speeds</b>.",
                 "<b>Joining</b>: as the water is heated the particles <b>gain energy and move faster</b>, until at the boiling point they have enough energy to <b>break away</b> from their neighbours.",
                 "<b>After</b>: in the gas they are <b>far apart</b> and move <b>fast in straight lines in random directions</b>.",
             ],
@@ -85,7 +85,7 @@ section_t2 = section(
             "<tr><td><b>Units</b></td><td>2023 Q3(b): kg and m³ converted to g and cm³ \"with incorrect powers of ten\"</td><td>stay in SI; if you must convert, 1 g/cm³ = 1000 kg/m³, 1 cm³ = $10^{-6}$ m³, 1 g = $10^{-3}$ kg</td></tr>"
             "<tr><td><b>Rounding</b></td><td>2025 Q5(c)(i): 0.0047 m³ rounded to 0.005 m³ — \"poor practice\"</td><td>keep the significant figures of the data (two or three); never round to one figure</td></tr>"
             "<tr><td><b>Scale reading</b></td><td>2024 Q3(d): a measuring cylinder read before and after (1350 and 1750 cm³) — the volume is the <b>difference</b>, 400 cm³</td><td>read the bottom of the meniscus on both, subtract, check the unit on the scale</td></tr></table>"
-            "<p><b>The upthrust route</b> (Topic 15 meets Topic 14, June 2025 Q9(a)): weigh an object in air and in water; the difference is the <b>upthrust</b>, which equals the <b>weight of water displaced</b>; so the mass of water displaced $= \\text{upthrust} \\div g$, and its volume = that mass ÷ 1000 kg/m³ — and that is the <b>volume of the object</b>. Then $\\rho = m \\div V$ for the object (the mass from its weight in air). The scheme gave $1.43 \\times 10^{-4}$ m³ and $4.9 \\times 10^3$ kg/m³, with error carried forward from the volume into the density.</p>",
+            "<p><b>The upthrust route</b> (Topic 15 meets Topic 14, June 2025 Q9(a)): weigh an object in air and in water: the reading falls because of the <b>upthrust</b> — the block's <b>apparent loss in weight</b> in the liquid — which is <b>equal to the weight of liquid displaced</b> (the 2-mark explanation in June 2025 Q9(a)(i)); so the mass of water displaced $= \\text{upthrust} \\div g$, and its volume = that mass ÷ 1000 kg/m³ — and that is the <b>volume of the object</b>. Then $\\rho = m \\div V$ for the object (the mass from its weight in air). The scheme gave $1.43 \\times 10^{-4}$ m³ and $4.9 \\times 10^3$ kg/m³, with error carried forward from the volume into the density.</p>",
         ),
         worked(
             "Grams, cubic centimetres and a density in kg/m³",
@@ -159,7 +159,7 @@ section_t3 = section(
                 "<b>Oil, mass</b>: put an empty measuring cylinder on the balance and <b>zero it</b> (or record its mass); pour in the oil; read the mass (subtracting the cylinder if needed).",
                 "<b>Oil, volume</b>: read the volume of the oil from the cylinder's scale.",
                 "<b>Calculate</b>: density = mass ÷ volume for each ($\\rho = m / V$).",
-                "<b>Accuracy</b>: read the meniscus at eye level; use a large volume of oil; dry the stone before weighing (or weigh it first); repeat and average.",
+                "<b>Accuracy</b>: read the meniscus at eye level; use a cylinder only a little wider than the stone so the rise in level is large; dry the stone before weighing (or weigh it first). (\"Repeat and average\" is ignored in the density method schemes, 2019 and 2023.)",
             ],
         ),
         practice("Planning the density practical", [
@@ -171,7 +171,7 @@ section_t3 = section(
                         ("Measure", "Mass with a balance; volume with a ruler ($l \\times w \\times h$) or by displacement in a measuring cylinder (before, after, subtract)."),
                         ("Use", "Plot mass against volume; a straight line through the origin shows the density is the same for every size; gradient = density."),
                         ("Accuracy", "Zero the balance; measure each length in several places; read the meniscus at eye level; fully submerge."),
-                        ("Repeat", "Repeat each reading and take a mean."),
+                        ("Repeat", "Repeat each reading and take a mean — write it, but know that the density schemes (2019, 2023) ignore it; the accuracy marks are eye level, full immersion and a right-sized cylinder."),
                     ], total=6, extra=["Any six of the seven points."]), lines=7),
             choice("pm-t3-q2", "A 2023 question gave a measuring cylinder and asked how to find the volume of an irregular metal object. A description of a eureka (displacement) can…",
                    ["scored full marks", "scored nothing — the measuring-cylinder method the question gave was wanted", "is the only valid method", "scored one mark for the apparatus"], 1,
@@ -182,7 +182,7 @@ section_t3 = section(
                    ["So the water does not get warm", "So the full volume of the object is displacing water and none splashes out", "So the balance reads correctly", "So the object does not dissolve"], 1,
                    "Any part above the water, or any splash, makes the volume reading too small."),
             written("pm-t3-q5", "State two accuracy points for finding the density of a liquid with a measuring cylinder and a balance. (2)",
-                    marks(["Read the <b>bottom of the meniscus at eye level</b>.", "Use a <b>large volume</b> of liquid (smaller percentage error) / zero the balance with the empty cylinder on it / repeat and average."]), lines=2),
+                    marks(["Read the <b>bottom of the meniscus at eye level</b>.", "Use a <b>large volume</b> of liquid (smaller percentage error) / zero the balance with the empty cylinder on it. (Not \"repeat and average\" — ignored in these schemes.)"]), lines=2),
         ]),
     ],
 )
@@ -226,7 +226,7 @@ section_t4 = section(
         explain(
             "Reading the graph, and explaining it",
             "<p><b>Sloping section</b>: the energy supplied raises the temperature — the particles move faster. <b>Flat section</b>: the energy supplied changes the state — it separates the particles (potential energy) and the kinetic energy, and so the temperature, does not change. Its <b>height</b> is the melting or boiling point; its <b>length</b> is how long the change took, so with a steady heater of power $P$, the energy for the change is $E = P t$ and $L = E \\div m$. A <b>cooling</b> curve is the same picture upside down: the flat section is <b>freezing</b> (or condensing), at the same temperature as melting, with the energy going <b>out</b> to the surroundings.</p>"
-            "<p>The June 2025 report (Q5(c)(iii), a cooling curve for wax with a table of its specific heat capacity and specific latent heat, 3 marks): the marks were for saying that the <b>latent heat is much larger than the specific heat capacity</b> — \"much more energy is needed to change state than to change temperature\" — <b>quoting the values</b> from the table to support it; and that energy is <b>transferred from the wax to the surroundings</b> (the wax is cooling, so the energy goes out). A fourth idea, that the rate of transfer is about the same throughout so a larger energy takes a longer time, \"was rarely seen\". Many candidates \"described melting rather than freezing\" — on a cooling curve the flat part is the wax <b>freezing</b>.</p>"
+            "<p>The June 2025 report (Q5(c)(iii), a cooling curve for wax with a table of its specific heat capacity and specific latent heat, 3 marks): the marks were for saying that the <b>latent heat is much larger than the specific heat capacity</b> — \"much more energy is needed to change state than to change temperature\" — <b>quoting the values</b> from the table to support it; and that <b>less energy is transferred to the surroundings</b> while the solid cools (R to S) than while it freezes (Q to R) — the comparison is the mark. A fourth idea, that the rate of transfer is about the same throughout so a larger energy takes a longer time, \"was rarely seen\". Many candidates \"described melting rather than freezing\" — on a cooling curve the flat part is the wax <b>freezing</b>.</p>"
             "<p><b>Why flat sections are long</b>: for water, $L_{\\text{fusion}} = 334\\,000$ J/kg against $c = 4200$ J/kg °C — melting 1 kg of ice takes as much energy as warming the water by about 80 °C; boiling it ($L_{\\text{vap}} = 2\\,260\\,000$ J/kg) takes over five times more than warming it from 0 to 100 °C.</p>",
         ),
         worked(
@@ -291,7 +291,7 @@ section_t5 = section(
             "<tr><td><b>Compare</b>: $L_{\\text{fusion}}$ (334 kJ/kg) and $L_{\\text{vap}}$ (2260 kJ/kg) for water</td><td>boiling needs <b>far more</b> energy per kg than melting: the particles must separate completely, not just leave their fixed positions</td></tr>"
             "<tr><td><b>Predict</b>: 0.50 kg of water receives 21 000 J</td><td>$\\Delta\\theta = 21\\,000 \\div (0.50 \\times 4200) = 10$ °C</td></tr>"
             "<tr><td><b>Explain the shortfall</b>: the measured rise is less than the calculated one</td><td>some of the energy is <b>transferred to the surroundings</b> (the air, the bench) and to the <b>container, heater and thermometer</b>, so <b>less energy goes into the water</b> than the heater supplied</td></tr></table>"
-            "<p>The June 2024 scheme (Q9(c)(ii), 2 marks: why the actual rise was smaller than calculated): \"energy transferred to the <b>surroundings</b>\" (1); \"energy transferred to <b>heater parts / container</b>\" (1); \"<b>ignore</b> 'energy is lost'\" and \"ignore 'heater not 100 % efficient'\" — say <b>where</b> the energy went, with a destination. The reverse version — the calculated $c$ comes out <b>too high</b> — has the same cause: the energy you put into $\\Delta Q$ was the heater's, but the water only got part of it, so dividing the full energy by the (smaller) rise overestimates $c$.</p>",
+            "<p>The June 2024 scheme (Q9(c)(ii), 2 marks: why the actual rise was smaller than calculated): any two of \"<b>not all the energy supplied goes to</b> the brick\", \"<b>not all</b> of it <b>stays</b> there\", \"energy transferred to the <b>heater parts</b>\", \"energy transferred to the <b>surroundings</b>\", or the equation argument; \"ignore 'energy is lost / wasted' <i>unqualified</i>\", \"ignore 'not 100 % efficient'\" and sound — and the one sentence \"<b>the brick transfers thermal energy to the surroundings</b>\" scored both marks. Say <b>where</b> the energy went, with a destination. The reverse version — the calculated $c$ comes out <b>too high</b> — has the same cause: the energy you put into $\\Delta Q$ was the heater's, but the water only got part of it, so dividing the full energy by the (smaller) rise overestimates $c$.</p>",
         ),
         worked(
             "Calculated and measured",
@@ -352,8 +352,8 @@ section_t6 = section(
             "<tr><td><b>3 Change</b></td><td>let the heater run (e.g. 10 minutes), or take readings every minute to plot a graph</td></tr>"
             "<tr><td><b>4 Measure</b></td><td>mass on a balance (zero with the empty beaker); temperatures with the thermometer; energy on the joulemeter or $E = I V t$ with an ammeter, voltmeter and stopwatch</td></tr>"
             "<tr><td><b>5 Use</b></td><td>$c = \\Delta Q \\div (m \\Delta\\theta)$; or plot temperature against energy — gradient $= 1 \\div (m c)$</td></tr>"
-            "<tr><td><b>6 Accuracy</b></td><td><b>lag</b> the beaker and use a <b>lid</b> (less energy to the surroundings); <b>stir</b> so the thermometer reads the whole water; read the thermometer at eye level; a larger mass and longer time give larger, less uncertain readings</td></tr>"
-            "<tr><td><b>7 Repeat</b></td><td>repeat and average, or take the gradient of the graph through many points</td></tr></table>"
+            "<tr><td><b>6 Accuracy</b></td><td><b>lag</b> the beaker and use a <b>lid</b> (less energy to the surroundings); <b>stir</b> so the thermometer reads the whole water; read the thermometer at eye level; keep the <b>heater fully under the water</b>; heat for longer (or use less water) so the <b>temperature rise is larger</b> and its uncertainty matters less</td></tr>"
+            "<tr><td><b>7 Repeat</b></td><td>take readings every minute and use the gradient of the graph — in \"improve the method\" questions \"repeat the readings\" is <b>ignored</b> (2018, 2020); lid, lagging, stirrer, heater fully under the water and a larger temperature rise are what score</td></tr></table>"
             "<p><b>The melting-ice half</b>: crushed ice in a beaker, thermometer in, heat gently (or let it stand), record the temperature every minute. The temperature rises to 0 °C and then <b>stays at 0 °C while the ice melts</b>, though energy is still going in; once it has all melted, the water warms. The flat section is the evidence that a change of state happens at a constant temperature.</p>",
         ),
         worked(
@@ -362,7 +362,7 @@ section_t6 = section(
             [
                 "Measure the <b>mass</b> of water in an insulated beaker with a <b>balance</b> (zero the balance with the empty beaker).",
                 "Put an <b>immersion heater</b> and a <b>thermometer</b> in the water, with a lid; record the <b>initial temperature</b>.",
-                "Switch on the heater and start a <b>stopwatch</b>; stir; after a measured time (say 10 minutes) record the <b>final temperature</b>.",
+                "Switch on the heater and start a <b>stopwatch</b>; after a measured time (say 10 minutes) switch off, <b>stir</b>, <b>keep watching the thermometer</b> and record the <b>highest temperature reached</b> as the final temperature (the water takes time to heat through — the whole of the 3-mark June 2022 Q9(b), and a point in the 2024 and Nov 2021 6-markers).",
                 "Measure the <b>energy supplied</b> with a <b>joulemeter</b>, or from the ammeter and voltmeter readings: $E = I V t$.",
                 "Calculate the <b>temperature change</b> $\\Delta\\theta$ = final − initial; then $c = \\Delta Q \\div (m \\Delta\\theta)$.",
                 "To reduce energy transferred to the surroundings, lag the beaker and use a lid; repeat, or plot temperature against energy and use the gradient.",
@@ -374,9 +374,9 @@ section_t6 = section(
                         ("Why not", "She has no value for the <b>energy supplied</b>: a Bunsen burner's energy transfer cannot be measured (and much of it heats the air and the beaker), so $\\Delta Q$ in $\\Delta Q = m c \\Delta\\theta$ is unknown — the mass of water may also be unmeasured."),
                         ("Heater", "Replace the burner with an <b>immersion heater</b> in the water, connected to a power supply through a <b>joulemeter</b> (or an ammeter and voltmeter with a stopwatch so that $E = I V t$)."),
                         ("Mass", "Measure the <b>mass</b> of the water with a balance (zeroed with the empty beaker)."),
-                        ("Temperatures", "Record the initial temperature, stir, and record the final temperature: $\\Delta\\theta$ = final − initial."),
+                        ("Temperatures", "Record the initial temperature; after heating, switch off, stir, keep watching and record the <b>highest temperature reached</b>: $\\Delta\\theta$ = final − initial."),
                         ("Calculate", "Rearrange: $c = \\Delta Q \\div (m \\Delta\\theta)$ — or take readings every minute and plot temperature against energy, using the gradient."),
-                        ("Accuracy", "Lag the beaker and use a lid so that nearly all the measured energy goes into the water; repeat."),
+                        ("Accuracy", "Lag the beaker and use a lid so that nearly all the measured energy goes into the water; keep the heater fully under the water. (\"Repeat\" is ignored in these schemes.)"),
                     ], total=6, extra=["Marked by levels, not per row: Level 3 (5–6) needs the reason (no measured energy), the temperature change, the energy supplied and how $c$ is found from them; Level 2 is a method with gaps."]), lines=8),
             group("pm-t6-q2", "The graph shows the temperature of crushed ice in a beaker as it is heated steadily.", [
                 written("pm-t6-q2a", "Explain the shape of the graph between 1 min and 7 min. (2)",
@@ -556,7 +556,7 @@ SECTIONS = [section_t1, section_t2, section_t3, section_t4, section_t5, section_
 FACTS = [
     # N1
     fact("Movement of particles in a solid?", "Vibrate about fixed positions.", "three-states"),
-    fact("Movement of particles in a liquid (the phrase that scores)?", "Move around / flow over each other, in random directions, still touching.", "three-states"),
+    fact("Movement of particles in a liquid (the phrase that scores)?", "Move around / flow past each other, in random directions, at a range of speeds, colliding with each other (still touching) — 2023: any two of random / range of speeds / collide / faster than a solid.", "three-states"),
     fact("Movement of particles in a gas?", "Fast, in straight lines, in random directions; far apart; colliding with each other and the walls.", "three-states"),
     fact("Arrangement in a solid, liquid, gas?", "Solid: regular, touching, fixed positions. Liquid: irregular, touching, no fixed positions. Gas: random, far apart.", "three-states"),
     fact("Why can a gas be compressed but a liquid cannot?", "Gas particles are far apart with empty space between them; liquid particles are already touching.", "three-states"),
@@ -617,16 +617,16 @@ FACTS = [
     fact("Template for a change-of-state motion answer?", "Before (motion in state 1) → joining word (gain/lose energy, speed up/slow down) → after (motion in state 2); particles as the subject.", "motion-words"),
     fact("Three answers that earn nothing about particle motion?", "Bulk properties (takes the shape of the container), 'lots of energy', and describing a different change (melting when asked about freezing).", "motion-words"),
     # T2
-    fact("Volume from an upthrust?", "Upthrust = weight of water displaced; mass of water $= \\text{upthrust} \\div g$; volume = mass ÷ 1000 kg/m³ = object's volume.", "density-hard"),
+    fact("Volume from an upthrust?", "The apparent loss in weight in the liquid = upthrust = weight of water displaced; mass of water $= \\text{upthrust} \\div g$; volume = mass ÷ 1000 kg/m³ = object's volume.", "density-hard"),
     fact("Measuring-cylinder volume of an object?", "Final reading − initial reading.", "density-hard"),
     # T3
     fact("Mass–volume graph for one material?", "A straight line through the origin; gradient = density; shows density does not depend on size.", "density-plan"),
     # T4
     fact("Flat section on a heating graph?", "A change of state at constant temperature: height = melting/boiling point; length × power = energy for the change.", "heating-cooling-graphs"),
-    fact("Why is the flat section long (2025)?", "Latent heat ≫ specific heat capacity (quote the values); energy transferred from the wax to the surroundings at about the same rate, so more energy takes longer.", "heating-cooling-graphs"),
+    fact("Why is the flat section long (2025)?", "Latent heat ≫ specific heat capacity (quote the values); less energy leaves during the cooling section than during freezing; energy leaves at about the same rate throughout, so the larger energy takes longer.", "heating-cooling-graphs"),
     fact("Flat section on a cooling curve?", "Freezing (or condensing) — not melting; same temperature as the melting point; energy given out.", "heating-cooling-graphs"),
     # T5
-    fact("Why was the measured temperature rise smaller than calculated (2024)?", "Energy transferred to the surroundings and to the container/heater parts. Ignore 'energy lost' and 'not 100 % efficient'.", "shc-vs-slh"),
+    fact("Why was the measured temperature rise smaller than calculated (2024)?", "Not all the energy supplied goes to / stays in the object: energy transferred to the surroundings and to the heater parts. 'Energy is lost' scores only with a destination; 'not 100 % efficient' is ignored.", "shc-vs-slh"),
     fact("Same energy, same mass, smaller c?", "Larger temperature rise: $\\Delta\\theta = \\Delta Q \\div (m c)$.", "shc-vs-slh"),
     # T6
     fact("SHC-of-water practical: apparatus?", "Immersion heater, power supply, balance, thermometer, stopwatch, joulemeter (or ammeter and voltmeter), insulated beaker with lid, stirrer.", "water-practical"),

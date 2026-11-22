@@ -191,3 +191,32 @@ converter wrapped 39 expressions and three lines were done by hand;
 notes mode; at 390 px nothing scrolls sideways, no card wider than the
 screen, nothing sticks out. The heating graph's "boiling" label was
 clipped at the right edge of the plot and now sits left of its marker.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-14.md`
+(15 questions, 12 with schemes) and the density / upthrust parts of
+topic-15 (24 parts matched). No physics error. Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| particle-model / three-states (table, explain, checklist), pm-n1-q2, template, flashcard | liquid motion in the four credited words (random; range of speeds; collide with each other; faster than a solid) — "flow over each other" is one of them, not the only one; differences must compare both states | 2H June 2023 Q3(c)(ii); Nov 2021 Q3(a) |
+| particle-model / density-practical (explain), pm-n3-q1, pm-n3-q2, pm-n3-q5; density-plan (worked, pm-t3-q1, pm-t3-q5) | "repeat and average" is **ignored** in the density method schemes — replaced by the credited accuracy ideas (fully submerged, eye level, several small objects / a right-sized cylinder); pm-n3-q1 now has its fourth (accuracy) mark; "mass earned nothing" → ignored | 2H June 2019 Q7(a); June 2023 Q3(d) |
+| particle-model / density-states (explain) | the 2024 wording is "distance between particles … less", with "closer / more tightly packed / more per unit volume" accepted | 2H June 2024 Q3(b) |
+| particle-model / heating-cooling-graphs (explain), flashcard | the 2025 third point is comparative: *less* energy transferred during the solid-cooling section | 2H June 2025 Q5(c)(iii) |
+| particle-model / shc-vs-slh (explain), flashcard | the 2024 scheme quoted as written (five points incl. "not all the energy goes to / stays in the brick"; "ignore energy is lost *unqualified*"; the one sentence worth 2) | 2H June 2024 Q9(c)(ii) |
+| particle-model / water-practical (table, worked, pm-t6-q1), flashcards | switch off, **stir, keep watching and record the highest temperature reached**; heater fully under the water; a *smaller* amount of water for a larger rise (not a larger mass); repeats are ignored in "improve the method" questions | 2H June 2022 Q9(b); June 2024 Q9(d); Nov 2021 Q10(b); Nov 2020 Q2(b)(ii); June 2018 Q2(a)(ii) |
+| particle-model / density-hard (explain), flashcard | "the block's **apparent loss in weight** = **weight of liquid displaced**" | 2H June 2025 Q9(a)(i) |
+| particle-model / gas-pressure (worked, pm-n9-q3, pm-n9-q5) | the $KE = \tfrac{1}{2}mv^2$ and $p = F/A$ links added; "bump into each other earns nothing" → not a link in the pressure chain (it scores in a motion question); pm-n9-q5 restated as the 2024 question was set (cold room → warm room; the momentum option) | 2H June 2022 Q9(c); June 2024 Q9(b) |
+| particle-model / thermal-equations table | if the question asks for a temperature, finish (80 scored 2 of 3) | 2H June 2019 Q7(b)(i) |
+
+No stored answer changed; `check_topic.js particle-model` passes on both
+tiers. H list in the report: the **method of mixtures** SHC method
+(Nov 2021 Q10(b) 6-marker, Nov 2020 Q2(b)) and its improvements — absent
+from T6; "state the measurements needed" (2018 Q2(a)(i)); the s.f.
+instruction as a separate mark (Nov 2021 Q10(a)(i), 2022 Q3(b)); the
+consistent-unit rule (2023 Q3(b)); water's density against temperature
+(2019 Q7(b)(iii)); why displacement fails for wood (2022 Q3(c)); the
+force on the tube wall "at right angles" (2018 Q1(b)(i)).
