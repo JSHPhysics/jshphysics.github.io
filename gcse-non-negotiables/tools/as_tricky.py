@@ -91,7 +91,7 @@ section_t2 = section(
         explain(
             "Three chains",
             diagram(dg.orbit_svg(), 600, 260, "Velocity along the orbit, gravity towards the centre, always at right angles.") +
-            "<p><b>Chain 1 — constant speed but accelerating:</b> velocity is a <b>vector</b> → the <b>direction</b> of motion is <b>continuously changing</b> → so the <b>velocity is changing</b> → a changing velocity is an <b>acceleration</b> → it needs a <b>resultant force</b> → that force is <b>gravity</b>, acting <b>towards the centre</b>. Trap: \"it is accelerating because it is speeding up\" — it is not; and \"centripetal force\" on its own was ignored in June 2024 — name the force (gravity) and its direction.</p>"
+            "<p><b>Chain 1 — constant speed but accelerating:</b> velocity is a <b>vector</b> → the <b>direction</b> of motion is <b>continuously changing</b> → so the <b>velocity is changing</b> → a changing velocity is an <b>acceleration</b> → it needs a <b>resultant force</b> → that force is <b>gravity</b>, acting <b>towards the centre</b>. Trap: \"it is accelerating because it is speeding up\" — it is not; and in the one-mark \"why is the velocity changing\" (June 2024, June 2025) \"centripetal force\", \"it is accelerating\" and \"the speed is changing\" were all ignored — the credited reasons are the changing <b>direction</b>, velocity being a <b>vector</b>, or a <b>resultant force</b>. For the force that keeps a satellite in orbit, \"gravitational\" or \"centripetal\" both scored (June 2018 Q4(b)(i)); name it and give its direction.</p>"
             "<p><b>Chain 2 — radius and speed:</b> closer to the central body → <b>stronger gravitational force</b> → a tighter turn is needed → <b>higher speed</b> for a stable orbit. The spec's wording (7.7P): <i>if the speed of an orbiting body changes, the radius of its orbit must change too</i> — faster → smaller orbit; slower → larger orbit. Trap: students write \"closer orbits are slower because they have less distance to travel\". Less distance per orbit is why the <i>period</i> is shorter, but the <i>speed</i> is higher.</p>"
             "<p><b>Chain 3 — comets:</b> highly elliptical orbit → gravitational force from the Sun is <b>stronger when closer</b> → the comet <b>speeds up as it falls towards the Sun</b> (gravitational potential store → kinetic store) and <b>slows as it climbs away</b> → fastest at the closest point, slowest at the furthest. Trap: a comet's orbit is not a circle, so its speed is <b>not</b> constant, unlike a planet's.</p>"
             "<p><b>Geostationary explained:</b> there is only one height (about 36 000 km) at which the orbital period is exactly 24 hours; placed there above the equator, moving the same way the Earth turns, a satellite stays over one point. Lower → period shorter → it drifts ahead of the ground.</p>",
@@ -154,11 +154,12 @@ section_t3 = section(
             "<p>The June 2022 Paper 1H question (Q6) gave the spectra of two galaxies and asked students to explain how they showed the Universe is expanding. The scheme:</p>"
             "<table class='tbl'><tr><th>Mark</th><th>What to write</th></tr>"
             "<tr><td>1</td><td>The lines in the <b>more distant</b> galaxy's spectrum are at <b>longer wavelengths</b> — it has the <b>greater red-shift</b>.</td></tr>"
-            "<tr><td>2</td><td>Greater red-shift means it is <b>moving away faster</b>; so <b>more distant galaxies move away faster</b>, which is what an <b>expanding</b> Universe looks like.</td></tr></table>"
-            "<p>Spell out each arrow. Common losses: saying \"the galaxy is red-shifted\" without saying what that shows; saying \"moving away\" without the distance–speed link; saying \"expanding\" with no evidence. Writing \"the light gets redder\" is not the same as \"the wavelength is longer\".</p>"
+            "<tr><td>2</td><td>Greater red-shift means it is <b>moving away faster</b> (a larger recession velocity).</td></tr></table>"
+            "<p>In a 2-mark version (June 2022 Q6(b)(iii), June 2023 Q4(b)) those two points are the whole answer; the 3-mark version (June 2024 Q1(c)(ii)) adds <b>more distant galaxies have the bigger red-shift, so move away faster</b>. Match the number of links to the marks.</p>"
+            "<p>Spell out each arrow. Common losses: saying \"the galaxy is red-shifted\" without saying what that shows; saying \"moving away\" without the distance–speed link; saying \"expanding\" with no evidence. Writing \"the light gets redder\" or \"shifted to the red end\" is not the same as \"the <b>wavelength is longer</b>\" — the 2023 scheme ignores the first and credits only the second. And it is <b>galaxies</b> that are moving away: \"stars\", \"planets\" and \"objects\" are ignored.</p>"
             "<p><b>Why expansion:</b> if <b>every</b> galaxy is moving away from us, and the further ones faster, either we are at the centre of a huge explosion (we are not — every galaxy sees the same thing) or <b>space itself is stretching</b>, carrying all the galaxies apart. Dots on a balloon being inflated: every dot sees every other move away, the more distant ones faster.</p>"
             "<p><b>Why red-shift does not settle the argument:</b> both the Big Bang and the Steady State theory describe an <b>expanding</b> Universe, so both predict red-shift. Red-shift is evidence <b>for expansion</b>, not for the Big Bang alone. What decided it was the CMB (T4).</p>"
-            "<p><b>The calculations</b> (if a question supplies the equations): $z = \\dfrac{\\Delta\\lambda}{\\lambda}$, and recession velocity $v = z \\times c$ with $c = 3 \\times 10^8$ m/s. The 2022 report: candidates mixed standard form with ordinary numbers (656 nm with 6.56 × 10⁻⁷ m) and lost the arithmetic; keep every wavelength in the same form, and use the \"show that\" value in the next part if there is one.</p>",
+            "<p><b>The calculations</b> (if a question supplies the equations): $z = \\dfrac{\\Delta\\lambda}{\\lambda}$, and recession velocity $v = z \\times c$ with $c = 3 \\times 10^8$ m/s. The 2022 report: candidates mixed standard form with ordinary numbers (656 nm with 6.56 × 10⁻⁷ m) and lost the arithmetic; keep every wavelength in the same form. In a \"show that … is about 0.025\" question write your own unrounded result ($z = 0.0244$): the quoted 0.025 copied back on its own scores nothing (2022: \"do not accept 0.025 on its own\"). In the next part either your value or the quoted one is accepted.</p>",
         ),
         worked(
             "Two spectra",
@@ -233,7 +234,7 @@ section_t4 = section(
                 "<b>Both theories</b> say the Universe is <b>expanding</b>; the Big Bang says it began from a tiny, hot, dense point, the Steady State says it has always existed with new matter continually created.",
                 "<b>Red-shift</b>: light from distant galaxies has longer wavelengths, more so the more distant the galaxy, showing galaxies are moving apart — the Universe is expanding. This <b>supports both</b> theories.",
                 "The Big Bang theory <b>predicted</b> that radiation left over from the hot early Universe should still be detectable, stretched by the expansion to <b>microwave</b> wavelengths and coming from <b>all directions</b>.",
-                "The <b>cosmic microwave background</b> was then <b>discovered</b>, matching that prediction — evidence for a hot, dense beginning.",
+                "The <b>cosmic microwave background</b> was then <b>discovered</b>, matching that prediction: it is the radiation <b>left over from the start</b>, now <b>cooled</b> to microwaves, so the Universe <b>had a definite beginning</b>.",
                 "The Steady State theory <b>could not explain</b> the CMB, because it has no hot early Universe.",
                 "So the Big Bang theory has <b>more supporting evidence</b> (red-shift and the CMB) and a confirmed prediction, and it became the accepted model.",
             ],
@@ -241,12 +242,12 @@ section_t4 = section(
         practice("Why the CMB decided it", [
             written("as-t4-q1", "Describe what the cosmic microwave background radiation is. (2)",
                     marks(["<b>Microwave</b> radiation detected coming from <b>all directions</b> in space (at the same temperature, about 2.7 K).",
-                           "It is the radiation <b>left over from the hot early Universe</b>, stretched to microwave wavelengths by the expansion."]), lines=2),
+                           "It is the radiation <b>left over from the start of the Universe</b>, <b>cooled</b> (stretched) to microwave wavelengths by the expansion — so the Universe <b>had a beginning</b>."]), lines=2),
             written("as-t4-q2", "Explain why the CMB supports the Big Bang theory. (3)",
                     mark_scheme([
                         ("Prediction", "The Big Bang theory says the early Universe was <b>hot and dense</b> and full of radiation."),
                         ("Stretching", "As the Universe <b>expanded</b>, that radiation was stretched to <b>longer (microwave) wavelengths</b> and should be seen coming from everywhere."),
-                        ("Match", "Microwave radiation <b>is</b> detected from all directions, as <b>predicted</b> — so it is evidence for a hot beginning."),
+                        ("Match", "Microwave radiation <b>is</b> detected from every direction — the radiation <b>left over from the beginning</b>, <b>cooled</b> by the expansion — so the Universe <b>had a beginning</b>."),
                     ]), lines=4),
             written("as-t4-q3", "Explain why the discovery of the CMB led scientists to reject the Steady State theory. (2)",
                     marks(["The Steady State theory says the Universe has <b>always existed</b> and looked the same, with <b>no hot early phase</b>…",
@@ -282,7 +283,7 @@ section_t5 = section(
         explain(
             "Gravity versus pressure",
             "<table class='tbl'><tr><th>Stage</th><th>Gravity</th><th>Outward pressure</th><th>Result</th></tr>"
-            "<tr><td>Nebula → protostar</td><td>pulls the gas and dust together</td><td>small</td><td>the cloud <b>collapses</b>; compressing it makes it <b>denser and hotter</b> (gravitational potential → thermal)</td></tr>"
+            "<tr><td>Nebula → protostar</td><td>pulls the gas and dust together</td><td>small</td><td>the cloud <b>collapses</b>; its <b>temperature, pressure and density increase</b> (gravitational potential energy → kinetic energy of the particles)</td></tr>"
             "<tr><td>Fusion starts</td><td>still pulling in</td><td>core hot enough (millions of °C) for <b>hydrogen nuclei to fuse into helium</b>, releasing energy</td><td>the energy heats the gas, whose <b>pressure pushes outwards</b></td></tr>"
             "<tr><td>Main sequence</td><td>inward</td><td>outward, from the hot gas</td><td><b>balanced</b> — the star is <b>stable</b> and the same size for billions of years</td></tr>"
             "<tr><td>Hydrogen runs out</td><td>wins in the core</td><td>falls</td><td>the <b>core contracts and heats</b> until <b>helium</b> fuses; the extra energy pushes the <b>outer layers out</b> — a <b>red giant</b> (or supergiant)</td></tr>"
@@ -294,7 +295,7 @@ section_t5 = section(
             "The 3-mark stability explanation",
             "Explain how a protostar becomes a main sequence star, and why a main sequence star remains the same size for billions of years. (3 marks)",
             [
-                "<b>Gravity</b> pulls the gas and dust of the protostar inwards, <b>compressing</b> it and making the core <b>hotter and denser</b>.",
+                "<b>Gravity</b> pulls the gas and dust of the protostar inwards, <b>compressing</b> it so the core's <b>temperature, pressure and density increase</b>.",
                 "When the core is hot enough, <b>hydrogen nuclei fuse</b> to form helium, <b>releasing energy</b> — the star is now a main sequence star.",
                 "It stays the same size because the <b>outward pressure</b> of the hot gas, kept up by fusion, <b>balances the inward force of gravity</b>.",
             ],
@@ -302,13 +303,13 @@ section_t5 = section(
         practice("How a star stays stable", [
             written("as-t5-q1", "Explain how a nebula becomes a protostar. (2)",
                     marks(["<b>Gravity</b> pulls the particles of gas and dust together, so the cloud <b>collapses</b> and becomes denser.",
-                           "Compressing the gas transfers energy to its thermal store: it gets <b>hotter</b> (but fusion has not yet started)."]), lines=2),
+                           "As it collapses, gravitational potential energy is transferred to the <b>kinetic energy of the particles</b>, so the <b>temperature</b> (and pressure and density) <b>increases</b> — but fusion has not yet started. Write \"temperature increases\", not \"it gets hot\": \"hot / heat\" is ignored (June 2019 Q10(a)(i))."]), lines=3),
             written("as-t5-q2", "Explain why a main sequence star is stable. (2)",
                     marks(["<b>Fusion</b> of hydrogen into helium releases energy, so the hot gas exerts an <b>outward pressure</b>.",
                            "This outward pressure <b>balances the inward pull of gravity</b>, so the star neither expands nor collapses."]), lines=2),
             choice("as-t5-q3", "What process releases the energy in a main sequence star?",
                    ["Nuclear fission of uranium", "Nuclear fusion of hydrogen nuclei into helium", "Burning hydrogen gas", "Gravity alone"], 1,
-                   "Fusion: small nuclei join. Fission is splitting, and it is not what powers stars."),
+                   "Fusion: <b>small nuclei</b> (hydrogen) <b>join</b> to form a <b>larger nucleus</b> (helium), releasing energy — two marks when asked to describe it (June 2025 Q10(b)(i)), and \"atoms\" or \"particles\" for nuclei are not accepted. Fission is splitting, and it is not what powers stars."),
             written("as-t5-q4", "Explain what happens to a star like the Sun when the hydrogen in its core runs out. (3)",
                     mark_scheme([
                         ("Balance lost", "Fusion in the core slows, so the outward pressure falls and <b>gravity wins</b>: the <b>core contracts</b> and gets hotter."),
@@ -332,7 +333,7 @@ section_t5 = section(
 section_t6 = section(
     "space-telescopes", "tricky", "Telescopes in space and telescopes for other wavelengths", "7.19P",
     equations=[r"\text{above the atmosphere: no absorption, no distortion}"],
-    blurb="'State and explain' questions on telescopes are marked on the reason, not the location. 'It is in space' earns nothing; 'it is above the atmosphere, which absorbs infrared' earns the marks.",
+    blurb="'Explain why' questions on telescopes give one mark for the location and one for its consequence. 'It is above the atmosphere' earns <b>one</b> mark; the second needs 'so infrared that the <b>atmosphere absorbs</b> reaches it', 'no <b>distortion</b> or <b>interference</b> from clouds and dust', or 'it can <b>view the whole sky</b>' (June 2022 Q6(c)).",
     tags=["P"],
     checklist=[
         "Give the advantages of a telescope above the atmosphere, each with its reason",
@@ -345,12 +346,13 @@ section_t6 = section(
             "<table class='tbl'><tr><th>Advantage of a space telescope</th><th>Because…</th></tr>"
             "<tr><td>can observe <b>infrared, ultraviolet, X-rays, gamma rays</b></td><td>the <b>atmosphere absorbs</b> most of these, so they never reach the ground</td></tr>"
             "<tr><td><b>sharper</b> images</td><td>no <b>distortion</b> (twinkling) from moving air of varying density refracting the light</td></tr>"
-            "<tr><td>sees <b>fainter</b> objects</td><td>no <b>light pollution</b> from towns, no scattered daylight, no clouds or dust — observations possible all the time</td></tr></table>"
+            "<tr><td>sees <b>fainter</b> objects</td><td>no <b>light pollution</b> from towns, no scattered daylight, no clouds or dust — observations possible all the time</td></tr>"
+            "<tr><td>can <b>view the whole sky</b></td><td>not blocked by the Earth beneath it, and not limited to night (a credited point in June 2022 Q6(c))</td></tr></table>"
             "<table class='tbl'><tr><th>Disadvantage</th><th>Because…</th></tr>"
             "<tr><td>very <b>expensive</b></td><td>launching a telescope into orbit costs far more than building one on a mountain</td></tr>"
             "<tr><td>hard to <b>repair or upgrade</b></td><td>astronauts or robots have to reach it (Hubble was serviced; Webb, 1.5 million km away, cannot be)</td></tr>"
             "<tr><td><b>size</b> limited</td><td>it must fit in a rocket, so the mirror is smaller than the biggest ground telescopes (Webb's unfolds)</td></tr></table>"
-            "<p>The 2022 report (Q6(c)): the question asked why some telescopes are on satellites; many \"stated the location without explaining why it matters\". Write <b>where</b> (above the atmosphere) <b>and the consequence</b> (no absorption / distortion / pollution).</p>"
+            "<p>The 2022 report (Q6(c)): the question asked why some telescopes are on satellites; many \"stated the location without explaining why it matters\". The scheme gave one mark for \"telescopes are above Earth / in space / outside the Earth's atmosphere\" and the second for a consequence: \"less interference from dust / clouds\", \"wavelengths that are absorbed by Earth's atmosphere\", \"can view the whole sky\". Write <b>where</b> (above the atmosphere) <b>and the consequence</b>. <b>Rejected:</b> \"it is closer to the stars\" — a few hundred kilometres is nothing against light-years; the scheme says <i>do not accept</i>.</p>"
             "<p><b>Other wavelengths</b> (and why bother): objects emit at wavelengths set by their temperature and processes — <b>cool dust and gas</b> clouds where stars form glow in <b>infrared</b>; very <b>hot</b> gas round black holes and in supernova remnants gives <b>X-rays</b>; <b>radio</b> telescopes see through dust and detect the CMB (microwaves) and pulsars; radio and some infrared pass through the atmosphere, so those telescopes can be on the ground (radio dishes are huge for that reason). Each wavelength reveals something the others cannot, so a complete picture needs them all.</p>",
         ),
         worked(
@@ -376,9 +378,9 @@ section_t6 = section(
             written("as-t6-q5", "Explain why astronomers use telescopes that detect infrared as well as telescopes that detect visible light. (2)",
                     marks(["Some objects — <b>cool</b> clouds of dust and gas where stars form — emit mostly <b>infrared</b> and little visible light, and infrared passes through dust that blocks light.",
                            "So the infrared telescope reveals objects and detail that a visible-light telescope <b>cannot see</b>."]), lines=3),
-            choice("as-t6-q6", "A student answers \"telescopes are put on satellites because they are in space\". Why does this score nothing?",
-                   ["Telescopes are never on satellites", "It gives the location but not the reason — the atmosphere's absorption or distortion must be mentioned", "Satellites cannot carry telescopes", "The answer is too long"], 1,
-                   "The 2022 report's exact complaint."),
+            choice("as-t6-q6", "A student answers \"telescopes are put on satellites because they are in space\". Why does this score only one of the two marks?",
+                   ["Telescopes are never on satellites", "It gives the location (one mark) but not a consequence — absorption, distortion, clouds and dust, or seeing the whole sky", "Satellites cannot carry telescopes", "The answer is too long"], 1,
+                   "June 2022 Q6(c): \"in space / outside the Earth's atmosphere (1)\" then a consequence for the second mark — the report's complaint was answers that stopped at the location."),
         ]),
     ],
 )
@@ -491,7 +493,7 @@ FACTS = [
     fact("Life cycle of a star much more massive than the Sun?", "Nebula → protostar → main sequence star → red supergiant → supernova → neutron star or black hole.", "star-cycles"),
     fact("What decides how a star ends its life?", "Its mass (not its age).", "star-cycles"),
     fact("What is a nebula?", "A cloud of dust and gas in space from which stars form.", "star-cycles"),
-    fact("What happens in a protostar?", "Gravity pulls the cloud together; it becomes denser and hotter, but fusion has not yet started.", "star-cycles"),
+    fact("What happens in a protostar?", "Gravity pulls the cloud together; its density and temperature increase (GPE → KE of the particles), but fusion has not yet started. Say \"temperature increases\" — \"hot\" is ignored.", "star-cycles"),
     fact("What happens in a main sequence star?", "Hydrogen nuclei fuse into helium, releasing energy; the star is stable.", "star-cycles"),
     fact("What is a red giant?", "A star whose core hydrogen has run out: the core contracts and heats, helium fuses, and the outer layers expand and cool.", "star-cycles"),
     fact("What is a white dwarf?", "The small, very hot, dense core left after a Sun-like star sheds its outer layers; no fusion; slowly cooling.", "star-cycles"),
@@ -518,7 +520,7 @@ FACTS = [
     fact("Why does red-shift alone not prove the Big Bang?", "Both the Big Bang and the Steady State theory describe an expanding Universe, so both predict red-shift.", "redshift-argument"),
     fact("What does Level 3 need in the 6-mark Big Bang evidence question?", "At least one piece of evidence described AND linked to what it shows (CMB → hot beginning; red-shift → expansion), the other identified. Isolated statements are Level 1.", "cmb-decides"),
     fact("Three word traps about the Big Bang and CMB?", "CMB is microwaves (not light or radio); it comes from all directions (not one place); the Big Bang was the expansion of space, not an explosion in space.", "cmb-decides"),
-    fact("'Telescopes are on satellites because they are in space' — why no marks?", "It gives the location but not the reason: say the atmosphere absorbs or distorts the radiation.", "space-telescopes"),
+    fact("'Telescopes are on satellites because they are in space' — why only one mark?", "Location is one mark; the second is a consequence — the atmosphere absorbs IR/UV/X-rays, distorts the image, clouds and dust interfere, or the satellite can view the whole sky.", "space-telescopes"),
     fact("Convert a weight on Earth to a weight on the Moon.", "Mass first ($m = W \\div 10$), then $W = m \\times 1.6$. Or use the ratio: Moon weight = Earth weight × 1.6/10.", "weight-hard"),
     fact("Why do astronauts in the ISS float, when g there is about 8.7 N/kg?", "They and the station are falling towards the Earth together, so nothing pushes up on them — gravity is still acting and keeps them in orbit.", "weight-hard"),
 ]

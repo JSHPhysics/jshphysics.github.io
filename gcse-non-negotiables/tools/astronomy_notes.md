@@ -92,3 +92,35 @@ Playwright at 1180 px: 10 section numerics, 31 choices and the 6 type
 practice answers entered through the UI and marked correct; no KaTeX
 errors; 3 diagrams render; P badges on all 16 sections; 84 flashcards. At
 390 px no sideways scroll; the booklet modal offers the notes mode.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent checked every taught phrasing against the closest parts
+in `Question DB/by-topic/topic-07.md` (14 questions; 31 page items matched;
+the June 2026 Q6/Q10 have no scheme yet). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| astronomy / circular-orbits (explain), orbit-explain Chain 1 trap | the 2024 part asked why the *velocity* changes; "it is accelerating", "speed is changing" and "centripetal force" were all ignored (not "centripetal force" alone); "gravitational / centripetal" both score for the orbit force | 1H June 2024 Q9(a)(ii), June 2025 Q6(b)(i), June 2018 Q4(b)(i) |
+| astronomy / as-n4-q1 | $a = \Delta v / t$ added as a credited point | 1H Nov 2021 Q8(c) |
+| astronomy / space-telescopes (blurb, explain, table), as-t6-q6, flashcard | "in space earns nothing" → location is one mark, consequence the second; "view the whole sky" row added; "closer to the stars" recorded as rejected | 1H June 2022 Q6(c) |
+| astronomy / star-balance as-t5-q1 and worked, star-cycles table and worked, keyword Protostar, flashcard | "hotter / heating up" → "temperature (pressure, density) increases", GPE → KE of the particles; "hot / heat" ignored | 1H June 2019 Q10(a)(i); June 2023 Q4(d)(ii); Nov 2020 Q4(d) |
+| astronomy / star-cycles (explain) | "biggest" alone ignored; write "greatest mass / heavier" | 1H June 2025 Q10(a)(ii) |
+| astronomy / big-bang (explain, worked, as-n6-q4), cmb-decides (worked, as-t4-q2) | CMB argument now carries "left over from the start", "cooled", "the Universe had a definite beginning" (none of the schemes credit "predicted") | 1H June 2025 Q10(c), June 2019 Q10(b), June 2018 Q4(c)(v), SAM Q2(b) |
+| astronomy / big-bang worked | "Describe the evidence" → "Discuss two pieces of evidence" (6) | 1H June 2025 Q10(c) |
+| astronomy / as-n5-q2, as-kw-q1 | red-shift definition is a 2-mark Describe: wavelength increased + source moving away | 1H June 2018 Q4(c)(i) |
+| astronomy / redshift-argument (explain) | "shifted to the red end" ignored; "stars / planets / objects" ignored — say galaxies; 2-mark versions need wavelength + moving away only, the 3-mark adds distance ↔ speed; "show that 0.025" needs the unrounded 0.0244 | 1H June 2023 Q4(b), June 2022 Q6(b)(i)–(iii), June 2024 Q1(c)(ii) |
+| astronomy / star-balance as-t5-q3 | fusion described in the credited two steps; "atoms / particles" not accepted | 1H June 2025 Q10(b)(i) |
+| astronomy / star-balance | one-mark cause of collapse is gravity; "gpe / gravitational energy / weight" ignored — folded into the as-t5-q1 model | 1H June 2023 Q4(d)(i) |
+
+Left as written: "the heaviest stars have the shortest lives" (right
+physics; the SAM key says the opposite and no live scheme examines it).
+No stored answer changed; `check_topic.js astronomy` passes on both tiers.
+H list for the author in the report: "ideas about the Solar System that
+have changed" (2019), the SAM geocentric-evidence 3-marker, the 2021
+similarity/difference (similarity = both expanding), the 2021
+velocity–distance graph (70 ± 5 km/s/Mpc), the 2021 orbit-time
+calculation, 2020 brightness vs temperature/mass, a draw-the-arrow
+question, CMB wavelength about 1 mm (2023).

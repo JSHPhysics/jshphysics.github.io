@@ -191,7 +191,7 @@ section_n4 = section(
             "Velocity changes, speed does not",
             diagram(dg.orbit_svg(), 600, 260, "A planet in a circular orbit: the velocity is along the orbit, the force of gravity is towards the Sun — always at right angles to the velocity.") +
             "<p><b>Velocity is a vector</b>: speed <i>and</i> direction. In a circular orbit the <b>speed is constant</b> but the <b>direction is changing continuously</b>, so the <b>velocity is changing</b>, so the planet is <b>accelerating</b> — towards the centre. An acceleration needs a resultant force, and that force is <b>gravity</b>, acting <b>towards the Sun</b>, <b>at right angles to the velocity</b>. Because it is at right angles it does no work: it <b>changes the direction</b> of the motion but <b>not the speed</b>.</p>"
-            "<p>The June 2024 marks (Q9(a)): the resultant force on a body in circular motion points <b>towards the centre</b> (not along the motion, no vertical component for a horizontal circle); it is accelerating because \"its <b>direction is continuously changing</b>\" or \"there is a <b>resultant force</b>\" or \"<b>velocity is a vector</b>\". \"Centripetal force\" on its own was ignored.</p>"
+            "<p>The June 2024 marks (Q9(a)): the resultant force on a body in circular motion points <b>towards the centre</b> (not along the motion, no vertical component for a horizontal circle); and it asked for one reason why the <b>velocity</b> is continuously changing (June 2024 Q9(a)(ii), June 2025 Q6(b)(i)): \"its <b>direction is continuously changing</b>\", \"there is a <b>resultant force</b>\" or \"<b>velocity is a vector</b>\" each scored. \"It is accelerating\", \"the speed is changing\" and \"centripetal force\" were all <b>ignored</b> — they are not reasons for the velocity changing.</p>"
             "<p><b>Speed and radius</b> (7.7P, qualitative): for a stable orbit the gravitational force must be exactly enough to keep bending the path into a circle. Closer to the Sun gravity is stronger, so the orbit must be <b>faster</b>; further out it is weaker, so the orbit is <b>slower</b>. Put the other way: <b>if the speed of an orbiting body increases, it must move to a smaller radius to stay in a stable orbit</b>; if it slows, to a larger one. That is why Mercury races round in 88 days and Neptune takes 165 years.</p>",
         ),
         worked(
@@ -206,7 +206,7 @@ section_n4 = section(
         practice("Circular orbits", [
             written("as-n4-q1", "A planet orbits the Sun at constant speed. Explain why it is accelerating. (2)",
                     marks(["Its <b>direction is continuously changing</b>, and velocity is a vector, so its <b>velocity is changing</b>.",
-                           "A change in velocity is an acceleration (there is a resultant force — gravity — towards the Sun)."]), lines=2),
+                           "A change in velocity is an acceleration — $a = \\dfrac{\\Delta v}{t}$, so a <b>changing velocity</b> means an acceleration even at constant speed (Nov 2021 Q8(c) credited the equation as a point); the resultant force is gravity, towards the Sun."]), lines=2),
             choice("as-n4-q2", "In which direction does the force of gravity act on a planet in a circular orbit?",
                    ["Along the direction of motion", "Towards the centre (the Sun)", "Away from the Sun", "There is no force"], 1,
                    "Towards the centre, at right angles to the velocity."),
@@ -259,8 +259,9 @@ section_n5 = section(
         practice("Red-shift", [
             written("as-n5-q1", "A source of waves moves away from an observer. State what happens to the observed wavelength and frequency. (2)",
                     marks(["Wavelength <b>increases</b> (longer).", "Frequency <b>decreases</b> (lower)."]), lines=2),
-            written("as-n5-q2", "State what is meant by red-shift. (1)",
-                    marks(["The <b>increase in wavelength</b> of light from a source (galaxy) that is <b>moving away</b> — its spectral lines are shifted towards the red end of the spectrum."]), lines=2),
+            written("as-n5-q2", "Describe what is meant by red-shift. (2)",
+                    marks(["The <b>wavelength</b> of the light is <b>increased</b> (frequency decreased) — the spectral lines are shifted towards the red end of the spectrum…",
+                           "…because the source (galaxy) is <b>moving away</b> from us (June 2018 Q4(c)(i): one mark for each)."]), lines=3),
             choice("as-n5-q3", "Galaxy A is further from Earth than galaxy B. Which is correct?",
                    ["A has a smaller red-shift than B", "A has a larger red-shift than B and is moving away faster", "Both have the same red-shift", "A is moving towards us"], 1,
                    "Red-shift increases with distance."),
@@ -299,12 +300,12 @@ section_n6 = section(
             "<tr><td>Explains the CMB?</td><td><b>yes</b> — predicted it: the leftover radiation from the hot early Universe, stretched to microwaves by the expansion</td><td><b>no</b> — gives no reason for it</td></tr>"
             "<tr><td>Status</td><td><b>accepted</b> model</td><td>abandoned</td></tr></table>"
             "<p><b>Red-shift → expansion</b> (7.13P): the light from distant galaxies is red-shifted, so they are <b>moving away</b>; the <b>further away</b> a galaxy, the <b>faster</b> it recedes. That is what you see from any point in a space that is <b>expanding everywhere</b> — like dots on an inflating balloon. Running it backwards, everything was once together: a beginning.</p>"
-            "<p><b>The CMB</b> (cosmic microwave background, 7.15P): faint <b>microwave radiation coming from every direction in the sky</b>, at the same temperature everywhere (about 2.7 K). The Big Bang theory <b>predicted</b> it: the early Universe was hot and full of radiation, and the expansion has stretched that radiation to microwave wavelengths. When it was <b>discovered (1964)</b> it matched the prediction; Steady State had no explanation, so the Big Bang became the <b>accepted model</b> — it is the theory with <b>more supporting evidence</b> (7.10P).</p>"
+            "<p><b>The CMB</b> (cosmic microwave background, 7.15P): faint <b>microwave radiation coming from every direction in the sky</b>, at the same temperature everywhere (about 2.7 K). The Big Bang theory <b>predicted</b> it: the early Universe was hot and full of radiation, and that radiation is <b>left over from the start of the Universe</b>, <b>cooled</b> (stretched) by the expansion to microwave wavelengths — so the Universe <b>had a definite beginning</b> (the credited words in 2018, 2019, 2025 and the SAM). When it was <b>discovered (1964)</b> it matched the prediction; Steady State had no explanation, so the Big Bang became the <b>accepted model</b> — it is the theory with <b>more supporting evidence</b> (7.10P).</p>"
             "<p>The June 2025 6-marker (Q10(c)): Level 3 needs <b>at least one piece of evidence described and linked to the aspect of the Big Bang it supports</b>, and the other identified — red-shift linked to <b>expansion</b>, the CMB (microwaves \"across the sky\") linked to a <b>definite beginning</b> (a hot early Universe). Isolated statements were Level 1.</p>",
         ),
         worked(
             "The 6-mark answer",
-            "Describe the evidence that supports the Big Bang theory. (6 marks)",
+            "Discuss two pieces of evidence that support the Big Bang theory. (6 marks)",
             [
                 "<b>Red-shift — observation:</b> light from distant galaxies has <b>longer wavelengths</b> than the same light on Earth; the further the galaxy, the <b>bigger the red-shift</b>.",
                 "<b>Red-shift — what it shows:</b> the galaxies are <b>moving away</b>, and the more distant ones faster, so the <b>Universe is expanding</b>; traced back, everything was once in one place — a beginning.",
@@ -328,7 +329,7 @@ section_n6 = section(
             written("as-n6-q4", "Explain why the discovery of the cosmic microwave background radiation led to the Big Bang theory becoming the accepted model. (3)",
                     mark_scheme([
                         ("What", "Microwave radiation is detected <b>from all directions</b> in space."),
-                        ("Predicted", "The Big Bang theory had <b>predicted</b> it: radiation from the <b>hot early Universe</b>, stretched to microwave wavelengths by the expansion."),
+                        ("Left over", "It is radiation <b>left over from the start of the Universe</b> (released at the Big Bang), now <b>cooled</b> to microwaves — so the Universe <b>had a definite beginning</b>."),
                         ("Decides", "The Steady State theory <b>could not explain</b> it, so the Big Bang had <b>more supporting evidence</b> and was accepted."),
                     ]), lines=4),
             choice("as-n6-q5", "Which piece of evidence is explained by the Big Bang theory but NOT by the Steady State theory?",
@@ -361,7 +362,7 @@ section_n7 = section(
             diagram(dg.life_cycle_svg(), 660, 275, "The life cycles of stars. Every star passes through nebula, protostar and main sequence; its mass decides what happens next.") +
             "<table class='tbl'><tr><th>Stage</th><th>What is happening</th></tr>"
             "<tr><td><b>Nebula</b></td><td>a huge <b>cloud of dust and gas</b> (mostly hydrogen); <b>gravity</b> pulls it together</td></tr>"
-            "<tr><td><b>Protostar</b></td><td>the collapsing cloud gets <b>denser and hotter</b> as gravitational potential energy is transferred to thermal energy</td></tr>"
+            "<tr><td><b>Protostar</b></td><td>the collapsing cloud's <b>temperature and density increase</b> as gravitational potential energy is transferred to the <b>kinetic energy of the particles</b> (write \"temperature increases\" — \"hot / heat\" is ignored, June 2019 Q10(a)(i))</td></tr>"
             "<tr><td><b>Main sequence star</b></td><td>the core is hot enough for <b>hydrogen nuclei to fuse into helium</b>, releasing energy; the star is <b>stable</b> because the outward pressure from the hot gas balances gravity; the Sun is here, for about 10 billion years</td></tr>"
             "<tr><td colspan='2'><b>Star of similar mass to the Sun</b></td></tr>"
             "<tr><td><b>Red giant</b></td><td>the hydrogen in the core runs out; the core contracts and heats, helium fuses into heavier elements, and the outer layers <b>expand and cool</b> (red)</td></tr>"
@@ -371,13 +372,13 @@ section_n7 = section(
             "<tr><td><b>Red supergiant</b></td><td>as the red giant, but far bigger; fusion makes heavier and heavier elements, up to iron</td></tr>"
             "<tr><td><b>Supernova</b></td><td>the core collapses suddenly and the star <b>explodes</b>, scattering the elements (and making the ones heavier than iron)</td></tr>"
             "<tr><td><b>Neutron star</b> or <b>black hole</b></td><td>the core left behind is a tiny, incredibly dense <b>neutron star</b> — or, for the <b>most massive</b> stars, a <b>black hole</b>, whose gravity is so strong that not even light escapes</td></tr></table>"
-            "<p>The June 2025 report (Q10(a)): the key variable deciding the end of a star is its <b>mass</b> — not its age. \"Older stars are more likely to become black holes\" was the common wrong answer; the heaviest stars have the <i>shortest</i> lives.</p>",
+            "<p>The June 2025 report (Q10(a)): the key variable deciding the end of a star is its <b>mass</b> — not its age, and not its size. Write \"the <b>greatest mass</b>\" or \"much <b>heavier</b> than the Sun\": the scheme ignores \"biggest\" on its own (it could mean radius) and ignores any reference to age. \"Older stars are more likely to become black holes\" was the common wrong answer; the heaviest stars have the <i>shortest</i> lives.</p>",
         ),
         worked(
             "A Sun-like star",
             "Describe the life cycle of a star of similar mass to the Sun. (4 marks)",
             [
-                "<b>Nebula → protostar:</b> <b>gravity</b> pulls a cloud of dust and gas together; it gets denser and hotter, forming a protostar.",
+                "<b>Nebula → protostar:</b> <b>gravity</b> pulls a cloud of dust and gas together; its <b>density and temperature increase</b>, forming a protostar.",
                 "<b>Main sequence:</b> when the core is hot enough, <b>hydrogen fuses into helium</b>; the star is stable for billions of years, the outward pressure balancing gravity.",
                 "<b>Red giant:</b> when the hydrogen runs out, the core contracts and the outer layers <b>expand and cool</b>; helium fuses into heavier elements.",
                 "<b>White dwarf → black dwarf:</b> the outer layers are shed, leaving a hot dense core with no fusion that <b>cools</b> into a white dwarf and eventually a black dwarf.",
@@ -478,7 +479,7 @@ DEFINITIONS = [
     ("Big Bang theory", "The Universe began from a <b>very small, hot, dense</b> point and has been <b>expanding</b> ever since.", "\"an explosion in space\""),
     ("Steady State theory", "The Universe has <b>always existed</b>, expanding while <b>new matter is created</b> so it always looks the same.", "\"the Universe does not change\""),
     ("Nebula", "A <b>cloud of dust and gas</b> in space from which stars form.", "\"a galaxy\""),
-    ("Protostar", "A collapsing cloud that is <b>heating up</b> under gravity but has <b>not yet started fusion</b>.", "\"a young star that shines\""),
+    ("Protostar", "A collapsing cloud whose <b>temperature is rising</b> as it collapses under gravity but has <b>not yet started fusion</b>.", "\"a young star that shines\""),
     ("Main sequence star", "A star in the stable stage, <b>fusing hydrogen into helium</b>, with outward pressure balancing gravity.", "\"a normal star\""),
     ("Red giant", "A star whose core hydrogen has run out: the <b>outer layers expand and cool</b>.", "\"a big red star\""),
     ("White dwarf", "The small, hot, dense <b>core</b> left by a Sun-like star, with <b>no fusion</b>, slowly cooling.", "\"a dead star\""),
@@ -509,8 +510,8 @@ section_keywords = section(
     parts=[
         explain("The definitions", "<p>\"<b>State what is meant by</b>\" asks for the definition. Learn these as sentences.</p>" + definitions_table()),
         practice("Key words", [
-            written("as-kw-q1", "State what is meant by red-shift. (1)",
-                    marks(["The <b>increase in the wavelength</b> of light from a source that is <b>moving away</b> from the observer."]), lines=2),
+            written("as-kw-q1", "Describe what is meant by red-shift. (2)",
+                    marks(["The <b>wavelength</b> of the light is <b>increased</b> (frequency decreased)…", "…because the source is <b>moving away</b> from the observer."]), lines=3),
             written("as-kw-q2", "State what is meant by a main sequence star. (1)",
                     marks(["A stable star <b>fusing hydrogen into helium</b> in its core, with the outward pressure balancing gravity."]), lines=2),
             written("as-kw-q3", "State what is meant by the cosmic microwave background radiation. (1)",
