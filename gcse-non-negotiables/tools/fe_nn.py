@@ -40,11 +40,11 @@ section_n1 = section(
             "<tr><td><b>Tension</b></td><td>the pull along a stretched rope, string or cable</td><td>a crane cable</td></tr>"
             "<tr><td><b>Drag</b> (air resistance, water resistance)</td><td>friction with a fluid, opposing motion through it</td><td>a parachute</td></tr>"
             "<tr><td><b>Upthrust</b></td><td>the upward push of a fluid on an object in it</td><td>a boat floating</td></tr></table>"
-            "<p>The June 2024 scheme (Q1(b)) credited \"a region where a charge experiences a force\" for an electric field; the same shape of sentence does for the other two fields. The June 2023 report (Q5(b), a magnet floating above another): \"many answers had the words <i>magnetic fields</i> but usually in terms of repelling\" — say that the <b>fields interact</b> to produce the force, then that the repulsion <b>balances the weight</b>. The 2024 scheme (Q4(a)) and 2023 report (Q4(a)(iv)): a normal contact force arrow is drawn <b>at right angles to the surface</b> and must <b>start or end at the point</b> where it acts.</p>",
+            "<p>The June 2024 scheme (Q1(b)) credited \"a region where a charge experiences a force\" for an electric field; the same shape of sentence does for the other two fields. The June 2023 report (Q5(b), a magnet floating above another): \"many answers had the words <i>magnetic fields</i> but usually in terms of repelling\" — say that the <b>fields interact</b> to produce the force, then that the repulsion <b>balances the weight</b>. The June 2023 scheme (Q4(a)(iv)) and June 2024 scheme (Q4(a)) — both for the force a fluid exerts on a surface — gave the mark for an arrow <b>normal to the surface at the point</b> and required it to <b>touch the point</b> (or the dot) where it acts; draw a normal contact force the same way.</p>",
         ),
         worked(
             "Naming the forces",
-            "A magnet is held above a second magnet so that it floats. Explain how the forces on the upper magnet keep it at rest. (3 marks)",
+            "A magnet is held above a second magnet so that it floats. Describe the forces acting on the upper magnet. Use the idea of magnetic fields in your answer. (3 marks)",
             [
                 "The <b>magnetic fields</b> of the two magnets <b>interact</b> (like poles facing), producing a <b>repulsive</b> force upwards on the upper magnet — a <b>non-contact</b> force.",
                 "The Earth's gravitational field pulls the upper magnet down: its <b>weight</b>, also non-contact.",
@@ -87,7 +87,7 @@ section_n2 = section(
         explain(
             "Pairs and how to spot them",
             diagram(dg.pair_svg(), 640, 275, "Left: an interaction pair — one force on each object. Right: two balanced forces on the same object, which is not a pair.") +
-            "<p>An <b>interaction pair</b> (Newton's third law pair) is two forces that are <b>equal in size</b>, <b>opposite in direction</b>, of the <b>same type</b> (both gravitational, or both contact…), and act on <b>different objects</b>. Written as a sentence: \"<i>the Earth pulls the book down with 5 N; the book pulls the Earth up with 5 N</i>\". Swap the two nouns and the force is its partner.</p>"
+            "<p>An <b>interaction pair</b> (Newton's third law pair) is two forces that are <b>equal in size</b>, <b>opposite in direction</b>, of the <b>same type</b> (both gravitational, or both contact…), and act on <b>different objects</b>. Written as a sentence: \"<i>the Earth pulls the book down with 5 N; the book pulls the Earth up with 5 N</i>\". Swap the two nouns and the force is its partner. In the exam <b>name both forces with both objects</b>: June 2025 1H Q8(a)(iii) gave a mark for \"equal and opposite\", a mark for \"the force exerted by the foot on the ball\" and a mark for \"the force exerted by the ball on the foot\"; \"action and reaction\" on its own is capped at 1 mark and an answer in terms of energy scores nothing (June 2022 1H Q7(c)(ii)).</p>"
             "<p>The <b>weight of the book and the normal contact force from the table</b> are <b>not</b> a pair: they act on the <b>same</b> object (the book) and are <b>different types</b> (gravity and contact). They happen to be equal because the book is in equilibrium; tip the table and they are no longer equal, while the real pairs stay equal always.</p>"
             "<p>Both forces of a pair are <b>vectors</b> — they can be drawn as arrows of the same length pointing opposite ways, one on each object (9.1c).</p>",
         ),
@@ -107,13 +107,13 @@ section_n2 = section(
                    ["The ball's weight, 200 N", "The ball pushing on the boot with 200 N", "Friction on the ball, 200 N", "The ground pushing up on the footballer"], 1,
                    "Swap the nouns: boot on ball ↔ ball on boot, same size, opposite direction."),
             written("fe-n2-q3", "A rocket pushes exhaust gas downwards. Identify the partner force and explain how it makes the rocket accelerate upwards. (2)",
-                    marks(["The <b>gas pushes the rocket upwards</b> with an equal and opposite force.",
+                    marks(["The <b>rocket exerts a force on the gas</b> (downwards); the <b>gas exerts an equal and opposite force on the rocket</b> (upwards) — name both forces with both objects.",
                            "If that upward force is larger than the rocket's weight there is a <b>resultant upward force</b>, so it accelerates upwards."]), lines=2),
             choice("fe-n2-q4", "A book rests on a table. Which pair of forces is an interaction pair?",
                    ["The book's weight and the normal contact force on the book", "The normal contact force on the book and the book's push on the table", "The book's weight and friction", "The table's weight and the book's weight"], 1,
                    "Table pushes book up / book pushes table down: same type (contact), different objects."),
             written("fe-n2-q5", "A swimmer pushes backwards on the water with her hands. Explain how this moves her forwards. (2)",
-                    marks(["The water pushes <b>forwards on her hands</b> with an <b>equal and opposite</b> force (the interaction pair).",
+                    marks(["<b>Her hands exert a force on the water</b> (backwards); the <b>water exerts an equal and opposite force on her hands</b> (forwards) — the interaction pair, both forces named with both objects.",
                            "This forward force on the swimmer is greater than the drag, giving a resultant force forwards, so she accelerates."]), lines=2),
             written("fe-n2-q6", "An apple of weight 1 N hangs from a tree. State the size and direction of the gravitational force the apple exerts on the Earth. (1)",
                     marks(["<b>1 N</b>, <b>upwards</b> (towards the apple) on the Earth."]), lines=1),
@@ -215,7 +215,7 @@ section_n4 = section(
             written("fe-n4-q3", "A sledge is pulled along flat snow by a rope at constant speed. Name the four forces on the sledge's free body diagram and state which pairs are equal. (3)",
                     mark_scheme([
                         ("Vertical", "<b>Weight</b> down and <b>normal contact force</b> up — equal."),
-                        ("Horizontal", "<b>Tension</b> in the rope forwards and <b>friction</b> backwards — equal (constant speed, zero resultant)."),
+                        ("Horizontal", "<b>Tension</b> in the rope forwards and <b>friction</b> (between runners and snow) backwards, <b>opposing the motion</b>; they are <b>equal</b>, so there is <b>no resultant force</b> and the sledge moves at <b>constant velocity</b>. The vertical forces are balanced too (it does not move up or down) and do not affect the horizontal motion (Nov 2020 2H Q9(c))."),
                         ("Drawing", "All four from the centre, labelled, equal pairs the same length."),
                     ]), lines=3),
             choice("fe-n4-q4", "A free body diagram of a car shows a 2000 N driving force forwards and 1500 N of drag backwards. What is the resultant force?",
@@ -239,7 +239,7 @@ section_n5 = section(
     equations=[r"\text{same direction: add}", r"\text{opposite: subtract}", r"\text{resultant } 0 \Rightarrow \text{at rest or constant velocity}"],
     blurb="The resultant force is the single force that would have the same effect as all the forces together. Along a line it is add-and-subtract. Zero resultant does not mean 'stopped' — it means the velocity is not changing.",
     checklist=[
-        "Calculate the resultant of forces along a line",
+        "Calculate the resultant of forces along a line and state its direction",
         "State what a zero resultant means for the motion",
         "Link the direction of the resultant to the direction of the acceleration",
     ],
@@ -263,13 +263,13 @@ section_n5 = section(
             ],
         ),
         practice("Resultant force", [
-            numeric("fe-n5-q1", "A boat's engine pushes it forwards with 3000 N; water resistance is 1800 N. Calculate the resultant force.", 1200, "N", "Opposite directions: subtract.",
-                    [r"$3000 - 1800 = 1200$ N forwards."]),
+            numeric("fe-n5-q1", "A boat's engine pushes it forwards with 3000 N; water resistance is 1800 N. Calculate the size and direction of the resultant force.", 1200, "N", "Opposite directions: subtract.",
+                    [r"$3000 - 1800 = 1200$ N <b>forwards</b> — the direction is a separate mark (June 2018 2H Q7(a)(i): \"0.9 (kN) (1) upwards (1)\")."]),
             choice("fe-n5-q2", "The resultant force on a moving object is zero. Which must be true?",
                    ["It is stationary", "It is slowing down", "It moves at constant velocity (or is at rest)", "It is accelerating"], 2,
                    "Zero resultant → velocity does not change."),
-            numeric("fe-n5-q3", "Two people push a car in the same direction with 250 N and 300 N; friction is 400 N. Calculate the resultant force.", 150, "N", "Add the two pushes, subtract the friction.",
-                    [r"$250 + 300 = 550$ N forwards; $550 - 400 = 150$ N forwards."]),
+            numeric("fe-n5-q3", "Two people push a car in the same direction with 250 N and 300 N; friction is 400 N. Calculate the size and direction of the resultant force.", 150, "N", "Add the two pushes, subtract the friction.",
+                    [r"$250 + 300 = 550$ N forwards; $550 - 400 = 150$ N <b>forwards</b> (state the direction — it is a mark)."]),
             written("fe-n5-q4", "A skydiver falls at a constant speed of 50 m/s. A student says the forces on him must be unbalanced because he is moving so fast. Explain why the student is wrong. (2)",
                     marks(["Constant speed in a straight line means the <b>velocity is not changing</b>, so there is <b>no acceleration</b>.",
                            "No acceleration means the <b>resultant force is zero</b>: air resistance <b>equals</b> his weight. Speed itself does not need a resultant force."]), lines=3),
@@ -319,7 +319,7 @@ section_n6 = section(
                    ["N", "J", "N m", "N/m"], 2,
                    "Newton metre. Not the joule, even though $J = N m$ dimensionally, because the distance is perpendicular to the force, not along it."),
             numeric("fe-n6-q3", "A moment of 24 N m is needed to turn a stiff tap. The tap handle is 0.08 m long. Calculate the force needed at its end.", 300, "N", "$F = M \\div d$.",
-                    [r"$F = \dfrac{M}{d} = \dfrac{24}{0.08} = 300$ N."]),
+                    [r"$F = \dfrac{M}{d} = \dfrac{24}{0.08} = 300$ N. (Divide: the June 2022 2H scheme (Q6(b)(i)) rejected $0.6 \times 3$ for a force from a moment of 0.60 N m at 3 cm — and the cm had to become 0.03 m.)"]),
             written("fe-n6-q4", "Explain why it is easier to loosen a wheel nut with a long wheel brace than with a short one. (2)",
                     marks(["Moment = force × perpendicular distance; the long brace puts the hand at a <b>greater distance</b> from the nut.",
                            "So the <b>same force produces a bigger moment</b> — or the moment needed to loosen the nut is produced with a <b>smaller force</b>."]), lines=2),
@@ -351,7 +351,7 @@ section_n7 = section(
             "The principle and how it is marked",
             diagram(dg.beam_svg(), 600, 230, "A balanced beam: the anticlockwise moment of the 200 N equals the clockwise moment of the 300 N.") +
             "<p><b>The principle of moments:</b> for an object <b>in equilibrium</b> (balanced, not rotating), the <b>sum of the clockwise moments</b> about a pivot <b>equals the sum of the anticlockwise moments</b> about the same pivot.</p>"
-            "<p>The June 2024 scheme (Q6(b)(i), 2 marks) gave one mark for \"sum of the clockwise moments = sum of anticlockwise moments (about the same point)\" and a separate mark for \"<b>for a system in equilibrium</b>\". The June 2022 report: \"just saying clockwise moments = anticlockwise moments would not score\" — the <b>totals</b> must be stated. Both halves, every time.</p>"
+            "<p>The June 2024 scheme (Q6(b)(i), 2 marks) gave one mark for \"sum of the clockwise moments = sum of anticlockwise moments (about the same point)\" and a separate mark for \"<b>for a system in equilibrium</b>\". The June 2022 report: \"just saying clockwise moments = anticlockwise moments would not score\" — when the question says <i>state the principle</i>, the <b>totals</b> (\"sum of\" or \"total\") and <b>in equilibrium</b> are the two marks (June 2022 Q6(b)(iii), June 2024 Q6(b)(i)). Asked only for the <i>relationship</i> between two moments, Nov 2021 Q6(a) accepted \"the moments are equal\". In a calculation, masses in grams can be used directly — $g$ cancels from every term (June 2018 2H Q6(b)).</p>"
             "<p><b>Calculations:</b> decide which side turns which way, write each moment as force × distance, set the totals equal, solve. The June 2023 report: \"questions asking for the principle of moments will expect you to show a <b>calculation of moments using force × distance</b>\" — students who used ratios of forces and distances without calculating a moment lost marks, even with the right answer. Keep the distances all in m (or all in cm — consistent units were accepted) and measure every distance <b>from the pivot</b>, not from the end of the beam.</p>",
         ),
         worked(
@@ -367,7 +367,7 @@ section_n7 = section(
             written("fe-n7-q1", "State the principle of moments. (2)",
                     marks(["The <b>sum of the clockwise moments</b> about a point equals the <b>sum of the anticlockwise moments</b> about that point…", "…when the object is <b>in equilibrium</b> (balanced)."]), lines=2),
             numeric("fe-n7-q2", "A see-saw is pivoted at its centre. A 450 N child sits 1.2 m from the pivot. Calculate the force needed 1.8 m from the pivot on the other side to balance it.", 300, "N", "Set the two moments equal.",
-                    [r"$450 \times 1.2 = F \times 1.8$", r"$540 = 1.8F$, so $F = 300$ N."]),
+                    [r"Sum of clockwise moments = sum of anticlockwise moments (in equilibrium); moment = force × distance — both lines carry marks (June 2018 2H Q6(b)).", r"$450 \times 1.2 = F \times 1.8$", r"$540 = 1.8F$, so $F = 300$ N."]),
             numeric("fe-n7-q3", "A metre rule balances on a pivot at its centre. A 4 N weight hangs 20 cm left of the pivot. Calculate how far right of the pivot a 5 N weight must hang.", 16, "cm", "Work in cm throughout.",
                     [r"$4 \times 20 = 5 \times d$", r"$80 = 5d$, so $d = 16$ cm."]),
             choice("fe-n7-q4", "A student answers a principle-of-moments question by writing \"$300 \\div 200 = 1.5$, so the distance is $1.5 \\times 1 = 1.5$ m\" and gets the right number. Why might this lose marks?",
@@ -420,7 +420,7 @@ section_n8 = section(
             "A bicycle",
             "A cyclist's pedal wheel has 48 teeth and drives, through a chain, a rear wheel gear with 16 teeth. (a) How many times does the rear gear turn for one turn of the pedals? (b) Compare the moment on the rear gear with the moment on the pedal wheel. (c) Explain why the cyclist changes to a 32-tooth rear gear for a hill. (4 marks)",
             [
-                "<b>(a)</b> Turns × teeth is the same for both: $48 \\div 16 = 3$ turns of the rear gear per pedal turn.",
+                "<b>(a)</b> The <b>chain moves the same distance round both wheels</b>, so turns × teeth is the same for both (or gear ratio $48:16 = 3:1$ — June 2019 2H Q4(c)(i)): $48 \\div 16 = 3$ turns of the rear gear per pedal turn.",
                 "<b>(b)</b> The chain pulls both wheels with the <b>same force</b>; the rear gear has <b>one third of the radius</b>, so it gets <b>one third of the moment</b> — a speed multiplier.",
                 "<b>(c)</b> With 32 teeth the rear gear's radius is larger, so the <b>same chain force gives a bigger moment</b> on the wheel — more turning force to climb — while the wheel turns only 1.5 times per pedal turn, so the bike goes slower.",
             ],
@@ -441,7 +441,7 @@ section_n8 = section(
                    ["clockwise", "anticlockwise", "it does not turn", "clockwise, then anticlockwise"], 1,
                    "Meshed gears turn opposite ways."),
             written("fe-n8-q5", "A motor turns a 40-tooth gear at 60 turns per minute. Describe how to add a gear so that an output turns at 120 turns per minute, and explain your choice. (2)",
-                    marks(["Mesh a gear with <b>20 teeth</b> (half as many) with the 40-tooth gear.",
+                    marks(["Add a gear <b>meshing with the 40-tooth gear only</b> (next to it, touching no other), with <b>20 teeth</b> (half as many) — the June 2024 2H scheme (Q6(c)(ii)) gave one mark for linking it to the named wheel and one for the tooth count.",
                            "The same number of teeth pass the contact point on each, so the 20-tooth gear makes <b>two turns for every one</b> of the 40-tooth gear: 120 per minute."]), lines=3),
             written("fe-n8-q6", "Explain why a lever with the effort far from the pivot and the load near it is called a force multiplier, and what the user gives up in return. (2)",
                     marks(["Effort × its distance = load × its distance, so with a longer effort distance the <b>load force is larger than the effort</b>.",
@@ -469,7 +469,7 @@ section_n9 = section(
             "<p>When two surfaces slide over each other, <b>friction</b> acts and <b>work is done against it</b>; the energy is transferred to the <b>thermal store</b> of the surfaces and the air — it heats them up and spreads out (<b>dissipates</b>), so it is no longer useful. In a machine that lowers the <b>efficiency</b> (Topic 3): more of the input energy ends up as heat and less as useful output.</p>"
             "<p>A <b>lubricant</b> (oil, grease, graphite) is a thin layer that <b>separates the surfaces</b> so they slide on the fluid instead of rubbing directly; the frictional force is <b>smaller</b>, so <b>less work is done against friction</b>, less energy is dissipated as heat, and more is transferred usefully.</p>"
             "<p>Where friction is wanted — brakes, tyres, shoes, a match — you do not lubricate; you increase the grip (rougher surface, larger normal force).</p>"
-            "<p>The June 2025 report (Q2(a)(iii)): asked for a <b>way</b> to reduce the effect of friction on a trolley, \"many candidates answered in general terms of reducing friction rather than how this could be achieved\" — \"reduce friction\" scored nothing; \"<b>oil the wheel axles</b>\" scored. The June 2023 report said the same for practical improvements: \"you need to say <b>how</b> it will improve, not why\".</p>",
+            "<p>The June 2025 report (Q2(a)(iii)): asked for one way to reduce the gap between a trolley's measured and predicted speed down a runway, \"many candidates answered in general terms of reducing friction rather than how this could be achieved\" — \"reduce friction\" scored nothing; \"<b>oil the wheel axles</b>\" scored (the scheme also accepted an air track, a steeper runway and streamlining the trolley). The June 2023 report said the same for practical improvements: \"you need to say <b>how</b> it will improve, not why\".</p>",
         ),
         worked(
             "Say how",
@@ -484,10 +484,10 @@ section_n9 = section(
             written("fe-n9-q1", "Explain how lubricating the moving parts of a machine increases its efficiency. (3)",
                     mark_scheme([
                         ("Friction", "Without lubricant the surfaces rub; work is done against <b>friction</b> and energy is transferred to the <b>thermal store</b> (dissipated / wasted)."),
-                        ("Lubricant", "The lubricant forms a layer that <b>separates the surfaces</b>, so the frictional force is <b>smaller</b>."),
-                        ("Efficiency", "Less energy is wasted as heat, so a <b>larger fraction</b> of the input is transferred usefully — higher efficiency."),
+                        ("Lubricant", "The oil <b>reduces friction</b>, so <b>less energy is transferred to the thermal store</b> (less is wasted)."),
+                        ("Efficiency", "<b>More useful energy is available for the same input</b> (or <b>less input energy is needed for the same useful output</b>), and $\\text{efficiency} = \\dfrac{\\text{useful energy transferred}}{\\text{total energy supplied}}$ — stating the equation is the third mark (June 2019 2H Q4(c)(ii))."),
                     ]), lines=4),
-            choice("fe-n9-q2", "A question asks: \"Suggest one way to reduce the effect of friction on the trolley.\" Which answer scores?",
+            choice("fe-n9-q2", "A trolley runs down a runway more slowly than the calculation predicts. A question asks: \"Suggest one way to reduce the difference.\" Which answer scores?",
                    ["Reduce the friction", "Make it more efficient", "Oil the wheel axles", "Friction wastes energy"], 2,
                    "A method, not a reason."),
             written("fe-n9-q3", "Describe what happens to the energy when work is done against friction. (2)",
@@ -496,7 +496,7 @@ section_n9 = section(
                    ["A door hinge", "A bicycle chain", "The brake pads of a car", "A sliding drawer"], 2,
                    "Brakes work by friction."),
             written("fe-n9-q5", "A bicycle chain squeaks and the cyclist has to pedal harder. Explain what has happened and what to do. (2)",
-                    marks(["The chain has lost its lubricant, so there is <b>more friction</b> between the links and the gear teeth; more of the pedalling energy is dissipated as heat (and sound).",
+                    marks(["The chain has lost its lubricant, so there is <b>more friction</b> between the links and the gear teeth; more of the pedalling energy is transferred to the <b>thermal store</b> (dissipated) — the June 2024 2H scheme (Q7(b)(iii)) ignores \"sound\".",
                            "<b>Oil the chain</b>: the oil separates the metal surfaces and reduces the frictional force."]), lines=2),
         ]),
     ],
@@ -510,7 +510,7 @@ DEFINITIONS = [
     ("Contact force", "A force between objects that are <b>touching</b> (normal contact force, friction, tension, drag).", "\"a push\""),
     ("Non-contact force", "A force that acts <b>at a distance</b>, through a field (gravitational, electrostatic, magnetic).", "\"a force that does not touch\""),
     ("Field", "A <b>region</b> in which a mass / charge / magnetic material <b>experiences a force</b>.", "\"where the force is\""),
-    ("Normal contact force", "The force from a surface on an object pressing on it, <b>at right angles</b> to the surface.", "\"the reaction\" alone"),
+    ("Normal contact force", "The force from a surface on an object pressing on it, <b>at right angles</b> to the surface.", "an unnamed \"upward force\" — \"normal contact force\", \"(normal) reaction force\" and \"contact force\" were all credited (Nov 2020 2H Q9(c)); name it and give its direction"),
     ("Friction", "The force between two surfaces that <b>opposes</b> their relative motion.", "\"stickiness\""),
     ("Interaction pair", "Two forces, <b>equal and opposite</b>, of the <b>same type</b>, on <b>different objects</b>.", "\"balanced forces\""),
     ("Vector", "A quantity with <b>size and direction</b> (force, velocity, displacement, acceleration, momentum).", "\"a quantity with direction\" alone"),

@@ -121,3 +121,35 @@ practice answers entered through the UI and marked correct; no KaTeX
 errors; 10 diagrams render; P badges on N6–N8 and T5–T7, H on T1–T4; 90
 flashcards. At 390 px no sideways scroll; the booklet modal offers the
 notes mode.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent checked every taught phrasing against `Question
+DB/by-topic/topic-09.md` (13 questions) and the third-law / force-diagram
+parts of topic-02 (26 parts matched; two question images opened). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| forces-and-their-effects / force-types (explain), fact "How should a force arrow be drawn" | the two arrow schemes cited were fluid-force questions; now said so, rule kept (normal to the surface, touching the point) | 2H June 2023 Q4(a)(iv), June 2024 Q4(a) |
+| forces-and-their-effects / force-types worked | "Explain how the forces keep it at rest" → "Describe the forces… Use the idea of magnetic fields" | 2H June 2023 Q5(b) |
+| forces-and-their-effects / force-pairs (explain), fe-n2-q3, fe-n2-q5 | both forces of the pair named with both objects; "action and reaction" alone capped at 1, energy scores nothing | 1H June 2025 Q8(a)(iii); June 2022 Q7(c)(ii) |
+| forces-and-their-effects / keywords row Normal contact force | "the reaction alone" is credited ("(normal) reaction (force)"); the non-scorer is an unnamed upward force | 2H Nov 2020 Q9(c) |
+| forces-and-their-effects / fe-n4-q3 | sledge chain: friction opposes motion → equal → no resultant → constant velocity; vertical forces do not affect horizontal motion | 2H Nov 2020 Q9(c) indicative content |
+| forces-and-their-effects / resultant-line checklist, fe-n5-q1, fe-n5-q3 | "size and direction"; direction stated in the walkthrough as its own mark | 2H June 2018 Q7(a)(i) "0.9 (kN) (1) upwards (1)" |
+| forces-and-their-effects / fe-n6-q3 | divide, not multiply, for a force from a moment; cm → m | 2H June 2022 Q6(b)(i) "reject 0.6 × 3" |
+| forces-and-their-effects / balance-nn (explain), fe-n7-q2 | "sum of" + "in equilibrium" when the principle is asked for; "moments are equal" accepted for a relationship; principle and moment equation written as lines; g cancels with masses in grams | 2H June 2022 Q6(b)(iii), June 2024 Q6(b)(i), Nov 2021 Q6(a), June 2018 Q6(b) |
+| forces-and-their-effects / fe-t5-q6 | show-that check says "equal in size and opposite in sense" | 2H June 2023 Q6(b)(i) |
+| forces-and-their-effects / levers-gears worked, fe-n8-q5 | chain moves the same distance round both wheels; the added gear meshes with the named wheel only | 2H June 2019 Q4(c)(i); June 2024 Q6(c)(ii) |
+| forces-and-their-effects / lubrication (explain), fe-n9-q1, fe-n9-q2, fe-n9-q5 | 2025 question described as set (velocity gap, not "reduce friction"), accepted alternatives added; the three credited points for oil and efficiency incl. the efficiency equation; "sound" dropped (ignored) | 2H June 2025 Q2(a)(iii); June 2019 Q4(c)(ii); June 2024 Q7(b)(iii) |
+| forces-and-their-effects / scale-resultant (explain), fe-t1-q6 | Pythagoras is Nov 2020 not 2025; arrowhead required (2023); construction lines plain, one arrow R from X (2018 "reject additional vectors") | 2H June 2025 Q8(c), Nov 2020 Q9(b), June 2023 Q7(c), June 2018 Q7(a)(ii) |
+| forces-and-their-effects / winch table | gear line now in the scheme's form "moment of the force of gear Y on gear X = tooth force × radius of Y" with the X form beside it | 2H June 2025 Q9(b) indicative content |
+
+No stored answer changed; `check_topic.js forces-and-their-effects`
+passes on both tiers. H list for the author in the report: rack and
+pinion (2018, 2022), "is it in equilibrium?" (2022 Q6(b)(iii)), the lever
+and rock (2019 Q4(b)), moments about one support of a beam on two ropes
+(Nov 2020 Q1(c)), the push-up pivot (2023 Q6(a)), three gears in a line
+(2018 Q6(a)(i)), why the runway is tilted ("do not accept reducing /
+cancelling friction", 1H 2022 Q7(b)(ii)).

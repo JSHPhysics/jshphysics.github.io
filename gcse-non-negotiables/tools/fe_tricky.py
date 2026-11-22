@@ -36,7 +36,7 @@ section_t1 = section(
             "<li><b>Draw the first force</b> as an arrow of the right length in the right direction, with a ruler.</li>"
             "<li><b>Draw the second force starting from the tip of the first</b> (tip to tail), at its correct angle — use a protractor.</li>"
             "<li><b>The resultant</b> is the arrow from the <b>start of the first</b> to the <b>tip of the second</b>. Measure its <b>length</b> and convert with the scale; measure its <b>angle</b> from a stated direction.</li></ol>"
-            "<p>The <b>parallelogram</b> method gives the same answer: draw both forces from the same point, complete the parallelogram, and the diagonal from that point is the resultant. The June 2025 scheme (Q8(c)) accepted either, or \"a right-angled triangle and Pythagoras\". The marks were for the <b>direction</b> (judged by eye) and the <b>size</b> (within a tolerance — 2.5 to 3.5 for a 3 N answer), so the arrow must be drawn, labelled, and measurably right.</p>"
+            "<p>The <b>parallelogram</b> method gives the same answer: draw both forces from the same point, complete the parallelogram, and the diagonal from that point is the resultant. The June 2025 scheme (Q8(c)) accepted \"a suitable parallelogram or triangle\" for the direction mark; Nov 2020 (Q9(b)) accepted Pythagoras in place of the drawing. The marks were for the <b>direction</b> (judged by eye) and the <b>size</b> (within a tolerance — 2.5 to 3.5 for a 3 N answer in 2025, 48 to 52 N for 50 N in 2023), so the arrow must be drawn <b>from the point the forces act on</b> with an <b>arrowhead</b> (June 2023: \"arrow head must be present\"), labelled R, and within the tolerance. On the exam figure the two forces are already drawn from a point X: complete the parallelogram with <b>plain construction lines</b> (no arrowheads — June 2018 2H Q7(a)(ii): \"reject answers which have any additional vectors drawn\") and draw <b>one arrow, R, from X</b> along the diagonal.</p>"
             "<p><b>Pythagoras check</b> for forces at right angles: $R^2 = F_1^2 + F_2^2$; $3^2 + 4^2 = 25$, $R = 5$ N. If the drawing says 5.4, redraw. Trig is not required (\"scale drawings only\" in the spec) but is accepted if correct.</p>",
         ),
         worked(
@@ -67,7 +67,7 @@ section_t1 = section(
                            "At 60° apart they partly reinforce each other, so the tip-to-tail closing line is longer than either force alone — the resultant lies between 10 N and 20 N (it is about 17 N)."]), lines=3),
             choice("fe-t1-q6", "In a scale drawing of two forces, where is the resultant drawn?",
                    ["Between the tips of the two force arrows", "From the start of the first force to the tip of the second", "From the tip of the second back to the start", "Along the longer force"], 1,
-                   "Start of the first to tip of the last; the arrowhead points at the tip."),
+                   "Start of the first to tip of the last in a tip-to-tail construction; on an exam figure, from the point the forces act on, along the parallelogram's diagonal."),
         ]),
     ],
 )
@@ -308,7 +308,7 @@ section_t5 = section(
             numeric("fe-t5-q5", "A tower crane carries a 20 000 N load 15 m from the tower. Its counterweight is 5 m from the tower on the other side. Calculate the counterweight needed to balance the load (ignore the arm's weight).", 60000, "N", "Moments about the tower.",
                     [r"$W \times 5 = 20\,000 \times 15 = 300\,000$", r"$W = 60\,000$ N."]),
             numeric("fe-t5-q6", "A 500 N uniform beam is pivoted at its centre and balanced: a 200 N load sits 3 m to the left and a 300 N load 2 m to the right. Calculate the upward force from the pivot.", 1000, "N", "Forces, not moments: up = down.",
-                    [r"Check it balances: $200 \times 3 = 600 = 300 \times 2$. ✓", r"In equilibrium the pivot supports everything: $500 + 200 + 300 = 1000$ N upwards."]),
+                    [r"Check it balances: anticlockwise $200 \times 3 = 600$ N m, clockwise $300 \times 2 = 600$ N m — <b>equal in size and opposite in sense</b>, so in equilibrium (the June 2023 2H show-that, Q6(b)(i), gave a mark for the comparison).", r"In equilibrium the pivot supports everything: $500 + 200 + 300 = 1000$ N upwards."]),
         ]),
     ],
 )
@@ -376,7 +376,7 @@ section_t6 = section(
 LEVELS_TABLE = (
     "<table class='tbl'><tr><th>Equation (Level 2 if left like this)</th><th>The same equation in the parts of the winch (Level 3)</th><th>Said in words (also Level 3)</th></tr>"
     "<tr><td>moment = force × perpendicular distance</td><td><b>moment of the handle = effort × length of the handle</b></td><td>the longer the handle, the smaller the effort needed for the same moment</td></tr>"
-    "<tr><td>moment = force × perpendicular distance</td><td><b>moment on gear X = force between the teeth × radius of X</b> (and on Y: the same tooth force × radius of Y)</td><td>the bigger gear X is compared with Y, the more the moment is multiplied</td></tr>"
+    "<tr><td>moment = force × perpendicular distance</td><td><b>moment of the force of gear Y on gear X = tooth force × radius of Y</b> (the scheme's line), and the moment that force gives gear X = the same tooth force × radius of X</td><td>the bigger gear X is compared with Y, the more the moment is multiplied</td></tr>"
     "<tr><td>moment = force × perpendicular distance</td><td><b>moment of the load on the drum = load × radius of the drum</b></td><td>the smaller the drum, the smaller the moment the load produces, so the smaller the effort</td></tr>"
     "<tr><td>work done = force × distance moved</td><td><b>work done by the effort = effort × distance the end of the handle moves</b> (2π × handle length per turn)</td><td>a longer handle means the effort moves further each turn</td></tr>"
     "<tr><td>work done = force × distance moved</td><td><b>work done on the load = load × height the load rises</b> (2π × drum radius per turn of the drum)</td><td>a smaller drum lifts the load less far per turn</td></tr>"
@@ -533,7 +533,7 @@ FACTS = [
     fact("Name five contact forces.", "Normal contact force, friction, tension, drag (air / water resistance), upthrust.", "force-types"),
     fact("In which direction does the normal contact force act?", "At right angles (normal) to the surface, pushing away from it.", "force-types"),
     fact("What is a field, in one sentence?", "A region in which a mass / charge / magnetic material experiences a force.", "force-types"),
-    fact("How should a force arrow be drawn on a surface?", "Starting or ending at the point where the force acts, at right angles to the surface for a normal contact force.", "force-types"),
+    fact("How should a force arrow be drawn on a surface?", "Touching the point where the force acts, at right angles (normal) to the surface — the 2023 and 2024 fluid-force schemes gave a mark for each.", "force-types"),
     # N2
     fact("Four features of an interaction pair?", "Equal in size, opposite in direction, same type of force, acting on different objects.", "force-pairs"),
     fact("Are the weight of a book and the normal contact force from the table an interaction pair?", "No — both act on the book and they are different types. They are balanced forces. The pair to the weight is the book pulling the Earth up.", "force-pairs"),
