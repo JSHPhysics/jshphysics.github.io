@@ -458,7 +458,7 @@ section_t5 = {
     "band": "tricky",
     "lessons": "2.23",
     "title": "Third-law pairs vs balanced forces",
-    "blurb": "Two equal and opposite forces on the same object are balanced forces, not a third-law pair. Sorting the two ideas out is worth several marks a year.",
+    "blurb": "Two equal and opposite forces on the same object are balanced forces, not a third-law pair. Every third-law question so far has been about a collision or a push between two named objects — the trap matters because it stops you naming the wrong pair.",
     "equations": [],
     "checklist": [
         "Explain why the weight of an object and the surface's push on it are not a third-law pair",

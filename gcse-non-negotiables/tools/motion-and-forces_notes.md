@@ -93,3 +93,33 @@ also could not verify the H/P tags, which led to the spec check above
 Playwright: expand all cards, enter every numeric answer and click every
 correct choice through the UI, check for KaTeX errors and horizontal
 overflow at 390px, open the booklet. Run before the push.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-02.md`
+(28 questions) plus the Topic-2 records in topic-03/09 and index.json
+(34 questions matched; the June 2026 papers have no scheme yet). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| motion-and-forces / acceleration-nn (explain) | the minus sign is only required when the question says "include the sign"; either sign is credited otherwise | 1H June 2018 Q6(d) "accept −8"; June 2024 Q3(b)(ii) "ignore negative sign" |
+| motion-and-forces / t2-n4-q2, t2-t12-q2 | walkthroughs now show the stored value (9.22; 31.25 cm) beside the 2 s.f. one | schemes "allow numbers that round to" |
+| motion-and-forces / core-practical-analysis (explain) | "cancels friction" → balances / compensates for the effect of friction; "cancels / reduces" recorded as rejected | 1H June 2022 Q7(b)(ii) "do not accept reducing / cancelling friction" |
+| motion-and-forces / keywords (Scalar, Newton's third law), t2-kw-q12, t2-n13-q4 | "action and reaction" scores one mark at most on its own; the other marks name both forces with both objects; energy scores nothing; scalar "Not this" no longer rejects "without direction" | 1H June 2022 Q7(c)(ii); June 2025 Q8(a)(iii) |
+| motion-and-forces / conservation-momentum worked | the third-law chain no longer "answers every version": the 2024 6-marker ignored forces and the laws of motion and marked the signed momenta and the KE → thermal lines; the 2025 3-mark chain (momentum of the system constant → p = mv → more mass moving) added | 1H June 2024 Q9(c); June 2025 Q8(b); June 2018 Q9(b); Nov 2020 Q9(c) |
+| motion-and-forces / t2-t9-q8a | the direction slip in Δp loses the final mark only | 1H June 2022 Q7(c)(i); June 2023 Q9(b) |
+| motion-and-forces / force-momentum (explain) | the crumple-zone chain kept; "absorbs the impact gets nothing" softened to "in no scheme" | 1H Nov 2020 Q9(b) |
+| motion-and-forces / braking-v-squared (explain) | "kinetic energy lost" → transferred, with the destination named | 1H June 2019 Q1(b) "must include destination of final energy" |
+| motion-and-forces / planning-practical (explain, checklist), t2-tp-q1, t2-tp-q2 | "use light gates" is an isolated statement (Level 1), not "nothing"; "repeat" alone has sometimes scored and is ignored as an improvement — the advice to write "repeat and take a mean" stands, the claim that "repeat" scores nothing does not | 1H June 2023 Q9(c); Nov 2020 Q2(b); June 2019 Q5(a); Nov 2021 Q7(b)(ii) |
+| motion-and-forces / t2-n8-q7 | "keep the same height" replaces "measure the height" rather than adding a mark | 1H June 2023 Q2(b)(i) |
+| motion-and-forces / third-law-trap (blurb) | "worth several marks a year" → every third-law question so far names two objects | bank 2018–2025 |
+
+No stored answer changed; `check_topic.js motion-and-forces` passes on
+both tiers. H list in the report: the 2025 "more mass is moving" chain
+(now in the worked), the 2022 momentum investigation (Q7(b)(i)), the
+constant-thrust rocket (Nov 2021 Q6(c)), the "show that" convention
+(2022 Q5(a)(i), 2024 Q7(a)(ii) "do not accept 710"), y = mx + c on a v–t
+graph (2024 Q7(c)), the ruler-drop evaluation (SAM Q4), N s accepted for
+momentum (2025 Q8(a)(i)).

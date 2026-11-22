@@ -243,7 +243,7 @@ section_n3 = {
                 "The unit of acceleration is <b>m/s²</b>: metres per second, <i>every second</i>.</p>"
                 "<p>An acceleration of 3 m/s² means the velocity increases by 3 m/s each second: 0, 3, 6, 9, 12 …</p>"
                 "<p><b>Slowing down</b> gives a <b>negative</b> answer, because $v$ is smaller than $u$. That is called a <b>deceleration</b>. "
-                "If a question says \"include the sign\" or \"calculate the acceleration\" of something slowing down, write the minus sign.</p>"
+                "If a question says \"include the sign\", write the minus sign. Otherwise either $-4$ m/s² or \"a deceleration of 4 m/s²\" is credited — the schemes accept both (June 2018 Q6(d): \"accept −8\"; June 2024 Q3(b)(ii): \"ignore negative sign in answer line\").</p>"
                 "<table class='tbl'><tr><th>To find…</th><th>Use…</th></tr>"
                 "<tr><td>acceleration</td><td>$" + ACC_EQ + "$</td></tr>"
                 "<tr><td>final velocity</td><td>$" + V_EQ + "$</td></tr>"
@@ -342,7 +342,7 @@ section_n4 = {
                         ewau(SUVAT_EQ, r"v^2 = 0 + 2 \times 2 \times 16 = 64 \quad\Rightarrow\quad v = \sqrt{64}", "8", "m/s")),
                 numeric("t2-n4-q2", "A runner moving at 5 m/s accelerates at 1.5 m/s² for 20 m. Calculate her final velocity.", sf(q4_2), "m/s",
                         "Square u (5² = 25) before adding 2ax.",
-                        ewau(SUVAT_EQ, r"v^2 = 5^2 + 2 \times 1.5 \times 20 = 25 + 60 = 85 \quad\Rightarrow\quad v = \sqrt{85}", "9.2", "m/s")),
+                        ewau(SUVAT_EQ, r"v^2 = 5^2 + 2 \times 1.5 \times 20 = 25 + 60 = 85 \quad\Rightarrow\quad v = \sqrt{85} = 9.22", "9.2", "m/s")),
                 numeric("t2-n4-q3", "A car travelling at 20 m/s brakes and stops in 50 m. Calculate its acceleration. Include the sign.", sf(q4_3), "m/s²",
                         "Stopping means $v = 0$. The answer is negative.",
                         ewau(SUVAT_EQ, r"0^2 - 20^2 = 2 \times a \times 50 \quad\Rightarrow\quad a = \dfrac{-400}{100}", "-4", "m/s²")),

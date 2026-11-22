@@ -50,7 +50,7 @@ q_describe_speed = written(
         ("Change", "Repeat with a <b>different number of cupcake cases</b> in the stack (several stacks)."),
         ("Repeat &amp; mean", "<b>Repeat and average</b> the time for each stack."),
         ("Use the result", "<b>Plot a graph</b> of speed of fall against number of cases."),
-    ], total=4, extra=["Any four of the six rows score. \"Time it\" is accepted for measuring the time; \"drop it from the same height\" is accepted as the control."]),
+    ], total=4, extra=["Any four of the six rows score. \"Time it\" is accepted for measuring the time; \"keep the same height\" is accepted in place of \"measure the height\" (it is not an extra mark)."]),
     lines=5,
     hint="Two measurements, one calculation, what you change, repeats, a graph — pick four.",
 )
@@ -153,7 +153,7 @@ q_bounce_group = group(
                 "Velocity is a vector. Take the direction towards the racket as positive: $u = +20$ m/s, $v = -25$ m/s. The change is $v - u$, not the difference of the two sizes.",
                 [r"Take towards the racket as positive: $u = +20$ m/s, $v = -25$ m/s.",
                  r"$\Delta p = m v - m u = 0.16 \times (-25) - 0.16 \times 20 = -4 - 3.2 = -7.2$ kg m/s.",
-                 r"Size of the change: 7.2 kg m/s (the minus sign says it is directed away from the racket). Subtracting $4 - 3.2 = 0.8$ ignores the change of direction and scores one mark at most."], label="a", tags=["H"]),
+                 r"Size of the change: 7.2 kg m/s (the minus sign says it is directed away from the racket). Subtracting $4 - 3.2 = 0.8$ ignores the change of direction and loses the <b>final mark only</b> — the schemes still give the substitution mark (June 2022 Q7(c)(i): \"42.5 N scores 2 marks maximum\"; June 2023 Q9(b): \"allow Δp = ±0.2\"). Get the direction right and you keep all three."], label="a", tags=["H"]),
         numeric("t2-t9-q8b", "Calculate the average force the racket exerts on the ball.", sf(force_ball, 3), "N",
                 "70 ms is 0.070 s — ms means milliseconds.",
                 [r"$t = 70\ \text{ms} = 0.070$ s.",

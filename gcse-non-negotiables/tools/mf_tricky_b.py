@@ -158,8 +158,8 @@ section_t9 = {
                 "<tr><td>Seatbelt</td><td>Stretches slightly, and stops the person over the same time as the car rather than when they hit the windscreen</td></tr>"
                 "<tr><td>Cycle helmet</td><td>Foam compresses on impact</td></tr>"
                 "<tr><td>Crash mat, bending your knees on landing</td><td>Same idea: longer stopping time</td></tr></table>"
-                "<p><b>The 4-mark answer, in order:</b> (1) the momentum change is the same with or without the feature; (2) the feature increases the time taken to stop; "
-                "(3) force = change in momentum ÷ time, so (4) the force on the person is smaller, so less injury. Students who write \"it absorbs the impact\" get nothing.</p>"
+                "<p><b>The chain the schemes credit</b> (Nov 2020 Q9(b): \"with spring, time for contact greater, less impact force\"), in order: (1) the momentum change is the same with or without the feature; (2) the feature increases the time taken to stop; "
+                "(3) force = change in momentum ÷ time, so (4) the force on the person is smaller, so less injury. \"It absorbs the impact\" names no quantity and is in no scheme.</p>"
                 "<p><b>Large decelerations are dangerous</b> because a large deceleration means a large force on the body ($F = ma$). Forces of many times a person's weight can break bones, "
                 "tear organs and injure the brain against the skull — even without hitting anything, because the body's own tissues have to supply the stopping force.</p>"
             ),
@@ -239,9 +239,9 @@ section_t10 = {
     "parts": [
         {
             "kind": "explain",
-            "title": "Work done by the brakes = kinetic energy lost",
+            "title": "Work done by the brakes = kinetic energy transferred",
             "html": (
-                "<p>To stop a car, the brakes must remove all of its kinetic energy. The braking force does work over the braking distance:</p>"
+                "<p>To stop a car, the brakes must transfer all of its kinetic energy <b>to the thermal store of the brakes and the surroundings</b> (by heating). If asked what happens to the KE, name that destination — June 2019 Q1(b): \"must include destination of final energy\"; \"the KE decreases\" on its own does not score. The braking force does work over the braking distance:</p>"
                 "$$" + WD_EQ + r"\qquad\qquad " + KE_EQ + "$$"
                 "<p>Setting them equal:</p>"
                 "$$" + BRAKE_EQ + r"\qquad\Rightarrow\qquad " + D_EQ + "$$"
@@ -347,7 +347,7 @@ section_t11 = {
                 "because they are joined by the string. If you simply added more mass to the hanger you would increase the force <i>and</i> the mass at the same time, "
                 "so you could not tell which caused the change in acceleration. Moving a mass from the trolley to the hanger changes only the force; the total mass is unchanged.</p>"
                 "<p><b>Friction.</b> Friction on the trolley opposes the motion, so the <i>resultant</i> force is less than the hanging weight. Two ways to deal with it:</p>"
-                "<ul><li><b>Compensate:</b> tilt the runway slightly, until the trolley (given a gentle push, with no hanging mass) runs at a constant speed. The component of its weight down the slope now cancels friction.</li>"
+                "<ul><li><b>Compensate:</b> tilt the runway slightly, until the trolley (given a gentle push, with no hanging mass) runs at a constant speed. The component of its weight down the slope now <b>balances</b> friction — the slope <b>compensates for the effect of friction</b>, so the trolley runs at a constant speed. Do not write that the slope \"cancels\" or \"reduces\" friction: June 2022 Q7(b)(ii) says \"do not accept reducing / cancelling friction\".</li>"
                 "<li><b>Or leave it and read it off the graph:</b> uncompensated friction gives an acceleration–force graph that is still a straight line, but it cuts the force axis at a positive value. That intercept is the friction force — the force you need before the trolley accelerates at all.</li></ul>"
                 "<p><b>The gradient.</b> From $F = ma$, $a = F \\times \\dfrac{1}{m}$, so the gradient of $a$ against $F$ is $\\dfrac{1}{m}$: the reciprocal of the total mass. "
                 "A plot of $a$ against $m$ (force constant) is a curve, because $a = F \\div m$; to get a straight line, plot $a$ against $\\dfrac{1}{m}$.</p>"
@@ -447,7 +447,7 @@ section_planning = {
         "Say which variable you measure, how, and with what equipment",
         "Say what you will do with the results (a calculation or a graph)",
         "Give one specific detail that makes the results accurate",
-        "Say you will repeat the readings and calculate a mean (both halves, or no mark)",
+        "Say you will repeat the readings and calculate a mean (write both halves)",
     ],
     "parts": [
         {
@@ -467,8 +467,8 @@ section_planning = {
                 "<li><b>Say what you will do with the result</b> — e.g. \"use $a = F \\div m$ to calculate the acceleration\" or \"plot a graph of $F$ against $a$ and calculate the gradient\".</li>"
                 "<li><b>Add a detail about the practical to make sure you get accurate results</b> — e.g. \"release the trolley from the same point each time\", "
                 "\"keep the ramp at the same angle\", \"use light gates rather than a stopwatch so there is no reaction time\". One specific, relevant detail is enough.</li>"
-                "<li><b>Say you will repeat the readings and calculate a mean.</b> Both halves are needed: writing \"repeat the experiment\" on its own does <b>not</b> get the mark — "
-                "you must also say that you will <b>calculate a mean</b> of the repeats.</li>"
+                "<li><b>Say you will repeat the readings and calculate a mean.</b> Write both halves: the marking point is almost always \"repeat and take a mean\", and \"repeat the experiment\" on its own has only sometimes scored — "
+                "so always add that you will <b>calculate a mean</b> of the repeats.</li>"
                 "</ol>"
                 "<p>Write the steps as numbered points, not as one paragraph. A labelled diagram of the equipment is worth adding if you have time, but it does not replace the words.</p>"
             ),
@@ -479,10 +479,10 @@ section_planning = {
             "title": "Where the marks go missing",
             "html": (
                 "<p>The two most common ways to lose marks are <b>describing the equipment without saying what you measure with it</b> "
-                "(\"use light gates\" earns nothing; \"use light gates to record the speed at each point\" does), "
+                "(\"use light gates\" is an <i>isolated statement</i> that keeps you in Level 1 — June 2023 Q9(c); \"use light gates to measure the velocity at each point\" is a <i>detail of procedure</i>, which is what Levels 2 and 3 are made of), "
                 "and <b>stopping after you have collected the data</b>. The question asked how you would <i>investigate</i> the link between the two variables, "
                 "so the calculation or graph that shows the link is a mark in its own right. "
-                "And the easiest mark on the paper is the one most often thrown away: <b>\"repeat\" alone scores nothing — \"repeat and calculate a mean\" scores</b>.</p>"
+                "And the point the schemes almost always write as <b>\"repeat and take a mean\"</b> (June 2022 Q7(b)(i), June 2023 Q2(b)(i), SAM Q7(a)) needs both halves — \"repeat\" on its own has only sometimes scored (June 2019 Q5(a)), and as an <i>improvement</i> to a method it is ignored (Nov 2021 Q7(b)(ii)).</p>"
             ),
         },
         {
@@ -516,7 +516,7 @@ section_planning = {
                         ("Measure", "Measures the acceleration using the card and two light gates with a data logger: speed at each gate, time between the gates, $a = (v - u) \\div t$ (or the data logger calculates it)."),
                         ("Use the result", "Plots a graph of acceleration against mass (or against $1 \\div \\text{mass}$) and describes the link — $a$ decreases as $m$ increases; $a$ against $1/m$ is a straight line through the origin with gradient $F$."),
                         ("Accuracy", "One specific detail that makes the results accurate: releases the trolley from the same marked point each time, or tilts the runway to compensate for friction, or measures the card length precisely with a ruler."),
-                        ("Repeat &amp; mean", "Repeats the readings for each mass <b>and calculates a mean</b>. \"Repeat\" on its own does not score."),
+                        ("Repeat &amp; mean", "Repeats the readings for each mass <b>and calculates a mean</b> — the schemes' wording is \"repeat and average\"; write both halves."),
                     ], extra=[
                         "\"Use light gates\" on its own does not earn the <i>Measure</i> mark — you must say what the light gates measure.",
                         "The <i>Use the result</i> mark needs a graph or a calculation that links the two variables, not just \"record the results in a table\".",
@@ -534,7 +534,7 @@ section_planning = {
                         ("Measure", "Measures the velocity at the gate: a card of measured length on the trolley breaks the light-gate beam, the timer records the time, and velocity $= \\text{card length} \\div \\text{time}$."),
                         ("Use the result", "Plots a graph of $v^2$ against $x$. A straight line through the origin shows that $v^2 \\propto x$ (the acceleration is constant); the gradient equals $2a$, so the acceleration is half the gradient."),
                         ("Accuracy", "One specific detail that makes the results accurate: releases the trolley from the same marked point each time without pushing it, or keeps the ramp at the same angle throughout, or measures the distance to the gate from the front of the card."),
-                        ("Repeat &amp; mean", "Repeats the readings at each distance <b>and calculates a mean</b> velocity. \"Repeat\" on its own does not score."),
+                        ("Repeat &amp; mean", "Repeats the readings at each distance <b>and calculates a mean</b> velocity — the schemes' wording is \"repeat and average\"; write both halves."),
                     ], extra=[
                         "Plotting $v$ against $x$ and saying \"it curves\" earns the graph part of the last mark only if you say the curve shows $v$ is not proportional to $x$; the full mark needs $v^2$ against $x$.",
                         "A stopwatch instead of a light gate is accepted for the <i>Measure</i> mark only if you say what distance and time you would use to find the velocity, and note that reaction time makes it less accurate.",
@@ -606,7 +606,7 @@ section_t12 = {
                         [r"$t^2 = \dfrac{2 \times 0.45}{10} = 0.09$.", r"$t = \sqrt{0.09} = 0.3$ s."]),
                 numeric("t2-t12-q2", "A student's reaction time is 0.25 s. How far, in cm, will a ruler fall before she catches it?", 31.25, "cm",
                         "$x = \\tfrac{1}{2}gt^2$, then convert metres to centimetres.",
-                        [r"$x = \tfrac{1}{2} \times 10 \times 0.25^2 = 5 \times 0.0625 = 0.3125$ m.", r"$0.3125 \text{ m} = 31$ cm (to 2 s.f.)."]),
+                        [r"$x = \tfrac{1}{2} \times 10 \times 0.25^2 = 5 \times 0.0625 = 0.3125$ m.", r"$0.3125 \text{ m} = 31.25$ cm (31 cm to 2 s.f. — the schemes allow any value that rounds to theirs)."]),
                 written("t2-t12-q3", "Explain why the ruler-drop test should be repeated several times and a mean taken.",
                         marks(["Reaction time varies from one attempt to the next (random variation).",
                                "Repeating and averaging reduces the effect of this random error and makes the result more reliable.",

@@ -15,7 +15,7 @@ from revlib import choice, explain, fact, group, marks, practice, section, worke
 
 DEFINITIONS = [
     # (term, mark-scheme definition with scoring words bolded, common wrong answer)
-    ("Scalar", "A quantity with <b>magnitude (size) only</b>", "\"a number\" / \"a quantity without direction\" on its own — say magnitude only"),
+    ("Scalar", "A quantity with <b>magnitude (size) only</b>", "\"a number\" — say it has magnitude (size) and no specific direction"),
     ("Vector", "A quantity with <b>magnitude and direction</b>", "\"a quantity with direction\" — the magnitude must be mentioned too"),
     ("Displacement", "The <b>distance</b> from a start point <b>in a stated direction</b>", "\"how far you have gone\" — that is distance"),
     ("Velocity", "<b>Speed in a stated direction</b> (the rate of change of displacement)", "\"how fast\" / \"speed\" — the direction is the mark"),
@@ -25,7 +25,7 @@ DEFINITIONS = [
     ("Equilibrium", "The <b>resultant force is zero</b> (forces balanced), so the object stays at rest or at constant velocity", "\"nothing is moving\" — a moving object can be in equilibrium"),
     ("Newton's first law", "An object stays <b>at rest</b> or moves at <b>constant velocity</b> unless a <b>resultant force</b> acts on it", "\"objects keep moving\" — all three parts are needed"),
     ("Newton's second law", "Acceleration is <b>proportional to the resultant force</b> and <b>inversely proportional to the mass</b>; $F = m \\times a$", "\"force makes things accelerate\""),
-    ("Newton's third law", "When two objects interact, the forces on each are <b>equal in size</b> and <b>opposite in direction</b> (and of the same type)", "\"every action has an equal and opposite reaction\" — credited only if you then say what the two forces are"),
+    ("Newton's third law", "When two objects interact, the forces on each are <b>equal in size</b> and <b>opposite in direction</b> (and of the same type)", "\"every action has an equal and opposite reaction\" — one mark at most on its own (June 2022 Q7(c)(ii), June 2025 Q8(a)(iii)); the other marks are for naming the two forces, \"the force of the foot on the ball\" and \"the force of the ball on the foot\", and saying they are opposite. Energy gets nothing"),
     ("Mass", "The <b>amount of matter</b> in an object (also: a measure of its inertia)", "\"how heavy it is\" — that is weight"),
     ("Weight", "The <b>force</b> of <b>gravity</b> on an object; $W = m \\times g$", "\"mass × gravity\" — weight is a force, in newtons"),
     ("Gravitational field strength", "The <b>force</b> of gravity <b>per kilogram</b> (per unit mass), in N/kg", "\"gravity\" / \"10\""),
@@ -112,7 +112,7 @@ section_keywords = section(
                            "the <b>total momentum before</b> an event (collision or explosion) is <b>equal to the total momentum after</b> it."]), lines=2, tags=["H"]),
             written("t2-kw-q12", "State Newton's third law. (2)",
                     marks(["When two objects interact, each exerts a force on the other;",
-                           "the two forces are <b>equal in size and opposite in direction</b> (and of the same type)."]), lines=2),
+                           "the two forces are <b>equal in size and opposite in direction</b> (and of the same type). In the exam add the two forces by name — \"the force of X on Y and the force of Y on X\" — or the statement alone is one mark."]), lines=2),
         ], intro="Write each answer on paper first. Mark yourself strictly: if the bold words (or their equivalent) are missing, it is not a mark."),
     ],
 )
@@ -141,7 +141,7 @@ worked_n3_momentum = worked(
         r"<b>2.</b> The two forces act for the <b>same time</b>, because the trolleys are in contact for the same time.",
         r"<b>3.</b> Change in momentum = force × time, so the trolleys receive changes in momentum that are <b>equal in size and opposite in direction</b>.",
         r"<b>4.</b> The changes cancel: the <b>total change in momentum is zero</b>, so the total momentum is unchanged by the collision.",
-        r"Each numbered line is one mark. The same answer, with \"the ball and the bat\" or \"the gun and the bullet\" substituted, answers every version of the question.",
+        r"Each numbered line is one mark. Use this chain when the question says <b>using Newton's third law</b> (June 2018 Q9(b), Nov 2020 Q9(c) — which also credits \"no external forces act\"). When it says <b>explain how momentum is conserved in this collision</b> (June 2024 Q9(c), 6 marks) the marks are for the <b>momenta themselves</b>: $p = mv$, momentum is a <b>vector</b>, the two momenta before are $+mv$ and $-mv$ so the <b>total before is zero</b>, the total after must also be zero — and that scheme <i>ignores</i> equal-and-opposite forces and the laws of motion. If it also asks about energy: each trolley has KE before, the KE after is zero, the KE is <b>transferred to the thermal store</b> (by heating and sound) and <b>dissipated to the surroundings</b>. The 3-mark qualitative version (June 2025 Q8(b)): <b>total momentum of the system is constant</b> → $p = mv$ → <b>more mass is moving</b> after the collision, so the velocity is lower.",
     ],
 )
 
