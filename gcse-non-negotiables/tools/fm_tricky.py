@@ -33,7 +33,7 @@ section_t1 = section(
             "<table class='tbl'><tr><th>Slip</th><th>Where it showed</th><th>Cost</th><th>Avoid it</th></tr>"
             "<tr><td>using the <b>length</b> as $x$</td><td>a spring \"12 cm long with a 4 N load\" — the extension is the loaded length minus the unloaded length, which the question gives elsewhere</td><td>the substitution mark and the answer</td><td>write $x = l - l_0$ first and find both lengths before anything else</td></tr>"
             "<tr><td>$x$ left in <b>cm</b> in $F = kx$</td><td>June 2025 Q8(b)(ii): \"use the extension in cm and give the value as N/m\"</td><td>answer 100 times too small; one mark of two</td><td>cm → m is ÷ 100; mm → m is ÷ 1000</td></tr>"
-            "<tr><td>$x$ left in cm in $E = \\tfrac{1}{2} k x^2$</td><td>June 2025 Q8(b)(i): \"forget to convert the extension from cm to m\"</td><td>answer 100 times too large (the square makes it 10 000, but $k$ was also found in cm); two marks of three for clear working</td><td>convert <b>before</b> squaring</td></tr>"
+            "<tr><td>$x$ left in cm in the area $\\tfrac{1}{2} F x$</td><td>June 2025 Q8(b)(i): \"forget to convert the extension from cm to m\" — 14 J instead of 0.14 J</td><td>answer 100 times too large; two marks of three (\"to any other power of ten scores 2 marks\"); forgetting the ½ (0.29 J) also two of three</td><td>convert <b>before</b> multiplying; in $\\tfrac{1}{2} k x^2$ the same slip is squared — 10 000 times (June 2018 Q5(b)(ii): \"½ × 24 × 12²\" max 1 of 2)</td></tr>"
             "<tr><td>mm not converted in $F = kx$</td><td>June 2023 Q7(a)(i): 1600 N instead of 1.6 N</td><td>two marks of three</td><td>6.2 mm = $6.2 \\times 10^{-3}$ m</td></tr></table>"
             "<p>Ruler readings work the same way: the June 2023 scheme (Q7(a)(ii)) gave one mark each for reading the position with <b>no load</b>, reading it <b>with the load</b>, and <b>subtracting</b>. If the question gives you the spring constant and the force instead, the change in length comes from $x = F \\div k$ — the alternative the scheme allowed (\"0.39 = 260 × change in length\", 1.5 mm, <b>with the unit shown</b>).</p>",
         ),
@@ -53,7 +53,7 @@ section_t1 = section(
             numeric("fm-t1-q2", "A spring of spring constant 260 N/m is pressed with a force of 0.39 N. Calculate the change in its length, in mm.", 1.5, "mm",
                     "$x = F \\div k$ in metres, then × 1000.",
                     [r"$x = F \div k = 0.39 \div 260 = 1.5 \times 10^{-3}$ m"] + ewau(r"x = F \div k", r"x = 0.39 \div 260 = 1.5 \times 10^{-3} \text{ m}", "1.5", "mm (the June 2023 Q7(a)(ii) alternative; the unit must be shown)")),
-            choice("fm-t1-q3", "A student uses $x = 4$ cm in $E = \tfrac{1}{2} k x^2$ with k in N/m. The energy comes out…",
+            choice("fm-t1-q3", "A student uses $x = 4$ cm in $E = \\tfrac{1}{2} k x^2$ with k in N/m. The energy comes out…",
                    ["100 times too large", "10 000 times too large ($4^2 = 16$ instead of $0.04^2 = 0.0016$)", "correct", "100 times too small"], 1,
                    "The square makes the cm slip worse: convert first."),
             numeric("fm-t1-q4", "The pointer on a spring reads 3.2 cm with no load and 9.7 cm with a 2.6 N load. Calculate the energy stored in the spring.", 0.0845, "J",
@@ -99,7 +99,7 @@ section_t2 = section(
             "Three readings from one graph",
             "<table class='tbl'><tr><th>Wanted</th><th>Read</th><th>Watch</th></tr>"
             "<tr><td>spring constant</td><td><b>gradient</b> of the <b>straight</b> part: pick two points far apart on the line, $k = \\Delta F \\div \\Delta x$</td><td>$x$ in metres; if extension is on the $y$-axis the gradient is $1 \\div k$; beyond the limit the gradient is not $k$ (the spring is not obeying Hooke's law there)</td></tr>"
-            "<tr><td>energy stored / work done</td><td><b>area under the line</b> up to the extension asked for: on the straight part a <b>triangle</b>, $\\tfrac{1}{2} F x$ (= $\\tfrac{1}{2} k x^2$)</td><td>past the limit the area is a triangle plus a curved strip — estimate by counting squares; the June 2025 scheme (Q8(b)(i)) gave the three marks for converting to metres, reading the correct points and calculating the area</td></tr>"
+            "<tr><td>energy stored / work done</td><td><b>area under the line</b> up to the extension asked for: on the straight part a <b>triangle</b>, $\\tfrac{1}{2} F x$ (= $\\tfrac{1}{2} k x^2$)</td><td>past the limit the area is a triangle plus a curved strip — estimate by counting squares; the June 2025 scheme (Q8(b)(i)) gave one mark for the values read from the graph (8 cm and 3.6 N), one for the substitution $\\tfrac{1}{2} \\times 3.6 \\times 0.08$ and one for 0.14 J; 14 J (cm left in) and 0.29 J (½ forgotten) each scored two</td></tr>"
             "<tr><td>limit of proportionality</td><td>the point where the <b>straight line ends</b></td><td>beyond it: non-linear, Hooke's law no longer applies, each extra newton gives more extension than before; the elastic limit is a little further on</td></tr></table>"
             "<p><b>Compression graphs</b> are read the same way: force against compression (how much shorter), with the same $k$ for the same spring — 2023 Q7 was a spring <b>pressed</b> by 6.2 mm. <b>Check the axes and their units</b> before reading anything off. A graph that is a straight line but <b>not through the origin</b> is linear but not proportional — say so if asked.</p>",
         ),
@@ -230,7 +230,7 @@ section_t4 = section(
             "<tr><td><b>mm² and cm²</b></td><td>June 2025 Q1(c): forgetting to convert mm² to m² gave \"an answer that was a million times too large\" (1 of 2)</td><td>square the length conversion: 1 mm = $10^{-3}$ m so 1 mm² = $10^{-6}$ m²; 1 cm² = $10^{-4}$ m²</td></tr>"
             "<tr><td><b>Rounding</b></td><td>June 2024 Q4(b): substitution (1), evaluation 576 N (1), <b>rounded to 2 s.f.</b> 580 N (1)</td><td>when the question says \"to 2 significant figures\", the rounding is a mark on its own</td></tr>"
             "<tr><td><b>Difference</b></td><td>June 2023 Q4(a)(i)–(ii): net pressure $80\\,000 - 23\\,000 = 57\\,000$ Pa; the force of the <b>cabin air</b> on the window used 80 000 (substituting 57 000 there earned only the substitution mark)</td><td>read which force the question wants: one side's pressure, or the net</td></tr></table>"
-            "<p>And the explanation version (2022 Q4(a)(ii)): larger area → the <b>weight (force) is spread over a larger area</b> → <b>less pressure</b>. Two marks: the larger area, and the weight spread over it giving less pressure; \"mass spread out\" earned neither.</p>",
+            "<p>And the explanation version (2022 Q4(a)(ii)): larger area → the <b>weight (force) is spread over a larger area</b> → <b>less pressure</b>. Any two of four: <b>greater area</b>; the (same) <b>weight is spread out</b>; <b>less pressure</b>; <b>less likely to sink</b> into the soft ground. \"Pressure is spread out\" is ignored — it is the force that spreads, and the pressure that falls; \"mass spread out\" earned nothing.</p>",
         ),
         worked(
             "Four feet and square millimetres",
@@ -291,14 +291,14 @@ section_t5 = section(
             "<tr><td><b>Shape</b></td><td>a <b>curve</b> falling: <b>non-linear</b>, the gradient becomes less steep with height</td><td>a <b>straight line</b> rising: linear, pressure proportional to depth (plus the constant atmosphere)</td></tr>"
             "<tr><td><b>Why</b></td><td>less air above → less weight → lower pressure; and the air is less dense higher up, so each km removes less weight</td><td>the weight of the column of liquid above grows in proportion to its height; the liquid's density does not change with depth</td></tr>"
             "<tr><td><b>Intercept</b></td><td>about 100 kPa at sea level</td><td><b>atmospheric pressure</b> at the surface (depth 0), the same whatever the liquid</td></tr>"
-            "<tr><td><b>Marks seen</b></td><td>2023 Q4(b): decrease with height (1), non-linear (1), use of numerical data (1); 2024 Q4(c): decreases as height increases / negative correlation (1), non-linear — curved, not proportional, gradient changes (1); a reading within a range; a percentage change</td><td>2022 Q4(c): density up → pressure up (1), <b>steeper gradient</b> (1), still <b>linear</b> (1), <b>same intercept, the air pressure</b> (1)</td></tr></table>"
+            "<tr><td><b>Marks seen</b></td><td>2023 Q4(b): decrease with height (1), non-linear (1), use of numerical data (1); 2024 Q4(c): decreases as height increases / negative correlation (1), non-linear — curved, not proportional, gradient changes (1); a reading within a range; a percentage change</td><td>2022 Q4(c), 2 marks, any two of: pressures <b>greater</b>; <b>steeper gradient</b>; <b>both straight lines</b>; <b>same intercept</b> (atmospheric)</td></tr></table>"
             "<p><b>Percentage change</b> (2024 Q4(c)(iii)): (new − old) ÷ old × 100 — the scheme gave one mark for the substitution and one for the evaluation, and only one mark for dividing by the new value instead. <b>Reading a graph</b>: say the two values you read and show the subtraction; a reading within the scheme's range scores even if the line is hard to read.</p>",
         ),
         worked(
             "Fresh water and sea water on one graph",
             "The graph shows total pressure against depth for fresh water and sea water. Describe the two lines and explain the differences and similarities. (4 marks)",
             [
-                "Both lines are <b>straight</b>: the pressure increases <b>in proportion</b> to the depth, because the weight of liquid above grows with the height of the column.",
+                "Both lines are <b>straight</b> (linear): equal extra depths add equal extra pressure, because the weight of liquid above grows with the height of the column — but they do not pass through the origin, so total pressure is not <i>proportional</i> to depth ($y = mx + c$, the 2022 Q4(b)(iii) answer).",
                 "Both start at <b>100 kPa</b> at the surface — the <b>atmospheric pressure</b>, which is the same whatever the liquid.",
                 "The sea-water line is <b>steeper</b> (306 kPa against 300 kPa at 20 m): sea water is <b>denser</b>, so the same column has more weight.",
                 "At any depth the sea-water pressure is higher by the extra weight of the denser column above — only 6 kPa at 20 m, because the densities differ by just 3 %.",
@@ -318,12 +318,12 @@ section_t5 = section(
                        "The intercept is the air pressure.", label="c"),
             ], graph=graph_depth),
             written("fm-t5-q2", "Describe the difference between a graph of pressure against height in the atmosphere and a graph of pressure against depth in a lake. (3)",
-                    marks(["Height: the pressure <b>decreases</b> as height increases; depth: the pressure <b>increases</b> with depth.", "Height: the graph is <b>non-linear</b> (a curve, less steep higher up, because the air is less dense there); depth: the graph is a <b>straight line</b> (pressure proportional to depth, the water's density being constant).", "Both start from <b>atmospheric pressure</b>, about 100 kPa, at the surface."]), lines=3),
+                    marks(["Height: the pressure <b>decreases</b> as height increases; depth: the pressure <b>increases</b> with depth.", "Height: the graph is <b>non-linear</b> (a curve, less steep higher up, because the air is less dense there); depth: the graph is a <b>straight line</b> (linear: the pressure due to the water is proportional to depth, added to the constant atmospheric pressure).", "Both start from <b>atmospheric pressure</b>, about 100 kPa, at the surface."]), lines=3),
             choice("fm-t5-q3", "In 2024 the percentage change in pressure was calculated as $(74 - 104) \\div 104 \\times 100 = -29$ %. A student who divided by 74 instead…",
                    ["scored full marks", "scored one mark (−41 %), because the change must be divided by the original value", "scored zero", "was given the benefit of the doubt"], 1,
                    "Divide by the starting value."),
             written("fm-t5-q4", "A pressure–height graph for the atmosphere is described by a student as 'inversely proportional'. Comment on this. (2)",
-                    marks(["The relationship is not inversely proportional in the strict sense (pressure × height is not constant — at zero height the pressure is 100 kPa, not infinite).", "The accurate description is a <b>negative, non-linear</b> relationship: pressure decreases as height increases and the fall per kilometre gets smaller. (The 2023 scheme, Q4(b)(i), accepted 'inversely proportional' for the non-linear mark \"in this context\" — a loose way of saying this.)"]), lines=2),
+                    marks(["The relationship is not inversely proportional in the strict sense (pressure × height is not constant — at zero height the pressure is 100 kPa, not infinite).", "The accurate description is a <b>negative, non-linear</b> relationship: pressure decreases as height increases and the fall per kilometre gets smaller. (The 2023 scheme, Q4(b)(i), accepted 'inversely proportional' \"in this context\" as a description of the fall — do not rely on it; 'decreases with height' and 'non-linear' are the words the two marks are written in.)"]), lines=2),
         ]),
     ],
 )
@@ -350,7 +350,7 @@ section_t6 = section(
             "<tr><td>2 volume of fluid displaced = volume of the object</td><td>$V = \\text{upthrust} \\div (\\rho_{\\text{fluid}}\\, g)$</td><td>$1.43 \\times 10^{-4}$ m³ (one mark)</td></tr>"
             "<tr><td>3 mass of the object from its weight in air</td><td>$m = W_{\\text{air}} \\div g$</td><td>the density equation with the block's weight (one mark)</td></tr>"
             "<tr><td>4 density</td><td>$\\rho = m \\div V$</td><td>$4.9 \\times 10^{3}$ kg/m³ (one mark), error carried forward</td></tr></table>"
-            "<p>The report: \"partial credit could be obtained by successfully completing each stage\", and on the explanation part (Q9(a)(i)) \"only a very few candidates correctly linked the loss in weight with the <b>weight of liquid displaced</b>\" — the marks were upthrust (1), equal to the weight of liquid displaced (1), and the liquid being <b>more dense than air</b> (1), which is why the object weighs less in the liquid than in air (there is an upthrust from the air too, but it is tiny). The paper's summary: \"less confidence was shown in the application of Archimedes' principle\".</p>"
+            "<p>The report: \"partial credit could be obtained by successfully completing each stage\", and on the explanation part (Q9(a)(i)) \"only a very few candidates correctly linked the loss in weight with the <b>weight of liquid displaced</b>\" — the two marks were the <b>(apparent) loss in weight</b> of the block in the liquid — the upthrust (1) — <b>equal to the weight of liquid displaced</b> (1); the guidance also accepts \"the liquid is more dense than air\" (so the liquid displaced weighs more than the air displaced — there is an upthrust from the air too, but it is tiny). The paper's summary: \"less confidence was shown in the application of Archimedes' principle\".</p>"
             "<p><b>The floating ball</b> (June 2023 Q6(c)): a ball floating in fresh water and in sea water has the <b>same upthrust</b> in both — equal to its <b>weight</b>, because it floats. The difference is in <b>how much</b> liquid it must displace: sea water is denser, so a <b>smaller volume</b> of it weighs the same as the ball, so less of the ball is under the surface. Three of the four scheme points: weight of ball = weight of water displaced; sea water more dense; smaller volume displaced to produce the same weight.</p>",
         ),
         worked(
@@ -375,8 +375,8 @@ section_t6 = section(
                         "Mass of the stone = 6.0 ÷ 10.",
                         [r"$m = 6.0 \div 10 = 0.60$ kg"] + ewau(r"\rho = m \div V", r"\rho = 0.60 \div (2.0 \times 10^{-4})", "3000", "kg/m³"), label="c"),
             ]),
-            written("fm-t6-q2", "Explain why an object appears to weigh less when it is hanging in a liquid than when it is hanging in air. (3)",
-                    marks(["In the liquid there is an <b>upthrust</b> on the object, which supports part of its weight, so the force on the string is smaller.", "The upthrust is equal to the <b>weight of liquid displaced</b> by the object.", "The liquid is <b>much more dense than air</b>, so the liquid displaced weighs far more than the air the object displaced — the upthrust in air is negligible."]), lines=3),
+            written("fm-t6-q2", "Explain why an object appears to weigh less when it is hanging in a liquid than when it is hanging in air. (2)",
+                    marks(["In the liquid the object has an <b>apparent loss in weight</b>: the <b>upthrust</b> on it supports part of its weight, so the force on the newton meter is smaller (June 2025 2H Q9(a)(i): \"(apparent) loss in weight (1) (equal to) weight of liquid displaced (1)\").", "The upthrust is equal to the <b>weight of liquid displaced</b> by the object.", "The liquid is <b>much more dense than air</b>, so the liquid displaced weighs far more than the air the object displaced — the upthrust in air is negligible."]), lines=3),
             written("fm-t6-q3", "A wooden block floats in water and then in oil, which is less dense than water. Compare the upthrust on the block in the two liquids, and explain whether more or less of the block is below the surface in the oil. (4)",
                     marks(["The upthrust is the <b>same</b> in both: the block floats, so in each liquid the upthrust <b>equals the block's weight</b>.", "Floating: the <b>weight of liquid displaced = the weight of the block</b>.", "Oil is <b>less dense</b> than water…", "…so a <b>larger volume</b> of oil must be displaced to have the block's weight: <b>more</b> of the block is below the surface in the oil."]), lines=4),
             choice("fm-t6-q4", "A student starts the 2025 chain with an upthrust of 5 N (the weight in the liquid) instead of 2 N (the loss in weight). According to the report, this…",
@@ -461,7 +461,7 @@ FACTS = [
     fact("6.2 mm in metres?", "$6.2 \\times 10^{-3}$ m (1600 N instead of 1.6 N lost a mark in 2023).", "hooke-nn"),
     # N4
     fact("Energy stored in a stretched spring?", "$E = \\tfrac{1}{2} k x^2$, extension in metres; also the area under the F–x line.", "energy-stored"),
-    fact("Why the ½ in $E = \tfrac{1}{2} k x^2$?", "The force grows from zero to $kx$ as it stretches, so the average force is half the final force.", "energy-stored"),
+    fact("Why the ½ in $E = \\tfrac{1}{2} k x^2$?", "The force grows from zero to $kx$ as it stretches, so the average force is half the final force.", "energy-stored"),
     fact("Double the extension: energy stored?", "Four times — $E \\propto x^2$.", "energy-stored"),
     # N5
     fact("A linear force–extension graph through the origin shows…", "Force is directly proportional to extension (Hooke's law); gradient = k.", "linear-nonlinear"),
@@ -483,7 +483,7 @@ FACTS = [
     fact("Force on a surface from a pressure?", "$F = PA$; with fluid on both sides, use the difference in pressure.", "fluid-pressure"),
     fact("Two windows, same cabin pressure, different sizes?", "Same pressure, larger force on the larger window.", "fluid-pressure"),
     # N9
-    fact("Why does atmospheric pressure fall with height?", "Less air above → smaller weight of air pressing down; the air is also less dense higher up.", "atmospheric-height"),
+    fact("Why does atmospheric pressure fall with height?", "Less air above → smaller weight of air pressing down; the air is less dense higher up; (and it is colder). Any one scores (2023, 2021); g is ignored.", "atmospheric-height"),
     fact("Shape of pressure against height?", "A curve falling: non-linear, the fall per km shrinks as the air thins.", "atmospheric-height"),
     fact("Atmospheric pressure at sea level?", "About 100 kPa — the weight of the air above each m².", "atmospheric-height"),
     fact("Marks for describing the height graph (2023, 2024)?", "Pressure decreases as height increases; non-linear; use numbers from the graph.", "atmospheric-height"),
@@ -520,10 +520,10 @@ FACTS = [
     fact("Height graph vs depth graph?", "Height: curve, falling, non-linear. Depth: straight line, rising, intercept = atmospheric pressure.", "pressure-graphs"),
     # T6
     fact("The 2025 Archimedes chain?", "Loss in weight = upthrust = weight of fluid displaced → volume displaced = object's volume → mass from weight in air → density.", "upthrust-hard"),
-    fact("Why does an object weigh less in a liquid than in air?", "Upthrust = weight of liquid displaced; the liquid is much denser than air, so the upthrust is much larger.", "upthrust-hard"),
+    fact("Why does an object weigh less in a liquid than in air?", "Apparent loss in weight = upthrust = weight of liquid displaced; the liquid is much denser than air, so far more weight of fluid is displaced.", "upthrust-hard"),
     fact("A ball floating in fresh and in sea water: the upthrusts?", "Equal — each equals the ball's weight; less sea water needs displacing because it is denser.", "upthrust-hard"),
     # T7
-    fact("The 2022 second mark for 'why does wood float'?", "Less water is displaced than the wood's own volume (because wood is less dense).", "floating-words"),
+    fact("The 2022 second mark for why the displacement method fails for wood?", "Wood is less dense than water, so it floats and displaces less water than its own volume.", "floating-words"),
     fact("Sinking in terms of forces?", "Even fully immersed, upthrust < weight: a resultant downward force.", "floating-words"),
     fact("How does a submarine dive?", "Floods its tanks so its weight exceeds the (unchanged) upthrust.", "floating-words"),
 ]

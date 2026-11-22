@@ -202,3 +202,36 @@ nothing scrolls sideways, no card wider than the screen, nothing sticks
 out. The limit-of-proportionality label on the N5 graph and the two
 liquid labels on the T5 graph were moved clear of the lines after a
 screenshot pass.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-15.md`
+(17 questions, 15 with schemes) and the density / upthrust / force parts of
+topic-14 and topic-09. No physics error; the defects were mark tariffs and
+dropped scheme points. Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| forces-and-matter / energy-stored (blurb, checklist), fm-t1-q3, flashcard | **bug**: four `"\tfrac"` strings carried a literal tab, so KaTeX could not render the fraction — now `\\tfrac` | — |
+| forces-and-matter / elastic-inelastic (explain) | "deformation … accepted" unsupported — removed; "distortion" cited to the 2019 stem | 2H June 2019 Q8(b)(ii) |
+| forces-and-matter / hooke-nn worked | the 2023 partial credits as given (1.61 N unrounded = 2 of 3; 1600 N = 2; 1612 N = 1) | 2H June 2023 Q7(a)(i) |
+| forces-and-matter / energy-stored worked, pressure-nn worked | forward ½kx² is a 2-mark question (cm left in: 1 of 2); the four-hooves calculation is 2 marks with its partial credits | 2H June 2018 Q5(b)(ii); June 2022 Q4(a)(i) |
+| forces-and-matter / extension-not-length table, fx-graphs-hard table | the 2025 cm slip was in the area ½Fx (14 J; 2 of 3), with forgetting the ½ also 2 of 3; converting is not a marking point; the ½kx² cm case is 2018 | 2H June 2025 Q8(b)(i); June 2018 Q5(b)(ii) |
+| forces-and-matter / pressure-nn, pressure-hard (explain) | the camel scheme is any two of four (area / weight spread / less pressure / less likely to sink); "pressure is spread out" ignored | 2H June 2022 Q4(a)(ii) |
+| forces-and-matter / atmospheric-height (explain), fm-n9-q1c, flashcard | the third credited reason, lower temperature, added; the ignore of g cited to 2023 Q4(b)(ii) | 2H June 2023 Q4(b)(ii); Nov 2021 Q4(b)(ii) |
+| forces-and-matter / depth-density (explain), fm-n10-q3, fm-n10-q1; pressure-graphs (table, worked), fm-t5-q2 | the 2022 compare was 2 marks, any two of four; a total-pressure line is **linear with an intercept** (y = mx + c, the paper's own answer), not "pressure proportional to depth"; "more water" alone is ignored — say depth / weight of water above | 2H June 2022 Q4(b)(iii), Q4(c); Nov 2021 Q4(a)(ii) |
+| forces-and-matter / fm-t5-q4 | "inversely proportional" accepted as a description of the fall, not for a named mark | 2H June 2023 Q4(b)(i) |
+| forces-and-matter / fm-n12-q1 | 2 marks: pressure on the bottom greater than on the top (same area) → force on the bottom greater; the 2-mark alternative route noted | 2H June 2019 Q9(a)(iii) |
+| forces-and-matter / upthrust-hard (explain), fm-t6-q2, flashcard | the 2025 explanation is 2 marks — "(apparent) loss in weight" = "weight of liquid displaced"; "more dense than air" is guidance, not a third mark | 2H June 2025 Q9(a)(i) |
+| forces-and-matter / floating-words flashcard | the 2022 question was why the displacement method fails for wood | 2H June 2022 Q3(c) |
+
+No stored answer changed; `check_topic.js forces-and-matter` passes on
+both tiers. H list in the report: the 2019 block-lifted-out-of-water
+6-marker and the Nov 2020 loaded-boat 6-marker (floating has been a
+6-marker twice and the page has no 6-mark worked example), the rubber
+band's unloading-line mark (2019 Q8(b)(ii)), the U-tube "no area in the
+equation" (Nov 2020 Q10(b)(ii)), the hydraulic lift (2018 Q6(c)), the
+spring-method improvements (Nov 2020 Q6(a)(iii)), the compression limit
+(Nov 2020 Q6(a)(iv)), the vertical-spring Z − Y extension (2025 Q8(a)).

@@ -85,7 +85,7 @@ section_n2 = section(
             "<tr><td><b>Definition</b></td><td>the object <b>returns to its original shape and size when the forces are removed</b></td><td>the object <b>does not return</b> to its original shape: it is <b>permanently</b> distorted</td></tr>"
             "<tr><td><b>Examples</b></td><td>a spring within its elastic limit, an elastic band, a rubber ball, a diving board, a car's springs</td><td>modelling clay, a crushed can, a bent paperclip, a spring stretched too far (it stays longer)</td></tr>"
             "<tr><td><b>Energy</b></td><td>the work done stretching it is stored (elastic potential energy) and given back as it returns</td><td>the work done goes into rearranging the material and is not recovered</td></tr></table>"
-            "<p>The <b>elastic limit</b> is the point beyond which the distortion stops being elastic: stretch a spring past it and it will not return to its original length. Up to the elastic limit the extension is also <b>proportional</b> to the force (Hooke's law, N3) for a spring — strictly the straight line ends at the <b>limit of proportionality</b>, just before the elastic limit, but for a GCSE spring the two are treated as the same point. The examiners' word is <b>distortion</b> (not \"deformation\", though that is accepted) and the two kinds are <b>elastic</b> and <b>inelastic</b>, not \"plastic\".</p>",
+            "<p>The <b>elastic limit</b> is the point beyond which the distortion stops being elastic: stretch a spring past it and it will not return to its original length. Up to the elastic limit the extension is also <b>proportional</b> to the force (Hooke's law, N3) for a spring — strictly the straight line ends at the <b>limit of proportionality</b>, just before the elastic limit, but for a GCSE spring the two are treated as the same point. The spec's and the papers' word is <b>distortion</b> (the 2019 paper asked about \"the distortion of the piece of rubber\") and the two kinds are <b>elastic</b> and <b>inelastic</b>, not \"plastic\".</p>",
         ),
         worked(
             "Two springs",
@@ -138,7 +138,7 @@ section_n3 = section(
             [
                 "$x = 6.2$ mm $= 6.2 \\times 10^{-3}$ m.",
                 "$F = k x = 260 \\times 6.2 \\times 10^{-3} = 1.612$ N.",
-                "$F = 1.6$ N (2 s.f.) — the June 2023 Q7(a)(i) marks were selection and substitution, evaluation, and the 2 s.f. answer; 1600 N (mm not converted) earned two of the three.",
+                "$F = 1.6$ N (2 s.f.) — the June 2023 Q7(a)(i) marks were selection and substitution, evaluation, and the 2 s.f. answer; 1.61 N or 1.612 N (not rounded) earned two of the three — the question said \"an appropriate number of significant figures\" and the data had two; 1600 N (mm not converted but rounded) also earned two; 1612 N (neither) earned one.",
             ],
         ),
         practice("Hooke's law", [
@@ -168,9 +168,9 @@ section_n3 = section(
 section_n4 = section(
     "energy-stored", "nn", "The energy stored in a stretched spring", "15.4",
     equations=[r"E = \tfrac{1}{2}\,k\,x^2", r"E = \text{area under the } F\text{–}x \text{ line}"],
-    blurb="Stretching a spring does work on it, and the work is stored as elastic potential energy: $E = \tfrac{1}{2} k x^2$. The ½ is there because the force grows from zero as the spring stretches, so the average force is half the final force — which is why the energy is also the area under the force–extension line.",
+    blurb="Stretching a spring does work on it, and the work is stored as elastic potential energy: $E = \\tfrac{1}{2} k x^2$. The ½ is there because the force grows from zero as the spring stretches, so the average force is half the final force — which is why the energy is also the area under the force–extension line.",
     checklist=[
-        "Use $E = \tfrac{1}{2} k x^2$ to find the energy stored (or work done) in stretching a spring",
+        "Use $E = \\tfrac{1}{2} k x^2$ to find the energy stored (or work done) in stretching a spring",
         "Square the extension in metres, not in centimetres",
         "Explain why the energy is the area under a force–extension graph",
     ],
@@ -182,11 +182,11 @@ section_n4 = section(
         ),
         worked(
             "Energy in a stretched spring",
-            "A spring with a spring constant of 80 N/m is stretched by 25 cm. Calculate the energy stored in it. (3 marks)",
+            "A spring with a spring constant of 80 N/m is stretched by 25 cm. Calculate the energy stored in it. (2 marks)",
             [
                 "$x = 25$ cm $= 0.25$ m.",
                 "$E = \\tfrac{1}{2} k x^2 = \\tfrac{1}{2} \\times 80 \\times 0.25^2 = \\tfrac{1}{2} \\times 80 \\times 0.0625$.",
-                "$E = 2.5$ J.",
+                "$E = 2.5$ J — select-and-substitute, then evaluate (June 2018 2H Q5(b)(ii)); with 25 left in cm, \"½ × 80 × 25²\" scored the first mark only.",
             ],
         ),
         practice("Energy stored", [
@@ -339,15 +339,15 @@ section_n7 = section(
         explain(
             "The equation and the explanation",
             "<p><b>Pressure</b> = force ÷ area, $P = F \\div A$, in <b>pascals</b> (1 Pa = 1 N/m²), with the force at right angles to the surface. A force of 800 N on 0.4 m² is 2000 Pa; the same 800 N on 0.0004 m² (the point of a stiletto heel) is 2 000 000 Pa. <b>Large area → small pressure</b>: snowshoes, skis, wide tyres, camel feet, the broad base of a dam, a wide strap. <b>Small area → large pressure</b>: a knife edge, a nail point, a drawing pin, football studs, an ice skate.</p>"
-            "<p>The June 2022 report (Q4(a)(ii), why a camel's wide feet help on sand): the marks were for <b>the larger surface area</b> and for <b>less pressure</b> (or the weight spread over a larger area); \"the mass spread out\" was \"unworthy of a second mark\" — say <b>force or weight</b> spread over the area, and name the <b>pressure</b>. The same report's Q4(a)(i): a donkey's weight on <b>four hooves</b> — the area in $P = F \\div A$ is the <b>total</b> area in contact, 4 × one hoof; forgetting the four cost a mark. And the area must be in <b>m²</b>: 1 cm² = $10^{-4}$ m², 1 mm² = $10^{-6}$ m² (June 2025 Q1(c): an area left in mm² gave \"an answer that was a million times too large\").</p>",
+            "<p>The June 2022 report (Q4(a)(ii), why a camel's wide feet help on sand): the scheme was any two of four — <b>greater (surface) area</b>; the (same) <b>weight / force is spread out</b>; <b>less pressure</b>; <b>less likely to sink</b> into the soft ground — and \"the mass spread out\" was \"unworthy of a second mark\"; \"pressure is spread out\" is ignored (it is the force that spreads and the pressure that falls). Say <b>force or weight</b> spread over the area, and name the <b>pressure</b>. The same report's Q4(a)(i): a donkey's weight on <b>four hooves</b> — the area in $P = F \\div A$ is the <b>total</b> area in contact, 4 × one hoof; forgetting the four cost a mark. And the area must be in <b>m²</b>: 1 cm² = $10^{-4}$ m², 1 mm² = $10^{-6}$ m² (June 2025 Q1(c): an area left in mm² gave \"an answer that was a million times too large\").</p>",
         ),
         worked(
             "Pressure under four feet",
-            "A donkey weighs 2000 N. Each hoof has an area of 50 cm². Calculate the pressure the donkey exerts on the ground when standing on all four hooves. (3 marks)",
+            "A donkey weighs 2000 N. Each hoof has an area of 50 cm². Calculate the pressure the donkey exerts on the ground when standing on all four hooves. (2 marks)",
             [
                 "Total area $= 4 \\times 50 = 200$ cm² $= 200 \\times 10^{-4} = 0.020$ m².",
                 "$P = F \\div A = 2000 \\div 0.020$.",
-                "$P = 100\\,000$ Pa (100 kPa).",
+                "$P = 100\\,000$ Pa (100 kPa) — substitution with the total area, then evaluation; ÷ 50 cm² alone, or × 4 instead of ÷, kept one mark (June 2022 2H Q4(a)(i)).",
             ],
         ),
         practice("Pressure", [
@@ -443,7 +443,7 @@ section_n9 = section(
         explain(
             "Less air above",
             "<p><b>Atmospheric pressure</b> is the pressure of the air: the <b>weight of the column of air above</b> a surface, spread over that surface, about <b>100 kPa</b> (100 000 N on every square metre) at sea level — plus the constant bombardment of air molecules (Topic 14), which is the same thing seen from the particle side. We do not feel it because the fluids inside us push out just as hard.</p>"
-            "<p><b>Why it falls with height</b>: higher up there is <b>less air above</b> you, so a <b>smaller weight of air</b> presses down on each square metre, so the pressure is lower. The air is also <b>less dense</b> higher up — the particles are further apart — because it is not squeezed by as much air above it, and this is why the graph is a <b>curve</b>: each kilometre of thin high air weighs less than a kilometre of dense low air, so the pressure falls by less and less per kilometre. The June 2023 scheme (Q4(b)) gave marks for \"increase in height results in decrease in pressure\", \"<b>non-linear</b> relationship\" and \"<b>use of numerical data</b>\" from the graph, and for the explanation any one of \"air becomes <b>less dense</b>\", \"<b>smaller weight of air above</b>\"; the June 2024 scheme (Q4(c)) wanted \"as height increases pressure decreases\" (a negative correlation) and \"non-linear — curved, not proportional, the gradient changes\". Gravity getting weaker is <b>not</b> the reason (it barely changes over 10 km): the June 2024 scheme (Q4(d)) said to ignore it.</p>",
+            "<p><b>Why it falls with height</b>: higher up there is <b>less air above</b> you, so a <b>smaller weight of air</b> presses down on each square metre, so the pressure is lower. The air is also <b>less dense</b> higher up — the particles are further apart — because it is not squeezed by as much air above it, and this is why the graph is a <b>curve</b>: each kilometre of thin high air weighs less than a kilometre of dense low air, so the pressure falls by less and less per kilometre. The June 2023 scheme (Q4(b)) gave marks for \"increase in height results in decrease in pressure\", \"<b>non-linear</b> relationship\" and \"<b>use of numerical data</b>\" from the graph, and for the explanation any one of \"air becomes <b>less dense</b>\" (particles further apart, fewer per m³), \"<b>smaller weight of air above</b>\" (less depth of atmosphere above you) or \"<b>lower temperature</b>\" — the same three in Nov 2021 Q4(b)(ii); the June 2024 scheme (Q4(c)) wanted \"as height increases pressure decreases\" (a negative correlation) and \"non-linear — curved, not proportional, the gradient changes\". Gravity getting weaker is <b>not</b> the reason (it barely changes over 10 km): the June 2023 scheme (Q4(b)(ii)) says \"ignore change in value of g with height\".</p>",
         ),
         worked(
             "Describing the graph",
@@ -464,7 +464,7 @@ section_n9 = section(
                         "$(100 - 70) \\div 100 \\times 100$.",
                         [r"fall $= 100 - 70 = 30$ kPa", r"percentage $= 30 \div 100 \times 100 = 30$ %"], label="b", tolerance=0.04),
                 written("fm-n9-q1c", "Explain why the pressure decreases with height. (2)",
-                        marks(["Higher up there is <b>less air above</b>, so a <b>smaller weight of air</b> presses down on each unit of area.", "The air higher up is also <b>less dense</b> (particles further apart), so each extra kilometre of height removes less weight — which is why the fall is non-linear."]), lines=2, label="c"),
+                        marks(["Higher up there is <b>less air above</b>, so a <b>smaller weight of air</b> presses down on each unit of area.", "The air higher up is also <b>less dense</b> (particles further apart), so each extra kilometre of height removes less weight — which is why the fall is non-linear. (The schemes' third accepted reason is the <b>lower temperature</b> higher up.)"]), lines=2, label="c"),
             ], graph=graph_height),
             choice("fm-n9-q2", "Which is NOT a reason for lower atmospheric pressure at the top of a mountain?",
                    ["Less air above", "A smaller weight of air pressing down", "Gravity is much weaker there", "The air is less dense"], 2,
@@ -494,7 +494,7 @@ section_n10 = section(
             "The weight of the liquid above",
             diagram(dg.depth_svg(), 660, 275, "Two tanks filled to the same depth with fresh water and sea water; the pressure arrows on the walls lengthen with depth and are longer in the denser sea water.") +
             "<p>At a point in a liquid, the pressure due to the liquid is produced by the <b>weight of the liquid above</b> that point. <b>Deeper</b> means a <b>taller column of liquid</b> above, which weighs more, so the pressure is greater: a dam is built <b>thicker at the bottom</b>, where the pressure is largest; water jets out <b>further</b> from a hole low in a can than from one near the top (June 2025 Q1(d): the force below a bigger or deeper hole is greater); a diver's ears hurt as she descends. <b>Denser</b> liquid means the <b>same column has more mass</b>, so more weight, so more pressure: at the same depth, sea water (1030 kg/m³) presses harder than fresh water (1000 kg/m³), and mercury (13 600 kg/m³) harder still.</p>"
-            "<p>The June 2022 report (Q4(c), a graph of pressure against depth for fresh water, asked how the line for sea water would differ): \"increasing the density increases the pressure\" — the line is <b>steeper</b> (a larger gradient), still <b>straight</b> (pressure proportional to depth), and starts from the <b>same intercept</b>, the <b>atmospheric pressure</b> at the surface. Those four points were the four marks.</p>",
+            "<p>The June 2022 report (Q4(c), a graph of pressure against depth for fresh water, asked how the line for sea water would differ): \"increasing the density increases the pressure\" — the pressures are <b>greater</b> at every depth, the line is <b>steeper</b> (a larger gradient), <b>both are straight lines</b> — linear: the extra pressure is proportional to the extra depth, but the line has an <b>intercept</b>, so the whole thing is $y = mx + c$, not $y = mx$ (the 1-mark question before it, Q4(b)(iii)) — and the <b>intercept is the same</b>, the <b>atmospheric pressure</b> at the surface. The question was \"Compare\" for 2 marks: any two of those four.</p>",
         ),
         worked(
             "The dam",
@@ -507,12 +507,12 @@ section_n10 = section(
         ),
         practice("Depth and density", [
             written("fm-n10-q1", "A can has three holes in its side at different heights. Water jets out furthest from the lowest hole. Explain why. (2)",
-                    marks(["The lowest hole is <b>deepest</b>, with the <b>most water above</b> it, so the <b>pressure</b> there is greatest.", "A greater pressure gives a greater force on the water at the hole, so it leaves faster and travels further."]), lines=2),
+                    marks(["The lowest hole is at the <b>greatest depth</b>, so the <b>weight of water above</b> it (the force on it) is greatest, so the <b>pressure</b> there is greatest (\"more water\" on its own is ignored — Nov 2021 2H Q4(a)(ii)).", "A greater pressure gives a greater force on the water at the hole, so it leaves faster and travels further."]), lines=2),
             choice("fm-n10-q2", "At the same depth, the pressure due to the liquid is greater in sea water than in fresh water because…",
                    ["sea water is deeper", "sea water is denser, so the same column of liquid above has more weight", "sea water is colder", "the atmosphere is heavier over the sea"], 1,
                    "Same height, more mass per m³."),
-            written("fm-n10-q3", "A graph of pressure against depth is drawn for fresh water. Describe how the line for a denser liquid would differ. (4)",
-                    marks(["At every depth the <b>pressure would be greater</b>: a denser liquid gives more pressure.", "It would be <b>steeper</b> (a larger gradient): the pressure increases faster with depth in the denser liquid.", "It would still be a <b>straight line</b> (pressure proportional to depth).", "It would start from the <b>same intercept</b> — the atmospheric pressure at the surface."]), lines=4),
+            written("fm-n10-q3", "A graph of pressure against depth is drawn for fresh water. Compare the line for a denser liquid with the first. (2)",
+                    marks(["At every depth the <b>pressure would be greater</b>: a denser liquid gives more pressure.", "It would be <b>steeper</b> (a larger gradient): the pressure increases faster with depth in the denser liquid.", "Both would be <b>straight lines</b> (linear, with the same positive intercept).", "It would start from the <b>same intercept</b> — the atmospheric pressure at the surface. (June 2022 2H Q4(c): any two of these four.)"]), lines=4),
             choice("fm-n10-q4", "Which pair both increase the pressure at a point in a liquid?",
                    ["Greater depth and greater density", "Greater depth and smaller density", "Smaller depth and greater density", "A wider container and a taller container"], 0,
                    "Taller column, heavier liquid."),
@@ -604,8 +604,8 @@ section_n12 = section(
             ],
         ),
         practice("Upthrust, floating and sinking", [
-            written("fm-n12-q1", "Explain why there is an upward force on a stone held under water. (3)",
-                    marks(["Pressure in the water <b>increases with depth</b>.", "So the pressure on the <b>bottom</b> of the stone is <b>greater</b> than on the top; the sideways forces cancel.", "The upward force on the bottom is larger than the downward force on the top, giving a <b>resultant upward force</b> — the upthrust."]), lines=3),
+            written("fm-n12-q1", "Explain why there is an upward force on a stone held under water. (2)",
+                    marks(["The <b>pressure on the bottom</b> of the stone is <b>greater than on the top</b> (it is deeper; same area) — the sideways forces cancel.", "So the <b>force on the bottom is greater than the force on the top</b>: the resultant is upward — the upthrust. (June 2019 2H Q9(a)(iii): one mark for each; \"the upthrust equals the weight of water displaced\" on its own also scored both.)"]), lines=3),
             choice("fm-n12-q2", "The upthrust on an object in a fluid is equal to…",
                    ["the weight of the object", "the weight of the fluid displaced by the object", "the volume of the object", "the pressure at its base"], 1,
                    "Weight of fluid displaced — in a liquid or a gas."),
