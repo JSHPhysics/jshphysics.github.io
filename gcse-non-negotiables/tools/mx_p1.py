@@ -43,7 +43,7 @@ def join_section(stem):
                 "<table class='tbl'><tr><th>Habit</th><th>Why it scores</th><th>Example</th></tr>"
                 "<tr><td><b>Find the join</b></td><td>each stage of a chain has its own equation; the output of one is the input of the next</td><td>GPE from a height → the <i>same number</i> as KE → a speed from $\\tfrac{1}{2}mv^2$</td></tr>"
                 "<tr><td><b>Match units at the join</b></td><td>the examiners' reports name the same slips every year: kJ left as kJ, cm in a squared term, minutes into $E = Pt$, mm² into $P = F/A$</td><td>$E = Pt$ needs seconds: 5.0 minutes is 300 s</td></tr>"
-                "<tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets stages 2 and 3 score if they use it correctly and are shown</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr>"
+                "<tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets the <b>equation and substitution</b> marks of stages 2 and 3 score if they use it and are shown — usually the evaluation mark too (June 2025 1H Q8(a)(ii), 2H Q2(a)(ii)), though not always (1H Q6(a)(ii): \"no ecf for evaluation\")</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr>"
                 "<tr><td><b>Check the join makes sense</b></td><td>a speed of 300 m/s for a trolley, a pool 35 m deep, a spring constant of 2.5 N/m for a stiff spring — the number itself tells you a join went wrong</td><td>\"look at the result of a calculation to see if the value makes sense\" (June 2025 report)</td></tr></table>"
                 "<p>The chains on this page are the ones that have come up in the June 2023, 2024 and 2025 papers for this paper. Each section names the join, lays the chain out as a table, and works one example modelled on the real question with new numbers. The physics of each stage is on its topic page — this page practises the hand-over.</p>",
             ),
@@ -53,8 +53,8 @@ def join_section(stem):
                 [
                     "(a) Stage 1, Topic 3: $\\Delta GPE = m g \\Delta h$, so $m = \\Delta GPE \\div (g \\Delta h) = 4.8 \\div (10 \\times 0.30) = 1.6$ kg.",
                     "(b) <b>The join</b>: the GPE <i>is</i> the KE at the bottom — 4.8 J hands over. $KE = \\tfrac{1}{2} m v^2$, so $v^2 = 2 KE \\div m = 2 \\times 4.8 \\div 1.6 = 6.0$.",
-                    "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed.",
-                    "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store — not \"energy is lost\".",
+                    "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed. Write the $v^2$ line: in June 2025 (2H Q2(a)(ii)) it carried its own mark, and a wrong mass from (a) was carried forward through all three.",
+                    "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store. The mark is for <b>where the energy went</b> (friction / air resistance → the surroundings by heating); \"lost\" on its own names no destination.",
                     "(d) Stage 3, Topic 8: work done against gravity $= m g h = 52 \\times 10 \\times 3.0 = 1560$ J; power $= E \\div t = 1560 \\div 4.0 = 390$ W (2 s.f.).",
                 ],
             ),
@@ -67,7 +67,7 @@ def join_section(stem):
                             "The 9.0 J hands over to KE: $v^2 = 2\\text{KE} \\div m$.",
                             [r"$KE = 9.0$ J (the join)", r"$v^2 = 2 KE \div m = 2 \times 9.0 \div 0.50 = 36$", r"$v = 6.0$ m/s"], label="b"),
                     written(stem + "-q1c", "The measured landing speed is 5.6 m/s. Explain the difference. (2)",
-                            marks(["Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.", "A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (do not say the energy is \"lost\": say where it went)."]), lines=2, label="c"),
+                            marks(["Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.", "A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (the second mark is the <b>destination</b> — \"lost\" alone does not give it)."]), lines=2, label="c"),
                 ]),
                 choice(stem + "-q2", "In a chain calculation, stage 1 gives a wrong energy. What should you do in stage 2?",
                        ["Stop — no more marks are available", "Use the wrong value, show the working, and label the stage: error carried forward lets stage 2 score", "Guess a better value", "Leave stage 2 blank"], 1,
@@ -98,9 +98,9 @@ section_a1 = section(
             "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr>"
             "<tr><td>height → energy</td><td>$\\Delta GPE = m g \\Delta h$ (Topic 3)</td><td>an energy in J</td><td>$\\Delta h$ is the vertical height, not the slope length</td></tr>"
             "<tr><td>energy → speed</td><td>$KE = \\tfrac{1}{2} m v^2$, so $v = \\sqrt{2 KE \\div m}$</td><td>a speed in m/s</td><td>square-root at the end; a kJ must become J first</td></tr>"
-            "<tr><td>speed → acceleration</td><td>$v^2 - u^2 = 2 a x$ (Topic 2) [H]</td><td>$a$ in m/s²</td><td>$x$ is the distance along the slope; $u = 0$ from rest</td></tr>"
+            "<tr><td>speed → acceleration</td><td>$v^2 - u^2 = 2 a x$ (Topic 2)</td><td>$a$ in m/s²</td><td>$x$ is the distance along the slope; $u = 0$ from rest</td></tr>"
             "<tr><td>measured speed → dissipation</td><td>energy dissipated $= \\Delta GPE - \\tfrac{1}{2} m v_{\\text{measured}}^2$</td><td>an energy in J</td><td>say where it went: work against friction / air resistance, transferred to the surroundings by heating</td></tr></table>"
-            "<p>June 2025 1H Q6: a skier's height from $\\Delta GPE$ (2), then the acceleration from rest to 27 m/s over a 200 m slope (3), then \"explain how to determine the energy dissipated\" (2) — measure the speed at the bottom, find the KE, subtract from the GPE. June 2025 2H Q2 did the same with a trolley (mass from the GPE, expected velocity, one way to reduce the gap). The \"suggest one way to reduce the gap\" mark is a practical one: reduce friction (lubricate the wheels, a smoother runway) or air resistance.</p>",
+            "<p>June 2025 1H Q6: a skier's height from $\\Delta GPE$ (2), then the acceleration from rest to 27 m/s over a 200 m slope (3), then \"explain how to determine the energy dissipated\" (2) — measure the speed at the bottom, find the KE, subtract from the GPE. June 2025 2H Q2 did the same with a trolley (mass from the GPE, expected velocity, one way to reduce the gap). The \"suggest one way to reduce the gap\" mark is a practical one: <b>lubricate</b> (oil / grease) the wheels or axles, use an <b>air track</b>, make the runway <b>steeper</b>, or <b>streamline</b> the trolley (the June 2025 2H Q2(a)(iii) list).</p>",
         ),
         worked(
             "The skier",
@@ -124,7 +124,7 @@ section_a1 = section(
                         [r"$KE = \tfrac{1}{2} \times 500 \times 26^2 = 169\,000$ J", r"dissipated $= 200\,000 - 169\,000 = 31\,000$ J"], label="c"),
                 numeric("mx-a1-q1d", "The track from the top to the bottom is 120 m long. Use the measured speed to calculate the average acceleration along the track.", 2.82, "m/s²",
                         "$v^2 - u^2 = 2ax$ with $u = 0$.",
-                        ewau(r"v^2 - u^2 = 2 a x", r"26^2 - 0 = 2 \times a \times 120", "2.8", "m/s² (2.82)"), label="d", tags=["H"]),
+                        ewau(r"v^2 - u^2 = 2 a x", r"26^2 - 0 = 2 \times a \times 120", "2.8", "m/s² (2.82)"), label="d"),
             ]),
             written("mx-a1-q2", "Describe how a student could determine the energy dissipated as a trolley runs down a ramp. (3)",
                     marks(["Measure the <b>vertical height</b> of the start above the bottom and the trolley's <b>mass</b>; calculate $\\Delta GPE = m g \\Delta h$.", "Measure the trolley's <b>speed at the bottom</b> (light gate and interrupt card, or distance and time) and calculate $KE = \\tfrac{1}{2} m v^2$.", "Energy dissipated $= \\Delta GPE - KE$ — the difference transferred to the surroundings by friction and air resistance."]), lines=3),
@@ -329,7 +329,7 @@ section_a5 = section(
             "<table class='tbl'><tr><th>Stage</th><th>Equation or reading</th><th>Hands over</th><th>Watch</th></tr>"
             "<tr><td>curve → half-life</td><td>the time for the activity (or amount) to halve (Topic 6)</td><td>$t_{1/2}$</td><td>read two points, not one; the curve never reaches zero</td></tr>"
             "<tr><td>time → fraction left</td><td>count half-lives: $100\\% \\to 50\\% \\to 25\\% \\to 12.5\\%$</td><td>a percentage</td><td>at a time that is not a whole number of half-lives, <b>read the graph</b></td></tr>"
-            "<tr><td>fusion → energy from mass</td><td>$E = m c^2$, supplied; $m = E \\div c^2$</td><td>$m$ in kg</td><td>$c^2 = 9.0 \\times 10^{16}$; the unit mark is for kg; the mass of the products is <b>less</b> than the reactants</td></tr>"
+            "<tr><td>fusion → energy from mass</td><td>$E = m c^2$, supplied; $m = E \\div c^2$</td><td>$m$ in kg</td><td>$c^2 = 9.0 \\times 10^{16}$; when the question says \"state the unit\" the <b>answer and the unit share one mark</b> — $4.3 \\times 10^{9}$ without <b>kg</b> scored 1 of 2 (June 2025 1H Q10(b)(ii)); the mass of the products is <b>less</b> than the reactants</td></tr>"
             "<tr><td>power stations → comparison</td><td>ratio $= P_1 \\div P_2$ (Topic 3 resources)</td><td>a number</td><td>to the significant figures asked; GW stays GW on both sides</td></tr></table>"
             "<p>June 2025 1H Q4: the percentage of fluorine-18 remaining after 150 min from a decay curve (2), what happens when a positron meets an electron (2, Topic 6 PET), one neutron and one uranium nucleus (3), and the ratio of Finland's to the UK's nuclear power to 2 s.f. (2). Q10(b): describe fusion (2) and the mass decrease equivalent to $3.9 \\times 10^{26}$ J with its unit (2), $c = 3.0 \\times 10^{8}$ m/s — $E = mc^2$ is <b>not on the equation list</b>; it was supplied in the question. Fusion's energy comes from the mass lost when light nuclei join; \"two hydrogen nuclei join to form helium, and energy is released\" — Topic 6 N9 / Topic 7 N7.</p>",
         ),
@@ -358,9 +358,9 @@ section_a5 = section(
             numeric("mx-a5-q2", "In a fusion reaction $1.2 \\times 10^{-29}$ kg of mass is converted to energy. Use $E = mc^2$ with $c = 3.0 \\times 10^8$ m/s to calculate the energy released.", 1.08e-12, "J",
                     "$E = m c^2$ (supplied).",
                     ewau(r"E = m c^2", r"E = 1.2 \times 10^{-29} \times (3.0 \times 10^{8})^2", r"1.1 \times 10^{-12}", "J (1.08)"), tolerance=0.03),
-            numeric("mx-a5-q3", "France generates about 61 GW from nuclear power and the UK about 5.9 GW. Calculate the ratio of France's nuclear power to the UK's, to 2 significant figures.", 10, "",
-                    "$61 \\div 5.9$.",
-                    [r"ratio $= 61 \div 5.9 = 10.3 = 10$ (2 s.f.)"], tolerance=0.05),
+            numeric("mx-a5-q3", "France generates about 61 GW from nuclear power and the UK about 5.6 GW. Calculate the ratio of France's nuclear power to the UK's, to 2 significant figures.", 11, "",
+                    "$61 \\div 5.6$.",
+                    [r"ratio $= 61 \div 5.6 = 10.9 = 11$ (2 s.f.) — the June 2025 scheme (Q4(d)) gave the second mark for \"evaluation to 2 s.f.\""], tolerance=0.05),
             numeric("mx-a5-q5", "A beta particle (mass $9.1 \\times 10^{-31}$ kg) leaves a nucleus at $4.0 \\times 10^{6}$ m/s. Calculate its kinetic energy.", 7.3e-18, "J",
                     "$\\tfrac{1}{2} m v^2$ with the powers of ten kept.",
                     ewau(r"KE = \tfrac{1}{2} m v^2", r"KE = \tfrac{1}{2} \times 9.1 \times 10^{-31} \times (4.0 \times 10^{6})^2", r"7.3 \times 10^{-18}", "J (7.28)")),
@@ -380,7 +380,7 @@ section_a6 = section(
     blurb="Why is a planet's average temperature steady? Because it absorbs radiation from the Sun at the same rate as it emits infrared to space. Warm it and it emits more until the two balance again; cool it and it emits less. The same balance holds a star in its stable phase between gravity and the pressure from fusion. The join is the rate of energy transfer.",
     tags=["H"],
     checklist=[
-        "Explain a constant temperature as a balance between radiation absorbed and radiation emitted",
+        "Explain a constant temperature as the <b>rate</b> of emission equalling the <b>rate</b> of absorption — the word <b>rate</b> is a mark",
         "Explain what happens to the temperature when the balance is disturbed, and how a new balance is reached",
         "Apply the same balance idea to a star's stable phase",
     ],
@@ -392,7 +392,7 @@ section_a6 = section(
             "<tr><td>planet → space</td><td>every object <b>emits</b> infrared; the <b>hotter</b> it is, the <b>more it emits</b> per second (and at shorter wavelengths)</td><td>power out, W</td><td>the rate depends on the temperature — this is the lever</td></tr>"
             "<tr><td>balance</td><td>power in = power out → <b>constant temperature</b>; in > out → warms until out rises to match; in < out → cools until out falls to match</td><td>—</td><td>a change in the <i>balance</i>, not in the Sun, is what greenhouse gases do: they reduce the infrared escaping</td></tr>"
             "<tr><td>a star (Topic 7)</td><td>stable phase: the <b>inward force of gravity</b> balances the <b>outward pressure</b> from fusion</td><td>—</td><td>a different balance, same shape of answer: name both, say they are equal</td></tr></table>"
-            "<p>June 2025 1H Q7(d) (4 marks): explain why Ceres' average temperature stays constant. The marks: it <b>absorbs</b> radiation from the Sun; it <b>emits</b> radiation (infrared); the rate of emission <b>equals</b> the rate of absorption; if it were hotter it would emit more than it absorbs and cool (or the reverse), so the temperature settles where they balance. Four ideas, four marks — Topic 5 T6.</p>",
+            "<p>June 2025 1H Q7(d) (4 marks): explain why Ceres' average temperature stays constant. The marks: it <b>absorbs</b> radiation from the Sun; it (also) <b>emits</b> radiation; the <b>rate of emission increases with temperature</b>; the temperature is constant when the <b>rate of emission = rate of absorption</b> — and \"rate\" (or \"power\") in either of the last two is itself a mark. One sentence, \"temperature constant when the rate of emission of radiation equals the rate of absorption of radiation\", scored all four; \"absorbs more than it emits, so it warms\" scored two. The same four marks were set for a black sphere by a heater in June 2023 (Q8(b)(ii)) — Topic 5 T6.</p>",
         ),
         worked(
             "A planet at constant temperature",

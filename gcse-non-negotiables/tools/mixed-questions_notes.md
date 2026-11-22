@@ -182,3 +182,41 @@ double-wrapped `ewau` equations put back; 5 graphs, 41 flashcards,
 108 ref buttons; booklet offers the notes mode; at 390 px nothing
 scrolls sideways. The home page shows the new card last ("All topics ·
 Mixed-topic questions · 15 sections").
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+Two separate agents compared the pages with the June 2023–2025 questions
+they are modelled on (`Question DB/index.json`, read part by part) and
+their analogues in other series — 31 questions for Paper 1, 41 for Paper 2.
+No stored number or physics error; every June 2025 citation matched the
+scheme's parts and marks. Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| mixed-paper-1 / join table, flashcard "Stage 1 wrong" (both pages) | error carried forward: method marks always, the evaluation usually ("no ecf for evaluation" in one 2025 part) | 1H June 2025 Q6(a)(ii), Q8(a)(ii); 2H Q2(a)(ii) |
+| mixed-paper-1 / join worked (c), mx-m1-q1c; opener worked step 3 (both pages) | "not 'energy is lost'" → the mark is for the destination; the $v^2$ line is its own mark | 2H June 2019 Q2(b)(iv); 1H June 2024 Q2(c)(i); 2H June 2025 Q2(a)(ii) |
+| mixed-paper-1 / gpe-ke-speed (explain, table), mx-a1-q1d | "a smoother runway" → the scheme's list (lubricate, air track, steeper, streamline); the $v^2 = u^2 + 2ax$ stage loses its H (spec 2.8 is both tiers, as on the Topic 2 page) | 2H June 2025 Q2(a)(iii); spec 2.8 |
+| mixed-paper-1 / nuclear-energy table, **mx-a5-q3** | the answer and the unit share one mark in the E = mc² question; mx-a5-q3 re-set so the 2 s.f. answer can be shown (61 ÷ 5.6 = 11; stored answer 10 → 11) | 1H June 2025 Q10(b)(ii), Q4(d) |
+| mixed-paper-1 / thermal-balance (checklist, explain) | "rate" is a mark on its own; the four marks as the scheme writes them (emission increases with temperature) | 1H June 2025 Q7(d); June 2023 Q8(b)(ii) |
+| mixed-paper-2 / one-object (explain, worked, mx-b1-q3, table), mx-b1-q1 | the 2025 wax question described as set (R–S shorter than Q–R); the credited sentence "specific heat capacity is much less than specific latent heat" with both values; mass into Q = mL in kg (60.0 g scored 1 of 2) — mx-b1-q1 now gives 250 g | 2H June 2025 Q5(e); June 2024 Q3(c) |
+| mixed-paper-2 / pressure-force-particles (table, mx-b2-q2), flashcard | use the pressure the question names, net only when asked (the net force was capped at 1 of 2 in 2023); lower temperature as the third reason; "non-linear" wordings and two data pairs | 2H June 2023 Q4(a)(ii), Q4(c)(i)–(ii); Nov 2021 Q4(c)(ii) |
+| mixed-paper-2 / springs-forces-energy (explain, table, worked, mx-b3-q1c, mx-b3-q2), flashcard | k with a consistent unit (0.45 N/cm scored full marks; no unit = 1); the free-body second mark is "label 5 N on both arrows"; the extension trap is Z − Y (loaded minus unloaded vertical length) | 2H June 2025 Q8(b), Q8(c)(ii), Q8(d) |
+| mixed-paper-2 / mx-b4-q2 | "apparent loss in weight" | 2H June 2025 Q9(a)(i) |
+| mixed-paper-2 / work-efficiency-power (explain), mx-b5-q1d, mx-b5-q3 | the 2023 numbers as set (1800 J over 1.2 m); friction and heating as the two reasons, sound ignored; the 2 s.f. line is its own mark | 2H June 2023 Q9(a); June 2024 Q7(d); June 2025 Q2(b) |
+| mixed-paper-2 / electrical-energy-store (worked, table), mx-b6-q2 | KE in the unit asked for (153 600 J scored 1 of 2 against "in kJ"); "Comment on" not "Evaluate"; "energy that would otherwise be wasted" | 2H June 2023 Q8(a), Q8(c), Q8(d) |
+| mixed-paper-2 / induction-neighbours (table), mx-b7-q1b, mx-b7-q3 | the commutator's first mark (connects the coil to the battery); the dynamo force comes from the interaction of fields, "greater resistance" ignored; the loudspeaker chain's changing field and the amplitude link | 2H June 2025 Q6(d); June 2023 Q10(b), Q10(d); Nov 2020 Q7(a) |
+| mixed-paper-2 / electricity-into-heat (explain) | the second heating-effect mark: the ions vibrate more | 2H June 2018 Q8(c) |
+
+One stored answer changed (mx-a5-q3: 10 → 11, with new data). Both pages
+pass `check_topic.js` on both tiers. Noted for the author: the Paper 1
+stopping-distances-as-energy section has no June 2023–2025 1H analogue
+(nearest 2019 Q1, 2018 Q6(d), June 2026 Q3 with no scheme yet) — its
+physics stands, its claim to be a recurring blend does not; the opener's
+worked example gives the runway height in metres where the real 2025
+question gave 26 cm (the cm → m conversion carried a mark). H lists in
+both reports: the freezing-motion 2-marker (2025 Q5(b)), "pressure is the
+same" on a smaller window (2023 Q4(a)(iii)), the GPE experiment (2024
+Q7(b)), the momentum-and-energy collision 6-marker's energy half (1H 2024
+Q9(c)), Δv = fΔλ as the accepted alternative (1H 2025 Q5(b)(iii)).

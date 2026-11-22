@@ -42,7 +42,7 @@
         {
           "kind": "explain",
           "title": "The four habits",
-          "html": "<table class='tbl'><tr><th>Habit</th><th>Why it scores</th><th>Example</th></tr><tr><td><b>Find the join</b></td><td>each stage of a chain has its own equation; the output of one is the input of the next</td><td>GPE from a height → the <i>same number</i> as KE → a speed from $\\tfrac{1}{2}mv^2$</td></tr><tr><td><b>Match units at the join</b></td><td>the examiners' reports name the same slips every year: kJ left as kJ, cm in a squared term, minutes into $E = Pt$, mm² into $P = F/A$</td><td>$E = Pt$ needs seconds: 5.0 minutes is 300 s</td></tr><tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets stages 2 and 3 score if they use it correctly and are shown</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr><tr><td><b>Check the join makes sense</b></td><td>a speed of 300 m/s for a trolley, a pool 35 m deep, a spring constant of 2.5 N/m for a stiff spring — the number itself tells you a join went wrong</td><td>\"look at the result of a calculation to see if the value makes sense\" (June 2025 report)</td></tr></table><p>The chains on this page are the ones that have come up in the June 2023, 2024 and 2025 papers for this paper. Each section names the join, lays the chain out as a table, and works one example modelled on the real question with new numbers. The physics of each stage is on its topic page — this page practises the hand-over.</p>"
+          "html": "<table class='tbl'><tr><th>Habit</th><th>Why it scores</th><th>Example</th></tr><tr><td><b>Find the join</b></td><td>each stage of a chain has its own equation; the output of one is the input of the next</td><td>GPE from a height → the <i>same number</i> as KE → a speed from $\\tfrac{1}{2}mv^2$</td></tr><tr><td><b>Match units at the join</b></td><td>the examiners' reports name the same slips every year: kJ left as kJ, cm in a squared term, minutes into $E = Pt$, mm² into $P = F/A$</td><td>$E = Pt$ needs seconds: 5.0 minutes is 300 s</td></tr><tr><td><b>Carry forward and label</b></td><td>mark schemes give a mark per stage and allow \"error carried forward\" — a wrong stage 1 still lets the <b>equation and substitution</b> marks of stages 2 and 3 score if they use it and are shown — usually the evaluation mark too (June 2025 1H Q8(a)(ii), 2H Q2(a)(ii)), though not always (1H Q6(a)(ii): \"no ecf for evaluation\")</td><td>June 2025 2H Q9(a)(ii): starting from the wrong upthrust still scored 3 of 4</td></tr><tr><td><b>Check the join makes sense</b></td><td>a speed of 300 m/s for a trolley, a pool 35 m deep, a spring constant of 2.5 N/m for a stiff spring — the number itself tells you a join went wrong</td><td>\"look at the result of a calculation to see if the value makes sense\" (June 2025 report)</td></tr></table><p>The chains on this page are the ones that have come up in the June 2023, 2024 and 2025 papers for this paper. Each section names the join, lays the chain out as a table, and works one example modelled on the real question with new numbers. The physics of each stage is on its topic page — this page practises the hand-over.</p>"
         },
         {
           "kind": "worked",
@@ -51,8 +51,8 @@
           "steps": [
             "(a) Stage 1, Topic 3: $\\Delta GPE = m g \\Delta h$, so $m = \\Delta GPE \\div (g \\Delta h) = 4.8 \\div (10 \\times 0.30) = 1.6$ kg.",
             "(b) <b>The join</b>: the GPE <i>is</i> the KE at the bottom — 4.8 J hands over. $KE = \\tfrac{1}{2} m v^2$, so $v^2 = 2 KE \\div m = 2 \\times 4.8 \\div 1.6 = 6.0$.",
-            "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed.",
-            "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store — not \"energy is lost\".",
+            "$v = \\sqrt{6.0} = 2.4$ m/s (2.45) — a sensible trolley speed. Write the $v^2$ line: in June 2025 (2H Q2(a)(ii)) it carried its own mark, and a wrong mass from (a) was carried forward through all three.",
+            "(c) The measured speed is lower because some of the energy is <b>transferred to the surroundings by friction and air resistance</b> (dissipated as heating), so less than 4.8 J is in the kinetic store. The mark is for <b>where the energy went</b> (friction / air resistance → the surroundings by heating); \"lost\" on its own names no destination.",
             "(d) Stage 3, Topic 8: work done against gravity $= m g h = 52 \\times 10 \\times 3.0 = 1560$ J; power $= E \\div t = 1560 \\div 4.0 = 390$ W (2 s.f.)."
           ]
         },
@@ -102,7 +102,7 @@
                   "id": "mx-j2-q1c",
                   "type": "written",
                   "text": "The measured landing speed is 5.6 m/s. Explain the difference. (2)",
-                  "model": "<ul><li>Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.</li><li>A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (do not say the energy is \"lost\": say where it went).</li></ul>",
+                  "model": "<ul><li>Some of the energy is <b>transferred to the surroundings</b> by <b>air resistance</b> (work done against it, dissipated by heating), so less than 9.0 J is in the kinetic store.</li><li>A smaller KE means a smaller speed — $v = \\sqrt{2 KE / m}$ (the second mark is the <b>destination</b> — \"lost\" alone does not give it).</li></ul>",
                   "lines": 2,
                   "label": "c"
                 }
@@ -157,7 +157,7 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and density → volume</td><td>$V = m \\div \\rho$ (Topic 14 / 15)</td><td>$V$ in m³ or cm³</td><td>keep the units the data use (kg and kg/m³, or g and g/cm³); do not round 0.0047 m³ to 0.005</td></tr><tr><td>solid vs liquid density</td><td>particle spacing</td><td>—</td><td>the solid is usually denser: particles closer, more per unit volume; the same mass has a smaller volume</td></tr><tr><td>cooling curve → change of state</td><td>flat section = freezing at constant temperature</td><td>the melting point</td><td>on a cooling curve the flat part is <b>freezing</b>, not melting; energy is transferred <b>from</b> the wax</td></tr><tr><td>mass → energies</td><td>$Q = mL$ for the flat part; $\\Delta Q = mc\\Delta\\theta$ for the slopes</td><td>energies in J</td><td>same mass in both; $L$ in J/kg (190 kJ/kg = 190 000 J/kg); $\\Delta\\theta$ is the temperature change</td></tr></table><p>June 2025 2H Q5: all the wax liquid between which points (1), the particles' motion as it freezes (2), the volume of 3.9 kg of liquid wax at 830 kg/m³ (2), how the volume changes on solidifying at 930 kg/m³ (1), and why the flat section R–S is much longer than the cooling Q–R with $L = 190$ kJ/kg and $c = 2.1$ kJ/kg °C given (3). June 2024 2H Q3: the volume of 14.1 g of copper at 8.96 g/cm³ (3), why the solid is denser (2), the energy to vaporise 60.0 g of water with $L = 2.26 \\times 10^{6}$ J/kg (2), and a volume read off a jug (2). Every stage is on the Topic 14 page; the exam asks them in one go.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and density → volume</td><td>$V = m \\div \\rho$ (Topic 14 / 15)</td><td>$V$ in m³ or cm³</td><td>keep the units the data use (kg and kg/m³, or g and g/cm³); do not round 0.0047 m³ to 0.005</td></tr><tr><td>solid vs liquid density</td><td>particle spacing</td><td>—</td><td>the solid is usually denser: particles closer, more per unit volume; the same mass has a smaller volume</td></tr><tr><td>cooling curve → change of state</td><td>flat section = freezing at constant temperature</td><td>the melting point</td><td>on a cooling curve the flat part is <b>freezing</b>, not melting; energy is transferred <b>from</b> the wax</td></tr><tr><td>mass → energies</td><td>$Q = mL$ for the flat part; $\\Delta Q = mc\\Delta\\theta$ for the slopes</td><td>energies in J</td><td>same mass in both, in <b>kg</b> (June 2024 2H Q3(c): 60.0 g into $Q = mL$ — $60 \\times 2.26 \\times 10^6$ scored 1 of 2); $L$ in J/kg (190 kJ/kg = 190 000 J/kg); $\\Delta\\theta$ is the temperature change</td></tr></table><p>June 2025 2H Q5: all the wax liquid between which points (1), the particles' motion as it freezes (2), the volume of 3.9 kg of liquid wax at 830 kg/m³ (2), how the volume changes on solidifying at 930 kg/m³ (1), and why the solid's cooling R–S takes much less time than the flat freezing section Q–R, with $L = 190$ kJ/kg and $c = 2.1$ kJ/kg °C given (3). June 2024 2H Q3: the volume of 14.1 g of copper at 8.96 g/cm³ (3), why the solid is denser (2), the energy to vaporise 60.0 g of water with $L = 2.26 \\times 10^{6}$ J/kg (2), and a volume read off a jug (2). Every stage is on the Topic 14 page; the exam asks them in one go.</p>"
         },
         {
           "kind": "worked",
@@ -168,7 +168,7 @@
             "(b) The solid is denser, so the same 3.0 kg occupies a <b>smaller volume</b> ($3.0 \\div 920 = 3.26 \\times 10^{-3}$ m³): the particles pack closer in the solid.",
             "(c) Join: the same 3.0 kg. Freezing at 70 °C (the flat section): $Q = mL = 3.0 \\times 180\\,000 = 540\\,000$ J, transferred <b>from the wax to the surroundings</b>.",
             "(d) Cooling the solid: $\\Delta Q = mc\\Delta\\theta = 3.0 \\times 2100 \\times 30 = 189\\,000$ J.",
-            "The freezing section (6 min) is about three times as long as the cooling to 40 °C (2 min) because <b>far more energy</b> (540 kJ against 189 kJ, the same ratio) must leave the wax during the change of state than during 30 °C of cooling, and energy leaves at roughly the same rate throughout — so it takes longer."
+            "The freezing section (6 min) is about three times as long as the cooling to 40 °C (2 min) because the <b>specific heat capacity (2100 J/kg °C) is much less than the specific latent heat (180 000 J/kg)</b> — the first 2025 mark, with both values quoted the second — so <b>far more energy</b> (540 kJ against 189 kJ, the same ratio) must leave the wax during the change of state than during 30 °C of cooling, and energy leaves at roughly the same rate throughout — so it takes longer."
           ],
           "graph": {
             "x": {
@@ -216,7 +216,7 @@
             {
               "id": "mx-b1-q1",
               "type": "group",
-              "text": "A 0.250 kg block of ice at 0 °C is heated until it is water at 20 °C. Density of ice = 920 kg/m³; $L = 334\\,000$ J/kg; $c$ (water) $= 4200$ J/kg °C.",
+              "text": "A 250 g block of ice at 0 °C is heated until it is water at 20 °C. Density of ice = 920 kg/m³; $L = 334\\,000$ J/kg; $c$ (water) $= 4200$ J/kg °C.",
               "parts": [
                 {
                   "id": "mx-b1-q1a",
@@ -226,7 +226,7 @@
                     "value": 0.000272,
                     "unit": "m³"
                   },
-                  "hint": "$V = m \\div \\rho$.",
+                  "hint": "$V = m \\div \\rho$ — 250 g is 0.250 kg.",
                   "walkthrough": [
                     "<b>Equation:</b> $V = m \\div \\rho$",
                     "<b>Working:</b> $V = 0.250 \\div 920$",
@@ -243,7 +243,7 @@
                     "value": 83500,
                     "unit": "J"
                   },
-                  "hint": "$Q = m L$ with the same mass.",
+                  "hint": "$Q = m L$ with the same mass, in kg.",
                   "walkthrough": [
                     "<b>Equation:</b> $Q = m L$",
                     "<b>Working:</b> $Q = 0.250 \\times 334\\,000$",
@@ -299,7 +299,7 @@
               "id": "mx-b1-q3",
               "type": "written",
               "text": "On a cooling curve the flat section is much longer than the sloping section before it. Explain why, using the words latent heat and specific heat capacity. (3)",
-              "model": "<ul><li>The flat section is the <b>change of state</b> (freezing), where the energy transferred per kilogram is the <b>specific latent heat</b>, which is <b>much larger</b> than the specific heat capacity × the temperature fall in the sloping section (quote the values if given).</li><li>Energy is transferred <b>from the substance to the surroundings</b> at about the <b>same rate</b> throughout…</li><li>…so transferring the larger amount of energy takes a <b>longer time</b>.</li></ul>",
+              "model": "<ul><li>The flat section is the <b>change of state</b> (freezing), and the <b>specific heat capacity is much less than the specific latent heat</b> — quote both values (e.g. 2100 J/kg °C against 180 000 J/kg) — so the sloping section needs <b>less energy</b> than the flat one (June 2025 2H Q5(e): one mark for the comparison, one for the values).</li><li>Energy is transferred <b>from the substance to the surroundings</b> at about the <b>same rate</b> throughout…</li><li>…so transferring the larger amount of energy takes a <b>longer time</b>.</li></ul>",
               "lines": 3
             }
           ]
@@ -325,7 +325,7 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or idea</th><th>Hands over</th><th>Watch</th></tr><tr><td>force direction</td><td>fluid pressure acts <b>normal</b> to the surface, towards it (Topic 15 / 9)</td><td>an arrow</td><td>from the point, at right angles</td></tr><tr><td>pressure and area → force</td><td>$F = PA$ (Topic 15)</td><td>$F$ in N</td><td>area in m²; a <b>difference</b> in pressure if fluid is on both sides; round as asked</td></tr><tr><td>graph → description</td><td>pressure <b>decreases</b> as height increases; <b>non-linear</b>; quote numbers</td><td>a reading, a % change</td><td>(new − old) ÷ old × 100</td></tr><tr><td>description → particles</td><td>less air above → smaller weight of air → lower pressure; the air is <b>less dense</b>: particles <b>further apart</b> (Topic 14)</td><td>—</td><td>do not say gravity is weaker higher up; density is about spacing, not particle size</td></tr></table><p>June 2024 2H Q4: the direction of the water's force at X (1), the force from a skate on ice from $4.8 \\times 10^{7}$ Pa and $1.2 \\times 10^{-5}$ m² to 2 s.f. (3), describe the pressure–height graph (2), read 8850 m (1), the % change from 104 to 74 kPa (2), and explain the density change with height using the particle model (2). June 2023 2H Q4 did the aeroplane window: pressure difference, $F = PA$, the larger window, the arrow, the graph and the reason.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or idea</th><th>Hands over</th><th>Watch</th></tr><tr><td>force direction</td><td>fluid pressure acts <b>normal</b> to the surface, towards it (Topic 15 / 9)</td><td>an arrow</td><td>from the point, at right angles</td></tr><tr><td>pressure and area → force</td><td>$F = PA$ (Topic 15)</td><td>$F$ in N</td><td>area in m²; a <b>difference</b> in pressure if fluid is on both sides; round as asked</td></tr><tr><td>graph → description</td><td>pressure <b>decreases</b> as height increases; <b>non-linear</b>; quote numbers</td><td>a reading, a % change</td><td>(new − old) ÷ old × 100</td></tr><tr><td>description → particles</td><td>less air above → smaller weight of air → lower pressure; the air is <b>less dense</b>: particles <b>further apart</b> (Topic 14)</td><td>—</td><td>do not say gravity is weaker higher up (ignored, 2023); the three credited reasons are less dense, less air above, lower temperature (2023, Nov 2021); density is about spacing, not particle size</td></tr></table><p>June 2024 2H Q4: the direction of the water's force at X (1), the force from a skate on ice from $4.8 \\times 10^{7}$ Pa and $1.2 \\times 10^{-5}$ m² to 2 s.f. (3), describe the pressure–height graph (2), read 8850 m (1), the % change from 104 to 74 kPa (2), and explain the density change with height using the particle model (2). June 2023 2H Q4 did the aeroplane window: pressure difference, $F = PA$, the larger window, the arrow, the graph and the reason.</p>"
         },
         {
           "kind": "worked",
@@ -406,7 +406,7 @@
               "id": "mx-b2-q2",
               "type": "written",
               "text": "A graph shows atmospheric pressure falling from 100 kPa at sea level to 50 kPa at 5.5 km and 26 kPa at 10 km. Describe the relationship and explain it. (4)",
-              "model": "<ul><li>As height increases the pressure <b>decreases</b>.</li><li>The relationship is <b>non-linear</b>: the pressure halves in the first 5.5 km but falls by only 24 kPa in the next 4.5 km — the fall per km gets smaller.</li><li>Higher up there is <b>less air above</b>, so a <b>smaller weight of air</b> presses down.</li><li>The air higher up is also <b>less dense</b> — its particles are further apart because less air presses on it — so each extra kilometre of height removes less weight.</li></ul>",
+              "model": "<ul><li>As height increases the pressure <b>decreases</b>.</li><li>The relationship is <b>non-linear</b> (the line is curved, not straight; doubling the height does not halve the pressure): quote <b>two pairs</b> of values — 100 kPa at 0 km, 50 kPa at 5.5 km, 26 kPa at 10 km — the fall per km gets smaller (2023: a mark for 'use of numerical data', at least two pairs).</li><li>Higher up there is <b>less air above</b>, so a <b>smaller weight of air</b> presses down.</li><li>The air higher up is also <b>less dense</b> — its particles are further apart because less air presses on it — so each extra kilometre of height removes less weight.</li></ul>",
               "lines": 4
             },
             {
@@ -451,7 +451,7 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or method</th><th>Hands over</th><th>Watch</th></tr><tr><td>graph → energy</td><td>area under the weight–extension line: $\\tfrac{1}{2} F x$ (Topic 15)</td><td>$E$ in J</td><td>$x$ in metres (2025: cm left in, 100 times too large)</td></tr><tr><td>graph → spring constant</td><td>gradient, or $k = F \\div x$ from a point on the line</td><td>$k$ in N/m</td><td>$x$ in metres (2025: 100 times too small); the unit is often a separate mark</td></tr><tr><td>block in equilibrium → free-body diagram</td><td>weight down, tension (spring force) up, <b>equal length</b>, through the <b>centre</b> (Topic 9)</td><td>a diagram</td><td>2025: vectors \"must have a size as well as a direction\"; arrows near the edge of the box would make it spin</td></tr><tr><td>two forces at an angle → resultant</td><td>scale drawing, tip to tail, measure the closing side (Topic 9) [H]</td><td>$R$ in N</td><td>state the scale; measure the length and convert</td></tr></table><p>June 2025 2H Q8: why the vertical spring is longer than the horizontal one (its own weight stretches it) (1), what the extension equals (the added weight ÷ $k$) (1), energy from 0 to 8 cm from the area (3), the spring constant with its unit (2), two vectors on the 5 N block (2), the resultant of 4 N and 5 N at X by scale drawing (2). June 2023 2H Q7: the pen spring's force, the change in length, the accuracy point, the hook's force (6 N up) and the resultant of 30 N and 40 N.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation or method</th><th>Hands over</th><th>Watch</th></tr><tr><td>graph → energy</td><td>area under the weight–extension line: $\\tfrac{1}{2} F x$ (Topic 15)</td><td>$E$ in J</td><td>$x$ in metres (2025: cm left in, 100 times too large)</td></tr><tr><td>graph → spring constant</td><td>gradient, or $k = F \\div x$ from a point on the line</td><td>$k$ in N/m</td><td>give the unit that matches the $x$ you used (June 2025 2H Q8(c)(ii): 45 N/m and 0.45 N/cm both scored 2; 45 or 0.45 with no unit scored 1)</td></tr><tr><td>block in equilibrium → free-body diagram</td><td>weight down, tension (spring force) up, <b>equal length</b>, through the <b>centre</b> (Topic 9)</td><td>a diagram</td><td>2025: vectors \"must have a size as well as a direction\"; arrows near the edge of the box would make it spin</td></tr><tr><td>two forces at an angle → resultant</td><td>scale drawing, tip to tail, measure the closing side (Topic 9) [H]</td><td>$R$ in N</td><td>state the scale; measure the length and convert</td></tr></table><p>June 2025 2H Q8: why the vertical spring is longer than the horizontal one (its own weight stretches it) (1), what the extension equals — the loaded length minus the unloaded <b>vertical</b> length Y, not the horizontal length X (1), energy from 0 to 8 cm from the area (3), the spring constant with its unit (2), two vectors on the 5 N block (2), the resultant of 4 N and 5 N at X by scale drawing (2). June 2023 2H Q7: the pen spring's force, the change in length, the accuracy point, the hook's force (6 N up) and the resultant of 30 N and 40 N.</p>"
         },
         {
           "kind": "worked",
@@ -460,7 +460,7 @@
           "steps": [
             "(a) Area of the triangle to 20 cm: $E = \\tfrac{1}{2} F x = \\tfrac{1}{2} \\times 8.0 \\times 0.20 = 0.80$ J (extension in metres).",
             "(b) $k = F \\div x = 8.0 \\div 0.20 = 40$ N/m (or $E = \\tfrac{1}{2} k x^2$: $0.80 = \\tfrac{1}{2} \\times k \\times 0.20^2$ gives the same).",
-            "(c) Two vectors through the <b>centre</b> of the block: <b>weight 4.0 N downwards</b> and the <b>force of the spring 4.0 N upwards</b> — the same length, because the block is in equilibrium (resultant zero)."
+            "(c) Two vectors through the <b>centre</b> of the block: <b>weight 4.0 N downwards</b> and the <b>force of the spring 4.0 N upwards</b> — <b>both labelled 4.0 N</b> and the same length, because the block is in equilibrium (resultant zero); in June 2025 (2H Q8(d)) the label on both arrows was the second mark."
           ],
           "graph": {
             "x": {
@@ -552,7 +552,7 @@
                   "id": "mx-b3-q1c",
                   "type": "written",
                   "text": "The 6.0 N block hangs at rest. Describe the two force vectors that a free-body diagram of the block must show. (2)",
-                  "model": "<ul><li>The <b>weight</b>, 6.0 N, drawn <b>vertically downwards</b> from the centre of the block.</li><li>The <b>force of the spring</b> on the block (tension), 6.0 N <b>upwards</b> from the centre — the <b>same length</b> as the weight, because the block is in equilibrium.</li></ul>",
+                  "model": "<ul><li>The <b>weight</b>, 6.0 N, drawn <b>vertically downwards</b> from the centre of the block.</li><li>The <b>force of the spring</b> on the block (tension), 6.0 N <b>upwards</b> through the centre, <b>labelled 6.0 N</b> like the weight and the same length, because the block is in equilibrium.</li></ul>",
                   "lines": 2,
                   "label": "c"
                 },
@@ -623,7 +623,7 @@
               "text": "A 2025 free-body diagram of a block on a spring scored one mark of two because…",
               "options": [
                 "the arrows were the wrong colour",
-                "the arrows had no size shown — force vectors must have a size as well as a direction",
+                "the arrows were not labelled 5 N — the label on both arrows was the second mark",
                 "it showed only the weight",
                 "the block was too small"
               ],
@@ -756,7 +756,7 @@
               "id": "mx-b4-q2",
               "type": "written",
               "text": "Explain why the newton-meter reading is smaller when the stone is in water than in air. (3)",
-              "model": "<ul><li>In the water there is an <b>upthrust</b> on the stone, supporting part of its weight.</li><li>The upthrust equals the <b>weight of water displaced</b> by the stone.</li><li>Water is <b>much more dense than air</b>, so the water displaced weighs far more than the air displaced did — the upthrust in air is negligible.</li></ul>",
+              "model": "<ul><li>In the water there is an <b>upthrust</b> on the stone, so the stone has an <b>apparent loss in weight</b> (the meter reads weight − upthrust) — the 2025 scheme's first phrase.</li><li>The upthrust equals the <b>weight of water displaced</b> by the stone.</li><li>Water is <b>much more dense than air</b>, so the water displaced weighs far more than the air displaced did — the upthrust in air is negligible.</li></ul>",
               "lines": 3
             },
             {
@@ -805,7 +805,7 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>force and distance → work</td><td>$W = F d$ (Topic 8): the load's weight × the height lifted = useful work</td><td>an energy in J</td><td>distance in the direction of the force</td></tr><tr><td>useful → total</td><td>efficiency $=$ useful ÷ total, so total $=$ useful ÷ efficiency (Topic 3)</td><td>an energy in J</td><td>divide by the efficiency, do not multiply; as a decimal</td></tr><tr><td>wasted</td><td>total − useful</td><td>—</td><td>say where: friction in the pulley bearings, lifting the pulley's own moving parts, the rope stretching</td></tr><tr><td>energy → height, or → power</td><td>$\\Delta h = \\Delta GPE \\div (mg)$; $P = E \\div t$</td><td>$h$ in m, $P$ in W</td><td>mass in kg (320 g = 0.32 kg); time in s</td></tr></table><p>June 2023 2H Q9: the barrel's weight from 3000 J of work over 2.0 m (2), the total work at 64 % efficiency (2), another reason for wasted energy (1), and the 6-mark plan \"investigate how the efficiency of the pulley system varies with the weight being lifted\" with a spring balance, metre rule, pulley and metal cubes — \"include how you will use your measurements\". June 2024 2H Q7: distance from $W = Fd$, an experiment to find the GPE gained by a lifted mass naming the measuring devices (4), the height from 5.8 J and 320 g, and one reason a motor is under 100 % efficient. June 2025 2H Q2(b): a student's power climbing stairs to 2 s.f.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>force and distance → work</td><td>$W = F d$ (Topic 8): the load's weight × the height lifted = useful work</td><td>an energy in J</td><td>distance in the direction of the force</td></tr><tr><td>useful → total</td><td>efficiency $=$ useful ÷ total, so total $=$ useful ÷ efficiency (Topic 3)</td><td>an energy in J</td><td>divide by the efficiency, do not multiply; as a decimal</td></tr><tr><td>wasted</td><td>total − useful</td><td>—</td><td>say where: friction in the pulley bearings, lifting the pulley's own moving parts, the rope stretching</td></tr><tr><td>energy → height, or → power</td><td>$\\Delta h = \\Delta GPE \\div (mg)$; $P = E \\div t$</td><td>$h$ in m, $P$ in W</td><td>mass in kg (320 g = 0.32 kg); time in s</td></tr></table><p>June 2023 2H Q9: the barrel's weight from 1800 J of work over 1.2 m (2), the total work at 64 % efficiency (2), another reason for wasted energy (1), and the 6-mark plan \"investigate how the efficiency of the pulley system varies with the weight being lifted\" with a spring balance, metre rule, pulley and metal cubes — \"include how you will use your measurements\". June 2024 2H Q7: distance from $W = Fd$, an experiment to find the GPE gained by a lifted mass naming the measuring devices (4), the height from 5.8 J and 320 g, and one reason a motor is under 100 % efficient. June 2025 2H Q2(b): a student's power climbing stairs to 2 s.f.</p>"
         },
         {
           "kind": "worked",
@@ -882,7 +882,7 @@
                   "id": "mx-b5-q1d",
                   "type": "written",
                   "text": "Give two reasons why the motor is less than 100 % efficient. (2)",
-                  "model": "<ul><li>Energy is transferred to the <b>thermal store</b> of the motor's wires and bearings by <b>friction</b> and by the current's heating effect.</li><li>Some energy is transferred by <b>sound</b>, and some lifts the string or hook as well as the mass (not useful).</li></ul>",
+                  "model": "<ul><li>There is <b>friction</b> in the motor's bearings, so energy is transferred to the thermal store of the motor.</li><li>The current in the motor's wires has a <b>heating</b> effect (electrical heating), so energy is transferred to the surroundings as well as to the mass. (June 2024 2H Q7(d): friction (1), heating (1); sound is ignored.)</li></ul>",
                   "lines": 2,
                   "label": "d"
                 }
@@ -910,7 +910,7 @@
                 "<b>Equation:</b> $P = E \\div t$",
                 "<b>Working:</b> $P = 2310 \\div 6.0$",
                 "<b>Answer:</b> $= 385 = 390$",
-                "<b>Units:</b> W (2 s.f.)"
+                "<b>Units:</b> W — write 385 W then 390 W: the 2 s.f. line is its own mark, given for rounding whatever you got (June 2025 2H Q2(b))"
               ]
             }
           ]
@@ -936,14 +936,14 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and speed → KE</td><td>$KE = \\tfrac{1}{2} m v^2$ (Topic 3)</td><td>$E$ in J</td><td>a car's KE is $10^5$ J; a battery stores $10^8$ J</td></tr><tr><td>battery energy and motor power → time</td><td>$t = E \\div P$ (Topic 8)</td><td>$t$ in s → hours</td><td>1 kWh $= 3.6 \\times 10^{6}$ J; convert before dividing</td></tr><tr><td>charging → energy</td><td>$E = I V t$, or $P = IV$ then $E = Pt$ (Topic 10)</td><td>$E$ in J, $t$ in s</td><td>\"evaluate the claim\": calculate the time and compare it with the claim in a sentence</td></tr><tr><td>current and time → charge</td><td>$Q = I t$ (Topic 10)</td><td>$Q$ in C</td><td>hours into seconds first</td></tr><tr><td>regenerative braking</td><td>KE → electrical (the motor runs as a generator, Topic 13) → chemical store of the battery</td><td>—</td><td>instead of the thermal store of the brakes: less energy wasted, longer range</td></tr></table><p>June 2023 2H Q8: the car's KE (2), how long the battery lasts (2), how regenerative braking extends the range (2), whether a charging-time claim is right using $t = E \\div (IV)$ (3), and the charge moved (2). The evaluate mark is for the <b>comparison</b> and a <b>conclusion</b>, not just the number.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>mass and speed → KE</td><td>$KE = \\tfrac{1}{2} m v^2$ (Topic 3)</td><td>$E$ in J</td><td>a car's KE is $10^5$ J; a battery stores $10^8$ J</td></tr><tr><td>battery energy and motor power → time</td><td>$t = E \\div P$ (Topic 8)</td><td>$t$ in s → hours</td><td>1 kWh $= 3.6 \\times 10^{6}$ J; convert before dividing</td></tr><tr><td>charging → energy</td><td>$E = I V t$, or $P = IV$ then $E = Pt$ (Topic 10)</td><td>$E$ in J, $t$ in s</td><td>\"comment on this claim\" (June 2023 2H Q8(d)): calculate the time, then one sentence — the claim is / is not justified because the time is less / more than … (the conclusion mark is independent of the arithmetic)</td></tr><tr><td>current and time → charge</td><td>$Q = I t$ (Topic 10)</td><td>$Q$ in C</td><td>hours into seconds first</td></tr><tr><td>regenerative braking</td><td>KE → electrical (the motor runs as a generator, Topic 13) → chemical store of the battery</td><td>—</td><td>instead of the thermal store of the brakes: less energy wasted, longer range</td></tr></table><p>June 2023 2H Q8: the car's KE (2), how long the battery lasts (2), how regenerative braking extends the range (2), whether a charging-time claim is right using $t = E \\div (IV)$ (3), and the charge moved (2). The evaluate mark is for the <b>comparison</b> and a <b>conclusion</b>, not just the number.</p>"
         },
         {
           "kind": "worked",
           "title": "The electric car",
-          "question": "An electric car of mass 1200 kg travels at 16 m/s. Its battery stores 36 kWh ($1.3 \\times 10^{8}$ J) and its motor has an average power of 18 kW. The charger supplies 32 A at 230 V and the maker claims a full charge takes 'under 5 hours'. (a) Calculate the car's kinetic energy. (b) Calculate how long the battery can run the motor, in hours. (c) Evaluate the charging claim. (d) Calculate the charge that flows during the charge. (9 marks)",
+          "question": "An electric car of mass 1200 kg travels at 16 m/s. Its battery stores 36 kWh ($1.3 \\times 10^{8}$ J) and its motor has an average power of 18 kW. The charger supplies 32 A at 230 V and the maker claims a full charge takes 'under 5 hours'. (a) Calculate the car's kinetic energy. (b) Calculate how long the battery can run the motor, in hours. (c) Comment on the charging claim. (d) Calculate the charge that flows during the charge. (9 marks)",
           "steps": [
-            "(a) $KE = \\tfrac{1}{2} m v^2 = \\tfrac{1}{2} \\times 1200 \\times 16^2 = 153\\,600$ J (about 0.1 % of the battery).",
+            "(a) $KE = \\tfrac{1}{2} m v^2 = \\tfrac{1}{2} \\times 1200 \\times 16^2 = 153\\,600$ J $= 150$ kJ — give it in the unit the question asks for (June 2023 2H Q8(a): 'in kJ'; 153 600 scored 1 of 2). About 0.1 % of the battery.",
             "(b) $t = E \\div P = 1.3 \\times 10^{8} \\div 18\\,000 = 7200$ s $= 2.0$ hours.",
             "(c) Charging power $P = IV = 32 \\times 230 = 7360$ W; $t = E \\div P = 1.3 \\times 10^{8} \\div 7360 = 17\\,700$ s $= 4.9$ hours — so the claim of under 5 hours is <b>just</b> right, but only if nothing is wasted in the charger and battery; in practice it would take a little longer.",
             "(d) $Q = I t = 32 \\times 17\\,700 = 5.7 \\times 10^{5}$ C."
@@ -1029,7 +1029,7 @@
               "id": "mx-b6-q2",
               "type": "written",
               "text": "Explain how regenerative braking increases the distance an electric car can travel on one charge. (3)",
-              "model": "<ul><li>When the car brakes, its <b>kinetic energy</b> is transferred to the motor, which runs as a <b>generator</b> (induction)…</li><li>…so the energy is transferred <b>electrically to the chemical store of the battery</b> instead of to the thermal store of the brakes.</li><li>The battery therefore has <b>more energy</b> after braking than it would with friction brakes, so the car can travel further before it needs charging.</li></ul>",
+              "model": "<ul><li>When the car brakes, its <b>kinetic energy</b> is transferred to the motor, which runs as a <b>generator</b> (induction)…</li><li>…so energy that would <b>otherwise be wasted</b> (heating the brakes) is transferred electrically to the <b>chemical store of the battery</b> (June 2023 2H Q8(c): kinetic store (1) → chemical store (1)).</li><li>The battery therefore has <b>more energy</b> after braking than it would with friction brakes, so the car can travel further before it needs charging.</li></ul>",
               "lines": 3
             },
             {
@@ -1068,7 +1068,7 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Idea or equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>turning → induced pd</td><td>the coil cuts field lines, a pd is <b>induced</b>; with a lamp connected a current flows and the induced current's field <b>opposes</b> the motion, so it is harder to turn (Topic 13) [H]</td><td>a pd, then a current</td><td>\"induced\", never \"produced\"</td></tr><tr><td>primary → secondary</td><td>alternating current → changing field in the core → changing field through the secondary → pd induced (Topic 13) [H]</td><td>$V_s$</td><td>d.c. would give no changing field</td></tr><tr><td>turns → pd; pd → current</td><td>$V_p \\div V_s = N_p \\div N_s$ [H, P]; $V_p I_p = V_s I_s$</td><td>$V_s$, $I_s$</td><td>step-down: fewer turns on the secondary, larger current</td></tr><tr><td>a.c. → charging a battery</td><td>a <b>diode</b> lets current flow one way only, so the battery is charged, not discharged on the reverse half-cycles (Topic 10)</td><td>d.c.</td><td>a battery needs d.c.</td></tr><tr><td>motor beside generator</td><td>the <b>commutator</b> reverses the current every half turn so the force on each side of the coil keeps it turning the same way (Topic 12) [H, P]</td><td>—</td><td>the loudspeaker is the motor effect; the microphone is induction — the same parts, opposite direction of transfer (Topic 13 T4) [P]</td></tr></table><p>June 2025 2H Q6: how a current is produced in the secondary (3), the secondary turns from 230 V, 1.5 V and 1840 turns (2), why a diode is needed in series with the battery (2), the commutator (3). June 2023 2H Q10: how the dynamo was turned between readings, why it gets harder to turn with a lamp (2), the secondary pd (3), loudspeaker versus microphone (6). June 2024 2H Q10: the falling magnet and its investigation, then the grid transformer 11 000 V → 230 V (6). The standard chains are on the Topic 13 page word for word; this is where they are asked side by side.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Idea or equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>turning → induced pd</td><td>the coil cuts field lines, a pd is <b>induced</b>; with a lamp connected a current flows and the induced current's field <b>opposes</b> the motion, so it is harder to turn (Topic 13) [H]</td><td>a pd, then a current</td><td>\"induced\", never \"produced\"</td></tr><tr><td>primary → secondary</td><td>alternating current → changing field in the core → changing field through the secondary → pd induced (Topic 13) [H]</td><td>$V_s$</td><td>d.c. would give no changing field</td></tr><tr><td>turns → pd; pd → current</td><td>$V_p \\div V_s = N_p \\div N_s$ [H, P]; $V_p I_p = V_s I_s$</td><td>$V_s$, $I_s$</td><td>step-down: fewer turns on the secondary, larger current</td></tr><tr><td>a.c. → charging a battery</td><td>a <b>diode</b> lets current flow one way only, so the battery is charged, not discharged on the reverse half-cycles (Topic 10)</td><td>d.c.</td><td>a battery needs d.c.</td></tr><tr><td>motor beside generator</td><td>the <b>commutator</b> <b>connects the coil to the battery</b> through the brushes (carries the current to the coil); it <b>reverses the current in the coil every half turn</b>; so the <b>force on the coil stays in the same direction</b> and it keeps turning the same way (June 2025 2H Q6(d): one mark each) (Topic 12) [H, P]</td><td>—</td><td>the loudspeaker is the motor effect; the microphone is induction — the same parts, opposite direction of transfer (Topic 13 T4) [P]</td></tr></table><p>June 2025 2H Q6: how a current is produced in the secondary (3), the secondary turns from 230 V, 1.5 V and 1840 turns (2), why a diode is needed in series with the battery (2), the commutator (3). June 2023 2H Q10: how the dynamo was turned between readings, why it gets harder to turn with a lamp (2), the secondary pd (3), loudspeaker versus microphone (6). June 2024 2H Q10: the falling magnet and its investigation, then the grid transformer 11 000 V → 230 V (6). The standard chains are on the Topic 13 page word for word; this is where they are asked side by side.</p>"
         },
         {
           "kind": "worked",
@@ -1105,7 +1105,7 @@
                   "id": "mx-b7-q1b",
                   "type": "written",
                   "text": "Explain why the wheel is harder to turn when the lamp is switched on. (2)",
-                  "model": "<ul><li>With the lamp connected a <b>current flows</b> in the coil, and the current has its own <b>magnetic field</b>.</li><li>That field <b>opposes the motion</b> that induced it (a force against the turning), so more work must be done to keep the dynamo turning — the extra work is the energy transferred to the lamp.</li></ul>",
+                  "model": "<ul><li>With the lamp connected a <b>current flows</b> in the coil, and the current has its own <b>magnetic field</b>.</li><li>The current's <b>magnetic field interacts with the magnet's field</b>, giving a <b>force that opposes the motion</b> (a force against the turning), so more work must be done to keep the dynamo turning — the extra work is the energy transferred to the lamp. (Do not say the resistance is greater — ignored in 2023.)</li></ul>",
                   "lines": 2,
                   "label": "b",
                   "tags": [
@@ -1192,7 +1192,7 @@
               "id": "mx-b7-q3",
               "type": "written",
               "text": "A coil of wire attached to a cone sits in a magnetic field. Compare how it works as a loudspeaker with how it works as a microphone. (4)",
-              "model": "<ul><li><b>Loudspeaker</b>: an alternating <b>current</b> in the coil → a <b>force</b> on the coil in the magnetic field (motor effect) → the coil and cone <b>move</b> back and forth → the cone pushes the air: <b>sound</b>.</li><li><b>Microphone</b>: <b>sound</b> makes the cone and coil <b>move</b> in the field → the coil cuts field lines → a <b>pd is induced</b> → an alternating <b>current</b> with the same frequency as the sound.</li><li>Both use the same parts — a coil, a magnet, a cone — and in both the current and the movement have the frequency of the sound.</li><li>The direction of transfer is opposite: electrical → sound in the loudspeaker (motor effect), sound → electrical in the microphone (induction).</li></ul>",
+              "model": "<ul><li><b>Loudspeaker</b>: an alternating <b>current</b> in the coil produces a <b>changing magnetic field</b> around it → the two fields interact: a <b>force</b> on the coil that <b>changes direction</b> (motor effect) → the coil and cone <b>move</b> back and forth → the cone pushes the air: <b>sound</b>.</li><li><b>Microphone</b>: <b>sound</b> makes the cone and coil <b>move</b> in the field → the coil cuts field lines → a <b>pd is induced</b> → an alternating <b>current</b> with the same frequency as the sound.</li><li>Both use the same parts — a coil, a magnet, a cone — and in both the <b>frequency and amplitude</b> of the current match the frequency and amplitude of the sound (both credited in the 2023 indicative content).</li><li>The direction of transfer is opposite: electrical → sound in the loudspeaker (motor effect), sound → electrical in the microphone (induction).</li></ul>",
               "lines": 4,
               "tags": [
                 "P"
@@ -1224,7 +1224,7 @@
         {
           "kind": "explain",
           "title": "The chain",
-          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>current, pd, time → energy</td><td>$E = IVt$, or $P = IV$ then $E = Pt$ (Topic 10)</td><td>$E$ in J</td><td>$t$ in <b>seconds</b>; a joulemeter reads $E$ directly</td></tr><tr><td>energy → temperature rise</td><td>$\\Delta\\theta = \\Delta Q \\div (mc)$ (Topic 14)</td><td>$\\Delta\\theta$ in °C</td><td>mass in kg; this assumes all the energy went into the substance</td></tr><tr><td>measured rise → c</td><td>$c = \\Delta Q \\div (m \\Delta\\theta)$</td><td>$c$ in J/kg °C</td><td>comes out too high if energy went elsewhere</td></tr><tr><td>why smaller</td><td>energy transferred to the <b>surroundings</b> and to the <b>container / heater parts</b></td><td>—</td><td>2024: ignore \"energy is lost\" and \"not 100 % efficient\"</td></tr></table><p>June 2024 2H Q9: the temperature rise of a 5.8 kg storage-heater brick given 210 kJ with $c = 860$ J/kg °C (2 — the kJ must become J), why the actual rise is smaller (2), and the 6-mark SHC-of-water practical (Topic 14 T6: immersion heater, joulemeter or ammeter and voltmeter with a stopwatch, balance, thermometer; Level 3 needs $\\Delta\\theta$, the energy and how $c$ is found). The Topic 10 heating-effect explanation sits underneath: the current's electrons collide with the ions of the heater wire and transfer energy to them.</p>"
+          "html": "<table class='tbl'><tr><th>Stage</th><th>Equation</th><th>Hands over</th><th>Watch</th></tr><tr><td>current, pd, time → energy</td><td>$E = IVt$, or $P = IV$ then $E = Pt$ (Topic 10)</td><td>$E$ in J</td><td>$t$ in <b>seconds</b>; a joulemeter reads $E$ directly</td></tr><tr><td>energy → temperature rise</td><td>$\\Delta\\theta = \\Delta Q \\div (mc)$ (Topic 14)</td><td>$\\Delta\\theta$ in °C</td><td>mass in kg; this assumes all the energy went into the substance</td></tr><tr><td>measured rise → c</td><td>$c = \\Delta Q \\div (m \\Delta\\theta)$</td><td>$c$ in J/kg °C</td><td>comes out too high if energy went elsewhere</td></tr><tr><td>why smaller</td><td>energy transferred to the <b>surroundings</b> and to the <b>container / heater parts</b></td><td>—</td><td>2024: ignore \"energy is lost\" and \"not 100 % efficient\"</td></tr></table><p>June 2024 2H Q9: the temperature rise of a 5.8 kg storage-heater brick given 210 kJ with $c = 860$ J/kg °C (2 — the kJ must become J), why the actual rise is smaller (2), and the 6-mark SHC-of-water practical (Topic 14 T6: immersion heater, joulemeter or ammeter and voltmeter with a stopwatch, balance, thermometer; Level 3 needs $\\Delta\\theta$, the energy and how $c$ is found). The Topic 10 heating-effect explanation sits underneath: the current's electrons <b>collide with the ions</b> of the heater wire and transfer energy to them, so the <b>ions vibrate more</b> — a higher temperature (June 2018 2H Q8(c): one mark for each).</p>"
         },
         {
           "kind": "worked",
@@ -1339,7 +1339,7 @@
     },
     {
       "q": "Stage 1 wrong — what about stages 2 and 3?",
-      "a": "Use the wrong value, show the working, label the stage: error carried forward still scores.",
+      "a": "Use the wrong value, show the working, label the stage: error carried forward still scores the method marks (and usually the answer).",
       "section": "join"
     },
     {
@@ -1354,7 +1354,7 @@
     },
     {
       "q": "Pressure → force on a surface?",
-      "a": "$F = PA$, normal to the surface; use the pressure difference with fluid on both sides.",
+      "a": "$F = PA$, normal to the surface; use the pressure the question names — the difference only when it asks for the net (resultant) force (2023: the net force scored 1 of 2 when the question said 'due to the cabin air pressure').",
       "section": "pressure-force-particles"
     },
     {
@@ -1369,7 +1369,7 @@
     },
     {
       "q": "Free-body diagram of a hanging block at rest?",
-      "a": "Weight down and spring force up, equal lengths, through the centre.",
+      "a": "Weight down and spring force up, through the centre, both labelled with the value (equal lengths).",
       "section": "springs-forces-energy"
     },
     {
