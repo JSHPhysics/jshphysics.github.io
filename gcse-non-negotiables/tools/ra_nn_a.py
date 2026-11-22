@@ -186,7 +186,7 @@ section_n4 = section(
             RADIATION_TABLE +
             "<p>Radiation is emitted from <b>unstable nuclei</b> in a <b>random</b> process: you cannot say which nucleus will decay next or when (N7). All of alpha, β⁻, β⁺ and gamma are <b>ionising</b>.</p>"
             "<p><b>Why penetration and ionisation are opposites:</b> an alpha particle is large and carries +2, so it ionises almost every atom it passes, losing its energy within a few centimetres. A gamma ray has no charge and no mass, so it rarely interacts — it ionises little and travels far. The June 2024 scheme (Q8(a)): the charge on an alpha particle is <b>+2</b>.</p>"
-            "<p>\"Alpha is stopped by paper\" scores; \"alpha is the weakest\" does not — say <b>least penetrating</b> or <b>most ionising</b>, never \"strongest\" or \"weakest\".</p>",
+            "<p>\"Alpha is stopped by paper\" scores, and so does a comparison in the right dimension — \"alpha is <b>more ionising</b> than gamma\" was a mark on its own in June 2019 (Q8(a)(ii)). \"Strongest\" or \"weakest\" names neither dimension: write <b>least penetrating</b> / <b>most ionising</b>.</p>",
         ),
         worked(
             "Comparing two radiations",
@@ -196,6 +196,7 @@ section_n4 = section(
                 "<b>Ionising:</b> alpha is <b>strongly</b> ionising; gamma is <b>weakly</b> ionising.",
                 "<b>Penetration:</b> alpha travels a few cm in air and is stopped by paper; gamma travels far and is only reduced by thick lead.",
                 "<b>Effect on the nucleus</b> (what the June 2025 6-marker wanted): alpha emission reduces the mass number by 4 and the atomic number by 2 — a new element; gamma emission <b>changes neither</b> — the nucleus just loses energy.",
+                "<b>Read the bullets.</b> When the question says \"the processes of decay … what each radiation is and the effect on the original nucleus\" (Nov 2021 Q9(d)), penetration and ionisation were <b>ignored</b> — every mark was for the nature (particle or wave, how many particles, charge) and the change in A and Z. June 2025 Q9(c) did credit them as a third strand. Write the nature and the nucleus first; add penetration only if there is room.",
             ],
         ),
         practice("Types of radiation", [
@@ -215,8 +216,8 @@ section_n4 = section(
                    "Two protons, no electrons: +2."),
             written("ra-n4-q6", "A source emits beta and gamma radiation. Describe how you could show, using absorbers and a detector, that it emits both. (3)",
                     mark_scheme([
-                        ("Baseline", "Measure the <b>count rate</b> with nothing in the way (and subtract background)."),
-                        ("Aluminium", "Put a few mm of <b>aluminium</b> between source and detector: the count <b>falls</b> but does not reach background — the beta has been stopped, something more penetrating remains."),
+                        ("Baseline", "Place the source a fixed distance <b>in front of</b> the GM tube (not \"in\" it — June 2018 Q3(a)); measure the <b>count rate</b> with nothing in the way, for the <b>same time</b> each reading, and subtract the background."),
+                        ("Aluminium", "Put a few mm of <b>aluminium</b> between source and detector, keeping the <b>source–tube distance the same</b>: the count <b>falls</b> but does not reach background — the aluminium <b>absorbs</b> the beta particles so fewer reach the tube (Nov 2021 Q3(c)(i)); something more penetrating remains."),
                         ("Lead", "Put thick <b>lead</b> in the way: the count falls again (towards background) — that remaining radiation is <b>gamma</b>."),
                     ]), lines=4),
             written("ra-n4-q7", "State what is meant by saying radioactive decay is a random process. (1)",

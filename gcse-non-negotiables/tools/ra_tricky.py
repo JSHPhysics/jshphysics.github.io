@@ -38,7 +38,7 @@ section_t1 = section(
             "<tr><td><b>most</b> alpha particles passed <b>straight through</b> the foil undeflected</td><td>the atom is <b>mostly empty space</b></td></tr>"
             "<tr><td><b>some</b> were <b>deflected</b> through small angles</td><td>the centre of the atom is <b>positively charged</b> (repels the positive alpha particles)</td></tr>"
             "<tr><td><b>very few</b> (about 1 in 8000) were <b>deflected back</b> through more than 90°</td><td>the positive charge and <b>most of the mass</b> are concentrated in a <b>tiny, dense nucleus</b></td></tr></table>"
-            "<p>The plum pudding model could not explain this: if the positive charge were spread out thinly, nothing could turn an alpha particle round. So the model changed to a <b>small positive nucleus with electrons orbiting far outside it</b>. (The 2022 scheme credited \"most pass straight through — mostly empty space\" and \"a few reflected through 180° — a dense, small nucleus\"; the Bohr electrons were ignored here.)</p>"
+            "<p>The plum pudding model could not explain this: if the positive charge were spread out thinly, nothing could turn an alpha particle round. So the model changed to a <b>small positive nucleus with electrons orbiting far outside it</b>. (The June 2022 scheme, Q8(b)(ii), gave a mark each for three observations — <b>most pass straight through</b>, <b>some deflected through small angles</b> (less than 90°), <b>very few through large angles</b> (more than 90°) — and three conclusions — <b>mostly empty space</b>, <b>there must be a nucleus</b>, which is <b>small / dense / positive</b>. \"Bounce back\" and \"repelled\" were allowed; \"refracted\" and anything about electrons ignored.)</p>"
             "<p><b>3. Bohr:</b> electrons orbiting freely would spiral into the nucleus, and hot gases emit light only at particular frequencies. Bohr proposed that electrons can only occupy <b>certain fixed orbits (energy levels)</b> at set distances, and move between them by absorbing or emitting fixed amounts of EM radiation. This agreed with experiment, so it replaced the free-orbit picture. Later, the nucleus was found to contain <b>protons</b> and (Chadwick, 1932) <b>neutrons</b>.</p>"
             "<p><b>The pattern for the 6-marker:</b> for each step say the <b>model</b>, the <b>evidence</b>, and <b>why</b> the evidence could not be explained by the old model.</p>",
         ),
@@ -69,7 +69,7 @@ section_t1 = section(
                    "Positive alpha particles repelled by a positive nucleus are deflected."),
             written("ra-t1-q6", "A student models alpha scattering by rolling marbles at a heavy weight hidden under a sheet of paper. Give two limitations of this model. (2)",
                     marks(["The marble and weight have <b>no charge</b>, so the deflection is by contact rather than electrostatic repulsion; the model is <b>not to scale</b> (the weight is far too big compared with the atom).",
-                           "It is <b>two-dimensional</b> / the marbles are slow and visible, whereas alpha particles are fast and detected only by flashes."]), lines=3),
+                           "It is <b>two-dimensional</b> (not 3D) / there is <b>only one</b> marble and one weight / <b>all the marbles have the same speed</b>, whereas alpha particles do not (June 2022 Q8(c)(ii))."]), lines=3),
         ]),
     ],
 )
@@ -145,7 +145,7 @@ graph_decay_bg = graph(
 section_t3 = section(
     "half-life-hard", "tricky", "Half-life the hard way: background, graphs and working backwards", "6.27",
     equations=[r"\text{corrected count} = \text{measured} - \text{background}", r"\text{fraction left} = \dfrac{1}{2^{n}}", r"\text{ratio} = 2^{n}"],
-    blurb="The harder half-life questions hide a background count in the graph, ask for the original activity from a later one, or want a fraction or percentage rather than a number. Each one is the same halving, with one extra step first.",
+    blurb="The harder half-life questions read a value off a graph and turn it into a percentage, ask for the original activity from a later one, count half-lives in years, or want a fraction, percentage or ratio rather than a number. (A background hidden in the graph has not been set in a Physics paper since 2018, but it is the method behind the core practical.) Each one is the same halving, with one extra step first.",
     checklist=[
         "Subtract the background before finding a half-life from a graph",
         "Work backwards from a later activity to the original",
@@ -279,7 +279,7 @@ section_t5 = section(
             "<tr><td>Rotation</td><td>healthy tissue along any one path gets only a <b>fraction</b> of the dose; the tumour, where all the beams meet, gets it all</td><td>—</td></tr>"
             "<tr><td>Healthy tissue</td><td><b>some damage</b> to tissue the beams pass through (side effects)</td><td><b>less</b> damage to surrounding tissue; very targeted</td></tr>"
             "<tr><td>Downsides</td><td>many sessions; not all of the dose reaches the tumour</td><td>needs <b>surgery or injection</b>; the patient is <b>contaminated</b> (radioactive) for a time; source must have a suitable <b>half-life</b></td></tr></table>"
-            "<p>The June 2024 scheme (Q4(a)): of gamma, X-rays, UV and microwaves, <b>gamma</b> is the one that can be applied <b>internally</b> (from an implanted source); the others are applied externally.</p>",
+            "<p>The June 2024 scheme (Q4(a)): of gamma, X-rays, radio waves and microwaves, <b>gamma</b> is the one that can be applied <b>internally</b> (from an implanted source); the others are applied externally.</p>",
         ),
         worked(
             "Why rotate the beam",
@@ -335,7 +335,7 @@ section_t6 = section(
             "<li>Each emitted <b>positron meets an electron</b> within a millimetre and the two <b>annihilate</b>: their mass becomes energy as <b>two gamma rays</b> travelling in <b>opposite directions</b> (180° apart).</li>"
             "<li>A <b>ring of gamma detectors</b> around the patient records the two gamma rays arriving at <b>almost the same time</b> on opposite sides; the decay happened on the line between them, and the small <b>time difference</b> says where along the line.</li>"
             "<li>Millions of such lines are combined by a computer into a <b>3-D image</b> of where the tracer is concentrated.</li></ol>"
-            "<p>These are the June 2024 marks (Q4(b)(i)): annihilate; two gamma rays; opposite directions; detected (gamma camera); at almost the same time; time difference gives the position. The June 2025 scheme for \"positron meets electron\": <b>annihilate</b> and <b>release (a pair of) gamma rays</b>.</p>"
+            "<p>These are the June 2024 marks (Q4(b)(i)): annihilate; two gamma rays; opposite directions; detected (gamma camera); at almost the same time; time difference gives the position. The June 2025 scheme for \"positron meets electron\" (Q4(b)(ii), 2 marks): any two of <b>collide</b>, <b>annihilate</b>, <b>release (a pair of) gamma rays</b>; \"meet\", \"combine\", \"interact\", \"attract\" and \"light\" were <b>ignored</b>.</p>"
             "<p><b>Why made nearby</b> (6.35P): positron emitters have <b>short half-lives</b> (F-18 110 min, others minutes), so the activity <b>decays rapidly</b>; if it were transported far it would be <b>too weak to use</b> by the time it arrived. So they are made in a <b>cyclotron</b> at or near the hospital and used within hours.</p>",
         ),
         worked(
@@ -349,7 +349,7 @@ section_t6 = section(
         ),
         practice("PET", [
             written("ra-t6-q1", "Describe what happens when a positron meets an electron. (2)",
-                    marks(["They <b>annihilate</b> (both are destroyed; their mass becomes energy)…", "…producing <b>two gamma rays</b> travelling in <b>opposite directions</b>."]), lines=2),
+                    marks(["They <b>collide</b> and <b>annihilate</b> (both are destroyed; their mass becomes energy)…", "…producing <b>two gamma rays</b> travelling in <b>opposite directions</b>."]), lines=2),
             written("ra-t6-q2", "Explain why isotopes used in PET scanners have to be produced close to the hospital. (2)",
                     marks(["They have <b>very short half-lives</b>, so their activity <b>decays rapidly</b>.",
                            "If transported a long way they would be <b>too weak to use</b> (have decayed) on arrival, so they are made in a nearby cyclotron and used within hours."]), lines=3),
@@ -398,7 +398,7 @@ section_t7 = section(
             "<tr><td><b>Coolant</b> (water or gas)</td><td>carries the thermal energy out of the core</td><td>the kinetic energy of the fission fragments heats the fuel; the coolant transfers it to the boiler</td></tr>"
             "<tr><td><b>Boiler, turbine, generator</b></td><td>heat makes <b>steam</b>, steam turns a <b>turbine</b>, the turbine turns a <b>generator</b></td><td>the same as any thermal power station from here on</td></tr>"
             "<tr><td><b>Concrete and steel shielding</b></td><td>absorbs the radiation from the core</td><td>the <b>fission products are radioactive</b> (6.42P), with long half-lives</td></tr></table>"
-            "<p><b>Moderator vs control rods</b> is the examiner's recurring complaint: in 2022 \"most candidates did not recognise that control rods absorb neutrons\" and confused them with the moderator. <b>Moderator slows; control rods absorb.</b> The June 2023 6-marker on this (Q10(c)): Level 3 needs <b>detail on two of</b> chain reaction / control rods / moderator and a mention of the third — \"neutrons hit other U-235 nuclei; control rods absorb neutrons to reduce the number of fissions; the moderator slows neutrons so they are more likely to cause fission\".</p>"
+            "<p><b>Moderator vs control rods</b> is the examiner's recurring complaint: in 2022 \"most candidates did not recognise that control rods absorb neutrons\" and confused them with the moderator. <b>Moderator slows; control rods absorb.</b> The June 2023 6-marker on this (Q10(c)): the indicative content has three strands — chain reaction, control rods, moderator — so cover all three: \"neutrons hit other U-235 nuclei; control rods absorb neutrons to reduce the number of fissions; the moderator slows neutrons so they are more likely to cause fission\".</p>"
             "<p><b>The energy chain</b> (2022 Q4(b)(iii), \"few gained both marks\"): nuclear store of the fuel → <b>kinetic energy of the fission fragments</b> → <b>thermal store of the fuel and coolant</b> (by heating) → <b>steam</b> → <b>kinetic energy of the turbine</b> → generator (electrically). Start with the fragments, not the coolant.</p>",
         ),
         worked(
@@ -471,14 +471,15 @@ section_t8 = section(
             "<tr><td>Products</td><td><b>radioactive</b> daughter nuclei, neutrons</td><td>helium (not radioactive), neutrons</td></tr>"
             "<tr><td>Where</td><td>reactors, bombs</td><td>stars; experimental reactors</td></tr>"
             "<tr><td>Energy per kg of fuel</td><td>very large</td><td>even larger</td></tr></table>"
-            "<p><b>Why it needs high temperature and pressure</b> (6.45P): nuclei are <b>positively charged</b>, so they <b>repel</b> each other electrostatically. To get close enough to fuse they must be moving extremely <b>fast</b> (very <b>high temperature</b>, millions of kelvin) and be crowded <b>close together</b> (very <b>high pressure / density</b>). At low temperature and pressure they never get near enough.</p>"
+            "<p><b>Why it needs high temperature and pressure</b> (6.45P): nuclei are <b>positively charged</b>, so they <b>repel</b> each other electrostatically. To get close enough to fuse they need enough <b>kinetic energy to overcome that repulsion</b> — moving extremely <b>fast</b> (very <b>high temperature</b>, millions of kelvin) — and must be crowded <b>close together</b> (very <b>high pressure / density</b>). At low temperature and pressure they never get near enough. The schemes mark \"high energy\" and \"to overcome the (force of) repulsion\" as separate points (June 2018 Q10(a)(i), Nov 2020 Q4(c)).</p>"
+            "<p><b>$E = mc^2$</b> is not on the equation list but has been <b>supplied</b> in five of the nine series (2018, 2019, 2023, 2024, 2025): the mass lost in fusion becomes energy. Rearrange to $m = E \\div c^2$ with $c = 3.0 \\times 10^8$ m/s. June 2025 Q10(b)(ii): the Sun radiates $3.9 \\times 10^{26}$ J each second, so $m = 3.9 \\times 10^{26} \\div (3.0 \\times 10^8)^2 = 4.3 \\times 10^9$ <b>kg</b> each second — the <b>unit</b> was part of the evaluation mark (\"$4.3 \\times 10^9$ with no unit or the wrong unit scores 1 mark\"), and every year's guidance says a power-of-ten slip costs the last mark only.</p>"
             "<p><b>Why no fusion power station yet</b> (6.46P): those conditions are <b>very hard to create and contain</b> on Earth — no material can hold a gas at millions of degrees, so it is confined by magnetic fields; so far the energy put in to reach the conditions is <b>about as much as</b> the energy got out, so it is not yet <b>practical or economic</b>.</p>",
         ),
         worked(
             "Why stars fuse and we struggle",
             "Explain why fusion happens in the core of the Sun but is difficult to achieve on Earth. (4 marks)",
             [
-                "<b>Repulsion:</b> nuclei are <b>positively charged</b> and <b>repel</b> each other, so they only fuse if they collide at very high speed and are packed close together.",
+                "<b>Repulsion:</b> nuclei are <b>positively charged</b> and <b>repel</b> each other, so they only fuse if they have enough <b>energy to overcome that repulsion</b> (collide at very high speed) and are packed close together.",
                 "<b>In the Sun:</b> gravity compresses the core to an enormous <b>pressure</b> and <b>temperature</b> (about 15 million K), so hydrogen nuclei move fast enough and are close enough to fuse.",
                 "<b>On Earth:</b> reaching those temperatures takes a huge energy input, and the hot plasma must be <b>contained</b> without touching any material (magnetic confinement).",
                 "<b>Economics:</b> so far the energy needed to create the conditions is about the same as the energy released, so it is not yet a <b>practical, economic</b> power source.",
@@ -489,7 +490,7 @@ section_t8 = section(
                     marks(["Two <b>small nuclei join</b> (fuse) to form a <b>larger nucleus</b>…", "…with a <b>loss of mass</b> that is released as <b>energy</b>."]), lines=2),
             written("ra-t8-q2", "Explain why nuclear fusion does not happen at low temperatures and pressures. (2)",
                     marks(["Nuclei are <b>positively charged</b> and <b>repel</b> each other (electrostatic repulsion between the protons).",
-                           "Only at very <b>high temperature</b> (fast-moving nuclei) and <b>high pressure</b> (nuclei close together) do they get close enough to fuse."]), lines=3),
+                           "A very <b>high temperature</b> gives the nuclei enough <b>kinetic energy to overcome the repulsion</b>, and a <b>high pressure</b> keeps them close together, so they get near enough to fuse (June 2018 Q10(a)(i): \"high energy (1) to overcome (force of) repulsion (1)\")."]), lines=3),
             choice("ra-t8-q3", "Which statement about fusion and fission is correct?",
                    ["Both split large nuclei", "Fission splits a large nucleus; fusion joins small nuclei", "Fusion is the energy source of nuclear power stations today", "Fission is the energy source of stars"], 1,
                    "Stars fuse; power stations (so far) fission."),
@@ -510,9 +511,9 @@ section_t8 = section(
 # ---------------------------------------------------------------------
 
 section_t9 = section(
-    "nuclear-power", "tricky", "Nuclear power: the evaluate question", "6.36P",
+    "nuclear-power", "tricky", "Nuclear power: the for-and-against question", "6.36P",
     equations=[r"\text{advantages} + \text{disadvantages} + \text{a judgement}"],
-    blurb="\"Evaluate\" means give the points for, the points against, and then a conclusion that follows from them. Three or four of each, each one a physics reason rather than an opinion, then decide.",
+    blurb="The papers say \"Discuss the arguments for and against\" (Nov 2020 Q8(c)), \"Compare\" fission and fusion as sources (Nov 2021) or give you a FOR / AGAINST list to add to (June 2026). Every point is a fact plus a <b>so</b>: \"no carbon emissions, <b>so</b> it does not add to global warming\". Add a conclusion when the command word is discuss or evaluate; the marks are in the reasoned points.",
     tags=["P"],
     checklist=[
         "Give the advantages of nuclear power (no CO₂ in generation, reliable, energy density, small fuel volume)",
@@ -528,11 +529,11 @@ section_t9 = section(
             "<tr><td>Enormous <b>energy per kilogram of fuel</b>: a small volume of fuel for a huge output, so little mining and transport</td><td>Risk of <b>accidents</b> releasing radioactive material over a wide area (contamination lasting decades)</td></tr>"
             "<tr><td>Fuel is relatively <b>plentiful</b> and not concentrated in a few countries</td><td>Uranium is <b>non-renewable</b>; mining and enrichment have their own impacts and energy cost</td></tr>"
             "<tr><td>Small land area compared with wind or solar farms</td><td>Security concerns: fuel and waste could be misused; public opposition</td></tr></table>"
-            "<p><b>The shape of a Level-3 evaluate answer:</b> at least two advantages and two disadvantages, each with the physics reason (\"no CO₂ <i>because</i> the energy comes from fission, not combustion\"; \"waste is dangerous <i>because</i> the fission products are radioactive with long half-lives\"), then a <b>conclusion that follows</b>: e.g. \"nuclear is a good way to supply reliable low-carbon electricity while renewables are built up, provided the waste is stored securely\". A conclusion with no reasons, or reasons with no conclusion, caps the level.</p>",
+            "<p><b>The shape of a Level-3 evaluate answer:</b> at least two advantages and two disadvantages, each with the physics reason (\"no CO₂ <i>because</i> the energy comes from fission, not combustion\"; \"waste is dangerous <i>because</i> the fission products are radioactive with long half-lives\"), then a <b>conclusion that follows</b>: e.g. \"nuclear is a good way to supply reliable low-carbon electricity while renewables are built up, provided the waste is stored securely\". The Nov 2020 indicative content also credits: running out of fossil fuels; <b>low running costs</b>; <b>large power output</b> compared with wind or solar; fuel lasts hundreds of years with reprocessing; against — contamination of ground water, loss of life in an accident, terrorism.</p>",
         ),
         worked(
             "A compact evaluation",
-            "Evaluate the use of nuclear power stations to generate electricity. (6 marks)",
+            "Discuss the arguments for and against using nuclear power to meet the increasing demand for electricity. (6 marks)",
             [
                 "<b>For 1:</b> fission releases energy without burning fuel, so <b>no carbon dioxide</b> is produced during generation — it does not contribute to climate change as fossil fuels do.",
                 "<b>For 2:</b> a nuclear station runs <b>continuously</b> whatever the weather, so it provides a reliable baseload that wind and solar cannot; and a tiny mass of fuel gives a huge energy output.",
@@ -587,7 +588,7 @@ FACTS = [
     fact("Alpha decay: effect on A and Z?", "A − 4, $Z - 2$.", "decays"),
     fact("Beta-minus decay: what happens, effect on A and Z?", "Neutron → proton + electron (emitted). A same, $Z + 1$.", "decays"),
     fact("Beta-plus decay: what happens, effect on A and Z?", "Proton → neutron + positron (emitted). A same, $Z - 1$.", "decays"),
-    fact("Gamma emission: effect on A and Z?", "None. The nucleus rearranges and loses energy, often just after an alpha or beta decay.", "decays"),
+    fact("Gamma emission: effect on A and Z?", "None — same element. The nucleus rearranges, loses energy and becomes more stable, often just after an alpha or beta decay.", "decays"),
     fact("Neutron emission: effect on A and Z?", "A − 1, Z same.", "decays"),
     fact("How do you check a nuclear equation?", "Top numbers (mass) add up on both sides; bottom numbers (charge) add up on both sides.", "decays"),
     fact("Activity and its unit?", "Number of decays per second; becquerel (Bq) = 1 decay per second.", "half-life-nn"),
@@ -621,7 +622,7 @@ FACTS = [
     fact("Energy chain in a reactor?", "Kinetic energy of fission fragments → thermal store of fuel and coolant → steam → kinetic energy of turbine → generator.", "fission-reactor"),
     fact("Fission products?", "Radioactive, with long half-lives — the waste problem.", "fission-reactor"),
     fact("Fusion?", "Two small NUCLEI join to form a larger nucleus; mass is lost and released as energy. The energy source of stars.", "fusion"),
-    fact("Why does fusion need high temperature and pressure?", "Nuclei are positive and repel; they must collide fast (high T) and be close together (high P) to get near enough to fuse.", "fusion"),
+    fact("Why does fusion need high temperature and pressure?", "Nuclei are positive and repel; they need enough kinetic energy (high T) to overcome the repulsion and must be close together (high P).", "fusion"),
     fact("Why no fusion power station yet?", "The conditions are extremely hard to create and contain; so far the energy in is about equal to the energy out — not practical or economic.", "fusion"),
     fact("Fission vs fusion in one line each?", "Fission: large nucleus splits, started by a neutron, radioactive products. Fusion: small nuclei join, needs extreme T and P, powers stars.", "fusion"),
     fact("Nuclear power: two for, two against?", "For: no CO₂ in generation; reliable, huge energy per kg. Against: long-lived radioactive waste; expensive to build and decommission, accident risk.", "nuclear-power"),

@@ -63,7 +63,7 @@ section_n6 = section(
                    "β⁺: A unchanged, $Z - 1 = 8$ (oxygen)."),
             written("ra-n6-q5", "Explain why the mass number and atomic number of a nucleus do not change when it emits a gamma ray. (2)",
                     marks(["A gamma ray is <b>electromagnetic radiation</b>: it has <b>no mass and no charge</b>.",
-                           "So no protons or neutrons leave — the nucleus just <b>loses energy</b> (rearranges into a lower-energy state)."]), lines=3),
+                           "So no protons or neutrons leave and the <b>element does not change</b> — the nucleus <b>rearranges</b>, <b>loses energy</b> and <b>becomes more stable</b> (Nov 2021 Q9(c): any one of those three)."]), lines=3),
             written("ra-n6-q6", "Complete and check this equation for the alpha decay of polonium-210: ²¹⁰₈₄Po → ? + ⁴₂He. (2)",
                     marks([r"Product: ${}^{206}_{82}\mathrm{Pb}$ (lead) — mass number $210 - 4 = 206$, atomic number $84 - 2 = 82$.",
                            "Check both lines balance: $210 = 206 + 4$ and $84 = 82 + 2$."]), lines=2),
@@ -145,7 +145,7 @@ section_n8 = section(
             "Dangers",
             "<p>Ionising radiation <b>knocks electrons out of atoms</b> in living cells. That can <b>damage or kill cells</b> (high doses: radiation burns, radiation sickness) or <b>damage the DNA</b> in a cell so that it <b>mutates</b>; a mutated cell that keeps dividing is <b>cancer</b>. Write <i>mutation</i> and <i>cancer</i> — \"it is dangerous\" or \"it makes you ill\" score nothing.</p>"
             "<p><b>Precautions when handling a source:</b> keep it in a <b>lead-lined box</b>; handle it with <b>tongs</b>, never fingers, and point it <b>away</b> from people (distance); <b>limit the time</b> of exposure; use <b>shielding</b> (lead); don't eat or drink nearby; wash hands afterwards.</p>"
-            "<p><b>Medical staff and patients</b> (6.31): staff wear <b>film badges</b> to monitor their dose, stand behind <b>lead screens</b> or leave the room, wear <b>lead aprons</b>, and limit their time — they are exposed every day, so their total dose would otherwise be high. Patients have <b>dose limits</b>: use the <b>lowest dose</b> that works, a <b>short half-life</b> tracer, and only when the benefit outweighs the risk. The 2022 report: two precautions must be <b>different kinds</b> — \"gloves and masks\" are both protective clothing and scored one; protective clothing <i>and</i> shielding <i>or</i> limited time scored two. Lead was credited; aluminium ignored.</p>",
+            "<p><b>Medical staff and patients</b> (6.31): staff wear <b>film badges</b> to monitor their dose, stand behind <b>lead screens</b> or leave the room, wear <b>lead aprons</b>, and limit their time — they are exposed every day, so their total dose would otherwise be high. Patients have <b>dose limits</b>: use the <b>lowest dose</b> that works, a <b>short half-life</b> tracer, and only when the benefit outweighs the risk. The 2022 report: two precautions must be <b>different kinds</b> — \"gloves and masks\" scored one, because gloves are protective clothing and masks (and goggles) are <b>ignored</b>; protective clothing <i>and</i> shielding <i>or</i> limited time <i>or</i> distance scored two. Lead was credited; aluminium ignored.</p>",
         ),
         explain(
             "Contamination and irradiation",
@@ -199,7 +199,7 @@ section_n8 = section(
 USES_TABLE = (
     "<table class='tbl'><tr><th>Use</th><th>Radiation</th><th>Half-life</th><th>Why</th></tr>"
     "<tr><td><b>Smoke alarm</b> (americium-241)</td><td>alpha</td><td>long (hundreds of years)</td><td>alpha ionises the air between two plates so a small current flows; <b>smoke absorbs the alpha</b>, the current falls, the alarm sounds. Alpha is stopped by the casing and a few cm of air, so it is safe in the home; long half-life means it never needs replacing</td></tr>"
-    "<tr><td><b>Irradiating food</b> / <b>sterilising</b> medical equipment</td><td>gamma</td><td>long</td><td>gamma <b>penetrates the packaging</b> and <b>kills microbes</b> inside it; the food/instrument is irradiated, not contaminated, so it does not become radioactive</td></tr>"
+    "<tr><td><b>Irradiating food</b> / <b>sterilising</b> medical equipment</td><td>gamma</td><td>long</td><td>gamma is <b>very penetrating</b>, so it reaches all the food / the instrument inside its packaging and <b>kills bacteria</b>, which <b>preserves</b> the food (stops it going off) or <b>sterilises</b> the instrument (Nov 2021 Q9(b)); the food/instrument is irradiated, not contaminated, so it does not become radioactive</td></tr>"
     "<tr><td><b>Medical tracer</b> (technetium-99m)</td><td>gamma</td><td>short (hours)</td><td>gamma <b>passes out of the body</b> to be detected by a gamma camera; weakly ionising, so little damage; short half-life so the patient's dose soon falls</td></tr>"
     "<tr><td><b>Industrial tracer</b> (finding a leak in a pipe)</td><td>gamma</td><td>short (days)</td><td>detected through the soil above the pipe; decays away afterwards</td></tr>"
     "<tr><td><b>Thickness gauging</b> (paper, foil)</td><td>beta</td><td>long</td><td>beta is <b>partly absorbed</b> by the sheet: thicker → fewer counts get through → rollers adjust. Alpha would all be stopped, gamma would all get through; long half-life so the reading does not drift</td></tr>"
@@ -244,7 +244,7 @@ section_n9 = section(
                         ("Gamma", "Gamma would <b>pass straight through</b> whatever the thickness — no change to detect."),
                     ]), lines=4),
             written("ra-n9-q4", "Explain why gamma rays are used to sterilise surgical instruments in sealed packets. (2)",
-                    marks(["Gamma <b>penetrates the packaging</b> and <b>kills microbes</b> (bacteria) on the instruments inside.",
+                    marks(["Gamma is <b>very penetrating</b>, so it reaches the instruments inside the packaging and <b>kills bacteria</b> — <b>sterilising</b> them.",
                            "The instruments are only <b>irradiated</b>, so they do not become radioactive and stay sterile in the sealed packet."]), lines=3),
             written("ra-n9-q5", "A radioactive tracer is used to find a leak in an underground water pipe. Explain the choice of radiation and half-life. (3)",
                     mark_scheme([

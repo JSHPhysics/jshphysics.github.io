@@ -92,3 +92,36 @@ Playwright: 11 section numerics and 29 choices entered through the UI and
 marked correct; no KaTeX errors; no sideways scroll at 390 px; 10 graphs
 and 3 diagrams render; P badges on T5–T9; the booklet modal offers the
 notes mode.
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared the page with `Question DB/by-topic/topic-06.md`
+(28 questions, 25 with schemes; two question images opened). Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| radioactivity / radiation-types (explain, worked) | "alpha is the weakest scores nothing" → a comparison in the right dimension scores ("more ionising than gamma" was a mark alone); the compare worked warns that Nov 2021 ignored range, penetration and ionisation — nature and the change in A and Z first | 1H June 2019 Q8(a)(ii); Nov 2021 Q9(d); June 2025 Q9(c) |
+| radioactivity / ra-n4-q6 | method controls: source in front of (not in) the tube, same time, same distance; aluminium absorbs the beta | 1H June 2018 Q3(a); June 2024 Q8(d)(iii); Nov 2021 Q3(c)(i) |
+| radioactivity / ra-n6-q5, flashcard | gamma: element does not change; rearranges, loses energy, becomes more stable | 1H Nov 2021 Q9(c); June 2025 Q9(c) |
+| radioactivity / dangers-precautions (explain) | "gloves and masks scored one" because masks are ignored, not because both are PPE; distance added | 1H June 2022 Q4(a)(iii) |
+| radioactivity / uses table, ra-n9-q4 | gamma very penetrating → kills bacteria → preserves / sterilises | 1H Nov 2021 Q9(b) |
+| radioactivity / atomic-model (explain), ra-t1-q6 | the 2022 scattering scheme quoted as written (three observations, three conclusions; small angles / large angles, not 180°); credited model limitations (2D, one marble, same speed) | 1H June 2022 Q8(b)(ii), Q8(c)(ii) |
+| radioactivity / half-life-hard (blurb) | the hard forms actually set (graph → percentage, half-lives in years, fractions); background-in-graph noted as the core-practical method | 1H June 2024 Q4(d)(i); June 2025 Q4(b)(i); June 2019 Q3(c); Nov 2020 Q7(c) |
+| radioactivity / tumours (explain) | the 2024 options were radio waves, not UV (image checked) | 1H June 2024 Q4(a) |
+| radioactivity / pet-scanners (explain), ra-t6-q1 | "collide" credited; "meet / combine / interact / attract / light" ignored | 1H June 2025 Q4(b)(ii) |
+| radioactivity / fission-reactor (explain) | the "detail on two, mention the third" level rule removed; three strands to cover | 1H June 2023 Q10(c) |
+| radioactivity / fusion (explain, worked, ra-t8-q2, flashcard) | kinetic energy **overcomes the repulsion** as its own point; **E = mc² added** as a supplied equation with the 2025 Sun example and the unit mark | 1H June 2018 Q10(a)(i); Nov 2020 Q4(c); June 2025 Q10(b)(ii) |
+| radioactivity / nuclear-power (title, blurb, explain, worked) | "Evaluate" is never the command word in the bank — now "the for-and-against question" with Discuss (Nov 2020) / Compare (Nov 2021) / add to the lists (June 2026); the unsupported "caps the level" rule removed; the 2020 credited points added | 1H Nov 2020 Q8(c); Nov 2021 Q10(b); June 2026 Q4(c) |
+
+No stored answer changed; `check_topic.js radioactivity` passes on both
+tiers. H list in the report: the two-rock GM method as a practice question
+(2018 Q3(a)), the beta-absorption investigation (2024 Q8(d)), count rate as
+a gradient and "random, not 'difficult to predict'" (Nov 2020 Q7(e)),
+plotting a decay curve (2018 Q3(b), 2023 Q7(b)), the longer-half-life
+sample being more dangerous (2024 Q4(d)(ii)), eating contaminated food
+(Nov 2021 Q9(a)), the 2019 tumour 4-marker's exact lines, electron capture
+(SAM Q6(c)). Also flagged: ra-t2-q3's "thin sheet" gauge argues from beta
+being stopped by a few mm of aluminium, which the 2024 investigation
+contradicts — consider steel plate.
