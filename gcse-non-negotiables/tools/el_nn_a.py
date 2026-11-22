@@ -96,7 +96,7 @@ section_n2 = section(
             "Draw a circuit diagram to measure the current in a resistor and the potential difference across it, using a cell, a switch, an ammeter and a voltmeter. (3 marks)",
             [
                 "One loop: <b>cell → switch → ammeter → resistor → back to the cell</b>, all in series.",
-                "The <b>voltmeter</b> drawn as a separate branch with one lead on <b>each side of the resistor only</b> — not across the cell, not across the ammeter.",
+                "The <b>voltmeter</b> drawn as a separate branch with one lead on <b>each side of the resistor</b> — <b>across the resistor only</b>, not across the ammeter. (When the resistor is the only component, across the battery reads the same and the Nov 2021 scheme (Q8(a)(i)) accepted it; once there is a variable resistor in the loop it does not — the 2023 complaint.)",
                 "Correct symbols: circle-A and circle-V, rectangle for the resistor, long-and-short lines for the cell, a gap with a hinged line for the switch.",
             ],
         ),
@@ -219,13 +219,13 @@ section_n5 = section(
         explain(
             "Resistance",
             "<p>$V = I \\times R$: pd (V) = current (A) × resistance (Ω). Resistance is the <b>ratio of pd to current</b>, $R = V \\div I$ — the number of volts needed to drive one amp. A 1 Ω component passes 1 A with 1 V across it; a 100 Ω one needs 100 V for the same current.</p>"
-            "<p><b>Changing resistance changes current</b> (10.12): for a fixed pd, <b>more resistance → less current</b>, in inverse proportion (double R, halve I). A <b>variable resistor</b> is a long coil of resistance wire with a sliding contact: moving the slider puts <b>more or less wire</b> in the circuit, changing the resistance and so the current — which is how a dimmer, a volume control and the core practical work. The June 2023 report (Q2(b)(iv)): the variable resistor reduces the current by <b>increasing the resistance of the circuit</b>; \"slowing down the current\" and \"decreasing the resistance\" were rejected, and many confused it with a thermistor.</p>"
+            "<p><b>Changing resistance changes current</b> (10.12): for a fixed pd, <b>more resistance → less current</b>, in inverse proportion (double R, halve I). A <b>variable resistor</b> is a long coil of resistance wire with a sliding contact: moving the slider puts <b>more or less wire</b> in the circuit, changing the resistance and so the current — which is how a dimmer, a volume control and the core practical work. The June 2023 report (Q2(b)(iv)): the variable resistor <b>increases the resistance</b> of the circuit, so it <b>keeps the current small (or constant)</b>, and it is the <b>current that heats the wire</b> — any two of those three links scored; \"slows the current\" is ignored, \"adjust the variable resistor to keep the current constant\" on its own was worth two marks, and many confused it with a thermistor.</p>"
             "<p>Units trap: kΩ × 1000 to Ω, mA ÷ 1000 to A. $6$ V across $2$ kΩ gives $I = 6 \\div 2000 = 0.003$ A $= 3$ mA.</p>",
         ),
         worked(
             "Resistance from V and I",
             "A pd of 6.0 V across a resistor gives a current of 9.1 mA. Calculate the resistance.",
-            [r"Convert: $9.1$ mA $= 0.0091$ A.", r"$R = \dfrac{V}{I} = \dfrac{6.0}{0.0091} = 660$ Ω (3 s.f.) — the June 2024 scheme's own numbers (Q2(b)(iii))."],
+            [r"Convert: $9.1$ mA $= 0.0091$ A.", r"$R = \dfrac{V}{I} = \dfrac{6.0}{0.0091} = 659.3\ldots = 660$ Ω (2 s.f.) — the June 2024 scheme's own numbers (Q2(b)(iii)); it allows any value that rounds to 660."],
         ),
         practice("V = IR", [
             numeric("el-n5-q1", "A current of 0.4 A flows through a 30 Ω resistor. Calculate the pd across it.", 12, "V", "$V = I \\times R$.", ewau(r"V = I \times R", r"V = 0.4 \times 30", "12", "V")),

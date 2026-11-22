@@ -82,7 +82,7 @@ section_t2 = section(
     blurb="The 2025 6-marker: describe how to test resistors in series and in parallel. Level 3 needed both circuits drawn with the meters in the right places, the expected readings, and the rules stated as what you would find.",
     checklist=[
         "Draw the series and parallel test circuits with meters in the right places",
-        "State what readings to take and what they show",
+        "State what readings to take and what they show, and the two comparisons: cell current greater in parallel; pd across each resistor less in series",
         "Describe what happens to lamps in series and in parallel when one is removed",
     ],
     parts=[
@@ -92,7 +92,7 @@ section_t2 = section(
             "<p><b>Series test:</b> two resistors in one loop with the cell; an <b>ammeter</b> anywhere in the loop (move it round to show the current is the <b>same everywhere</b>); a <b>voltmeter across each resistor</b> and across the cell: the two pds <b>add up</b> to the cell's pd, the bigger resistor taking the bigger share. Add a third resistor and the current falls — resistances add.</p>"
             "<p><b>Parallel test:</b> the two resistors in separate branches; an <b>ammeter in each branch</b> and one by the cell: the branch currents <b>add up</b> to the cell current; a voltmeter across either branch reads the <b>same as the cell</b>. Add a branch and the cell current rises — total resistance falls.</p>"
             "<p>The June 2025 report (Q10(c), 6 marks): Level 3 answers had \"correct circuit diagrams for both arrangements, with ammeters and voltmeters placed correctly\", included <b>expected values</b>, and explained \"voltage sharing\" in series, \"the current being shared between branches\" in parallel and \"the same current throughout the series circuit\". Level 2 had one circuit done properly; Level 1 \"a misplaced voltmeter and no parallel circuit\". The spec also asks you to explain the <b>design</b> of such circuits (10.16): every component you add is there to measure one quantity, and the meters must not change what they measure (voltmeter high resistance, ammeter low).</p>"
-            "<p><b>Lamps:</b> two identical lamps in series each get half the pd and are dim; unscrew one and the other goes out. In parallel each gets the full pd and is bright; unscrew one and the other is unaffected. The June 2022 report (Q2(b)): to say which circuit's lamp is brighter you need both the <b>pd</b> argument (the pd across it is halved in series) and the <b>power</b> argument — most gave one \"but rarely both\".</p>",
+            "<p><b>Lamps:</b> two identical lamps in series each get half the pd and are dim; unscrew one and the other goes out. In parallel each gets the full pd and is bright; unscrew one and the other is unaffected. The June 2022 report (Q2(b)): the scheme (Q2(b)) gave one mark each, any three, for: the lamp is <b>dimmer</b>; the <b>current is less</b>; the <b>pd across each lamp is less</b> (shared); the <b>power of each lamp is less</b>; the <b>total resistance is more</b>. State the brightness and give two of the four reasons — most students gave only one (\"but rarely both\").</p>",
         ),
         worked(
             "The 6-mark description",
@@ -102,7 +102,7 @@ section_t2 = section(
                 "Move the ammeter to different positions: the <b>current is the same</b> at every point. The voltmeter readings across the two resistors <b>add up</b> to the reading across the cell (e.g. 2 V + 4 V = 6 V): the pd is shared.",
                 "<b>Parallel circuit:</b> connect the two resistors in separate branches across the cell; an ammeter in each branch and one next to the cell; a voltmeter across each branch.",
                 "The branch currents <b>add up</b> to the cell current (e.g. 0.3 A + 0.6 A = 0.9 A): the current is shared. Each voltmeter reads the <b>same</b> as the cell (6 V): the pd is the same across every branch.",
-                "<b>Resistance:</b> in series the current is <b>smaller</b> than with one resistor (resistances add); in parallel the cell current is <b>larger</b> (total resistance is less than either).",
+                "<b>Compare the two circuits</b> with the same two resistors — the comparisons the question's statements asked for: the <b>current from the cell is greater in the parallel circuit than in the series circuit</b> (0.9 A against 0.2 A), and the <b>pd across each resistor is less in series than in parallel</b> (3 V against 6 V) — because the resistances add in series, and in parallel the total resistance is less than either.",
                 "Check with $V = IR$ for each resistor in each circuit; repeat readings to be sure.",
             ],
         ),
@@ -319,7 +319,7 @@ section_t6 = section(
             "<tr><td>how long will a 12 V, 50 A h car battery run a 60 W lamp?</td><td>stored energy $= Q \\times V$ with $Q = 50 \\times 3600 = 180\\,000$ C → $E = 2.16$ MJ → $t = E/P = 36\\,000 \\text{ s} = 10 \\text{ h}$</td></tr>"
             "<tr><td>energy in a day from a 100 W bulb left on</td><td>$E = P \\times t = 100 \\times 86\\,400 = 8.64$ MJ</td></tr>"
             "<tr><td>does the battery charge in 6 hours at 10 A, 400 V, 126 MJ?</td><td>$t = E/(IV) = 126 \\times 10^6 / 4000 = 31\\,500 \\text{ s} = 8.75 \\text{ h}$ → no (or: energy in 6 h $= IVt = 86.4$ MJ &lt; 126 MJ)</td></tr></table>"
-            "<p>Traps: <b>kW to W</b>, <b>MJ to J</b>, <b>hours and minutes to seconds</b> — the June 2023 report's main complaint on the charging question (Q8(b)(i)); and a comparison only scored when the <b>unit</b> of the calculated time was stated. Fuse choice: the <b>lowest standard rating above</b> the normal current — too low and it melts in normal use; too high and it does not protect.</p>"
+            "<p>Traps: <b>kW to W</b>, <b>MJ to J</b>, <b>hours and minutes to seconds</b> — the June 2023 report's main complaint on the charging question (Q8(b)(i)); and the <b>conclusion is its own mark</b> — \"the claim is justified because 5.8 h is less than 6 hours\" — credited even on a wrongly calculated time, but never for a bare number. Fuse choice: the <b>lowest standard rating above</b> the normal current — too low and it melts in normal use; too high and it does not protect.</p>"
             "<p><b>Power ratings and stored energy</b> (10.42): a 3 kW kettle changes the supply's energy store three times as fast as a 1 kW heater; over the same time it transfers three times the energy. $E = P \\times t$ is the whole of it.</p>",
         ),
         worked(
@@ -355,7 +355,7 @@ section_t6 = section(
 section_t7 = section(
     "mains-safety", "tricky", "Mains safety explained: the chains the marks are on", "10.37, 10.38, 10.39, 10.41",
     equations=[r"\text{fault} \rightarrow \text{large current to earth} \rightarrow \text{fuse melts} \rightarrow \text{circuit broken}"],
-    blurb="Every safety question is a chain of three or four links, and each link is a mark. The words that score are fixed: low-resistance path, large current, the fuse wire melts, the circuit is broken, the case cannot become live. 'Blows' is never written.",
+    blurb="Every safety question is a chain of three or four links, and each link is a mark. The words that score are fixed: low-resistance path, large current, the fuse wire melts, so the current stops, the case is kept at earth potential. Write melts — it is the word the scheme leads with, and 'blows' describes nothing.",
     checklist=[
         "Write the fuse chain: current exceeds rating → wire melts → circuit broken → appliance disconnected",
         "Write the earth-wire chain: fault → case live → low-resistance path → large current → fuse melts → safe",
@@ -365,8 +365,8 @@ section_t7 = section(
         explain(
             "The chains",
             "<table class='tbl'><tr><th>Question</th><th>The chain (one mark a link)</th></tr>"
-            "<tr><td>what the fuse does when the current is too large</td><td>current <b>exceeds the fuse rating</b> → the fuse wire <b>heats up and melts</b> → the circuit is <b>broken</b> → the appliance is <b>disconnected from the live supply</b></td></tr>"
-            "<tr><td>how the earth wire protects the user</td><td>the earth wire connects the <b>metal case</b> to earth → if the live touches the case, the earth wire gives a <b>low-resistance path</b> → a <b>large current</b> flows to earth → the <b>fuse melts</b> and breaks the circuit → the case <b>cannot stay live</b>, so no shock</td></tr>"
+            "<tr><td>what the fuse does when the current is too large</td><td>current <b>exceeds the fuse rating</b> → the fuse wire <b>heats up and melts</b> → the circuit is <b>broken, so the current stops</b> (June 2025 Q3(c)(ii): \"melts (1) stops the current (1)\") → the appliance is <b>disconnected from the live supply</b></td></tr>"
+            "<tr><td>how the earth wire protects the user</td><td>the earth wire connects the <b>metal case</b> to earth → if the live touches the case, the earth wire gives a <b>low-resistance path</b> → a <b>large current</b> flows to earth → the <b>fuse melts</b> and breaks the circuit → the earth wire <b>keeps the case at earth potential (0 V)</b>, so no shock (the 2019 Level 3 wording)</td></tr>"
             "<tr><td>why the fuse/switch is in the live wire</td><td>the live wire is at <b>230 V</b> → breaking it <b>isolates</b> the whole appliance from the supply → nothing inside is live when off; in the neutral the appliance would <b>stay at 230 V</b></td></tr>"
             "<tr><td>why no earth wire on a plastic-cased appliance</td><td><b>double insulated</b>: the case is an <b>insulator</b> and cannot become live, so there is nothing to earth</td></tr>"
             "<tr><td>why a live–earth connection is dangerous</td><td><b>230 V between live and earth</b> → a person (or water) touching the live provides a <b>path to earth</b> → a <b>large current flows through them</b> → electric shock (or heating → fire)</td></tr>"
@@ -391,11 +391,11 @@ section_t7 = section(
                         ("Earth path", "The earth wire connects the case to earth, giving a <b>low-resistance path</b>."),
                         ("Current", "So a <b>large current</b> flows from the live wire through the case to earth."),
                         ("Fuse", "The large current makes the <b>fuse wire melt</b>…"),
-                        ("Result", "…which <b>breaks the circuit</b>, disconnecting the appliance from the live supply so the case cannot stay live."),
+                        ("Result", "…which <b>breaks the circuit, so the current stops</b>, disconnecting the appliance from the live supply; the earth wire <b>keeps the case at earth potential (0 V)</b>, so a person touching it gets no shock."),
                     ]), lines=5),
-            choice("el-t7-q2", "A student writes: \"If there is a fault the fuse blows and protects the appliance.\" What should they have written?",
-                   ["\"the fuse explodes\"", "\"the fuse wire melts, breaking the circuit\"", "\"the fuse switches off\"", "\"the fuse absorbs the current\""], 1,
-                   "Melts — that is what happens; it does not explode."),
+            choice("el-t7-q2", "A student writes: \"If there is a fault the fuse blows and protects the appliance.\" Which answer says what actually happens?",
+                   ["\"the fuse explodes\"", "\"the fuse wire melts, breaking the circuit so the current stops\"", "\"the fuse switches off\"", "\"the fuse absorbs the current\""], 1,
+                   "Melts — that is what happens, and it is the word the scheme leads with; it does not explode, and the second mark is that the current stops."),
             written("el-t7-q3", "A hair dryer has a plastic case and a two-core cable with no earth wire. Explain why it is still safe. (2)",
                     marks(["It is <b>double insulated</b>: the case is made of an <b>insulator</b>…", "…so it <b>cannot become live</b> even if a wire inside comes loose, and there is nothing for an earth wire to protect."]), lines=2),
             written("el-t7-q4", "Explain why a fuse is placed in the live wire and not the neutral wire. (2)",
@@ -579,7 +579,7 @@ FACTS = [
     fact("What does the live wire do? The neutral?", "Live carries the current to the appliance at 230 V; neutral completes the circuit back to the supply at 0 V.", "mains"),
     fact("What does a fuse do?", "Its thin wire melts when the current exceeds its rating, breaking the circuit. (It melts — it does not blow.)", "mains"),
     fact("What does a circuit breaker do?", "An automatic switch that trips when the current is too large; faster than a fuse and can be reset.", "mains"),
-    fact("What does the earth wire do?", "Connects the metal case to earth; if the live touches the case, a large current flows through the low-resistance earth path and melts the fuse, so the case cannot stay live.", "mains"),
+    fact("What does the earth wire do?", "Connects the metal case to earth and keeps it at earth potential (0 V); if the live touches the case, a large current flows through the low-resistance earth path and melts the fuse.", "mains"),
     fact("Why are switches and fuses in the live wire?", "Breaking the live wire disconnects the appliance from 230 V; in the neutral the appliance would stay live.", "mains"),
     fact("Why is a connection between live and earth dangerous?", "There is 230 V between them, so a large current flows through whatever makes the connection — a person gets a shock, a fault can start a fire.", "mains"),
     fact("What is double insulation?", "A plastic (insulating) case that cannot become live, so no earth wire is needed.", "mains"),
@@ -608,10 +608,10 @@ FACTS = [
     # T6
     fact("How do you choose a fuse for an appliance?", "$I = P/V$, then the lowest standard rating (3 A, 5 A, 13 A) above that current.", "power-hard"),
     fact("Energy from a power rating?", "$E = P \\times t$ with P in watts and t in seconds (kW × 1000; hours × 3600).", "power-hard"),
-    fact("The commonest error in $E = IVt$ questions?", "Not converting kW/MJ and minutes/hours to W, J and seconds; and not stating the unit of a calculated time.", "power-hard"),
+    fact("The commonest error in $E = IVt$ questions?", "Not converting kW/MJ and minutes/hours to W, J and seconds; and leaving out the comparison (\"5.8 h is less than 6 h, so the claim is justified\"), which is a mark on its own.", "power-hard"),
     # T7
     fact("The fuse chain?", "Current exceeds the rating → fuse wire heats and melts → circuit broken → appliance disconnected from the live supply.", "mains-safety"),
-    fact("The earth-wire chain?", "Live touches the case → earth wire is a low-resistance path → large current to earth → fuse melts → circuit broken → case cannot stay live.", "mains-safety"),
+    fact("The earth-wire chain?", "Live touches the case → earth wire is a low-resistance path → large current to earth → fuse melts → current stops → the case is kept at earth potential (0 V), no shock.", "mains-safety"),
     fact("Fuse vs circuit breaker?", "Both break the circuit when the current is too large; a breaker trips faster and can be reset, a fuse melts and must be replaced.", "mains-safety"),
     fact("Why is a 13 A fuse wrong for a 0.3 A lamp?", "A fault current of a few amps would not melt it, so the lamp could overheat without the supply being cut.", "mains-safety"),
     # T8

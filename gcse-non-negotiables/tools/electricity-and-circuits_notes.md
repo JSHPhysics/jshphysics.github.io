@@ -132,3 +132,35 @@ over — `.skill-head .lessons` now wraps under 640 px (`sections.css`,
 both sites) and the long kickers are written as ranges — and the check
 script now fails when any card is wider than the phone screen, which
 the earlier pages passed (350 px).
+
+## Revisions
+
+### 2026-11-22 — exam-wording verification against the question database
+
+A separate agent compared 44 mark-scheme parts (`Question
+DB/by-topic/topic-10.md`, 16 marked questions 2018–2025) with the page's
+21 sections and 99 flashcards. Changes:
+
+| Reference | Change | Scheme |
+|---|---|---|
+| electricity-and-circuits / circuit-symbols worked | voltmeter across the battery accepted when the resistor is the only component | 2H Nov 2021 Q8(a)(i) guidance |
+| electricity-and-circuits / ohm-nn worked | 660 Ω is 2 s.f. (659.3…), not 3 | 2H June 2024 Q2(b)(iii) |
+| electricity-and-circuits / ohm-nn (explain) | variable-resistor chain: increases resistance → keeps current small/constant → the current heats the wire; "slows" ignored not rejected | 2H June 2023 Q2(b)(iv) |
+| electricity-and-circuits / series-parallel-practical (explain, worked, checklist) | lamp brightness: any three of five points, not "both arguments"; the 6-mark worked now makes the two comparisons the 2025 question asked for (cell current greater in parallel; pd across each resistor less in series) | 2H June 2022 Q2(b); June 2025 Q10(c) and Figure 23 |
+| electricity-and-circuits / iv-characteristics (explain) | lamp alternative route needs "resistance increases" as well as the gradient; the diode question was two marks (battery supplies d.c. + one direction) | 2H June 2024 Q8(b)(iii); June 2025 Q6(b) |
+| electricity-and-circuits / heating-effect (explain), el-n9-q4, worked | cable: any two of area / lower resistance / safely higher current, insulation a fallback mark, "thicker/wider" accepted; el-n9-q4 splits area and resistance and adds "less pd across the wires"; the heating worked is 2 marks and the dissipation step is marked as not a mark | 2H June 2025 Q3(d); Nov 2021 Q8(b)(iv); June 2018 Q8(b) |
+| electricity-and-circuits / power-nn, power-hard (explain), flashcard | "comparison scored only with the unit" → the conclusion is an independent mark ("5.8 h is less than 6 h, so justified"), credited even on a wrong time; bare correct answer 2 of 3 | 2H June 2023 Q8(b)(i) |
+| electricity-and-circuits / mains (explain), keywords Fuse, mains-safety (blurb, chains), el-t7-q1, el-t7-q2, flashcards | fuse second mark is "so the current stops" ("breaks the circuit" accepted); the claim that "blows" never scores is dropped — the house word stays **melts** (the scheme leads with it); earth-wire chains carry "keeps the case at earth potential (0 V)" (2019 Level 3 wording) | 2H June 2025 Q3(c)(ii); June 2019 Q10(b) |
+| electricity-and-circuits / keywords d.c. and a.c. | "Not this" is the bare label: "it is d.c. / a.c." is not a description of the movement of charge | 2H June 2019 Q10(a)(ii) |
+
+Note for the author: the 2025 scheme's guidance reads "allow fuse blows /
+breaks circuit"; the page keeps *melts* as the only word it teaches and no
+longer claims that "blows" fails. No stored answer changed;
+`check_topic.js electricity-and-circuits` passes on both tiers. H list in
+the report: "state the unit of charge" as its own mark (2025 Q4(c), "As"
+accepted), deduce the arrangement from R = V/I (2018 Q8(c)), the doubling
+test for "directly proportional" (2019 Q3(b)(ii)), parallel resistors
+"trend + non-linear + two values" (Nov 2020 Q8(a)(iv)), "more precise =
+more s.f." (2022 Q8(c)(ii)), variable resistor "in series" as the second
+mark (2025 Q10(a)(ii)), a.c./d.c. differences in the movement of charge
+(2019 Q10(a)(ii)), the 2 s.f. mark (2019 Q10(a)(i)).

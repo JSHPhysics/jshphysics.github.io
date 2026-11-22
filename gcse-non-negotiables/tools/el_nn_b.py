@@ -56,12 +56,12 @@ section_n7 = section(
         ),
         explain(
             "Filament lamp",
-            "<p>The lamp's graph is a <b>curve</b> that gets <b>less steep</b> as the pd increases: each extra volt gives less extra current, so the <b>resistance increases</b> with pd. The filament is getting hotter (T3 explains why that raises the resistance). The June 2024 scheme (Q8(b)(ii)): \"as potential difference increases current increases\" (1) and \"non-linear — curve, changing gradient\" (1); Q8(b)(iii): resistance from $R = V/I$ at <b>two points</b> showing it increasing, or \"the gradient decreases as pd increases\" for 2 marks.</p>",
+            "<p>The lamp's graph is a <b>curve</b> that gets <b>less steep</b> as the pd increases: each extra volt gives less extra current, so the <b>resistance increases</b> with pd. The filament is getting hotter (T3 explains why that raises the resistance). The June 2024 scheme (Q8(b)(ii)): \"as potential difference increases current increases\" (1) and \"non-linear — curve, changing gradient\" (1); Q8(b)(iii): resistance from $R = V/I$ at <b>two points</b> showing it increasing, or, for 2 marks, \"<b>as the pd increases the resistance increases</b>, shown by the <b>gradient of the graph decreasing</b>\" — the resistance statement must be there, not just the gradient.</p>",
             graph=IV_LAMP,
         ),
         explain(
             "Diode",
-            "<p>A <b>diode</b> conducts in <b>one direction only</b>: for negative pd the current is zero (very high resistance); for positive pd nothing happens until about 0.7 V, then the current rises steeply (low resistance). The June 2025 report (Q6(b)): the mark was for \"diodes allow current in one direction only\"; \"it limits the current\" and \"it is an LED indicator\" scored nothing.</p>",
+            "<p>A <b>diode</b> conducts in <b>one direction only</b>: for negative pd the current is zero (very high resistance); for positive pd nothing happens until about 0.7 V, then the current rises steeply (low resistance). The June 2025 report (Q6(b)): two marks — a <b>battery supplies (needs) d.c.</b> (1) and a <b>diode allows current in one direction only</b> (1); \"rectifies a.c. to d.c.\" is accepted, while \"it limits the current\" and \"it is an LED indicator\" scored nothing.</p>",
             graph=IV_DIODE,
         ),
         worked(
@@ -177,17 +177,17 @@ section_n9 = section(
         explain(
             "Why resistors get hot",
             "<p>When there is a current in a resistor there is an <b>energy transfer that heats the resistor</b> (10.22). Why (10.24): the free <b>electrons collide with the ions</b> in the metal's lattice as they are pushed through; each collision transfers energy to the ion, which <b>vibrates more</b> — and more vibration <i>is</i> a higher temperature. The electrical work done against the resistance is <b>dissipated as thermal energy</b> to the surroundings (10.23). That is also why a hot filament has a higher resistance: the ions vibrate more, so the electrons collide more often (T3).</p>"
-            "<p><b>Reducing the waste</b> (10.25): energy transferred to heat in a wire is $I^2R$ per second, so use wires with <b>low resistance</b> — <b>thick</b> (large cross-section), <b>short</b>, made of a good conductor (<b>copper</b>). The June 2025 report (Q3(d)): the better cable has the <b>thicker copper wire</b> — lower resistance, so it carries a higher current safely with less heating; \"thicker <i>insulation</i> stops energy loss\" is wrong, and \"bigger\" alone scored nothing: say what is bigger and why it matters.</p>"
+            "<p><b>Reducing the waste</b> (10.25): energy transferred to heat in a wire is $I^2R$ per second, so use wires with <b>low resistance</b> — <b>thick</b> (large cross-section), <b>short</b>, made of a good conductor (<b>copper</b>). The June 2025 report (Q3(d)): the better cable has the <b>thicker copper wire</b> — lower resistance, so it carries a higher current safely with less heating; the scheme gave any two of: the <b>wires have a greater cross-sectional area</b> (thicker / wider accepted), <b>lower resistance</b>, <b>safely carry a higher current</b> (less likely to overheat). \"More insulation\" earns only a single fallback mark, for the cable being less likely to be damaged — it does nothing to the resistance. Say what is thicker: the <b>wires</b>, not the cable.</p>"
             "<table class='tbl'><tr><th>Heating effect wanted</th><th>Heating effect unwanted</th></tr>"
             "<tr><td>electric heaters, kettles, toasters, ovens, hair dryers; filament lamps (the filament glows); <b>fuses</b> (the wire melts when the current is too large)</td><td>wires and cables warming (wasted energy, lower efficiency); electronics overheating; fire risk if a cable carries too much current</td></tr></table>",
         ),
         worked(
             "The explain question",
-            "Explain why a resistor gets hot when there is a current in it. (3 marks)",
+            "Explain why a resistor gets hot when there is a current in it. (2 marks)",
             [
-                "The current is a flow of <b>electrons</b> through the metal; they <b>collide with the ions</b> in the lattice.",
-                "Each collision transfers energy to the ions, making them <b>vibrate more</b> — the resistor's temperature rises.",
-                "The energy is transferred from the electrical pathway to the <b>thermal store</b> of the resistor and then <b>dissipated</b> to the surroundings.",
+                "The current is a flow of <b>electrons</b> through the metal; they <b>collide with the ions</b> in the lattice (\"atoms\" or \"ions\" both count as the lattice).",
+                "Each collision transfers energy to the ions, making them <b>vibrate more</b> — the resistor's temperature rises. The June 2018 scheme (Q8(b)) credits exactly these two points; its own extras are \"<b>KE of the lattice increases</b>\" and \"<b>KE of the electrons decreases</b>\".",
+                "(Not a mark, but true: the energy is transferred from the electrical pathway to the <b>thermal store</b> of the resistor and then <b>dissipated</b> to the surroundings.)",
             ],
         ),
         practice("The heating effect", [
@@ -200,9 +200,9 @@ section_n9 = section(
                     marks(["Use: a kettle / heater / toaster / filament lamp / fuse.", "Disadvantage: cables and components warming up wastes energy (lower efficiency) or risks fire / damage."]), lines=2),
             written("el-n9-q4", "Explain why thick copper wires are used to carry large currents. (3)",
                     mark_scheme([
-                        ("Resistance", "A thicker wire (larger cross-sectional area) and a good conductor like copper have a <b>low resistance</b>."),
-                        ("Heating", "The energy transferred to heat in the wire each second depends on the resistance ($P = I^2R$), so a low resistance means <b>less heating</b> for the same current."),
-                        ("Safety", "So the wire can carry a large current <b>without overheating</b> (and less energy is wasted)."),
+                        ("Area", "A thicker wire has a <b>greater cross-sectional area</b>…"),
+                        ("Resistance", "…so it has a <b>lower resistance</b> (and copper is a good conductor)."),
+                        ("Heating", "…so <b>less thermal energy is transferred in the wire</b> for the same current ($P = I^2R$) — it does not get hot and can <b>safely carry a higher current</b>; equivalently, <b>less pd is dropped across the wires</b>. Any three of these four (June 2025 Q3(d), Nov 2021 Q8(b)(iv))."),
                     ]), lines=4),
             choice("el-n9-q5", "What happens to the energy transferred by a current in a resistor?",
                    ["It is stored in the resistor for ever", "It is dissipated as thermal energy to the surroundings", "It returns to the battery", "It becomes charge"], 1,
@@ -235,7 +235,7 @@ section_n10 = section(
             "<tr><td>current, pd and time</td><td>$E = I \\times V \\times t$</td></tr>"
             "<tr><td>power rating and time</td><td>$E = P \\times t$ — seconds, for joules</td></tr></table>"
             "<p>Why $P = IV$: each coulomb transfers $V$ joules, and $I$ coulombs pass each second, so $I \\times V$ joules per second. Why $P = I^2R$: substitute $V = IR$. The June 2025 report (Q3(b)): a straightforward $P = IV$ lost marks to calculator slips — \"250 ÷ 0.53\" instead of ×; write the substitution before pressing anything.</p>"
-            "<p>Time in <b>seconds</b> unless the question works in hours; the June 2023 report (Q8(b)(i)) — the commonest error in an $E = IVt$ charging-time question was <b>not converting MJ to J and hours to seconds</b>, and a comparison only scored if the unit of the calculated time was stated.</p>",
+            "<p>Time in <b>seconds</b> unless the question works in hours; the June 2023 report (Q8(b)(i)) — the commonest error in an $E = IVt$ charging-time question was <b>not converting MJ to J and hours to seconds</b>, and the <b>conclusion is its own mark</b>: write \"<b>the claim is justified because 5.8 h is less than 6 hours</b>\" (or \"because 130 MJ in 6 h is more than 126 MJ\"). It is independent — a comparison made correctly on a wrong time still scores it — but a bare number without the comparison does not, and a correct answer with no working gets only 2 of the 3.</p>",
         ),
         worked(
             "Power rating to current to energy",
@@ -285,7 +285,7 @@ section_n11 = section(
             "<tr><td><b>Live</b></td><td>brown</td><td><b>230 V</b> (alternating)</td><td>carries the current <b>to</b> the appliance from the supply; the dangerous one</td></tr>"
             "<tr><td><b>Neutral</b></td><td>blue</td><td><b>0 V</b></td><td>completes the circuit — carries the current <b>back</b> to the supply</td></tr>"
             "<tr><td><b>Earth</b></td><td>green and yellow</td><td><b>0 V</b></td><td>a <b>safety</b> wire connected to the metal case; carries no current unless there is a fault</td></tr></table>"
-            "<p><b>Fuse:</b> a thin wire in the live wire, rated at a current a little above the appliance's normal current (3 A, 5 A, 13 A). If the current <b>exceeds the rating</b>, the fuse wire <b>heats up and melts</b>, which <b>breaks the circuit</b> and cuts off the current. Say <b>melts</b>: a fuse does not explode, and \"blows\" is not the physics. The June 2025 scheme (Q3(c)(ii)) gave two marks for \"the fuse wire melts\" and \"this breaks the circuit\"; answers that did not say what the fuse <i>does</i> scored one.</p>"
+            "<p><b>Fuse:</b> a thin wire in the live wire, rated at a current a little above the appliance's normal current (3 A, 5 A, 13 A). If the current <b>exceeds the rating</b>, the fuse wire <b>heats up and melts</b>, which <b>breaks the circuit</b> and cuts off the current. Say <b>melts</b>: it is the word the scheme leads with, a fuse does not explode, and \"blows\" describes nothing. The June 2025 scheme (Q3(c)(ii)) gave two marks for \"<b>the fuse melts</b>\" and \"<b>so the current stops</b>\" (\"breaks the circuit\" / \"switches off the appliance\" accepted); answers that did not say what the fuse <i>does</i> scored one.</p>"
             "<p><b>Circuit breaker:</b> an automatic switch (an electromagnet) that <b>trips</b> when the current is too large; it does the fuse's job but faster, and it can be <b>reset</b> instead of replaced. The 2025 scheme accepted circuit breaker, earth wire, cable clamp, socket covers and insulation as safety devices \"other than a fuse\".</p>"
             "<p><b>Earth wire:</b> connected to the <b>metal case</b>. If a fault makes the live wire touch the case, the case would become live (230 V) and anyone touching it would get a shock. With the earth wire, the current flows through the <b>low-resistance earth path</b> instead — a <b>large current</b>, which <b>melts the fuse</b> and cuts the supply, and the case stays at 0 V. Appliances with plastic cases are <b>double insulated</b> and need no earth wire.</p>"
             "<p><b>Why the switch and fuse are in the live wire</b> (10.39): opening the switch (or melting the fuse) in the live wire <b>disconnects the appliance from the 230 V</b>, so nothing inside is live when it is off. In the neutral wire they would stop the current but leave the appliance <b>connected to 230 V</b> — still dangerous to touch.</p>"
@@ -298,7 +298,7 @@ section_n11 = section(
                 "The case is connected to the <b>earth wire</b>, a <b>low-resistance path</b> to the ground.",
                 "So when the live wire touches the case, a <b>large current</b> flows from the live wire, through the case, to earth…",
                 "…and the large current makes the <b>fuse wire melt</b>, which <b>breaks the circuit</b> and disconnects the heater from the live supply.",
-                "The case therefore cannot stay at 230 V, so a user touching it does not get a shock.",
+                "The earth wire <b>keeps the case at earth potential (0 V)</b> — the phrase in the 2019 Level 3 answer — so a user touching it does not get a shock.",
             ],
         ),
         practice("Mains electricity", [
@@ -320,7 +320,7 @@ section_n11 = section(
                     mark_scheme([
                         ("Connection", "It connects the <b>metal case</b> of the appliance to earth (0 V), carrying no current normally."),
                         ("Fault", "If the live wire touches the case, the earth wire provides a <b>low-resistance path</b>, so a <b>large current</b> flows to earth…"),
-                        ("Result", "…which <b>melts the fuse</b> and cuts off the supply; the case cannot become live, so the user is not shocked."),
+                        ("Result", "…which <b>melts the fuse</b> and cuts off the supply; the earth wire <b>keeps the case at earth potential (0 V)</b>, so the user is not shocked."),
                     ]), lines=4),
             choice("el-n11-q6", "Which statement about a circuit breaker is correct?",
                    ["It melts when the current is too large", "It is an automatic switch that trips when the current is too large and can be reset", "It increases the current", "It replaces the earth wire"], 1,
@@ -350,12 +350,12 @@ DEFINITIONS = [
     ("Thermistor", "A resistor whose resistance <b>decreases as its temperature increases</b>.", "\"a temperature sensor\""),
     ("LDR", "A light-dependent resistor: resistance <b>decreases as the light intensity increases</b>.", "\"a light sensor\""),
     ("Power", "The <b>energy transferred per second</b>; watt (W) = joule per second. $P = E \\div t = I \\times V$.", "\"how strong it is\""),
-    ("Direct current", "Movement of charge in <b>one direction only</b>; supplied by cells and batteries.", "\"a constant current\""),
-    ("Alternating current", "Movement of charge that <b>changes direction</b> repeatedly; UK mains 50 Hz, about 230 V.", "\"current that goes up and down\""),
+    ("Direct current", "Movement of charge in <b>one direction only</b>; supplied by cells and batteries.", "\"it is d.c.\" — the label is not the description (June 2019 Q10(a)(ii): \"simply referring to alternating current and direct current is not enough\")"),
+    ("Alternating current", "Movement of charge whose <b>direction keeps changing</b>; UK mains 50 Hz, about 230 V.", "\"it is a.c.\" — say the direction of the flow of charge keeps changing"),
     ("Live wire", "The brown wire at <b>230 V</b> (alternating) that carries the current to the appliance; the switch and fuse are in it.", "\"the main wire\""),
     ("Neutral wire", "The blue wire at <b>0 V</b> that completes the circuit back to the supply.", "\"the safe wire\""),
     ("Earth wire", "The green-and-yellow wire at <b>0 V</b> connected to the <b>metal case</b>; a low-resistance path for a fault current so the fuse melts.", "\"the wire that stops shocks\" alone"),
-    ("Fuse", "A thin wire in the live wire that <b>melts</b> when the current exceeds its rating, <b>breaking the circuit</b>.", "\"blows\" / \"explodes\""),
+    ("Fuse", "A thin wire in the live wire that <b>melts</b> when the current exceeds its rating, <b>breaking the circuit so the current stops</b>.", "\"explodes\"; and write melts, not \"blows\" — melts is what happens and the word the scheme leads with"),
     ("Circuit breaker", "An automatic switch that <b>trips</b> (opens) when the current is too large; can be <b>reset</b>.", "\"a fuse\""),
 ]
 
