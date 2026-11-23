@@ -815,6 +815,16 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
     <div class="entry-list" data-section="chemistry"></div>
   </section>
 
+  <!-- ═══════════ SECTION 5: ENGLISH BITS ═══════════ -->
+  <section id="english">
+    <div class="section-header">
+      <span class="section-number">§ 05</span>
+      <h2 class="section-title">English Bits</h2>
+      <span class="section-blurb">Interactive models for English literature.</span>
+    </div>
+    <div class="entry-list" data-section="english"></div>
+  </section>
+
   <noscript>
     <div style="padding: 24px; border: 1px solid var(--rule); background: var(--paper-warm); margin-top: 32px; font-size: 14px; color: var(--ink-soft);">
       <strong>JavaScript is disabled.</strong> The list of tools loads dynamically and needs JavaScript to render. You can browse every tool directly at <a href="https://github.com/JSHPhysics/" style="color: var(--accent);">github.com/JSHPhysics</a>.
@@ -901,7 +911,7 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
   function renderEntry(tool) {
     const imageFile = tool.image || '';
     const imagePath = imageFile ? `images/${imageFile}` : '';
-    const SECTION_LABELS = { simulations: 'Simulation', lessons: 'Lesson', tools: 'Tool', chemistry: 'Chemistry' };
+    const SECTION_LABELS = { simulations: 'Simulation', lessons: 'Lesson', tools: 'Tool', chemistry: 'Chemistry', english: 'English' };
     const sectionLabel = SECTION_LABELS[tool.section] || 'Tool';
     const category = tool.category ? ` · ${esc(tool.category)}` : '';
     const previewBadge = tool.badge === 'preview'

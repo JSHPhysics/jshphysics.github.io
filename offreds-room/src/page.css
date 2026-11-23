@@ -1,0 +1,655 @@
+/* Layout idea: the model on the left, a question panel on the right; one column on a phone. */
+/* The drawing kit's own tokens (--anatomy-*) are dark by default and light under data-theme="light". */
+/* The page's tokens below follow the same pattern, so both themes are complete. */
+
+.iso {
+  --rm-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --rm-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --rm-accent: #ff8f85;
+  --rm-accent-ink: #1a0b0a;
+  --rm-rule: #2c2c2c;
+  --rm-field: #0f0f0f;
+  --rm-done: #6be0a0;
+
+  --rm-sun: #4a3f17;
+  --rm-sun-blend: screen;
+  --rm-pick: #4d4219;
+  --rm-seen: #2e2a1a;
+  --rm-air: #050505;
+  --rm-glass: #1b2228;
+  --rm-in-back: #0b0b0b;
+  --rm-in-side: #101010;
+  --rm-in-floor: #161616;
+  --rm-red-top: #d9545a;
+  --rm-red-side: #a8383d;
+  --rm-red-edge: #ff9a9a;
+  --rm-iris: #8ea2ff;
+  color-scheme: dark;
+}
+
+.iso {
+  --anatomy-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+/* Cream-and-ink paper in the light theme, to match the rest of the site. */
+.iso[data-theme="light"] {
+  --anatomy-page: #f3eee3;
+  --anatomy-card: #fbf8f1;
+  --anatomy-face: #fffdf8;
+  --anatomy-top: #fffdf8;
+  --anatomy-shade-0: #ddd7c9;
+  --anatomy-shade-1: #e6e0d3;
+  --anatomy-shade-2: #eee9dd;
+  --anatomy-shade-3: #f5f1e7;
+  --rm-accent: #a3201b;
+  --rm-accent-ink: #ffffff;
+  --rm-rule: #ddd7c9;
+  --rm-field: #fffdf8;
+  --rm-done: #23794f;
+
+  --rm-sun: #ffe9a3;
+  --rm-sun-blend: multiply;
+  --rm-pick: #ffe38a;
+  --rm-seen: #fff6d6;
+  --rm-air: #3b3b3e;
+  --rm-glass: #e3ebf0;
+  --rm-in-back: #d2ccbe;
+  --rm-in-side: #ddd7c9;
+  --rm-in-floor: #e9e4d8;
+  --rm-red-top: #e8595e;
+  --rm-red-side: #c43d42;
+  --rm-red-edge: #8f1f24;
+  --rm-iris: #4a52c9;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--anatomy-page);
+  color: var(--anatomy-text);
+  font: 15px/1.6 var(--rm-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.rm-page {
+  width: min(1280px, 100% - 32px);
+  margin: 28px auto 72px;
+  display: grid;
+  gap: 22px;
+}
+
+/* ---------- heading ---------- */
+
+.rm-head {
+  display: grid;
+  gap: 6px;
+  max-width: 68ch;
+}
+
+.rm-eyebrow {
+  margin: 0;
+  font-family: var(--anatomy-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--anatomy-muted);
+}
+
+.rm-head h1 {
+  margin: 0;
+  font-family: var(--rm-display);
+  font-weight: 600;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  color: var(--anatomy-strong);
+  text-wrap: balance;
+}
+
+.rm-lede {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ---------- two columns ---------- */
+
+.rm-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.85fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.rm-left {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.rm-left .iso-figure {
+  margin: 0;
+}
+
+.rm-left .iso-plate {
+  padding: 40px 14px 34px;
+}
+
+/* ---------- controls above the model ---------- */
+
+.rm-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+}
+
+.rm-seg {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.rm-seg legend,
+.rm-label {
+  padding: 0;
+  font-family: var(--anatomy-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--anatomy-muted);
+}
+
+.rm-seg-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rm-btn {
+  appearance: none;
+  border: 1px solid var(--rm-rule);
+  background: var(--anatomy-card);
+  color: var(--anatomy-text);
+  font: 500 13.5px/1 var(--rm-body);
+  padding: 9px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rm-btn:hover {
+  border-color: var(--anatomy-mid);
+  color: var(--anatomy-strong);
+}
+
+.rm-btn[aria-pressed="true"] {
+  border-color: var(--rm-accent);
+  background: var(--rm-accent);
+  color: var(--rm-accent-ink);
+}
+
+.rm-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.rm-btn:focus-visible,
+.rm-chip:focus-visible,
+.rm-text:focus-visible,
+.rm-teacher summary:focus-visible {
+  outline: 2px solid var(--rm-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- the model ---------- */
+
+.iso-stage {
+  touch-action: pan-y;
+}
+
+.rm-obj {
+  cursor: pointer;
+  outline: none;
+}
+
+.rm-obj .iso-solid > .iso-top,
+.rm-obj .iso-solid > .iso-shade,
+.rm-obj .iso-edge {
+  transition: fill 180ms ease, stroke 180ms ease;
+}
+
+/* Hover or keyboard focus: a firmer outline. */
+.rm-obj:hover .iso-edge,
+.rm-obj:focus-visible .iso-edge {
+  stroke: var(--anatomy-lit);
+  stroke-width: 1px;
+}
+
+/* An object the playback has already visited keeps a faint tint. */
+.rm-obj[data-seen] .iso-solid > .iso-top {
+  fill: var(--rm-seen);
+}
+
+/* The selected object, and the one the playback is on now. */
+.rm-obj[data-on] .iso-solid > .iso-top,
+.rm-obj[data-eye] .iso-solid > .iso-top {
+  fill: var(--rm-pick);
+}
+
+.rm-obj[data-on] .iso-edge,
+.rm-obj[data-eye] .iso-edge {
+  stroke: var(--anatomy-lit);
+  stroke-width: 1.1px;
+}
+
+/* Flat pieces of the drawing. */
+.rm-air {
+  fill: var(--rm-air);
+  stroke: none;
+}
+
+.rm-glass,
+.rm-pane {
+  fill: var(--rm-glass);
+  stroke: var(--anatomy-mid);
+  stroke-width: var(--anatomy-weight);
+  stroke-linejoin: round;
+}
+
+.rm-cloth {
+  fill: var(--anatomy-face);
+  stroke: var(--anatomy-hi);
+  stroke-width: var(--anatomy-weight);
+  stroke-linejoin: round;
+}
+
+.rm-in {
+  stroke: var(--anatomy-lo);
+  stroke-width: var(--anatomy-weight);
+  stroke-linejoin: round;
+}
+
+.rm-in-back {
+  fill: var(--rm-in-back);
+}
+
+.rm-in-side {
+  fill: var(--rm-in-side);
+}
+
+.rm-in-floor {
+  fill: var(--rm-in-floor);
+}
+
+.rm-sun {
+  fill: var(--rm-sun);
+  stroke: none;
+  mix-blend-mode: var(--rm-sun-blend);
+}
+
+.rm-shadow {
+  fill: var(--anatomy-halo);
+  stroke: none;
+  opacity: calc(var(--anatomy-halo-opacity) * 0.55);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* Her gloves are the one strong colour in the room. */
+.rm-red > .iso-top {
+  fill: var(--rm-red-top) !important;
+}
+
+.rm-red > .iso-shade {
+  fill: var(--rm-red-side);
+}
+
+.rm-red > .iso-edge {
+  stroke: var(--rm-red-edge);
+}
+
+.rm-iris circle {
+  fill: var(--rm-iris);
+  opacity: 1;
+}
+
+/* Things that have been taken out of the room fade in when asked for. */
+.rm-ghost {
+  opacity: var(--rm-ghost, 0);
+  pointer-events: none;
+}
+
+.iso-svg[data-mode="missing"] .rm-ghost {
+  pointer-events: auto;
+}
+
+.rm-ghost .iso-edge {
+  stroke-dasharray: 2.6 2;
+}
+
+.rm-ghost .rm-pane {
+  stroke-dasharray: 2.6 2;
+  fill-opacity: 0.75;
+}
+
+/* The stitched word and the scratched message wait for their chapters. */
+.rm-word {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.iso-svg[data-ch10] .rm-word {
+  opacity: 1;
+}
+
+.rm-message .iso-line {
+  stroke: var(--anatomy-lit);
+  stroke-width: 0.9px;
+}
+
+/* ---------- playback strip ---------- */
+
+.rm-tour {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  background: var(--anatomy-card);
+  border: 1px solid var(--rm-rule);
+  border-radius: 8px;
+}
+
+.rm-tour-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.rm-tour-count {
+  margin-left: auto;
+  font-family: var(--anatomy-mono);
+  font-size: 11.5px;
+  color: var(--anatomy-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.rm-tour-say {
+  margin: 0;
+  min-height: 1.6em;
+  font-family: var(--rm-display);
+  font-size: 17px;
+  color: var(--anatomy-strong);
+}
+
+.rm-trail {
+  margin: 0;
+  font-size: 13px;
+  color: var(--anatomy-muted);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- object chips ---------- */
+
+.rm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rm-chip {
+  appearance: none;
+  border: 1px solid var(--rm-rule);
+  background: transparent;
+  color: var(--anatomy-text);
+  font: 13px/1 var(--rm-body);
+  padding: 7px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rm-chip::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--anatomy-mid);
+}
+
+.rm-chip[data-done]::before {
+  background: var(--rm-done);
+  border-color: var(--rm-done);
+}
+
+.rm-chip[aria-pressed="true"] {
+  border-color: var(--anatomy-strong);
+  color: var(--anatomy-strong);
+}
+
+/* ---------- the question panel ---------- */
+
+.rm-panel {
+  position: sticky;
+  top: 14px;
+  max-height: calc(100vh - 28px);
+  overflow: auto;
+  display: grid;
+  gap: 16px;
+  padding: 22px 22px 24px;
+  background: var(--anatomy-card);
+  border: 1px solid var(--rm-rule);
+  border-radius: 8px;
+}
+
+.rm-panel h2 {
+  margin: 0;
+  font-family: var(--rm-display);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--anatomy-strong);
+  text-wrap: balance;
+}
+
+.rm-panel p {
+  margin: 0;
+}
+
+.rm-steps {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.rm-layer {
+  display: grid;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rm-rule);
+}
+
+.rm-layer-title {
+  font-family: var(--anatomy-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rm-accent);
+}
+
+.rm-prompt {
+  font-family: var(--rm-display);
+  font-size: 17.5px;
+  line-height: 1.45;
+  color: var(--anatomy-strong);
+}
+
+.rm-text {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid var(--rm-rule);
+  border-radius: 6px;
+  background: var(--rm-field);
+  color: var(--anatomy-strong);
+  font: 15px/1.5 var(--rm-body);
+}
+
+.rm-gate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--anatomy-muted);
+}
+
+.rm-gate[hidden] {
+  display: none;
+}
+
+.rm-reveal {
+  display: grid;
+  gap: 12px;
+}
+
+.rm-block {
+  display: grid;
+  gap: 4px;
+}
+
+.rm-block ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.rm-locked {
+  padding: 12px 14px;
+  border: 1px dashed var(--rm-rule);
+  border-radius: 6px;
+  color: var(--anatomy-muted);
+  font-size: 14px;
+}
+
+.rm-panel-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rm-rule);
+}
+
+.rm-status {
+  flex-basis: 100%;
+  min-height: 1.4em;
+  font-size: 13px;
+  color: var(--anatomy-muted);
+}
+
+.rm-export {
+  flex-basis: 100%;
+  min-height: 160px;
+}
+
+/* ---------- teacher notes and footer ---------- */
+
+.rm-teacher {
+  max-width: 78ch;
+  padding: 14px 18px;
+  border: 1px solid var(--rm-rule);
+  border-radius: 8px;
+  background: var(--anatomy-card);
+}
+
+.rm-teacher summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--anatomy-strong);
+}
+
+.rm-teacher ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.rm-foot {
+  font-size: 12.5px;
+  color: var(--anatomy-muted);
+}
+
+/* ---------- site build: the link back to the gallery, iPad touch sizes, one-screen figure ---------- */
+
+.site-back {
+  justify-self: start;
+  margin: 0 0 6px;
+  font-family: var(--anatomy-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--anatomy-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--anatomy-mid);
+  padding-bottom: 2px;
+}
+
+.site-back:hover,
+.site-back:focus-visible {
+  color: var(--anatomy-strong);
+}
+
+.site .rm-btn,
+.site .rm-chip {
+  min-height: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The model never grows taller than the screen, so its buttons stay in reach on an iPad. */
+.site .rm-left .iso-plate .iso-svg {
+  max-height: calc(100vh - 210px);
+  min-height: 260px;
+}
+
+/* ---------- narrow screens ---------- */
+
+@media (max-width: 980px) {
+  .rm-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rm-panel {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .rm-left .iso-plate {
+    padding: 44px 6px 60px;
+  }
+
+  .rm-panel {
+    padding: 18px 16px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-obj .iso-solid > .iso-top,
+  .rm-obj .iso-solid > .iso-shade,
+  .rm-obj .iso-edge,
+  .rm-word {
+    transition: none;
+  }
+}
