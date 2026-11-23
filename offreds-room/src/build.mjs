@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 import * as k from "./vendor/kit/iso-kit.mjs";
 import { kitScript } from "./vendor/scripts/inline-kit.mjs";
 import { roomSvg, P, SASH_NOW, SASH_BEFORE, WIDTH, HEIGHT } from "./geometry.mjs";
-import { OBJECTS, TOUR, CHAPTERS, SCENES, SCENE_END } from "./content.mjs";
+import { OBJECTS, TOUR, CHAPTERS, SCENES, SCENE_END, VIEWS } from "./content.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const read = (name) => readFileSync(join(HERE, name), "utf8");
@@ -51,10 +51,10 @@ const card = k.plateHtml({
   fig: "Fig 1",
   title: "Offred's room",
   hint: "Click any object",
-  readout: "0 of " + OBJECTS.length + " examined · ch. 2 · the room now",
+  readout: "0 of " + OBJECTS.length + " examined · ch. 2 · " + VIEWS.now.readout,
   keys: [
     { mark: "lit", label: "The object you have chosen" },
-    { mark: "dashed", label: "Taken out of the room" },
+    { mark: "dashed", label: "Not in Offred's room" },
     { mark: "red", label: "Her gloves, the only strong colour" },
   ],
   caption:
@@ -71,8 +71,9 @@ const modeControl = `
 <fieldset class="rm-seg">
   <legend>Show</legend>
   <div class="rm-seg-row">
-    <button class="rm-btn" type="button" data-mode-button="now" aria-pressed="true">The room now</button>
-    <button class="rm-btn" type="button" data-mode-button="missing" aria-pressed="false">What has been taken out</button>
+    <button class="rm-btn" type="button" data-mode-button="ordinary" aria-pressed="false">${VIEWS.ordinary.label}</button>
+    <button class="rm-btn" type="button" data-mode-button="now" aria-pressed="true">${VIEWS.now.label}</button>
+    <button class="rm-btn" type="button" data-mode-button="removed" aria-pressed="false">${VIEWS.removed.label}</button>
   </div>
 </fieldset>`;
 
@@ -111,7 +112,7 @@ const teacher = `
   <ul>
     <li>The page quotes nothing from the novel. Students find and copy the words themselves, so they need the text in front of them.</li>
     <li>Chapter references follow the standard numbering: the room in chapter 2, the cupboard in chapter 9, the cushion in chapter 10, the study conversation in chapter 29. Check them against your edition before the lesson.</li>
-    <li>"What has been taken out" shows the light fitting, the glass in the picture, a fully opening window and a mirror. The first three are stated in chapter 2. The mirror is an inference from the remark that mirrors are few, and its questions ask students to notice that difference.</li>
+    <li>The model has three views. "An ordinary bedroom" adds ten things a bedroom usually has; they are for comparison and the novel does not list them. "What was removed" shows only the light fitting, because that is the one thing chapter 2 says was taken out. The picture glass is left for students to argue about.</li>
     <li>The reason these things were removed is self-harm, and the chapter 29 layer returns to it. The page never describes it, so students meet it in the novel's own words. You may want to set the chapter buttons yourself and brief the class first.</li>
     <li>The cupboard is drawn but the narrator never mentions it in chapter 2. Its first question uses that gap to open a discussion of narrative reliability.</li>
     <li>Writing is kept in the browser on that device only. "Copy my notes" gives students plain text to paste into their own document.</li>
@@ -132,6 +133,7 @@ const SASH_NOW = ${SASH_NOW};
 const SASH_BEFORE = ${SASH_BEFORE};
 const SCENES = ${JSON.stringify(SCENES)};
 const SCENE_END = ${JSON.stringify(SCENE_END)};
+const VIEWS = ${JSON.stringify(VIEWS)};
 const VIEW_WIDTH = ${WIDTH};
 const VIEW_HEIGHT = ${HEIGHT};
 `;

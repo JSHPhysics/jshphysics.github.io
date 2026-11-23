@@ -1,6 +1,6 @@
 // The page's behaviour.
 // The build script puts these names in scope before this file runs:
-//   P, OBJECTS, TOUR, CHAPTERS, SCENES, SCENE_END, SASH_NOW, SASH_BEFORE, VIEW_WIDTH, VIEW_HEIGHT   (data)
+//   P, OBJECTS, TOUR, CHAPTERS, SCENES, SCENE_END, VIEWS, SASH_NOW, SASH_BEFORE, VIEW_WIDTH, VIEW_HEIGHT   (data)
 //   curtainSvg, cupboardDoorSvg                          (from moving.mjs)
 //   iso, extrude, solidSvg, lineSvg, dotsSvg, towardViewer, translateAlong   (the drawing kit)
 
@@ -35,7 +35,7 @@ const kit = { iso, extrude, solidSvg, lineSvg, dotsSvg, towardViewer };
 // ---------- what the student has chosen ----------
 
 const state = {
-  mode: "now", // "now" or "missing"
+  mode: "now", // "ordinary", "now" or "removed"
   chapter: 2, // how far the class has read
   selected: null, // id of the object in the panel
   step: -1, // position in the narrator's tour; -1 means not started
@@ -157,7 +157,8 @@ function make(tag, className, text) {
 // Where each moving part is now. The loop eases these toward their targets.
 const motion = {
   sash: SASH_NOW,
-  ghost: 0,
+  ordinary: 0,
+  removed: 0,
   door: 0,
   light: 0,
   clock: 0,
@@ -181,10 +182,13 @@ function boxOf(ids) {
   let bottom = -Infinity;
   for (const id of ids) {
     for (const group of svg.querySelectorAll('[data-obj="' + id + '"]')) {
-      // Parts that have been taken out only count when they are showing.
+      // Parts that are not in her room only count in the views that show them.
       const isGhost = group.classList.contains("rm-ghost");
-      if (isGhost && state.mode !== "missing") {
-        continue;
+      if (isGhost) {
+        const views = (group.dataset.views || "").split(" ");
+        if (!views.includes(state.mode)) {
+          continue;
+        }
       }
       const box = group.getBBox();
       left = Math.min(left, box.x);
@@ -237,14 +241,21 @@ function cameraSettled() {
 }
 
 function sashTarget() {
-  if (state.mode === "missing") {
+  if (state.mode === "ordinary") {
     return SASH_BEFORE;
   }
   return SASH_NOW;
 }
 
-function ghostTarget() {
-  if (state.mode === "missing") {
+function ordinaryTarget() {
+  if (state.mode === "ordinary") {
+    return 1;
+  }
+  return 0;
+}
+
+function removedTarget() {
+  if (state.mode === "removed") {
     return 1;
   }
   return 0;
@@ -288,8 +299,9 @@ function drawModel() {
   // The cupboard door.
   cupboardDoor.innerHTML = cupboardDoorSvg(kit, P, motion.door);
 
-  // The things that have been taken out, and the light fitting when a scene shows it.
-  svg.style.setProperty("--rm-ghost", motion.ghost.toFixed(3));
+  // The things that are not in her room, and the light fitting when a scene shows it.
+  svg.style.setProperty("--rm-ordinary", motion.ordinary.toFixed(3));
+  svg.style.setProperty("--rm-removed", motion.removed.toFixed(3));
   svg.style.setProperty("--rm-light", motion.light.toFixed(3));
 
   // The camera.
@@ -310,7 +322,8 @@ function tick(now) {
   motion.clock += dt;
 
   motion.sash = ease(motion.sash, sashTarget(), dt, 0.32);
-  motion.ghost = ease(motion.ghost, ghostTarget(), dt, 0.28);
+  motion.ordinary = ease(motion.ordinary, ordinaryTarget(), dt, 0.28);
+  motion.removed = ease(motion.removed, removedTarget(), dt, 0.28);
   motion.door = ease(motion.door, doorTarget(), dt, 0.45);
   motion.light = ease(motion.light, lightTarget, dt, 0.5);
   camera.x = ease(camera.x, cameraTarget.x, dt, 0.36);
@@ -320,7 +333,7 @@ function tick(now) {
   drawModel();
 
   // The curtains keep moving, so the loop only stops for reduced motion or when off screen.
-  const partsSettled = motion.sash === sashTarget() && motion.ghost === ghostTarget() && motion.door === doorTarget();
+  const partsSettled = motion.sash === sashTarget() && motion.ordinary === ordinaryTarget() && motion.removed === removedTarget() && motion.door === doorTarget();
   const settled = partsSettled && motion.light === lightTarget && cameraSettled();
   const keepGoing = visible && (!still.matches || !settled);
   if (keepGoing) {
@@ -340,10 +353,7 @@ function run() {
 // ---------- readout, chips and highlights ----------
 
 function describeMode() {
-  if (state.mode === "missing") {
-    return "what has been taken out";
-  }
-  return "the room now";
+  return VIEWS[state.mode].readout;
 }
 
 function updateReadout() {
@@ -405,7 +415,31 @@ function updateButtons() {
 
 // ---------- the question panel ----------
 
+// The panel for the two comparison views, shown while no object is chosen.
+function renderView(view) {
+  panel.replaceChildren();
+  panel.append(make("h2", "", view.heading));
+  panel.append(make("p", "", view.about));
+
+  const block = make("div", "rm-block");
+  block.append(make("div", "rm-label", "Talk about"));
+  const list = make("ul", "");
+  for (const question of view.questions) {
+    list.append(make("li", "", question));
+  }
+  block.append(list);
+  panel.append(block);
+  panel.append(renderFoot());
+}
+
 function renderIntro() {
+  // The comparison views have their own questions.
+  const view = VIEWS[state.mode];
+  if (view.questions) {
+    renderView(view);
+    return;
+  }
+
   panel.replaceChildren();
   panel.append(make("h2", "", "Question the room"));
   panel.append(
@@ -422,7 +456,7 @@ function renderIntro() {
     "Write a prediction before you look anything up. The questions unlock when you have written at least three words.",
     "Find the words in your copy of the novel and write them down with what you notice.",
     "Press a chapter button when your class reaches that chapter. The model shows what changes and outlines the objects that have new questions.",
-    "Press 'What has been taken out' to see what is missing from the room.",
+    "Use the three Show buttons to compare her room with an ordinary bedroom, and to see what the novel says was removed.",
   ];
   for (const line of lines) {
     steps.append(make("li", "", line));
@@ -550,7 +584,7 @@ function renderObject(object) {
   panel.append(make("h2", "", object.name));
 
   if (object.absent) {
-    panel.append(make("p", "", "This object is not in the room. It appears only when the model shows what has been taken out."));
+    panel.append(make("p", "", "This object is not in Offred's room. It appears only when the model shows an ordinary bedroom."));
   }
 
   for (const layer of object.layers) {
@@ -767,10 +801,10 @@ function select(id) {
   stopTour();
   cancelScene();
   state.selected = id;
-  // The mirror only exists in the "taken out" view, so choosing it switches to that view.
+  // The mirror and the clock only exist in the ordinary bedroom, so choosing one switches to that view.
   const object = findObject(id);
   if (object && object.absent) {
-    state.mode = "missing";
+    state.mode = "ordinary";
   }
   if (object) {
     markOpened(object);
@@ -799,11 +833,11 @@ function setMode(mode) {
   stopTour();
   cancelScene();
   state.mode = mode;
+  // Changing view shows the whole room and that view's own questions.
+  state.selected = null;
   render();
-  // The view may need to widen or narrow now that parts have appeared or gone.
-  if (state.selected && state.selected !== "floor") {
-    lookAt([state.selected]);
-  }
+  lookAt(null);
+  showSceneLine(VIEWS[mode].line);
 }
 
 // ---------- chapter scenes ----------

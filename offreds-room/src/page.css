@@ -318,13 +318,14 @@ body {
   opacity: 1;
 }
 
-/* Things that have been taken out of the room fade in when asked for. */
+/* Things that are not in her room fade in for the ordinary bedroom. */
 .rm-ghost {
-  opacity: var(--rm-ghost, 0);
+  opacity: var(--rm-ordinary, 0);
   pointer-events: none;
 }
 
-.iso-svg[data-mode="missing"] .rm-ghost {
+.iso-svg[data-mode="ordinary"] .rm-obj.rm-ghost,
+.iso-svg[data-mode="removed"] .rm-obj.rm-ghost-light {
   pointer-events: auto;
 }
 
@@ -354,7 +355,7 @@ body {
 
 /* The light fitting also shows for a moment when chapter 29 explains it. */
 .rm-ghost-light {
-  opacity: max(var(--rm-ghost, 0), var(--rm-light, 0));
+  opacity: max(var(--rm-ordinary, 0), var(--rm-removed, 0), var(--rm-light, 0));
 }
 
 /* An object with questions from a newly reached chapter gets a slow red outline until it is opened. */

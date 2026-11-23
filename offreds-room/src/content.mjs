@@ -70,7 +70,7 @@ export const OBJECTS = [
         closer: [
           "The simile turns the ceiling into a face. What has happened to that face? What does that suggest about how she sees the room, or how the room sees her?",
           "A wreath can stand for celebration or for mourning. Which reading fits this ceiling?",
-          "Switch the room to 'What has been taken out'. Does seeing the fitting change how you read the opening paragraph?",
+          "Switch the model to 'What was removed'. Does seeing the fitting change how you read the opening paragraph?",
         ],
         zoom: "Start a list of every eye in the novel, and of every time someone is watched. This one goes first.",
       },
@@ -272,6 +272,23 @@ export const OBJECTS = [
     ],
   },
   {
+    id: "clock",
+    name: "The missing clock",
+    absent: true,
+    layers: [
+      {
+        chapter: 2,
+        predict: "There is no clock in this room. A bell somewhere in the house tells her the time. What changes for a person when someone else keeps the time?",
+        find: "Chapter 2. Find the sentence about the bell, and the kind of place she compares this house to.",
+        closer: [
+          "She does not choose when to get up, eat or go out. List the things in chapter 2 that are decided for her.",
+          "The clock is in the drawing because an ordinary bedroom would have one. The novel does not say a clock was taken away. What does the text tell us, and what are we assuming?",
+        ],
+        zoom: "Track how Offred tells the time across the novel. Start with the bell.",
+      },
+    ],
+  },
+  {
     id: "mirror",
     name: "The missing mirror",
     absent: true,
@@ -282,7 +299,7 @@ export const OBJECTS = [
         find: "Chapter 2. Find the comparison to a nunnery, and the two things she says a nunnery and this house have in common.",
         closer: [
           "Vanity is one reason to remove a mirror. Look again at what has been done to the picture and the window. What other reason is there?",
-          "The mirror in the drawing is a guess at what a room like this once held. The text only tells us mirrors are few. Why is it worth separating what the text states from what we infer?",
+          "The mirror is in the drawing because an ordinary bedroom would have one. The text only tells us mirrors are few. Why is it worth separating what the text states from what we infer?",
           "When she does see herself, in the hall, how does she describe the figure in the glass?",
         ],
         zoom: "Offred is not her real name. Track the ways the regime takes away a person's sense of who they are.",
@@ -338,3 +355,38 @@ export const SCENES = {
 
 // Shown when a chapter's beats have finished.
 export const SCENE_END = "The objects outlined in red have new questions. Click one.";
+
+// The three views of the room. "line" shows under the model when the view is chosen.
+// "heading", "about" and "questions" fill the panel while no object is selected.
+export const VIEWS = {
+  ordinary: {
+    label: "An ordinary bedroom",
+    readout: "an ordinary bedroom",
+    line: "The dashed objects are things a bedroom usually has. None of them is in Offred's room.",
+    heading: "An ordinary bedroom",
+    about: "The dashed objects are a ceiling light, a mirror, glass in the picture frame, a window that opens wide, a clock, family photographs, books and paper, a plant, scatter cushions and a key in the door. They are here for comparison. The novel does not list them.",
+    questions: [
+      "Sort the dashed objects into three groups: comforts, luxuries, and things that make a room your own. Which group has she lost most of?",
+      "She is left a bed, a chair, a table and a rug. Why would a regime keep those and leave out a book or a photograph?",
+      "Nothing here shows who lives in this room. What does it do to a person to live somewhere with no trace of themselves?",
+      "How does taking away small comforts make someone easier to control?",
+    ],
+  },
+  now: {
+    label: "Offred's room",
+    readout: "Offred's room",
+    line: "This is what Offred's room contains.",
+  },
+  removed: {
+    label: "What was removed",
+    readout: "what was removed",
+    line: "Chapter 2 says one thing was taken out of this room: the light fitting.",
+    heading: "What was removed",
+    about: "Most of what an ordinary bedroom has was never given to her. Chapter 2 names one thing that was there and was taken out: the light fitting in the middle of the ceiling wreath.",
+    questions: [
+      "Find the sentence that says so. Who does she say removed it, and what else did they remove?",
+      "Later in the chapter she says she knows why the picture has no glass. Does the glass belong in this view too? Argue it both ways.",
+      "Is there a difference between having something taken away and never being given it? Which is worse for her?",
+    ],
+  },
+};

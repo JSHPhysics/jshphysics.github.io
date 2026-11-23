@@ -205,6 +205,65 @@ function mirror() {
   return out.join("");
 }
 
+// A wall clock. Her time is kept by a bell somewhere else in the house.
+function clock() {
+  const out = [];
+  out.push(box(152, 0, 14, 1.4, 69, 14, {}, 0.4));
+  // The dial: a circle on the face, with two hands that reach it from the centre.
+  const centre = [159, 1.45, 76];
+  const dial = [];
+  for (let index = 0; index < 28; index++) {
+    const angle = (index / 28) * Math.PI * 2;
+    dial.push([centre[0] + Math.cos(angle) * 5, 1.45, centre[2] + Math.sin(angle) * 5]);
+  }
+  out.push(L(loop(dial), { tone: "mid" }));
+  const hand = (angle) => line([centre, [centre[0] + Math.cos(angle) * 5, 1.45, centre[2] + Math.sin(angle) * 5]]);
+  out.push(L(hand(2.6) + hand(0.55), { tone: "hi" }));
+  out.push(Dots([at(centre)], { size: 0.7, tone: "hi" }));
+  return out.join("");
+}
+
+// Two family photographs above the bed.
+function photographs() {
+  const out = [];
+  out.push(box(175, 0, 10, 1.2, 53, 13, {}, 0.2));
+  out.push(L(loop(onRightWall(1.25, 177, 183, 55, 64)), { tone: "mid" }));
+  out.push(box(189, 0, 13, 1.2, 56, 10, {}, 0.2));
+  out.push(L(loop(onRightWall(1.25, 191, 200, 58, 64)), { tone: "mid" }));
+  return out.join("");
+}
+
+// Books, a sheet of paper and a pen on the table.
+function booksAndPaper() {
+  const out = [];
+  out.push(box(120, 7, 11, 8, 35.8, 2, {}, 0.4));
+  out.push(box(120.7, 7.6, 10, 7.2, 37.8, 1.8, {}, 0.4));
+  out.push(box(121.4, 8, 9.4, 6.6, 39.6, 1.5, {}, 0.4));
+  out.push(box(121, 18.5, 9, 7, 35.8, 0.25, {}, 0.2));
+  out.push(box(131.4, 19.5, 0.8, 6, 35.8, 0.6, {}, 0.2));
+  return out.join("");
+}
+
+// A plant in a pot on the window seat.
+function plant() {
+  const out = [];
+  out.push(S(k.cylinder(8, 119, 3.2, 20, 5, P, 22, 0.3), { tone: "hi" }));
+  out.push(S(k.cylinder(8, 119, 4.8, 25, 5.5, P, 26, 1.2), { tone: "hi" }));
+  out.push(S(k.cylinder(8, 119, 3.2, 30.5, 3.6, P, 22, 1), { tone: "hi" }));
+  return out.join("");
+}
+
+// Two scatter cushions on the bed.
+function scatterCushions() {
+  const out = [];
+  for (const x of [174.5, 189.5]) {
+    const plan = { x: x, y: 25, w: 12.5, d: 11, r: 3.6 };
+    out.push(S(k.slabOf(plan, 25, 3.4, P, 5, 0.5), { tone: "hi" }));
+    out.push(L(k.planOutline(k.insetPlan(plan, 1.8), 28.4, P, 5), { tone: "lo" }));
+  }
+  return out.join("");
+}
+
 // ---------- things on the left-hand wall ----------
 
 function cupboardBody() {
@@ -302,6 +361,12 @@ function door() {
   out.push(L(panel(8, 44) + panel(52, 92), { tone: "lo" }));
   const knob = point(30.6, 1.55);
   out.push(Dots([at([knob[0], knob[1], 48])], { size: 1.1, tone: "hi" }));
+
+  // A key in the lock, for the ordinary bedroom only. Her door has no lock.
+  const keyRing = [point(30.1, 1.5), point(31.1, 1.5), point(31.1, 4.8), point(30.1, 4.8)];
+  const keyBow = point(30.6, 5.2);
+  const key = S(k.extrude(keyRing, 41.4, 1, P), { tone: "hi" }) + Dots([at([keyBow[0], keyBow[1], 41.9])], { size: 1.1, tone: "hi" });
+  out.push(`<g class="rm-ghost" data-views="ordinary">${key}</g>`);
 
   // The near jamb.
   out.push(box(0, 183, 1.6, 3, 0, 100, {}, 0.2));
@@ -552,8 +617,11 @@ export function roomSvg() {
   body.push(walls());
 
   body.push(object("picture", "The picture", picture()));
-  body.push(`<g class="rm-ghost" data-obj="picture" aria-hidden="true">${pictureGlass()}</g>`);
-  body.push(`<g class="rm-ghost rm-obj" data-obj="mirror" aria-hidden="true">${mirror()}</g>`);
+  // Things an ordinary bedroom would have. "data-views" says which views show each one.
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="picture" aria-hidden="true">${pictureGlass()}</g>`);
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="mirror" aria-hidden="true">${mirror()}</g>`);
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="clock" aria-hidden="true">${clock()}</g>`);
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="picture" aria-hidden="true">${photographs()}</g>`);
 
   body.push(object("cupboard", "The cupboard", cupboardBody()));
   body.push(object("window", "The window and curtains", windowAndCurtains()));
@@ -566,14 +634,17 @@ export function roomSvg() {
 
   body.push(object("cupboard", "The cupboard door", `<g data-part="cupboard-door">${cupboardDoorSvg(k, P, 0)}</g>`, false));
   body.push(object("windowseat", "The window seat and cushion", windowSeat() + cushion()));
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="windowseat" aria-hidden="true">${plant()}</g>`);
 
   body.push(object("chair", "The chair", chair()));
   body.push(object("table", "The table", table()));
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="table" aria-hidden="true">${booksAndPaper()}</g>`);
   body.push(object("lamp", "The lamp", lamp()));
   body.push(object("bed", "The bed", bed()));
+  body.push(`<g class="rm-ghost rm-obj" data-views="ordinary" data-obj="bed" aria-hidden="true">${scatterCushions()}</g>`);
   body.push(object("gloves", "The red gloves", gloves()));
 
-  body.push(`<g class="rm-ghost rm-ghost-light rm-obj" data-obj="ceiling" aria-hidden="true">${chandelier()}</g>`);
+  body.push(`<g class="rm-ghost rm-ghost-light rm-obj" data-views="ordinary removed" data-obj="ceiling" aria-hidden="true">${chandelier()}</g>`);
   body.push(object("ceiling", "The ceiling wreath", ceilingRose()));
 
   return k.figureSvg({
