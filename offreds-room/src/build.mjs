@@ -58,7 +58,7 @@ const card = k.plateHtml({
     { mark: "red", label: "Her gloves, the only strong colour" },
   ],
   caption:
-    "A cutaway model of the room in chapter 2. Two walls and the ceiling are removed so you can see in. One piece of ceiling is kept, held on a joist, to show the plaster wreath; it is drawn from above. The scale strip on the stand is marked every 10 cm.",
+    "A cutaway model of the room in chapter 2. Two walls and the ceiling are removed so you can see in. The disc floating above the room is the one piece of ceiling left in, so you can see the plaster wreath. It is drawn from above. The scale strip on the stand is marked every 10 cm.",
   body: `<div class="iso-stage" role="group" aria-label="Model of Offred's room">${roomSvg()}</div>`,
 });
 

@@ -538,28 +538,6 @@ function ceilingRose() {
   // The blank, plastered-over centre.
   out.push(L(k.ring(x, y, 6, 121, P, 32), { tone: "lo" }));
 
-  // A block on the corner of the walls and a joist from it carry the piece.
-  out.push(box(-5, -5, 9, 9, H, 1.4, { tone: "mid" }, 1));
-  const from = [-2.5, -2.5];
-  const length = Math.hypot(x - from[0], y - from[1]);
-  const dir = [(x - from[0]) / length, (y - from[1]) / length];
-  const across = [-dir[1] * 1.7, dir[0] * 1.7];
-  // The joist stops short of the middle, so the blank centre of the wreath stays in view.
-  const end = [x - dir[0] * 8.5, y - dir[1] * 8.5];
-  const ring = [
-    [from[0] + across[0], from[1] + across[1]],
-    [end[0] + across[0], end[1] + across[1]],
-    [end[0] - across[0], end[1] - across[1]],
-    [from[0] - across[0], from[1] - across[1]],
-  ];
-  out.push(S(k.extrude(ring, H + 1.4, 2.6, P), { tone: "mid" }));
-  // Two screws fix the joist to the ceiling piece, one fixes it to the block.
-  const screws = [
-    [x - dir[0] * 16.5, y - dir[1] * 16.5],
-    [x - dir[0] * 11, y - dir[1] * 11],
-    [from[0] + dir[0] * 3.5, from[1] + dir[1] * 3.5],
-  ];
-  out.push(Dots(screws.map(([sx, sy]) => at([sx, sy, H + 4])), { size: 0.5 }));
   return out.join("");
 }
 
