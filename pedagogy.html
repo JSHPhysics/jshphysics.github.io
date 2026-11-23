@@ -805,24 +805,14 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
     <div class="entry-list" data-section="tools"></div>
   </section>
 
-  <!-- ═══════════ SECTION 4: CHEMISTRY BITS ═══════════ -->
-  <section id="chemistry">
+  <!-- ═══════════ SECTION 4: BITS FOR OTHER SUBJECTS ═══════════ -->
+  <section id="other-subjects">
     <div class="section-header">
       <span class="section-number">§ 04</span>
-      <h2 class="section-title">Chemistry Bits</h2>
-      <span class="section-blurb">Interactive models for A-level chemistry.</span>
+      <h2 class="section-title">Bits for my friends in other subjects</h2>
+      <span class="section-blurb">Interactive models for chemistry and English.</span>
     </div>
-    <div class="entry-list" data-section="chemistry"></div>
-  </section>
-
-  <!-- ═══════════ SECTION 5: ENGLISH BITS ═══════════ -->
-  <section id="english">
-    <div class="section-header">
-      <span class="section-number">§ 05</span>
-      <h2 class="section-title">English Bits</h2>
-      <span class="section-blurb">Interactive models for English literature.</span>
-    </div>
-    <div class="entry-list" data-section="english"></div>
+    <div class="entry-list" data-section="other-subjects"></div>
   </section>
 
   <noscript>
@@ -911,7 +901,7 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
   function renderEntry(tool) {
     const imageFile = tool.image || '';
     const imagePath = imageFile ? `images/${imageFile}` : '';
-    const SECTION_LABELS = { simulations: 'Simulation', lessons: 'Lesson', tools: 'Tool', chemistry: 'Chemistry', english: 'English' };
+    const SECTION_LABELS = { simulations: 'Simulation', lessons: 'Lesson', tools: 'Tool', 'other-subjects': 'Other subjects' };
     const sectionLabel = SECTION_LABELS[tool.section] || 'Tool';
     const category = tool.category ? ` · ${esc(tool.category)}` : '';
     const previewBadge = tool.badge === 'preview'
