@@ -41,7 +41,7 @@ if (SITE) {
     // No storage here: fall through to the device setting.
   }`;
   siteMeta =
-    '<meta name="description" content="A cutaway model of Offred\'s room from chapter 2 of The Handmaid\'s Tale. Click each object, predict, then find the words in the novel.">' +
+    '<meta name="description" content="A cutaway model of Offred\'s room from chapter 2 of The Handmaid\'s Tale. Click an object, answer a discussion question, then find the words in the novel.">' +
     '<meta name="author" content="Joshua Stafford-Haworth (JSHPhysics)">';
 }
 
@@ -172,7 +172,7 @@ ${siteMeta}
     ${backLink}
     <p class="rm-eyebrow">The Handmaid's Tale · Chapter 2</p>
     <h1>Offred's room</h1>
-    <p class="rm-lede">Offred's room holds a few plain pieces of furniture and several gaps where things have been removed. Click an object, write a prediction, then find the words in your copy of the novel.</p>
+    <p class="rm-lede">Offred's room holds a few plain pieces of furniture and very little else. Click an object, answer the discussion question, then find the words in your copy of the novel.</p>
   </header>
 
   <div class="rm-layout">

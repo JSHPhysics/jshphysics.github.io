@@ -212,6 +212,12 @@ body {
   touch-action: pan-y;
 }
 
+/* The kit lets a drawing spill past its own box. Once the camera zooms in, that would put the room */
+/* over the card's labels and outside the card, so the drawing is cut off at the edge of its box. */
+.rm-left .iso-plate .iso-svg {
+  overflow: hidden;
+}
+
 .rm-obj {
   cursor: pointer;
   outline: none;

@@ -16,7 +16,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "The chapter opens by listing three plain pieces of furniture and nothing else. Before any feeling or event is mentioned, what impression does a bare list like that give you of the room and of the person describing it?",
+        discuss: "The chapter opens by listing three plain pieces of furniture and nothing else. Before any feeling or event is mentioned, what impression does a bare list like that give you of the room and of the person describing it?",
         find: "Chapter 2, the first sentence. Copy it exactly, with its punctuation.",
         closer: [
           "The sentence has no verb. What is missing from a room where nothing happens in the sentence that describes it?",
@@ -33,7 +33,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "The narrator names the table and moves straight on. What do you usually keep on a bedroom table that a Handmaid would not be allowed to have?",
+        discuss: "The narrator names the table and moves straight on. What do you usually keep on a bedroom table that a Handmaid would not be allowed to have?",
         find: "Chapter 2, first sentence again. Where does the table come in the list, and does she ever return to it?",
         closer: [
           "Handmaids are forbidden to read or write. How does that change what a table is for?",
@@ -49,7 +49,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "A lamp is the one light she lists. A different light fitting has been taken out of this room. Why might a regime allow one kind of light and remove another?",
+        discuss: "A lamp is the one light she lists. A different light fitting has been taken out of this room. Why might a regime allow one kind of light and remove another?",
         find: "Chapter 2, opening paragraph. Find the sentence that says what has been removed. What reason does it imply?",
         closer: [
           "Compare the lamp with the missing light fitting. From the regime's point of view, what is the difference between them?",
@@ -65,7 +65,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "Look up. There is a plaster wreath on the ceiling and its centre has been filled in and smoothed over. What do you think used to be there, and why would someone take it away?",
+        discuss: "Look up. There is a plaster wreath on the ceiling and its centre has been filled in and smoothed over. What do you think used to be there, and why would someone take it away?",
         find: "Chapter 2, opening paragraph. Find the simile she uses for the blank space in the middle of the wreath.",
         closer: [
           "The simile turns the ceiling into a face. What has happened to that face? What does that suggest about how she sees the room, or how the room sees her?",
@@ -76,7 +76,7 @@ export const OBJECTS = [
       },
       {
         chapter: 29,
-        predict: "In chapter 29 Offred asks the Commander what became of the Handmaid who had this room before her. What clues has this ceiling been giving you since chapter 2?",
+        discuss: "In chapter 29 Offred asks the Commander what became of the Handmaid who had this room before her. What clues has this ceiling been giving you since chapter 2?",
         find: "Chapter 29, the end of the conversation in the study. Find the Commander's answer, and what he says was done about the light fitting afterwards.",
         closer: [
           "Reread the opening paragraph of chapter 2. Which phrases now carry a second meaning?",
@@ -93,7 +93,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "The window opens only a little way and the glass cannot be broken. What do you think the authorities are afraid of?",
+        discuss: "The window opens only a little way and the glass cannot be broken. What do you think the authorities are afraid of?",
         find: "Chapter 2. Find where she says what they are not afraid of, and the phrase she uses for what they are afraid of.",
         closer: [
           "She says it is not running away they fear. Why is the other kind of escape a particular threat to Gilead? Think about what a Handmaid is for.",
@@ -110,7 +110,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "Under the window there is a seat with one small cushion. A window seat is made for looking out. What can Offred do with what she sees from it, and what can she not do?",
+        discuss: "Under the window there is a seat with one small cushion. A window seat is made for looking out. What can Offred do with what she sees from it, and what can she not do?",
         find: "Chapter 2. Find the short sentence that mentions the window seat. How much does she tell us about the cushion at this point?",
         closer: [
           "In chapter 2 the cushion is only 'little'. She is holding something back about it. Make a note to come back here after chapter 10.",
@@ -120,7 +120,7 @@ export const OBJECTS = [
       },
       {
         chapter: 10,
-        predict: "In chapter 10 she finally tells us what is stitched on the cushion: a single word, FAITH. Why is one embroidered word remarkable in this house?",
+        discuss: "In chapter 10 she finally tells us what is stitched on the cushion: a single word, FAITH. Why is one embroidered word remarkable in this house?",
         find: "Chapter 10. Find what she says about being given this to read, and what she wonders happened to the cushions that once went with it.",
         closer: [
           "She is forbidden to read, and here is a word. Is looking at the cushion a small act of rebellion, or exactly what the regime intends?",
@@ -137,7 +137,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "Sunlight falls on a polished wooden floor and she can smell the polish. Why would a place of confinement be made to look and smell pleasant?",
+        discuss: "Sunlight falls on a polished wooden floor and she can smell the polish. Why would a place of confinement be made to look and smell pleasant?",
         find: "Chapter 2. Find the sentence about the sunlight and the floor. Which senses does she use?",
         closer: [
           "Somebody polishes this floor. Who does the housework in the Commander's house, and what colour do they wear?",
@@ -154,7 +154,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "The rug is an oval, braided by hand out of rags. What might a regime like Gilead find to admire in a handmade object like that?",
+        discuss: "The rug is an oval, braided by hand out of rags. What might a regime like Gilead find to admire in a handmade object like that?",
         find: "Chapter 2. Find where she explains the kind of touch 'they' like. Then find the two sayings that follow, and the question she ends on.",
         closer: [
           "She describes the rug as women's work made from things nobody needs any more. Who else in Gilead is valued only for their use?",
@@ -171,7 +171,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "On the wall is a framed print of flowers, and the frame has no glass in it. Why would anyone take the glass out of a picture frame?",
+        discuss: "On the wall is a framed print of flowers, and the frame has no glass in it. Why would anyone take the glass out of a picture frame?",
         find: "Chapter 2. Find the flower and its colour. Then find the two-word question she asks about whether every Handmaid has the same room.",
         closer: [
           "She says flowers are 'still allowed'. What does the word 'still' imply about everything else?",
@@ -188,7 +188,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "A single bed with a white cover. She tells us that only one thing takes place in it. What does it suggest that she feels the need to say so?",
+        discuss: "A single bed with a white cover. She tells us that only one thing takes place in it. What does it suggest that she feels the need to say so?",
         find: "Chapter 2. Find her remark about what takes place in the bed, and the short correction she adds straight after it.",
         closer: [
           "The bed is single, with a white cover and a medium-hard mattress. Which parts of an adult life have been kept out of this room?",
@@ -205,7 +205,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "A pair of red gloves lies on the bed. Everything she wears is red apart from the white wings around her face. What does red make you think of?",
+        discuss: "A pair of red gloves lies on the bed. Everything she wears is red apart from the white wings around her face. What does red make you think of?",
         find: "Chapter 2. Find what she says red is the colour of, and the verb she uses for what it does to the Handmaids.",
         closer: [
           "List three things red can stand for. Which does Gilead intend, and which does Offred feel?",
@@ -222,7 +222,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "The door of this room is not locked. In fact it will not even shut properly. Is that a kind of freedom?",
+        discuss: "The door of this room is not locked. In fact it will not even shut properly. Is that a kind of freedom?",
         find: "Chapter 2. Find the word she refuses to use about this room, and the reason she gives.",
         closer: [
           "A door that will not shut lets her out. Who else does it let in?",
@@ -240,7 +240,7 @@ export const OBJECTS = [
       {
         chapter: 2,
         unmentioned: true,
-        predict: "Offred walks us round the whole room in chapter 2 and never mentions the cupboard. Why might a narrator leave something out of a description?",
+        discuss: "Offred walks us round the whole room in chapter 2 and never mentions the cupboard. Why might a narrator leave something out of a description?",
         find: "Chapter 2. Check for yourself: read the chapter again and list every object she names. Is the cupboard there?",
         closer: [
           "She chose what to describe. What does this gap tell you about treating her inventory as complete?",
@@ -250,7 +250,7 @@ export const OBJECTS = [
       },
       {
         chapter: 9,
-        predict: "In chapter 9 Offred searches the room slowly, one section at a time, and in the cupboard she finds something left by the woman who lived here before her. If you were that woman, what would you leave for the next person?",
+        discuss: "In chapter 9 Offred searches the room slowly, one section at a time, and in the cupboard she finds something left by the woman who lived here before her. If you were that woman, what would you leave for the next person?",
         find: "Chapter 9. Find where in the cupboard the message is, what she thinks it was written with, and copy the message exactly.",
         closer: [
           "She cannot translate it, yet it pleases her. Why does a message you cannot read still count as a message?",
@@ -261,7 +261,7 @@ export const OBJECTS = [
       },
       {
         chapter: 29,
-        predict: "In chapter 29 Offred asks the Commander what the scratched words mean. Who do you now think the message was written for?",
+        discuss: "In chapter 29 Offred asks the Commander what the scratched words mean. Who do you now think the message was written for?",
         find: "Chapter 29. Find the Commander's translation, and where he says the phrase comes from.",
         closer: [
           "The phrase turns out to be a schoolboy joke that belonged to the Commander. Is it still a message of resistance now you know that?",
@@ -278,7 +278,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "There is no clock in this room. A bell somewhere in the house tells her the time. What changes for a person when someone else keeps the time?",
+        discuss: "There is no clock in this room. A bell somewhere in the house tells her the time. What changes for a person when someone else keeps the time?",
         find: "Chapter 2. Find the sentence about the bell, and the kind of place she compares this house to.",
         closer: [
           "She does not choose when to get up, eat or go out. List the things in chapter 2 that are decided for her.",
@@ -295,7 +295,7 @@ export const OBJECTS = [
     layers: [
       {
         chapter: 2,
-        predict: "There is no mirror in this room, and very few in the house. What does a person lose when they can no longer see themselves?",
+        discuss: "There is no mirror in this room, and very few in the house. What does a person lose when they can no longer see themselves?",
         find: "Chapter 2. Find the comparison to a nunnery, and the two things she says a nunnery and this house have in common.",
         closer: [
           "Vanity is one reason to remove a mirror. Look again at what has been done to the picture and the window. What other reason is there?",

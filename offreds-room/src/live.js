@@ -74,6 +74,7 @@ function saveWork() {
 function workFor(objectId, chapter) {
   const key = objectId + ":" + chapter;
   if (!state.work[key]) {
+    // ("prediction" is the saved name for the student's first answer. It is kept so earlier saved work still loads.)
     state.work[key] = { prediction: "", revealed: false, notes: "" };
   }
   return state.work[key];
@@ -453,7 +454,7 @@ function renderIntro() {
   const steps = make("ol", "rm-steps");
   const lines = [
     "Click any object in the model. Start with the chair: it is the first thing she names.",
-    "Write a prediction before you look anything up. The questions unlock when you have written at least three words.",
+    "Answer the discussion question in your own words before you look anything up. More questions appear once you have written at least three words.",
     "Find the words in your copy of the novel and write them down with what you notice.",
     "Press a chapter button when your class reaches that chapter. The model shows what changes and outlines the objects that have new questions.",
     "Use the three Show buttons to compare her room with an ordinary bedroom, and to see what the novel says was removed.",
@@ -465,7 +466,7 @@ function renderIntro() {
   panel.append(renderFoot());
 }
 
-// One layer of one object: a prediction, then the questions it unlocks.
+// One layer of one object: a discussion question, then the questions it unlocks.
 function renderLayer(object, layer) {
   const box = make("section", "rm-layer");
 
@@ -482,20 +483,20 @@ function renderLayer(object, layer) {
   }
 
   const record = workFor(object.id, layer.chapter);
-  const fieldId = "rm-predict-" + object.id + "-" + layer.chapter;
+  const fieldId = "rm-discuss-" + object.id + "-" + layer.chapter;
 
-  const promptLabel = make("label", "rm-prompt", layer.predict);
+  const promptLabel = make("label", "rm-prompt", layer.discuss);
   promptLabel.htmlFor = fieldId;
   box.append(promptLabel);
 
-  const prediction = make("textarea", "rm-text");
-  prediction.id = fieldId;
-  prediction.placeholder = "Your prediction";
-  prediction.value = record.prediction;
-  box.append(prediction);
+  const firstAnswer = make("textarea", "rm-text");
+  firstAnswer.id = fieldId;
+  firstAnswer.placeholder = "What do you think?";
+  firstAnswer.value = record.prediction;
+  box.append(firstAnswer);
 
   const gate = make("div", "rm-gate");
-  const revealButton = make("button", "rm-btn", "Show the questions");
+  const revealButton = make("button", "rm-btn", "Show more questions");
   revealButton.type = "button";
   const gateNote = make("span", "", "");
   gate.append(revealButton, gateNote);
@@ -547,7 +548,7 @@ function renderLayer(object, layer) {
       gate.hidden = true;
       return;
     }
-    const words = countWords(prediction.value);
+    const words = countWords(firstAnswer.value);
     const ready = words >= 3;
     revealButton.disabled = !ready;
     if (ready) {
@@ -557,8 +558,8 @@ function renderLayer(object, layer) {
     }
   };
 
-  prediction.addEventListener("input", () => {
-    record.prediction = prediction.value;
+  firstAnswer.addEventListener("input", () => {
+    record.prediction = firstAnswer.value;
     saveWork();
     updateGate();
   });
@@ -664,15 +665,15 @@ function notesAsText() {
       if (!record) {
         continue;
       }
-      const hasPrediction = record.prediction.trim() !== "";
+      const hasFirstAnswer = record.prediction.trim() !== "";
       const hasNotes = record.notes.trim() !== "";
-      if (!hasPrediction && !hasNotes) {
+      if (!hasFirstAnswer && !hasNotes) {
         continue;
       }
       wroteAnything = true;
       lines.push(object.name + " (chapter " + layer.chapter + ")");
-      if (hasPrediction) {
-        lines.push("My prediction: " + record.prediction.trim());
+      if (hasFirstAnswer) {
+        lines.push("My first thoughts: " + record.prediction.trim());
       }
       if (hasNotes) {
         lines.push("Quotation and notes: " + record.notes.trim());
