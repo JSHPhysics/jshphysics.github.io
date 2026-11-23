@@ -1636,7 +1636,7 @@ const TOUR = [{"object":"chair","say":"She starts with a chair."},{"object":"tab
 const CHAPTERS = [2,9,10,29];
 const SASH_NOW = 5;
 const SASH_BEFORE = 25;
-const SCENES = {"2":[{"focus":null,"say":"Chapter 2. The room as she first describes it.","hold":2600}],"9":[{"focus":["cupboard"],"say":"Chapter 9. She searches the room and opens the cupboard. Something is scratched on its floor.","hold":6200}],"10":[{"focus":["windowseat"],"say":"Chapter 10. She tells us the word stitched on the cushion.","hold":4800}],"29":[{"focus":["cupboard"],"say":"Chapter 29. She asks the Commander what the scratched words mean.","hold":4600},{"focus":["ceiling"],"say":"He also tells her what used to hang from this ceiling, and why it was taken down.","hold":5600,"light":true}]};
+const SCENES = {"2":[{"focus":null,"say":"Chapter 2. This is the room as she first describes it.","hold":2600}],"9":[{"focus":["cupboard"],"say":"Chapter 9. She searches the room and opens the cupboard. Something is scratched on its floor.","hold":6200}],"10":[{"focus":["windowseat"],"say":"Chapter 10. She tells us the word stitched on the cushion.","hold":4800}],"29":[{"focus":["cupboard"],"say":"Chapter 29. She asks the Commander what the scratched words mean.","hold":4600},{"focus":["ceiling"],"say":"He also tells her what used to hang from this ceiling, and why it was taken down.","hold":5600,"light":true}]};
 const SCENE_END = "The objects outlined in red have new questions. Click one.";
 const VIEW_WIDTH = 640;
 const VIEW_HEIGHT = 520;
@@ -2196,7 +2196,7 @@ function renderIntro() {
     "Write a prediction before you look anything up. The questions unlock when you have written at least three words.",
     "Find the words in your copy of the novel and write them down with what you notice.",
     "Press a chapter button when your class reaches that chapter. The model shows what changes and outlines the objects that have new questions.",
-    "Use the other button above the model to see what has been taken out of the room.",
+    "Press 'What has been taken out' to see what is missing from the room.",
   ];
   for (const line of lines) {
     steps.append(make("li", "", line));
@@ -2642,7 +2642,7 @@ function setChapter(chapter) {
   } else {
     // Going back: no scene, only the whole room at the earlier chapter.
     lookAt(null);
-    showSceneLine("Back at chapter " + chapter + ".");
+    showSceneLine("This is the room at chapter " + chapter + " again.");
     sceneTimer = setTimeout(() => showSceneLine(""), 2400);
   }
 }

@@ -316,7 +316,7 @@ export const TOUR = [
 // the whole room), shows "say" under the model and waits "hold" milliseconds before the next beat.
 // "light: true" lets the missing light fitting show for that beat.
 export const SCENES = {
-  2: [{ focus: null, say: "Chapter 2. The room as she first describes it.", hold: 2600 }],
+  2: [{ focus: null, say: "Chapter 2. This is the room as she first describes it.", hold: 2600 }],
   9: [
     {
       focus: ["cupboard"],

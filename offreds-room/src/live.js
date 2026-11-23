@@ -422,7 +422,7 @@ function renderIntro() {
     "Write a prediction before you look anything up. The questions unlock when you have written at least three words.",
     "Find the words in your copy of the novel and write them down with what you notice.",
     "Press a chapter button when your class reaches that chapter. The model shows what changes and outlines the objects that have new questions.",
-    "Use the other button above the model to see what has been taken out of the room.",
+    "Press 'What has been taken out' to see what is missing from the room.",
   ];
   for (const line of lines) {
     steps.append(make("li", "", line));
@@ -868,7 +868,7 @@ function setChapter(chapter) {
   } else {
     // Going back: no scene, only the whole room at the earlier chapter.
     lookAt(null);
-    showSceneLine("Back at chapter " + chapter + ".");
+    showSceneLine("This is the room at chapter " + chapter + " again.");
     sceneTimer = setTimeout(() => showSceneLine(""), 2400);
   }
 }
