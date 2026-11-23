@@ -10,8 +10,8 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as k from "./vendor/kit/iso-kit.mjs";
 import { kitScript } from "./vendor/scripts/inline-kit.mjs";
-import { roomSvg, P, SASH_NOW, SASH_BEFORE } from "./geometry.mjs";
-import { OBJECTS, TOUR, CHAPTERS } from "./content.mjs";
+import { roomSvg, P, SASH_NOW, SASH_BEFORE, WIDTH, HEIGHT } from "./geometry.mjs";
+import { OBJECTS, TOUR, CHAPTERS, SCENES, SCENE_END } from "./content.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const read = (name) => readFileSync(join(HERE, name), "utf8");
@@ -59,7 +59,10 @@ const card = k.plateHtml({
   ],
   caption:
     "A cutaway model of the room in chapter 2. Two walls and the ceiling are removed so you can see in. The disc floating above the room is the one piece of ceiling left in, so you can see the plaster wreath. It is drawn from above. The scale strip on the stand is marked every 10 cm.",
-  body: `<div class="iso-stage" role="group" aria-label="Model of Offred's room">${roomSvg()}</div>`,
+  body:
+    `<div class="iso-stage" role="group" aria-label="Model of Offred's room">${roomSvg()}</div>` +
+    `<button class="rm-btn rm-whole" type="button" id="rm-whole" hidden>Whole room</button>` +
+    `<p class="rm-scene" id="rm-scene" aria-live="polite"></p>`,
 });
 
 // ---------- the controls ----------
@@ -127,6 +130,10 @@ const TOUR = ${JSON.stringify(TOUR)};
 const CHAPTERS = ${JSON.stringify(CHAPTERS)};
 const SASH_NOW = ${SASH_NOW};
 const SASH_BEFORE = ${SASH_BEFORE};
+const SCENES = ${JSON.stringify(SCENES)};
+const SCENE_END = ${JSON.stringify(SCENE_END)};
+const VIEW_WIDTH = ${WIDTH};
+const VIEW_HEIGHT = ${HEIGHT};
 `;
 
 // The page's own code sits in a block so its names cannot collide with the kit's.

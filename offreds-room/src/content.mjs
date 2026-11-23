@@ -310,3 +310,31 @@ export const TOUR = [
   { object: "gloves", say: "She stands. Her red gloves are lying on the bed." },
   { object: "door", say: "She leaves by a door that does not lock, or even shut." },
 ];
+
+// What the model does when a chapter button is pressed.
+// Each chapter is a short list of beats. A beat moves the camera to "focus" (object ids, or null for
+// the whole room), shows "say" under the model and waits "hold" milliseconds before the next beat.
+// "light: true" lets the missing light fitting show for that beat.
+export const SCENES = {
+  2: [{ focus: null, say: "Chapter 2. The room as she first describes it.", hold: 2600 }],
+  9: [
+    {
+      focus: ["cupboard"],
+      say: "Chapter 9. She searches the room and opens the cupboard. Something is scratched on its floor.",
+      hold: 6200,
+    },
+  ],
+  10: [{ focus: ["windowseat"], say: "Chapter 10. She tells us the word stitched on the cushion.", hold: 4800 }],
+  29: [
+    { focus: ["cupboard"], say: "Chapter 29. She asks the Commander what the scratched words mean.", hold: 4600 },
+    {
+      focus: ["ceiling"],
+      say: "He also tells her what used to hang from this ceiling, and why it was taken down.",
+      hold: 5600,
+      light: true,
+    },
+  ],
+};
+
+// Shown when a chapter's beats have finished.
+export const SCENE_END = "The objects outlined in red have new questions. Click one.";

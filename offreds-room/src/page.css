@@ -352,6 +352,99 @@ body {
   stroke-width: 0.9px;
 }
 
+/* The light fitting also shows for a moment when chapter 29 explains it. */
+.rm-ghost-light {
+  opacity: max(var(--rm-ghost, 0), var(--rm-light, 0));
+}
+
+/* An object with questions from a newly reached chapter gets a slow red outline until it is opened. */
+.rm-obj[data-new] .iso-edge {
+  stroke: var(--rm-accent);
+  stroke-width: 1.2px;
+  animation: rm-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes rm-pulse {
+  50% {
+    stroke-opacity: 0.25;
+  }
+}
+
+/* The scratched message is written in when the cupboard opens in chapter 9. */
+.rm-message .iso-line {
+  stroke-dasharray: 16;
+  stroke-dashoffset: 16;
+}
+
+.iso-svg[data-ch9] .rm-message .iso-line {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1500ms ease 1600ms, stroke 500ms ease;
+}
+
+/* Chapter 29 explains the message and the blank centre of the wreath, so both are picked out. */
+.iso-svg[data-ch29] .rm-message .iso-line {
+  stroke: var(--rm-accent);
+  stroke-width: 1.3px;
+}
+
+.rm-blank-fill {
+  fill: var(--rm-accent);
+  fill-opacity: 0;
+  stroke: none;
+  transition: fill-opacity 700ms ease;
+}
+
+.iso-svg[data-ch29] .rm-blank-fill {
+  fill-opacity: 0.3;
+}
+
+.iso-svg[data-ch10] .rm-word text {
+  fill: var(--rm-accent);
+}
+
+/* The line under the model that says what a chapter changes, and the button that zooms back out. */
+.rm-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 38px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(92%, 540px);
+  margin: 0;
+  padding: 8px 14px;
+  background: var(--anatomy-card);
+  border: 1px solid var(--rm-rule);
+  border-radius: 6px;
+  font-family: var(--rm-display);
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--anatomy-strong);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+.rm-scene[data-show] {
+  opacity: 1;
+}
+
+.rm-whole {
+  position: absolute;
+  top: 32px;
+  right: 14px;
+}
+
+.rm-chip[data-new] {
+  border-color: var(--rm-accent);
+  color: var(--rm-accent);
+}
+
+.rm-chip[data-new]::before {
+  background: var(--rm-accent);
+  border-color: var(--rm-accent);
+}
+
 /* ---------- playback strip ---------- */
 
 .rm-tour {
@@ -646,6 +739,16 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .rm-obj[data-new] .iso-edge {
+    animation: none;
+  }
+
+  .iso-svg[data-ch9] .rm-message .iso-line,
+  .rm-blank-fill,
+  .rm-scene {
+    transition: none;
+  }
+
   .rm-obj .iso-solid > .iso-top,
   .rm-obj .iso-solid > .iso-shade,
   .rm-obj .iso-edge,

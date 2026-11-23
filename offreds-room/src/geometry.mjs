@@ -536,6 +536,8 @@ function ceilingRose() {
   }
   out.push(L(leaves, { tone: "mid" }));
   // The blank, plastered-over centre.
+  // (The fill is clear until chapter 29, when the stylesheet tints it.)
+  out.push(`<path class="rm-blank-fill" d="${k.onTop(k.circleRing(x, y, 6, 32), 121, P, true)}"/>`);
   out.push(L(k.ring(x, y, 6, 121, P, 32), { tone: "lo" }));
 
   return out.join("");
@@ -571,7 +573,7 @@ export function roomSvg() {
   body.push(object("bed", "The bed", bed()));
   body.push(object("gloves", "The red gloves", gloves()));
 
-  body.push(`<g class="rm-ghost rm-obj" data-obj="ceiling" aria-hidden="true">${chandelier()}</g>`);
+  body.push(`<g class="rm-ghost rm-ghost-light rm-obj" data-obj="ceiling" aria-hidden="true">${chandelier()}</g>`);
   body.push(object("ceiling", "The ceiling wreath", ceilingRose()));
 
   return k.figureSvg({

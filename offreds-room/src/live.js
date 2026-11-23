@@ -1,6 +1,6 @@
 // The page's behaviour.
 // The build script puts these names in scope before this file runs:
-//   P, OBJECTS, TOUR, CHAPTERS, SASH_NOW, SASH_BEFORE   (data)
+//   P, OBJECTS, TOUR, CHAPTERS, SCENES, SCENE_END, SASH_NOW, SASH_BEFORE, VIEW_WIDTH, VIEW_HEIGHT   (data)
 //   curtainSvg, cupboardDoorSvg                          (from moving.mjs)
 //   iso, extrude, solidSvg, lineSvg, dotsSvg, towardViewer, translateAlong   (the drawing kit)
 
@@ -19,6 +19,8 @@ const tourNext = document.getElementById("rm-tour-next");
 const tourSay = document.getElementById("rm-tour-say");
 const tourCount = document.getElementById("rm-tour-count");
 const tourTrail = document.getElementById("rm-tour-trail");
+const sceneLine = document.getElementById("rm-scene");
+const wholeButton = document.getElementById("rm-whole");
 
 const sashGroup = svg.querySelector('[data-part="sash"]');
 const curtainFar = svg.querySelector('[data-part="curtain-far"]');
@@ -39,6 +41,7 @@ const state = {
   step: -1, // position in the narrator's tour; -1 means not started
   playing: false,
   work: {}, // the student's writing, keyed by "objectId:chapter"
+  opened: {}, // later-chapter layers the student has looked at, keyed the same way
 };
 
 const STORE_KEY = "offreds-room-work-v1";
@@ -85,6 +88,28 @@ function isExamined(object) {
     }
   }
   return false;
+}
+
+// Does this object have questions from a later chapter that the student has not looked at yet?
+function hasNew(object) {
+  for (const layer of object.layers) {
+    const isLater = layer.chapter > 2;
+    const isUnlocked = layer.chapter <= state.chapter;
+    const key = object.id + ":" + layer.chapter;
+    if (isLater && isUnlocked && !state.opened[key]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Record that the student has looked at every unlocked layer of this object.
+function markOpened(object) {
+  for (const layer of object.layers) {
+    if (layer.chapter <= state.chapter) {
+      state.opened[object.id + ":" + layer.chapter] = true;
+    }
+  }
 }
 
 function countExamined() {
@@ -134,8 +159,82 @@ const motion = {
   sash: SASH_NOW,
   ghost: 0,
   door: 0,
+  light: 0,
   clock: 0,
 };
+
+// Set by a chapter scene while the missing light fitting should show.
+let lightTarget = 0;
+
+// ---------- the camera ----------
+
+// The camera is the SVG's viewBox. "camera" is where it is now; "cameraTarget" is where it is heading.
+const FULL_VIEW = { x: 0, y: 0, w: VIEW_WIDTH, h: VIEW_HEIGHT };
+const camera = { x: 0, y: 0, w: VIEW_WIDTH, h: VIEW_HEIGHT };
+let cameraTarget = { x: 0, y: 0, w: VIEW_WIDTH, h: VIEW_HEIGHT };
+
+// The box, in drawing units, that holds every part of the named objects.
+function boxOf(ids) {
+  let left = Infinity;
+  let top = Infinity;
+  let right = -Infinity;
+  let bottom = -Infinity;
+  for (const id of ids) {
+    for (const group of svg.querySelectorAll('[data-obj="' + id + '"]')) {
+      // Parts that have been taken out only count when they are showing.
+      const isGhost = group.classList.contains("rm-ghost");
+      if (isGhost && state.mode !== "missing") {
+        continue;
+      }
+      const box = group.getBBox();
+      left = Math.min(left, box.x);
+      top = Math.min(top, box.y);
+      right = Math.max(right, box.x + box.width);
+      bottom = Math.max(bottom, box.y + box.height);
+    }
+  }
+  if (left === Infinity) {
+    return null;
+  }
+  return { x: left, y: top, w: right - left, h: bottom - top };
+}
+
+// A view that frames the named objects with some of the room around them.
+function frameFor(ids) {
+  const box = boxOf(ids);
+  if (!box) {
+    return { x: 0, y: 0, w: VIEW_WIDTH, h: VIEW_HEIGHT };
+  }
+  const shape = VIEW_WIDTH / VIEW_HEIGHT;
+
+  // Wide enough for the object with room to spare, and never closer than about 2.5 times.
+  let width = Math.max(box.w * 1.9, box.h * 1.7 * shape, VIEW_WIDTH / 2.5);
+  width = Math.min(width, VIEW_WIDTH);
+  const height = width / shape;
+
+  // Centre on the object, then keep the view inside the drawing.
+  let x = box.x + box.w / 2 - width / 2;
+  let y = box.y + box.h / 2 - height / 2;
+  x = Math.max(0, Math.min(VIEW_WIDTH - width, x));
+  y = Math.max(0, Math.min(VIEW_HEIGHT - height, y));
+  return { x: x, y: y, w: width, h: height };
+}
+
+// Point the camera at some objects, or at the whole room when "ids" is null.
+function lookAt(ids) {
+  if (ids) {
+    cameraTarget = frameFor(ids);
+  } else {
+    cameraTarget = { x: 0, y: 0, w: VIEW_WIDTH, h: VIEW_HEIGHT };
+  }
+  const zoomedIn = cameraTarget.w < VIEW_WIDTH - 1;
+  wholeButton.hidden = !zoomedIn;
+  run();
+}
+
+function cameraSettled() {
+  return camera.x === cameraTarget.x && camera.y === cameraTarget.y && camera.w === cameraTarget.w && camera.h === cameraTarget.h;
+}
 
 function sashTarget() {
   if (state.mode === "missing") {
@@ -189,8 +288,13 @@ function drawModel() {
   // The cupboard door.
   cupboardDoor.innerHTML = cupboardDoorSvg(kit, P, motion.door);
 
-  // The things that have been taken out.
+  // The things that have been taken out, and the light fitting when a scene shows it.
   svg.style.setProperty("--rm-ghost", motion.ghost.toFixed(3));
+  svg.style.setProperty("--rm-light", motion.light.toFixed(3));
+
+  // The camera.
+  const view = camera.x.toFixed(2) + " " + camera.y.toFixed(2) + " " + camera.w.toFixed(2) + " " + camera.h.toFixed(2);
+  svg.setAttribute("viewBox", view);
 }
 
 let frame = 0;
@@ -208,10 +312,16 @@ function tick(now) {
   motion.sash = ease(motion.sash, sashTarget(), dt, 0.32);
   motion.ghost = ease(motion.ghost, ghostTarget(), dt, 0.28);
   motion.door = ease(motion.door, doorTarget(), dt, 0.45);
+  motion.light = ease(motion.light, lightTarget, dt, 0.5);
+  camera.x = ease(camera.x, cameraTarget.x, dt, 0.36);
+  camera.y = ease(camera.y, cameraTarget.y, dt, 0.36);
+  camera.w = ease(camera.w, cameraTarget.w, dt, 0.36);
+  camera.h = ease(camera.h, cameraTarget.h, dt, 0.36);
   drawModel();
 
   // The curtains keep moving, so the loop only stops for reduced motion or when off screen.
-  const settled = motion.sash === sashTarget() && motion.ghost === ghostTarget() && motion.door === doorTarget();
+  const partsSettled = motion.sash === sashTarget() && motion.ghost === ghostTarget() && motion.door === doorTarget();
+  const settled = partsSettled && motion.light === lightTarget && cameraSettled();
   const keepGoing = visible && (!still.matches || !settled);
   if (keepGoing) {
     frame = requestAnimationFrame(tick);
@@ -264,12 +374,15 @@ function updateHighlights() {
     group.toggleAttribute("data-on", id === state.selected);
     group.toggleAttribute("data-eye", id === eyeObject);
     group.toggleAttribute("data-seen", Boolean(seen[id]));
+    const object = findObject(id);
+    group.toggleAttribute("data-new", Boolean(object) && hasNew(object));
   }
 
   // Chapter and mode flags that the stylesheet reads.
   svg.dataset.mode = state.mode;
   svg.toggleAttribute("data-ch9", state.chapter >= 9);
   svg.toggleAttribute("data-ch10", state.chapter >= 10);
+  svg.toggleAttribute("data-ch29", state.chapter >= 29);
 }
 
 function updateChips() {
@@ -277,6 +390,7 @@ function updateChips() {
     const object = findObject(chip.dataset.chip);
     chip.setAttribute("aria-pressed", String(object.id === state.selected));
     chip.toggleAttribute("data-done", isExamined(object));
+    chip.toggleAttribute("data-new", hasNew(object));
   }
 }
 
@@ -307,7 +421,8 @@ function renderIntro() {
     "Click any object in the model. Start with the chair: it is the first thing she names.",
     "Write a prediction before you look anything up. The questions unlock when you have written at least three words.",
     "Find the words in your copy of the novel and write them down with what you notice.",
-    "Use the buttons above the model to see what has been taken out, and to add later chapters as you read them.",
+    "Press a chapter button when your class reaches that chapter. The model shows what changes and outlines the objects that have new questions.",
+    "Use the other button above the model to see what has been taken out of the room.",
   ];
   for (const line of lines) {
     steps.append(make("li", "", line));
@@ -585,6 +700,17 @@ function goToStep(step) {
   state.step = Math.max(-1, Math.min(TOUR.length - 1, step));
   updateHighlights();
   updateTour();
+
+  // The camera follows her eyes. The floor and the bell are shown with the whole room.
+  let target = null;
+  if (state.step >= 0) {
+    target = TOUR[state.step].object;
+  }
+  if (target && target !== "floor") {
+    lookAt([target]);
+  } else {
+    lookAt(null);
+  }
 }
 
 function scheduleNextStep() {
@@ -596,6 +722,7 @@ function scheduleNextStep() {
     if (state.step >= TOUR.length - 1) {
       stopTour();
       updateTour();
+      lookAt(null);
       return;
     }
     goToStep(state.step + 1);
@@ -608,6 +735,7 @@ function playTour() {
   if (state.step >= TOUR.length - 1) {
     state.step = -1;
   }
+  cancelScene();
   // The tour belongs to chapter 2 and to the room as it is now.
   state.mode = "now";
   state.selected = null;
@@ -637,13 +765,24 @@ function render() {
 
 function select(id) {
   stopTour();
+  cancelScene();
   state.selected = id;
   // The mirror only exists in the "taken out" view, so choosing it switches to that view.
   const object = findObject(id);
   if (object && object.absent) {
     state.mode = "missing";
   }
+  if (object) {
+    markOpened(object);
+  }
   render();
+
+  // Move in on the chosen object. The floor is the whole room, so it stays wide.
+  if (id === "floor") {
+    lookAt(null);
+  } else {
+    lookAt([id]);
+  }
 
   // On a narrow screen the panel sits below the model, so bring it into view.
   const stacked = matchMedia("(max-width: 980px)").matches;
@@ -658,13 +797,80 @@ function select(id) {
 
 function setMode(mode) {
   stopTour();
+  cancelScene();
   state.mode = mode;
   render();
+  // The view may need to widen or narrow now that parts have appeared or gone.
+  if (state.selected && state.selected !== "floor") {
+    lookAt([state.selected]);
+  }
+}
+
+// ---------- chapter scenes ----------
+
+let sceneTimer = 0;
+
+function showSceneLine(text) {
+  sceneLine.textContent = text;
+  sceneLine.toggleAttribute("data-show", text !== "");
+}
+
+function cancelScene() {
+  clearTimeout(sceneTimer);
+  sceneTimer = 0;
+  lightTarget = 0;
+  showSceneLine("");
+}
+
+// Play the beats of a chapter one after another, then pull back to the whole room.
+function playScene(chapter) {
+  const beats = SCENES[chapter];
+  let index = 0;
+
+  const nextBeat = () => {
+    if (index >= beats.length) {
+      // Finished: show the whole room and say where the new questions are.
+      lightTarget = 0;
+      lookAt(null);
+      if (chapter > 2) {
+        showSceneLine(SCENE_END);
+      } else {
+        showSceneLine("");
+      }
+      run();
+      return;
+    }
+    const beat = beats[index];
+    index += 1;
+    showSceneLine(beat.say);
+    lookAt(beat.focus);
+    if (beat.light) {
+      lightTarget = 1;
+    } else {
+      lightTarget = 0;
+    }
+    run();
+    sceneTimer = setTimeout(nextBeat, beat.hold);
+  };
+
+  nextBeat();
 }
 
 function setChapter(chapter) {
+  stopTour();
+  cancelScene();
+  const movedOn = chapter > state.chapter;
   state.chapter = chapter;
+  state.selected = null;
   render();
+  if (movedOn) {
+    playScene(chapter);
+  } else {
+    // Going back: no scene, only the whole room at the earlier chapter.
+    lookAt(null);
+    showSceneLine("Back at chapter " + chapter + ".");
+    sceneTimer = setTimeout(() => showSceneLine(""), 2400);
+  }
 }
 
 // ---------- wiring ----------
@@ -705,7 +911,15 @@ svg.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     state.selected = null;
     render();
+    lookAt(null);
   }
+});
+
+wholeButton.addEventListener("click", () => {
+  cancelScene();
+  stopTour();
+  updateTour();
+  lookAt(null);
 });
 
 tourPlay.addEventListener("click", () => {
@@ -719,11 +933,13 @@ tourPlay.addEventListener("click", () => {
 
 tourBack.addEventListener("click", () => {
   stopTour();
+  cancelScene();
   goToStep(state.step - 1);
 });
 
 tourNext.addEventListener("click", () => {
   stopTour();
+  cancelScene();
   goToStep(state.step + 1);
 });
 
