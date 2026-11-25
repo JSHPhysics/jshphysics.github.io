@@ -234,3 +234,7 @@ Big session — built out the entire pedagogy hotspot system end-to-end.
 - Seventh plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
 - Eighth plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
 - Ninth plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
+
+### 2026-11-25 (Fable 5.2)
+
+- Tenth and eleventh plans added to `intervention/data/`, both for one more student, each under its own code: a term-time plan to 11 December and a heavier holiday plan (14 December to 3 January, Topics 1 to 13). Encrypted and checked with `intervention.py check`; the local end-to-end test passed with both codes (a wrong code refused, each code opens its own plan, no code in the address bar, the plan reopens after a reload). One code opens one plan, so a student with two plans has two codes, and `encrypt` gives each its own storage key.
