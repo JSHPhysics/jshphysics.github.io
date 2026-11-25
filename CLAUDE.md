@@ -232,3 +232,4 @@ Big session — built out the entire pedagogy hotspot system end-to-end.
 - `offreds-room/`: when the camera zoomed in, the drawing spilled out of its card, because the Anatomy kit sets `overflow: visible` on `.iso-svg`. The page now sets `overflow: hidden` on that SVG, so a zoomed view is cut off at the edge of the drawing box. Checked zoomed on the bed at 1280 wide.
 
 - Seventh plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
+- Eighth plan added to `intervention/data/` (one more student), encrypted and checked with `intervention.py check`; the local end-to-end test passed with that student's code.
